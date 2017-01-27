@@ -11,6 +11,7 @@
     "prepublish": ". ./.scripts/prepublish.sh",
     "lint": "eslint src",
     "lintfix": "eslint src --fix",
+    "jest": "jest",
     "testonly": "mocha --require ignore-styles --require .scripts/mocha_runner src/**/tests/**/*.js",
     "test": "npm run lint && npm run testonly",
     "test-watch": "npm run testonly -- --watch --watch-extensions js",
@@ -22,6 +23,7 @@
     "babel-cli": "^6.14.0",
     "babel-core": "^6.14.0",
     "babel-eslint": "^6.1.2",
+    "babel-jest": "18.0.0",
     "babel-loader": "^6.2.5",
     "babel-plugin-transform-runtime": "^6.15.0",
     "babel-polyfill": "^6.13.0",
@@ -29,24 +31,22 @@
     "bootstrap": "4.0.0-alpha.6",
     "chai": "^3.5.0",
     "chai-enzyme": "0.6.1",
-    "css-modules-require-hook": "4.0.5",
-    "enzyme": "^2.2.0",
+    "enzyme": "2.7.1",
+    "enzyme-to-json": "1.4.5",
     "eslint": "^3.6.0",
     "eslint-config-airbnb": "^12.0.0",
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.2.2",
     "eslint-plugin-react": "^6.3.0",
     "git-url-parse": "^6.0.1",
-    "ignore-styles": "5.0.1",
-    "jsdom": "^9.5.0",
-    "mocha": "^3.0.2",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "18.1.0",
     "node-sass": "4.3.0",
     "react": "^15.3.2",
-    "react-addons-test-utils": "^15.3.2",
+    "react-addons-test-utils": "15.4.2",
     "react-dom": "^15.3.2",
     "sass-loader": "4.1.1",
-    "sass-resources-loader": "1.2.0-beta.2",
-    "sinon": "^1.17.6"
+    "sass-resources-loader": "1.2.0-beta.2"
   },
   "peerDependencies": {
     "react-addons-css-transition-group": "15.4.2",
@@ -57,6 +57,18 @@
     "identicon.js": "2.0.0",
     "lodash": "4.17.4",
     "babel-runtime": "^6.11.6"
+  },
+  "jest": {
+    "setupFiles": [
+      "./.scripts/user/pretest.js"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|scss)$": "identity-obj-proxy"
+    },
+    "testRegex": "./src/tests/.*.js$",
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/enzyme-to-json/serializer"
+    ]
   },
   "main": "dist/index.js",
   "engines": {
