@@ -4,7 +4,7 @@ import chroma from 'chroma-js';
 
 const disable = (props) => {
   return `
-      background-color: ${chroma(props.bgColor).brighten()};
+      background-color: ${chroma(props.type).brighten()};
       cursor: not-allowed;
       pointer-events: none;
       `;
@@ -12,7 +12,7 @@ const disable = (props) => {
 
 const Btn = styled.button`
   /* Adapt the colors based on primary prop */
-  background-color: ${props => props.bgColor};
+  background-color: ${props => props.theme.colors[props.type]};
   color: ${props => props.textColor ? props.textColor : 'white'};
   display: inline-block;
   text-align: center;
@@ -25,15 +25,15 @@ const Btn = styled.button`
   box-sizing: border-box;
   margin: 0 .15rem;
   &:hover {
-    background: ${props => chroma(props.bgColor).darken()}
+    background: ${props => chroma(props.theme.colors[props.type]).darken()}
   }
   ${props => props.disabled && disable(props)}
 `;
 
-const Button = ({ children, type, theme, disabled = false }) => {
+const Button = ({ children, type, disabled = false }) => {
   return (
     <Btn
-      bgColor={type ? theme.colors[type] : theme.colors.gray}
+      type={type}
       textColor="white"
       disabled={disabled}
     >
@@ -42,4 +42,16 @@ const Button = ({ children, type, theme, disabled = false }) => {
   );
 };
 
-export default withTheme(Button);
+Object.assign(Button, {
+  displayName: 'Button',
+  propTypes: {
+    type: React.PropTypes.string,
+    children: React.PropTypes.node,
+    disabled: React.PropTypes.bool,
+  },
+  defaultProps: {
+    type: 'gray',
+  },
+});
+
+export default Button;

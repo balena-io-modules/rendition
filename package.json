@@ -17,6 +17,7 @@
     "publish-storybook": "bash .scripts/publish_storybook.sh"
   },
   "devDependencies": {
+    "@kadira/react-storybook-addon-info": "3.3.0",
     "@kadira/storybook": "^2.18.1",
     "babel-cli": "^6.14.0",
     "babel-core": "^6.14.0",
@@ -47,7 +48,8 @@
     "chroma-js": "1.2.1",
     "identicon.js": "2.0.0",
     "lodash": "4.17.4",
-    "styled-components": "1.4.2"
+    "styled-components": "1.4.2",
+    "styled-components-theme": "1.0.2"
   },
   "jest": {
     "testRegex": "./src/components/*/.*.spec.js$"

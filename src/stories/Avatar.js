@@ -3,14 +3,14 @@ import { storiesOf } from '@kadira/storybook';
 import { Avatar } from '../index';
 
 storiesOf('Avatar', module)
-  .add('Default view', () => {
+  .addWithInfo('Default view', () => {
     return <Avatar id="12345"/>;
-  }).add('Custom size', () => {
+  }).addWithInfo('Custom size', () => {
     return <Avatar id="12345" size={30} />;
-  }).add('No border', () => {
+  }).addWithInfo('No border', () => {
     return <Avatar id="12345" border={false} />;
-  }).add('Square', () => {
+  }).addWithInfo('Square', () => {
     return <Avatar id="12345" borderRadius={0} />;
-  }).add('Image', () => {
+  }).addWithInfo('Image', () => {
     return <Avatar size={50} src="http://openplus.ca/images/photo.jpg" />;
   });

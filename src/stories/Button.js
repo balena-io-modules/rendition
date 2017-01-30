@@ -1,12 +1,12 @@
 import React from 'react';
-import { storiesOf, action } from '@kadira/storybook';
+import { storiesOf } from '@kadira/storybook';
 import { Button } from '../index';
 
 storiesOf('Button', module)
-  .add('Default view', () => {
+  .addWithInfo('Default view', () => {
     return <Button>Default Button</Button>;
   })
-  .add('secondary, info, success, warning', () => {
+  .addWithInfo('secondary, info, success, warning', () => {
     return (
       <div>
         <Button type="secondary">secondary</Button>
@@ -16,6 +16,6 @@ storiesOf('Button', module)
       </div>
     )
   })
-  .add('Disabled', () => {
+  .addWithInfo('Disabled', () => {
     return <Button disabled>You cant click me</Button>;
   })

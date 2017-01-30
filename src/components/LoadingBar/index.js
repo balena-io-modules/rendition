@@ -1,6 +1,5 @@
 import React from 'react';
-import styled, { keyframes, withTheme } from 'styled-components';
-import isUndefined from 'lodash/isUndefined';
+import styled, { keyframes } from 'styled-components';
 
 const animation = () => {
   return keyframes`
@@ -23,14 +22,18 @@ const Bar = styled.div`
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
-  height: ${props => props.height};
+  height: ${props => props.height + 'px'};
 `;
 
-const renderBars = (colors, duration) => {
+const isValidColor = (color) => {
+  return (color.charAt(0) === '#');
+};
+
+const renderBars = (colors) => {
   return colors.map((color, i) => {
     const AltBar = styled(Bar)`
       animation: ${animation} 2s linear ${i/2}s infinite;
-      background-color: ${color};
+      background-color: ${props => isValidColor(color) ? color : props.theme.colors[color]};
     `;
     return (
       <AltBar key={i} />
@@ -38,24 +41,25 @@ const renderBars = (colors, duration) => {
   });
 };
 
-const getColors = (colors, theme) => {
-  if (isUndefined(colors)) {
-    return [
-      theme.colors.primary,
-      theme.colors.secondary,
-      theme.colors.gray,
-    ];
-  }
-
-  return colors;
-};
-
-const LoadingBar = ({ colors, theme, height = '5px'}) => {
+const LoadingBar = ({ colors, theme, height }) => {
   return (
     <Wrapper height={height}>
-      {renderBars(getColors(colors, theme))}
+      {renderBars(colors)}
     </Wrapper>
   );
 };
 
-export default withTheme(LoadingBar);
+Object.assign(LoadingBar, {
+  displayName: 'LoadingBar',
+  propTypes: {
+    colors: React.PropTypes.array,
+    children: React.PropTypes.node,
+    height: React.PropTypes.number,
+  },
+  defaultProps: {
+    height: 5,
+    colors: ['primary', 'secondary', 'gray']
+  },
+});
+
+export default LoadingBar;

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { keyframes, withTheme } from 'styled-components';
+import styled from 'styled-components';
 import Identicon from 'identicon.js';
 import random from 'lodash/random';
 import chroma from 'chroma-js';
@@ -45,19 +45,30 @@ const Avatar = ({
   id = random(9999).toString(),
   size = 100,
   borderRadius = '50%',
-  border = true
+  border = true,
 }) => {
   return (
     <Container
       size={size}
       borderRadius={borderRadius}
-      border={border}>
-        <Image
+      border={border}
+    >
+      <Image
         src={getImage(src, id, size)}
-        alt={name}
-        borderRadius={borderRadius}/>
+        borderRadius={borderRadius}
+      />
     </Container>
   );
 };
 
-export default withTheme(Avatar);
+Object.assign(Avatar, {
+  displayName: 'Avatar',
+  propTypes: {
+    src: React.PropTypes.string,
+    id: React.PropTypes.string,
+    borderRadius: React.PropTypes.number,
+    border: React.PropTypes.bool,
+  },
+});
+
+export default Avatar;
