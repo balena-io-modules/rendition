@@ -18,6 +18,12 @@ If some snapshots fail make sure you have changed stories for those shots.
 npm run new-snaps
 ```
 
+### Publishing
+
+```
+npm run publish-storybook
+```
+
 ### General
 - [ ] setup CI
 - [ ] getting started/integration guide
