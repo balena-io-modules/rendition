@@ -32,7 +32,7 @@ const isValidColor = (color) => {
 const renderBars = (colors) => {
   return colors.map((color, i) => {
     const AltBar = styled(Bar)`
-      animation: ${animation} 2s linear ${i/2}s infinite;
+      animation: ${animation} 2s linear ${i / 2}s infinite;
       background-color: ${props => isValidColor(color) ? color : props.theme.colors[color]};
     `;
     return (
@@ -53,12 +53,11 @@ Object.assign(LoadingBar, {
   displayName: 'LoadingBar',
   propTypes: {
     colors: React.PropTypes.array,
-    children: React.PropTypes.node,
     height: React.PropTypes.number,
   },
   defaultProps: {
     height: 5,
-    colors: ['primary', 'secondary', 'gray']
+    colors: ['primary', 'secondary', 'gray'],
   },
 });
 
