@@ -11,7 +11,7 @@
     "prepublish": ". ./.scripts/prepublish.sh",
     "lint": "eslint src",
     "lintfix": "eslint src --fix",
-    "jest": "jest",
+    "test": "jest",
     "storybook": "start-storybook -p 9010",
     "publish-storybook": "bash .scripts/publish_storybook.sh"
   },
@@ -35,7 +35,6 @@
     "eslint-plugin-jsx-a11y": "^2.2.2",
     "eslint-plugin-react": "^6.3.0",
     "git-url-parse": "^6.0.1",
-    "identity-obj-proxy": "3.0.0",
     "jest": "18.1.0",
     "react": "^15.3.2",
     "react-addons-test-utils": "15.4.2",
@@ -55,10 +54,7 @@
     "setupFiles": [
       "./.scripts/user/pretest.js"
     ],
-    "moduleNameMapper": {
-      "^.+\\.(css|scss)$": "identity-obj-proxy"
-    },
-    "testRegex": "./src/tests/.*.js$",
+    "testRegex": "./src/components/*/.*.spec.js$",
     "snapshotSerializers": [
       "<rootDir>/node_modules/enzyme-to-json/serializer"
     ]

@@ -12,8 +12,12 @@ Collection of resin.io react components
 - [ ] https://github.com/storybooks/react-storybook-addon-info
 
 ### Styling
-- [ ] add utils https://polished.js.org/docs/
+- [ ] add utils(like bourbon for js styles) https://polished.js.org/docs/
 - [ ] add default theme eg https://github.com/callemall/material-ui/tree/master/src/styles/baseThemes
+- [ ] typography (https://github.com/KyleAMathews/typography.js)
+
+### Analytics
+- [ ] best per project basis? some projects may not use react router.  
 
 ### Components list
 - [ ] grid (flexbox?)

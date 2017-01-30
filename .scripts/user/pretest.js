@@ -7,14 +7,13 @@ import React from 'react';
 
 chai.use(chaiEnzyme());
 
-console.log(chai.expect)
-
 global.shallow = shallow;
 global.render = render;
 global.mount = mount;
 global.chai = chai;
 global.chaiExpect = chai.expect;
 global.React = React;
+
 
 // Skip createElement warnings but fail tests on any other warning
 console.error = message => {

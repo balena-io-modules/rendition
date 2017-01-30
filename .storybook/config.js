@@ -6,15 +6,7 @@
 import { configure, addDecorator } from '@kadira/storybook';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-
-const theme = {
-  colors: {
-    primary: 'red',
-    secondary: 'green',
-    tertiary: 'blue',
-    lightGray: '#ddd'
-  }
-};
+import theme from '../src/styles/theme';
 
 addDecorator(story => (
   <ThemeProvider theme={theme}>
