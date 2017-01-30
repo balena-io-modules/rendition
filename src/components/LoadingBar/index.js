@@ -43,7 +43,7 @@ const getColors = (colors, theme) => {
     return [
       theme.colors.primary,
       theme.colors.secondary,
-      theme.colors.tertiary,
+      theme.colors.gray,
     ];
   }
 

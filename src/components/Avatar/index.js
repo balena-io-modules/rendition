@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { keyframes, withTheme } from 'styled-components';
 import Identicon from 'identicon.js';
 import random from 'lodash/random';
+import chroma from 'chroma-js';
 
 const GenerateIcon = (id, size) => {
   // key can be any unique id
@@ -22,7 +23,7 @@ const Container = styled.div`
   overflow: hidden;
   padding: 0.2rem;
   z-index: 2;
-  border: ${props => props.border ? props.theme.colors.lightGray + ' 1px solid;' : ''}
+  border: ${props => props.border && chroma(props.theme.colors.gray).brighten(4) + ' 1px solid;'}
   border-radius: ${props => props.borderRadius}
   width: ${props => props.size}
   height: ${props => props.size}

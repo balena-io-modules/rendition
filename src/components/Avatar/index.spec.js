@@ -9,7 +9,6 @@ describe('Avatar', () => {
         <Avatar src={image}/>
       </TestContainer>
     );
-    console.log()
     chaiExpect(instance.find('img')).to.have.attr('src', image);
   });
 

@@ -17,5 +17,8 @@
     "func-names": 0,
     # propTypes can be object
     "react/forbid-prop-types": 0,
+    # allow functions const func = arg => return arg
+    "no-confusing-arrow": 0,
+    "react/prop-types": 0,
   },
 }
