@@ -25,8 +25,8 @@ const Container = styled.div`
   z-index: 2;
   border: ${props => props.border && chroma(props.theme.colors.gray).brighten(4) + ' 1px solid;'}
   border-radius: ${props => props.borderRadius}
-  width: ${props => props.size}
-  height: ${props => props.size}
+  width: ${props => props.size + 'px'}
+  height: ${props => props.size + 'px'}
 `;
 
 const Image = styled.img`

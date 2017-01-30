@@ -2,6 +2,22 @@
 
 Collection of resin.io react components
 
+### Developing
+
+```
+npm run storybook
+```
+
+### Testing
+```
+npm test
+```
+
+If some snapshots fail make sure you have changed stories for those shots.
+```
+npm run new-snaps
+```
+
 ### General
 - [ ] setup CI
 - [ ] getting started/integration guide

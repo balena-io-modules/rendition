@@ -1,6 +1,9 @@
 import Avatar from './';
 import TestContainer from '../../utils/TestContainer';
 
+import initStoryshots from 'storyshots';
+initStoryshots();
+
 describe('Avatar', () => {
   it('Should mount with src prop', () => {
     const image = 'http://openplus.ca/images/photo.jpg'

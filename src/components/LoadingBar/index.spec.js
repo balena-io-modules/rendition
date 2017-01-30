@@ -1,6 +1,9 @@
 import LoadingBar from './';
 import TestContainer from '../../utils/TestContainer';
 
+import initStoryshots from 'storyshots';
+initStoryshots();
+
 describe('LoadingBar', () => {
   const instance = mount(
     <TestContainer>

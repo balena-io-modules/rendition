@@ -12,6 +12,7 @@
     "lint": "eslint src",
     "lintfix": "eslint src --fix",
     "test": "jest",
+    "new-snaps": "jest -u",
     "storybook": "start-storybook -p 9010",
     "publish-storybook": "bash .scripts/publish_storybook.sh"
   },
@@ -38,7 +39,8 @@
     "jest": "18.1.0",
     "react": "^15.3.2",
     "react-addons-test-utils": "15.4.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "storyshots": "3.2.1"
   },
   "peerDependencies": {
     "react": "^15.3.2",
