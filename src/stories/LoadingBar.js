@@ -4,7 +4,7 @@ import { LoadingBar } from '../index';
 
 storiesOf('LoadingBar', module)
   .add('Default view', () => {
-    return  <LoadingBar />;
+    return <LoadingBar />;
   })
   .add('Custom Colors', () => {
     return <LoadingBar colors={[ 'red', 'purple', 'yellow' ]}/>;

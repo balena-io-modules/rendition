@@ -1,2 +1,2 @@
 import './LoadingBar.js';
-import './User.js';
+import './Avatar.js';

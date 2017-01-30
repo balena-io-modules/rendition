@@ -1,8 +1,4 @@
 import LoadingBar from './components/LoadingBar';
-import * as User from './components/User';
+import Avatar from './components/Avatar';
 
-// globabl styles;
-import 'bootstrap/scss/bootstrap.scss';
-
-
-export { User, LoadingBar };
+export { Avatar, LoadingBar };
