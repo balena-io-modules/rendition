@@ -1,57 +1,46 @@
-import styled, { withTheme } from 'styled-components';
 import React from 'react';
-import chroma from 'chroma-js';
+import classNames from 'classnames';
 
-const disable = (props) => {
-  return `
-      background-color: ${chroma(props.type).brighten()};
-      cursor: not-allowed;
-      pointer-events: none;
-      `;
-};
+const { PropTypes } = React;
 
-const Btn = styled.button`
-  /* Adapt the colors based on primary prop */
-  background-color: ${props => props.theme.colors[props.type]};
-  color: ${props => props.textColor ? props.textColor : 'white'};
-  display: inline-block;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  border-radius: 3px;
-  user-select: none;
-  border: 1px solid transparent;
-  padding: .5rem 1rem;
-  box-sizing: border-box;
-  margin: 0 .15rem;
-  &:hover {
-    background: ${props => chroma(props.theme.colors[props.type]).darken()}
+const Button = ({
+  btnStyle,
+  children,
+  className,
+  disabled,
+  onClick,
+  id,
+} = {}) => {
+  let classes = classNames('resin-control', className);
+
+  if (btnStyle) {
+    classes += ` resin-control_btn-${btnStyle}`;
   }
-  ${props => props.disabled && disable(props)}
-`;
 
-const Button = ({ children, type, disabled = false }) => {
   return (
-    <Btn
-      type={type}
-      textColor="white"
+    <button
+      onClick={onClick}
+      id={id}
+      className={classes}
       disabled={disabled}
     >
       {children}
-    </Btn>
+    </button>
   );
 };
 
-Object.assign(Button, {
-  displayName: 'Button',
-  propTypes: {
-    type: React.PropTypes.string,
-    children: React.PropTypes.node,
-    disabled: React.PropTypes.bool,
-  },
-  defaultProps: {
-    type: 'gray',
-  },
-});
+Button.propTypes = {
+  btnStyle: PropTypes.string,
+  children: React.PropTypes.node,
+  className: PropTypes.string,
+  disabled: PropTypes.bool,
+  id: PropTypes.string,
+  onClick: PropTypes.func,
+};
+
+Button.defaultProps = {
+  // 'amber', 'blue', 'dark', 'light'
+  btnStyle: 'dark',
+};
 
 export default Button;

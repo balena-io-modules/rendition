@@ -1,3 +1,4 @@
-import './Avatar.js';
-import './Button.js';
-import './LoadingBar.js';
+import '../styles/main.less';
+
+import './Button';
+import './Input';

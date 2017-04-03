@@ -20,5 +20,7 @@
     # allow functions const func = arg => return arg
     "no-confusing-arrow": 0,
     "react/prop-types": 0,
+    "react/require-default-props": 0,
+    "import/newline-after-import": 0,
   },
 }
