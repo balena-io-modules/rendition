@@ -39,7 +39,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  // 'amber', 'blue', 'dark', 'light'
+  // 'primary', 'secondary', 'dark', 'light'
   btnStyle: 'dark',
 };
 

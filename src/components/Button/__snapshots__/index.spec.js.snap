@@ -719,7 +719,7 @@ exports[`Storyshots Button Disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots Button amber, blue, dark, light 1`] = `
+exports[`Storyshots Button primary, secondary, dark, light 1`] = `
 <div>
   <div
     style={
@@ -730,18 +730,18 @@ exports[`Storyshots Button amber, blue, dark, light 1`] = `
     }>
     <div>
       <button
-        className="resin-control resin-control_btn-amber"
+        className="resin-control resin-control_btn-primary"
         disabled={undefined}
         id={undefined}
         onClick={undefined}>
-        amber
+        primary
       </button>
       <button
-        className="resin-control resin-control_btn-blue"
+        className="resin-control resin-control_btn-secondary"
         disabled={undefined}
         id={undefined}
         onClick={undefined}>
-        blue
+        secondary
       </button>
       <button
         className="resin-control resin-control_btn-dark"
@@ -855,7 +855,7 @@ exports[`Storyshots Button amber, blue, dark, light 1`] = `
                 "padding": 0,
               }
             }>
-            amber, blue, dark, light
+            primary, secondary, dark, light
           </h2>
         </div>
         
@@ -945,7 +945,7 @@ exports[`Storyshots Button amber, blue, dark, light 1`] = `
                               }
                             }>
                             \"
-                            amber
+                            primary
                             \"
                           </span>
                         </span>
@@ -975,7 +975,7 @@ exports[`Storyshots Button amber, blue, dark, light 1`] = `
                         "color": "#777",
                       }
                     }>
-                    amber
+                    primary
                   </span>
                 </div>
                 <div
@@ -1033,7 +1033,7 @@ exports[`Storyshots Button amber, blue, dark, light 1`] = `
                               }
                             }>
                             \"
-                            blue
+                            secondary
                             \"
                           </span>
                         </span>
@@ -1063,7 +1063,7 @@ exports[`Storyshots Button amber, blue, dark, light 1`] = `
                         "color": "#777",
                       }
                     }>
-                    blue
+                    secondary
                   </span>
                 </div>
                 <div

@@ -10,14 +10,20 @@
 		width: 100%;
 		height: 48px;
 		border-radius: 3px;
-		border: solid 1px @alto;
+		border: solid 1px @gray-light;
 		padding: 5px 15px;
     max-width: @single-col-width;
 
 		&:focus {
 			outline: none;
-			border-color: @corn;
+			border-color: @resin-primary;
 		}
+
+    &:hover {
+      box-shadow: 0 0px 3px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    transition: box-shadow 125ms ease-in-out;
 	}
 
   button& {
@@ -34,60 +40,60 @@
     border: 1px solid transparent;
     border-radius: 3px;
 
-    &.resin-control_btn-amber {
-      background-color: @sunglow;
+    &.resin-control_btn-primary {
+      background-color: @resin-primary;
       color: white;
 
       &:disabled,
       &:hover {
-        background-color: @dandelion;
+        background-color: @resin-primary-light;
       }
 
       &:active {
-        background-color: @corn;
+        background-color: @resin-primary-dark;
       }
     }
 
-    &.resin-control_btn-blue {
-      background-color: @curious-blue;
+    &.resin-control_btn-secondary {
+      background-color: @resin-secondary;
       color: white;
 
       &:disabled,
       &:hover {
-        background-color: @picton-blue;
+        background-color: @resin-secondary-light;
       }
 
       &:active {
-        background-color: @denim;
+        background-color: @resin-secondary-dark;
       }
     }
 
     &.resin-control_btn-dark {
-      background-color: @abbey;
+      background-color: @gray-dark;
       color: white;
 
       &:disabled,
       &:hover {
-        background-color: @rolling-stone;
+        background-color: @gray;
       }
 
       &:active {
-        background-color: @shark;
+        background-color: @gray-darker;
       }
     }
 
     &.resin-control_btn-light {
       background-color: white;
-      border-color: @french-gray;
-      color: @abbey;
+      border-color: @gray-light;
+      color: @gray-dark;
 
       &:disabled,
       &:hover {
-        border-color: @rolling-stone;
+        border-color: @gray;
       }
 
       &:active {
-        background-color: @tuna;
+        background-color: @gray-dark;
         color: white;
       }
     }

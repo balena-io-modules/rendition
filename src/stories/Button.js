@@ -6,11 +6,11 @@ storiesOf('Button', module)
 .addWithInfo('Default view', () => {
   return <Button>Default test Button</Button>;
 })
-.addWithInfo('amber, blue, dark, light', () => {
+.addWithInfo('primary, secondary, dark, light', () => {
   return (
     <div>
-      <Button btnStyle="amber">amber</Button>
-      <Button btnStyle="blue">blue</Button>
+      <Button btnStyle="primary">primary</Button>
+      <Button btnStyle="secondary">secondary</Button>
       <Button btnStyle="dark">dark</Button>
       <Button btnStyle="light">light</Button>
     </div>
