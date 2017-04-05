@@ -1,5 +1,4 @@
-import LoadingBar from './components/LoadingBar';
-import Avatar from './components/Avatar';
 import Button from './components/Button';
+import Input from './components/Input';
 
-export { Avatar, Button, LoadingBar };
+export { Button, Input };

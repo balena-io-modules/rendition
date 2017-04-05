@@ -14,7 +14,8 @@
     "test": "jest",
     "new-snaps": "jest -u",
     "storybook": "start-storybook -p 9010",
-    "publish-storybook": "bash .scripts/publish_storybook.sh"
+    "publish-storybook": "bash .scripts/publish_storybook.sh",
+    "postinstall": "./.scripts/postinstall.js"
   },
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "3.3.0",
@@ -34,6 +35,8 @@
     "eslint-plugin-react": "^6.3.0",
     "git-url-parse": "^6.0.1",
     "jest": "18.1.0",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.3",
     "react": "^15.3.2",
     "react-addons-test-utils": "15.4.2",
     "react-dom": "^15.3.2",
@@ -45,14 +48,13 @@
   },
   "dependencies": {
     "babel-runtime": "^6.11.6",
-    "chroma-js": "1.2.1",
-    "identicon.js": "2.0.0",
-    "lodash": "4.17.4",
-    "styled-components": "1.4.2",
-    "styled-components-theme": "1.0.2"
+    "classnames": "^2.2.5"
   },
   "jest": {
-    "testRegex": "./src/components/*/.*.spec.js$"
+    "testRegex": "./src/components/*/.*.spec.js$",
+    "moduleNameMapper": {
+      "\\.(css|less)$": "<rootDir>/test/styleMock.js"
+    }
   },
   "main": "dist/index.js",
   "engines": {

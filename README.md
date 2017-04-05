@@ -1,8 +1,17 @@
 # Resin Component
 
-Collection of resin.io react components
+Collection of resin.io react components and a library of shared less
+variables and styles.
 
 ### Developing
+
+Clone this repository and then run:
+
+```sh
+NODE_ENV=dev npm install
+```
+
+The interactive storybook can be launched by running:
 
 ```
 npm run storybook

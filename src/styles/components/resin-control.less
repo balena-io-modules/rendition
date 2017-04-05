@@ -1,0 +1,101 @@
+.resin-control {
+  .resin-bb;
+  .resin-t-body;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+	input& {
+		width: 100%;
+		height: 48px;
+		border-radius: 3px;
+		border: solid 1px @gray-light;
+		padding: 5px 15px;
+    max-width: @single-col-width;
+
+		&:focus {
+			outline: none;
+			border-color: @resin-primary;
+		}
+
+    &:hover {
+      box-shadow: 0 0px 3px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    transition: box-shadow 125ms ease-in-out;
+	}
+
+  button& {
+    display: inline-block;
+    padding: 13px 20px;
+    margin-bottom: 0;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+
+    &.resin-control_btn-primary {
+      background-color: @resin-primary;
+      color: white;
+
+      &:disabled,
+      &:hover {
+        background-color: @resin-primary-light;
+      }
+
+      &:active {
+        background-color: @resin-primary-dark;
+      }
+    }
+
+    &.resin-control_btn-secondary {
+      background-color: @resin-secondary;
+      color: white;
+
+      &:disabled,
+      &:hover {
+        background-color: @resin-secondary-light;
+      }
+
+      &:active {
+        background-color: @resin-secondary-dark;
+      }
+    }
+
+    &.resin-control_btn-dark {
+      background-color: @gray-dark;
+      color: white;
+
+      &:disabled,
+      &:hover {
+        background-color: @gray;
+      }
+
+      &:active {
+        background-color: @gray-darker;
+      }
+    }
+
+    &.resin-control_btn-light {
+      background-color: white;
+      border-color: @gray-light;
+      color: @gray-dark;
+
+      &:disabled,
+      &:hover {
+        border-color: @gray;
+      }
+
+      &:active {
+        background-color: @gray-dark;
+        color: white;
+      }
+    }
+  }
+}
