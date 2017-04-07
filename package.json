@@ -12,6 +12,7 @@
     "lint": "eslint src",
     "lintfix": "eslint src --fix",
     "test": "jest",
+    "ci": "npm run lint && npm run test",
     "new-snaps": "jest -u",
     "storybook": "start-storybook -p 9010",
     "publish-storybook": "bash .scripts/publish_storybook.sh",
@@ -51,7 +52,7 @@
     "classnames": "^2.2.5"
   },
   "jest": {
-    "testRegex": "./src/components/*/.*.spec.js$",
+    "testRegex": "./test/storyshots.spec.js",
     "moduleNameMapper": {
       "\\.(css|less)$": "<rootDir>/test/styleMock.js"
     }
