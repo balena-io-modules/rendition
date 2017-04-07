@@ -1,5 +1,7 @@
 # Resin Component
 
+[![Build Status](https://travis-ci.org/resin-io-modules/resin-components.svg?branch=master)](https://travis-ci.org/resin-io-modules/resin-components)
+
 Collection of resin.io react components and a library of shared less
 variables and styles.
 
@@ -57,4 +59,3 @@ npm run new-snaps
 ```
 npm run publish-storybook
 ```
-

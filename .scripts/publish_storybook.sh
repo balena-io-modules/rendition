@@ -8,10 +8,11 @@
 set -e # exit with nonzero exit code if anything fails
 
 # get GIT url
-
-GIT_URL=`git config --get remote.origin.url`
 if [[ $GIT_URL == "" ]]; then
-  echo "This project is not configured with a remote git repo".
+  GIT_URL=`git config --get remote.origin.url`
+  if [[ $GIT_URL == "" ]]; then
+    echo "This project is not configured with a remote git repo".
+  fi
   exit 1
 fi
 
@@ -39,7 +40,7 @@ git commit -m "Deploy Storybook to GitHub Pages"
 # repo's gh-pages branch. (All previous history on the gh-pages branch
 # will be lost, since we are overwriting it.) We redirect any output to
 # /dev/null to hide any sensitive credential data that might otherwise be exposed.
-git push --force --quiet $GIT_URL master:gh-pages > /dev/null 2>&1
+git push --force --quiet $GIT_URL master:gh-pages
 cd ..
 rm -rf .out
 
