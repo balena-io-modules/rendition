@@ -1,7 +1,15 @@
 @single-col-width: 470px;
+@resin-standard-height: 45px;
+@resin-emphasized-height: 55px;
+@resin-border-radius: 3px;
+
 
 @base-line-height: 1.428;
-@font-size-body: 14px;
+@font-size-body: 16px;
+
+@font-family-sans-serif: proxima-nova, Arial, Tahoma, sans-serif;
+@font-family-monospace: 'Ubuntu Mono Web', 'Courier New', monospace;
+@font-weight-bold: 600;
 
 // Colors
 @gray-darker: #45484e;
@@ -20,7 +28,18 @@
 @resin-secondary-dark: darken(@resin-secondary, 10%);
 
 @resin-success: #76c950;
+@resin-success-light: hardlight(@resin-success, darken(#ffffff, 2.5%));
+@resin-success-dark: hardlight(@resin-success, darken(#ffffff, 80%));
+
 @resin-danger: #ff423d;
+@resin-danger-light: hardlight(@resin-danger, darken(#ffffff, 2.5%));
+@resin-danger-dark: hardlight(@resin-danger, darken(#ffffff, 80%));
+
 @resin-warning: #fca321;
+@resin-warning-light: hardlight(@resin-warning, darken(#ffffff, 2.5%));
+@resin-warning-dark: hardlight(@resin-warning, darken(#ffffff, 80%));
+
 @resin-info: #1496e1;
+@resin-info-light: hardlight(@resin-info, darken(#ffffff, 2.5%));
+@resin-info-dark: hardlight(@resin-info, darken(#ffffff, 80%));
 

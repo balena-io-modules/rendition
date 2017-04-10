@@ -35,7 +35,7 @@ export default Example;
 Clone this repository and then run:
 
 ```sh
-NODE_ENV=dev npm install
+npm install
 ```
 
 The interactive storybook can be launched by running:

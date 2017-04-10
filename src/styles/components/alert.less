@@ -1,0 +1,124 @@
+.resin-alert {
+  .resin-bb;
+  .resin-t-body;
+
+  border-radius: @resin-border-radius;
+  position: relative;
+  margin-bottom: 15px;
+  width: 100%;
+
+  .close {
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    font-size: 22px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &:not(.emphasized) {
+    min-height: @resin-standard-height;
+    border: 1px solid;
+    max-width: 520px;
+    padding: 10px 20px;
+
+    &.dismissable {
+      padding-right: 40px;
+    }
+
+    &.resin-alert-success {
+      background-color: @resin-success-light;
+      border-color: @resin-success;
+
+      .close,
+      .resin-alert__title {
+        color: @resin-success;
+      }
+    }
+
+    &.resin-alert-danger {
+      background-color: @resin-danger-light;
+      border-color: @resin-danger;
+
+      .close,
+      .resin-alert__title {
+        color: @resin-danger;
+      }
+    }
+
+    &.resin-alert-warning {
+      background-color: @resin-warning-light;
+      border-color: @resin-warning;
+
+      .close,
+      .resin-alert__title {
+        color: @resin-warning;
+      }
+    }
+
+    &.resin-alert-info {
+      background-color: @resin-info-light;
+      border-color: @resin-info;
+
+      .close,
+      .resin-alert__title {
+        color: @resin-info;
+      }
+    }
+
+    .close {
+      right: 5px;
+      top: 5px;
+    }
+
+    .resin-alert__title {
+      font-weight: @font-weight-bold;
+      margin-right: 8px;
+    }
+  }
+
+  &.emphasized {
+    min-height: @resin-emphasized-height;
+    font-weight: @font-weight-bold;
+    padding: 16px 30px;
+    color: white;
+
+    &.resin-alert-success {
+      background-color: @resin-success;
+    }
+
+    &.resin-alert-danger {
+      background-color: @resin-danger;
+    }
+
+    &.resin-alert-warning {
+      background-color: @resin-warning;
+    }
+
+    &.resin-alert-info {
+      background-color: @resin-info;
+    }
+
+    .close {
+      right: 10px;
+      top: 12px;
+      opacity: 0.75;
+    }
+  }
+
+  &.fade {
+    opacity: 1;
+    transition: opacity 300ms ease-out;
+  }
+
+  &.fade.out {
+    opacity: 0;
+  }
+
+}

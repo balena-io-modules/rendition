@@ -1,0 +1,171 @@
+.resin-control {
+  .resin-bb;
+  .resin-t-body;
+
+  font-family: inherit;
+  font-size: @font-size-body;
+
+  textarea&,
+	input& {
+		width: 100%;
+		height: @resin-standard-height;
+		border-radius: @resin-border-radius;
+		border: solid 1px @gray-light;
+		padding: 5px 20px;
+    max-width: @single-col-width;
+    transition: box-shadow 125ms ease-in-out;
+    margin-bottom: 15px;
+
+    &::placeholder {
+      color: @gray;
+    }
+
+    &.emphasized {
+      padding: 13px 20px;
+      height: @resin-emphasized-height;
+    }
+
+    &.success {
+      border-color: @resin-success;
+    }
+
+    &.error {
+      border-color: @resin-danger;
+    }
+
+		&:focus {
+			outline: none;
+
+      &:not(.error):not(.success) {
+        border-color: @resin-primary;
+      }
+		}
+
+    &:hover:not(:disabled) {
+      box-shadow: 0 0px 3px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    &:disabled {
+      background-color: @gray-lightest;
+      border-color: @gray-lightest;
+    }
+	}
+
+  textarea& {
+    min-height: @resin-standard-height * 2;
+    padding-top: 15px;
+    resize: none;
+
+    &.emphasized {
+      min-height: @resin-emphasized-height * 2;
+      padding-top: 20px;
+    }
+  }
+
+  &.resin-control-btn {
+    display: inline-block;
+    background-image: none;
+    border-radius: @resin-border-radius;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: @font-weight-bold;
+    margin-bottom: 0;
+    padding: 0 20px;
+    text-align: center;
+    touch-action: manipulation;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    height: @resin-standard-height;
+    line-height: @resin-standard-height;
+    min-width: 140px;
+
+    a& {
+      text-decoration: none;
+    }
+
+    &.emphasized {
+      height: @resin-emphasized-height;
+      line-height: @resin-emphasized-height;
+      min-width: 200px;
+    }
+
+    &.resin-control-btn-primary {
+      color: white;
+      background-color: @resin-primary;
+
+      &:disabled,
+      &:hover {
+        background-color: @resin-primary-light;
+      }
+
+      &:active {
+        background-color: @resin-primary-dark;
+      }
+    }
+
+    &.resin-control-btn-secondary {
+      color: white;
+      background-color: @resin-secondary;
+
+      &:disabled,
+      &:hover {
+        background-color: @resin-secondary-light;
+      }
+
+      &:active {
+        background-color: @resin-secondary-dark;
+      }
+    }
+
+    &.resin-control-btn-dark {
+      color: white;
+      background-color: @gray-dark;
+
+      &:disabled,
+      &:hover {
+        background-color: @gray;
+      }
+
+      &:active {
+        background-color: @gray-darker;
+      }
+    }
+
+    &.resin-control-btn-light {
+      color: @gray-dark;
+      background-color: white;
+      border-color: @gray-light;
+
+      &:disabled,
+      &:hover {
+        border-color: @gray;
+      }
+
+      &:active {
+        color: white;
+        background-color: @gray-dark;
+      }
+    }
+
+    &.resin-control-btn-danger {
+      color: white;
+      background-color: @resin-danger;
+
+      &:disabled,
+      &:hover {
+        background-color: lighten(@resin-danger, 10%);
+      }
+
+      &:active {
+        background-color: darken(@resin-danger, 10%);
+      }
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+}

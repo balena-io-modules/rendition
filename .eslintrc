@@ -23,4 +23,7 @@
     "react/require-default-props": 0,
     "import/newline-after-import": 0,
   },
+  "globals": {
+    "jest": true
+  }
 }

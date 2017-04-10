@@ -1,4 +1,9 @@
+import Alert from './components/Alert';
 import Button from './components/Button';
 import Input from './components/Input';
 
-export { Button, Input };
+export {
+  Alert,
+  Button,
+  Input,
+};
