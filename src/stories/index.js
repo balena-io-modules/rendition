@@ -1,4 +1,5 @@
-import '../styles/main.less';
+import '../styles/storybook.less';
 
+import './Alert';
 import './Button';
 import './Input';

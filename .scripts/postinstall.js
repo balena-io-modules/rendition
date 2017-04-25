@@ -7,7 +7,9 @@
 const fs = require('fs');
 const path = require('path');
 
-if (process.env.NODE_ENV === 'dev') {
+// Only run this script if the module is being installed into
+// a "node_modules" folder.
+if (process.cwd().indexOf('node_modules') === -1) {
   process.exit();
 }
 
