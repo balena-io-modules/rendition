@@ -1,5 +1,5 @@
 import initStoryshots from 'storyshots';
 
-jest.mock('react-transition-group/CSSTransitionGroup');
+jest.mock('react-addons-css-transition-group');
 
 initStoryshots();

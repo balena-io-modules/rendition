@@ -1,5 +1,6 @@
-import '../styles/storybook.less';
+import '../styles/storybook.scss';
 
 import './Alert';
 import './Button';
-import './Input';
+import './Form';
+import './Typography';
