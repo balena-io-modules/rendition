@@ -61,7 +61,7 @@ typings/
 .env
 
 # End of https://www.gitignore.io/api/node
- 
+
 # Numerous always-ignore extensions
 *.diff
 *.err
@@ -101,3 +101,4 @@ nbproject
 
 # Dist files
 dist
+.out

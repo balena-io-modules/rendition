@@ -10,13 +10,12 @@
   "scripts": {
     "prepublish": ". ./.scripts/prepublish.sh",
     "lint": "eslint src",
-    "lintfix": "eslint src --fix",
+    "lint:fix": "eslint src --fix",
     "test": "jest",
     "ci": "npm run lint && npm run test",
     "new-snaps": "jest -u",
     "storybook": "start-storybook -p 9010",
-    "publish-storybook": "bash .scripts/publish_storybook.sh",
-    "postinstall": "./.scripts/postinstall.js"
+    "publish-storybook": "build-storybook -o .out && gh-pages -d .out"
   },
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "3.3.0",
@@ -35,6 +34,7 @@
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.2.2",
     "eslint-plugin-react": "^6.3.0",
+    "gh-pages": "1.0.0",
     "git-url-parse": "^6.0.1",
     "jest": "18.1.0",
     "node-sass": "4.5.2",
