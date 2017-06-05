@@ -1,0 +1,7 @@
+.btn-tertiary {
+  @include button-variant($btn-tertiary-color, $btn-tertiary-bg, $btn-tertiary-border);
+}
+
+.btn-outline-tertiary {
+  @include button-outline-variant($btn-tertiary-border, $btn-tertiary-color);
+}

@@ -1,0 +1,42 @@
+// https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+
+// GRAYSCALE
+$gray-dark: #45484e;
+$gray: #4d5057;
+$gray-light: #7e8085;
+$gray-lighter: #d3d7dc;
+$gray-lightest: #ebeff4;
+
+// COLORS
+$white:  #fff;
+$black:  #000;
+$red:    #ff423d;
+$orange: #fca321;
+$yellow: #ffd500;
+$green:  #76c950;
+$blue:   #2297de;
+$teal:   #1496e1;
+
+// BOOTSTRAP SEMANTICS
+$brand-primary: $blue;
+
+// CUSTOM SEMANTICS
+$brand-secondary: $yellow;
+$brand-tertiary: $gray-dark;
+
+// FONTS
+$font-family-sans-serif: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+
+// BUTTONS
+$btn-secondary-color: $white;
+$btn-secondary-bg: $brand-secondary;
+$btn-secondary-border: $brand-secondary;
+
+$btn-tertiary-color: $white;
+$btn-tertiary-bg: $gray-dark;
+$btn-tertiary-border: $gray-light;
+
+// BADGES
+
+$badge-padding-y: .5em;
+$badge-padding-x: .8em;

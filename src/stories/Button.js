@@ -2,50 +2,61 @@ import React from 'react';
 import { storiesOf } from '@kadira/storybook';
 import { Button } from '../index';
 
-const unicorn = 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/DomenichinounicornPalFarnese.jpg/1920px-DomenichinounicornPalFarnese.jpg';
-
 storiesOf('Button', module)
 .addWithInfo('Standard', () => {
   return (
-    <div>
-      <Button btnStyle="primary">primary</Button>
-      <Button btnStyle="secondary">secondary</Button>
-      <Button btnStyle="dark">dark</Button>
-      <Button btnStyle="light">light</Button>
-      <Button btnStyle="danger">danger</Button>
+    <div className="buttonContainer">
+      <Button color="primary">primary</Button>
+      <Button color="secondary">secondary</Button>
+      <Button color="tertiary">tertiary</Button>
+      <Button color="success">success</Button>
+      <Button color="info">info</Button>
+      <Button color="warning">warning</Button>
+      <Button color="danger">danger</Button>
     </div>
   );
 })
-.addWithInfo('Emphasized', () => {
+.addWithInfo('Outline', () => {
   return (
-    <div>
-      <Button emphasized btnStyle="primary">primary</Button>
-      <Button emphasized btnStyle="secondary">secondary</Button>
-      <Button emphasized btnStyle="dark">dark</Button>
-      <Button emphasized btnStyle="light">light</Button>
-      <Button emphasized btnStyle="danger">danger</Button>
+    <div className="buttonContainer">
+      <Button outline color="primary">primary</Button>
+      <Button outline color="secondary">secondary</Button>
+      <Button outline color="tertiary">tertiary</Button>
+      <Button outline color="success">success</Button>
+      <Button outline color="info">info</Button>
+      <Button outline color="warning">warning</Button>
+      <Button outline color="danger">danger</Button>
     </div>
   );
 })
 .addWithInfo('Disabled', () => {
   return (
-    <div>
-      <Button disabled btnStyle="primary">primary</Button>
-      <Button disabled btnStyle="secondary">secondary</Button>
-      <Button disabled btnStyle="dark">dark</Button>
-      <Button disabled btnStyle="light">light</Button>
-      <Button disabled btnStyle="danger">danger</Button>
+    <div className="buttonContainer">
+      <Button disabled color="primary">primary</Button>
+      <Button disabled color="secondary">secondary</Button>
+      <Button disabled color="tertiary">tertiary</Button>
+      <Button disabled color="success">success</Button>
+      <Button disabled color="info">info</Button>
+      <Button disabled color="warning">warning</Button>
+      <Button disabled color="danger">danger</Button>
     </div>
   );
 })
-.addWithInfo('Link', () => {
+.addWithInfo('Large', () => {
   return (
-    <div>
-      <Button target="_blank" href={unicorn} btnStyle="primary">primary</Button>
-      <Button target="_blank" href={unicorn} btnStyle="secondary">secondary</Button>
-      <Button target="_blank" href={unicorn} btnStyle="dark">dark</Button>
-      <Button target="_blank" href={unicorn} btnStyle="light">light</Button>
-      <Button target="_blank" href={unicorn} btnStyle="danger">danger</Button>
+    <div className="buttonContainer">
+      <Button color="primary" size="lg">Large Button</Button>
+      <Button color="secondary" size="lg">Large Button</Button>
+      <Button color="tertiary" size="lg">Large Button</Button>
+    </div>
+  );
+})
+.addWithInfo('Small', () => {
+  return (
+    <div className="buttonContainer">
+      <Button color="primary" size="sm">Small Button</Button>
+      <Button color="secondary" size="sm">Small Button</Button>
+      <Button color="tertiary" size="sm">Small Button</Button>
     </div>
   );
 });

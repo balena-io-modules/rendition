@@ -1,39 +1,95 @@
 import React from 'react';
 import { storiesOf } from '@kadira/storybook';
-import { Alert } from '../index';
+import { Alert, UncontrolledAlert } from '../index';
 
 storiesOf('Alert', module)
 .addWithInfo('Standard', () => {
   return (
     <div>
-      <p>Static</p>
-      <Alert type="success" title="Great!">This is a success</Alert>
-      <Alert type="danger" title="Darn!">This is an alert message</Alert>
-      <Alert type="warning" title="Warning!">This is an alert message</Alert>
-      <Alert type="info" title="Hey!">This is a general resin announcement</Alert>
-
-      <p>Dismissable</p>
-      <Alert dismissable type="success" title="Great!">This is a success</Alert>
-      <Alert dismissable type="danger" title="Darn!">This is an alert message</Alert>
-      <Alert dismissable type="warning" title="Warning!">This is an alert message</Alert>
-      <Alert dismissable type="info" title="Hey!">This is a general resin announcement</Alert>
+      <Alert color="success">
+        <strong>Well done!</strong> You successfully read this important alert message.
+      </Alert>
+      <Alert color="info">
+        <strong>Heads up!</strong> This alert needs your attention, but not super important.
+      </Alert>
+      <Alert color="warning">
+        <strong>Warning!</strong> Better check yourself, you are not looking too good.
+      </Alert>
+      <Alert color="danger">
+        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+      </Alert>
     </div>
   );
 })
-.addWithInfo('Emphasized', () => {
+.addWithInfo('Inverse', () => {
   return (
     <div>
-      <p>Static</p>
-      <Alert emphasized type="success">Great! This is a success</Alert>
-      <Alert emphasized type="danger">Darn! This is an alert message</Alert>
-      <Alert emphasized type="warning">Warning! This is an alert message</Alert>
-      <Alert emphasized type="info">Hey! This is a general resin announcement</Alert>
-
-      <p>Dismissable</p>
-      <Alert emphasized dismissable type="success">Great! This is a success</Alert>
-      <Alert emphasized dismissable type="danger">Darn! This is an alert message</Alert>
-      <Alert emphasized dismissable type="warning">Warning! This is an alert message</Alert>
-      <Alert emphasized dismissable type="info">Hey! This is a general resin announcement</Alert>
+      <Alert inverse color="success">
+        <strong>Well done!</strong> You successfully read this important alert message.
+      </Alert>
+      <Alert inverse color="info">
+        <strong>Heads up!</strong> This alert needs your attention, but not super important.
+      </Alert>
+      <Alert inverse color="warning">
+        <strong>Warning!</strong> Better check yourself, you are not looking too good.
+      </Alert>
+      <Alert inverse color="danger">
+        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+      </Alert>
+    </div>
+  );
+})
+.addWithInfo('Dismissable', () => {
+  return (
+    <div>
+      <UncontrolledAlert inverse color="success">
+        <strong>Well done!</strong> You successfully read this important alert message.
+      </UncontrolledAlert>
+      <UncontrolledAlert color="danger">
+        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+      </UncontrolledAlert>
+      <UncontrolledAlert inverse color="warning">
+        <strong>Warning!</strong> Better check yourself, you are not looking too good.
+      </UncontrolledAlert>
+      <UncontrolledAlert color="info">
+        <strong>Heads up!</strong> This alert needs your attention, but not super important.
+      </UncontrolledAlert>
+    </div>
+  );
+})
+.addWithInfo('Small', () => {
+  return (
+    <div>
+      <UncontrolledAlert inverse size="sm" color="success">
+        <strong>Well done!</strong> You successfully read this important alert message.
+      </UncontrolledAlert>
+      <UncontrolledAlert size="sm" color="danger">
+        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+      </UncontrolledAlert>
+      <UncontrolledAlert inverse size="sm" color="warning">
+        <strong>Warning!</strong> Better check yourself, you are not looking too good.
+      </UncontrolledAlert>
+      <UncontrolledAlert size="sm" color="info">
+        <strong>Heads up!</strong> This alert needs your attention, but not super important.
+      </UncontrolledAlert>
+    </div>
+  );
+})
+.addWithInfo('Large', () => {
+  return (
+    <div>
+      <UncontrolledAlert inverse size="lg" color="success">
+        <strong>Well done!</strong> You successfully read this important alert message.
+      </UncontrolledAlert>
+      <UncontrolledAlert size="lg" color="danger">
+        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+      </UncontrolledAlert>
+      <UncontrolledAlert inverse size="lg" color="warning">
+        <strong>Warning!</strong> Better check yourself, you are not looking too good.
+      </UncontrolledAlert>
+      <UncontrolledAlert size="lg" color="info">
+        <strong>Heads up!</strong> This alert needs your attention, but not super important.
+      </UncontrolledAlert>
     </div>
   );
 });
