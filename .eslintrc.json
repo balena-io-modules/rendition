@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "no-unused-expressions": 1
+  },
+  "extends": ["standard", "standard-preact"]
+}

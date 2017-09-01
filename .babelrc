@@ -1,3 +1,4 @@
 {
-  "presets": ["react-app"]
+  "presets": ["es2015", "stage-3"],
+  "plugins": [["transform-react-jsx", { "pragma": "h" }]]
 }

@@ -1,21 +1,21 @@
-// load the default config generator.
-const genDefaultConfig = require('@kadira/storybook/dist/server/config/defaults/webpack.config.js');
-
-module.exports = function(config, env) {
-  config = genDefaultConfig(config, env);
-
-  // Add the sass loader
-  config.module.loaders.push(
-    {
-      test: /\.scss$/,
-      loaders: [
-      'style-loader',
-      'css-loader',
-      'resolve-url-loader',
-      'sass-loader?sourceMap'
-      ]
+module.exports = {
+  name: 'client',
+  target: 'web',
+  resolve: {
+    extensions: ['', '.js', 'jsx'],
+    alias: {
+      react: 'preact-compat',
+      'react-dom': 'preact-compat'
     }
-  );
-
-  return config;
-};
+  },
+  devtool: 'source-map',
+  module: {
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      }
+    ]
+  }
+}

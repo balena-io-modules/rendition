@@ -1,6 +1,3 @@
-import '../styles/storybook.scss';
+import './swatches'
 
-import './Alert';
-import './Button';
-import './Form';
-import './Typography';
+import './button'

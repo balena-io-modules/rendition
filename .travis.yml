@@ -6,8 +6,6 @@ notifications:
   email:
     on_success: never
 
-script: npm run ci
-
 after_success:
   - if [[ ${TRAVIS_PULL_REQUEST} == "false" && ${TRAVIS_BRANCH} == "master" ]]; then
       npm run publish-storybook;
