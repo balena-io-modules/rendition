@@ -1,13 +1,11 @@
 import { h } from 'preact'
-import { storiesOf } from '@kadira/storybook'
-import { Flex, Box } from 'rebass'
+import { storiesOf } from '@storybook/react'
+import { Flex, Box } from '../'
 import { colors } from '../theme'
+import { withTheme } from 'styled-components'
 
-const Swatch = ({ style, border }) => {
-  const { main, light, dark } = colors[style]
-
-  console.log('dark ' + style, dark)
-  console.log('light ' + style, light)
+const S = ({ style, border, theme }) => {
+  const { main, light, dark } = theme.colors[style]
 
   return (
     <Box
@@ -27,6 +25,8 @@ const Swatch = ({ style, border }) => {
     </Box>
   )
 }
+
+const Swatch = withTheme(S);
 
 storiesOf('Swatches', module)
   .addWithInfo('Primary', () => {

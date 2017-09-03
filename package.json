@@ -7,14 +7,17 @@
     "url": "https://github.com/resin-io-modules/resin-components"
   },
   "license": "MIT",
+  "main": "./src/index.js",
   "scripts": {
     "storybook": "start-storybook -p 6006",
+    "watch": "babel src -w -d dist",
     "build": "babel src -d dist",
     "test": "echo \"No tests are defined yet\" && exit 0"
   },
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "^3.4.0",
-    "@kadira/storybook": "^2.35.3",
+    "@storybook/addon-info": "3.2.9",
+    "@storybook/react": "3.2.8",
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^7.2.3",
@@ -34,9 +37,12 @@
     "react-dom": "^15.6.1"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
     "color": "^2.0.0",
+    "grid-styled": "2.0.0-10",
     "preact": "^7.2.0",
-    "rebass": "^1.0.4"
+    "recompose": "0.25.0",
+    "styled-grid": "1.0.0-beta.1",
+    "styled-system": "1.0.0-13",
+    "tag-hoc": "1.0.0"
   }
 }

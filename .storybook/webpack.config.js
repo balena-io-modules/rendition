@@ -2,7 +2,7 @@ module.exports = {
   name: 'client',
   target: 'web',
   resolve: {
-    extensions: ['', '.js', 'jsx'],
+    extensions: ['.js', 'jsx'],
     alias: {
       react: 'preact-compat',
       'react-dom': 'preact-compat'
@@ -10,7 +10,7 @@ module.exports = {
   },
   devtool: 'source-map',
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
