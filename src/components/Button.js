@@ -5,6 +5,7 @@ import { compose, withProps } from 'recompose'
 import get from 'lodash/get'
 
 const Base = styled.button`
+  padding-top: 1px;
   font-family: inherit;
   display: inline-block;
   font-weight: ${props => bold(props)};
@@ -13,6 +14,7 @@ const Base = styled.button`
   text-decoration: none;
   border: 0;
   margin: 0;
+  min-width: 135px;
   vertical-align: middle;
   font-size: inherit;
   line-height: 1.1;
@@ -22,6 +24,8 @@ const Base = styled.button`
   color: ${props => props.color};
   border-color: ${props => props.borderColor || props.color};
   border: ${props => props.border};
+  height: ${props =>
+    px(props.emphasized ? props.theme.space[5] : props.theme.space[4])};
 
   &:hover,
   &:focus,
@@ -34,13 +38,16 @@ const Base = styled.button`
   '&:disabled': {
     opacity: 1/4;
   }
+
+  svg {
+    transform: translateY(-2px);
+  }
 `
 
 const emphasized = withProps(props => {
   if (props.emphasized) {
     return {
-      px: 5,
-      py: 2
+      px: 5
     }
   }
 })
@@ -53,8 +60,8 @@ const setDefaultProps = withProps(props => {
     {
       bg: 'transparent',
       color: color,
-      px: 4,
-      py: 2,
+      px: 16,
+      pb: 0,
       border: '1px solid',
       borderColor: lighten(color),
       active: {

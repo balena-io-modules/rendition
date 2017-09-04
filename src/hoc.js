@@ -33,12 +33,12 @@ const propTypes = {
 }
 
 const withStyledSystem = child => {
+  const Base = styled(child)`${space} ${width} ${fontSize} ${color};`
+
+  Base.displayName = getDisplayName(child)
+  Base.propTypes = propTypes
+
   return props => {
-    const Base = styled(child)`${space} ${width} ${fontSize} ${color};`
-
-    Base.displayName = getDisplayName(child)
-    Base.propTypes = propTypes
-
     return <Base {...props} />
   }
 }
