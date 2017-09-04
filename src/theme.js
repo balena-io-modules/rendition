@@ -1,24 +1,9 @@
-import Color from 'color'
-
-const lighten = color =>
-  Color(color)
-    .fade(0.3)
-    .string()
-
-const darken = color =>
-  Color(color)
-    .darken(0.2)
-    .string()
-
-const fade = color =>
-  Color(color)
-    .fade(0.95)
-    .string()
-
-const blacken = color =>
-  Color(color)
-    .darken(0.6)
-    .string()
+import {
+  lighten,
+  darken,
+  blacken,
+  fade
+} from './utils'
 
 const primary = '#2297DE'
 const secondary = '#FFC523'
@@ -30,7 +15,7 @@ const warning = '#FCA321'
 const success = '#76C950'
 const info = '#1496E1'
 
-export const colors = {
+const colors = {
   primary: {
     main: primary,
     light: lighten(primary),
@@ -78,4 +63,54 @@ export const colors = {
     main: '#3c3e42',
     light: '#8f9297'
   }
+}
+
+export const breakpoints = [
+  32,
+  48,
+  64,
+  80
+]
+
+export const space = [
+  0,
+  4,
+  8,
+  16,
+  32,
+  64,
+  128,
+]
+
+export const fontSizes = [
+  12,
+  14,
+  16,
+  20,
+  24,
+  32,
+  48,
+  64,
+  72,
+  96
+]
+
+export const weights = [
+  400,
+  700
+]
+
+export const radius = 4
+export const font = `Roboto, Arial, sans-serif`
+export const monospace = `'Ubuntu Mono Web', 'Courier New', monospace`
+
+export default {
+  breakpoints,
+  space,
+  fontSizes,
+  weights,
+  font,
+  monospace,
+  colors,
+  radius,
 }

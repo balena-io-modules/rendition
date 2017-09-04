@@ -1,3 +1,0 @@
-import './swatches'
-
-import './button'

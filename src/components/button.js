@@ -1,74 +1,113 @@
-import styled from 'styled-components'
 import { h } from 'preact'
-import { Button } from 'rebass'
-import classNames from 'classnames'
-import { colors } from '../theme'
+import styled, { withTheme } from 'styled-components'
+import hoc from '../hoc'
+import { bold, px } from '../utils'
+import { compose, withProps } from 'recompose'
+import get from 'lodash/get'
+import { darken, lighten } from '../utils'
 
-const BaseBtn = styled(Button)`
-  height: 32px;
-  border-radius: 3px;
+const Base = styled.button`
+  font-family: inherit;
+  display: inline-block;
+  font-weight: ${ props => bold(props) };
+  border-radius: ${ props => px(props.theme.radius) };
+  appearance: none;
+  text-decoration: none;
+  border: 0;
+  margin: 0;
+  vertical-align: middle;
   font-size: inherit;
-  min-width: 135px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 1px;
-  padding-bottom: 0;
+  line-height: 1.1;
+  text-align: center;
   cursor: pointer;
-
-  &.emphasized {
-    height: 42px;
-    min-width: 200px;
-  }
-`
-
-const DefaultBtn = styled(BaseBtn)`
-  border: solid 1px #9b9b9b;
-  background: none;
-  color: ${colors.text.main};
+  background: ${ props => props.bg };
+  color: ${ props => props.color };
+  border-color: ${ props => props.borderColor || props.color };
+  border: ${ props => props.border };
 
   &:hover,
   &:focus,
   &:active {
-    background-color: rgba(0, 0, 0, 0.05);
-    box-shadow: none;
+    color: ${ props => props.active.color };
+    background-color: ${ props => props.active.bg };
+    border: ${ props => props.active.border };
+  }
+
+  '&:disabled': {
+    opacity: 1/4
   }
 `
 
-const buttonMaker = ({ main, dark }, darkText = false) => {
-  const textColor = darkText ? colors.text.main : 'white'
-  return styled(BaseBtn)`
-    border: 0;
-    background: ${main};
-    color: ${textColor};
-
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: ${dark};
-      box-shadow: none;
+const emphasized = withProps(props => {
+  if (props.emphasized) {
+    return {
+      px: 5,
+      py: 2
     }
-  `
-}
-
-const PrimaryBtn = buttonMaker(colors.primary)
-const SecondaryBtn = buttonMaker(colors.secondary)
-const TertiaryBtn = buttonMaker(colors.tertiary)
-
-const ResinBtn = props => {
-  const btnClass = classNames(props.className, {
-    emphasized: !!props.emphasized
-  })
-  console.log(btnClass)
-  if (props.primary) {
-    return <PrimaryBtn {...props} className={btnClass} />
   }
-  if (props.secondary) {
-    return <SecondaryBtn {...props} className={btnClass} />
-  }
-  if (props.tertiary) {
-    return <TertiaryBtn {...props} className={btnClass} />
-  }
-  return <DefaultBtn {...props} className={btnClass} />
-}
+})
 
-export default ResinBtn
+
+const setDefaultProps = withProps((props) => {
+  // set defaults
+  // always allow override with provided props
+  const color = props.color || props.theme.colors.text.main
+  return Object.assign({
+    bg: 'transparent',
+    color: color,
+    px: 4,
+    py: 2,
+    border: '1px solid',
+    borderColor: lighten(color),
+    active: {
+      color: '#fff',
+      bg: color
+    }
+  }, props)
+})
+
+const getType = withProps(props => {
+  // get primary, tertiary, secondary and set as props.type
+  const type = Object.keys(props).find(b => Object.keys(props.theme.colors).find(k => k === b))
+  props.type = type;
+  return props;
+})
+
+const setTypeProps = withProps(({ type, theme }) => {
+  // set type colors
+  if (!type) return;
+
+  return {
+    color: '#fff',
+    bg: get(theme.colors[type], 'main'),
+    active: {
+      color: '#fff',
+      bg: get(theme.colors[type], 'dark')
+    }
+  }
+})
+
+const outline = withProps(({ outline, color, bg, border, active }) => {
+  // get primary, tertiary, secondary and set as props.type
+  if (!outline) return;
+
+  return {
+    bg: color,
+    color: bg !== 'transparent' ? bg : '#fff',
+    border:  border || '1px solid',
+    active: {
+      color: active.bg,
+      bg: active.color
+    }
+  }
+})
+
+export default compose(
+  withTheme,
+  setDefaultProps,
+  getType,
+  setTypeProps,
+  emphasized,
+  outline,
+  hoc
+)(Base)
