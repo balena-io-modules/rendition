@@ -23,4 +23,14 @@ export const blacken = color =>
 
 export const bold = props => get(props.theme, 'weights.1')
 
-export const px = n => typeof n === 'number' ? n + 'px' : n
+export const px = n => (typeof n === 'number' ? n + 'px' : n)
+
+export const randomString = (length = 16) => {
+  let text = ''
+  const possible =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+  for (let i = 0; i < length; i++) {
+    text += possible.charAt(Math.floor(Math.random() * possible.length))
+  }
+  return text
+}

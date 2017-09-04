@@ -5,77 +5,89 @@ import { bold, px } from '../utils'
 import { compose, withProps } from 'recompose'
 import get from 'lodash/get'
 import { darken, lighten } from '../utils'
+import { defaultControlHeight, emphasizedControlHeight } from '../theme'
 
 const Base = styled.button`
+  padding-top: 1px;
   font-family: inherit;
   display: inline-block;
-  font-weight: ${ props => bold(props) };
-  border-radius: ${ props => px(props.theme.radius) };
+  font-weight: ${props => bold(props)};
+  border-radius: ${props => px(props.theme.radius)};
   appearance: none;
   text-decoration: none;
   border: 0;
   margin: 0;
+  min-width: 135px;
   vertical-align: middle;
   font-size: inherit;
   line-height: 1.1;
   text-align: center;
   cursor: pointer;
-  background: ${ props => props.bg };
-  color: ${ props => props.color };
-  border-color: ${ props => props.borderColor || props.color };
-  border: ${ props => props.border };
+  background: ${props => props.bg};
+  color: ${props => props.color};
+  border-color: ${props => props.borderColor || props.color};
+  border: ${props => props.border};
+  height: ${props =>
+    px(props.emphasized ? emphasizedControlHeight : defaultControlHeight)};
 
   &:hover,
   &:focus,
   &:active {
-    color: ${ props => props.active.color };
-    background-color: ${ props => props.active.bg };
-    border: ${ props => props.active.border };
+    color: ${props => props.active.color};
+    background-color: ${props => props.active.bg};
+    border: ${props => props.active.border};
   }
 
   '&:disabled': {
-    opacity: 1/4
+    opacity: 1/4;
+  }
+
+  svg {
+    transform: translateY(-2px);
   }
 `
 
 const emphasized = withProps(props => {
   if (props.emphasized) {
     return {
-      px: 5,
-      py: 2
+      px: 5
     }
   }
 })
 
-
-const setDefaultProps = withProps((props) => {
+const setDefaultProps = withProps(props => {
   // set defaults
   // always allow override with provided props
   const color = props.color || props.theme.colors.text.main
-  return Object.assign({
-    bg: 'transparent',
-    color: color,
-    px: 4,
-    py: 2,
-    border: '1px solid',
-    borderColor: lighten(color),
-    active: {
-      color: '#fff',
-      bg: color
-    }
-  }, props)
+  return Object.assign(
+    {
+      bg: 'transparent',
+      color: color,
+      px: 16,
+      pb: 0,
+      border: '1px solid',
+      borderColor: lighten(color),
+      active: {
+        color: '#fff',
+        bg: color
+      }
+    },
+    props
+  )
 })
 
 const getType = withProps(props => {
   // get primary, tertiary, secondary and set as props.type
-  const type = Object.keys(props).find(b => Object.keys(props.theme.colors).find(k => k === b))
-  props.type = type;
-  return props;
+  const type = Object.keys(props).find(b =>
+    Object.keys(props.theme.colors).find(k => k === b)
+  )
+  props.type = type
+  return props
 })
 
 const setTypeProps = withProps(({ type, theme }) => {
   // set type colors
-  if (!type) return;
+  if (!type) return
 
   return {
     color: '#fff',
@@ -89,12 +101,12 @@ const setTypeProps = withProps(({ type, theme }) => {
 
 const outline = withProps(({ outline, color, bg, border, active }) => {
   // get primary, tertiary, secondary and set as props.type
-  if (!outline) return;
+  if (!outline) return
 
   return {
     bg: color,
     color: bg !== 'transparent' ? bg : '#fff',
-    border:  border || '1px solid',
+    border: border || '1px solid',
     active: {
       color: active.bg,
       bg: active.color
