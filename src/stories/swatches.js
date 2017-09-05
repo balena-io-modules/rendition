@@ -1,7 +1,6 @@
 import { h } from 'preact'
 import { storiesOf } from '@storybook/react'
 import { Flex, Box } from '../'
-import { colors } from '../theme'
 import { withTheme } from 'styled-components'
 
 const S = ({ style, border, theme }) => {
@@ -26,7 +25,7 @@ const S = ({ style, border, theme }) => {
   )
 }
 
-const Swatch = withTheme(S);
+const Swatch = withTheme(S)
 
 storiesOf('Swatches', module)
   .addWithInfo('Primary', () => {

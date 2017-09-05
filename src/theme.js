@@ -1,9 +1,4 @@
-import {
-  lighten,
-  darken,
-  blacken,
-  fade
-} from './utils'
+import { lighten, darken, blacken, fade } from './utils'
 
 const primary = '#2297DE'
 const secondary = '#FFC523'
@@ -62,43 +57,32 @@ const colors = {
   text: {
     main: '#3c3e42',
     light: '#8f9297'
+  },
+
+  statusIdle: {
+    main: '#89c683'
+  },
+  statusConfiguring: {
+    main: '#ffb25e'
+  },
+  statusUpdating: {
+    main: '#7ccdfd'
+  },
+  statusPostProvisioning: {
+    main: '#aa96d5'
+  },
+  statusOffline: {
+    main: '#fd7c7c'
   }
 }
 
-export const breakpoints = [
-  32,
-  48,
-  64,
-  80
-]
+export const breakpoints = [32, 48, 64, 80]
 
-export const space = [
-  0,
-  4,
-  8,
-  16,
-  32,
-  64,
-  128,
-]
+export const space = [0, 4, 8, 16, 32, 64, 128]
 
-export const fontSizes = [
-  12,
-  14,
-  16,
-  20,
-  24,
-  32,
-  48,
-  64,
-  72,
-  96
-]
+export const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 72, 96]
 
-export const weights = [
-  400,
-  700
-]
+export const weights = [400, 700]
 
 export const radius = 4
 export const font = `Roboto, Arial, sans-serif`
@@ -112,5 +96,5 @@ export default {
   font,
   monospace,
   colors,
-  radius,
+  radius
 }
