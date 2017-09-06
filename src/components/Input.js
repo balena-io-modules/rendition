@@ -2,12 +2,7 @@ import { h } from 'preact'
 import styled, { withTheme } from 'styled-components'
 import hoc from '../hoc'
 import { px } from '../utils'
-import {
-  colors,
-  radius,
-  defaultControlHeight,
-  emphasizedControlHeight
-} from '../theme'
+import { radius, defaultControlHeight, emphasizedControlHeight } from '../theme'
 import { compose } from 'recompose'
 
 const Base = styled.input`
@@ -15,7 +10,7 @@ const Base = styled.input`
   height: ${props =>
     px(props.emphasized ? emphasizedControlHeight : defaultControlHeight)};
   font-size: inherit;
-  border: 1px solid ${colors.gray.main};
+  border: 1px solid ${props => props.theme.colors.gray.main};
   padding: 0px 16px;
 
   &:hover {
@@ -23,19 +18,19 @@ const Base = styled.input`
   }
   &::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
-    color: ${colors.gray.main};
+    color: ${props => props.theme.colors.gray.main};
   }
   &::-moz-placeholder {
     /* Firefox 19+ */
-    color: ${colors.gray.main};
+    color: ${props => props.theme.colors.gray.main};
   }
   &:-ms-input-placeholder {
     /* IE 10+ */
-    color: ${colors.gray.main};
+    color: ${props => props.theme.colors.gray.main};
   }
   &:-moz-placeholder {
     /* Firefox 18- */
-    color: ${colors.gray.main};
+    color: ${props => props.theme.colors.gray.main};
   }
 `
 

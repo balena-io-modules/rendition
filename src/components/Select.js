@@ -2,12 +2,7 @@ import { h } from 'preact'
 import styled, { withTheme } from 'styled-components'
 import hoc from '../hoc'
 import { px } from '../utils'
-import {
-  colors,
-  radius,
-  defaultControlHeight,
-  emphasizedControlHeight
-} from '../theme'
+import { radius, defaultControlHeight, emphasizedControlHeight } from '../theme'
 import { compose, withProps } from 'recompose'
 
 const Base = styled.select`
@@ -15,7 +10,7 @@ const Base = styled.select`
   height: ${props =>
     px(props.emphasized ? emphasizedControlHeight : defaultControlHeight)};
   font-size: inherit;
-  border: 1px solid ${colors.gray.main};
+  border: 1px solid ${props => props.theme.colors.gray.main};
   padding-top: 0px;
   padding-bottom: 0px;
   padding-left: 16px;
@@ -41,7 +36,7 @@ const Wrapper = styled.span`
     height: 0;
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
-    border-top: 5px solid ${colors.gray.dark};
+    border-top: 5px solid ${props => props.theme.colors.gray.dark};
 
     position: absolute;
     right: 16px;

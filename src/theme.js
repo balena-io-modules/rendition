@@ -10,7 +10,7 @@ const warning = '#FCA321'
 const success = '#76C950'
 const info = '#1496E1'
 
-export const colors = {
+const colors = {
   primary: {
     main: primary,
     light: lighten(primary),
