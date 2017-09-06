@@ -2,13 +2,13 @@ import { h } from 'preact'
 import styled, { withTheme } from 'styled-components'
 import hoc from '../hoc'
 import { px } from '../utils'
-import { radius, defaultControlHeight, emphasizedControlHeight } from '../theme'
+import { radius } from '../theme'
 import { compose } from 'recompose'
 
 const Base = styled.input`
   border-radius: ${px(radius)};
   height: ${props =>
-    px(props.emphasized ? emphasizedControlHeight : defaultControlHeight)};
+    px(props.emphasized ? props.theme.space[5] : props.theme.space[4])};
   font-size: inherit;
   border: 1px solid ${props => props.theme.colors.gray.main};
   padding: 0px 16px;

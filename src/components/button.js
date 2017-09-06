@@ -5,7 +5,6 @@ import { bold, px } from '../utils'
 import { compose, withProps } from 'recompose'
 import get from 'lodash/get'
 import { darken, lighten } from '../utils'
-import { defaultControlHeight, emphasizedControlHeight } from '../theme'
 
 const Base = styled.button`
   padding-top: 1px;
@@ -28,7 +27,7 @@ const Base = styled.button`
   border-color: ${props => props.borderColor || props.color};
   border: ${props => props.border};
   height: ${props =>
-    px(props.emphasized ? emphasizedControlHeight : defaultControlHeight)};
+    px(props.emphasized ? props.theme.space[5] : props.theme.space[4])};
 
   &:hover,
   &:focus,

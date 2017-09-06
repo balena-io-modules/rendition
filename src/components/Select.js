@@ -2,19 +2,20 @@ import { h } from 'preact'
 import styled, { withTheme } from 'styled-components'
 import hoc from '../hoc'
 import { px } from '../utils'
-import { radius, defaultControlHeight, emphasizedControlHeight } from '../theme'
+import { radius } from '../theme'
 import { compose, withProps } from 'recompose'
 
 const Base = styled.select`
   border-radius: ${px(radius)};
   height: ${props =>
-    px(props.emphasized ? emphasizedControlHeight : defaultControlHeight)};
+    px(props.emphasized ? props.theme.space[5] : props.theme.space[4])};
   font-size: inherit;
   border: 1px solid ${props => props.theme.colors.gray.main};
   padding-top: 0px;
   padding-bottom: 0px;
   padding-left: 16px;
-  padding-right: 40px;
+  padding-right: ${props =>
+    px(props.emphasized ? props.theme.space[5] : props.theme.space[4])};
   background-color: white;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -40,24 +41,21 @@ const Wrapper = styled.span`
 
     position: absolute;
     right: 16px;
-    top: 16px;
+    top: ${props => px(props.emphasized ? 20 : 16)};
   }
 `
 
-const Component = ({ children, value, onChange, ...props }) => {
+const Component = ({ emphasized, children, value, onChange, ...props }) => {
   return (
-    <Wrapper {...props}>
-      <Base value={value} onChange={onChange} children={children} />
+    <Wrapper emphasized={emphasized} {...props}>
+      <Base
+        emphasized={emphasized}
+        value={value}
+        onChange={onChange}
+        children={children}
+      />
     </Wrapper>
   )
 }
 
-const emphasized = withProps(props => {
-  if (props.emphasized) {
-    return {
-      pr: 5
-    }
-  }
-})
-
-export default compose(withTheme, emphasized, hoc)(Component)
+export default compose(withTheme, hoc)(Component)
