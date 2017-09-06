@@ -1,4 +1,3 @@
-import { h } from 'preact'
 import styled, { withTheme } from 'styled-components'
 import hoc from '../hoc'
 import { bold, px, lighten } from '../utils'
