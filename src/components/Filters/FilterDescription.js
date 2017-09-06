@@ -1,6 +1,7 @@
 import { h } from 'preact'
 import styled from 'styled-components'
 import DeleteBtn from '../DeleteButton'
+import { Box, Flex } from '../Grid'
 
 const ButtonWrapper = styled.button`
   font-size: 13px;
@@ -14,11 +15,13 @@ const ButtonWrapper = styled.button`
 const FilterDescription = props => (
   <div>
     <ButtonWrapper onClick={!!props.edit && props.edit}>
-      {props.rule.name}{' '}
-      <strong style={{ marginLeft: 7, marginRight: 7 }}>
-        {props.rule.operator}
-      </strong>{' '}
-      <em>{props.rule.value}</em>
+      <Flex>
+        {props.rule.name}{' '}
+        <Box mx={7}>
+          <strong>{props.rule.operator}</strong>
+        </Box>{' '}
+        <em>{props.rule.value}</em>
+      </Flex>
     </ButtonWrapper>
 
     {!!props.delete && <DeleteBtn onClick={props.delete} />}
