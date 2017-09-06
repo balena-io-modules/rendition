@@ -59,6 +59,8 @@ const FilterWrapper = styled(Box)`position: relative;`
 
 const FilterInput = props => {
   const PineTypeInput = PineTypes[props.type].Edit
+  console.log(PineTypes)
+  console.log(props.type)
 
   return <PineTypeInput data={props.value} onChange={props.onChange} />
 }

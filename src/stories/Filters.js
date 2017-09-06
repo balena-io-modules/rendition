@@ -16,7 +16,7 @@ const schema = {
     type: 'Date Time'
   },
   'Integer field': {
-    type: 'Integer Time'
+    type: 'Integer'
   }
 }
 
