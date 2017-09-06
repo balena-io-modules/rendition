@@ -10,7 +10,7 @@ import ViewsMenu from './ViewsMenu'
 import Button from '../Button'
 import Modal from '../Modal'
 import Select from '../Select'
-import { Flex } from '../Grid'
+import { Flex, Box } from '../Grid'
 import * as utils from '../../utils'
 import SchemaSieve from './SchemaSieve'
 import PineTypes from '../PineTypes'
@@ -54,6 +54,8 @@ const SimpleSearchBox = styled.div`
     }
   }
 `
+
+const FilterWrapper = styled(Box)`position: relative;`
 
 const FilterInput = props => {
   const PineTypeInput = PineTypes[props.type].Edit
@@ -245,7 +247,7 @@ class Filters extends Component {
     const rules = this.props.rules || []
 
     return (
-      <div style={{ position: 'relative', marginBottom: 20 }}>
+      <FilterWrapper mb={3}>
         <Flex justify='space-between'>
           <Button primary onClick={() => this.toggleModal()}>
             <FaFilter style={{ marginRight: 10 }} />
@@ -316,7 +318,7 @@ class Filters extends Component {
             views={this.props.views || {}}
           />
         )}
-      </div>
+      </FilterWrapper>
     )
   }
 }
