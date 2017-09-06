@@ -23,4 +23,4 @@ export const blacken = color =>
 
 export const bold = props => get(props.theme, 'weights.1')
 
-export const px = n => typeof n === 'number' ? n + 'px' : n
+export const px = n => (typeof n === 'number' ? n + 'px' : n)

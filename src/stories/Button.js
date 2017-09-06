@@ -1,7 +1,6 @@
 import { h } from 'preact'
 import { storiesOf, action } from '@storybook/react'
-import styled, { injectGlobal, ThemeProvider } from 'styled-components'
-import theme from '../theme'
+import styled from 'styled-components'
 import Button from '../components/Button'
 
 const Container = styled.div`margin: 30px;`

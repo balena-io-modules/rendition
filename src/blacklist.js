@@ -45,5 +45,5 @@ export default [
   'position',
   'index',
   'direction',
-  'text',
+  'text'
 ]

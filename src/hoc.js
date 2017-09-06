@@ -2,29 +2,12 @@ import { h } from 'preact'
 import { compose } from 'recompose'
 import getDisplayName from 'recompose/getDisplayName'
 import styled from 'styled-components'
-import {
-  space,
-  width,
-  fontSize,
-  color
-} from 'styled-system'
-import {
-  arrayOf,
-  oneOfType,
-  number,
-  string
-} from 'prop-types'
+import { space, width, fontSize, color } from 'styled-system'
+import { arrayOf, oneOfType, number, string } from 'prop-types'
 import tag from 'tag-hoc'
 import blacklist from './blacklist'
 
-const prop = oneOfType([
-  number,
-  string,
-  arrayOf(oneOfType([
-    number,
-    string
-  ]))
-])
+const prop = oneOfType([number, string, arrayOf(oneOfType([number, string]))])
 
 const propTypes = {
   width: prop,
@@ -46,17 +29,12 @@ const propTypes = {
   pb: prop,
   pl: prop,
   px: prop,
-  py: prop,
+  py: prop
 }
 
-const withStyledSystem = (child) => {
-  return (props) => {
-    const Base = styled(child)`
-     ${space}
-     ${width}
-     ${fontSize}
-     ${color}
-    `
+const withStyledSystem = child => {
+  return props => {
+    const Base = styled(child)`${space} ${width} ${fontSize} ${color};`
 
     Base.displayName = getDisplayName(child)
     Base.propTypes = propTypes
@@ -65,6 +43,6 @@ const withStyledSystem = (child) => {
   }
 }
 
-const Tag = tag(blacklist);
+const Tag = tag(blacklist)
 
 export default compose(withStyledSystem, Tag)

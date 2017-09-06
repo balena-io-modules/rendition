@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components'
 import defaultTheme from '../theme'
 
 const Provider = ({ theme, ...props }) => {
-  return (<ThemeProvider theme={theme || defaultTheme} {...props} />);
+  return <ThemeProvider theme={theme || defaultTheme} {...props} />
 }
 
-export default Provider;
+export default Provider
