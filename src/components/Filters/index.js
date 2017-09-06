@@ -181,17 +181,16 @@ class Filters extends Component {
     this.props.setRules(updatedRules)
   }
 
-  handleEditChange (e, attribute) {
+  handleEditChange (value, attribute) {
     const update = this.state.edit
-    const value = e.target.value
     const inputModels = sieve.makeFilterInputs(this.props.schema)
 
     if (attribute === 'name' && update.name !== value) {
-      update.name = e.target.value
+      update.name = value
       update.operator = inputModels[value].availableOperators[0]
       update.value = ''
     } else {
-      update[attribute] = e.target.value
+      update[attribute] = value
     }
 
     this.setState({ edit: update })
@@ -284,14 +283,16 @@ class Filters extends Component {
                   <Select
                     mr={20}
                     value={this.state.edit.name}
-                    onChange={e => this.handleEditChange(e, 'name')}
+                    onChange={e =>
+                      this.handleEditChange(e.target.value, 'name')}
                   >
                     {map(inputModels, ({ name }) => <option>{name}</option>)}
                   </Select>
                   <Select
                     mr={20}
                     value={this.state.edit.operator}
-                    onChange={e => this.handleEditChange(e, 'operator')}
+                    onChange={e =>
+                      this.handleEditChange(e.target.value, 'operator')}
                   >
                     {map(
                       inputModels[this.state.edit.name].availableOperators,
@@ -300,7 +301,7 @@ class Filters extends Component {
                   </Select>
                   <FilterInput
                     value={this.state.edit.value}
-                    onChange={e => this.handleEditChange(e, 'value')}
+                    onChange={value => this.handleEditChange(value, 'value')}
                     type={inputModels[this.state.edit.name].type}
                   />
                 </Flex>
