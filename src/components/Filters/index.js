@@ -46,19 +46,7 @@ const SimpleSearchBox = styled.div`
     width: 100%;
     font-size: inherit;
     padding: 5px;
-    ::-webkit-input-placeholder {
-      font-style: italic;
-      color: #9b9b9b;
-    }
-    :-moz-placeholder {
-      font-style: italic;
-      color: #9b9b9b;
-    }
-    ::-moz-placeholder {
-      font-style: italic;
-      color: #9b9b9b;
-    }
-    :-ms-input-placeholder {
+    ::placeholder {
       font-style: italic;
       color: #9b9b9b;
     }
