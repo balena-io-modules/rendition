@@ -1,11 +1,13 @@
 import { h, Component } from 'preact'
-import _ from 'lodash'
+import cloneDeep from 'lodash/cloneDeep'
+import find from 'lodash/find'
+import assign from 'lodash/assign'
+import map from 'lodash/map'
 import styled from 'styled-components'
 import { FaFilter, FaSearch } from 'react-icons/lib/fa'
 import FilterSummary from './Summary'
 import ViewsMenu from './ViewsMenu'
 import Button from '../Button'
-import Input from '../Input'
 import Modal from '../Modal'
 import Select from '../Select'
 import { Flex } from '../Grid'
@@ -67,7 +69,7 @@ class Filters extends Component {
     this.generateFreshEdit = this.generateFreshEdit.bind(this)
 
     const { rules } = this.props
-    const existingRule = _.find(rules, { name: sieve.SIMPLE_SEARCH_NAME })
+    const existingRule = find(rules, { name: sieve.SIMPLE_SEARCH_NAME })
 
     this.state = {
       showModal: false,
@@ -78,7 +80,7 @@ class Filters extends Component {
 
   componentWillReceiveProps (nextProps) {
     const currentRules = nextProps.rules
-    const existing = _.find(currentRules, { name: sieve.SIMPLE_SEARCH_NAME })
+    const existing = find(currentRules, { name: sieve.SIMPLE_SEARCH_NAME })
     if (existing) {
       const { value } = existing
       if (value !== this.state.searchString) {
@@ -122,10 +124,10 @@ class Filters extends Component {
     const inputModels = sieve.makeFilterInputs(this.props.schema)
 
     if (!rule) {
-      rule = _.cloneDeep(this.state.edit)
+      rule = cloneDeep(this.state.edit)
     }
     const baseRule = inputModels[rule.name]
-    const newRule = _.assign(_.cloneDeep(baseRule), rule)
+    const newRule = assign(cloneDeep(baseRule), rule)
 
     if (newRule.id) {
       this.editFilterRule(newRule)
@@ -142,7 +144,7 @@ class Filters extends Component {
   updateSimpleSearch (val) {
     this.setState({ searchString: val })
     const { rules } = this.props
-    const existingRule = _.find(rules, { name: sieve.SIMPLE_SEARCH_NAME })
+    const existingRule = find(rules, { name: sieve.SIMPLE_SEARCH_NAME })
     if (existingRule) {
       existingRule.value = val
       this.editFilterRule(existingRule)
@@ -242,9 +244,6 @@ class Filters extends Component {
     const inputModels = sieve.makeFilterInputs(this.props.schema)
     const rules = this.props.rules || []
 
-    console.log(inputModels)
-    console.log(this.props)
-
     return (
       <div style={{ position: 'relative', marginBottom: 20 }}>
         <Flex justify='space-between'>
@@ -285,14 +284,14 @@ class Filters extends Component {
                     value={this.state.edit.name}
                     onChange={e => this.handleEditChange(e, 'name')}
                   >
-                    {_.map(inputModels, ({ name }) => <option>{name}</option>)}
+                    {map(inputModels, ({ name }) => <option>{name}</option>)}
                   </Select>
                   <Select
                     mr={20}
                     value={this.state.edit.operator}
                     onChange={e => this.handleEditChange(e, 'operator')}
                   >
-                    {_.map(
+                    {map(
                       inputModels[this.state.edit.name].availableOperators,
                       name => <option>{name}</option>
                     )}
