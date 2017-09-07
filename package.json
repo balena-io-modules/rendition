@@ -15,7 +15,8 @@
     "test": "npm run lint",
     "lint": "eslint src",
     "precommit": "lint-staged",
-    "prettify": "prettier-eslint --write \"src/**/*.js\""
+    "prettify": "prettier-eslint --write \"src/**/*.js\"",
+    "publish-storybook": "bash .scripts/publish_storybook.sh"
   },
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "^3.4.0",
@@ -35,6 +36,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.3.0",
     "eslint-plugin-standard": "^3.0.1",
+    "git-url-parse": "^7.0.0",
     "husky": "^0.14.3",
     "lint-staged": "^4.1.1",
     "preact-compat": "^3.14.1",
