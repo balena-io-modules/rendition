@@ -1,6 +1,6 @@
 {
   "name": "resin-components",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Resin Components Component",
   "repository": {
     "type": "git",
@@ -56,6 +56,10 @@
     "resin-device-status": "^1.1.0"
   },
   "lint-staged": {
-    "*.js": ["prettier-eslint --write", "npm run lint", "git add"]
+    "*.js": [
+      "prettier-eslint --write",
+      "npm run lint",
+      "git add"
+    ]
   }
 }
