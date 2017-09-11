@@ -73,12 +73,29 @@ const colors = {
   },
   statusOffline: {
     main: '#fd7c7c'
+  },
+
+  gray: {
+    light: '#f4f4f4',
+    main: '#c6c8c9',
+    dark: '#9f9f9f'
   }
 }
 
+const defaultControlHeight = 36
+const emphasizedControlHeight = 45
+
 export const breakpoints = [32, 48, 64, 80]
 
-export const space = [0, 4, 8, 16, 32, 64, 128]
+export const space = [
+  0,
+  4,
+  8,
+  16,
+  defaultControlHeight,
+  emphasizedControlHeight,
+  128
+]
 
 export const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 72, 96]
 

@@ -15,7 +15,7 @@ const S = ({ style, border, theme }) => {
       }}
       width={160}
       m={15}
-    >
+      >
       <Box style={{ height: 75, backgroundColor: main }} />
       <Flex style={{ height: 45 }}>
         <Box width={1 / 2} style={{ backgroundColor: light }} />
