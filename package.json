@@ -7,14 +7,14 @@
     "url": "https://github.com/resin-io-modules/resin-components"
   },
   "license": "MIT",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "watch": "babel src -w -d dist",
     "build": "babel src -d dist",
     "test": "npm run lint",
     "lint": "eslint src",
-    "precommit": "lint-staged",
+    "precommit": "lint-staged && npm run build",
     "prettify": "prettier-eslint --write \"src/**/*.js\"",
     "publish-storybook": "bash .scripts/publish_storybook.sh"
   },
@@ -56,10 +56,6 @@
     "resin-device-status": "^1.1.0"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier-eslint --write",
-      "npm run lint",
-      "git add"
-    ]
+    "*.js": ["prettier-eslint --write", "npm run lint", "git add"]
   }
 }
