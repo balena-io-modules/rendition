@@ -12,7 +12,8 @@
     "storybook": "start-storybook -p 6006",
     "watch": "babel src -w -d dist",
     "build": "babel src -d dist",
-    "test": "npm run lint && mocha --compilers js:babel-core/register test/*.spec.js",
+    "test":
+      "npm run lint && mocha --compilers js:babel-core/register test/*.spec.js",
     "lint": "eslint src test",
     "precommit": "lint-staged",
     "prettify": "prettier-eslint --write \"src/**/*.js\" \"test/**/*.js\"",
@@ -42,7 +43,7 @@
     "lint-staged": "^4.1.1",
     "mocha": "^3.5.0",
     "preact-compat": "^3.14.1",
-    "prettier-eslint-cli": "^4.3.0",
+    "prettier-eslint-cli": "4.3.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
@@ -64,10 +65,6 @@
     "resin-device-status": "^1.1.0"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier-eslint --write",
-      "npm run lint",
-      "git add"
-    ]
+    "*.js": ["prettier-eslint --write", "npm run lint", "git add"]
   }
 }
