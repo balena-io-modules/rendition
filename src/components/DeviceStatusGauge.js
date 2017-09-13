@@ -12,6 +12,24 @@ const { colors, font } = theme
 
 const DeviceStatusGaugeWrapper = styled.div`
   display: block;
+  color: ${({ theme }) => theme.colors.text.main};
+
+  /* fix edge hover missplacing bug
+    on svg text inside anchors
+  */
+  &,
+  &:hover {
+    text-decoration: none;
+
+    text {
+      text-decoration: none !important;
+    }
+
+    .device-status-gauge__graph__total-devices-label,
+    .device-status-gauge__graph__total-devices-number {
+      transform: translateX(0);
+    }
+  }
 
   .device-status-gauge__graph {
     display: block;
