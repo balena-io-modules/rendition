@@ -1,12 +1,20 @@
 language: node_js
-node_js:
-  - "7"
-
+matrix:
+  include:
+  - node_js:
+    - '6'
+    env:
+    - CAN_DEPLOY=true
 notifications:
   email:
     on_success: never
-
-after_success:
-  - if [[ ${TRAVIS_PULL_REQUEST} == "false" && ${TRAVIS_BRANCH} == "master" ]]; then
-      npm run publish-storybook;
-    fi
+deploy:
+  provider: npm
+  email: accounts@resin.io
+  skip_cleanup: true
+  api_key:
+    secure: tL6tRzDN2331z1yik1UQtH3sKbMtcdqVXO2DNQgrr55/4x5fAq76ZB/pkW4Iiafopb4+OP03CN5Koo+loBDt6MXwi08k/oJwUkPyU3VqAC9AL3RwhPLuSTKQNCeZ/ALQYN2y0kPCr2z1GAvijXPQMzhNJK7nIhWgi6JXMKkxC9K7rVLazJwF4F0ZTYOpI9CCix1kbJfVHwnAX05EDXhdXsvoBLSmBPCAAPJmkOaPgmFsCnoJLXuCJjkBj69pyarwAolAEckrX5Fh6T72+B7NiMZaAAX53rTxZJCyWhKk/kClTBnIBYW35YufCIg+NTHPTrEwyYU+ouUHAsIzRE8TMWUuooolgWmC4ZozR2uphIu5uIWSSRzUlJgQ8z3T1ZOz+KCnSo/H3Si5gurzDSkQ2i9jZLI/B1oCq7DHYdMhC6T8HJnpF1KU3A2n52NWdTvFzD9ws8MtTM7ugBtEGrg/X/+9iTK0Sj+8OWOtnFHxcuTdTcke5A0S2KmgREss1cehYM0PxmGuxbLMe6ZcYAZ0xqhtp4OkjRN0bczymbvPcZqZhwvIbfjD4p1k1xMhtZjlmha15v9hSxNV8mEd/yptFle+f+E7bw1aRPjJFSS6kwxiQqhX8GyEjtiqFPCcUhL+FY9t70gpN6LA3fIdOct5+6KQiS4A1dIotsGuiMqgqPw=
+  on:
+    tags: true
+    condition: $CAN_DEPLOY = 'true' && $TRAVIS_TAG =~ ^v?[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+
+    repo: resin-io-modules/resin-components
