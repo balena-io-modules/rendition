@@ -190,9 +190,9 @@ const DeviceStatusGauge = ({ devices, ...props }) => {
           r='46'
         />
 
-        <g class='device-status-gauge__graph__placeholder'>
+        <g>
           <circle
-            className={`device-status-gauge__graph__outer-circle device-status-gauge__graph__segment__path--${placeholderState.key}`}
+            fill={pathFillColor(placeholderState.key)}
             cx='50'
             cy='50'
             r='46'
@@ -206,7 +206,7 @@ const DeviceStatusGauge = ({ devices, ...props }) => {
         <g transform='translate(50, 50)'>
           {_.map(gauge, segment => {
             return (
-              <g class='device-status-gauge__graph__segment'>
+              <g>
                 {!!segment.item.count && (
                   <title>{segment.item.name}: devices</title>
                 )}
