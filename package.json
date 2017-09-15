@@ -1,6 +1,6 @@
 {
   "name": "resin-components",
-  "version": "1.3.6",
+  "version": "1.3.7",
   "description": "Resin Components Component",
   "repository": {
     "type": "git",
@@ -14,10 +14,9 @@
     "build": "babel src -d dist",
     "test": "npm run lint && mocha --compilers js:babel-core/register test/*.spec.js",
     "lint": "eslint src test",
-    "precommit": "npm run build && lint-staged",
+    "precommit": "lint-staged",
     "prettify": "prettier-eslint --write \"src/**/*.js\" \"test/**/*.js\"",
-    "publish-storybook": "bash .scripts/publish_storybook.sh",
-    "ci": "npm run build && catch-uncommitted"
+    "publish-storybook": "bash .scripts/publish_storybook.sh"
   },
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "^3.4.0",
@@ -29,7 +28,6 @@
     "babel-plugin-transform-react-jsx": "^6.23.0",
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-stage-3": "^6.24.1",
-    "catch-uncommitted": "^1.0.0",
     "chai": "^4.1.2",
     "css-loader": "^0.28.5",
     "eslint-config-standard": "^10.2.1",

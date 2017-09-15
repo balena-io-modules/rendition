@@ -99,5 +99,6 @@ nbproject
 # Node environment
 .cache.json
 
-# Storybook files
+# Dist files
+dist
 .out
