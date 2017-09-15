@@ -1,6 +1,6 @@
 {
   "name": "resin-components",
-  "version": "1.3.6",
+  "version": "1.3.7",
   "description": "Resin Components Component",
   "repository": {
     "type": "git",
@@ -12,8 +12,7 @@
     "storybook": "start-storybook -p 6006",
     "watch": "babel src -w -d dist",
     "build": "babel src -d dist",
-    "test":
-      "npm run lint && mocha --compilers js:babel-core/register test/*.spec.js",
+    "test": "npm run lint && mocha --compilers js:babel-core/register test/*.spec.js",
     "lint": "eslint src test",
     "precommit": "lint-staged",
     "prettify": "prettier-eslint --write \"src/**/*.js\" \"test/**/*.js\"",
