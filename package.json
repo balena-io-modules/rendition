@@ -10,9 +10,10 @@
   "main": "./dist/index.js",
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "watch": "babel src -w -d dist",
-    "build": "babel src -d dist",
-    "test": "npm run lint && mocha --compilers js:babel-core/register test/*.spec.js",
+    "watch": "babel src -w -d dist --ignore src/stories",
+    "build": "babel src -d dist --ignore src/stories",
+    "test":
+      "npm run lint && mocha --compilers js:babel-core/register test/*.spec.js",
     "lint": "eslint src test",
     "precommit": "lint-staged",
     "prettify": "prettier-eslint --write \"src/**/*.js\" \"test/**/*.js\"",

@@ -1,5 +1,4 @@
 {
   "presets": ["es2015", "stage-3"],
-  "plugins": [["transform-react-jsx", { "pragma": "h" }]],
-  "ignore": "src/stories"
+  "plugins": [["transform-react-jsx", { "pragma": "h" }]]
 }
