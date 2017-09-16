@@ -8,6 +8,7 @@ import { default as Fixed } from './components/Fixed'
 import { default as Input } from './components/Input'
 import { default as Modal } from './components/Modal'
 import { default as PineTypes } from './components/PineTypes'
+import { default as ProgressBar } from './components/ProgressBar'
 import { default as Provider } from './components/Provider'
 import { default as SchemaSieve } from './components/Filters/SchemaSieve'
 import { default as Select } from './components/Select'
@@ -30,6 +31,7 @@ export {
   Modal,
   PineTypes,
   Provider,
+  ProgressBar,
   SchemaSieve,
   Select,
   Text,
