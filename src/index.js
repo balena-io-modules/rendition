@@ -1,5 +1,6 @@
 import { default as Banner } from './components/Banner'
 import { default as Button } from './components/Button'
+import { default as CodeWithCopy } from './components/CodeWithCopy'
 import { default as DeleteButton } from './components/DeleteButton'
 import { default as DeviceStatusGauge } from './components/DeviceStatusGauge'
 import { default as Divider } from './components/Divider'
@@ -21,6 +22,7 @@ export {
   Banner,
   Box,
   Button,
+  CodeWithCopy,
   DeleteButton,
   DeviceStatusGauge,
   Divider,
