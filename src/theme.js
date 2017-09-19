@@ -103,7 +103,7 @@ export const weights = [400, 700]
 
 export const radius = 4
 export const font = `Roboto, Arial, sans-serif`
-export const monospace = `'Ubuntu Mono Web', 'Courier New', monospace`
+export const monospace = `'Ubuntu Mono', 'Courier New', monospace`
 
 export default {
   breakpoints,
