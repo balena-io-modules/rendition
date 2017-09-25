@@ -135,6 +135,17 @@ const StatusGauge = ({
 
         <g transform='translate(50, 50)'>
           {_.map(gauge, segment => {
+            if (segment.item.value === count) {
+              return (
+                <g>
+                  <path
+                    transform='translate(-100, -100)'
+                    fill={segment.item.color}
+                    d='M100 100m-46,0a46,46,0 1,0 92,0a 46,46 0 1,0 -92,0zM100 100m-25,0a25,25,0 0,1 50,0a 25,25 0 0,1 -50,0z'
+                  />
+                </g>
+              )
+            }
             return (
               <g>
                 <path
