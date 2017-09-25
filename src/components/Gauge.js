@@ -135,7 +135,7 @@ const StatusGauge = ({
 
         <g transform='translate(50, 50)'>
           {_.map(gauge, segment => {
-            if (segment.item.value === count) {
+            if (count > 0 && segment.item.value === count) {
               return (
                 <g>
                   <path

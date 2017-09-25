@@ -20,7 +20,7 @@ const data = [
   }
 ]
 
-const singleItem = [
+const singleSegment = [
   {
     value: 0,
     name: 'Vanilla',
@@ -38,10 +38,34 @@ const singleItem = [
   }
 ]
 
+const zeroCountPlaceholder = 'red'
+const zeroCount = [
+  {
+    value: 0,
+    name: 'Chocolate',
+    color: 'brown'
+  },
+  {
+    value: 0,
+    name: 'Strawberry',
+    color: 'pink'
+  }
+]
+
 storiesOf('Gauge', module)
   .addWithInfo('default', () => {
     return <Gauge m={30} title='Ice Cream' data={data} />
   })
   .addWithInfo('single segment', () => {
-    return <Gauge m={30} title='Ice Cream' data={singleItem} />
+    return <Gauge m={30} title='Ice Cream' data={singleSegment} />
+  })
+  .addWithInfo('zero zount', () => {
+    return (
+      <Gauge
+        m={30}
+        title='Ice Cream'
+        data={zeroCount}
+        placeholderColor={zeroCountPlaceholder}
+      />
+    )
   })
