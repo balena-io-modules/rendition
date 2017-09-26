@@ -828,6 +828,23 @@ describe('resin-filter', () => {
         const result = sieve.filter(this.collection, input)
         expect(result[0].test).to.equal(this.collection[0].test)
       })
+
+      it('should allow an array of rules', function () {
+        const inputs = sieve.makeFilterInputs(this.schema)
+        const rules = [
+          Object.assign({}, inputs.test, {
+            operator: 'contains',
+            value: 'de'
+          }),
+          Object.assign({}, inputs.test, {
+            operator: 'contains',
+            value: 'abc'
+          })
+        ]
+
+        const result = sieve.filter(this.collection, rules)
+        expect(result[0].test).to.equal(this.collection[0].test)
+      })
     })
   })
 })
