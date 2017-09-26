@@ -19,7 +19,7 @@ const ModalPanel = styled.div`
   left: 50%;
   margin-left: -${px(MODAL_WIDTH / 2)};
   padding: 30px 50px;
-  z-index: 10;
+  z-index: 9999;
   box-shadow: 0px 0px 60px 1px rgba(0, 0, 0, 0.4);
 
   @media (max-width: 730px) {
@@ -33,7 +33,7 @@ const ModalPanel = styled.div`
 const Modal = props => (
   <div>
     <Fixed
-      z={9}
+      z={8888}
       bg='rgba(0,0,0,0.4)'
       top
       right
