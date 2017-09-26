@@ -6,20 +6,23 @@ import showdown from 'showdown'
 
 export const converter = new showdown.Converter()
 
-export const toLowerCase = fn => (target, value) =>
-  fn(target.toLowerCase(), value.toLowerCase())
+// We normalize falsey values to empty strings
+export const toLowerCase = fn => (target, value) => {
+  if (!target) {
+    target = ''
+  }
+  return fn(target.toLowerCase(), value.toLowerCase())
+}
 
 export const rules = {
-  is: toLowerCase((target = '', value) => target === value),
-  contains: toLowerCase((target = '', value) => target.includes(value)),
-  'does not contain': toLowerCase(
-    (target = '', value) => !target.includes(value)
-  ),
-  'matches RegEx': toLowerCase((target = '', value) =>
+  is: toLowerCase((target, value) => target === value),
+  contains: toLowerCase((target, value) => target.includes(value)),
+  'does not contain': toLowerCase((target, value) => !target.includes(value)),
+  'matches RegEx': toLowerCase((target, value) =>
     target.match(RegexParser(value))
   ),
   'does not match RegEx': toLowerCase(
-    (target = '', value) => !target.match(RegexParser(value))
+    (target, value) => !target.match(RegexParser(value))
   )
 }
 

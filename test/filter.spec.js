@@ -18,6 +18,9 @@ describe('resin-filter', () => {
           },
           'Entry 2': {
             test: false
+          },
+          'Entry 3': {
+            test: null
           }
         }
       })
@@ -37,7 +40,10 @@ describe('resin-filter', () => {
 
         input.operator = 'is false'
 
-        expect(sieve.filter(this.collection, input)).to.have.all.keys('Entry 2')
+        expect(sieve.filter(this.collection, input)).to.have.all.keys(
+          'Entry 2',
+          'Entry 3'
+        )
       })
     })
 
@@ -53,6 +59,9 @@ describe('resin-filter', () => {
           },
           'Entry 2': {
             test: 'fghi'
+          },
+          'Entry 3': {
+            test: null
           }
         }
       })
@@ -89,7 +98,10 @@ describe('resin-filter', () => {
         // Set a value
         input.value = 'bCd'
 
-        expect(sieve.filter(this.collection, input)).to.have.all.keys('Entry 2')
+        expect(sieve.filter(this.collection, input)).to.have.all.keys(
+          'Entry 2',
+          'Entry 3'
+        )
       })
 
       it('should correctly test values using the "matches RegEx" operator', function () {
@@ -109,7 +121,10 @@ describe('resin-filter', () => {
         input.operator = 'does not match RegEx'
         input.value = '/FG/g'
 
-        expect(sieve.filter(this.collection, input)).to.have.all.keys('Entry 1')
+        expect(sieve.filter(this.collection, input)).to.have.all.keys(
+          'Entry 1',
+          'Entry 3'
+        )
       })
     })
 
@@ -125,6 +140,9 @@ describe('resin-filter', () => {
           },
           'Entry 2': {
             test: '2012-01-01T00:00:00.000Z'
+          },
+          'Entry 3': {
+            test: null
           }
         }
       })
@@ -171,6 +189,9 @@ describe('resin-filter', () => {
           },
           'Entry 2': {
             test: '2012-01-01T00:00:00.000Z'
+          },
+          'Entry 3': {
+            test: null
           }
         }
       })
@@ -220,6 +241,9 @@ describe('resin-filter', () => {
           },
           'Entry 3': {
             test: 3
+          },
+          'Entry 4': {
+            test: null
           }
         }
       })
@@ -289,6 +313,9 @@ describe('resin-filter', () => {
           },
           'Entry 3': {
             test: 3.19
+          },
+          'Entry 4': {
+            test: null
           }
         }
       })
@@ -368,6 +395,9 @@ describe('resin-filter', () => {
           },
           'Entry 4': {
             test: 'ABCde'
+          },
+          'Entry 5': {
+            test: null
           }
         }
       })
@@ -407,7 +437,8 @@ describe('resin-filter', () => {
         expect(sieve.filter(this.collection, input)).to.have.all.keys(
           'Entry 1',
           'Entry 2',
-          'Entry 3'
+          'Entry 3',
+          'Entry 5'
         )
       })
 
@@ -431,7 +462,8 @@ describe('resin-filter', () => {
         expect(sieve.filter(this.collection, input)).to.have.all.keys(
           'Entry 1',
           'Entry 3',
-          'Entry 4'
+          'Entry 4',
+          'Entry 5'
         )
       })
     })
@@ -454,6 +486,9 @@ describe('resin-filter', () => {
           },
           'Entry 4': {
             test: 'ABCde'
+          },
+          'Entry 5': {
+            test: null
           }
         }
       })
@@ -493,7 +528,8 @@ describe('resin-filter', () => {
         expect(sieve.filter(this.collection, input)).to.have.all.keys(
           'Entry 1',
           'Entry 2',
-          'Entry 3'
+          'Entry 3',
+          'Entry 5'
         )
       })
 
@@ -517,7 +553,8 @@ describe('resin-filter', () => {
         expect(sieve.filter(this.collection, input)).to.have.all.keys(
           'Entry 1',
           'Entry 3',
-          'Entry 4'
+          'Entry 4',
+          'Entry 5'
         )
       })
     })
@@ -534,6 +571,9 @@ describe('resin-filter', () => {
           },
           'Entry 2': {
             test: '2012-01-01T14:43:02.000Z'
+          },
+          'Entry 3': {
+            test: null
           }
         }
       })
@@ -580,6 +620,9 @@ describe('resin-filter', () => {
           },
           'Entry 2': {
             test: '< 1.7.0'
+          },
+          'Entry 3': {
+            test: null
           }
         }
       })
@@ -608,7 +651,10 @@ describe('resin-filter', () => {
         input.operator = 'does not contain'
         input.value = 'Resin OS 1.4.0'
 
-        expect(sieve.filter(this.collection, input)).to.have.all.keys('Entry 1')
+        expect(sieve.filter(this.collection, input)).to.have.all.keys(
+          'Entry 1',
+          'Entry 3'
+        )
       })
     })
 
@@ -627,6 +673,9 @@ describe('resin-filter', () => {
           },
           'Entry 3': {
             test: '2.0.0'
+          },
+          'Entry 4': {
+            test: null
           }
         }
       })
@@ -681,6 +730,9 @@ describe('resin-filter', () => {
           },
           brief: {
             type: 'Short Text'
+          },
+          nullTest: {
+            test: null
           }
         }
         this.collection = {
