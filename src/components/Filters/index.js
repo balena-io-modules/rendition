@@ -105,6 +105,7 @@ class Filters extends Component {
     }
 
     edit.operator = inputModels[edit.name].availableOperators[0]
+    edit.label = inputModels[edit.name].label
 
     return edit
   }
@@ -188,6 +189,7 @@ class Filters extends Component {
     if (attribute === 'name' && update.name !== value) {
       update.name = value
       update.operator = inputModels[value].availableOperators[0]
+      update.label = inputModels[value].label
       update.value = ''
     } else {
       update[attribute] = value
@@ -286,7 +288,9 @@ class Filters extends Component {
                     onChange={e =>
                       this.handleEditChange(e.target.value, 'name')}
                   >
-                    {map(inputModels, ({ name }) => <option>{name}</option>)}
+                    {map(inputModels, ({ name, label }) => (
+                      <option value={name}>{label || name}</option>
+                    ))}
                   </Select>
                   <Select
                     mr={20}

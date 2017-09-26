@@ -80,6 +80,7 @@ class SchemaSieve {
       inputs[key] = {
         type: value.type,
         name: key,
+        label: value.label,
         availableOperators: this.getOperators(value.type),
         operator: null,
         value: null
