@@ -11,6 +11,12 @@ class SchemaSieve {
     this.SIMPLE_SEARCH_NAME = SIMPLE_SEARCH_NAME
   }
 
+  test (item, input) {
+    return _.isArray(input)
+      ? _.every(input, i => this.baseTest(item, i))
+      : this.baseTest(item, input)
+  }
+
   baseTest (item, input) {
     const { type, name } = input
 
@@ -53,11 +59,11 @@ class SchemaSieve {
   }
 
   filterArray (collection, input) {
-    return collection.filter(item => this.baseTest(item, input))
+    return collection.filter(item => this.test(item, input))
   }
 
   filterObject (collection, input) {
-    return _.pickBy(collection, value => this.baseTest(value, input))
+    return _.pickBy(collection, value => this.test(value, input))
   }
 
   getOperators (type) {
