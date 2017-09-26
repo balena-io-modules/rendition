@@ -1,26 +1,53 @@
 import { h, Component } from 'preact'
 import { storiesOf, action } from '@storybook/react'
 import styled from 'styled-components'
-import Filters from '../components/Filters'
+import { Filters, SchemaSieve, PineTypes } from '../index.js'
+import PokeDex from './assets/pokedex'
+
+const sieve = SchemaSieve()
 
 const Container = styled.div`margin: 30px;`
+
+const StyledTable = styled.table`
+  width: 100%;
+
+  td {
+    border: 1px solid #eee;
+    padding: 3px 6px;
+  }
+`
 
 const setViewsAction = action('Set views')
 const setRulesAction = action('Set rules')
 
+const DateTimeDisplay = PineTypes['Date Time'].Display
+
 const schema = {
-  Boolean: {
-    type: 'Boolean'
+  Name: {
+    type: 'Short Text'
   },
-  short_text_field: {
-    type: 'Short Text',
-    label: 'Short Text Field'
+  Description: {
+    type: 'Short Text'
   },
-  'Date Time field': {
-    type: 'Date Time'
+  Category: {
+    type: 'Short Text'
   },
-  'Integer field': {
-    type: 'Integer'
+  Abilities: {
+    type: 'Short Text'
+  },
+  Height: {
+    type: 'Real'
+  },
+  Weight: {
+    type: 'Real'
+  },
+  first_seen: {
+    type: 'Date Time',
+    label: 'First Seen'
+  },
+  pokedex_number: {
+    type: 'Integer',
+    label: 'National Pokedex Number'
   }
 }
 
@@ -48,14 +75,54 @@ class FiltersDemo extends Component {
   }
 
   render () {
+    const items = sieve.filter(PokeDex, this.state.rules)
     return (
-      <Filters
-        rules={this.state.rules}
-        views={this.state.views}
-        schema={this.state.schema}
-        setViews={views => this.setViews(views)}
-        setRules={rules => this.setRules(rules)}
-      />
+      <div>
+        <Filters
+          rules={this.state.rules}
+          views={this.state.views}
+          schema={this.state.schema}
+          setViews={views => this.setViews(views)}
+          setRules={rules => this.setRules(rules)}
+        />
+
+        {items.map(item => {
+          return (
+            <div>
+              <h2>{item.Name}</h2>
+              <StyledTable>
+                <tr>
+                  <td>National PokeDex Number</td>
+                  <td>{item.pokedex_number}</td>
+                </tr>
+                <tr>
+                  <td>Category</td>
+                  <td>{item.Category}</td>
+                </tr>
+                <tr>
+                  <td>Height</td>
+                  <td>{item.Height}</td>
+                </tr>
+                <tr>
+                  <td>Weight</td>
+                  <td>{item.Weight}</td>
+                </tr>
+                <tr>
+                  <td>Abilities:</td>
+                  <td>{item.Abilities}</td>
+                </tr>
+                <tr>
+                  <td>First Seen:</td>
+                  <td>
+                    <DateTimeDisplay data={item.first_seen} />
+                  </td>
+                </tr>
+              </StyledTable>
+              <p>{item.Description}</p>
+            </div>
+          )
+        })}
+      </div>
     )
   }
 }
