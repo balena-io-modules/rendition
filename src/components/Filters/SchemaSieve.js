@@ -42,11 +42,11 @@ class SchemaSieve {
   }
 
   filter (collection, input) {
-    if (_.isObject(collection)) {
-      return this.filterObject(collection, input)
-    }
     if (_.isArray(collection)) {
       return this.filterArray(collection, input)
+    }
+    if (_.isObject(collection)) {
+      return this.filterObject(collection, input)
     }
 
     throw new Error('collection argument must be either object or array.')

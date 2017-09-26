@@ -729,5 +729,53 @@ describe('resin-filter', () => {
         )
       })
     })
+
+    describe('Filtering an array', () => {
+      before(function () {
+        this.schema = { test: { type: 'Short Text' } }
+        this.collection = [
+          {
+            test: 'abcde',
+            id: 1
+          },
+          {
+            test: 'fghij',
+            id: 2
+          },
+          {
+            test: 'KLmno',
+            id: 3
+          },
+          {
+            test: 'ABCde',
+            id: 4
+          }
+        ]
+      })
+
+      it('should return an array', function () {
+        const inputs = sieve.makeFilterInputs(this.schema)
+        const input = inputs.test
+
+        input.operator = 'contains'
+        // Set a value
+        input.value = 'abc'
+
+        const result = sieve.filter(this.collection, input)
+        expect(result).to.be.an('array')
+      })
+
+      it('should return the correct values', function () {
+        const inputs = sieve.makeFilterInputs(this.schema)
+        const input = inputs.test
+
+        input.operator = 'contains'
+        // Set a value
+        input.value = 'abc'
+
+        const result = sieve.filter(this.collection, input)
+        expect(result[0].test).to.equal(this.collection[0].test)
+      })
+    })
   })
 })
