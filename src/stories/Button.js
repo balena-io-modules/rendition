@@ -9,7 +9,7 @@ storiesOf('Button', module)
   .addWithInfo('Standard', () => {
     return (
       <Container>
-        <Button mx={2} is='h1' primary onPress={action('case-1')}>
+        <Button mx={2} primary onPress={action('case-1')}>
           Button
         </Button>
         <Button mx={2} secondary onPress={action('case-2')}>
@@ -55,6 +55,24 @@ storiesOf('Button', module)
           Button
         </Button>
         <Button mx={2} outline onPress={action('case-4')}>
+          Button
+        </Button>
+      </Container>
+    )
+  })
+  .addWithInfo('Underline', () => {
+    return (
+      <Container>
+        <Button mx={2} primary underline onPress={action('case-1')}>
+          Button
+        </Button>
+        <Button mx={2} secondary underline onPress={action('case-2')}>
+          Button
+        </Button>
+        <Button mx={2} tertiary underline onPress={action('case-3')}>
+          Button
+        </Button>
+        <Button mx={2} underline onPress={action('case-4')}>
           Button
         </Button>
       </Container>
