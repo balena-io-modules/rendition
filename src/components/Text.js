@@ -1,11 +1,25 @@
-import styled, { withTheme } from 'styled-components'
-import hoc from '../hoc'
-import { font } from '../theme'
-import { compose } from 'recompose'
+import styled from 'styled-components'
+import { fontSize, space, color, responsiveStyle } from 'styled-system'
 
-const Base = styled.p`
-  font-family: ${font};
-  font-size: inherit;
-`
+export const caps = props =>
+  props.caps
+    ? {
+      textTransform: 'uppercase',
+      letterSpacing: '0.2em'
+    }
+    : null
 
-export default compose(withTheme, hoc)(Base)
+export const bold = props =>
+  props.bold
+    ? { fontWeight: props.theme.weights[props.theme.weights.length - 1] }
+    : null
+
+const align = responsiveStyle('text-align', 'align')
+
+const Text = styled.div`${fontSize} ${space} ${color} ${caps} ${bold} ${align};`
+
+Text.displayName = 'Text'
+Text.span = Text.withComponent('span')
+Text.p = Text.withComponent('p')
+
+export default Text
