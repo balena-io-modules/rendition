@@ -33,7 +33,7 @@ class FilterSummary extends Component {
       showForm: false,
       id: '',
       option: 'new',
-      scope: 'user'
+      scope: props.views[0].key
     }
   }
 
