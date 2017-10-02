@@ -9,8 +9,12 @@ const setViewsAction = action('Set views')
 const setRulesAction = action('Set rules')
 
 const schema = {
-  'Short Text field': {
-    type: 'Short Text'
+  Boolean: {
+    type: 'Boolean'
+  },
+  short_text_field: {
+    type: 'Short Text',
+    label: 'Short Text Field'
   },
   'Date Time field': {
     type: 'Date Time'

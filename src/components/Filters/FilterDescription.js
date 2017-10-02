@@ -16,7 +16,7 @@ const FilterDescription = props => (
   <div>
     <ButtonWrapper onClick={!!props.edit && props.edit}>
       <Flex>
-        {props.rule.name}{' '}
+        {props.rule.label || props.rule.name}{' '}
         <Box mx={7}>
           <strong>{props.rule.operator}</strong>
         </Box>{' '}

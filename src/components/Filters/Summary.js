@@ -113,11 +113,9 @@ class FilterSummary extends Component {
               <FilterDescription
                 rule={rule}
                 edit={
-                  rule.name === sieve.SIMPLE_SEARCH_NAME ? (
-                    false
-                  )
+                  rule.name === sieve.SIMPLE_SEARCH_NAME
+                    ? false
                     : () => this.props.edit(rule)
-
                 }
                 delete={() => this.props.delete(rule)}
               />
