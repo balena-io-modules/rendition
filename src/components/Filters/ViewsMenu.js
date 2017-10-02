@@ -1,6 +1,5 @@
 import { h, Component } from 'preact'
 import styled from 'styled-components'
-import Divider from '../Divider'
 import { Box } from '../Grid'
 import Fixed from '../Fixed'
 import Text from '../Text'
@@ -20,7 +19,7 @@ const PlainPanel = styled.div`
   border-radius: 2px;
   background-color: #ffffff;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
-  border: solid 0.5px #9b9b9b;
+  border: solid 1px #9b9b9b;
 `
 
 const Preview = styled(PlainPanel)`
@@ -39,7 +38,7 @@ const ViewListItem = styled.li`
   &:hover {
     background-color: #f3f3f3;
   }
-  & > ${Text} {
+  & > p {
     padding-right: 20px;
   }
   & > button {
@@ -83,8 +82,9 @@ class ViewsMenu extends Component {
 
   render () {
     const { views } = this.props
-    const hasGlobalViews = views.global && !!views.global.length
-    const hasUserViews = views.user && !!views.user.length
+    const hasViews =
+      views.length > 0 &&
+      views.reduce((sum, item) => sum + item.data.length, 0) > 0
     return (
       <Wrapper>
         <Button
@@ -107,77 +107,51 @@ class ViewsMenu extends Component {
         )}
         {this.state.showViewsMenu && (
           <MenuPanel className='views-menu__panel'>
-            {!hasGlobalViews &&
-            !hasUserViews && (
+            {!hasViews && (
               <Box p={3}>{"You haven't created any views yet"}</Box>
             )}
-            {hasGlobalViews && (
-              <Box>
-                <Text fontSize={13} ml={20} mb={2} mt={2} color='#ccc'>
-                  Global views
-                </Text>
-                <UnstyledList>
-                  {views.global.map(view => (
-                    <ViewListItem key={view.name}>
-                      <Text onClick={() => this.loadView(view)}>
-                        {view.name}
-                        <br />
-                        <Text fontSize={12}>
-                          {view.rules.length} filter{view.rules.length > 1 && 's'}
-                        </Text>
+            {hasViews &&
+              views.map(scope => {
+                if (!scope.data || !scope.data.length) {
+                  return null
+                }
+                return (
+                  <Box>
+                    {!!scope.title && (
+                      <Text fontSize={13} ml={20} mb={2} mt={2} color='#aaa'>
+                        {scope.title}
                       </Text>
-                      <button>
-                        <FaTrash
-                          name='trash'
-                          onClick={() => this.props.deleteView(view)}
-                        />
-                      </button>
-                      <Preview>
-                        {view.rules.map(rule => (
-                          <Box mb={10} key={rule.id}>
-                            <FilterDescription rule={rule} />
-                          </Box>
-                        ))}
-                      </Preview>
-                    </ViewListItem>
-                  ))}
-                </UnstyledList>
-              </Box>
-            )}
-            {hasGlobalViews && hasUserViews && <Divider color='#ccc' />}
-            {hasUserViews && (
-              <Box>
-                <Text fontSize={13} ml={20} mb={2} mt={2} color='#ccc'>
-                  Your views
-                </Text>
-                <UnstyledList>
-                  {views.user.map(view => (
-                    <ViewListItem key={view.id}>
-                      <Text onClick={() => this.loadView(view)}>
-                        {view.name}
-                        <br />
-                        <Text fontSize={12}>
-                          {view.rules.length} filter{view.rules.length > 1 && 's'}
-                        </Text>
-                      </Text>
-                      <button>
-                        <FaTrash
-                          name='trash'
-                          onClick={() => this.props.deleteView(view)}
-                        />
-                      </button>
-                      <Preview>
-                        {view.rules.map(rule => (
-                          <Box mb={10} key={rule.id}>
-                            <FilterDescription rule={rule} />
-                          </Box>
-                        ))}
-                      </Preview>
-                    </ViewListItem>
-                  ))}
-                </UnstyledList>
-              </Box>
-            )}
+                    )}
+                    <UnstyledList>
+                      {scope.data.map(view => (
+                        <ViewListItem key={view.name}>
+                          <Text m={0} onClick={() => this.loadView(view)}>
+                            {view.name}
+                            <br />
+                            <Text m={0} fontSize={12} color='#aaa'>
+                              {view.rules.length} filter{view.rules.length > 1 && 's'}
+                            </Text>
+                          </Text>
+                          <button>
+                            <FaTrash
+                              name='trash'
+                              onClick={() =>
+                                this.props.deleteView(view, scope.key)}
+                            />
+                          </button>
+                          <Preview>
+                            {view.rules.map(rule => (
+                              <Box mb={10} key={rule.id}>
+                                <FilterDescription rule={rule} />
+                              </Box>
+                            ))}
+                          </Preview>
+                        </ViewListItem>
+                      ))}
+                    </UnstyledList>
+                  </Box>
+                )
+              })}
           </MenuPanel>
         )}
       </Wrapper>
