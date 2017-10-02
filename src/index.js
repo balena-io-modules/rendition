@@ -15,6 +15,7 @@ import { default as SchemaSieve } from './components/Filters/SchemaSieve'
 import { default as Select } from './components/Select'
 import { default as Text } from './components/Text'
 import { default as Textarea } from './components/Textarea'
+import { default as Image } from './components/Image'
 
 import { Flex, Box } from './components/Grid'
 
@@ -30,6 +31,7 @@ export {
   Fixed,
   Flex,
   Input,
+  Image,
   Modal,
   PineTypes,
   Provider,
