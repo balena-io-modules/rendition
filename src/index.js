@@ -16,6 +16,7 @@ import { default as Select } from './components/Select'
 import { default as Text } from './components/Text'
 import { default as Textarea } from './components/Textarea'
 import { default as Image } from './components/Image'
+import { default as Heading } from './components/Heading'
 
 import { Flex, Box } from './components/Grid'
 
@@ -30,6 +31,7 @@ export {
   Filters,
   Fixed,
   Flex,
+  Heading,
   Input,
   Image,
   Modal,
