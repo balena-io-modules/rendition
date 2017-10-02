@@ -1,4 +1,5 @@
 import { h, Component } from 'preact'
+import moment from 'moment'
 import cloneDeep from 'lodash/cloneDeep'
 import find from 'lodash/find'
 import assign from 'lodash/assign'
@@ -187,10 +188,19 @@ class Filters extends Component {
     const inputModels = sieve.makeFilterInputs(this.props.schema)
 
     if (attribute === 'name' && update.name !== value) {
+      const model = inputModels[value]
       update.name = value
-      update.operator = inputModels[value].availableOperators[0]
-      update.label = inputModels[value].label
-      update.value = ''
+      update.operator = model.availableOperators[0]
+      update.label = model.label
+      if (model.type === 'Date Time') {
+        update.value = moment().format('YYYY-MM-DDTHH:mm')
+      } else if (model.type === 'Date') {
+        update.value = moment().format('YYYY-MM-DD')
+      } else if (model.type === 'Time') {
+        update.value = moment().format('HH:mm')
+      } else {
+        update.value = ''
+      }
     } else {
       update[attribute] = value
     }
