@@ -56,10 +56,20 @@ class FiltersDemo extends Component {
     super(props)
     this.state = {
       rules: [],
-      views: {
-        global: [],
-        user: []
-      },
+      views: [
+        {
+          key: 'global', // Unique key for this set of views
+          scopeLabel: 'everyone', // Text shown when selecting where to save view
+          title: 'Global', // Text shown above views in views menu
+          data: [] // array of views
+        },
+        {
+          key: 'user', // Unique key for this set of views
+          scopeLabel: 'just me', // Text shown when selecting where to save view
+          title: 'User', // Text shown above views in views menu
+          data: [] // array of views
+        }
+      ],
       schema
     }
   }

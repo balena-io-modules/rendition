@@ -87,20 +87,24 @@ class FilterSummary extends Component {
             done={() => this.save()}
             action='Save'
           >
-            <Flex mb={30}>
-              <Text width={90}>Visible to:</Text>
-              <Select
-                mt={10}
-                width={120}
-                value={this.state.scope}
-                onChange={e => this.setViewScope(e.target.value)}
-              >
-                <option value='user'>just me</option>
-                <option value='global'>everyone</option>
-              </Select>
-            </Flex>
+            {this.props.views.length > 1 && (
+              <Flex mb={30}>
+                <Text width={90}>Visible to:</Text>
+                <Select
+                  mt={10}
+                  width={120}
+                  value={this.state.scope}
+                  onChange={e => this.setViewScope(e.target.value)}
+                >
+                  {this.props.views.map(item => {
+                    return <option value={item.key}>{item.scopeLabel}</option>
+                  })}
+                </Select>
+              </Flex>
+            )}
 
             <Input
+              width='100%'
               value={this.state.name}
               placeholder='Enter a name for the view'
               onChange={e => this.handleChange(e)}

@@ -19,7 +19,7 @@ import PineTypes from '../PineTypes'
  * The filter component requires the following props:
  * rules - an array of filter rule objects
  * schema - a SchemaSieve schema
- * views - an object with two keys, 'global' and 'user', each of which contains an array of predefined filter views,
+ * views - an array of objects, each of which contains an array of predefined filter views,
  * setRules - a method that is called to set rules
  * setViews - a method that is called to set views
  */
@@ -198,7 +198,7 @@ class Filters extends Component {
     this.setState({ edit: update })
   }
 
-  saveView (name, scope) {
+  saveView (name, scopeKey) {
     const { rules } = this.props
     let { views } = this.props
 
@@ -206,39 +206,26 @@ class Filters extends Component {
       name,
       rules,
       id: utils.randomString(),
-      scope
+      scopeKey
     }
 
     if (!views) {
-      views = {}
+      views = []
     }
 
-    if (scope === 'global') {
-      if (!views.global) {
-        views.global = []
-      }
-      views[scope].push(newView)
-    } else {
-      if (!views[scope]) {
-        views[scope] = {}
-      }
-      if (!views[scope]) {
-        views[scope] = []
-      }
-      views[scope].push(newView)
-    }
+    const store = views.find(item => item.key === scopeKey)
+
+    store.data.push(newView)
 
     this.props.setViews(views)
   }
 
-  deleteView (view) {
+  deleteView (view, scopeKey) {
     const { views } = this.props
 
-    if (view.scope === 'global') {
-      views.global = views.global.filter(item => item.id !== view.id)
-    } else {
-      views[view.scope] = views[view.scope].filter(item => item.id !== view.id)
-    }
+    const store = views.find(item => item.key === scopeKey)
+
+    store.data = store.data.filter(v => v.id !== view.id)
 
     this.props.setViews(views)
   }
@@ -268,7 +255,7 @@ class Filters extends Component {
             rules={rules}
             views={this.props.views || []}
             setRules={this.props.setRules}
-            deleteView={view => this.deleteView(view)}
+            deleteView={(view, scopeKey) => this.deleteView(view, scopeKey)}
           />
         </Flex>
 
@@ -320,7 +307,7 @@ class Filters extends Component {
             delete={rule => this.removeRule(rule)}
             saveView={(name, scope) => this.saveView(name, scope)}
             rules={rules}
-            views={this.props.views || {}}
+            views={this.props.views || []}
           />
         )}
       </FilterWrapper>
