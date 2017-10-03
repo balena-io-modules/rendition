@@ -26,7 +26,7 @@ const Preview = styled(PlainPanel)`
   display: none;
   position: absolute;
   right: 230px;
-  width: 400px;
+  width: 300px;
   right: 302px;
   top: 2px;
   padding: 15px 15px 5px;
@@ -63,7 +63,7 @@ const MenuPanel = styled(PlainPanel)`
   width: 300px;
   right: 0;
   top: 40px;
-  z-index: 1;
+  z-index: 9999;
 `
 
 class ViewsMenu extends Component {
