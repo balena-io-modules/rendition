@@ -5,7 +5,7 @@ import { Box, Flex } from '../Grid'
 
 const ButtonWrapper = styled.button`
   font-size: 13px;
-  height: 22px;
+  min-height: 22px;
   border: 0;
   border-radius: 3px;
   background-color: #e9e9e9;
