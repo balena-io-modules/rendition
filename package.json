@@ -1,6 +1,6 @@
 {
   "name": "resin-components",
-  "version": "1.10.7",
+  "version": "1.11.0",
   "description": "Resin Components Component",
   "repository": {
     "type": "git",
@@ -62,7 +62,7 @@
     "resin-semver": "^0.10.0",
     "showdown": "^1.7.3",
     "styled-grid": "1.0.0-beta.1",
-    "styled-system": "1.0.0-13",
+    "styled-system": "^1.0.5",
     "tag-hoc": "1.0.0"
   },
   "lint-staged": {
