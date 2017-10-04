@@ -1,3 +1,4 @@
+import cloneDeep from 'lodash/cloneDeep'
 import { h, Component } from 'preact'
 import styled from 'styled-components'
 import { Box } from '../Grid'
@@ -76,7 +77,8 @@ class ViewsMenu extends Component {
   }
 
   loadView (view) {
-    this.props.setRules(view.rules)
+    const rules = cloneDeep(view.rules)
+    this.props.setRules(rules)
     this.setState({ showViewsMenu: false })
   }
 
