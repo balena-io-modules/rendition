@@ -9,7 +9,7 @@
   "license": "MIT",
   "main": "./dist/index.js",
   "scripts": {
-    "storybook": "start-storybook -p 6006",
+    "start": "start-storybook -p 6006",
     "watch": "babel src -w -d dist --ignore src/stories",
     "build": "babel src -d dist --ignore src/stories",
     "test": "npm run lint && mocha --compilers js:babel-core/register test/*.spec.js",
