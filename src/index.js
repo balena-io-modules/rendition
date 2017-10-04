@@ -18,6 +18,7 @@ import { default as Textarea } from './components/Textarea'
 import { default as Image } from './components/Image'
 import { default as Heading } from './components/Heading'
 import { default as Container } from './components/Container'
+import { default as DropDownButton } from './components/DropDownButton'
 
 import { Flex, Box } from './components/Grid'
 
@@ -30,6 +31,7 @@ export {
   DeleteButton,
   DeviceStatusGauge,
   Divider,
+  DropDownButton,
   Filters,
   Fixed,
   Flex,
