@@ -19,6 +19,7 @@ import { default as Image } from './components/Image'
 import { default as Heading } from './components/Heading'
 import { default as Container } from './components/Container'
 import { default as DropDownButton } from './components/DropDownButton'
+import { default as Navbar } from './components/Navbar'
 import { default as Link } from './components/Link'
 
 import { Flex, Box } from './components/Grid'
@@ -41,6 +42,7 @@ export {
   Input,
   Image,
   Modal,
+  Navbar,
   PineTypes,
   Provider,
   ProgressBar,

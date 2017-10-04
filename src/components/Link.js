@@ -4,6 +4,7 @@ import get from 'lodash/get'
 import { darken } from '../utils'
 
 const Base = Text.extend`
+  text-decoration: ${props => props.decor || 'none'};
   cursor: pointer;
 
   &:active,
