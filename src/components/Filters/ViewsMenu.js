@@ -132,12 +132,11 @@ class ViewsMenu extends Component {
                               {view.rules.length} filter{view.rules.length > 1 && 's'}
                             </Text>
                           </Text>
-                          <button>
-                            <FaTrash
-                              name='trash'
-                              onClick={() =>
-                                this.props.deleteView(view, scope.key)}
-                            />
+                          <button
+                            onClick={() =>
+                              this.props.deleteView(view, scope.key)}
+                          >
+                            <FaTrash name='trash' />
                           </button>
                           <Preview>
                             {view.rules.map(rule => (
