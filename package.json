@@ -12,11 +12,12 @@
     "start": "start-storybook -p 6006",
     "watch": "babel src -w -d dist --ignore src/stories",
     "build": "babel src -d dist --ignore src/stories",
+    "build:storybook": "build-storybook -o .out",
     "test": "npm run lint && mocha --compilers js:babel-core/register test/*.spec.js",
     "lint": "eslint src test",
     "precommit": "lint-staged",
     "prettify": "prettier-eslint --write \"src/**/*.js\" \"test/**/*.js\"",
-    "publish-storybook": "bash .scripts/publish_storybook.sh"
+    "deploy": "npm run build:storybook && gh-pages -d .out"
   },
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "^3.4.0",
@@ -37,6 +38,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.3.0",
     "eslint-plugin-standard": "^3.0.1",
+    "gh-pages": "1.0.0",
     "git-url-parse": "^7.0.0",
     "husky": "^0.14.3",
     "lint-staged": "^4.1.1",
