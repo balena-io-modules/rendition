@@ -72,7 +72,12 @@ class Navbar extends Component {
               <Flex width={['100%', 'auto']} direction={['column', 'row']}>
                 {children.map((child, i) => {
                   return (
-                    <Box width={['100%', 'auto']} p={2} key={i}>
+                    <Box
+                      onClick={() => this.toggle()}
+                      width={['100%', 'auto']}
+                      p={2}
+                      key={i}
+                    >
                       {child}
                     </Box>
                   )

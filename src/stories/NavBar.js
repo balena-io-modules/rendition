@@ -5,19 +5,19 @@ import logo from './assets/etcher.svg'
 
 storiesOf('Navbar', module).addWithInfo('standard', () => {
   const Brand = (
-    <Link color='white' to={'/'}>
+    <Link color='white' href={'/'}>
       <Image style={{ height: '20px' }} src={logo} />
     </Link>
   )
   return (
     <Navbar brand={Brand} color='white'>
-      <Link color='white' to={'/docs/'}>
+      <Link color='white' href={'/docs/'}>
         Docs
       </Link>
-      <Link color='white' to={'/changelog/'}>
+      <Link color='white' href={'/changelog/'}>
         changelog
       </Link>
-      <Link color='white' to={'/gitter/'}>
+      <Link color='white' href={'/gitter/'}>
         gitter
       </Link>
     </Navbar>

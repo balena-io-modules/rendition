@@ -40,10 +40,10 @@ storiesOf('Typography', module)
     return (
       <div>
         <div>
-          <Link to={`#`}>Internal Link</Link>
+          <Link href={`#`}>Internal Link</Link>
         </div>
         <div>
-          <Link to={`https://resin.io`} blank>
+          <Link href={`https://resin.io`} blank>
             External Link
           </Link>
         </div>
