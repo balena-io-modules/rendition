@@ -3,8 +3,11 @@ import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import Text from '../components/Text'
 import Heading from '../components/Heading'
+import Link from '../components/Link'
 
-const Container = styled.div`margin: 60px;`
+const Container = styled.div`
+  margin: 60px;
+`
 
 storiesOf('Typography', module)
   .addDecorator(story => <Container>{story()}</Container>)
@@ -30,6 +33,20 @@ storiesOf('Typography', module)
         <Text.span color='blue'>Inline </Text.span>
         <Text.span color='red'>Inline </Text.span>
         <Text.span color='yellow'>Inline </Text.span>
+      </div>
+    )
+  })
+  .addWithInfo('Link', props => {
+    return (
+      <div>
+        <div>
+          <Link to={`#`}>Internal Link</Link>
+        </div>
+        <div>
+          <Link to={`https://resin.io`} blank>
+            External Link
+          </Link>
+        </div>
       </div>
     )
   })

@@ -19,6 +19,7 @@ import { default as Image } from './components/Image'
 import { default as Heading } from './components/Heading'
 import { default as Container } from './components/Container'
 import { default as DropDownButton } from './components/DropDownButton'
+import { default as Link } from './components/Link'
 
 import { Flex, Box } from './components/Grid'
 
@@ -36,6 +37,7 @@ export {
   Fixed,
   Flex,
   Heading,
+  Link,
   Input,
   Image,
   Modal,
