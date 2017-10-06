@@ -3,9 +3,10 @@ import Text from './Text'
 import get from 'lodash/get'
 import { darken } from '../utils'
 
-const Base = Text.extend`
+let Base = Text.extend`
   text-decoration: ${props => props.decor || 'none'};
   cursor: pointer;
+  display: inline-block;
 
   &:active,
   &:hover {
@@ -14,15 +15,12 @@ const Base = Text.extend`
   }
 `
 
-const Link = ({ is, to, blank, ...props }) => {
-  const L = Base.withComponent(is)
+const Link = ({ is, blank, ...props }) => {
+  if (is) {
+    Base = Base.withComponent(is)
+  }
   return (
-    <L
-      {...props}
-      href={to}
-      rel={blank && 'noopener'}
-      target={blank && '_blank'}
-    />
+    <Base {...props} rel={blank && 'noopener'} target={blank && '_blank'} />
   )
 }
 
