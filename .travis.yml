@@ -26,6 +26,4 @@ deploy:
   github_token:
     secure: ovdIn3BKs1cxs5ESzx+mnZzadi8jGY1CKaAfsq9xYV99LL/9NSs9OlLqukjEyRkUojOy67eJKWARcVh6GLsXEVfNbrgvos6+ZM9H1Fd7ICiB8bWKrNbfEmNF9deTcbyKaTZygse3UGhA+Q9hibCjXkhd5W0oQQGCxzGzWbvXcjgdnliBjvhUqSmKyG75v6ycrG70ETYXlVY8nRzSUOnoav7W5kcrkNoIQNWON8UETwFlMi1dGQrhBsj5Ceb6u6cQsypIeyttWYjQ3uxfbSSqLY2OG3sOaWa1+L0DFo+6gtUBoVVh5vcQFfenXEI3AF4jdrcUV/1ged3QiUdzggELQsPsDiq0pxO5QKMsikyxTUZhhQM4uGCYCsgFb5hJREVLSBBEsqEH5vBFASt23PSL0UIvPFl+uHLH3jVNtj/lip6ryPOGhEP3ZqxjYgTdJiKjIuWF9JCOuuU1tdxdQeMHfNaa+Nv7VAos8sDGpiDjGUOX7GpVTyrCNNUzYPbE5EF5Pf/wRiib7DJfRbErhXN2NOeCkz4L9dSWEntqCdCuFI0gEGNu0LmhsgPoxynCML4FGr/vH4mOtFDFfBmbU+PIp5dYAP6HG4xaUw3QWhxrWOjbtO57jplcNsDpDFJ9c7KiCumDZt9axEou9v1Lx4BhRPegX6rV//NIVip0AsAA0jo=
   on:
-    branch: master
-    tags: true
-    condition: $CAN_DEPLOY = 'true' && $TRAVIS_TAG =~ ^v?[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+
+    branch: fix-gh-pages-deploy
