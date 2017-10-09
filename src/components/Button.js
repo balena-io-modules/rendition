@@ -33,6 +33,17 @@ const getColor = (props, key, shade) => {
   }
 }
 
+const minWidth = props => {
+  if (props.w == null && !props.square) {
+    return 135
+  }
+  if (props.square) {
+    return props.emphasized ? props.theme.space[5] : props.theme.space[4]
+  }
+
+  return props.w
+}
+
 const Button = styled.button`
   padding-top: 1px;
   font-family: inherit;
@@ -43,7 +54,7 @@ const Button = styled.button`
   text-decoration: none;
   border: 0;
   margin: 0;
-  min-width: 135px;
+  min-width: ${props => px(minWidth(props))};
   vertical-align: middle;
   font-size: inherit;
   line-height: 1.1;
@@ -64,10 +75,6 @@ const Button = styled.button`
 
   '&:disabled': {
     opacity: 1/4;
-  }
-
-  svg {
-    transform: translateY(-2px);
   }
 `
 
