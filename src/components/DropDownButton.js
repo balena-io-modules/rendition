@@ -1,9 +1,10 @@
 import styled, { withTheme } from 'styled-components'
 import { px } from '../utils'
-import IconAngleDown from 'react-icons/lib/fa/angle-down'
-import IconAngleUp from 'react-icons/lib/fa/angle-up'
+import IconCaretDown from 'react-icons/lib/fa/caret-down'
+import IconCaretUp from 'react-icons/lib/fa/caret-up'
 import { h, Component } from 'preact'
 import Button from './Button'
+import { Box, Flex } from './Grid'
 import { compose } from 'recompose'
 import { space, color, fontSize, width } from 'styled-system'
 
@@ -32,6 +33,8 @@ const MenuBase = styled.div`
   box-shadow: ${props => '1px 1px 5px' + props.theme.colors.gray.light};
   border-radius: ${props => px(props.theme.radius)};
   border: ${props => '1px solid ' + props.theme.colors.gray.main};
+  overflow: hidden;
+  z-index: 1;
 `
 
 const Wrapper = styled.div`
@@ -49,10 +52,31 @@ const Item = styled.div`
   }
 `
 
-const Toggle = ({ open, handler, ...props }) => {
+const IconWrapper = styled.span`width: 28px;`
+
+const Toggle = ({ open, handler, label, joined, ...props }) => {
+  if (joined) {
+    if (label) {
+      return (
+        <Button pl={16} pr={0} {...props} onClick={handler}>
+          <Flex justify='space-between'>
+            <Box mt='1px'>{label}</Box>
+            <IconWrapper>
+              {open ? <IconCaretUp /> : <IconCaretDown />}
+            </IconWrapper>
+          </Flex>
+        </Button>
+      )
+    }
+    return (
+      <Button {...props} square onClick={handler}>
+        {open ? <IconCaretUp /> : <IconCaretDown />}
+      </Button>
+    )
+  }
   return (
     <ToggleBase {...props} onClick={handler}>
-      {open ? <IconAngleUp /> : <IconAngleDown />}
+      {open ? <IconCaretUp /> : <IconCaretDown />}
     </ToggleBase>
   )
 }
@@ -73,15 +97,27 @@ class DropDownButton extends Component {
     })
   }
 
-  render ({ children, label, ...props }) {
+  render ({ children, label, border, joined, ...props }) {
     return (
       <Wrapper {...props}>
-        <ButtonBase {...props}>{label}</ButtonBase>
-        <Toggle
-          {...props}
-          handler={e => this.toggle(e)}
-          open={this.state.open}
-        />
+        {joined ? (
+          <Toggle
+            {...props}
+            joined={joined}
+            label={label}
+            handler={e => this.toggle(e)}
+            open={this.state.open}
+          />
+        ) : (
+          <span>
+            <ButtonBase {...props}>{label}</ButtonBase>
+            <Toggle
+              {...props}
+              handler={e => this.toggle(e)}
+              open={this.state.open}
+            />
+          </span>
+        )}
         {this.state.open && (
           <MenuBase
             onClick={e => this.toggle(e)}
@@ -89,7 +125,7 @@ class DropDownButton extends Component {
           >
             {children.map((child, i) => {
               return (
-                <Item border={i} key={i}>
+                <Item border={border && i} key={i}>
                   {child}
                 </Item>
               )
