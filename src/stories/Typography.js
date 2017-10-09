@@ -5,9 +5,7 @@ import Text from '../components/Text'
 import Heading from '../components/Heading'
 import Link from '../components/Link'
 
-const Container = styled.div`
-  margin: 60px;
-`
+const Container = styled.div`margin: 60px;`
 
 storiesOf('Typography', module)
   .addDecorator(story => <Container>{story()}</Container>)
@@ -45,6 +43,11 @@ storiesOf('Typography', module)
         <div>
           <Link href={`https://resin.io`} blank>
             External Link
+          </Link>
+        </div>
+        <div>
+          <Link disabled href={`https://resin.io`} blank>
+            Disabled Link
           </Link>
         </div>
       </div>
