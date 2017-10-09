@@ -12,6 +12,7 @@ const ModalWrapper = Flex.extend`
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 9999;
   pointer-events: none;
 `
 
@@ -34,9 +35,8 @@ const ModalPanel = styled.div`
   pointer-events: auto;
 
   @media (max-width: 730px) {
-    left: 15px;
-    right: 15px;
     width: auto;
+    margin: 0 15px;
   }
 `
 
