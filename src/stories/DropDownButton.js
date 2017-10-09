@@ -2,6 +2,8 @@ import { h } from 'preact'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import DropDownButton from '../components/DropDownButton'
+import { Flex } from '../components/Grid'
+
 const Container = styled.div`margin: 30px;`
 
 storiesOf('DropDownButton', module)
@@ -107,6 +109,31 @@ storiesOf('DropDownButton', module)
           <div>Item</div>
           <div>Item</div>
         </DropDownButton>
+      </Container>
+    )
+  })
+  .addWithInfo('Alignment', () => {
+    return (
+      <Container>
+        <Flex justify='space-between'>
+          <DropDownButton mx={2} primary label={<div>DropDown</div>}>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          </DropDownButton>
+          <DropDownButton
+            mx={2}
+            alignRight
+            secondary
+            label={<div>DropDown</div>}
+          >
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          </DropDownButton>
+        </Flex>
       </Container>
     )
   })

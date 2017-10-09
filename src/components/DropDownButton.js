@@ -4,6 +4,7 @@ import IconCaretDown from 'react-icons/lib/fa/caret-down'
 import IconCaretUp from 'react-icons/lib/fa/caret-up'
 import { h, Component } from 'preact'
 import Button from './Button'
+import Fixed from './Fixed'
 import { Box, Flex } from './Grid'
 import { compose } from 'recompose'
 import { space, color, fontSize, width } from 'styled-system'
@@ -35,17 +36,24 @@ const MenuBase = styled.div`
   border: ${props => '1px solid ' + props.theme.colors.gray.main};
   overflow: hidden;
   z-index: 1;
+  left: ${props => (props.alignRight ? 'auto' : 0)};
+  right: ${props => (!props.alignRight ? 'auto' : 0)};
 `
 
 const Wrapper = styled.div`
   ${space} ${width} ${fontSize} ${color} display: inline-block;
   vertical-align: top;
+  position: relative;
 `
 
 const Item = styled.div`
-  padding: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 16px;
+  padding-right: 16px;
   border-top: ${props =>
     props.border && '1px solid ' + props.theme.colors.gray.main};
+  white-space: nowrap;
 
   &:hover {
     background: ${props => props.theme.colors.gray.light};
@@ -54,24 +62,26 @@ const Item = styled.div`
 
 const IconWrapper = styled.span`width: 28px;`
 
+const JoinedButton = styled(Button)`margin: 0;`
+
 const Toggle = ({ open, handler, label, joined, ...props }) => {
   if (joined) {
     if (label) {
       return (
-        <Button pl={16} pr={0} {...props} onClick={handler}>
+        <JoinedButton {...props} pl={16} pr={0} onClick={handler}>
           <Flex justify='space-between'>
             <Box mt='1px'>{label}</Box>
             <IconWrapper>
               {open ? <IconCaretUp /> : <IconCaretDown />}
             </IconWrapper>
           </Flex>
-        </Button>
+        </JoinedButton>
       )
     }
     return (
-      <Button {...props} square onClick={handler}>
+      <JoinedButton {...props} square onClick={handler}>
         {open ? <IconCaretUp /> : <IconCaretDown />}
-      </Button>
+      </JoinedButton>
     )
   }
   return (
@@ -97,7 +107,7 @@ class DropDownButton extends Component {
     })
   }
 
-  render ({ children, label, border, joined, ...props }) {
+  render ({ alignRight, children, label, border, joined, ...props }) {
     return (
       <Wrapper {...props}>
         {joined ? (
@@ -118,8 +128,10 @@ class DropDownButton extends Component {
             />
           </span>
         )}
+        {this.state.open && <Fixed onClick={e => this.toggle(e)} />}
         {this.state.open && (
           <MenuBase
+            alignRight={alignRight}
             onClick={e => this.toggle(e)}
             minWidth={`${this.state.minWidth}px`}
           >
