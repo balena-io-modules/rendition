@@ -73,8 +73,9 @@ const Button = styled.button`
     getColor(props, 'bg', 'dark') || darken(props.color)};
   }
 
-  '&:disabled': {
-    opacity: 1/4;
+  &:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
   }
 `
 

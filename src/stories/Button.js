@@ -43,6 +43,24 @@ storiesOf('Button', module)
       </Container>
     )
   })
+  .addWithInfo('Disabled', () => {
+    return (
+      <Container>
+        <Button mx={2} disabled primary onPress={action('case-1')}>
+          Button
+        </Button>
+        <Button mx={2} disabled secondary onPress={action('case-2')}>
+          Button
+        </Button>
+        <Button mx={2} disabled tertiary onPress={action('case-3')}>
+          Button
+        </Button>
+        <Button mx={2} disabled onPress={action('case-4')}>
+          Button
+        </Button>
+      </Container>
+    )
+  })
   .addWithInfo('Outline', () => {
     return (
       <Container>
