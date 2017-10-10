@@ -4,6 +4,7 @@ import IconCaretDown from 'react-icons/lib/fa/caret-down'
 import IconCaretUp from 'react-icons/lib/fa/caret-up'
 import { h, Component } from 'preact'
 import Button from './Button'
+import Divider from './Divider'
 import Fixed from './Fixed'
 import { Box, Flex } from './Grid'
 import { compose } from 'recompose'
@@ -136,6 +137,9 @@ class DropDownButton extends Component {
             minWidth={`${this.state.minWidth}px`}
           >
             {children.map((child, i) => {
+              if (child.type === Divider) {
+                return child
+              }
               return (
                 <Item border={border && i} key={i}>
                   {child}

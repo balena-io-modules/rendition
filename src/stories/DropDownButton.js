@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import DropDownButton from '../components/DropDownButton'
 import { Flex } from '../components/Grid'
+import Divider from '../components/Divider'
 
 const Container = styled.div`margin: 30px;`
 
@@ -134,6 +135,21 @@ storiesOf('DropDownButton', module)
             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
           </DropDownButton>
         </Flex>
+      </Container>
+    )
+  })
+  .addWithInfo('Divider', () => {
+    return (
+      <Container>
+        <DropDownButton mx={2} primary label={<div>DropDown</div>}>
+          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <Divider color='#c6c8c9' height={1} />
+          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </DropDownButton>
       </Container>
     )
   })
