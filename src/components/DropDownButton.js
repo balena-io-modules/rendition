@@ -37,6 +37,7 @@ const MenuBase = styled.div`
   border: ${props => '1px solid ' + props.theme.colors.gray.main};
   overflow: hidden;
   z-index: 1;
+  margin-top: 2px;
   left: ${props => (props.alignRight ? 'auto' : 0)};
   right: ${props => (!props.alignRight ? 'auto' : 0)};
 `
