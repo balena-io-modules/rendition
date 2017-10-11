@@ -1,10 +1,15 @@
 import { h } from 'preact'
 import { storiesOf, action } from '@storybook/react'
 import styled from 'styled-components'
-import { FaDownload, FaExpand, FaTrash, FaRecycle } from 'react-icons/lib/fa'
+import FaDownload from 'react-icons/lib/fa/download'
+import FaExpand from 'react-icons/lib/fa/expand'
+import FaTrash from 'react-icons/lib/fa/trash'
+import FaRecycle from 'react-icons/lib/fa/recycle'
 import Button from '../components/Button'
 
-const Container = styled.div`margin: 30px;`
+const Container = styled.div`
+  margin: 30px;
+`
 
 storiesOf('Button', module)
   .addWithInfo('Standard', () => {

@@ -1,6 +1,6 @@
-import _ from 'lodash'
 import { h } from 'preact'
 import Input from '../Input'
+import isInteger from 'lodash/isInteger'
 
 const p10 = val => parseInt(val, 10)
 
@@ -10,7 +10,7 @@ export const rules = {
   'less than': (target, value) => p10(target) < p10(value)
 }
 
-export const validate = _.isInteger
+export const validate = isInteger
 
 export const Edit = ({ value, onChange, ...props }) => (
   <Input

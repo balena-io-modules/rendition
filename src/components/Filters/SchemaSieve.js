@@ -1,19 +1,27 @@
 /* eslint class-methods-use-this: 0 */
-import _ from 'lodash'
+
+import assign from 'lodash/assign'
+import cloneDeep from 'lodash/cloneDeep'
+import isArray from 'lodash/isArray'
+import every from 'lodash/every'
+import some from 'lodash/some'
+import isObject from 'lodash/isObject'
+import pickBy from 'lodash/pickBy'
+import forEach from 'lodash/forEach'
 import filterTests from '../PineTypes'
 
 const SIMPLE_SEARCH_NAME = 'Full text search'
 
 class SchemaSieve {
   constructor (tests = {}) {
-    this.tests = _.assign(_.cloneDeep(filterTests), tests)
+    this.tests = assign(cloneDeep(filterTests), tests)
 
     this.SIMPLE_SEARCH_NAME = SIMPLE_SEARCH_NAME
   }
 
   test (item, input) {
-    return _.isArray(input)
-      ? _.every(input, i => this.baseTest(item, i))
+    return isArray(input)
+      ? every(input, i => this.baseTest(item, i))
       : this.baseTest(item, input)
   }
 
@@ -24,7 +32,7 @@ class SchemaSieve {
     // so we handle that seperately here
     if (name === SIMPLE_SEARCH_NAME) {
       const { value } = input
-      return _.some(
+      return some(
         item,
         target =>
           target &&
@@ -48,10 +56,10 @@ class SchemaSieve {
   }
 
   filter (collection, input) {
-    if (_.isArray(collection)) {
+    if (isArray(collection)) {
       return this.filterArray(collection, input)
     }
-    if (_.isObject(collection)) {
+    if (isObject(collection)) {
       return this.filterObject(collection, input)
     }
 
@@ -63,7 +71,7 @@ class SchemaSieve {
   }
 
   filterObject (collection, input) {
-    return _.pickBy(collection, value => this.test(value, input))
+    return pickBy(collection, value => this.test(value, input))
   }
 
   getOperators (type) {
@@ -76,7 +84,7 @@ class SchemaSieve {
   makeFilterInputs (schema) {
     const inputs = {}
 
-    _.forEach(schema, (value, key) => {
+    forEach(schema, (value, key) => {
       inputs[key] = {
         type: value.type,
         name: key,

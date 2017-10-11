@@ -1,7 +1,8 @@
 import { h } from 'preact'
-import _ from 'lodash'
+
 import Pie from 'paths-js/pie'
 import styled, { withTheme } from 'styled-components'
+import map from 'lodash/map'
 import { compose } from 'recompose'
 
 import hoc from '../hoc'
@@ -134,7 +135,7 @@ const StatusGauge = ({
         </g>
 
         <g transform='translate(50, 50)'>
-          {_.map(gauge, segment => {
+          {map(gauge, segment => {
             if (!count) {
               return
             }
@@ -168,7 +169,7 @@ const StatusGauge = ({
       </svg>
 
       <ul class='gauge__legend'>
-        {_.map(data, item => {
+        {map(data, item => {
           return (
             <li className={`gauge__legend-item`}>
               <span

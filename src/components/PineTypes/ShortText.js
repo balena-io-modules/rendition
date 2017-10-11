@@ -1,5 +1,5 @@
 import RegexParser from 'regex-parser'
-import _ from 'lodash'
+import isString from 'lodash/isString'
 import { h } from 'preact'
 import Input from '../Input'
 import showdown from 'showdown'
@@ -20,7 +20,7 @@ export const rules = {
     !normalize(target).match(RegexParser(value))
 }
 
-export const validate = val => _.isString(val) && val.length <= 255
+export const validate = val => isString(val) && val.length <= 255
 
 export const Edit = ({ onChange, ...props }) => (
   <Input type='text' onChange={e => onChange(e.target.value)} {...props} />

@@ -1,5 +1,5 @@
 import RegexParser from 'regex-parser'
-import _ from 'lodash'
+import isString from 'lodash/isString'
 import { h } from 'preact'
 import Textarea from '../Textarea'
 import showdown from 'showdown'
@@ -26,7 +26,7 @@ export const rules = {
   )
 }
 
-export const validate = _.isString
+export const validate = isString
 
 export const Edit = ({ onChange, ...props }) => (
   <Textarea onChange={e => onChange(e.target.value)} {...props} />

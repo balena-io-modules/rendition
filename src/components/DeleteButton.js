@@ -1,5 +1,5 @@
 import { h } from 'preact'
-import { FaClose } from 'react-icons/lib/fa'
+import FaClose from 'react-icons/lib/fa/close'
 import styled, { withTheme } from 'styled-components'
 import hoc from '../hoc'
 import { compose } from 'recompose'

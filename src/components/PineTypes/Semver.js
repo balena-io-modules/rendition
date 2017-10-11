@@ -1,7 +1,7 @@
 import * as semver from 'resin-semver'
-import _ from 'lodash'
 import { h } from 'preact'
 import Input from '../Input'
+import isString from 'lodash/isString'
 
 export const rules = {
   is: (target, value) => target && semver.compare(target, value) === 0,
@@ -9,7 +9,7 @@ export const rules = {
   'is less than': (target, value) => target && semver.lt(target, value)
 }
 
-export const validate = _.isString
+export const validate = isString
 
 export const Edit = ({ value, onChange, ...props }) => (
   <Input
