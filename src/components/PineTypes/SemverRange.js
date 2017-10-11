@@ -1,7 +1,8 @@
 import * as semver from 'resin-semver'
-import _ from 'lodash'
+
 import { h } from 'preact'
 import Input from '../Input'
+import isString from 'lodash/isString'
 
 /**
  * See the node-semver docs for more information on semver ranges
@@ -12,7 +13,7 @@ export const rules = {
   'does not contain': (target, value) => !semver.satisfies(value, target)
 }
 
-export const validate = _.isString
+export const validate = isString
 
 export const Edit = ({ value, onChange, ...props }) => (
   <Input

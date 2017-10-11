@@ -1,6 +1,6 @@
 import { h } from 'preact'
 import Select from '../Select'
-import _ from 'lodash'
+import isBoolean from 'lodash/isBoolean'
 
 export const Edit = ({ value, onChange, ...props }) => (
   <Select
@@ -18,7 +18,7 @@ export const rules = {
   'is false': target => !target
 }
 
-export const validate = _.isBoolean
+export const validate = isBoolean
 
 export const Display = ({ data, ...props }) => (
   <div {...props}>

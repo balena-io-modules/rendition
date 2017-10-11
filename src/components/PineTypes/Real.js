@@ -1,6 +1,6 @@
-import _ from 'lodash'
 import { h } from 'preact'
 import Input from '../Input'
+import isNumber from 'lodash/isNumber'
 
 const pF = val => parseFloat(val)
 
@@ -10,7 +10,7 @@ export const rules = {
   'less than': (target, value) => pF(target) < pF(value)
 }
 
-export const validate = _.isNumber
+export const validate = isNumber
 
 export const Edit = ({ value, onChange, ...props }) => (
   <Input

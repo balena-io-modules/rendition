@@ -1,5 +1,5 @@
 import { h } from 'preact'
-import _ from 'lodash'
+import filter from 'lodash/filter'
 import { withTheme } from 'styled-components'
 import { compose } from 'recompose'
 import ResinDeviceStatus from 'resin-device-status'
@@ -37,7 +37,7 @@ const DeviceStatusGauge = ({ devices, ...props }) => {
   const allDevices = devices || []
 
   ResinDeviceStatus.statuses.forEach(status => {
-    const devices = _.filter(
+    const devices = filter(
       allDevices,
       d => ResinDeviceStatus.getStatus(d).key === status.key
     )
