@@ -2,7 +2,7 @@ import { h } from 'preact'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import DropDownButton from '../components/DropDownButton'
-import { Flex } from '../components/Grid'
+import { Box, Flex } from '../components/Grid'
 import Divider from '../components/Divider'
 
 const Container = styled.div`margin: 30px;`
@@ -149,6 +149,18 @@ storiesOf('DropDownButton', module)
           <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
           <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
           <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </DropDownButton>
+      </Container>
+    )
+  })
+  .addWithInfo('No List Formatting', () => {
+    return (
+      <Container>
+        <DropDownButton mx={2} noListFormat primary label={<div>DropDown</div>}>
+          <Box p={3}>
+            <h3>Free input</h3>
+            <p>Lorem ipsum dolor sit amet</p>
+          </Box>
         </DropDownButton>
       </Container>
     )

@@ -35,11 +35,11 @@ const MenuBase = styled.div`
   box-shadow: ${props => '1px 1px 5px' + props.theme.colors.gray.light};
   border-radius: ${props => px(props.theme.radius)};
   border: ${props => '1px solid ' + props.theme.colors.gray.main};
-  overflow: hidden;
   z-index: 1;
   margin-top: 2px;
   left: ${props => (props.alignRight ? 'auto' : 0)};
   right: ${props => (!props.alignRight ? 'auto' : 0)};
+  white-space: nowrap;
 `
 
 const Wrapper = styled.div`
@@ -55,7 +55,7 @@ const Item = styled.div`
   padding-right: 16px;
   border-top: ${props =>
     props.border && '1px solid ' + props.theme.colors.gray.main};
-  white-space: nowrap;
+  border-radius: ${props => px(props.theme.radius)};
 
   &:hover {
     background: ${props => props.theme.colors.gray.light};
@@ -109,7 +109,15 @@ class DropDownButton extends Component {
     })
   }
 
-  render ({ alignRight, children, label, border, joined, ...props }) {
+  render ({
+    alignRight,
+    children,
+    label,
+    border,
+    joined,
+    noListFormat,
+    ...props
+  }) {
     return (
       <Wrapper {...props}>
         {joined ? (
@@ -138,6 +146,12 @@ class DropDownButton extends Component {
             minWidth={`${this.state.minWidth}px`}
           >
             {children.map((child, i) => {
+              if (noListFormat) {
+                return child
+              }
+              if (!child) {
+                return
+              }
               if (child.type === Divider) {
                 return child
               }
