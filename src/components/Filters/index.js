@@ -57,9 +57,7 @@ const SimpleSearchBox = styled.div`
   }
 `
 
-const FilterWrapper = styled(Box)`
-  position: relative;
-`
+const FilterWrapper = styled(Box)`position: relative;`
 
 const FilterInput = props => {
   const PineTypeInput = PineTypes[props.type].Edit

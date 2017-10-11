@@ -91,8 +91,9 @@ class FilterSummary extends Component {
               <Flex mb={30}>
                 <Text width={90}>Visible to:</Text>
                 <Select
-                  mt={10}
-                  width={120}
+                  ml={10}
+                  mt='-7px'
+                  width='auto'
                   value={this.state.scope}
                   onChange={e => this.setViewScope(e.target.value)}
                 >
