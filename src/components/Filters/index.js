@@ -62,7 +62,13 @@ const FilterWrapper = styled(Box)`position: relative;`
 const FilterInput = props => {
   const PineTypeInput = PineTypes[props.type].Edit
 
-  return <PineTypeInput value={props.value} onChange={props.onChange} />
+  return (
+    <PineTypeInput
+      schema={props.schema}
+      value={props.value}
+      onChange={props.onChange}
+    />
+  )
 }
 
 class Filters extends Component {
@@ -302,6 +308,7 @@ class Filters extends Component {
                     )}
                   </Select>
                   <FilterInput
+                    schema={this.props.schema[this.state.edit.name]}
                     value={this.state.edit.value}
                     onChange={value => this.handleEditChange(value, 'value')}
                     type={inputModels[this.state.edit.name].type}
