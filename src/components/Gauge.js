@@ -1,9 +1,9 @@
 import { h } from 'preact'
-
 import Pie from 'paths-js/pie'
 import styled, { withTheme } from 'styled-components'
 import map from 'lodash/map'
 import { compose } from 'recompose'
+import { px } from '../utils'
 
 import hoc from '../hoc'
 import theme from '../theme'
@@ -25,8 +25,7 @@ const StatusGaugeWrapper = styled.div`
       text-decoration: none !important;
     }
 
-    .gauge__graph__total-label,
-    .gauge__graph__total {
+    .gauge__graph__total-label {
       transform: translateX(0);
     }
   }
@@ -42,14 +41,6 @@ const StatusGaugeWrapper = styled.div`
     font-family: ${font};
     font-size: 5px;
     fill: #b8b8b8;
-    text-anchor: middle;
-  }
-
-  .gauge__graph__total {
-    font-family: ${font};
-    font-size: 26px;
-    fill: #5e5e5e;
-    letter-spacing: -1px;
     text-anchor: middle;
   }
 
@@ -84,6 +75,21 @@ const StatusGaugeWrapper = styled.div`
     font-size: 11px;
   }
 `
+
+const GaugeTotalText = styled.text`
+  font-family: ${font};
+  font-size: ${props => px(props.count > 999 ? 20 : 26)};
+  fill: #5e5e5e;
+  letter-spacing: -1px;
+  text-anchor: middle;
+  transform: translateX(0);
+`
+
+const GaugeTotal = ({ count, ...props }) => (
+  <GaugeTotalText count={count} {...props}>
+    {count}
+  </GaugeTotalText>
+)
 
 /**
  * data: [{
@@ -163,9 +169,7 @@ const StatusGauge = ({
         <text class='gauge__graph__total-label' x='50' y='41'>
           {title ? ` ${title.toUpperCase()}` : 'TOTAL'}
         </text>
-        <text class='gauge__graph__total' x='50' y='63'>
-          {count}
-        </text>
+        <GaugeTotal x='50' y='63' count={count} />
       </svg>
 
       <ul class='gauge__legend'>
