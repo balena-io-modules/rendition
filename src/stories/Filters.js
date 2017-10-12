@@ -1,5 +1,6 @@
 import { h, Component } from 'preact'
 import { storiesOf, action } from '@storybook/react'
+import uniq from 'lodash/uniq'
 import styled from 'styled-components'
 import { Filters, SchemaSieve, PineTypes } from '../index.js'
 import PokeDex from './assets/pokedex'
@@ -30,7 +31,8 @@ const schema = {
     type: 'Short Text'
   },
   Category: {
-    type: 'Short Text'
+    type: 'Enum',
+    values: uniq(PokeDex.map(p => p.Category))
   },
   Abilities: {
     type: 'Short Text'

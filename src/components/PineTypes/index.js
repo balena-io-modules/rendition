@@ -2,6 +2,7 @@ import * as BooleanType from './Boolean'
 import * as CaseInsensitiveTextType from './CaseInsensitiveText'
 import * as DateTimeType from './DateTime'
 import * as DateType from './Date'
+import * as EnumType from './Enum'
 import * as IntegerType from './Integer'
 import * as RealType from './Real'
 import * as ShortTextType from './ShortText'
@@ -22,6 +23,7 @@ export default {
   Text: TextType,
   Time: TimeType,
 
+  Enum: EnumType,
   'Semver Range': SemverRangeType,
   Semver: SemverType
 }
