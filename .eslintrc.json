@@ -1,8 +1,9 @@
 {
   "rules": {
+    "react/prop-types": 0,
     "no-unused-expressions": 1,
     // Prevents clashes with jsx specific rules about indenting, by ignoring JSX elements
     "indent": ["error", 2, { "ignoredNodes": ["JSXElement *"] }]
   },
-  "extends": ["standard", "standard-preact"]
+  "extends": ["standard", "standard-react"]
 }

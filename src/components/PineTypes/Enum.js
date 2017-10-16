@@ -1,4 +1,4 @@
-import { h } from 'preact'
+import React from 'react'
 import Select from '../Select'
 import _ from 'lodash'
 

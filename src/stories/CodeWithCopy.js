@@ -1,9 +1,11 @@
-import { h } from 'preact'
+import React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import CodeWithCopy from '../components/CodeWithCopy'
 
-const Container = styled.div`margin: 30px;`
+const Container = styled.div`
+  margin: 30px;
+`
 
 storiesOf('CodeWithCopy', module)
   .addDecorator(story => <Container>{story()}</Container>)

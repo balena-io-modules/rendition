@@ -2,12 +2,13 @@ import styled, { withTheme } from 'styled-components'
 import { px } from '../utils'
 import IconCaretDown from 'react-icons/lib/fa/caret-down'
 import IconCaretUp from 'react-icons/lib/fa/caret-up'
-import { h, Component } from 'preact'
+import React, { Component } from 'react'
 import Button from './Button'
 import Divider from './Divider'
 import Fixed from './Fixed'
 import { Box, Flex } from './Grid'
 import { compose } from 'recompose'
+import isArray from 'lodash/isArray'
 import { space, color, fontSize, width } from 'styled-system'
 
 const ToggleBase = styled(Button)`
@@ -62,9 +63,13 @@ const Item = styled.div`
   }
 `
 
-const IconWrapper = styled.span`width: 28px;`
+const IconWrapper = styled.span`
+  width: 28px;
+`
 
-const JoinedButton = styled(Button)`margin: 0;`
+const JoinedButton = styled(Button)`
+  margin: 0;
+`
 
 const Toggle = ({ open, handler, label, joined, ...props }) => {
   if (joined) {
@@ -109,15 +114,19 @@ class DropDownButton extends Component {
     })
   }
 
-  render ({
-    alignRight,
-    children,
-    label,
-    border,
-    joined,
-    noListFormat,
-    ...props
-  }) {
+  render () {
+    const {
+      alignRight,
+      children,
+      label,
+      border,
+      joined,
+      noListFormat,
+      ...props
+    } = this.props
+
+    const dropdownContents = isArray(children) ? children : [children]
+
     return (
       <Wrapper {...props}>
         {joined ? (
@@ -145,7 +154,7 @@ class DropDownButton extends Component {
             onClick={e => this.toggle(e)}
             minWidth={`${this.state.minWidth}px`}
           >
-            {children.map((child, i) => {
+            {dropdownContents.map((child, i) => {
               if (noListFormat) {
                 return child
               }

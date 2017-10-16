@@ -1,10 +1,12 @@
-import { h, Component } from 'preact'
+import React, { Component } from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import Modal from '../components/Modal'
 import Button from '../components/Button'
 
-const Container = styled.div`margin: 30px;`
+const Container = styled.div`
+  margin: 30px;
+`
 
 class ModalDemo extends Component {
   constructor (props) {

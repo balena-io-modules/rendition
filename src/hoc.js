@@ -1,4 +1,4 @@
-import { h } from 'preact'
+import React from 'react'
 import { compose } from 'recompose'
 import getDisplayName from 'recompose/getDisplayName'
 import styled from 'styled-components'
@@ -33,7 +33,9 @@ const propTypes = {
 }
 
 const withStyledSystem = child => {
-  const Base = styled(child)`${space} ${width} ${fontSize} ${color};`
+  const Base = styled(child)`
+    ${space} ${width} ${fontSize} ${color};
+  `
 
   Base.displayName = getDisplayName(child)
   Base.propTypes = propTypes

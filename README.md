@@ -2,14 +2,14 @@
 
 [![Build Status](https://travis-ci.org/resin-io-modules/resin-components.svg?branch=master)](https://travis-ci.org/resin-io-modules/resin-components)
 
-A collection of resin.io UI components, built using [Preact][preact], [recompose][recompose], [styled-components][styled-components] and [styled-system][styled-system].
+A collection of resin.io UI components, built using [React][react], [recompose][recompose], [styled-components][styled-components] and [styled-system][styled-system].
 
 ## Usage
 
-You can import preact components directly into your project:
+You can import react components directly into your project:
 
 ```jsx
-import { h } from 'preact';
+import React from 'react';
 import { Button, Box } from 'resin-components';
 
 const Example = () => {
@@ -63,7 +63,7 @@ npm run publish-storybook
 npm test
 ```
 
-[preact]:https://preactjs.com/
+[react]:https://reactjs.org/
 [recompose]:https://github.com/acdlite/recompose
 [styled-components]:https://www.styled-components.com/
 [styled-system]:http://jxnblk.com/styled-system/

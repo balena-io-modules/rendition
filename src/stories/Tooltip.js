@@ -1,9 +1,11 @@
-import { h } from 'preact'
+import React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import Tooltip from '../components/Tooltip'
 
-const Container = styled.div`margin: 60px;`
+const Container = styled.div`
+  margin: 60px;
+`
 
 storiesOf('Tooltip', module)
   .addDecorator(story => <Container>{story()}</Container>)

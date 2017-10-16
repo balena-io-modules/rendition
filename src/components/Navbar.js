@@ -1,4 +1,4 @@
-import { h, Component } from 'preact'
+import React, { Component } from 'react'
 import { Flex, Box } from './Grid'
 import Container from './Container'
 import MenuIcon from 'react-icons/lib/md/dehaze'
@@ -48,7 +48,8 @@ class Navbar extends Component {
     })
   }
 
-  render ({ children, brand, ...props }) {
+  render () {
+    const { children, brand, ...props } = this.props
     return (
       <Box {...props}>
         <Container>

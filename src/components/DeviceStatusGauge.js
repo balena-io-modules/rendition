@@ -1,4 +1,4 @@
-import { h } from 'preact'
+import React from 'react'
 import filter from 'lodash/filter'
 import { withTheme } from 'styled-components'
 import { compose } from 'recompose'

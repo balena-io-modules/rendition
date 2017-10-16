@@ -1,5 +1,5 @@
 import cloneDeep from 'lodash/cloneDeep'
-import { h, Component } from 'preact'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Box } from '../Grid'
 import Text from '../Text'
@@ -107,7 +107,7 @@ class ViewsMenu extends Component {
                   return
                 }
                 return (
-                  <Box>
+                  <Box key={scope.key}>
                     {!!scope.title && (
                       <Text fontSize={13} ml={20} mb={2} mt={2} color='#aaa'>
                         {scope.title}

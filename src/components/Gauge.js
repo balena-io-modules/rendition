@@ -1,4 +1,4 @@
-import { h } from 'preact'
+import React from 'react'
 import Pie from 'paths-js/pie'
 import styled, { withTheme } from 'styled-components'
 import map from 'lodash/map'
@@ -122,14 +122,14 @@ const StatusGauge = ({
   return (
     <StatusGaugeWrapper {...props}>
       <svg
-        class='gauge__graph'
+        className='gauge__graph'
         viewBox='0 0 100 100'
         xmlns='http://www.w3.org/2000/svg'
       >
         <circle
           fill=' white'
           stroke='#dadada'
-          stroke-width='5'
+          strokeWidth='5'
           cx='50'
           cy='50'
           r='46'
@@ -147,7 +147,7 @@ const StatusGauge = ({
             }
             if (segment.item.value === count) {
               return (
-                <g>
+                <g key={segment.item.key || segment.item.name}>
                   <path
                     transform='translate(-100, -100)'
                     fill={segment.item.color}
@@ -157,7 +157,7 @@ const StatusGauge = ({
               )
             }
             return (
-              <g>
+              <g key={segment.item.key || segment.item.name}>
                 <path
                   fill={segment.item.color}
                   d={segment.sector.path.print()}
@@ -166,23 +166,23 @@ const StatusGauge = ({
             )
           })}
         </g>
-        <text class='gauge__graph__total-label' x='50' y='41'>
+        <text className='gauge__graph__total-label' x='50' y='41'>
           {title ? ` ${title.toUpperCase()}` : 'TOTAL'}
         </text>
         <GaugeTotal x='50' y='63' count={count} />
       </svg>
 
-      <ul class='gauge__legend'>
+      <ul className='gauge__legend'>
         {map(data, item => {
           return (
-            <li className={`gauge__legend-item`}>
+            <li key={item.key || item.name} className={`gauge__legend-item`}>
               <span
                 className={`gauge__legend-color`}
                 style={{ backgroundColor: item.color }}
               >
                 &nbsp;
               </span>
-              <span class='gauge__legend-name'>{item.name}</span>
+              <span className='gauge__legend-name'>{item.name}</span>
             </li>
           )
         })}

@@ -1,4 +1,4 @@
-import { h } from 'preact'
+import React from 'react'
 import styled from 'styled-components'
 import Button from './Button'
 import Fixed from './Fixed'

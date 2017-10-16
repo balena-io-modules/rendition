@@ -1,11 +1,13 @@
-import { h } from 'preact'
+import React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import Text from '../components/Text'
 import Heading from '../components/Heading'
 import Link from '../components/Link'
 
-const Container = styled.div`margin: 60px;`
+const Container = styled.div`
+  margin: 60px;
+`
 
 storiesOf('Typography', module)
   .addDecorator(story => <Container>{story()}</Container>)

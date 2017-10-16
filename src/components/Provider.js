@@ -1,8 +1,10 @@
-import { h } from 'preact'
+import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import defaultTheme from '../theme'
 
-const Base = styled.div`font-family: ${props => props.theme.font};`
+const Base = styled.div`
+  font-family: ${props => props.theme.font};
+`
 
 const Provider = ({ theme, ...props }) => {
   return (

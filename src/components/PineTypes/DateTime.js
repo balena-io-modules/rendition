@@ -1,5 +1,5 @@
 import moment from 'moment'
-import { h } from 'preact'
+import React from 'react'
 import Input from '../Input'
 
 /**

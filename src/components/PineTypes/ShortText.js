@@ -1,6 +1,6 @@
 import RegexParser from 'regex-parser'
 import isString from 'lodash/isString'
-import { h } from 'preact'
+import React from 'react'
 import Input from '../Input'
 import showdown from 'showdown'
 

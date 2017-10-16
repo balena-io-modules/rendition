@@ -1,4 +1,4 @@
-import { h, Component } from 'preact'
+import React, { Component } from 'react'
 import moment from 'moment'
 import cloneDeep from 'lodash/cloneDeep'
 import find from 'lodash/find'
@@ -57,7 +57,9 @@ const SimpleSearchBox = styled.div`
   }
 `
 
-const FilterWrapper = styled(Box)`position: relative;`
+const FilterWrapper = styled(Box)`
+  position: relative;
+`
 
 const FilterInput = props => {
   const PineTypeInput = PineTypes[props.type].Edit
@@ -293,7 +295,9 @@ class Filters extends Component {
                       this.handleEditChange(e.target.value, 'name')}
                   >
                     {map(inputModels, ({ name, label }) => (
-                      <option value={name}>{label || name}</option>
+                      <option key={name} value={name}>
+                        {label || name}
+                      </option>
                     ))}
                   </Select>
                   <Select
@@ -304,7 +308,7 @@ class Filters extends Component {
                   >
                     {map(
                       inputModels[this.state.edit.name].availableOperators,
-                      name => <option>{name}</option>
+                      name => <option key={name}>{name}</option>
                     )}
                   </Select>
                   <FilterInput

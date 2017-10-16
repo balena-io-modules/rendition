@@ -1,4 +1,4 @@
-import { h } from 'preact'
+import React from 'react'
 import Input from '../Input'
 import isInteger from 'lodash/isInteger'
 

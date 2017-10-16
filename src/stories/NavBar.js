@@ -1,4 +1,4 @@
-import { h } from 'preact'
+import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Navbar, Image, Link } from '../'
 import logo from './assets/etcher.svg'
