@@ -6,9 +6,13 @@ export const Edit = ({ schema, value, onChange, ...props }) => (
   <Select {...props} value={value} onChange={e => onChange(e.target.value)}>
     {_.map(schema.values, item => {
       if (_.isString(item)) {
-        return <option>{item}</option>
+        return <option key={item}>{item}</option>
       } else {
-        return <option value={item.value}>{item.label}</option>
+        return (
+          <option key={item} value={item.value}>
+            {item.label}
+          </option>
+        )
       }
     })}
   </Select>
