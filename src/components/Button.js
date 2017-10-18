@@ -1,9 +1,9 @@
 import styled, { withTheme } from 'styled-components'
 import hoc from '../hoc'
 import { bold, px, darken } from '../utils'
-import get from 'lodash/get'
-import isObject from 'lodash/isObject'
-import React from 'react'
+import * as get from 'lodash/get'
+import * as isObject from 'lodash/isObject'
+import * as React from 'react'
 
 const getColorFromTheme = theme => colorString => {
   // allows for dot notation like 'secondary.dark'

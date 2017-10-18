@@ -1,6 +1,6 @@
-import React from 'react'
+import * as React from 'react'
+import * as isInteger from 'lodash/isInteger'
 import Input from '../Input'
-import isInteger from 'lodash/isInteger'
 
 const p10 = val => parseInt(val, 10)
 

@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import * as React from 'react'
+import * as FaBookmarkO from 'react-icons/lib/fa/bookmark'
 import styled from 'styled-components'
 import { Box, Flex } from '../Grid'
 import Input from '../Input'
 import Text from '../Text'
 import Select from '../Select'
-import FaBookmarkO from 'react-icons/lib/fa/bookmark'
 import Modal from '../Modal'
 import FilterDescription from './FilterDescription'
 import SchemaSieve from './SchemaSieve'
@@ -25,7 +25,7 @@ const ActionBtn = styled.button`
   float: right;
 `
 
-class FilterSummary extends Component {
+class FilterSummary extends React.Component {
   constructor (props) {
     super(props)
     this.state = {

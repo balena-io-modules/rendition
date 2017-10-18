@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import { Flex, Box } from './Grid'
-import Container from './Container'
-import MenuIcon from 'react-icons/lib/md/dehaze'
-import CloseIcon from 'react-icons/lib/md/close'
+import * as React from 'react'
+import * as MenuIcon from 'react-icons/lib/md/dehaze'
+import * as CloseIcon from 'react-icons/lib/md/close'
 import { withTheme } from 'styled-components'
 import { responsiveStyle } from 'styled-system'
+import { Flex, Box } from './Grid'
+import Container from './Container'
 
 const display = responsiveStyle('display', 'display')
 const maxHeight = responsiveStyle('max-height', 'maxHeight')
@@ -34,7 +34,7 @@ const MenuBox = Flex.extend`
   }
 `
 
-class Navbar extends Component {
+class Navbar extends React.Component {
   constructor (props) {
     super(props)
     this.state = {

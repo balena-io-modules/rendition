@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
 import styled from 'styled-components'
 import DeleteButton from '../components/DeleteButton'

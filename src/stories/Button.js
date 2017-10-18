@@ -1,10 +1,10 @@
-import React from 'react'
+import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
 import styled from 'styled-components'
-import FaDownload from 'react-icons/lib/fa/download'
-import FaExpand from 'react-icons/lib/fa/expand'
-import FaTrash from 'react-icons/lib/fa/trash'
-import FaRecycle from 'react-icons/lib/fa/recycle'
+import * as FaDownload from 'react-icons/lib/fa/download'
+import * as FaExpand from 'react-icons/lib/fa/expand'
+import * as FaTrash from 'react-icons/lib/fa/trash'
+import * as FaRecycle from 'react-icons/lib/fa/recycle'
 import Button from '../components/Button'
 
 const Container = styled.div`

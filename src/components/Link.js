@@ -1,7 +1,7 @@
-import React from 'react'
+import * as React from 'react'
+import * as get from 'lodash/get'
+import * as omit from 'lodash/omit'
 import Text from './Text'
-import get from 'lodash/get'
-import omit from 'lodash/omit'
 import { darken } from '../utils'
 
 let Base = Text.extend`

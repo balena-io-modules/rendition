@@ -1,7 +1,7 @@
-import React from 'react'
-import Pie from 'paths-js/pie'
+import * as React from 'react'
+import * as Pie from 'paths-js/pie'
 import styled, { withTheme } from 'styled-components'
-import map from 'lodash/map'
+import * as map from 'lodash/map'
 import { compose } from 'recompose'
 import { px } from '../utils'
 

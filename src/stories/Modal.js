@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import Modal from '../components/Modal'
@@ -8,7 +8,7 @@ const Container = styled.div`
   margin: 30px;
 `
 
-class ModalDemo extends Component {
+class ModalDemo extends React.Component {
   constructor (props) {
     super(props)
 

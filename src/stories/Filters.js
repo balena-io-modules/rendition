@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
-import uniq from 'lodash/uniq'
+import * as uniq from 'lodash/uniq'
 import styled from 'styled-components'
 import { Filters, SchemaSieve, PineTypes } from '../index.js'
 import PokeDex from './assets/pokedex'
@@ -55,7 +55,7 @@ const schema = {
   }
 }
 
-class FiltersDemo extends Component {
+class FiltersDemo extends React.Component {
   constructor (props) {
     super(props)
     this.state = {

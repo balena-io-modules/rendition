@@ -1,7 +1,7 @@
 import styled, { withTheme } from 'styled-components'
 import hoc from '../hoc'
 import { compose, withProps } from 'recompose'
-import defaultTo from 'lodash/defaultTo'
+import * as defaultTo from 'lodash/defaultTo'
 
 const Base = styled.div`
   position: fixed;

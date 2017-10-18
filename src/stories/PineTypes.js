@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
 import styled from 'styled-components'
 import PineTypes from '../components/PineTypes'
@@ -9,7 +9,7 @@ const Container = styled.div`
 
 const actionHandler = action('Data changed')
 
-class PineTypeDemo extends Component {
+class PineTypeDemo extends React.Component {
   constructor (props) {
     super(props)
 
