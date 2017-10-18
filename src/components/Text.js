@@ -16,7 +16,9 @@ export const bold = props =>
 
 const align = responsiveStyle('text-align', 'align')
 
-const Text = styled.div`${fontSize} ${space} ${color} ${caps} ${bold} ${align};`
+const Text = styled.div`
+  ${fontSize} ${space} ${color} ${caps} ${bold} ${align};
+`
 
 Text.displayName = 'Text'
 Text.span = Text.withComponent('span')

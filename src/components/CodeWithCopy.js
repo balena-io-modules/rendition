@@ -1,4 +1,4 @@
-import { h } from 'preact'
+import React from 'react'
 import styled, { withTheme } from 'styled-components'
 import copyToClipboard from 'copy-to-clipboard'
 import { compose } from 'recompose'
@@ -31,15 +31,13 @@ const Wrapper = styled.span`
 const Base = ({ copy, text, ...props }) => {
   const getCopyText = () => (copy || text || '').trim()
   return (
-    <Wrapper class='code-with-copy'>
-      <code ng-copy='showTooltip(true)' title={copy}>
-        {text.trim()}
-      </code>
+    <Wrapper className='code-with-copy'>
+      <code title={copy}>{text.trim()}</code>
 
       <Tooltip message='Copied!' eventType='click'>
         <span
           onClick={() => copyToClipboard(getCopyText())}
-          class='code-with-copy__copy'
+          className='code-with-copy__copy'
         >
           <FaClipboard />
         </span>

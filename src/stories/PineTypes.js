@@ -1,9 +1,11 @@
-import { h, Component } from 'preact'
+import React, { Component } from 'react'
 import { storiesOf, action } from '@storybook/react'
 import styled from 'styled-components'
 import PineTypes from '../components/PineTypes'
 
-const Container = styled.div`margin: 30px;`
+const Container = styled.div`
+  margin: 30px;
+`
 
 const actionHandler = action('Data changed')
 

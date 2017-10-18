@@ -7,14 +7,14 @@ const setDefaultProps = withProps(props => {
   // always allow override with provided props
   return Object.assign(
     {
-      p: [ 3, 4 ],
+      p: [3, 4],
       minHeight: `80vh`
     },
     props
   )
 })
 
-const setBgImage = bgImage => bgImage ? `url(${bgImage})` : 'none'
+const setBgImage = bgImage => (bgImage ? `url(${bgImage})` : 'none')
 
 const Base = styled.div`
   display: flex;
@@ -24,11 +24,7 @@ const Base = styled.div`
   min-height: ${props => props.minHeight};
   background-size: cover;
   background-position: center;
-  background-image: ${props => setBgImage(props.backgroundImage)}
+  background-image: ${props => setBgImage(props.backgroundImage)};
 `
 
-export default compose(
-  withTheme,
-  setDefaultProps,
-  hoc
-)(Base)
+export default compose(withTheme, setDefaultProps, hoc)(Base)

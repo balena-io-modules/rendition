@@ -1,4 +1,4 @@
-import { h } from 'preact'
+import React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import Textarea from '../components/Textarea'

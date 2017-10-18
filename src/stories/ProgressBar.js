@@ -1,9 +1,11 @@
-import { h, Component } from 'preact'
+import React, { Component } from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import ProgressBar from '../components/ProgressBar'
 
-const Container = styled.div`margin: 30px;`
+const Container = styled.div`
+  margin: 30px;
+`
 
 class Progressor extends Component {
   constructor (props) {
@@ -12,14 +14,20 @@ class Progressor extends Component {
     this.state = {
       value: props.value
     }
+  }
 
-    setInterval(() => {
+  componentDidMount () {
+    this.progressInterval = setInterval(() => {
       let value = this.state.value + 1
       if (value > 100) {
         value = 0
       }
       this.setState({ value })
     }, 250)
+  }
+
+  componentWillUnmount () {
+    window.clearInterval(this.progressInterval)
   }
 
   render () {

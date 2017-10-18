@@ -3,7 +3,7 @@ import hoc from '../hoc'
 import { bold, px, darken } from '../utils'
 import get from 'lodash/get'
 import isObject from 'lodash/isObject'
-import { h } from 'preact'
+import React from 'react'
 
 const getColorFromTheme = theme => colorString => {
   // allows for dot notation like 'secondary.dark'

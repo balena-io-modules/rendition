@@ -1,4 +1,4 @@
-import { h, Component } from 'preact'
+import React, { Component } from 'react'
 import { storiesOf, action } from '@storybook/react'
 import uniq from 'lodash/uniq'
 import styled from 'styled-components'
@@ -7,7 +7,9 @@ import PokeDex from './assets/pokedex'
 
 const sieve = SchemaSieve()
 
-const Container = styled.div`margin: 30px;`
+const Container = styled.div`
+  margin: 30px;
+`
 
 const StyledTable = styled.table`
   width: 100%;
@@ -98,11 +100,11 @@ class FiltersDemo extends Component {
           setRules={rules => this.setRules(rules)}
         />
 
-        {items.map(item => {
-          return (
-            <div>
-              <h2>{item.Name}</h2>
-              <StyledTable>
+        {items.map((item, index) => (
+          <div key={index}>
+            <h2>{item.Name}</h2>
+            <StyledTable>
+              <tbody>
                 <tr>
                   <td>National PokeDex Number</td>
                   <td>{item.pokedex_number}</td>
@@ -129,11 +131,11 @@ class FiltersDemo extends Component {
                     <DateTimeDisplay data={item.first_seen} />
                   </td>
                 </tr>
-              </StyledTable>
-              <p>{item.Description}</p>
-            </div>
-          )
-        })}
+              </tbody>
+            </StyledTable>
+            <p>{item.Description}</p>
+          </div>
+        ))}
       </div>
     )
   }

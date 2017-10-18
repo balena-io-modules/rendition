@@ -1,11 +1,13 @@
-import { h } from 'preact'
+import React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import DropDownButton from '../components/DropDownButton'
 import { Box, Flex } from '../components/Grid'
 import Divider from '../components/Divider'
 
-const Container = styled.div`margin: 30px;`
+const Container = styled.div`
+  margin: 30px;
+`
 
 storiesOf('DropDownButton', module)
   .addWithInfo('Standard', () => {

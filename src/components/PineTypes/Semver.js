@@ -1,5 +1,5 @@
 import * as semver from 'resin-semver'
-import { h } from 'preact'
+import React from 'react'
 import Input from '../Input'
 import isString from 'lodash/isString'
 

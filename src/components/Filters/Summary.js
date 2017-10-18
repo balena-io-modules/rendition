@@ -1,4 +1,4 @@
-import { h, Component } from 'preact'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Box, Flex } from '../Grid'
 import Input from '../Input'
@@ -97,9 +97,11 @@ class FilterSummary extends Component {
                   value={this.state.scope}
                   onChange={e => this.setViewScope(e.target.value)}
                 >
-                  {this.props.views.map(item => {
-                    return <option value={item.key}>{item.scopeLabel}</option>
-                  })}
+                  {this.props.views.map(item => (
+                    <option key={item.key} value={item.key}>
+                      {item.scopeLabel}
+                    </option>
+                  ))}
                 </Select>
               </Flex>
             )}

@@ -1,4 +1,4 @@
-import { h } from 'preact'
+import React from 'react'
 import { storiesOf } from '@storybook/react'
 import Container from '../components/Container'
 import Heading from '../components/Heading'

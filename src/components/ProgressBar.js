@@ -1,7 +1,8 @@
-import { h } from 'preact'
+import React from 'react'
 import styled, { withTheme } from 'styled-components'
 import { compose, withProps } from 'recompose'
 import get from 'lodash/get'
+import assign from 'lodash/assign'
 import hoc from '../hoc'
 import { px } from '../utils'
 import { radius } from '../theme'
@@ -42,8 +43,7 @@ const getType = withProps(props => {
   const type = Object.keys(props).find(b =>
     Object.keys(props.theme.colors).find(k => k === b)
   )
-  props.type = type
-  return props
+  return assign({}, props, { type })
 })
 
 const setTypeProps = withProps(({ type, theme }) => {

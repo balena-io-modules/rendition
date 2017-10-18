@@ -1,4 +1,4 @@
-import { h } from 'preact'
+import React from 'react'
 import { storiesOf } from '@storybook/react'
 import Gauge from '../components/Gauge'
 
@@ -59,7 +59,7 @@ storiesOf('Gauge', module)
   .addWithInfo('single segment', () => {
     return <Gauge m={30} title='Ice Cream' data={singleSegment} />
   })
-  .addWithInfo('zero zount', () => {
+  .addWithInfo('zero count', () => {
     return (
       <Gauge
         m={30}

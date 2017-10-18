@@ -1,5 +1,3 @@
-/* eslint class-methods-use-this: 0 */
-
 import assign from 'lodash/assign'
 import cloneDeep from 'lodash/cloneDeep'
 import isArray from 'lodash/isArray'

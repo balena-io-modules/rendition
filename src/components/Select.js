@@ -1,4 +1,4 @@
-import { h } from 'preact'
+import React from 'react'
 import styled, { withTheme } from 'styled-components'
 import hoc from '../hoc'
 import { px } from '../utils'

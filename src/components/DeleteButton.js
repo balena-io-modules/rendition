@@ -1,4 +1,4 @@
-import { h } from 'preact'
+import React from 'react'
 import FaClose from 'react-icons/lib/fa/close'
 import styled, { withTheme } from 'styled-components'
 import hoc from '../hoc'

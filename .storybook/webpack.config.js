@@ -1,27 +1,21 @@
 module.exports = {
-  name: 'client',
-  target: 'web',
+  name: "client",
+  target: "web",
   resolve: {
-    extensions: ['.js', 'jsx'],
-    alias: {
-      react: 'preact-compat',
-      'react-dom': 'preact-compat'
-    }
+    extensions: [".js", "jsx"]
   },
-  devtool: 'source-map',
+  devtool: "source-map",
   module: {
     rules: [
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         exclude: /node_modules/
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader'
-        ]
+        use: ["file-loader"]
       }
     ]
   }
-}
+};

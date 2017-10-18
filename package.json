@@ -1,6 +1,6 @@
 {
   "name": "resin-components",
-  "version": "1.21.3",
+  "version": "2.0.0",
   "description": "Resin Components Component",
   "repository": {
     "type": "git",
@@ -32,21 +32,20 @@
     "chai": "^4.1.2",
     "css-loader": "^0.28.5",
     "eslint-config-standard": "^10.2.1",
-    "eslint-config-standard-preact": "^1.1.6",
+    "eslint-config-standard-react": "^5.0.0",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-react": "^7.3.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.4.0",
     "eslint-plugin-standard": "^3.0.1",
     "gh-pages": "1.0.0",
     "git-url-parse": "^7.0.0",
     "husky": "^0.14.3",
     "lint-staged": "^4.1.1",
     "mocha": "^3.5.0",
-    "preact-compat": "^3.14.1",
     "prettier-eslint-cli": "4.3.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react": "^15.6.0",
+    "react-dom": "^15.6.0"
   },
   "dependencies": {
     "color": "^2.0.0",
@@ -55,7 +54,6 @@
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "paths-js": "^0.4.5",
-    "preact": "^7.2.0",
     "react-aria-tooltip": "^1.1.1",
     "react-icons": "^2.2.5",
     "recompose": "0.25.0",

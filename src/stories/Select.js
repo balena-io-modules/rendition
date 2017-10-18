@@ -1,15 +1,17 @@
-import { h } from 'preact'
+import React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import Select from '../components/Select'
 
-const Container = styled.div`margin: 30px;`
+const Container = styled.div`
+  margin: 30px;
+`
 
 storiesOf('Select', module)
   .addDecorator(story => <Container>{story()}</Container>)
   .addWithInfo('Standard', () => {
     return (
-      <Select value={1}>
+      <Select>
         <option value={1}>Option 1</option>
         <option value={2}>Option 2</option>
         <option value={3}>Option 3</option>
@@ -18,7 +20,7 @@ storiesOf('Select', module)
   })
   .addWithInfo('Emphasized', () => {
     return (
-      <Select value={1} emphasized>
+      <Select emphasized>
         <option value={1}>Option 1</option>
         <option value={2}>Option 2</option>
         <option value={3}>Option 3</option>
