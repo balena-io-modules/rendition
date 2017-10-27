@@ -1,14 +1,14 @@
 import styled, { withTheme } from 'styled-components'
 import { px } from '../utils'
-import IconCaretDown from 'react-icons/lib/fa/caret-down'
-import IconCaretUp from 'react-icons/lib/fa/caret-up'
-import React, { Component } from 'react'
+import * as IconCaretDown from 'react-icons/lib/fa/caret-down'
+import * as IconCaretUp from 'react-icons/lib/fa/caret-up'
+import * as React from 'react'
 import Button from './Button'
 import Divider from './Divider'
 import Fixed from './Fixed'
 import { Box, Flex } from './Grid'
 import { compose } from 'recompose'
-import isArray from 'lodash/isArray'
+import * as isArray from 'lodash/isArray'
 import { space, color, fontSize, width } from 'styled-system'
 
 const ToggleBase = styled(Button)`
@@ -98,7 +98,7 @@ const Toggle = ({ open, handler, label, joined, ...props }) => {
   )
 }
 
-class DropDownButton extends Component {
+class DropDownButton extends React.Component {
   constructor (props) {
     super(props)
     this.state = {

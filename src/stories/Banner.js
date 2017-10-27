@@ -1,7 +1,7 @@
-import React from 'react'
+import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Banner } from '../'
-import bgImage from './assets/bg.png'
+import * as bgImage from './assets/bg.png'
 
 storiesOf('Banner', module).addWithInfo('BackgoundImage', () => {
   return (

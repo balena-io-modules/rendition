@@ -1,6 +1,6 @@
-import React from 'react'
+import * as React from 'react'
+import * as isNumber from 'lodash/isNumber'
 import Input from '../Input'
-import isNumber from 'lodash/isNumber'
 
 const pF = val => parseFloat(val)
 

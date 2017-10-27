@@ -1,5 +1,5 @@
-import React from 'react'
-import FaClose from 'react-icons/lib/fa/close'
+import * as React from 'react'
+import * as FaClose from 'react-icons/lib/fa/close'
 import styled, { withTheme } from 'styled-components'
 import hoc from '../hoc'
 import { compose } from 'recompose'

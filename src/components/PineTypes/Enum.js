@@ -1,11 +1,12 @@
-import React from 'react'
+import * as React from 'react'
 import Select from '../Select'
-import _ from 'lodash'
+import * as isString from 'lodash/isString'
+import * as map from 'lodash/map'
 
 export const Edit = ({ schema, value, onChange, ...props }) => (
   <Select {...props} value={value} onChange={e => onChange(e.target.value)}>
-    {_.map(schema.values, item => {
-      if (_.isString(item)) {
+    {map(schema.values, item => {
+      if (isString(item)) {
         return <option key={item}>{item}</option>
       } else {
         return (
@@ -23,7 +24,7 @@ export const rules = {
   'is not': (target, value) => target !== value
 }
 
-export const validate = _.isBoolean
+export const validate = value => !!value
 
 export const Display = ({ data, ...props }) => (
   <div {...props}>

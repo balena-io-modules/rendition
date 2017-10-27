@@ -1,5 +1,5 @@
-import Color from 'color'
-import get from 'lodash/get'
+import * as get from 'lodash/get'
+import * as Color from 'color'
 
 export const lighten = color =>
   Color(color)

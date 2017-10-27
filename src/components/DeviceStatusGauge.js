@@ -1,8 +1,8 @@
-import React from 'react'
-import filter from 'lodash/filter'
+import * as React from 'react'
+import * as filter from 'lodash/filter'
 import { withTheme } from 'styled-components'
 import { compose } from 'recompose'
-import ResinDeviceStatus from 'resin-device-status'
+import * as ResinDeviceStatus from 'resin-device-status'
 import Gauge from './Gauge'
 
 import hoc from '../hoc'

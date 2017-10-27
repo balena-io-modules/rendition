@@ -1,10 +1,10 @@
-import cloneDeep from 'lodash/cloneDeep'
-import React, { Component } from 'react'
+import * as cloneDeep from 'lodash/cloneDeep'
+import * as React from 'react'
 import styled from 'styled-components'
 import { Box } from '../Grid'
 import Text from '../Text'
-import FaTrash from 'react-icons/lib/fa/trash'
-import FaPieChart from 'react-icons/lib/fa/pie-chart'
+import * as FaTrash from 'react-icons/lib/fa/trash'
+import * as FaPieChart from 'react-icons/lib/fa/pie-chart'
 import DropDownButton from '../DropDownButton'
 import FilterDescription from './FilterDescription'
 
@@ -62,7 +62,7 @@ const ViewListItem = styled.li`
   }
 `
 
-class ViewsMenu extends Component {
+class ViewsMenu extends React.Component {
   constructor (props) {
     super(props)
 

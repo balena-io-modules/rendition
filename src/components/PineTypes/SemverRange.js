@@ -1,7 +1,7 @@
 import * as semver from 'resin-semver'
-import React from 'react'
+import * as React from 'react'
+import * as isString from 'lodash/isString'
 import Input from '../Input'
-import isString from 'lodash/isString'
 
 /**
  * See the node-semver docs for more information on semver ranges

@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import moment from 'moment'
-import cloneDeep from 'lodash/cloneDeep'
-import find from 'lodash/find'
-import assign from 'lodash/assign'
-import map from 'lodash/map'
+import * as React from 'react'
+import * as moment from 'moment'
+import * as cloneDeep from 'lodash/cloneDeep'
+import * as find from 'lodash/find'
+import * as assign from 'lodash/assign'
+import * as map from 'lodash/map'
+import * as FaFilter from 'react-icons/lib/fa/filter'
+import * as FaSearch from 'react-icons/lib/fa/search'
 import styled from 'styled-components'
-import FaFilter from 'react-icons/lib/fa/filter'
-import FaSearch from 'react-icons/lib/fa/search'
 import FilterSummary from './Summary'
 import ViewsMenu from './ViewsMenu'
 import Button from '../Button'
@@ -73,7 +73,7 @@ const FilterInput = props => {
   )
 }
 
-class Filters extends Component {
+class Filters extends React.Component {
   constructor (props) {
     super(props)
     this.toggleModal = this.toggleModal.bind(this)

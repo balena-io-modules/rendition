@@ -1,8 +1,8 @@
-import React from 'react'
+import * as React from 'react'
 import styled, { withTheme } from 'styled-components'
-import copyToClipboard from 'copy-to-clipboard'
+import * as copyToClipboard from 'copy-to-clipboard'
 import { compose } from 'recompose'
-import FaClipboard from 'react-icons/lib/fa/clipboard'
+import * as FaClipboard from 'react-icons/lib/fa/clipboard'
 import Tooltip from './Tooltip'
 import hoc from '../hoc'
 

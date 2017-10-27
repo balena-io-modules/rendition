@@ -1,6 +1,6 @@
-import React from 'react'
+import * as React from 'react'
 import Select from '../Select'
-import isBoolean from 'lodash/isBoolean'
+import * as isBoolean from 'lodash/isBoolean'
 
 export const Edit = ({ value, onChange, ...props }) => (
   <Select

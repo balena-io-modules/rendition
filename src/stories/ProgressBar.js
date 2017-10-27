@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import ProgressBar from '../components/ProgressBar'
@@ -7,7 +7,7 @@ const Container = styled.div`
   margin: 30px;
 `
 
-class Progressor extends Component {
+class Progressor extends React.Component {
   constructor (props) {
     super(props)
 

@@ -1,7 +1,7 @@
-import React from 'react'
+import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Navbar, Image, Link } from '../'
-import logo from './assets/etcher.svg'
+import * as logo from './assets/etcher.svg'
 
 storiesOf('Navbar', module).addWithInfo('standard', () => {
   const Brand = (

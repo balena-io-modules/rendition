@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Flex, Box } from '../'
 import { withTheme } from 'styled-components'

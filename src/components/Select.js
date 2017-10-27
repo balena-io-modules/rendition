@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import styled, { withTheme } from 'styled-components'
 import hoc from '../hoc'
 import { px } from '../utils'

@@ -1,5 +1,5 @@
-import moment from 'moment'
-import React from 'react'
+import * as moment from 'moment'
+import * as React from 'react'
 import Input from '../Input'
 
 /**
