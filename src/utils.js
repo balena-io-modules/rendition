@@ -34,3 +34,8 @@ export const randomString = (length = 16) => {
   }
   return text
 }
+
+export const stopEvent = e => {
+  e.preventDefault()
+  e.stopPropagation()
+}

@@ -5,6 +5,7 @@ import { compose } from 'recompose'
 import * as FaClipboard from 'react-icons/lib/fa/clipboard'
 import Tooltip from './Tooltip'
 import hoc from '../hoc'
+import { stopEvent } from '../utils'
 
 const Wrapper = styled.span`
   white-space: initial;
@@ -28,20 +29,27 @@ const Wrapper = styled.span`
   }
 `
 
-const Base = ({ copy, text, ...props }) => {
-  const getCopyText = () => (copy || text || '').trim()
+const copyIt = (copy, text) => {
+  const copyText = (copy || text || '').trim()
+
+  copyToClipboard(copyText)
+}
+
+const Base = ({ copy, text, color, ...props }) => {
   return (
-    <Wrapper className='code-with-copy'>
+    <Wrapper {...props} className='code-with-copy'>
       <code title={copy}>{text.trim()}</code>
 
-      <Tooltip message='Copied!' eventType='click'>
-        <span
-          onClick={() => copyToClipboard(getCopyText())}
-          className='code-with-copy__copy'
-        >
-          <FaClipboard />
-        </span>
-      </Tooltip>
+      <span onClick={stopEvent}>
+        <Tooltip message='Copied!' eventType='click'>
+          <span
+            onClick={() => copyIt(copy, text)}
+            className='code-with-copy__copy'
+          >
+            <FaClipboard color={color} />
+          </span>
+        </Tooltip>
+      </span>
     </Wrapper>
   )
 }
