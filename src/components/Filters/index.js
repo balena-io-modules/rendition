@@ -1,6 +1,7 @@
 import * as React from 'react'
 import * as moment from 'moment'
 import * as cloneDeep from 'lodash/cloneDeep'
+import * as first from 'lodash/first'
 import * as find from 'lodash/find'
 import * as assign from 'lodash/assign'
 import * as map from 'lodash/map'
@@ -116,8 +117,9 @@ class Filters extends React.Component {
 
     edit.operator = inputModels[edit.name].availableOperators[0]
     edit.label = inputModels[edit.name].label
+    edit.type = inputModels[edit.name].type
 
-    return edit
+    return this.setDefaultEditData(edit, edit.name)
   }
 
   addFilterRule (rule) {
@@ -128,7 +130,7 @@ class Filters extends React.Component {
 
   editFilterRule (rule) {
     const { rules } = this.props
-    const updatedRules = rules.map(r => (r.id === rule ? rule : r))
+    const updatedRules = rules.map(r => (r.id === rule.id ? rule : r))
 
     this.props.setRules(updatedRules)
   }
@@ -192,24 +194,34 @@ class Filters extends React.Component {
     this.props.setRules(updatedRules)
   }
 
-  handleEditChange (value, attribute) {
-    const update = this.state.edit
+  setDefaultEditData (data, value) {
+    const update = cloneDeep(data)
     const inputModels = sieve.makeFilterInputs(this.props.schema)
+    const model = inputModels[value]
+    update.type = model.type
+    update.name = value
+    update.operator = model.availableOperators[0]
+    update.label = model.label
+    if (model.type === 'Date Time') {
+      update.value = moment().format('YYYY-MM-DDTHH:mm')
+    } else if (model.type === 'Date') {
+      update.value = moment().format('YYYY-MM-DD')
+    } else if (model.type === 'Time') {
+      update.value = moment().format('HH:mm')
+    } else if (model.type === 'Enum') {
+      update.value = first(this.props.schema[model.name].values)
+    } else {
+      update.value = ''
+    }
+
+    return update
+  }
+
+  handleEditChange (value, attribute) {
+    let update = this.state.edit
 
     if (attribute === 'name' && update.name !== value) {
-      const model = inputModels[value]
-      update.name = value
-      update.operator = model.availableOperators[0]
-      update.label = model.label
-      if (model.type === 'Date Time') {
-        update.value = moment().format('YYYY-MM-DDTHH:mm')
-      } else if (model.type === 'Date') {
-        update.value = moment().format('YYYY-MM-DD')
-      } else if (model.type === 'Time') {
-        update.value = moment().format('HH:mm')
-      } else {
-        update.value = ''
-      }
+      update = this.setDefaultEditData(update, value)
     } else {
       update[attribute] = value
     }
