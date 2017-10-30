@@ -15,6 +15,7 @@ import { default as SchemaSieve } from './components/Filters/SchemaSieve'
 import { default as Select } from './components/Select'
 import { default as Text } from './components/Text'
 import { default as Textarea } from './components/Textarea'
+import { default as Tooltip } from './components/Tooltip'
 import { default as Image } from './components/Image'
 import { default as Heading } from './components/Heading'
 import { default as Container } from './components/Container'
@@ -49,5 +50,6 @@ export {
   SchemaSieve,
   Select,
   Text,
-  Textarea
+  Textarea,
+  Tooltip
 }
