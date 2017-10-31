@@ -29,12 +29,12 @@ const schema = {
   Name: {
     type: 'Short Text'
   },
-  Description: {
-    type: 'Short Text'
-  },
   Category: {
     type: 'Enum',
     values: uniq(PokeDex.map(p => p.Category))
+  },
+  Description: {
+    type: 'Short Text'
   },
   Abilities: {
     type: 'Short Text'
