@@ -323,12 +323,14 @@ class Filters extends React.Component {
                       name => <option key={name}>{name}</option>
                     )}
                   </Select>
-                  <FilterInput
-                    schema={this.props.schema[this.state.edit.name]}
-                    value={this.state.edit.value}
-                    onChange={value => this.handleEditChange(value, 'value')}
-                    type={inputModels[this.state.edit.name].type}
-                  />
+                  {inputModels[this.state.edit.name].type !== 'Boolean' && (
+                    <FilterInput
+                      schema={this.props.schema[this.state.edit.name]}
+                      value={this.state.edit.value}
+                      onChange={value => this.handleEditChange(value, 'value')}
+                      type={inputModels[this.state.edit.name].type}
+                    />
+                  )}
                 </Flex>
               </form>
             </Modal>

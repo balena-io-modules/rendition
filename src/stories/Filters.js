@@ -52,6 +52,10 @@ const schema = {
   pokedex_number: {
     type: 'Integer',
     label: 'National Pokedex Number'
+  },
+  caught: {
+    type: 'Boolean',
+    label: 'Pokemon has been caught'
   }
 }
 
@@ -130,6 +134,10 @@ class FiltersDemo extends React.Component {
                   <td>
                     <DateTimeDisplay data={item.first_seen} />
                   </td>
+                </tr>
+                <tr>
+                  <td>Caught:</td>
+                  <td>{item.caught ? 'yes' : 'no'}</td>
                 </tr>
               </tbody>
             </StyledTable>
