@@ -1,30 +1,56 @@
 declare module 'resin-components' {
 	import { Component } from 'react';
 
+	type ResponsiveStyle = string | number | Array<string | number>;
+
 	interface StyledSystemProps {
-		width?: number;
-		w?: string | number;
-		fontSize?: number;
-		f?: number;
-		color?: string;
-		bg?: string;
-		m?: string | number;
-		mt?: string | number;
-		mr?: string | number;
-		mb?: string | number;
-		ml?: string | number;
-		mx?: string | number;
-		my?: string | number;
-		p?: string | number;
-		pt?: string | number;
-		pr?: string | number;
-		pb?: string | number;
-		pl?: string | number;
-		px?: string | number;
-		py?: string | number;
+		width?: ResponsiveStyle;
+		w?: ResponsiveStyle;
+		fontSize?: ResponsiveStyle;
+		f?: ResponsiveStyle;
+		color?: ResponsiveStyle;
+		bg?: ResponsiveStyle;
+		m?: ResponsiveStyle;
+		mt?: ResponsiveStyle;
+		mr?: ResponsiveStyle;
+		mb?: ResponsiveStyle;
+		ml?: ResponsiveStyle;
+		mx?: ResponsiveStyle;
+		my?: ResponsiveStyle;
+		p?: ResponsiveStyle;
+		pt?: ResponsiveStyle;
+		pr?: ResponsiveStyle;
+		pb?: ResponsiveStyle;
+		pl?: ResponsiveStyle;
+		px?: ResponsiveStyle;
+		py?: ResponsiveStyle;
 	}
 
-	interface DefaultProps extends StyledSystemProps, React.HTMLAttributes<HTMLElement> {}
+	// Cherry pick the react attributes that don't conflict with styled-system
+	interface DefaultProps
+		extends StyledSystemProps,
+			React.DOMAttributes<HTMLElement> {
+		// React-specific Attributes
+		defaultChecked?: boolean;
+		defaultValue?: string | string[];
+		suppressContentEditableWarning?: boolean;
+
+		// Standard HTML Attributes
+		accessKey?: string;
+		className?: string;
+		contentEditable?: boolean;
+		contextMenu?: string;
+		dir?: string;
+		draggable?: boolean;
+		hidden?: boolean;
+		id?: string;
+		lang?: string;
+		slot?: string;
+		spellCheck?: boolean;
+		style?: React.CSSProperties;
+		tabIndex?: number;
+		title?: string;
+	}
 
 	type PineDataType =
 		| 'Boolean'
@@ -179,11 +205,17 @@ declare module 'resin-components' {
 		class h4 extends RenderableElementWithProps<FlexProps, any> {}
 	}
 
-	interface LinkProps
-		extends DefaultProps,
-			React.AnchorHTMLAttributes<HTMLElement> {
+	interface LinkProps extends DefaultProps {
 		blank?: boolean;
 		disabled?: boolean;
+		download?: any;
+		href?: string;
+		hrefLang?: string;
+		media?: string;
+		rel?: string;
+		target?: string;
+		type?: string;
+		as?: string;
 	}
 
 	class Link extends RenderableElementWithProps<LinkProps, any> {}
@@ -216,14 +248,14 @@ declare module 'resin-components' {
 
 	interface PineTypeModule {
 		rules: {
-			[key: string]: (target: any, value?: any) => boolean
+			[key: string]: (target: any, value?: any) => boolean;
 		};
 		validate: (value: any) => boolean;
 		Edit: (props: any) => JSX.Element;
 		Display: (props: any) => JSX.Element;
 	}
 
-	var PineTypes: { [K in PineDataType]: PineTypeModule }
+	var PineTypes: { [K in PineDataType]: PineTypeModule };
 
 	class Provider extends Component<any, any> {}
 
@@ -245,7 +277,25 @@ declare module 'resin-components' {
 
 	class Text extends RenderableElementWithProps<DefaultProps, any> {}
 
-	interface TextareaProps extends StyledSystemProps, React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
+	interface TextareaProps extends DefaultProps {
+		autoComplete?: string;
+		autoFocus?: boolean;
+		cols?: number;
+		dirName?: string;
+		disabled?: boolean;
+		form?: string;
+		maxLength?: number;
+		minLength?: number;
+		name?: string;
+		placeholder?: string;
+		readOnly?: boolean;
+		required?: boolean;
+		rows?: number;
+		value?: string | string[] | number;
+		wrap?: string;
+
+		onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
+	}
 
 	class Textarea extends RenderableElementWithProps<TextareaProps, any> {}
 
