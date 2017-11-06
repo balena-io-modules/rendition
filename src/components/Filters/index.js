@@ -77,7 +77,6 @@ const FilterInput = props => {
 class Filters extends React.Component {
   constructor (props) {
     super(props)
-    this.toggleModal = this.toggleModal.bind(this)
     this.handleEditChange = this.handleEditChange.bind(this)
     this.generateFreshEdit = this.generateFreshEdit.bind(this)
 
@@ -172,14 +171,10 @@ class Filters extends React.Component {
     }
   }
 
-  toggleModal () {
-    this.setState({ showModal: !this.state.showModal })
-  }
-
   showEditModal (rule) {
     this.setState({
       showModal: true,
-      edit: rule
+      edit: cloneDeep(rule)
     })
   }
 
@@ -261,6 +256,13 @@ class Filters extends React.Component {
     this.props.setViews(views)
   }
 
+  showNewFilterModal () {
+    this.setState({
+      showModal: true,
+      edit: this.generateFreshEdit()
+    })
+  }
+
   render () {
     const inputModels = sieve.makeFilterInputs(this.props.schema)
     const rules = this.props.rules || []
@@ -268,7 +270,7 @@ class Filters extends React.Component {
     return (
       <FilterWrapper mb={3}>
         <Flex justify='space-between'>
-          <Button primary onClick={() => this.toggleModal()}>
+          <Button primary onClick={() => this.showNewFilterModal()}>
             <FaFilter style={{ marginRight: 10 }} />
             Add filter
           </Button>
@@ -293,7 +295,11 @@ class Filters extends React.Component {
         {this.state.showModal && (
           <div>
             <Modal
-              title='Add a New Filter'
+              title={
+                this.state.edit.id
+                  ? 'Update existing filter'
+                  : 'Add a new filter'
+              }
               cancel={() => this.setState({ showModal: false })}
               done={() => this.addRule()}
               action={this.state.edit.id ? 'Update filter' : 'Add filter'}
