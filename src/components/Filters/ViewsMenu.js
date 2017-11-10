@@ -85,6 +85,7 @@ class ViewsMenu extends React.Component {
     return (
       <Wrapper>
         <DropDownButton
+          disabled={this.props.disabled}
           joined
           alignRight
           noListFormat

@@ -97,6 +97,7 @@ class FiltersDemo extends React.Component {
     return (
       <div>
         <Filters
+          disabled={this.props.disabled}
           rules={this.state.rules}
           views={this.state.views}
           schema={this.state.schema}
@@ -153,4 +154,7 @@ storiesOf('Filters', module)
   .addDecorator(story => <Container>{story()}</Container>)
   .addWithInfo('Standard', () => {
     return <FiltersDemo />
+  })
+  .addWithInfo('Disabled', () => {
+    return <FiltersDemo disabled />
   })

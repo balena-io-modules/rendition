@@ -270,13 +270,18 @@ class Filters extends React.Component {
     return (
       <FilterWrapper mb={3}>
         <Flex justify='space-between'>
-          <Button primary onClick={() => this.showNewFilterModal()}>
+          <Button
+            disabled={this.props.disabled}
+            primary
+            onClick={() => this.showNewFilterModal()}
+          >
             <FaFilter style={{ marginRight: 10 }} />
             Add filter
           </Button>
 
           <SimpleSearchBox>
             <input
+              disabled={this.props.disabled}
               placeholder='Search entries...'
               value={this.state.searchString}
               onChange={e => this.updateSimpleSearch(e.target.value)}
@@ -285,6 +290,7 @@ class Filters extends React.Component {
           </SimpleSearchBox>
 
           <ViewsMenu
+            disabled={this.props.disabled}
             rules={rules}
             views={this.props.views || []}
             setRules={this.props.setRules}
@@ -343,15 +349,16 @@ class Filters extends React.Component {
           </div>
         )}
 
-        {!!rules.length && (
-          <FilterSummary
-            edit={rule => this.showEditModal(rule)}
-            delete={rule => this.removeRule(rule)}
-            saveView={(name, scope) => this.saveView(name, scope)}
-            rules={rules}
-            views={this.props.views || []}
-          />
-        )}
+        {!!rules.length &&
+          !this.props.disabled && (
+            <FilterSummary
+              edit={rule => this.showEditModal(rule)}
+              delete={rule => this.removeRule(rule)}
+              saveView={(name, scope) => this.saveView(name, scope)}
+              rules={rules}
+              views={this.props.views || []}
+            />
+          )}
       </FilterWrapper>
     )
   }
