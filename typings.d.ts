@@ -167,6 +167,7 @@ declare module 'resin-components' {
 	class Divider extends RenderableElementWithProps<DefaultProps, any> {}
 
 	interface DropDownButtonProps extends DefaultProps, Coloring {
+		disabled?: boolean;
 		label?: JSX.Element;
 		border?: boolean;
 		joined?: boolean;
@@ -180,6 +181,7 @@ declare module 'resin-components' {
 	> {}
 
 	interface FiltersProps extends DefaultProps {
+		disabled?: boolean;
 		rules: FilterRule[];
 		views: FilterViewScope[];
 		schema: Schema;
