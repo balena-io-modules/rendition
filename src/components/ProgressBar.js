@@ -7,23 +7,37 @@ import hoc from '../hoc'
 import { px } from '../utils'
 import { radius } from '../theme'
 
+const transition = 'width linear 250ms'
+
 const Bar = styled.div`
+  position: relative;
   height: ${props =>
     px(props.emphasized ? props.theme.space[5] : props.theme.space[4])};
+  overflow: hidden;
   background: ${props => props.bg};
-  transition: width linear 250ms;
+  transition: ${transition};
   text-align: center;
+`
+
+const LoadingContent = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  color: #000;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
 `
 
 const Content = styled.div`
   text-align: center;
   position: absolute;
   left: 0;
-  right: 0;
   bottom: 0;
   top: 0;
-  z-index: 1;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  transition: ${transition};
 `
 
 const Sleeve = styled.div`
@@ -56,11 +70,15 @@ const setTypeProps = withProps(({ type, theme }) => {
   }
 })
 
-const Base = ({ children, background, value, ...props }) => {
+const Base = ({ children, color, background, value, ...props }) => {
   return (
     <Sleeve {...props}>
-      <Bar bg={background} style={{ width: `${value}%` }} />
-      <Content>{children}</Content>
+      <LoadingContent>{children}</LoadingContent>
+      <Bar bg={background} style={{ width: `${value}%` }}>
+        <Content style={{ width: `${value && 100 * 100 / value}%` }}>
+          {children}
+        </Content>
+      </Bar>
     </Sleeve>
   )
 }
