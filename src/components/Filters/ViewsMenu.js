@@ -56,10 +56,18 @@ const ViewListItem = styled.li`
   }
   &:hover > button {
     display: block;
+    opacity: 0.7;
+  }
+  > button:hover {
+    opacity: 1;
   }
   &:hover ${Preview} {
     display: block;
   }
+`
+
+const ViewListItemLabel = styled(Text)`
+  cursor: pointer;
 `
 
 class ViewsMenu extends React.Component {
@@ -117,13 +125,16 @@ class ViewsMenu extends React.Component {
                     <UnstyledList>
                       {scope.data.map(view => (
                         <ViewListItem key={view.name}>
-                          <Text m={0} onClick={() => this.loadView(view)}>
+                          <ViewListItemLabel
+                            m={0}
+                            onClick={() => this.loadView(view)}
+                          >
                             {view.name}
                             <br />
                             <Text m={0} fontSize={12} color='#aaa'>
                               {view.rules.length} filter{view.rules.length > 1 && 's'}
                             </Text>
-                          </Text>
+                          </ViewListItemLabel>
                           <button
                             onClick={() =>
                               this.props.deleteView(view, scope.key)}
