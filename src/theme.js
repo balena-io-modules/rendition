@@ -101,7 +101,7 @@ export const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 72, 96]
 
 export const weights = [400, 700]
 
-export const radius = 4
+export const radius = 3
 export const font = `Roboto, Arial, sans-serif`
 export const monospace = `'Ubuntu Mono', 'Courier New', monospace`
 
