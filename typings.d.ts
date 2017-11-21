@@ -269,6 +269,18 @@ declare module 'resin-components' {
 
 	class SchemaSieveClass {
 		filter<T>(items: T[], rule: FilterRule): T[];
+		makeFilterInputs(
+			schema: Schema,
+		): {
+			[key: string]: {
+				type: string;
+				name: string;
+				label: string;
+				availableOperators: string[];
+				operator: string;
+				value: any;
+			};
+		};
 	}
 
 	function SchemaSieve(): SchemaSieveClass;
