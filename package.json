@@ -48,6 +48,7 @@
     "ts-node": "^3.3.0"
   },
   "dependencies": {
+    "@types/color": "^2.0.0",
     "@types/lodash": "^4.14.77",
     "@types/prop-types": "^15.5.2",
     "@types/react": "^15.0.0",
