@@ -10,8 +10,22 @@ const Container = styled.div`
 storiesOf('Input', module)
   .addDecorator(story => <Container>{story()}</Container>)
   .addWithInfo('Standard', () => {
-    return <Input placeholder='Placeholder Text' />
+    return (
+      <div>
+        <Input m={2} placeholder='Placeholder Text' />
+        <Input m={2} placeholder='Placeholder Text' invalid />
+        <Input m={2} placeholder='Placeholder Text' valid />
+        <Input m={2} placeholder='Placeholder Text' disabled />
+      </div>
+    )
   })
   .addWithInfo('Emphasized', () => {
-    return <Input emphasized placeholder='Placeholder Text' />
+    return (
+      <div>
+        <Input m={2} emphasized placeholder='Placeholder Text' />
+        <Input m={2} emphasized placeholder='Placeholder Text' invalid />
+        <Input m={2} emphasized placeholder='Placeholder Text' valid />
+        <Input m={2} emphasized placeholder='Placeholder Text' disabled />
+      </div>
+    )
   })
