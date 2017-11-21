@@ -19,6 +19,7 @@ const ToggleBase = styled(Button)`
   border-left: 0;
   margin: 0;
   border-width: ${props => props.outline && '1px'};
+  vertical-align: top;
 `
 
 const ButtonBase = styled(Button)`
