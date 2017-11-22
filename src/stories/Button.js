@@ -140,3 +140,21 @@ storiesOf('Button', module)
       </Container>
     )
   })
+  .addWithInfo('Square Emphasized', () => {
+    return (
+      <Container>
+        <Button mx={2} emphasized primary square onPress={action('case-1')}>
+          <FaDownload />
+        </Button>
+        <Button mx={2} emphasized secondary square onPress={action('case-2')}>
+          <FaTrash />
+        </Button>
+        <Button mx={2} emphasized tertiary square onPress={action('case-3')}>
+          <FaExpand />
+        </Button>
+        <Button m={2} emphasized square onPress={action('case-4')}>
+          <FaRecycle />
+        </Button>
+      </Container>
+    )
+  })
