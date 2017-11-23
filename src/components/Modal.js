@@ -52,10 +52,14 @@ const Modal = props => (
       onClick={() => props.cancel()}
     />
     <ModalPanel>
-      {!!props.title && (
-        <Text mb={50}>
-          <strong>{props.title}</strong>
-        </Text>
+      {props.titleElement ? (
+        <Text mb={50}>{props.titleElement}</Text>
+      ) : (
+        !!props.title && (
+          <Text mb={50}>
+            <strong>{props.title}</strong>
+          </Text>
+        )
       )}
       {props.children}
       <Flex mt={60} align='center' justify='center'>

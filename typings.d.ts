@@ -251,7 +251,8 @@ declare module 'resin-components' {
 
 	class Modal extends RenderableElementWithProps<
 		DefaultProps & {
-			title: string;
+			title?: string;
+			titleElement?: string | JSX.Element;
 			action: string;
 			cancel: () => any;
 			done: () => any;
