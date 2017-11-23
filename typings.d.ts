@@ -222,7 +222,25 @@ declare module 'resin-components' {
 
 	class Link extends RenderableElementWithProps<LinkProps, any> {}
 
-	interface InputProps extends DefaultProps, Sizing {}
+	interface InputProps extends DefaultProps, Sizing {
+		autoComplete?: string;
+		autoFocus?: boolean;
+		disabled?: boolean;
+		form?: string;
+		max?: number | string;
+		maxLength?: number;
+		min?: number | string;
+		minLength?: number;
+		name?: string;
+		placeholder?: string;
+		readOnly?: boolean;
+		required?: boolean;
+		value?: string | string[] | number;
+
+		invalid?: boolean;
+		valid?: boolean;
+		onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
+	}
 
 	class Input extends RenderableElementWithProps<InputProps, any> {}
 
