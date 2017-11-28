@@ -304,11 +304,28 @@ declare module 'resin-components' {
 
 	function SchemaSieve(): SchemaSieveClass;
 
-	interface SelectProps extends DefaultProps, Sizing {}
+	interface SelectProps extends DefaultProps, Sizing {
+		value?: string | string[] | number | null;
+	}
 
 	class Select extends RenderableElementWithProps<SelectProps, any> {}
 
-	class Text extends RenderableElementWithProps<DefaultProps, any> {}
+	interface TextProps extends DefaultProps {
+		align?:
+			| 'left'
+			| 'right'
+			| 'center'
+			| 'justify'
+			| 'justify-all'
+			| 'start'
+			| 'end'
+			| 'match-parent'
+			| 'inherit'
+			| 'initial'
+			| 'unset';
+	}
+
+	class Text extends RenderableElementWithProps<TextProps, any> {}
 
 	interface TextareaProps extends DefaultProps {
 		autoComplete?: string;
