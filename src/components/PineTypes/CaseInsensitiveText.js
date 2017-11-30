@@ -28,6 +28,8 @@ export const rules = {
 
 export const validate = isString
 
+export const normalize = value => (value == null ? '' : value.toString())
+
 export const Edit = ({ onChange, ...props }) => (
   <Textarea onChange={e => onChange(e.target.value)} {...props} />
 )

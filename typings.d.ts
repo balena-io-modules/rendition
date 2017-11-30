@@ -272,6 +272,7 @@ declare module 'resin-components' {
 			[key: string]: (target: any, value?: any) => boolean;
 		};
 		validate: (value: any) => boolean;
+		normalize: <T>(value: any) => T;
 		Edit: (props: any) => JSX.Element;
 		Display: (props: any) => JSX.Element;
 	}

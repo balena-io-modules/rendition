@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as isInteger from 'lodash/isInteger'
+import * as isNaN from 'lodash/isNaN'
 import Input from '../Input'
 
 const p10 = val => parseInt(val, 10)
@@ -11,6 +12,19 @@ export const rules = {
 }
 
 export const validate = isInteger
+
+export const normalize = value => {
+  if (isInteger(value)) {
+    return value
+  }
+  const num = parseFloat(value, 10)
+
+  if (isNaN(num)) {
+    return 0
+  }
+
+  return Math.round(value)
+}
 
 export const Edit = ({ value, onChange, ...props }) => (
   <Input

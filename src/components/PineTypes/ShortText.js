@@ -6,21 +6,24 @@ import * as showdown from 'showdown'
 
 const converter = new showdown.Converter()
 
-const normalize = string => {
+const normalizeString = string => {
   return string || ''
 }
 
 export const rules = {
-  is: (target, value) => normalize(target) === value,
-  contains: (target, value) => normalize(target).includes(value),
-  'does not contain': (target, value) => !normalize(target).includes(value),
+  is: (target, value) => normalizeString(target) === value,
+  contains: (target, value) => normalizeString(target).includes(value),
+  'does not contain': (target, value) =>
+    !normalizeString(target).includes(value),
   'matches RegEx': (target, value) =>
-    normalize(target).match(RegexParser(value)),
+    normalizeString(target).match(RegexParser(value)),
   'does not match RegEx': (target, value) =>
-    !normalize(target).match(RegexParser(value))
+    !normalizeString(target).match(RegexParser(value))
 }
 
 export const validate = val => isString(val) && val.length <= 255
+
+export const normalize = value => (value == null ? '' : value.toString())
 
 export const Edit = ({ onChange, ...props }) => (
   <Input type='text' onChange={e => onChange(e.target.value)} {...props} />

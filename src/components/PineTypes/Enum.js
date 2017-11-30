@@ -24,6 +24,8 @@ export const rules = {
   'is not': (target, value) => target !== value
 }
 
+export const normalize = value => value
+
 export const validate = value => !!value
 
 export const Display = ({ data, ...props }) => (

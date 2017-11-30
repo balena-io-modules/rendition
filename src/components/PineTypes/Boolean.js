@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Select from '../Select'
 import * as isBoolean from 'lodash/isBoolean'
+import * as isString from 'lodash/isString'
 
 export const Edit = ({ value, onChange, ...props }) => (
   <Select
@@ -19,6 +20,25 @@ export const rules = {
 }
 
 export const validate = isBoolean
+
+export const normalize = value => {
+  if (isString(value)) {
+    switch (value.toLowerCase()) {
+    case 'true':
+    case 'yes':
+    case '1':
+      return true
+    case 'false':
+    case 'no':
+    case '0':
+      return false
+    default:
+      return !!value
+    }
+  }
+
+  return !!value
+}
 
 export const Display = ({ data, ...props }) => (
   <div {...props}>
