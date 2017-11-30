@@ -33,19 +33,38 @@ const getColor = (props, key, shade) => {
   }
 }
 
+const squareWidth = val => val / 9 * 10
+
 const minWidth = props => {
   if (props.w == null && !props.square) {
-    return 135
+    // return 135
+    return 'auto'
   }
   if (props.square) {
-    return props.emphasized ? props.theme.space[5] : props.theme.space[4]
+    return props.emphasized
+      ? squareWidth(props.theme.space[5])
+      : squareWidth(props.theme.space[4])
   }
 
   return props.w
 }
 
+const horizontalPadding = props => {
+  if (props.w == null && !props.square) {
+    // return 20
+    return props.emphasized ? 50 : 20
+  }
+  if (props.square || props.w) {
+    return 0
+  }
+
+  return props.emphasized ? 50 : 20
+}
+
 const Button = styled.button`
   padding-top: 1px;
+  padding-left: ${props => px(horizontalPadding(props))};
+  padding-right: ${props => px(horizontalPadding(props))};
   font-family: inherit;
   display: inline-block;
   font-weight: ${props => bold(props)};
