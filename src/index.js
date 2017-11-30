@@ -22,6 +22,7 @@ import { default as Container } from './components/Container'
 import { default as DropDownButton } from './components/DropDownButton'
 import { default as Navbar } from './components/Navbar'
 import { default as Link } from './components/Link'
+import Theme from './theme'
 
 import { Flex, Box } from './components/Grid'
 
@@ -51,5 +52,6 @@ export {
   Select,
   Text,
   Textarea,
-  Tooltip
+  Tooltip,
+  Theme
 }
