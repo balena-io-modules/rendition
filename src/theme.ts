@@ -76,8 +76,8 @@ const colors = {
 	},
 
 	gray: {
-		light: '#f4f4f4',
 		main: '#c6c8c9',
+		light: '#f4f4f4',
 		dark: '#9f9f9f',
 	},
 };

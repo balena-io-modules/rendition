@@ -356,4 +356,37 @@ declare module 'resin-components' {
 	}
 
 	class Tooltip extends RenderableElementWithProps<TooltipProps, any> {}
+
+	interface ThemeColorSet {
+		main: string;
+		light: string;
+		dark: string;
+	}
+
+	interface Theme {
+		breakpoints: number[];
+		space: number[];
+		fontSizes: number[];
+		weights: number[];
+		font: string;
+		monospace: string;
+		colors: {
+			primary: ThemeColorSet;
+			secondary: ThemeColorSet;
+			tertiary: ThemeColorSet;
+			quartenary: ThemeColorSet;
+			danger: ThemeColorSet;
+			warning: ThemeColorSet;
+			success: ThemeColorSet;
+			info: ThemeColorSet;
+			text: {
+				main: string;
+				light: string;
+			};
+			gray: ThemeColorSet;
+		};
+		radius: number;
+	}
+
+	const Theme: Theme;
 }
