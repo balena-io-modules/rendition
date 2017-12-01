@@ -25,6 +25,9 @@ export const rules = {
 
 export const validate = value => moment(`${EPOCH_PREFIX} ${value}`).isValid()
 
+// Since we interpret dates on display, there is no need to normalize here
+export const normalize = value => value
+
 export const Edit = ({ value, onChange, ...props }) => (
   <Input
     {...props}

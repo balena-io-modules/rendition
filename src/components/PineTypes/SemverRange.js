@@ -14,6 +14,8 @@ export const rules = {
 
 export const validate = isString
 
+export const normalize = value => (value == null ? '' : value.toString())
+
 export const Edit = ({ value, onChange, ...props }) => (
   <Input
     {...props}
