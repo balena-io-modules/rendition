@@ -48,6 +48,7 @@ const colors = {
 	text: {
 		main: '#3c3e42',
 		light: '#8f9297',
+		dark: '#1c1d1e',
 	},
 
 	statusIdle: {
@@ -74,7 +75,7 @@ const colors = {
 };
 
 const defaultControlHeight = 36;
-const emphasizedControlHeight = 45;
+const emphasizedControlHeight = 48;
 
 export const breakpoints = [32, 48, 64, 80];
 
