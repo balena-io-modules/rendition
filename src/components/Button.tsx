@@ -1,12 +1,13 @@
 import * as React from 'react';
 import styled, { StyledFunction, withTheme } from 'styled-components';
 import hoc from '../hoc';
-import { bold, darken, getColor, getColoringType, px } from '../utils';
+import { normal, bold, darken, getColor, getColoringType, px } from '../utils';
 
 interface ButtonProps extends DefaultProps, Coloring, Sizing {
 	square?: boolean;
 	disabled?: boolean;
 	outline?: boolean;
+	plaintext?: boolean;
 	underline?: boolean;
 }
 
@@ -82,19 +83,34 @@ const Outline = Button.extend`
 	border: 1px solid;
 `;
 
-const Underline = Outline.extend`
+const Plaintext = Button.extend`
 	padding-left: 0;
 	padding-right: 0;
-	padding-bottom: 2px;
 	height: auto;
 	border: 0;
 	border-radius: 0;
-	border-bottom: 1px solid;
+	color: ${props =>
+		getColor(props, 'color', 'main') || props.theme.colors.text.main};
+	background: ${props => props.color || 'none'};
+	font-weight: ${props => normal(props)};
 
 	&:hover,
 	&:focus,
 	&:active {
 		background: none;
+		color: ${props =>
+			getColor(props, 'color', 'dark') || props.theme.colors.text.main};
+	}
+`
+
+const Underline = Plaintext.extend`
+	padding-bottom: 2px;
+	border-bottom: 1px solid;
+	font-weight: ${props => bold(props)};
+
+	&:hover,
+	&:focus,
+	&:active {
 		color: ${props =>
 			getColor(props, 'color', 'main') || props.theme.colors.text.main};
 		box-shadow: 0px -1px 0 0px inset;
@@ -102,8 +118,10 @@ const Underline = Outline.extend`
 `;
 
 export default withTheme(
-	hoc(({ outline, underline, ...props }: ButtonProps) => {
-		if (outline) {
+	hoc(({ outline, underline, plaintext, ...props }: ButtonProps) => {
+		if (plaintext) {
+			return <Plaintext {...props} />;
+		} else if (outline) {
 			return <Outline {...props} />;
 		} else if (underline) {
 			return <Underline {...props} />;

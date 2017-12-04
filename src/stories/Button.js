@@ -103,6 +103,24 @@ storiesOf('Button', module)
       </Container>
     )
   })
+  .addWithInfo('Plaintext', () => {
+    return (
+      <Container>
+        <Button mx={2} plaintext primary onPress={action('case-1')}>
+          Button
+        </Button>
+        <Button mx={2} plaintext danger onPress={action('case-2')}>
+          Button
+        </Button>
+        <Button mx={2} plaintext warning onPress={action('case-3')}>
+          Button
+        </Button>
+        <Button mx={2} plaintext onPress={action('case-4')}>
+          Button
+        </Button>
+      </Container>
+    )
+  })
   .addWithInfo('Width', () => {
     return (
       <Container>
