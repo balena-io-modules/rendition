@@ -1,10 +1,7 @@
-import find = require('lodash/find');
-import get = require('lodash/get');
-import isObject = require('lodash/isObject');
 import * as React from 'react';
 import styled, { StyledFunction, withTheme } from 'styled-components';
 import hoc from '../hoc';
-import { bold, darken, px } from '../utils';
+import { bold, darken, getColor, getColoringType, px } from '../utils';
 
 interface ButtonProps extends DefaultProps, Coloring, Sizing {
 	square?: boolean;
@@ -12,45 +9,6 @@ interface ButtonProps extends DefaultProps, Coloring, Sizing {
 	outline?: boolean;
 	underline?: boolean;
 }
-
-const getColorFromTheme = (theme: Theme) => (
-	colorString: string,
-): {
-	main: string;
-	light?: string;
-	dark?: string;
-} => {
-	// allows for dot notation like 'secondary.dark'
-	return get(theme, `colors.${colorString}`);
-};
-
-const getType = (props: ButtonProps): string | undefined => {
-	// get primary, tertiary, secondary etc
-	const type = find<string>(
-		Object.keys(props),
-		b => !!find(Object.keys(props.theme.colors), k => k === b),
-	);
-	return type;
-};
-
-const getColor = (
-	props: ButtonProps,
-	key: string,
-	shade: 'main' | 'light' | 'dark',
-) => {
-	if (get(props, key)) {
-		return get(props, key);
-	}
-	const type = getType(props);
-	if (type) {
-		const color = getColorFromTheme(props.theme)(type);
-		if (isObject(color)) {
-			return color[shade];
-		} else {
-			return color;
-		}
-	}
-};
 
 const squareWidth = (val: number): number => val / 9 * 10;
 
@@ -145,7 +103,7 @@ export default withTheme(
 			return <Outline {...props} />;
 		} else if (underline) {
 			return <Underline {...props} />;
-		} else if (!getType(props) && !props.color && !props.bg) {
+		} else if (!getColoringType(props) && !props.color && !props.bg) {
 			// outline tertiary is our default btn
 			return <Outline {...props} tertiary />;
 		} else {

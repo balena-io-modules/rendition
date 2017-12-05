@@ -1,6 +1,6 @@
 {
   "name": "resin-components",
-  "version": "2.8.0",
+  "version": "2.9.0",
   "description": "Resin Components Component",
   "repository": {
     "type": "git",
@@ -53,6 +53,7 @@
     "@types/prop-types": "^15.5.2",
     "@types/react": "^15.0.0",
     "@types/react-dom": "^15.0.0",
+    "@types/react-icons": "^2.2.4",
     "@types/recompose": "^0.24.2",
     "color": "^2.0.0",
     "copy-to-clipboard": "^3.0.8",

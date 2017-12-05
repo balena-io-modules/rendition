@@ -1,3 +1,4 @@
+import { default as Alert } from './components/Alert'
 import { default as Banner } from './components/Banner'
 import { default as Button } from './components/Button'
 import { default as CodeWithCopy } from './components/CodeWithCopy'
@@ -27,6 +28,7 @@ import Theme from './theme'
 import { Flex, Box } from './components/Grid'
 
 export {
+  Alert,
   Banner,
   Box,
   Button,

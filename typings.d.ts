@@ -119,6 +119,14 @@ declare module 'resin-components' {
 		emphasized?: boolean;
 	}
 
+	interface AlertProps extends DefaultProps, Coloring, Sizing {
+		plaintext?: boolean;
+		prefix?: JSX.Element | string | false;
+		onDismiss?: () => void;
+	}
+
+	class Alert extends RenderableElementWithProps<AlertProps, any> {}
+
 	interface BannerProps extends DefaultProps {
 		backgroundImage?: string;
 	}
@@ -383,10 +391,7 @@ declare module 'resin-components' {
 			warning: ThemeColorSet & WithSemilight;
 			success: ThemeColorSet & WithSemilight;
 			info: ThemeColorSet & WithSemilight;
-			text: {
-				main: string;
-				light: string;
-			};
+			text: ThemeColorSet;
 			gray: ThemeColorSet;
 		};
 		radius: number;
