@@ -21,6 +21,16 @@ const ModalBackdrop = styled(Fixed)`
 `
 const MODAL_WIDTH = 700
 
+const ModalHeader = styled(Text)`
+  margin-bottom: 50px;
+  font-size: 24px;
+`
+
+const ModalTitleDetails = styled(Text)`
+  color: ${props => props.theme.colors.text.light};
+  font-size: 16px;
+`
+
 const ModalPanel = styled.div`
   position: relative;
   width: ${px(MODAL_WIDTH)};
@@ -34,7 +44,7 @@ const ModalPanel = styled.div`
   box-shadow: 0px 0px 60px 1px rgba(0, 0, 0, 0.4);
   pointer-events: auto;
 
-  @media (max-width: 730px) {
+  @media (max-width: ${px(MODAL_WIDTH + 30)}) {
     width: auto;
     margin: 0 15px;
   }
@@ -53,19 +63,24 @@ const Modal = props => (
     />
     <ModalPanel>
       {props.titleElement ? (
-        <Text mb={50}>{props.titleElement}</Text>
+        <ModalHeader>{props.titleElement}</ModalHeader>
       ) : (
         !!props.title && (
-          <Text mb={50}>
+          <ModalHeader>
             <strong>{props.title}</strong>
-          </Text>
+            {!!props.titleDetails && (
+              <ModalTitleDetails>{props.titleDetails}</ModalTitleDetails>
+            )}
+          </ModalHeader>
         )
       )}
       {props.children}
-      <Flex mt={60} align='center' justify='center'>
-        <Button style={{ marginRight: 20 }} onClick={props.cancel}>
-          Cancel
-        </Button>
+      <Flex mt={50} align='center' justify='flex-end'>
+        {props.cancel && (
+          <Button style={{ marginRight: 20 }} onClick={props.cancel}>
+            Cancel
+          </Button>
+        )}
         <Button primary onClick={props.done}>
           {props.action}
         </Button>

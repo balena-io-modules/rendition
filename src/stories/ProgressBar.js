@@ -7,7 +7,7 @@ const Container = styled.div`
   margin: 30px;
 `
 
-class Progressor extends React.Component {
+export class Progressor extends React.Component {
   constructor (props) {
     super(props)
 
