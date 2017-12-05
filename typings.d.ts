@@ -363,6 +363,10 @@ declare module 'resin-components' {
 		dark: string;
 	}
 
+	interface WithSemilight {
+		semilight: string;
+	}
+
 	interface Theme {
 		breakpoints: number[];
 		space: number[];
@@ -375,10 +379,10 @@ declare module 'resin-components' {
 			secondary: ThemeColorSet;
 			tertiary: ThemeColorSet;
 			quartenary: ThemeColorSet;
-			danger: ThemeColorSet;
-			warning: ThemeColorSet;
-			success: ThemeColorSet;
-			info: ThemeColorSet;
+			danger: ThemeColorSet & WithSemilight;
+			warning: ThemeColorSet & WithSemilight;
+			success: ThemeColorSet & WithSemilight;
+			info: ThemeColorSet & WithSemilight;
 			text: {
 				main: string;
 				light: string;

@@ -1,57 +1,48 @@
-import { blacken, darken, fade, lighten } from './utils';
-
-const primary = '#2297DE';
-const secondary = '#FFC523';
-const tertiary = '#4D5057';
-const quartenary = '#EBEFF4';
-
-const danger = '#FF423D';
-const warning = '#FCA321';
-const success = '#76C950';
-const info = '#1496E1';
-
 const colors = {
 	primary: {
-		main: primary,
-		light: lighten(primary),
-		dark: darken(primary),
+		main: '#2297DE',
+		light: '#5FB3E7',
+		dark: '#1E87C7',
 	},
 	secondary: {
-		main: secondary,
-		light: lighten(secondary),
-		dark: darken(secondary),
+		main: '#FFC523',
+		light: '#FFD45E',
+		dark: '#E5B01F',
 	},
 	tertiary: {
-		main: tertiary,
-		light: lighten(tertiary),
-		dark: darken(tertiary),
+		main: '#4D5057',
+		light: '#7E8085',
+		dark: '#2F3033',
 	},
 	quartenary: {
-		main: quartenary,
-		light: lighten(quartenary),
-		// Can't quite replicate this programatically :(
-		dark: '#d3d7dc',
+		main: '#EBEFF4',
+		light: '#F0F3F7',
+		dark: '#D3D6DB',
 	},
 
 	danger: {
-		main: danger,
-		light: fade(danger),
-		dark: blacken(danger),
+		main: '#FF4444',
+		semilight: '#FFA1A1',
+		light: '#FFECEC',
+		dark: '#661B1B',
 	},
 	warning: {
-		main: warning,
-		light: fade(warning),
-		dark: blacken(warning),
+		main: '#FCA321',
+		semilight: '#FDD190',
+		light: '#FEF5E9',
+		dark: '#64410D',
 	},
 	success: {
-		main: success,
-		light: fade(success),
-		dark: blacken(success),
+		main: '#4DB313',
+		semilight: '#A6D989',
+		light: '#EDF7E7',
+		dark: '#1E4707',
 	},
 	info: {
-		main: info,
-		light: fade(info),
-		dark: blacken(info),
+		main: '#2297DE',
+		semilight: '#90CBEE',
+		light: '#E9F4FB',
+		dark: '#0D3C58',
 	},
 
 	text: {
