@@ -3,8 +3,7 @@ import styled from 'styled-components'
 import Button from './Button'
 import Fixed from './Fixed'
 import Text from './Text'
-import { px } from '../utils'
-import { Flex } from './Grid'
+import { Box, Flex } from './Grid'
 
 const ModalWrapper = Flex.extend`
   position: fixed;
@@ -19,7 +18,7 @@ const ModalWrapper = Flex.extend`
 const ModalBackdrop = styled(Fixed)`
   pointer-events: auto;
 `
-const MODAL_WIDTH = 700
+const DEFAULT_MODAL_WIDTH = 700
 
 const ModalHeader = styled(Text)`
   margin-bottom: 50px;
@@ -31,26 +30,21 @@ const ModalTitleDetails = styled(Text)`
   font-size: 16px;
 `
 
-const ModalPanel = styled.div`
+const ModalPanel = styled(Box)`
   position: relative;
-  width: ${px(MODAL_WIDTH)};
+  max-width: calc(100% - 30px);
   min-height: 50px;
   padding: 30px 50px;
-  margin: 0;
+  margin: 0 15px;
   border: solid 0.5px #9b9b9b;
   border-radius: 2px;
   background-color: #ffffff;
   z-index: 9999;
   box-shadow: 0px 0px 60px 1px rgba(0, 0, 0, 0.4);
   pointer-events: auto;
-
-  @media (max-width: ${px(MODAL_WIDTH + 30)}) {
-    width: auto;
-    margin: 0 15px;
-  }
 `
 
-const Modal = props => (
+const Modal = ({ w, width, ...props }) => (
   <ModalWrapper align='center' justify='center'>
     <ModalBackdrop
       z={8888}
@@ -61,7 +55,7 @@ const Modal = props => (
       left
       onClick={() => props.cancel()}
     />
-    <ModalPanel>
+    <ModalPanel w={w || width || DEFAULT_MODAL_WIDTH} {...props}>
       {props.titleElement ? (
         <ModalHeader>{props.titleElement}</ModalHeader>
       ) : (

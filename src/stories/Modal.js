@@ -68,6 +68,34 @@ storiesOf('Modal', module)
       </Modal>
     )
   })
+  .addWithInfo('Custom Width', () => {
+    return (
+      <Modal
+        w={1000}
+        title='Modal title'
+        titleDetails='Optional details'
+        cancel={() => {}}
+        done={() => {}}
+        action='Ok'
+        >
+        Lorem ipsum dolor sit amet
+      </Modal>
+    )
+  })
+  .addWithInfo('Responsive Custom Width', () => {
+    return (
+      <Modal
+        w={['auto', 500, 1000]}
+        title='Modal title'
+        titleDetails='Optional details'
+        cancel={() => {}}
+        done={() => {}}
+        action='Ok'
+        >
+        Lorem ipsum dolor sit amet
+      </Modal>
+    )
+  })
   .addWithInfo('Multi Element Title', () => {
     return (
       <Modal
