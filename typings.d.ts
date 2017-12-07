@@ -266,6 +266,7 @@ declare module 'resin-components' {
 		DefaultProps & {
 			title?: string;
 			titleElement?: string | JSX.Element;
+			titleDetails?: string | JSX.Element;
 			action: string;
 			cancel: () => any;
 			done: () => any;
