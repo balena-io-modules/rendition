@@ -55,7 +55,7 @@ const Modal = ({ w, width, ...props }) => (
       left
       onClick={() => props.cancel()}
     />
-    <ModalPanel w={w || width || DEFAULT_MODAL_WIDTH} {...props}>
+    <ModalPanel w={w || width || DEFAULT_MODAL_WIDTH}>
       {props.titleElement ? (
         <ModalHeader>{props.titleElement}</ModalHeader>
       ) : (
