@@ -30,6 +30,7 @@ storiesOf('Typography', module)
         <Text align='center'>Centered</Text>
         <Text align='right'>Right</Text>
         <Text bold>Bold</Text>
+        <Text monospace>Monospace</Text>
         <Text.span color='blue'>Inline </Text.span>
         <Text.span color='red'>Inline </Text.span>
         <Text.span color='yellow'>Inline </Text.span>
