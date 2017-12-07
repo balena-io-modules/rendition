@@ -212,7 +212,12 @@ declare module 'resin-components' {
 	class Flex extends RenderableElementWithProps<FlexProps, any> {}
 
 	namespace Heading {
+		class h1 extends RenderableElementWithProps<FlexProps, any> {}
+		class h2 extends RenderableElementWithProps<FlexProps, any> {}
+		class h3 extends RenderableElementWithProps<FlexProps, any> {}
 		class h4 extends RenderableElementWithProps<FlexProps, any> {}
+		class h5 extends RenderableElementWithProps<FlexProps, any> {}
+		class h6 extends RenderableElementWithProps<FlexProps, any> {}
 	}
 
 	interface LinkProps extends DefaultProps {
