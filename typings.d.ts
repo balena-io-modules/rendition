@@ -236,6 +236,7 @@ declare module 'resin-components' {
 	class Link extends RenderableElementWithProps<LinkProps, any> {}
 
 	interface InputProps extends DefaultProps, Sizing {
+		monospace?: boolean;
 		autoComplete?: string;
 		autoFocus?: boolean;
 		disabled?: boolean;
@@ -326,6 +327,7 @@ declare module 'resin-components' {
 	class Select extends RenderableElementWithProps<SelectProps, any> {}
 
 	interface TextProps extends DefaultProps {
+		monospace?: boolean;
 		align?:
 			| 'left'
 			| 'right'
