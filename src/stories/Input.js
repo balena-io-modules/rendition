@@ -29,3 +29,13 @@ storiesOf('Input', module)
       </div>
     )
   })
+  .addWithInfo('Monospace', () => {
+    return (
+      <div>
+        <Input m={2} monospace placeholder='Placeholder Text' />
+        <Input m={2} monospace placeholder='Placeholder Text' invalid />
+        <Input m={2} monospace placeholder='Placeholder Text' valid />
+        <Input m={2} monospace placeholder='Placeholder Text' disabled />
+      </div>
+    )
+  })

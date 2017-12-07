@@ -81,3 +81,8 @@ export const getColor = (
 		}
 	}
 };
+
+export const monospace = (props: { monospace?: boolean, theme: Theme }) =>
+	props.monospace
+		? { fontFamily: props.theme.monospace }
+		: null;
