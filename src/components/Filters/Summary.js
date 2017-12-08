@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as FaBookmarkO from 'react-icons/lib/fa/bookmark'
+import * as every from 'lodash/every'
 import styled from 'styled-components'
 import { Box, Flex } from '../Grid'
 import Input from '../Input'
@@ -8,6 +9,7 @@ import Select from '../Select'
 import Modal from '../Modal'
 import FilterDescription from './FilterDescription'
 import SchemaSieve from './SchemaSieve'
+import types from '../PineTypes'
 
 const sieve = SchemaSieve()
 
@@ -24,6 +26,8 @@ const ActionBtn = styled.button`
   font-size: 13px;
   float: right;
 `
+
+const isValidRule = rule => types.hasOwnProperty(rule.type)
 
 class FilterSummary extends React.Component {
   constructor (props) {
@@ -68,6 +72,10 @@ class FilterSummary extends React.Component {
   }
 
   render () {
+    if (every(this.props.rules, r => !isValidRule(r))) {
+      return null
+    }
+
     return (
       <BorderedDiv>
         <ActionBtn
@@ -115,19 +123,25 @@ class FilterSummary extends React.Component {
           </Modal>
         )}
         <Flex wrap>
-          {this.props.rules.map(rule => (
-            <Box mb={10} mr={10} key={rule.id}>
-              <FilterDescription
-                rule={rule}
-                edit={
-                  rule.name === sieve.SIMPLE_SEARCH_NAME
-                    ? false
-                    : () => this.props.edit(rule)
-                }
-                delete={() => this.props.delete(rule)}
-              />
-            </Box>
-          ))}
+          {this.props.rules.map(rule => {
+            if (!isValidRule(rule)) {
+              return null
+            }
+
+            return (
+              <Box mb={10} mr={10} key={rule.id}>
+                <FilterDescription
+                  rule={rule}
+                  edit={
+                    rule.name === sieve.SIMPLE_SEARCH_NAME
+                      ? false
+                      : () => this.props.edit(rule)
+                  }
+                  delete={() => this.props.delete(rule)}
+                />
+              </Box>
+            )
+          })}
         </Flex>
       </BorderedDiv>
     )
