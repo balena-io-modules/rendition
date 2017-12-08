@@ -846,5 +846,93 @@ describe('resin-filter', () => {
         expect(result[0].test).to.equal(this.collection[0].test)
       })
     })
+
+    it('should not throw if provided with an invalid data type in the rule', function () {
+      const schema = { test: { type: 'Foo Bar' } }
+      const collection = [
+        {
+          test: 'abcde',
+          id: 1
+        },
+        {
+          test: 'fghij',
+          id: 2
+        }
+      ]
+
+      const inputs = sieve.makeFilterInputs(schema)
+      const input = inputs.test
+
+      input.operator = 'contains'
+      input.value = 'abc'
+
+      expect(() => sieve.filter(collection, input)).to.not.throw()
+    })
+
+    it('should not throw if provided with an invalid operator in the rule', function () {
+      const schema = { test: { type: 'Short Text' } }
+      const collection = [
+        {
+          test: 'abcde',
+          id: 1
+        },
+        {
+          test: 'fghij',
+          id: 2
+        }
+      ]
+
+      const inputs = sieve.makeFilterInputs(schema)
+      const input = inputs.test
+
+      input.operator = 'foo bar'
+      input.value = 'abc'
+
+      expect(() => sieve.filter(collection, input)).to.not.throw()
+    })
+
+    it('should not restrict results if there is an invalid data type in the rule', function () {
+      const schema = { test: { type: 'Foo Bar' } }
+      const collection = [
+        {
+          test: 'abcde',
+          id: 1
+        },
+        {
+          test: 'fghij',
+          id: 2
+        }
+      ]
+
+      const inputs = sieve.makeFilterInputs(schema)
+      const input = inputs.test
+
+      input.operator = 'contains'
+      input.value = 'abc'
+
+      expect(sieve.filter(collection, input)).to.have.length(2)
+    })
+
+    it('should not restrict results if there is an invalid operator in the rule', function () {
+      const schema = { test: { type: 'Short Text' } }
+      const collection = [
+        {
+          test: 'abcde',
+          id: 1
+        },
+        {
+          test: 'fghij',
+          id: 2
+        }
+      ]
+
+      const inputs = sieve.makeFilterInputs(schema)
+      const input = inputs.test
+
+      input.operator = 'foo bar'
+      input.value = 'abc'
+
+      expect(sieve.filter(collection, input)).to.have.length(2)
+    })
   })
 })

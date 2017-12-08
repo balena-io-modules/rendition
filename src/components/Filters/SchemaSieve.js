@@ -47,10 +47,11 @@ class SchemaSieve {
       if (operator in filterTests[type].rules) {
         return filterTests[type].rules[operator](target, value)
       }
-
-      throw new Error(`${operator} is not a valid operator for ${type} types`)
     }
-    throw new Error(`There is no filter test for type ${type}`)
+
+    // If the rule contains an unrecognised type or operator, then play it safe
+    // and don't filter the item
+    return true
   }
 
   filter (collection, input) {
