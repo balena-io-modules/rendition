@@ -274,6 +274,7 @@ class Filters extends React.Component {
             disabled={this.props.disabled}
             primary
             onClick={() => this.showNewFilterModal()}
+            {...this.props.addFilterButtonProps}
           >
             <FaFilter style={{ marginRight: 10 }} />
             Add filter
@@ -290,6 +291,7 @@ class Filters extends React.Component {
           </SimpleSearchBox>
 
           <ViewsMenu
+            buttonProps={this.props.viewsMenuButtonProps}
             disabled={this.props.disabled}
             rules={rules}
             views={this.props.views || []}
@@ -316,7 +318,8 @@ class Filters extends React.Component {
                     mr={20}
                     value={this.state.edit.name}
                     onChange={e =>
-                      this.handleEditChange(e.target.value, 'name')}
+                      this.handleEditChange(e.target.value, 'name')
+                    }
                   >
                     {map(inputModels, ({ name, label }) => (
                       <option key={name} value={name}>
@@ -328,7 +331,8 @@ class Filters extends React.Component {
                     mr={20}
                     value={this.state.edit.operator}
                     onChange={e =>
-                      this.handleEditChange(e.target.value, 'operator')}
+                      this.handleEditChange(e.target.value, 'operator')
+                    }
                   >
                     {map(
                       inputModels[this.state.edit.name].availableOperators,

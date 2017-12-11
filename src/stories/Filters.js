@@ -103,6 +103,7 @@ class FiltersDemo extends React.Component {
           schema={this.state.schema}
           setViews={views => this.setViews(views)}
           setRules={rules => this.setRules(rules)}
+          {...this.props.extra}
         />
 
         {items.map((item, index) => (
@@ -157,4 +158,17 @@ storiesOf('Filters', module)
   })
   .addWithInfo('Disabled', () => {
     return <FiltersDemo disabled />
+  })
+  .addWithInfo('Button props', () => {
+    const props = {
+      addFilterButtonProps: {
+        w: 200
+      },
+      viewsMenuButtonProps: {
+        w: 200,
+        danger: true
+      }
+    }
+
+    return <FiltersDemo extra={props} />
   })

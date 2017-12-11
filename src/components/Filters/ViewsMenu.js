@@ -103,6 +103,7 @@ class ViewsMenu extends React.Component {
               Views
             </span>
           }
+          {...this.props.buttonProps}
         >
           <Box py={1}>
             {!hasViews && (
@@ -132,12 +133,14 @@ class ViewsMenu extends React.Component {
                             {view.name}
                             <br />
                             <Text m={0} fontSize={12} color='#aaa'>
-                              {view.rules.length} filter{view.rules.length > 1 && 's'}
+                              {view.rules.length} filter{view.rules.length >
+                                1 && 's'}
                             </Text>
                           </ViewListItemLabel>
                           <button
                             onClick={() =>
-                              this.props.deleteView(view, scope.key)}
+                              this.props.deleteView(view, scope.key)
+                            }
                           >
                             <FaTrash name='trash' />
                           </button>
