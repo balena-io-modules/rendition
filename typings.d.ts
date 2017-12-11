@@ -195,8 +195,8 @@ declare module 'resin-components' {
 		schema: Schema;
 		setViews(views: SingleFilterView[]): void;
 		setRules(rules: FilterRule[]): void;
-		addFilterButtonProps: ButtonProps;
-		viewsMenuButtonProps: DropDownButtonProps;
+		addFilterButtonProps?: ButtonProps;
+		viewsMenuButtonProps?: DropDownButtonProps;
 	}
 
 	class Filters extends RenderableElementWithProps<FiltersProps, any> {}
