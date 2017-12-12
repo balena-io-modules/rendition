@@ -51,6 +51,7 @@ const DismissButton = styled.button`
 	padding: 0;
 	border: 0;
 	background: none;
+	line-height: 0;
 	font-size: 14px;
 	cursor: pointer;
 
