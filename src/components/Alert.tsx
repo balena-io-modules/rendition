@@ -104,7 +104,8 @@ const Filled = AlertBase.extend`
 `;
 
 const Plaintext = AlertBase.extend`
-	padding-left: 19px;
+	min-height: auto;
+	padding: 0;
 	font-size: 14px;
 
 	&,
