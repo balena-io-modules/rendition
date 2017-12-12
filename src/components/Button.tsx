@@ -83,6 +83,10 @@ const Outline = Button.extend`
 `;
 
 const Underline = Outline.extend`
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 2px;
+	height: auto;
 	border: 0;
 	border-radius: 0;
 	border-bottom: 1px solid;
