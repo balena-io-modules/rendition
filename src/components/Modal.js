@@ -1,3 +1,4 @@
+import * as assign from 'lodash/assign'
 import * as React from 'react'
 import styled from 'styled-components'
 import Button from './Button'
@@ -44,43 +45,52 @@ const ModalPanel = styled(Box)`
   pointer-events: auto;
 `
 
-const Modal = ({ w, width, ...props }) => (
-  <ModalWrapper align='center' justify='center'>
-    <ModalBackdrop
-      z={8888}
-      bg='rgba(0,0,0,0.4)'
-      top
-      right
-      bottom
-      left
-      onClick={() => props.cancel()}
-    />
-    <ModalPanel w={w || width || DEFAULT_MODAL_WIDTH}>
-      {props.titleElement ? (
-        <ModalHeader>{props.titleElement}</ModalHeader>
-      ) : (
-        !!props.title && (
-          <ModalHeader>
-            <strong>{props.title}</strong>
-            {!!props.titleDetails && (
-              <ModalTitleDetails>{props.titleDetails}</ModalTitleDetails>
-            )}
-          </ModalHeader>
-        )
-      )}
-      {props.children}
-      <Flex mt={50} align='center' justify='flex-end'>
-        {props.cancel && (
-          <Button style={{ marginRight: 20 }} onClick={props.cancel}>
-            Cancel
-          </Button>
+const Modal = ({ w, width, ...props }) => {
+  const cancelButtonProps = assign(
+    { style: { marginRight: 20 } },
+    props.cancelButtonProps
+  )
+
+  const primaryButtonProps = assign({ primary: true }, props.primaryButtonProps)
+
+  return (
+    <ModalWrapper align='center' justify='center'>
+      <ModalBackdrop
+        z={8888}
+        bg='rgba(0,0,0,0.4)'
+        top
+        right
+        bottom
+        left
+        onClick={() => props.cancel()}
+      />
+      <ModalPanel w={w || width || DEFAULT_MODAL_WIDTH}>
+        {props.titleElement ? (
+          <ModalHeader>{props.titleElement}</ModalHeader>
+        ) : (
+          !!props.title && (
+            <ModalHeader>
+              <strong>{props.title}</strong>
+              {!!props.titleDetails && (
+                <ModalTitleDetails>{props.titleDetails}</ModalTitleDetails>
+              )}
+            </ModalHeader>
+          )
         )}
-        <Button primary onClick={props.done}>
-          {props.action}
-        </Button>
-      </Flex>
-    </ModalPanel>
-  </ModalWrapper>
-)
+        {props.children}
+        <Flex mt={50} align='center' justify='flex-end'>
+          {props.cancel && (
+            <Button {...cancelButtonProps} onClick={props.cancel}>
+              Cancel
+            </Button>
+          )}
+          <Button {...primaryButtonProps} onClick={props.done}>
+            {props.action}
+          </Button>
+        </Flex>
+      </ModalPanel>
+    </ModalWrapper>
+  )
+}
 
 export default Modal

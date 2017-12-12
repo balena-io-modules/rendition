@@ -274,6 +274,8 @@ declare module 'resin-components' {
 			action: string;
 			cancel: () => any;
 			done: () => any;
+			primaryButtonProps?: ButtonProps;
+			cancelButtonProps?: ButtonProps;
 		},
 		any
 	> {}
