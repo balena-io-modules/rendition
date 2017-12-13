@@ -251,6 +251,7 @@ declare module 'resin-components' {
 		placeholder?: string;
 		readOnly?: boolean;
 		required?: boolean;
+		type?: string;
 		value?: string | string[] | number;
 
 		invalid?: boolean;

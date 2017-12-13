@@ -39,3 +39,33 @@ storiesOf('Input', module)
       </div>
     )
   })
+  .addWithInfo('Input types', () => {
+    return (
+      <div>
+        <label>
+          <div>Text</div>
+          <Input m={2} placeholder='Placeholder Text' type='text' />
+        </label>
+        <label>
+          <div>Number</div>
+          <Input m={2} placeholder='Placeholder Number' type='number' />
+        </label>
+        <label>
+          <div>Date</div>
+          <Input m={2} placeholder='Placeholder Date' type='date' />
+        </label>
+        <label>
+          <div>Month</div>
+          <Input m={2} placeholder='Placeholder Month' type='month' />
+        </label>
+        <label>
+          <div>Password</div>
+          <Input m={2} placeholder='Placeholder Password' type='password' />
+        </label>
+        <label>
+          <div>Time</div>
+          <Input m={2} placeholder='Placeholder Time' type='time' />
+        </label>
+      </div>
+    )
+  })
