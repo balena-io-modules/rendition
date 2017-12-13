@@ -271,8 +271,8 @@ declare module 'resin-components' {
 			title?: string;
 			titleElement?: string | JSX.Element;
 			titleDetails?: string | JSX.Element;
-			action: string;
-			cancel: () => any;
+			action: string | JSX.Element;
+			cancel?: () => any;
 			done: () => any;
 			primaryButtonProps?: ButtonProps;
 			cancelButtonProps?: ButtonProps;
