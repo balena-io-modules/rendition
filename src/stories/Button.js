@@ -1,9 +1,7 @@
 import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
 import styled from 'styled-components'
-import * as FaDownload from 'react-icons/lib/fa/download'
 import * as FaExpand from 'react-icons/lib/fa/expand'
-import * as FaTrash from 'react-icons/lib/fa/trash'
 import * as FaRecycle from 'react-icons/lib/fa/recycle'
 import Button from '../components/Button'
 
@@ -21,10 +19,13 @@ storiesOf('Button', module)
         <Button mx={2} secondary onPress={action('case-2')}>
           Button
         </Button>
-        <Button mx={2} tertiary onPress={action('case-3')}>
+        <Button mx={2} success onPress={action('case-3')}>
           Button
         </Button>
-        <Button mx={2} onPress={action('case-4')}>
+        <Button mx={2} tertiary onPress={action('case-4')}>
+          Button
+        </Button>
+        <Button mx={2} onPress={action('case-5')}>
           Button
         </Button>
       </Container>
@@ -39,10 +40,13 @@ storiesOf('Button', module)
         <Button mx={2} emphasized secondary onPress={action('case-2')}>
           Button
         </Button>
-        <Button mx={2} emphasized tertiary onPress={action('case-3')}>
+        <Button mx={2} emphasized success onPress={action('case-3')}>
           Button
         </Button>
-        <Button mx={2} emphasized onPress={action('case-4')}>
+        <Button mx={2} emphasized tertiary onPress={action('case-4')}>
+          Button
+        </Button>
+        <Button mx={2} emphasized onPress={action('case-5')}>
           Button
         </Button>
       </Container>
@@ -57,10 +61,13 @@ storiesOf('Button', module)
         <Button mx={2} disabled secondary onPress={action('case-2')}>
           Button
         </Button>
-        <Button mx={2} disabled tertiary onPress={action('case-3')}>
+        <Button mx={2} disabled success onPress={action('case-3')}>
           Button
         </Button>
-        <Button mx={2} disabled onPress={action('case-4')}>
+        <Button mx={2} disabled tertiary onPress={action('case-4')}>
+          Button
+        </Button>
+        <Button mx={2} disabled onPress={action('case-5')}>
           Button
         </Button>
       </Container>
@@ -72,7 +79,7 @@ storiesOf('Button', module)
         <Button mx={2} primary outline onPress={action('case-1')}>
           Button
         </Button>
-        <Button mx={2} secondary outline onPress={action('case-2')}>
+        <Button mx={2} danger outline onPress={action('case-3')}>
           Button
         </Button>
         <Button mx={2} tertiary outline onPress={action('case-3')}>
@@ -88,12 +95,6 @@ storiesOf('Button', module)
     return (
       <Container>
         <Button mx={2} primary underline onPress={action('case-1')}>
-          Button
-        </Button>
-        <Button mx={2} secondary underline onPress={action('case-2')}>
-          Button
-        </Button>
-        <Button mx={2} tertiary underline onPress={action('case-3')}>
           Button
         </Button>
         <Button mx={2} underline onPress={action('case-4')}>
@@ -125,12 +126,6 @@ storiesOf('Button', module)
   .addWithInfo('Square', () => {
     return (
       <Container>
-        <Button mx={2} primary square onPress={action('case-1')}>
-          <FaDownload />
-        </Button>
-        <Button mx={2} secondary square onPress={action('case-2')}>
-          <FaTrash />
-        </Button>
         <Button mx={2} tertiary square onPress={action('case-3')}>
           <FaExpand />
         </Button>
@@ -143,12 +138,6 @@ storiesOf('Button', module)
   .addWithInfo('Square Emphasized', () => {
     return (
       <Container>
-        <Button mx={2} emphasized primary square onPress={action('case-1')}>
-          <FaDownload />
-        </Button>
-        <Button mx={2} emphasized secondary square onPress={action('case-2')}>
-          <FaTrash />
-        </Button>
         <Button mx={2} emphasized tertiary square onPress={action('case-3')}>
           <FaExpand />
         </Button>
