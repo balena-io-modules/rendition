@@ -131,6 +131,7 @@ class FilterSummary extends React.Component {
             return (
               <Box mb={10} mr={10} key={rule.id}>
                 <FilterDescription
+                  schema={this.props.schema[rule.name]}
                   rule={rule}
                   edit={
                     rule.name === sieve.SIMPLE_SEARCH_NAME

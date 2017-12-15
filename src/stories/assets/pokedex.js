@@ -64,7 +64,17 @@ export default [
     Category: 'Flame',
     Abilities: 'Blaze',
     pokedex_number: 6,
-    caught: false
+    caught: false,
+    Tag: [
+      {
+        tag_name: 'rarity',
+        tag_value: '10'
+      },
+      {
+        tag_name: 'region',
+        tag_value: 'Kanto'
+      }
+    ]
   },
   {
     Name: 'Squirtle',
@@ -76,7 +86,17 @@ export default [
     Abilities: 'Torrent',
     pokedex_number: 7,
     first_seen: '2017-01-01T08:49:26.961Z',
-    caught: false
+    caught: false,
+    Tag: [
+      {
+        tag_name: 'rarity',
+        tag_value: '5'
+      },
+      {
+        tag_name: 'region',
+        tag_value: 'Johto'
+      }
+    ]
   },
   {
     Name: 'Wartortle',

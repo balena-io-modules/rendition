@@ -21,6 +21,7 @@ const Base = styled.select`
   -moz-appearance: none;
   appearance: none;
   width: 100%;
+  min-width: 90px;
 
   &:hover {
     box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1);
