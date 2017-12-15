@@ -113,6 +113,31 @@ storiesOf('Modal', module)
       </Modal>
     )
   })
+  .addWithInfo('Custom Button Properties', () => {
+    return (
+      <Modal
+        w={['auto', 500, 1000]}
+        title='Are you sure?'
+        cancel={() => {}}
+        done={() => {}}
+        action='Delete'
+        cancelButtonProps={{
+          w: 150,
+          style: {
+            marginRight: 30
+          }
+        }}
+        primaryButtonProps={{
+          w: 150,
+          danger: true,
+          primary: false,
+          disabled: true
+        }}
+        >
+        Lorem ipsum dolor sit amet
+      </Modal>
+    )
+  })
   .addWithInfo('Open Modal Demo', () => {
     return <ModalDemo />
   })

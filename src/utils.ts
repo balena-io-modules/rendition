@@ -54,11 +54,11 @@ export const getColorFromTheme = (theme: Theme) => (
 	return get(theme, `colors.${colorString}`);
 };
 
-export const getColoringType = (props: DefaultProps & Coloring): string | undefined => {
+export const getColoringType = (props: DefaultProps & Coloring & { [key: string]: any }): string | undefined => {
 	// get primary, tertiary, secondary etc
 	const type = find<string>(
 		Object.keys(props),
-		b => !!find(Object.keys(props.theme.colors), k => k === b),
+		b => !!props[b] && !!find(Object.keys(props.theme.colors), k => k === b),
 	);
 	return type;
 };
