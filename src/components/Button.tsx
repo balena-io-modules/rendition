@@ -44,7 +44,9 @@ const Button = styleableButton`
 	padding-left: ${props => px(horizontalPadding(props))};
 	padding-right: ${props => px(horizontalPadding(props))};
 	font-family: inherit;
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	font-weight: ${props => bold(props)};
 	border-radius: ${props => px(props.theme.radius)};
 	appearance: none;
