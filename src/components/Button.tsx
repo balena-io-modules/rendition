@@ -9,6 +9,7 @@ interface ButtonProps extends DefaultProps, Coloring, Sizing {
 	outline?: boolean;
 	plaintext?: boolean;
 	underline?: boolean;
+	iconElement?: JSX.Element;
 }
 
 const squareWidth = (val: number): number => val / 9 * 10;
@@ -38,6 +39,11 @@ const horizontalPadding = (props: ButtonProps) => {
 };
 
 const styleableButton: StyledFunction<ButtonProps> = styled.button;
+
+const ButtonIcon = styled.span`
+	margin-right: ${props => px(props.theme.space[2])};
+	font-size: 0.875em;
+`;
 
 const Button = styleableButton`
 	padding-top: 1px;
@@ -120,18 +126,33 @@ const Underline = Plaintext.extend`
 `;
 
 export default withTheme(
-	hoc(({ outline, underline, plaintext, ...props }: ButtonProps) => {
+	hoc(({ outline, underline, plaintext, children, iconElement, ...props }: ButtonProps) => {
 		if (plaintext) {
-			return <Plaintext {...props} />;
+			return <Plaintext {...props}>
+				{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
+				{children}
+			</Plaintext>;
 		} else if (outline) {
-			return <Outline {...props} />;
+			return <Outline {...props}>
+				{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
+				{children}
+			</Outline>;
 		} else if (underline) {
-			return <Underline {...props} />;
+			return <Underline {...props}>
+				{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
+				{children}
+			</Underline>;
 		} else if (!getColoringType(props) && !props.color && !props.bg) {
 			// outline tertiary is our default btn
-			return <Outline {...props} tertiary />;
+			return <Outline {...props} tertiary>
+				{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
+				{children}
+			</Outline>;
 		} else {
-			return <Button {...props} />;
+			return <Button {...props}>
+				{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
+				{children}
+			</Button>;
 		}
 	}),
 );

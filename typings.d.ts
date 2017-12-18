@@ -151,6 +151,7 @@ declare module 'resin-components' {
 		outline?: boolean;
 		plaintext?: boolean;
 		underline?: boolean;
+		iconElement?: JSX.Element;
 	}
 
 	class Button extends RenderableElementWithProps<ButtonProps, any> {}
