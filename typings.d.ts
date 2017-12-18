@@ -63,14 +63,17 @@ declare module 'resin-components' {
 		| 'Text'
 		| 'Time'
 		| 'Semver Range'
-		| 'Semver';
+		| 'Semver'
+		| 'Key Value Pair';
 
 	interface SchemaEntry {
 		type: PineDataType;
 		values?: string[];
+		key?: string;
+		value?: string;
 		label?: string;
-		valueLabel?: string;
 		keyLabel?: string;
+		valueLabel?: string;
 	}
 
 	interface Schema {
