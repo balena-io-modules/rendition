@@ -147,7 +147,10 @@ class ViewsMenu extends React.Component {
                           <Preview>
                             {view.rules.map(rule => (
                               <Box mb={10} key={rule.id}>
-                                <FilterDescription rule={rule} />
+                                <FilterDescription
+                                  schema={this.props.schema[rule.name]}
+                                  rule={rule}
+                                />
                               </Box>
                             ))}
                           </Preview>

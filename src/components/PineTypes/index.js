@@ -4,6 +4,7 @@ import * as DateTimeType from './DateTime'
 import * as DateType from './Date'
 import * as EnumType from './Enum'
 import * as IntegerType from './Integer'
+import * as KeyValuePair from './KeyValuePair'
 import * as RealType from './Real'
 import * as ShortTextType from './ShortText'
 import * as TextType from './Text'
@@ -18,6 +19,7 @@ export default {
   'Date Time': DateTimeType,
   Date: DateType,
   Integer: IntegerType,
+  'Key Value Pair': KeyValuePair,
   Real: RealType,
   'Short Text': ShortTextType,
   Text: TextType,

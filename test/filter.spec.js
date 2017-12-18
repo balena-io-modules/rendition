@@ -299,6 +299,216 @@ describe('resin-filter', () => {
     })
 
     /**
+     * Key Value Pair
+     */
+    describe('Key Value Pair', () => {
+      before(function () {
+        this.schema = {
+          test: {
+            type: 'Key Value Pair',
+            key: 'key',
+            value: 'value'
+          }
+        }
+
+        this.collection = {
+          'Entry 1': {
+            test: {
+              letter: 'Aa',
+              number: '123'
+            }
+          },
+          'Entry 2': {
+            test: {
+              letter: 'Bb',
+              number: '456'
+            }
+          },
+          'Entry 3': {
+            test: [
+              {
+                letter: 'Cc',
+                number: '789'
+              },
+              {
+                letter: 'Bb',
+                number: '101112'
+              }
+            ]
+          },
+          'Entry 4': {
+            test: {
+              letter: 'Dd',
+              number: '131415'
+            }
+          },
+          'Entry 5': {
+            foo: 'bar'
+          }
+        }
+      })
+
+      it('should correctly test values using the "is" operator', function () {
+        const inputs = sieve.makeFilterInputs(this.schema)
+        const input = inputs.test
+
+        input.operator = 'is'
+        input.value = {
+          letter: 'Aa',
+          number: '123'
+        }
+        expect(sieve.filter(this.collection, input)).to.have.all.keys('Entry 1')
+      })
+
+      it('should correctly test values using the "is not" operator', function () {
+        const inputs = sieve.makeFilterInputs(this.schema)
+        const input = inputs.test
+
+        input.operator = 'is not'
+        input.value = {
+          letter: 'Aa',
+          number: '123'
+        }
+        expect(sieve.filter(this.collection, input)).to.have.all.keys(
+          'Entry 2',
+          'Entry 3',
+          'Entry 4',
+          'Entry 5'
+        )
+      })
+
+      it('should correctly test values using the "key is" operator', function () {
+        const inputs = sieve.makeFilterInputs(this.schema)
+        const input = inputs.test
+
+        input.operator = 'key is'
+        input.value = {
+          letter: 'Dd'
+        }
+        expect(sieve.filter(this.collection, input)).to.have.all.keys('Entry 4')
+      })
+
+      it('should correctly test values using the "key contains" operator', function () {
+        const inputs = sieve.makeFilterInputs(this.schema)
+        const input = inputs.test
+
+        input.operator = 'key contains'
+        input.value = {
+          letter: 'b'
+        }
+        expect(sieve.filter(this.collection, input)).to.have.all.keys(
+          'Entry 2',
+          'Entry 3'
+        )
+      })
+
+      it('should correctly test values using the "key does not contain" operator', function () {
+        const inputs = sieve.makeFilterInputs(this.schema)
+        const input = inputs.test
+
+        input.operator = 'key does not contain'
+        input.value = {
+          letter: 'b'
+        }
+        expect(sieve.filter(this.collection, input)).to.have.all.keys(
+          'Entry 1',
+          'Entry 4',
+          'Entry 5'
+        )
+      })
+
+      it('should correctly test values using the "key matches RegEx" operator', function () {
+        const inputs = sieve.makeFilterInputs(this.schema)
+        const input = inputs.test
+
+        input.operator = 'key matches RegEx'
+        input.value = {
+          letter: '/b/'
+        }
+        expect(sieve.filter(this.collection, input)).to.have.all.keys(
+          'Entry 2',
+          'Entry 3'
+        )
+      })
+
+      it('should correctly test values using the "key does not match RegEx" operator', function () {
+        const inputs = sieve.makeFilterInputs(this.schema)
+        const input = inputs.test
+
+        input.operator = 'key does not match RegEx'
+        input.value = {
+          letter: '/b/'
+        }
+        expect(sieve.filter(this.collection, input)).to.have.all.keys(
+          'Entry 1',
+          'Entry 4',
+          'Entry 5'
+        )
+      })
+
+      it('should correctly test values using the "value is" operator', function () {
+        const inputs = sieve.makeFilterInputs(this.schema)
+        const input = inputs.test
+
+        input.operator = 'value is'
+        input.value = {
+          number: '123'
+        }
+        expect(sieve.filter(this.collection, input)).to.have.all.keys('Entry 1')
+      })
+
+      it('should correctly test values using the "value contains" operator', function () {
+        const inputs = sieve.makeFilterInputs(this.schema)
+        const input = inputs.test
+
+        input.operator = 'value contains'
+        input.value = {
+          number: '23'
+        }
+        expect(sieve.filter(this.collection, input)).to.have.all.keys('Entry 1')
+      })
+
+      it('should correctly test values using the "value does not contain" operator', function () {
+        const inputs = sieve.makeFilterInputs(this.schema)
+        const input = inputs.test
+
+        input.operator = 'value does not contain'
+        input.value = {
+          number: '1'
+        }
+        expect(sieve.filter(this.collection, input)).to.have.all.keys(
+          'Entry 2',
+          'Entry 5'
+        )
+      })
+
+      it('should correctly test values using the "value matches RegEx" operator', function () {
+        const inputs = sieve.makeFilterInputs(this.schema)
+        const input = inputs.test
+
+        input.operator = 'value matches RegEx'
+        input.value = {
+          number: '/56/'
+        }
+        expect(sieve.filter(this.collection, input)).to.have.all.keys('Entry 2')
+      })
+
+      it('should correctly test values using the "value does not match RegEx" operator', function () {
+        const inputs = sieve.makeFilterInputs(this.schema)
+        const input = inputs.test
+
+        input.operator = 'value does not match RegEx'
+        input.value = {
+          number: '/1/'
+        }
+        expect(sieve.filter(this.collection, input)).to.have.all.keys(
+          'Entry 2',
+          'Entry 5'
+        )
+      })
+    })
+
+    /**
      * Real
      */
     describe('Real', () => {

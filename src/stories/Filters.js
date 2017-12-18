@@ -20,6 +20,20 @@ const StyledTable = styled.table`
   }
 `
 
+const TagBase = styled.span`
+  background: yellow;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 3px 8px;
+  margin: 3px 5px;
+`
+
+const Tag = ({ tag }) => (
+  <TagBase>
+    {tag.tag_name}: {tag.tag_value}
+  </TagBase>
+)
+
 const setViewsAction = action('Set views')
 const setRulesAction = action('Set rules')
 
@@ -56,6 +70,13 @@ const schema = {
   caught: {
     type: 'Boolean',
     label: 'Pokemon has been caught'
+  },
+  Tag: {
+    type: 'Key Value Pair',
+    key: 'tag_name',
+    value: 'tag_value',
+    keyLabel: 'Name',
+    valueLabel: 'Value'
   }
 }
 
@@ -128,18 +149,27 @@ class FiltersDemo extends React.Component {
                   <td>{item.Weight}</td>
                 </tr>
                 <tr>
-                  <td>Abilities:</td>
+                  <td>Abilities</td>
                   <td>{item.Abilities}</td>
                 </tr>
                 <tr>
-                  <td>First Seen:</td>
+                  <td>First Seen</td>
                   <td>
                     <DateTimeDisplay data={item.first_seen} />
                   </td>
                 </tr>
                 <tr>
-                  <td>Caught:</td>
+                  <td>Caught</td>
                   <td>{item.caught ? 'yes' : 'no'}</td>
+                </tr>
+                <tr>
+                  <td>Tags</td>
+                  <td>
+                    {!!item.Tag &&
+                      item.Tag.map((tag, index) => (
+                        <Tag tag={tag} key={index} />
+                      ))}
+                  </td>
                 </tr>
               </tbody>
             </StyledTable>

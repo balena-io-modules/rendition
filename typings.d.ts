@@ -69,6 +69,8 @@ declare module 'resin-components' {
 		type: PineDataType;
 		values?: string[];
 		label?: string;
+		valueLabel?: string;
+		keyLabel?: string;
 	}
 
 	interface Schema {
@@ -287,9 +289,14 @@ declare module 'resin-components' {
 		any
 	> {}
 
+	type PineTypeOperatorTest = (target: any, value?: any) => boolean;
+
 	interface PineTypeModule {
 		rules: {
-			[key: string]: (target: any, value?: any) => boolean;
+			[key: string]: PineTypeOperatorTest | {
+				getLabel: (schemaEntry: SchemaEntry) => string | false;
+				test: PineTypeOperatorTest
+			}
 		};
 		validate: (value: any) => boolean;
 		normalize: <T>(value: any) => T;

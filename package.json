@@ -1,6 +1,6 @@
 {
   "name": "resin-components",
-  "version": "2.14.1",
+  "version": "2.15.0",
   "description": "Resin Components Component",
   "repository": {
     "type": "git",
@@ -13,7 +13,8 @@
     "start": "start-storybook -p 6006",
     "build": "rimraf dist && tsc",
     "build:storybook": "build-storybook -o .out",
-    "test": "npm run lint && mocha --require ts-node/register test/*.spec.js",
+    "test": "npm run lint && npm run mocha",
+    "mocha": "mocha --require ts-node/register test/*.spec.js",
     "lint": "eslint src test",
     "precommit": "lint-staged",
     "prettify": "prettier-eslint --write \"src/**/*.js\" \"test/**/*.js\"",

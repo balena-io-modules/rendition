@@ -3,9 +3,10 @@ import * as cloneDeep from 'lodash/cloneDeep'
 import * as isArray from 'lodash/isArray'
 import * as every from 'lodash/every'
 import * as some from 'lodash/some'
-import * as isObject from 'lodash/isObject'
+import * as isPlainObject from 'lodash/isPlainObject'
 import * as pickBy from 'lodash/pickBy'
 import * as forEach from 'lodash/forEach'
+import * as map from 'lodash/map'
 import filterTests from '../PineTypes'
 
 const SIMPLE_SEARCH_NAME = 'Full text search'
@@ -45,7 +46,10 @@ class SchemaSieve {
       const target = item[name]
 
       if (operator in filterTests[type].rules) {
-        return filterTests[type].rules[operator](target, value)
+        const result = filterTests[type].rules[operator]
+        return isPlainObject(result)
+          ? result.test(target, value)
+          : result(target, value)
       }
     }
 
@@ -58,7 +62,7 @@ class SchemaSieve {
     if (isArray(collection)) {
       return this.filterArray(collection, input)
     }
-    if (isObject(collection)) {
+    if (isPlainObject(collection)) {
       return this.filterObject(collection, input)
     }
 
@@ -73,9 +77,24 @@ class SchemaSieve {
     return pickBy(collection, value => this.test(value, input))
   }
 
-  getOperators (type) {
+  getOperators (type, schemaEntry) {
     if (type in filterTests) {
-      return Object.keys(filterTests[type].rules)
+      // If the rule has a 'getLabel' method, use that to construct the return object
+      return map(filterTests[type].rules, (value, key) => {
+        if (isPlainObject(value) && value.getLabel) {
+          const label = value.getLabel(schemaEntry)
+          if (label) {
+            return {
+              label,
+              value: key
+            }
+          }
+        }
+        return {
+          label: key,
+          value: key
+        }
+      })
     }
     return []
   }
@@ -88,7 +107,7 @@ class SchemaSieve {
         type: value.type,
         name: key,
         label: value.label,
-        availableOperators: this.getOperators(value.type),
+        availableOperators: this.getOperators(value.type, schema[key]),
         operator: null,
         value: null
       }

@@ -69,6 +69,7 @@ const FilterInput = props => {
     <PineTypeInput
       schema={props.schema}
       value={props.value}
+      operator={props.operator}
       onChange={props.onChange}
     />
   )
@@ -114,7 +115,7 @@ class Filters extends React.Component {
       value: ''
     }
 
-    edit.operator = inputModels[edit.name].availableOperators[0]
+    edit.operator = inputModels[edit.name].availableOperators[0].value
     edit.label = inputModels[edit.name].label
     edit.type = inputModels[edit.name].type
 
@@ -195,7 +196,7 @@ class Filters extends React.Component {
     const model = inputModels[value]
     update.type = model.type
     update.name = value
-    update.operator = model.availableOperators[0]
+    update.operator = model.availableOperators[0].value
     update.label = model.label
     if (model.type === 'Date Time') {
       update.value = moment().format('YYYY-MM-DDTHH:mm')
@@ -217,6 +218,9 @@ class Filters extends React.Component {
 
     if (attribute === 'name' && update.name !== value) {
       update = this.setDefaultEditData(update, value)
+    } else if (attribute === 'operator') {
+      update.value = null
+      update[attribute] = value
     } else {
       update[attribute] = value
     }
@@ -295,6 +299,7 @@ class Filters extends React.Component {
             disabled={this.props.disabled}
             rules={rules}
             views={this.props.views || []}
+            schema={this.props.schema}
             setRules={this.props.setRules}
             deleteView={(view, scopeKey) => this.deleteView(view, scopeKey)}
           />
@@ -336,11 +341,16 @@ class Filters extends React.Component {
                   >
                     {map(
                       inputModels[this.state.edit.name].availableOperators,
-                      name => <option key={name}>{name}</option>
+                      ({ value, label }) => (
+                        <option value={value} key={value}>
+                          {label}
+                        </option>
+                      )
                     )}
                   </Select>
                   {inputModels[this.state.edit.name].type !== 'Boolean' && (
                     <FilterInput
+                      operator={this.state.edit.operator}
                       schema={this.props.schema[this.state.edit.name]}
                       value={this.state.edit.value}
                       onChange={value => this.handleEditChange(value, 'value')}
@@ -361,6 +371,7 @@ class Filters extends React.Component {
               saveView={(name, scope) => this.saveView(name, scope)}
               rules={rules}
               views={this.props.views || []}
+              schema={this.props.schema}
             />
           )}
       </FilterWrapper>
