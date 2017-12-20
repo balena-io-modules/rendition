@@ -89,6 +89,9 @@ class Filters extends React.Component {
       edit: this.generateFreshEdit(),
       searchString: (existingRule && existingRule.value) || ''
     }
+
+    // Clean exsting rules on load
+    this.filterAndSetRules(rules)
   }
 
   componentWillReceiveProps (nextProps) {
@@ -102,6 +105,20 @@ class Filters extends React.Component {
     } else {
       this.setState({ searchString: '' })
     }
+  }
+
+  /**
+   * Remove filter rules that don't have a matching schema entry.
+   * This can happen if the provided rules are from an old version of the
+   * provided schema. Rather than making wrapper code handle this, we just clean
+   * up rules as they are output from this component.
+   */
+  filterInvalidRules (rules) {
+    return rules.filter(rule => this.props.schema.hasOwnProperty(rule.name))
+  }
+
+  filterAndSetRules (rules) {
+    this.props.setRules(this.filterInvalidRules(rules))
   }
 
   generateFreshEdit () {
@@ -125,14 +142,14 @@ class Filters extends React.Component {
   addFilterRule (rule) {
     const { rules } = this.props
     rules.push(rule)
-    this.props.setRules(rules)
+    this.filterAndSetRules(rules)
   }
 
   editFilterRule (rule) {
     const { rules } = this.props
     const updatedRules = rules.map(r => (r.id === rule.id ? rule : r))
 
-    this.props.setRules(updatedRules)
+    this.filterAndSetRules(updatedRules)
   }
 
   addRule (rule) {
@@ -187,7 +204,7 @@ class Filters extends React.Component {
     const { rules } = this.props
 
     const updatedRules = rules.filter(r => r.id !== rule.id)
-    this.props.setRules(updatedRules)
+    this.filterAndSetRules(updatedRules)
   }
 
   setDefaultEditData (data, value) {
@@ -300,7 +317,7 @@ class Filters extends React.Component {
             rules={rules}
             views={this.props.views || []}
             schema={this.props.schema}
-            setRules={this.props.setRules}
+            setRules={this.filterAndSetRules}
             deleteView={(view, scopeKey) => this.deleteView(view, scopeKey)}
           />
         </Flex>
