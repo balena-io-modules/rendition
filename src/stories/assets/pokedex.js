@@ -63,6 +63,7 @@ export default [
       'Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.',
     Category: 'Flame',
     Abilities: 'Blaze',
+    first_seen: '2013-04-17T14:43:02.000Z',
     pokedex_number: 6,
     caught: false,
     Tag: [
@@ -85,7 +86,7 @@ export default [
     Category: 'Tiny Turtle',
     Abilities: 'Torrent',
     pokedex_number: 7,
-    first_seen: '2017-01-01T08:49:26.961Z',
+    first_seen: '2017-11-03T08:49:26.961Z',
     caught: false,
     Tag: [
       {

@@ -12,9 +12,13 @@ interface ButtonProps extends DefaultProps, Coloring, Sizing {
 	iconElement?: JSX.Element;
 }
 
+interface ThemedButtonProps extends ButtonProps {
+	theme: Theme;
+}
+
 const squareWidth = (val: number): number => val / 9 * 10;
 
-const minWidth = (props: ButtonProps) => {
+const minWidth = (props: ThemedButtonProps) => {
 	if (props.w == null && !props.square) {
 		return 'auto';
 	}
@@ -38,14 +42,12 @@ const horizontalPadding = (props: ButtonProps) => {
 	return props.emphasized ? 50 : 20;
 };
 
-const styleableButton: StyledFunction<ButtonProps> = styled.button;
-
 const ButtonIcon = styled.span`
 	margin-right: ${props => px(props.theme.space[2])};
 	font-size: 0.875em;
 `;
 
-const Button = styleableButton`
+const Button = (styled.button as StyledFunction<ThemedButtonProps>)`
 	padding-top: 1px;
 	padding-left: ${props => px(horizontalPadding(props))};
 	padding-right: ${props => px(horizontalPadding(props))};
@@ -67,7 +69,7 @@ const Button = styleableButton`
 	cursor: pointer;
 	background: ${props => props.bg || getColor(props, 'bg', 'main')};
 	color: ${props => props.color || '#fff'};
-	height: ${(props: ButtonProps) =>
+	height: ${(props: ThemedButtonProps) =>
 		px(props.emphasized ? props.theme.space[5] : props.theme.space[4])};
 
 	&:hover,
@@ -143,7 +145,7 @@ export default withTheme(
 			children,
 			iconElement,
 			...props
-		}: ButtonProps) => {
+		}: ThemedButtonProps) => {
 			if (plaintext) {
 				return (
 					<Plaintext {...props}>
@@ -183,4 +185,4 @@ export default withTheme(
 			}
 		},
 	),
-);
+) as React.ComponentClass<ButtonProps>;

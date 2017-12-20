@@ -18,7 +18,6 @@ interface Theme {
 }
 
 interface StyledSystemProps {
-	theme: Theme;
 	width?: ResponsiveStyle;
 	w?: ResponsiveStyle;
 	fontSize?: ResponsiveStyle;

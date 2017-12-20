@@ -3,6 +3,10 @@ import find = require('lodash/find');
 import get = require('lodash/get');
 import isObject = require('lodash/isObject');
 
+interface ThemedDefaultProps extends DefaultProps {
+	theme: Theme;
+}
+
 export const lighten = (color: string) =>
 	Color(color)
 		.fade(0.3)
@@ -23,8 +27,8 @@ export const blacken = (color: string) =>
 		.darken(0.6)
 		.string();
 
-export const normal = (props: DefaultProps) => get(props.theme, 'weights.0');
-export const bold = (props: DefaultProps) => get(props.theme, 'weights.1');
+export const normal = (props: ThemedDefaultProps) => get(props.theme, 'weights.0');
+export const bold = (props: ThemedDefaultProps) => get(props.theme, 'weights.1');
 
 export const px = (n: any) => (typeof n === 'number' ? n + 'px' : n);
 
@@ -66,7 +70,7 @@ export const getColoringType = (
 };
 
 export const getColor = (
-	props: DefaultProps & Coloring,
+	props: ThemedDefaultProps & Coloring,
 	key: string,
 	shade: 'main' | 'light' | 'dark',
 ) => {
