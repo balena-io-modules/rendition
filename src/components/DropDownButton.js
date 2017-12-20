@@ -46,6 +46,7 @@ const MenuBase = styled.div`
 
 const Wrapper = styled.div`
   ${space} ${width} ${fontSize} ${color} display: inline-block;
+  border-radius: ${props => px(props.theme.radius)};
   vertical-align: top;
   position: relative;
 `
