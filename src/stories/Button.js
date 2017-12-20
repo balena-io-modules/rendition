@@ -3,6 +3,7 @@ import { storiesOf, action } from '@storybook/react'
 import styled from 'styled-components'
 import * as FaExpand from 'react-icons/lib/fa/expand'
 import * as FaRecycle from 'react-icons/lib/fa/recycle'
+import * as FaSpinner from 'react-icons/lib/fa/spinner'
 import Button from '../components/Button'
 
 const Container = styled.div`
@@ -98,6 +99,24 @@ storiesOf('Button', module)
           Button
         </Button>
         <Button mx={2} underline onPress={action('case-4')}>
+          Button
+        </Button>
+      </Container>
+    )
+  })
+  .addWithInfo('Plaintext', () => {
+    return (
+      <Container>
+        <Button mx={2} plaintext primary onPress={action('case-1')}>
+          Button
+        </Button>
+        <Button
+          mx={2}
+          plaintext
+          primary
+          iconElement={<FaSpinner />}
+          onPress={action('case-2')}
+        >
           Button
         </Button>
       </Container>

@@ -1,13 +1,15 @@
 import * as React from 'react';
 import styled, { StyledFunction, withTheme } from 'styled-components';
 import hoc from '../hoc';
-import { bold, darken, getColor, getColoringType, px } from '../utils';
+import { normal, bold, darken, getColor, getColoringType, px } from '../utils';
 
 interface ButtonProps extends DefaultProps, Coloring, Sizing {
 	square?: boolean;
 	disabled?: boolean;
 	outline?: boolean;
+	plaintext?: boolean;
 	underline?: boolean;
+	iconElement?: JSX.Element;
 }
 
 const squareWidth = (val: number): number => val / 9 * 10;
@@ -38,12 +40,19 @@ const horizontalPadding = (props: ButtonProps) => {
 
 const styleableButton: StyledFunction<ButtonProps> = styled.button;
 
+const ButtonIcon = styled.span`
+	margin-right: ${props => px(props.theme.space[2])};
+	font-size: 0.875em;
+`;
+
 const Button = styleableButton`
 	padding-top: 1px;
 	padding-left: ${props => px(horizontalPadding(props))};
 	padding-right: ${props => px(horizontalPadding(props))};
 	font-family: inherit;
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	font-weight: ${props => bold(props)};
 	border-radius: ${props => px(props.theme.radius)};
 	appearance: none;
@@ -82,19 +91,34 @@ const Outline = Button.extend`
 	border: 1px solid;
 `;
 
-const Underline = Outline.extend`
+const Plaintext = Button.extend`
 	padding-left: 0;
 	padding-right: 0;
-	padding-bottom: 2px;
 	height: auto;
 	border: 0;
 	border-radius: 0;
-	border-bottom: 1px solid;
+	color: ${props =>
+		getColor(props, 'color', 'main') || props.theme.colors.text.main};
+	background: ${props => props.color || 'none'};
+	font-weight: ${props => normal(props)};
 
 	&:hover,
 	&:focus,
 	&:active {
 		background: none;
+		color: ${props =>
+			getColor(props, 'color', 'dark') || props.theme.colors.text.main};
+	}
+`
+
+const Underline = Plaintext.extend`
+	padding-bottom: 2px;
+	border-bottom: 1px solid;
+	font-weight: ${props => bold(props)};
+
+	&:hover,
+	&:focus,
+	&:active {
 		color: ${props =>
 			getColor(props, 'color', 'main') || props.theme.colors.text.main};
 		box-shadow: 0px -1px 0 0px inset;
@@ -102,16 +126,33 @@ const Underline = Outline.extend`
 `;
 
 export default withTheme(
-	hoc(({ outline, underline, ...props }: ButtonProps) => {
-		if (outline) {
-			return <Outline {...props} />;
+	hoc(({ outline, underline, plaintext, children, iconElement, ...props }: ButtonProps) => {
+		if (plaintext) {
+			return <Plaintext {...props}>
+				{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
+				{children}
+			</Plaintext>;
+		} else if (outline) {
+			return <Outline {...props}>
+				{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
+				{children}
+			</Outline>;
 		} else if (underline) {
-			return <Underline {...props} />;
+			return <Underline {...props}>
+				{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
+				{children}
+			</Underline>;
 		} else if (!getColoringType(props) && !props.color && !props.bg) {
 			// outline tertiary is our default btn
-			return <Outline {...props} tertiary />;
+			return <Outline {...props} tertiary>
+				{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
+				{children}
+			</Outline>;
 		} else {
-			return <Button {...props} />;
+			return <Button {...props}>
+				{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
+				{children}
+			</Button>;
 		}
 	}),
 );
