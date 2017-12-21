@@ -1,6 +1,6 @@
 {
   "name": "resin-components",
-  "version": "2.16.1",
+  "version": "2.16.2",
   "description": "Resin Components Component",
   "repository": {
     "type": "git",
@@ -41,7 +41,7 @@
     "husky": "^0.14.3",
     "lint-staged": "^4.1.1",
     "mocha": "^3.5.0",
-    "prettier-eslint-cli": "~4.4.0",
+    "prettier-eslint-cli": "~4.6.0",
     "react": "^15.6.2",
     "react-dom": "^15.6.0",
     "rimraf": "^2.6.2",

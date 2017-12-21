@@ -1144,5 +1144,30 @@ describe('resin-filter', () => {
 
       expect(sieve.filter(collection, input)).to.have.length(2)
     })
+
+    it('should behave correctly when a rule references a non-existent schema field', function () {
+      const schema = { test: { type: 'Short Text' } }
+      const collection = [
+        {
+          test: 'abcde',
+          id: 1
+        },
+        {
+          test: 'fghij',
+          id: 2
+        }
+      ]
+
+      const inputs = sieve.makeFilterInputs(schema)
+      const input = inputs.test
+
+      // Set the input name to something that doesn't exist in the schema
+      input.name = 'foobar'
+
+      input.operator = 'contains'
+      input.value = 'abc'
+
+      expect(sieve.filter(collection, input)).to.have.length(0)
+    })
   })
 })
