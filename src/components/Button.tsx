@@ -73,9 +73,9 @@ const Button = styleableButton`
 	&:hover,
 	&:focus,
 	&:active {
-		color: #fff;
-		background-color: ${props =>
-			getColor(props, 'bg', 'dark') || darken(props.color as string)};
+		color: ${props => props.color || '#fff'};
+		background-color: ${props => props.bg ?
+			darken(props.bg as string) : getColor(props, 'bg', 'dark')};
 	}
 
 	&:disabled {
@@ -89,6 +89,13 @@ const Outline = Button.extend`
 		getColor(props, 'color', 'main') || props.theme.colors.text.main};
 	background: ${props => props.color || 'none'};
 	border: 1px solid;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: ${props => props.bg ?
+			darken(props.bg as string) : (getColor(props, 'bg', 'dark') || props.theme.colors.tertiary.dark)};
+	}
 `;
 
 const Plaintext = Button.extend`
