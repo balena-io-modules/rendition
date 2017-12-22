@@ -1,7 +1,7 @@
+import * as Color from 'color';
 import find = require('lodash/find');
 import get = require('lodash/get');
 import isObject = require('lodash/isObject');
-import * as Color from 'color';
 
 export const lighten = (color: string) =>
 	Color(color)
@@ -54,7 +54,9 @@ export const getColorFromTheme = (theme: Theme) => (
 	return get(theme, `colors.${colorString}`);
 };
 
-export const getColoringType = (props: DefaultProps & Coloring & { [key: string]: any }): string | undefined => {
+export const getColoringType = (
+	props: DefaultProps & Coloring & { [key: string]: any },
+): string | undefined => {
 	// get primary, tertiary, secondary etc
 	const type = find<string>(
 		Object.keys(props),
@@ -82,7 +84,5 @@ export const getColor = (
 	}
 };
 
-export const monospace = (props: { monospace?: boolean, theme: Theme }) =>
-	props.monospace
-		? { fontFamily: props.theme.monospace }
-		: null;
+export const monospace = (props: { monospace?: boolean; theme: Theme }) =>
+	props.monospace ? { fontFamily: props.theme.monospace } : null;

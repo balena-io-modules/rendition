@@ -98,7 +98,7 @@ const GaugeTotal = ({ count, ...props }) => (
  *   color: string
  *   name: string
  * }]
-*/
+ */
 const StatusGauge = ({
   placeholderColor = theme.colors.gray.light,
   legend,

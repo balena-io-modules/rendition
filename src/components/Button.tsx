@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled, { StyledFunction, withTheme } from 'styled-components';
 import hoc from '../hoc';
-import { normal, bold, darken, getColor, getColoringType, px } from '../utils';
+import { bold, darken, getColor, getColoringType, normal, px } from '../utils';
 
 interface ButtonProps extends DefaultProps, Coloring, Sizing {
 	square?: boolean;
@@ -74,8 +74,8 @@ const Button = styleableButton`
 	&:focus,
 	&:active {
 		color: ${props => props.color || '#fff'};
-		background-color: ${props => props.bg ?
-			darken(props.bg as string) : getColor(props, 'bg', 'dark')};
+		background-color: ${props =>
+			props.bg ? darken(props.bg as string) : getColor(props, 'bg', 'dark')};
 	}
 
 	&:disabled {
@@ -93,8 +93,10 @@ const Outline = Button.extend`
 	&:hover,
 	&:focus,
 	&:active {
-		background-color: ${props => props.bg ?
-			darken(props.bg as string) : (getColor(props, 'bg', 'dark') || props.theme.colors.tertiary.dark)};
+		background-color: ${props =>
+			props.bg
+				? darken(props.bg as string)
+				: getColor(props, 'bg', 'dark') || props.theme.colors.tertiary.dark};
 	}
 `;
 
@@ -116,7 +118,7 @@ const Plaintext = Button.extend`
 		color: ${props =>
 			getColor(props, 'color', 'dark') || props.theme.colors.text.main};
 	}
-`
+`;
 
 const Underline = Plaintext.extend`
 	padding-bottom: 2px;
@@ -133,33 +135,52 @@ const Underline = Plaintext.extend`
 `;
 
 export default withTheme(
-	hoc(({ outline, underline, plaintext, children, iconElement, ...props }: ButtonProps) => {
-		if (plaintext) {
-			return <Plaintext {...props}>
-				{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
-				{children}
-			</Plaintext>;
-		} else if (outline) {
-			return <Outline {...props}>
-				{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
-				{children}
-			</Outline>;
-		} else if (underline) {
-			return <Underline {...props}>
-				{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
-				{children}
-			</Underline>;
-		} else if (!getColoringType(props) && !props.color && !props.bg) {
-			// outline tertiary is our default btn
-			return <Outline {...props} tertiary>
-				{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
-				{children}
-			</Outline>;
-		} else {
-			return <Button {...props}>
-				{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
-				{children}
-			</Button>;
-		}
-	}),
+	hoc(
+		({
+			outline,
+			underline,
+			plaintext,
+			children,
+			iconElement,
+			...props
+		}: ButtonProps) => {
+			if (plaintext) {
+				return (
+					<Plaintext {...props}>
+						{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
+						{children}
+					</Plaintext>
+				);
+			} else if (outline) {
+				return (
+					<Outline {...props}>
+						{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
+						{children}
+					</Outline>
+				);
+			} else if (underline) {
+				return (
+					<Underline {...props}>
+						{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
+						{children}
+					</Underline>
+				);
+			} else if (!getColoringType(props) && !props.color && !props.bg) {
+				// outline tertiary is our default btn
+				return (
+					<Outline {...props} tertiary>
+						{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
+						{children}
+					</Outline>
+				);
+			} else {
+				return (
+					<Button {...props}>
+						{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
+						{children}
+					</Button>
+				);
+			}
+		},
+	),
 );

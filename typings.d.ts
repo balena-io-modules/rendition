@@ -221,12 +221,14 @@ declare module 'resin-components' {
 	class Flex extends RenderableElementWithProps<FlexProps, any> {}
 
 	namespace Heading {
+		/* tslint:disable:class-name */
 		class h1 extends RenderableElementWithProps<FlexProps, any> {}
 		class h2 extends RenderableElementWithProps<FlexProps, any> {}
 		class h3 extends RenderableElementWithProps<FlexProps, any> {}
 		class h4 extends RenderableElementWithProps<FlexProps, any> {}
 		class h5 extends RenderableElementWithProps<FlexProps, any> {}
 		class h6 extends RenderableElementWithProps<FlexProps, any> {}
+		/* tslint:enable:class-name */
 	}
 
 	interface LinkProps extends DefaultProps {
@@ -298,10 +300,12 @@ declare module 'resin-components' {
 
 	interface PineTypeModule {
 		rules: {
-			[key: string]: PineTypeOperatorTest | {
-				getLabel: (schemaEntry: SchemaEntry) => string | false;
-				test: PineTypeOperatorTest
-			}
+			[key: string]:
+				| PineTypeOperatorTest
+				| {
+						getLabel: (schemaEntry: SchemaEntry) => string | false;
+						test: PineTypeOperatorTest;
+					};
 		};
 		validate: (value: any) => boolean;
 		normalize: <T>(value: any) => T;
@@ -309,7 +313,7 @@ declare module 'resin-components' {
 		Display: (props: any) => JSX.Element;
 	}
 
-	var PineTypes: { [K in PineDataType]: PineTypeModule };
+	const PineTypes: { [K in PineDataType]: PineTypeModule };
 
 	class Provider extends Component<any, any> {}
 

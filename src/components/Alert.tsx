@@ -14,7 +14,8 @@ interface AlertProps extends DefaultProps, Coloring, Sizing {
 	onDismiss?: () => void;
 }
 
-const getPadding = (props: AlertProps) => props.emphasized ? '15px 40px' : '8px 32px';
+const getPadding = (props: AlertProps) =>
+	props.emphasized ? '15px 40px' : '8px 32px';
 
 const getTitle = (props: AlertProps) => {
 	if (props.prefix === false) {
@@ -23,11 +24,11 @@ const getTitle = (props: AlertProps) => {
 	if (props.prefix !== undefined) {
 		return props.prefix;
 	}
-	return props.danger ? 'Darn!' :
-		props.warning ? 'Warning!' :
-		props.success ? 'Great!' :
-		props.info ? 'Hey!' :
-		'';
+	return props.danger
+		? 'Darn!'
+		: props.warning
+			? 'Warning!'
+			: props.success ? 'Great!' : props.info ? 'Hey!' : '';
 };
 
 const AlertTitle = styled.span`
@@ -88,10 +89,9 @@ const Outline = AlertBase.extend`
 	background: ${props => props.bg || getColor(props, 'bg', 'light')};
 	color: ${props => props.theme.colors.text.main};
 
-	& ${AlertTitle},
-	& ${DismissButtonWrapper} > ${DismissButton} {
+	& ${AlertTitle}, & ${DismissButtonWrapper} > ${DismissButton} {
 		font-weight: ${props => bold(props)};
-		color: ${props => getColor(props, 'color', 'main')}
+		color: ${props => getColor(props, 'color', 'main')};
 	}
 `;
 
@@ -110,7 +110,11 @@ const Plaintext = AlertBase.extend`
 
 	&,
 	& ${DismissButtonWrapper} > ${DismissButton} {
-		color: ${props => props.color || (props.info ? props.theme.colors.gray.main : getColor(props, 'color', 'main'))};
+		color: ${props =>
+			props.color ||
+			(props.info
+				? props.theme.colors.gray.main
+				: getColor(props, 'color', 'main'))};
 	}
 `;
 
@@ -121,14 +125,20 @@ const getIcon = (props: AlertProps) => {
 	if (props.prefix !== undefined) {
 		return props.prefix;
 	}
-	return props.danger ? (<FaExclamationCircle />) :
-		props.warning ? (<FaExclamationTriangle />) :
-		props.success ? (<FaCheckCircle />) :
-		props.info ? (<FaInfoCircle />) :
-		'';
+	return props.danger ? (
+		<FaExclamationCircle />
+	) : props.warning ? (
+		<FaExclamationTriangle />
+	) : props.success ? (
+		<FaCheckCircle />
+	) : props.info ? (
+		<FaInfoCircle />
+	) : (
+		''
+	);
 };
 
-const DismissAlert = (props: AlertProps) =>(
+const DismissAlert = (props: AlertProps) => (
 	<DismissButtonWrapper {...props}>
 		<DismissButton onClick={() => props.onDismiss && props.onDismiss()}>
 			<FaClose />
@@ -143,7 +153,7 @@ export default withTheme(
 			return (
 				<Plaintext {...props}>
 					<div>
-						{title && <AlertTitle children={title} /> }
+						{title && <AlertTitle children={title} />}
 						{props.children}
 					</div>
 					{props.onDismiss && <DismissAlert {...props} />}
@@ -153,7 +163,7 @@ export default withTheme(
 			return (
 				<Filled emphasized {...props}>
 					<div>
-						{title && <AlertTitle children={title} /> }
+						{title && <AlertTitle children={title} />}
 						{props.children}
 					</div>
 					{props.onDismiss && <DismissAlert {...props} />}
@@ -163,7 +173,7 @@ export default withTheme(
 			return (
 				<Outline {...props}>
 					<div>
-						{title && <AlertTitle children={title} /> }
+						{title && <AlertTitle children={title} />}
 						{props.children}
 					</div>
 					{props.onDismiss && <DismissAlert {...props} />}

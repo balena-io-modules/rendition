@@ -91,7 +91,7 @@ interface Schema {
 }
 
 interface FilterRule {
-	availableOperators: Array<{value: string, label: string}>;
+	availableOperators: Array<{ value: string; label: string }>;
 	id: string;
 	label: string;
 	name: string;

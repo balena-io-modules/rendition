@@ -1,6 +1,6 @@
 {
   "name": "resin-components",
-  "version": "2.16.3",
+  "version": "2.16.4",
   "description": "Resin Components Component",
   "repository": {
     "type": "git",
@@ -15,9 +15,15 @@
     "build:storybook": "build-storybook -o .out",
     "test": "npm run lint && npm run mocha",
     "mocha": "mocha --require ts-node/register test/*.spec.js",
-    "lint": "eslint src test",
+    "eslint": "eslint src test",
+    "eslint-fix": "eslint src test --fix",
+    "tslint": "tslint -t stylish \"src/**/*.ts\" \"src/**/*.tsx\" \"typings.d.ts\"",
+    "tslint-fix": "tslint -t stylish --fix \"src/**/*.ts\" \"src/**/*.tsx\" \"typings.d.ts\"",
+    "lint": "npm run eslint && npm run tslint",
     "precommit": "lint-staged",
-    "prettify": "prettier-eslint --write \"src/**/*.js\" \"test/**/*.js\"",
+    "prettify-js": "prettier --config .prettierrc-js --write \"src/**/*.js\" \"test/**/*.js\"",
+    "prettify-ts": "prettier --config .prettierrc-ts --write \"src/**/*.ts\" \"src/**/*.tsx\" \"typings.d.ts\"",
+    "prettify": "npm run prettify-js && npm run eslint-fix && npm run prettify-ts && npm run tslint-fix",
     "deploy": "npm run build:storybook && gh-pages -d .out"
   },
   "devDependencies": {
@@ -29,6 +35,7 @@
     "babel-preset-stage-3": "^6.24.1",
     "chai": "^4.1.2",
     "css-loader": "^0.28.5",
+    "eslint": "^4.13.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-react": "^5.0.0",
     "eslint-plugin-import": "^2.7.0",
@@ -41,12 +48,14 @@
     "husky": "^0.14.3",
     "lint-staged": "^4.1.1",
     "mocha": "^3.5.0",
-    "prettier-eslint-cli": "~4.6.0",
+    "prettier": "^1.9.2",
     "react": "^15.6.2",
     "react-dom": "^15.6.0",
     "rimraf": "^2.6.2",
     "ts-loader": "^3.0.2",
-    "ts-node": "^3.3.0"
+    "ts-node": "^3.3.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2"
   },
   "dependencies": {
     "@types/color": "^2.0.0",
@@ -74,9 +83,14 @@
     "tag-hoc": "1.0.0"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier-eslint --ignore 'dist' --write",
-      "npm run lint",
+    "{src, test}/**/*.js": [
+      "prettier --config .prettierrc-js --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "prettier --config .prettierrc-ts --write",
+      "tslint --fix",
       "git add"
     ]
   }
