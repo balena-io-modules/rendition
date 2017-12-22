@@ -33,7 +33,7 @@ All components support [styled-system][styled-system] attributes, allowing you t
 
 ### UI Components
 
-For and interactive demo of all components, see https://resin-io-modules.github.io/resin-components
+For an interactive demo of all components, see https://resin-io-modules.github.io/resin-components
 
 ## Developing
 
