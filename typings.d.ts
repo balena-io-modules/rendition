@@ -1,4 +1,4 @@
-declare module 'resin-components' {
+declare module 'rendition' {
 	import { Component } from 'react';
 
 	type ResponsiveStyle = string | number | Array<string | number>;
