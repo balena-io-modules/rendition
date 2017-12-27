@@ -18,7 +18,7 @@ deploy:
     on:
       tags: true
       condition: $CAN_DEPLOY = 'true' && $TRAVIS_TAG =~ ^v?[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+
-      repo: resin-io-modules/resin-components
+      repo: resin-io-modules/rendition
   - provider: pages
     local_dir: .out
     skip_cleanup: true

@@ -1,8 +1,8 @@
-# Resin Components
+# Rendition
 
-[![Build Status](https://travis-ci.org/resin-io-modules/resin-components.svg?branch=master)](https://travis-ci.org/resin-io-modules/resin-components)
+[![Build Status](https://travis-ci.org/resin-io-modules/rendition.svg?branch=master)](https://travis-ci.org/resin-io-modules/rendition)
 
-A collection of resin.io UI components, built using [React][react], [recompose][recompose], [styled-components][styled-components] and [styled-system][styled-system].
+A library of UI components, built using [React][react], [recompose][recompose], [styled-components][styled-components] and [styled-system][styled-system].
 
 ## Usage
 
@@ -10,7 +10,7 @@ You can import react components directly into your project:
 
 ```jsx
 import React from 'react';
-import { Button, Box } from 'resin-components';
+import { Button, Box } from 'rendition';
 
 const Example = () => {
   return (
@@ -25,7 +25,7 @@ export default Example;
 
 ### Provider
 
-Wrap your application in the `<Provider>` component so that child components can correctly inherit the resin theme. You can optionally provide your own theme.
+Wrap your application in the `<Provider>` component so that child components can correctly inherit the default theme. You can optionally provide your own theme.
 
 ### Styled system
 
@@ -33,7 +33,7 @@ All components support [styled-system][styled-system] attributes, allowing you t
 
 ### UI Components
 
-For an interactive demo of all components, see https://resin-io-modules.github.io/resin-components
+For an interactive demo of all components, see https://resin-io-modules.github.io/rendition
 
 ## Developing
 

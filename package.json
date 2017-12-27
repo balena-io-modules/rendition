@@ -1,10 +1,10 @@
 {
-  "name": "resin-components",
-  "version": "2.16.6",
+  "name": "rendition",
+  "version": "3.0.0",
   "description": "Resin Components Component",
   "repository": {
     "type": "git",
-    "url": "https://github.com/resin-io-modules/resin-components"
+    "url": "https://github.com/resin-io-modules/rendition"
   },
   "license": "MIT",
   "main": "./dist/index.js",
