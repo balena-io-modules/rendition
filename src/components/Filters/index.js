@@ -114,7 +114,11 @@ class Filters extends React.Component {
    * up rules as they are output from this component.
    */
   filterInvalidRules (rules) {
-    return rules.filter(rule => this.props.schema.hasOwnProperty(rule.name))
+    return rules.filter(
+      rule =>
+        rule.name === sieve.SIMPLE_SEARCH_NAME ||
+        this.props.schema.hasOwnProperty(rule.name)
+    )
   }
 
   filterAndSetRules (rules) {
