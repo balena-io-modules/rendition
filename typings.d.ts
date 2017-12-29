@@ -347,6 +347,29 @@ declare module 'rendition' {
 
 	class Select extends RenderableElementWithProps<SelectProps, any> {}
 
+	interface TableDataRow {
+		[key: string]: any;
+	}
+
+	type TableSortFunction = <T>(a: T, b: T) => number;
+
+	interface TableColumn {
+		field: string;
+		icon?: string;
+		label?: string | JSX.Element;
+		sortable?: boolean | TableSortFunction;
+		render?: (value: any) => string | JSX.Element;
+	}
+
+	interface TableProps extends DefaultProps {
+		columns: TableColumn[];
+		data: TableDataRow[];
+		// Optionally provide a key that should be used as a unique identifier for each row
+		rowKey?: string;
+	}
+
+	class Table extends RenderableElementWithProps<TableProps, any> {}
+
 	interface TextProps extends DefaultProps {
 		monospace?: boolean;
 		align?:
