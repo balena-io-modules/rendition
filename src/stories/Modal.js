@@ -1,14 +1,18 @@
 import * as React from 'react'
-import { storiesOf } from '@storybook/react'
+import { storiesOf, action } from '@storybook/react'
 import styled from 'styled-components'
 import Button from '../components/Button'
 import Heading from '../components/Heading'
 import Modal from '../components/Modal'
 import { Progressor } from './ProgressBar'
+import PokeDex from './assets/pokedex'
 
 const Container = styled.div`
   margin: 30px;
 `
+
+const cancelAction = action('Modal.cancel')
+const doneAction = action('Modal.done')
 
 class ModalDemo extends React.Component {
   constructor (props) {
@@ -28,8 +32,14 @@ class ModalDemo extends React.Component {
         {this.state.show && (
           <Modal
             title='Modal title'
-            cancel={() => this.setState({ show: false })}
-            done={() => this.setState({ show: false })}
+            cancel={() => {
+              cancelAction()
+              this.setState({ show: false })
+            }}
+            done={x => {
+              doneAction(x)
+              this.setState({ show: false })
+            }}
             action='Ok'
           >
             Lorem ipsum dolor sit amet
@@ -43,14 +53,31 @@ class ModalDemo extends React.Component {
 storiesOf('Modal', module)
   .addWithInfo('Standard', () => {
     return (
-      <Modal title='Modal title' cancel={() => {}} done={() => {}} action='Ok'>
+      <Modal
+        title='Modal title'
+        cancel={cancelAction}
+        done={doneAction}
+        action='Ok'
+        >
         Lorem ipsum dolor sit amet
+      </Modal>
+    )
+  })
+  .addWithInfo('Overflow', () => {
+    return (
+      <Modal
+        title='Modal title'
+        cancel={cancelAction}
+        done={doneAction}
+        action='Ok'
+        >
+        {PokeDex.map((x, i) => <p key={i}>{x.Description}</p>)}
       </Modal>
     )
   })
   .addWithInfo('No cancel button', () => {
     return (
-      <Modal title='Modal title' done={() => {}} action='Ok'>
+      <Modal title='Modal title' done={doneAction} action='Ok'>
         Lorem ipsum dolor sit amet
       </Modal>
     )
@@ -60,8 +87,8 @@ storiesOf('Modal', module)
       <Modal
         title='Modal title'
         titleDetails='Optional details'
-        cancel={() => {}}
-        done={() => {}}
+        cancel={cancelAction}
+        done={doneAction}
         action='Ok'
         >
         Lorem ipsum dolor sit amet
@@ -74,8 +101,8 @@ storiesOf('Modal', module)
         w={1000}
         title='Modal title'
         titleDetails='Optional details'
-        cancel={() => {}}
-        done={() => {}}
+        cancel={cancelAction}
+        done={doneAction}
         action='Ok'
         >
         Lorem ipsum dolor sit amet
@@ -88,8 +115,8 @@ storiesOf('Modal', module)
         w={['auto', 500, 1000]}
         title='Modal title'
         titleDetails='Optional details'
-        cancel={() => {}}
-        done={() => {}}
+        cancel={cancelAction}
+        done={doneAction}
         action='Ok'
         >
         Lorem ipsum dolor sit amet
@@ -105,8 +132,8 @@ storiesOf('Modal', module)
             <Progressor mb={3} primary value={50} />
           </heading>
         }
-        cancel={() => {}}
-        done={() => {}}
+        cancel={cancelAction}
+        done={doneAction}
         action='Ok'
         >
         Lorem ipsum dolor sit amet
@@ -118,8 +145,8 @@ storiesOf('Modal', module)
       <Modal
         w={['auto', 500, 1000]}
         title='Are you sure?'
-        cancel={() => {}}
-        done={() => {}}
+        cancel={cancelAction}
+        done={doneAction}
         action='Delete'
         cancelButtonProps={{
           w: 150,

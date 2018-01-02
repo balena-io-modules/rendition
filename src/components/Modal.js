@@ -35,10 +35,12 @@ const ModalPanel = styled(Box)`
   position: relative;
   max-width: calc(100% - 30px);
   min-height: 50px;
+  max-height: 100%;
   padding: 30px 50px;
   margin: 0 15px;
   border: solid 0.5px #9b9b9b;
   border-radius: 2px;
+  overflow-y: auto;
   background-color: #ffffff;
   z-index: 9999;
   box-shadow: 0px 0px 60px 1px rgba(0, 0, 0, 0.4);
