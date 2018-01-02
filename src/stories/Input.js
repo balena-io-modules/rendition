@@ -66,6 +66,10 @@ storiesOf('Input', module)
           <div>Time</div>
           <Input m={2} placeholder='Placeholder Time' type='time' />
         </label>
+        <label>
+          <div>Checkbox</div>
+          <Input m={2} type='checkbox' />
+        </label>
       </div>
     )
   })
