@@ -9,7 +9,7 @@ import * as forEach from 'lodash/forEach'
 import * as map from 'lodash/map'
 import filterTests from '../PineTypes'
 
-const SIMPLE_SEARCH_NAME = 'Full text search'
+export const SIMPLE_SEARCH_NAME = 'Full text search'
 
 class SchemaSieve {
   constructor (tests = {}) {

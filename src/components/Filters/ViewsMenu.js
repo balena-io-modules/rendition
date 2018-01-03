@@ -8,6 +8,7 @@ import * as FaPieChart from 'react-icons/lib/fa/pie-chart'
 import DropDownButton from '../DropDownButton'
 import FilterDescription from './FilterDescription'
 import { isValidRule } from './Summary'
+import { SIMPLE_SEARCH_NAME } from './SchemaSieve'
 
 const Wrapper = styled.div``
 
@@ -126,7 +127,11 @@ class ViewsMenu extends React.Component {
                     )}
                     <UnstyledList>
                       {scope.data.map(view => {
-                        const rules = view.rules.filter(isValidRule)
+                        const rules = view.rules.filter(
+                          rule =>
+                            isValidRule(rule) ||
+                            rule.name === SIMPLE_SEARCH_NAME
+                        )
                         return (
                           <ViewListItem key={view.name}>
                             <ViewListItemLabel
@@ -147,7 +152,7 @@ class ViewsMenu extends React.Component {
                               <FaTrash name='trash' />
                             </button>
                             <Preview>
-                              {rules.filter(isValidRule).map(rule => (
+                              {rules.map(rule => (
                                 <Box mb={10} key={rule.id}>
                                   <FilterDescription
                                     schema={this.props.schema[rule.name]}
