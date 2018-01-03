@@ -27,7 +27,7 @@ const ActionBtn = styled.button`
   float: right;
 `
 
-const isValidRule = rule => types.hasOwnProperty(rule.type)
+export const isValidRule = rule => types.hasOwnProperty(rule.type)
 
 class FilterSummary extends React.Component {
   constructor (props) {

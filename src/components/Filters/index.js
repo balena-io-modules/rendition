@@ -321,7 +321,7 @@ class Filters extends React.Component {
             rules={rules}
             views={this.props.views || []}
             schema={this.props.schema}
-            setRules={this.filterAndSetRules}
+            setRules={rules => this.filterAndSetRules(rules)}
             deleteView={(view, scopeKey) => this.deleteView(view, scopeKey)}
           />
         </Flex>
