@@ -372,6 +372,7 @@ declare module 'rendition' {
 
 	interface TextProps extends DefaultProps {
 		monospace?: boolean;
+		bold?: boolean;
 		align?:
 			| 'left'
 			| 'right'
