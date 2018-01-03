@@ -38,16 +38,18 @@ const FilterDescription = props => (
   <div>
     <ButtonWrapper onClick={!!props.edit && props.edit}>
       <Flex>
-        {props.rule.label || props.rule.name}{' '}
-        <Box mx={7}>
-          <strong>
-            {getOperatorText(
-              props.rule.operator,
-              props.rule.type,
-              props.schema
-            )}
-          </strong>
-        </Box>{' '}
+        <Box mr={7}>{props.rule.label || props.rule.name} </Box>
+        {props.rule.operator && (
+          <Box mr={7}>
+            <strong>
+              {getOperatorText(
+                props.rule.operator,
+                props.rule.type,
+                props.schema
+              )}
+            </strong>
+          </Box>
+        )}
         {props.rule.type === 'Key Value Pair' ? (
           <em>{kvpFormat(props.rule.value, props.schema)}</em>
         ) : (

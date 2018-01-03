@@ -7,6 +7,8 @@ import * as FaTrash from 'react-icons/lib/fa/trash'
 import * as FaPieChart from 'react-icons/lib/fa/pie-chart'
 import DropDownButton from '../DropDownButton'
 import FilterDescription from './FilterDescription'
+import { isValidRule } from './Summary'
+import { SIMPLE_SEARCH_NAME } from './SchemaSieve'
 
 const Wrapper = styled.div``
 
@@ -124,38 +126,44 @@ class ViewsMenu extends React.Component {
                       </Text>
                     )}
                     <UnstyledList>
-                      {scope.data.map(view => (
-                        <ViewListItem key={view.name}>
-                          <ViewListItemLabel
-                            m={0}
-                            onClick={() => this.loadView(view)}
-                          >
-                            {view.name}
-                            <br />
-                            <Text m={0} fontSize={12} color='#aaa'>
-                              {view.rules.length} filter{view.rules.length >
-                                1 && 's'}
-                            </Text>
-                          </ViewListItemLabel>
-                          <button
-                            onClick={() =>
-                              this.props.deleteView(view, scope.key)
-                            }
-                          >
-                            <FaTrash name='trash' />
-                          </button>
-                          <Preview>
-                            {view.rules.map(rule => (
-                              <Box mb={10} key={rule.id}>
-                                <FilterDescription
-                                  schema={this.props.schema[rule.name]}
-                                  rule={rule}
-                                />
-                              </Box>
-                            ))}
-                          </Preview>
-                        </ViewListItem>
-                      ))}
+                      {scope.data.map(view => {
+                        const rules = view.rules.filter(
+                          rule =>
+                            isValidRule(rule) ||
+                            rule.name === SIMPLE_SEARCH_NAME
+                        )
+                        return (
+                          <ViewListItem key={view.name}>
+                            <ViewListItemLabel
+                              m={0}
+                              onClick={() => this.loadView(view)}
+                            >
+                              {view.name}
+                              <br />
+                              <Text m={0} fontSize={12} color='#aaa'>
+                                {rules.length} filter{rules.length > 1 && 's'}
+                              </Text>
+                            </ViewListItemLabel>
+                            <button
+                              onClick={() =>
+                                this.props.deleteView(view, scope.key)
+                              }
+                            >
+                              <FaTrash name='trash' />
+                            </button>
+                            <Preview>
+                              {rules.map(rule => (
+                                <Box mb={10} key={rule.id}>
+                                  <FilterDescription
+                                    schema={this.props.schema[rule.name]}
+                                    rule={rule}
+                                  />
+                                </Box>
+                              ))}
+                            </Preview>
+                          </ViewListItem>
+                        )
+                      })}
                     </UnstyledList>
                   </Box>
                 )
