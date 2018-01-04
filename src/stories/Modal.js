@@ -42,7 +42,7 @@ class ModalDemo extends React.Component {
             }}
             action='Ok'
           >
-            Lorem ipsum dolor sit amet
+            {this.props.children || 'Lorem ipsum dolor sit amet'}
           </Modal>
         )}
       </Container>
@@ -60,18 +60,6 @@ storiesOf('Modal', module)
         action='Ok'
         >
         Lorem ipsum dolor sit amet
-      </Modal>
-    )
-  })
-  .addWithInfo('Overflow', () => {
-    return (
-      <Modal
-        title='Modal title'
-        cancel={cancelAction}
-        done={doneAction}
-        action='Ok'
-        >
-        {PokeDex.map((x, i) => <p key={i}>{x.Description}</p>)}
       </Modal>
     )
   })
@@ -167,4 +155,21 @@ storiesOf('Modal', module)
   })
   .addWithInfo('Open Modal Demo', () => {
     return <ModalDemo />
+  })
+  .addWithInfo('Overflow', () => {
+    return (
+      <div>
+        <Container>
+          <h1>
+            This is page with long content that causes scrollbars to appear
+          </h1>
+        </Container>
+        <ModalDemo>
+          {PokeDex.map((x, i) => <p key={i}>{x.Description}</p>)}
+        </ModalDemo>
+        <Container>
+          {PokeDex.map((x, i) => <p key={i}>{x.Description}</p>)}
+        </Container>
+      </div>
+    )
   })
