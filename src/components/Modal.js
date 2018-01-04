@@ -54,50 +54,93 @@ const ModalPanel = styled(Box)`
   box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.4);
 `
 
-const Modal = ({ w, width, ...props }) => {
-  const cancelButtonProps = assign(
-    { style: { marginRight: 20 } },
-    props.cancelButtonProps
-  )
+class Modal extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      originalBodyOverflow: undefined
+    }
+  }
 
-  const primaryButtonProps = assign({ primary: true }, props.primaryButtonProps)
+  componentDidMount () {
+    this.setState(
+      prevState => {
+        const originalBodyOverflow =
+          prevState.originalBodyOverflow === undefined
+            ? document.body.style.overflow
+            : prevState.originalBodyOverflow
 
-  return (
-    <ModalWrapper
-      align='center'
-      justify='center'
-      onClick={() => (props.cancel || props.done)()}
-      >
-      <ModalBackdrop z={8888} bg='rgba(0,0,0,0.4)' top right bottom left />
-      <ModalSizer>
-        <ModalPanel w={w || width || DEFAULT_MODAL_WIDTH} onClick={stopEvent}>
-          {props.titleElement ? (
-            <ModalHeader>{props.titleElement}</ModalHeader>
-          ) : (
-            !!props.title && (
-              <ModalHeader>
-                <strong>{props.title}</strong>
-                {!!props.titleDetails && (
-                  <ModalTitleDetails>{props.titleDetails}</ModalTitleDetails>
-                )}
-              </ModalHeader>
-            )
-          )}
-          {props.children}
-          <Flex mt={50} align='center' justify='flex-end'>
-            {props.cancel && (
-              <Button {...cancelButtonProps} onClick={props.cancel}>
-                Cancel
-              </Button>
+        return { originalBodyOverflow }
+      },
+      () => {
+        if (document.body.style.overflow === this.state.originalBodyOverflow) {
+          document.body.style.overflow = 'hidden'
+        }
+      }
+    )
+  }
+
+  componentWillUnmount () {
+    if (
+      this.state.originalBodyOverflow !== undefined &&
+      document.body.style.overflow === 'hidden'
+    ) {
+      document.body.style.overflow = this.state.originalBodyOverflow
+    }
+
+    this.setState({ originalBodyOverflow: undefined })
+  }
+
+  render () {
+    const { w, width, ...props } = this.props
+
+    const cancelButtonProps = assign(
+      { style: { marginRight: 20 } },
+      props.cancelButtonProps
+    )
+
+    const primaryButtonProps = assign(
+      { primary: true },
+      props.primaryButtonProps
+    )
+
+    return (
+      <ModalWrapper
+        align='center'
+        justify='center'
+        onClick={() => (props.cancel || props.done)()}
+        >
+        <ModalBackdrop z={8888} bg='rgba(0,0,0,0.4)' top right bottom left />
+        <ModalSizer>
+          <ModalPanel w={w || width || DEFAULT_MODAL_WIDTH} onClick={stopEvent}>
+            {props.titleElement ? (
+              <ModalHeader>{props.titleElement}</ModalHeader>
+            ) : (
+              !!props.title && (
+                <ModalHeader>
+                  <strong>{props.title}</strong>
+                  {!!props.titleDetails && (
+                    <ModalTitleDetails>{props.titleDetails}</ModalTitleDetails>
+                  )}
+                </ModalHeader>
+              )
             )}
-            <Button {...primaryButtonProps} onClick={props.done}>
-              {props.action}
-            </Button>
-          </Flex>
-        </ModalPanel>
-      </ModalSizer>
-    </ModalWrapper>
-  )
+            {props.children}
+            <Flex mt={50} align='center' justify='flex-end'>
+              {props.cancel && (
+                <Button {...cancelButtonProps} onClick={props.cancel}>
+                  Cancel
+                </Button>
+              )}
+              <Button {...primaryButtonProps} onClick={props.done}>
+                {props.action}
+              </Button>
+            </Flex>
+          </ModalPanel>
+        </ModalSizer>
+      </ModalWrapper>
+    )
+  }
 }
 
 export default Modal
