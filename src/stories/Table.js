@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { storiesOf } from '@storybook/react'
+import { storiesOf, action } from '@storybook/react'
 import styled from 'styled-components'
 import Table from '../components/Table'
 import PokeDex from './assets/pokedex'
@@ -30,6 +30,10 @@ const columns = [
     label: 'First Seen',
     sortable: true,
     render: value => {
+      if (value == null) {
+        return null
+      }
+
       const d = new Date(value)
       return (
         <span>
@@ -45,7 +49,12 @@ const columns = [
 storiesOf('Table', module).addWithInfo('Standard', () => {
   return (
     <Container>
-      <Table columns={columns} data={PokeDex} rowKey='pokedex_number' />
+      <Table
+        columns={columns}
+        data={PokeDex}
+        rowKey='pokedex_number'
+        onCheck={action('items-selected')}
+      />
     </Container>
   )
 })

@@ -38,6 +38,11 @@ const Base = styled.input`
     color: ${props => props.theme.colors.gray.main};
   }
 
+  &[type='checkbox'] {
+    height: auto;
+    font-size: ${props => px(props.theme.fontSizes[1])};
+  }
+
   ${monospace};
 `
 

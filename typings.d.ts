@@ -347,28 +347,29 @@ declare module 'rendition' {
 
 	class Select extends RenderableElementWithProps<SelectProps, any> {}
 
-	interface TableDataRow {
-		[key: string]: any;
-	}
-
 	type TableSortFunction = <T>(a: T, b: T) => number;
 
-	interface TableColumn {
-		field: string;
+	interface TableColumn<T> {
+		field: keyof T;
 		icon?: string;
 		label?: string | JSX.Element;
 		sortable?: boolean | TableSortFunction;
-		render?: (value: any) => string | JSX.Element;
+		render?: (value: any, row: T) => string | JSX.Element;
 	}
 
-	interface TableProps extends DefaultProps {
-		columns: TableColumn[];
-		data: TableDataRow[];
+	interface TableProps<T> {
+		columns: Array<TableColumn<T>>;
+		data: T[];
 		// Optionally provide a key that should be used as a unique identifier for each row
-		rowKey?: string;
+		rowKey?: keyof T;
+
+		// Only usable if a rowKey property is also provided.
+		// If an onCheck property is provided , then checkboxes will be renders,
+		// allowing rows to be selected.
+		onCheck?: (checkedItems: T[]) => void;
 	}
 
-	class Table extends RenderableElementWithProps<TableProps, any> {}
+	class Table<T> extends RenderableElementWithProps<TableProps<T>, any> {}
 
 	interface TextProps extends DefaultProps {
 		monospace?: boolean;
