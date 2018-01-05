@@ -25,6 +25,7 @@ const ActionBtn = styled.button`
   padding: 0;
   font-size: 13px;
   float: right;
+  cursor: pointer;
 `
 
 export const isValidRule = rule => types.hasOwnProperty(rule.type)
@@ -95,31 +96,34 @@ class FilterSummary extends React.Component {
             done={() => this.save()}
             action='Save'
           >
-            {this.props.views.length > 1 && (
-              <Flex mb={30}>
-                <Text width={90}>Visible to:</Text>
-                <Select
-                  ml={10}
-                  mt='-7px'
-                  width='auto'
-                  value={this.state.scope}
-                  onChange={e => this.setViewScope(e.target.value)}
-                >
-                  {this.props.views.map(item => (
-                    <option key={item.key} value={item.key}>
-                      {item.scopeLabel}
-                    </option>
-                  ))}
-                </Select>
-              </Flex>
-            )}
+            <form onSubmit={e => e.preventDefault() || this.save()}>
+              {this.props.views.length > 1 && (
+                <Flex mb={30}>
+                  <Text width={90}>Visible to:</Text>
+                  <Select
+                    ml={10}
+                    mt='-7px'
+                    width='auto'
+                    value={this.state.scope}
+                    onChange={e => this.setViewScope(e.target.value)}
+                  >
+                    {this.props.views.map(item => (
+                      <option key={item.key} value={item.key}>
+                        {item.scopeLabel}
+                      </option>
+                    ))}
+                  </Select>
+                </Flex>
+              )}
 
-            <Input
-              width='100%'
-              value={this.state.name}
-              placeholder='Enter a name for the view'
-              onChange={e => this.handleChange(e)}
-            />
+              <Input
+                width='100%'
+                value={this.state.name}
+                placeholder='Enter a name for the view'
+                onChange={e => this.handleChange(e)}
+                autoFocus
+              />
+            </form>
           </Modal>
         )}
         <Flex wrap>
