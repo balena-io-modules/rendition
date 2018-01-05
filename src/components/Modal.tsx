@@ -1,11 +1,20 @@
 import assign = require('lodash/assign');
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, { injectGlobal } from 'styled-components';
 import { stopEvent } from '../utils';
 import Button, { ButtonProps } from './Button';
 import Fixed from './Fixed';
 import { Box, Flex } from './Grid';
 import Text from './Text';
+
+const bodyNoOverflowClass = `rendition-modal-open`;
+
+// tslint:disable-next-line no-unused-expression
+injectGlobal`
+	.${bodyNoOverflowClass} {
+		overflow: hidden;
+	}
+`;
 
 const ModalWrapper = Flex.extend`
 	position: fixed;
@@ -66,45 +75,25 @@ interface ModalProps extends DefaultProps {
 	cancelButtonProps?: ButtonProps;
 }
 
-interface ModalState {
-	originalBodyOverflow?: string | null;
-}
+class Modal extends React.Component<ModalProps, any> {
+	static mountedCount = 0;
 
-class Modal extends React.Component<ModalProps, ModalState> {
 	constructor(props: ModalProps) {
 		super(props);
-		this.state = {
-			originalBodyOverflow: undefined,
-		};
 	}
 
 	componentDidMount() {
-		this.setState(
-			(prevState: ModalState) => {
-				const originalBodyOverflow =
-					prevState.originalBodyOverflow === undefined
-						? document.body.style.overflow
-						: prevState.originalBodyOverflow;
-
-				return { originalBodyOverflow };
-			},
-			() => {
-				if (document.body.style.overflow === this.state.originalBodyOverflow) {
-					document.body.style.overflow = 'hidden';
-				}
-			},
-		);
+		if (!Modal.mountedCount) {
+			document.body.classList.add(bodyNoOverflowClass);
+		}
+		Modal.mountedCount++;
 	}
 
 	componentWillUnmount() {
-		if (
-			this.state.originalBodyOverflow !== undefined &&
-			document.body.style.overflow === 'hidden'
-		) {
-			document.body.style.overflow = this.state.originalBodyOverflow;
+		Modal.mountedCount--;
+		if (!Modal.mountedCount) {
+			document.body.classList.remove(bodyNoOverflowClass);
 		}
-
-		this.setState({ originalBodyOverflow: undefined });
 	}
 
 	render() {
