@@ -116,7 +116,7 @@ class Filters extends React.Component {
   filterInvalidRules (rules) {
     return rules.filter(
       rule =>
-        rule.name === sieve.SIMPLE_SEARCH_NAME ||
+        (rule.name === sieve.SIMPLE_SEARCH_NAME && rule.value) ||
         this.props.schema.hasOwnProperty(rule.name)
     )
   }
