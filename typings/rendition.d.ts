@@ -275,19 +275,18 @@ declare module 'rendition' {
 		any
 	> {}
 
-	class Modal extends RenderableElementWithProps<
-		DefaultProps & {
-			title?: string;
-			titleElement?: string | JSX.Element;
-			titleDetails?: string | JSX.Element;
-			action: string | JSX.Element;
-			cancel?: () => any;
-			done: () => any;
-			primaryButtonProps?: ButtonProps;
-			cancelButtonProps?: ButtonProps;
-		},
-		any
-	> {}
+	interface ModalProps extends DefaultProps {
+		title?: string;
+		titleElement?: string | JSX.Element;
+		titleDetails?: string | JSX.Element;
+		action: string | JSX.Element;
+		cancel?: () => any;
+		done: () => any;
+		primaryButtonProps?: ButtonProps;
+		cancelButtonProps?: ButtonProps;
+	}
+
+	class Modal extends RenderableElementWithProps<ModalProps, any> {}
 
 	class Navbar extends RenderableElementWithProps<
 		DefaultProps & {
