@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
-import DeviceStatusGauge from '../components/DeviceStatusGauge'
+import { DeviceStatusGauge } from '../'
 
 const mockDeviceArray = [
   {

@@ -2,7 +2,7 @@ import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
 import * as uniq from 'lodash/uniq'
 import styled from 'styled-components'
-import { Filters, SchemaSieve, PineTypes } from '../index.js'
+import { Filters, SchemaSieve, PineTypes } from '../'
 import PokeDex from './assets/pokedex'
 
 const sieve = SchemaSieve()

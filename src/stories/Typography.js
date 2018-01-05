@@ -1,9 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
-import Text from '../components/Text'
-import Heading from '../components/Heading'
-import Link from '../components/Link'
+import { Heading, Link, Text } from '../'
 
 const Container = styled.div`
   margin: 60px;

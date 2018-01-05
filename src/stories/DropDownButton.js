@@ -1,9 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
-import DropDownButton from '../components/DropDownButton'
-import { Box, Flex } from '../components/Grid'
-import Divider from '../components/Divider'
+import { Divider, DropDownButton, Box, Flex } from '../'
 
 const Container = styled.div`
   margin: 30px;

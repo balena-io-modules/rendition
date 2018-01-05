@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
-import Tooltip from '../components/Tooltip'
+import { Tooltip } from '../'
 
 const Container = styled.div`
   margin: 60px;

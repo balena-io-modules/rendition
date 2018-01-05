@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
 import styled from 'styled-components'
-import Alert from '../components/Alert'
+import { Alert } from '../'
 
 const Container = styled.div`
   margin: 30px;

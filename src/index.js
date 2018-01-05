@@ -7,6 +7,7 @@ import { default as DeviceStatusGauge } from './components/DeviceStatusGauge'
 import { default as Divider } from './components/Divider'
 import { default as Filters } from './components/Filters'
 import { default as Fixed } from './components/Fixed'
+import { default as Gauge } from './components/Gauge'
 import { default as Input } from './components/Input'
 import { default as Modal } from './components/Modal'
 import { default as PineTypes } from './components/PineTypes'
@@ -42,6 +43,7 @@ export {
   Filters,
   Fixed,
   Flex,
+  Gauge,
   Heading,
   Link,
   Input,

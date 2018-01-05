@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
-import Image from '../components/Image'
+import { Image } from '../'
 import * as Logo from './assets/etcher.svg'
 
 const Container = styled.div`

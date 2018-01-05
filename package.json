@@ -1,6 +1,6 @@
 {
   "name": "rendition",
-  "version": "3.4.0",
+  "version": "3.5.0",
   "description": "Resin Components Component",
   "repository": {
     "type": "git",
@@ -8,7 +8,7 @@
   },
   "license": "MIT",
   "main": "./dist/index.js",
-  "types": "./typings.d.ts",
+  "types": "./typings/rendition.d.ts",
   "scripts": {
     "start": "start-storybook -p 6006",
     "build": "rimraf dist && tsc",
