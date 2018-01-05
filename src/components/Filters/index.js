@@ -329,11 +329,7 @@ class Filters extends React.Component {
         {this.state.showModal && (
           <div>
             <Modal
-              title={
-                this.state.edit.id
-                  ? 'Update existing filter'
-                  : 'Add a new filter'
-              }
+              title='Filter by'
               cancel={() => this.setState({ showModal: false })}
               done={() => this.addRule()}
               action={this.state.edit.id ? 'Update filter' : 'Add filter'}
