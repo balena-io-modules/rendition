@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import * as FaExpand from 'react-icons/lib/fa/expand'
 import * as FaRecycle from 'react-icons/lib/fa/recycle'
 import * as FaSpinner from 'react-icons/lib/fa/spinner'
-import Button from '../components/Button'
+import { Button } from '../'
 
 const Container = styled.div`
   margin: 30px;

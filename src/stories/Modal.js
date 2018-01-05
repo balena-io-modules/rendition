@@ -1,9 +1,7 @@
 import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
 import styled from 'styled-components'
-import Button from '../components/Button'
-import Heading from '../components/Heading'
-import Modal from '../components/Modal'
+import { Button, Heading, Modal } from '../'
 import { Progressor } from './ProgressBar'
 import PokeDex from './assets/pokedex'
 

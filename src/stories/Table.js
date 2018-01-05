@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
 import styled from 'styled-components'
-import Table from '../components/Table'
+import { Table } from '../'
 import PokeDex from './assets/pokedex'
 
 const Container = styled.div`

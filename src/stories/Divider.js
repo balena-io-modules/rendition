@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import styled from 'styled-components'
-import Divider from '../components/Divider'
+import { Divider } from '../'
 
 const Container = styled.div`
   margin: 30px;

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
-import Gauge from '../components/Gauge'
+import { Gauge } from '../'
 
 const data = [
   {

@@ -1,9 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
-import CodeWithCopy from '../components/CodeWithCopy'
-import { Flex, Box } from '../components/Grid'
-import Link from '../components/Link'
+import { CodeWithCopy, Flex, Box, Link } from '../'
 
 const Container = styled.div`
   margin: 30px;
