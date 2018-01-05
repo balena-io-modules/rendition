@@ -1,5 +1,6 @@
 import defaultTo = require('lodash/defaultTo');
 import { compose, withProps } from 'recompose';
+import { FixedProps } from 'rendition';
 import styled, { StyledFunction, withTheme } from 'styled-components';
 import hoc from '../hoc';
 
@@ -20,14 +21,6 @@ const Base = (styled.div as StyledFunction<FixedBaseProps>)`
 	z-index: ${props => defaultTo(props.z, 0)};
 	background: ${props => defaultTo(props.bg, 'none')};
 `;
-
-interface FixedProps extends DefaultProps {
-	top?: boolean | ResponsiveStyle;
-	right?: boolean | ResponsiveStyle;
-	bottom?: boolean | ResponsiveStyle;
-	left?: boolean | ResponsiveStyle;
-	z?: ResponsiveStyle;
-}
 
 const dimensions = withProps((props: FixedProps) => {
 	return {

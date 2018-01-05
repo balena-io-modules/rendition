@@ -208,7 +208,15 @@ declare module 'rendition' {
 
 	class Filters extends RenderableElementWithProps<FiltersProps, any> {}
 
-	class Fixed extends RenderableElementWithProps<DefaultProps, any> {}
+	interface FixedProps extends DefaultProps {
+		top?: boolean | ResponsiveStyle;
+		right?: boolean | ResponsiveStyle;
+		bottom?: boolean | ResponsiveStyle;
+		left?: boolean | ResponsiveStyle;
+		z?: ResponsiveStyle;
+	}
+
+	class Fixed extends RenderableElementWithProps<FixedProps, any> {}
 
 	interface FlexProps extends BoxProps {
 		align?: string | string[];
