@@ -3,7 +3,7 @@ import styled, { StyledFunction, withTheme } from 'styled-components';
 import hoc from '../hoc';
 import { bold, darken, getColor, getColoringType, normal, px } from '../utils';
 
-interface ButtonProps extends DefaultProps, Coloring, Sizing {
+export interface ButtonProps extends DefaultProps, Coloring, Sizing {
 	square?: boolean;
 	disabled?: boolean;
 	outline?: boolean;

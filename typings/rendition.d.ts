@@ -208,7 +208,15 @@ declare module 'rendition' {
 
 	class Filters extends RenderableElementWithProps<FiltersProps, any> {}
 
-	class Fixed extends RenderableElementWithProps<DefaultProps, any> {}
+	interface FixedProps extends DefaultProps {
+		top?: boolean | ResponsiveStyle;
+		right?: boolean | ResponsiveStyle;
+		bottom?: boolean | ResponsiveStyle;
+		left?: boolean | ResponsiveStyle;
+		z?: ResponsiveStyle;
+	}
+
+	class Fixed extends RenderableElementWithProps<FixedProps, any> {}
 
 	interface FlexProps extends BoxProps {
 		align?: string | string[];
@@ -275,19 +283,18 @@ declare module 'rendition' {
 		any
 	> {}
 
-	class Modal extends RenderableElementWithProps<
-		DefaultProps & {
-			title?: string;
-			titleElement?: string | JSX.Element;
-			titleDetails?: string | JSX.Element;
-			action: string | JSX.Element;
-			cancel?: () => any;
-			done: () => any;
-			primaryButtonProps?: ButtonProps;
-			cancelButtonProps?: ButtonProps;
-		},
-		any
-	> {}
+	interface ModalProps extends DefaultProps {
+		title?: string;
+		titleElement?: string | JSX.Element;
+		titleDetails?: string | JSX.Element;
+		action: string | JSX.Element;
+		cancel?: () => any;
+		done: () => any;
+		primaryButtonProps?: ButtonProps;
+		cancelButtonProps?: ButtonProps;
+	}
+
+	class Modal extends RenderableElementWithProps<ModalProps, any> {}
 
 	class Navbar extends RenderableElementWithProps<
 		DefaultProps & {
