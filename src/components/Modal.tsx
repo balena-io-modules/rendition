@@ -1,8 +1,9 @@
 import assign = require('lodash/assign');
 import * as React from 'react';
+import { ModalProps } from 'rendition';
 import styled, { injectGlobal } from 'styled-components';
 import { stopEvent } from '../utils';
-import Button, { ButtonProps } from './Button';
+import Button from './Button';
 import Fixed from './Fixed';
 import { Box, Flex } from './Grid';
 import Text from './Text';
@@ -63,17 +64,6 @@ const ModalPanel = styled(Box)`
 	background-color: #ffffff;
 	box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.4);
 `;
-
-interface ModalProps extends DefaultProps {
-	title?: string;
-	titleElement?: string | JSX.Element;
-	titleDetails?: string | JSX.Element;
-	action: string | JSX.Element;
-	cancel?: () => any;
-	done: () => any;
-	primaryButtonProps?: ButtonProps;
-	cancelButtonProps?: ButtonProps;
-}
 
 class Modal extends React.Component<ModalProps, any> {
 	static mountedCount = 0;
