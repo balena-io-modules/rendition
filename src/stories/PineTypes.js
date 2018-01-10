@@ -30,6 +30,7 @@ class PineTypeDemo extends React.Component {
         <this.props.Type.Edit
           value={this.state.data}
           onChange={val => this.handleChange(val)}
+          {...this.props}
         />
         <h2>Display</h2>
         <this.props.Type.Display data={this.state.data} />
@@ -56,6 +57,15 @@ storiesOf('PineTypes', module)
   .addWithInfo('Date Time', () => {
     return (
       <PineTypeDemo data='2017-09-14T12:00' Type={PineTypes['Date Time']} />
+    )
+  })
+  .addWithInfo('Enum', () => {
+    return (
+      <PineTypeDemo
+        data='a'
+        Type={PineTypes.Enum}
+        schema={{ values: ['a', 'b', 'c'] }}
+      />
     )
   })
   .addWithInfo('Integer', () => {
