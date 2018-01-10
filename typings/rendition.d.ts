@@ -57,6 +57,7 @@ declare module 'rendition' {
 		| 'Case Insensitive Text'
 		| 'Date Time'
 		| 'Date'
+		| 'Enum'
 		| 'Integer'
 		| 'Real'
 		| 'Short Text'

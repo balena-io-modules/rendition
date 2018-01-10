@@ -71,6 +71,7 @@ type PineDataType =
 	| 'Case Insensitive Text'
 	| 'Date Time'
 	| 'Date'
+	| 'Enum'
 	| 'Integer'
 	| 'Real'
 	| 'Short Text'
