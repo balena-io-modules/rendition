@@ -124,6 +124,7 @@ class DropDownButton extends React.Component {
       border,
       joined,
       noListFormat,
+      outline,
       ...props
     } = this.props
 
@@ -134,6 +135,7 @@ class DropDownButton extends React.Component {
         {joined ? (
           <Toggle
             {...props}
+            outline={outline}
             joined={joined}
             label={label}
             handler={e => this.toggle(e)}
@@ -141,9 +143,12 @@ class DropDownButton extends React.Component {
           />
         ) : (
           <span>
-            <ButtonBase {...props}>{label}</ButtonBase>
+            <ButtonBase outline={outline} {...props}>
+              {label}
+            </ButtonBase>
             <Toggle
               {...props}
+              outline={outline}
               handler={e => this.toggle(e)}
               open={this.state.open}
             />

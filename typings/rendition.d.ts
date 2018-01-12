@@ -187,6 +187,7 @@ declare module 'rendition' {
 		label?: JSX.Element;
 		border?: boolean;
 		joined?: boolean;
+		outline?: boolean;
 		alignRight?: boolean;
 		noListFormat?: boolean;
 	}
