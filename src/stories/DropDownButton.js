@@ -113,6 +113,84 @@ storiesOf('DropDownButton', module)
       </Container>
     )
   })
+  .addWithInfo('Outline', () => {
+    return (
+      <Container>
+        <DropDownButton mx={2} primary outline label={<div>DropDown</div>}>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+        </DropDownButton>
+        <DropDownButton mx={2} danger outline label={<div>DropDown</div>}>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+        </DropDownButton>
+        <DropDownButton mx={2} tertiary outline label={<div>DropDown</div>}>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+        </DropDownButton>
+        <DropDownButton mx={2} outline label={<div>DropDown</div>}>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+        </DropDownButton>
+      </Container>
+    )
+  })
+  .addWithInfo('Outline + Joined', () => {
+    return (
+      <Container>
+        <DropDownButton
+          mx={2}
+          primary
+          joined
+          outline
+          label={<div>DropDown</div>}
+        >
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+        </DropDownButton>
+        <DropDownButton
+          mx={2}
+          danger
+          joined
+          outline
+          label={<div>DropDown</div>}
+        >
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+        </DropDownButton>
+        <DropDownButton
+          mx={2}
+          tertiary
+          joined
+          outline
+          label={<div>DropDown</div>}
+        >
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+        </DropDownButton>
+        <DropDownButton mx={2} joined outline label={<div>DropDown</div>}>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+        </DropDownButton>
+      </Container>
+    )
+  })
   .addWithInfo('Alignment', () => {
     return (
       <Container>
