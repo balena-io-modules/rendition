@@ -17,6 +17,7 @@ import { Flex, Box } from '../Grid'
 import * as utils from '../../utils'
 import SchemaSieve from './SchemaSieve'
 import PineTypes from '../PineTypes'
+import Theme from '../../theme'
 
 /**
  * The filter component requires the following props:
@@ -32,7 +33,7 @@ const sieve = SchemaSieve()
 const SimpleSearchBox = styled.div`
   position: relative;
   width: 500px;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid ${Theme.colors.gray.main};
   padding-left: 20px;
   padding-top: 3px;
   margin-left: 30px;
@@ -42,10 +43,11 @@ const SimpleSearchBox = styled.div`
     position: absolute;
     top: 7px;
     left: 0;
-    color: #9b9b9b;
+    color: ${Theme.colors.gray.main};
   }
 
   input {
+    background: transparent;
     box-shadow: none;
     border: none;
     width: 100%;
@@ -53,7 +55,7 @@ const SimpleSearchBox = styled.div`
     padding: 5px;
     ::placeholder {
       font-style: italic;
-      color: #9b9b9b;
+      color: ${Theme.colors.gray.main};
     }
   }
 `
@@ -307,6 +309,7 @@ class Filters extends React.Component {
 
           <SimpleSearchBox>
             <input
+              style={{ color: this.props.dark ? '#fff' : null }}
               disabled={this.props.disabled}
               placeholder='Search entries...'
               value={this.state.searchString}
