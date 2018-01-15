@@ -393,6 +393,7 @@ class Filters extends React.Component {
               rules={rules}
               views={this.props.views || []}
               schema={this.props.schema}
+              dark={!!this.props.dark}
             />
           )}
       </FilterWrapper>

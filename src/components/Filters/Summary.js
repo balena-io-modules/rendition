@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as FaBookmarkO from 'react-icons/lib/fa/bookmark'
+import * as FaBookmarkO from 'react-icons/lib/fa/bookmark-o'
 import * as every from 'lodash/every'
 import styled from 'styled-components'
 import { Box, Flex } from '../Grid'
@@ -10,6 +10,7 @@ import Modal from '../Modal'
 import FilterDescription from './FilterDescription'
 import SchemaSieve from './SchemaSieve'
 import types from '../PineTypes'
+import Button from '../Button'
 
 const sieve = SchemaSieve()
 
@@ -17,15 +18,6 @@ const BorderedDiv = styled.div`
   margin-top: 15px;
   padding: 6px 11px 0;
   border: solid 1px #979797;
-`
-
-const ActionBtn = styled.button`
-  border: 0;
-  background: none;
-  padding: 0;
-  font-size: 13px;
-  float: right;
-  cursor: pointer;
 `
 
 export const isValidRule = rule => types.hasOwnProperty(rule.type)
@@ -79,16 +71,22 @@ class FilterSummary extends React.Component {
 
     return (
       <BorderedDiv>
-        <ActionBtn
-          onClick={() => this.setState({ showForm: !this.state.showForm })}
-        >
-          <FaBookmarkO style={{ marginRight: 6 }} />
-          Save view
-        </ActionBtn>
+        <Flex justify='space-between'>
+          <Text fontSize={13} mb={10} color={this.props.dark && '#fff'}>
+            Filters ({this.props.rules.length})
+          </Text>
 
-        <Text fontSize={13} mb={10}>
-          Filters ({this.props.rules.length})
-        </Text>
+          <Button
+            primary
+            plaintext
+            fontSize={13}
+            mt={-7}
+            onClick={() => this.setState({ showForm: !this.state.showForm })}
+          >
+            <FaBookmarkO style={{ marginRight: 6 }} />
+            Save view
+          </Button>
+        </Flex>
         {this.state.showForm && (
           <Modal
             title='Save current view'
@@ -135,6 +133,7 @@ class FilterSummary extends React.Component {
             return (
               <Box mb={10} mr={10} key={rule.id}>
                 <FilterDescription
+                  dark={this.props.dark}
                   schema={this.props.schema[rule.name]}
                   rule={rule}
                   edit={
