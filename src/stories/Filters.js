@@ -2,7 +2,7 @@ import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
 import * as uniq from 'lodash/uniq'
 import styled from 'styled-components'
-import { Filters, SchemaSieve, PineTypes } from '../'
+import { Box, Filters, SchemaSieve, PineTypes } from '../'
 import PokeDex from './assets/pokedex'
 
 const sieve = SchemaSieve()
@@ -124,11 +124,12 @@ class FiltersDemo extends React.Component {
           schema={this.state.schema}
           setViews={views => this.setViews(views)}
           setRules={rules => this.setRules(rules)}
+          dark={this.props.dark}
           {...this.props.extra}
         />
 
         {items.map((item, index) => (
-          <div key={index}>
+          <div key={index} style={{ color: this.props.dark ? 'white' : null }}>
             <h2>{item.Name}</h2>
             <StyledTable>
               <tbody>
@@ -201,4 +202,11 @@ storiesOf('Filters', module)
     }
 
     return <FiltersDemo extra={props} />
+  })
+  .addWithInfo('Dark', () => {
+    return (
+      <Box bg='#343434' p={30}>
+        <FiltersDemo dark />
+      </Box>
+    )
   })

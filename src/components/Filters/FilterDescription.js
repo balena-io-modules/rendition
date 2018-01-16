@@ -58,7 +58,9 @@ const FilterDescription = props => (
       </Flex>
     </ButtonWrapper>
 
-    {!!props.delete && <DeleteBtn onClick={props.delete} />}
+    {!!props.delete && (
+      <DeleteBtn color={props.dark && '#fff'} onClick={props.delete} />
+    )}
   </div>
 )
 
