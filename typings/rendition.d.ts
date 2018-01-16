@@ -206,6 +206,7 @@ declare module 'rendition' {
 		setRules(rules: FilterRule[]): void;
 		addFilterButtonProps?: ButtonProps;
 		viewsMenuButtonProps?: DropDownButtonProps;
+		dark?: boolean;
 	}
 
 	class Filters extends RenderableElementWithProps<FiltersProps, any> {}
