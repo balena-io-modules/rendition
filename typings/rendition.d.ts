@@ -364,7 +364,7 @@ declare module 'rendition' {
 		icon?: string;
 		label?: string | JSX.Element;
 		sortable?: boolean | TableSortFunction;
-		render?: (value: any, row: T) => string | JSX.Element;
+		render?: (value: any, row: T) => string | JSX.Element | null;
 	}
 
 	interface TableProps<T> {
