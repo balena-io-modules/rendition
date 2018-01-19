@@ -46,15 +46,28 @@ const columns = [
   }
 ]
 
-storiesOf('Table', module).addWithInfo('Standard', () => {
-  return (
-    <Container>
-      <Table
-        columns={columns}
-        data={PokeDex}
-        rowKey='pokedex_number'
-        onCheck={action('items-selected')}
-      />
-    </Container>
-  )
-})
+storiesOf('Table', module)
+  .addWithInfo('Standard', () => {
+    return (
+      <Container>
+        <Table
+          columns={columns}
+          data={PokeDex}
+          rowKey='pokedex_number'
+          onCheck={action('items-selected')}
+        />
+      </Container>
+    )
+  })
+  .addWithInfo('Row Click', () => {
+    return (
+      <Container>
+        <Table
+          columns={columns}
+          data={PokeDex}
+          rowKey='pokedex_number'
+          onRowClick={action('row-clicked')}
+        />
+      </Container>
+    )
+  })
