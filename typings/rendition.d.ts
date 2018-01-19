@@ -364,7 +364,7 @@ declare module 'rendition' {
 		icon?: string;
 		label?: string | JSX.Element;
 		sortable?: boolean | TableSortFunction;
-		render?: (value: any, row: T) => string | JSX.Element | null;
+		render?: (value: any, row: T) => string | number | JSX.Element | null;
 	}
 
 	interface TableProps<T> {
@@ -377,6 +377,8 @@ declare module 'rendition' {
 		// If an onCheck property is provided , then checkboxes will be renders,
 		// allowing rows to be selected.
 		onCheck?: (checkedItems: T[]) => void;
+
+		onRowClick?: (row: T) => void;
 	}
 
 	class Table<T> extends RenderableElementWithProps<TableProps<T>, any> {}

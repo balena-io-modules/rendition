@@ -9,6 +9,7 @@ import some = require('lodash/some');
 import sortBy = require('lodash/sortBy');
 import * as React from 'react';
 import FaSort = require('react-icons/lib/fa/sort');
+import { TableColumn, TableProps } from 'rendition';
 import styled from 'styled-components';
 
 import theme from '../theme';
@@ -16,27 +17,9 @@ import Button from './Button';
 import { Flex } from './Grid';
 import Input from './Input';
 
-type TableSortFunction = <T>(a: T, b: T) => number;
-
-interface TableColumn<T> {
-	field: keyof T;
-	icon?: string;
-	label?: string | JSX.Element;
-	sortable?: boolean | TableSortFunction;
-	render?: (value: any, row: T) => string | JSX.Element;
-}
-
-export interface TableProps<T> {
-	columns: Array<TableColumn<T>>;
-	data: T[];
-	// Optionally provide a key that should be used as a unique identifier for each row
-	rowKey?: keyof T;
-
-	// Only usable if a rowKey property is also provided.
-	// If an onCheck property is provided , then checkboxes will be renders,
-	// allowing rows to be selected.
-	onCheck?: (checkedItems: T[]) => void;
-}
+const highlightStyle = `
+	background-color: ${theme.colors.info.light};
+`;
 
 const BaseTable = styled.table`
 	width: 100%;
@@ -56,6 +39,8 @@ const BaseTable = styled.table`
 
 	> tbody {
 		> tr {
+			cursor: ${(props: any) => (!!props.onRowClick ? 'pointer' : 'auto')};
+
 			> td {
 				text-align: left;
 				font-size: 14px;
@@ -66,6 +51,16 @@ const BaseTable = styled.table`
 
 			&:nth-of-type(even) {
 				background-color: #f8f8f8;
+			}
+
+			&: hover {
+				${highlightStyle};
+			}
+
+			&[data-checked='true'] {
+				${highlightStyle} > td:first-child {
+					box-shadow: inset 3px 0px 0 ${theme.colors.info.main};
+				}
 			}
 		}
 	}
@@ -82,7 +77,7 @@ const HeaderButton = styled(Button)`
 const renderField = <T extends {}>(
 	row: T,
 	column: TableColumn<T>,
-): string | number | JSX.Element => {
+): string | number | JSX.Element | null => {
 	const value = get(row, column.field);
 
 	if (column.render) {
@@ -249,12 +244,19 @@ export default class Table<T> extends React.Component<
 				</thead>
 				<tbody>
 					{map(this.sortData(data), (row, i) => {
+						const isChecked = this.props.onCheck ? this.isChecked(row) : false;
 						return (
-							<tr key={rowKey ? (row[rowKey] as any) : i}>
+							<tr
+								data-checked={isChecked}
+								key={rowKey ? (row[rowKey] as any) : i}
+								onClick={() =>
+									this.props.onRowClick && this.props.onRowClick(row)
+								}
+							>
 								{this.props.onCheck && (
 									<td>
 										<Input
-											checked={this.isChecked(row)}
+											checked={isChecked}
 											onChange={() => this.toggleChecked(row)}
 											type="checkbox"
 										/>
