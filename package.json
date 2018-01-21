@@ -65,6 +65,7 @@
     "@types/react-dom": "^15.0.0",
     "@types/react-icons": "^2.2.4",
     "@types/recompose": "^0.24.2",
+    "@types/uuid": "^3.4.3",
     "color": "^2.0.0",
     "color-hash": "^1.0.3",
     "copy-to-clipboard": "^3.0.8",
@@ -81,7 +82,9 @@
     "showdown": "^1.7.3",
     "styled-grid": "1.0.0-beta.1",
     "styled-system": "^1.0.5",
-    "tag-hoc": "1.0.0"
+    "tag-hoc": "1.0.0",
+    "uuid": "^3.2.1",
+    "xterm": "^3.1.0"
   },
   "lint-staged": {
     "{src, test}/**/*.js": [
