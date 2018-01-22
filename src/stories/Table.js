@@ -90,3 +90,25 @@ storiesOf('Table', module)
       </Container>
     )
   })
+  .addWithInfo('Multiple Row Prefix', () => {
+    return (
+      <Container>
+        <Table
+          columns={columns}
+          data={PokeDex}
+          tbodyPrefix={[
+            <tr>
+              <td colSpan={columns.length}>
+                <p style={{ textAlign: 'center' }}>Row 1</p>
+              </td>
+            </tr>,
+            <tr>
+              <td colSpan={columns.length}>
+                <p style={{ textAlign: 'center' }}>Row 2</p>
+              </td>
+            </tr>
+          ]}
+        />
+      </Container>
+    )
+  })
