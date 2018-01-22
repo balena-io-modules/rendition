@@ -50,6 +50,13 @@ storiesOf('Table', module)
   .addWithInfo('Standard', () => {
     return (
       <Container>
+        <Table columns={columns} data={PokeDex} />
+      </Container>
+    )
+  })
+  .addWithInfo('Checkboxes', () => {
+    return (
+      <Container>
         <Table
           columns={columns}
           data={PokeDex}
