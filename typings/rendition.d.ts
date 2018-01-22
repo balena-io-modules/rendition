@@ -379,6 +379,8 @@ declare module 'rendition' {
 		onCheck?: (checkedItems: T[]) => void;
 
 		onRowClick?: (row: T) => void;
+
+		tbodyPrefix?: JSX.Element;
 	}
 
 	class Table<T> extends RenderableElementWithProps<TableProps<T>, any> {}

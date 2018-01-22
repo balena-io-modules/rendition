@@ -71,3 +71,22 @@ storiesOf('Table', module)
       </Container>
     )
   })
+  .addWithInfo('Row Prefix', () => {
+    return (
+      <Container>
+        <Table
+          columns={columns}
+          data={PokeDex}
+          tbodyPrefix={
+            <tr>
+              <td colSpan={columns.length}>
+                <p style={{ textAlign: 'center' }}>
+                  This row will always appear at the top of the table
+                </p>
+              </td>
+            </tr>
+          }
+        />
+      </Container>
+    )
+  })
