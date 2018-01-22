@@ -380,7 +380,7 @@ declare module 'rendition' {
 
 		onRowClick?: (row: T) => void;
 
-		tbodyPrefix?: JSX.Element;
+		tbodyPrefix?: JSX.Element | JSX.Element[];
 	}
 
 	class Table<T> extends RenderableElementWithProps<TableProps<T>, any> {}
