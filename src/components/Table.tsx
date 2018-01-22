@@ -243,6 +243,7 @@ export default class Table<T> extends React.Component<
 					</tr>
 				</thead>
 				<tbody>
+					{this.props.tbodyPrefix}
 					{map(this.sortData(data), (row, i) => {
 						const isChecked = this.props.onCheck ? this.isChecked(row) : false;
 						return (
