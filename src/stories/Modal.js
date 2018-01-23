@@ -10,6 +10,7 @@ const Container = styled.div`
 `
 
 const cancelAction = action('Modal.cancel')
+const secondaryAction = action('Modal.secondary')
 const doneAction = action('Modal.done')
 
 class ModalDemo extends React.Component {
@@ -121,6 +122,22 @@ storiesOf('Modal', module)
         cancel={cancelAction}
         done={doneAction}
         action='Ok'
+        >
+        Lorem ipsum dolor sit amet
+      </Modal>
+    )
+  })
+  .addWithInfo('Secondary action', () => {
+    return (
+      <Modal
+        w={['auto', 500, 1000]}
+        title='Some info'
+        secondaryButtonProps={{
+          children: 'Refresh',
+          onClick: secondaryAction
+        }}
+        done={doneAction}
+        action='OK'
         >
         Lorem ipsum dolor sit amet
       </Modal>

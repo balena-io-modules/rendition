@@ -301,6 +301,7 @@ declare module 'rendition' {
 		cancel?: () => any;
 		done: () => any;
 		primaryButtonProps?: ButtonProps;
+		secondaryButtonProps?: ButtonProps;
 		cancelButtonProps?: ButtonProps;
 	}
 
