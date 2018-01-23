@@ -1,5 +1,6 @@
 # Rendition
 
+[![npm version](https://badge.fury.io/js/rendition.svg)](http://badge.fury.io/js/rendition)
 [![Build Status](https://travis-ci.org/resin-io-modules/rendition.svg?branch=master)](https://travis-ci.org/resin-io-modules/rendition)
 
 A library of UI components, built using [React][react], [recompose][recompose], [styled-components][styled-components] and [styled-system][styled-system].
