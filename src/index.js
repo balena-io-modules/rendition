@@ -1,5 +1,6 @@
 import { default as Alert } from './components/Alert'
 import { default as Badge } from './components/Badge'
+import { default as BadgeSelect } from './components/BadgeSelect'
 import { default as Banner } from './components/Banner'
 import { default as Button } from './components/Button'
 import { default as CodeWithCopy } from './components/CodeWithCopy'
@@ -33,6 +34,7 @@ import { Flex, Box } from './components/Grid'
 export {
   Alert,
   Badge,
+  BadgeSelect,
   Banner,
   Box,
   Button,
