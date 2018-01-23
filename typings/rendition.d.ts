@@ -137,6 +137,13 @@ declare module 'rendition' {
 		backgroundImage?: string;
 	}
 
+	interface BadgeProps extends BoxProps, Coloring {
+		text: string;
+		small?: boolean;
+	}
+
+	class Badge extends RenderableElementWithProps<BadgeProps, any> {}
+
 	class BannerProps extends RenderableElementWithProps<BoxProps, any> {}
 
 	interface BoxProps extends DefaultProps {

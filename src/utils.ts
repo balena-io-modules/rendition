@@ -27,8 +27,10 @@ export const blacken = (color: string) =>
 		.darken(0.6)
 		.string();
 
-export const normal = (props: ThemedDefaultProps) => get(props.theme, 'weights.0');
-export const bold = (props: ThemedDefaultProps) => get(props.theme, 'weights.1');
+export const normal = (props: ThemedDefaultProps) =>
+	get(props.theme, 'weights.0');
+export const bold = (props: ThemedDefaultProps) =>
+	get(props.theme, 'weights.1');
 
 export const px = (n: any) => (typeof n === 'number' ? n + 'px' : n);
 
@@ -58,9 +60,10 @@ export const getColorFromTheme = (theme: Theme) => (
 	return get(theme, `colors.${colorString}`);
 };
 
-export const getColoringType = (
-	props: DefaultProps & Coloring & { [key: string]: any },
-): string | undefined => {
+export const getColoringType = (props: {
+	theme: Theme;
+	[key: string]: any;
+}): string | undefined => {
 	// get primary, tertiary, secondary etc
 	const type = find<string>(
 		Object.keys(props),
@@ -70,7 +73,7 @@ export const getColoringType = (
 };
 
 export const getColor = (
-	props: ThemedDefaultProps & Coloring,
+	props: { theme: Theme; [key: string]: any },
 	key: string,
 	shade: 'main' | 'light' | 'dark',
 ) => {

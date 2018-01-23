@@ -66,6 +66,7 @@
     "@types/react-icons": "^2.2.4",
     "@types/recompose": "^0.24.2",
     "color": "^2.0.0",
+    "color-hash": "^1.0.3",
     "copy-to-clipboard": "^3.0.8",
     "grid-styled": "2.0.0-10",
     "lodash": "^4.17.4",
