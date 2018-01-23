@@ -135,6 +135,7 @@ storiesOf('Modal', module)
         done={doneAction}
         action='Delete'
         cancelButtonProps={{
+          children: 'Abort',
           w: 150,
           style: {
             marginRight: 30

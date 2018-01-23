@@ -124,7 +124,8 @@ class Modal extends React.Component<ModalProps, any> {
 						<Flex mt={50} align="center" justify="flex-end">
 							{props.cancel && (
 								<Button {...cancelButtonProps} onClick={props.cancel}>
-									Cancel
+									{(cancelButtonProps && cancelButtonProps.children) ||
+										'Cancel'}
 								</Button>
 							)}
 							<Button {...primaryButtonProps} onClick={props.done}>
