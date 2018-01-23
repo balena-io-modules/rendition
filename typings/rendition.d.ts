@@ -144,6 +144,19 @@ declare module 'rendition' {
 
 	class Badge extends RenderableElementWithProps<BadgeProps, any> {}
 
+	interface BadgeSelectProps extends DropDownButtonProps {
+		items: string[];
+		extra?: string[];
+		onItemChange?: (value: string) => void;
+		defaultSelected?: string;
+		placeholder?: string;
+	}
+
+	class BadgeSelectProps extends RenderableElementWithProps<
+		BadgeSelectProps,
+		any
+	> {}
+
 	class BannerProps extends RenderableElementWithProps<BoxProps, any> {}
 
 	interface BoxProps extends DefaultProps {
