@@ -94,6 +94,15 @@ class Modal extends React.Component<ModalProps, any> {
 			props.cancelButtonProps,
 		);
 
+		const secondaryButtonProps = assign(
+			{
+				primary: true,
+				outline: true,
+				style: { marginRight: 20 },
+			},
+			props.secondaryButtonProps,
+		);
+
 		const primaryButtonProps = assign(
 			{ primary: true },
 			props.primaryButtonProps,
@@ -127,6 +136,9 @@ class Modal extends React.Component<ModalProps, any> {
 									{(cancelButtonProps && cancelButtonProps.children) ||
 										'Cancel'}
 								</Button>
+							)}
+							{props.secondaryButtonProps && (
+								<Button {...secondaryButtonProps} />
 							)}
 							<Button {...primaryButtonProps} onClick={props.done}>
 								{props.action}
