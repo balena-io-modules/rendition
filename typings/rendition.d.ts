@@ -152,7 +152,7 @@ declare module 'rendition' {
 		placeholder?: string;
 	}
 
-	class BadgeSelectProps extends RenderableElementWithProps<
+	class BadgeSelect extends RenderableElementWithProps<
 		BadgeSelectProps,
 		any
 	> {}
