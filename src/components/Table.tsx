@@ -54,7 +54,8 @@ const BaseTable = styled.table`
 			}
 
 			&: hover {
-				${highlightStyle};
+				${(props: any) =>
+					!!props.onRowClick || !!props.onCheck ? highlightStyle : ''};
 			}
 
 			&[data-checked='true'] {
