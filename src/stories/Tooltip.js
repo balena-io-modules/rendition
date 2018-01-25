@@ -11,15 +11,27 @@ storiesOf('Tooltip', module)
   .addDecorator(story => <Container>{story()}</Container>)
   .addWithInfo('Hover', () => {
     return (
-      <Tooltip message='Lorem ipsum dolor sit' eventType='hover'>
-        <a>Hover over me</a>
-      </Tooltip>
+      <div>
+        <Tooltip message='Lorem ipsum dolor sit'>
+          <a>Hover over me</a>
+        </Tooltip>
+        <br />
+        <Tooltip>
+          <a>Disabled hover tooltip</a>
+        </Tooltip>
+      </div>
     )
   })
   .addWithInfo('Click', () => {
     return (
-      <Tooltip message='Lorem ipsum dolor sit' eventType='click'>
-        <a>Click me</a>
-      </Tooltip>
+      <div>
+        <Tooltip message='Lorem ipsum dolor sit' eventType='click'>
+          <a>Click me</a>
+        </Tooltip>
+        <br />
+        <Tooltip eventType='click'>
+          <a>Disabled click tooltip</a>
+        </Tooltip>
+      </div>
     )
   })
