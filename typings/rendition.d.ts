@@ -152,10 +152,7 @@ declare module 'rendition' {
 		placeholder?: string;
 	}
 
-	class BadgeSelect extends RenderableElementWithProps<
-		BadgeSelectProps,
-		any
-	> {}
+	class BadgeSelect extends RenderableElementWithProps<BadgeSelectProps, any> {}
 
 	class BannerProps extends RenderableElementWithProps<BoxProps, any> {}
 
@@ -310,7 +307,7 @@ declare module 'rendition' {
 		title?: string;
 		titleElement?: string | JSX.Element;
 		titleDetails?: string | JSX.Element;
-		action: string | JSX.Element;
+		action?: string | JSX.Element;
 		cancel?: () => any;
 		done: () => any;
 		primaryButtonProps?: ButtonProps;
