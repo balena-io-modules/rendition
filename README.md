@@ -7,22 +7,24 @@ A library of UI components, built using [React][react], [recompose][recompose], 
 
 ## Usage
 
-You can import react components directly into your project:
-
 ```jsx
-import React from 'react';
-import { Button, Box } from 'rendition';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Button, Box, Provider } from 'rendition';
 
-const Example = () => {
-  return (
-    <Box my={3} className="example-button-wrapper">
+ReactDOM.render(
+  <Provider>
+    <Box my={3} mx={['auto', 15]}>
       <Button primary emphasized>Click me</Button>
     </Box>
-  )
-};
-
-export default Example;
+  </Provider>,
+  document.getElementById('root')
+);
 ```
+
+### Demo
+
+For an interactive demo of all components, see https://resin-io-modules.github.io/rendition
 
 ### Provider
 
@@ -31,10 +33,6 @@ Wrap your application in the `<Provider>` component so that child components can
 ### Styled system
 
 All components support [styled-system][styled-system] attributes, allowing you to use `fontSize`, `color`, `px` etc.
-
-### UI Components
-
-For an interactive demo of all components, see https://resin-io-modules.github.io/rendition
 
 ## Developing
 
