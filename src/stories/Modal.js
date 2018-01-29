@@ -39,7 +39,6 @@ class ModalDemo extends React.Component {
               doneAction(x)
               this.setState({ show: false })
             }}
-            action='Ok'
           >
             {this.props.children || 'Lorem ipsum dolor sit amet'}
           </Modal>
@@ -52,11 +51,18 @@ class ModalDemo extends React.Component {
 storiesOf('Modal', module)
   .addWithInfo('Standard', () => {
     return (
+      <Modal title='Modal title' cancel={cancelAction} done={doneAction}>
+        Lorem ipsum dolor sit amet
+      </Modal>
+    )
+  })
+  .addWithInfo('Custom action text', () => {
+    return (
       <Modal
         title='Modal title'
         cancel={cancelAction}
         done={doneAction}
-        action='Ok'
+        action='Go!'
         >
         Lorem ipsum dolor sit amet
       </Modal>
@@ -64,7 +70,7 @@ storiesOf('Modal', module)
   })
   .addWithInfo('No cancel button', () => {
     return (
-      <Modal title='Modal title' done={doneAction} action='Ok'>
+      <Modal title='Modal title' done={doneAction}>
         Lorem ipsum dolor sit amet
       </Modal>
     )
@@ -76,7 +82,6 @@ storiesOf('Modal', module)
         titleDetails='Optional details'
         cancel={cancelAction}
         done={doneAction}
-        action='Ok'
         >
         Lorem ipsum dolor sit amet
       </Modal>
@@ -90,7 +95,6 @@ storiesOf('Modal', module)
         titleDetails='Optional details'
         cancel={cancelAction}
         done={doneAction}
-        action='Ok'
         >
         Lorem ipsum dolor sit amet
       </Modal>
@@ -104,7 +108,6 @@ storiesOf('Modal', module)
         titleDetails='Optional details'
         cancel={cancelAction}
         done={doneAction}
-        action='Ok'
         >
         Lorem ipsum dolor sit amet
       </Modal>
@@ -121,7 +124,6 @@ storiesOf('Modal', module)
         }
         cancel={cancelAction}
         done={doneAction}
-        action='Ok'
         >
         Lorem ipsum dolor sit amet
       </Modal>

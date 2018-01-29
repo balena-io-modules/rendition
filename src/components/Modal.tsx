@@ -141,7 +141,7 @@ class Modal extends React.Component<ModalProps, any> {
 								<Button {...secondaryButtonProps} />
 							)}
 							<Button {...primaryButtonProps} onClick={props.done}>
-								{props.action}
+								{props.action || 'OK'}
 							</Button>
 						</Flex>
 					</ModalPanel>
