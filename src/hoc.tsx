@@ -5,6 +5,9 @@ import styled from 'styled-components';
 import { color, fontSize, space, width } from 'styled-system';
 import tag from 'tag-hoc';
 import blacklist from './blacklist';
+import { Tooltips } from './tooltips';
+
+const tt = new Tooltips();
 
 const prop = oneOfType([number, string, arrayOf(oneOfType([number, string]))]);
 
@@ -35,6 +38,16 @@ type BaseProps = {
 	[k in keyof typeof propTypes]?: string | string[] | number | number[]
 };
 
+const withTooltip = (Base: React.StatelessComponent) => {
+	return ({ ...props }: any) => {
+		if (props.tooltip) {
+			props = tt.bindProps(props);
+		}
+		delete props.tooltip;
+		return <Base {...props} />;
+	};
+};
+
 const withStyledSystem = (child: React.StatelessComponent) => {
 	const Base = styled<BaseProps>(child)`
 		${space} ${width} ${fontSize} ${color};
@@ -50,4 +63,4 @@ const withStyledSystem = (child: React.StatelessComponent) => {
 
 const Tag = tag(blacklist);
 
-export default compose(withStyledSystem, Tag);
+export default compose(withTooltip, withStyledSystem, Tag);
