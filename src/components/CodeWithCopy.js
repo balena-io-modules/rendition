@@ -3,7 +3,7 @@ import styled, { withTheme } from 'styled-components'
 import * as copyToClipboard from 'copy-to-clipboard'
 import { compose } from 'recompose'
 import * as FaClipboard from 'react-icons/lib/fa/clipboard'
-import Tooltip from './Tooltip'
+import Button from './Button'
 import hoc from '../hoc'
 import { stopEvent } from '../utils'
 
@@ -41,14 +41,14 @@ const Base = ({ copy, text, color, ...props }) => {
       <code title={copy}>{text.trim()}</code>
 
       <span onClick={stopEvent}>
-        <Tooltip message='Copied!' eventType='click'>
-          <span
-            onClick={() => copyIt(copy, text)}
-            className='code-with-copy__copy'
-          >
-            <FaClipboard color={color} />
-          </span>
-        </Tooltip>
+        <Button
+          plaintext
+          tooltip={{ text: 'Copied!', trigger: 'click' }}
+          onClick={() => copyIt(copy, text)}
+          className='code-with-copy__copy'
+        >
+          <FaClipboard color={color} />
+        </Button>
       </span>
     </Wrapper>
   )

@@ -26,6 +26,17 @@ declare module 'rendition' {
 		py?: ResponsiveStyle;
 	}
 
+	type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left';
+	interface TooltipProps {
+		text: string;
+		trigger: 'click' | 'hover';
+		placement: TooltipPlacement;
+	}
+
+	interface Tooltip {
+		tooltip?: string | TooltipProps;
+	}
+
 	// Cherry pick the react attributes that don't conflict with styled-system
 	interface DefaultProps
 		extends StyledSystemProps,
@@ -163,7 +174,7 @@ declare module 'rendition' {
 
 	class Box extends RenderableElementWithProps<BoxProps, any> {}
 
-	interface ButtonProps extends DefaultProps, Coloring, Sizing {
+	interface ButtonProps extends DefaultProps, Coloring, Sizing, Tooltip {
 		square?: boolean;
 		disabled?: boolean;
 		outline?: boolean;

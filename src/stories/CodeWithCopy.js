@@ -12,7 +12,7 @@ storiesOf('CodeWithCopy', module)
   .addWithInfo('Standard', () => {
     return (
       <CodeWithCopy
-        text='click me'
+        text='22ab7io'
         copy='This value has been copied to your clipboard!'
       />
     )
@@ -25,7 +25,7 @@ storiesOf('CodeWithCopy', module)
           <Box>
             <CodeWithCopy
               color='#333'
-              text='click me'
+              text='22ab7io'
               copy='This value has been copied to your clipboard!'
             />
           </Box>

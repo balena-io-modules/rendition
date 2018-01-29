@@ -72,7 +72,6 @@
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "paths-js": "^0.4.5",
-    "react-aria-tooltip": "^1.1.1",
     "react-icons": "^2.2.5",
     "recompose": "0.25.0",
     "regex-parser": "^2.2.7",
