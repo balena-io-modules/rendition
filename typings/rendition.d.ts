@@ -39,6 +39,17 @@ declare module 'rendition' {
 		tooltip?: string | TooltipProps;
 	}
 
+	type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left';
+	interface TooltipProps {
+		text: string;
+		trigger: 'click' | 'hover';
+		placement: TooltipPlacement;
+	}
+
+	interface Tooltip {
+		tooltip?: string | TooltipProps;
+	}
+
 	// Cherry pick the react attributes that don't conflict with styled-system
 	interface DefaultProps
 		extends StyledSystemProps,
