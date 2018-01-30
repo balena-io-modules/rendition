@@ -219,7 +219,7 @@ declare module 'rendition' {
 		rules: FilterRule[];
 		views: FilterViewScope[];
 		schema: Schema;
-		setViews(views: SingleFilterView[]): void;
+		setViews(views: FilterViewScope[]): void;
 		setRules(rules: FilterRule[]): void;
 		addFilterButtonProps?: ButtonProps;
 		viewsMenuButtonProps?: DropDownButtonProps;
