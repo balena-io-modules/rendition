@@ -1,12 +1,12 @@
 import * as React from 'react'
-import * as RegexParser from 'regex-parser'
-import * as isArray from 'lodash/isArray'
-import * as assign from 'lodash/assign'
-import * as some from 'lodash/some'
-import * as includes from 'lodash/includes'
-import * as isString from 'lodash/isString'
-import * as values from 'lodash/values'
-import * as keys from 'lodash/keys'
+const RegexParser = require('regex-parser')
+const isArray = require('lodash/isArray')
+const assign = require('lodash/assign')
+const some = require('lodash/some')
+const includes = require('lodash/includes')
+const isString = require('lodash/isString')
+const values = require('lodash/values')
+const keys = require('lodash/keys')
 import Input from '../Input'
 import { Flex } from '../Grid'
 

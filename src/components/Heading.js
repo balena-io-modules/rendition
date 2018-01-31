@@ -1,6 +1,19 @@
-import Text from './Text'
+import styled from 'styled-components'
+import { color, fontSize, space } from 'styled-system'
+import asRendition from '../asRendition'
+import { monospace } from '../utils'
+import { align, bold, caps } from './Txt'
 
-const Heading = Text.withComponent('h3')
+const Heading = styled.h3`
+  ${align}
+  ${color}
+  ${fontSize}
+  ${monospace};
+  ${space}
+
+  ${caps}
+  ${bold}
+`
 
 Heading.displayName = 'Heading'
 
@@ -9,40 +22,42 @@ Heading.defaultProps = {
   m: 0
 }
 
-Heading.h1 = Heading.withComponent('h1')
-Heading.h1.defaultProps = {
+const Base = asRendition(Heading)
+
+Base.h1 = asRendition(Heading.withComponent('h1'))
+Base.h1.defaultProps = {
   fontSize: 6,
   m: 0
 }
 
-Heading.h2 = Heading.withComponent('h2')
-Heading.h2.defaultProps = {
+Base.h2 = asRendition(Heading.withComponent('h2'))
+Base.h2.defaultProps = {
   fontSize: 5,
   m: 0
 }
 
-Heading.h3 = Heading.withComponent('h3')
-Heading.h3.defaultProps = {
+Base.h3 = asRendition(Heading.withComponent('h3'))
+Base.h3.defaultProps = {
   fontSize: 4,
   m: 0
 }
 
-Heading.h4 = Heading.withComponent('h4')
-Heading.h4.defaultProps = {
+Base.h4 = asRendition(Heading.withComponent('h4'))
+Base.h4.defaultProps = {
   fontSize: 3,
   m: 0
 }
 
-Heading.h5 = Heading.withComponent('h5')
-Heading.h5.defaultProps = {
+Base.h5 = asRendition(Heading.withComponent('h5'))
+Base.h5.defaultProps = {
   fontSize: 2,
   m: 0
 }
 
-Heading.h6 = Heading.withComponent('h6')
-Heading.h6.defaultProps = {
+Base.h6 = asRendition(Heading.withComponent('h6'))
+Base.h6.defaultProps = {
   fontSize: 1,
   m: 0
 }
 
-export default Heading
+export default Base

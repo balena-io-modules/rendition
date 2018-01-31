@@ -6,7 +6,7 @@ import { stopPropagation } from '../utils';
 import Button from './Button';
 import Fixed from './Fixed';
 import { Box, Flex } from './Grid';
-import Text from './Text';
+import Txt from './Txt';
 
 const bodyNoOverflowClass = `rendition-modal-open`;
 
@@ -17,7 +17,7 @@ injectGlobal`
 	}
 `;
 
-const ModalWrapper = Flex.extend`
+const ModalWrapper = styled(Flex)`
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -33,12 +33,12 @@ const ModalBackdrop = styled(Fixed)`
 
 const DEFAULT_MODAL_WIDTH = 700;
 
-const ModalHeader = styled(Text)`
+const ModalHeader = styled(Txt)`
 	margin-bottom: 50px;
 	font-size: 24px;
 `;
 
-const ModalTitleDetails = styled(Text)`
+const ModalTitleDetails = styled(Txt)`
 	color: ${props => props.theme.colors.text.light};
 	font-size: 16px;
 `;

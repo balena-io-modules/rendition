@@ -1,11 +1,11 @@
 import * as React from 'react'
-import * as filter from 'lodash/filter'
+const filter = require('lodash/filter')
 import { withTheme } from 'styled-components'
 import { compose } from 'recompose'
 import * as ResinDeviceStatus from 'resin-device-status'
 import Gauge from './Gauge'
 
-import hoc from '../hoc'
+import asRendition from '../asRendition'
 import theme from '../theme'
 
 const { colors } = theme
@@ -59,4 +59,4 @@ const DeviceStatusGauge = ({ devices, ...props }) => {
   )
 }
 
-export default compose(withTheme, hoc)(DeviceStatusGauge)
+export default compose(withTheme, asRendition)(DeviceStatusGauge)

@@ -1,7 +1,7 @@
 {
   "name": "rendition",
-  "version": "3.26.1",
-  "description": "Resin Components Component",
+  "version": "4.0.0-beta4",
+  "description": "React components library",
   "repository": {
     "type": "git",
     "url": "https://github.com/resin-io-modules/rendition"
@@ -13,8 +13,8 @@
     "start": "start-storybook -p 6006",
     "build": "rimraf dist && tsc",
     "build:storybook": "build-storybook -o .out",
-    "test": "npm run lint && npm run mocha",
-    "mocha": "mocha --require ts-node/register test/*.spec.js",
+    "test": "npm run lint && npm run jest",
+    "jest": "jest __tests__",
     "eslint": "eslint src test",
     "eslint-fix": "eslint src test --fix",
     "tslint": "tslint -t stylish \"src/**/*.ts\" \"src/**/*.tsx\" \"typings.d.ts\"",
@@ -27,13 +27,12 @@
     "deploy": "npm run build:storybook && gh-pages -d .out"
   },
   "devDependencies": {
-    "@kadira/react-storybook-addon-info": "^3.4.0",
-    "@storybook/addon-info": "3.2.9",
-    "@storybook/react": "3.2.8",
+    "@storybook/addon-info": "^3.3.13",
+    "@storybook/react": "^3.3.13",
+    "@types/jest": "^22.1.4",
     "babel-plugin-transform-react-jsx": "^6.23.0",
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-stage-3": "^6.24.1",
-    "chai": "^4.1.2",
     "css-loader": "^0.28.5",
     "eslint": "^4.13.1",
     "eslint-config-standard": "^10.2.1",
@@ -46,12 +45,18 @@
     "gh-pages": "1.0.0",
     "git-url-parse": "^7.0.0",
     "husky": "^0.14.3",
+    "jest": "^22.4.2",
+    "jest-canvas-mock": "^1.0.2",
+    "jest-extended": "^0.6.0",
+    "jsdom": "^11.6.2",
     "lint-staged": "^4.1.1",
-    "mocha": "^3.5.0",
+    "match-media-mock": "^0.1.0",
     "prettier": "^1.9.2",
-    "react": "^15.6.2",
-    "react-dom": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-test-renderer": "^16.2.0",
     "rimraf": "^2.6.2",
+    "ts-jest": "^22.4.0",
     "ts-loader": "^3.0.2",
     "ts-node": "^3.3.0",
     "tslint": "^5.8.0",
@@ -59,28 +64,29 @@
   },
   "dependencies": {
     "@types/color": "^2.0.0",
+    "@types/grid-styled": "^3.2.0",
     "@types/lodash": "^4.14.77",
     "@types/prop-types": "^15.5.2",
-    "@types/react": "^15.0.0",
-    "@types/react-dom": "^15.0.0",
+    "@types/react": "^16.0.38",
+    "@types/react-dom": "^16.0.4",
     "@types/react-icons": "^2.2.4",
-    "@types/recompose": "^0.24.2",
+    "@types/recompose": "^0.24.7",
     "@types/uuid": "^3.4.3",
+    "babel-core": "^6.26.0",
     "color": "^2.0.0",
     "color-hash": "^1.0.3",
     "copy-to-clipboard": "^3.0.8",
-    "grid-styled": "2.0.0-10",
+    "grid-styled": "^3.2.1",
     "lodash": "^4.17.4",
     "moment": "^2.20.1",
     "paths-js": "^0.4.5",
-    "react-aria-tooltip": "^1.1.1",
     "react-icons": "^2.2.5",
-    "recompose": "0.25.0",
+    "recompose": "0.26.0",
     "regex-parser": "^2.2.7",
     "resin-device-status": "^1.1.1",
-    "resin-semver": "^0.10.0",
+    "resin-semver": "^1.2.2",
     "showdown": "^1.7.3",
-    "styled-grid": "1.0.0-beta.1",
+    "styled-components": "^3.2.3",
     "styled-system": "^1.0.5",
     "tag-hoc": "1.0.0",
     "uuid": "^3.2.1",
@@ -96,6 +102,33 @@
       "prettier --config .prettierrc-ts --write",
       "tslint --fix",
       "git add"
+    ]
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "jest-extended",
+    "verbose": true,
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest",
+      "^.+\\.js$": "babel-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "skipBabel": true
+      }
+    },
+    "setupFiles": ["jest-canvas-mock"],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
     ]
   }
 }

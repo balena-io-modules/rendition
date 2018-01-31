@@ -1,9 +1,7 @@
 import * as _ from 'lodash';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { TerminalProps } from 'rendition';
 import styled from 'styled-components';
-import * as uuid from 'uuid';
 import { ITerminalOptions, Terminal as Xterm } from 'xterm';
 import { fit as fitTerm } from 'xterm/dist/addons/fit/fit';
 import Theme from '../theme';
@@ -147,8 +145,8 @@ interface ThemedTerminalProps extends TerminalProps {
 
 class Terminal extends React.Component<ThemedTerminalProps, {}> {
 	readonly tty: Xterm;
-	// Used as the element ID to mount XTERM into
-	private mountElementId: string;
+	// Used as the element to mount XTERM into
+	private mountElement: HTMLDivElement;
 	private termConfig: ITerminalOptions;
 
 	constructor(props: ThemedTerminalProps) {
@@ -174,8 +172,6 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 			// here
 			this.tty = new Xterm(_.cloneDeep(this.termConfig));
 		}
-
-		this.mountElementId = `terminal-${uuid.v1()}`;
 
 		this.resize = this.resize.bind(this);
 	}
@@ -228,9 +224,7 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 	}
 
 	open() {
-		const rootElement = ReactDOM.findDOMNode(this);
-		const element = rootElement.querySelector(`#${this.mountElementId}`);
-		this.tty.open(element as HTMLElement);
+		this.tty.open(this.mountElement);
 		this.tty.focus();
 	}
 
@@ -253,7 +247,7 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 	render() {
 		return (
 			<TtyContainer color={this.props.color}>
-				<TtyInner id={this.mountElementId} />
+				<TtyInner innerRef={el => (this.mountElement = el)} />
 			</TtyContainer>
 		);
 	}

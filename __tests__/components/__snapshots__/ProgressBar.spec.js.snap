@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressBar renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <div
+    className="sc-gZMcBi cmZZgb sc-iwsKbI eoQbrg"
+    type={undefined}
+  >
+    <div
+      className="sc-htoDjs iNxaeG"
+    >
+      50
+      %
+    </div>
+    <div
+      className="sc-gzVnrw ipiFkw"
+      style={
+        Object {
+          "width": "50%",
+        }
+      }
+    >
+      <div
+        className="sc-dnqmqq ghoYrH"
+        style={
+          Object {
+            "width": "200%",
+          }
+        }
+      >
+        50
+        %
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import DeleteBtn from '../DeleteButton';
 import { Box, Flex } from '../Grid';
 import PineTypes from '../PineTypes';
-import Text from '../Text';
+import Txt from '../Txt';
 
 const ButtonWrapper = styled.button`
 	font-size: 13px;
@@ -80,9 +80,9 @@ const FilterDescription = (props: FilterDescriptionProps) => {
 						!!props.rule.extra.or &&
 						props.rule.extra.or.map((rule, index) => (
 							<Flex key={index}>
-								<Text mx={2} bold>
+								<Txt mx={2} bold>
 									OR
-								</Text>
+								</Txt>
 								<FilterDescriptionInner rule={rule} schema={props.schema} />
 							</Flex>
 						))}

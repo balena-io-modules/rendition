@@ -9,7 +9,7 @@ declare module 'rendition' {
 		w?: ResponsiveStyle;
 		fontSize?: ResponsiveStyle;
 		f?: ResponsiveStyle;
-		color?: ResponsiveStyle;
+		color?: string;
 		bg?: ResponsiveStyle;
 		m?: ResponsiveStyle;
 		mt?: ResponsiveStyle;
@@ -25,6 +25,29 @@ declare module 'rendition' {
 		pl?: ResponsiveStyle;
 		px?: ResponsiveStyle;
 		py?: ResponsiveStyle;
+		innerRef?: (element: HTMLElement) => void;
+	}
+
+	type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left';
+	interface TooltipProps {
+		text: string;
+		trigger?: 'click' | 'hover';
+		placement?: TooltipPlacement;
+	}
+
+	interface Tooltip {
+		tooltip?: string | TooltipProps;
+	}
+
+	type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left';
+	interface TooltipProps {
+		text: string;
+		trigger: 'click' | 'hover';
+		placement: TooltipPlacement;
+	}
+
+	interface Tooltip {
+		tooltip?: string | TooltipProps;
 	}
 
 	// Cherry pick the react attributes that don't conflict with styled-system
@@ -131,10 +154,6 @@ declare module 'rendition' {
 
 	class Alert extends RenderableElementWithProps<AlertProps, any> {}
 
-	interface BannerProps extends DefaultProps {
-		backgroundImage?: string;
-	}
-
 	interface BadgeProps extends BoxProps, Coloring {
 		text: string;
 		small?: boolean;
@@ -154,7 +173,12 @@ declare module 'rendition' {
 
 	class BadgeSelect extends RenderableElementWithProps<BadgeSelectProps, any> {}
 
-	class BannerProps extends RenderableElementWithProps<BoxProps, any> {}
+	interface BannerProps extends DefaultProps {
+		backgroundImage?: string;
+		minHeight?: string;
+	}
+
+	class Banner extends RenderableElementWithProps<BoxProps, any> {}
 
 	interface BoxProps extends DefaultProps {
 		flex?: string | string[];
@@ -163,7 +187,7 @@ declare module 'rendition' {
 
 	class Box extends RenderableElementWithProps<BoxProps, any> {}
 
-	interface ButtonProps extends DefaultProps, Coloring, Sizing {
+	interface ButtonProps extends DefaultProps, Coloring, Sizing, Tooltip {
 		square?: boolean;
 		disabled?: boolean;
 		outline?: boolean;
@@ -174,8 +198,8 @@ declare module 'rendition' {
 
 	class Button extends RenderableElementWithProps<ButtonProps, any> {}
 
-	interface CodeWithCopyProps extends DefaultProps {
-		copy: string;
+	interface CodeWithCopyProps extends DefaultProps, Tooltip {
+		copy?: string;
 		text: string;
 	}
 
@@ -302,7 +326,7 @@ declare module 'rendition' {
 
 	class Input extends RenderableElementWithProps<InputProps, any> {}
 
-	class Image extends RenderableElementWithProps<
+	class Img extends RenderableElementWithProps<
 		DefaultProps & React.ImgHTMLAttributes<HTMLImageElement>,
 		any
 	> {}
@@ -431,9 +455,10 @@ declare module 'rendition' {
 		destroy: () => void;
 	}
 
-	interface TextProps extends DefaultProps {
+	interface TxtProps extends DefaultProps, Tooltip {
 		monospace?: boolean;
 		bold?: boolean;
+		caps?: boolean;
 		align?:
 			| 'left'
 			| 'right'
@@ -448,7 +473,13 @@ declare module 'rendition' {
 			| 'unset';
 	}
 
-	class Text extends RenderableElementWithProps<TextProps, any> {}
+	class TxtP extends RenderableElementWithProps<TxtProps, any> {}
+	class TxtSpan extends RenderableElementWithProps<TxtProps, any> {}
+
+	class Txt extends RenderableElementWithProps<TxtProps, any> {
+		p: TxtP;
+		span: TxtSpan;
+	}
 
 	// also expose the HTML tag variant constructors
 	// that we support & make available as static properties
@@ -490,20 +521,6 @@ declare module 'rendition' {
 	}
 
 	class Textarea extends RenderableElementWithProps<TextareaProps, any> {}
-
-	interface TooltipProps extends DefaultProps {
-		message?: string;
-		/** default 'hover' */
-		eventType?: 'click' | 'hover';
-		/** default 'top' */
-		direction?: 'top' | 'bottom' | 'right' | 'left';
-		/** default 2000 */
-		duration?: number;
-		/** default '#000' */
-		bgcolor?: string;
-	}
-
-	class Tooltip extends RenderableElementWithProps<TooltipProps, any> {}
 
 	interface ThemeColorSet {
 		main: string;

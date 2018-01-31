@@ -1,11 +1,11 @@
 import * as React from 'react'
-import * as Pie from 'paths-js/pie'
+const Pie = require('paths-js/pie')
 import styled, { withTheme } from 'styled-components'
-import * as map from 'lodash/map'
+const map = require('lodash/map')
 import { compose } from 'recompose'
 import { px } from '../utils'
 
-import hoc from '../hoc'
+import asRendition from '../asRendition'
 import theme from '../theme'
 
 const { font } = theme
@@ -191,4 +191,4 @@ const StatusGauge = ({
   )
 }
 
-export default compose(withTheme, hoc)(StatusGauge)
+export default compose(withTheme, asRendition)(StatusGauge)

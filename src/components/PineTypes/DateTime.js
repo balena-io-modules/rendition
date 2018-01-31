@@ -1,6 +1,6 @@
-import * as moment from 'moment'
 import * as React from 'react'
 import Input from '../Input'
+const moment = require('moment')
 
 /**
   Date Time types use momentjs for comparison, so the input and target value

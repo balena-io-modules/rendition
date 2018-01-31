@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Txt renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <div
+    className="sc-htoDjs gDCMNh sc-gzVnrw faVbst"
+  >
+    Hello world
+  </div>
+</div>
+`;

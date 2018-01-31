@@ -1,8 +1,8 @@
-import * as RegexParser from 'regex-parser'
+const RegexParser = require('regex-parser')
 import * as React from 'react'
 import Textarea from '../Textarea'
 import * as showdown from 'showdown'
-import * as isString from 'lodash/isString'
+const isString = require('lodash/isString')
 
 const converter = new showdown.Converter()
 

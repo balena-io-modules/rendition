@@ -5,7 +5,7 @@ import FaExclamationCircle = require('react-icons/lib/fa/exclamation-circle');
 import FaExclamationTriangle = require('react-icons/lib/fa/exclamation-triangle');
 import FaInfoCircle = require('react-icons/lib/fa/info-circle');
 import styled, { StyledFunction, withTheme } from 'styled-components';
-import hoc from '../hoc';
+import asRendition from '../asRendition';
 import { bold, getColor, normal, px } from '../utils';
 
 interface AlertProps extends DefaultProps, Coloring, Sizing {
@@ -147,7 +147,7 @@ const DismissAlert = (props: AlertProps) => (
 );
 
 export default withTheme(
-	hoc(({ emphasized, plaintext, ...props }: AlertProps) => {
+	asRendition(({ emphasized, plaintext, ...props }: AlertProps) => {
 		const title = plaintext ? getIcon(props) : getTitle(props);
 		if (plaintext) {
 			return (

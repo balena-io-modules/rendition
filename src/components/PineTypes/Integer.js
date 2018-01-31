@@ -1,6 +1,6 @@
 import * as React from 'react'
-import * as isInteger from 'lodash/isInteger'
-import * as isNaN from 'lodash/isNaN'
+const isInteger = require('lodash/isInteger')
+const isNaN = require('lodash/isNaN')
 import Input from '../Input'
 
 const p10 = val => parseInt(val, 10)

@@ -9,7 +9,7 @@ import Input from '../Input';
 import Modal from '../Modal';
 import types from '../PineTypes';
 import Select from '../Select';
-import Text from '../Text';
+import Txt from '../Txt';
 import FilterDescription from './FilterDescription';
 import SchemaSieve from './SchemaSieve';
 
@@ -93,9 +93,13 @@ class FilterSummary extends React.Component<
 		return (
 			<BorderedDiv>
 				<Flex justify="space-between">
-					<Text fontSize={13} mb={10} color={this.props.dark && '#fff'}>
+					<Txt
+						fontSize={13}
+						mb={10}
+						color={this.props.dark ? '#fff' : undefined}
+					>
 						Filters ({this.props.rules.length})
-					</Text>
+					</Txt>
 
 					<Button
 						primary
@@ -118,7 +122,7 @@ class FilterSummary extends React.Component<
 						<form onSubmit={e => e.preventDefault() || this.save()}>
 							{this.props.views.length > 1 && (
 								<Flex mb={30}>
-									<Text width={90}>Visible to:</Text>
+									<Txt width={90}>Visible to:</Txt>
 									<Select
 										ml={10}
 										mt="-7px"

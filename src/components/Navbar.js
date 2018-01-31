@@ -1,7 +1,7 @@
 import * as React from 'react'
-import * as MenuIcon from 'react-icons/lib/md/dehaze'
-import * as CloseIcon from 'react-icons/lib/md/close'
-import { withTheme } from 'styled-components'
+const MenuIcon = require('react-icons/lib/md/dehaze')
+const CloseIcon = require('react-icons/lib/md/close')
+import styled, { withTheme } from 'styled-components'
 import { responsiveStyle } from 'styled-system'
 import { Flex, Box } from './Grid'
 import Container from './Container'
@@ -9,19 +9,19 @@ import Container from './Container'
 const display = responsiveStyle('display', 'display')
 const maxHeight = responsiveStyle('max-height', 'maxHeight')
 
-const BrandBox = Box.extend`
+const BrandBox = styled(Box)`
   display: flex;
   height: auto;
   min-width: 150px;
   align-self: center;
 `
 
-const IconBox = Box.extend`
+const IconBox = styled(Box)`
   ${display} align-self: center;
   cursor: pointer;
 `
 
-const MenuBox = Flex.extend`
+const MenuBox = styled(Flex)`
   ${display} ${maxHeight};
   text-align: center;
   transition: max-height 0.4s ease-in-out;

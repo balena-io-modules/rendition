@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <hr
+    className="sc-htoDjs gDCMNh sc-gzVnrw dFonrj"
+  />
+</div>
+`;
