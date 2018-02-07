@@ -83,6 +83,9 @@ declare module 'rendition' {
 
 	interface FilterRule extends FilterModel {
 		id: string;
+		extra: {
+			or: FilterModel[];
+		};
 	}
 
 	interface SingleFilterView {

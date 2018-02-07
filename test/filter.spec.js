@@ -1169,5 +1169,69 @@ describe('resin-filter', () => {
 
       expect(sieve.filter(collection, input)).to.have.length(0)
     })
+
+    /**
+     * Additional rules
+     */
+    describe('Additional rules', () => {
+      before(function () {
+        this.schema = {
+          version: {
+            type: 'Semver'
+          },
+          description: {
+            type: 'Text'
+          },
+          brief: {
+            type: 'Short Text'
+          },
+          incidents: {
+            type: 'Integer'
+          }
+        }
+        this.collection = {
+          'Entry 1': {
+            version: '1.5.0',
+            description: 'Lorem ipsum',
+            brief: 'dolor sit amet',
+            incidents: 1
+          },
+          'Entry 2': {
+            version: '1.7.0',
+            description: 'consectetur adipiscing elit',
+            brief: 'Nulla condimentum',
+            incidents: 2
+          },
+          'Entry 3': {
+            version: '2.0.0',
+            description: 'eu mollis',
+            brief: 'finibus lorem',
+            incidents: 3
+          }
+        }
+      })
+
+      it('should correctly combine additional rules', function () {
+        const filter = {
+          name: 'incidents',
+          type: 'Integer',
+          operator: 'equals',
+          value: 1,
+          extra: {
+            or: [{
+              name: 'brief',
+              type: 'Short Text',
+              operator: 'contains',
+              value: 'lorem'
+            }]
+          }
+        }
+
+        expect(sieve.filter(this.collection, filter)).to.have.all.keys(
+          'Entry 1',
+          'Entry 3'
+        )
+      })
+    })
   })
 })

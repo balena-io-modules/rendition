@@ -2,19 +2,25 @@ import assign = require('lodash/assign');
 import cloneDeep = require('lodash/cloneDeep');
 import find = require('lodash/find');
 import first = require('lodash/first');
-import map = require('lodash/map');
+import set = require('lodash/set');
 import * as moment from 'moment';
 import * as React from 'react';
 import { FaFilter, FaSearch } from 'react-icons/lib/fa';
-import { FilterRule, FiltersProps, SingleFilterView } from 'rendition';
+import {
+	FilterModel,
+	FilterRule,
+	FiltersProps,
+	SingleFilterView,
+} from 'rendition';
 import styled from 'styled-components';
 import Theme from '../../theme';
 import * as utils from '../../utils';
 import Button from '../Button';
+import DeleteBtn from '../DeleteButton';
 import { Box, Flex } from '../Grid';
 import Modal from '../Modal';
-import PineTypes from '../PineTypes';
-import Select from '../Select';
+import Text from '../Text';
+import FilterForm from './FilterForm';
 import SchemaSieve from './SchemaSieve';
 import FilterSummary from './Summary';
 import ViewsMenu from './ViewsMenu';
@@ -29,6 +35,16 @@ import ViewsMenu from './ViewsMenu';
  */
 
 const sieve = SchemaSieve();
+
+const RelativeBox = styled(Box)`
+	position: relative;
+`;
+
+const ExtraRuleDeleteBtn = styled(DeleteBtn)`
+	position: absolute;
+	bottom: 7px;
+	right: -35px;
+`;
 
 const SimpleSearchBox = styled.div`
 	position: relative;
@@ -63,19 +79,6 @@ const SimpleSearchBox = styled.div`
 const FilterWrapper = styled(Box)`
 	position: relative;
 `;
-
-const FilterInput = (props: any) => {
-	const PineTypeInput = PineTypes[props.type].Edit;
-
-	return (
-		<PineTypeInput
-			schema={props.schema}
-			value={props.value}
-			operator={props.operator}
-			onChange={props.onChange}
-		/>
-	);
-};
 
 interface FiltersState {
 	showModal: boolean;
@@ -255,6 +258,29 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		this.setState({ edit: update });
 	}
 
+	editExtraRule(index: number, value: string, key: keyof FilterRule) {
+		const extra = this.state.edit.extra || { or: [] };
+		set(extra, `or[${index}][${key}]`, value);
+		this.setState(prevState => ({ edit: { ...prevState.edit, extra } }));
+	}
+
+	addExtraRule() {
+		const extra = this.state.edit.extra || { or: [] };
+
+		extra.or.push((this.generateFreshEdit() as any) as FilterModel);
+
+		this.setState(prevState => ({ edit: { ...prevState.edit, extra } }));
+	}
+
+	removeExtraRule(index: number) {
+		const extra = this.state.edit.extra || { or: [] };
+
+		// Remove the extra rule specified by index
+		extra.or.splice(index, 1);
+
+		this.setState(prevState => ({ edit: { ...prevState.edit, extra } }));
+	}
+
 	saveView(name: string, scopeKey: string) {
 		const { rules } = this.props;
 		let { views } = this.props;
@@ -343,58 +369,51 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 							title="Filter by"
 							cancel={() => this.setState({ showModal: false })}
 							done={() => this.addRule()}
-							action={this.state.edit.id ? 'Update filter' : 'Add filter'}
+							action="Save"
 						>
 							<form onSubmit={e => e.preventDefault() || this.addRule()}>
-								<Flex>
-									<Select
-										mr={20}
-										value={this.state.edit.name}
-										onChange={(e: Event) =>
-											this.handleEditChange(
-												(e.target as HTMLSelectElement).value,
-												'name',
-											)
-										}
-									>
-										{map(inputModels, ({ name, label }) => (
-											<option key={name} value={name}>
-												{label || name}
-											</option>
-										))}
-									</Select>
-									<Select
-										mr={20}
-										value={this.state.edit.operator}
-										onChange={(e: Event) =>
-											this.handleEditChange(
-												(e.target as HTMLSelectElement).value,
-												'operator',
-											)
-										}
-									>
-										{map(
-											inputModels[this.state.edit.name!].availableOperators,
-											({ value, label }) => (
-												<option value={value} key={value}>
-													{label}
-												</option>
-											),
-										)}
-									</Select>
-									{inputModels[this.state.edit.name!].type !== 'Boolean' && (
-										<FilterInput
-											operator={this.state.edit.operator}
-											schema={this.props.schema[this.state.edit.name!]}
-											value={this.state.edit.value}
-											onChange={(value: string) =>
-												this.handleEditChange(value, 'value')
-											}
-											type={inputModels[this.state.edit.name!].type}
-											autoFocus
-										/>
-									)}
-								</Flex>
+								<FilterForm
+									handleEditChange={this.handleEditChange}
+									inputModels={inputModels}
+									name={this.state.edit.name!}
+									value={this.state.edit.value!}
+									operator={this.state.edit.operator!}
+									schema={this.props.schema}
+								/>
+
+								{!!this.state.edit.extra &&
+									this.state.edit.extra.or.map((rule, index) => (
+										<RelativeBox key={index}>
+											<Text my={2}>OR</Text>
+											<FilterForm
+												handleEditChange={(value, key) =>
+													this.editExtraRule(
+														index,
+														value,
+														key as keyof FilterRule,
+													)
+												}
+												inputModels={inputModels}
+												name={rule.name!}
+												value={rule.value!}
+												operator={rule.operator!}
+												schema={this.props.schema}
+											/>
+											<ExtraRuleDeleteBtn
+												onClick={() => this.removeExtraRule(index)}
+											/>
+										</RelativeBox>
+									))}
+
+								<Button
+									mb={2}
+									mt={4}
+									primary
+									underline
+									onClick={() => this.addExtraRule()}
+								>
+									Add alternative
+								</Button>
 							</form>
 						</Modal>
 					</div>

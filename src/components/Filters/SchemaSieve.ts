@@ -6,6 +6,7 @@ import includes = require('lodash/includes');
 import isArray = require('lodash/isArray');
 import isPlainObject = require('lodash/isPlainObject');
 import map = require('lodash/map');
+import omit = require('lodash/omit');
 import pickBy = require('lodash/pickBy');
 import some = require('lodash/some');
 import {
@@ -37,7 +38,15 @@ class SchemaSieve implements SchemaSieveClass {
 			: this.baseTest(item, input);
 	}
 
-	baseTest(item: any, input: FilterRule) {
+	baseTest(item: any, input: FilterRule): boolean {
+		// If this is a compound rule, evaluate the rules together using OR logic
+		if (input.extra && input.extra.or) {
+			return (
+				this.baseTest(item, omit(input, 'extra') as FilterRule) ||
+				some(input.extra.or, rule => this.baseTest(item, rule as FilterRule))
+			);
+		}
+
 		const { type, name } = input;
 
 		// A simple search is not strictly a "type" and searches on all fields,

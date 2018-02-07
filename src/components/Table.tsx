@@ -75,10 +75,7 @@ const HeaderButton = styled(Button)`
  * Get the value specified by the `field` value
  * If a `render` function is available, use it to get the display value.
  */
-const renderField = <T extends {}>(
-	row: T,
-	column: TableColumn<T>,
-): string | number | JSX.Element | null => {
+const renderField = <T extends {}>(row: T, column: TableColumn<T>): any => {
 	const value = get(row, column.field);
 
 	if (column.render) {
