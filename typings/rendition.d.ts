@@ -81,14 +81,8 @@ declare module 'rendition' {
 		[key: string]: SchemaEntry;
 	}
 
-	interface FilterRule {
-		availableOperators: string[];
+	interface FilterRule extends FilterModel {
 		id: string;
-		label: string;
-		name: string;
-		operator: string;
-		type: string;
-		value: any;
 	}
 
 	interface SingleFilterView {
@@ -325,15 +319,14 @@ declare module 'rendition' {
 	> {}
 
 	type PineTypeOperatorTest = (target: any, value?: any) => boolean;
+	type AdvancedPineOperatorTest = {
+		getLabel: (schemaEntry: SchemaEntry) => string | false;
+		test: PineTypeOperatorTest;
+	};
 
 	interface PineTypeModule {
 		rules: {
-			[key: string]:
-				| PineTypeOperatorTest
-				| {
-						getLabel: (schemaEntry: SchemaEntry) => string | false;
-						test: PineTypeOperatorTest;
-					};
+			[key: string]: PineTypeOperatorTest | AdvancedPineOperatorTest;
 		};
 		validate: (value: any) => boolean;
 		normalize: <T>(value: any) => T;
@@ -351,19 +344,23 @@ declare module 'rendition' {
 
 	class ProgressBar extends RenderableElementWithProps<ProgressBarProps, any> {}
 
+	interface FilterModel {
+		availableOperators: Array<{ label: string; value: string }>;
+		label?: string;
+		name: string;
+		operator: string | null;
+		type: string;
+		value: any;
+	}
+
 	class SchemaSieveClass {
-		filter<T>(items: T[], rule: FilterRule): T[];
+		SIMPLE_SEARCH_NAME: string;
+		tests: { [key: string]: PineTypeModule };
+		filter<T>(items: T[], rule: FilterRule | FilterRule[]): T[] | Partial<T>;
 		makeFilterInputs(
 			schema: Schema,
 		): {
-			[key: string]: {
-				type: string;
-				name: string;
-				label: string;
-				availableOperators: string[];
-				operator: string;
-				value: any;
-			};
+			[key: string]: FilterModel;
 		};
 	}
 
