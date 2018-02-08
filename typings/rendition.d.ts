@@ -83,7 +83,7 @@ declare module 'rendition' {
 
 	interface FilterRule extends FilterModel {
 		id: string;
-		extra: {
+		extra?: {
 			or: FilterModel[];
 		};
 	}
