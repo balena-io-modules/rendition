@@ -359,6 +359,7 @@ declare module 'rendition' {
 	class SchemaSieveClass {
 		SIMPLE_SEARCH_NAME: string;
 		tests: { [key: string]: PineTypeModule };
+		test(item: any, filter: FilterRule | FilterRule[]): boolean;
 		filter<T>(items: T[], rule: FilterRule | FilterRule[]): T[] | Partial<T>;
 		makeFilterInputs(
 			schema: Schema,
