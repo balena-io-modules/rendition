@@ -4,6 +4,7 @@ import * as React from 'react';
 import { BadgeSelectProps } from 'rendition';
 import styled from 'styled-components';
 import Badge from './Badge';
+import Divider from './Divider';
 import DropDownButton from './DropDownButton';
 import Text from './Text';
 
@@ -79,16 +80,38 @@ class BadgeSelect extends React.Component<BadgeSelectProps, BadgeSelectState> {
 					</Text>
 				}
 			>
+				{!!this.props.extraPrefix &&
+					this.props.extraPrefix.map(item => (
+						<ButtonWrapper key={item} onClick={() => this.setSelected(item)}>
+							<Text fontSize={2}>{item}</Text>
+						</ButtonWrapper>
+					))}
+
+				{!!this.props.extraPrefix && (
+					<Divider height={1} color="#dadada" mx={10} />
+				)}
+
 				{this.props.items.map(item => (
 					<ButtonWrapper key={item} onClick={() => this.setSelected(item)}>
 						<Badge text={item} />
 					</ButtonWrapper>
 				))}
 
+				{(!!this.props.extra || this.props.extraSuffix) && (
+					<Divider height={1} color="#dadada" mx={10} />
+				)}
+
 				{!!this.props.extra &&
 					this.props.extra.map(item => (
 						<ButtonWrapper key={item} onClick={() => this.setSelected(item)}>
-							<Text>{item}</Text>
+							<Text fontSize={2}>{item}</Text>
+						</ButtonWrapper>
+					))}
+
+				{!!this.props.extraSuffix &&
+					this.props.extraSuffix.map(item => (
+						<ButtonWrapper key={item} onClick={() => this.setSelected(item)}>
+							<Text fontSize={2}>{item}</Text>
 						</ButtonWrapper>
 					))}
 			</DropDownButton>

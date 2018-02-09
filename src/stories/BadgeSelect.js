@@ -14,7 +14,26 @@ storiesOf('BadgeSelect', module)
       <BadgeSelect
         placeholder='Select a target'
         items={['wpe', 'web', 'redis']}
-        extra={['Host OS']}
+        onItemChange={action('onItemChange')}
+      />
+    )
+  })
+  .addWithInfo('Prefix', () => {
+    return (
+      <BadgeSelect
+        placeholder='Select a target'
+        items={['wpe', 'web', 'redis']}
+        extraPrefix={['Host OS']}
+        onItemChange={action('onItemChange')}
+      />
+    )
+  })
+  .addWithInfo('Suffix', () => {
+    return (
+      <BadgeSelect
+        placeholder='Select a target'
+        items={['wpe', 'web', 'redis']}
+        extraSuffix={['Host OS']}
         onItemChange={action('onItemChange')}
       />
     )

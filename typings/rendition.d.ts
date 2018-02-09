@@ -143,6 +143,8 @@ declare module 'rendition' {
 
 	interface BadgeSelectProps extends DropDownButtonProps {
 		items: string[];
+		extraPrefix?: string[];
+		extraSuffix?: string[];
 		extra?: string[];
 		onItemChange?: (value: string) => void;
 		defaultSelected?: string;
@@ -193,6 +195,10 @@ declare module 'rendition' {
 		DeviceStatusGaugeProps,
 		any
 	> {}
+
+	interface DividerProps extends DefaultProps {
+		height?: number;
+	}
 
 	class Divider extends RenderableElementWithProps<DefaultProps, any> {}
 
