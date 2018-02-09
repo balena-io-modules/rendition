@@ -2,6 +2,7 @@ import assign = require('lodash/assign');
 import cloneDeep = require('lodash/cloneDeep');
 import find = require('lodash/find');
 import first = require('lodash/first');
+import get = require('lodash/get');
 import set = require('lodash/set');
 import * as moment from 'moment';
 import * as React from 'react';
@@ -89,7 +90,10 @@ interface FiltersState {
 class Filters extends React.Component<FiltersProps, FiltersState> {
 	constructor(props: FiltersProps) {
 		super(props);
-		this.handleEditChange = this.handleEditChange.bind(this);
+		this.handleFilterFormChange = this.handleFilterFormChange.bind(this);
+		this.handleExtraFilterFormChange = this.handleExtraFilterFormChange.bind(
+			this,
+		);
 		this.generateFreshEdit = this.generateFreshEdit.bind(this);
 
 		const { rules } = this.props;
@@ -151,7 +155,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		edit.label = inputModels[edit.name!].label;
 		edit.type = inputModels[edit.name!].type;
 
-		return this.setDefaultEditData(edit, edit.name!);
+		return this.getDefaultEditData(edit, edit.name!);
 	}
 
 	addFilterRule(rule: FilterRule) {
@@ -220,7 +224,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		this.filterAndSetRules(updatedRules);
 	}
 
-	setDefaultEditData(data: Partial<FilterRule>, value: string) {
+	getDefaultEditData(data: Partial<FilterRule>, value: string) {
 		const update = cloneDeep(data);
 		const inputModels = sieve.makeFilterInputs(this.props.schema);
 		const model = inputModels[value];
@@ -243,24 +247,51 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		return update;
 	}
 
-	handleEditChange(value: string, attribute: keyof FilterRule) {
-		let update = this.state.edit;
+	updateFilter(
+		filterBase: FilterModel,
+		attribute: keyof FilterModel,
+		value: any,
+	) {
+		let filter = { ...filterBase };
 
-		if (attribute === 'name' && update.name !== value) {
-			update = this.setDefaultEditData(update, value);
+		if (attribute === 'name' && filter.name !== value) {
+			filter = this.getDefaultEditData(filter, value) as FilterModel;
 		} else if (attribute === 'operator') {
-			update.value = null;
-			update[attribute] = value;
+			filter.value = '';
+			filter[attribute] = value;
 		} else {
-			update[attribute] = value;
+			set(filter, attribute, value);
 		}
+
+		return filter;
+	}
+
+	handleFilterFormChange(value: string, attribute: keyof FilterModel) {
+		const update = this.updateFilter(
+			this.state.edit as FilterModel,
+			attribute,
+			value,
+		);
 
 		this.setState({ edit: update });
 	}
 
-	editExtraRule(index: number, value: string, key: keyof FilterRule) {
+	handleExtraFilterFormChange(
+		index: number,
+		value: string,
+		attribute: keyof FilterModel,
+	) {
 		const extra = this.state.edit.extra || { or: [] };
-		set(extra, `or[${index}][${key}]`, value);
+
+		const filter = get(extra.or, index);
+
+		if (!filter) {
+			return;
+		}
+
+		const update = this.updateFilter(filter, attribute, value);
+
+		set(extra.or, index, update);
 		this.setState(prevState => ({ edit: { ...prevState.edit, extra } }));
 	}
 
@@ -373,7 +404,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 						>
 							<form onSubmit={e => e.preventDefault() || this.addRule()}>
 								<FilterForm
-									handleEditChange={this.handleEditChange}
+									handleEditChange={this.handleFilterFormChange}
 									inputModels={inputModels}
 									name={this.state.edit.name!}
 									value={this.state.edit.value!}
@@ -387,10 +418,10 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 											<Text my={2}>OR</Text>
 											<FilterForm
 												handleEditChange={(value, key) =>
-													this.editExtraRule(
+													this.handleExtraFilterFormChange(
 														index,
 														value,
-														key as keyof FilterRule,
+														key as keyof FilterModel,
 													)
 												}
 												inputModels={inputModels}

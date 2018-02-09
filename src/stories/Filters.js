@@ -40,12 +40,12 @@ const setRulesAction = action('Set rules')
 const DateTimeDisplay = PineTypes['Date Time'].Display
 
 const schema = {
-  Name: {
-    type: 'Short Text'
-  },
   Category: {
     type: 'Enum',
     values: uniq(PokeDex.map(p => p.Category))
+  },
+  Name: {
+    type: 'Short Text'
   },
   Description: {
     type: 'Short Text'
