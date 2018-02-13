@@ -403,7 +403,9 @@ declare module 'rendition' {
 		// allowing rows to be selected.
 		onCheck?: (checkedItems: T[]) => void;
 
-		onRowClick?: (row: T) => void;
+		onRowClick?: (row: T, event: React.MouseEvent<HTMLAnchorElement>) => void;
+		getRowHref?: (row: T) => string;
+		rowAnchorAttributes?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
 
 		tbodyPrefix?: JSX.Element | JSX.Element[];
 	}

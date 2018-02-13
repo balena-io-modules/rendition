@@ -119,3 +119,15 @@ storiesOf('Table', module)
       </Container>
     )
   })
+  .addWithInfo('Anchor Rows', () => {
+    return (
+      <Container>
+        <Table
+          columns={columns}
+          data={PokeDex}
+          getRowHref={row => `https://www.pokemon.com/uk/pokedex/${row.Name}`}
+          rowAnchorAttributes={{ target: '_blank' }}
+        />
+      </Container>
+    )
+  })

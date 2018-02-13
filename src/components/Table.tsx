@@ -37,11 +37,18 @@ const BaseTable = styled.table`
 		}
 	}
 
-	> tbody {
-		> tr {
-			cursor: ${(props: any) => (!!props.onRowClick ? 'pointer' : 'auto')};
+	> [data-display='table-body'] {
+		display: table-row-group;
 
-			> td {
+		> [data-display='table-row'] {
+			display: table-row;
+			cursor: ${(props: any) =>
+				!!props.onRowClick || !!props.getRowHref ? 'pointer' : 'auto'};
+			text-decoration: none;
+			color: inherit;
+
+			> [data-display='table-cell'] {
+				display: table-cell;
 				text-align: left;
 				font-size: 14px;
 				padding-top: 14px;
@@ -54,8 +61,12 @@ const BaseTable = styled.table`
 			}
 
 			&: hover {
+				text-decoration: none;
+				color: inherit;
 				${(props: any) =>
-					!!props.onRowClick || !!props.onCheck ? highlightStyle : ''};
+					!!props.onRowClick || !!props.getRowHref || !!props.onCheck
+						? highlightStyle
+						: ''};
 			}
 
 			&[data-checked='true'] {
@@ -197,7 +208,9 @@ export default class Table<T> extends React.Component<
 	}
 
 	render() {
-		const { columns, data, rowKey, ...props } = this.props;
+		const { columns, data, rowAnchorAttributes, rowKey, ...props } = this.props;
+
+		const { getRowHref } = props;
 
 		return (
 			<BaseTable {...props}>
@@ -240,34 +253,41 @@ export default class Table<T> extends React.Component<
 						})}
 					</tr>
 				</thead>
-				<tbody>
+				<div data-display="table-body">
 					{this.props.tbodyPrefix}
 					{map(this.sortData(data), (row, i) => {
 						const isChecked = this.props.onCheck ? this.isChecked(row) : false;
 						return (
-							<tr
+							<a
+								{...rowAnchorAttributes}
+								data-display="table-row"
 								data-checked={isChecked}
+								href={!!getRowHref ? getRowHref(row) : undefined}
 								key={rowKey ? (row[rowKey] as any) : i}
-								onClick={() =>
-									this.props.onRowClick && this.props.onRowClick(row)
+								onClick={e =>
+									this.props.onRowClick && this.props.onRowClick(row, e)
 								}
 							>
 								{this.props.onCheck && (
-									<td>
+									<span data-display="table-cell">
 										<Input
 											checked={isChecked}
 											onChange={() => this.toggleChecked(row)}
 											type="checkbox"
 										/>
-									</td>
+									</span>
 								)}
 								{map(columns, column => {
-									return <td key={column.field}>{renderField(row, column)}</td>;
+									return (
+										<span data-display="table-cell" key={column.field}>
+											{renderField(row, column)}
+										</span>
+									);
 								})}
-							</tr>
+							</a>
 						);
 					})}
-				</tbody>
+				</div>
 			</BaseTable>
 		);
 	}
