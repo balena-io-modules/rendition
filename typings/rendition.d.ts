@@ -502,20 +502,6 @@ declare module 'rendition' {
 
 	class Textarea extends RenderableElementWithProps<TextareaProps, any> {}
 
-	interface TooltipProps extends DefaultProps {
-		message?: string;
-		/** default 'hover' */
-		eventType?: 'click' | 'hover';
-		/** default 'top' */
-		direction?: 'top' | 'bottom' | 'right' | 'left';
-		/** default 2000 */
-		duration?: number;
-		/** default '#000' */
-		bgcolor?: string;
-	}
-
-	class Tooltip extends RenderableElementWithProps<TooltipProps, any> {}
-
 	interface ThemeColorSet {
 		main: string;
 		light: string;
