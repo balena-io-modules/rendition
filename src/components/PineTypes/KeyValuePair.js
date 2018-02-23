@@ -4,6 +4,7 @@ import * as isArray from 'lodash/isArray'
 import * as assign from 'lodash/assign'
 import * as some from 'lodash/some'
 import * as includes from 'lodash/includes'
+import * as isString from 'lodash/isString'
 import * as values from 'lodash/values'
 import * as keys from 'lodash/keys'
 import Input from '../Input'
@@ -162,7 +163,13 @@ const valueOperators = [
 ]
 
 export const Edit = props => {
-  const { value, schema, onChange, operator } = props
+  const { schema, onChange, operator } = props
+  let { value } = props
+
+  // Convert strings to objects
+  if (isString(value)) {
+    value = { [schema.value]: value }
+  }
 
   return (
     <Flex wrap>
