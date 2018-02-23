@@ -18,6 +18,7 @@ import { default as Provider } from './components/Provider'
 import { default as SchemaSieve } from './components/Filters/SchemaSieve'
 import { default as Select } from './components/Select'
 import { default as Table } from './components/Table'
+import { default as Terminal } from './components/Terminal'
 import { default as Text } from './components/Text'
 import { default as Textarea } from './components/Textarea'
 import { default as Tooltip } from './components/Tooltip'
@@ -62,6 +63,7 @@ export {
   Table,
   Text,
   Textarea,
+  Terminal,
   Tooltip,
   Theme
 }

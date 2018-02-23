@@ -1,5 +1,6 @@
 declare module 'rendition' {
 	import { Component } from 'react';
+	import * as Xterm from 'xterm';
 
 	type ResponsiveStyle = string | number | Array<string | number>;
 
@@ -411,6 +412,15 @@ declare module 'rendition' {
 	}
 
 	class Table<T> extends RenderableElementWithProps<TableProps<T>, any> {}
+
+	interface TerminalProps {
+		ttyInstance?: Xterm.Terminal | null;
+		nonInteractive?: boolean;
+		color?: string;
+		config?: Xterm.ITerminalOptions;
+	}
+
+	class Terminal extends RenderableElementWithProps<TerminalProps, any> {}
 
 	interface TextProps extends DefaultProps {
 		monospace?: boolean;
