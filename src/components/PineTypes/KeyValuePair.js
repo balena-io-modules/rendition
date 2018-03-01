@@ -168,7 +168,15 @@ export const Edit = props => {
 
   // Convert strings to objects
   if (isString(value)) {
-    value = { [schema.value]: value }
+    let p = {}
+    if (includes(valueOperators, operator)) {
+      p[schema.value] = value
+    }
+    if (includes(keyOperators, operator)) {
+      p[schema.key] = value
+    }
+
+    value = p
   }
 
   return (
