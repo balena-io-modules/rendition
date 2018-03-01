@@ -13,8 +13,8 @@
     "start": "start-storybook -p 6006",
     "build": "rimraf dist && tsc",
     "build:storybook": "build-storybook -o .out",
-    "test": "npm run lint && npm run mocha",
-    "mocha": "mocha --require ts-node/register test/*.spec.js",
+    "test": "npm run lint && npm run jest",
+    "jest": "jest __tests__",
     "eslint": "eslint src test",
     "eslint-fix": "eslint src test --fix",
     "tslint": "tslint -t stylish \"src/**/*.ts\" \"src/**/*.tsx\" \"typings.d.ts\"",
@@ -29,10 +29,10 @@
   "devDependencies": {
     "@storybook/addon-info": "^3.3.13",
     "@storybook/react": "^3.3.13",
+    "@types/jest": "^22.1.4",
     "babel-plugin-transform-react-jsx": "^6.23.0",
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-stage-3": "^6.24.1",
-    "chai": "^4.1.2",
     "css-loader": "^0.28.5",
     "eslint": "^4.13.1",
     "eslint-config-standard": "^10.2.1",
@@ -45,13 +45,16 @@
     "gh-pages": "1.0.0",
     "git-url-parse": "^7.0.0",
     "husky": "^0.14.3",
+    "jest": "^22.4.2",
+    "jest-extended": "^0.6.0",
     "jsdom": "^11.6.2",
     "lint-staged": "^4.1.1",
-    "mocha": "^3.5.0",
     "prettier": "^1.9.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-test-renderer": "^16.2.0",
     "rimraf": "^2.6.2",
+    "ts-jest": "^22.4.0",
     "ts-loader": "^3.0.2",
     "ts-node": "^3.3.0",
     "tslint": "^5.8.0",
@@ -96,6 +99,32 @@
       "prettier --config .prettierrc-ts --write",
       "tslint --fix",
       "git add"
+    ]
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "jest-extended",
+    "verbose": true,
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest",
+      "^.+\\.js$": "babel-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "skipBabel": true
+      }
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
     ]
   }
 }

@@ -1,4 +1,4 @@
-import * as moment from 'moment'
+const moment = require('moment')
 import * as React from 'react'
 import Input from '../Input'
 

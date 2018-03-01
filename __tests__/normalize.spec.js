@@ -1,9 +1,8 @@
-/* eslint-env mocha */
-import { expect } from 'chai'
+/* globals expect, describe, it */
 import { JSDOM } from 'jsdom'
 global.document = (new JSDOM('')).window.document
 
-import { PineTypes } from '../src'
+import PineTypes from '../src/components/PineTypes'
 
 /**
  * For some types, the correct normalization behaviour is to leave the value unmodified
@@ -15,29 +14,29 @@ describe('PineTypes', () => {
      */
     describe('Boolean', () => {
       it('should correctly normalize the boolean value `true`', () =>
-        expect(PineTypes.Boolean.normalize(true)).to.be.true)
+        expect(PineTypes.Boolean.normalize(true)).toBe(true))
       it('should correctly normalize the boolean value `false`', () =>
-        expect(PineTypes.Boolean.normalize(false)).to.be.false)
+        expect(PineTypes.Boolean.normalize(false)).toBe(false))
       it('should correctly normalize the string value `True`', () =>
-        expect(PineTypes.Boolean.normalize('True')).to.be.true)
+        expect(PineTypes.Boolean.normalize('True')).toBe(true))
       it('should correctly normalize the string value `False`', () =>
-        expect(PineTypes.Boolean.normalize('False')).to.be.false)
+        expect(PineTypes.Boolean.normalize('False')).toBe(false))
       it('should correctly normalize the string value `1`', () =>
-        expect(PineTypes.Boolean.normalize('1')).to.be.true)
+        expect(PineTypes.Boolean.normalize('1')).toBe(true))
       it('should correctly normalize the string value `0`', () =>
-        expect(PineTypes.Boolean.normalize('0')).to.be.false)
+        expect(PineTypes.Boolean.normalize('0')).toBe(false))
       it('should correctly normalize the string value `Yes`', () =>
-        expect(PineTypes.Boolean.normalize('Yes')).to.be.true)
+        expect(PineTypes.Boolean.normalize('Yes')).toBe(true))
       it('should correctly normalize the string value `No`', () =>
-        expect(PineTypes.Boolean.normalize('No')).to.be.false)
+        expect(PineTypes.Boolean.normalize('No')).toBe(false))
       it('should correctly normalize the number value `1`', () =>
-        expect(PineTypes.Boolean.normalize(1)).to.be.true)
+        expect(PineTypes.Boolean.normalize(1)).toBe(true))
       it('should correctly normalize the number value `0`', () =>
-        expect(PineTypes.Boolean.normalize(0)).to.be.false)
+        expect(PineTypes.Boolean.normalize(0)).toBe(false))
       it('should correctly normalize null values', () =>
-        expect(PineTypes.Boolean.normalize(null)).to.be.false)
+        expect(PineTypes.Boolean.normalize(null)).toBe(false))
       it('should correctly normalize undefined values', () =>
-        expect(PineTypes.Boolean.normalize(undefined)).to.be.false)
+        expect(PineTypes.Boolean.normalize(undefined)).toBe(false))
     })
 
     /**
@@ -45,19 +44,19 @@ describe('PineTypes', () => {
      */
     describe('Case Insensitive Text', () => {
       it('should correctly normalize values', () => {
-        expect(PineTypes['Case Insensitive Text'].normalize(0)).to.equal('0')
+        expect(PineTypes['Case Insensitive Text'].normalize(0)).toBe('0')
         expect(
           PineTypes['Case Insensitive Text'].normalize(
             'lorem ipsum dolor sit amet'
           )
-        ).to.equal('lorem ipsum dolor sit amet')
+        ).toBe('lorem ipsum dolor sit amet')
       })
       it('should correctly normalize null values', () =>
-        expect(PineTypes['Case Insensitive Text'].normalize(null)).to.equal(''))
+        expect(PineTypes['Case Insensitive Text'].normalize(null)).toBe(''))
       it('should correctly normalize undefined values', () =>
         expect(
           PineTypes['Case Insensitive Text'].normalize(undefined)
-        ).to.equal(''))
+        ).toBe(''))
     })
 
     /**
@@ -65,7 +64,7 @@ describe('PineTypes', () => {
      */
     describe('Date', () => {
       it('should correctly normalize values', () => {
-        expect(PineTypes.Date.normalize(0)).to.equal(0)
+        expect(PineTypes.Date.normalize(0)).toBe(0)
       })
     })
 
@@ -74,7 +73,7 @@ describe('PineTypes', () => {
      */
     describe('Date Time', () => {
       it('should correctly normalize values', () => {
-        expect(PineTypes['Date Time'].normalize(0)).to.equal(0)
+        expect(PineTypes['Date Time'].normalize(0)).toBe(0)
       })
     })
 
@@ -83,7 +82,7 @@ describe('PineTypes', () => {
      */
     describe('Enum', () => {
       it('should correctly normalize values', () => {
-        expect(PineTypes.Enum.normalize(0)).to.equal(0)
+        expect(PineTypes.Enum.normalize(0)).toBe(0)
       })
     })
 
@@ -92,20 +91,20 @@ describe('PineTypes', () => {
      */
     describe('Integer', () => {
       it('should correctly normalize floating point values', () => {
-        expect(PineTypes.Integer.normalize(1.2)).to.equal(1)
-        expect(PineTypes.Integer.normalize(1.8)).to.equal(2)
+        expect(PineTypes.Integer.normalize(1.2)).toBe(1)
+        expect(PineTypes.Integer.normalize(1.8)).toBe(2)
       })
 
       it('should correctly normalize string values', () => {
-        expect(PineTypes.Integer.normalize('1.2')).to.equal(1)
-        expect(PineTypes.Integer.normalize('1.8')).to.equal(2)
-        expect(PineTypes.Integer.normalize('foobar')).to.equal(0)
+        expect(PineTypes.Integer.normalize('1.2')).toBe(1)
+        expect(PineTypes.Integer.normalize('1.8')).toBe(2)
+        expect(PineTypes.Integer.normalize('foobar')).toBe(0)
       })
 
       it('should correctly normalize null values', () =>
-        expect(PineTypes.Integer.normalize(null)).to.equal(0))
+        expect(PineTypes.Integer.normalize(null)).toBe(0))
       it('should correctly normalize undefined values', () =>
-        expect(PineTypes.Integer.normalize(undefined)).to.equal(0))
+        expect(PineTypes.Integer.normalize(undefined)).toBe(0))
     })
 
     /**
@@ -113,20 +112,20 @@ describe('PineTypes', () => {
      */
     describe('Real', () => {
       it('should correctly normalize number values', () => {
-        expect(PineTypes.Real.normalize(1.2)).to.equal(1.2)
-        expect(PineTypes.Real.normalize(1.8)).to.equal(1.8)
+        expect(PineTypes.Real.normalize(1.2)).toBe(1.2)
+        expect(PineTypes.Real.normalize(1.8)).toBe(1.8)
       })
 
       it('should correctly normalize string values', () => {
-        expect(PineTypes.Real.normalize('1.2')).to.equal(1.2)
-        expect(PineTypes.Real.normalize('1.8')).to.equal(1.8)
-        expect(PineTypes.Real.normalize('foobar')).to.equal(0)
+        expect(PineTypes.Real.normalize('1.2')).toBe(1.2)
+        expect(PineTypes.Real.normalize('1.8')).toBe(1.8)
+        expect(PineTypes.Real.normalize('foobar')).toBe(0)
       })
 
       it('should correctly normalize null values', () =>
-        expect(PineTypes.Real.normalize(null)).to.equal(0))
+        expect(PineTypes.Real.normalize(null)).toBe(0))
       it('should correctly normalize undefined values', () =>
-        expect(PineTypes.Real.normalize(undefined)).to.equal(0))
+        expect(PineTypes.Real.normalize(undefined)).toBe(0))
     })
 
     /**
@@ -134,12 +133,12 @@ describe('PineTypes', () => {
      */
     describe('Semver', () => {
       it('should correctly normalize values', () => {
-        expect(PineTypes.Semver.normalize(0)).to.equal('0')
+        expect(PineTypes.Semver.normalize(0)).toBe('0')
       })
       it('should correctly normalize null values', () =>
-        expect(PineTypes.Semver.normalize(null)).to.equal(''))
+        expect(PineTypes.Semver.normalize(null)).toBe(''))
       it('should correctly normalize undefined values', () =>
-        expect(PineTypes.Semver.normalize(undefined)).to.equal(''))
+        expect(PineTypes.Semver.normalize(undefined)).toBe(''))
     })
 
     /**
@@ -147,12 +146,12 @@ describe('PineTypes', () => {
      */
     describe('Semver Range', () => {
       it('should correctly normalize values', () => {
-        expect(PineTypes['Semver Range'].normalize(0)).to.equal('0')
+        expect(PineTypes['Semver Range'].normalize(0)).toBe('0')
       })
       it('should correctly normalize null values', () =>
-        expect(PineTypes['Semver Range'].normalize(null)).to.equal(''))
+        expect(PineTypes['Semver Range'].normalize(null)).toBe(''))
       it('should correctly normalize undefined values', () =>
-        expect(PineTypes['Semver Range'].normalize(undefined)).to.equal(''))
+        expect(PineTypes['Semver Range'].normalize(undefined)).toBe(''))
     })
 
     /**
@@ -160,15 +159,15 @@ describe('PineTypes', () => {
      */
     describe('Short Text', () => {
       it('should correctly normalize values', () => {
-        expect(PineTypes['Short Text'].normalize(0)).to.equal('0')
+        expect(PineTypes['Short Text'].normalize(0)).toBe('0')
         expect(
           PineTypes['Short Text'].normalize('lorem ipsum dolor sit amet')
-        ).to.equal('lorem ipsum dolor sit amet')
+        ).toBe('lorem ipsum dolor sit amet')
       })
       it('should correctly normalize null values', () =>
-        expect(PineTypes['Short Text'].normalize(null)).to.equal(''))
+        expect(PineTypes['Short Text'].normalize(null)).toBe(''))
       it('should correctly normalize undefined values', () =>
-        expect(PineTypes['Short Text'].normalize(undefined)).to.equal(''))
+        expect(PineTypes['Short Text'].normalize(undefined)).toBe(''))
     })
 
     /**
@@ -176,15 +175,15 @@ describe('PineTypes', () => {
      */
     describe('Text', () => {
       it('should correctly normalize values', () => {
-        expect(PineTypes.Text.normalize(0)).to.equal('0')
-        expect(PineTypes.Text.normalize('lorem ipsum dolor sit amet')).to.equal(
+        expect(PineTypes.Text.normalize(0)).toBe('0')
+        expect(PineTypes.Text.normalize('lorem ipsum dolor sit amet')).toBe(
           'lorem ipsum dolor sit amet'
         )
       })
       it('should correctly normalize null values', () =>
-        expect(PineTypes.Text.normalize(null)).to.equal(''))
+        expect(PineTypes.Text.normalize(null)).toBe(''))
       it('should correctly normalize undefined values', () =>
-        expect(PineTypes.Text.normalize(undefined)).to.equal(''))
+        expect(PineTypes.Text.normalize(undefined)).toBe(''))
     })
 
     /**
@@ -192,7 +191,7 @@ describe('PineTypes', () => {
      */
     describe('Time', () => {
       it('should correctly normalize values', () => {
-        expect(PineTypes.Time.normalize(0)).to.equal(0)
+        expect(PineTypes.Time.normalize(0)).toBe(0)
       })
     })
   })

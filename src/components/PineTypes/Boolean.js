@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Select from '../Select'
-import * as isBoolean from 'lodash/isBoolean'
-import * as isString from 'lodash/isString'
+const isBoolean = require('lodash/isBoolean')
+const isString = require('lodash/isString')
 
 export const Edit = ({ value, onChange, ...props }) => (
   <Select

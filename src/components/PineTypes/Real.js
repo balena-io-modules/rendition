@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as isNumber from 'lodash/isNumber'
+const isNumber = require('lodash/isNumber')
 import Input from '../Input'
 
 const pF = val => parseFloat(val, 10)

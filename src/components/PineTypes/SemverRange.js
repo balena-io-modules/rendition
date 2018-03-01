@@ -1,6 +1,6 @@
 import * as semver from 'resin-semver'
 import * as React from 'react'
-import * as isString from 'lodash/isString'
+const isString = require('lodash/isString')
 import Input from '../Input'
 
 /**

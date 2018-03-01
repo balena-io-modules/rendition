@@ -1,5 +1,5 @@
-import * as RegexParser from 'regex-parser'
-import * as isString from 'lodash/isString'
+const RegexParser = require('regex-parser')
+const isString = require('lodash/isString')
 import * as React from 'react'
 import Input from '../Input'
 import * as showdown from 'showdown'
