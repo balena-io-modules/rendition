@@ -9,7 +9,7 @@ declare module 'rendition' {
 		w?: ResponsiveStyle;
 		fontSize?: ResponsiveStyle;
 		f?: ResponsiveStyle;
-		color?: ResponsiveStyle;
+		color?: string;
 		bg?: ResponsiveStyle;
 		m?: ResponsiveStyle;
 		mt?: ResponsiveStyle;
@@ -30,8 +30,8 @@ declare module 'rendition' {
 	type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left';
 	interface TooltipProps {
 		text: string;
-		trigger: 'click' | 'hover';
-		placement: TooltipPlacement;
+		trigger?: 'click' | 'hover';
+		placement?: TooltipPlacement;
 	}
 
 	interface Tooltip {
@@ -142,10 +142,6 @@ declare module 'rendition' {
 
 	class Alert extends RenderableElementWithProps<AlertProps, any> {}
 
-	interface BannerProps extends DefaultProps {
-		backgroundImage?: string;
-	}
-
 	interface BadgeProps extends BoxProps, Coloring {
 		text: string;
 		small?: boolean;
@@ -165,7 +161,12 @@ declare module 'rendition' {
 
 	class BadgeSelect extends RenderableElementWithProps<BadgeSelectProps, any> {}
 
-	class BannerProps extends RenderableElementWithProps<BoxProps, any> {}
+	interface BannerProps extends DefaultProps {
+		backgroundImage?: string;
+		minHeight?: string;
+	}
+
+	class Banner extends RenderableElementWithProps<BoxProps, any> {}
 
 	interface BoxProps extends DefaultProps {
 		flex?: string | string[];
@@ -185,8 +186,8 @@ declare module 'rendition' {
 
 	class Button extends RenderableElementWithProps<ButtonProps, any> {}
 
-	interface CodeWithCopyProps extends DefaultProps {
-		copy: string;
+	interface CodeWithCopyProps extends DefaultProps, Tooltip {
+		copy?: string;
 		text: string;
 	}
 

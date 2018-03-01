@@ -1,5 +1,8 @@
 /* eslint-env mocha */
 import { expect } from 'chai'
+import { JSDOM } from 'jsdom'
+global.document = (new JSDOM('')).window.document
+
 import { SchemaSieve } from '../src'
 
 const sieve = SchemaSieve()

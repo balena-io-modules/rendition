@@ -1,16 +1,8 @@
 import * as React from 'react';
+import { ButtonProps } from 'rendition';
 import styled, { StyledFunction, withTheme } from 'styled-components';
 import hoc from '../hoc';
 import { bold, darken, getColor, getColoringType, normal, px } from '../utils';
-
-export interface ButtonProps extends DefaultProps, Coloring, Sizing {
-	square?: boolean;
-	disabled?: boolean;
-	outline?: boolean;
-	plaintext?: boolean;
-	underline?: boolean;
-	iconElement?: JSX.Element;
-}
 
 interface ThemedButtonProps extends ButtonProps {
 	theme: Theme;

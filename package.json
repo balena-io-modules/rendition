@@ -45,6 +45,7 @@
     "gh-pages": "1.0.0",
     "git-url-parse": "^7.0.0",
     "husky": "^0.14.3",
+    "jsdom": "^11.6.2",
     "lint-staged": "^4.1.1",
     "mocha": "^3.5.0",
     "prettier": "^1.9.2",

@@ -64,6 +64,10 @@ npm run publish-storybook
 npm test
 ```
 
+## Upgrading
+
+[Upgrading from 3.x to 4.x](docs/migrating_3x-4x.md)
+
 [react]:https://reactjs.org/
 [recompose]:https://github.com/acdlite/recompose
 [styled-components]:https://www.styled-components.com/

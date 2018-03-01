@@ -1,7 +1,18 @@
 # Migrating from v3.x to v4.x
 
-Version 4 of Rendition includes many breaking changes. This document aims to
+Version 4 of Rendition includes some breaking changes. This document aims to
 list these changes and provide a migration path for users wanting to upgrade.
+
+## Dependency updates
+
+The following dependencies have been updated to their latest versions:
+- `react`
+- `react-dom`
+- `@types/react`
+- `@types/react-dom`
+- `grid-styled`
+- `resin-semver`
+- `styled-components`
 
 ## Tooltips
 The tooltip component has been removed in v4. To add a tooltip to your
