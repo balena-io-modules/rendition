@@ -420,7 +420,14 @@ declare module 'rendition' {
 		config?: Xterm.ITerminalOptions;
 	}
 
-	class Terminal extends RenderableElementWithProps<TerminalProps, any> {}
+	class Terminal extends RenderableElementWithProps<TerminalProps, any> {
+		readonly tty: Xterm.Terminal;
+		resize: () => void;
+		clear: () => void;
+		writeln: (line: string) => void;
+		write: (line: string) => void;
+		destroy: () => void;
+	}
 
 	interface TextProps extends DefaultProps {
 		monospace?: boolean;

@@ -146,7 +146,7 @@ interface ThemedTerminalProps extends TerminalProps {
 }
 
 class Terminal extends React.Component<ThemedTerminalProps, {}> {
-	private tty: Xterm;
+	readonly tty: Xterm;
 	// Used as the element ID to mount XTERM into
 	private mountElementId: string;
 
