@@ -1,14 +1,20 @@
 export class Repl {
-  constructor (gotLineCallback, element) {
+  constructor (gotLineCallback) {
     this.state = {
       history: [],
       input: ''
     }
 
-    this.gotLineCallback = gotLineCallback
     this.replRoot = {}
+    this.gotLineCallback = gotLineCallback
+
+    this.open()
+  }
+
+  open () {
     this.iframe = document.createElement('iframe')
-    element.appendChild(this.iframe)
+    this.iframe.style.display = 'none'
+    document.body.appendChild(this.iframe)
 
     this.iframe.contentWindow.REPL_LOG_CAPTURE = (...args) => {
       args.forEach(arg => this.state.history.push(arg))
@@ -34,5 +40,9 @@ export class Repl {
     if (this.gotLineCallback) {
       this.gotLineCallback(result)
     }
+  }
+
+  destroy () {
+    this.iframe.remove()
   }
 }

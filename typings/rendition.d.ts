@@ -415,6 +415,8 @@ declare module 'rendition' {
 
 	interface TerminalProps {
 		ttyInstance?: Xterm.Terminal | null;
+		// Prevents tty instance from being destroyed when terminal unmounts
+		persistent?: boolean;
 		nonInteractive?: boolean;
 		color?: string;
 		config?: Xterm.ITerminalOptions;
