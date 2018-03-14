@@ -4,7 +4,7 @@ import * as ReactDOM from 'react-dom';
 import { TerminalProps } from 'rendition';
 import styled from 'styled-components';
 import * as uuid from 'uuid';
-import { Terminal as Xterm } from 'xterm';
+import { ITerminalOptions, Terminal as Xterm } from 'xterm';
 import { fit as fitTerm } from 'xterm/dist/addons/fit/fit';
 import Theme from '../theme';
 import { Box } from './Grid';
@@ -149,15 +149,15 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 	readonly tty: Xterm;
 	// Used as the element ID to mount XTERM into
 	private mountElementId: string;
+	private termConfig: ITerminalOptions;
 
 	constructor(props: ThemedTerminalProps) {
 		super(props);
 
-		const termConfig = _.assign({}, props.config, {
+		this.termConfig = _.assign({}, props.config, {
 			cols: 80,
 			cursorBlink: false,
 			rows: 24,
-			useStyle: true,
 			fontFamily: Theme.monospace,
 			lineHeight: 1.4,
 			theme: {
@@ -167,7 +167,13 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 		});
 
 		// Allow an existing tty instance to be rebound to this react element
-		this.tty = this.props.ttyInstance || new Xterm(termConfig);
+		if (this.props.ttyInstance) {
+			this.tty = this.props.ttyInstance;
+		} else {
+			// Xterm mutates the options object passed into it, so we have to clone it
+			// here
+			this.tty = new Xterm(_.cloneDeep(this.termConfig));
+		}
 
 		this.mountElementId = `terminal-${uuid.v1()}`;
 
@@ -176,6 +182,13 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 
 	componentDidMount() {
 		this.open();
+
+		if (this.props.ttyInstance) {
+			// Xterm nullifies the 'theme' option after opening, so we have to set it
+			// again after a new renderer is created
+			// see: https://github.com/xtermjs/xterm.js/issues/1323
+			this.tty.setOption('theme', this.termConfig.theme);
+		}
 
 		// Wait before writing to the xterm instance, so that the term can be sized to the screen correctly
 		setTimeout(() => {
@@ -200,17 +213,18 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 
 	componentWillUnmount() {
 		window.removeEventListener('resize', this.resize);
-		this.tty.destroy();
+
+		// Don't destroy tty on unmount if this Terminal is persistent
+		if (!this.props.persistent) {
+			this.tty.destroy();
+		}
 	}
 
+	// Explicitly calling '.destroy()' will always work, even with the 'persistent' property
 	destroy() {
 		window.removeEventListener('resize', this.resize);
 
-		// If the Terminal was not instantiated with an existing tty instance,
-		// destroy the instance when the component unmounts
-		if (!this.props.ttyInstance) {
-			this.tty.destroy();
-		}
+		this.tty.destroy();
 	}
 
 	open() {

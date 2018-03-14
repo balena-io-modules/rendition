@@ -1,5 +1,4 @@
 import * as React from 'react'
-import * as ReactDOM from 'react-dom'
 import { storiesOf } from '@storybook/react'
 import { Box, Terminal } from '../'
 import { output1 } from './assets/tty-output'
@@ -42,7 +41,7 @@ class Logger extends React.Component {
   }
 }
 
-class InteractiveTerm extends React.Component {
+class InteractiveTerm extends Terminal {
   constructor (props) {
     super(props)
 
@@ -50,56 +49,132 @@ class InteractiveTerm extends React.Component {
   }
 
   componentDidMount () {
-    this._repl = new Repl(line => {
-      if (this.term) {
-        this.term.writeln(line)
-        this.term.tty.prompt()
-      }
-    }, ReactDOM.findDOMNode(this))
+    super.componentDidMount()
 
-    this.term.tty.prompt = () => {
-      this.term.tty.write('\u001b[33m$ \u001b[0m')
+    if (!this.props.ttyInstance) {
+      this.tty._repl = new Repl(line => {
+        if (this.tty) {
+          this.writeln(line)
+          this.tty.prompt()
+        }
+      })
+
+      this.tty.prompt = () => {
+        this.tty.write('\u001b[33m$ \u001b[0m')
+      }
+
+      this.tty.writeln(
+        '\u001b[32mThis is a basic interactive representation of a web browser javascript console\u001b[0m'
+      )
+      this.tty.writeln(
+        '\u001b[32mType some keys and commands to play around\u001b[0m'
+      )
+      this.tty.prompt()
+
+      this.tty.on('key', (key, ev) => {
+        const printable =
+          !ev.altKey && !ev.altGraphKey && !ev.ctrlKey && !ev.metaKey
+        // Ignore arrow keys
+        if (
+          ev.code === 'ArrowUp' ||
+          ev.code === 'ArrowDown' ||
+          ev.code === 'ArrowLeft' ||
+          ev.code === 'ArrowRight'
+        ) {
+          return
+        }
+
+        if (ev.keyCode === 13) {
+          this.write('\r\n')
+          this.tty._repl.process(this.input)
+          this.input = ''
+        } else if (ev.keyCode === 8) {
+          if (this.tty.buffer.x > 2) {
+            this.tty.write('\b \b')
+            this.input = this.input.slice(0, -1)
+          }
+        } else if (printable) {
+          this.input += key
+          this.tty.write(key)
+        }
+      })
+    }
+  }
+
+  componentWillUnmount () {
+    if (!this.props.persistent) {
+      this.tty._repl.destroy()
     }
 
-    this.term.tty.writeln(
-      '\u001b[32mThis is a basic interactive representation of a web browser javascript console\u001b[0m'
-    )
-    this.term.tty.writeln(
-      '\u001b[32mType some keys and commands to play around\u001b[0m'
-    )
-    this.term.tty.prompt()
+    super.componentWillUnmount()
+  }
+}
 
-    this.term.tty.on('key', (key, ev) => {
-      const printable =
-        !ev.altKey && !ev.altGraphKey && !ev.ctrlKey && !ev.metaKey
-      // Ignore arrow keys
-      if (
-        ev.code === 'ArrowUp' ||
-        ev.code === 'ArrowDown' ||
-        ev.code === 'ArrowLeft' ||
-        ev.code === 'ArrowRight'
-      ) {
-        return
+class PersistentTerm extends React.Component {
+  constructor (props) {
+    super(props)
+    const items = [
+      {
+        name: 'terminal 1',
+        term: null
+      },
+      {
+        name: 'terminal 2',
+        term: null
+      },
+      {
+        name: 'terminal 3',
+        term: null
       }
+    ]
 
-      if (ev.keyCode === 13) {
-        this.term.write('\r\n')
-        this._repl.process(this.input)
-        this.input = ''
-      } else if (ev.keyCode === 8) {
-        if (this.term.tty.buffer.x > 2) {
-          this.term.tty.write('\b \b')
-          this.input = this.input.slice(0, -1)
-        }
-      } else if (printable) {
-        this.input += key
-        this.term.tty.write(key)
-      }
-    })
+    this.state = {
+      selectedTerm: items[0]
+    }
+
+    this.items = items
+  }
+
+  setTerm (name) {
+    this.setState({ selectedTerm: this.items.find(x => x.name === name) })
+  }
+
+  setActiveTty (tty) {
+    const selectedTerm = this.items.find(
+      x => x.name === this.state.selectedTerm.name
+    )
+    selectedTerm.term = tty
   }
 
   render () {
-    return <Terminal ref={term => (this.term = term)} />
+    const activeTerm = this.items.find(
+      x => x.name === this.state.selectedTerm.name
+    )
+    return (
+      <Box>
+        <select
+          value={this.state.selectedTerm.name}
+          onChange={e => this.setTerm(e.target.value)}
+        >
+          {this.items.map(x => <option key={x.name}>{x.name}</option>)}
+        </select>
+        <Box style={{ height: 500 }}>
+          {this.items.map(t => {
+            if (t.name !== activeTerm.name) {
+              return null
+            }
+            return (
+              <InteractiveTerm
+                key={t.name}
+                persistent
+                ttyInstance={activeTerm.term && activeTerm.term.tty}
+                ref={term => this.setActiveTty(term)}
+              />
+            )
+          })}
+        </Box>
+      </Box>
+    )
   }
 }
 
@@ -115,6 +190,13 @@ storiesOf('Terminal', module)
     return (
       <Box p={30} style={{ height: 500 }}>
         <Logger termProps={{ nonInteractive: true }} />
+      </Box>
+    )
+  })
+  .addWithInfo('Persistent', () => {
+    return (
+      <Box p={30}>
+        <PersistentTerm />
       </Box>
     )
   })

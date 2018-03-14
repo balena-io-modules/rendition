@@ -1,6 +1,6 @@
 {
   "name": "rendition",
-  "version": "3.25.5",
+  "version": "3.25.6",
   "description": "Resin Components Component",
   "repository": {
     "type": "git",
@@ -84,7 +84,7 @@
     "styled-system": "^1.0.5",
     "tag-hoc": "1.0.0",
     "uuid": "^3.2.1",
-    "xterm": "^3.1.0"
+    "xterm": "^3.2.0"
   },
   "lint-staged": {
     "{src, test}/**/*.js": [
