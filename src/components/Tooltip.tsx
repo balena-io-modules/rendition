@@ -31,4 +31,4 @@ const Tooltip = styled(Base)`
 	}
 `;
 
-export default compose(withTheme, hoc)(Tooltip);
+export default compose<{}, TooltipProps>(withTheme, hoc)(Tooltip);

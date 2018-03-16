@@ -450,6 +450,25 @@ declare module 'rendition' {
 
 	class Text extends RenderableElementWithProps<TextProps, any> {}
 
+	// also expose the HTML tag variant constructors
+	// that we support & make available as static properties
+	namespace Text {
+		/* tslint:disable:class-name */
+		class span extends Text {}
+		class p extends Text {}
+		/* tslint:enable:class-name */
+	}
+
+	interface TextWithCopyProps extends DefaultProps {
+		copy: string;
+		showCopyButton?: 'hover' | 'always';
+	}
+
+	class TextWithCopy extends RenderableElementWithProps<
+		TextWithCopyProps,
+		any
+	> {}
+
 	interface TextareaProps extends DefaultProps {
 		autoComplete?: string;
 		autoFocus?: boolean;

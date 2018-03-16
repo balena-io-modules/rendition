@@ -2,6 +2,7 @@ import * as Color from 'color';
 import find = require('lodash/find');
 import get = require('lodash/get');
 import isObject = require('lodash/isObject');
+import { ThemedStyledFunction } from 'styled-components';
 
 interface ThemedDefaultProps extends DefaultProps {
 	theme: Theme;
@@ -44,7 +45,7 @@ export const randomString = (length = 16) => {
 	return text;
 };
 
-export const stopEvent = (e: Event) => {
+export const stopEvent = <T>(e: Event | React.MouseEvent<T>) => {
 	e.preventDefault();
 	e.stopPropagation();
 };
@@ -93,3 +94,11 @@ export const getColor = (
 
 export const monospace = (props: { monospace?: boolean; theme: Theme }) =>
 	props.monospace ? { fontFamily: props.theme.monospace } : null;
+
+// TODO: replace the method call with a simple interface
+// utilizing `infer`, once TS 2.8 is out
+export function withProps<U>() {
+	return <P, T, O>(
+		fn: ThemedStyledFunction<P, T, O>,
+	): ThemedStyledFunction<P & U, T, O & U> => fn;
+}
