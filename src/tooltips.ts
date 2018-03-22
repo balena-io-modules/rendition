@@ -71,8 +71,13 @@ export class Tooltips {
 	private tooltipElementInner: HTMLDivElement;
 	private tooltipElementArrow: HTMLDivElement;
 	private hideTimeout: number;
+	private initialised: boolean = false;
 
-	constructor() {
+	initialiseElements() {
+		if (this.initialised || !document || !document.body) {
+			return;
+		}
+
 		const tooltipElement = document.createElement('div');
 		tooltipElement.setAttribute(
 			'style',
@@ -133,6 +138,8 @@ export class Tooltips {
 		this.tooltipElement = tooltipElement;
 		this.tooltipElementInner = tooltipElementInner;
 		this.tooltipElementArrow = tooltipArrow;
+
+		this.initialised = true;
 	}
 
 	bindProps(props: any) {
@@ -176,6 +183,8 @@ export class Tooltips {
 	}
 
 	show(e: Event, tooltipText: string, placement?: Placement): void {
+		this.initialiseElements();
+
 		// Set the tooltip text
 		this.tooltipElementInner.innerText = tooltipText;
 
@@ -229,6 +238,7 @@ export class Tooltips {
 	}
 
 	hide(): void {
+		this.initialiseElements();
 		this.tooltipElement.style.visibility = 'hidden';
 	}
 }
