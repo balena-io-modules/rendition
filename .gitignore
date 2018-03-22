@@ -99,3 +99,5 @@ nbproject
 # Dist files
 dist
 .out
+
+package-lock.json
