@@ -7,7 +7,7 @@ import tag from 'tag-hoc';
 import blacklist from './blacklist';
 import { Tooltips } from './tooltips';
 
-const tt = new Tooltips();
+const tooltip = new Tooltips();
 
 const prop = oneOfType([number, string, arrayOf(oneOfType([number, string]))]);
 
@@ -41,7 +41,7 @@ type BaseProps = {
 const withTooltip = (Base: React.StatelessComponent) => {
 	return ({ ...props }: any) => {
 		if (props.tooltip) {
-			props = tt.bindProps(props);
+			props = tooltip.bindProps(props);
 		}
 		delete props.tooltip;
 		return <Base {...props} />;

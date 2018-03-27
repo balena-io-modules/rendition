@@ -1,5 +1,5 @@
 import styled, { withTheme } from 'styled-components'
-import hoc from '../hoc'
+import asRendition from '../asRendition'
 import { px } from '../utils'
 import { radius } from '../theme'
 import { compose } from 'recompose'
@@ -21,4 +21,4 @@ const Base = styled.textarea`
   }
 `
 
-export default compose(withTheme, hoc)(Base)
+export default compose(withTheme, asRendition)(Base)

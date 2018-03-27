@@ -2,7 +2,7 @@ import assign = require('lodash/assign');
 import { compose, withProps } from 'recompose';
 import { BannerProps } from 'rendition';
 import styled, { withTheme } from 'styled-components';
-import hoc from '../hoc';
+import asRendition from '../asRendition';
 
 const setDefaultProps = withProps((props: BannerProps) => {
 	// set defaults
@@ -29,6 +29,6 @@ const Base = styled.div`
 	background-image: ${(props: any) => setBgImage(props.backgroundImage)};
 `;
 
-export default compose(withTheme, setDefaultProps, hoc)(
+export default compose(withTheme, setDefaultProps, asRendition)(
 	Base,
 ) as React.ComponentClass<BannerProps>;

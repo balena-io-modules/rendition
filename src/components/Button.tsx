@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ButtonProps } from 'rendition';
 import styled, { StyledFunction, withTheme } from 'styled-components';
-import hoc from '../hoc';
+import asRendition from '../asRendition';
 import { bold, darken, getColor, getColoringType, normal, px } from '../utils';
 
 interface ThemedButtonProps extends ButtonProps {
@@ -129,7 +129,7 @@ const Underline = Plaintext.extend`
 `;
 
 export default withTheme(
-	hoc(
+	asRendition(
 		({
 			outline,
 			underline,

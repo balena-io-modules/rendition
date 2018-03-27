@@ -3,7 +3,7 @@ import styled, { withTheme } from 'styled-components'
 import { compose, withProps } from 'recompose'
 import * as get from 'lodash/get'
 import * as assign from 'lodash/assign'
-import hoc from '../hoc'
+import asRendition from '../asRendition'
 import { px } from '../utils'
 import { radius } from '../theme'
 
@@ -83,4 +83,4 @@ const Base = ({ children, color, background, value, ...props }) => {
   )
 }
 
-export default compose(withTheme, getType, setTypeProps, hoc)(Base)
+export default compose(withTheme, getType, setTypeProps, asRendition)(Base)

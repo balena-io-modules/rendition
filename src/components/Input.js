@@ -1,5 +1,5 @@
 import styled, { withTheme } from 'styled-components'
-import hoc from '../hoc'
+import asRendition from '../asRendition'
 import { monospace, px } from '../utils'
 import { radius } from '../theme'
 import { compose } from 'recompose'
@@ -38,7 +38,7 @@ const Base = styled.input`
     color: ${props => props.theme.colors.gray.main};
   }
 
-  &[type='checkbox'] {
+  &[type="checkbox"] {
     height: auto;
     font-size: ${props => px(props.theme.fontSizes[1])};
   }
@@ -46,4 +46,4 @@ const Base = styled.input`
   ${monospace};
 `
 
-export default compose(withTheme, hoc)(Base)
+export default compose(withTheme, asRendition)(Base)

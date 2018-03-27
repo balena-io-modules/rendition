@@ -3,7 +3,7 @@ import { FaClose } from 'react-icons/lib/fa';
 import { compose } from 'recompose';
 import { DefaultProps } from 'rendition';
 import styled, { withTheme } from 'styled-components';
-import hoc from '../hoc';
+import asRendition from '../asRendition';
 import { darken } from '../utils';
 
 const BtnWrapper = styled.button`
@@ -32,4 +32,6 @@ const Base = (props: BaseProps) => {
 	);
 };
 
-export default compose(withTheme, hoc)(Base) as React.ComponentClass<BaseProps>;
+export default compose(withTheme, asRendition)(Base) as React.ComponentClass<
+	BaseProps
+>;

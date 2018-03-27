@@ -139,6 +139,11 @@ export class Tooltips {
 		this.tooltipElementInner = tooltipElementInner;
 		this.tooltipElementArrow = tooltipArrow;
 
+		const tooltipRoot = document.createElement('div');
+		tooltipRoot.id = 'rendition-tooltip-root';
+
+		document.body.appendChild(tooltipRoot);
+
 		this.initialised = true;
 	}
 
@@ -167,13 +172,23 @@ export class Tooltips {
 							CLICK_TIMEOUT,
 						);
 					};
-					props.onClick = (e: Event) => showFn(e) || hideFn() || oldFn(e);
+					props.onClick = (e: Event) => {
+						showFn(e);
+						hideFn();
+						oldFn(e);
+					};
 				} else {
 					const oldMEFn = props.onMouseEnter || noop;
-					props.onMouseEnter = (e: Event) => showFn(e) || oldMEFn(e);
+					props.onMouseEnter = (e: Event) => {
+						showFn(e);
+						oldMEFn(e);
+					};
 
 					const oldMLFn = props.onMouseLeave || noop;
-					props.onMouseLeave = (e: Event) => this.hide() || oldMLFn(e);
+					props.onMouseLeave = (e: Event) => {
+						this.hide();
+						oldMLFn(e);
+					};
 					props.onMouseLeave = () => this.hide();
 				}
 			}

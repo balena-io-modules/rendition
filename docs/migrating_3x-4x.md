@@ -22,7 +22,7 @@ options object.
 
 | Option | Type | Description |
 --- | --- | ---
-text | string | The text displayted in the tooltip
+text | string | The text displayed in the tooltip
 trigger | 'hover' &#124; 'click' | The event used to display the tooltip, defaults to 'hover'
 placement | 'top' &#124; 'right' &#124; 'bottom' &#124; 'left' | The position that the tooltip should be displayed
 

@@ -4,7 +4,7 @@ import memoize = require('lodash/memoize');
 import * as React from 'react';
 import { BadgeProps } from 'rendition';
 import styled, { withTheme } from 'styled-components';
-import hoc from '../hoc';
+import asRendition from '../asRendition';
 import { getColor, px } from '../utils';
 import { Box } from './Grid';
 
@@ -23,7 +23,7 @@ const BaseBadge = styled(Box)`
 `;
 
 export default withTheme(
-	hoc(({ small, text, theme, ...props }: ThemedBadgeProps) => {
+	asRendition(({ small, text, theme, ...props }: ThemedBadgeProps) => {
 		return (
 			<BaseBadge
 				p="3px 5px"

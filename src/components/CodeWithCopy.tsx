@@ -4,7 +4,7 @@ import { FaClipboard } from 'react-icons/lib/fa';
 import { compose } from 'recompose';
 import { CodeWithCopyProps } from 'rendition';
 import styled, { withTheme } from 'styled-components';
-import hoc from '../hoc';
+import asRendition from '../asRendition';
 import { stopEvent } from '../utils';
 import Button from './Button';
 
@@ -55,6 +55,6 @@ const Base = ({ copy, text, color, ...props }: CodeWithCopyProps) => {
 	);
 };
 
-export default compose(withTheme, hoc)(Base) as React.ComponentClass<
+export default compose(withTheme, asRendition)(Base) as React.ComponentClass<
 	CodeWithCopyProps
 >;

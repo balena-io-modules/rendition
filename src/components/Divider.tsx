@@ -1,7 +1,7 @@
 import { compose } from 'recompose';
 import { DividerProps } from 'rendition';
 import styled, { StyledFunction, withTheme } from 'styled-components';
-import hoc from '../hoc';
+import asRendition from '../asRendition';
 import { px } from '../utils';
 
 const Base = (styled.hr as StyledFunction<
@@ -12,6 +12,6 @@ const Base = (styled.hr as StyledFunction<
 	background-color: ${props => props.color || '#333'};
 `;
 
-export default compose(withTheme, hoc)(Base) as React.ComponentClass<
+export default compose(withTheme, asRendition)(Base) as React.ComponentClass<
 	DividerProps
 >;

@@ -9,27 +9,6 @@ import {
   CodeWithCopy,
   DeleteButton,
   Heading
-  /*
-  DeviceStatusGauge,
-  Divider,
-  DropDownButton,
-  Filters,
-  Fixed,
-  Flex,
-  Gauge,
-  Link,
-  Input,
-  Image,
-  Modal,
-  Navbar,
-  PineTypes,
-  Provider,
-  ProgressBar,
-  Select,
-  Table,
-  Text,
-  Textarea,
-  */
 } from '../'
 
 storiesOf('Tooltip', module)
@@ -153,27 +132,3 @@ storiesOf('Tooltip', module)
       </Box>
     )
   })
-
-/*
-TODO: Add remaining elements once TypeScript conversion is complete:
-- DeviceStatusGauge
-- Divider
-- DropDownButton
-- Filters
-- Fixed
-- Flex
-- Gauge
-- Heading
-- Link
-- Input
-- Image
-- Modal
-- Navbar
-- PineTypes
-- Provider
-- ProgressBar
-- Select
-- Table
-- Text
-- Textarea
-*/
