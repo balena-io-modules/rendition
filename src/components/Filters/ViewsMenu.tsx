@@ -1,20 +1,19 @@
 import cloneDeep = require('lodash/cloneDeep');
+import groupBy = require('lodash/groupBy');
+import map = require('lodash/map');
 import * as React from 'react';
 import { FaPieChart, FaTrash } from 'react-icons/lib/fa';
 import {
 	DropDownButtonProps,
-	FilterRule,
-	FilterViewScope,
-	Schema,
-	SingleFilterView
+	FiltersView,
 } from 'rendition';
 import styled from 'styled-components';
 import DropDownButton from '../DropDownButton';
 import { Box } from '../Grid';
 import Txt from '../Txt';
 import FilterDescription from './FilterDescription';
-import { SIMPLE_SEARCH_NAME } from './SchemaSieve';
-import { isValidRule } from './Summary';
+
+import { JSONSchema6 } from 'json-schema';
 
 const Wrapper = styled.div``;
 
@@ -81,11 +80,10 @@ const ViewListItemLabel = styled(Txt)`
 interface ViewsMenuProps {
 	buttonProps?: DropDownButtonProps;
 	disabled?: boolean;
-	rules: FilterRule[];
-	views: FilterViewScope[];
-	schema: Schema;
-	setRules: (rules: FilterRule[]) => void;
-	deleteView: (view: SingleFilterView, scopeKey: string) => any;
+	views: FiltersView[];
+	schema: JSONSchema6;
+	setFilters: (filters: JSONSchema6[]) => void;
+	deleteView: (view: FiltersView) => any;
 }
 
 interface ViewsMenuState {
@@ -101,17 +99,16 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 		};
 	}
 
-	loadView(view: SingleFilterView) {
-		const rules = cloneDeep(view.rules);
-		this.props.setRules(rules);
+	loadView(view: FiltersView) {
+		const filters = cloneDeep(view.filters);
+		this.props.setFilters(filters);
 		this.setState({ showViewsMenu: false });
 	}
 
 	render() {
 		const { views } = this.props;
-		const hasViews =
-			views.length > 0 &&
-			views.reduce((sum, item) => sum + item.data.length, 0) > 0;
+		const hasViews = views.length > 0;
+		const groupedViews = groupBy(views, 'scope');
 		return (
 			<Wrapper>
 				<DropDownButton
@@ -136,60 +133,47 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 							</Box>
 						)}
 						{hasViews &&
-							views.map(scope => {
-								if (!scope.data || !scope.data.length) {
-									return;
-								}
-								return (
-									<Box key={scope.key}>
-										{!!scope.title && (
-											<Txt fontSize={13} ml={20} mb={2} mt={2} color="#aaa">
-												{scope.title}
-											</Txt>
-										)}
-										<UnstyledList>
-											{scope.data.map(view => {
-												const rules = view.rules.filter(
-													rule =>
-														isValidRule(rule) ||
-														rule.name === SIMPLE_SEARCH_NAME,
-												);
-												return (
-													<ViewListItem key={view.name}>
-														<ViewListItemLabel
-															m={0}
-															onClick={() => this.loadView(view)}
-														>
-															{view.name}
-															<br />
-															<Txt m={0} fontSize={12} color="#aaa">
-																{rules.length} filter{rules.length > 1 && 's'}
-															</Txt>
-														</ViewListItemLabel>
-														<button
-															onClick={() =>
-																this.props.deleteView(view, scope.key)
-															}
-														>
-															<FaTrash name="trash" />
-														</button>
-														<Preview>
-															{rules.map(rule => (
-																<Box mb={10} key={rule.id}>
-																	<FilterDescription
-																		schema={this.props.schema[rule.name]}
-																		rule={rule}
-																	/>
-																</Box>
-															))}
-														</Preview>
-													</ViewListItem>
-												);
-											})}
-										</UnstyledList>
-									</Box>
-								);
-							})}
+							map(groupedViews, (views: FiltersView[], scope) => (
+								<Box key={scope}>
+									{(!!scope && scope !== 'null') && (
+										<Text fontSize={13} ml={20} mb={2} mt={2} color="#aaa">
+											{scope}
+										</Text>
+									)}
+									<UnstyledList>
+										{views.map(view => (
+											<ViewListItem key={view.name}>
+												<ViewListItemLabel
+													m={0}
+													onClick={() => this.loadView(view)}
+												>
+													{view.name}
+													<br />
+													<Text m={0} fontSize={12} color="#aaa">
+														{view.filters.length} filter{view.filters.length > 1 && 's'}
+													</Text>
+												</ViewListItemLabel>
+												<button
+													onClick={() =>
+														this.props.deleteView(view)
+													}
+												>
+													<FaTrash name="trash" />
+												</button>
+												<Preview>
+													{view.filters.map(filter => (
+														<Box mb={10} key={filter.$id}>
+															<FilterDescription
+																filter={filter}
+															/>
+														</Box>
+													))}
+												</Preview>
+											</ViewListItem>
+										))}
+									</UnstyledList>
+								</Box>
+							))}
 					</Box>
 				</DropDownButton>
 			</Wrapper>

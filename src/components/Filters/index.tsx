@@ -1,18 +1,9 @@
-import assign = require('lodash/assign');
 import cloneDeep = require('lodash/cloneDeep');
-import find = require('lodash/find');
-import first = require('lodash/first');
-import get = require('lodash/get');
-import set = require('lodash/set');
-import * as moment from 'moment';
+import findIndex = require('lodash/findIndex');
+import map = require('lodash/map');
 import * as React from 'react';
 import { FaFilter, FaSearch } from 'react-icons/lib/fa';
-import {
-	FilterModel,
-	FilterRule,
-	FiltersProps,
-	SingleFilterView
-} from 'rendition';
+import { FiltersProps, FiltersView } from 'rendition';
 import styled from 'styled-components';
 import Theme from '../../theme';
 import * as utils from '../../utils';
@@ -20,22 +11,39 @@ import Button from '../Button';
 import DeleteBtn from '../DeleteButton';
 import { Box, Flex } from '../Grid';
 import Modal from '../Modal';
+import Select from '../Select';
 import Txt from '../Txt';
-import FilterForm from './FilterForm';
-import SchemaSieve from './SchemaSieve';
-import FilterSummary from './Summary';
+import * as SchemaSieve from './SchemaSieve';
 import ViewsMenu from './ViewsMenu';
 
-/**
- * The filter component requires the following props:
- * rules - an array of filter rule objects
- * schema - a SchemaSieve schema
- * views - an array of objects, each of which contains an array of predefined filter views,
- * setRules - a method that is called to set rules
- * setViews - a method that is called to set views
- */
+import { JSONSchema6 } from 'json-schema';
 
-const sieve = SchemaSieve();
+import Summary from './Summary';
+
+interface FilterInput {
+	schema: JSONSchema6;
+	value: any;
+	operator: string;
+	onUpdate: (value: any) => void;
+}
+
+const FilterInput = (props: any) => {
+	const model = SchemaSieve.getDataModel(props.schema);
+
+	if (!model) {
+		return null;
+	}
+
+	return (
+		<model.Edit
+			schema={props.schema}
+			value={props.value}
+			operator={props.operator}
+			onUpdate={props.onUpdate}
+			slim
+		/>
+	);
+};
 
 const RelativeBox = styled(Box)`
 	position: relative;
@@ -81,283 +89,207 @@ const FilterWrapper = styled(Box)`
 	position: relative;
 `;
 
+interface EditModel {
+	field: string;
+	operator: string;
+	value: string | number | { [k: string]: string };
+}
+
 interface FiltersState {
 	showModal: boolean;
-	edit: Partial<FilterRule>;
+	edit: EditModel[];
+	editingFilter: string | null;
 	searchString: string;
+	filters: JSONSchema6[];
+	views: FiltersView[];
 }
 
 class Filters extends React.Component<FiltersProps, FiltersState> {
 	constructor(props: FiltersProps) {
 		super(props);
-		this.handleFilterFormChange = this.handleFilterFormChange.bind(this);
-		this.handleExtraFilterFormChange = this.handleExtraFilterFormChange.bind(
-			this,
-		);
-		this.generateFreshEdit = this.generateFreshEdit.bind(this);
-
-		const { rules } = this.props;
-		const existingRule = find(rules, { name: sieve.SIMPLE_SEARCH_NAME });
+		const { filters, views } = this.props;
 
 		this.state = {
 			showModal: false,
-			edit: this.generateFreshEdit(),
-			searchString: (existingRule && existingRule.value) || '',
+			searchString: '',
+			edit: [this.getCleanEditModel()],
+			editingFilter: null,
+			filters: filters || [],
+			views: views || [],
 		};
 
 		// Clean exsting rules on load
-		this.filterAndSetRules(rules);
 	}
 
-	componentWillReceiveProps(nextProps: FiltersProps) {
-		const currentRules = nextProps.rules;
-		const existing = find(currentRules, { name: sieve.SIMPLE_SEARCH_NAME });
-		if (existing) {
-			const { value } = existing;
-			if (value !== this.state.searchString) {
-				this.setState({ searchString: value });
-			}
-		} else {
-			this.setState({ searchString: '' });
+	getCleanEditModel(field?: string) {
+		const { schema } = this.props;
+		if (!field) {
+			field = Object.keys(schema.properties as JSONSchema6).shift()!;
 		}
-	}
-
-	/**
-	 * Remove filter rules that don't have a matching schema entry.
-	 * This can happen if the provided rules are from an old version of the
-	 * provided schema. Rather than making wrapper code handle this, we just clean
-	 * up rules as they are output from this component.
-	 */
-	filterInvalidRules(rules: FilterRule[]) {
-		return rules.filter(
-			rule =>
-				(rule.name === sieve.SIMPLE_SEARCH_NAME && rule.value) ||
-				this.props.schema.hasOwnProperty(rule.name),
-		);
-	}
-
-	filterAndSetRules(rules: FilterRule[]) {
-		this.props.setRules(this.filterInvalidRules(rules));
-	}
-
-	generateFreshEdit() {
-		if (!this.props.schema) {
-			return {};
-		}
-		const inputModels = sieve.makeFilterInputs(this.props.schema);
-
-		const edit: Partial<FilterRule> = {
-			name: Object.keys(inputModels).shift(),
+		const operator = this.getOperators(field).shift()!.slug;
+		return {
+			field,
+			operator,
 			value: '',
 		};
-
-		edit.operator = inputModels[edit.name!].availableOperators[0].value;
-		edit.label = inputModels[edit.name!].label;
-		edit.type = inputModels[edit.name!].type;
-
-		return this.getDefaultEditData(edit, edit.name!);
 	}
 
-	addFilterRule(rule: FilterRule) {
-		const { rules } = this.props;
-		rules.push(rule);
-		this.filterAndSetRules(rules);
+	getOperators(field: string) {
+		const { schema } = this.props;
+		return SchemaSieve.getOperators(schema, field);
 	}
 
-	editFilterRule(rule: FilterRule) {
-		const { rules } = this.props;
-		const updatedRules = rules.map(r => (r.id === rule.id ? rule : r));
-
-		this.filterAndSetRules(updatedRules);
-	}
-
-	addRule() {
-		const inputModels = sieve.makeFilterInputs(this.props.schema);
-
-		const rule = cloneDeep(this.state.edit);
-		const baseRule = inputModels[rule.name!];
-		const newRule = assign(cloneDeep(baseRule), rule);
-
-		if (newRule.id) {
-			this.editFilterRule(newRule as FilterRule);
-		} else {
-			newRule.id = utils.randomString();
-			this.addFilterRule(newRule as FilterRule);
-		}
+	setEditField(field: string, index: number) {
+		const currentEdit = this.state.edit.slice();
+		currentEdit.splice(index, 1, this.getCleanEditModel(field));
 		this.setState({
-			showModal: false,
-			edit: this.generateFreshEdit(),
+			edit: currentEdit,
 		});
 	}
 
-	updateSimpleSearch(val: string) {
-		this.setState({ searchString: val });
-		const { rules } = this.props;
-		const existingRule = find(rules, { name: sieve.SIMPLE_SEARCH_NAME });
-		if (existingRule) {
-			existingRule.value = val;
-			this.editFilterRule(existingRule);
-		} else {
-			this.addFilterRule({
-				name: sieve.SIMPLE_SEARCH_NAME,
-				value: val,
-				id: utils.randomString(),
-			} as FilterRule);
-		}
-	}
-
-	showEditModal(rule: FilterRule) {
+	setEditOperator(operator: string, index: number) {
+		console.log('setting edit operator', operator);
+		const currentEdit = this.state.edit.slice();
+		const item = currentEdit[index];
+		currentEdit.splice(index, 1, { ...item, operator });
 		this.setState({
-			showModal: true,
-			edit: cloneDeep(rule),
+			edit: currentEdit,
 		});
 	}
 
-	removeRule(rule: FilterRule) {
-		if (rule.name === sieve.SIMPLE_SEARCH_NAME) {
-			this.setState({ searchString: '' });
-		}
-
-		const { rules } = this.props;
-
-		const updatedRules = rules.filter(r => r.id !== rule.id);
-		this.filterAndSetRules(updatedRules);
+	setEditValue(value: string, index: number) {
+		console.log('setting edit value', value);
+		const currentEdit = this.state.edit.slice();
+		const item = currentEdit[index];
+		currentEdit.splice(index, 1, { ...item, value });
+		this.setState({
+			edit: currentEdit,
+		});
 	}
 
-	getDefaultEditData(data: Partial<FilterRule>, value: string) {
-		const update = cloneDeep(data);
-		const inputModels = sieve.makeFilterInputs(this.props.schema);
-		const model = inputModels[value];
-		update.type = model.type;
-		update.name = value;
-		update.operator = model.availableOperators[0].value;
-		update.label = model.label;
-		if (model.type === 'Date Time') {
-			update.value = moment().format('YYYY-MM-DDTHH:mm');
-		} else if (model.type === 'Date') {
-			update.value = moment().format('YYYY-MM-DD');
-		} else if (model.type === 'Time') {
-			update.value = moment().format('HH:mm');
-		} else if (model.type === 'Enum') {
-			update.value = first(this.props.schema[model.name].values);
+	addFilter() {
+		const $id = this.state.editingFilter;
+		const { schema } = this.props;
+		const filter = SchemaSieve.createFilter(schema, this.state.edit);
+		const currentFilters = this.state.filters;
+
+		let filters: JSONSchema6[];
+
+		if (!!$id) {
+			const matchIndex = findIndex(currentFilters, { $id });
+			currentFilters.splice(matchIndex, 1, filter);
+			filters = currentFilters.slice();
 		} else {
-			update.value = '';
+			filters = currentFilters.concat(filter);
 		}
 
-		return update;
-	}
+		console.log('FILTERS', filters);
 
-	updateFilter(
-		filterBase: FilterModel,
-		attribute: keyof FilterModel,
-		value: any,
-	) {
-		let filter = { ...filterBase };
-
-		if (attribute === 'name' && filter.name !== value) {
-			filter = this.getDefaultEditData(filter, value) as FilterModel;
-		} else if (attribute === 'operator') {
-			filter.value = '';
-			filter[attribute] = value;
-		} else {
-			set(filter, attribute, value);
-		}
-
-		return filter;
-	}
-
-	handleFilterFormChange(value: string, attribute: keyof FilterModel) {
-		const update = this.updateFilter(
-			this.state.edit as FilterModel,
-			attribute,
-			value,
+		this.setState(
+			{
+				filters,
+				edit: [this.getCleanEditModel()],
+				showModal: false,
+				editingFilter: null,
+			},
+			() =>
+				this.props.onFiltersUpdate &&
+				this.props.onFiltersUpdate(this.state.filters),
 		);
-
-		this.setState({ edit: update });
 	}
 
-	handleExtraFilterFormChange(
-		index: number,
-		value: string,
-		attribute: keyof FilterModel,
-	) {
-		const extra = this.state.edit.extra || { or: [] };
+	editFilter(filter: JSONSchema6) {
+		const { schema } = this.props;
 
-		const filter = get(extra.or, index);
+		const signatures = SchemaSieve.decodeFilter(schema, filter);
 
-		if (!filter) {
-			return;
-		}
-
-		const update = this.updateFilter(filter, attribute, value);
-
-		set(extra.or, index, update);
-		this.setState(prevState => ({ edit: { ...prevState.edit, extra } }));
+		this.setState({
+			edit: signatures as EditModel[],
+			editingFilter: filter.$id!,
+			showModal: true,
+		});
 	}
 
-	addExtraRule() {
-		const extra = this.state.edit.extra || { or: [] };
-
-		extra.or.push((this.generateFreshEdit() as any) as FilterModel);
-
-		this.setState(prevState => ({ edit: { ...prevState.edit, extra } }));
+	removeFilter({ $id }: JSONSchema6) {
+		this.setState(
+			prevState => ({
+				filters: prevState.filters.filter(f => f.$id !== $id),
+			}),
+			() =>
+				this.props.onFiltersUpdate &&
+				this.props.onFiltersUpdate(this.state.filters),
+		);
 	}
 
-	removeExtraRule(index: number) {
-		const extra = this.state.edit.extra || { or: [] };
-
-		// Remove the extra rule specified by index
-		extra.or.splice(index, 1);
-
-		this.setState(prevState => ({ edit: { ...prevState.edit, extra } }));
+	setFilters(filters: JSONSchema6[]) {
+		this.setState(
+			{ filters },
+			() =>
+				this.props.onFiltersUpdate &&
+				this.props.onFiltersUpdate(this.state.filters),
+		);
 	}
 
-	saveView(name: string, scopeKey: string) {
-		const { rules } = this.props;
-		let { views } = this.props;
+	addCompound() {
+		this.setState(prevState => ({
+			edit: prevState.edit.concat(this.getCleanEditModel()),
+		}));
+	}
 
-		const newView = {
-			name,
-			rules: cloneDeep(rules),
+	removeCompound(index: number) {
+		const edit = this.state.edit.slice();
+		edit.splice(index, 1);
+		this.setState({
+			edit,
+		});
+	}
+
+	saveView(name: string, scope: string | null) {
+		const view: FiltersView = {
 			id: utils.randomString(),
-			scopeKey,
+			name,
+			scope,
+			filters: cloneDeep(this.state.filters),
 		};
 
-		if (!views) {
-			views = [];
-		}
-
-		const store = find(views, item => item.key === scopeKey);
-
-		if (store) {
-			store.data.push(newView);
-
-			this.props.setViews(views);
-		}
+		this.setState(
+			prevState => ({
+				views: prevState.views.concat(view),
+			}),
+			() =>
+				this.props.onViewsUpdate && this.props.onViewsUpdate(this.state.views),
+		);
 	}
 
-	deleteView(view: SingleFilterView, scopeKey: string) {
-		const { views } = this.props;
-
-		const store = find(views, item => item.key === scopeKey);
-
-		if (store) {
-			store.data = store.data.filter(v => v.id !== view.id);
-
-			this.props.setViews(views);
-		}
+	deleteView({ id }: FiltersView) {
+		this.setState(
+			prevState => ({
+				views: prevState.views.filter(v => v.id !== id),
+			}),
+			() =>
+				this.props.onViewsUpdate && this.props.onViewsUpdate(this.state.views),
+		);
 	}
 
-	showNewFilterModal() {
-		this.setState({
-			showModal: true,
-			edit: this.generateFreshEdit(),
-		});
+	setSimpleSearch(term: string) {
+		this.setState(prevState => {
+			const newFilters = term
+				? SchemaSieve.upsertFullTextSearch(
+						this.props.schema,
+						prevState.filters,
+						term,
+					)
+				: SchemaSieve.removeFullTextSearch(prevState.filters);
+
+			return {
+				searchString: term,
+				filters: newFilters,
+			};
+		}, () => this.props.onFiltersUpdate && this.props.onFiltersUpdate(this.state.filters));
 	}
 
 	render() {
-		const inputModels = sieve.makeFilterInputs(this.props.schema);
-		const rules = this.props.rules || [];
+		const { filters } = this.state;
 
 		return (
 			<FilterWrapper mb={3}>
@@ -365,7 +297,9 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 					<Button
 						disabled={this.props.disabled}
 						primary
-						onClick={() => this.showNewFilterModal()}
+						onClick={() =>
+							this.setState({ showModal: true, editingFilter: null })
+						}
 						{...this.props.addFilterButtonProps}
 					>
 						<FaFilter style={{ marginRight: 10 }} />
@@ -378,7 +312,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 							disabled={this.props.disabled}
 							placeholder="Search entries..."
 							value={this.state.searchString}
-							onChange={e => this.updateSimpleSearch(e.target.value)}
+							onChange={e => this.setSimpleSearch(e.target.value)}
 						/>
 						<FaSearch className="search-icon" name="search" />
 					</SimpleSearchBox>
@@ -386,11 +320,10 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 					<ViewsMenu
 						buttonProps={this.props.viewsMenuButtonProps}
 						disabled={this.props.disabled}
-						rules={rules}
-						views={this.props.views || []}
+						views={this.state.views || []}
 						schema={this.props.schema}
-						setRules={rules => this.filterAndSetRules(rules)}
-						deleteView={(view, scopeKey) => this.deleteView(view, scopeKey)}
+						setFilters={filters => this.setFilters(filters)}
+						deleteView={view => this.deleteView(view)}
 					/>
 				</Flex>
 
@@ -399,65 +332,88 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 						<Modal
 							title="Filter by"
 							cancel={() => this.setState({ showModal: false })}
-							done={() => this.addRule()}
+							done={() => this.addFilter()}
 							action="Save"
 						>
-							<form onSubmit={e => e.preventDefault() || this.addRule()}>
-								<FilterForm
-									handleEditChange={this.handleFilterFormChange}
-									inputModels={inputModels}
-									name={this.state.edit.name!}
-									value={this.state.edit.value!}
-									operator={this.state.edit.operator!}
-									schema={this.props.schema}
-								/>
+							{map(this.state.edit, ({ field, operator, value }, index) => {
+								const operators = this.getOperators(field);
 
-								{!!this.state.edit.extra &&
-									this.state.edit.extra.or.map((rule, index) => (
-										<RelativeBox key={index}>
-											<Txt my={2}>OR</Txt>
-											<FilterForm
-												handleEditChange={(value, key) =>
-													this.handleExtraFilterFormChange(
-														index,
-														value,
-														key as keyof FilterModel,
-													)
+								return (
+									<RelativeBox key={index}>
+										{index > 0 && <Text my={2}>OR</Text>}
+										<Flex>
+											<Select
+												value={field}
+												onChange={(v: any) =>
+													this.setEditField(v.target.value, index)
 												}
-												inputModels={inputModels}
-												name={rule.name!}
-												value={rule.value!}
-												operator={rule.operator!}
-												schema={this.props.schema}
-											/>
-											<ExtraRuleDeleteBtn
-												onClick={() => this.removeExtraRule(index)}
-											/>
-										</RelativeBox>
-									))}
+											>
+												{map(
+													this.props.schema.properties,
+													(s: JSONSchema6, field) => (
+														<option value={field}>{s.title || field}</option>
+													),
+												)}
+											</Select>
 
-								<Button
-									mb={2}
-									mt={4}
-									primary
-									underline
-									onClick={() => this.addExtraRule()}
-								>
-									Add alternative
-								</Button>
-							</form>
+											{operators.length === 1 && (
+												<Text mx={1} p="7px 20px 0">
+													{operators[0].label}
+												</Text>
+											)}
+
+											{operators.length > 1 && (
+												<Select
+													ml={1}
+													value={operator}
+													onChange={(v: any) =>
+														this.setEditOperator(v.target.value, index)
+													}
+												>
+													{map(operators, ({ slug, label }) => (
+														<option value={slug}>{label}</option>
+													))}
+												</Select>
+											)}
+
+											<FilterInput
+												operator={operator}
+												value={value}
+												schema={
+													this.props.schema.properties![field] as JSONSchema6
+												}
+												onUpdate={(v: any) => this.setEditValue(v, index)}
+											/>
+										</Flex>
+										{index > 0 && (
+											<ExtraRuleDeleteBtn
+												onClick={() => this.removeCompound(index)}
+											/>
+										)}
+									</RelativeBox>
+								);
+							})}
+							<Button
+								mb={2}
+								mt={4}
+								primary
+								underline
+								onClick={() => this.addCompound()}
+							>
+								Add alternative
+							</Button>
 						</Modal>
 					</div>
 				)}
 
-				{!!rules.length &&
+				{!!filters.length &&
 					!this.props.disabled && (
-						<FilterSummary
-							edit={(rule: FilterRule) => this.showEditModal(rule)}
-							delete={(rule: FilterRule) => this.removeRule(rule)}
+						<Summary
+							edit={(filter: JSONSchema6) => this.editFilter(filter)}
+							delete={(filter: JSONSchema6) => this.removeFilter(filter)}
 							saveView={(name, scope) => this.saveView(name, scope)}
-							rules={rules}
-							views={this.props.views || []}
+							filters={filters}
+							views={this.state.views || []}
 							schema={this.props.schema}
 							dark={!!this.props.dark}
 						/>

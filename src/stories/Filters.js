@@ -1,11 +1,9 @@
 import * as React from 'react'
-import { storiesOf, action } from '@storybook/react'
 import * as uniq from 'lodash/uniq'
+import { storiesOf, action } from '@storybook/react'
 import styled from 'styled-components'
-import { Box, Filters, SchemaSieve, PineTypes } from '../'
+import { Box, Filters, SchemaSieve } from '../'
 import PokeDex from './assets/pokedex'
-
-const sieve = SchemaSieve()
 
 const Container = styled.div`
   margin: 30px;
@@ -35,48 +33,60 @@ const Tag = ({ tag }) => (
 )
 
 const setViewsAction = action('Set views')
-const setRulesAction = action('Set rules')
-
-const DateTimeDisplay = PineTypes['Date Time'].Display
+const setFiltersAction = action('Set filters')
 
 const schema = {
-  Category: {
-    type: 'Enum',
-    values: uniq(PokeDex.map(p => p.Category))
-  },
-  Name: {
-    type: 'Short Text'
-  },
-  Description: {
-    type: 'Short Text'
-  },
-  Abilities: {
-    type: 'Short Text'
-  },
-  Height: {
-    type: 'Real'
-  },
-  Weight: {
-    type: 'Real'
-  },
-  first_seen: {
-    type: 'Date Time',
-    label: 'First Seen'
-  },
-  pokedex_number: {
-    type: 'Integer',
-    label: 'National Pokedex Number'
-  },
-  caught: {
-    type: 'Boolean',
-    label: 'Pokemon has been caught'
-  },
-  Tag: {
-    type: 'Key Value Pair',
-    key: 'tag_name',
-    value: 'tag_value',
-    keyLabel: 'Name',
-    valueLabel: 'Value'
+  type: 'object',
+  properties: {
+    Name: {
+      title: 'Pokemon Name',
+      type: 'string'
+    },
+    Description: {
+      title: 'Pokemon Name',
+      type: 'string'
+    },
+    Abilities: {
+      title: 'Pokemon Name',
+      type: 'string'
+    },
+    Tag: {
+      type: 'object',
+      properties: {
+        tag_name: {
+          title: 'Name',
+          description: 'key',
+          type: 'string'
+        },
+        tag_value: {
+          description: 'value',
+          title: 'Value',
+          type: 'string'
+        }
+      }
+    },
+    first_seen: {
+      title: 'First Seen',
+      type: 'string',
+      format: 'date-time'
+    },
+    caught: {
+      title: 'Has been caught',
+      type: 'boolean'
+    },
+    Height: {
+      type: 'number'
+    },
+    Weight: {
+      type: 'number'
+    },
+    pokedex_number: {
+      title: 'National pokedex number',
+      type: 'number'
+    },
+    Category: {
+      enum: uniq(PokeDex.map(p => p.Category))
+    }
   }
 }
 
@@ -84,22 +94,7 @@ class FiltersDemo extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      rules: [],
-      views: [
-        {
-          key: 'global', // Unique key for this set of views
-          scopeLabel: 'everyone', // Text shown when selecting where to save view
-          title: 'Global', // Text shown above views in views menu
-          data: [] // array of views
-        },
-        {
-          key: 'user', // Unique key for this set of views
-          scopeLabel: 'just me', // Text shown when selecting where to save view
-          title: 'User', // Text shown above views in views menu
-          data: [] // array of views
-        }
-      ],
-      schema
+      filters: []
     }
   }
 
@@ -108,22 +103,21 @@ class FiltersDemo extends React.Component {
     this.setState({ views })
   }
 
-  setRules (rules) {
-    setRulesAction(rules)
-    this.setState({ rules })
+  setFilters (filters) {
+    setFiltersAction(filters)
+    this.setState({ filters })
   }
 
   render () {
-    const items = sieve.filter(PokeDex, this.state.rules)
+    const items = SchemaSieve.filter(this.state.filters, PokeDex)
+
     return (
       <div>
         <Filters
           disabled={this.props.disabled}
-          rules={this.state.rules}
-          views={this.state.views}
-          schema={this.state.schema}
-          setViews={views => this.setViews(views)}
-          setRules={rules => this.setRules(rules)}
+          onFiltersUpdate={filters => this.setFilters(filters)}
+          onViewsUpdate={views => this.setViews(views)}
+          schema={schema}
           dark={this.props.dark}
           {...this.props.extra}
         />
@@ -156,7 +150,9 @@ class FiltersDemo extends React.Component {
                 <tr>
                   <td>First Seen</td>
                   <td>
-                    <DateTimeDisplay data={item.first_seen} />
+                    {item.first_seen
+                      ? new Date(item.first_seen).toString()
+                      : ''}
                   </td>
                 </tr>
                 <tr>

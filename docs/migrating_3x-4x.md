@@ -36,3 +36,31 @@ The `Image` component has been renamed to `Img` to prevent conflicts with the
 
 The `Text` component has been renamed to `Txt` to prevent conflicts with the
 `Text()` web API - https://developer.mozilla.org/en-US/docs/Web/API/Text
+
+## Filters 
+The `Semver` and `Semver Range` types have been removed
+`SchemaSieve` is no longer a factory function, and its methods can be accessed
+without instantiation.
+
+```
+import { SchemaSieve } from 'rendition';
+const sieve = SchemaSieve();
+// ...
+sieve.filter(items, rules)
+```
+
+now becomes:
+
+```
+import { SchemaSieve } from 'rendition';
+SchemaSieve.filter(filters, items)
+```
+
+Filters now use JSON schema (draft 6) for both schemas and rules.
+Any views, schemas or filters created using v3 can be migrated using the
+functions `migrateLegacyFilter()`, `migrateLegacyViews()` and
+`migrateLegacySchema()` functions in the `SchemaSieve` object
+
+The filters components now only requires a schema property to bootstrap. You can
+be notified of filter and view changes using the `onFiltersUpdate` and
+`onViewsUpdate` properties.

@@ -1,14 +1,9 @@
-import isPlainObject = require('lodash/isPlainObject');
-import keys = require('lodash/keys');
 import noop = require('lodash/noop');
-import values = require('lodash/values');
 import * as React from 'react';
-import { FilterModel, FilterRule, SchemaEntry } from 'rendition';
 import styled from 'styled-components';
 import DeleteBtn from '../DeleteButton';
 import { Box, Flex } from '../Grid';
-import PineTypes from '../PineTypes';
-import Txt from '../Txt';
+import { JSONSchema6 } from 'json-schema';
 
 const ButtonWrapper = styled.button`
 	font-size: 13px;
@@ -19,53 +14,20 @@ const ButtonWrapper = styled.button`
 	padding: 3px 8px;
 `;
 
-const getOperatorText = (
-	operator: string,
-	type: string,
-	schemaEntry: SchemaEntry,
-) => {
-	const operatorItem = PineTypes[type].rules[operator];
-	if (isPlainObject(operatorItem) && schemaEntry) {
-		const label = operatorItem.getLabel(schemaEntry);
-
-		return label || operator;
-	}
-
-	return operator;
-};
-
-const kvpFormat = (object: any, schema: SchemaEntry) => {
-	if (keys(object).length > 1) {
-		return `${object[schema.key!]} : ${object[schema.value!]}`;
-	}
-	return values(object).pop();
-};
-
-const FilterDescriptionInner = (props: {
-	rule: FilterModel;
-	schema: SchemaEntry;
-}) => (
-	<Flex>
-		<Box mr={7}>{props.rule.label || props.rule.name} </Box>
-		{props.rule.operator && (
-			<Box mr={7}>
-				<strong>
-					{getOperatorText(props.rule.operator, props.rule.type, props.schema)}
-				</strong>
-			</Box>
-		)}
-		{props.rule.type === 'Key Value Pair' ? (
-			<em>{kvpFormat(props.rule.value, props.schema)}</em>
-		) : (
-			<em>{props.rule.value}</em>
-		)}
-	</Flex>
+const FilterDescriptionInner = (props: { filter: JSONSchema6 }) => (
+	<Box>
+		{props.filter.anyOf!.map((f, i) => (
+			<React.Fragment key={i}>
+				{i > 0 && <em> or </em>}
+				<span>{f.description}</span>
+			</React.Fragment>
+		))}
+	</Box>
 );
 
 interface FilterDescriptionProps {
 	dark?: boolean;
-	schema: SchemaEntry;
-	rule: FilterRule;
+	filter: JSONSchema6;
 	edit?: false | (() => void);
 	delete?: () => void;
 }
@@ -75,17 +37,7 @@ const FilterDescription = (props: FilterDescriptionProps) => {
 		<div>
 			<ButtonWrapper onClick={!!props.edit ? props.edit : noop}>
 				<Flex>
-					<FilterDescriptionInner rule={props.rule} schema={props.schema} />
-					{!!props.rule.extra &&
-						!!props.rule.extra.or &&
-						props.rule.extra.or.map((rule, index) => (
-							<Flex key={index}>
-								<Txt mx={2} bold>
-									OR
-								</Txt>
-								<FilterDescriptionInner rule={rule} schema={props.schema} />
-							</Flex>
-						))}
+					<FilterDescriptionInner filter={props.filter} />
 				</Flex>
 			</ButtonWrapper>
 

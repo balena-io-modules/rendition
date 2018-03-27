@@ -1,19 +1,19 @@
 import map = require('lodash/map');
 import * as React from 'react';
 import { Schema } from 'rendition';
+import DataTypes from '../DataTypes';
 import { Flex } from '../Grid';
-import PineTypes from '../PineTypes';
 import Select from '../Select';
 
 const FilterInput = (props: any) => {
-	const PineTypeInput = PineTypes[props.type].Edit;
+	const DataTypeInput = DataTypes[props.type as keyof typeof DataTypes].Edit;
 
 	return (
-		<PineTypeInput
+		<DataTypeInput
 			schema={props.schema}
 			value={props.value}
 			operator={props.operator}
-			onChange={props.onChange}
+			onUpdate={props.onChange}
 		/>
 	);
 };
@@ -36,6 +36,7 @@ const FilterForm = (props: FilterFormProps) => {
 		operator,
 		schema,
 	} = props;
+	const subSchema = (schema as any).properties[name];
 	return (
 		<Flex>
 			<Select
@@ -58,11 +59,14 @@ const FilterForm = (props: FilterFormProps) => {
 					handleEditChange((e.target as HTMLSelectElement).value, 'operator')
 				}
 			>
-				{map(inputModels[name!].availableOperators, ({ value, label }) => (
-					<option value={value} key={value}>
-						{label}
-					</option>
-				))}
+				{map(
+					DataTypes[subSchema.type as keyof typeof DataTypes].operators,
+					({ value, label }) => (
+						<option value={value} key={value}>
+							{label}
+						</option>
+					),
+				)}
 			</Select>
 			{inputModels[name!].type !== 'Boolean' && (
 				<FilterInput

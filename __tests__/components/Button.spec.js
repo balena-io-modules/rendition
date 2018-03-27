@@ -7,8 +7,8 @@ test('Button renders correctly', () => {
   const component = renderer.create(
     <Provider>
       <Button>Click me</Button>
-    </Provider>,
-  );
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+    </Provider>
+  )
+  let tree = component.toJSON()
+  expect(tree).toMatchSnapshot()
+})

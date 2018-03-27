@@ -1,6 +1,6 @@
 import styled, { withTheme } from 'styled-components'
 import asRendition from '../asRendition'
-import { px } from '../utils'
+import { monospace, px } from '../utils'
 import { radius } from '../theme'
 import { compose } from 'recompose'
 
@@ -19,6 +19,8 @@ const Base = styled.textarea`
   &::placeholder {
     color: ${props => props.theme.colors.gray.main};
   }
+
+  ${monospace};
 `
 
 export default compose(withTheme, asRendition)(Base)

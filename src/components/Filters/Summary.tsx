@@ -1,19 +1,15 @@
-import every = require('lodash/every');
+import { JSONSchema6 } from 'json-schema';
 import * as React from 'react';
 import { FaBookmarkO } from 'react-icons/lib/fa/';
-import { FilterRule, FilterViewScope, Schema } from 'rendition';
+import { FiltersView, ViewScope } from 'rendition';
 import styled from 'styled-components';
 import Button from '../Button';
 import { Box, Flex } from '../Grid';
 import Input from '../Input';
 import Modal from '../Modal';
-import types from '../PineTypes';
 import Select from '../Select';
 import Txt from '../Txt';
 import FilterDescription from './FilterDescription';
-import SchemaSieve from './SchemaSieve';
-
-const sieve = SchemaSieve();
 
 const BorderedDiv = styled.div`
 	margin-top: 15px;
@@ -21,16 +17,14 @@ const BorderedDiv = styled.div`
 	border: solid 1px #979797;
 `;
 
-export const isValidRule = (rule: FilterRule) =>
-	types.hasOwnProperty(rule.type);
-
 interface FilterSummaryProps {
-	edit: (rule: FilterRule) => void;
-	delete: (rule: FilterRule) => void;
-	saveView: (name: string, scope: string) => void;
-	rules: FilterRule[];
-	views: FilterViewScope[];
-	schema: Schema;
+	edit: (rule: JSONSchema6) => void;
+	delete: (rule: JSONSchema6) => void;
+	saveView: (name: string, scope: string | null) => void;
+	filters: JSONSchema6[];
+	views: FiltersView[];
+	scopes?: ViewScope[];
+	schema: JSONSchema6;
 	dark?: boolean;
 }
 
@@ -38,7 +32,7 @@ interface FilterSummaryState {
 	name: string;
 	showForm: boolean;
 	id: string;
-	scope: string;
+	scope: string | null;
 }
 
 class FilterSummary extends React.Component<
@@ -51,28 +45,14 @@ class FilterSummary extends React.Component<
 			name: '',
 			showForm: false,
 			id: '',
-			scope: props.views[0].key,
+			scope: this.props.scopes ? this.props.scopes[0].slug : null,
 		};
 	}
 
-	setExistingId(e: Event) {
-		const id = (e.target as HTMLInputElement).value;
-		this.setState({ id });
-	}
-
-	setViewScope(scope: string) {
-		this.setState({ scope });
-	}
-
-	handleChange(e: Event) {
-		const name = (e.target as HTMLInputElement).value;
-		this.setState({ name });
-	}
-
 	save() {
-		const { name, id, scope } = this.state;
+		const { name, scope } = this.state;
 
-		if (!name && !id) {
+		if (!name) {
 			return;
 		}
 
@@ -85,33 +65,20 @@ class FilterSummary extends React.Component<
 		});
 	}
 
-	render() {
-		if (every(this.props.rules, r => !isValidRule(r))) {
-			return null;
-		}
+	setExistingId(e: Event) {
+		const id = (e.target as HTMLInputElement).value;
+		this.setState({ id });
+	}
 
+	handleChange(e: Event) {
+		const name = (e.target as HTMLInputElement).value;
+		this.setState({ name });
+	}
+
+	render() {
+		const { scopes } = this.props;
 		return (
 			<BorderedDiv>
-				<Flex justify="space-between">
-					<Txt
-						fontSize={13}
-						mb={10}
-						color={this.props.dark ? '#fff' : undefined}
-					>
-						Filters ({this.props.rules.length})
-					</Txt>
-
-					<Button
-						primary
-						plaintext
-						fontSize={13}
-						mt={-7}
-						onClick={() => this.setState({ showForm: !this.state.showForm })}
-					>
-						<FaBookmarkO style={{ marginRight: 6 }} />
-						Save view
-					</Button>
-				</Flex>
 				{this.state.showForm && (
 					<Modal
 						title="Save current view"
@@ -120,7 +87,7 @@ class FilterSummary extends React.Component<
 						action="Save"
 					>
 						<form onSubmit={e => e.preventDefault() || this.save()}>
-							{this.props.views.length > 1 && (
+							{!!scopes && scopes.length > 1 && (
 								<Flex mb={30}>
 									<Txt width={90}>Visible to:</Txt>
 									<Select
@@ -129,12 +96,12 @@ class FilterSummary extends React.Component<
 										width="auto"
 										value={this.state.scope}
 										onChange={(e: Event) =>
-											this.setViewScope((e.target as HTMLInputElement).value)
+											this.setState({ scope: (e.target as HTMLInputElement).value })
 										}
 									>
-										{this.props.views.map(item => (
-											<option key={item.key} value={item.key}>
-												{item.scopeLabel}
+										{scopes.map(({ name, slug }) => (
+											<option key={slug} value={slug}>
+												{name}
 											</option>
 										))}
 									</Select>
@@ -151,24 +118,31 @@ class FilterSummary extends React.Component<
 						</form>
 					</Modal>
 				)}
-				<Flex wrap>
-					{this.props.rules.map(rule => {
-						if (!isValidRule(rule)) {
-							return null;
-						}
+				<Flex justify="space-between">
+					<Text fontSize={13} mb={10} color={this.props.dark && '#fff'}>
+						Filters ({this.props.filters.length})
+					</Text>
 
+					<Button
+						primary
+						plaintext
+						fontSize={13}
+						mt={-7}
+						onClick={() => this.setState({ showForm: !this.state.showForm })}
+					>
+						<FaBookmarkO style={{ marginRight: 6 }} />
+						Save view
+					</Button>
+				</Flex>
+				<Flex wrap>
+					{this.props.filters.map((filter, index) => {
 						return (
-							<Box mb={10} mr={10} key={rule.id}>
+							<Box mb={10} mr={10} key={index}>
 								<FilterDescription
 									dark={this.props.dark}
-									schema={this.props.schema[rule.name]}
-									rule={rule}
-									edit={
-										rule.name === sieve.SIMPLE_SEARCH_NAME
-											? false
-											: () => this.props.edit(rule)
-									}
-									delete={() => this.props.delete(rule)}
+									filter={filter}
+									edit={() => this.props.edit(filter)}
+									delete={() => this.props.delete(filter)}
 								/>
 							</Box>
 						);
