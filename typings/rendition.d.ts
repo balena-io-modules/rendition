@@ -595,3 +595,22 @@ declare module 'rendition' {
 
 	export const migrations: Migrations;
 }
+
+declare module 'rendition/dist/unstable' {
+	import { JSONSchema6 } from 'json-schema';
+	import { Component } from 'react';
+	import { UiSchema } from 'react-jsonschema-form';
+	import { BoxProps, RenderableElementWithProps } from 'rendition';
+
+	interface FormProps extends BoxProps {
+		schema: JSONSchema6;
+		submitButtonText?: string;
+		hideSubmitButton?: boolean;
+		value?: { [key: string]: any };
+		onChange?: (result: any) => void;
+		onSubmit?: (result: any) => void;
+		uiSchema?: UiSchema;
+	}
+
+	class Form extends RenderableElementWithProps<FormProps, any> {}
+}

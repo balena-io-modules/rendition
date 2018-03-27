@@ -1,0 +1,51 @@
+import * as React from 'react';
+
+import { Input } from '../../../../';
+
+const BaseInput = (props: any) => {
+	// Note: since React 15.2.0 we can't forward unknown element attributes, so we
+	// exclude the "options" and "schema" ones here.
+	const {
+		value,
+		readonly,
+		disabled,
+		autofocus,
+		onBlur,
+		onFocus,
+		options,
+		schema,
+		formContext,
+		registry,
+		...inputProps
+	} = props;
+
+	if (schema.type === 'number') {
+		inputProps.type = 'number';
+	} else {
+		inputProps.type = options.inputType || inputProps.type || 'text';
+	}
+
+	const _onChange = ({ target: { value } }: any) => {
+		return props.onChange(value === '' ? options.emptyValue : value);
+	};
+
+	return (
+		<Input
+			w="100%"
+			readOnly={readonly}
+			disabled={disabled}
+			autoFocus={autofocus}
+			value={value == null ? '' : value}
+			{...inputProps}
+			onChange={_onChange}
+			onBlur={
+				onBlur && ((event: any) => onBlur(inputProps.id, event.target.value))
+			}
+			onFocus={
+				onFocus && ((event: any) => onFocus(inputProps.id, event.target.value))
+			}
+		/>
+	);
+};
+
+export default BaseInput;
