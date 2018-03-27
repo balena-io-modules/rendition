@@ -5,26 +5,26 @@ exports[`Modal renders correctly 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <div
-    className="sc-hMqMXs gOARcJ sc-chPdSV dfDVBP sc-cSHVUG kBGaNN sc-jzJRlG gnRVez"
+    className="sc-kGXeez eZAhaK sc-VigVT hegYug sc-gZMcBi eQxJRS sc-iwsKbI krPIvU"
     onClick={[Function]}
   >
     <div
-      className="sc-kEYyzF gMkvag sc-jTzLTM gkrlrR sc-VigVT gYpBDW"
+      className="sc-kpOJdX idFqiX sc-htoDjs gqRfJm sc-gzVnrw izJmEp"
       z={8888}
     />
     <div
-      className="sc-hSdWYo QyOcr sc-kgoBCf jIcSzk sc-kAzzGY bHluuy sc-fjdhpX jWzEVr"
+      className="sc-jKJlTe bTUqRQ sc-jTzLTM bUWCnN sc-gqjmRU jowXRS sc-dnqmqq dMmQvA"
     >
       <div
-        className="sc-eHgmQL bWRhNx sc-kgoBCf cUYCEa sc-kAzzGY bHluuy sc-fjdhpX gjXQTW"
+        className="sc-eNQAEJ fPBoGG sc-jTzLTM cpHAjr sc-gqjmRU jowXRS sc-dnqmqq goLRQh"
         onClick={[Function]}
       >
         Modal
         <div
-          className="sc-chPdSV WNwZE sc-cSHVUG kBGaNN sc-jzJRlG gBjLKB"
+          className="sc-VigVT hVEKCG sc-gZMcBi eQxJRS sc-iwsKbI djlFET"
         >
           <button
-            className="sc-gqjmRU bCjhLA sc-htoDjs hfajhw"
+            className="sc-bZQynM bycwzs sc-htpNat jbaLXG"
             onClick={undefined}
           >
             OK

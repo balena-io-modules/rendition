@@ -14,9 +14,9 @@
     "build": "rimraf dist && tsc",
     "build:storybook": "build-storybook -o .out",
     "test": "npm run lint && npm run jest",
-    "jest": "jest __tests__",
-    "eslint": "eslint src test",
-    "eslint-fix": "eslint src test --fix",
+    "jest": "jest __tests__ --maxWorkers=4",
+    "eslint": "eslint src __tests__",
+    "eslint-fix": "eslint src __tests__ --fix",
     "tslint": "tslint -t stylish \"src/**/*.ts\" \"src/**/*.tsx\" \"typings.d.ts\"",
     "tslint-fix": "tslint -t stylish --fix \"src/**/*.ts\" \"src/**/*.tsx\" \"typings.d.ts\"",
     "lint": "npm run eslint && npm run tslint",
@@ -65,6 +65,7 @@
   "dependencies": {
     "@types/color": "^2.0.0",
     "@types/grid-styled": "^3.2.0",
+    "@types/json-schema": "^6.0.1",
     "@types/lodash": "^4.14.77",
     "@types/prop-types": "^15.5.2",
     "@types/react": "^16.0.38",
@@ -72,6 +73,8 @@
     "@types/react-icons": "^2.2.4",
     "@types/recompose": "^0.24.7",
     "@types/uuid": "^3.4.3",
+    "ajv": "^6.2.0",
+    "ajv-keywords": "^3.1.0",
     "babel-core": "^6.26.0",
     "color": "^2.0.0",
     "color-hash": "^1.0.3",
@@ -105,6 +108,7 @@
     ]
   },
   "jest": {
+    "collectCoverage": true,
     "setupTestFrameworkScriptFile": "jest-extended",
     "verbose": true,
     "transform": {
@@ -116,7 +120,9 @@
         "skipBabel": true
       }
     },
-    "setupFiles": ["jest-canvas-mock"],
+    "setupFiles": [
+      "jest-canvas-mock"
+    ],
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
       "ts",

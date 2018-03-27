@@ -1,5 +1,6 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
+/* globals expect, test */
+import React from 'react'
+import renderer from 'react-test-renderer'
 import Link from '../../src/components/Link'
 import Provider from '../../src/components/Provider'
 import Navbar from '../../src/components/Navbar'
@@ -18,8 +19,8 @@ test('Navbar renders correctly', () => {
           gitter
         </Link>
       </Navbar>
-    </Provider>,
-  );
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+    </Provider>
+  )
+  let tree = component.toJSON()
+  expect(tree).toMatchSnapshot()
+})

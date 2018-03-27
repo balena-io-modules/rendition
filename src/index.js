@@ -12,10 +12,9 @@ import { default as Fixed } from './components/Fixed'
 import { default as Gauge } from './components/Gauge'
 import { default as Input } from './components/Input'
 import { default as Modal } from './components/Modal'
-import { default as PineTypes } from './components/PineTypes'
 import { default as ProgressBar } from './components/ProgressBar'
 import { default as Provider } from './components/Provider'
-import { default as SchemaSieve } from './components/Filters/SchemaSieve'
+import * as SchemaSieve from './components/Filters/SchemaSieve'
 import { default as Select } from './components/Select'
 import { default as Table } from './components/Table'
 import { default as Terminal } from './components/Terminal'
@@ -28,6 +27,8 @@ import { default as Container } from './components/Container'
 import { default as DropDownButton } from './components/DropDownButton'
 import { default as Navbar } from './components/Navbar'
 import { default as Link } from './components/Link'
+
+import * as migrations from './migrations'
 import Theme from './theme'
 
 import { Flex, Box } from './components/Grid'
@@ -55,7 +56,6 @@ export {
   Img,
   Modal,
   Navbar,
-  PineTypes,
   Provider,
   ProgressBar,
   SchemaSieve,
@@ -65,5 +65,6 @@ export {
   Txt,
   Textarea,
   Terminal,
-  Theme
+  Theme,
+  migrations
 }

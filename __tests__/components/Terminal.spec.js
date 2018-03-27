@@ -1,5 +1,6 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
+/* globals expect, jest, test */
+import React from 'react'
+import renderer from 'react-test-renderer'
 import Provider from '../../src/components/Provider'
 import Terminal from '../../src/components/Terminal'
 
@@ -16,8 +17,8 @@ test('Terminal renders correctly', () => {
   const component = renderer.create(
     <Provider>
       <Terminal>Terminal</Terminal>
-    </Provider>,
-  );
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+    </Provider>
+  )
+  let tree = component.toJSON()
+  expect(tree).toMatchSnapshot()
+})

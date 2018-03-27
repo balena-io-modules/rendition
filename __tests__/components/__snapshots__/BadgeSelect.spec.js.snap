@@ -5,26 +5,26 @@ exports[`BadgeSelect renders correctly 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <div
-    className="sc-kEYyzF hUuPit"
+    className="sc-kpOJdX jgZMDN"
   >
     <button
-      className="sc-hSdWYo bGviYS sc-kpOJdX iWnUME sc-chPdSV bqLJdV"
+      className="sc-jKJlTe dzNTLJ sc-jzJRlG cQCBHI sc-VigVT cSuplq"
       onClick={[Function]}
     >
       <div
-        className="sc-gZMcBi cmZZgb sc-dnqmqq eheJhs sc-htoDjs frbeoW"
+        className="sc-EHOje brTwkL sc-bxivhb hMYiSQ sc-htpNat wOiiQ"
       >
         <div
-          className="sc-gqjmRU iMncXr sc-iwsKbI khHCQa sc-gzVnrw gceidV"
+          className="sc-bZQynM gchzhw sc-ifAKCX jUTOfE sc-bwzfXH eXfjvq"
         >
           <div
-            className="sc-cvbbAY ceKDkd sc-eHgmQL dRFCGN"
+            className="sc-hMqMXs kYklEl sc-eNQAEJ jlvaQa"
           >
             Select a target
           </div>
         </div>
         <span
-          className="sc-iAyFgw dqfTor"
+          className="sc-ckVGcZ gKuJUi"
         >
           <svg
             fill="currentColor"
