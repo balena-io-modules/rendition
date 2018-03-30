@@ -1,12 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Provider from '../src/components/Provider'
-import Button from '../src/components/Button'
+import Provider from '../../src/components/Provider'
+import { Box } from '../../src/components/Grid'
 
-test('Button renders correctly', () => {
+test('Box renders correctly', () => {
   const component = renderer.create(
     <Provider>
-      <Button>Click me</Button>
+      <Box>A box</Box>
     </Provider>,
   );
   let tree = component.toJSON();
