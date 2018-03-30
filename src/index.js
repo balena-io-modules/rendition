@@ -22,7 +22,7 @@ import { default as Terminal } from './components/Terminal'
 import { default as Text } from './components/Text'
 import { default as TextWithCopy } from './components/TextWithCopy'
 import { default as Textarea } from './components/Textarea'
-import { default as Image } from './components/Image'
+import { default as Img } from './components/Img'
 import { default as Heading } from './components/Heading'
 import { default as Container } from './components/Container'
 import { default as DropDownButton } from './components/DropDownButton'
@@ -52,7 +52,7 @@ export {
   Heading,
   Link,
   Input,
-  Image,
+  Img,
   Modal,
   Navbar,
   PineTypes,

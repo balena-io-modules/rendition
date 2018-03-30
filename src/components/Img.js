@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 import { space, width } from 'styled-system'
 
-const Image = styled.img`
+const Img = styled.img`
   display: block;
   max-width: 100%;
   height: auto;
   ${space} ${width};
 `
 
-Image.displayName = 'Image'
+Img.displayName = 'Img'
 
-export default Image
+export default Img

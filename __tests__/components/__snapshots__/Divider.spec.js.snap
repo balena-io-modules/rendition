@@ -6,8 +6,6 @@ exports[`Divider renders correctly 1`] = `
 >
   <hr
     className="sc-htoDjs gDCMNh sc-gzVnrw dFonrj"
-  >
-    Divider
-  </hr>
+  />
 </div>
 `;

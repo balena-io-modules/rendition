@@ -1,13 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Image renders correctly 1`] = `
+exports[`Img renders correctly 1`] = `
 <div
   className="sc-bdVaJa jKopLr"
 >
   <img
     className="sc-bwzfXH fHoJvN"
-  >
-    Image
-  </img>
+  />
 </div>
 `;

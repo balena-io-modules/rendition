@@ -6,8 +6,7 @@ exports[`Input renders correctly 1`] = `
 >
   <input
     className="sc-htoDjs gDCMNh sc-gzVnrw fEujqr"
-  >
-    Input
-  </input>
+    placeholder="Placeholder Text"
+  />
 </div>
 `;

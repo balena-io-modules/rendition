@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
-import { Image } from '../'
+import { Img } from '../'
 import * as Logo from './assets/etcher.svg'
 
 const Container = styled.div`
@@ -9,8 +9,8 @@ const Container = styled.div`
   background: ${props => props.theme.colors.gray.dark};
 `
 
-storiesOf('Image', module)
+storiesOf('Img', module)
   .addDecorator(story => <Container>{story()}</Container>)
   .addWithInfo('Standard', () => {
-    return <Image p={5} src={Logo} />
+    return <Img p={5} src={Logo} />
   })
