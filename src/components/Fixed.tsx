@@ -14,10 +14,10 @@ interface FixedBaseProps extends DefaultProps {
 
 const Base = (styled.div as StyledFunction<FixedBaseProps>)`
 	position: fixed;
-	top: ${props => defaultTo(props.top, 0)};
-	right: ${props => defaultTo(props.right, 0)};
-	bottom: ${props => defaultTo(props.bottom, 0)};
-	left: ${props => defaultTo(props.left, 0)};
+	top: ${props => defaultTo(props.top, 'auto')};
+	right: ${props => defaultTo(props.right, 'auto')};
+	bottom: ${props => defaultTo(props.bottom, 'auto')};
+	left: ${props => defaultTo(props.left, 'auto')};
 	z-index: ${props => defaultTo(props.z, 0)};
 	background: ${props => defaultTo(props.bg, 'none')};
 `;

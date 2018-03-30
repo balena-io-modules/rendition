@@ -443,9 +443,10 @@ declare module 'rendition' {
 		destroy: () => void;
 	}
 
-	interface TextProps extends DefaultProps {
+	interface TextProps extends DefaultProps, Tooltip {
 		monospace?: boolean;
 		bold?: boolean;
+		caps?: boolean;
 		align?:
 			| 'left'
 			| 'right'
@@ -460,7 +461,13 @@ declare module 'rendition' {
 			| 'unset';
 	}
 
-	class Text extends RenderableElementWithProps<TextProps, any> {}
+	class TextP extends RenderableElementWithProps<TextProps, any> {}
+	class TextSpan extends RenderableElementWithProps<TextProps, any> {}
+
+	class Text extends RenderableElementWithProps<TextProps, any> {
+		p: TextP;
+		span: TextSpan;
+	}
 
 	// also expose the HTML tag variant constructors
 	// that we support & make available as static properties

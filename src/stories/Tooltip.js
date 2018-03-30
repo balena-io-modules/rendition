@@ -8,7 +8,12 @@ import {
   Button,
   CodeWithCopy,
   DeleteButton,
-  Heading
+  DropDownButton,
+  Fixed,
+  Flex,
+  Heading,
+  Text,
+  Link
 } from '../'
 
 storiesOf('Tooltip', module)
@@ -101,7 +106,7 @@ storiesOf('Tooltip', module)
       </Box>
     )
   })
-  .addWithInfo('Elements', () => {
+  .addWithInfo('Supported Elements', () => {
     return (
       <Box>
         <Heading.h3>Alert</Heading.h3>
@@ -129,6 +134,35 @@ storiesOf('Tooltip', module)
 
         <Heading.h3 mt={30}>DeleteButton</Heading.h3>
         <DeleteButton tooltip='DeleteButton tooltip' />
+
+        <Heading.h3 mt={30}>DropDownButton</Heading.h3>
+        <DropDownButton
+          tooltip='DropDownButton tooltip'
+          mx={2}
+          primary
+          label={<div>DropDown</div>}
+        >
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+        </DropDownButton>
+
+        <Fixed right='30px' tooltip='Fixed tooltip'>
+          <Heading.h3 mt={30}>Fixed</Heading.h3>
+        </Fixed>
+
+        <Heading.h3 mt={30}>Flex</Heading.h3>
+        <Flex style={{ height: 30 }} bg='red' tooltip='Flex tooltip' />
+
+        <Heading.h3 mt={30}>Heading</Heading.h3>
+        <Heading.h2 tooltip='Heading tooltip'>Hello world!</Heading.h2>
+
+        <Heading.h3 mt={30}>Link</Heading.h3>
+        <Link tooltip='Link tooltip'>Lorem ipsum dolor sit amet</Link>
+
+        <Heading.h3 mt={30}>Text</Heading.h3>
+        <Text tooltip='Text tooltip'>Lorem ipsum dolor sit amet</Text>
       </Box>
     )
   })

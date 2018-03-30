@@ -127,7 +127,11 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 		let left = 0;
 
 		// Position the tooltip correctly
-		const boundingRect = (e.target as any).getBoundingClientRect();
+		const boundingRect = (e.target as any).getBoundingClientRect().toJSON();
+
+		// Ajust bounds to compensate for scrolling
+		boundingRect.top += window.scrollY;
+		boundingRect.left += window.scrollX;
 
 		if (!placement || placement === 'top') {
 			top = boundingRect.top - this.tooltipElement.clientHeight - TARGET_OFFSET;

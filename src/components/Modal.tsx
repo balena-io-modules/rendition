@@ -17,7 +17,7 @@ injectGlobal`
 	}
 `;
 
-const ModalWrapper = Flex.extend`
+const ModalWrapper = styled(Flex)`
 	position: fixed;
 	top: 0;
 	left: 0;

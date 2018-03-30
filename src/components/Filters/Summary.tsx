@@ -93,7 +93,11 @@ class FilterSummary extends React.Component<
 		return (
 			<BorderedDiv>
 				<Flex justify="space-between">
-					<Text fontSize={13} mb={10} color={this.props.dark && '#fff'}>
+					<Text
+						fontSize={13}
+						mb={10}
+						color={this.props.dark ? '#fff' : undefined}
+					>
 						Filters ({this.props.rules.length})
 					</Text>
 

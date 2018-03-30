@@ -1,10 +1,22 @@
-import * as React from 'react'
 import * as get from 'lodash/get'
 import * as omit from 'lodash/omit'
-import Text from './Text'
-import { darken } from '../utils'
+import * as React from 'react'
+import styled from 'styled-components'
+import { color, fontSize, space } from 'styled-system'
+import { align, bold, caps } from './Text'
+import asRendition from '../asRendition'
+import { darken, monospace } from '../utils'
 
-let Base = Text.extend`
+let Base = styled.a`
+  ${align}
+  ${color}
+  ${fontSize}
+  ${monospace};
+  ${space}
+
+  ${caps}
+  ${bold}
+
   text-decoration: ${props => props.decor || 'none'};
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
   opacity: ${props => (props.disabled ? 0.65 : 1)};
@@ -35,4 +47,4 @@ Link.defaultProps = {
   color: 'primary.main'
 }
 
-export default Link
+export default asRendition(Link)
