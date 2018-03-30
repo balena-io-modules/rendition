@@ -28,27 +28,45 @@ export const operators = {
 
 type OperatorSlug = keyof typeof operators;
 
+interface DateTimeFilter extends JSONSchema6 {
+	title: OperatorSlug;
+	properties?: {
+		[k: string]: {
+			type: 'string';
+			format: 'date-time';
+			const: string;
+			formatMaximum?: string;
+			formatMinimum?: string;
+		}
+	};
+}
+
 export const decodeFilter = (
-	filter: any,
+	filter: DateTimeFilter,
 ): {
 	field: string;
 	operator: OperatorSlug;
 	value: string;
 } | null => {
-	const field = Object.keys(filter.properties!).shift()!;
-	const operator: OperatorSlug = filter.title;
-	let value: string;
-
-	if (!filter.properties || !filter.properties![field]) {
+	if (!filter.properties) {
 		return null;
 	}
 
+	const keys = Object.keys(filter.properties);
+	if (!keys.length) {
+		return null;
+	}
+
+	const field = keys[0];
+	const operator = filter.title;
+	let value: string;
+
 	if (operator === 'is') {
-		value = (filter.properties[field] as JSONSchema6).const! as string;
+		value = filter.properties[field].const!;
 	} else if (operator === 'is_before') {
-		value = (filter.properties[field] as JSONSchema6).formatMaximum!;
+		value = filter.properties[field].formatMaximum!;
 	} else if (operator === 'is_after') {
-		value = (filter.properties[field] as JSONSchema6).formatMinimum!;
+		value = filter.properties[field].formatMinimum!;
 	} else {
 		return null;
 	}
@@ -65,11 +83,11 @@ export const createFilter = (
 	o: string,
 	value: any,
 	schema: JSONSchema6,
-): JSONSchema6 => {
+): DateTimeFilter => {
 	// Cast the operator type so that all DataType create filter functions can have the same call signature
 	const operator: OperatorSlug = o as any;
 	const { title } = schema;
-	const base: JSONSchema6 = {
+	const base: DateTimeFilter = {
 		$id: utils.randomString(),
 		title: operator,
 		description: `${title || field} ${operators[operator].getLabel(

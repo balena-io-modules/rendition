@@ -17,8 +17,12 @@ export const operators = {
 
 type OperatorSlug = keyof typeof operators;
 
+interface EnumFilter extends JSONSchema6 {
+	title: OperatorSlug;
+}
+
 export const decodeFilter = (
-	filter: any,
+	filter: EnumFilter,
 ): {
 	field: string;
 	operator: OperatorSlug;
@@ -53,11 +57,11 @@ export const createFilter = (
 	o: string,
 	value: any,
 	schema: JSONSchema6,
-): JSONSchema6 => {
+): EnumFilter => {
 	// Cast the operator type so that all DataType create filter functions can have the same call signature
 	const operator: OperatorSlug = o as any;
 	const { title } = schema;
-	const base: JSONSchema6 = {
+	const base: EnumFilter = {
 		$id: utils.randomString(),
 		title: operator,
 		description: `${title || field} ${operators[operator].getLabel(

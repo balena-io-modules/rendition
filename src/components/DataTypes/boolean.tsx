@@ -13,17 +13,30 @@ export const operators = {
 
 type OperatorSlug = keyof typeof operators;
 
-export const decodeFilter = (filter: any): FilterSignature | null => {
-	const field = Object.keys(filter.properties!).shift()!;
-	const operator: OperatorSlug = filter.title;
-	let value: boolean;
+interface BooleanFilter extends JSONSchema6 {
+	title: OperatorSlug;
+	properties?: {
+		[k: string]: { const: boolean };
+	};
+}
 
-	if (!filter.properties || !filter.properties![field]) {
+export const decodeFilter = (filter: BooleanFilter): FilterSignature | null => {
+	if (!filter.properties) {
 		return null;
 	}
 
+	const keys = Object.keys(filter.properties);
+	if (!keys.length) {
+		return null;
+	}
+
+	const field = keys[0];
+	const operator = filter.title;
+	let value: boolean;
+
+
 	if (operator === 'is') {
-		value = (filter.properties[field] as JSONSchema6).const as boolean;
+		value = filter.properties[field].const;
 	} else {
 		return null;
 	}
@@ -40,11 +53,11 @@ export const createFilter = (
 	o: string,
 	value: any,
 	schema: JSONSchema6,
-): JSONSchema6 => {
+): BooleanFilter => {
 	// Cast the operator type so that all DataType create filter functions can have the same call signature
 	const operator: OperatorSlug = o as any;
 	const { title } = schema;
-	const base: JSONSchema6 = {
+	const base: BooleanFilter = {
 		$id: utils.randomString(),
 		title: operator,
 		description: `${title || field} ${operators[operator].getLabel(
