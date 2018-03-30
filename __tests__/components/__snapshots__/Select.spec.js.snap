@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <span
+    className="sc-dnqmqq gDpXJY sc-htoDjs gdpVxp"
+  >
+    <select
+      className="sc-gzVnrw ePUKPC"
+      onChange={undefined}
+      value={undefined}
+    >
+      Select
+    </select>
+  </span>
+</div>
+`;

@@ -1,7 +1,7 @@
 import * as React from 'react'
-import * as Pie from 'paths-js/pie'
+const Pie = require('paths-js/pie')
 import styled, { withTheme } from 'styled-components'
-import * as map from 'lodash/map'
+const map = require('lodash/map')
 import { compose } from 'recompose'
 import { px } from '../utils'
 

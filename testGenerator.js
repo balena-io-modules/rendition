@@ -55,6 +55,6 @@ const files = fs.readdirSync(testFolder)
 components.forEach(component => {
   const n =`${component}.spec.js`
   if (files.indexOf(n) === -1) {
-    fs.writeFile(testFolder + n, fileText(n), 'utf8');
+    fs.writeFile(testFolder + n, fileText(component), 'utf8');
   }
 })

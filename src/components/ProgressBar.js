@@ -1,8 +1,8 @@
 import * as React from 'react'
 import styled, { withTheme } from 'styled-components'
 import { compose, withProps } from 'recompose'
-import * as get from 'lodash/get'
-import * as assign from 'lodash/assign'
+const get = require('lodash/get')
+const assign = require('lodash/assign')
 import asRendition from '../asRendition'
 import { px } from '../utils'
 import { radius } from '../theme'

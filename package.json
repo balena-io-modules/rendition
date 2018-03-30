@@ -46,9 +46,11 @@
     "git-url-parse": "^7.0.0",
     "husky": "^0.14.3",
     "jest": "^22.4.2",
+    "jest-canvas-mock": "^1.0.2",
     "jest-extended": "^0.6.0",
     "jsdom": "^11.6.2",
     "lint-staged": "^4.1.1",
+    "match-media-mock": "^0.1.0",
     "prettier": "^1.9.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -114,6 +116,7 @@
         "skipBabel": true
       }
     },
+    "setupFiles": ["jest-canvas-mock"],
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
       "ts",

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BadgeSelect renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <div
+    className="sc-kEYyzF hUuPit"
+  >
+    <button
+      className="sc-hSdWYo bGviYS sc-kpOJdX iWnUME sc-chPdSV bqLJdV"
+      onClick={[Function]}
+    >
+      <div
+        className="sc-gZMcBi cmZZgb sc-dnqmqq eheJhs sc-htoDjs frbeoW"
+      >
+        <div
+          className="sc-gqjmRU iMncXr sc-iwsKbI khHCQa sc-gzVnrw gceidV"
+        >
+          <div
+            className="sc-cvbbAY ceKDkd sc-eHgmQL dRFCGN"
+          >
+            Select a target
+          </div>
+        </div>
+        <span
+          className="sc-iAyFgw dqfTor"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            preserveAspectRatio="xMidYMid meet"
+            style={
+              Object {
+                "color": undefined,
+                "verticalAlign": "middle",
+              }
+            }
+            viewBox="0 0 40 40"
+            width="1em"
+          >
+            <g>
+              <path
+                d="m31.4 15.7q0 0.6-0.5 1l-10 10q-0.4 0.4-1 0.4t-1-0.4l-10-10q-0.4-0.4-0.4-1t0.4-1 1-0.4h20q0.6 0 1 0.4t0.5 1z"
+              />
+            </g>
+          </svg>
+        </span>
+      </div>
+    </button>
+  </div>
+</div>
+`;

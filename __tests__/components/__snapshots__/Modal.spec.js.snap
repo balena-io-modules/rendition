@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <div
+    className="sc-hMqMXs gOARcJ sc-chPdSV dfDVBP sc-cSHVUG kBGaNN sc-jzJRlG gnRVez"
+    onClick={[Function]}
+  >
+    <div
+      className="sc-kEYyzF gMkvag sc-jTzLTM gkrlrR sc-VigVT gYpBDW"
+      z={8888}
+    />
+    <div
+      className="sc-hSdWYo QyOcr sc-kgoBCf jIcSzk sc-kAzzGY bHluuy sc-fjdhpX jWzEVr"
+    >
+      <div
+        className="sc-eHgmQL bWRhNx sc-kgoBCf cUYCEa sc-kAzzGY bHluuy sc-fjdhpX gjXQTW"
+        onClick={[Function]}
+      >
+        Modal
+        <div
+          className="sc-chPdSV WNwZE sc-cSHVUG kBGaNN sc-jzJRlG gBjLKB"
+        >
+          <button
+            className="sc-gqjmRU bCjhLA sc-htoDjs hfajhw"
+            onClick={undefined}
+          >
+            OK
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

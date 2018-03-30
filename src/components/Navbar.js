@@ -1,6 +1,6 @@
 import * as React from 'react'
-import * as MenuIcon from 'react-icons/lib/md/dehaze'
-import * as CloseIcon from 'react-icons/lib/md/close'
+const MenuIcon = require('react-icons/lib/md/dehaze')
+const CloseIcon = require('react-icons/lib/md/close')
 import styled, { withTheme } from 'styled-components'
 import { responsiveStyle } from 'styled-system'
 import { Flex, Box } from './Grid'

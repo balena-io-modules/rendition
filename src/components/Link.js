@@ -1,5 +1,5 @@
-import * as get from 'lodash/get'
-import * as omit from 'lodash/omit'
+const get = require('lodash/get')
+const omit = require('lodash/omit')
 import * as React from 'react'
 import styled from 'styled-components'
 import { color, fontSize, space } from 'styled-system'

@@ -25,6 +25,7 @@ declare module 'rendition' {
 		pl?: ResponsiveStyle;
 		px?: ResponsiveStyle;
 		py?: ResponsiveStyle;
+		innerRef?: (element: HTMLElement) => void;
 	}
 
 	type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left';

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as filter from 'lodash/filter'
+const filter = require('lodash/filter')
 import { withTheme } from 'styled-components'
 import { compose } from 'recompose'
 import * as ResinDeviceStatus from 'resin-device-status'

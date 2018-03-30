@@ -1,14 +1,14 @@
 import styled, { withTheme } from 'styled-components'
 import { px } from '../utils'
-import * as IconCaretDown from 'react-icons/lib/fa/caret-down'
-import * as IconCaretUp from 'react-icons/lib/fa/caret-up'
+const IconCaretDown = require('react-icons/lib/fa/caret-down')
+const IconCaretUp = require('react-icons/lib/fa/caret-up')
 import * as React from 'react'
 import Button from './Button'
 import Divider from './Divider'
 import Fixed from './Fixed'
 import { Box, Flex } from './Grid'
 import { compose } from 'recompose'
-import * as isArray from 'lodash/isArray'
+const isArray = require('lodash/isArray')
 import { space, color, fontSize, width } from 'styled-system'
 
 const ToggleBase = styled(Button)`

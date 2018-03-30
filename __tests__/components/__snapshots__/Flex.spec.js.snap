@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flex renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <div
+    className="sc-gZMcBi cmZZgb sc-dnqmqq eheJhs sc-htpNat jNWwaj"
+  >
+    Flex
+  </div>
+</div>
+`;
