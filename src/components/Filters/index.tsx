@@ -20,7 +20,7 @@ import Button from '../Button';
 import DeleteBtn from '../DeleteButton';
 import { Box, Flex } from '../Grid';
 import Modal from '../Modal';
-import Text from '../Text';
+import Txt from '../Txt';
 import FilterForm from './FilterForm';
 import SchemaSieve from './SchemaSieve';
 import FilterSummary from './Summary';
@@ -415,7 +415,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 								{!!this.state.edit.extra &&
 									this.state.edit.extra.or.map((rule, index) => (
 										<RelativeBox key={index}>
-											<Text my={2}>OR</Text>
+											<Txt my={2}>OR</Txt>
 											<FilterForm
 												handleEditChange={(value, key) =>
 													this.handleExtraFilterFormChange(

@@ -3,7 +3,7 @@ const omit = require('lodash/omit')
 import * as React from 'react'
 import styled from 'styled-components'
 import { color, fontSize, space } from 'styled-system'
-import { align, bold, caps } from './Text'
+import { align, bold, caps } from './Txt'
 import asRendition from '../asRendition'
 import { darken, monospace } from '../utils'
 

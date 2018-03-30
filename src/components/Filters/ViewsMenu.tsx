@@ -11,7 +11,7 @@ import {
 import styled from 'styled-components';
 import DropDownButton from '../DropDownButton';
 import { Box } from '../Grid';
-import Text from '../Text';
+import Txt from '../Txt';
 import FilterDescription from './FilterDescription';
 import { SIMPLE_SEARCH_NAME } from './SchemaSieve';
 import { isValidRule } from './Summary';
@@ -74,7 +74,7 @@ const ViewListItem = styled.li`
 	}
 `;
 
-const ViewListItemLabel = styled(Text)`
+const ViewListItemLabel = styled(Txt)`
 	cursor: pointer;
 `;
 
@@ -143,9 +143,9 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 								return (
 									<Box key={scope.key}>
 										{!!scope.title && (
-											<Text fontSize={13} ml={20} mb={2} mt={2} color="#aaa">
+											<Txt fontSize={13} ml={20} mb={2} mt={2} color="#aaa">
 												{scope.title}
-											</Text>
+											</Txt>
 										)}
 										<UnstyledList>
 											{scope.data.map(view => {
@@ -162,9 +162,9 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 														>
 															{view.name}
 															<br />
-															<Text m={0} fontSize={12} color="#aaa">
+															<Txt m={0} fontSize={12} color="#aaa">
 																{rules.length} filter{rules.length > 1 && 's'}
-															</Text>
+															</Txt>
 														</ViewListItemLabel>
 														<button
 															onClick={() =>

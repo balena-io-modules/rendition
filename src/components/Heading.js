@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { color, fontSize, space } from 'styled-system'
 import asRendition from '../asRendition'
 import { monospace } from '../utils'
-import { align, bold, caps } from './Text'
+import { align, bold, caps } from './Txt'
 
 const Heading = styled.h3`
   ${align}

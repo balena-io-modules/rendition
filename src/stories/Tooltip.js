@@ -12,7 +12,7 @@ import {
   Fixed,
   Flex,
   Heading,
-  Text,
+  Txt,
   Link
 } from '../'
 
@@ -161,8 +161,8 @@ storiesOf('Tooltip', module)
         <Heading.h3 mt={30}>Link</Heading.h3>
         <Link tooltip='Link tooltip'>Lorem ipsum dolor sit amet</Link>
 
-        <Heading.h3 mt={30}>Text</Heading.h3>
-        <Text tooltip='Text tooltip'>Lorem ipsum dolor sit amet</Text>
+        <Heading.h3 mt={30}>Txt</Heading.h3>
+        <Txt tooltip='Txt tooltip'>Lorem ipsum dolor sit amet</Txt>
       </Box>
     )
   })

@@ -31,3 +31,8 @@ placement | 'top' &#124; 'right' &#124; 'bottom' &#124; 'left' | The position th
 
 The `Image` component has been renamed to `Img` to prevent conflicts with the
 `Image()` web API - https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/Image
+
+## Text
+
+The `Text` component has been renamed to `Txt` to prevent conflicts with the
+`Text()` web API - https://developer.mozilla.org/en-US/docs/Web/API/Text

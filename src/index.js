@@ -19,8 +19,8 @@ import { default as SchemaSieve } from './components/Filters/SchemaSieve'
 import { default as Select } from './components/Select'
 import { default as Table } from './components/Table'
 import { default as Terminal } from './components/Terminal'
-import { default as Text } from './components/Text'
 import { default as TextWithCopy } from './components/TextWithCopy'
+import { default as Txt } from './components/Txt'
 import { default as Textarea } from './components/Textarea'
 import { default as Img } from './components/Img'
 import { default as Heading } from './components/Heading'
@@ -61,8 +61,8 @@ export {
   SchemaSieve,
   Select,
   Table,
-  Text,
   TextWithCopy,
+  Txt,
   Textarea,
   Terminal,
   Theme

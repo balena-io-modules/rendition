@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import Badge from './Badge';
 import Divider from './Divider';
 import DropDownButton from './DropDownButton';
-import Text from './Text';
+import Txt from './Txt';
 
 const ButtonWrapper = styled.button`
 	border: 0;
@@ -63,7 +63,7 @@ class BadgeSelect extends React.Component<BadgeSelectProps, BadgeSelectState> {
 				noListFormat
 				joined
 				label={
-					<Text>
+					<Txt>
 						{this.state.selected == null &&
 							!!this.props.placeholder &&
 							this.props.placeholder}
@@ -77,13 +77,13 @@ class BadgeSelect extends React.Component<BadgeSelectProps, BadgeSelectState> {
 						{this.state.selected != null &&
 							!includes(this.props.items, this.state.selected) &&
 							this.state.selected}
-					</Text>
+					</Txt>
 				}
 			>
 				{!!this.props.extraPrefix &&
 					this.props.extraPrefix.map(item => (
 						<ButtonWrapper key={item} onClick={() => this.setSelected(item)}>
-							<Text fontSize={2}>{item}</Text>
+							<Txt fontSize={2}>{item}</Txt>
 						</ButtonWrapper>
 					))}
 
@@ -104,14 +104,14 @@ class BadgeSelect extends React.Component<BadgeSelectProps, BadgeSelectState> {
 				{!!this.props.extra &&
 					this.props.extra.map(item => (
 						<ButtonWrapper key={item} onClick={() => this.setSelected(item)}>
-							<Text fontSize={2}>{item}</Text>
+							<Txt fontSize={2}>{item}</Txt>
 						</ButtonWrapper>
 					))}
 
 				{!!this.props.extraSuffix &&
 					this.props.extraSuffix.map(item => (
 						<ButtonWrapper key={item} onClick={() => this.setSelected(item)}>
-							<Text fontSize={2}>{item}</Text>
+							<Txt fontSize={2}>{item}</Txt>
 						</ButtonWrapper>
 					))}
 			</DropDownButton>

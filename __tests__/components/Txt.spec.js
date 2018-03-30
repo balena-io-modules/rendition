@@ -1,12 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Provider from '../../src/components/Provider'
-import Text from '../../src/components/Text'
+import Txt from '../../src/components/Txt'
 
-test('Text renders correctly', () => {
+test('Txt renders correctly', () => {
   const component = renderer.create(
     <Provider>
-      <Text>Text</Text>
+      <Txt>Hello world</Txt>
     </Provider>,
   );
   let tree = component.toJSON();

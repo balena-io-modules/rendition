@@ -315,7 +315,7 @@ declare module 'rendition' {
 
 	class Input extends RenderableElementWithProps<InputProps, any> {}
 
-	class Image extends RenderableElementWithProps<
+	class Img extends RenderableElementWithProps<
 		DefaultProps & React.ImgHTMLAttributes<HTMLImageElement>,
 		any
 	> {}
@@ -444,7 +444,7 @@ declare module 'rendition' {
 		destroy: () => void;
 	}
 
-	interface TextProps extends DefaultProps, Tooltip {
+	interface TxtProps extends DefaultProps, Tooltip {
 		monospace?: boolean;
 		bold?: boolean;
 		caps?: boolean;
@@ -462,12 +462,12 @@ declare module 'rendition' {
 			| 'unset';
 	}
 
-	class TextP extends RenderableElementWithProps<TextProps, any> {}
-	class TextSpan extends RenderableElementWithProps<TextProps, any> {}
+	class TxtP extends RenderableElementWithProps<TxtProps, any> {}
+	class TxtSpan extends RenderableElementWithProps<TxtProps, any> {}
 
-	class Text extends RenderableElementWithProps<TextProps, any> {
-		p: TextP;
-		span: TextSpan;
+	class Txt extends RenderableElementWithProps<TxtProps, any> {
+		p: TxtP;
+		span: TxtSpan;
 	}
 
 	// also expose the HTML tag variant constructors

@@ -1,14 +1,14 @@
-import { TextProps, Theme } from 'rendition';
+import { Theme, TxtProps } from 'rendition';
 import styled from 'styled-components';
 import { color, fontSize, responsiveStyle, space } from 'styled-system';
 import asRendition from '../asRendition';
 import { monospace } from '../utils';
 
-interface ThemedTextProps extends TextProps {
+interface ThemedTxtProps extends TxtProps {
 	theme: Theme;
 }
 
-export const caps = (props: ThemedTextProps) =>
+export const caps = (props: ThemedTxtProps) =>
 	props.caps
 		? {
 				textTransform: 'uppercase',
@@ -16,14 +16,14 @@ export const caps = (props: ThemedTextProps) =>
 			}
 		: null;
 
-export const bold = (props: ThemedTextProps) =>
+export const bold = (props: ThemedTxtProps) =>
 	props.bold
 		? { fontWeight: props.theme.weights[props.theme.weights.length - 1] }
 		: null;
 
 export const align = responsiveStyle('text-align', 'align');
 
-const Text = styled.div`
+const Txt = styled.div`
 	${align}
 	${color}
 	${fontSize}
@@ -34,12 +34,12 @@ const Text = styled.div`
 	${bold as any}
 `;
 
-const Base = asRendition(Text) as React.ComponentClass<TextProps> & {
-	span: React.ComponentClass<TextProps>;
-	p: React.ComponentClass<TextProps>;
+const Base = asRendition(Txt) as React.ComponentClass<TxtProps> & {
+	span: React.ComponentClass<TxtProps>;
+	p: React.ComponentClass<TxtProps>;
 };
-Base.displayName = 'Text';
-Base.span = asRendition(Text.withComponent('span'));
-Base.p = asRendition(Text.withComponent('p'));
+Base.displayName = 'Txt';
+Base.span = asRendition(Txt.withComponent('span'));
+Base.p = asRendition(Txt.withComponent('p'));
 
 export default Base;
