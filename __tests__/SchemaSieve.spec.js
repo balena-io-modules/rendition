@@ -1,5 +1,4 @@
 /* globals expect, describe, it */
-import * as _ from 'lodash'
 import { JSDOM } from 'jsdom'
 const Ajv = require('ajv')
 const ajvKeywords = require('ajv-keywords')
