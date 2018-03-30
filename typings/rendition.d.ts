@@ -374,18 +374,6 @@ declare module 'rendition' {
 			schema: JSONSchema6,
 			field: string,
 		): Array<{ slug: string; label: string }>;
-		migrateLegacyFilter(
-			schema: JSONSchema6,
-			legacyFilter: v3.Filter,
-		): JSONSchema6;
-		migrateLegacyViews(
-			schema: JSONSchema6,
-			legacyViews: v3.FilterViewScope[],
-		): {
-			views: FiltersView[];
-			viewScopes: ViewScope[];
-		};
-		migrateLegacySchema(legacySchema: v3.Schema): JSONSchema6;
 	}
 
 	interface SelectProps extends DefaultProps, Sizing {
@@ -604,4 +592,21 @@ declare module 'rendition' {
 			data: SingleFilterView[];
 		}
 	}
+
+	interface Migrations {
+		migrateLegacyFilter(
+			schema: JSONSchema6,
+			legacyFilter: v3.Filter,
+		): JSONSchema6;
+		migrateLegacyViews(
+			schema: JSONSchema6,
+			legacyViews: v3.FilterViewScope[],
+		): {
+			views: FiltersView[];
+			viewScopes: ViewScope[];
+		};
+		migrateLegacySchema(legacySchema: v3.Schema): JSONSchema6;
+	}
+
+	export const migrations: Migrations;
 }
