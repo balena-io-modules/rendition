@@ -6,7 +6,7 @@ import {
 	FilterRule,
 	FilterViewScope,
 	Schema,
-	SingleFilterView,
+	SingleFilterView
 } from 'rendition';
 import styled from 'styled-components';
 import DropDownButton from '../DropDownButton';

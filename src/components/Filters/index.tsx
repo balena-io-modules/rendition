@@ -11,7 +11,7 @@ import {
 	FilterModel,
 	FilterRule,
 	FiltersProps,
-	SingleFilterView,
+	SingleFilterView
 } from 'rendition';
 import styled from 'styled-components';
 import Theme from '../../theme';
