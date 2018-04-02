@@ -82,61 +82,90 @@ const valueOperators: OperatorSlug[] = [
 	'value_not_matches_re',
 ];
 
+interface SubSchema {
+	title: string;
+	properties: {
+		[key: string]: {
+			const?: string
+			description?: string;
+			pattern?: string;
+		}
+	};
+}
+
+interface ObjectFilter extends JSONSchema6 {
+	title: OperatorSlug;
+	properties?: {
+		[k: string]: {
+			contains?: SubSchema;
+			not?: {
+				contains: SubSchema;
+			};
+		};
+	};
+}
+
 export const decodeFilter = (
-	filter: any,
+	filter: ObjectFilter,
 ): {
 	field: string;
 	operator: OperatorSlug;
 	value: {};
 } | null => {
-	const field = Object.keys(filter.properties!).shift()!;
-	const operator: OperatorSlug = filter.title;
-	let value: {};
+	const operator = filter.title;
 
-	if (!filter.properties || !filter.properties![field]) {
+	if (!filter.properties) {
 		return null;
 	}
 
+	const keys = Object.keys(filter.properties);
+	if (!keys.length) {
+		return null;
+	}
+	let value: { [key: string]: string };
+
+	const field = keys[0];
+
 	if (operator === 'is') {
 		value = mapValues(
-			filter.properties[field].contains.properties,
-			v => v.const,
+			filter.properties[field].contains!.properties,
+			v => v.const!,
 		);
 	} else if (operator === 'is_not') {
 		value = mapValues(
-			filter.properties[field].not.contains.properties,
-			v => v.const,
+			filter.properties[field].not!.contains.properties,
+			v => v.const!,
 		);
 	} else if (operator === 'key_is' || operator === 'value_is') {
 		value = mapValues(
-			filter.properties[field].contains.properties,
-			v => v.const,
+			filter.properties[field].contains!.properties,
+			v => v.const!,
 		);
 	} else if (operator === 'key_contains' || operator === 'value_contains') {
 		value = mapValues(
-			filter.properties[field].contains.properties,
-			v => v.description,
+			filter.properties[field].contains!.properties,
+			v => v.description!,
 		);
 	} else if (
 		operator === 'key_not_contains' ||
 		operator === 'value_not_contains'
 	) {
 		value = mapValues(
-			filter.properties[field].not.contains.properties,
-			v => v.description,
+			filter.properties[field].not!.contains.properties,
+			v => v.description!,
 		);
 	} else if (operator === 'key_matches_re' || operator === 'value_matches_re') {
 		value = mapValues(
-			filter.properties[field].contains.properties,
-			v => v.pattern,
+			filter.properties[field].contains!.properties,
+			v => v.pattern!,
 		);
 	} else if (
 		operator === 'key_not_matches_re' ||
 		operator === 'value_not_matches_re'
 	) {
 		value = mapValues(
-			filter.properties[field].not.contains.properties,
-			v => v.pattern,
+			filter.properties[field].not!.contains.properties,
+			v => v.pattern!,
 		);
 	} else {
 		return null;
@@ -159,14 +188,12 @@ const format = (schema: JSONSchema6, object: { [k: string]: string }) => {
 
 export const createFilter = (
 	field: string,
-	o: string,
+	operator: OperatorSlug,
 	value: any,
 	schema: JSONSchema6,
 ): JSONSchema6 => {
-	// Cast the operator type so that all DataType create filter functions can have the same call signature
-	const operator: OperatorSlug = o as any;
 	const { title } = schema;
-	const base: JSONSchema6 = {
+	const base: ObjectFilter = {
 		title: operator,
 		description: `${title || field} ${operators[operator].getLabel(
 			schema,

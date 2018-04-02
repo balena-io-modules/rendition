@@ -4,7 +4,7 @@ import { FilterSignature, FiltersView, v3, ViewScope } from 'rendition';
 import {
 	createFilter,
 	createFullTextSearchFilter,
-} from './components/filters/SchemaSieve';
+} from './components/Filters/SchemaSieve';
 
 const convertToBooleanSignature = (
 	legacyFilter: v3.BaseFilter,

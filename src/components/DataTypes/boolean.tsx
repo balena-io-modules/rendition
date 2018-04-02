@@ -50,12 +50,10 @@ export const decodeFilter = (filter: BooleanFilter): FilterSignature | null => {
 
 export const createFilter = (
 	field: string,
-	o: string,
+	operator: OperatorSlug,
 	value: any,
 	schema: JSONSchema6,
 ): BooleanFilter => {
-	// Cast the operator type so that all DataType create filter functions can have the same call signature
-	const operator: OperatorSlug = o as any;
 	const { title } = schema;
 	const base: BooleanFilter = {
 		$id: utils.randomString(),

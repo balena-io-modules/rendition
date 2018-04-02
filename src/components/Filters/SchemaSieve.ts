@@ -128,7 +128,7 @@ export const createFilter = (
 			return {};
 		}
 
-		return model.createFilter(field, operator as any, value, subSchema);
+		return (model.createFilter as (...args: any[]) => JSONSchema6)(field, operator as any, value, subSchema);
 	});
 
 	return {
@@ -147,7 +147,7 @@ export const decodeFilter = (schema: JSONSchema6, filter: JSONSchema6) => {
 			return {};
 		}
 
-		return model.decodeFilter(f);
+		return (model.decodeFilter as (f: JSONSchema6) => FilterSignature)(f);
 	});
 
 	return signatures.filter(s => s !== null);

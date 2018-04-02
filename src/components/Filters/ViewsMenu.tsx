@@ -135,7 +135,7 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 						{hasViews &&
 							map(groupedViews, (views: FiltersView[], scope) => (
 								<Box key={scope}>
-									{(!!scope && scope !== 'null') && (
+									{!!scope && (
 										<Text fontSize={13} ml={20} mb={2} mt={2} color="#aaa">
 											{scope}
 										</Text>

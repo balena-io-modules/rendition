@@ -80,12 +80,10 @@ export const decodeFilter = (
 
 export const createFilter = (
 	field: string,
-	o: string,
+	operator: OperatorSlug,
 	value: any,
 	schema: JSONSchema6,
 ): DateTimeFilter => {
-	// Cast the operator type so that all DataType create filter functions can have the same call signature
-	const operator: OperatorSlug = o as any;
 	const { title } = schema;
 	const base: DateTimeFilter = {
 		$id: utils.randomString(),

@@ -86,7 +86,7 @@ declare module 'rendition' {
 		decodeFilter(filter: JSONSchema6): null | FilterSignature;
 		createFilter(
 			field: string,
-			o: string,
+			operator: string,
 			value: any,
 			schema: JSONSchema6,
 		): JSONSchema6;

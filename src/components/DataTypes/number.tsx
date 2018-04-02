@@ -19,27 +19,45 @@ export const operators = {
 
 type OperatorSlug = keyof typeof operators;
 
+interface NumberFilter extends JSONSchema6 {
+	title: OperatorSlug;
+	properties?: {
+		[k: string]: {
+			type: 'number';
+			const?: number;
+			exclusiveMinimum?: number;
+			exclusiveMaximum?: number;
+		};
+	};
+}
+
 export const decodeFilter = (
-	filter: any,
+	filter: NumberFilter,
 ): {
 	field: string;
 	operator: OperatorSlug;
 	value: number;
 } | null => {
-	const field = Object.keys(filter.properties!).shift()!;
-	const operator: OperatorSlug = filter.title;
-	let value: number;
+	const operator = filter.title;
 
-	if (!filter.properties || !filter.properties![field]) {
+	if (!filter.properties) {
 		return null;
 	}
 
+	const keys = Object.keys(filter.properties);
+	if (!keys.length) {
+		return null;
+	}
+	let value: number;
+
+	const field = keys[0];
+
 	if (operator === 'is') {
-		value = (filter.properties[field] as JSONSchema6).const! as number;
+		value = filter.properties[field].const!;
 	} else if (operator === 'is_more_than') {
-		value = (filter.properties[field] as JSONSchema6).exclusiveMinimum!;
+		value = filter.properties[field].exclusiveMinimum!;
 	} else if (operator === 'is_less_than') {
-		value = (filter.properties[field] as JSONSchema6).exclusiveMaximum!;
+		value = filter.properties[field].exclusiveMaximum!;
 	} else {
 		return null;
 	}
@@ -53,14 +71,12 @@ export const decodeFilter = (
 
 export const createFilter = (
 	field: string,
-	o: string,
+	operator: OperatorSlug,
 	value: any,
 	schema: JSONSchema6,
-): JSONSchema6 => {
-	// Cast the operator type so that all DataType create filter functions can have the same call signature
-	const operator: OperatorSlug = o as any;
+): NumberFilter => {
 	const { title } = schema;
-	const base: JSONSchema6 = {
+	const base: NumberFilter = {
 		$id: utils.randomString(),
 		title: operator,
 		description: `${title || field} ${operators[operator].getLabel(

@@ -65,11 +65,6 @@ class FilterSummary extends React.Component<
 		});
 	}
 
-	setExistingId(e: Event) {
-		const id = (e.target as HTMLInputElement).value;
-		this.setState({ id });
-	}
-
 	handleChange(e: Event) {
 		const name = (e.target as HTMLInputElement).value;
 		this.setState({ name });

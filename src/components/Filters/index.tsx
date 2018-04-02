@@ -1,5 +1,6 @@
 import cloneDeep = require('lodash/cloneDeep');
 import findIndex = require('lodash/findIndex');
+import reject = require('lodash/reject');
 import map = require('lodash/map');
 import * as React from 'react';
 import { FaFilter, FaSearch } from 'react-icons/lib/fa';
@@ -20,14 +21,14 @@ import { JSONSchema6 } from 'json-schema';
 
 import Summary from './Summary';
 
-interface FilterInput {
+interface FilterInputProps {
 	schema: JSONSchema6;
 	value: any;
 	operator: string;
 	onUpdate: (value: any) => void;
 }
 
-const FilterInput = (props: any) => {
+const FilterInput = (props: FilterInputProps) => {
 	const model = SchemaSieve.getDataModel(props.schema);
 
 	if (!model) {
@@ -124,7 +125,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 	getCleanEditModel(field?: string) {
 		const { schema } = this.props;
 		if (!field) {
-			field = Object.keys(schema.properties as JSONSchema6).shift()!;
+			field = Object.keys(schema.properties!).shift()!;
 		}
 		const operator = this.getOperators(field).shift()!.slug;
 		return {
@@ -213,7 +214,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 	removeFilter({ $id }: JSONSchema6) {
 		this.setState(
 			prevState => ({
-				filters: prevState.filters.filter(f => f.$id !== $id),
+				filters: reject(prevState.filters, { $id }),
 			}),
 			() =>
 				this.props.onFiltersUpdate &&
@@ -264,7 +265,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 	deleteView({ id }: FiltersView) {
 		this.setState(
 			prevState => ({
-				views: prevState.views.filter(v => v.id !== id),
+				views: reject(prevState.views, { id }),
 			}),
 			() =>
 				this.props.onViewsUpdate && this.props.onViewsUpdate(this.state.views),

@@ -26,30 +26,49 @@ export const operators = {
 
 type OperatorSlug = keyof typeof operators;
 
+interface StringFilter extends JSONSchema6 {
+	title: OperatorSlug;
+	properties?: {
+		[k: string]: {
+			const?: string;
+			pattern?: string;
+			description?: string;
+			not?: {
+				pattern: string;
+			}
+		};
+	};
+}
+
 export const decodeFilter = (
-	filter: any,
+	filter: StringFilter,
 ): {
 	field: string;
 	operator: OperatorSlug;
 	value: string;
 } | null => {
-	const field = Object.keys(filter.properties!).shift()!;
-	const operator: OperatorSlug = filter.title;
-	let value: string;
+	const operator = filter.title;
 
-	if (!filter.properties || !filter.properties![field]) {
+	if (!filter.properties) {
 		return null;
 	}
 
+	const keys = Object.keys(filter.properties);
+	if (!keys.length) {
+		return null;
+	}
+	let value: string;
+
+	const field = keys[0];
+
 	if (operator === 'is') {
-		value = (filter.properties[field] as JSONSchema6).const! as string;
+		value = filter.properties[field].const!;
 	} else if (operator === 'contains' || operator === 'not_contains') {
-		value = (filter.properties[field] as JSONSchema6).description!;
+		value = filter.properties[field].description!;
 	} else if (operator === 'matches_re') {
-		value = (filter.properties[field] as JSONSchema6).pattern!;
+		value = filter.properties[field].pattern!;
 	} else if (operator === 'not_matches_re') {
-		value = ((filter.properties[field] as JSONSchema6).not! as JSONSchema6)
-			.pattern!;
+		value = filter.properties[field].not!.pattern;
 	} else {
 		return null;
 	}
@@ -63,14 +82,12 @@ export const decodeFilter = (
 
 export const createFilter = (
 	field: string,
-	o: string,
+	operator: OperatorSlug,
 	value: any,
 	schema: JSONSchema6,
 ): JSONSchema6 => {
-	// Cast the operator type so that all DataType create filter functions can have the same call signature
-	const operator: OperatorSlug = o as any;
 	const { title } = schema;
-	const base: JSONSchema6 = {
+	const base: StringFilter = {
 		$id: utils.randomString(),
 		title: operator,
 		description: `${title || field} ${operators[operator].getLabel(
