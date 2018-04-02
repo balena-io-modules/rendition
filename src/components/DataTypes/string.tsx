@@ -35,7 +35,7 @@ interface StringFilter extends JSONSchema6 {
 			description?: string;
 			not?: {
 				pattern: string;
-			}
+			};
 		};
 	};
 }

@@ -128,7 +128,12 @@ export const createFilter = (
 			return {};
 		}
 
-		return (model.createFilter as (...args: any[]) => JSONSchema6)(field, operator as any, value, subSchema);
+		return (model.createFilter as (...args: any[]) => JSONSchema6)(
+			field,
+			operator as any,
+			value,
+			subSchema,
+		);
 	});
 
 	return {

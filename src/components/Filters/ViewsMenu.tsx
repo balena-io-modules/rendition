@@ -3,10 +3,7 @@ import groupBy = require('lodash/groupBy');
 import map = require('lodash/map');
 import * as React from 'react';
 import { FaPieChart, FaTrash } from 'react-icons/lib/fa';
-import {
-	DropDownButtonProps,
-	FiltersView,
-} from 'rendition';
+import { DropDownButtonProps, FiltersView } from 'rendition';
 import styled from 'styled-components';
 import DropDownButton from '../DropDownButton';
 import { Box } from '../Grid';
@@ -150,22 +147,17 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 													{view.name}
 													<br />
 													<Text m={0} fontSize={12} color="#aaa">
-														{view.filters.length} filter{view.filters.length > 1 && 's'}
+														{view.filters.length} filter{view.filters.length >
+															1 && 's'}
 													</Text>
 												</ViewListItemLabel>
-												<button
-													onClick={() =>
-														this.props.deleteView(view)
-													}
-												>
+												<button onClick={() => this.props.deleteView(view)}>
 													<FaTrash name="trash" />
 												</button>
 												<Preview>
 													{view.filters.map(filter => (
 														<Box mb={10} key={filter.$id}>
-															<FilterDescription
-																filter={filter}
-															/>
+															<FilterDescription filter={filter} />
 														</Box>
 													))}
 												</Preview>

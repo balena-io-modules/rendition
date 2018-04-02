@@ -86,10 +86,10 @@ interface SubSchema {
 	title: string;
 	properties: {
 		[key: string]: {
-			const?: string
+			const?: string;
 			description?: string;
 			pattern?: string;
-		}
+		};
 	};
 }
 

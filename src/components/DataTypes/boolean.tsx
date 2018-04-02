@@ -34,7 +34,6 @@ export const decodeFilter = (filter: BooleanFilter): FilterSignature | null => {
 	const operator = filter.title;
 	let value: boolean;
 
-
 	if (operator === 'is') {
 		value = filter.properties[field].const;
 	} else {

@@ -37,7 +37,7 @@ interface DateTimeFilter extends JSONSchema6 {
 			const: string;
 			formatMaximum?: string;
 			formatMinimum?: string;
-		}
+		};
 	};
 }
 
