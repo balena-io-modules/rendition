@@ -1,7 +1,7 @@
 import cloneDeep = require('lodash/cloneDeep');
 import findIndex = require('lodash/findIndex');
-import reject = require('lodash/reject');
 import map = require('lodash/map');
+import reject = require('lodash/reject');
 import * as React from 'react';
 import { FaFilter, FaSearch } from 'react-icons/lib/fa';
 import { FiltersProps, FiltersView } from 'rendition';
