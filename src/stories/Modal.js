@@ -40,7 +40,17 @@ class ModalDemo extends React.Component {
               this.setState({ show: false })
             }}
           >
-            {this.props.children || 'Lorem ipsum dolor sit amet'}
+            {this.props.children || (
+              <div>
+                <p>Lorem ipsum dolor sit amet</p>
+                <a
+                  href='https://resin-io-modules.github.io/rendition/'
+                  target='_blank'
+                >
+                  Rendition
+                </a>
+              </div>
+            )}
           </Modal>
         )}
       </Container>
@@ -52,7 +62,10 @@ storiesOf('Modal', module)
   .addWithInfo('Standard', () => {
     return (
       <Modal title='Modal title' cancel={cancelAction} done={doneAction}>
-        Lorem ipsum dolor sit amet
+        <p>Lorem ipsum dolor sit amet</p>
+        <a href='https://resin-io-modules.github.io/rendition/' target='_blank'>
+          Rendition
+        </a>
       </Modal>
     )
   })
@@ -64,14 +77,20 @@ storiesOf('Modal', module)
         done={doneAction}
         action='Go!'
         >
-        Lorem ipsum dolor sit amet
+        <p>Lorem ipsum dolor sit amet</p>
+        <a href='https://resin-io-modules.github.io/rendition/' target='_blank'>
+          Rendition
+        </a>
       </Modal>
     )
   })
   .addWithInfo('No cancel button', () => {
     return (
       <Modal title='Modal title' done={doneAction}>
-        Lorem ipsum dolor sit amet
+        <p>Lorem ipsum dolor sit amet</p>
+        <a href='https://resin-io-modules.github.io/rendition/' target='_blank'>
+          Rendition
+        </a>
       </Modal>
     )
   })
@@ -83,7 +102,10 @@ storiesOf('Modal', module)
         cancel={cancelAction}
         done={doneAction}
         >
-        Lorem ipsum dolor sit amet
+        <p>Lorem ipsum dolor sit amet</p>
+        <a href='https://resin-io-modules.github.io/rendition/' target='_blank'>
+          Rendition
+        </a>
       </Modal>
     )
   })
@@ -96,7 +118,10 @@ storiesOf('Modal', module)
         cancel={cancelAction}
         done={doneAction}
         >
-        Lorem ipsum dolor sit amet
+        <p>Lorem ipsum dolor sit amet</p>
+        <a href='https://resin-io-modules.github.io/rendition/' target='_blank'>
+          Rendition
+        </a>
       </Modal>
     )
   })
@@ -109,7 +134,10 @@ storiesOf('Modal', module)
         cancel={cancelAction}
         done={doneAction}
         >
-        Lorem ipsum dolor sit amet
+        <p>Lorem ipsum dolor sit amet</p>
+        <a href='https://resin-io-modules.github.io/rendition/' target='_blank'>
+          Rendition
+        </a>
       </Modal>
     )
   })
@@ -125,7 +153,10 @@ storiesOf('Modal', module)
         cancel={cancelAction}
         done={doneAction}
         >
-        Lorem ipsum dolor sit amet
+        <p>Lorem ipsum dolor sit amet</p>
+        <a href='https://resin-io-modules.github.io/rendition/' target='_blank'>
+          Rendition
+        </a>
       </Modal>
     )
   })
@@ -141,7 +172,10 @@ storiesOf('Modal', module)
         done={doneAction}
         action='OK'
         >
-        Lorem ipsum dolor sit amet
+        <p>Lorem ipsum dolor sit amet</p>
+        <a href='https://resin-io-modules.github.io/rendition/' target='_blank'>
+          Rendition
+        </a>
       </Modal>
     )
   })
@@ -167,7 +201,10 @@ storiesOf('Modal', module)
           disabled: true
         }}
         >
-        Lorem ipsum dolor sit amet
+        <p>Lorem ipsum dolor sit amet</p>
+        <a href='https://resin-io-modules.github.io/rendition/' target='_blank'>
+          Rendition
+        </a>
       </Modal>
     )
   })

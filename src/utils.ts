@@ -45,6 +45,10 @@ export const randomString = (length = 16) => {
 	return text;
 };
 
+export const stopPropagation = <T>(e: Event | React.MouseEvent<T>) => {
+	e.stopPropagation();
+};
+
 export const stopEvent = <T>(e: Event | React.MouseEvent<T>) => {
 	e.preventDefault();
 	e.stopPropagation();
