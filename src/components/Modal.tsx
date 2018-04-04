@@ -2,7 +2,7 @@ import assign = require('lodash/assign');
 import * as React from 'react';
 import { ModalProps } from 'rendition';
 import styled, { injectGlobal } from 'styled-components';
-import { stopEvent } from '../utils';
+import { stopPropagation } from '../utils';
 import Button from './Button';
 import Fixed from './Fixed';
 import { Box, Flex } from './Grid';
@@ -116,7 +116,10 @@ class Modal extends React.Component<ModalProps, any> {
 			>
 				<ModalBackdrop z={8888} bg="rgba(0,0,0,0.4)" top right bottom left />
 				<ModalSizer>
-					<ModalPanel w={w || width || DEFAULT_MODAL_WIDTH} onClick={stopEvent}>
+					<ModalPanel
+						w={w || width || DEFAULT_MODAL_WIDTH}
+						onClick={stopPropagation}
+					>
 						{props.titleElement ? (
 							<ModalHeader>{props.titleElement}</ModalHeader>
 						) : (
