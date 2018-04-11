@@ -14,12 +14,16 @@ const ButtonWrapper = styled.button`
 	padding: 3px 8px;
 `;
 
+const WrappingEm = styled.em`
+	white-space: pre-wrap;
+`;
+
 const FilterDescriptionInner = (props: { filter: JSONSchema6 }) => (
 	<Box>
 		{!!props.filter.anyOf &&
 			props.filter.anyOf.map((f, i) => (
 				<React.Fragment key={i}>
-					{i > 0 && <em> or </em>}
+					{i > 0 && <WrappingEm> or </WrappingEm>}
 					<span>{f.description}</span>
 				</React.Fragment>
 			))}
