@@ -115,7 +115,9 @@ export const Edit = ({
 	<Select
 		{...props}
 		value={value}
-		onChange={(e: Event) => onUpdate((e.target as HTMLSelectElement).value)}
+		onChange={(e: React.FormEvent<HTMLSelectElement>) =>
+			onUpdate(e.currentTarget.value)
+		}
 	>
 		{map(schema.enum, (item: string) => <option key={item}>{item}</option>)}
 	</Select>

@@ -357,10 +357,10 @@ export const Edit = (props: DataTypeEditProps) => {
 					mr={2}
 					mb={1}
 					placeholder={keyLabel}
-					onChange={(e: Event) =>
+					onChange={(e: React.FormEvent<HTMLInputElement>) =>
 						onUpdate(
 							assign(value, {
-								[schemaKey]: (e.target as HTMLInputElement).value,
+								[schemaKey]: e.currentTarget.value,
 							}),
 						)
 					}
@@ -371,10 +371,10 @@ export const Edit = (props: DataTypeEditProps) => {
 					type="text"
 					value={value ? value[schemaValue] : ''}
 					placeholder={valueLabel}
-					onChange={(e: Event) =>
+					onChange={(e: React.FormEvent<HTMLInputElement>) =>
 						onUpdate(
 							assign(value, {
-								[schemaValue]: (e.target as HTMLInputElement).value,
+								[schemaValue]: e.currentTarget.value,
 							}),
 						)
 					}

@@ -147,7 +147,9 @@ export const Edit = ({
 			{...props}
 			type="datetime-local"
 			value={value}
-			onChange={(e: Event) => onUpdate((e.target as HTMLInputElement).value)}
+			onChange={(e: React.FormEvent<HTMLInputElement>) =>
+				onUpdate(e.currentTarget.value)
+			}
 		/>
 	);
 };

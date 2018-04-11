@@ -130,8 +130,8 @@ export const Edit = ({
 		{...props}
 		type="number"
 		value={value}
-		onChange={(e: Event) =>
-			onUpdate(parseFloat((e.target as HTMLInputElement).value))
+		onChange={(e: React.FormEvent<HTMLInputElement>) =>
+			onUpdate(parseFloat(e.currentTarget.value))
 		}
 	/>
 );

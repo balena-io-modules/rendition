@@ -84,8 +84,8 @@ export const Edit = ({
 	<Select
 		{...props}
 		value={value ? 'true' : 'false'}
-		onChange={(e: Event) =>
-			onUpdate((e.target as HTMLSelectElement).value === 'true')
+		onChange={(e: React.FormEvent<HTMLSelectElement>) =>
+			onUpdate(e.currentTarget.value === 'true')
 		}
 	>
 		<option>true</option>

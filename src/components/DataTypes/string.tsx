@@ -168,8 +168,8 @@ export const Edit = ({
 	if (slim) {
 		return (
 			<Input
-				onChange={(e: Event) =>
-					onUpdate((e.target as HTMLTextAreaElement).value)
+				onChange={(e: React.FormEvent<HTMLInputElement>) =>
+					onUpdate(e.currentTarget.value)
 				}
 				{...props}
 			/>
@@ -178,7 +178,9 @@ export const Edit = ({
 
 	return (
 		<Textarea
-			onChange={(e: Event) => onUpdate((e.target as HTMLTextAreaElement).value)}
+			onChange={(e: React.FormEvent<HTMLTextAreaElement>) =>
+				onUpdate(e.currentTarget.value)
+			}
 			{...props}
 		/>
 	);
