@@ -5,7 +5,7 @@ exports[`DeviceStatusGauge renders correctly 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <div
-    className="sc-dnqmqq gDpXJY sc-gzVnrw iYSyBq"
+    className="sc-bxivhb ljpeSw sc-bwzfXH hBrfBJ"
   >
     <svg
       className="gauge__graph"
@@ -45,7 +45,7 @@ exports[`DeviceStatusGauge renders correctly 1`] = `
          TOTAL DEVICES
       </text>
       <text
-        className="sc-htoDjs gNiaxF"
+        className="sc-htpNat gwYnzy"
         x="50"
         y="63"
       >

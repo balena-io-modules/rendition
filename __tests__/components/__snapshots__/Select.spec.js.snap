@@ -5,10 +5,10 @@ exports[`Select renders correctly 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <span
-    className="sc-dnqmqq gDpXJY sc-htoDjs gdpVxp"
+    className="sc-bxivhb ljpeSw sc-htpNat bgSeOB"
   >
     <select
-      className="sc-gzVnrw ePUKPC"
+      className="sc-bwzfXH hbfTbM"
       onChange={undefined}
       value={undefined}
     >
