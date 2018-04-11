@@ -150,7 +150,6 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 	}
 
 	setEditOperator(operator: string, index: number) {
-		console.log('setting edit operator', operator);
 		const currentEdit = this.state.edit.slice();
 		const item = currentEdit[index];
 		currentEdit.splice(index, 1, { ...item, operator });
@@ -160,7 +159,6 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 	}
 
 	setEditValue(value: string, index: number) {
-		console.log('setting edit value', value);
 		const currentEdit = this.state.edit.slice();
 		const item = currentEdit[index];
 		currentEdit.splice(index, 1, { ...item, value });
@@ -184,8 +182,6 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		} else {
 			filters = currentFilters.concat(filter);
 		}
-
-		console.log('FILTERS', filters);
 
 		this.setState(
 			{
