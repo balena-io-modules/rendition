@@ -43,11 +43,9 @@ const schema = {
       type: 'string'
     },
     Description: {
-      title: 'Pokemon Name',
       type: 'string'
     },
     Abilities: {
-      title: 'Pokemon Name',
       type: 'string'
     },
     Tag: {
