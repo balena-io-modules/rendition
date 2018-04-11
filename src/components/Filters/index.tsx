@@ -9,6 +9,7 @@ import styled from 'styled-components';
 import Theme from '../../theme';
 import * as utils from '../../utils';
 import Button from '../Button';
+import { getDataModel } from '../DataTypes';
 import DeleteBtn from '../DeleteButton';
 import { Box, Flex } from '../Grid';
 import Modal from '../Modal';
@@ -29,7 +30,7 @@ interface FilterInputProps {
 }
 
 const FilterInput = (props: FilterInputProps) => {
-	const model = SchemaSieve.getDataModel(props.schema);
+	const model = getDataModel(props.schema);
 
 	if (!model) {
 		return null;

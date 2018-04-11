@@ -9,7 +9,7 @@ import map = require('lodash/map');
 import pickBy = require('lodash/pickBy');
 import { FilterSignature } from 'rendition';
 import * as utils from '../../utils';
-import DataTypes from '../DataTypes';
+import { getDataModel } from '../DataTypes';
 
 const ajv = new Ajv();
 ajvKeywords(ajv);
@@ -33,35 +33,6 @@ export const filter = (
 	}
 
 	return pickBy(collection, m => every(validators, v => v(m)));
-};
-
-export const getDataModel = (schema?: JSONSchema6) => {
-	if (!schema) {
-		return null;
-	}
-
-	const { format, type } = schema;
-
-	if (schema.enum) {
-		return DataTypes.enum;
-	}
-	if (type === 'string') {
-		if (format === 'date-time') {
-			return DataTypes.date_time;
-		}
-		return DataTypes.string;
-	}
-	if (type === 'object') {
-		return DataTypes.object;
-	}
-	if (type === 'boolean') {
-		return DataTypes.boolean;
-	}
-	if (type === 'number') {
-		return DataTypes.number;
-	}
-
-	return null;
 };
 
 export const createFullTextSearchFilter = (
