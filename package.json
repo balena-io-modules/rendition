@@ -108,6 +108,7 @@
     ]
   },
   "jest": {
+    "collectCoverage": true,
     "setupTestFrameworkScriptFile": "jest-extended",
     "verbose": true,
     "transform": {
