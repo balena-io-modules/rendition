@@ -133,9 +133,9 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 							map(groupedViews, (views: FiltersView[], scope) => (
 								<Box key={scope}>
 									{!!scope && (
-										<Text fontSize={13} ml={20} mb={2} mt={2} color="#aaa">
+										<Txt fontSize={13} ml={20} mb={2} mt={2} color="#aaa">
 											{scope}
-										</Text>
+										</Txt>
 									)}
 									<UnstyledList>
 										{views.map(view => (
@@ -146,10 +146,10 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 												>
 													{view.name}
 													<br />
-													<Text m={0} fontSize={12} color="#aaa">
+													<Txt m={0} fontSize={12} color="#aaa">
 														{view.filters.length} filter{view.filters.length >
 															1 && 's'}
-													</Text>
+													</Txt>
 												</ViewListItemLabel>
 												<button onClick={() => this.props.deleteView(view)}>
 													<FaTrash name="trash" />

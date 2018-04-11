@@ -155,7 +155,7 @@ declare module 'rendition' {
 
 	class Banner extends RenderableElementWithProps<BoxProps, any> {}
 
-	interface BoxProps extends DefaultProps {
+	interface BoxProps extends DefaultProps, Tooltip {
 		flex?: string | string[];
 		order?: number | string | Array<number | string>;
 	}

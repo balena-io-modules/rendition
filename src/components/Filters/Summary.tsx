@@ -117,9 +117,13 @@ class FilterSummary extends React.Component<
 					</Modal>
 				)}
 				<Flex justify="space-between">
-					<Text fontSize={13} mb={10} color={this.props.dark && '#fff'}>
+					<Txt
+						fontSize={13}
+						mb={10}
+						color={this.props.dark ? '#fff' : undefined}
+					>
 						Filters ({this.props.filters.length})
-					</Text>
+					</Txt>
 
 					<Button
 						primary

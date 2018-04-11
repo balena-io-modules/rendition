@@ -276,7 +276,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 						this.props.schema,
 						prevState.filters,
 						term,
-				  )
+					)
 				: SchemaSieve.removeFullTextSearch(prevState.filters);
 
 			return {
@@ -338,7 +338,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 
 								return (
 									<RelativeBox key={index}>
-										{index > 0 && <Text my={2}>OR</Text>}
+										{index > 0 && <Txt my={2}>OR</Txt>}
 										<Flex>
 											<Select
 												value={field}
@@ -355,9 +355,9 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 											</Select>
 
 											{operators.length === 1 && (
-												<Text mx={1} p="7px 20px 0">
+												<Txt mx={1} p="7px 20px 0">
 													{operators[0].label}
-												</Text>
+												</Txt>
 											)}
 
 											{operators.length > 1 && (

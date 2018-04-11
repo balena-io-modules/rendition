@@ -1,9 +1,9 @@
+import { JSONSchema6 } from 'json-schema';
 import noop = require('lodash/noop');
 import * as React from 'react';
 import styled from 'styled-components';
 import DeleteBtn from '../DeleteButton';
 import { Box, Flex } from '../Grid';
-import { JSONSchema6 } from 'json-schema';
 
 const ButtonWrapper = styled.button`
 	font-size: 13px;
