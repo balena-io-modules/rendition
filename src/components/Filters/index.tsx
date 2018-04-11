@@ -276,7 +276,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 						this.props.schema,
 						prevState.filters,
 						term,
-					)
+				  )
 				: SchemaSieve.removeFullTextSearch(prevState.filters);
 
 			return {
