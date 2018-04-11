@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled, { withTheme } from 'styled-components'
-import hoc from '../hoc'
+import asRendition from '../asRendition'
 import { px } from '../utils'
 import { radius } from '../theme'
 import { compose } from 'recompose'
@@ -33,7 +33,7 @@ const Wrapper = styled.span`
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     width: 0;
     height: 0;
     border-left: 4px solid transparent;
@@ -59,4 +59,4 @@ const Component = ({ emphasized, children, value, onChange, ...props }) => {
   )
 }
 
-export default compose(withTheme, hoc)(Component)
+export default compose(withTheme, asRendition)(Component)

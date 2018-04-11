@@ -1,19 +1,30 @@
+import { JSONSchema6 } from 'json-schema';
 import map = require('lodash/map');
 import * as React from 'react';
 import { Schema } from 'rendition';
+import { getDataModel } from '../DataTypes';
 import { Flex } from '../Grid';
-import PineTypes from '../PineTypes';
 import Select from '../Select';
 
-const FilterInput = (props: any) => {
-	const PineTypeInput = PineTypes[props.type].Edit;
+const FilterInput = (props: {
+	schema: JSONSchema6;
+	value: any;
+	operator: string;
+	onChange: (e: any) => void;
+}) => {
+	const Model = getDataModel(props.schema);
+
+	if (!Model) {
+		return null;
+	}
 
 	return (
-		<PineTypeInput
+		<Model.Edit
 			schema={props.schema}
 			value={props.value}
 			operator={props.operator}
-			onChange={props.onChange}
+			onUpdate={props.onChange}
+			autofocus
 		/>
 	);
 };
@@ -36,6 +47,13 @@ const FilterForm = (props: FilterFormProps) => {
 		operator,
 		schema,
 	} = props;
+	const subSchema = (schema as any).properties[name];
+	const Model = getDataModel(subSchema);
+
+	if (!Model) {
+		return null;
+	}
+
 	return (
 		<Flex>
 			<Select
@@ -58,22 +76,18 @@ const FilterForm = (props: FilterFormProps) => {
 					handleEditChange((e.target as HTMLSelectElement).value, 'operator')
 				}
 			>
-				{map(inputModels[name!].availableOperators, ({ value, label }) => (
+				{map(Model.operators, ({ value, label }) => (
 					<option value={value} key={value}>
 						{label}
 					</option>
 				))}
 			</Select>
-			{inputModels[name!].type !== 'Boolean' && (
-				<FilterInput
-					operator={operator}
-					schema={schema[name!]}
-					value={value}
-					onChange={(value: string) => handleEditChange(value, 'value')}
-					type={inputModels[name!].type}
-					autoFocus
-				/>
-			)}
+			<FilterInput
+				operator={operator}
+				schema={schema[name!]}
+				value={value}
+				onChange={(value: string) => handleEditChange(value, 'value')}
+			/>
 		</Flex>
 	);
 };

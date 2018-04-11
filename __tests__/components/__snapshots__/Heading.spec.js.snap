@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <h3
+    className="sc-htoDjs gDCMNh sc-gzVnrw lakuDe"
+    fontSize={4}
+  >
+    Heading
+  </h3>
+</div>
+`;

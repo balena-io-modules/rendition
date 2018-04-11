@@ -1,4 +1,5 @@
 declare module 'rendition' {
+	import { JSONSchema6 } from 'json-schema';
 	import { Component } from 'react';
 	import * as Xterm from 'xterm';
 
@@ -9,7 +10,7 @@ declare module 'rendition' {
 		w?: ResponsiveStyle;
 		fontSize?: ResponsiveStyle;
 		f?: ResponsiveStyle;
-		color?: ResponsiveStyle;
+		color?: string;
 		bg?: ResponsiveStyle;
 		m?: ResponsiveStyle;
 		mt?: ResponsiveStyle;
@@ -25,6 +26,18 @@ declare module 'rendition' {
 		pl?: ResponsiveStyle;
 		px?: ResponsiveStyle;
 		py?: ResponsiveStyle;
+		innerRef?: (element: HTMLElement) => void;
+	}
+
+	type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left';
+	interface TooltipProps {
+		text: string;
+		trigger?: 'click' | 'hover';
+		placement?: TooltipPlacement;
+	}
+
+	interface Tooltip {
+		tooltip?: string | TooltipProps;
 	}
 
 	// Cherry pick the react attributes that don't conflict with styled-system
@@ -53,54 +66,28 @@ declare module 'rendition' {
 		title?: string;
 	}
 
-	type PineDataType =
-		| 'Boolean'
-		| 'Case Insensitive Text'
-		| 'Date Time'
-		| 'Date'
-		| 'Enum'
-		| 'Integer'
-		| 'Real'
-		| 'Short Text'
-		| 'Text'
-		| 'Time'
-		| 'Semver Range'
-		| 'Semver'
-		| 'Key Value Pair';
-
-	interface SchemaEntry {
-		type: PineDataType;
-		values?: string[];
-		key?: string;
-		value?: string;
-		label?: string;
-		keyLabel?: string;
-		valueLabel?: string;
-	}
-
-	interface Schema {
-		[key: string]: SchemaEntry;
-	}
-
-	interface FilterRule extends FilterModel {
-		id: string;
-		extra?: {
-			or: FilterModel[];
+	interface DataTypeModel {
+		operators: {
+			[key: string]: {
+				getLabel: (schema: JSONSchema6) => string;
+			};
 		};
+		decodeFilter(filter: JSONSchema6): null | FilterSignature;
+		createFilter(
+			field: string,
+			operator: string,
+			value: any,
+			schema: JSONSchema6,
+		): JSONSchema6;
+		Edit(props: DataTypeEditProps): JSX.Element;
 	}
 
-	interface SingleFilterView {
-		id: string;
-		name: string;
-		scopeKey: string;
-		rules: FilterRule[];
-	}
-
-	interface FilterViewScope {
-		key: string;
-		scopeLabel?: string;
-		title?: string;
-		data: SingleFilterView[];
+	interface DataTypeEditProps {
+		schema: JSONSchema6;
+		value?: any;
+		onUpdate: (value: string | number | boolean) => void;
+		operator: string;
+		slim?: boolean;
 	}
 
 	class RenderableElementWithProps<PropsType, StateType> extends Component<
@@ -131,10 +118,6 @@ declare module 'rendition' {
 
 	class Alert extends RenderableElementWithProps<AlertProps, any> {}
 
-	interface BannerProps extends DefaultProps {
-		backgroundImage?: string;
-	}
-
 	interface BadgeProps extends BoxProps, Coloring {
 		text: string;
 		small?: boolean;
@@ -154,16 +137,21 @@ declare module 'rendition' {
 
 	class BadgeSelect extends RenderableElementWithProps<BadgeSelectProps, any> {}
 
-	class BannerProps extends RenderableElementWithProps<BoxProps, any> {}
+	interface BannerProps extends DefaultProps {
+		backgroundImage?: string;
+		minHeight?: string;
+	}
 
-	interface BoxProps extends DefaultProps {
+	class Banner extends RenderableElementWithProps<BoxProps, any> {}
+
+	interface BoxProps extends DefaultProps, Tooltip {
 		flex?: string | string[];
 		order?: number | string | Array<number | string>;
 	}
 
 	class Box extends RenderableElementWithProps<BoxProps, any> {}
 
-	interface ButtonProps extends DefaultProps, Coloring, Sizing {
+	interface ButtonProps extends DefaultProps, Coloring, Sizing, Tooltip {
 		square?: boolean;
 		disabled?: boolean;
 		outline?: boolean;
@@ -174,8 +162,8 @@ declare module 'rendition' {
 
 	class Button extends RenderableElementWithProps<ButtonProps, any> {}
 
-	interface CodeWithCopyProps extends DefaultProps {
-		copy: string;
+	interface CodeWithCopyProps extends DefaultProps, Tooltip {
+		copy?: string;
 		text: string;
 	}
 
@@ -218,13 +206,33 @@ declare module 'rendition' {
 		any
 	> {}
 
+	interface FiltersView {
+		id: string;
+		name: string;
+		scope?: string | null;
+		filters: JSONSchema6[];
+	}
+
+	interface ViewScope {
+		slug: string;
+		name: string;
+		label?: string;
+	}
+
+	interface FilterSignature {
+		field: string;
+		operator: string;
+		value: string | number | boolean | { [k: string]: string };
+	}
+
 	interface FiltersProps extends DefaultProps {
 		disabled?: boolean;
-		rules: FilterRule[];
-		views: FilterViewScope[];
-		schema: Schema;
-		setViews(views: FilterViewScope[]): void;
-		setRules(rules: FilterRule[]): void;
+		filters?: JSONSchema6[];
+		views?: FiltersView[];
+		viewScopes?: ViewScope[];
+		onFiltersUpdate?: (filters: JSONSchema6[]) => void;
+		onViewsUpdate?: (views: FiltersView[]) => void;
+		schema: JSONSchema6;
 		addFilterButtonProps?: ButtonProps;
 		viewsMenuButtonProps?: DropDownButtonProps;
 		dark?: boolean;
@@ -302,7 +310,7 @@ declare module 'rendition' {
 
 	class Input extends RenderableElementWithProps<InputProps, any> {}
 
-	class Image extends RenderableElementWithProps<
+	class Img extends RenderableElementWithProps<
 		DefaultProps & React.ImgHTMLAttributes<HTMLImageElement>,
 		any
 	> {}
@@ -328,24 +336,6 @@ declare module 'rendition' {
 		any
 	> {}
 
-	type PineTypeOperatorTest = (target: any, value?: any) => boolean;
-	type AdvancedPineOperatorTest = {
-		getLabel: (schemaEntry: SchemaEntry) => string | false;
-		test: PineTypeOperatorTest;
-	};
-
-	interface PineTypeModule {
-		rules: {
-			[key: string]: PineTypeOperatorTest | AdvancedPineOperatorTest;
-		};
-		validate: (value: any) => boolean;
-		normalize: <T>(value: any) => T;
-		Edit: (props: any) => JSX.Element;
-		Display: (props: any) => JSX.Element;
-	}
-
-	const PineTypes: { [K in PineDataType]: PineTypeModule };
-
 	class Provider extends Component<any, any> {}
 
 	interface ProgressBarProps extends DefaultProps, Coloring {
@@ -354,28 +344,26 @@ declare module 'rendition' {
 
 	class ProgressBar extends RenderableElementWithProps<ProgressBarProps, any> {}
 
-	interface FilterModel {
-		availableOperators: Array<{ label: string; value: string }>;
-		label?: string;
-		name: string;
-		operator: string | null;
-		type: string;
-		value: any;
+	interface SchemaSieve {
+		filter<T>(filters: JSONSchema6 | JSONSchema6[], collection: T[]): T[];
+		getDataModel(schema: JSONSchema6): null | DataTypeModel;
+		createFullTextSearchFilter(schema: JSONSchema6, term: string): JSONSchema6;
+		upsertFullTextSearch(
+			schema: JSONSchema6,
+			filters: JSONSchema6[],
+			term: string,
+		): JSONSchema6[];
+		removeFullTextSearch(filters: JSONSchema6[]): JSONSchema6[];
+		createFilter(
+			schema: JSONSchema6,
+			signatures: FilterSignature[],
+		): JSONSchema6;
+		decodeFilter(schema: JSONSchema6, filter: JSONSchema6): FilterSignature[];
+		getOperators(
+			schema: JSONSchema6,
+			field: string,
+		): Array<{ slug: string; label: string }>;
 	}
-
-	class SchemaSieveClass {
-		SIMPLE_SEARCH_NAME: string;
-		tests: { [key: string]: PineTypeModule };
-		test(item: any, filter: FilterRule | FilterRule[]): boolean;
-		filter<T>(items: T[], rule: FilterRule | FilterRule[]): T[] | Partial<T>;
-		makeFilterInputs(
-			schema: Schema,
-		): {
-			[key: string]: FilterModel;
-		};
-	}
-
-	function SchemaSieve(): SchemaSieveClass;
 
 	interface SelectProps extends DefaultProps, Sizing {
 		value?: string | string[] | number | null;
@@ -431,9 +419,10 @@ declare module 'rendition' {
 		destroy: () => void;
 	}
 
-	interface TextProps extends DefaultProps {
+	interface TxtProps extends DefaultProps, Tooltip {
 		monospace?: boolean;
 		bold?: boolean;
+		caps?: boolean;
 		align?:
 			| 'left'
 			| 'right'
@@ -448,15 +437,12 @@ declare module 'rendition' {
 			| 'unset';
 	}
 
-	class Text extends RenderableElementWithProps<TextProps, any> {}
+	class TxtP extends RenderableElementWithProps<TxtProps, any> {}
+	class TxtSpan extends RenderableElementWithProps<TxtProps, any> {}
 
-	// also expose the HTML tag variant constructors
-	// that we support & make available as static properties
-	namespace Text {
-		/* tslint:disable:class-name */
-		class span extends Text {}
-		class p extends Text {}
-		/* tslint:enable:class-name */
+	class Txt extends RenderableElementWithProps<TxtProps, any> {
+		p: TxtP;
+		span: TxtSpan;
 	}
 
 	interface TextWithCopyProps extends DefaultProps {
@@ -470,6 +456,7 @@ declare module 'rendition' {
 	> {}
 
 	interface TextareaProps extends DefaultProps {
+		monospace?: boolean;
 		autoComplete?: string;
 		autoFocus?: boolean;
 		cols?: number;
@@ -490,20 +477,6 @@ declare module 'rendition' {
 	}
 
 	class Textarea extends RenderableElementWithProps<TextareaProps, any> {}
-
-	interface TooltipProps extends DefaultProps {
-		message?: string;
-		/** default 'hover' */
-		eventType?: 'click' | 'hover';
-		/** default 'top' */
-		direction?: 'top' | 'bottom' | 'right' | 'left';
-		/** default 2000 */
-		duration?: number;
-		/** default '#000' */
-		bgcolor?: string;
-	}
-
-	class Tooltip extends RenderableElementWithProps<TooltipProps, any> {}
 
 	interface ThemeColorSet {
 		main: string;
@@ -538,4 +511,82 @@ declare module 'rendition' {
 	}
 
 	const Theme: Theme;
+
+	namespace v3 {
+		type PineDataType =
+			| 'Boolean'
+			| 'Case Insensitive Text'
+			| 'Date Time'
+			| 'Date'
+			| 'Enum'
+			| 'Integer'
+			| 'Real'
+			| 'Short Text'
+			| 'Text'
+			| 'Time'
+			| 'Semver Range'
+			| 'Semver'
+			| 'Key Value Pair';
+
+		interface SchemaEntry {
+			type: PineDataType;
+			values?: string[];
+			key?: string;
+			value?: string;
+			label?: string;
+			keyLabel?: string;
+			valueLabel?: string;
+		}
+
+		interface Schema {
+			[key: string]: SchemaEntry;
+		}
+
+		interface BaseFilter {
+			availableOperators: Array<{ label: string; value: string }>;
+			label?: string;
+			name: string;
+			operator: string | null;
+			type: PineDataType;
+			value: any;
+		}
+
+		interface Filter extends BaseFilter {
+			id: string;
+			extra?: {
+				or: BaseFilter[];
+			};
+		}
+
+		interface SingleFilterView {
+			id: string;
+			name: string;
+			scopeKey: string;
+			rules: Filter[];
+		}
+
+		interface FilterViewScope {
+			key: string;
+			scopeLabel?: string;
+			title?: string;
+			data: SingleFilterView[];
+		}
+	}
+
+	interface Migrations {
+		migrateLegacyFilter(
+			schema: JSONSchema6,
+			legacyFilter: v3.Filter,
+		): JSONSchema6;
+		migrateLegacyViews(
+			schema: JSONSchema6,
+			legacyViews: v3.FilterViewScope[],
+		): {
+			views: FiltersView[];
+			viewScopes: ViewScope[];
+		};
+		migrateLegacySchema(legacySchema: v3.Schema): JSONSchema6;
+	}
+
+	export const migrations: Migrations;
 }

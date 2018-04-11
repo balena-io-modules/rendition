@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar renders correctly 1`] = `
+<div
+  className="sc-htoDjs bSlTVa"
+>
+  <div
+    className="sc-jTzLTM SofDJ sc-gqjmRU gYzTfQ sc-dnqmqq fozHQE"
+  >
+    <div
+      className="sc-fjdhpX gKwwVP"
+    >
+      <div
+        className="sc-VigVT hegYug sc-gZMcBi eQxJRS sc-iwsKbI gLKxKc"
+        direction={
+          Array [
+            "column",
+            "row",
+          ]
+        }
+      >
+        <div
+          className="sc-VigVT hegYug sc-gZMcBi eQxJRS sc-iwsKbI gLKxKc"
+        >
+          <div
+            className="sc-jzJRlG dVdezz sc-jTzLTM dqvzgf sc-gqjmRU jowXRS sc-dnqmqq gGbYAg"
+          />
+          <div
+            className="sc-cSHVUG iCVeHJ sc-jTzLTM bxmMAi sc-gqjmRU jowXRS sc-dnqmqq fiBbgU"
+            display={
+              Array [
+                "block",
+                "none",
+              ]
+            }
+            onClick={[Function]}
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m3.4 9.1h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.2h-33.2v-3.2z"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          className="sc-kAzzGY buEXUc sc-VigVT giMOMu sc-gZMcBi eQxJRS sc-iwsKbI fGhqpY"
+          maxHeight={
+            Array [
+              "0vh",
+              "none",
+            ]
+          }
+        >
+          <div
+            className="sc-VigVT iLaKEt sc-gZMcBi eQxJRS sc-iwsKbI hCcawn"
+            direction={
+              Array [
+                "column",
+                "row",
+              ]
+            }
+          >
+            <div
+              className="sc-jTzLTM hpYooM sc-gqjmRU jowXRS sc-dnqmqq llRrFg"
+              onClick={[Function]}
+            >
+              <a
+                className="sc-gzVnrw cpqKMG sc-chPdSV goMgoP"
+                color="white"
+                href="/docs/"
+                rel={undefined}
+                target={undefined}
+              >
+                Docs
+              </a>
+            </div>
+            <div
+              className="sc-jTzLTM hpYooM sc-gqjmRU jowXRS sc-dnqmqq llRrFg"
+              onClick={[Function]}
+            >
+              <a
+                className="sc-gzVnrw cpqKMG sc-kgoBCf gXqCXL"
+                color="white"
+                href="/changelog/"
+                rel={undefined}
+                target={undefined}
+              >
+                changelog
+              </a>
+            </div>
+            <div
+              className="sc-jTzLTM hpYooM sc-gqjmRU jowXRS sc-dnqmqq llRrFg"
+              onClick={[Function]}
+            >
+              <a
+                className="sc-gzVnrw cpqKMG sc-kGXeez jASSHv"
+                color="white"
+                href="/gitter/"
+                rel={undefined}
+                target={undefined}
+              >
+                gitter
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

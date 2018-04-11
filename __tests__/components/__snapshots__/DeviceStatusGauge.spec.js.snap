@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeviceStatusGauge renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <div
+    className="sc-bxivhb ljpeSw sc-bwzfXH hBrfBJ"
+  >
+    <svg
+      className="gauge__graph"
+      viewBox="0 0 100 100"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="50"
+        cy="50"
+        fill=" white"
+        r="46"
+        stroke="#dadada"
+        strokeWidth="5"
+      />
+      <g>
+        <circle
+          cx="50"
+          cy="50"
+          fill="#fd7c7c"
+          r="46"
+        />
+        <circle
+          cx="50"
+          cy="50"
+          fill="white"
+          r="25"
+        />
+      </g>
+      <g
+        transform="translate(50, 50)"
+      />
+      <text
+        className="gauge__graph__total-label"
+        x="50"
+        y="41"
+      >
+         TOTAL DEVICES
+      </text>
+      <text
+        className="sc-htpNat gwYnzy"
+        x="50"
+        y="63"
+      >
+        0
+      </text>
+    </svg>
+    <ul
+      className="gauge__legend"
+    >
+      <li
+        className="gauge__legend-item"
+      >
+        <span
+          className="gauge__legend-color"
+          style={
+            Object {
+              "backgroundColor": "#89c683",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="gauge__legend-name"
+        >
+          Online
+        </span>
+      </li>
+      <li
+        className="gauge__legend-item"
+      >
+        <span
+          className="gauge__legend-color"
+          style={
+            Object {
+              "backgroundColor": "#ffb25e",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="gauge__legend-name"
+        >
+          Configuring
+        </span>
+      </li>
+      <li
+        className="gauge__legend-item"
+      >
+        <span
+          className="gauge__legend-color"
+          style={
+            Object {
+              "backgroundColor": "#7ccdfd",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="gauge__legend-name"
+        >
+          Updating
+        </span>
+      </li>
+      <li
+        className="gauge__legend-item"
+      >
+        <span
+          className="gauge__legend-color"
+          style={
+            Object {
+              "backgroundColor": "#fd7c7c",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="gauge__legend-name"
+        >
+          Offline
+        </span>
+      </li>
+      <li
+        className="gauge__legend-item"
+      >
+        <span
+          className="gauge__legend-color"
+          style={
+            Object {
+              "backgroundColor": "#aa96d5",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="gauge__legend-name"
+        >
+          Post Provisioning
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

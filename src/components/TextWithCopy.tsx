@@ -4,12 +4,12 @@ import FaClipboard = require('react-icons/lib/fa/clipboard');
 import { compose } from 'recompose';
 import { TextWithCopyProps } from 'rendition';
 import styled, { withTheme } from 'styled-components';
-import hoc from '../hoc';
+import asRendition from '../asRendition';
 import { stopEvent, withProps } from '../utils';
-import Text from './Text';
-import Tooltip from './Tooltip';
+import { Box } from './Grid';
+import Txt from './Txt';
 
-const Wrapper = withProps<TextWithCopyProps>()(styled(Text.span))`
+const Wrapper = withProps<TextWithCopyProps>()(styled(Txt.span))`
 	display: inline-block;
 	white-space: nowrap;
 
@@ -37,22 +37,21 @@ const Wrapper = withProps<TextWithCopyProps>()(styled(Text.span))`
 `;
 
 const Base = ({ copy, ...props }: TextWithCopyProps) => (
-	<Wrapper title={copy} {...props} className="text-with-copy">
+	<Wrapper copy={copy} title={copy} {...props} className="text-with-copy">
 		{!!props.children && (
 			<span className="text-with-copy__content">{props.children}</span>
 		)}
 
 		<span onClick={e => stopEvent(e)} className="text-with-copy__copy_wrapper">
-			<Tooltip message="Copied!" eventType="click">
-				<div
-					onClick={() => copyToClipboard((copy || '').trim())}
-					className="text-with-copy__copy"
-				>
-					<FaClipboard />
-				</div>
-			</Tooltip>
+			<Box
+				tooltip={{ text: 'Copied!', trigger: 'click' }}
+				onClick={() => copyToClipboard((copy || '').trim())}
+				className="text-with-copy__copy"
+			>
+				<FaClipboard />
+			</Box>
 		</span>
 	</Wrapper>
 );
 
-export default compose(withTheme, hoc)(Base);
+export default compose(withTheme, asRendition)(Base);

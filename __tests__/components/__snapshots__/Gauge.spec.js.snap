@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gauge renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <div
+    className="sc-bxivhb ljpeSw sc-bwzfXH hBrfBJ"
+  >
+    <svg
+      className="gauge__graph"
+      viewBox="0 0 100 100"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="50"
+        cy="50"
+        fill=" white"
+        r="46"
+        stroke="#dadada"
+        strokeWidth="5"
+      />
+      <g>
+        <circle
+          cx="50"
+          cy="50"
+          fill="#f4f4f4"
+          r="46"
+        />
+        <circle
+          cx="50"
+          cy="50"
+          fill="white"
+          r="25"
+        />
+      </g>
+      <g
+        transform="translate(50, 50)"
+      >
+        <g>
+          <path
+            d="M 0 -46 A 46 46 0 0 1 39.837169 23 L 21.650635 12.5 A 25 25 0 0 0 0 -25 Z "
+            fill="beige"
+          />
+        </g>
+        <g>
+          <path
+            d="M 39.837169 23 A 46 46 0 0 1 -44.432588 11.905676 L -24.148146 6.470476 A 25 25 0 0 0 21.650635 12.5 Z "
+            fill="brown"
+          />
+        </g>
+        <g>
+          <path
+            d="M -44.432588 11.905676 A 46 46 0 0 1 -0 -46 L -0 -25 A 25 25 0 0 0 -24.148146 6.470476 Z "
+            fill="pink"
+          />
+        </g>
+      </g>
+      <text
+        className="gauge__graph__total-label"
+        x="50"
+        y="41"
+      >
+         ICE CREAM
+      </text>
+      <text
+        className="sc-htpNat gwYnzy"
+        x="50"
+        y="63"
+      >
+        24
+      </text>
+    </svg>
+    <ul
+      className="gauge__legend"
+    >
+      <li
+        className="gauge__legend-item"
+      >
+        <span
+          className="gauge__legend-color"
+          style={
+            Object {
+              "backgroundColor": "beige",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="gauge__legend-name"
+        >
+          Vanilla
+        </span>
+      </li>
+      <li
+        className="gauge__legend-item"
+      >
+        <span
+          className="gauge__legend-color"
+          style={
+            Object {
+              "backgroundColor": "brown",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="gauge__legend-name"
+        >
+          Chocolate
+        </span>
+      </li>
+      <li
+        className="gauge__legend-item"
+      >
+        <span
+          className="gauge__legend-color"
+          style={
+            Object {
+              "backgroundColor": "pink",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="gauge__legend-name"
+        >
+          Strawberry
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

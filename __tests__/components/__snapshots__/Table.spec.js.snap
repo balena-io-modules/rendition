@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <table
+    className="sc-fjdhpX vcRDz"
+  >
+    <thead>
+      <tr />
+    </thead>
+    <div
+      data-display="table-body"
+    />
+  </table>
+</div>
+`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Box renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <div
+    className="sc-bZQynM bycwzs sc-ifAKCX jUTOfE sc-bwzfXH ihgQcP"
+  >
+    A box
+  </div>
+</div>
+`;

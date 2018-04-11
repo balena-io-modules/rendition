@@ -1,157 +1,144 @@
-import assign = require('lodash/assign');
-import cloneDeep = require('lodash/cloneDeep');
+import Ajv = require('ajv');
+import ajvKeywords = require('ajv-keywords');
+import metaSchema6 = require('ajv/lib/refs/json-schema-draft-06.json');
+import { JSONSchema6 } from 'json-schema';
 import every = require('lodash/every');
-import forEach = require('lodash/forEach');
-import includes = require('lodash/includes');
+import findIndex = require('lodash/findIndex');
 import isArray = require('lodash/isArray');
-import isPlainObject = require('lodash/isPlainObject');
 import map = require('lodash/map');
-import omit = require('lodash/omit');
 import pickBy = require('lodash/pickBy');
-import some = require('lodash/some');
-import {
-	AdvancedPineOperatorTest,
-	FilterModel,
-	FilterRule,
-	PineTypeModule,
-	Schema,
-	SchemaEntry,
-	SchemaSieveClass,
-} from 'rendition';
-import filterTests from '../PineTypes';
+import { FilterSignature } from 'rendition';
+import * as utils from '../../utils';
+import { getDataModel } from '../DataTypes';
 
-type PineTypeModuleStruct = { [key: string]: PineTypeModule };
+const ajv = new Ajv();
+ajvKeywords(ajv);
+ajv.addMetaSchema(metaSchema6);
 
-export const SIMPLE_SEARCH_NAME = 'Full text search';
+const FULL_TEXT_SLUG = 'full_text_search';
 
-class SchemaSieve implements SchemaSieveClass {
-	public SIMPLE_SEARCH_NAME = SIMPLE_SEARCH_NAME;
-	public tests: PineTypeModuleStruct;
+export const filter = (
+	filters: JSONSchema6 | JSONSchema6[],
+	collection: any[],
+) => {
+	// Remove all schemas that may have been compiled already
+	ajv.removeSchema(/^.*$/);
 
-	constructor(tests: PineTypeModuleStruct = {}) {
-		this.tests = assign(cloneDeep(filterTests), tests);
+	const validators = isArray(filters)
+		? filters.map(s => ajv.compile(s))
+		: [ajv.compile(filters)];
+
+	if (isArray(collection)) {
+		return collection.filter(m => every(validators, v => v(m)));
 	}
 
-	test(item: any, input: FilterRule | FilterRule[]) {
-		return isArray(input)
-			? every(input, i => this.baseTest(item, i))
-			: this.baseTest(item, input);
+	return pickBy(collection, m => every(validators, v => v(m)));
+};
+
+export const createFullTextSearchFilter = (
+	schema: JSONSchema6,
+	term: string,
+) => {
+	// A schema that matches applies the pattern to each known schema field
+	const filter = {
+		$id: utils.randomString(),
+		title: FULL_TEXT_SLUG,
+		anyOf: [
+			{
+				description: `Full text search is ${term}`,
+				anyOf: Object.keys(schema.properties!).map(key => ({
+					properties: {
+						[key]: {
+							type: 'string',
+							regexp: {
+								pattern: utils.regexEscape(term),
+								flags: 'i',
+							},
+						},
+					},
+					required: [key],
+				})),
+			},
+		],
+	};
+
+	return filter as JSONSchema6;
+};
+
+// Update or insert a full text search filter into an array of filters
+export const upsertFullTextSearch = (
+	schema: JSONSchema6,
+	filters: JSONSchema6[] = [],
+	term: string,
+) => {
+	const searchFilter = createFullTextSearchFilter(schema, term);
+	const existingSearchIndex = findIndex(filters, { title: FULL_TEXT_SLUG });
+
+	if (existingSearchIndex > -1) {
+		filters.splice(existingSearchIndex, 1, searchFilter);
+	} else {
+		filters.push(searchFilter as JSONSchema6);
 	}
 
-	baseTest(item: any, input: FilterRule): boolean {
-		// If this is a compound rule, evaluate the rules together using OR logic
-		if (input.extra && input.extra.or) {
-			return (
-				this.baseTest(item, omit(input, 'extra') as FilterRule) ||
-				some(input.extra.or, rule => this.baseTest(item, rule as FilterRule))
-			);
+	return filters;
+};
+
+// Removes a full text search filter from an array of filters
+export const removeFullTextSearch = (filters: JSONSchema6[]) =>
+	filters.filter(f => f.title !== FULL_TEXT_SLUG);
+
+export const createFilter = (
+	schema: JSONSchema6,
+	signatures: FilterSignature[],
+): JSONSchema6 => {
+	const anyOf = signatures.map(({ field, operator, value }) => {
+		const subSchema = schema.properties![field] as JSONSchema6;
+		const model = getDataModel(subSchema);
+
+		if (!model || !model.operators.hasOwnProperty(operator)) {
+			return {};
 		}
 
-		const { type, name } = input;
+		return (model.createFilter as (
+			field: string,
+			operator: string,
+			value: any,
+			subSchema: JSONSchema6,
+		) => JSONSchema6)(field, operator, value, subSchema);
+	});
 
-		// A simple search is not strictly a "type" and searches on all fields,
-		// so we handle that seperately here
-		if (name === this.SIMPLE_SEARCH_NAME) {
-			const { value } = input;
-			return some(
-				item,
-				target =>
-					target && includes(String(target).toLowerCase(), value.toLowerCase()),
-			);
+	return {
+		$id: utils.randomString(),
+		anyOf,
+	};
+};
+
+export const decodeFilter = (schema: JSONSchema6, filter: JSONSchema6) => {
+	const signatures = filter.anyOf!.map(f => {
+		const schemaField = Object.keys(f.properties!).shift()!;
+		const subSchema = schema.properties![schemaField] as JSONSchema6;
+		const model = getDataModel(subSchema);
+
+		if (!model) {
+			return {};
 		}
 
-		if (type in filterTests) {
-			const { operator, value } = input;
-			const target = item[name];
+		return (model.decodeFilter as (f: JSONSchema6) => FilterSignature)(f);
+	});
 
-			if (operator! in filterTests[type].rules) {
-				const result = filterTests[type].rules[operator!];
-				return isPlainObject(result)
-					? result.test(target, value)
-					: result(target, value);
-			}
-		}
+	return signatures.filter(s => s !== null);
+};
 
-		// If the rule contains an unrecognised type or operator, then play it safe
-		// and don't filter the item
-		return true;
-	}
+export const getOperators = (schema: JSONSchema6, field: string) => {
+	const subSchema = schema.properties![field] as JSONSchema6;
+	const model = getDataModel(subSchema);
 
-	filter<T>(
-		collection: T[],
-		input: FilterRule | FilterRule[],
-	): T[] | Partial<T> {
-		if (isArray(collection)) {
-			return this.filterArray(collection, input);
-		}
-		if (isPlainObject(collection)) {
-			return this.filterObject(collection, input) as Partial<T>;
-		}
-
-		throw new Error('collection argument must be either object or array.');
-	}
-
-	filterArray(collection: any[], input: FilterRule | FilterRule[]) {
-		return collection.filter(item => this.test(item, input));
-	}
-
-	filterObject(collection: any, input: FilterRule | FilterRule[]) {
-		return pickBy(collection, value => this.test(value, input));
-	}
-
-	getOperators(type: string, schemaEntry: SchemaEntry) {
-		if (type in filterTests) {
-			// If the rule has a 'getLabel' method, use that to construct the return object
-			return map((filterTests[type] as PineTypeModule).rules, (value, key) => {
-				if (!!(<AdvancedPineOperatorTest>value).getLabel) {
-					const label = (<AdvancedPineOperatorTest>value).getLabel(schemaEntry);
-					if (label) {
-						return {
-							label,
-							value: key,
-						};
-					}
-				}
-				return {
-					label: key,
-					value: key,
-				};
-			});
-		}
+	if (!model) {
 		return [];
 	}
 
-	makeFilterInputs(schema: Schema) {
-		const inputs: {
-			[key: string]: FilterModel;
-		} = {};
-
-		forEach(schema, (value, key) => {
-			inputs[key] = {
-				type: value.type,
-				name: key,
-				label: value.label,
-				availableOperators: this.getOperators(value.type, schema[key]),
-				operator: null,
-				value: null,
-			};
-		});
-
-		return inputs;
-	}
-
-	validate(type: string, value: any) {
-		// If the type is unknown just return true
-		if (!(type in filterTests)) {
-			return true;
-		}
-
-		return filterTests[type].validate(value);
-	}
-
-	getTypes() {
-		return Object.keys(filterTests);
-	}
-}
-
-export default (tests?: PineTypeModuleStruct) => new SchemaSieve(tests);
+	return map(model.operators, (value, key) => ({
+		slug: key,
+		label: value.getLabel(subSchema),
+	}));
+};

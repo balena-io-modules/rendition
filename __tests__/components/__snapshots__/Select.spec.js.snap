@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <span
+    className="sc-bxivhb ljpeSw sc-htpNat bgSeOB"
+  >
+    <select
+      className="sc-bwzfXH hbfTbM"
+      onChange={undefined}
+      value={undefined}
+    >
+      <option
+        value={1}
+      >
+        Option 1
+      </option>
+      <option
+        value={2}
+      >
+        Option 2
+      </option>
+      <option
+        value={3}
+      >
+        Option 3
+      </option>
+    </select>
+  </span>
+</div>
+`;

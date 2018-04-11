@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fixed renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <div
+    className="sc-htpNat fGEkbD sc-bwzfXH kgFKMk"
+  >
+    Fixed
+  </div>
+</div>
+`;

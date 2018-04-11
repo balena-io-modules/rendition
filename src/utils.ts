@@ -3,6 +3,7 @@ import find = require('lodash/find');
 import get = require('lodash/get');
 import isObject = require('lodash/isObject');
 import { ThemedStyledFunction } from 'styled-components';
+const matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;
 
 interface ThemedDefaultProps extends DefaultProps {
 	theme: Theme;
@@ -106,3 +107,6 @@ export function withProps<U>() {
 		fn: ThemedStyledFunction<P, T, O>,
 	): ThemedStyledFunction<P & U, T, O & U> => fn;
 }
+
+export const regexEscape = (str: string) =>
+	str.replace(matchOperatorsRe, '\\$&');
