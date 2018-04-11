@@ -306,7 +306,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 
 					<SimpleSearchBox>
 						<input
-							style={{ color: this.props.dark ? '#fff' : null }}
+							style={{ color: this.props.dark ? '#fff' : undefined }}
 							disabled={this.props.disabled}
 							placeholder="Search entries..."
 							value={this.state.searchString}
