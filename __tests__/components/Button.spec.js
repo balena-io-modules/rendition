@@ -1,5 +1,6 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
+/* globals expect, test */
+import React from 'react'
+import renderer from 'react-test-renderer'
 import Provider from '../../src/components/Provider'
 import Button from '../../src/components/Button'
 

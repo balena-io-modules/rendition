@@ -1,5 +1,6 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
+/* globals expect, test */
+import React from 'react'
+import renderer from 'react-test-renderer'
 import Provider from '../../src/components/Provider'
 import Banner from '../../src/components/Banner'
 
@@ -13,8 +14,8 @@ test('Button renders correctly', () => {
           iteratively, deploy safely, and manage at scale.
         </p>
       </Banner>
-    </Provider>,
-  );
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+    </Provider>
+  )
+  let tree = component.toJSON()
+  expect(tree).toMatchSnapshot()
+})

@@ -40,17 +40,6 @@ declare module 'rendition' {
 		tooltip?: string | TooltipProps;
 	}
 
-	type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left';
-	interface TooltipProps {
-		text: string;
-		trigger: 'click' | 'hover';
-		placement: TooltipPlacement;
-	}
-
-	interface Tooltip {
-		tooltip?: string | TooltipProps;
-	}
-
 	// Cherry pick the react attributes that don't conflict with styled-system
 	interface DefaultProps
 		extends StyledSystemProps,
@@ -454,15 +443,6 @@ declare module 'rendition' {
 	class Txt extends RenderableElementWithProps<TxtProps, any> {
 		p: TxtP;
 		span: TxtSpan;
-	}
-
-	// also expose the HTML tag variant constructors
-	// that we support & make available as static properties
-	namespace Text {
-		/* tslint:disable:class-name */
-		class span extends Text {}
-		class p extends Text {}
-		/* tslint:enable:class-name */
 	}
 
 	interface TextWithCopyProps extends DefaultProps {
