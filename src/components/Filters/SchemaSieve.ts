@@ -99,12 +99,12 @@ export const createFilter = (
 			return {};
 		}
 
-		return (model.createFilter as (...args: any[]) => JSONSchema6)(
-			field,
-			operator as any,
-			value,
-			subSchema,
-		);
+		return (model.createFilter as (
+			field: string,
+			operator: string,
+			value: any,
+			subSchema: JSONSchema6,
+		) => JSONSchema6)(field, operator, value, subSchema);
 	});
 
 	return {
