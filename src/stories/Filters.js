@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as uniq from 'lodash/uniq'
 import { storiesOf, action } from '@storybook/react'
 import styled from 'styled-components'
-import { Box, Filters, SchemaSieve } from '../'
+import { Box, Divider, Filters, SchemaSieve } from '../'
 import PokeDex from './assets/pokedex'
 
 const Container = styled.div`
@@ -206,6 +206,63 @@ storiesOf('Filters', module)
     return (
       <Box bg='#343434' p={30}>
         <FiltersDemo dark />
+      </Box>
+    )
+  })
+  .addWithInfo('Render modes', () => {
+    const dummyFilter = {
+      $id: 'FuELaSmfCBqiV9hx',
+      anyOf: [
+        {
+          $id: 'QXe1ev3KzutxZ0lK',
+          title: 'is',
+          description: 'Pokemon Name is Squirtle',
+          type: 'object',
+          properties: {
+            Name: {
+              title: 'Pokemon Name',
+              const: 'Squirtle'
+            }
+          }
+        }
+      ]
+    }
+
+    return (
+      <Box p={30}>
+        <h3>
+          <code>all</code>
+        </h3>
+        <Filters schema={schema} renderMode='all' />
+        <Divider color='#eee' mt={40} mb={90} />
+
+        <h3>
+          <code>add</code>
+        </h3>
+        <Filters schema={schema} renderMode='add' />
+        <Divider color='#eee' mt={40} mb={90} />
+
+        <h3>
+          <code>search</code>
+        </h3>
+        <Filters schema={schema} renderMode='search' />
+        <Divider color='#eee' mt={40} mb={90} />
+
+        <h3>
+          <code>views</code>
+        </h3>
+        <Filters schema={schema} renderMode='views' />
+        <Divider color='#eee' mt={40} mb={90} />
+
+        <h3>
+          <code>summary</code>
+        </h3>
+        <Filters filters={[dummyFilter]} schema={schema} renderMode='summary' />
+        <Divider color='#eee' mt={40} mb={90} />
+
+        <h3>You can also use an array of modes</h3>
+        <Filters schema={schema} renderMode={['add', 'search']} />
+        <Divider color='#eee' mt={40} mb={90} />
       </Box>
     )
   })

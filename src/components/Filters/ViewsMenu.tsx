@@ -3,7 +3,7 @@ import groupBy = require('lodash/groupBy');
 import map = require('lodash/map');
 import * as React from 'react';
 import { FaPieChart, FaTrash } from 'react-icons/lib/fa';
-import { DropDownButtonProps, FiltersView } from 'rendition';
+import { DropDownButtonProps, FilterRenderMode, FiltersView } from 'rendition';
 import styled from 'styled-components';
 import DropDownButton from '../DropDownButton';
 import { Box } from '../Grid';
@@ -81,6 +81,7 @@ interface ViewsMenuProps {
 	schema: JSONSchema6;
 	setFilters: (filters: JSONSchema6[]) => void;
 	deleteView: (view: FiltersView) => any;
+	renderMode?: FilterRenderMode | FilterRenderMode[];
 }
 
 interface ViewsMenuState {
@@ -103,17 +104,24 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 	}
 
 	render() {
-		const { views } = this.props;
+		const { views, renderMode } = this.props;
 		const hasViews = views.length > 0;
 		const groupedViews = groupBy(views, 'scope');
+		let soloRender = false;
+		if (renderMode) {
+			const mode = Array.isArray(renderMode) ? renderMode : [renderMode];
+			soloRender = mode.length === 1 && mode[0] === 'views';
+		}
+
 		return (
 			<Wrapper>
 				<DropDownButton
+					ml={soloRender ? 0 : 30}
 					disabled={this.props.disabled}
 					primary
 					outline
 					joined
-					alignRight
+					alignRight={!soloRender}
 					noListFormat
 					label={
 						<span>

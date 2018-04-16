@@ -225,6 +225,8 @@ declare module 'rendition' {
 		value: string | number | boolean | { [k: string]: string };
 	}
 
+	type FilterRenderMode = 'all' | 'add' | 'search' | 'views' | 'summary';
+
 	interface FiltersProps extends DefaultProps {
 		disabled?: boolean;
 		filters?: JSONSchema6[];
@@ -235,6 +237,7 @@ declare module 'rendition' {
 		schema: JSONSchema6;
 		addFilterButtonProps?: ButtonProps;
 		viewsMenuButtonProps?: DropDownButtonProps;
+		renderMode?: FilterRenderMode | FilterRenderMode[];
 		dark?: boolean;
 	}
 

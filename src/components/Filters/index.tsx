@@ -1,12 +1,13 @@
 import { JSONSchema6 } from 'json-schema';
 import cloneDeep = require('lodash/cloneDeep');
 import findIndex = require('lodash/findIndex');
+import includes = require('lodash/includes');
 import isEqual = require('lodash/isEqual');
 import map = require('lodash/map');
 import reject = require('lodash/reject');
 import * as React from 'react';
 import { FaFilter, FaSearch } from 'react-icons/lib/fa';
-import { FiltersProps, FiltersView } from 'rendition';
+import { FilterRenderMode, FiltersProps, FiltersView } from 'rendition';
 import styled from 'styled-components';
 import Theme from '../../theme';
 import * as utils from '../../utils';
@@ -62,8 +63,6 @@ const SimpleSearchBox = styled.div`
 	border-bottom: 2px solid ${Theme.colors.gray.main};
 	padding-left: 20px;
 	padding-top: 3px;
-	margin-left: 30px;
-	margin-right: 30px;
 
 	.search-icon {
 		position: absolute;
@@ -302,43 +301,66 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		);
 	}
 
+	shouldRenderComponent(mode: FilterRenderMode): boolean {
+		// If a render mode is not specified, render all components
+		if (!this.props.renderMode) {
+			return true;
+		}
+
+		const allowedModes = Array.isArray(this.props.renderMode) ? this.props.renderMode : [ this.props.renderMode ];
+
+		if (includes(allowedModes, 'all')) {
+			return true;
+		}
+
+		return includes(allowedModes, mode);
+	}
+
 	render() {
 		const { filters } = this.state;
 
 		return (
 			<FilterWrapper mb={3}>
 				<Flex justify="space-between">
-					<Button
-						disabled={this.props.disabled}
-						primary
-						onClick={() =>
-							this.setState({ showModal: true, editingFilter: null })
-						}
-						{...this.props.addFilterButtonProps}
-					>
-						<FaFilter style={{ marginRight: 10 }} />
-						Add filter
-					</Button>
-
-					<SimpleSearchBox>
-						<input
-							style={{ color: this.props.dark ? '#fff' : undefined }}
+					{this.shouldRenderComponent('add') &&
+						<Button
+							mr={30}
 							disabled={this.props.disabled}
-							placeholder="Search entries..."
-							value={this.state.searchString}
-							onChange={e => this.setSimpleSearch(e.target.value)}
-						/>
-						<FaSearch className="search-icon" name="search" />
-					</SimpleSearchBox>
+							primary
+							onClick={() =>
+								this.setState({ showModal: true, editingFilter: null })
+							}
+							{...this.props.addFilterButtonProps}
+						>
+							<FaFilter style={{ marginRight: 10 }} />
+							Add filter
+						</Button>
+					}
 
-					<ViewsMenu
-						buttonProps={this.props.viewsMenuButtonProps}
-						disabled={this.props.disabled}
-						views={this.state.views || []}
-						schema={this.state.schema}
-						setFilters={filters => this.setFilters(filters)}
-						deleteView={view => this.deleteView(view)}
-					/>
+					{this.shouldRenderComponent('search') &&
+						<SimpleSearchBox>
+							<input
+								style={{ color: this.props.dark ? '#fff' : undefined }}
+								disabled={this.props.disabled}
+								placeholder="Search entries..."
+								value={this.state.searchString}
+								onChange={e => this.setSimpleSearch(e.target.value)}
+							/>
+							<FaSearch className="search-icon" name="search" />
+						</SimpleSearchBox>
+					}
+
+					{this.shouldRenderComponent('views') &&
+						<ViewsMenu
+							buttonProps={this.props.viewsMenuButtonProps}
+							disabled={this.props.disabled}
+							views={this.state.views || []}
+							schema={this.props.schema}
+							setFilters={filters => this.setFilters(filters)}
+							deleteView={view => this.deleteView(view)}
+							renderMode={this.props.renderMode}
+						/>
+					}
 				</Flex>
 
 				{this.state.showModal && (
@@ -424,7 +446,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 					</div>
 				)}
 
-				{!!filters.length &&
+				{this.shouldRenderComponent('summary') && !!filters.length &&
 					!this.props.disabled && (
 						<Summary
 							edit={(filter: JSONSchema6) => this.editFilter(filter)}
