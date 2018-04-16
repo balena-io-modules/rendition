@@ -5,7 +5,7 @@ exports[`Gauge renders correctly 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <div
-    className="sc-bxivhb ljpeSw sc-bwzfXH hBrfBJ"
+    className="sc-dnqmqq gDpXJY sc-gzVnrw iYSyBq"
   >
     <svg
       className="gauge__graph"
@@ -64,7 +64,7 @@ exports[`Gauge renders correctly 1`] = `
          ICE CREAM
       </text>
       <text
-        className="sc-htpNat gwYnzy"
+        className="sc-htoDjs gNiaxF"
         x="50"
         y="63"
       >

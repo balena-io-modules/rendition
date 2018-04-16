@@ -5,7 +5,7 @@ exports[`Input renders correctly 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <input
-    className="sc-htpNat fGEkbD sc-bwzfXH bicRBw"
+    className="sc-htoDjs gDCMNh sc-gzVnrw fEujqr"
     placeholder="Placeholder Text"
   />
 </div>

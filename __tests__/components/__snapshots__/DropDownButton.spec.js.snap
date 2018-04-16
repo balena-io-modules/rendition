@@ -5,18 +5,18 @@ exports[`DropDownButton renders correctly 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <div
-    className="sc-kgoBCf fdaLlg"
+    className="sc-eNQAEJ fTusFU"
   >
     <span>
       <button
-        className="sc-kAzzGY fvlqXW sc-bZQynM bycwzs sc-htpNat jbaLXG"
+        className="sc-ckVGcZ emIugb sc-gqjmRU bCjhLA sc-htoDjs hfajhw"
       >
         <div>
           DropDown
         </div>
       </button>
       <button
-        className="sc-cSHVUG hhjplt sc-bZQynM bycwzs sc-htpNat jbaLXG"
+        className="sc-dxgOiQ sZxT sc-gqjmRU bCjhLA sc-htoDjs hfajhw"
         onClick={[Function]}
       >
         <svg
