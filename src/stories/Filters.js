@@ -72,11 +72,16 @@ const schema = {
       title: 'Has been caught',
       type: 'boolean'
     },
-    Height: {
-      type: 'number'
-    },
-    Weight: {
-      type: 'number'
+    biometrics: {
+      type: 'object',
+      properties: {
+        Height: {
+          type: 'number'
+        },
+        Weight: {
+          type: 'number'
+        }
+      }
     },
     pokedex_number: {
       title: 'National pokedex number',
@@ -135,11 +140,11 @@ class FiltersDemo extends React.Component {
                 </tr>
                 <tr>
                   <td>Height</td>
-                  <td>{item.Height}</td>
+                  <td>{item.biometrics.Height}</td>
                 </tr>
                 <tr>
                   <td>Weight</td>
-                  <td>{item.Weight}</td>
+                  <td>{item.biometrics.Weight}</td>
                 </tr>
                 <tr>
                   <td>Abilities</td>

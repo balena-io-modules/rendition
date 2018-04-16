@@ -1122,4 +1122,400 @@ describe('SchemaSieve', () => {
       )
     })
   })
+
+  describe('.flattenSchema()', () => {
+    it('should flatten a schema correctly', () => {
+      const schema = {
+        type: 'object',
+        properties: {
+          string: { type: 'string' },
+          nestedString: {
+            type: 'object',
+            properties: {
+              string: { type: 'string' }
+            }
+          },
+          nestedNumber: {
+            type: 'object',
+            properties: {
+              number: { type: 'number' }
+            }
+          },
+          nestedBoolean: {
+            type: 'object',
+            properties: {
+              boolean: { type: 'boolean' }
+            }
+          },
+          nestedDateTime: {
+            type: 'object',
+            properties: {
+              'date-time': {
+                type: 'string',
+                format: 'date-time'
+              }
+            }
+          },
+          nestedObject: {
+            type: 'object',
+            properties: {
+              object: {
+                type: 'object',
+                properties: {
+                  tag_name: {
+                    description: 'key',
+                    type: 'string'
+                  },
+                  tag_value: {
+                    description: 'value',
+                    type: 'string'
+                  }
+                }
+              }
+            }
+          },
+          nestedEnum: {
+            type: 'object',
+            properties: {
+              enum: {
+                enum: [ 'foo', 'bar', 'baz' ]
+              }
+            }
+          },
+          nestedMultiple: {
+            type: 'object',
+            properties: {
+              string: { type: 'string' },
+              number: { type: 'number' }
+            }
+          },
+          nestedLevels: {
+            type: 'object',
+            properties: {
+              level: {
+                type: 'object',
+                properties: {
+                  string: { type: 'string' }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      expect(sieve.flattenSchema(schema)).toEqual({
+        type: 'object',
+        properties: {
+          string: { type: 'string' },
+          ___nestedString___string: {
+            title: 'string',
+            type: 'string'
+          },
+          ___nestedNumber___number: {
+            title: 'number',
+            type: 'number'
+          },
+          ___nestedBoolean___boolean: {
+            title: 'boolean',
+            type: 'boolean'
+          },
+          '___nestedDateTime___date-time': {
+            title: 'date-time',
+            type: 'string',
+            format: 'date-time'
+          },
+          ___nestedObject___object: {
+            title: 'object',
+            type: 'object',
+            properties: {
+              tag_name: {
+                description: 'key',
+                type: 'string'
+              },
+              tag_value: {
+                description: 'value',
+                type: 'string'
+              }
+            }
+          },
+          ___nestedEnum___enum: {
+            title: 'enum',
+            enum: [ 'foo', 'bar', 'baz' ]
+          },
+          ___nestedMultiple___string: {
+            title: 'string',
+            type: 'string'
+          },
+          ___nestedMultiple___number: {
+            title: 'number',
+            type: 'number'
+          },
+          ___nestedLevels___level___string: {
+            title: 'string',
+            type: 'string'
+          }
+        }
+      })
+    })
+
+    it('should preserve titles when flattening', () => {
+      const schema = {
+        type: 'object',
+        properties: {
+          nestedString: {
+            type: 'object',
+            properties: {
+              string: {
+                title: 'A string field',
+                type: 'string'
+              }
+            }
+          }
+        }
+      }
+
+      expect(sieve.flattenSchema(schema)).toEqual({
+        type: 'object',
+        properties: {
+          ___nestedString___string: {
+            title: 'A string field',
+            type: 'string'
+          }
+        }
+      })
+    })
+
+    it('should work with the "anyOf" keyword', () => {
+      const schema = {
+        anyOf: [{
+          type: 'object',
+          properties: {
+            nestedString: {
+              type: 'object',
+              properties: {
+                string: {
+                  title: 'A string field',
+                  type: 'string'
+                }
+              }
+            }
+          }
+        }]
+      }
+
+      expect(sieve.flattenSchema(schema)).toEqual({
+        anyOf: [{
+          type: 'object',
+          properties: {
+            ___nestedString___string: {
+              title: 'A string field',
+              type: 'string'
+            }
+          }
+        }]
+      })
+    })
+  })
+
+  describe('.unflattenSchema()', () => {
+    it('should unflatten a schema correctly', () => {
+      const schema = {
+        type: 'object',
+        properties: {
+          string: { type: 'string' },
+          nestedString: {
+            type: 'object',
+            properties: {
+              string: { type: 'string' }
+            }
+          },
+          nestedNumber: {
+            type: 'object',
+            properties: {
+              number: { type: 'number' }
+            }
+          },
+          nestedBoolean: {
+            type: 'object',
+            properties: {
+              boolean: { type: 'boolean' }
+            }
+          },
+          nestedDateTime: {
+            type: 'object',
+            properties: {
+              'date-time': {
+                type: 'string',
+                format: 'date-time'
+              }
+            }
+          },
+          nestedObject: {
+            type: 'object',
+            properties: {
+              object: {
+                type: 'object',
+                properties: {
+                  tag_name: {
+                    description: 'key',
+                    type: 'string'
+                  },
+                  tag_value: {
+                    description: 'value',
+                    type: 'string'
+                  }
+                }
+              }
+            }
+          },
+          nestedEnum: {
+            type: 'object',
+            properties: {
+              enum: {
+                enum: [ 'foo', 'bar', 'baz' ]
+              }
+            }
+          },
+          nestedMultiple: {
+            type: 'object',
+            properties: {
+              string: { type: 'string' },
+              number: { type: 'number' }
+            }
+          },
+          nestedLevels: {
+            type: 'object',
+            properties: {
+              level: {
+                type: 'object',
+                properties: {
+                  string: { type: 'string' }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      const flattenedSchema = sieve.flattenSchema(schema)
+
+      expect(sieve.unflattenSchema(flattenedSchema)).toEqual(schema)
+    })
+
+    it('should work with the "anyOf" keyword', () => {
+      const schema = {
+        anyOf: [{
+          type: 'object',
+          properties: {
+            string: { type: 'string' },
+            nestedString: {
+              type: 'object',
+              properties: {
+                string: { type: 'string' }
+              }
+            },
+            nestedNumber: {
+              type: 'object',
+              properties: {
+                number: { type: 'number' }
+              }
+            },
+            nestedBoolean: {
+              type: 'object',
+              properties: {
+                boolean: { type: 'boolean' }
+              }
+            },
+            nestedDateTime: {
+              type: 'object',
+              properties: {
+                'date-time': {
+                  type: 'string',
+                  format: 'date-time'
+                }
+              }
+            },
+            nestedObject: {
+              type: 'object',
+              properties: {
+                object: {
+                  type: 'object',
+                  properties: {
+                    tag_name: {
+                      description: 'key',
+                      type: 'string'
+                    },
+                    tag_value: {
+                      description: 'value',
+                      type: 'string'
+                    }
+                  }
+                }
+              }
+            },
+            nestedEnum: {
+              type: 'object',
+              properties: {
+                enum: {
+                  enum: [ 'foo', 'bar', 'baz' ]
+                }
+              }
+            },
+            nestedMultiple: {
+              type: 'object',
+              properties: {
+                string: { type: 'string' },
+                number: { type: 'number' }
+              }
+            },
+            nestedLevels: {
+              type: 'object',
+              properties: {
+                level: {
+                  type: 'object',
+                  properties: {
+                    string: { type: 'string' }
+                  }
+                }
+              }
+            }
+          }
+        }]
+      }
+
+      const flattenedSchema = sieve.flattenSchema(schema)
+
+      expect(sieve.unflattenSchema(flattenedSchema)).toEqual(schema)
+    })
+
+    it('should preserve the "required" keyword', () => {
+      const flattenedSchema = {
+        type: 'object',
+        properties: {
+          ___nestedString___string: {
+            title: 'A string field',
+            type: 'string'
+          }
+        },
+        required: [ '___nestedString___string' ]
+      }
+
+      expect(sieve.unflattenSchema(flattenedSchema)).toEqual({
+        type: 'object',
+        properties: {
+          nestedString: {
+            type: 'object',
+            properties: {
+              string: {
+                title: 'A string field',
+                type: 'string'
+              }
+            },
+            required: [ 'string' ]
+          }
+        },
+        required: [ 'nestedString' ]
+      })
+    })
+  })
 })
