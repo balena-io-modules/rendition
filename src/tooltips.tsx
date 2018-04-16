@@ -177,7 +177,7 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 
 	render() {
 		const Arrow = getArrowElement(this.state.placement);
-		const tooltipStyle = {
+		const tooltipStyle: React.CSSProperties = {
 			top: this.state.coordinates.top,
 			left: this.state.coordinates.left,
 			visibility: this.state.show ? 'visible' : 'hidden',

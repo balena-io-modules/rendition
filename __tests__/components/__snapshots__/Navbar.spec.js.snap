@@ -2,16 +2,16 @@
 
 exports[`Navbar renders correctly 1`] = `
 <div
-  className="sc-htoDjs bSlTVa"
+  className="sc-jTzLTM bHwELW"
 >
   <div
-    className="sc-jTzLTM SofDJ sc-gqjmRU gYzTfQ sc-dnqmqq fozHQE"
+    className="sc-kgoBCf cwVKXx sc-kAzzGY iLlCGt sc-fjdhpX dBcBpm"
   >
     <div
-      className="sc-fjdhpX gKwwVP"
+      className="sc-kGXeez QXPYf"
     >
       <div
-        className="sc-VigVT hegYug sc-gZMcBi eQxJRS sc-iwsKbI gLKxKc"
+        className="sc-chPdSV dfDVBP sc-cSHVUG kBGaNN sc-jzJRlG jJxvfu"
         direction={
           Array [
             "column",
@@ -20,13 +20,13 @@ exports[`Navbar renders correctly 1`] = `
         }
       >
         <div
-          className="sc-VigVT hegYug sc-gZMcBi eQxJRS sc-iwsKbI gLKxKc"
+          className="sc-chPdSV dfDVBP sc-cSHVUG kBGaNN sc-jzJRlG jJxvfu"
         >
           <div
-            className="sc-jzJRlG dVdezz sc-jTzLTM dqvzgf sc-gqjmRU jowXRS sc-dnqmqq gGbYAg"
+            className="sc-kpOJdX gjfIsR sc-kgoBCf cmynHa sc-kAzzGY bHluuy sc-fjdhpX cqKzNA"
           />
           <div
-            className="sc-cSHVUG iCVeHJ sc-jTzLTM bxmMAi sc-gqjmRU jowXRS sc-dnqmqq fiBbgU"
+            className="sc-dxgOiQ bTZgME sc-kgoBCf hSuaOE sc-kAzzGY bHluuy sc-fjdhpX kGtvco"
             display={
               Array [
                 "block",
@@ -57,7 +57,7 @@ exports[`Navbar renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="sc-kAzzGY buEXUc sc-VigVT giMOMu sc-gZMcBi eQxJRS sc-iwsKbI fGhqpY"
+          className="sc-ckVGcZ izzoql sc-chPdSV hcSthT sc-cSHVUG kBGaNN sc-jzJRlG krtRJA"
           maxHeight={
             Array [
               "0vh",
@@ -66,7 +66,7 @@ exports[`Navbar renders correctly 1`] = `
           }
         >
           <div
-            className="sc-VigVT iLaKEt sc-gZMcBi eQxJRS sc-iwsKbI hCcawn"
+            className="sc-chPdSV dMuhYu sc-cSHVUG kBGaNN sc-jzJRlG ffNkmI"
             direction={
               Array [
                 "column",
@@ -75,11 +75,11 @@ exports[`Navbar renders correctly 1`] = `
             }
           >
             <div
-              className="sc-jTzLTM hpYooM sc-gqjmRU jowXRS sc-dnqmqq llRrFg"
+              className="sc-kgoBCf hdQKjv sc-kAzzGY bHluuy sc-fjdhpX iUbdmZ"
               onClick={[Function]}
             >
               <a
-                className="sc-gzVnrw cpqKMG sc-chPdSV goMgoP"
+                className="sc-VigVT tcTAH sc-jKJlTe iYFCgQ"
                 color="white"
                 href="/docs/"
                 rel={undefined}
@@ -89,11 +89,11 @@ exports[`Navbar renders correctly 1`] = `
               </a>
             </div>
             <div
-              className="sc-jTzLTM hpYooM sc-gqjmRU jowXRS sc-dnqmqq llRrFg"
+              className="sc-kgoBCf hdQKjv sc-kAzzGY bHluuy sc-fjdhpX iUbdmZ"
               onClick={[Function]}
             >
               <a
-                className="sc-gzVnrw cpqKMG sc-kgoBCf gXqCXL"
+                className="sc-VigVT tcTAH sc-eNQAEJ iestvo"
                 color="white"
                 href="/changelog/"
                 rel={undefined}
@@ -103,11 +103,11 @@ exports[`Navbar renders correctly 1`] = `
               </a>
             </div>
             <div
-              className="sc-jTzLTM hpYooM sc-gqjmRU jowXRS sc-dnqmqq llRrFg"
+              className="sc-kgoBCf hdQKjv sc-kAzzGY bHluuy sc-fjdhpX iUbdmZ"
               onClick={[Function]}
             >
               <a
-                className="sc-gzVnrw cpqKMG sc-kGXeez jASSHv"
+                className="sc-VigVT tcTAH sc-hMqMXs bPxJSr"
                 color="white"
                 href="/gitter/"
                 rel={undefined}
