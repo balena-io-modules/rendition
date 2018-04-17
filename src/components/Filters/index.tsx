@@ -59,7 +59,7 @@ const ExtraRuleDeleteBtn = styled(DeleteBtn)`
 
 const SimpleSearchBox = styled.div`
 	position: relative;
-	width: 500px;
+	flex-basis: 500px;
 	border-bottom: 2px solid ${Theme.colors.gray.main};
 	padding-left: 20px;
 	padding-top: 3px;
