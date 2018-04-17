@@ -25,10 +25,14 @@ const getTitle = (props: AlertProps) => {
 		return props.prefix;
 	}
 	return props.danger
-		? 'Darn!'
+		? 'Oh no!'
 		: props.warning
 			? 'Warning!'
-			: props.success ? 'Great!' : props.info ? 'Hey!' : '';
+			: props.success
+				? 'Great!'
+				: props.info
+					? 'Hey!'
+					: '';
 };
 
 const AlertTitle = styled.span`
