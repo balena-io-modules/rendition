@@ -1,5 +1,7 @@
+import { JSONSchema6 } from 'json-schema';
 import cloneDeep = require('lodash/cloneDeep');
 import findIndex = require('lodash/findIndex');
+import isEqual = require('lodash/isEqual');
 import map = require('lodash/map');
 import reject = require('lodash/reject');
 import * as React from 'react';
@@ -16,11 +18,8 @@ import Modal from '../Modal';
 import Select from '../Select';
 import Txt from '../Txt';
 import * as SchemaSieve from './SchemaSieve';
-import ViewsMenu from './ViewsMenu';
-
-import { JSONSchema6 } from 'json-schema';
-
 import Summary from './Summary';
+import ViewsMenu from './ViewsMenu';
 
 interface FilterInputProps {
 	schema: JSONSchema6;
@@ -104,27 +103,40 @@ interface FiltersState {
 	searchString: string;
 	filters: JSONSchema6[];
 	views: FiltersView[];
+	schema: JSONSchema6;
 }
 
 class Filters extends React.Component<FiltersProps, FiltersState> {
 	constructor(props: FiltersProps) {
 		super(props);
-		const { filters, views } = this.props;
+		const { filters, schema, views } = this.props;
+
+		const flatSchema = SchemaSieve.flattenSchema(schema);
 
 		this.state = {
 			showModal: false,
 			searchString: '',
-			edit: [this.getCleanEditModel()],
 			editingFilter: null,
 			filters: filters || [],
 			views: views || [],
+			schema: flatSchema,
+			edit: [],
 		};
 
-		// Clean exsting rules on load
+		this.state.edit.push(this.getCleanEditModel());
 	}
 
-	getCleanEditModel(field?: string) {
-		const { schema } = this.props;
+	componentWillReceiveProps(prevProps: FiltersProps) {
+		// If the schema prop updates, also update the internal 'flat' schema
+		if (!isEqual(prevProps.schema, this.props.schema)) {
+			this.setState({
+				schema: SchemaSieve.flattenSchema(this.props.schema),
+			});
+		}
+	}
+
+	getCleanEditModel(field?: string | null) {
+		const schema = this.state.schema;
 		if (!field) {
 			field = Object.keys(schema.properties!).shift()!;
 		}
@@ -137,7 +149,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 	}
 
 	getOperators(field: string) {
-		const { schema } = this.props;
+		const schema = this.state.schema;
 		return SchemaSieve.getOperators(schema, field);
 	}
 
@@ -167,9 +179,19 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		});
 	}
 
+	emitFilterUpdate() {
+		if (!this.props.onFiltersUpdate) {
+			return;
+		}
+
+		this.props.onFiltersUpdate(
+			this.state.filters.map(filter => SchemaSieve.unflattenSchema(filter)),
+		);
+	}
+
 	addFilter() {
 		const $id = this.state.editingFilter;
-		const { schema } = this.props;
+		const { schema } = this.state;
 		const filter = SchemaSieve.createFilter(schema, this.state.edit);
 		const currentFilters = this.state.filters;
 
@@ -190,14 +212,12 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 				showModal: false,
 				editingFilter: null,
 			},
-			() =>
-				this.props.onFiltersUpdate &&
-				this.props.onFiltersUpdate(this.state.filters),
+			() => this.emitFilterUpdate(),
 		);
 	}
 
 	editFilter(filter: JSONSchema6) {
-		const { schema } = this.props;
+		const { schema } = this.state;
 
 		const signatures = SchemaSieve.decodeFilter(schema, filter);
 
@@ -213,19 +233,12 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 			prevState => ({
 				filters: reject(prevState.filters, { $id }),
 			}),
-			() =>
-				this.props.onFiltersUpdate &&
-				this.props.onFiltersUpdate(this.state.filters),
+			() => this.emitFilterUpdate(),
 		);
 	}
 
 	setFilters(filters: JSONSchema6[]) {
-		this.setState(
-			{ filters },
-			() =>
-				this.props.onFiltersUpdate &&
-				this.props.onFiltersUpdate(this.state.filters),
-		);
+		this.setState({ filters }, () => this.emitFilterUpdate());
 	}
 
 	addCompound() {
@@ -270,20 +283,23 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 	}
 
 	setSimpleSearch(term: string) {
-		this.setState(prevState => {
-			const newFilters = term
-				? SchemaSieve.upsertFullTextSearch(
-						this.props.schema,
-						prevState.filters,
-						term,
-					)
-				: SchemaSieve.removeFullTextSearch(prevState.filters);
+		this.setState(
+			prevState => {
+				const newFilters = term
+					? SchemaSieve.upsertFullTextSearch(
+							this.state.schema,
+							prevState.filters,
+							term,
+						)
+					: SchemaSieve.removeFullTextSearch(prevState.filters);
 
-			return {
-				searchString: term,
-				filters: newFilters,
-			};
-		}, () => this.props.onFiltersUpdate && this.props.onFiltersUpdate(this.state.filters));
+				return {
+					searchString: term,
+					filters: newFilters,
+				};
+			},
+			() => this.emitFilterUpdate(),
+		);
 	}
 
 	render() {
@@ -319,7 +335,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 						buttonProps={this.props.viewsMenuButtonProps}
 						disabled={this.props.disabled}
 						views={this.state.views || []}
-						schema={this.props.schema}
+						schema={this.state.schema}
 						setFilters={filters => this.setFilters(filters)}
 						deleteView={view => this.deleteView(view)}
 					/>
@@ -347,9 +363,11 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 												}
 											>
 												{map(
-													this.props.schema.properties,
+													this.state.schema.properties,
 													(s: JSONSchema6, field) => (
-														<option value={field}>{s.title || field}</option>
+														<option key={field} value={field}>
+															{s.title || field}
+														</option>
 													),
 												)}
 											</Select>
@@ -369,7 +387,9 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 													}
 												>
 													{map(operators, ({ slug, label }) => (
-														<option value={slug}>{label}</option>
+														<option key={slug} value={slug}>
+															{label}
+														</option>
 													))}
 												</Select>
 											)}
@@ -378,7 +398,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 												operator={operator}
 												value={value}
 												schema={
-													this.props.schema.properties![field] as JSONSchema6
+													this.state.schema.properties![field] as JSONSchema6
 												}
 												onUpdate={(v: any) => this.setEditValue(v, index)}
 											/>
@@ -412,7 +432,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 							saveView={(name, scope) => this.saveView(name, scope)}
 							filters={filters}
 							views={this.state.views || []}
-							schema={this.props.schema}
+							schema={this.state.schema}
 							dark={!!this.props.dark}
 						/>
 					)}

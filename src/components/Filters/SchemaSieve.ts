@@ -2,11 +2,18 @@ import Ajv = require('ajv');
 import ajvKeywords = require('ajv-keywords');
 import metaSchema6 = require('ajv/lib/refs/json-schema-draft-06.json');
 import { JSONSchema6 } from 'json-schema';
+import cloneDeep = require('lodash/cloneDeep');
+import defaults = require('lodash/defaults');
 import every = require('lodash/every');
 import findIndex = require('lodash/findIndex');
+import findKey = require('lodash/findKey');
 import isArray = require('lodash/isArray');
+import isBoolean = require('lodash/isBoolean');
 import map = require('lodash/map');
 import pickBy = require('lodash/pickBy');
+import reduce = require('lodash/reduce');
+import startsWith = require('lodash/startsWith');
+import trimStart = require('lodash/trimStart');
 import { FilterSignature } from 'rendition';
 import * as utils from '../../utils';
 import { getDataModel } from '../DataTypes';
@@ -16,6 +23,7 @@ ajvKeywords(ajv);
 ajv.addMetaSchema(metaSchema6);
 
 const FULL_TEXT_SLUG = 'full_text_search';
+const DELIMITER = '___';
 
 export const filter = (
 	filters: JSONSchema6 | JSONSchema6[],
@@ -141,4 +149,152 @@ export const getOperators = (schema: JSONSchema6, field: string) => {
 		slug: key,
 		label: value.getLabel(subSchema),
 	}));
+};
+
+// The inner recursive function used by `flattenSchema`. Mutates the
+// `accumulator` argument.
+const flattenAccumulator = (
+	schema: JSONSchema6,
+	delimiter: string,
+	parentKey: string = '',
+	accumulator?: JSONSchema6,
+): JSONSchema6 => {
+	if (!accumulator) {
+		accumulator = cloneDeep(schema);
+
+		if (schema.properties) {
+			accumulator.properties = {};
+		}
+	}
+
+	if (schema.anyOf && isArray(schema.anyOf)) {
+		accumulator.anyOf = schema.anyOf.map(subSchema =>
+			flattenAccumulator(subSchema, delimiter, parentKey),
+		);
+	}
+
+	return reduce(
+		schema.properties,
+		(result, value, key) => {
+			if (isBoolean(value)) {
+				return accumulator;
+			}
+
+			const newKey = parentKey + DELIMITER + key;
+			// If the value is not an object type or
+			// If the value is a key value pair style object, it can be added to the
+			// accumulator
+			if (
+				value.type !== 'object' ||
+				(findKey(value.properties, { description: 'key' }) &&
+					findKey(value.properties, { description: 'value' }))
+			) {
+				// If there is a parentKey then this function has been called recursively
+				// and we should use the newKey
+				if (parentKey) {
+					result!.properties![newKey] = defaults(value, { title: key });
+					return result;
+				}
+
+				// If there is no parentKey then we are at the top level and this field
+				// does not need to be flattened/modified
+				result!.properties![key] = value;
+				return result;
+			}
+
+			return flattenAccumulator(value, delimiter, newKey, result);
+		},
+		accumulator,
+	) as JSONSchema6;
+};
+
+// Reduces a multi level schema to a single level
+export const flattenSchema = (
+	schema: JSONSchema6,
+	delimiter: string = DELIMITER,
+): JSONSchema6 => {
+	return flattenAccumulator(schema, delimiter);
+};
+
+// Restores a schema that has been flattened with `flattenSchema()`
+export const unflattenSchema = (
+	schema: JSONSchema6,
+	delimiter: string = DELIMITER,
+) => {
+	const base = cloneDeep(schema);
+
+	// Reset the properties object to clean up the flattened fields
+	if (schema.properties) {
+		base.properties = {};
+	}
+
+	const unflattenedSchema = reduce(
+		schema.properties,
+		(result, value, field) => {
+			// Skip fields that don't start with the delimiter, as the property hasn't
+			// been flattened
+			if (!startsWith(field, DELIMITER)) {
+				result.properties![field] = value;
+				return result;
+			}
+
+			const keys = trimStart(field, delimiter).split(delimiter);
+			const lastKey = keys.pop()!;
+
+			let head = result;
+
+			// Convert keys array into nested object schemas
+			for (const key of keys) {
+				// Don't overwrite an existing entry
+				if (!head.properties![key]) {
+					head.properties![key] = {
+						type: 'object',
+						properties: {},
+					};
+				}
+
+				// Move the head pointer to the subschema that was just created
+				head = head.properties![key] as JSONSchema6;
+			}
+
+			// Finally, use the last key to set the actual value of the field
+			head.properties![lastKey] = value;
+
+			return result;
+		},
+		base,
+	);
+
+	// If the schema uses `anyOf` then use recursion to populate the array
+	if (unflattenedSchema.anyOf) {
+		unflattenedSchema.anyOf = unflattenedSchema.anyOf.map(subSchema =>
+			unflattenSchema(subSchema, delimiter),
+		);
+	}
+
+	// Unflatten any required fields
+	if (unflattenedSchema.required) {
+		const requiredFields = unflattenedSchema.required;
+
+		// Reset the `required` array so it can be repopulated
+		unflattenedSchema.required = [];
+
+		requiredFields.forEach(requiredField => {
+			const fields = trimStart(requiredField, delimiter).split(delimiter);
+
+			let head = unflattenedSchema;
+
+			for (const field of fields) {
+				if (!head.required) {
+					head.required = [];
+				}
+
+				head.required.push(field);
+
+				head = head.properties![field] as JSONSchema6;
+			}
+		});
+	}
+
+	return unflattenedSchema;
 };

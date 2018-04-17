@@ -83,6 +83,7 @@ export const createFilter = (
 			schema,
 		)} ${value}`,
 		type: 'object',
+		required: [field],
 	};
 
 	if (operator === 'is') {
