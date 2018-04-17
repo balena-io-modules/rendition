@@ -4,7 +4,7 @@ import { getDataModel } from '../src/components/DataTypes'
 global.document = (new JSDOM('')).window.document
 
 const expectMatchesKeys = (data, keys) =>
-  expect(Object.keys(data).sort()).toEqual(keys.sort());
+  expect(Object.keys(data).sort()).toEqual(keys.sort())
 
 describe('DataTypes', () => {
   describe('.getDataModel()', () => {

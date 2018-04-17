@@ -1,5 +1,5 @@
 /* globals expect, describe, it */
-import * as _ from 'lodash';
+import * as _ from 'lodash'
 import { JSDOM } from 'jsdom'
 const Ajv = require('ajv')
 const ajvKeywords = require('ajv-keywords')
@@ -9,7 +9,7 @@ global.document = (new JSDOM('')).window.document
 import { SchemaSieve as sieve } from '../src'
 
 const expectMatchesKeys = (data, keys) =>
-  expect(Object.keys(data).sort()).toEqual(keys.sort());
+  expect(Object.keys(data).sort()).toEqual(keys.sort())
 
 describe('SchemaSieve', () => {
   describe('.filter()', () => {
@@ -25,7 +25,7 @@ describe('SchemaSieve', () => {
       const nestedCollection = _.mapValues(collection, (value) => ({ data: value }))
 
       tests.forEach(({ operator, value, expected }) => {
-        it(`should correctly test values using the "${operator}" operator`, function () {
+        it(`should correctly test values using the "${operator}" operator with a value of "${value}"`, function () {
           const filter = sieve.createFilter(schema, [{
             field,
             operator,
@@ -34,12 +34,12 @@ describe('SchemaSieve', () => {
 
           const result = sieve.filter(filter, collection)
 
-          expectMatchesKeys(result, expected);
+          expectMatchesKeys(result, expected)
         })
-      });
+      })
 
       tests.forEach(({ operator, value, expected }) => {
-        it(`should correctly test values using a nested schema and the "${operator}" operator`, function () {
+        it(`should correctly test values using a nested schema and the "${operator}" operator with a value of "${value}"`, function () {
           // Flattend/Unflatten happens 'behind the scenes' in the filter
           // component when creating filters. The methods are used here directly
           // to simulate the Filters behaviour.
@@ -51,7 +51,7 @@ describe('SchemaSieve', () => {
 
           const result = sieve.filter(sieve.unflattenSchema(filter), nestedCollection)
 
-          expectMatchesKeys(result, expected);
+          expectMatchesKeys(result, expected)
         })
       })
     }
@@ -227,6 +227,9 @@ describe('SchemaSieve', () => {
         },
         'Entry 5': {
           test: null
+        },
+        'Entry 6': {
+          foo: 'bar'
         }
       }
 
@@ -248,7 +251,8 @@ describe('SchemaSieve', () => {
             'Entry 1',
             'Entry 2',
             'Entry 3',
-            'Entry 5'
+            'Entry 5',
+            'Entry 6'
           ]
         },
         {
@@ -263,7 +267,8 @@ describe('SchemaSieve', () => {
             'Entry 1',
             'Entry 3',
             'Entry 4',
-            'Entry 5'
+            'Entry 5',
+            'Entry 6'
           ]
         }
       ]
@@ -328,10 +333,12 @@ describe('SchemaSieve', () => {
           foo: 'bar'
         },
         'Entry 6': {
-          hello: 'world',
-          foo: 'bar',
-          tag_name: 'Ee',
-          tag_value: '161718'
+          Tag: [{
+            hello: 'world',
+            foo: 'bar',
+            tag_name: 'Ee',
+            tag_value: '161718'
+          }]
         }
       }
 
@@ -361,23 +368,23 @@ describe('SchemaSieve', () => {
         {
           operator: 'key_is',
           value: {
-            tag_name: 'Dd',
+            tag_name: 'Dd'
           },
           expected: [ 'Entry 4' ]
         },
         {
           operator: 'key_contains',
           value: {
-            tag_name: 'b',
+            tag_name: 'b'
           },
           expected: [ 'Entry 2', 'Entry 3' ]
         },
         {
           operator: 'key_not_contains',
           value: {
-            tag_name: 'b',
+            tag_name: 'b'
           },
-          expected: [ 'Entry 1', 'Entry 4', 'Entry 5' ]
+          expected: [ 'Entry 1', 'Entry 4', 'Entry 5', 'Entry 6' ]
         },
         {
           operator: 'key_matches_re',
@@ -392,45 +399,45 @@ describe('SchemaSieve', () => {
         {
           operator: 'key_not_matches_re',
           value: {
-            tag_name: 'b',
+            tag_name: 'b'
           },
-          expected: [ 'Entry 1', 'Entry 4', 'Entry 5' ]
+          expected: [ 'Entry 1', 'Entry 4', 'Entry 5', 'Entry 6' ]
         },
         {
           operator: 'value_is',
           value: {
-            tag_value: '123',
+            tag_value: '123'
           },
           expected: [ 'Entry 1' ]
         },
         {
           operator: 'value_contains',
           value: {
-            tag_value: '23',
+            tag_value: '23'
           },
           expected: [ 'Entry 1' ]
         },
         {
           operator: 'value_not_contains',
           value: {
-            tag_value: '1',
+            tag_value: '1'
           },
           expected: [ 'Entry 2', 'Entry 5' ]
         },
         {
           operator: 'value_matches_re',
           value: {
-            tag_value: '56',
+            tag_value: '56'
           },
           expected: [ 'Entry 2' ]
         },
         {
           operator: 'value_not_matches_re',
           value: {
-            tag_value: '1',
+            tag_value: '1'
           },
           expected: [ 'Entry 2', 'Entry 5' ]
-        },
+        }
       ]
 
       testFilter('Tag', schema, collection, tests)
@@ -464,20 +471,23 @@ describe('SchemaSieve', () => {
 
       const collection = {
         'Entry 1': {
-          date: '2017-01-01T08:49:26.961Z'
+          date: '2017-01-01T08:49:26Z'
         },
         'Entry 2': {
-          date: '2012-01-01T00:00:00.000Z'
+          date: '2012-01-01T00:00:00Z'
         },
         'Entry 3': {
           date: null
+        },
+        'Entry 4': {
+          foo: 'bar'
         }
       }
 
       const tests = [
         {
           operator: 'is',
-          value: '2017-01-01T08:49:26.961Z',
+          value: '2017-01-01T08:49:26.000Z',
           expected: [ 'Entry 1' ]
         },
         {
@@ -494,10 +504,11 @@ describe('SchemaSieve', () => {
 
       testFilter('date', schema, collection, tests)
 
-      it('should correctly test values using the "is" operator where the date is in a different format', function () {
+      it('should correctly test values using the "is" operator where the date is not in the RFC3339 format', function () {
         const filter = sieve.createFilter(schema, [{
           field: 'date',
           operator: 'is',
+          // This is a RFC2882 formatted date
           value: 'Sun, 01 Jan 2017 08:49:26 +0000'
         }])
 
@@ -524,6 +535,9 @@ describe('SchemaSieve', () => {
         },
         'Entry 3': {
           bool: null
+        },
+        'Entry 4': {
+          foo: 'bar'
         }
       }
 
@@ -536,7 +550,7 @@ describe('SchemaSieve', () => {
         {
           operator: 'is',
           value: false,
-          expected: ['Entry 2', 'Entry 3']
+          expected: ['Entry 2']
         }
       ]
 
@@ -552,18 +566,22 @@ describe('SchemaSieve', () => {
           }
         }
       }
+
       const collection = {
         'Entry 1': {
           score: 1.5
         },
         'Entry 2': {
-          score: '2.3'
+          score: 2.3
         },
         'Entry 3': {
           score: 3.19
         },
         'Entry 4': {
           score: null
+        },
+        'Entry 5': {
+          foo: 'bar'
         }
       }
 
@@ -576,13 +594,13 @@ describe('SchemaSieve', () => {
         {
           operator: 'is_more_than',
           value: 2.3,
-          expected: [ 'Entry 2', 'Entry 3' ]
+          expected: [ 'Entry 3' ]
         },
         {
           operator: 'is_less_than',
           value: 3.19,
           expected: [ 'Entry 1', 'Entry 2' ]
-        },
+        }
       ]
 
       testFilter('score', schema, collection, tests)
@@ -601,6 +619,7 @@ describe('SchemaSieve', () => {
           }
         }
       }
+
       const collection = {
         'Entry 1': {
           category: 'Flame'
@@ -613,6 +632,9 @@ describe('SchemaSieve', () => {
         },
         'Entry 4': {
           category: null
+        },
+        'Entry 5': {
+          foo: 'bar'
         }
       }
 
@@ -628,7 +650,8 @@ describe('SchemaSieve', () => {
           expected: [
             'Entry 1',
             'Entry 2',
-            'Entry 4'
+            'Entry 4',
+            'Entry 5'
           ]
         }
       ]
@@ -670,6 +693,9 @@ describe('SchemaSieve', () => {
           description: 'eu mollis',
           brief: 'finibus lorem',
           incidents: 3
+        },
+        'Entry 4': {
+          foo: 'bar'
         }
       }
 
@@ -677,6 +703,26 @@ describe('SchemaSieve', () => {
         const filter = sieve.createFullTextSearchFilter(schema, 'Lorem')
 
         expectMatchesKeys(sieve.filter(filter, collection), [
+          'Entry 1',
+          'Entry 3'
+        ])
+      })
+
+      it('should correctly test values using a nested schema', function () {
+        const nestedSchema = {
+          type: 'object',
+          properties: {
+            data: schema
+          }
+        }
+
+        const nestedCollection = _.mapValues(collection, (value) => ({ data: value }))
+
+        const filter = sieve.createFullTextSearchFilter(sieve.flattenSchema(nestedSchema), 'lorem')
+
+        const result = sieve.filter(sieve.unflattenSchema(filter), nestedCollection)
+
+        expectMatchesKeys(result, [
           'Entry 1',
           'Entry 3'
         ])
@@ -977,6 +1023,9 @@ describe('SchemaSieve', () => {
           // correctly
           let value
           switch (type) {
+          case 'date-time':
+            value = '2017-01-01T08:49:26Z'
+            break
           case 'boolean':
             value = true
             break

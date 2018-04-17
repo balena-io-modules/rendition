@@ -123,7 +123,12 @@ export const createFilter = (
 
 export const decodeFilter = (schema: JSONSchema6, filter: JSONSchema6) => {
 	const signatures = filter.anyOf!.map(f => {
-		const schemaField = Object.keys(f.properties!).shift()!;
+		if (!f.properties && (!f.anyOf || !f.anyOf.length || !f.anyOf[0].properties)) {
+			return null;
+		}
+		const schemaField = f.anyOf ?
+			Object.keys(f.anyOf[0].properties!).shift()!  :
+			Object.keys(f.properties!).shift()!;
 		const subSchema = schema.properties![schemaField] as JSONSchema6;
 		const model = getDataModel(subSchema);
 

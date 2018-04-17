@@ -38,6 +38,18 @@ interface StringFilter extends JSONSchema6 {
 			};
 		};
 	};
+	anyOf?: Array<{
+		properties?: {
+			[k: string]: {
+				const?: string;
+				pattern?: string;
+				description?: string;
+				not?: {
+					pattern: string;
+				};
+			};
+		};
+	}>;
 }
 
 export const decodeFilter = (
@@ -48,27 +60,44 @@ export const decodeFilter = (
 	value: string;
 } | null => {
 	const operator = filter.title;
-
-	if (!filter.properties) {
-		return null;
-	}
-
-	const keys = Object.keys(filter.properties);
-	if (!keys.length) {
-		return null;
-	}
 	let value: string;
+	let field: string;
 
-	const field = keys[0];
+	if (filter.properties) {
+		const keys = Object.keys(filter.properties);
+		if (!keys.length) {
+			return null;
+		}
 
-	if (operator === 'is') {
-		value = filter.properties[field].const!;
-	} else if (operator === 'contains' || operator === 'not_contains') {
-		value = filter.properties[field].description!;
-	} else if (operator === 'matches_re') {
-		value = filter.properties[field].pattern!;
-	} else if (operator === 'not_matches_re') {
-		value = filter.properties[field].not!.pattern;
+		field = keys[0];
+
+		if (operator === 'is') {
+			value = filter.properties[field].const!;
+		} else if (operator === 'contains') {
+			value = filter.properties[field].description!;
+		} else if (operator === 'matches_re') {
+			value = filter.properties[field].pattern!;
+		} else {
+			return null;
+		}
+	} else if (filter.anyOf) {
+		if (filter.anyOf.length === 0 || !filter.anyOf[0].properties) {
+			return null;
+		}
+		const keys = Object.keys(filter.anyOf[0].properties!);
+		if (!keys.length) {
+			return null;
+		}
+
+		field = keys[0];
+
+		if (operator === 'not_contains') {
+			value = filter.anyOf[0].properties![field].description!;
+		} else if (operator === 'not_matches_re') {
+			value = filter.anyOf[0].properties![field].not!.pattern;
+		} else {
+			return null;
+		}
 	} else {
 		return null;
 	}
@@ -104,6 +133,7 @@ export const createFilter = (
 					const: value,
 				},
 			},
+			required: [ field ],
 		});
 	}
 
@@ -116,20 +146,32 @@ export const createFilter = (
 					pattern: utils.regexEscape(value),
 				},
 			},
+			required: [ field ],
 		});
 	}
 
 	if (operator === 'not_contains') {
 		return assign(base, {
-			properties: {
-				[field]: {
-					type: 'string',
-					description: value,
-					not: {
-						pattern: utils.regexEscape(value),
+			anyOf: [
+				{
+					properties: {
+						[field]: {
+							type: 'string',
+							description: value,
+							not: {
+								pattern: utils.regexEscape(value),
+							},
+						},
 					},
 				},
-			},
+				{
+					properties: {
+						[field]: {
+							type: 'null',
+						},
+					},
+				},
+			],
 		});
 	}
 
@@ -141,19 +183,31 @@ export const createFilter = (
 					pattern: value,
 				},
 			},
+			required: [ field ],
 		});
 	}
 
 	if (operator === 'not_matches_re') {
 		return assign(base, {
-			properties: {
-				[field]: {
-					type: 'string',
-					not: {
-						pattern: value,
+			anyOf: [
+				{
+					properties: {
+						[field]: {
+							type: 'string',
+							not: {
+								pattern: value,
+							},
+						},
 					},
 				},
-			},
+				{
+					properties: {
+						[field]: {
+							type: 'null',
+						},
+					},
+				},
+			],
 		});
 	}
 
