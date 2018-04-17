@@ -47,7 +47,6 @@
     "husky": "^0.14.3",
     "jest": "^22.4.2",
     "jest-canvas-mock": "^1.0.2",
-    "jest-extended": "^0.6.0",
     "jsdom": "^11.6.2",
     "lint-staged": "^4.1.1",
     "match-media-mock": "^0.1.0",
@@ -109,7 +108,6 @@
   },
   "jest": {
     "collectCoverage": true,
-    "setupTestFrameworkScriptFile": "jest-extended",
     "verbose": true,
     "transform": {
       "^.+\\.tsx?$": "ts-jest",

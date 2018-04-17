@@ -1,4 +1,5 @@
 /* globals expect, describe, it */
+import * as _ from 'lodash';
 import { JSDOM } from 'jsdom'
 const Ajv = require('ajv')
 const ajvKeywords = require('ajv-keywords')
@@ -7,8 +8,54 @@ global.document = (new JSDOM('')).window.document
 
 import { SchemaSieve as sieve } from '../src'
 
+const expectMatchesKeys = (data, keys) =>
+  expect(Object.keys(data).sort()).toEqual(keys.sort());
+
 describe('SchemaSieve', () => {
   describe('.filter()', () => {
+    // Utility function for batch testing schema/operator combinations
+    const testFilter = (field, schema, collection, tests) => {
+      const nestedSchema = {
+        type: 'object',
+        properties: {
+          data: schema
+        }
+      }
+
+      const nestedCollection = _.mapValues(collection, (value) => ({ data: value }))
+
+      tests.forEach(({ operator, value, expected }) => {
+        it(`should correctly test values using the "${operator}" operator`, function () {
+          const filter = sieve.createFilter(schema, [{
+            field,
+            operator,
+            value
+          }])
+
+          const result = sieve.filter(filter, collection)
+
+          expectMatchesKeys(result, expected);
+        })
+      });
+
+      tests.forEach(({ operator, value, expected }) => {
+        it(`should correctly test values using a nested schema and the "${operator}" operator`, function () {
+          // Flattend/Unflatten happens 'behind the scenes' in the filter
+          // component when creating filters. The methods are used here directly
+          // to simulate the Filters behaviour.
+          const filter = sieve.createFilter(sieve.flattenSchema(nestedSchema), [{
+            field: '___data___' + field,
+            operator,
+            value
+          }])
+
+          const result = sieve.filter(sieve.unflattenSchema(filter), nestedCollection)
+
+          expectMatchesKeys(result, expected);
+        })
+      })
+    }
+
     it('should not throw if provided with an invalid data type in the filter', function () {
       const schema = {
         type: 'object',
@@ -164,6 +211,7 @@ describe('SchemaSieve', () => {
           }
         }
       }
+
       const collection = {
         'Entry 1': {
           test: 'abcde'
@@ -182,65 +230,45 @@ describe('SchemaSieve', () => {
         }
       }
 
-      it('should correctly test values using the "is" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'test',
+      const tests = [
+        {
           operator: 'is',
-          value: 'abcde'
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys(['Entry 1'])
-      })
-
-      it('should correctly test values using the "contains" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'test',
+          value: 'abcde',
+          expected: ['Entry 1']
+        },
+        {
           operator: 'contains',
-          value: 'BCd'
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys(['Entry 4'])
-      })
-
-      it('should correctly test values using the "does not contain" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'test',
+          value: 'BCd',
+          expected: ['Entry 4']
+        },
+        {
           operator: 'not_contains',
-          value: 'ABC'
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys([
-          'Entry 1',
-          'Entry 2',
-          'Entry 3',
-          'Entry 5'
-        ])
-      })
-
-      it('should correctly test values using the "matches RegEx" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'test',
+          value: 'ABC',
+          expected: [
+            'Entry 1',
+            'Entry 2',
+            'Entry 3',
+            'Entry 5'
+          ]
+        },
+        {
           operator: 'matches_re',
-          value: 'ABC'
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys(['Entry 4'])
-      })
-
-      it('should correctly test values using the "does not match RegEx" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'test',
+          value: 'ABC',
+          expected: ['Entry 4']
+        },
+        {
           operator: 'not_matches_re',
-          value: 'ghi'
-        }])
+          value: 'ghi',
+          expected: [
+            'Entry 1',
+            'Entry 3',
+            'Entry 4',
+            'Entry 5'
+          ]
+        }
+      ]
 
-        expect(sieve.filter(filter, collection)).toContainAllKeys([
-          'Entry 1',
-          'Entry 3',
-          'Entry 4',
-          'Entry 5'
-        ])
-      })
+      testFilter('test', schema, collection, tests)
     })
 
     describe('object types', () => {
@@ -307,18 +335,105 @@ describe('SchemaSieve', () => {
         }
       }
 
-      it('should correctly test values using the "is" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'Tag',
+      const tests = [
+        {
           operator: 'is',
           value: {
             tag_name: 'Aa',
             tag_value: '123'
-          }
-        }])
+          },
+          expected: [ 'Entry 1' ]
+        },
+        {
+          operator: 'is_not',
+          value: {
+            tag_name: 'Aa',
+            tag_value: '123'
+          },
+          expected: [
+            'Entry 2',
+            'Entry 3',
+            'Entry 4',
+            'Entry 5',
+            'Entry 6'
+          ]
+        },
+        {
+          operator: 'key_is',
+          value: {
+            tag_name: 'Dd',
+          },
+          expected: [ 'Entry 4' ]
+        },
+        {
+          operator: 'key_contains',
+          value: {
+            tag_name: 'b',
+          },
+          expected: [ 'Entry 2', 'Entry 3' ]
+        },
+        {
+          operator: 'key_not_contains',
+          value: {
+            tag_name: 'b',
+          },
+          expected: [ 'Entry 1', 'Entry 4', 'Entry 5' ]
+        },
+        {
+          operator: 'key_matches_re',
+          value: {
+            tag_name: 'b'
+          },
+          expected: [
+            'Entry 2',
+            'Entry 3'
+          ]
+        },
+        {
+          operator: 'key_not_matches_re',
+          value: {
+            tag_name: 'b',
+          },
+          expected: [ 'Entry 1', 'Entry 4', 'Entry 5' ]
+        },
+        {
+          operator: 'value_is',
+          value: {
+            tag_value: '123',
+          },
+          expected: [ 'Entry 1' ]
+        },
+        {
+          operator: 'value_contains',
+          value: {
+            tag_value: '23',
+          },
+          expected: [ 'Entry 1' ]
+        },
+        {
+          operator: 'value_not_contains',
+          value: {
+            tag_value: '1',
+          },
+          expected: [ 'Entry 2', 'Entry 5' ]
+        },
+        {
+          operator: 'value_matches_re',
+          value: {
+            tag_value: '56',
+          },
+          expected: [ 'Entry 2' ]
+        },
+        {
+          operator: 'value_not_matches_re',
+          value: {
+            tag_value: '1',
+          },
+          expected: [ 'Entry 2', 'Entry 5' ]
+        },
+      ]
 
-        expect(sieve.filter(filter, collection)).toContainAllKeys(['Entry 1'])
-      })
+      testFilter('Tag', schema, collection, tests)
 
       it('should correctly test values using the "is" operator when there are additional properties', function () {
         const filter = sieve.createFilter(schema, [{
@@ -330,166 +445,9 @@ describe('SchemaSieve', () => {
           }
         }])
 
-        expect(sieve.filter(filter, collection)).toContainAllKeys(['Entry 1'])
-      })
+        const result = sieve.filter(filter, collection)
 
-      it('should correctly test values using the "is not" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'Tag',
-          operator: 'is_not',
-          value: {
-            tag_name: 'Aa',
-            tag_value: '123'
-          }
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys([
-          'Entry 2',
-          'Entry 3',
-          'Entry 4',
-          'Entry 5',
-          'Entry 6'
-        ])
-      })
-
-      it('should correctly test values using the "key is" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'Tag',
-          operator: 'key_is',
-          value: {
-            tag_name: 'Dd'
-          }
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys(['Entry 4'])
-      })
-
-      it('should correctly test values using the "key contains" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'Tag',
-          operator: 'key_contains',
-          value: {
-            tag_name: 'b'
-          }
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys([
-          'Entry 2',
-          'Entry 3'
-        ])
-      })
-
-      it('should correctly test values using the "key does not contain" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'Tag',
-          operator: 'key_not_contains',
-          value: {
-            tag_name: 'b'
-          }
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys([
-          'Entry 1',
-          'Entry 4',
-          'Entry 5'
-        ])
-      })
-
-      it('should correctly test values using the "key matches RegEx" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'Tag',
-          operator: 'key_matches_re',
-          value: {
-            tag_name: 'b'
-          }
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys([
-          'Entry 2',
-          'Entry 3'
-        ])
-      })
-
-      it('should correctly test values using the "key does not match RegEx" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'Tag',
-          operator: 'key_not_matches_re',
-          value: {
-            tag_name: 'b'
-          }
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys([
-          'Entry 1',
-          'Entry 4',
-          'Entry 5'
-        ])
-      })
-
-      it('should correctly test values using the "value is" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'Tag',
-          operator: 'value_is',
-          value: {
-            tag_value: '123'
-          }
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys(['Entry 1'])
-      })
-
-      it('should correctly test values using the "value contains" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'Tag',
-          operator: 'value_contains',
-          value: {
-            tag_value: '23'
-          }
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys(['Entry 1'])
-      })
-
-      it('should correctly test values using the "value does not contain" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'Tag',
-          operator: 'value_not_contains',
-          value: {
-            tag_value: '1'
-          }
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys([
-          'Entry 2',
-          'Entry 5'
-        ])
-      })
-
-      it('should correctly test values using the "value matches RegEx" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'Tag',
-          operator: 'value_matches_re',
-          value: {
-            tag_value: '56'
-          }
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys(['Entry 2'])
-      })
-
-      it('should correctly test values using the "value does not match RegEx" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'Tag',
-          operator: 'value_not_matches_re',
-          value: {
-            tag_value: '1'
-          }
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys([
-          'Entry 2',
-          'Entry 5'
-        ])
+        expectMatchesKeys(result, ['Entry 6'])
       })
     })
 
@@ -516,15 +474,25 @@ describe('SchemaSieve', () => {
         }
       }
 
-      it('should correctly test values using the "is" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'date',
+      const tests = [
+        {
           operator: 'is',
-          value: '2017-01-01T08:49:26.961Z'
-        }])
+          value: '2017-01-01T08:49:26.961Z',
+          expected: [ 'Entry 1' ]
+        },
+        {
+          operator: 'is_before',
+          value: '2016-12-25T00:00:00.000Z',
+          expected: [ 'Entry 2' ]
+        },
+        {
+          operator: 'is_after',
+          value: '2016-12-25T00:00:00.000Z',
+          expected: [ 'Entry 1' ]
+        }
+      ]
 
-        expect(sieve.filter(filter, collection)).toContainAllKeys(['Entry 1'])
-      })
+      testFilter('date', schema, collection, tests)
 
       it('should correctly test values using the "is" operator where the date is in a different format', function () {
         const filter = sieve.createFilter(schema, [{
@@ -533,27 +501,7 @@ describe('SchemaSieve', () => {
           value: 'Sun, 01 Jan 2017 08:49:26 +0000'
         }])
 
-        expect(sieve.filter(filter, collection)).toContainAllKeys(['Entry 1'])
-      })
-
-      it('should correctly test values using the "is before" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'date',
-          operator: 'is_before',
-          value: '2016-12-25T00:00:00.000Z'
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys(['Entry 2'])
-      })
-
-      it('should correctly test values using the "is after" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'date',
-          operator: 'is_after',
-          value: '2016-12-25T00:00:00.000Z'
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys(['Entry 1'])
+        expectMatchesKeys(sieve.filter(filter, collection), ['Entry 1'])
       })
     })
 
@@ -566,6 +514,7 @@ describe('SchemaSieve', () => {
           }
         }
       }
+
       const collection = {
         'Entry 1': {
           bool: true
@@ -578,28 +527,20 @@ describe('SchemaSieve', () => {
         }
       }
 
-      it('should correctly test values using the "is" operator and the "true" value', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'bool',
+      const tests = [
+        {
           operator: 'is',
-          value: true
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys(['Entry 1'])
-      })
-
-      it('should correctly test values using the "is false" operator and the "false" value', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'bool',
+          value: true,
+          expected: ['Entry 1']
+        },
+        {
           operator: 'is',
-          value: false
-        }])
+          value: false,
+          expected: ['Entry 2', 'Entry 3']
+        }
+      ]
 
-        expect(sieve.filter(filter, collection)).toContainAllKeys([
-          'Entry 2',
-          'Entry 3'
-        ])
-      })
+      testFilter('bool', schema, collection, tests)
     })
 
     describe('number types', () => {
@@ -626,41 +567,25 @@ describe('SchemaSieve', () => {
         }
       }
 
-      it('should correctly test values using the "is" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'score',
+      const tests = [
+        {
           operator: 'is',
-          value: 1.5
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys(['Entry 1'])
-      })
-
-      it('should correctly test values using the "is more than" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'score',
+          value: 1.5,
+          expected: [ 'Entry 1' ]
+        },
+        {
           operator: 'is_more_than',
-          value: 2.3
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys([
-          'Entry 2',
-          'Entry 3'
-        ])
-      })
-
-      it('should correctly test values using the "is less than" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'score',
+          value: 2.3,
+          expected: [ 'Entry 2', 'Entry 3' ]
+        },
+        {
           operator: 'is_less_than',
-          value: 3.19
-        }])
+          value: 3.19,
+          expected: [ 'Entry 1', 'Entry 2' ]
+        },
+      ]
 
-        expect(sieve.filter(filter, collection)).toContainAllKeys([
-          'Entry 1',
-          'Entry 2'
-        ])
-      })
+      testFilter('score', schema, collection, tests)
     })
 
     describe('enum types', () => {
@@ -691,29 +616,24 @@ describe('SchemaSieve', () => {
         }
       }
 
-      it('should correctly test values using the "is" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'category',
+      const tests = [
+        {
           operator: 'is',
-          value: 'Flame'
-        }])
-
-        expect(sieve.filter(filter, collection)).toContainAllKeys(['Entry 1'])
-      })
-
-      it('should correctly test values using the "is not" operator', function () {
-        const filter = sieve.createFilter(schema, [{
-          field: 'category',
+          value: 'Flame',
+          expected: ['Entry 1']
+        },
+        {
           operator: 'is_not',
-          value: 'Seed'
-        }])
+          value: 'Seed',
+          expected: [
+            'Entry 1',
+            'Entry 2',
+            'Entry 4'
+          ]
+        }
+      ]
 
-        expect(sieve.filter(filter, collection)).toContainAllKeys([
-          'Entry 1',
-          'Entry 2',
-          'Entry 4'
-        ])
-      })
+      testFilter('category', schema, collection, tests)
     })
 
     describe('Full text search', () => {
@@ -756,7 +676,7 @@ describe('SchemaSieve', () => {
       it('should correctly test values', function () {
         const filter = sieve.createFullTextSearchFilter(schema, 'Lorem')
 
-        expect(sieve.filter(filter, collection)).toContainAllKeys([
+        expectMatchesKeys(sieve.filter(filter, collection), [
           'Entry 1',
           'Entry 3'
         ])
@@ -799,7 +719,7 @@ describe('SchemaSieve', () => {
         }])
 
         const result = sieve.filter(filter, collection)
-        expect(result).toBeArray()
+        expect(_.isArray(result)).toBe(true)
       })
 
       it('should return the correct values', function () {
@@ -884,7 +804,7 @@ describe('SchemaSieve', () => {
           value: 'lorem'
         }])
 
-        expect(sieve.filter(filter, collection)).toContainAllKeys([
+        expectMatchesKeys(sieve.filter(filter, collection), [
           'Entry 1',
           'Entry 3'
         ])
@@ -1002,16 +922,16 @@ describe('SchemaSieve', () => {
 
       operators.forEach(({ slug }) => {
         it(`should create a filter for the '${type}' type using operator '${slug}'`, () => {
-          expect(
-            sieve.createFilter(
-              schema,
-              [{
-                field: type,
-                operator: slug,
-                value: 'test'
-              }]
-            )
-          ).toContainAllKeys(['$id', 'anyOf'])
+          const result = sieve.createFilter(
+            schema,
+            [{
+              field: type,
+              operator: slug,
+              value: 'test'
+            }]
+          )
+
+          expectMatchesKeys(result, ['$id', 'anyOf'])
         })
       })
     })
@@ -1117,7 +1037,7 @@ describe('SchemaSieve', () => {
     Object.keys(schema.properties).forEach(type => {
       it(`should return an array of operators for the '${type}' type`, () =>
         sieve.getOperators(schema, type).forEach((operator) =>
-          expect(operator).toContainAllKeys(['slug', 'label'])
+          expectMatchesKeys(operator, ['slug', 'label'])
         )
       )
     })

@@ -3,6 +3,9 @@ import { JSDOM } from 'jsdom'
 import { getDataModel } from '../src/components/DataTypes'
 global.document = (new JSDOM('')).window.document
 
+const expectMatchesKeys = (data, keys) =>
+  expect(Object.keys(data).sort()).toEqual(keys.sort());
+
 describe('DataTypes', () => {
   describe('.getDataModel()', () => {
     const dataModelKeys = [
@@ -33,7 +36,7 @@ describe('DataTypes', () => {
         type: 'string'
       }
 
-      expect(getDataModel(schema)).toContainAllKeys(dataModelKeys)
+      expectMatchesKeys(getDataModel(schema), dataModelKeys)
     })
 
     it('should return a model for date-time formatted string types', () => {
@@ -42,7 +45,7 @@ describe('DataTypes', () => {
         format: 'date-time'
       }
 
-      expect(getDataModel(schema)).toContainAllKeys(dataModelKeys)
+      expectMatchesKeys(getDataModel(schema), dataModelKeys)
     })
 
     it('should return a model for object types', () => {
@@ -50,7 +53,7 @@ describe('DataTypes', () => {
         type: 'object'
       }
 
-      expect(getDataModel(schema)).toContainAllKeys(dataModelKeys)
+      expectMatchesKeys(getDataModel(schema), dataModelKeys)
     })
 
     it('should return a model for boolean types', () => {
@@ -58,15 +61,14 @@ describe('DataTypes', () => {
         type: 'boolean'
       }
 
-      expect(getDataModel(schema)).toContainAllKeys(dataModelKeys)
+      expectMatchesKeys(getDataModel(schema), dataModelKeys)
     })
 
     it('should return a model for number types', () => {
       const schema = {
         type: 'number'
       }
-
-      expect(getDataModel(schema)).toContainAllKeys(dataModelKeys)
+      expectMatchesKeys(getDataModel(schema), dataModelKeys)
     })
   })
 })
