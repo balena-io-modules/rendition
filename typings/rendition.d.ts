@@ -365,6 +365,8 @@ declare module 'rendition' {
 		): Array<{ slug: string; label: string }>;
 	}
 
+	export const SchemaSieve: SchemaSieve;
+
 	interface SelectProps extends DefaultProps, Sizing {
 		value?: string | string[] | number | null;
 	}
