@@ -253,7 +253,7 @@ declare module 'rendition' {
 	interface FlexProps extends BoxProps {
 		align?: string | string[];
 		justify?: string | string[];
-		direction?: string | string[];
+		flexDirection?: string | string[];
 		wrap?: boolean | boolean[] | string;
 		column?: boolean;
 	}
