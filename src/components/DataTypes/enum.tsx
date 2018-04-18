@@ -88,6 +88,7 @@ export const createFilter = (
 					const: value,
 				},
 			},
+			required: [ field ],
 		});
 	}
 

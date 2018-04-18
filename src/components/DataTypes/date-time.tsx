@@ -1,5 +1,7 @@
 import { JSONSchema6 } from 'json-schema';
 import assign = require('lodash/assign');
+import memoize = require('lodash/memoize');
+import * as moment from 'moment';
 import * as React from 'react';
 import { DataTypeEditProps, InputProps } from 'rendition';
 import * as utils from '../../utils';
@@ -13,6 +15,15 @@ const getDefaultDate = (): string => {
 
 	return `${today}T00:00`;
 };
+
+// Normalize a timestamp to a RFC3339 timestamp, which is required for JSON
+// schema.
+// https://momentjs.com/docs/#default-format
+const normalizeDateTime = memoize((timestamp: string) =>
+	moment(timestamp)
+		.utc()
+		.format(),
+);
 
 export const operators = {
 	is: {
@@ -94,15 +105,18 @@ export const createFilter = (
 		type: 'object',
 	};
 
+	const normalizedValue = normalizeDateTime(value);
+
 	if (operator === 'is') {
 		return assign(base, {
 			properties: {
 				[field]: {
 					type: 'string',
 					format: 'date-time',
-					const: value,
+					const: normalizedValue,
 				},
 			},
+			required: [field],
 		});
 	}
 
@@ -112,9 +126,10 @@ export const createFilter = (
 				[field]: {
 					type: 'string',
 					format: 'date-time',
-					formatMaximum: value,
+					formatMaximum: normalizedValue,
 				},
 			},
+			required: [field],
 		});
 	}
 
@@ -124,9 +139,10 @@ export const createFilter = (
 				[field]: {
 					type: 'string',
 					format: 'date-time',
-					formatMinimum: value,
+					formatMinimum: normalizedValue,
 				},
 			},
+			required: [field],
 		});
 	}
 

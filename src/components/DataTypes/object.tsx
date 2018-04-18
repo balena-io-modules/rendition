@@ -278,7 +278,6 @@ export const createFilter = (
 					},
 				},
 			},
-			required: [field],
 		});
 	}
 
@@ -317,7 +316,6 @@ export const createFilter = (
 					},
 				},
 			},
-			required: [field],
 		});
 	}
 
