@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
-import { Heading, Link, Text } from '../'
+import { Heading, Link, Txt } from '../'
 
 const Container = styled.div`
   margin: 60px;
@@ -21,17 +21,17 @@ storiesOf('Typography', module)
       </div>
     )
   })
-  .addWithInfo('Text', props => {
+  .addWithInfo('Txt', props => {
     return (
       <div>
-        <Text>Standard text</Text>
-        <Text align='center'>Centered</Text>
-        <Text align='right'>Right</Text>
-        <Text bold>Bold</Text>
-        <Text monospace>Monospace</Text>
-        <Text.span color='blue'>Inline </Text.span>
-        <Text.span color='red'>Inline </Text.span>
-        <Text.span color='yellow'>Inline </Text.span>
+        <Txt>Standard txt</Txt>
+        <Txt align='center'>Centered</Txt>
+        <Txt align='right'>Right</Txt>
+        <Txt bold>Bold</Txt>
+        <Txt monospace>Monospace</Txt>
+        <Txt.span color='blue'>Inline </Txt.span>
+        <Txt.span color='red'>Inline </Txt.span>
+        <Txt.span color='yellow'>Inline </Txt.span>
       </div>
     )
   })
