@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { color, fontSize, space, width } from 'styled-system';
 import tag from 'tag-hoc';
 import blacklist from './blacklist';
+import theme from './theme';
 import { Tooltips } from './tooltips';
 
 const tooltip = new Tooltips();
@@ -61,6 +62,22 @@ const withStyledSystem = (child: React.StatelessComponent) => {
 	};
 };
 
+// This middleware allows component to fallback to the default theme when
+// rendered without a ThemeProvider wrappwer
+export const withDefaultTheme = (
+	Base: React.ComponentClass | React.StatelessComponent,
+) => {
+	if (!Base.defaultProps) {
+		Base.defaultProps = {};
+	}
+
+	(Base.defaultProps as any).theme = theme;
+
+	return (props: any) => {
+		return <Base {...props} />;
+	};
+};
+
 const Tag = tag(blacklist);
 
-export default compose(withTooltip, withStyledSystem, Tag);
+export default compose(withDefaultTheme, withTooltip, withStyledSystem, Tag);
