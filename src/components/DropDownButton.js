@@ -43,6 +43,8 @@ const MenuBase = styled.div`
   left: ${props => (props.alignRight ? 'auto' : 0)};
   right: ${props => (!props.alignRight ? 'auto' : 0)};
   white-space: nowrap;
+  max-height: 280px;
+  overflow-y: auto;
 `
 
 MenuBase.defaultProps = { theme }
