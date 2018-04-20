@@ -176,17 +176,29 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		);
 	}
 
-
 	getCleanEditModel(field?: string | null) {
 		const schema = this.state.schema;
 		if (!field) {
 			field = Object.keys(schema.properties!).shift()!;
 		}
 		const operator = this.getOperators(field).shift()!.slug;
+
+		let value: any = '';
+		const subschema = schema.properties![field];
+		if (typeof subschema !== 'boolean') {
+			if (subschema.enum) {
+				value = subschema.enum[0] || '';
+			}
+
+			if (subschema.type === 'boolean') {
+				value = true;
+			}
+		}
+
 		return {
 			field,
 			operator,
-			value: '',
+			value,
 		};
 	}
 
@@ -310,7 +322,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 				views: prevState.views.concat(view),
 			}),
 			() =>
-			this.props.onViewsUpdate && this.props.onViewsUpdate(this.state.views),
+				this.props.onViewsUpdate && this.props.onViewsUpdate(this.state.views),
 		);
 	}
 
@@ -320,7 +332,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 				views: reject(prevState.views, { id }),
 			}),
 			() =>
-			this.props.onViewsUpdate && this.props.onViewsUpdate(this.state.views),
+				this.props.onViewsUpdate && this.props.onViewsUpdate(this.state.views),
 		);
 	}
 
@@ -329,10 +341,10 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 			prevState => {
 				const newFilters = term
 					? SchemaSieve.upsertFullTextSearch(
-						this.state.schema,
-						prevState.filters,
-						term,
-					)
+							this.state.schema,
+							prevState.filters,
+							term,
+						)
 					: SchemaSieve.removeFullTextSearch(prevState.filters);
 
 				return {
@@ -364,141 +376,142 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 
 		return (
 			<FilterWrapper mb={3}>
-			<Flex justify="space-between">
-			{this.shouldRenderComponent('add') &&
-				<Button
-				mr={30}
-				disabled={this.props.disabled}
-				primary
-				onClick={() =>
-					this.setState({ showModal: true, editingFilter: null })
-				}
-				{...this.props.addFilterButtonProps}
-				>
-				<FaFilter style={{ marginRight: 10 }} />
-				Add filter
-				</Button>
-			}
-
-			{this.shouldRenderComponent('search') &&
-					<SimpleSearchBox>
-					<input
-				style={{ color: this.props.dark ? '#fff' : undefined }}
-				disabled={this.props.disabled}
-				placeholder="Search entries..."
-				value={this.state.searchString}
-				onChange={e => this.setSimpleSearch(e.target.value)}
-					/>
-					<FaSearch className="search-icon" name="search" />
-					</SimpleSearchBox>
-			}
-
-			{this.shouldRenderComponent('views') &&
-					<ViewsMenu
-				buttonProps={this.props.viewsMenuButtonProps}
-				disabled={this.props.disabled}
-				views={this.state.views || []}
-				schema={this.props.schema}
-				setFilters={filters => this.setFilters(filters)}
-				deleteView={view => this.deleteView(view)}
-				renderMode={this.props.renderMode}
-					/>
-			}
-			</Flex>
-
-			{this.state.showModal && (
-				<div>
-				<Modal
-				title="Filter by"
-				cancel={() => this.setState({ showModal: false })}
-				done={() => this.addFilter()}
-				action="Save"
-				>
-				{map(this.state.edit, ({ field, operator, value }, index) => {
-					const operators = this.getOperators(field);
-
-					return (
-						<RelativeBox key={index}>
-						{index > 0 && <Txt my={2}>OR</Txt>}
-						<Flex>
-						<Select
-						value={field}
-						onChange={(v: any) =>
-							this.setEditField(v.target.value, index)
-						}
-						>
-						{map(
-							this.state.schema.properties,
-							(s: JSONSchema6, field) => (
-								<option key={field} value={field}>
-								{s.title || field}
-								</option>
-							),
-						)}
-						</Select>
-
-						{operators.length === 1 && (
-							<Txt mx={1} p="7px 20px 0">
-							{operators[0].label}
-							</Txt>
-						)}
-
-						{operators.length > 1 && (
-							<Select
-							ml={1}
-							value={operator}
-							onChange={(v: any) =>
-								this.setEditOperator(v.target.value, index)
+				<Flex justify="space-between">
+					{this.shouldRenderComponent('add') && (
+						<Button
+							mr={30}
+							disabled={this.props.disabled}
+							primary
+							onClick={() =>
+								this.setState({ showModal: true, editingFilter: null })
 							}
-							>
-							{map(operators, ({ slug, label }) => (
-								<option key={slug} value={slug}>
-								{label}
-								</option>
-							))}
-							</Select>
-						)}
+							{...this.props.addFilterButtonProps}
+						>
+							<FaFilter style={{ marginRight: 10 }} />
+							Add filter
+						</Button>
+					)}
 
-						<FilterInput
-						operator={operator}
-						value={value}
-						schema={
-							this.state.schema.properties![field] as JSONSchema6
-						}
-						onUpdate={(v: any) => this.setEditValue(v, index)}
-						/>
-						</Flex>
-						{index > 0 && (
-							<ExtraRuleDeleteBtn
-							onClick={() => this.removeCompound(index)}
+					{this.shouldRenderComponent('search') && (
+						<SimpleSearchBox>
+							<input
+								style={{ color: this.props.dark ? '#fff' : undefined }}
+								disabled={this.props.disabled}
+								placeholder="Search entries..."
+								value={this.state.searchString}
+								onChange={e => this.setSimpleSearch(e.target.value)}
 							/>
-						)}
-						</RelativeBox>
-					);
-				})}
-				<Button
-				mb={2}
-				mt={4}
-				primary
-				underline
-				onClick={() => this.addCompound()}
-				>
-				Add alternative
-				</Button>
-				</Modal>
-				</div>
-			)}
+							<FaSearch className="search-icon" name="search" />
+						</SimpleSearchBox>
+					)}
 
-			{this.shouldRenderComponent('summary') && !!filters.length &&
+					{this.shouldRenderComponent('views') && (
+						<ViewsMenu
+							buttonProps={this.props.viewsMenuButtonProps}
+							disabled={this.props.disabled}
+							views={this.state.views || []}
+							schema={this.props.schema}
+							setFilters={filters => this.setFilters(filters)}
+							deleteView={view => this.deleteView(view)}
+							renderMode={this.props.renderMode}
+						/>
+					)}
+				</Flex>
+
+				{this.state.showModal && (
+					<div>
+						<Modal
+							title="Filter by"
+							cancel={() => this.setState({ showModal: false })}
+							done={() => this.addFilter()}
+							action="Save"
+						>
+							{map(this.state.edit, ({ field, operator, value }, index) => {
+								const operators = this.getOperators(field);
+
+								return (
+									<RelativeBox key={index}>
+										{index > 0 && <Txt my={2}>OR</Txt>}
+										<Flex>
+											<Select
+												value={field}
+												onChange={(v: any) =>
+													this.setEditField(v.target.value, index)
+												}
+											>
+												{map(
+													this.state.schema.properties,
+													(s: JSONSchema6, field) => (
+														<option key={field} value={field}>
+															{s.title || field}
+														</option>
+													),
+												)}
+											</Select>
+
+											{operators.length === 1 && (
+												<Txt mx={1} p="7px 20px 0">
+													{operators[0].label}
+												</Txt>
+											)}
+
+											{operators.length > 1 && (
+												<Select
+													ml={1}
+													value={operator}
+													onChange={(v: any) =>
+														this.setEditOperator(v.target.value, index)
+													}
+												>
+													{map(operators, ({ slug, label }) => (
+														<option key={slug} value={slug}>
+															{label}
+														</option>
+													))}
+												</Select>
+											)}
+
+											<FilterInput
+												operator={operator}
+												value={value}
+												schema={
+													this.state.schema.properties![field] as JSONSchema6
+												}
+												onUpdate={(v: any) => this.setEditValue(v, index)}
+											/>
+										</Flex>
+										{index > 0 && (
+											<ExtraRuleDeleteBtn
+												onClick={() => this.removeCompound(index)}
+											/>
+										)}
+									</RelativeBox>
+								);
+							})}
+							<Button
+								mb={2}
+								mt={4}
+								primary
+								underline
+								onClick={() => this.addCompound()}
+							>
+								Add alternative
+							</Button>
+						</Modal>
+					</div>
+				)}
+
+				{this.shouldRenderComponent('summary') &&
+					!!filters.length &&
 					!this.props.disabled && (
 						<Summary
-						edit={(filter: JSONSchema6) => this.editFilter(filter)}
-						delete={(filter: JSONSchema6) => this.removeFilter(filter)}
-						saveView={(name, scope) => this.saveView(name, scope)}
-						filters={filters}
-						views={this.state.views || []}
-						schema={this.state.schema}
-						dark={!!this.props.dark}
+							edit={(filter: JSONSchema6) => this.editFilter(filter)}
+							delete={(filter: JSONSchema6) => this.removeFilter(filter)}
+							saveView={(name, scope) => this.saveView(name, scope)}
+							filters={filters}
+							views={this.state.views || []}
+							schema={this.state.schema}
+							dark={!!this.props.dark}
 						/>
 					)}
 			</FilterWrapper>
