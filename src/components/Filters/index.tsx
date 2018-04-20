@@ -1,7 +1,9 @@
 import { JSONSchema6 } from 'json-schema';
+import castArray = require('lodash/castArray');
 import cloneDeep = require('lodash/cloneDeep');
 import findIndex = require('lodash/findIndex');
 import includes = require('lodash/includes');
+import isEmpty = require('lodash/isEmpty');
 import isEqual = require('lodash/isEqual');
 import map = require('lodash/map');
 import reject = require('lodash/reject');
@@ -108,16 +110,20 @@ interface FiltersState {
 class Filters extends React.Component<FiltersProps, FiltersState> {
 	constructor(props: FiltersProps) {
 		super(props);
-		const { filters, schema, views } = this.props;
+		const { filters = [], schema, views = [] } = this.props;
 
 		const flatSchema = SchemaSieve.flattenSchema(schema);
+		const flatViews = this.flattenViews(views);
+		const flatFilters = filters.map(filter =>
+			SchemaSieve.flattenSchema(filter),
+		);
 
 		this.state = {
 			showModal: false,
 			searchString: '',
 			editingFilter: null,
-			filters: filters || [],
-			views: views || [],
+			filters: flatFilters,
+			views: flatViews,
 			schema: flatSchema,
 			edit: [],
 		};
@@ -125,14 +131,51 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		this.state.edit.push(this.getCleanEditModel());
 	}
 
-	componentWillReceiveProps(prevProps: FiltersProps) {
+	componentWillReceiveProps(nextProps: FiltersProps) {
+		const newState: any = {};
+
 		// If the schema prop updates, also update the internal 'flat' schema
-		if (!isEqual(prevProps.schema, this.props.schema)) {
-			this.setState({
-				schema: SchemaSieve.flattenSchema(this.props.schema),
-			});
+		if (!isEqual(nextProps.schema, this.props.schema)) {
+			newState.schema = SchemaSieve.flattenSchema(nextProps.schema);
+		}
+
+		if (!isEqual(nextProps.filters, this.props.filters)) {
+			const filters = nextProps.filters || [];
+			newState.filters = filters.map(filter =>
+				SchemaSieve.flattenSchema(filter),
+			);
+		}
+
+		if (!isEqual(nextProps.views, this.props.views)) {
+			const views = nextProps.views || [];
+			newState.views = this.flattenViews(views);
+		}
+
+		if (!isEmpty(newState)) {
+			this.setState(newState);
 		}
 	}
+
+	flattenViews(views: FiltersView[]) {
+		return views.map(({ filters, ...view }) => ({
+			...view,
+			filters: filters.map(filter => SchemaSieve.flattenSchema(filter)),
+		}));
+	}
+
+	emitViewsUpdate() {
+		if (!this.props.onViewsUpdate) {
+			return;
+		}
+
+		this.props.onViewsUpdate(
+			this.state.views.map(({ filters, ...view }) => ({
+				...view,
+				filters: filters.map(filter => SchemaSieve.unflattenSchema(filter)),
+			})),
+		);
+	}
+
 
 	getCleanEditModel(field?: string | null) {
 		const schema = this.state.schema;
@@ -267,7 +310,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 				views: prevState.views.concat(view),
 			}),
 			() =>
-				this.props.onViewsUpdate && this.props.onViewsUpdate(this.state.views),
+			this.props.onViewsUpdate && this.props.onViewsUpdate(this.state.views),
 		);
 	}
 
@@ -277,7 +320,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 				views: reject(prevState.views, { id }),
 			}),
 			() =>
-				this.props.onViewsUpdate && this.props.onViewsUpdate(this.state.views),
+			this.props.onViewsUpdate && this.props.onViewsUpdate(this.state.views),
 		);
 	}
 
@@ -286,10 +329,10 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 			prevState => {
 				const newFilters = term
 					? SchemaSieve.upsertFullTextSearch(
-							this.state.schema,
-							prevState.filters,
-							term,
-						)
+						this.state.schema,
+						prevState.filters,
+						term,
+					)
 					: SchemaSieve.removeFullTextSearch(prevState.filters);
 
 				return {
@@ -307,7 +350,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 			return true;
 		}
 
-		const allowedModes = Array.isArray(this.props.renderMode) ? this.props.renderMode : [ this.props.renderMode ];
+		const allowedModes = castArray(this.props.renderMode);
 
 		if (includes(allowedModes, 'all')) {
 			return true;
@@ -321,141 +364,141 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 
 		return (
 			<FilterWrapper mb={3}>
-				<Flex justify="space-between">
-					{this.shouldRenderComponent('add') &&
-						<Button
-							mr={30}
-							disabled={this.props.disabled}
-							primary
-							onClick={() =>
-								this.setState({ showModal: true, editingFilter: null })
+			<Flex justify="space-between">
+			{this.shouldRenderComponent('add') &&
+				<Button
+				mr={30}
+				disabled={this.props.disabled}
+				primary
+				onClick={() =>
+					this.setState({ showModal: true, editingFilter: null })
+				}
+				{...this.props.addFilterButtonProps}
+				>
+				<FaFilter style={{ marginRight: 10 }} />
+				Add filter
+				</Button>
+			}
+
+			{this.shouldRenderComponent('search') &&
+					<SimpleSearchBox>
+					<input
+				style={{ color: this.props.dark ? '#fff' : undefined }}
+				disabled={this.props.disabled}
+				placeholder="Search entries..."
+				value={this.state.searchString}
+				onChange={e => this.setSimpleSearch(e.target.value)}
+					/>
+					<FaSearch className="search-icon" name="search" />
+					</SimpleSearchBox>
+			}
+
+			{this.shouldRenderComponent('views') &&
+					<ViewsMenu
+				buttonProps={this.props.viewsMenuButtonProps}
+				disabled={this.props.disabled}
+				views={this.state.views || []}
+				schema={this.props.schema}
+				setFilters={filters => this.setFilters(filters)}
+				deleteView={view => this.deleteView(view)}
+				renderMode={this.props.renderMode}
+					/>
+			}
+			</Flex>
+
+			{this.state.showModal && (
+				<div>
+				<Modal
+				title="Filter by"
+				cancel={() => this.setState({ showModal: false })}
+				done={() => this.addFilter()}
+				action="Save"
+				>
+				{map(this.state.edit, ({ field, operator, value }, index) => {
+					const operators = this.getOperators(field);
+
+					return (
+						<RelativeBox key={index}>
+						{index > 0 && <Txt my={2}>OR</Txt>}
+						<Flex>
+						<Select
+						value={field}
+						onChange={(v: any) =>
+							this.setEditField(v.target.value, index)
+						}
+						>
+						{map(
+							this.state.schema.properties,
+							(s: JSONSchema6, field) => (
+								<option key={field} value={field}>
+								{s.title || field}
+								</option>
+							),
+						)}
+						</Select>
+
+						{operators.length === 1 && (
+							<Txt mx={1} p="7px 20px 0">
+							{operators[0].label}
+							</Txt>
+						)}
+
+						{operators.length > 1 && (
+							<Select
+							ml={1}
+							value={operator}
+							onChange={(v: any) =>
+								this.setEditOperator(v.target.value, index)
 							}
-							{...this.props.addFilterButtonProps}
-						>
-							<FaFilter style={{ marginRight: 10 }} />
-							Add filter
-						</Button>
-					}
-
-					{this.shouldRenderComponent('search') &&
-						<SimpleSearchBox>
-							<input
-								style={{ color: this.props.dark ? '#fff' : undefined }}
-								disabled={this.props.disabled}
-								placeholder="Search entries..."
-								value={this.state.searchString}
-								onChange={e => this.setSimpleSearch(e.target.value)}
-							/>
-							<FaSearch className="search-icon" name="search" />
-						</SimpleSearchBox>
-					}
-
-					{this.shouldRenderComponent('views') &&
-						<ViewsMenu
-							buttonProps={this.props.viewsMenuButtonProps}
-							disabled={this.props.disabled}
-							views={this.state.views || []}
-							schema={this.props.schema}
-							setFilters={filters => this.setFilters(filters)}
-							deleteView={view => this.deleteView(view)}
-							renderMode={this.props.renderMode}
-						/>
-					}
-				</Flex>
-
-				{this.state.showModal && (
-					<div>
-						<Modal
-							title="Filter by"
-							cancel={() => this.setState({ showModal: false })}
-							done={() => this.addFilter()}
-							action="Save"
-						>
-							{map(this.state.edit, ({ field, operator, value }, index) => {
-								const operators = this.getOperators(field);
-
-								return (
-									<RelativeBox key={index}>
-										{index > 0 && <Txt my={2}>OR</Txt>}
-										<Flex>
-											<Select
-												value={field}
-												onChange={(v: any) =>
-													this.setEditField(v.target.value, index)
-												}
-											>
-												{map(
-													this.state.schema.properties,
-													(s: JSONSchema6, field) => (
-														<option key={field} value={field}>
-															{s.title || field}
-														</option>
-													),
-												)}
-											</Select>
-
-											{operators.length === 1 && (
-												<Txt mx={1} p="7px 20px 0">
-													{operators[0].label}
-												</Txt>
-											)}
-
-											{operators.length > 1 && (
-												<Select
-													ml={1}
-													value={operator}
-													onChange={(v: any) =>
-														this.setEditOperator(v.target.value, index)
-													}
-												>
-													{map(operators, ({ slug, label }) => (
-														<option key={slug} value={slug}>
-															{label}
-														</option>
-													))}
-												</Select>
-											)}
-
-											<FilterInput
-												operator={operator}
-												value={value}
-												schema={
-													this.state.schema.properties![field] as JSONSchema6
-												}
-												onUpdate={(v: any) => this.setEditValue(v, index)}
-											/>
-										</Flex>
-										{index > 0 && (
-											<ExtraRuleDeleteBtn
-												onClick={() => this.removeCompound(index)}
-											/>
-										)}
-									</RelativeBox>
-								);
-							})}
-							<Button
-								mb={2}
-								mt={4}
-								primary
-								underline
-								onClick={() => this.addCompound()}
 							>
-								Add alternative
-							</Button>
-						</Modal>
-					</div>
-				)}
+							{map(operators, ({ slug, label }) => (
+								<option key={slug} value={slug}>
+								{label}
+								</option>
+							))}
+							</Select>
+						)}
 
-				{this.shouldRenderComponent('summary') && !!filters.length &&
+						<FilterInput
+						operator={operator}
+						value={value}
+						schema={
+							this.state.schema.properties![field] as JSONSchema6
+						}
+						onUpdate={(v: any) => this.setEditValue(v, index)}
+						/>
+						</Flex>
+						{index > 0 && (
+							<ExtraRuleDeleteBtn
+							onClick={() => this.removeCompound(index)}
+							/>
+						)}
+						</RelativeBox>
+					);
+				})}
+				<Button
+				mb={2}
+				mt={4}
+				primary
+				underline
+				onClick={() => this.addCompound()}
+				>
+				Add alternative
+				</Button>
+				</Modal>
+				</div>
+			)}
+
+			{this.shouldRenderComponent('summary') && !!filters.length &&
 					!this.props.disabled && (
 						<Summary
-							edit={(filter: JSONSchema6) => this.editFilter(filter)}
-							delete={(filter: JSONSchema6) => this.removeFilter(filter)}
-							saveView={(name, scope) => this.saveView(name, scope)}
-							filters={filters}
-							views={this.state.views || []}
-							schema={this.state.schema}
-							dark={!!this.props.dark}
+						edit={(filter: JSONSchema6) => this.editFilter(filter)}
+						delete={(filter: JSONSchema6) => this.removeFilter(filter)}
+						saveView={(name, scope) => this.saveView(name, scope)}
+						filters={filters}
+						views={this.state.views || []}
+						schema={this.state.schema}
+						dark={!!this.props.dark}
 						/>
 					)}
 			</FilterWrapper>

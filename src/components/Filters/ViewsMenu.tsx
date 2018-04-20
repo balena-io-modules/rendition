@@ -38,7 +38,7 @@ const Preview = styled(PlainPanel)`
 	padding: 15px 15px 5px;
 `;
 
-const ViewListItem = styled.li`
+export const ViewListItem = styled.li`
 	position: relative;
 	padding: 7px 40px 7px 20px;
 	&:hover {

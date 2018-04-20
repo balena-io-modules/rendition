@@ -7,6 +7,7 @@ import Button from './Button'
 import Divider from './Divider'
 import Fixed from './Fixed'
 import { Box, Flex } from './Grid'
+import theme from '../theme'
 import { compose } from 'recompose'
 const isArray = require('lodash/isArray')
 import { space, color, fontSize, width } from 'styled-system'
@@ -44,6 +45,8 @@ const MenuBase = styled.div`
   white-space: nowrap;
 `
 
+MenuBase.defaultProps = { theme }
+
 const Wrapper = styled.div`
   ${space} ${width} ${fontSize} ${color} display: inline-block;
   border-radius: ${props => px(props.theme.radius)};
@@ -64,6 +67,8 @@ const Item = styled.div`
     background: ${props => props.theme.colors.gray.light};
   }
 `
+
+Item.defaultProps = { theme }
 
 const IconWrapper = styled.span`
   width: 28px;
