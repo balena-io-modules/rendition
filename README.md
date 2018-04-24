@@ -40,7 +40,8 @@ All components support [styled-system][styled-system] attributes, allowing you t
 
 Some components in the [storybook](https://resin-io-modules.github.io/rendition)
 are marked with a `[beta]` label. These components are experimental and still
-under development. They should not be used in a production application.
+under development, as such their API may change without notice. They should not 
+be used in a production application.
 If you would like to try them out they can be loaded using
 `require('rendition/dist/unstable')`.
 

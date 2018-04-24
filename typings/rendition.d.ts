@@ -5,6 +5,10 @@ declare module 'rendition' {
 
 	type ResponsiveStyle = string | number | Array<string | number>;
 
+	type AnyObject = {
+		[index: string]: any;
+	};
+
 	interface StyledSystemProps {
 		width?: ResponsiveStyle;
 		w?: ResponsiveStyle;
@@ -599,16 +603,22 @@ declare module 'rendition' {
 declare module 'rendition/dist/unstable' {
 	import { JSONSchema6 } from 'json-schema';
 	import { Component } from 'react';
-	import { UiSchema } from 'react-jsonschema-form';
-	import { BoxProps, RenderableElementWithProps } from 'rendition';
+	import { IChangeEvent, UiSchema } from 'react-jsonschema-form';
+	import {
+		AnyObject,
+		BoxProps,
+		ButtonProps,
+		RenderableElementWithProps,
+	} from 'rendition';
 
 	interface FormProps extends BoxProps {
 		schema: JSONSchema6;
-		submitButtonText?: string;
+		submitButtonText?: string | JSX.Element;
 		hideSubmitButton?: boolean;
-		value?: { [key: string]: any };
-		onChange?: (result: any) => void;
-		onSubmit?: (result: any) => void;
+		submitButtonProps?: ButtonProps;
+		value?: number | string | boolean | AnyObject | any[] | null;
+		onFormChange?: (result: IChangeEvent) => void;
+		onFormSubmit?: (result: any) => void;
 		uiSchema?: UiSchema;
 	}
 

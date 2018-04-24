@@ -1,4 +1,5 @@
 /* globals expect, describe, it */
+import Promise from 'bluebird'
 import { mount } from 'enzyme'
 import React from 'react'
 import renderer from 'react-test-renderer'
@@ -78,38 +79,48 @@ describe('Form component', () => {
 
       component.unmount()
     })
-  })
 
-  describe('onSubmit property', () => {
-    it('should be called when the submit button is clicked', (done) => {
-      const value = 'Squirtle'
-      const callback = sinon.spy()
+    it('should accept a JSX element as a value', () => {
+      const submitText = 'Click me to submit this form'
+      const submitElement = <span>{submitText}</span>
+
       const component = mount(
         <Provider>
-          <Form schema={schema} onSubmit={callback} />
+          <Form schema={schema} submitButtonText={submitElement} />
         </Provider>
       )
 
-      const input = component.find('input')
-      input.simulate('change', { target: { value } })
-      component.update()
+      expect(component.find('button').text()).toEqual(submitText)
 
-      setTimeout(() => {
-        component.find('form').simulate('submit')
-        expect(callback.callCount).toEqual(1)
-        expect(callback.getCall(0).args[0].formData).toEqual({ Name: value })
-        done()
-      }, 150)
+      component.unmount()
     })
   })
 
-  describe('onChange property', () => {
-    it('should be called when an input field is changed', (done) => {
+  describe('submitButtonProps property', () => {
+    it('should set submit button props', () => {
+      const submitButtonProps = {
+        className: 'custom-button-class'
+      }
+
+      const component = mount(
+        <Provider>
+          <Form schema={schema} submitButtonProps={submitButtonProps} />
+        </Provider>
+      )
+
+      expect(component.find('button').hasClass(submitButtonProps.className)).toEqual(true)
+
+      component.unmount()
+    })
+  })
+
+  describe('onFormSubmit property', () => {
+    it('should be called when the submit button is clicked', () => {
       const value = 'Squirtle'
       const callback = sinon.spy()
       const component = mount(
         <Provider>
-          <Form schema={schema} onChange={callback} />
+          <Form schema={schema} onFormSubmit={callback} />
         </Provider>
       )
 
@@ -117,11 +128,32 @@ describe('Form component', () => {
       input.simulate('change', { target: { value } })
       component.update()
 
-      setTimeout(() => {
+      return Promise.delay(150).then(() => {
+        component.find('form').simulate('submit')
         expect(callback.callCount).toEqual(1)
         expect(callback.getCall(0).args[0].formData).toEqual({ Name: value })
-        done()
-      }, 150)
+      })
+    })
+  })
+
+  describe('onFormChange property', () => {
+    it('should be called when an input field is changed', () => {
+      const value = 'Squirtle'
+      const callback = sinon.spy()
+      const component = mount(
+        <Provider>
+          <Form schema={schema} onFormChange={callback} />
+        </Provider>
+      )
+
+      const input = component.find('input')
+      input.simulate('change', { target: { value } })
+      component.update()
+
+      return Promise.delay(150).then(() => {
+        expect(callback.callCount).toEqual(1)
+        expect(callback.getCall(0).args[0].formData).toEqual({ Name: value })
+      })
     })
   })
 

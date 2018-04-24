@@ -1,6 +1,7 @@
 import isEqual = require('lodash/isEqual');
+import omit = require('lodash/omit');
 import * as React from 'react';
-import Form from 'react-jsonschema-form';
+import Form, { IChangeEvent } from 'react-jsonschema-form';
 import { FormProps } from 'rendition/dist/unstable';
 import styled from 'styled-components';
 import Button from '../../../components/Button';
@@ -30,8 +31,6 @@ export default class FormHOC extends React.Component<
 		this.state = {
 			value: this.props.value || {},
 		};
-
-		this.change = this.change.bind(this);
 	}
 
 	componentWillReceiveProps(nextProps: FormProps) {
@@ -42,17 +41,17 @@ export default class FormHOC extends React.Component<
 		}
 	}
 
-	change = (data: any) => {
+	change = (data: IChangeEvent) => {
 		this.setState({ value: data.formData });
 
-		if (this.props.onChange) {
-			this.props.onChange(data);
+		if (this.props.onFormChange) {
+			this.props.onFormChange(data);
 		}
 	};
 
 	submit = (data: any) => {
-		if (this.props.onSubmit) {
-			this.props.onSubmit(data);
+		if (this.props.onFormSubmit) {
+			this.props.onFormSubmit(data);
 		}
 	};
 
@@ -60,16 +59,24 @@ export default class FormHOC extends React.Component<
 		const {
 			hideSubmitButton,
 			submitButtonText,
+			submitButtonProps,
 			schema,
 			uiSchema,
-			onChange,
-			onSubmit,
-			value,
-			...props
 		} = this.props;
 
+		const cleanProps = omit(this.props, [
+			'schema',
+			'submitButtonText',
+			'hideSubmitButton',
+			'submitButtonProps',
+			'value',
+			'onFormChange',
+			'onFormSubmit',
+			'uiSchema',
+		]);
+
 		return (
-			<FormWrapper {...props}>
+			<FormWrapper {...cleanProps}>
 				<Form
 					schema={schema}
 					formData={this.state.value}
@@ -82,7 +89,9 @@ export default class FormHOC extends React.Component<
 					{hideSubmitButton && <span />}
 
 					{!hideSubmitButton && (
-						<Button primary>{submitButtonText || 'Submit'}</Button>
+						<Button primary {...submitButtonProps}>
+							{submitButtonText || 'Submit'}
+						</Button>
 					)}
 				</Form>
 			</FormWrapper>

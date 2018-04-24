@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
-import { Box, Flex, Txt } from '../'
-import { Form } from '../unstable/'
+import { Box, Flex, Txt } from '../../'
+import { Form } from '../../unstable/'
 
 const basicPokedexSchema = {
   type: 'object',
