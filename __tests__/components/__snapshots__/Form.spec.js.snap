@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form component should match the stored snapshot 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <div
+    className="sc-cLQEGU eccMuB sc-kAzzGY dirfrO sc-jzJRlG cmnKTT sc-VigVT hKzTLn"
+  >
+    <form
+      acceptCharset={undefined}
+      action={undefined}
+      autoComplete={undefined}
+      className="rjsf"
+      encType={undefined}
+      id={undefined}
+      method={undefined}
+      name={undefined}
+      noValidate={false}
+      onSubmit={[Function]}
+      target={undefined}
+    >
+      <div
+        className="form-group field field-object sc-kAzzGY NqgqS sc-jzJRlG cmnKTT sc-VigVT bdIaRB"
+      >
+        <fieldset>
+          <div
+            className="form-group field field-string sc-kAzzGY NqgqS sc-jzJRlG cmnKTT sc-VigVT bdIaRB"
+          >
+            <label
+              className="control-label sc-chPdSV fqrjzk"
+              htmlFor="root_Name"
+            >
+              Pokemon Name
+            </label>
+            <div />
+            <input
+              autoFocus={false}
+              className="sc-frDJqD dUvkau sc-hmzhuo ciIWRW"
+              disabled={false}
+              id="root_Name"
+              label="Pokemon Name"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              placeholder=""
+              readOnly={false}
+              required={false}
+              type="text"
+              value=""
+            />
+            <div />
+            <div />
+          </div>
+        </fieldset>
+        <div />
+        <div />
+      </div>
+      <button
+        className="sc-gqjmRU bCjhLA sc-htoDjs hfajhw"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+`;

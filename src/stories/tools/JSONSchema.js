@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as debounce from 'lodash/debounce'
 import { storiesOf } from '@storybook/react'
-import { Box, Flex, Text, Textarea } from '../'
+import { Box, Flex, Text, Textarea } from '../../'
 const Ajv = require('ajv')
 const ajvKeywords = require('ajv-keywords')
 const metaSchema6 = require('ajv/lib/refs/json-schema-draft-06.json')
