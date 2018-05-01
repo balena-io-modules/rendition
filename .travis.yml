@@ -5,6 +5,9 @@ matrix:
     - '6'
     env:
     - CAN_DEPLOY=true
+before_install:
+  - npm i -g npm@^5.8.0
+install: npm ci
 script: npm test && npm run build && npm run build:storybook
 notifications:
   email:
