@@ -65,6 +65,7 @@
     "typescript": "^2.6.2"
   },
   "dependencies": {
+    "@types/chart.js": "^2.7.14",
     "@types/color": "^2.0.0",
     "@types/grid-styled": "^3.2.0",
     "@types/json-schema": "^6.0.1",
@@ -79,13 +80,13 @@
     "ajv": "^6.2.0",
     "ajv-keywords": "^3.1.0",
     "babel-core": "^6.26.0",
+    "chart.js": "^2.7.2",
     "color": "^2.0.0",
     "color-hash": "^1.0.3",
     "copy-to-clipboard": "^3.0.8",
     "grid-styled": "^3.2.1",
     "lodash": "^4.17.4",
     "moment": "^2.20.1",
-    "paths-js": "^0.4.5",
     "react-icons": "^2.2.5",
     "react-jsonschema-form": "^1.0.0",
     "recompose": "0.26.0",
