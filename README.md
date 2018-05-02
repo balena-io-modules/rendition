@@ -50,7 +50,7 @@ If you would like to try them out they can be loaded using
 Clone this repository and then run:
 
 ```sh
-npm install
+npm ci
 ```
 
 The interactive storybook can be launched by running:

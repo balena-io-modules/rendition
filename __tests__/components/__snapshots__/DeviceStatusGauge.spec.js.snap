@@ -5,53 +5,51 @@ exports[`DeviceStatusGauge renders correctly 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <div
-    className="sc-dnqmqq gDpXJY sc-gzVnrw iYSyBq"
+    className="sc-htoDjs gDCMNh sc-gzVnrw iQdaNH"
+    data={
+      Array [
+        Object {
+          "color": "#89c683",
+          "key": "idle",
+          "name": "Online",
+          "value": 0,
+        },
+        Object {
+          "color": "#ffb25e",
+          "key": "configuring",
+          "name": "Configuring",
+          "value": 0,
+        },
+        Object {
+          "color": "#7ccdfd",
+          "key": "updating",
+          "name": "Updating",
+          "value": 0,
+        },
+        Object {
+          "color": "#fd7c7c",
+          "key": "offline",
+          "name": "Offline",
+          "value": 0,
+        },
+        Object {
+          "color": "#aa96d5",
+          "key": "post-provisioning",
+          "name": "Post Provisioning",
+          "value": 0,
+        },
+      ]
+    }
+    title="Total Devices"
   >
-    <svg
+    <div
       className="gauge__graph"
-      viewBox="0 0 100 100"
-      xmlns="http://www.w3.org/2000/svg"
     >
-      <circle
-        cx="50"
-        cy="50"
-        fill=" white"
-        r="46"
-        stroke="#dadada"
-        strokeWidth="5"
+      <canvas
+        height="165"
+        width="165"
       />
-      <g>
-        <circle
-          cx="50"
-          cy="50"
-          fill="#fd7c7c"
-          r="46"
-        />
-        <circle
-          cx="50"
-          cy="50"
-          fill="white"
-          r="25"
-        />
-      </g>
-      <g
-        transform="translate(50, 50)"
-      />
-      <text
-        className="gauge__graph__total-label"
-        x="50"
-        y="41"
-      >
-         TOTAL DEVICES
-      </text>
-      <text
-        className="sc-htoDjs gNiaxF"
-        x="50"
-        y="63"
-      >
-        0
-      </text>
-    </svg>
+    </div>
     <ul
       className="gauge__legend"
     >
