@@ -69,8 +69,8 @@ const BaseTable = styled.table`
 						: ''};
 			}
 
-			&[data-checked='true'] {
-				${highlightStyle} > td:first-child {
+			&[data-checked="true"] {
+				${highlightStyle} > [data-display="table-cell"]:first-child {
 					box-shadow: inset 3px 0px 0 ${theme.colors.info.main};
 				}
 			}
