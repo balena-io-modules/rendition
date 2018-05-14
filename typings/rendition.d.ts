@@ -390,6 +390,9 @@ declare module 'rendition' {
 		icon?: string;
 		label?: string | JSX.Element;
 		sortable?: boolean | TableSortFunction;
+		cellAttributes?:
+			| React.AnchorHTMLAttributes<HTMLAnchorElement>
+			| ((value: any, row: T) => React.AnchorHTMLAttributes<HTMLAnchorElement>);
 		render?: (value: any, row: T) => string | number | JSX.Element | null;
 	}
 
@@ -407,6 +410,7 @@ declare module 'rendition' {
 		onRowClick?: (row: T, event: React.MouseEvent<HTMLAnchorElement>) => void;
 		getRowHref?: (row: T) => string;
 		rowAnchorAttributes?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
+		rowCheckboxAttributes?: React.InputHTMLAttributes<HTMLInputElement>;
 
 		tbodyPrefix?: JSX.Element | JSX.Element[];
 	}

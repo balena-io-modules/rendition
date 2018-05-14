@@ -1,6 +1,7 @@
 import every = require('lodash/every');
 import get = require('lodash/get');
 import includes = require('lodash/includes');
+import isFunction = require('lodash/isFunction');
 import isPlainObject = require('lodash/isPlainObject');
 import map = require('lodash/map');
 import reject = require('lodash/reject');
@@ -37,23 +38,28 @@ const BaseTable = styled.table`
 		}
 	}
 
-	> [data-display='table-body'] {
+	> [data-display="table-body"] {
 		display: table-row-group;
 
-		> [data-display='table-row'] {
+		> [data-display="table-row"] {
 			display: table-row;
-			cursor: ${(props: any) =>
-				!!props.onRowClick || !!props.getRowHref ? 'pointer' : 'auto'};
 			text-decoration: none;
 			color: inherit;
 
-			> [data-display='table-cell'] {
+			> [data-display="table-cell"] {
 				display: table-cell;
-				text-align: left;
 				font-size: 14px;
+				text-align: left;
 				padding-top: 14px;
 				padding-bottom: 14px;
 				padding-left: 40px;
+				text-decoration: none;
+				color: inherit;
+			}
+
+			> a[data-display="table-cell"] {
+				cursor: ${(props: any) =>
+					!!props.onRowClick || !!props.getRowHref ? 'pointer' : 'auto'};
 			}
 
 			&:nth-of-type(even) {
@@ -69,8 +75,8 @@ const BaseTable = styled.table`
 						: ''};
 			}
 
-			&[data-checked='true'] {
-				${highlightStyle} > td:first-child {
+			&[data-checked="true"] {
+				${highlightStyle} > [data-display="table-cell"]:first-child {
 					box-shadow: inset 3px 0px 0 ${theme.colors.info.main};
 				}
 			}
@@ -257,34 +263,43 @@ export default class Table<T> extends React.Component<
 					{this.props.tbodyPrefix}
 					{map(this.sortData(data), (row, i) => {
 						const isChecked = this.props.onCheck ? this.isChecked(row) : false;
+						const href = !!getRowHref ? getRowHref(row) : undefined;
 						return (
-							<a
-								{...rowAnchorAttributes}
+							<div
 								data-display="table-row"
 								data-checked={isChecked}
-								href={!!getRowHref ? getRowHref(row) : undefined}
 								key={rowKey ? (row[rowKey] as any) : i}
-								onClick={e =>
-									this.props.onRowClick && this.props.onRowClick(row, e)
-								}
 							>
 								{this.props.onCheck && (
 									<span data-display="table-cell">
 										<Input
 											checked={isChecked}
 											onChange={() => this.toggleChecked(row)}
+											{...this.props.rowCheckboxAttributes}
 											type="checkbox"
 										/>
 									</span>
 								)}
 								{map(columns, column => {
+									const cellAttributes = isFunction(column.cellAttributes)
+										? column.cellAttributes(row, get(row, column.field))
+										: column.cellAttributes || {};
 									return (
-										<span data-display="table-cell" key={column.field}>
+										<a
+											{...rowAnchorAttributes}
+											data-display="table-cell"
+											href={href}
+											onClick={e =>
+												this.props.onRowClick && this.props.onRowClick(row, e)
+											}
+											{...cellAttributes}
+											key={column.field}
+										>
 											{renderField(row, column)}
-										</span>
+										</a>
 									);
 								})}
-							</a>
+							</div>
 						);
 					})}
 				</div>
