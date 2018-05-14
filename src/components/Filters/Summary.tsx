@@ -136,7 +136,7 @@ class FilterSummary extends React.Component<
 						Save view
 					</Button>
 				</Flex>
-				<Flex wrap>
+				<Flex wrap="wrap">
 					{this.props.filters.map((filter, index) => {
 						return (
 							<Box mb={10} mr={10} key={index}>
