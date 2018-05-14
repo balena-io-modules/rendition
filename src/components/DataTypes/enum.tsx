@@ -1,5 +1,7 @@
 import { JSONSchema6 } from 'json-schema';
 import assign = require('lodash/assign');
+import isArray = require('lodash/isArray');
+import isEmpty = require('lodash/isEmpty');
 import map = require('lodash/map');
 import * as React from 'react';
 import { DataTypeEditProps, SelectProps } from 'rendition';
@@ -88,7 +90,7 @@ export const createFilter = (
 					const: value,
 				},
 			},
-			required: [ field ],
+			required: [field],
 		});
 	}
 
@@ -112,14 +114,20 @@ export const Edit = ({
 	value,
 	onUpdate,
 	...props
-}: DataTypeEditProps & SelectProps & { slim?: boolean }) => (
-	<Select
-		{...props}
-		value={value}
-		onChange={(e: React.FormEvent<HTMLSelectElement>) =>
-			onUpdate(e.currentTarget.value)
-		}
-	>
-		{map(schema.enum, (item: string) => <option key={item}>{item}</option>)}
-	</Select>
-);
+}: DataTypeEditProps & SelectProps & { slim?: boolean }) => {
+	if (!value && isArray(schema.enum) && !isEmpty(schema.enum)) {
+		onUpdate(schema.enum[0] as any);
+	}
+
+	return (
+		<Select
+			{...props}
+			value={value}
+			onChange={(e: React.FormEvent<HTMLSelectElement>) =>
+				onUpdate(e.currentTarget.value)
+			}
+		>
+			{map(schema.enum, (item: string) => <option key={item}>{item}</option>)}
+		</Select>
+	);
+};
