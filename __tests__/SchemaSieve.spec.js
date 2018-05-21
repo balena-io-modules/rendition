@@ -860,7 +860,11 @@ describe('SchemaSieve', () => {
 
   describe('.createFullTextSearchFilter()', () => {
     const ajv = new Ajv()
-    ajvKeywords(ajv)
+    ajvKeywords(ajv, [
+      'regexp',
+      'formatMaximum',
+      'formatMinimum'
+    ])
     ajv.addMetaSchema(metaSchema6)
 
     it('should create a valid JSON schema', () => {

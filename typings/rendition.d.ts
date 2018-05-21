@@ -383,32 +383,29 @@ declare module 'rendition' {
 	type TableSortFunction = <T>(a: T, b: T) => number;
 
 	interface TableColumn<T> {
-		field: keyof T;
-		icon?: string;
-		label?: string | JSX.Element;
-		sortable?: boolean | TableSortFunction;
 		cellAttributes?:
 			| React.AnchorHTMLAttributes<HTMLAnchorElement>
 			| ((value: any, row: T) => React.AnchorHTMLAttributes<HTMLAnchorElement>);
+		field: keyof T;
+		icon?: string;
+		label?: string | JSX.Element;
 		render?: (value: any, row: T) => string | number | JSX.Element | null;
+		sortable?: boolean | TableSortFunction;
 	}
 
 	interface TableProps<T> {
 		columns: Array<TableColumn<T>>;
 		data: T[];
-		// Optionally provide a key that should be used as a unique identifier for each row
-		rowKey?: keyof T;
-
+		getRowHref?: (row: T) => string;
 		// Only usable if a rowKey property is also provided.
 		// If an onCheck property is provided , then checkboxes will be renders,
 		// allowing rows to be selected.
 		onCheck?: (checkedItems: T[]) => void;
-
 		onRowClick?: (row: T, event: React.MouseEvent<HTMLAnchorElement>) => void;
-		getRowHref?: (row: T) => string;
 		rowAnchorAttributes?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
 		rowCheckboxAttributes?: React.InputHTMLAttributes<HTMLInputElement>;
-
+		// Optionally provide a key that should be used as a unique identifier for each row
+		rowKey?: keyof T;
 		tbodyPrefix?: JSX.Element | JSX.Element[];
 	}
 

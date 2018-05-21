@@ -1,18 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Table renders correctly 1`] = `
+exports[`Table component should match the stored snapshot 1`] = `
 <div
   className="sc-bdVaJa jKopLr"
 >
-  <table
-    className="sc-kGXeez gjLqYY"
+  <div
+    className="sc-VigVT kEUnfO"
   >
-    <thead>
-      <tr />
-    </thead>
+    <div
+      data-display="table-head"
+    >
+      <div
+        data-display="table-row"
+      />
+    </div>
     <div
       data-display="table-body"
     />
-  </table>
+  </div>
 </div>
 `;

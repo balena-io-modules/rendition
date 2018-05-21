@@ -19,7 +19,7 @@ import * as utils from '../../utils';
 import { getDataModel } from '../DataTypes';
 
 const ajv = new Ajv();
-ajvKeywords(ajv);
+ajvKeywords(ajv, ['regexp', 'formatMaximum', 'formatMinimum']);
 ajv.addMetaSchema(metaSchema6);
 
 const FULL_TEXT_SLUG = 'full_text_search';
@@ -123,12 +123,15 @@ export const createFilter = (
 
 export const decodeFilter = (schema: JSONSchema6, filter: JSONSchema6) => {
 	const signatures = filter.anyOf!.map(f => {
-		if (!f.properties && (!f.anyOf || !f.anyOf.length || !f.anyOf[0].properties)) {
+		if (
+			!f.properties &&
+			(!f.anyOf || !f.anyOf.length || !f.anyOf[0].properties)
+		) {
 			return null;
 		}
-		const schemaField = f.anyOf ?
-			Object.keys(f.anyOf[0].properties!).shift()!  :
-			Object.keys(f.properties!).shift()!;
+		const schemaField = f.anyOf
+			? Object.keys(f.anyOf[0].properties!).shift()!
+			: Object.keys(f.properties!).shift()!;
 		const subSchema = schema.properties![schemaField] as JSONSchema6;
 		const model = getDataModel(subSchema);
 
