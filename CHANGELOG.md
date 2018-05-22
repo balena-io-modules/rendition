@@ -69,6 +69,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 * V4 #366 [Lucian Buzzo]
 
+## 3.27.0 - 2018-05-14
+
+* Fix tslint targets & limit lodash typings #417 [Thodoris Greasidis]
+* Table: Add cell props & make the cells clickable instead of the rows #417 [Thodoris Greasidis]
+* Table: Fix checked row style #417 [Thodoris Greasidis]
+
 ## v3.26.1 - 2018-04-04
 
 * Modal: Fix anchors inside modals #379 [Thodoris Greasidis]
