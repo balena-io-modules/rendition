@@ -104,12 +104,12 @@ storiesOf('Table', module)
           columns={columns}
           data={PokeDex}
           tbodyPrefix={[
-            <tr>
+            <tr key={1}>
               <td colSpan={columns.length}>
                 <p style={{ textAlign: 'center' }}>Row 1</p>
               </td>
             </tr>,
-            <tr>
+            <tr key={2}>
               <td colSpan={columns.length}>
                 <p style={{ textAlign: 'center' }}>Row 2</p>
               </td>

@@ -1,6 +1,8 @@
 import every = require('lodash/every');
+import find = require('lodash/find');
 import get = require('lodash/get');
 import includes = require('lodash/includes');
+import isEqual = require('lodash/isEqual');
 import isFunction = require('lodash/isFunction');
 import isPlainObject = require('lodash/isPlainObject');
 import map = require('lodash/map');
@@ -15,26 +17,31 @@ import styled from 'styled-components';
 
 import theme from '../theme';
 import Button from './Button';
-import { Flex } from './Grid';
-import Input from './Input';
 
 const highlightStyle = `
 	background-color: ${theme.colors.info.light};
 `;
 
-const BaseTable = styled.table`
+const BaseTable = styled.div`
+	display: table;
 	width: 100%;
 	border-spacing: 0;
 
-	> thead {
+	> [data-display='table-head'] {
+		display: table-header-group;
 		background-color: #f2f2f2;
 
-		> tr > th {
-			text-align: left;
-			padding-left: 40px;
-			padding-top: 10px;
-			padding-bottom: 10px;
-			font-size: 16px;
+		> [data-display='table-row'] {
+			display: table-row;
+
+			> [data-display='table-cell'] {
+				display: table-cell;
+				text-align: left;
+				padding-left: 40px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				font-size: 16px;
+			}
 		}
 	}
 
@@ -102,6 +109,74 @@ const renderField = <T extends {}>(row: T, column: TableColumn<T>): any => {
 	return value == null ? '' : value;
 };
 
+interface TableRowProps<T> {
+	isChecked: boolean;
+	keyAttribute: string | number;
+	onRowClick: (e: any) => void;
+	toggleChecked: (e: any) => void;
+	showCheck: boolean;
+	columns: Array<TableColumn<T>>;
+	href?: string;
+	data: T;
+	attributes?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
+	checkboxAttributes?: React.InputHTMLAttributes<HTMLInputElement>;
+}
+
+class TableRow<T> extends React.Component<TableRowProps<T>, {}> {
+	shouldComponentUpdate(nextProps: TableRowProps<T>) {
+		const update = !isEqual(nextProps, this.props);
+
+		return update;
+	}
+
+	render() {
+		const {
+			attributes,
+			checkboxAttributes,
+			columns,
+			data,
+			href,
+			keyAttribute,
+			isChecked,
+			showCheck,
+		} = this.props;
+
+		return (
+			<div data-display="table-row" data-checked={isChecked}>
+				{showCheck && (
+					<span data-display="table-cell">
+						<input
+							checked={isChecked}
+							data-key={keyAttribute}
+							onChange={this.props.toggleChecked}
+							{...checkboxAttributes}
+							type="checkbox"
+						/>
+					</span>
+				)}
+				{map(columns, column => {
+					const cellAttributes = isFunction(column.cellAttributes)
+						? column.cellAttributes(data, get(data, column.field))
+						: column.cellAttributes || {};
+					return (
+						<a
+							{...attributes}
+							href={href}
+							data-display="table-cell"
+							data-key={keyAttribute}
+							onClick={this.props.onRowClick}
+							{...cellAttributes}
+							key={column.field}
+						>
+							{renderField(data, column)}
+						</a>
+					);
+				})}
+			</div>
+		);
+	}
+}
+
 export default class Table<T> extends React.Component<
 	TableProps<T>,
 	{
@@ -150,16 +225,28 @@ export default class Table<T> extends React.Component<
 	}
 
 	sortData(data: T[]): T[] {
-		if (this.state.sortColumn === null) {
+		const { sortColumn } = this.state;
+		if (sortColumn === null) {
+			return data;
+		}
+		const column = find(this.props.columns, { field: sortColumn });
+
+		if (!column) {
 			return data;
 		}
 
-		const collection = sortBy<T>(data.slice(), item => {
-			const sortableValue = item[this.state.sortColumn!] as any;
-			return isPlainObject(sortableValue)
-				? (sortableValue as any).value
-				: sortableValue;
-		});
+		let collection;
+
+		if (isFunction(column.sortable)) {
+			collection = data.slice().sort(column.sortable);
+		} else {
+			collection = sortBy<T>(data.slice(), item => {
+				const sortableValue = item[sortColumn];
+				return isPlainObject(sortableValue)
+					? (sortableValue as any).value
+					: sortableValue;
+			});
+		}
 
 		if (this.state.reverse) {
 			reverse(collection);
@@ -168,7 +255,7 @@ export default class Table<T> extends React.Component<
 		return collection;
 	}
 
-	toggleAllChecked() {
+	toggleAllChecked = () => {
 		const allChecked = !this.state.allChecked;
 		const checkedItems = allChecked ? this.props.data.slice() : [];
 
@@ -177,12 +264,19 @@ export default class Table<T> extends React.Component<
 		}
 
 		this.setState({ allChecked, checkedItems });
-	}
+	};
 
-	toggleChecked(item: T) {
+	toggleChecked = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const rowKey = this.props.rowKey;
-		if (!rowKey) {
+		const { key } = e.currentTarget.dataset;
+		if (!rowKey || !key) {
 			return false;
+		}
+
+		const item = this.getElementFromKey(key);
+
+		if (!item) {
+			return;
 		}
 
 		const identifier = item[rowKey];
@@ -200,18 +294,52 @@ export default class Table<T> extends React.Component<
 			allChecked: this.isEachRowChecked(checkedItems),
 			checkedItems,
 		});
-	}
+	};
 
-	toggleSort(field: keyof T) {
+	toggleSort = (e: React.MouseEvent<HTMLButtonElement>) => {
+		const { field } = e.currentTarget.dataset;
+
+		if (!field) {
+			return;
+		}
+
 		if (this.state.sortColumn === field) {
 			this.setState({ reverse: !this.state.reverse });
 			return;
 		}
 		this.setState({
-			sortColumn: field,
+			sortColumn: field as keyof T,
 			reverse: false,
 		});
+	};
+
+	getElementFromKey(key: string) {
+		const { data, rowKey } = this.props;
+		if (rowKey) {
+			// Normalize the key value to a string for comparison, because data
+			// attributes on elements are always strings
+			return find(data, element => `${element[rowKey]}` === key);
+		}
+
+		return data[Number(key)];
 	}
+
+	onRowClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+		if (!this.props.onRowClick) {
+			return;
+		}
+
+		const { key } = e.currentTarget.dataset;
+
+		if (!key) {
+			return console.warn('onRowClick called on an element without a key set');
+		}
+		const row = this.getElementFromKey(key);
+
+		if (row) {
+			this.props.onRowClick(row, e);
+		}
+	};
 
 	render() {
 		const { columns, data, rowAnchorAttributes, rowKey, ...props } = this.props;
@@ -220,86 +348,69 @@ export default class Table<T> extends React.Component<
 
 		return (
 			<BaseTable {...props}>
-				<thead>
-					<tr>
+				<div data-display="table-head">
+					<div data-display="table-row">
 						{this.props.onCheck && (
-							<th>
-								<Input
+							<div data-display="table-cell">
+								<input
 									checked={this.state.allChecked}
-									onChange={() => this.toggleAllChecked()}
+									onChange={this.toggleAllChecked}
 									type="checkbox"
 								/>
-							</th>
+							</div>
 						)}
 						{map(columns, item => {
 							if (item.sortable) {
 								return (
-									<th key={item.field}>
+									<div data-display="table-cell" key={item.field}>
 										<HeaderButton
+											data-field={item.field}
 											plaintext
 											primary={this.state.sortColumn === item.field}
-											onClick={() => this.toggleSort(item.field)}
+											onClick={this.toggleSort}
 										>
-											<Flex align="center">
-												{item.label || item.field}
-												&nbsp;
-												<FaSort
-													color={
-														this.state.sortColumn === item.field
-															? theme.colors.info.main
-															: ''
-													}
-												/>
-											</Flex>
+											{item.label || item.field}
+											&nbsp;
+											<FaSort
+												style={{ display: 'inline-block' }}
+												color={
+													this.state.sortColumn === item.field
+														? theme.colors.info.main
+														: ''
+												}
+											/>
 										</HeaderButton>
-									</th>
+									</div>
 								);
 							}
-							return <th key={item.field}>{item.label}</th>;
+							return (
+								<div data-display="table-cell" key={item.field}>
+									{item.label || item.field}
+								</div>
+							);
 						})}
-					</tr>
-				</thead>
+					</div>
+				</div>
 				<div data-display="table-body">
 					{this.props.tbodyPrefix}
 					{map(this.sortData(data), (row, i) => {
 						const isChecked = this.props.onCheck ? this.isChecked(row) : false;
+						const key = rowKey ? (row[rowKey] as any) : i;
 						const href = !!getRowHref ? getRowHref(row) : undefined;
 						return (
-							<div
-								data-display="table-row"
-								data-checked={isChecked}
-								key={rowKey ? (row[rowKey] as any) : i}
-							>
-								{this.props.onCheck && (
-									<span data-display="table-cell">
-										<Input
-											checked={isChecked}
-											onChange={() => this.toggleChecked(row)}
-											{...this.props.rowCheckboxAttributes}
-											type="checkbox"
-										/>
-									</span>
-								)}
-								{map(columns, column => {
-									const cellAttributes = isFunction(column.cellAttributes)
-										? column.cellAttributes(row, get(row, column.field))
-										: column.cellAttributes || {};
-									return (
-										<a
-											{...rowAnchorAttributes}
-											data-display="table-cell"
-											href={href}
-											onClick={e =>
-												this.props.onRowClick && this.props.onRowClick(row, e)
-											}
-											{...cellAttributes}
-											key={column.field}
-										>
-											{renderField(row, column)}
-										</a>
-									);
-								})}
-							</div>
+							<TableRow
+								isChecked={isChecked}
+								key={key}
+								keyAttribute={key}
+								href={href}
+								data={row}
+								showCheck={!!this.props.onCheck}
+								columns={columns}
+								attributes={rowAnchorAttributes}
+								checkboxAttributes={this.props.rowCheckboxAttributes}
+								toggleChecked={this.toggleChecked}
+								onRowClick={this.onRowClick}
+							/>
 						);
 					})}
 				</div>
