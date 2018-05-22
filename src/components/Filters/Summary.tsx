@@ -91,9 +91,9 @@ class FilterSummary extends React.Component<
 											mt="-7px"
 											width="auto"
 											value={this.state.scope}
-											onChange={(e: Event) =>
+											onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
 												this.setState({
-													scope: (e.target as HTMLInputElement).value,
+													scope: e.target.value,
 												})
 											}
 										>
