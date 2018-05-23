@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { compose } from 'recompose';
 import { SelectProps } from 'rendition';
-import styled, { StyledFunction, withTheme } from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 import asRendition from '../asRendition';
 import { radius } from '../theme';
-import { px } from '../utils';
+import { px, withProps } from '../utils';
 
-const Base = (styled.select as StyledFunction<
+const Base = withProps<
 	{ emphasized?: boolean } & React.HTMLProps<HTMLSelectElement>
->)`
+>()(styled.select)`
   border-radius: ${px(radius)};
   height: ${props =>
 		px(props.emphasized ? props.theme.space[5] : props.theme.space[4])};
@@ -20,8 +20,6 @@ const Base = (styled.select as StyledFunction<
   padding-right: ${props =>
 		px(props.emphasized ? props.theme.space[5] : props.theme.space[4])};
   background-color: white;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   width: 100%;
   min-width: 90px;
@@ -31,7 +29,7 @@ const Base = (styled.select as StyledFunction<
   }
 `;
 
-const Wrapper = (styled.span as StyledFunction<SelectProps>)`
+const Wrapper = withProps<SelectProps>()(styled.span)`
 	display: inline-block;
 	position: relative;
 
@@ -50,17 +48,19 @@ const Wrapper = (styled.span as StyledFunction<SelectProps>)`
 `;
 
 const Component = ({
-	emphasized,
 	children,
-	value,
+	disabled,
+	emphasized,
 	onChange,
+	value,
 	...props
 }: SelectProps) => {
 	return (
 		<Wrapper emphasized={emphasized} {...props}>
 			<Base
+				disabled={disabled}
 				emphasized={emphasized}
-				value={value === null ? '' : value}
+				value={value === null ? undefined : value}
 				onChange={onChange}
 				children={children}
 			/>

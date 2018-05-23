@@ -22,7 +22,6 @@ describe('Select component', () => {
     expect(tree).toMatchSnapshot()
   })
 
-
   describe('value property', () => {
     it('should set the value of the select element', () => {
       const component = mount(
@@ -41,7 +40,7 @@ describe('Select component', () => {
 
   describe('onChange property', () => {
     it('should set be called when the select element value is changed', () => {
-      const value = 2;
+      const value = 2
       const spy = sinon.spy()
       const component = mount(
         <Provider>
