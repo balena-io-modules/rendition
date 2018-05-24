@@ -1,14 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Select renders correctly 1`] = `
+exports[`Select component should match the stored snapshot 1`] = `
 <div
   className="sc-bdVaJa jKopLr"
 >
   <span
-    className="sc-dnqmqq gDpXJY sc-htoDjs gdpVxp"
+    className="sc-dnqmqq gDpXJY sc-htoDjs etMeNl"
   >
     <select
-      className="sc-gzVnrw ePUKPC"
+      className="sc-gzVnrw eSclAi"
+      disabled={undefined}
       onChange={undefined}
       value={undefined}
     >

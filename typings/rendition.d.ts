@@ -376,6 +376,7 @@ declare module 'rendition' {
 
 	interface SelectProps extends DefaultProps, Sizing {
 		value?: string | string[] | number | null;
+		disabled?: boolean;
 	}
 
 	class Select extends RenderableElementWithProps<SelectProps, any> {}
