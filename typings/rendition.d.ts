@@ -312,7 +312,7 @@ declare module 'rendition' {
 
 		invalid?: boolean;
 		valid?: boolean;
-		onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
+		onChange?: React.ChangeEventHandler<HTMLInputElement>;
 	}
 
 	class Input extends RenderableElementWithProps<InputProps, any> {}
