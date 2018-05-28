@@ -452,8 +452,8 @@ declare module 'rendition' {
 	class TxtSpan extends RenderableElementWithProps<TxtProps, any> {}
 
 	class Txt extends RenderableElementWithProps<TxtProps, any> {
-		p: TxtP;
-		span: TxtSpan;
+		static p: typeof TxtP;
+		static span: typeof TxtSpan;
 	}
 
 	interface TextWithCopyProps extends DefaultProps {
