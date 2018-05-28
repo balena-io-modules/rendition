@@ -278,7 +278,7 @@ declare module 'rendition' {
 		/* tslint:enable:class-name */
 	}
 
-	interface LinkProps extends DefaultProps {
+	interface LinkProps extends DefaultProps, Tooltip {
 		blank?: boolean;
 		disabled?: boolean;
 		download?: any;
