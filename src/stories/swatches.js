@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Flex, Box } from '../'
+import { Box, Flex, Heading } from '../'
 import { withTheme } from 'styled-components'
 
 const S = ({ style, border, theme }) => {
@@ -9,21 +9,19 @@ const S = ({ style, border, theme }) => {
   return (
     <Box
       style={{
-        minWidth: 120,
-        maxWidth: 160,
         borderRadius: 4,
         overflow: 'hidden',
         border: border ? `1px solid ${main}` : 'none'
       }}
       fontSize={10}
-      flex={1}
-      m={15}
       >
       <Flex
         style={{ height: 75, backgroundColor: main }}
         align='center'
         justify='center'
+        flexDirection='column'
       >
+        <div>main</div>
         {main}
       </Flex>
       {semilight && (
@@ -31,7 +29,9 @@ const S = ({ style, border, theme }) => {
           style={{ height: 45, backgroundColor: semilight }}
           align='center'
           justify='center'
+          flexDirection='column'
         >
+          <div>semilight</div>
           {semilight}
         </Flex>
       )}
@@ -41,7 +41,9 @@ const S = ({ style, border, theme }) => {
           style={{ backgroundColor: light }}
           align='center'
           justify='center'
+          flexDirection='column'
         >
+          <div>light</div>
           {light}
         </Flex>
         <Flex
@@ -49,7 +51,9 @@ const S = ({ style, border, theme }) => {
           style={{ backgroundColor: dark }}
           align='center'
           justify='center'
+          flexDirection='column'
         >
+          <div>dark</div>
           {dark}
         </Flex>
       </Flex>
@@ -57,7 +61,20 @@ const S = ({ style, border, theme }) => {
   )
 }
 
-const Swatch = withTheme(S)
+const Swatch = withTheme(props => (
+  <Flex
+    style={{
+      minWidth: 120,
+      maxWidth: 160
+    }}
+    m={15}
+    flexDirection='column'
+    flex={1}
+    >
+    <Heading.h5>{props.style}</Heading.h5>
+    <S {...props} />
+  </Flex>
+))
 
 storiesOf('Swatches', module).addWithInfo('All', () => {
   return (
@@ -82,6 +99,15 @@ storiesOf('Swatches', module).addWithInfo('All', () => {
           <Swatch border style='danger' />
           <Swatch border style='warning' />
           <Swatch border style='info' />
+        </Flex>
+      </Box>
+      <Box is='section' m={15}>
+        <Box is='h2' mx={15}>
+          Utility
+        </Box>
+        <Flex wrap>
+          <Swatch border style='text' />
+          <Swatch border style='gray' />
         </Flex>
       </Box>
     </div>
