@@ -163,5 +163,23 @@ describe('Filters component', () => {
       expect(component.find(ViewListItem)).toHaveLength(0)
       component.unmount()
     })
+
+    it('should render when the schema contains an unknown type', () => {
+      const unknownSchema = {
+        type: 'object',
+        properties: {
+          test: {
+            type: 'Foo Bar'
+          }
+        }
+      }
+      const component = mount(
+        <Filters
+          schema={unknownSchema}
+        />
+      )
+
+      component.unmount()
+    })
   })
 })

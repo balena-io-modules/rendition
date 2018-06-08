@@ -181,7 +181,17 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		if (!field) {
 			field = Object.keys(schema.properties!).shift()!;
 		}
-		const operator = this.getOperators(field).shift()!.slug;
+
+		const fieldOperators = this.getOperators(field);
+		if (!fieldOperators.length) {
+			return {
+				field,
+				operator: '',
+				value: '',
+			};
+		}
+
+		const operator = fieldOperators.shift()!.slug;
 
 		let value: any = '';
 		const subschema = schema.properties![field];

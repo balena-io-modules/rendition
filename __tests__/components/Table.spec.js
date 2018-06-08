@@ -371,14 +371,11 @@ describe('Table component', () => {
         }
       ]
       const fn = row => `https://www.pokemon.com/uk/pokedex/${row.Name}`
-      const spy = sinon.spy(fn)
       const component = mount(
         <Provider>
-          <Table getRowHref={spy} columns={cols} data={PokeDex} />
+          <Table getRowHref={fn} columns={cols} data={PokeDex} />
         </Provider>
       )
-
-      expect(spy.callCount).toEqual(10)
 
       const rowLinks = component.find('[data-display="table-body"] a')
         .map(element => element.prop('href'))
