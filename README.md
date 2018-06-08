@@ -36,6 +36,20 @@ Wrap your application in the `<Provider>` component so that child components can
 
 All components support [styled-system][styled-system] attributes, allowing you to use `fontSize`, `color`, `px` etc.
 
+## Extra components
+
+Some components in the [storybook](https://resin-io-modules.github.io/rendition)
+are marked with an `[extra]` label. These components are not loaded by default 
+as they rely on other large packages that you may not want to include in your 
+application.
+If you would like to use them they can be loaded using by prefixing the
+component name with `rendition/dist/extra/`. For example to load the `Markdown`
+components you can use:
+
+```
+import { Markdown } from 'rendition/dist/extra/Markdown';
+```
+
 ## Unstable/Beta components
 
 Some components in the [storybook](https://resin-io-modules.github.io/rendition)
@@ -43,7 +57,8 @@ are marked with a `[beta]` label. These components are experimental and still
 under development, as such their API may change without notice. They should not 
 be used in a production application.
 If you would like to try them out they can be loaded using
-`require('rendition/dist/unstable')`.
+`import * from 'rendition/dist/unstable'`.
+
 
 ## Developing
 

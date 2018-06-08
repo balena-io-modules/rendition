@@ -2,6 +2,14 @@ import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
 import { Box, Flex, Txt } from '../../'
 import { Form } from '../../unstable/'
+import { Markdown } from '../../extra/Markdown'
+import '../../extra/Form/mermaid'
+
+const extraWidgetsReadme = `
+# Extra widgets
+Additional widgets for handling different formats can be loaded by importing
+the relevant file from \`renditon/dist/extra/Form/\`.
+`
 
 const basicPokedexSchema = {
   type: 'object',
@@ -46,15 +54,15 @@ class FormDemo extends React.Component {
     this.state = {
       formData: {}
     }
-  }
 
-  change ({ formData }) {
-    action('Form.onChange')(formData)
-    this.setState({ formData })
-  }
+    this.change = ({ formData }) => {
+      action('Form.onChange')(formData)
+      this.setState({ formData })
+    }
 
-  submit (data) {
-    action('Form.onSubmit')(data)
+    this.submit = data => {
+      action('Form.onSubmit')(data)
+    }
   }
 
   render () {
@@ -62,13 +70,13 @@ class FormDemo extends React.Component {
       <Flex>
         <Box flex='1' m={30}>
           <Form
-            onChange={d => this.change(d)}
-            onSubmit={d => this.submit(d)}
+            onFormChange={this.change}
+            onFormSubmit={this.submit}
             value={this.state.formData}
             {...this.props}
           />
         </Box>
-        <Box flex='1' p={30}>
+        <Box flex='1' style={{ maxWidth: '50%' }} p={30}>
           <Txt monospace>
             <pre>{JSON.stringify(this.state.formData, null, 4)}</pre>
           </Txt>
@@ -106,5 +114,25 @@ storiesOf('[beta] Form', module)
           Name: 'Squirtle'
         }}
       />
+    )
+  })
+  .addWithInfo('Extra widgets', () => {
+    const mermaidSchema = {
+      type: 'object',
+      properties: {
+        Mermaid: {
+          type: 'string',
+          format: 'mermaid'
+        }
+      }
+    }
+    return (
+      <React.Fragment>
+        <Box px={30} pt={30}>
+          <Markdown>{extraWidgetsReadme}</Markdown>
+        </Box>
+
+        <FormDemo schema={mermaidSchema} />
+      </React.Fragment>
     )
   })

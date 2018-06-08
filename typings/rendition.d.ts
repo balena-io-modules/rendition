@@ -628,3 +628,36 @@ declare module 'rendition/dist/unstable' {
 
 	class Form extends RenderableElementWithProps<FormProps, any> {}
 }
+
+declare module 'rendition/dist/extra/Form/mermaid' {
+
+}
+
+declare module 'rendition/dist/extra/Mermaid' {
+	import { BoxProps, RenderableElementWithProps } from 'rendition';
+	interface MermaidProps extends BoxProps {
+		value: string;
+	}
+
+	class Form extends RenderableElementWithProps<MermaidProps, any> {}
+}
+
+declare module 'rendition/dist/extra/Mermaid' {
+	import { BoxProps, RenderableElementWithProps } from 'rendition';
+
+	interface MermaidProps extends BoxProps {
+		value: string;
+	}
+
+	class Mermaid extends RenderableElementWithProps<MermaidProps, any> {}
+}
+
+declare module 'rendition/dist/extra/Markdown' {
+	import { RenderableElementWithProps, TxtProps } from 'rendition';
+
+	interface MarkdownProps extends TxtProps {
+		children: string;
+	}
+
+	class Markdown extends RenderableElementWithProps<MarkdownProps, any> {}
+}
