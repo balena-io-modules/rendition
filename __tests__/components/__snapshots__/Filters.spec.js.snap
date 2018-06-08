@@ -5,10 +5,10 @@ exports[`Filters component should match the stored snapshot 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <div
-    className="sc-kvZOFW hNefWe sc-dxgOiQ itoeJg sc-kGXeez hlPeHw sc-kAzzGY fwYQsg"
+    className="sc-kvZOFW hNefWe sc-jKJlTe btDhva sc-dxgOiQ dtwKdh sc-kgoBCf eJupwi"
   >
     <div
-      className="sc-kpOJdX kXbjAC sc-kgoBCf fdAYGQ sc-chPdSV unXvr"
+      className="sc-ckVGcZ ezRKgJ sc-kpOJdX clPLoR sc-kGXeez gnrzTa"
     >
       <button
         className="sc-gqjmRU bGlCHk sc-htoDjs hfajhw"
@@ -86,10 +86,10 @@ exports[`Filters component should match the stored snapshot 1`] = `
             onClick={[Function]}
           >
             <div
-              className="sc-kpOJdX kXbjAC sc-kgoBCf fdAYGQ sc-chPdSV unXvr"
+              className="sc-ckVGcZ ezRKgJ sc-kpOJdX clPLoR sc-kGXeez gnrzTa"
             >
               <div
-                className="sc-dxgOiQ kenHXV sc-kGXeez hlPeHw sc-kAzzGY ehSEFn"
+                className="sc-jKJlTe ikSrEj sc-dxgOiQ dtwKdh sc-kgoBCf kvxKAo"
               >
                 <span>
                   <svg

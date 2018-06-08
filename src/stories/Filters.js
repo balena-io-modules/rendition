@@ -46,7 +46,10 @@ const schema = {
       type: 'string'
     },
     Abilities: {
-      type: 'string'
+      type: 'array',
+      items: {
+        type: 'string'
+      }
     },
     Tag: {
       type: 'object',
@@ -148,7 +151,7 @@ class FiltersDemo extends React.Component {
                 </tr>
                 <tr>
                   <td>Abilities</td>
-                  <td>{item.Abilities}</td>
+                  <td>{item.Abilities.join(', ')}</td>
                 </tr>
                 <tr>
                   <td>First Seen</td>

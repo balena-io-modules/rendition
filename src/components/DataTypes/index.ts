@@ -1,4 +1,5 @@
 import { JSONSchema6 } from 'json-schema';
+import * as arrayType from './array';
 import * as booleanType from './boolean';
 import * as dateTimeType from './date-time';
 import * as enumType from './enum';
@@ -15,6 +16,9 @@ export const getDataModel = (schema?: JSONSchema6) => {
 
 	if (schema.enum) {
 		return enumType;
+	}
+	if (type === 'array') {
+		return arrayType;
 	}
 	if (type === 'string') {
 		if (format === 'date-time') {

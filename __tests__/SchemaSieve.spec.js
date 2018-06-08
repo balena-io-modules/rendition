@@ -659,6 +659,60 @@ describe('SchemaSieve', () => {
       testFilter('category', schema, collection, tests)
     })
 
+    describe('array types', () => {
+      describe('where items are strings', () => {
+        const schema = {
+          type: 'object',
+          properties: {
+            category: {
+              type: 'array',
+              items: {
+                type: 'string'
+              }
+            }
+          }
+        }
+
+        const collection = {
+          'Entry 1': {
+            category: [ 'Flame' ]
+          },
+          'Entry 2': {
+            category: [ 'Lizard' ]
+          },
+          'Entry 3': {
+            category: [ 'Seed' ]
+          },
+          'Entry 4': {
+            category: null
+          },
+          'Entry 5': {
+            foo: 'bar'
+          }
+        }
+
+        const tests = [
+          {
+            operator: 'contains',
+            value: 'Flame',
+            expected: ['Entry 1']
+          },
+          {
+            operator: 'not_contains',
+            value: 'Seed',
+            expected: [
+              'Entry 1',
+              'Entry 2',
+              'Entry 4',
+              'Entry 5'
+            ]
+          }
+        ]
+
+        testFilter('category', schema, collection, tests)
+      })
+    })
+
     describe('Full text search', () => {
       const schema = {
         type: 'object',
@@ -962,6 +1016,12 @@ describe('SchemaSieve', () => {
         },
         enum: {
           enum: [ 'foo', 'bar', 'baz' ]
+        },
+        array: {
+          type: 'array',
+          items: {
+            type: 'string'
+          }
         }
       }
     }
