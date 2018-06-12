@@ -6,7 +6,7 @@ import { Box } from '../';
 
 export class Mermaid extends React.Component<MermaidProps, {}> {
 	private renderArea: null | HTMLElement;
-	public id: string;
+	public readonly id: string;
 
 	constructor(props: MermaidProps) {
 		super(props);
