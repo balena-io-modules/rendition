@@ -9,12 +9,8 @@ interface WidgetState {
 }
 
 class Widget extends React.Component<any, WidgetState> {
-	public id: string;
-
 	constructor(props: any) {
 		super(props);
-
-		this.id = uuid();
 
 		this.state = {
 			showPreview: false,
