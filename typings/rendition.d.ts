@@ -635,15 +635,6 @@ declare module 'rendition/dist/extra/Form/mermaid' {
 
 declare module 'rendition/dist/extra/Mermaid' {
 	import { BoxProps, RenderableElementWithProps } from 'rendition';
-	interface MermaidProps extends BoxProps {
-		value: string;
-	}
-
-	class Form extends RenderableElementWithProps<MermaidProps, any> {}
-}
-
-declare module 'rendition/dist/extra/Mermaid' {
-	import { BoxProps, RenderableElementWithProps } from 'rendition';
 
 	interface MermaidProps extends BoxProps {
 		value: string;
