@@ -1,5 +1,4 @@
 import * as React from 'react';
-import uuid = require('uuid/v4');
 import { Box, Button, Flex, Link, Textarea, Theme, Txt } from '../../';
 import { Form } from '../../unstable';
 import { Mermaid } from '../Mermaid';
