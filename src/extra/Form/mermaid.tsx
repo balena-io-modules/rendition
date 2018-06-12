@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { FormWidgetProps } from 'rendition/dist/unstable';
 import { Box, Button, Flex, Link, Textarea, Theme, Txt } from '../../';
 import { Form } from '../../unstable';
 import { Mermaid } from '../Mermaid';
@@ -7,8 +8,8 @@ interface WidgetState {
 	showPreview: boolean;
 }
 
-class Widget extends React.Component<any, WidgetState> {
-	constructor(props: any) {
+class Widget extends React.Component<FormWidgetProps, WidgetState> {
+	constructor(props: FormWidgetProps) {
 		super(props);
 
 		this.state = {
@@ -84,7 +85,7 @@ class Widget extends React.Component<any, WidgetState> {
 						readOnly={readonly}
 						disabled={disabled}
 						autoFocus={autofocus}
-						value={value == null ? '' : value}
+						value={value || ''}
 						{...inputProps}
 						onChange={change}
 						onBlur={

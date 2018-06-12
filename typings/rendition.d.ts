@@ -615,6 +615,82 @@ declare module 'rendition/dist/unstable' {
 		RenderableElementWithProps,
 	} from 'rendition';
 
+	/**
+	 * An object containing the registered custom fields and widgets as well as root schema definitions.
+	 */
+	interface FormRegistry {
+		/**
+		 * The custom registered fields. By default this object contains the
+		 * standard SchemaField, TitleField and DescriptionField components
+		 */
+		fields: {
+			SchemaField: (props: any) => JSX.Element;
+			TitleField: (props: any) => JSX.Element;
+			DescriptionField: (props: any) => JSX.Element;
+			[name: string]: (props: any) => JSX.Element;
+		};
+
+		/** The custom registered widgets, if any */
+		widgets: {
+			[name: string]: (props: FormWidgetProps) => JSX.Element;
+		};
+
+		/** The root schema definitions, if any */
+		definitions: {};
+
+		/** The formContext object */
+		formContext: any;
+	}
+
+	/**
+	 * Properties passed to custom Form widgets
+	 *
+	 * @see https://github.com/mozilla-services/react-jsonschema-form#custom-widget-components
+	 */
+	interface FormWidgetProps {
+		/** The generated id for this field */
+		id: string;
+
+		/** The JSONSchema subschema object for this field */
+		schema: JSONSchema6;
+
+		/** The current value for this field */
+		value: any;
+
+		/** The required status of this field */
+		required: boolean;
+
+		/** true if the widget is disabled */
+		disabled: boolean;
+
+		/** true if the widget should be autofocused */
+		autofocus: boolean;
+
+		/** true if the widget is read-only */
+		readonly: boolean;
+
+		/** The value change event handler; call it with the new value everytime it changes */
+		onChange: (value: any) => void;
+
+		/** The input blur event handler; call it with the the widget id and value */
+		onBlur: (id: string, value: any) => void;
+
+		/** The input focus event handler; call it with the the widget id and value */
+		onFocus: (id: string, value: any) => void;
+
+		/**
+		 * A map of options passed as a prop to the component
+		 * @see https://github.com/mozilla-services/react-jsonschema-form#custom-widget-options
+		 */
+		options: AnyObject;
+
+		/** The formContext object that you passed to Form. */
+		formContext: any;
+
+		/** A registry object */
+		registry: FormRegistry;
+	}
+
 	interface FormProps extends BoxProps {
 		schema: JSONSchema6;
 		submitButtonText?: string | JSX.Element;
