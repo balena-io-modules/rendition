@@ -1,8 +1,8 @@
 import * as React from 'react';
-
+import { FormWidgetProps } from 'rendition/dist/unstable';
 import { Input } from '../../../../';
 
-const BaseInput = (props: any) => {
+const BaseInput = (props: FormWidgetProps) => {
 	// Note: since React 15.2.0 we can't forward unknown element attributes, so we
 	// exclude the "options" and "schema" ones here.
 	const {
@@ -15,7 +15,6 @@ const BaseInput = (props: any) => {
 		options,
 		schema,
 		formContext,
-		registry,
 		...inputProps
 	} = props;
 

@@ -38,7 +38,6 @@ class Widget extends React.Component<FormWidgetProps, WidgetState> {
 			options,
 			schema,
 			formContext,
-			registry,
 			...inputProps
 		} = this.props;
 

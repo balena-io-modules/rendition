@@ -1,4 +1,3 @@
-import assign = require('lodash/assign');
 import isEqual = require('lodash/isEqual');
 import omit = require('lodash/omit');
 import * as React from 'react';
@@ -10,7 +9,9 @@ import { Box } from '../../../components/Grid';
 import FieldTemplate from './FieldTemplate';
 import BaseInput from './widgets/BaseInput';
 
-const baseWidgets = {
+const widgets: {
+	[k: string]: any;
+} = {
 	BaseInput,
 };
 
@@ -21,8 +22,6 @@ const FormWrapper = styled(Box)`
 		border: 0;
 	}
 `;
-
-const registeredWidgets: { [k: string]: any } = {};
 
 export default class FormHOC extends React.Component<
 	FormProps,
@@ -37,7 +36,7 @@ export default class FormHOC extends React.Component<
 	}
 
 	static registerWidget(name: string, value: any) {
-		registeredWidgets[name] = value;
+		widgets[name] = value;
 	}
 
 	componentWillReceiveProps(nextProps: FormProps) {
@@ -81,8 +80,6 @@ export default class FormHOC extends React.Component<
 			'onFormSubmit',
 			'uiSchema',
 		]);
-
-		const widgets = assign(baseWidgets, registeredWidgets);
 
 		return (
 			<FormWrapper {...cleanProps}>

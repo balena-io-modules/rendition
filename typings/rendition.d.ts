@@ -616,33 +616,6 @@ declare module 'rendition/dist/unstable' {
 	} from 'rendition';
 
 	/**
-	 * An object containing the registered custom fields and widgets as well as root schema definitions.
-	 */
-	interface FormRegistry {
-		/**
-		 * The custom registered fields. By default this object contains the
-		 * standard SchemaField, TitleField and DescriptionField components
-		 */
-		fields: {
-			SchemaField: (props: any) => JSX.Element;
-			TitleField: (props: any) => JSX.Element;
-			DescriptionField: (props: any) => JSX.Element;
-			[name: string]: (props: any) => JSX.Element;
-		};
-
-		/** The custom registered widgets, if any */
-		widgets: {
-			[name: string]: (props: FormWidgetProps) => JSX.Element;
-		};
-
-		/** The root schema definitions, if any */
-		definitions: {};
-
-		/** The formContext object */
-		formContext: any;
-	}
-
-	/**
 	 * Properties passed to custom Form widgets
 	 *
 	 * @see https://github.com/mozilla-services/react-jsonschema-form#custom-widget-components
@@ -687,8 +660,7 @@ declare module 'rendition/dist/unstable' {
 		/** The formContext object that you passed to Form. */
 		formContext: any;
 
-		/** A registry object */
-		registry: FormRegistry;
+		type?: string;
 	}
 
 	interface FormProps extends BoxProps {
