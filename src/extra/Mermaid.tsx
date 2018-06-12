@@ -27,7 +27,7 @@ export class Mermaid extends React.Component<MermaidProps, {}> {
 		}
 
 		try {
-			mermaidAPI.render(this.id, value || '', (svgCode, bindFunctions) => {
+			mermaidAPI.render(this.id, value, (svgCode, bindFunctions) => {
 				renderArea.innerHTML = svgCode;
 				bindFunctions(renderArea);
 			});
