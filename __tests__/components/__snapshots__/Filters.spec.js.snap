@@ -5,7 +5,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <div
-    className="sc-kvZOFW hNefWe sc-jKJlTe btDhva sc-dxgOiQ dtwKdh sc-kgoBCf eJupwi"
+    className="sc-jbKcbu jKqkhz sc-jKJlTe btDhva sc-dxgOiQ dtwKdh sc-kgoBCf eJupwi"
   >
     <div
       className="sc-ckVGcZ ezRKgJ sc-kpOJdX clPLoR sc-kGXeez gnrzTa"
@@ -38,50 +38,54 @@ exports[`Filters component should match the stored snapshot 1`] = `
         Add filter
       </button>
       <div
-        className="sc-frDJqD dhmQuX"
-      >
-        <input
-          disabled={undefined}
-          onChange={[Function]}
-          placeholder="Search entries..."
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          value=""
-        />
-        <svg
-          className="search-icon"
-          fill="currentColor"
-          height="1em"
-          name="search"
-          preserveAspectRatio="xMidYMid meet"
-          style={
-            Object {
-              "color": undefined,
-              "verticalAlign": "middle",
-            }
-          }
-          viewBox="0 0 40 40"
-          width="1em"
-        >
-          <g>
-            <path
-              d="m27.2 18.6q0-4.2-2.9-7.1t-7.1-2.9-7 2.9-3 7.1 2.9 7 7.1 3 7.1-3 2.9-7z m11.4 18.5q0 1.2-0.8 2.1t-2 0.8q-1.2 0-2-0.8l-7.7-7.7q-4 2.8-8.9 2.8-3.2 0-6.1-1.3t-5-3.3-3.4-5-1.2-6.1 1.2-6.1 3.4-5.1 5-3.3 6.1-1.2 6.1 1.2 5 3.3 3.4 5.1 1.2 6.1q0 4.9-2.7 8.9l7.6 7.6q0.8 0.9 0.8 2z"
-            />
-          </g>
-        </svg>
-      </div>
-      <div
-        className="sc-gisBJw kDlVKO"
+        className="sc-hqyNC brURbU"
       >
         <div
-          className="sc-dVhcbM eIQbzg"
+          className="sc-gipzik idXKAJ"
+        >
+          <input
+            disabled={undefined}
+            onChange={[Function]}
+            placeholder="Search entries..."
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            value=""
+          />
+          <svg
+            className="search-icon"
+            fill="currentColor"
+            height="1em"
+            name="search"
+            preserveAspectRatio="xMidYMid meet"
+            style={
+              Object {
+                "color": undefined,
+                "verticalAlign": "middle",
+              }
+            }
+            viewBox="0 0 40 40"
+            width="1em"
+          >
+            <g>
+              <path
+                d="m27.2 18.6q0-4.2-2.9-7.1t-7.1-2.9-7 2.9-3 7.1 2.9 7 7.1 3 7.1-3 2.9-7z m11.4 18.5q0 1.2-0.8 2.1t-2 0.8q-1.2 0-2-0.8l-7.7-7.7q-4 2.8-8.9 2.8-3.2 0-6.1-1.3t-5-3.3-3.4-5-1.2-6.1 1.2-6.1 3.4-5.1 5-3.3 6.1-1.2 6.1 1.2 5 3.3 3.4 5.1 1.2 6.1q0 4.9-2.7 8.9l7.6 7.6q0.8 0.9 0.8 2z"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div
+        className="sc-cHGsZl bHiaRe"
+      >
+        <div
+          className="sc-fAjcbJ gviARy"
           disabled={undefined}
         >
           <button
-            className="sc-caSCKo gARfXN sc-gqjmRU jFbWNI sc-dnqmqq eRlmTN"
+            className="sc-kjoXOD klhmaQ sc-gqjmRU jFbWNI sc-dnqmqq eRlmTN"
             disabled={undefined}
             onClick={[Function]}
           >
@@ -116,7 +120,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
                 </span>
               </div>
               <span
-                className="sc-fAjcbJ NEYih"
+                className="sc-gisBJw hhPohI"
               >
                 <svg
                   fill="currentColor"

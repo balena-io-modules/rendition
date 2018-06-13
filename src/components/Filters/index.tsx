@@ -8,16 +8,16 @@ import isEqual = require('lodash/isEqual');
 import map = require('lodash/map');
 import reject = require('lodash/reject');
 import * as React from 'react';
-import { FaFilter, FaSearch } from 'react-icons/lib/fa';
+import { FaFilter } from 'react-icons/lib/fa';
 import { FilterRenderMode, FiltersProps, FiltersView } from 'rendition';
 import styled from 'styled-components';
-import Theme from '../../theme';
 import * as utils from '../../utils';
 import Button from '../Button';
 import { getDataModel } from '../DataTypes';
 import DeleteBtn from '../DeleteButton';
 import { Box, Flex } from '../Grid';
 import Modal from '../Modal';
+import Search from '../Search';
 import Select from '../Select';
 import Txt from '../Txt';
 import * as SchemaSieve from './SchemaSieve';
@@ -59,32 +59,8 @@ const ExtraRuleDeleteBtn = styled(DeleteBtn)`
 	right: -35px;
 `;
 
-const SimpleSearchBox = styled.div`
-	position: relative;
+const SearchWrapper = styled.div`
 	flex-basis: 500px;
-	border-bottom: 2px solid ${Theme.colors.gray.main};
-	padding-left: 20px;
-	padding-top: 3px;
-
-	.search-icon {
-		position: absolute;
-		top: 7px;
-		left: 0;
-		color: ${Theme.colors.gray.main};
-	}
-
-	input {
-		background: transparent;
-		box-shadow: none;
-		border: none;
-		width: 100%;
-		font-size: inherit;
-		padding: 5px;
-		::placeholder {
-			font-style: italic;
-			color: ${Theme.colors.gray.main};
-		}
-	}
 `;
 
 const FilterWrapper = styled(Box)`
@@ -403,16 +379,14 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 					)}
 
 					{this.shouldRenderComponent('search') && (
-						<SimpleSearchBox>
-							<input
-								style={{ color: this.props.dark ? '#fff' : undefined }}
+						<SearchWrapper>
+							<Search
+								dark={this.props.dark}
 								disabled={this.props.disabled}
-								placeholder="Search entries..."
 								value={this.state.searchString}
 								onChange={e => this.setSimpleSearch(e.target.value)}
 							/>
-							<FaSearch className="search-icon" name="search" />
-						</SimpleSearchBox>
+						</SearchWrapper>
 					)}
 
 					{this.shouldRenderComponent('views') && (
