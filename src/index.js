@@ -15,6 +15,7 @@ import { default as Modal } from './components/Modal'
 import { default as ProgressBar } from './components/ProgressBar'
 import { default as Provider } from './components/Provider'
 import * as SchemaSieve from './components/Filters/SchemaSieve'
+import { default as Search } from './components/Search'
 import { default as Select } from './components/Select'
 import { default as Table } from './components/Table'
 import { default as Terminal } from './components/Terminal'
@@ -59,6 +60,7 @@ export {
   Provider,
   ProgressBar,
   SchemaSieve,
+  Search,
   Select,
   Table,
   TextWithCopy,
