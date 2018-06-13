@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/resin-io-modules/rendition"
   },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "main": "./dist/index.js",
   "types": "./typings/rendition.d.ts",
   "scripts": {
