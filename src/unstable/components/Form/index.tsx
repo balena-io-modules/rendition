@@ -9,7 +9,9 @@ import { Box } from '../../../components/Grid';
 import FieldTemplate from './FieldTemplate';
 import BaseInput from './widgets/BaseInput';
 
-const widgets = {
+const widgets: {
+	[k: string]: any;
+} = {
 	BaseInput,
 };
 
@@ -31,6 +33,10 @@ export default class FormHOC extends React.Component<
 		this.state = {
 			value: this.props.value || {},
 		};
+	}
+
+	static registerWidget(name: string, value: any) {
+		widgets[name] = value;
 	}
 
 	componentWillReceiveProps(nextProps: FormProps) {
