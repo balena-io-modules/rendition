@@ -322,6 +322,16 @@ declare module 'rendition' {
 		any
 	> {}
 
+	interface SearchProps extends DefaultProps {
+		dark?: boolean;
+		disabled?: boolean;
+		placeholder?: string;
+		value: string;
+		onChange: (value: any) => void;
+	}
+
+	class Search extends RenderableElementWithProps<SearchProps, any> {}
+
 	interface ModalProps extends DefaultProps {
 		title?: string;
 		titleElement?: string | JSX.Element;

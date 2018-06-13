@@ -5,7 +5,7 @@ exports[`Form component should match the stored snapshot 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <div
-    className="sc-hMFtBS jrWwyt sc-kAzzGY dirfrO sc-jzJRlG cmnKTT sc-VigVT hKzTLn"
+    className="sc-gqPbQI fTaHHz sc-kAzzGY dirfrO sc-jzJRlG cmnKTT sc-VigVT hKzTLn"
   >
     <form
       acceptCharset={undefined}
