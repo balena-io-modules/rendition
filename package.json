@@ -1,12 +1,12 @@
 {
   "name": "rendition",
-  "version": "4.11.0",
+  "version": "4.11.1",
   "description": "React components library",
   "repository": {
     "type": "git",
     "url": "https://github.com/resin-io-modules/rendition"
   },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "main": "./dist/index.js",
   "types": "./typings/rendition.d.ts",
   "scripts": {
