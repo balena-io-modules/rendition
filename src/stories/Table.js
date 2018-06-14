@@ -1,8 +1,10 @@
 import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
+import withReadme from 'storybook-readme/with-readme'
 import styled from 'styled-components'
 import { Table } from '../'
 import PokeDex from './assets/pokedex'
+import * as Readme from './README/Table.md'
 
 const Container = styled.div`
   margin: 30px;
@@ -46,15 +48,16 @@ const columns = [
   }
 ]
 
-storiesOf('Table', module)
-  .addWithInfo('Standard', () => {
+storiesOf('Core/Table', module)
+  .addDecorator(withReadme(Readme))
+  .add('Standard', () => {
     return (
       <Container>
         <Table columns={columns} data={PokeDex} />
       </Container>
     )
   })
-  .addWithInfo('Checkboxes', () => {
+  .add('Checkboxes', () => {
     return (
       <Container>
         <Table
@@ -66,7 +69,7 @@ storiesOf('Table', module)
       </Container>
     )
   })
-  .addWithInfo('Row Click', () => {
+  .add('Row Click', () => {
     return (
       <Container>
         <Table
@@ -78,7 +81,7 @@ storiesOf('Table', module)
       </Container>
     )
   })
-  .addWithInfo('Row Prefix', () => {
+  .add('Row Prefix', () => {
     return (
       <Container>
         <Table
@@ -97,7 +100,7 @@ storiesOf('Table', module)
       </Container>
     )
   })
-  .addWithInfo('Multiple Row Prefix', () => {
+  .add('Multiple Row Prefix', () => {
     return (
       <Container>
         <Table
@@ -119,7 +122,7 @@ storiesOf('Table', module)
       </Container>
     )
   })
-  .addWithInfo('Anchor Rows', () => {
+  .add('Anchor Rows', () => {
     return (
       <Container>
         <Table
@@ -131,7 +134,7 @@ storiesOf('Table', module)
       </Container>
     )
   })
-  .addWithInfo('Anchor Rows with Checkboxes', () => {
+  .add('Anchor Rows with Checkboxes', () => {
     return (
       <Container>
         <Table

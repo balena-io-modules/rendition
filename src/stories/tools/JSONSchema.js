@@ -92,9 +92,6 @@ class Validator extends React.Component {
   }
 }
 
-storiesOf('Tools - JSON Schema Validator', module).addWithInfo(
-  'Draft 6',
-  () => {
-    return <Validator />
-  }
-)
+storiesOf('Tools/JSON Schema Validator', module).addWithInfo('Draft 6', () => {
+  return <Validator />
+})

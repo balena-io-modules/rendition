@@ -24,7 +24,7 @@ const rows = [
   <div>Lorem Ipsum dolor si amet</div>
 ]
 
-storiesOf('Card', module)
+storiesOf('Core/Card', module)
   .addDecorator(story => <Container>{story()}</Container>)
   .addWithInfo('Standard', () => {
     return (

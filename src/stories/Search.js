@@ -1,7 +1,9 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import withReadme from 'storybook-readme/with-readme'
 import styled from 'styled-components'
 import { Search } from '../'
+import * as Readme from './README/Search.md'
 
 const Container = styled.div`
   margin: 30px;
@@ -12,7 +14,8 @@ const DarkBackground = styled.div`
   background: rgb(52, 52, 52);
 `
 
-storiesOf('Search', module)
+storiesOf('Core/Search', module)
+  .addDecorator(withReadme(Readme))
   .addDecorator(story => <Container>{story()}</Container>)
   .addWithInfo('Standard', () => {
     return <Search />

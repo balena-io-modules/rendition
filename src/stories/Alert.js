@@ -1,14 +1,17 @@
 import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
+import withReadme from 'storybook-readme/with-readme'
 import styled from 'styled-components'
 import { Alert } from '../'
+import * as AlertReadme from './README/Alert.md'
 
 const Container = styled.div`
   margin: 30px;
 `
 
-storiesOf('Alert', module)
-  .addWithInfo('Standard', () => {
+storiesOf('Core/Alert', module)
+  .addDecorator(withReadme(AlertReadme))
+  .add('Standard', () => {
     return (
       <Container>
         <Alert my={2} success onDismiss={action('case-3')}>
@@ -26,7 +29,7 @@ storiesOf('Alert', module)
       </Container>
     )
   })
-  .addWithInfo('Emphasized', () => {
+  .add('Emphasized', () => {
     return (
       <Container>
         <Alert my={2} emphasized success onDismiss={action('case-3')}>
@@ -44,7 +47,7 @@ storiesOf('Alert', module)
       </Container>
     )
   })
-  .addWithInfo('Plaintext', () => {
+  .add('Plaintext', () => {
     return (
       <Container>
         <Alert my={2} plaintext success>

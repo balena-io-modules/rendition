@@ -1,15 +1,18 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import withReadme from 'storybook-readme/with-readme'
 import styled from 'styled-components'
 import { Input } from '../'
+import * as Readme from './README/Input.md'
 
 const Container = styled.div`
   margin: 30px;
 `
 
-storiesOf('Input', module)
+storiesOf('Core/Input', module)
   .addDecorator(story => <Container>{story()}</Container>)
-  .addWithInfo('Standard', () => {
+  .addDecorator(withReadme(Readme))
+  .add('Standard', () => {
     return (
       <div>
         <Input m={2} placeholder='Placeholder Text' />
@@ -19,7 +22,7 @@ storiesOf('Input', module)
       </div>
     )
   })
-  .addWithInfo('Emphasized', () => {
+  .add('Emphasized', () => {
     return (
       <div>
         <Input m={2} emphasized placeholder='Placeholder Text' />
@@ -29,7 +32,7 @@ storiesOf('Input', module)
       </div>
     )
   })
-  .addWithInfo('Monospace', () => {
+  .add('Monospace', () => {
     return (
       <div>
         <Input m={2} monospace placeholder='Placeholder Text' />
@@ -39,7 +42,7 @@ storiesOf('Input', module)
       </div>
     )
   })
-  .addWithInfo('Input types', () => {
+  .add('Input types', () => {
     return (
       <div>
         <label>

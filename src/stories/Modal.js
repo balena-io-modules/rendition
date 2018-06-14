@@ -1,9 +1,11 @@
 import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
+import withReadme from 'storybook-readme/with-readme'
 import styled from 'styled-components'
 import { Button, Heading, Modal } from '../'
 import { Progressor } from './ProgressBar'
 import PokeDex from './assets/pokedex'
+import * as Readme from './README/Modal.md'
 
 const Container = styled.div`
   margin: 30px;
@@ -58,8 +60,9 @@ class ModalDemo extends React.Component {
   }
 }
 
-storiesOf('Modal', module)
-  .addWithInfo('Standard', () => {
+storiesOf('Core/Modal', module)
+  .addDecorator(withReadme(Readme))
+  .add('Standard', () => {
     return (
       <Modal title='Modal title' cancel={cancelAction} done={doneAction}>
         <p>Lorem ipsum dolor sit amet</p>
@@ -69,7 +72,7 @@ storiesOf('Modal', module)
       </Modal>
     )
   })
-  .addWithInfo('Custom action text', () => {
+  .add('Custom action text', () => {
     return (
       <Modal
         title='Modal title'
@@ -84,7 +87,7 @@ storiesOf('Modal', module)
       </Modal>
     )
   })
-  .addWithInfo('No cancel button', () => {
+  .add('No cancel button', () => {
     return (
       <Modal title='Modal title' done={doneAction}>
         <p>Lorem ipsum dolor sit amet</p>
@@ -94,7 +97,7 @@ storiesOf('Modal', module)
       </Modal>
     )
   })
-  .addWithInfo('Title Details', () => {
+  .add('Title Details', () => {
     return (
       <Modal
         title='Modal title'
@@ -109,7 +112,7 @@ storiesOf('Modal', module)
       </Modal>
     )
   })
-  .addWithInfo('Custom Width', () => {
+  .add('Custom Width', () => {
     return (
       <Modal
         w={1000}
@@ -125,7 +128,7 @@ storiesOf('Modal', module)
       </Modal>
     )
   })
-  .addWithInfo('Responsive Custom Width', () => {
+  .add('Responsive Custom Width', () => {
     return (
       <Modal
         w={['auto', 500, 1000]}
@@ -141,7 +144,7 @@ storiesOf('Modal', module)
       </Modal>
     )
   })
-  .addWithInfo('Multi Element Title', () => {
+  .add('Multi Element Title', () => {
     return (
       <Modal
         titleElement={
@@ -160,7 +163,7 @@ storiesOf('Modal', module)
       </Modal>
     )
   })
-  .addWithInfo('Secondary action', () => {
+  .add('Secondary action', () => {
     return (
       <Modal
         w={['auto', 500, 1000]}
@@ -179,7 +182,7 @@ storiesOf('Modal', module)
       </Modal>
     )
   })
-  .addWithInfo('Custom Button Properties', () => {
+  .add('Custom Button Properties', () => {
     return (
       <Modal
         w={['auto', 500, 1000]}
@@ -208,10 +211,10 @@ storiesOf('Modal', module)
       </Modal>
     )
   })
-  .addWithInfo('Open Modal Demo', () => {
+  .add('Open Modal Demo', () => {
     return <ModalDemo />
   })
-  .addWithInfo('Overflow', () => {
+  .add('Overflow', () => {
     return (
       <div>
         <Container>

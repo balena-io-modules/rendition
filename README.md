@@ -34,12 +34,35 @@ Wrap your application in the `<Provider>` component so that child components can
 
 ### Styled system
 
-All components support [styled-system][styled-system] attributes, allowing you to use `fontSize`, `color`, `px` etc.
+All components support [styled-system][styled-system] attributes, allowing you to use a shorthand properties for styling components. The properties can have the properties in the form of `string | number | Array<string | number>`. If an array is provided, then a property is chosen based on the width of the screen. The screen width corresponds to a breakpoint set in the `theme` property of the `Provider` component, by default this is set to `[32, 48, 64, 80]` where each number is the screen width in ems.
+
+| Name          | Type      | Description                                          |
+| -------------------------------------------------------------------------------- |
+|	w             | `ResponsiveStyle` | sets the width
+|	fontSize      | `ResponsiveStyle` | sets the font size
+|	color         | `ResponsiveStyle` | sets the `color` css property
+|	bg            | `ResponsiveStyle` | sets the `background` css property
+|	m             | `ResponsiveStyle` | sets the `margin` css property
+|	mt            | `ResponsiveStyle` | sets the `margin-top` css property
+|	mr            | `ResponsiveStyle` | sets the `margin-right` css property
+|	mb            | `ResponsiveStyle` | sets the `margin-bottom` css property
+|	ml            | `ResponsiveStyle` | sets the `margin-bottom` css property
+|	mx            | `ResponsiveStyle` | sets both the `margin-right` and `margin-left` css properties
+|	my            | `ResponsiveStyle` | sets both the `margin-top` and `margin-bottom` css properties
+|	p             | `ResponsiveStyle` | sets the `padding` css property
+|	pt            | `ResponsiveStyle` | sets the `padding-top` css property   
+|	pr            | `ResponsiveStyle` | sets the `padding-right` css property  
+|	pb            | `ResponsiveStyle` | sets the `padding-bottom` css property  
+|	pl            | `ResponsiveStyle` | sets the `padding-left` css property     
+|	px            | `ResponsiveStyle` | sets both the `padding-right` and `padding-left` css properties
+|	py            | `ResponsiveStyle` | sets both the `padding-top` and `padding-bottom` css properties
+
+&ast;*`ResponsiveStyle` corresponds to a type of `string | number | Array<string | number>`*
 
 ## Extra components
 
 Some components in the [storybook](https://resin-io-modules.github.io/rendition)
-are marked with an `[extra]` label. These components are not loaded by default 
+are grouped separately under the `Extra` label. These components are not loaded by default 
 as they rely on other large packages that you may not want to include in your 
 application.
 If you would like to use them they can be loaded using by prefixing the
@@ -53,7 +76,7 @@ import { Markdown } from 'rendition/dist/extra/Markdown';
 ## Unstable/Beta components
 
 Some components in the [storybook](https://resin-io-modules.github.io/rendition)
-are marked with a `[beta]` label. These components are experimental and still
+are grouped seperately under the `Beta` label. These components are experimental and still
 under development, as such their API may change without notice. They should not 
 be used in a production application.
 If you would like to try them out they can be loaded using

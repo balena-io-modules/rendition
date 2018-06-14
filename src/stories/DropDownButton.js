@@ -1,14 +1,17 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import withReadme from 'storybook-readme/with-readme'
 import styled from 'styled-components'
 import { Divider, DropDownButton, Box, Flex } from '../'
+import * as Readme from './README/DropDownButton.md'
 
 const Container = styled.div`
   margin: 30px;
 `
 
-storiesOf('DropDownButton', module)
-  .addWithInfo('Standard', () => {
+storiesOf('Core/DropDownButton', module)
+  .addDecorator(withReadme(Readme))
+  .add('Standard', () => {
     return (
       <Container>
         <DropDownButton mx={2} primary label={<div>DropDown</div>}>
@@ -38,7 +41,7 @@ storiesOf('DropDownButton', module)
       </Container>
     )
   })
-  .addWithInfo('Borderless', () => {
+  .add('Borderless', () => {
     return (
       <Container>
         <DropDownButton
@@ -83,7 +86,7 @@ storiesOf('DropDownButton', module)
       </Container>
     )
   })
-  .addWithInfo('Joined', () => {
+  .add('Joined', () => {
     return (
       <Container>
         <DropDownButton mx={2} joined primary label='DropDown'>
@@ -113,7 +116,7 @@ storiesOf('DropDownButton', module)
       </Container>
     )
   })
-  .addWithInfo('Outline', () => {
+  .add('Outline', () => {
     return (
       <Container>
         <DropDownButton mx={2} primary outline label={<div>DropDown</div>}>
@@ -143,7 +146,7 @@ storiesOf('DropDownButton', module)
       </Container>
     )
   })
-  .addWithInfo('Outline + Joined', () => {
+  .add('Outline + Joined', () => {
     return (
       <Container>
         <DropDownButton
@@ -191,7 +194,7 @@ storiesOf('DropDownButton', module)
       </Container>
     )
   })
-  .addWithInfo('Alignment', () => {
+  .add('Alignment', () => {
     return (
       <Container>
         <Flex justify='space-between'>
@@ -216,7 +219,7 @@ storiesOf('DropDownButton', module)
       </Container>
     )
   })
-  .addWithInfo('Divider', () => {
+  .add('Divider', () => {
     return (
       <Container>
         <DropDownButton mx={2} primary label={<div>DropDown</div>}>
@@ -231,7 +234,7 @@ storiesOf('DropDownButton', module)
       </Container>
     )
   })
-  .addWithInfo('No List Formatting', () => {
+  .add('No List Formatting', () => {
     return (
       <Container>
         <DropDownButton mx={2} noListFormat primary label={<div>DropDown</div>}>

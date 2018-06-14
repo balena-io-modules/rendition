@@ -58,6 +58,7 @@
     "react-test-renderer": "^16.2.0",
     "rimraf": "^2.6.2",
     "sinon": "^4.5.0",
+    "storybook-readme": "^3.3.0",
     "ts-jest": "^22.4.0",
     "ts-loader": "^3.0.2",
     "ts-node": "^3.3.0",

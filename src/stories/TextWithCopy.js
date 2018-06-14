@@ -1,22 +1,25 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import withReadme from 'storybook-readme/with-readme'
 import styled from 'styled-components'
 import { TextWithCopy, Flex, Box, Link } from '../'
+import * as Readme from './README/TextWithCopy.md'
 
 const Container = styled.div`
   margin: 30px;
 `
 
-storiesOf('TextWithCopy', module)
+storiesOf('Core/TextWithCopy', module)
   .addDecorator(story => <Container>{story()}</Container>)
-  .addWithInfo('Standard', () => {
+  .addDecorator(withReadme(Readme))
+  .add('Standard', () => {
     return (
       <TextWithCopy copy='This value has been copied to your clipboard!'>
         <i>hover</i> & <b>click</b> the icon
       </TextWithCopy>
     )
   })
-  .addWithInfo('wrapping text', () => {
+  .add('Wrapping text', () => {
     return (
       <div style={{ width: '300px' }}>
         <TextWithCopy copy='This value has been copied to your clipboard!'>
@@ -26,7 +29,7 @@ storiesOf('TextWithCopy', module)
       </div>
     )
   })
-  .addWithInfo('always showing the copy icon', () => {
+  .add('Always showing the copy icon', () => {
     return (
       <div style={{ width: '300px' }}>
         <TextWithCopy
@@ -38,7 +41,7 @@ storiesOf('TextWithCopy', module)
       </div>
     )
   })
-  .addWithInfo('Inside clickable element', () => {
+  .add('Inside clickable element', () => {
     return (
       <Link href='#foobar' style={{ display: 'block' }}>
         <Flex>

@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import withReadme from 'storybook-readme/with-readme'
 import { Gauge } from '../'
+import * as Readme from './README/Gauge.md'
 
 const data = [
   {
@@ -52,14 +54,15 @@ const zeroCount = [
   }
 ]
 
-storiesOf('Gauge', module)
-  .addWithInfo('default', () => {
+storiesOf('Core/Gauge', module)
+  .addDecorator(withReadme(Readme))
+  .add('Standard', () => {
     return <Gauge m={30} title='Ice Cream' data={data} />
   })
-  .addWithInfo('single segment', () => {
+  .add('Single segment', () => {
     return <Gauge m={30} title='Ice Cream' data={singleSegment} />
   })
-  .addWithInfo('zero count', () => {
+  .add('Zero count', () => {
     return (
       <Gauge
         m={30}

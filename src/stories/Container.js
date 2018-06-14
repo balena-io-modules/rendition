@@ -1,16 +1,19 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import withReadme from 'storybook-readme/with-readme'
 import { Container, Heading } from '../'
+import * as Readme from './README/Container.md'
 
-storiesOf('Container', module)
-  .addWithInfo('Standard', () => {
+storiesOf('Core/Container', module)
+  .addDecorator(withReadme(Readme))
+  .add('Standard', () => {
     return (
       <Container>
         <Heading>I am in a container</Heading>
       </Container>
     )
   })
-  .addWithInfo('Center Text', () => {
+  .add('Center Text', () => {
     return (
       <Container align='center'>
         <Heading>I am in a container</Heading>
