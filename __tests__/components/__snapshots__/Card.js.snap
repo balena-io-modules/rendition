@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <div
+    className="sc-kpOJdX kXbjAC sc-kGXeez kEYKeg"
+  >
+    <div
+      className="sc-jTzLTM kiXjdo sc-gqjmRU jowXRS sc-dnqmqq kiTpof"
+    >
+      Lorem ipsum dolor so ammet
+    </div>
+  </div>
+</div>
+`;

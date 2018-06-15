@@ -171,6 +171,16 @@ declare module 'rendition' {
 		text: string;
 	}
 
+	interface CardProps extends DefaultProps {
+		title?: string;
+		cta?: JSX.Element;
+		rows?: JSX.Element[];
+		children?: any;
+		minHeight?: string;
+	}
+
+	class Card extends RenderableElementWithProps<CardProps, any> {}
+
 	class CodeWithCopy extends RenderableElementWithProps<
 		CodeWithCopyProps,
 		any
