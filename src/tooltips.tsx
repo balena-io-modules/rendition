@@ -1,4 +1,5 @@
 import isString = require('lodash/isString');
+import merge = require('lodash/merge');
 import noop = require('lodash/noop');
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -74,6 +75,7 @@ const TooltipElement = styled.div`
 	line-height: 1.42857143;
 	padding: 5px;
 	position: absolute;
+	max-width: 300px;
 	text-align: left;
 	text-align: start;
 	text-decoration: none;
@@ -85,34 +87,43 @@ const TooltipElement = styled.div`
 	word-spacing: normal;
 	word-wrap: normal;
 	z-index: 1070;
+	color: white;
 `;
 
 const TooltipElementInner = styled.div`
 	background: black;
 	border-radius: 4px;
-	color: white;
 	padding: 3px 8px;
 	textalign: center;
 `;
 
+interface TooltipShowOptions {
+	placement?: Placement;
+	containerStyle?: React.CSSProperties;
+	innerStyle?: React.CSSProperties;
+	arrowStyle?: React.CSSProperties;
+}
+
 interface TooltipComponentState {
-	text: string;
 	placement: 'top' | 'right' | 'bottom' | 'left' | undefined;
 	show: boolean;
 	coordinates: {
 		top: number;
 		left: number;
 	};
+	containerStyle?: React.CSSProperties;
+	innerStyle?: React.CSSProperties;
+	arrowStyle?: React.CSSProperties;
 }
 
 class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 	private tooltipElement: HTMLDivElement;
+	private tooltipElementInner: HTMLDivElement;
 
 	constructor(props: {}) {
 		super(props);
 
 		this.state = {
-			text: '',
 			show: false,
 			placement: 'top',
 			coordinates: {
@@ -122,7 +133,7 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 		};
 	}
 
-	show(e: Event, tooltipText: string, placement?: Placement): void {
+	show(e: Event, tooltipText: string, options: TooltipShowOptions = {}): void {
 		let top = 0;
 		let left = 0;
 
@@ -132,6 +143,14 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 		// Ajust bounds to compensate for scrolling
 		boundingRect.top += window.scrollY;
 		boundingRect.left += window.scrollX;
+
+		const { placement, containerStyle, innerStyle, arrowStyle } = options;
+
+		// Set the contents of the tooltip using `ìnnerText` and adjust the styles
+		// now, so that the height can be properly calculated
+		if (this.tooltipElementInner) {
+			this.tooltipElementInner.innerText = tooltipText;
+		}
 
 		if (!placement || placement === 'top') {
 			top = boundingRect.top - this.tooltipElement.clientHeight - TARGET_OFFSET;
@@ -164,10 +183,12 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 		}
 
 		this.setState({
-			text: tooltipText,
 			coordinates: { top, left },
 			show: true,
 			placement,
+			containerStyle,
+			innerStyle,
+			arrowStyle,
 		});
 	}
 
@@ -176,20 +197,28 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 	}
 
 	render() {
-		const Arrow = getArrowElement(this.state.placement);
-		const tooltipStyle: React.CSSProperties = {
-			top: this.state.coordinates.top,
-			left: this.state.coordinates.left,
-			visibility: this.state.show ? 'visible' : 'hidden',
-		};
+		const { placement, containerStyle, innerStyle, arrowStyle } = this.state;
+		const Arrow = getArrowElement(placement);
+		const tooltipStyle: React.CSSProperties = merge(
+			{
+				top: this.state.coordinates.top,
+				left: this.state.coordinates.left,
+				visibility: this.state.show ? 'visible' : 'hidden',
+			},
+			containerStyle,
+		);
 
 		return (
 			<TooltipElement
 				style={tooltipStyle}
 				innerRef={(el: any) => (this.tooltipElement = el)}
 			>
-				<TooltipElementInner>{this.state.text}</TooltipElementInner>
-				<Arrow />
+				<TooltipElementInner
+					innerRef={el => (this.tooltipElementInner = el)}
+					style={innerStyle}
+				/>
+
+				<Arrow style={arrowStyle} />
 			</TooltipElement>
 		);
 	}
@@ -223,20 +252,24 @@ export class Tooltips {
 
 	bindProps(props: any) {
 		if (props.tooltip) {
+			const options: TooltipShowOptions = {};
 			let trigger = 'hover';
 			let tooltipText: string;
-			let placement: Placement;
 			if (isString(props.tooltip)) {
 				tooltipText = props.tooltip;
 			} else {
 				tooltipText = props.tooltip.text;
-				placement = props.tooltip.placement;
+				options.placement = props.tooltip.placement;
+				options.containerStyle = props.tooltip.containerStyle;
+				options.innerStyle = props.tooltip.innerStyle;
+				options.arrowStyle = props.tooltip.arrowStyle;
+
 				if (props.tooltip.trigger) {
 					trigger = props.tooltip.trigger;
 				}
 			}
 			if (tooltipText) {
-				const showFn = (e: Event) => this.show(e, tooltipText, placement);
+				const showFn = (e: Event) => this.show(e, tooltipText, options);
 
 				if (trigger === 'click') {
 					const oldFn = props.onClick || noop;
@@ -277,10 +310,10 @@ export class Tooltips {
 		return props;
 	}
 
-	show(e: Event, tooltipText: string, placement?: Placement): void {
+	show(e: Event, tooltipText: string, options?: TooltipShowOptions): void {
 		this.initialiseElements();
 
-		this.component.show(e, tooltipText, placement);
+		this.component.show(e, tooltipText, options);
 	}
 
 	hide(): void {

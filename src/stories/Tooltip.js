@@ -166,6 +166,55 @@ storiesOf('Tooltip', module)
       </Box>
     )
   })
+  .add('Styled tooltips', () => {
+    return (
+      <Box>
+        <Button
+          tooltip={{
+            text: 'Lorem ipsum dolor sit amet',
+            containerStyle: {
+              color: 'pink',
+              fontStyle: 'italic'
+            }
+          }}
+          m={2}
+          primary
+          onPress={action('case-1')}
+        >
+          Styled tooltip container
+        </Button>
+
+        <Button
+          tooltip={{
+            text: 'Lorem ipsum dolor sit amet',
+            arrowStyle: {
+              marginLeft: -70,
+              borderTopWidth: 10
+            }
+          }}
+          m={2}
+          primary
+          onPress={action('case-1')}
+        >
+          Styled tooltip arrow
+        </Button>
+
+        <Button
+          tooltip={{
+            text: 'Lorem ipsum dolor sit amet',
+            innerStyle: {
+              borderRadius: 15
+            }
+          }}
+          m={2}
+          primary
+          onPress={action('case-1')}
+        >
+          Styled tooltip inner
+        </Button>
+      </Box>
+    )
+  })
   .addWithInfo('Elements', () => {
     return (
       <Box>
