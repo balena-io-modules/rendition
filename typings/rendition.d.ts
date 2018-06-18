@@ -38,6 +38,9 @@ declare module 'rendition' {
 		text: string;
 		trigger?: 'click' | 'hover';
 		placement?: TooltipPlacement;
+		containerStyle?: React.CSSProperties;
+		innerStyle?: React.CSSProperties;
+		arrowStyle?: React.CSSProperties;
 	}
 
 	interface Tooltip {
