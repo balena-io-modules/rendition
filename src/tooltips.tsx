@@ -74,6 +74,7 @@ const TooltipElement = styled.div`
 	line-height: 1.42857143;
 	padding: 5px;
 	position: absolute;
+	max-width: 300px;
 	text-align: left;
 	text-align: start;
 	text-decoration: none;
@@ -96,7 +97,6 @@ const TooltipElementInner = styled.div`
 `;
 
 interface TooltipComponentState {
-	text: string;
 	placement: 'top' | 'right' | 'bottom' | 'left' | undefined;
 	show: boolean;
 	coordinates: {
@@ -107,12 +107,12 @@ interface TooltipComponentState {
 
 class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 	private tooltipElement: HTMLDivElement;
+	private tooltipElementInner: HTMLDivElement;
 
 	constructor(props: {}) {
 		super(props);
 
 		this.state = {
-			text: '',
 			show: false,
 			placement: 'top',
 			coordinates: {
@@ -128,6 +128,12 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 
 		// Position the tooltip correctly
 		const boundingRect = (e.target as any).getBoundingClientRect().toJSON();
+
+		// Set the contents of the tooltip using `ìnnerText` so that the height can
+		// be properly calculated
+		if (this.tooltipElementInner) {
+			this.tooltipElementInner.innerText = tooltipText;
+		}
 
 		// Ajust bounds to compensate for scrolling
 		boundingRect.top += window.scrollY;
@@ -164,7 +170,6 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 		}
 
 		this.setState({
-			text: tooltipText,
 			coordinates: { top, left },
 			show: true,
 			placement,
@@ -188,7 +193,8 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 				style={tooltipStyle}
 				innerRef={(el: any) => (this.tooltipElement = el)}
 			>
-				<TooltipElementInner>{this.state.text}</TooltipElementInner>
+				<TooltipElementInner innerRef={el => (this.tooltipElementInner = el)} />
+
 				<Arrow />
 			</TooltipElement>
 		);
@@ -222,6 +228,7 @@ export class Tooltips {
 	}
 
 	bindProps(props: any) {
+		console.log('binding props');
 		if (props.tooltip) {
 			let trigger = 'hover';
 			let tooltipText: string;
