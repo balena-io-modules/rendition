@@ -1,7 +1,9 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import withReadme from 'storybook-readme/with-readme'
 import styled from 'styled-components'
 import { ProgressBar } from '../'
+import * as Readme from './README/ProgressBar.md'
 
 const Container = styled.div`
   margin: 30px;
@@ -40,8 +42,9 @@ export class Progressor extends React.Component {
   }
 }
 
-storiesOf('ProgressBar', module)
-  .addWithInfo('Standard', () => {
+storiesOf('Core/ProgressBar', module)
+  .addDecorator(withReadme(Readme))
+  .add('Standard', () => {
     return (
       <Container>
         <Progressor mb={3} primary value={50} />
@@ -54,7 +57,7 @@ storiesOf('ProgressBar', module)
       </Container>
     )
   })
-  .addWithInfo('Emphasized', () => {
+  .add('Emphasized', () => {
     return (
       <Container>
         <Progressor mb={3} emphasized primary value={50} />

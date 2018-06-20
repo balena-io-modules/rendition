@@ -368,7 +368,7 @@ declare module 'rendition' {
 
 	class Provider extends Component<any, any> {}
 
-	interface ProgressBarProps extends DefaultProps, Coloring {
+	interface ProgressBarProps extends DefaultProps, Coloring, Sizing {
 		value: number;
 	}
 
@@ -402,6 +402,7 @@ declare module 'rendition' {
 	interface SelectProps extends DefaultProps, Sizing {
 		value?: string | string[] | number | null;
 		disabled?: boolean;
+		onChange?: React.ChangeEventHandler<HTMLSelectElement>;
 	}
 
 	class Select extends RenderableElementWithProps<SelectProps, any> {}

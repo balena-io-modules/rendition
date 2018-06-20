@@ -1,9 +1,11 @@
 import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
+import withReadme from 'storybook-readme/with-readme'
 import { Box, Flex, Txt } from '../../'
 import { Form } from '../../unstable/'
 import { Markdown } from '../../extra/Markdown'
 import '../../extra/Form/mermaid'
+import * as Readme from '../README/Form.md'
 
 const extraWidgetsReadme = `
 # Extra widgets
@@ -86,17 +88,18 @@ class FormDemo extends React.Component {
   }
 }
 
-storiesOf('[beta] Form', module)
-  .addWithInfo('Simple', () => {
+storiesOf('Beta/Form', module)
+  .addDecorator(withReadme(Readme))
+  .add('Simple', () => {
     return <FormDemo schema={basicPokedexSchema} />
   })
-  .addWithInfo('Hidden submit button', () => {
+  .add('Hidden submit button', () => {
     return <FormDemo schema={basicPokedexSchema} hideSubmitButton />
   })
-  .addWithInfo('Custom submit button text', () => {
+  .add('Custom submit button text', () => {
     return <FormDemo schema={basicPokedexSchema} submitButtonText='Save' />
   })
-  .addWithInfo('UI schema', () => {
+  .add('UI schema', () => {
     return (
       <FormDemo
         schema={basicPokedexSchema}
@@ -106,7 +109,7 @@ storiesOf('[beta] Form', module)
       />
     )
   })
-  .addWithInfo('Preset values', () => {
+  .add('Preset values', () => {
     return (
       <FormDemo
         schema={basicPokedexSchema}
@@ -116,7 +119,7 @@ storiesOf('[beta] Form', module)
       />
     )
   })
-  .addWithInfo('Extra widgets', () => {
+  .add('Extra widgets', () => {
     const mermaidSchema = {
       type: 'object',
       properties: {

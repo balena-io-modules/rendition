@@ -1,9 +1,11 @@
 import * as React from 'react'
 import * as uniq from 'lodash/uniq'
 import { storiesOf, action } from '@storybook/react'
+import withReadme from 'storybook-readme/with-readme'
 import styled from 'styled-components'
 import { Box, Divider, Filters, SchemaSieve } from '../'
 import PokeDex from './assets/pokedex'
+import * as Readme from './README/Filters.md'
 
 const Container = styled.div`
   margin: 30px;
@@ -184,15 +186,16 @@ class FiltersDemo extends React.Component {
   }
 }
 
-storiesOf('Filters', module)
+storiesOf('Core/Filters', module)
   .addDecorator(story => <Container>{story()}</Container>)
-  .addWithInfo('Standard', () => {
+  .addDecorator(withReadme(Readme))
+  .add('Standard', () => {
     return <FiltersDemo />
   })
-  .addWithInfo('Disabled', () => {
+  .add('Disabled', () => {
     return <FiltersDemo disabled />
   })
-  .addWithInfo('Button props', () => {
+  .add('Button props', () => {
     const props = {
       addFilterButtonProps: {
         w: 200
@@ -205,14 +208,14 @@ storiesOf('Filters', module)
 
     return <FiltersDemo extra={props} />
   })
-  .addWithInfo('Dark', () => {
+  .add('Dark', () => {
     return (
       <Box bg='#343434' p={30}>
         <FiltersDemo dark />
       </Box>
     )
   })
-  .addWithInfo('Render modes', () => {
+  .add('Render modes', () => {
     const dummyFilter = {
       $id: 'FuELaSmfCBqiV9hx',
       anyOf: [

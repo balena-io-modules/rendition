@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
+import withReadme from 'storybook-readme/with-readme'
 import {
   Alert,
   Badge,
@@ -7,7 +8,6 @@ import {
   Box,
   Button,
   CodeWithCopy,
-  DeleteButton,
   DropDownButton,
   Fixed,
   Flex,
@@ -15,9 +15,11 @@ import {
   Txt,
   Link
 } from '../'
+import * as Readme from './README/Tooltip.md'
 
-storiesOf('Tooltip', module)
+storiesOf('Core/Tooltips', module)
   .addDecorator(story => <Box m={4}>{story()}</Box>)
+  .addDecorator(withReadme(Readme))
   .addWithInfo('Standard', () => {
     return (
       <Box>
@@ -132,9 +134,6 @@ storiesOf('Tooltip', module)
         <Heading.h3 mt={30}>CodeWithCopy</Heading.h3>
         <CodeWithCopy text='Lorem' tooltip='CodeWithCopy tooltip' />
 
-        <Heading.h3 mt={30}>DeleteButton</Heading.h3>
-        <DeleteButton tooltip='DeleteButton tooltip' />
-
         <Heading.h3 mt={30}>DropDownButton</Heading.h3>
         <DropDownButton
           tooltip='DropDownButton tooltip'
@@ -212,37 +211,6 @@ storiesOf('Tooltip', module)
         >
           Styled tooltip inner
         </Button>
-      </Box>
-    )
-  })
-  .addWithInfo('Elements', () => {
-    return (
-      <Box>
-        <Heading.h3>Alert</Heading.h3>
-        <Alert tooltip='Alert tooltip' warning>
-          Lorem ipsum dolor sit amet.
-        </Alert>
-
-        <Heading.h3 mt={30}>Badge</Heading.h3>
-        <Badge tooltip='Badge tooltip' text='lorem' />
-
-        <Heading.h3 mt={30}>BadgeSelect</Heading.h3>
-        <BadgeSelect
-          tooltip='BadgeSelect tooltip'
-          items={['wpe', 'web', 'redis']}
-        />
-
-        <Heading.h3 mt={30}>Box</Heading.h3>
-        <Box tooltip='Box tooltip'>Lorem ipsum dolor sit amet.</Box>
-
-        <Heading.h3 mt={30}>Button</Heading.h3>
-        <Button tooltip='Button tooltip'>Lorem ipsum</Button>
-
-        <Heading.h3 mt={30}>CodeWithCopy</Heading.h3>
-        <CodeWithCopy text='Lorem' tooltip='CodeWithCopy tooltip' />
-
-        <Heading.h3 mt={30}>DeleteButton</Heading.h3>
-        <DeleteButton tooltip='DeleteButton tooltip' />
       </Box>
     )
   })

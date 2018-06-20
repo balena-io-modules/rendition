@@ -1,13 +1,9 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import withReadme from 'storybook-readme/with-readme'
 import { Box } from '../../'
-import { Markdown } from '../../extra/Markdown'
 import { Mermaid } from '../../extra/Mermaid'
-
-const readme = `
-# Mermaid
-Generate charts from text using [mermaidjs](https://mermaidjs.github.io/).
-`
+import * as Readme from '../README/Mermaid.md'
 
 const source = `
 graph TD;
@@ -17,13 +13,12 @@ graph TD;
     C-->D;
 `
 
-storiesOf('[extra] Mermaid', module)
+storiesOf('Extra/Mermaid', module)
   .addDecorator(story => <Box p={3}>{story()}</Box>)
-  .addWithInfo('Default', () => {
+  .addDecorator(withReadme(Readme))
+  .add('Standard', () => {
     return (
       <React.Fragment>
-        <Markdown>{readme}</Markdown>
-
         <Mermaid value={source} />
       </React.Fragment>
     )

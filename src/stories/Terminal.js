@@ -1,8 +1,10 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import withReadme from 'storybook-readme/with-readme'
 import { Box, Terminal } from '../'
 import { output1 } from './assets/tty-output'
 import { Repl } from './assets/repl'
+import * as Readme from './README/Terminal.md'
 
 const outputArray = output1.split('\n')
 
@@ -178,22 +180,23 @@ class PersistentTerm extends React.Component {
   }
 }
 
-storiesOf('Terminal', module)
-  .addWithInfo('Standard', () => {
+storiesOf('Core/Terminal', module)
+  .addDecorator(withReadme(Readme))
+  .add('Standard', () => {
     return (
       <Box p={30} style={{ height: 500 }}>
         <InteractiveTerm />
       </Box>
     )
   })
-  .addWithInfo('Non interactive', () => {
+  .add('Non interactive', () => {
     return (
       <Box p={30} style={{ height: 500 }}>
         <Logger termProps={{ nonInteractive: true }} />
       </Box>
     )
   })
-  .addWithInfo('Persistent', () => {
+  .add('Persistent', () => {
     return (
       <Box p={30}>
         <PersistentTerm />

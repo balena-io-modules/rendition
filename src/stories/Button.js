@@ -1,17 +1,20 @@
 import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
+import withReadme from 'storybook-readme/with-readme'
 import styled from 'styled-components'
 import * as FaExpand from 'react-icons/lib/fa/expand'
 import * as FaRecycle from 'react-icons/lib/fa/recycle'
 import * as FaSpinner from 'react-icons/lib/fa/spinner'
 import { Button } from '../'
+import * as Readme from './README/Button.md'
 
 const Container = styled.div`
   margin: 30px;
 `
 
-storiesOf('Button', module)
-  .addWithInfo('Standard', () => {
+storiesOf('Core/Button', module)
+  .addDecorator(withReadme(Readme))
+  .add('Standard', () => {
     return (
       <Container>
         <Button mx={2} primary onPress={action('case-1')}>
@@ -32,7 +35,7 @@ storiesOf('Button', module)
       </Container>
     )
   })
-  .addWithInfo('Emphasized', () => {
+  .add('Emphasized', () => {
     return (
       <Container>
         <Button mx={2} emphasized primary onPress={action('case-1')}>
@@ -53,7 +56,7 @@ storiesOf('Button', module)
       </Container>
     )
   })
-  .addWithInfo('Disabled', () => {
+  .add('Disabled', () => {
     return (
       <Container>
         <Button mx={2} disabled primary onPress={action('case-1')}>
@@ -74,7 +77,7 @@ storiesOf('Button', module)
       </Container>
     )
   })
-  .addWithInfo('Outline', () => {
+  .add('Outline', () => {
     return (
       <Container>
         <Button mx={2} primary outline onPress={action('case-1')}>
@@ -92,7 +95,7 @@ storiesOf('Button', module)
       </Container>
     )
   })
-  .addWithInfo('Underline', () => {
+  .add('Underline', () => {
     return (
       <Container>
         <Button mx={2} primary underline onPress={action('case-1')}>
@@ -104,7 +107,7 @@ storiesOf('Button', module)
       </Container>
     )
   })
-  .addWithInfo('Plaintext', () => {
+  .add('Plaintext', () => {
     return (
       <Container>
         <Button mx={2} plaintext primary onPress={action('case-1')}>
@@ -122,7 +125,7 @@ storiesOf('Button', module)
       </Container>
     )
   })
-  .addWithInfo('Width', () => {
+  .add('Width', () => {
     return (
       <Container>
         <Button w={95} mx={2} primary onPress={action('case-1')}>
@@ -142,7 +145,7 @@ storiesOf('Button', module)
       </Container>
     )
   })
-  .addWithInfo('Square', () => {
+  .add('Square', () => {
     return (
       <Container>
         <Button mx={2} tertiary square onPress={action('case-3')}>
@@ -154,7 +157,7 @@ storiesOf('Button', module)
       </Container>
     )
   })
-  .addWithInfo('Square Emphasized', () => {
+  .add('Square Emphasized', () => {
     return (
       <Container>
         <Button mx={2} emphasized tertiary square onPress={action('case-3')}>

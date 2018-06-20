@@ -1,15 +1,18 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import withReadme from 'storybook-readme/with-readme'
 import styled from 'styled-components'
 import { CodeWithCopy, Flex, Box, Link } from '../'
+import * as Readme from './README/CodeWithCopy.md'
 
 const Container = styled.div`
   margin: 30px;
 `
 
-storiesOf('CodeWithCopy', module)
+storiesOf('Core/CodeWithCopy', module)
   .addDecorator(story => <Container>{story()}</Container>)
-  .addWithInfo('Standard', () => {
+  .addDecorator(withReadme(Readme))
+  .add('Standard', () => {
     return (
       <CodeWithCopy
         text='22ab7io'
@@ -17,7 +20,7 @@ storiesOf('CodeWithCopy', module)
       />
     )
   })
-  .addWithInfo('Inside clickable element', () => {
+  .add('Inside clickable element', () => {
     return (
       <Link href='#foobar' style={{ display: 'block' }}>
         <Flex>
