@@ -40,9 +40,7 @@ const ButtonIcon = styled.span`
 `;
 
 const Button = (styled.button as StyledFunction<ThemedButtonProps>)`
-	padding-top: 1px;
-	padding-left: ${props => px(horizontalPadding(props))};
-	padding-right: ${props => px(horizontalPadding(props))};
+	padding: 0 ${props => px(horizontalPadding(props))};
 	font-family: inherit;
 	display: inline-flex;
 	align-items: center;
