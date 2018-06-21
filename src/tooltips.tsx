@@ -302,7 +302,6 @@ export class Tooltips {
 						this.hide();
 						oldMLFn(e);
 					};
-					props.onMouseLeave = () => this.hide();
 				}
 			}
 		}
