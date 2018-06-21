@@ -17,20 +17,23 @@ storiesOf('Core/Button', module)
   .add('Standard', () => {
     return (
       <Container>
-        <Button mx={2} primary onPress={action('case-1')}>
-          Button
+        <Button m={2} primary onPress={action('case-1')}>
+          Primary
         </Button>
-        <Button mx={2} secondary onPress={action('case-2')}>
-          Button
+        <Button m={2} secondary onPress={action('case-2')}>
+          Secondary
         </Button>
-        <Button mx={2} success onPress={action('case-3')}>
-          Button
+        <Button m={2} tertiary onPress={action('case-3')}>
+          Tertiary
         </Button>
-        <Button mx={2} tertiary onPress={action('case-4')}>
-          Button
+        <Button m={2} success onPress={action('case-4')}>
+          Success
         </Button>
-        <Button mx={2} onPress={action('case-5')}>
-          Button
+        <Button m={2} danger onPress={action('case-5')}>
+          Danger
+        </Button>
+        <Button m={2} onPress={action('case-6')}>
+          Default
         </Button>
       </Container>
     )
@@ -38,20 +41,23 @@ storiesOf('Core/Button', module)
   .add('Emphasized', () => {
     return (
       <Container>
-        <Button mx={2} emphasized primary onPress={action('case-1')}>
-          Button
+        <Button m={2} emphasized primary onPress={action('case-1')}>
+          Primary
         </Button>
-        <Button mx={2} emphasized secondary onPress={action('case-2')}>
-          Button
+        <Button m={2} emphasized secondary onPress={action('case-2')}>
+          Secondary
         </Button>
-        <Button mx={2} emphasized success onPress={action('case-3')}>
-          Button
+        <Button m={2} emphasized tertiary onPress={action('case-3')}>
+          Tertiary
         </Button>
-        <Button mx={2} emphasized tertiary onPress={action('case-4')}>
-          Button
+        <Button m={2} emphasized success onPress={action('case-4')}>
+          Success
         </Button>
-        <Button mx={2} emphasized onPress={action('case-5')}>
-          Button
+        <Button m={2} emphasized danger onPress={action('case-5')}>
+          Danger
+        </Button>
+        <Button m={2} emphasized onPress={action('case-6')}>
+          Default
         </Button>
       </Container>
     )
@@ -59,20 +65,23 @@ storiesOf('Core/Button', module)
   .add('Disabled', () => {
     return (
       <Container>
-        <Button mx={2} disabled primary onPress={action('case-1')}>
-          Button
+        <Button m={2} disabled primary onPress={action('case-1')}>
+          Primary
         </Button>
-        <Button mx={2} disabled secondary onPress={action('case-2')}>
-          Button
+        <Button m={2} disabled secondary onPress={action('case-2')}>
+          Secondary
         </Button>
-        <Button mx={2} disabled success onPress={action('case-3')}>
-          Button
+        <Button m={2} disabled tertiary onPress={action('case-3')}>
+          Tertiary
         </Button>
-        <Button mx={2} disabled tertiary onPress={action('case-4')}>
-          Button
+        <Button m={2} disabled success onPress={action('case-4')}>
+          Success
         </Button>
-        <Button mx={2} disabled onPress={action('case-5')}>
-          Button
+        <Button m={2} disabled danger onPress={action('case-5')}>
+          Danger
+        </Button>
+        <Button m={2} disabled onPress={action('case-6')}>
+          Default
         </Button>
       </Container>
     )
@@ -80,17 +89,23 @@ storiesOf('Core/Button', module)
   .add('Outline', () => {
     return (
       <Container>
-        <Button mx={2} primary outline onPress={action('case-1')}>
-          Button
+        <Button m={2} outline primary onPress={action('case-1')}>
+          Primary
         </Button>
-        <Button mx={2} danger outline onPress={action('case-3')}>
-          Button
+        <Button m={2} outline secondary onPress={action('case-2')}>
+          Secondary
         </Button>
-        <Button mx={2} tertiary outline onPress={action('case-3')}>
-          Button
+        <Button m={2} outline tertiary onPress={action('case-3')}>
+          Tertiary
         </Button>
-        <Button mx={2} outline onPress={action('case-4')}>
-          Button
+        <Button m={2} outline success onPress={action('case-4')}>
+          Success
+        </Button>
+        <Button m={2} outline danger onPress={action('case-5')}>
+          Danger
+        </Button>
+        <Button m={2} outline onPress={action('case-6')}>
+          Default
         </Button>
       </Container>
     )
@@ -98,10 +113,10 @@ storiesOf('Core/Button', module)
   .add('Underline', () => {
     return (
       <Container>
-        <Button mx={2} primary underline onPress={action('case-1')}>
+        <Button m={2} primary underline onPress={action('case-1')}>
           Button
         </Button>
-        <Button mx={2} underline onPress={action('case-4')}>
+        <Button m={2} underline onPress={action('case-1')}>
           Button
         </Button>
       </Container>
@@ -110,11 +125,11 @@ storiesOf('Core/Button', module)
   .add('Plaintext', () => {
     return (
       <Container>
-        <Button mx={2} plaintext primary onPress={action('case-1')}>
+        <Button m={2} plaintext primary onPress={action('case-1')}>
           Button
         </Button>
         <Button
-          mx={2}
+          m={2}
           plaintext
           primary
           iconElement={<FaSpinner />}
@@ -128,13 +143,13 @@ storiesOf('Core/Button', module)
   .add('Width', () => {
     return (
       <Container>
-        <Button w={95} mx={2} primary onPress={action('case-1')}>
+        <Button w={95} m={2} primary onPress={action('case-1')}>
           Button
         </Button>
-        <Button w={60} mx={2} secondary onPress={action('case-2')}>
+        <Button w={60} m={2} secondary onPress={action('case-2')}>
           Button
         </Button>
-        <Button w={120} mx={2} tertiary onPress={action('case-3')}>
+        <Button w={120} m={2} tertiary onPress={action('case-3')}>
           Button
         </Button>
         <div style={{ width: 300 }}>
@@ -148,7 +163,7 @@ storiesOf('Core/Button', module)
   .add('Square', () => {
     return (
       <Container>
-        <Button mx={2} tertiary square onPress={action('case-3')}>
+        <Button m={2} tertiary square onPress={action('case-3')}>
           <FaExpand />
         </Button>
         <Button m={2} square onPress={action('case-4')}>
@@ -160,7 +175,7 @@ storiesOf('Core/Button', module)
   .add('Square Emphasized', () => {
     return (
       <Container>
-        <Button mx={2} emphasized tertiary square onPress={action('case-3')}>
+        <Button m={2} emphasized tertiary square onPress={action('case-3')}>
           <FaExpand />
         </Button>
         <Button m={2} emphasized square onPress={action('case-4')}>

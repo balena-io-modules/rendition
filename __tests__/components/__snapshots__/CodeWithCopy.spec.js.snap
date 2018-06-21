@@ -5,7 +5,7 @@ exports[`CodeWithCopy renders correctly 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <span
-    className="code-with-copy sc-VigVT gYZbwL"
+    className="code-with-copy sc-jTzLTM hMcFrP"
   >
     <code
       title="This value has been copied to your clipboard!"
@@ -16,7 +16,7 @@ exports[`CodeWithCopy renders correctly 1`] = `
       onClick={[Function]}
     >
       <button
-        className="code-with-copy__copy sc-gqjmRU bCjhLA sc-iwsKbI jBxfRj"
+        className="code-with-copy__copy sc-VigVT hegYug sc-iwsKbI dLbaIT"
         onClick={[Function]}
       >
         <svg
