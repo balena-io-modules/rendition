@@ -228,6 +228,7 @@ export class Tooltips {
 	private hideTimeout: number;
 	private initialised: boolean = false;
 	private component: TooltipComponent;
+	private hideOnNextMouseOver: boolean = false;
 
 	// Creates a tiny React app for containing the tooltips and appends it to the
 	// bottom of the <body>. This allows us to overlay tooltips without affecting
@@ -241,6 +242,19 @@ export class Tooltips {
 		tooltipRoot.id = 'rendition-tooltip-root';
 
 		document.body.appendChild(tooltipRoot);
+
+		// This is a special case for handling disabled elements. When a tooltip is
+		// shown on a tooltip element, the flag is activated and the next time this
+		// event listener is called the tooltip is hidden. This happens because
+		// a mouseover event will be triggered when the cursor leaves a disabled
+		// element.
+		// See: https://github.com/facebook/react/issues/4251#issuecomment-334266778
+		document.addEventListener('mouseover', () => {
+			if (this.hideOnNextMouseOver) {
+				this.hide();
+				this.hideOnNextMouseOver = false;
+			}
+		});
 
 		this.component = ReactDOM.render(
 			<TooltipComponent />,
@@ -294,6 +308,10 @@ export class Tooltips {
 					props.onMouseEnter = (e: Event) => {
 						showFn(e);
 						oldMEFn(e);
+
+						if ((e.target as any).disabled) {
+							this.hideOnNextMouseOver = true;
+						}
 					};
 
 					const oldMLFn = props.onMouseLeave || noop;
