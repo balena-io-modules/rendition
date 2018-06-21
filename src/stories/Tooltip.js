@@ -55,6 +55,14 @@ storiesOf('Core/Tooltips', module)
         >
           Tooltip on left
         </Button>
+        <Button
+          tooltip='Tooltip on disabled button'
+          m={2}
+          onPress={action('case-5')}
+          disabled
+        >
+          Tooltip on disabled button
+        </Button>
       </Box>
     )
   })
