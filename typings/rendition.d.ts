@@ -632,6 +632,10 @@ declare module 'rendition/dist/extra/Form/mermaid' {
 
 }
 
+declare module 'rendition/dist/extra/Form/markdown' {
+
+}
+
 declare module 'rendition/dist/extra/Markdown' {
 	import { RenderableElementWithProps, TxtProps } from 'rendition';
 

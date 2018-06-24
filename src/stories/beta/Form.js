@@ -5,6 +5,7 @@ import { Box, Flex, Txt } from '../../'
 import { Form } from '../../unstable/'
 import { Markdown } from '../../extra/Markdown'
 import '../../extra/Form/mermaid'
+import '../../extra/Form/markdown'
 import * as Readme from '../README/Form.md'
 
 const extraWidgetsReadme = `
@@ -120,12 +121,16 @@ storiesOf('Beta/Form', module)
     )
   })
   .add('Extra widgets', () => {
-    const mermaidSchema = {
+    const extraSchema = {
       type: 'object',
       properties: {
         Mermaid: {
           type: 'string',
           format: 'mermaid'
+        },
+        Markdown: {
+          type: 'string',
+          format: 'markdown'
         }
       }
     }
@@ -135,7 +140,7 @@ storiesOf('Beta/Form', module)
           <Markdown>{extraWidgetsReadme}</Markdown>
         </Box>
 
-        <FormDemo schema={mermaidSchema} />
+        <FormDemo schema={extraSchema} />
       </React.Fragment>
     )
   })

@@ -3,7 +3,7 @@ import { FormWidgetProps } from 'rendition/dist/unstable';
 import { Link, Textarea, Theme } from '../../';
 import { Form } from '../../unstable';
 import { TabbedBox } from '../../unstable/components/Form/widgets/TabbedBox';
-import { Mermaid } from '../Mermaid';
+import { Markdown } from '../Markdown';
 
 class Widget extends React.Component<FormWidgetProps, {}> {
 	public handleChange = ({
@@ -46,13 +46,17 @@ class Widget extends React.Component<FormWidgetProps, {}> {
 			<TabbedBox
 				tabs={['Write', 'Preview']}
 				help={
-					<Link fontSize={2} href={'https://mermaidjs.github.io/'} blank>
-						About mermaid
+					<Link
+						fontSize={2}
+						href={'https://guides.github.com/features/mastering-markdown/'}
+						blank
+					>
+						About markdown
 					</Link>
 				}
 			>
 				<Textarea
-					placeholder="This text supports mermaid charts"
+					placeholder="This text supports markdown"
 					readOnly={readonly}
 					disabled={disabled}
 					autoFocus={autofocus}
@@ -64,20 +68,20 @@ class Widget extends React.Component<FormWidgetProps, {}> {
 					rows={5}
 				/>
 
-				<Mermaid
-					bg={Theme.colors.gray.light}
+				<Markdown
 					p={3}
 					style={{
 						borderRadius: Theme.radius,
 						width: '100%',
 						minHeight: 180,
 					}}
-					value={value}
-				/>
+				>
+					{value}
+				</Markdown>
 			</TabbedBox>
 		);
 	}
 }
 
 // Register the mermaid widget to the Form component
-Form.registerWidget('mermaid', Widget);
+Form.registerWidget('markdown', Widget);
