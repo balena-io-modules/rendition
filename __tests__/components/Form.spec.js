@@ -28,6 +28,24 @@ describe('Form component', () => {
     expect(tree).toMatchSnapshot()
   })
 
+  it('should still render if an unknown format is used', () => {
+    const uuidSchema = {
+      type: 'object',
+      properties: {
+        id: {
+          type: 'string',
+          format: 'uuid'
+        }
+      }
+    }
+
+    mount(
+      <Provider>
+        <Form schema={uuidSchema} />
+      </Provider>
+    )
+  })
+
   describe('hideSubmitButton property', () => {
     it('should render a submit button if the property is not specified', () => {
       const component = mount(

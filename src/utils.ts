@@ -1,5 +1,8 @@
 import * as Color from 'color';
+import { JSONSchema6 } from 'json-schema';
+import cloneDeep = require('lodash/cloneDeep');
 import find = require('lodash/find');
+import forEach = require('lodash/forEach');
 import get = require('lodash/get');
 import isObject = require('lodash/isObject');
 import { ThemedStyledFunction } from 'styled-components';
@@ -110,3 +113,68 @@ export function withProps<U>() {
 
 export const regexEscape = (str: string) =>
 	str.replace(matchOperatorsRe, '\\$&');
+
+/**
+ * @name stripSchemaFormats
+ * @summary Remove "format" keywords with an unknown value from a JSON schema
+ * @function
+ * @public
+ *
+ * @description @summary Remove any "format" keyword that has an unknown value
+ * from a JSON schema. Optionally you can provide a whitelist of  formats that
+ * should be preserved.
+ *
+ * @param {Object} schema - The json schema to filter
+ * @param {String[]} [whitelist=[]] - An array of formats to preserver
+ *
+ * @returns {Object} A new schema object
+ *
+ * @example
+ * const schema = {
+ * 	type: 'object',
+ * 	properties: {
+ * 		foo: {
+ * 			type: 'string',
+ * 			format: 'uuid'
+ * 		},
+ * 		bar: {
+ * 			type: 'string',
+ * 			format: 'email'
+ * 		}
+ * }
+ *
+ * const cleanSchema = utils.stripSchemaFormats(schema, [ 'email' ])
+ * console.log(cleanSchema) // -->
+ * {
+ * 	type: 'object',
+ * 	properties: {
+ * 		foo: {
+ * 			type: 'string',
+ * 		},
+ * 		bar: {
+ * 			type: 'string',
+ * 			format: 'email'
+ * 		}
+ * }
+ */
+export const stripSchemaFormats = (
+	schema: JSONSchema6,
+	whitelist: string[] = [],
+) => {
+	const newSchema = cloneDeep(schema);
+
+	const _strip = (schema: JSONSchema6) => {
+		if (schema.format && whitelist.indexOf(schema.format) === -1) {
+			delete schema.format;
+		}
+		if (schema.properties) {
+			forEach(schema.properties, subSchema => {
+				_strip(subSchema as JSONSchema6);
+			});
+		}
+	};
+
+	_strip(newSchema);
+
+	return newSchema;
+};

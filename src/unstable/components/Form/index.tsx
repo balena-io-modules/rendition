@@ -1,3 +1,4 @@
+import { JSONSchema6 } from 'json-schema';
 import isEqual = require('lodash/isEqual');
 import omit = require('lodash/omit');
 import * as React from 'react';
@@ -6,8 +7,20 @@ import { FormProps } from 'rendition/dist/unstable';
 import styled from 'styled-components';
 import Button from '../../../components/Button';
 import { Box } from '../../../components/Grid';
+import * as utils from '../../../utils';
 import FieldTemplate from './FieldTemplate';
 import BaseInput from './widgets/BaseInput';
+
+const SUPPORTED_SCHEMA_FORMATS = [
+	'data-url',
+	'date',
+	'date-time',
+	'email',
+	'hostname',
+	'ipv4',
+	'ipv6',
+	'uri',
+];
 
 const widgets: {
 	[k: string]: any;
@@ -25,13 +38,14 @@ const FormWrapper = styled(Box)`
 
 export default class FormHOC extends React.Component<
 	FormProps,
-	{ value: any }
+	{ value: any; schema: JSONSchema6 }
 > {
 	constructor(props: FormProps) {
 		super(props);
 
 		this.state = {
 			value: this.props.value || {},
+			schema: this.parseSchema(this.props.schema),
 		};
 	}
 
@@ -45,6 +59,17 @@ export default class FormHOC extends React.Component<
 				value: nextProps.value,
 			});
 		}
+
+		if (!isEqual(this.props.schema, nextProps.schema)) {
+			this.setState({
+				schema: this.parseSchema(nextProps.schema),
+			});
+		}
+	}
+
+	parseSchema(schema: JSONSchema6) {
+		const whitelist = SUPPORTED_SCHEMA_FORMATS.concat(Object.keys(widgets));
+		return utils.stripSchemaFormats(schema, whitelist);
 	}
 
 	change = (data: IChangeEvent) => {
@@ -66,7 +91,6 @@ export default class FormHOC extends React.Component<
 			hideSubmitButton,
 			submitButtonText,
 			submitButtonProps,
-			schema,
 			uiSchema,
 		} = this.props;
 
@@ -84,7 +108,7 @@ export default class FormHOC extends React.Component<
 		return (
 			<FormWrapper {...cleanProps}>
 				<Form
-					schema={schema}
+					schema={this.state.schema}
 					formData={this.state.value}
 					onSubmit={this.submit}
 					onChange={this.change}
