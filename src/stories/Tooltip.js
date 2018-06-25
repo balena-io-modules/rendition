@@ -1,4 +1,5 @@
 import * as React from 'react'
+import * as FaPlus from 'react-icons/lib/fa/spinner'
 import { storiesOf, action } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 import {
@@ -137,7 +138,24 @@ storiesOf('Core/Tooltips', module)
         <Box tooltip='Box tooltip'>Lorem ipsum dolor sit amet.</Box>
 
         <Heading.h3 mt={30}>Button</Heading.h3>
-        <Button tooltip='Button tooltip'>Lorem ipsum</Button>
+        <Button tooltip='Button tooltip' mr={2} mb={2}>
+          Lorem ipsum
+        </Button>
+        <Button tooltip='Button tooltip' iconElement={<FaPlus />} mr={2} mb={2}>
+          Lorem ipsum
+        </Button>
+        <Button tooltip='Button tooltip' mr={2} mb={2} disabled>
+          Lorem ipsum
+        </Button>
+        <Button
+          tooltip='Button tooltip'
+          iconElement={<FaPlus />}
+          mr={2}
+          mb={2}
+          disabled
+        >
+          <Txt>Lorem ipsum</Txt>
+        </Button>
 
         <Heading.h3 mt={30}>CodeWithCopy</Heading.h3>
         <CodeWithCopy text='Lorem' tooltip='CodeWithCopy tooltip' />
