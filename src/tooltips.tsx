@@ -228,7 +228,7 @@ export class Tooltips {
 	private hideTimeout: number;
 	private initialised: boolean = false;
 	private component: TooltipComponent;
-	private hideOnNextMouseOver: boolean = false;
+	private hideOnMouseOut: Element | null = null;
 
 	// Creates a tiny React app for containing the tooltips and appends it to the
 	// bottom of the <body>. This allows us to overlay tooltips without affecting
@@ -249,11 +249,28 @@ export class Tooltips {
 		// a mouseover event will be triggered when the cursor leaves a disabled
 		// element.
 		// See: https://github.com/facebook/react/issues/4251#issuecomment-334266778
-		document.addEventListener('mouseover', () => {
-			if (this.hideOnNextMouseOver) {
-				this.hide();
-				this.hideOnNextMouseOver = false;
+		document.addEventListener('mouseover', e => {
+			const target = e.target as Element;
+			if (
+				!this.hideOnMouseOut ||
+				// needed to work on Firefox
+				this.hideOnMouseOut === target
+			) {
+				return;
 			}
+
+			// if the event comes from one of the child elements
+			// then do not hide the tooltip
+			if (
+				this.hideOnMouseOut.firstElementChild &&
+				this.hideOnMouseOut.contains &&
+				this.hideOnMouseOut.contains(target)
+			) {
+				return;
+			}
+
+			this.hide();
+			this.hideOnMouseOut = null;
 		});
 
 		this.component = ReactDOM.render(
@@ -310,7 +327,7 @@ export class Tooltips {
 						oldMEFn(e);
 
 						if ((e.target as any).disabled) {
-							this.hideOnNextMouseOver = true;
+							this.hideOnMouseOut = e.target as Element;
 						}
 					};
 
