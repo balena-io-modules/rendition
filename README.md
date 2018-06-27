@@ -36,8 +36,8 @@ Wrap your application in the `<Provider>` component so that child components can
 
 All components support [styled-system][styled-system] attributes, allowing you to use a shorthand properties for styling components. The properties can have the properties in the form of `string | number | Array<string | number>`. If an array is provided, then a property is chosen based on the width of the screen. The screen width corresponds to a breakpoint set in the `theme` property of the `Provider` component, by default this is set to `[32, 48, 64, 80]` where each number is the screen width in ems.
 
-| Name          | Type      | Description                                          |
-| -------------------------------------------------------------------------------- |
+| Name          | Type              | Description                                  |
+| --------------|-------------------|--------------------------------------------- |
 |	w             | `ResponsiveStyle` | sets the width
 |	fontSize      | `ResponsiveStyle` | sets the font size
 |	color         | `ResponsiveStyle` | sets the `color` css property
@@ -50,10 +50,10 @@ All components support [styled-system][styled-system] attributes, allowing you t
 |	mx            | `ResponsiveStyle` | sets both the `margin-right` and `margin-left` css properties
 |	my            | `ResponsiveStyle` | sets both the `margin-top` and `margin-bottom` css properties
 |	p             | `ResponsiveStyle` | sets the `padding` css property
-|	pt            | `ResponsiveStyle` | sets the `padding-top` css property   
-|	pr            | `ResponsiveStyle` | sets the `padding-right` css property  
-|	pb            | `ResponsiveStyle` | sets the `padding-bottom` css property  
-|	pl            | `ResponsiveStyle` | sets the `padding-left` css property     
+|	pt            | `ResponsiveStyle` | sets the `padding-top` css property
+|	pr            | `ResponsiveStyle` | sets the `padding-right` css property
+|	pb            | `ResponsiveStyle` | sets the `padding-bottom` css property
+|	pl            | `ResponsiveStyle` | sets the `padding-left` css property
 |	px            | `ResponsiveStyle` | sets both the `padding-right` and `padding-left` css properties
 |	py            | `ResponsiveStyle` | sets both the `padding-top` and `padding-bottom` css properties
 
