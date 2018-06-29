@@ -1,6 +1,7 @@
 import isString = require('lodash/isString');
 import merge = require('lodash/merge');
 import noop = require('lodash/noop');
+import pick = require('lodash/pick');
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { TooltipPlacement as Placement } from 'rendition';
@@ -137,8 +138,15 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 		let top = 0;
 		let left = 0;
 
+		const boundingClientRect = (e.target as HTMLElement).getBoundingClientRect();
+
+		type Mutable<T> = { -readonly [P in keyof T]-?: T[P] };
+
 		// Position the tooltip correctly
-		const boundingRect = (e.target as any).getBoundingClientRect().toJSON();
+		const boundingRect = pick(
+			boundingClientRect as Mutable<typeof boundingClientRect>,
+			['top', 'left', 'width', 'height'],
+		);
 
 		// Ajust bounds to compensate for scrolling
 		boundingRect.top += window.scrollY;
