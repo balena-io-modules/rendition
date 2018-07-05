@@ -1,6 +1,13 @@
 import { JSONSchema6 } from 'json-schema';
 import forEach = require('lodash/forEach');
-import { FilterSignature, FiltersView, v3, ViewScope } from 'rendition';
+import isArray = require('lodash/isArray');
+import {
+	FilterSignature,
+	FiltersView,
+	MigrateLegacyViewsOutput,
+	v3,
+	ViewScope,
+} from 'rendition';
 import {
 	createFilter,
 	createFullTextSearchFilter,
@@ -248,14 +255,29 @@ export const migrateLegacyFilter = (
 };
 
 // Converts v3 views to v4 views + scopes
+// This function can accept previously migrated input and return it unchaged in
+// a safe manner
 export const migrateLegacyViews = (
 	schema: JSONSchema6,
-	legacyViews: v3.FilterViewScope[],
+	legacyViews: v3.FilterViewScope[] | MigrateLegacyViewsOutput | FiltersView[],
 ) => {
+	if (
+		isArray((legacyViews as MigrateLegacyViewsOutput).views) &&
+		isArray((legacyViews as MigrateLegacyViewsOutput).viewScopes)
+	) {
+		return legacyViews;
+	}
+
 	const views: FiltersView[] = [];
 	const viewScopes: ViewScope[] = [];
 
-	legacyViews.forEach(scope => {
+	(legacyViews as v3.FilterViewScope[]).forEach(scope => {
+		// Check for the presense of `filters` indeicating that the view has already
+		// beeen migrated
+		if ((scope as any).filters) {
+			views.push((scope as any) as FiltersView);
+			return;
+		}
 		viewScopes.push({
 			slug: scope.key,
 			name: scope.title || '',

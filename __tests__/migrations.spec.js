@@ -325,6 +325,73 @@ describe('migrations', () => {
         }]
       })
     })
+
+    it('should ignore views that have already been migrated', () => {
+      const preMigratedViews = [{
+        id: 'bizmeOiqYTCiLFzf',
+        name: 'My view',
+        scope: 'global',
+        filters: [
+          stripId(sieve.createFilter(schema, [{
+            field: 'string',
+            operator: 'is',
+            value: 'test'
+          }]))
+        ]
+      }]
+
+      const migrated = migrations.migrateLegacyViews(schema, preMigratedViews)
+
+      expect(migrated.views).toEqual(preMigratedViews)
+    })
+
+    it('should ignore input that is already migrated', () => {
+      const legacyViews = [{
+        key: 'global',
+        scopeLabel: 'Everyone',
+        title: 'Global',
+        data: [{
+          id: 'bizmeOiqYTCiLFzf',
+          name: 'My view',
+          scopeKey: 'global',
+          rules: [{
+            id: 'QGNwjQRd0rhQgIhl',
+            name: 'string',
+            operator: 'is',
+            type: 'Text',
+            value: 'test'
+          }]
+        }]
+      }]
+
+      const migrated = migrations.migrateLegacyViews(
+        schema,
+        migrations.migrateLegacyViews(schema, legacyViews)
+      )
+
+      // Remove the unique ids so we can match the data structures easily
+      migrated.views[0].filters = migrated.views[0].filters.map(stripId)
+
+      expect(migrated).toEqual({
+        views: [{
+          id: 'bizmeOiqYTCiLFzf',
+          name: 'My view',
+          scope: 'global',
+          filters: [
+            stripId(sieve.createFilter(schema, [{
+              field: 'string',
+              operator: 'is',
+              value: 'test'
+            }]))
+          ]
+        }],
+        viewScopes: [{
+          slug: 'global',
+          name: 'Global',
+          label: 'Everyone'
+        }]
+      })
+    })
   })
 
   describe('.migrateLegacySchema()', () => {
