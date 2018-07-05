@@ -610,6 +610,11 @@ declare module 'rendition' {
 		}
 	}
 
+	interface MigrateLegacyViewsOutput {
+		views: FiltersView[];
+		viewScopes: ViewScope[];
+	}
+
 	interface Migrations {
 		migrateLegacyFilter(
 			schema: JSONSchema6,
@@ -617,11 +622,11 @@ declare module 'rendition' {
 		): JSONSchema6;
 		migrateLegacyViews(
 			schema: JSONSchema6,
-			legacyViews: v3.FilterViewScope[],
-		): {
-			views: FiltersView[];
-			viewScopes: ViewScope[];
-		};
+			legacyViews:
+				| v3.FilterViewScope[]
+				| MigrateLegacyViewsOutput
+				| FiltersView[],
+		): MigrateLegacyViewsOutput;
 		migrateLegacySchema(legacySchema: v3.Schema): JSONSchema6;
 	}
 
