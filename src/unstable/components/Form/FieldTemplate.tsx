@@ -1,14 +1,6 @@
 import * as React from 'react';
-import styled from 'styled-components';
 import { Box } from '../../../components/Grid';
-
-const LabelElement = styled.label`
-	font-size: 11px;
-	color: #252629;
-	text-transform: uppercase;
-	display: inline-block;
-	margin-bottom: 6px;
-`;
+import { LabelElement } from './LabelElement';
 
 const REQUIRED_FIELD_SYMBOL = '*';
 

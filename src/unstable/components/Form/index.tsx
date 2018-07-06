@@ -7,7 +7,10 @@ import { FormProps } from 'rendition/dist/unstable';
 import styled from 'styled-components';
 import Button from '../../../components/Button';
 import { Box } from '../../../components/Grid';
+import Txt from '../../../components/Txt';
+import Theme from '../../../theme';
 import * as utils from '../../../utils';
+import ArrayFieldTemplate from './ArrayFieldTemplate';
 import FieldTemplate from './FieldTemplate';
 import BaseInput from './widgets/BaseInput';
 
@@ -22,10 +25,34 @@ const SUPPORTED_SCHEMA_FORMATS = [
 	'uri',
 ];
 
+const DescriptionField = ({
+	id,
+	description,
+}: {
+	id: string;
+	description?: string;
+}) => {
+	if (!description) {
+		return null;
+	}
+
+	return (
+		<Txt mb={1} id={id} color={Theme.colors.text.light}>
+			{description}
+		</Txt>
+	);
+};
+
 const widgets: {
 	[k: string]: any;
 } = {
 	BaseInput,
+};
+
+const fields: {
+	[k: string]: any;
+} = {
+	DescriptionField,
 };
 
 const FormWrapper = styled(Box)`
@@ -114,7 +141,9 @@ export default class FormHOC extends React.Component<
 					onChange={this.change}
 					uiSchema={uiSchema}
 					widgets={widgets}
+					fields={fields}
 					FieldTemplate={FieldTemplate}
+					ArrayFieldTemplate={ArrayFieldTemplate}
 				>
 					{hideSubmitButton && <span />}
 

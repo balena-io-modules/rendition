@@ -200,4 +200,124 @@ describe('Form component', () => {
       expect(input.props().value).toEqual('Squirtle')
     })
   })
+
+  describe('array fields', () => {
+    const arraySchema = {
+      type: 'object',
+      properties: {
+        Array: {
+          type: 'array',
+          items: {
+            type: 'string'
+          }
+        }
+      }
+    }
+
+    const callback = sinon.spy()
+    const component = mount(
+      <Provider>
+        <Form
+          schema={arraySchema}
+          onFormChange={callback}
+        />
+      </Provider>
+    )
+
+    const value1 = 'foobarbaz'
+    const value2 = 'bazbarfoo'
+
+    it('should be able to add an item', () => {
+      const value = 'foobarbaz'
+
+      component.find('.rendition-form-array-item__add-item')
+        .first()
+        .simulate('click')
+
+      const input = component.find('input').first()
+
+      input.simulate('change', {
+        target: {
+          value: value1
+        }
+      })
+
+      component.update()
+
+      return Promise.delay(150).then(() => {
+        const callArg = callback.lastCall.args[0]
+        expect(callArg.formData).toEqual({
+          Array: [ value ]
+        })
+      })
+    })
+
+    it('should be able to add multiple items', () => {
+      component.find('.rendition-form-array-item__add-item')
+        .first()
+        .simulate('click')
+
+      const input = component.find('input').last()
+
+      input.simulate('change', {
+        target: {
+          value: value2
+        }
+      })
+
+      component.update()
+
+      return Promise.delay(150).then(() => {
+        const callArg = callback.lastCall.args[0]
+        expect(callArg.formData).toEqual({
+          Array: [ value1, value2 ]
+        })
+      })
+    })
+
+    it('should be able to move an item up', () => {
+      component.find('.rendition-form-array-item__move-up')
+        .last()
+        .simulate('click')
+
+      component.update()
+
+      return Promise.delay(150).then(() => {
+        const callArg = callback.lastCall.args[0]
+        expect(callArg.formData).toEqual({
+          Array: [ value2, value1 ]
+        })
+      })
+    })
+
+    it('should be able to move an item down', () => {
+      component.find('.rendition-form-array-item__move-down')
+        .first()
+        .simulate('click')
+
+      component.update()
+
+      return Promise.delay(150).then(() => {
+        const callArg = callback.lastCall.args[0]
+        expect(callArg.formData).toEqual({
+          Array: [ value1, value2 ]
+        })
+      })
+    })
+
+    it('should be able to remove an item', () => {
+      component.find('.rendition-form-array-item__remove-item')
+        .last()
+        .simulate('click')
+
+      component.update()
+
+      return Promise.delay(150).then(() => {
+        const callArg = callback.lastCall.args[0]
+        expect(callArg.formData).toEqual({
+          Array: [ value1 ]
+        })
+      })
+    })
+  })
 })

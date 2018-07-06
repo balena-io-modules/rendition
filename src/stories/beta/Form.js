@@ -36,7 +36,7 @@ const basicPokedexSchema = {
       type: 'string'
     },
     pokedex_number: {
-      title: 'National Pokedex Number',
+      title: 'National Pokèdex Number',
       type: 'number'
     },
     caught: {
@@ -44,8 +44,16 @@ const basicPokedexSchema = {
     },
     first_seen: {
       title: 'First seen',
+      description: 'The first time you saw this pokèmon',
       type: 'string',
       format: 'date-time'
+    },
+    Tags: {
+      description: 'Add useful tags to your pokèmon',
+      type: 'array',
+      items: {
+        type: 'string'
+      }
     }
   }
 }
