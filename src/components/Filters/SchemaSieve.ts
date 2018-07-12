@@ -23,7 +23,7 @@ ajvKeywords(ajv, ['regexp', 'formatMaximum', 'formatMinimum']);
 ajv.addMetaSchema(metaSchema6);
 
 const FULL_TEXT_SLUG = 'full_text_search';
-const DELIMITER = '___';
+const DEFAULT_DELIMITER = '___';
 
 export const filter = (
 	filters: JSONSchema6 | JSONSchema6[],
@@ -188,7 +188,7 @@ const flattenAccumulator = (
 				return accumulator;
 			}
 
-			const newKey = parentKey + DELIMITER + key;
+			const newKey = parentKey + delimiter + key;
 			// If the value is not an object type or
 			// If the value is a key value pair style object, it can be added to the
 			// accumulator
@@ -219,7 +219,7 @@ const flattenAccumulator = (
 // Reduces a multi level schema to a single level
 export const flattenSchema = (
 	schema: JSONSchema6,
-	delimiter: string = DELIMITER,
+	delimiter: string = DEFAULT_DELIMITER,
 ): JSONSchema6 => {
 	return flattenAccumulator(schema, delimiter);
 };
@@ -227,7 +227,7 @@ export const flattenSchema = (
 // Restores a schema that has been flattened with `flattenSchema()`
 export const unflattenSchema = (
 	schema: JSONSchema6,
-	delimiter: string = DELIMITER,
+	delimiter: string = DEFAULT_DELIMITER,
 ) => {
 	const base = cloneDeep(schema);
 
@@ -241,7 +241,7 @@ export const unflattenSchema = (
 		(result, value, field) => {
 			// Skip fields that don't start with the delimiter, as the property hasn't
 			// been flattened
-			if (!startsWith(field, DELIMITER)) {
+			if (!startsWith(field, delimiter)) {
 				result.properties![field] = value;
 				return result;
 			}

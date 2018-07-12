@@ -393,8 +393,8 @@ declare module 'rendition' {
 			schema: JSONSchema6,
 			field: string,
 		): Array<{ slug: string; label: string }>;
-		flattenSchema(schema: JSONSchema6): JSONSchema6;
-		unflattenSchema(schema: JSONSchema6): JSONSchema6;
+		flattenSchema(schema: JSONSchema6, delimiter?: string): JSONSchema6;
+		unflattenSchema(schema: JSONSchema6, delimiter?: string): JSONSchema6;
 	}
 
 	export const SchemaSieve: SchemaSieve;

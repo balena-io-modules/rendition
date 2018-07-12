@@ -1348,6 +1348,52 @@ describe('SchemaSieve', () => {
         }]
       })
     })
+
+    it('should allow a custom delimiter to be used', () => {
+      const schema = {
+        type: 'object',
+        properties: {
+          string: { type: 'string' },
+          nestedString: {
+            type: 'object',
+            properties: {
+              string: { type: 'string' }
+            }
+          },
+          nestedNumber: {
+            type: 'object',
+            properties: {
+              number: { type: 'number' }
+            }
+          },
+          nestedBoolean: {
+            type: 'object',
+            properties: {
+              boolean: { type: 'boolean' }
+            }
+          }
+        }
+      }
+
+      expect(sieve.flattenSchema(schema, '$$$')).toEqual({
+        type: 'object',
+        properties: {
+          string: { type: 'string' },
+          $$$nestedString$$$string: {
+            title: 'string',
+            type: 'string'
+          },
+          $$$nestedNumber$$$number: {
+            title: 'number',
+            type: 'number'
+          },
+          $$$nestedBoolean$$$boolean: {
+            title: 'boolean',
+            type: 'boolean'
+          }
+        }
+      })
+    })
   })
 
   describe('.unflattenSchema()', () => {
@@ -1548,6 +1594,49 @@ describe('SchemaSieve', () => {
           }
         },
         required: [ 'nestedString' ]
+      })
+    })
+
+    it('should allow a custom delimiter to be used', () => {
+      const flattenedSchema = {
+        type: 'object',
+        properties: {
+          string: { type: 'string' },
+          $$$nestedString$$$string: {
+            type: 'string'
+          },
+          $$$nestedNumber$$$number: {
+            type: 'number'
+          },
+          $$$nestedBoolean$$$boolean: {
+            type: 'boolean'
+          }
+        }
+      }
+
+      expect(sieve.unflattenSchema(flattenedSchema, '$$$')).toEqual({
+        type: 'object',
+        properties: {
+          string: { type: 'string' },
+          nestedString: {
+            type: 'object',
+            properties: {
+              string: { type: 'string' }
+            }
+          },
+          nestedNumber: {
+            type: 'object',
+            properties: {
+              number: { type: 'number' }
+            }
+          },
+          nestedBoolean: {
+            type: 'object',
+            properties: {
+              boolean: { type: 'boolean' }
+            }
+          }
+        }
       })
     })
   })
