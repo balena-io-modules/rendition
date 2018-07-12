@@ -8,7 +8,10 @@ import styled from 'styled-components';
 import Button from '../../../components/Button';
 import { Box } from '../../../components/Grid';
 import * as utils from '../../../utils';
-import FieldTemplate from './FieldTemplate';
+import { DescriptionField } from './fields/DescriptionField';
+import { TitleField } from './fields/TitleField';
+import ArrayFieldTemplate from './templates/ArrayFieldTemplate';
+import FieldTemplate from './templates/FieldTemplate';
 import BaseInput from './widgets/BaseInput';
 
 const SUPPORTED_SCHEMA_FORMATS = [
@@ -26,6 +29,13 @@ const widgets: {
 	[k: string]: any;
 } = {
 	BaseInput,
+};
+
+const fields: {
+	[k: string]: any;
+} = {
+	DescriptionField,
+	TitleField,
 };
 
 const FormWrapper = styled(Box)`
@@ -114,7 +124,9 @@ export default class FormHOC extends React.Component<
 					onChange={this.change}
 					uiSchema={uiSchema}
 					widgets={widgets}
+					fields={fields}
 					FieldTemplate={FieldTemplate}
+					ArrayFieldTemplate={ArrayFieldTemplate}
 				>
 					{hideSubmitButton && <span />}
 
