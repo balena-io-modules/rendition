@@ -7,11 +7,11 @@ import { FormProps } from 'rendition/dist/unstable';
 import styled from 'styled-components';
 import Button from '../../../components/Button';
 import { Box } from '../../../components/Grid';
-import Txt from '../../../components/Txt';
-import Theme from '../../../theme';
 import * as utils from '../../../utils';
-import ArrayFieldTemplate from './ArrayFieldTemplate';
-import FieldTemplate from './FieldTemplate';
+import { DescriptionField } from './fields/DescriptionField';
+import { TitleField } from './fields/TitleField';
+import ArrayFieldTemplate from './templates/ArrayFieldTemplate';
+import FieldTemplate from './templates/FieldTemplate';
 import BaseInput from './widgets/BaseInput';
 
 const SUPPORTED_SCHEMA_FORMATS = [
@@ -25,24 +25,6 @@ const SUPPORTED_SCHEMA_FORMATS = [
 	'uri',
 ];
 
-const DescriptionField = ({
-	id,
-	description,
-}: {
-	id: string;
-	description?: string;
-}) => {
-	if (!description) {
-		return null;
-	}
-
-	return (
-		<Txt mb={1} id={id} color={Theme.colors.text.light}>
-			{description}
-		</Txt>
-	);
-};
-
 const widgets: {
 	[k: string]: any;
 } = {
@@ -53,6 +35,7 @@ const fields: {
 	[k: string]: any;
 } = {
 	DescriptionField,
+	TitleField,
 };
 
 const FormWrapper = styled(Box)`

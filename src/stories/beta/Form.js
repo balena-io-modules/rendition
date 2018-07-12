@@ -48,7 +48,8 @@ const basicPokedexSchema = {
       type: 'string',
       format: 'date-time'
     },
-    Tags: {
+    tags: {
+      title: 'Tags',
       description: 'Add useful tags to your pokèmon',
       type: 'array',
       items: {

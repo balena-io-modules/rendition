@@ -2,7 +2,7 @@ import * as React from 'react';
 import { FaArrowDown, FaArrowUp, FaClose, FaPlus } from 'react-icons/lib/fa';
 import { ArrayFieldTemplateProps } from 'react-jsonschema-form';
 import styled from 'styled-components';
-import { Box, Button, Flex } from '../../../';
+import { Box, Button, Flex } from '../../../../';
 
 interface ArrayFieldTitleProps {
 	// TODO: type this property correctly one this PR is merged https://github.com/DefinitelyTyped/DefinitelyTyped/pull/27164
@@ -29,7 +29,7 @@ interface ArrayFieldDescriptionProps {
 	// TODO: type this property correctly one this PR is merged https://github.com/DefinitelyTyped/DefinitelyTyped/pull/27164
 	DescriptionField: any;
 	idSchema: ArrayFieldTemplateProps['idSchema'];
-	description?: string | React.ReactElement<any>;
+	description?: string | JSX.Element;
 }
 
 const ArrayFieldDescription = ({
@@ -49,7 +49,6 @@ const ActionButton = styled(Button)`
 `;
 
 export default (props: ArrayFieldTemplateProps) => {
-	console.log(props);
 	return (
 		<div className={props.uiSchema.classNames}>
 			<ArrayFieldTitle

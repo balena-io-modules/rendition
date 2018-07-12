@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Box } from '../../../components/Grid';
-import { LabelElement } from './LabelElement';
+import { Box } from '../../../../components/Grid';
+import { LabelElement } from '../LabelElement';
 
 const REQUIRED_FIELD_SYMBOL = '*';
 
