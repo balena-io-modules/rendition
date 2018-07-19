@@ -19,6 +19,33 @@ The `columns` property should be an array of objects with the following properti
 | render | <code>(value: any, row: T) => string &#124; number &#124; number &#124; JSX.Element &#124; null</code> | - | Use a custom render function to display the value in each column cell. This function will be called with the value of the `field` provided and the row data (`T`) |
 | sortable | <code>boolean &#124; (a: T, b: T) => number</code> | - | If true, the column will be sortable using an alphanumeric sort, alternatively a function can be provided allowing finer grained control over sorting |
 
+## Notes
+
+For performance reasons table rows are only re-rendered if the row properties
+have changed. For this reason, rows **will not** re-render if their properties
+are mutated: you should clone the item instead, for example:
+
+```js
+update (index) {
+  const newData = this.state.data
+  const element = newData[index]
+  newData[index] = Object.assign({}, element, { active: !element.active })
+  this.setState({ data: newData })
+}
+```
+
+See the **Updating data in a table** story for an example of how this can be
+done using a high order component.
+
+Additionally, because of this rendering behaviour the `render()` functions in
+the `Table` component's `columns` property should only use values provided to 
+the render function.
+When `render()` functions are provided, they must act like pure functions with 
+respect to their props. They should only rely on their arguments to generate 
+their output and not use any context variables. If you are using a context 
+variable in your `render()` function, then changes to that variable will not 
+cause a re-render of the component and will not be reflected on the table.
+
 ## Props
 
 | Name          | Type      | Default   | Required   | Description                                          |

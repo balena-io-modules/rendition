@@ -1,8 +1,9 @@
+import * as _ from 'lodash'
 import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 import styled from 'styled-components'
-import { Table } from '../'
+import { Input, Table } from '../'
 import PokeDex from './assets/pokedex'
 import * as Readme from './README/Table.md'
 
@@ -47,6 +48,36 @@ const columns = [
     }
   }
 ]
+
+class HOC extends React.Component {
+  constructor () {
+    super()
+
+    this.state = {
+      PokeDex: _.cloneDeep(PokeDex)
+    }
+
+    this.changeName = this.changeName.bind(this)
+  }
+
+  changeName (e) {
+    const PokeDex = this.state.PokeDex.slice()
+
+    PokeDex[0] = Object.assign({}, PokeDex[0], { Name: e.target.value })
+
+    this.setState({ PokeDex })
+  }
+
+  render () {
+    const { PokeDex } = this.state
+    return (
+      <Container>
+        <Input mb={3} value={PokeDex[0].Name} onChange={this.changeName} />
+        <Table columns={columns} data={PokeDex} />
+      </Container>
+    )
+  }
+}
 
 storiesOf('Core/Table', module)
   .addDecorator(withReadme(Readme))
@@ -147,4 +178,7 @@ storiesOf('Core/Table', module)
         />
       </Container>
     )
+  })
+  .add('Updating data in a table', () => {
+    return <HOC />
   })

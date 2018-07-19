@@ -330,10 +330,9 @@ describe('Table component', () => {
 
   describe('data property', () => {
     it('should display the data fields specified in the `columns` attribute', () => {
-      const field = 'Name'
       const cols = [
         {
-          field
+          field: 'Name'
         }
       ]
 
@@ -357,9 +356,171 @@ describe('Table component', () => {
       const cellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
         .map(element => element.text())
 
-      const dataText = _.map(data, field)
+      const dataText = _.map(data, 'Name')
 
       expect(cellsText).toEqual(dataText)
+    })
+
+    it('should update the table when data is added', () => {
+      const cols = [
+        {
+          field: 'Name'
+        }
+      ]
+
+      const data = [
+        {
+          Name: 'Caterpie',
+          description: 'lorem ipsum dolor sit amet'
+        },
+        {
+          Name: 'Blastoise',
+          description: 'consecteur adipiscing elit, sed do eiusmod'
+        }
+      ]
+
+      const component = mount(
+        <Table columns={cols} data={data} />
+      )
+
+      const cellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
+        .map(element => element.text())
+
+      const dataText = _.map(data, 'Name')
+
+      expect(cellsText).toEqual(dataText)
+
+      data.push({
+        Name: 'Squrtle'
+      })
+
+      component.setProps({ data })
+
+      const updatedCellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
+        .map(element => element.text())
+
+      const updatedDataText = _.map(data, 'Name')
+
+      expect(updatedCellsText).toEqual(updatedDataText)
+    })
+
+    it('should update the table when data is added and a render function is used', () => {
+      const cols = [
+        {
+          field: 'Name',
+          render: (value) => <p>Name: {value}</p>
+        }
+      ]
+
+      const data = [
+        {
+          Name: 'Caterpie',
+          description: 'lorem ipsum dolor sit amet'
+        },
+        {
+          Name: 'Blastoise',
+          description: 'consecteur adipiscing elit, sed do eiusmod'
+        }
+      ]
+
+      const component = mount(
+        <Table columns={cols} data={data} />
+      )
+
+      data.push({
+        Name: 'Squirtle'
+      })
+
+      component.setProps({ data })
+
+      const cellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
+        .map(element => element.text())
+
+      const dataText = _.map(data, (field) => `Name: ${field.Name}`)
+
+      expect(cellsText).toEqual(dataText)
+    })
+
+    it('should not update the table when a data item changes in a mutable way', () => {
+      const cols = [
+        {
+          field: 'Name'
+        }
+      ]
+
+      const data = [
+        {
+          Name: 'Caterpie',
+          description: 'lorem ipsum dolor sit amet'
+        },
+        {
+          Name: 'Blastoise',
+          description: 'consecteur adipiscing elit, sed do eiusmod'
+        }
+      ]
+
+      const component = mount(
+        <Table columns={cols} data={data} />
+      )
+
+      const cellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
+        .map(element => element.text())
+
+      const dataText = _.map(data, 'Name')
+
+      expect(cellsText).toEqual(dataText)
+
+      data[0].Name = 'Squirtle'
+
+      component.setProps({ data })
+
+      const updatedCellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
+        .map(element => element.text())
+
+      const updatedDataText = _.map(data, 'Name')
+
+      expect(updatedCellsText).not.toEqual(updatedDataText)
+    })
+
+    it('should update the table when a data item changes in an immutable way', () => {
+      const cols = [
+        {
+          field: 'Name'
+        }
+      ]
+
+      const data = [
+        {
+          Name: 'Caterpie',
+          description: 'lorem ipsum dolor sit amet'
+        },
+        {
+          Name: 'Blastoise',
+          description: 'consecteur adipiscing elit, sed do eiusmod'
+        }
+      ]
+
+      const component = mount(
+        <Table columns={cols} data={data} />
+      )
+
+      const cellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
+        .map(element => element.text())
+
+      const dataText = _.map(data, 'Name')
+
+      expect(cellsText).toEqual(dataText)
+
+      data[0] = { Name: 'Squirtle' }
+
+      component.setProps({ data })
+
+      const updatedCellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
+        .map(element => element.text())
+
+      const updatedDataText = _.map(data, 'Name')
+
+      expect(updatedCellsText).toEqual(updatedDataText)
     })
   })
 
