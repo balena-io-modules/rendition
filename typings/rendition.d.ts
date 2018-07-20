@@ -275,7 +275,6 @@ declare module 'rendition' {
 		justify?: string | string[];
 		flexDirection?: string | string[];
 		wrap?: boolean | boolean[] | string;
-		column?: boolean;
 	}
 
 	class Flex extends RenderableElementWithProps<FlexProps, any> {}

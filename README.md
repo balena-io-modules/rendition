@@ -52,6 +52,7 @@ Each component has its own README file that can be seen at the bottom of it's pa
 - [DropDownButton](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FDropDownButtons)
 - [Filters](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FFilters)
 - [Fixed](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FFixed)
+- [Flex](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FFlex)
 - [Gauge](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FGauge)
 - [Img](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FImg)
 - [Input](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FInput)
