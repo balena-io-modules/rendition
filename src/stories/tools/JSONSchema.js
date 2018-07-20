@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as debounce from 'lodash/debounce'
 import { storiesOf } from '@storybook/react'
-import { Box, Flex, Text, Textarea } from '../../'
+import { Box, Flex, Txt, Textarea } from '../../'
 const Ajv = require('ajv')
 const ajvKeywords = require('ajv-keywords')
 const metaSchema6 = require('ajv/lib/refs/json-schema-draft-06.json')
@@ -19,6 +19,7 @@ class Validator extends React.Component {
     this.state = {
       data: '',
       schema: '',
+      schemaError: null,
       errors: null,
       valid: null
     }
@@ -27,20 +28,27 @@ class Validator extends React.Component {
       this.setState({ errors: null, valid: null })
       try {
         const schema = JSON.parse(this.state.schema)
-        console.log('SCHEMA', schema)
-        const data = JSON.parse(this.state.data)
-        console.log('DATA', data)
-
         // Remove all schemas that may have been compiled already
         ajv.removeSchema(/^.*$/)
 
-        const validate = ajv.compile(schema)
+        let validate
+
+        try {
+          validate = ajv.compile(schema)
+          this.setState({ schemaError: null })
+        } catch (e) {
+          this.setState({ schemaError: e.message })
+
+          return
+        }
+
+        const data = JSON.parse(this.state.data)
+
         const valid = validate(data)
 
         if (valid) {
           this.setState({ valid: true })
         } else {
-          console.log(validate.errors)
           this.setState({ errors: validate.errors })
         }
       } catch (e) {
@@ -71,7 +79,7 @@ class Validator extends React.Component {
             />
           </Box>
           <Box p={2} flex='1'>
-            <label>Data</label>
+            <label>JSON</label>
             <Textarea
               monospace
               rows='10'
@@ -80,13 +88,22 @@ class Validator extends React.Component {
             />
           </Box>
         </Flex>
-        {this.state.valid && <Text success>No errors found</Text>}
-        {this.state.errors &&
-          this.state.errors.map((err, index) => (
-            <Text key={index} danger>
-              <strong>{err.schemaPath}</strong>: {err.message}
-            </Text>
-          ))}
+
+        {this.state.schemaError && (
+          <Box p={3}>
+            <Txt color='red'>{this.state.schemaError}</Txt>
+          </Box>
+        )}
+
+        <Box p={3}>
+          {this.state.valid && <Txt color='green'>No errors found</Txt>}
+          {this.state.errors &&
+            this.state.errors.map((err, index) => (
+              <Txt key={index} color='red'>
+                <strong>{err.schemaPath}</strong>: {err.message}
+              </Txt>
+            ))}
+        </Box>
       </Box>
     )
   }
