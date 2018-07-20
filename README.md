@@ -30,9 +30,55 @@ ReactDOM.render(
 );
 ```
 
-### Demo
+### Components
 
 For an interactive demo of all components, see https://resin-io-modules.github.io/rendition
+
+Each component has its own README file that can be seen at the bottom of it's page.
+
+#### Core
+
+- [Alert](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FAlert)
+- [Badge](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FBadge)
+- [BadgeSelect](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FBadgeSelect)
+- [Banner](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FBanner)
+- [Button](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FButton)
+- [Card](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FCard)
+- [CodeWithCopy](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FCodeWithCopy)
+- [Container](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FContainer)
+- [Divider](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FDivider)
+- [DropDownButton](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FDropDownButtons)
+- [Filters](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FFilters)
+- [Fixed](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FFixed)
+- [Gauge](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FGauge)
+- [Img](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FImg)
+- [Input](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FInput)
+- [Modal](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FModal)
+- [NavBar](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FNavBar)
+- [ProgressBar](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FProgessBar)
+- [Search](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FSearch)
+- [Select](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FSelect)
+- [Table](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FTable)
+- [Terminal](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FTerminal)
+- [TextWithCopy](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FTextWithCopy)
+- [Textarea](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FTextarea)
+- [Tooltip](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FTooltip)
+
+#### Typography
+
+- [Heading](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FHeading)
+- [Link](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FLink)
+- [Txt](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FTxt)
+
+#### Beta
+
+- [Form](https://resin-io-modules.github.io/rendition/?selectedKind=Beta%2FForm)
+
+#### Extra
+
+- [Markdown](https://resin-io-modules.github.io/rendition/?selectedKind=Extra%2FMarkdown)
+- [Mermaid](https://resin-io-modules.github.io/rendition/?selectedKind=Extra%2FMermaid)
+
 
 ### Provider
 
