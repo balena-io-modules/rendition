@@ -7,6 +7,12 @@
 
 A library of UI components, built using [React][react], [recompose][recompose], [styled-components][styled-components] and [styled-system][styled-system].
 
+## Installation
+
+```
+npm install --save rendition
+```
+
 ## Usage
 
 ```jsx
