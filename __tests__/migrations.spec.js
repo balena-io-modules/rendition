@@ -223,6 +223,58 @@ describe('migrations', () => {
       })
     })
 
+    it('should ignore input that is already migrated', () => {
+      const newSchema = {
+        type: 'object',
+        properties: {
+          is_running_latest__release: {
+            title: 'Running Latest Release',
+            type: 'boolean'
+          }
+        }
+      }
+
+      const oldFilter = {
+        type: 'Boolean',
+        name: 'is_running_latest__release',
+        label: 'Running Latest Release',
+        availableOperators: [
+          {
+            label: 'is true',
+            value: 'is true'
+          },
+          {
+            label: 'is false',
+            value: 'is false'
+          }
+        ],
+        operator: 'is true',
+        value: '',
+        id: 'tOYR2EqLICRfS1cS'
+      }
+
+      const testData = [
+        {
+          id: 1,
+          is_running_latest__release: false
+        },
+        {
+          id: 2,
+          is_running_latest__release: true
+        }
+      ]
+
+      const migratedFilter = migrations.migrateLegacyFilter(newSchema, oldFilter)
+
+      const reMigratedFilter = migrations.migrateLegacyFilter(newSchema, migratedFilter)
+      expect(reMigratedFilter).toEqual(migratedFilter)
+
+      const results = sieve.filter([reMigratedFilter], testData)
+
+      expect(results.length).toEqual(1)
+      expect(results[0].id).toEqual(2)
+    })
+
     it(`should convert legacy 'Full Text Search' filters`, () => {
       const searchTerm = 'test'
       const legacyFilter = {
