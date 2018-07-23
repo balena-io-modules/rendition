@@ -234,18 +234,26 @@ const getLegacyFilterSignature = (
 // Converts v3 filters to v4 filters
 export const migrateLegacyFilter = (
 	schema: JSONSchema6,
-	legacyFilter: v3.Filter,
+	legacyFilter: v3.Filter | JSONSchema6,
 ): JSONSchema6 => {
-	if (legacyFilter.name === 'Full text search') {
-		return createFullTextSearchFilter(schema, legacyFilter.value);
+	// Check if this filter has already been converted, and return immediately if
+	// it has
+	if (!(legacyFilter as v3.Filter).name) {
+		return legacyFilter as JSONSchema6;
+	}
+
+	const filter: v3.Filter = legacyFilter as v3.Filter;
+
+	if (filter.name === 'Full text search') {
+		return createFullTextSearchFilter(schema, filter.value);
 	}
 
 	const signatures: Array<FilterSignature | null> = [];
 
-	signatures.push(getLegacyFilterSignature(legacyFilter));
+	signatures.push(getLegacyFilterSignature(filter));
 
-	if (legacyFilter.extra) {
-		const extraSignatures = legacyFilter.extra.or.map(getLegacyFilterSignature);
+	if (filter.extra) {
+		const extraSignatures = filter.extra.or.map(getLegacyFilterSignature);
 		Array.prototype.push.apply(signatures, extraSignatures);
 	}
 
