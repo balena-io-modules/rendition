@@ -17,7 +17,7 @@ deploy:
     email: accounts@resin.io
     skip_cleanup: true
     api_key:
-      secure: tL6tRzDN2331z1yik1UQtH3sKbMtcdqVXO2DNQgrr55/4x5fAq76ZB/pkW4Iiafopb4+OP03CN5Koo+loBDt6MXwi08k/oJwUkPyU3VqAC9AL3RwhPLuSTKQNCeZ/ALQYN2y0kPCr2z1GAvijXPQMzhNJK7nIhWgi6JXMKkxC9K7rVLazJwF4F0ZTYOpI9CCix1kbJfVHwnAX05EDXhdXsvoBLSmBPCAAPJmkOaPgmFsCnoJLXuCJjkBj69pyarwAolAEckrX5Fh6T72+B7NiMZaAAX53rTxZJCyWhKk/kClTBnIBYW35YufCIg+NTHPTrEwyYU+ouUHAsIzRE8TMWUuooolgWmC4ZozR2uphIu5uIWSSRzUlJgQ8z3T1ZOz+KCnSo/H3Si5gurzDSkQ2i9jZLI/B1oCq7DHYdMhC6T8HJnpF1KU3A2n52NWdTvFzD9ws8MtTM7ugBtEGrg/X/+9iTK0Sj+8OWOtnFHxcuTdTcke5A0S2KmgREss1cehYM0PxmGuxbLMe6ZcYAZ0xqhtp4OkjRN0bczymbvPcZqZhwvIbfjD4p1k1xMhtZjlmha15v9hSxNV8mEd/yptFle+f+E7bw1aRPjJFSS6kwxiQqhX8GyEjtiqFPCcUhL+FY9t70gpN6LA3fIdOct5+6KQiS4A1dIotsGuiMqgqPw=
+      secure: Qc0muG6T0biSVwGw3bHG3axnLO+tHLpy1WVKCPhabisSsidnyrLxYl7Otkxq8+KOrdRR2i43MDqxoJ0mKnv9j65bZGfpKa8/BSUSFq6uj296M2TckMlmu9kW08/h2z5ObyNxfvqohx9nL6gw7ezlu0i8x42nUbaKrZv7v/MnZ/N0QD2KL+d19Aqc5/NYNflWAeUMx1UAG4ohLm7iLhEy+X0IaCG7zCDfIP3vb4NR5+bI2ahEubqNPM+9Z9AesOtV6fXU0M3MPKeUNrtXZW0/1faukd78fGBMppUypWJxGXg7JA4QU9QFRacZEDid7Q5/gGXduWbvCnITBE63N9SuAGWS99WJkAUMCrd1XdQMkMenaFmenOVqSvEXcRSEDieLyw5qksH3W1jFbg/yjyVKFpOMwWNTfJkxfWv8ay3+tTnX5JwHaah80d6uSLNWZyYgahUC3cNz14OY7vJNh2DQ7EN3oVUFRC4pKkbmOemX/AZTSxZn/6Ito6Srb/C6zktnIoRgvitNhsm3H2NlYyGtSYCTgjaU44BjeqHzwOIrVPvXBHm1XF1QJnZvVnsSLt9TMG81YABol6TnOeYO4aI/Zuzi3oDMtpeBe30O2eLjRs5+Tv2sasqL1cIZDgNtoqaRXgeqtjY1jch75v0fBTpIXGkE5VEVU+vqDWtZo6on1oQ=
     on:
       tags: true
       condition: $CAN_DEPLOY = 'true' && $TRAVIS_TAG =~ ^v?[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+
