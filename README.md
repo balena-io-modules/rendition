@@ -15,6 +15,8 @@ npm install --save rendition
 
 ## Usage
 
+Wrap your application in the `Provider` component and start using components!
+
 ```jsx
 import React from 'react'
 import ReactDOM from 'react-dom'
