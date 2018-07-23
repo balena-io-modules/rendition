@@ -115,10 +115,11 @@ class Modal extends React.Component<ModalProps, any> {
 				onClick={() => (props.cancel || props.done)()}
 			>
 				<ModalBackdrop z={8888} bg="rgba(0,0,0,0.4)" top right bottom left />
-				<ModalSizer>
+				<ModalSizer style={props.containerStyle}>
 					<ModalPanel
 						w={w || width || DEFAULT_MODAL_WIDTH}
 						onClick={stopPropagation}
+						style={props.style}
 					>
 						{props.titleElement ? (
 							<ModalHeader>{props.titleElement}</ModalHeader>

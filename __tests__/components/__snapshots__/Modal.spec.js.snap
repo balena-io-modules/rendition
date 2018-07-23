@@ -14,10 +14,12 @@ exports[`Modal renders correctly 1`] = `
     />
     <div
       className="sc-eHgmQL jAAkQv sc-kGXeez eHjdfB sc-chPdSV hzgnFO sc-jzJRlG SxpZa"
+      style={undefined}
     >
       <div
         className="sc-cvbbAY beCtWv sc-kGXeez igImQF sc-chPdSV hzgnFO sc-jzJRlG gFAJVR"
         onClick={[Function]}
+        style={undefined}
       >
         Modal
         <div

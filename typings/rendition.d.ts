@@ -354,6 +354,7 @@ declare module 'rendition' {
 		primaryButtonProps?: ButtonProps;
 		secondaryButtonProps?: ButtonProps;
 		cancelButtonProps?: ButtonProps;
+		containerStyle?: React.CSSProperties;
 	}
 
 	class Modal extends RenderableElementWithProps<ModalProps, any> {}
