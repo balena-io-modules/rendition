@@ -59,6 +59,7 @@ Each component has its own README file that can be seen at the bottom of it's pa
 - [Input](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FInput)
 - [Modal](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FModal)
 - [NavBar](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FNavBar)
+- [Pill](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FPill)
 - [ProgressBar](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FProgessBar)
 - [Search](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FSearch)
 - [Select](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FSelect)
