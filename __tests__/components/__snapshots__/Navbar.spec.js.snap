@@ -1,6 +1,102 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Navbar renders correctly 1`] = `
+exports[`Navbar renders correctly with a single children prop 1`] = `
+<div
+  className="sc-jTzLTM bHwELW"
+>
+  <div
+    className="sc-kgoBCf cwVKXx sc-kAzzGY iLlCGt sc-fjdhpX dBcBpm"
+  >
+    <div
+      className="sc-kGXeez QXPYf"
+    >
+      <div
+        className="sc-chPdSV dfDVBP sc-cSHVUG kBGaNN sc-jzJRlG jJxvfu"
+        direction={
+          Array [
+            "column",
+            "row",
+          ]
+        }
+      >
+        <div
+          className="sc-chPdSV dfDVBP sc-cSHVUG kBGaNN sc-jzJRlG jJxvfu"
+        >
+          <div
+            className="sc-kpOJdX gjfIsR sc-kgoBCf cmynHa sc-kAzzGY bHluuy sc-fjdhpX cqKzNA"
+          />
+          <div
+            className="sc-dxgOiQ bTZgME sc-kgoBCf hSuaOE sc-kAzzGY bHluuy sc-fjdhpX kGtvco"
+            display={
+              Array [
+                "block",
+                "none",
+              ]
+            }
+            onClick={[Function]}
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m3.4 9.1h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.2h-33.2v-3.2z"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          className="sc-ckVGcZ izzoql sc-chPdSV hcSthT sc-cSHVUG kBGaNN sc-jzJRlG krtRJA"
+          maxHeight={
+            Array [
+              "0vh",
+              "none",
+            ]
+          }
+        >
+          <div
+            className="sc-chPdSV dMuhYu sc-cSHVUG kBGaNN sc-jzJRlG ffNkmI"
+            direction={
+              Array [
+                "column",
+                "row",
+              ]
+            }
+          >
+            <div
+              className="sc-kgoBCf hdQKjv sc-kAzzGY bHluuy sc-fjdhpX iUbdmZ"
+              onClick={[Function]}
+            >
+              <a
+                className="sc-VigVT tcTAH sc-kEYyzF tuesb"
+                color="white"
+                href="/docs/"
+                rel={undefined}
+                target={undefined}
+              >
+                Docs
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Navbar renders correctly with more than one children prop 1`] = `
 <div
   className="sc-jTzLTM bHwELW"
 >
@@ -118,6 +214,77 @@ exports[`Navbar renders correctly 1`] = `
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Navbar renders correctly with no children prop 1`] = `
+<div
+  className="sc-jTzLTM bHwELW"
+>
+  <div
+    className="sc-kgoBCf cwVKXx sc-kAzzGY iLlCGt sc-fjdhpX dBcBpm"
+  >
+    <div
+      className="sc-kGXeez QXPYf"
+    >
+      <div
+        className="sc-chPdSV dfDVBP sc-cSHVUG kBGaNN sc-jzJRlG jJxvfu"
+        direction={
+          Array [
+            "column",
+            "row",
+          ]
+        }
+      >
+        <div
+          className="sc-chPdSV dfDVBP sc-cSHVUG kBGaNN sc-jzJRlG jJxvfu"
+        >
+          <div
+            className="sc-kpOJdX gjfIsR sc-kgoBCf cmynHa sc-kAzzGY bHluuy sc-fjdhpX cqKzNA"
+          />
+          <div
+            className="sc-dxgOiQ bTZgME sc-kgoBCf hSuaOE sc-kAzzGY bHluuy sc-fjdhpX kGtvco"
+            display={
+              Array [
+                "block",
+                "none",
+              ]
+            }
+            onClick={[Function]}
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m3.4 9.1h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.2h-33.2v-3.2z"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          className="sc-ckVGcZ izzoql sc-chPdSV hcSthT sc-cSHVUG kBGaNN sc-jzJRlG krtRJA"
+          maxHeight={
+            Array [
+              "0vh",
+              "none",
+            ]
+          }
+        />
       </div>
     </div>
   </div>

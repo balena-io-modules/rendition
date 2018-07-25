@@ -49,7 +49,8 @@ class Navbar extends React.Component {
   }
 
   render () {
-    const { children, brand, ...props } = this.props
+    const { brand, ...props } = this.props
+    const children = this.props.children ? [].concat(this.props.children) : null
     return (
       <Box {...props}>
         <Container>
@@ -70,20 +71,22 @@ class Navbar extends React.Component {
               width={['100%', 'auto']}
               ml={[0, 'auto']}
             >
-              <Flex width={['100%', 'auto']} direction={['column', 'row']}>
-                {children.map((child, i) => {
-                  return (
-                    <Box
-                      onClick={() => this.toggle()}
-                      width={['100%', 'auto']}
-                      p={2}
-                      key={i}
-                    >
-                      {child}
-                    </Box>
-                  )
-                })}
-              </Flex>
+              {children && (
+                <Flex width={['100%', 'auto']} direction={['column', 'row']}>
+                  {children.map((child, i) => {
+                    return (
+                      <Box
+                        onClick={() => this.toggle()}
+                        width={['100%', 'auto']}
+                        p={2}
+                        key={i}
+                      >
+                        {child}
+                      </Box>
+                    )
+                  })}
+                </Flex>
+              )}
             </MenuBox>
           </Flex>
         </Container>
