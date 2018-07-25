@@ -77,7 +77,7 @@
     "@types/react-dom": "^16.0.4",
     "@types/react-icons": "^2.2.4",
     "@types/react-jsonschema-form": "^1.0.0",
-    "@types/recompose": "^0.24.7",
+    "@types/recompose": "^0.26.2",
     "@types/uuid": "^3.4.3",
     "ajv": "^6.2.0",
     "ajv-keywords": "^3.1.0",
