@@ -45,6 +45,7 @@ Each component has its own README file that can be seen at the bottom of it's pa
 - [BadgeSelect](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FBadgeSelect)
 - [Banner](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FBanner)
 - [Button](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FButton)
+- [Box](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FBox)
 - [Card](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FCard)
 - [CodeWithCopy](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FCodeWithCopy)
 - [Container](https://resin-io-modules.github.io/rendition/?selectedKind=Core%2FContainer)
