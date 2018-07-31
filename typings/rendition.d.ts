@@ -369,6 +369,8 @@ declare module 'rendition' {
 
 	interface ProgressBarProps extends DefaultProps, Coloring, Sizing {
 		value: number;
+		color?: string;
+		background?: string;
 	}
 
 	class ProgressBar extends RenderableElementWithProps<ProgressBarProps, any> {}
