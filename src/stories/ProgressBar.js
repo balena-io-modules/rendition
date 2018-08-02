@@ -54,6 +54,7 @@ storiesOf('Core/ProgressBar', module)
         <Progressor mb={3} warning value={30} />
         <Progressor mb={3} success value={25} />
         <Progressor mb={3} info value={20} />
+        <Progressor mb={3} background='purple' color='red' value={15} />
       </Container>
     )
   })
@@ -67,6 +68,13 @@ storiesOf('Core/ProgressBar', module)
         <Progressor mb={3} emphasized warning value={30} />
         <Progressor mb={3} emphasized success value={25} />
         <Progressor mb={3} emphasized info value={20} />
+        <Progressor
+          mb={3}
+          emphasized
+          background='purple'
+          color='red'
+          value={15}
+        />
       </Container>
     )
   })
