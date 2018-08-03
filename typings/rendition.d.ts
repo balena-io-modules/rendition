@@ -445,6 +445,10 @@ declare module 'rendition' {
 		// Optionally provide a key that should be used as a unique identifier for each row
 		rowKey?: keyof T;
 		tbodyPrefix?: JSX.Element | JSX.Element[];
+		// Highlights a row. This property requires that you have provided a
+		// `rowKey` property: the row with a `rowKey` property that matches this
+		// value is highlighted.
+		highlightedRows?: any;
 	}
 
 	class Table<T> extends RenderableElementWithProps<TableProps<T>, any> {}
