@@ -151,36 +151,37 @@ const DismissAlert = (props: AlertProps) => (
 );
 
 export default withTheme(
-	asRendition(({ emphasized, plaintext, ...props }: AlertProps) => {
+	asRendition((props: AlertProps) => {
+		const { emphasized, plaintext, prefix, ...restProps } = props;
 		const title = plaintext ? getIcon(props) : getTitle(props);
 		if (plaintext) {
 			return (
-				<Plaintext {...props}>
+				<Plaintext {...restProps}>
 					<div>
 						{title && <AlertTitle children={title} />}
 						{props.children}
 					</div>
-					{props.onDismiss && <DismissAlert {...props} />}
+					{props.onDismiss && <DismissAlert {...restProps} />}
 				</Plaintext>
 			);
 		} else if (emphasized) {
 			return (
-				<Filled emphasized {...props}>
+				<Filled emphasized {...restProps}>
 					<div>
 						{title && <AlertTitle children={title} />}
 						{props.children}
 					</div>
-					{props.onDismiss && <DismissAlert {...props} />}
+					{props.onDismiss && <DismissAlert {...restProps} />}
 				</Filled>
 			);
 		} else {
 			return (
-				<Outline {...props}>
+				<Outline {...restProps}>
 					<div>
 						{title && <AlertTitle children={title} />}
 						{props.children}
 					</div>
-					{props.onDismiss && <DismissAlert {...props} />}
+					{props.onDismiss && <DismissAlert {...restProps} />}
 				</Outline>
 			);
 		}
