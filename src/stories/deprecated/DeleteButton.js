@@ -10,5 +10,5 @@ const Container = styled.div`
 storiesOf('Deprecated/DeleteButton', module)
   .addDecorator(story => <Container>{story()}</Container>)
   .add('Standard', () => {
-    return <DeleteButton onPress={action('DeleteButton clicked')} />
+    return <DeleteButton onClick={action('DeleteButton clicked')} />
   })

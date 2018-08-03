@@ -28,7 +28,7 @@ storiesOf('Core/Tooltips', module)
           tooltip='Tooltip on top'
           m={2}
           primary
-          onPress={action('case-1')}
+          onClick={action('case-1')}
         >
           Tooltip on top
         </Button>
@@ -36,7 +36,7 @@ storiesOf('Core/Tooltips', module)
           tooltip={{ text: 'Tooltip on right', placement: 'right' }}
           m={2}
           secondary
-          onPress={action('case-2')}
+          onClick={action('case-2')}
         >
           Tooltip on right
         </Button>
@@ -44,7 +44,7 @@ storiesOf('Core/Tooltips', module)
           tooltip={{ text: 'Tooltip on bottom', placement: 'bottom' }}
           m={2}
           success
-          onPress={action('case-3')}
+          onClick={action('case-3')}
         >
           Tooltip on bottom
         </Button>
@@ -52,14 +52,14 @@ storiesOf('Core/Tooltips', module)
           tooltip={{ text: 'Tooltip on left', placement: 'left' }}
           m={2}
           tertiary
-          onPress={action('case-4')}
+          onClick={action('case-4')}
         >
           Tooltip on left
         </Button>
         <Button
           tooltip='Tooltip on disabled button'
           m={2}
-          onPress={action('case-5')}
+          onClick={action('case-5')}
           disabled
         >
           Tooltip on disabled button
@@ -74,7 +74,7 @@ storiesOf('Core/Tooltips', module)
           tooltip={{ text: 'Tooltip on top', trigger: 'click' }}
           m={2}
           primary
-          onPress={action('case-1')}
+          onClick={action('case-1')}
         >
           Tooltip on top
         </Button>
@@ -86,7 +86,7 @@ storiesOf('Core/Tooltips', module)
           }}
           m={2}
           secondary
-          onPress={action('case-2')}
+          onClick={action('case-2')}
         >
           Tooltip on right
         </Button>
@@ -98,7 +98,7 @@ storiesOf('Core/Tooltips', module)
           }}
           m={2}
           success
-          onPress={action('case-3')}
+          onClick={action('case-3')}
         >
           Tooltip on bottom
         </Button>
@@ -110,7 +110,7 @@ storiesOf('Core/Tooltips', module)
           }}
           m={2}
           tertiary
-          onPress={action('case-4')}
+          onClick={action('case-4')}
         >
           Tooltip on left
         </Button>
@@ -204,7 +204,7 @@ storiesOf('Core/Tooltips', module)
           }}
           m={2}
           primary
-          onPress={action('case-1')}
+          onClick={action('case-1')}
         >
           Styled tooltip container
         </Button>
@@ -219,7 +219,7 @@ storiesOf('Core/Tooltips', module)
           }}
           m={2}
           primary
-          onPress={action('case-1')}
+          onClick={action('case-1')}
         >
           Styled tooltip arrow
         </Button>
@@ -233,7 +233,7 @@ storiesOf('Core/Tooltips', module)
           }}
           m={2}
           primary
-          onPress={action('case-1')}
+          onClick={action('case-1')}
         >
           Styled tooltip inner
         </Button>
