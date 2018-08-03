@@ -22,7 +22,7 @@ const ajv = new Ajv();
 ajvKeywords(ajv, ['regexp', 'formatMaximum', 'formatMinimum']);
 ajv.addMetaSchema(metaSchema6);
 
-const FULL_TEXT_SLUG = 'full_text_search';
+export const FULL_TEXT_SLUG = 'full_text_search';
 const DEFAULT_DELIMITER = '___';
 
 export const filter = (

@@ -268,11 +268,20 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		});
 	}
 
-	removeFilter({ $id }: JSONSchema6) {
+	removeFilter({ $id, title }: JSONSchema6) {
 		this.setState(
-			prevState => ({
-				filters: reject(prevState.filters, { $id }),
-			}),
+			prevState => {
+				const newState = {
+					...prevState,
+					filters: reject(prevState.filters, { $id }),
+				};
+
+				if (title === SchemaSieve.FULL_TEXT_SLUG) {
+					newState.searchString = '';
+				}
+
+				return newState;
+			},
 			() => this.emitFilterUpdate(),
 		);
 	}
