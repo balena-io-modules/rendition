@@ -82,7 +82,7 @@ const BaseTable = styled.div`
 						: ''};
 			}
 
-			&[data-checked='true'] {
+			&[data-highlight='true'] {
 				${highlightStyle} > [data-display="table-cell"]:first-child {
 					box-shadow: inset 3px 0px 0 ${theme.colors.info.main};
 				}
@@ -111,6 +111,7 @@ const renderField = <T extends {}>(row: T, column: TableColumn<T>): any => {
 
 interface TableRowProps<T> {
 	isChecked: boolean;
+	isHighlighted: boolean;
 	keyAttribute: string | number;
 	onRowClick: (e: any) => void;
 	toggleChecked: (e: any) => void;
@@ -138,11 +139,12 @@ class TableRow<T> extends React.Component<TableRowProps<T>, {}> {
 			href,
 			keyAttribute,
 			isChecked,
+			isHighlighted,
 			showCheck,
 		} = this.props;
 
 		return (
-			<div data-display="table-row" data-checked={isChecked}>
+			<div data-display="table-row" data-highlight={isChecked || isHighlighted}>
 				{showCheck && (
 					<span data-display="table-cell">
 						<input
@@ -211,6 +213,23 @@ export default class Table<T> extends React.Component<
 
 		const identifier = item[rowKey];
 		return some(this.state.checkedItems, { [rowKey]: identifier });
+	}
+
+	isHighlighted(item: T) {
+		if (
+			!this.props.highlightedRows ||
+			this.props.highlightedRows.length === 0
+		) {
+			return false;
+		}
+
+		const rowKey = this.props.rowKey;
+		if (!rowKey) {
+			return false;
+		}
+
+		const identifier = item[rowKey];
+		return includes(this.props.highlightedRows, identifier);
 	}
 
 	isEachRowChecked(checkedItems: T[]): boolean {
@@ -395,11 +414,13 @@ export default class Table<T> extends React.Component<
 					{this.props.tbodyPrefix}
 					{map(this.sortData(data), (row, i) => {
 						const isChecked = this.props.onCheck ? this.isChecked(row) : false;
+						const isHighlighted = this.isHighlighted(row);
 						const key = rowKey ? (row[rowKey] as any) : i;
 						const href = !!getRowHref ? getRowHref(row) : undefined;
 						return (
 							<TableRow
 								isChecked={isChecked}
+								isHighlighted={isHighlighted}
 								key={key}
 								keyAttribute={key}
 								href={href}

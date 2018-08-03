@@ -676,4 +676,40 @@ describe('Table component', () => {
       expect(component.find('[data-display="table-body"] span.foobarbaz')).toHaveLength(1)
     })
   })
+
+  describe('highlightedRows property', () => {
+    it('should highlight the specified row', () => {
+      const component = mount(
+        <Provider>
+          <Table
+            rowKey='pokedex_number'
+            highlightedRows={[2]}
+            columns={[ { field: 'Name' } ]}
+            data={PokeDex}
+          />
+        </Provider>
+      )
+
+      const match = component.find('[data-highlight=true]')
+      expect(match).toHaveLength(1)
+      expect(match.text()).toEqual('Ivysaur')
+    })
+
+    it('should be able to highlight multiple rows', () => {
+      const component = mount(
+        <Provider>
+          <Table
+            rowKey='pokedex_number'
+            highlightedRows={[3, 5]}
+            columns={[ { field: 'Name' } ]}
+            data={PokeDex}
+          />
+        </Provider>
+      )
+
+      const match = component.find('[data-highlight=true]')
+      expect(match).toHaveLength(2)
+      expect(match.map(e => e.text())).toEqual(['Venusaur', 'Charmeleon'])
+    })
+  })
 })

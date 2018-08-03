@@ -179,6 +179,18 @@ storiesOf('Core/Table', module)
       </Container>
     )
   })
+  .add('Highlighted rows', () => {
+    return (
+      <Container>
+        <Table
+          columns={columns}
+          data={PokeDex}
+          rowKey='pokedex_number'
+          highlightedRows={[2, 5]}
+        />
+      </Container>
+    )
+  })
   .add('Updating data in a table', () => {
     return <HOC />
   })
