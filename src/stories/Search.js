@@ -1,35 +1,44 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
-import styled from 'styled-components'
-import { Search } from '../'
+import { Box, Provider, Search } from '../'
 import * as Readme from './README/Search.md'
-
-const Container = styled.div`
-  margin: 30px;
-  width: 500px;
-`
-
-const DarkBackground = styled.div`
-  background: rgb(52, 52, 52);
-`
 
 storiesOf('Core/Search', module)
   .addDecorator(withReadme(Readme))
-  .addDecorator(story => <Container>{story()}</Container>)
-  .addWithInfo('Standard', () => {
-    return <Search />
-  })
-  .addWithInfo('Disabled', () => {
-    return <Search disabled />
-  })
-  .addWithInfo('Dark', () => {
+  .add('Standard', () => {
     return (
-      <DarkBackground>
-        <Search dark />
-      </DarkBackground>
+      <Provider>
+        <Box m={3} w={500}>
+          <Search />
+        </Box>
+      </Provider>
     )
   })
-  .addWithInfo('Placeholder', () => {
-    return <Search dark placeholder='Placeholder Text' />
+  .add('Disabled', () => {
+    return (
+      <Provider>
+        <Box m={3} w={500}>
+          <Search disabled />
+        </Box>
+      </Provider>
+    )
+  })
+  .add('Dark', () => {
+    return (
+      <Provider>
+        <Box m={3} w={500} bg='rgb(52, 52, 52)'>
+          <Search dark />
+        </Box>
+      </Provider>
+    )
+  })
+  .add('Placeholder', () => {
+    return (
+      <Provider>
+        <Box m={3} w={500}>
+          <Search placeholder='Placeholder Text' />
+        </Box>
+      </Provider>
+    )
   })

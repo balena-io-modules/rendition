@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
-import { Box, Terminal } from '../'
+import { Box, Provider, Terminal } from '../'
 import { output1 } from './assets/tty-output'
 import { Repl } from './assets/repl'
 import * as Readme from './README/Terminal.md'
@@ -184,22 +184,28 @@ storiesOf('Core/Terminal', module)
   .addDecorator(withReadme(Readme))
   .add('Standard', () => {
     return (
-      <Box p={30} style={{ height: 500 }}>
-        <InteractiveTerm />
-      </Box>
+      <Provider>
+        <Box p={30} style={{ height: 500 }}>
+          <InteractiveTerm />
+        </Box>
+      </Provider>
     )
   })
   .add('Non interactive', () => {
     return (
-      <Box p={30} style={{ height: 500 }}>
-        <Logger termProps={{ nonInteractive: true }} />
-      </Box>
+      <Provider>
+        <Box p={30} style={{ height: 500 }}>
+          <Logger termProps={{ nonInteractive: true }} />
+        </Box>
+      </Provider>
     )
   })
   .add('Persistent', () => {
     return (
-      <Box p={30}>
-        <PersistentTerm />
-      </Box>
+      <Provider>
+        <Box p={30}>
+          <PersistentTerm />
+        </Box>
+      </Provider>
     )
   })

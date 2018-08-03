@@ -1,7 +1,5 @@
 import { configure, setAddon, addDecorator } from '@storybook/react'
-import infoAddon from '@storybook/addon-info'
 import * as React from 'react'
-import { Provider } from '../src/index'
 import theme from '../src/theme'
 import { injectGlobal } from 'styled-components'
 
@@ -15,10 +13,6 @@ injectGlobal([], {
     fontFamily: theme.font
   }
 })
-
-setAddon(infoAddon)
-
-addDecorator(story => <Provider>{story()}</Provider>)
 
 const req = require.context('../src', true, /\.js$/)
 

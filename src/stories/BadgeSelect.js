@@ -1,43 +1,49 @@
 import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
-import styled from 'styled-components'
-import { BadgeSelect } from '../'
+import { BadgeSelect, Box, Provider } from '../'
 import * as Readme from './README/BadgeSelect.md'
-
-const Container = styled.div`
-  margin: 30px;
-`
 
 storiesOf('Core/BadgeSelect', module)
   .addDecorator(withReadme(Readme))
-  .addDecorator(story => <Container>{story()}</Container>)
   .add('Standard', () => {
     return (
-      <BadgeSelect
-        placeholder='Select a target'
-        items={['wpe', 'web', 'redis']}
-        onItemChange={action('onItemChange')}
-      />
+      <Provider>
+        <Box m={3}>
+          <BadgeSelect
+            placeholder='Select a target'
+            items={['wpe', 'web', 'redis']}
+            onItemChange={action('onItemChange')}
+          />
+        </Box>
+      </Provider>
     )
   })
   .add('Prefix', () => {
     return (
-      <BadgeSelect
-        placeholder='Select a target'
-        items={['wpe', 'web', 'redis']}
-        extraPrefix={['Host OS']}
-        onItemChange={action('onItemChange')}
-      />
+      <Provider>
+        <Box m={3}>
+          <BadgeSelect
+            placeholder='Select a target'
+            items={['wpe', 'web', 'redis']}
+            extraPrefix={['Host OS']}
+            onItemChange={action('onItemChange')}
+          />
+        </Box>
+      </Provider>
     )
   })
   .add('Suffix', () => {
     return (
-      <BadgeSelect
-        placeholder='Select a target'
-        items={['wpe', 'web', 'redis']}
-        extraSuffix={['Host OS']}
-        onItemChange={action('onItemChange')}
-      />
+      <Provider>
+        <Box m={3}>
+          <BadgeSelect
+            placeholder='Select a target'
+            items={['wpe', 'web', 'redis']}
+            extraSuffix={['Host OS']}
+            onItemChange={action('onItemChange')}
+          />
+        </Box>
+      </Provider>
     )
   })
