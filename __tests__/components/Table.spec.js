@@ -633,7 +633,7 @@ describe('Table component', () => {
       const spy = sinon.spy()
       const component = mount(
         <Provider>
-          <Table onRowClick={spy} columns={cols} data={PokeDex} />
+          <Table onRowClick={spy} rowKey='pokedex_number' columns={cols} data={PokeDex} />
         </Provider>
       )
 

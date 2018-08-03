@@ -348,6 +348,12 @@ export default class Table<T> extends React.Component<
 			return;
 		}
 
+		if (!this.props.rowKey) {
+			return console.warn(
+				'onRowClick requires that you provide a `rowKey` property',
+			);
+		}
+
 		const { key } = e.currentTarget.dataset;
 
 		if (!key) {
