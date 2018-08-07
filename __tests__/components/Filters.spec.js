@@ -5,6 +5,7 @@ import renderer from 'react-test-renderer'
 import Provider from '../../src/components/Provider'
 import Filters from '../../src/components/Filters'
 import FiltersSummary from '../../src/components/Filters/Summary'
+import Search from '../../src/components/Search'
 import * as SchemaSieve from '../../src/components/Filters/SchemaSieve'
 import { ViewListItem } from '../../src/components/Filters/ViewsMenu'
 
@@ -178,6 +179,26 @@ describe('Filters component', () => {
           schema={unknownSchema}
         />
       )
+
+      component.unmount()
+    })
+
+    it('should clear the `searchString` state prop after search filter removal', () => {
+      const component = mount(
+        <Filters
+          schema={schema}
+          views={[view]}
+        />
+      )
+
+      expect(component.find(Search)).toHaveLength(1)
+      expect(component.state('searchString')).toEqual('')
+
+      component.find('input').simulate('change', { target: { value: 'Squirtle' } })
+      expect(component.state('searchString')).toEqual('Squirtle')
+
+      component.find(FiltersSummary).find('button').at(2).simulate('click')
+      expect(component.state('searchString')).toEqual('')
 
       component.unmount()
     })
