@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
-import { Box, Flex, Heading } from '../'
+import { Box, Flex, Heading, Provider } from '../'
 import { withTheme } from 'styled-components'
 import * as Readme from './README/Swatches.md'
 
@@ -82,7 +82,7 @@ storiesOf('Core/Swatches', module)
   .addDecorator(withReadme(Readme))
   .add('All', () => {
     return (
-      <div>
+      <Provider>
         <Box is='section' m={15}>
           <Box is='h2' mx={15}>
             Primary
@@ -114,6 +114,6 @@ storiesOf('Core/Swatches', module)
             <Swatch border style='gray' />
           </Flex>
         </Box>
-      </div>
+      </Provider>
     )
   })

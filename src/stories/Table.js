@@ -2,14 +2,9 @@ import * as _ from 'lodash'
 import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
-import styled from 'styled-components'
-import { Input, Table } from '../'
+import { Box, Input, Provider, Table } from '../'
 import PokeDex from './assets/pokedex'
 import * as Readme from './README/Table.md'
-
-const Container = styled.div`
-  margin: 30px;
-`
 
 const prefixNum = num => (num.toString().length === 1 ? `0${num}` : num)
 
@@ -71,10 +66,10 @@ class HOC extends React.Component {
   render () {
     const { PokeDex } = this.state
     return (
-      <Container>
+      <Box m={3}>
         <Input mb={3} value={PokeDex[0].Name} onChange={this.changeName} />
         <Table columns={columns} data={PokeDex} />
-      </Container>
+      </Box>
     )
   }
 }
@@ -83,114 +78,134 @@ storiesOf('Core/Table', module)
   .addDecorator(withReadme(Readme))
   .add('Standard', () => {
     return (
-      <Container>
-        <Table columns={columns} data={PokeDex} />
-      </Container>
+      <Provider>
+        <Box m={3}>
+          <Table columns={columns} data={PokeDex} />
+        </Box>
+      </Provider>
     )
   })
   .add('Checkboxes', () => {
     return (
-      <Container>
-        <Table
-          columns={columns}
-          data={PokeDex}
-          rowKey='pokedex_number'
-          onCheck={action('items-selected')}
-        />
-      </Container>
+      <Provider>
+        <Box m={3}>
+          <Table
+            columns={columns}
+            data={PokeDex}
+            rowKey='pokedex_number'
+            onCheck={action('items-selected')}
+          />
+        </Box>
+      </Provider>
     )
   })
   .add('Row Click', () => {
     return (
-      <Container>
-        <Table
-          columns={columns}
-          data={PokeDex}
-          rowKey='pokedex_number'
-          onRowClick={action('row-clicked')}
-        />
-      </Container>
+      <Provider>
+        <Box m={3}>
+          <Table
+            columns={columns}
+            data={PokeDex}
+            rowKey='pokedex_number'
+            onRowClick={action('row-clicked')}
+          />
+        </Box>
+      </Provider>
     )
   })
   .add('Row Prefix', () => {
     return (
-      <Container>
-        <Table
-          columns={columns}
-          data={PokeDex}
-          tbodyPrefix={
-            <tr>
-              <td colSpan={columns.length}>
-                <p style={{ textAlign: 'center' }}>
-                  This row will always appear at the top of the table
-                </p>
-              </td>
-            </tr>
-          }
-        />
-      </Container>
+      <Provider>
+        <Box m={3}>
+          <Table
+            columns={columns}
+            data={PokeDex}
+            tbodyPrefix={
+              <tr>
+                <td colSpan={columns.length}>
+                  <p style={{ textAlign: 'center' }}>
+                    This row will always appear at the top of the table
+                  </p>
+                </td>
+              </tr>
+            }
+          />
+        </Box>
+      </Provider>
     )
   })
   .add('Multiple Row Prefix', () => {
     return (
-      <Container>
-        <Table
-          columns={columns}
-          data={PokeDex}
-          tbodyPrefix={[
-            <tr key={1}>
-              <td colSpan={columns.length}>
-                <p style={{ textAlign: 'center' }}>Row 1</p>
-              </td>
-            </tr>,
-            <tr key={2}>
-              <td colSpan={columns.length}>
-                <p style={{ textAlign: 'center' }}>Row 2</p>
-              </td>
-            </tr>
-          ]}
-        />
-      </Container>
+      <Provider>
+        <Box m={3}>
+          <Table
+            columns={columns}
+            data={PokeDex}
+            tbodyPrefix={[
+              <tr key={1}>
+                <td colSpan={columns.length}>
+                  <p style={{ textAlign: 'center' }}>Row 1</p>
+                </td>
+              </tr>,
+              <tr key={2}>
+                <td colSpan={columns.length}>
+                  <p style={{ textAlign: 'center' }}>Row 2</p>
+                </td>
+              </tr>
+            ]}
+          />
+        </Box>
+      </Provider>
     )
   })
   .add('Anchor Rows', () => {
     return (
-      <Container>
-        <Table
-          columns={columns}
-          data={PokeDex}
-          getRowHref={row => `https://www.pokemon.com/uk/pokedex/${row.Name}`}
-          rowAnchorAttributes={{ target: '_blank' }}
-        />
-      </Container>
+      <Provider>
+        <Box m={3}>
+          <Table
+            columns={columns}
+            data={PokeDex}
+            getRowHref={row => `https://www.pokemon.com/uk/pokedex/${row.Name}`}
+            rowAnchorAttributes={{ target: '_blank' }}
+          />
+        </Box>
+      </Provider>
     )
   })
   .add('Anchor Rows with Checkboxes', () => {
     return (
-      <Container>
-        <Table
-          columns={columns}
-          data={PokeDex}
-          rowKey='pokedex_number'
-          onCheck={action('items-selected')}
-          getRowHref={row => `https://www.pokemon.com/uk/pokedex/${row.Name}`}
-          rowAnchorAttributes={{ target: '_blank' }}
-        />
-      </Container>
+      <Provider>
+        <Box m={3}>
+          <Table
+            columns={columns}
+            data={PokeDex}
+            rowKey='pokedex_number'
+            onCheck={action('items-selected')}
+            getRowHref={row => `https://www.pokemon.com/uk/pokedex/${row.Name}`}
+            rowAnchorAttributes={{ target: '_blank' }}
+          />
+        </Box>
+      </Provider>
     )
   })
   .add('Highlighted rows', () => {
     return (
-      <Container>
-        <Table
-          columns={columns}
-          data={PokeDex}
-          rowKey='pokedex_number'
-          highlightedRows={[2, 5]}
-        />
-      </Container>
+      <Provider>
+        <Box m={3}>
+          <Table
+            columns={columns}
+            data={PokeDex}
+            rowKey='pokedex_number'
+            highlightedRows={[2, 5]}
+          />
+        </Box>
+      </Provider>
     )
   })
   .add('Updating data in a table', () => {
-    return <HOC />
+    return (
+      <Provider>
+        <HOC />
+      </Provider>
+    )
   })

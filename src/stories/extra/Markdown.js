@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
-import { Box } from '../../'
+import { Box, Provider } from '../../'
 import { Markdown } from '../../extra/Markdown'
 import * as Readme from '../README/Markdown.md'
 
@@ -12,7 +12,12 @@ A simple component for rendering *GitHub flavored markdown*.
 
 storiesOf('Extra/Markdown', module)
   .addDecorator(withReadme(Readme))
-  .addDecorator(story => <Box p={3}>{story()}</Box>)
   .add('Standard', () => {
-    return <Markdown>{source}</Markdown>
+    return (
+      <Provider>
+        <Box m={3}>
+          <Markdown>{source}</Markdown>
+        </Box>
+      </Provider>
+    )
   })

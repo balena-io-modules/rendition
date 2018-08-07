@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
-import { DeviceStatusGauge } from '../../'
+import { DeviceStatusGauge, Provider } from '../../'
 
 const mockDeviceArray = [
   {
@@ -41,5 +41,9 @@ const mockDeviceArray = [
 ]
 
 storiesOf('Deprecated/DeviceStatusGauge', module).add('Standard', () => {
-  return <DeviceStatusGauge m={30} devices={mockDeviceArray} />
+  return (
+    <Provider>
+      <DeviceStatusGauge m={30} devices={mockDeviceArray} />
+    </Provider>
+  )
 })

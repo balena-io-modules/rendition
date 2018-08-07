@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { storiesOf, action } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
-import { Box, Flex, Txt } from '../../'
+import { Box, Flex, Provider, Txt } from '../../'
 import { Form } from '../../unstable/'
 import { Markdown } from '../../extra/Markdown'
 import '../../extra/Form/mermaid'
@@ -101,32 +101,48 @@ class FormDemo extends React.Component {
 storiesOf('Beta/Form', module)
   .addDecorator(withReadme(Readme))
   .add('Simple', () => {
-    return <FormDemo schema={basicPokedexSchema} />
+    return (
+      <Provider>
+        <FormDemo schema={basicPokedexSchema} />
+      </Provider>
+    )
   })
   .add('Hidden submit button', () => {
-    return <FormDemo schema={basicPokedexSchema} hideSubmitButton />
+    return (
+      <Provider>
+        <FormDemo schema={basicPokedexSchema} hideSubmitButton />
+      </Provider>
+    )
   })
   .add('Custom submit button text', () => {
-    return <FormDemo schema={basicPokedexSchema} submitButtonText='Save' />
+    return (
+      <Provider>
+        <FormDemo schema={basicPokedexSchema} submitButtonText='Save' />
+      </Provider>
+    )
   })
   .add('UI schema', () => {
     return (
-      <FormDemo
-        schema={basicPokedexSchema}
-        uiSchema={{
-          'ui:order': ['Name', 'caught', 'Description', 'Abilities', '*']
-        }}
-      />
+      <Provider>
+        <FormDemo
+          schema={basicPokedexSchema}
+          uiSchema={{
+            'ui:order': ['Name', 'caught', 'Description', 'Abilities', '*']
+          }}
+        />
+      </Provider>
     )
   })
   .add('Preset values', () => {
     return (
-      <FormDemo
-        schema={basicPokedexSchema}
-        value={{
-          Name: 'Squirtle'
-        }}
-      />
+      <Provider>
+        <FormDemo
+          schema={basicPokedexSchema}
+          value={{
+            Name: 'Squirtle'
+          }}
+        />
+      </Provider>
     )
   })
   .add('Extra widgets', () => {
@@ -144,12 +160,12 @@ storiesOf('Beta/Form', module)
       }
     }
     return (
-      <React.Fragment>
+      <Provider>
         <Box px={30} pt={30}>
           <Markdown>{extraWidgetsReadme}</Markdown>
         </Box>
 
         <FormDemo schema={extraSchema} />
-      </React.Fragment>
+      </Provider>
     )
   })

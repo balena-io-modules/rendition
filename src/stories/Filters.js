@@ -3,13 +3,9 @@ import * as uniq from 'lodash/uniq'
 import { storiesOf, action } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 import styled from 'styled-components'
-import { Box, Divider, Filters, SchemaSieve } from '../'
+import { Box, Divider, Filters, Heading, Provider, SchemaSieve } from '../'
 import PokeDex from './assets/pokedex'
 import * as Readme from './README/Filters.md'
-
-const Container = styled.div`
-  margin: 30px;
-`
 
 const StyledTable = styled.table`
   width: 100%;
@@ -187,13 +183,24 @@ class FiltersDemo extends React.Component {
 }
 
 storiesOf('Core/Filters', module)
-  .addDecorator(story => <Container>{story()}</Container>)
   .addDecorator(withReadme(Readme))
   .add('Standard', () => {
-    return <FiltersDemo />
+    return (
+      <Provider>
+        <Box m={3}>
+          <FiltersDemo />
+        </Box>
+      </Provider>
+    )
   })
   .add('Disabled', () => {
-    return <FiltersDemo disabled />
+    return (
+      <Provider>
+        <Box m={3}>
+          <FiltersDemo disabled />
+        </Box>
+      </Provider>
+    )
   })
   .add('Button props', () => {
     const props = {
@@ -206,13 +213,21 @@ storiesOf('Core/Filters', module)
       }
     }
 
-    return <FiltersDemo extra={props} />
+    return (
+      <Provider>
+        <Box m={3}>
+          <FiltersDemo extra={props} />
+        </Box>
+      </Provider>
+    )
   })
   .add('Dark', () => {
     return (
-      <Box bg='#343434' p={30}>
-        <FiltersDemo dark />
-      </Box>
+      <Provider>
+        <Box bg='#343434' p={3}>
+          <FiltersDemo dark />
+        </Box>
+      </Provider>
     )
   })
   .add('Render modes', () => {
@@ -235,40 +250,46 @@ storiesOf('Core/Filters', module)
     }
 
     return (
-      <Box p={30}>
-        <h3>
-          <code>all</code>
-        </h3>
-        <Filters schema={schema} renderMode='all' />
-        <Divider color='#eee' mt={40} mb={90} />
+      <Provider>
+        <Box p={3}>
+          <Heading.h3>
+            <code>all</code>
+          </Heading.h3>
+          <Filters schema={schema} renderMode='all' />
+          <Divider color='#eee' mt={40} mb={90} />
 
-        <h3>
-          <code>add</code>
-        </h3>
-        <Filters schema={schema} renderMode='add' />
-        <Divider color='#eee' mt={40} mb={90} />
+          <Heading.h3>
+            <code>add</code>
+          </Heading.h3>
+          <Filters schema={schema} renderMode='add' />
+          <Divider color='#eee' mt={40} mb={90} />
 
-        <h3>
-          <code>search</code>
-        </h3>
-        <Filters schema={schema} renderMode='search' />
-        <Divider color='#eee' mt={40} mb={90} />
+          <Heading.h3>
+            <code>search</code>
+          </Heading.h3>
+          <Filters schema={schema} renderMode='search' />
+          <Divider color='#eee' mt={40} mb={90} />
 
-        <h3>
-          <code>views</code>
-        </h3>
-        <Filters schema={schema} renderMode='views' />
-        <Divider color='#eee' mt={40} mb={90} />
+          <Heading.h3>
+            <code>views</code>
+          </Heading.h3>
+          <Filters schema={schema} renderMode='views' />
+          <Divider color='#eee' mt={40} mb={90} />
 
-        <h3>
-          <code>summary</code>
-        </h3>
-        <Filters filters={[dummyFilter]} schema={schema} renderMode='summary' />
-        <Divider color='#eee' mt={40} mb={90} />
+          <Heading.h3>
+            <code>summary</code>
+          </Heading.h3>
+          <Filters
+            filters={[dummyFilter]}
+            schema={schema}
+            renderMode='summary'
+          />
+          <Divider color='#eee' mt={40} mb={90} />
 
-        <h3>You can also use an array of modes</h3>
-        <Filters schema={schema} renderMode={['add', 'search']} />
-        <Divider color='#eee' mt={40} mb={90} />
-      </Box>
+          <Heading.h3>You can also use an array of modes</Heading.h3>
+          <Filters schema={schema} renderMode={['add', 'search']} />
+          <Divider color='#eee' mt={40} mb={90} />
+        </Box>
+      </Provider>
     )
   })

@@ -1,12 +1,6 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
-import styled from 'styled-components'
-import { Card, Link, Flex, Button, TextWithCopy } from '../'
-
-const Container = styled.div`
-  margin: 30px;
-  width: 350px;
-`
+import { Card, Link, Flex, Box, Button, Provider, TextWithCopy } from '../'
 
 const rows = [
   <div>Lorem Ipsum dolor si amet</div>,
@@ -25,66 +19,79 @@ const rows = [
 ]
 
 storiesOf('Core/Card', module)
-  .addDecorator(story => <Container>{story()}</Container>)
-  .addWithInfo('Standard', () => {
+  .add('Standard', () => {
     return (
-      <Card>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque
-        euismod risus at gravida. Pellentesque a nunc semper, ultrices lacus
-        nec, mattis mauris
-      </Card>
+      <Provider>
+        <Box w={350} m={3}>
+          <Card>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            scelerisque euismod risus at gravida. Pellentesque a nunc semper,
+            ultrices lacus nec, mattis mauris
+          </Card>
+        </Box>
+      </Provider>
     )
   })
-  .addWithInfo('With Header', () => {
+  .add('With Header', () => {
     return (
-      <React.Fragment>
-        <Card
-          title='Card with Button'
-          cta={
-            <Button
-              plaintext
-              primary
-              onClick={() => window.alert('Action with Button')}
-            >
-              Update
-            </Button>
-          }
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-          scelerisque euismod risus at gravida. Pellentesque a nunc semper,
-          ultrices lacus nec, mattis mauris
-        </Card>
-        <Card
-          mt={3}
-          title='Card with Link'
-          cta={<Link href='https://resin.io'>Link</Link>}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-          scelerisque euismod risus at gravida. Pellentesque a nunc semper,
-          ultrices lacus nec, mattis mauris
-        </Card>
-      </React.Fragment>
+      <Provider>
+        <Box w={350} m={3}>
+          <Card
+            title='Card with Button'
+            cta={
+              <Button
+                plaintext
+                primary
+                onClick={() => window.alert('Action with Button')}
+              >
+                Update
+              </Button>
+            }
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            scelerisque euismod risus at gravida. Pellentesque a nunc semper,
+            ultrices lacus nec, mattis mauris
+          </Card>
+          <Card
+            mt={3}
+            title='Card with Link'
+            cta={<Link href='https://resin.io'>Link</Link>}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            scelerisque euismod risus at gravida. Pellentesque a nunc semper,
+            ultrices lacus nec, mattis mauris
+          </Card>
+        </Box>
+      </Provider>
     )
   })
-  .addWithInfo('With rows', () => {
+  .add('With rows', () => {
     return (
-      <Card
-        title='Title'
-        rows={rows}
-        cta={<Link href='https://resin.io'>Link</Link>}
-      />
+      <Provider>
+        <Box w={350} m={3}>
+          <Card
+            title='Title'
+            rows={rows}
+            cta={<Link href='https://resin.io'>Link</Link>}
+          />
+        </Box>
+      </Provider>
     )
   })
-  .addWithInfo('Title', () => {
+  .add('Title', () => {
     return (
-      <Card
-        title='Title'
-        minHeight={'300px'}
-        cta={<Link href='https://resin.io'>Link</Link>}
-        >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque
-        euismod risus at gravida. Pellentesque a nunc semper, ultrices lacus
-        nec, mattis mauris
-      </Card>
+      <Provider>
+        <Box w={350} m={3}>
+          <Card
+            title='Title'
+            minHeight={'300px'}
+            cta={<Link href='https://resin.io'>Link</Link>}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            scelerisque euismod risus at gravida. Pellentesque a nunc semper,
+            ultrices lacus nec, mattis mauris
+          </Card>
+        </Box>
+      </Provider>
     )
   })
