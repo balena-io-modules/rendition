@@ -27,6 +27,7 @@
     "deploy": "npm run build:storybook && gh-pages -d .out"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.4.10",
     "@storybook/react": "^3.3.13",
     "@types/jest": "^22.1.4",
     "babel-plugin-transform-react-jsx": "^6.23.0",
