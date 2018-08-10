@@ -4,7 +4,7 @@ A component that can be used for generating filters in the form of [json schema]
 The filters created by this component can be used to filter a collection of
 objects using the `SchemaSieve` object.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/DropDownButton.js)
+[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Filters.js)
 
 ## Schema
 
