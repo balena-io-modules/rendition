@@ -1,6 +1,6 @@
 {
   "name": "rendition",
-  "version": "4.22.4",
+  "version": "4.22.5",
   "description": "React components library",
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
     "deploy": "npm run build:storybook && gh-pages -d .out"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.4.10",
     "@storybook/react": "^3.3.13",
     "@types/jest": "^22.1.4",
     "babel-plugin-transform-react-jsx": "^6.23.0",

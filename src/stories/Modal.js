@@ -1,5 +1,6 @@
 import * as React from 'react'
-import { storiesOf, action } from '@storybook/react'
+import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Button, Heading, Modal, Provider } from '../'
 import { Progressor } from './ProgressBar'
