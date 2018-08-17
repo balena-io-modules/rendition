@@ -206,7 +206,7 @@ declare module 'rendition' {
 		height?: number;
 	}
 
-	class Divider extends RenderableElementWithProps<DefaultProps, any> {}
+	class Divider extends RenderableElementWithProps<DividerProps, any> {}
 
 	interface DropDownButtonProps extends DefaultProps, Coloring {
 		disabled?: boolean;
