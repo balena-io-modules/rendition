@@ -5,10 +5,11 @@ import { compose } from 'recompose';
 import { CodeWithCopyProps } from 'rendition';
 import styled, { withTheme } from 'styled-components';
 import asRendition from '../asRendition';
-import { stopEvent } from '../utils';
+import { stopEvent, withProps } from '../utils';
 import Button from './Button';
+import Txt from './Txt';
 
-const Wrapper = styled.span`
+const Wrapper = withProps<Partial<CodeWithCopyProps>>()(styled(Txt.span))`
 	white-space: initial;
 
 	code {
@@ -27,6 +28,16 @@ const Wrapper = styled.span`
 	.code-with-copy__copy {
 		.text-selection--none;
 		cursor: pointer;
+		visibility: ${props =>
+			props.showCopyButton
+				? props.showCopyButton === 'always'
+					? 'visible'
+					: 'hidden'
+				: 'visible'};
+	}
+
+	&:hover .code-with-copy__copy {
+		visibility: visible;
 	}
 `;
 
