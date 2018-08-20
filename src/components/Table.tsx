@@ -2,6 +2,7 @@ import every = require('lodash/every');
 import find = require('lodash/find');
 import get = require('lodash/get');
 import includes = require('lodash/includes');
+import isArray = require('lodash/isArray');
 import isEqual = require('lodash/isEqual');
 import isFunction = require('lodash/isFunction');
 import isPlainObject = require('lodash/isPlainObject');
@@ -110,6 +111,7 @@ const renderField = <T extends {}>(row: T, column: TableColumn<T>): any => {
 };
 
 interface TableRowProps<T> {
+	className?: string;
 	isChecked: boolean;
 	isHighlighted: boolean;
 	keyAttribute: string | number;
@@ -135,6 +137,7 @@ class TableRow<T> extends React.Component<TableRowProps<T>, {}> {
 			attributes,
 			checkboxAttributes,
 			columns,
+			className,
 			data,
 			href,
 			keyAttribute,
@@ -144,7 +147,11 @@ class TableRow<T> extends React.Component<TableRowProps<T>, {}> {
 		} = this.props;
 
 		return (
-			<div data-display="table-row" data-highlight={isChecked || isHighlighted}>
+			<div
+				data-display="table-row"
+				data-highlight={isChecked || isHighlighted}
+				className={className}
+			>
 				{showCheck && (
 					<span data-display="table-cell">
 						<input
@@ -369,7 +376,7 @@ export default class Table<T> extends React.Component<
 	render() {
 		const { columns, data, rowAnchorAttributes, rowKey, ...props } = this.props;
 
-		const { getRowHref } = props;
+		const { getRowHref, getRowClass } = props;
 
 		return (
 			<BaseTable {...props}>
@@ -423,6 +430,12 @@ export default class Table<T> extends React.Component<
 						const isHighlighted = this.isHighlighted(row);
 						const key = rowKey ? (row[rowKey] as any) : i;
 						const href = !!getRowHref ? getRowHref(row) : undefined;
+						const classNamesList = isFunction(getRowClass)
+							? getRowClass(row)
+							: [];
+						const className = isArray(classNamesList)
+							? classNamesList.join(' ')
+							: '';
 						return (
 							<TableRow
 								isChecked={isChecked}
@@ -437,6 +450,7 @@ export default class Table<T> extends React.Component<
 								checkboxAttributes={this.props.rowCheckboxAttributes}
 								toggleChecked={this.toggleChecked}
 								onRowClick={this.onRowClick}
+								className={className}
 							/>
 						);
 					})}

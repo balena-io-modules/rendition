@@ -449,6 +449,7 @@ declare module 'rendition' {
 		// `rowKey` property: the row with a `rowKey` property that matches this
 		// value is highlighted.
 		highlightedRows?: any;
+		getRowClass?: (row: T) => string[];
 	}
 
 	class Table<T> extends RenderableElementWithProps<TableProps<T>, any> {}

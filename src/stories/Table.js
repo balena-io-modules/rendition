@@ -9,6 +9,19 @@ import * as Readme from './README/Table.md'
 
 const prefixNum = num => (num.toString().length === 1 ? `0${num}` : num)
 
+const getRowClass = pokemon => {
+  const classNames = ['pokemon']
+
+  if (pokemon.caught) {
+    classNames.push('pokemon--caught')
+  }
+  if (pokemon.Abilities.length === 1) {
+    classNames.push('pokemon--one-dimensional')
+  }
+
+  return classNames
+}
+
 const columns = [
   {
     field: 'Name',
@@ -198,6 +211,20 @@ storiesOf('Core/Table', module)
             data={PokeDex}
             rowKey='pokedex_number'
             highlightedRows={[2, 5]}
+          />
+        </Box>
+      </Provider>
+    )
+  })
+  .add('Conditional classes', () => {
+    return (
+      <Provider>
+        <Box m={3}>
+          <Table
+            columns={columns}
+            data={PokeDex}
+            rowKey='pokedex_number'
+            getRowClass={getRowClass}
           />
         </Box>
       </Provider>
