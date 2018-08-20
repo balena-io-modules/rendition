@@ -30,6 +30,19 @@ const columns = [
   }
 ]
 
+const getRowClass = pokemon => {
+  const classNames = ['pokemon']
+
+  if (pokemon.caught) {
+    classNames.push('pokemon--caught')
+  }
+  if (pokemon.Abilities.length === 1) {
+    classNames.push('pokemon--one-dimensional')
+  }
+
+  return classNames
+}
+
 describe('Table component', () => {
   it('should match the stored snapshot', () => {
     const component = renderer.create(
@@ -710,6 +723,45 @@ describe('Table component', () => {
       const match = component.find('[data-highlight=true]')
       expect(match).toHaveLength(2)
       expect(match.map(e => e.text())).toEqual(['Venusaur', 'Charmeleon'])
+    })
+  })
+})
+
+describe('getRowClass property', () => {
+  it('should add a class to every row', () => {
+    const component = mount(
+      <Provider>
+        <Table
+          rowKey='pokedex_number'
+          getRowClass={getRowClass}
+          columns={columns}
+          data={PokeDex}
+        />
+      </Provider>
+    )
+
+    const elements = component.find('[data-display="table-body"] [data-display="table-row"]')
+    expect(elements).toHaveLength(PokeDex.length)
+    elements.forEach((node) => {
+      expect(node.hasClass('pokemon')).toEqual(true)
+    })
+  })
+
+  it('should not add any classes if not present', () => {
+    const component = mount(
+      <Provider>
+        <Table
+          rowKey='pokedex_number'
+          columns={columns}
+          data={PokeDex}
+        />
+      </Provider>
+    )
+
+    const elements = component.find('[data-display="table-body"] [data-display="table-row"]')
+    expect(elements).toHaveLength(PokeDex.length)
+    elements.forEach((node) => {
+      expect(node.hasClass('pokemon')).toEqual(false)
     })
   })
 })
