@@ -765,3 +765,57 @@ describe('getRowClass property', () => {
     })
   })
 })
+
+describe('manually select rows', () => {
+  it('should select the first two rows', () => {
+    const component = mount(
+      <Table
+        rowKey='pokedex_number'
+        columns={columns}
+        data={PokeDex}
+      />
+    )
+
+    expect(component.state('checkedItems').length).toEqual(0)
+
+    component.instance().setRowSelection(PokeDex.slice(0, 2))
+    expect(component.state('checkedItems').length).toEqual(2)
+    expect(component.state('allChecked')).toEqual(false)
+  })
+
+  it('should select all rows', () => {
+    const component = mount(
+      <Table
+        rowKey='pokedex_number'
+        columns={columns}
+        data={PokeDex}
+      />
+    )
+
+    expect(component.state('checkedItems').length).toEqual(0)
+
+    component.instance().setRowSelection(PokeDex)
+    expect(component.state('checkedItems').length).toEqual(PokeDex.length)
+    expect(component.state('allChecked')).toEqual(true)
+  })
+
+  it('should clear all rows', () => {
+    const component = mount(
+      <Table
+        rowKey='pokedex_number'
+        columns={columns}
+        data={PokeDex}
+      />
+    )
+
+    expect(component.state('checkedItems').length).toEqual(0)
+
+    component.instance().setRowSelection(PokeDex)
+    expect(component.state('checkedItems').length).toEqual(PokeDex.length)
+    expect(component.state('allChecked')).toEqual(true)
+
+    component.instance().setRowSelection([])
+    expect(component.state('checkedItems').length).toEqual(0)
+    expect(component.state('allChecked')).toEqual(false)
+  })
+})
