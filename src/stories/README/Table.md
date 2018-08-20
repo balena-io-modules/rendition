@@ -61,3 +61,10 @@ cause a re-render of the component and will not be reflected on the table.
 | `toBodyPrefix`    | <code>JSX.element &#124; JSX.Element</code> | - | - | JSX element(s) to display at the top of the table body |
 | `highlightedRows`    | <code>&ast;[]</code> | - | - | Highlights one or more rows. This property requires that you have provided a `rowKey` property: the row with a `rowKey` property that matches one of these values is highlighted. 
 
+## Programmatically selecting rows
+
+The component has a `setRowSelection` method that can be accesssed via <a href='https://reactjs.org/docs/refs-and-the-dom.html' target='_blank' rel='noopener'>ref</a>.
+
+It will accept an array of rows `T[]`, or an empty array in order to clear the selection.
+
+This method requires that you have provided a `rowKey` property.
