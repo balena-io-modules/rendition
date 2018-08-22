@@ -47,14 +47,27 @@ export const createFullTextSearchFilter = (
 	schema: JSONSchema6,
 	term: string,
 ) => {
-	// A schema that matches applies the pattern to each known schema field
+	const stringKeys = reduce(
+		schema.properties,
+		(carry, item: JSONSchema6, key) => {
+			if (item.type === 'string') {
+				carry.push(key);
+			}
+
+			return carry;
+		},
+		[] as string[],
+	);
+
+	// A schema that matches applies the pattern to each schema field with a type
+	// of 'string'
 	const filter = {
 		$id: utils.randomString(),
 		title: FULL_TEXT_SLUG,
 		anyOf: [
 			{
-				description: `Full text search is ${term}`,
-				anyOf: Object.keys(schema.properties!).map(key => ({
+				description: `Any field contains ${term}`,
+				anyOf: stringKeys.map(key => ({
 					properties: {
 						[key]: {
 							type: 'string',
