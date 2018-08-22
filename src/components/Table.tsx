@@ -1,4 +1,5 @@
 import every = require('lodash/every');
+import filter = require('lodash/filter');
 import find = require('lodash/find');
 import get = require('lodash/get');
 import includes = require('lodash/includes');
@@ -280,6 +281,27 @@ export default class Table<T> extends React.Component<
 
 		return collection;
 	}
+
+	setRowSelection = (selectedRows: T[]): void => {
+		const rowKey = this.props.rowKey;
+
+		if (!rowKey) {
+			return;
+		}
+
+		if (selectedRows.length === 0) {
+			this.setState({ allChecked: false, checkedItems: [] });
+			return;
+		}
+
+		const selectedRowsIds = map(selectedRows, rowKey);
+		const checkedItems = filter(this.props.data, x =>
+			includes(selectedRowsIds, x[rowKey]),
+		);
+		const allChecked = checkedItems.length === this.props.data.length;
+
+		this.setState({ allChecked, checkedItems });
+	};
 
 	toggleAllChecked = () => {
 		const allChecked = !this.state.allChecked;
