@@ -164,7 +164,7 @@ class TableRow<T> extends React.Component<TableRowProps<T>, {}> {
 						/>
 					</span>
 				)}
-				{map(columns, column => {
+				{map(columns, (column, idx) => {
 					const cellAttributes = isFunction(column.cellAttributes)
 						? column.cellAttributes(data, get(data, column.field))
 						: column.cellAttributes || {};
@@ -176,7 +176,7 @@ class TableRow<T> extends React.Component<TableRowProps<T>, {}> {
 							data-key={keyAttribute}
 							onClick={this.props.onRowClick}
 							{...cellAttributes}
-							key={column.field}
+							key={`${column.field}-${idx}`}
 						>
 							{renderField(data, column)}
 						</a>
@@ -413,10 +413,10 @@ export default class Table<T> extends React.Component<
 								/>
 							</div>
 						)}
-						{map(columns, item => {
+						{map(columns, (item, idx) => {
 							if (item.sortable) {
 								return (
-									<div data-display="table-cell" key={item.field}>
+									<div data-display="table-cell" key={`${item.field}-${idx}`}>
 										<HeaderButton
 											data-field={item.field}
 											plaintext
@@ -438,7 +438,7 @@ export default class Table<T> extends React.Component<
 								);
 							}
 							return (
-								<div data-display="table-cell" key={item.field}>
+								<div data-display="table-cell" key={`${item.field}-${idx}`}>
 									{item.label || item.field}
 								</div>
 							);
