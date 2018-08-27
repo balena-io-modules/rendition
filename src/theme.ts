@@ -1,7 +1,9 @@
+/* used multiple times below */
+const primaryLight = '#5FB3E7';
 const colors = {
 	primary: {
 		main: '#2297DE',
-		light: '#5FB3E7',
+		light: primaryLight,
 		dark: '#1E87C7',
 	},
 	secondary: {
@@ -58,7 +60,7 @@ const colors = {
 		main: '#ffb25e',
 	},
 	statusUpdating: {
-		main: '#7ccdfd',
+		main: primaryLight,
 	},
 	statusPostProvisioning: {
 		main: '#aa96d5',
