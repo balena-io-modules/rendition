@@ -47,7 +47,7 @@ const Sleeve = styled.div`
     px(props.emphasized ? props.theme.space[4] : props.theme.space[3])};
   line-height: ${props =>
     px(props.emphasized ? props.theme.space[4] : props.theme.space[3])};
-  background: ${props => props.theme.colors.gray.light};
+  background: ${props => props.theme.colors.quartenary.main};
   font-size: ${props => (props.emphasized ? 1 : 0.6)}em;
   overflow: hidden;
 `
