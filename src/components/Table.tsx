@@ -39,7 +39,8 @@ const BaseTable = styled.div`
 			> [data-display='table-cell'] {
 				display: table-cell;
 				text-align: left;
-				padding-left: 40px;
+				padding-left: 20px;
+				padding-right: 20px;
 				padding-top: 10px;
 				padding-bottom: 10px;
 				font-size: 16px;
@@ -61,7 +62,8 @@ const BaseTable = styled.div`
 				text-align: left;
 				padding-top: 14px;
 				padding-bottom: 14px;
-				padding-left: 40px;
+				padding-left: 20px;
+				padding-right: 20px;
 				text-decoration: none;
 				color: inherit;
 			}
