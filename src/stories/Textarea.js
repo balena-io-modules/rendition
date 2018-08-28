@@ -10,7 +10,16 @@ storiesOf('Core/Textarea', module)
     return (
       <Provider>
         <Box m={3}>
-          <Textarea placeholder='Placeholder Text' />
+          <Textarea placeholder='Placeholder text' />
+        </Box>
+      </Provider>
+    )
+  })
+  .add('Monospace', () => {
+    return (
+      <Provider>
+        <Box m={3}>
+          <Textarea monospace placeholder='Placeholder text' />
         </Box>
       </Provider>
     )
