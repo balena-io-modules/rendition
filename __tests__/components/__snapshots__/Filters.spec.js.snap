@@ -90,7 +90,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
             onClick={[Function]}
           >
             <div
-              className="sc-jKJlTe dCeOjK sc-dxgOiQ dtwKdh sc-kpOJdX kGHtPs"
+              className="sc-jKJlTe dCeOjK sc-dxgOiQ dtwKdh sc-kpOJdX jwZFw"
             >
               <div
                 className="sc-eNQAEJ tjatD sc-ckVGcZ bTbrkH sc-kGXeez cazHBK"
