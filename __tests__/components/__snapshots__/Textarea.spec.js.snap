@@ -1,13 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Textarea renders correctly 1`] = `
+exports[`Textarea component should match the stored snapshot 1`] = `
 <div
   className="sc-bdVaJa jKopLr"
 >
   <textarea
-    className="sc-htoDjs gDCMNh sc-gzVnrw bfbgSR"
-  >
-    Textarea
-  </textarea>
+    className="sc-htoDjs gDCMNh sc-gzVnrw jsCvhN"
+    rows={undefined}
+  />
 </div>
 `;

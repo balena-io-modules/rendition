@@ -523,10 +523,13 @@ declare module 'rendition' {
 		readOnly?: boolean;
 		required?: boolean;
 		rows?: number;
-		value?: string | string[] | number;
+		value?: string;
 		wrap?: string;
 
 		onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
+		autoRows?: boolean;
+		maxRows?: number;
+		minRows?: number;
 	}
 
 	class Textarea extends RenderableElementWithProps<TextareaProps, any> {}
