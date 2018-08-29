@@ -21,6 +21,7 @@
     "tslint-fix": "tslint -t stylish --fix \"src/**/*.ts\" \"src/**/*.tsx\" \"typings/**/*.d.ts\"",
     "lint": "npm run eslint && npm run tslint",
     "precommit": "lint-staged",
+    "prepack": "npm run build",
     "prettify-js": "prettier --config .prettierrc-js --write \"src/**/*.js\" \"test/**/*.js\"",
     "prettify-ts": "prettier --config .prettierrc-ts --write \"src/**/*.ts\" \"src/**/*.tsx\" \"typings.d.ts\"",
     "prettify": "npm run prettify-js && npm run eslint-fix && npm run prettify-ts && npm run tslint-fix",
