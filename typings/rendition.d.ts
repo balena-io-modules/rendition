@@ -165,6 +165,7 @@ declare module 'rendition' {
 		plaintext?: boolean;
 		underline?: boolean;
 		iconElement?: JSX.Element;
+		type?: 'submit' | 'reset' | 'button';
 	}
 
 	class Button extends RenderableElementWithProps<ButtonProps, any> {}
