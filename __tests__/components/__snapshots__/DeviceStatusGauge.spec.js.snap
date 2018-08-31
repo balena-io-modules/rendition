@@ -21,7 +21,7 @@ exports[`DeviceStatusGauge renders correctly 1`] = `
           "value": 0,
         },
         Object {
-          "color": "#7ccdfd",
+          "color": "#5FB3E7",
           "key": "updating",
           "name": "Updating",
           "value": 0,
@@ -98,7 +98,7 @@ exports[`DeviceStatusGauge renders correctly 1`] = `
           className="gauge__legend-color"
           style={
             Object {
-              "backgroundColor": "#7ccdfd",
+              "backgroundColor": "#5FB3E7",
             }
           }
         >
