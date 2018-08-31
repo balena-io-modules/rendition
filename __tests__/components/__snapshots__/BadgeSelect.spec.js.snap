@@ -12,7 +12,7 @@ exports[`BadgeSelect renders correctly 1`] = `
       onClick={[Function]}
     >
       <div
-        className="sc-gZMcBi cmZZgb sc-dnqmqq eheJhs sc-htoDjs frbeoW"
+        className="sc-gZMcBi cmZZgb sc-dnqmqq eheJhs sc-htoDjs iZSBOM"
       >
         <div
           className="sc-gqjmRU iMncXr sc-iwsKbI khHCQa sc-gzVnrw gceidV"

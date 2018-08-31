@@ -85,7 +85,7 @@ const Toggle = ({ open, handler, label, joined, ...props }) => {
     if (label) {
       return (
         <JoinedButton {...props} pl={16} pr={0} onClick={handler}>
-          <Flex justify='space-between'>
+          <Flex justify='space-between' align='center'>
             <Box mt='1px'>{label}</Box>
             <IconWrapper>
               {open ? <IconCaretUp /> : <IconCaretDown />}
