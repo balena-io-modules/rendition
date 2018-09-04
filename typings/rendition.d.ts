@@ -367,6 +367,18 @@ declare module 'rendition' {
 		any
 	> {}
 
+	interface PagerProps extends DefaultProps {
+		totalItems: number;
+		upperBound: number;
+		lowerBound: number;
+		itemsPerPage: number;
+		page: number;
+		nextPage: () => void;
+		prevPage: () => void;
+	}
+
+	class Pager extends RenderableElementWithProps<PagerProps, any> {}
+
 	class Provider extends Component<any, any> {}
 
 	type PillProps = Coloring &
