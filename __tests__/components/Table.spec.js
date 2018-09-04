@@ -4,6 +4,7 @@ import * as _ from 'lodash'
 import React from 'react'
 import renderer from 'react-test-renderer'
 import sinon from 'sinon'
+import Pager from '../../src/components/Pager'
 import Provider from '../../src/components/Provider'
 import Table from '../../src/components/Table'
 import PokeDex from '../../src/stories/assets/pokedex'
@@ -723,6 +724,44 @@ describe('Table component', () => {
       const match = component.find('[data-highlight=true]')
       expect(match).toHaveLength(2)
       expect(match.map(e => e.text())).toEqual(['Venusaur', 'Charmeleon'])
+    })
+  })
+
+  describe('usePager property', () => {
+    it('should display a pager', () => {
+      const component = mount(
+        <Provider>
+          <Table
+            columns={[ { field: 'Name' } ]}
+            data={PokeDex}
+            usePager
+          />
+        </Provider>
+      )
+
+      expect(component.find(Pager)).toHaveLength(1)
+    })
+  })
+
+  describe.only('itemsPerPage property', () => {
+    it('should limit the number of items shown at one time', () => {
+      const component = mount(
+        <Provider>
+          <Table
+            columns={[ { field: 'Name' } ]}
+            data={PokeDex}
+            usePager
+            itemsPerPage={3}
+          />
+        </Provider>
+      )
+
+      const match = component.find('[data-display="table-body"] [data-display="table-row"]')
+      expect(match).toHaveLength(3)
+
+      const result = PokeDex.slice(0, 3).map(p => p.Name)
+
+      expect(match.map(e => e.text())).toEqual(result)
     })
   })
 })

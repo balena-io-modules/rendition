@@ -367,6 +367,16 @@ declare module 'rendition' {
 		any
 	> {}
 
+	interface PagerProps extends DefaultProps {
+		totalItems: number;
+		itemsPerPage: number;
+		page: number;
+		nextPage: () => void;
+		prevPage: () => void;
+	}
+
+	class Pager extends RenderableElementWithProps<PagerProps, any> {}
+
 	class Provider extends Component<any, any> {}
 
 	type PillProps = Coloring &
@@ -451,6 +461,13 @@ declare module 'rendition' {
 		// value is highlighted.
 		highlightedRows?: any;
 		getRowClass?: (row: T) => string[];
+		// If true, a pager will be used when displaying items.
+		usePager?: boolean;
+		// The number of items to be shown per page. Only used if `usePager` is true. Defaults to `50`.
+		itemsPerPage?: number;
+		// Sets whether the pager is displayed at the top of the table, the bottom of the table or
+		// in both positions. Only used if `usePager` is true. Defaults to `top`.
+		pagerPosition?: 'top' | 'bottom' | 'both';
 	}
 
 	class Table<T> extends RenderableElementWithProps<TableProps<T>, any> {}

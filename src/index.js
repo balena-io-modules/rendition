@@ -13,6 +13,7 @@ import { default as Fixed } from './components/Fixed'
 import { default as Gauge } from './components/Gauge'
 import { default as Input } from './components/Input'
 import { default as Modal } from './components/Modal'
+import { default as Pager } from './components/Pager'
 import { default as Pill } from './components/Pill'
 import { default as ProgressBar } from './components/ProgressBar'
 import { default as Provider } from './components/Provider'
@@ -60,6 +61,7 @@ export {
   Img,
   Modal,
   Navbar,
+  Pager,
   Pill,
   ProgressBar,
   Provider,

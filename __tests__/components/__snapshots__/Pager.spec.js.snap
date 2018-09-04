@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pager component should match the stored snapshot 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <div
+    className="sc-kAzzGY dirfrO sc-jzJRlG cmnKTT sc-fjdhpX fotfmg"
+  >
+    <div
+      className="sc-kGXeez gGPHCP sc-kgoBCf dTvwBP"
+    >
+      <strong>
+        1
+         - 
+        50
+      </strong>
+       
+      of 
+      <strong>
+        436
+      </strong>
+    </div>
+    <div
+      className="sc-kAzzGY dirfrO sc-jzJRlG cmnKTT sc-fjdhpX jmbwCw"
+    >
+      <div
+        className="sc-eNQAEJ hCBMuI sc-chPdSV dfDVBP sc-cSHVUG kBGaNN sc-jTzLTM cTXuEb"
+      >
+        <button
+          className="rendition-pager__btn--prev sc-VigVT hegYug sc-gqjmRU eUZmOA"
+          disabled={true}
+          onClick={[Function]}
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            preserveAspectRatio="xMidYMid meet"
+            style={
+              Object {
+                "color": undefined,
+                "verticalAlign": "middle",
+              }
+            }
+            viewBox="0 0 40 40"
+            width="1em"
+          >
+            <g>
+              <path
+                d="m31.1 6.7l-11.8 11.9 11.8 11.8q0.5 0.4 0.5 1t-0.5 1l-3.7 3.7q-0.4 0.5-1 0.5t-1-0.5l-16.5-16.5q-0.5-0.4-0.5-1t0.5-1l16.5-16.6q0.5-0.4 1-0.4t1 0.4l3.7 3.7q0.5 0.4 0.5 1t-0.5 1z"
+              />
+            </g>
+          </svg>
+        </button>
+        <button
+          className="rendition-pager__btn--next sc-VigVT hegYug sc-gqjmRU eUZmOA"
+          disabled={false}
+          onClick={[Function]}
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            preserveAspectRatio="xMidYMid meet"
+            style={
+              Object {
+                "color": undefined,
+                "verticalAlign": "middle",
+              }
+            }
+            viewBox="0 0 40 40"
+            width="1em"
+          >
+            <g>
+              <path
+                d="m31.2 19.6l-16.6 16.5q-0.4 0.5-1 0.5t-1-0.5l-3.7-3.7q-0.4-0.4-0.4-1t0.4-1l11.9-11.8-11.9-11.9q-0.4-0.4-0.4-1t0.4-1l3.7-3.7q0.5-0.4 1-0.4t1 0.4l16.6 16.6q0.4 0.4 0.4 1t-0.4 1z"
+              />
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
