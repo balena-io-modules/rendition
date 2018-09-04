@@ -173,6 +173,7 @@ declare module 'rendition' {
 	interface CodeWithCopyProps extends DefaultProps, Tooltip {
 		copy?: string;
 		text: string;
+		showCopyButton?: 'hover' | 'always';
 	}
 
 	interface CardProps extends DefaultProps {

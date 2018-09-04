@@ -38,3 +38,16 @@ storiesOf('Core/CodeWithCopy', module)
       </Provider>
     )
   })
+  .add('Show icon on hover', () => {
+    return (
+      <Provider>
+        <Box m={3}>
+          <CodeWithCopy
+            text='22ab7io'
+            copy='This value has been copied to your clipboard!'
+            showCopyButton='hover'
+          />
+        </Box>
+      </Provider>
+    )
+  })
