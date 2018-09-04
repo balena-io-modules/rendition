@@ -5,7 +5,7 @@ exports[`Form component should match the stored snapshot 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <div
-    className="sc-gojNiO eHLwjM sc-chPdSV dfDVBP sc-cSHVUG kBGaNN sc-jTzLTM cTXuEb"
+    className="sc-daURTG cllDlm sc-chPdSV dfDVBP sc-cSHVUG kBGaNN sc-jTzLTM cTXuEb"
   >
     <form
       acceptCharset={undefined}
@@ -28,7 +28,7 @@ exports[`Form component should match the stored snapshot 1`] = `
             className="form-group field field-string sc-chPdSV iqIpJd sc-cSHVUG kBGaNN sc-jTzLTM blsdOK"
           >
             <label
-              className="control-label sc-cQFLBn bqylOq"
+              className="control-label sc-gojNiO cHANxq"
               htmlFor="root_Name"
             >
               Pokemon Name

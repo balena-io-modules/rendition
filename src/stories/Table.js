@@ -237,3 +237,14 @@ storiesOf('Core/Table', module)
       </Provider>
     )
   })
+  .add('Pager', () => {
+    return (
+      <Provider>
+        <Provider>
+          <Box m={3}>
+            <Table columns={columns} data={PokeDex} usePager itemsPerPage={3} />
+          </Box>
+        </Provider>
+      </Provider>
+    )
+  })

@@ -51,6 +51,7 @@ export default ({
 			<Flex>
 				<ButtonGroup>
 					<Button
+						className="rendition-pager__btn--prev"
 						square
 						disabled={totalItems <= itemsPerPage || page <= 0}
 						onClick={() => prevPage()}
@@ -58,6 +59,7 @@ export default ({
 						<FaChevronLeft />
 					</Button>
 					<Button
+						className="rendition-pager__btn--next"
 						square
 						disabled={
 							totalItems <= itemsPerPage ||
