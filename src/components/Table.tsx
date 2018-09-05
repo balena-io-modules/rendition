@@ -451,7 +451,7 @@ export default class Table<T> extends React.Component<
 						/>
 					)}
 
-				<BaseTable>
+				<BaseTable {...props}>
 					<div data-display="table-head">
 						<div data-display="table-row">
 							{this.props.onCheck && (
