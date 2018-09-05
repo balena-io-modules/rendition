@@ -274,9 +274,12 @@ declare module 'rendition' {
 
 	interface FlexProps extends BoxProps {
 		align?: string | string[];
+		alignItems?: string | string[];
 		justify?: string | string[];
+		justifyContent?: string | string[];
 		flexDirection?: string | string[];
 		wrap?: boolean | boolean[] | string;
+		flexWrap?: boolean | boolean[] | string;
 	}
 
 	class Flex extends RenderableElementWithProps<FlexProps, any> {}

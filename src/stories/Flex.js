@@ -23,7 +23,7 @@ storiesOf('Core/Flex', module)
     return (
       <Provider>
         <Box m={3}>
-          <Flex justify='space-between'>
+          <Flex justifyContent='space-between'>
             <Box style={{ height: 200, width: 200 }} bg='red' />
             <Box style={{ height: 200, width: 200 }} bg='blue' />
             <Box style={{ height: 200, width: 200 }} bg='green' />
