@@ -19,7 +19,6 @@ import styled from 'styled-components';
 
 import theme from '../theme';
 import Button from './Button';
-import { Box } from './Grid';
 import Pager from './Pager';
 
 const highlightStyle = `
@@ -439,7 +438,7 @@ export default class Table<T> extends React.Component<
 		const sortedData = this.sortData(data).slice(lowerBound, upperBound);
 
 		return (
-			<Box {...props}>
+			<>
 				{!!usePager &&
 					(_pagerPosition === 'top' || _pagerPosition === 'both') && (
 						<Pager
@@ -543,7 +542,7 @@ export default class Table<T> extends React.Component<
 							mb={2}
 						/>
 					)}
-			</Box>
+			</>
 		);
 	}
 }
