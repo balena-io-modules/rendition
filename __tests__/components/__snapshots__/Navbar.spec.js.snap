@@ -26,7 +26,7 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
             className="sc-kpOJdX gjfIsR sc-kgoBCf cmynHa sc-kAzzGY bHluuy sc-fjdhpX cqKzNA"
           />
           <div
-            className="sc-dxgOiQ bTZgME sc-kgoBCf hSuaOE sc-kAzzGY bHluuy sc-fjdhpX kGtvco"
+            className="sc-dxgOiQ bTZgME sc-kgoBCf hSuaOE sc-kAzzGY bHluuy sc-fjdhpX kxUAi"
             display={
               Array [
                 "block",
@@ -57,7 +57,7 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
           </div>
         </div>
         <div
-          className="sc-ckVGcZ izzoql sc-chPdSV hcSthT sc-cSHVUG kBGaNN sc-jzJRlG krtRJA"
+          className="sc-ckVGcZ izzoql sc-chPdSV hcSthT sc-cSHVUG kBGaNN sc-jzJRlG ixrKXi"
           maxHeight={
             Array [
               "0vh",
@@ -66,7 +66,7 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
           }
         >
           <div
-            className="sc-chPdSV dMuhYu sc-cSHVUG kBGaNN sc-jzJRlG ffNkmI"
+            className="sc-chPdSV dMuhYu sc-cSHVUG kBGaNN sc-jzJRlG VYGwj"
             direction={
               Array [
                 "column",
@@ -75,7 +75,7 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
             }
           >
             <div
-              className="sc-kgoBCf hdQKjv sc-kAzzGY bHluuy sc-fjdhpX iUbdmZ"
+              className="sc-kgoBCf hdQKjv sc-kAzzGY bHluuy sc-fjdhpX kCJwjT"
               onClick={[Function]}
             >
               <a
@@ -122,7 +122,7 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
             className="sc-kpOJdX gjfIsR sc-kgoBCf cmynHa sc-kAzzGY bHluuy sc-fjdhpX cqKzNA"
           />
           <div
-            className="sc-dxgOiQ bTZgME sc-kgoBCf hSuaOE sc-kAzzGY bHluuy sc-fjdhpX kGtvco"
+            className="sc-dxgOiQ bTZgME sc-kgoBCf hSuaOE sc-kAzzGY bHluuy sc-fjdhpX kxUAi"
             display={
               Array [
                 "block",
@@ -153,7 +153,7 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
           </div>
         </div>
         <div
-          className="sc-ckVGcZ izzoql sc-chPdSV hcSthT sc-cSHVUG kBGaNN sc-jzJRlG krtRJA"
+          className="sc-ckVGcZ izzoql sc-chPdSV hcSthT sc-cSHVUG kBGaNN sc-jzJRlG ixrKXi"
           maxHeight={
             Array [
               "0vh",
@@ -162,7 +162,7 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
           }
         >
           <div
-            className="sc-chPdSV dMuhYu sc-cSHVUG kBGaNN sc-jzJRlG ffNkmI"
+            className="sc-chPdSV dMuhYu sc-cSHVUG kBGaNN sc-jzJRlG VYGwj"
             direction={
               Array [
                 "column",
@@ -171,7 +171,7 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
             }
           >
             <div
-              className="sc-kgoBCf hdQKjv sc-kAzzGY bHluuy sc-fjdhpX iUbdmZ"
+              className="sc-kgoBCf hdQKjv sc-kAzzGY bHluuy sc-fjdhpX kCJwjT"
               onClick={[Function]}
             >
               <a
@@ -185,7 +185,7 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
               </a>
             </div>
             <div
-              className="sc-kgoBCf hdQKjv sc-kAzzGY bHluuy sc-fjdhpX iUbdmZ"
+              className="sc-kgoBCf hdQKjv sc-kAzzGY bHluuy sc-fjdhpX kCJwjT"
               onClick={[Function]}
             >
               <a
@@ -199,7 +199,7 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
               </a>
             </div>
             <div
-              className="sc-kgoBCf hdQKjv sc-kAzzGY bHluuy sc-fjdhpX iUbdmZ"
+              className="sc-kgoBCf hdQKjv sc-kAzzGY bHluuy sc-fjdhpX kCJwjT"
               onClick={[Function]}
             >
               <a
@@ -246,7 +246,7 @@ exports[`Navbar renders correctly with no children prop 1`] = `
             className="sc-kpOJdX gjfIsR sc-kgoBCf cmynHa sc-kAzzGY bHluuy sc-fjdhpX cqKzNA"
           />
           <div
-            className="sc-dxgOiQ bTZgME sc-kgoBCf hSuaOE sc-kAzzGY bHluuy sc-fjdhpX kGtvco"
+            className="sc-dxgOiQ bTZgME sc-kgoBCf hSuaOE sc-kAzzGY bHluuy sc-fjdhpX kxUAi"
             display={
               Array [
                 "block",
@@ -277,7 +277,7 @@ exports[`Navbar renders correctly with no children prop 1`] = `
           </div>
         </div>
         <div
-          className="sc-ckVGcZ izzoql sc-chPdSV hcSthT sc-cSHVUG kBGaNN sc-jzJRlG krtRJA"
+          className="sc-ckVGcZ izzoql sc-chPdSV hcSthT sc-cSHVUG kBGaNN sc-jzJRlG ixrKXi"
           maxHeight={
             Array [
               "0vh",
