@@ -60,7 +60,7 @@ const Button = (styled.button as StyledFunction<ThemedButtonProps>)`
 	border: 0;
 	margin: 0;
 	min-width: ${props => px(minWidth(props))};
-	vertical-align: middle;
+	vertical-align: ${props => props.vAlign || 'top'};
 	font-size: inherit;
 	line-height: 1.1;
 	text-align: center;

@@ -56,7 +56,7 @@ exports[`Form component should match the stored snapshot 1`] = `
         <div />
       </div>
       <button
-        className="sc-VigVT hegYug sc-htoDjs jrhxUu"
+        className="sc-VigVT hegYug sc-htoDjs iwozsz"
       >
         Submit
       </button>

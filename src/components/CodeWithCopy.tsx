@@ -57,6 +57,7 @@ const Base = ({ copy, text, color, ...props }: CodeWithCopyProps) => {
 					plaintext
 					tooltip={{ text: 'Copied!', trigger: 'click' }}
 					onClick={() => copyIt(copy, text)}
+					vAlign="middle"
 					className="code-with-copy__copy"
 				>
 					<FaClipboard color={color as string} />

@@ -11,7 +11,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
       className="sc-jKJlTe dCeOjK sc-dxgOiQ dtwKdh sc-kpOJdX kGHtPs"
     >
       <button
-        className="sc-VigVT iMLQux sc-htoDjs jrhxUu"
+        className="sc-VigVT iMLQux sc-htoDjs iwozsz"
         disabled={undefined}
         onClick={[Function]}
       >
@@ -85,7 +85,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
           disabled={undefined}
         >
           <button
-            className="sc-cHGsZl kKmwRj sc-VigVT xuzkb sc-dnqmqq eWZAMQ"
+            className="sc-cHGsZl kKmwRj sc-VigVT xuzkb sc-dnqmqq eTCRPL"
             disabled={undefined}
             onClick={[Function]}
           >
