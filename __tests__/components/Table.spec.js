@@ -743,7 +743,7 @@ describe('Table component', () => {
     })
   })
 
-  describe.only('itemsPerPage property', () => {
+  describe('itemsPerPage property', () => {
     it('should limit the number of items shown at one time', () => {
       const component = mount(
         <Provider>
