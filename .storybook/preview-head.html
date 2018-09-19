@@ -1,1 +1,14 @@
-<link href="https://fonts.googleapis.com/css?family=Roboto400,700|Ubuntu+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu+Mono:400,700" rel="stylesheet" onload="this.setAttribute('loaded', 'loaded')">
+<script>
+function fontLoading() {
+  const loaded = () => !!document.querySelector('link[loaded="loaded"]');
+  if (loaded()) return Promise.resolve();
+  return new Promise((resolve, reject) => {
+    const id = setInterval(() => {
+      if (!loaded()) return;
+      clearInterval(id);
+      resolve();
+    }, 50);
+  });
+}
+</script>

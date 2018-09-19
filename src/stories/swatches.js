@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Flex, Heading, Provider } from '../'
 import { withTheme } from 'styled-components'
@@ -80,6 +81,7 @@ const Swatch = withTheme(props => (
 
 storiesOf('Core/Swatches', module)
   .addDecorator(withReadme(Readme))
+  .addDecorator(withScreenshot())
   .add('All', () => {
     return (
       <Provider>

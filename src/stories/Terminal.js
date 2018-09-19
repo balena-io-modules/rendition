@@ -1,9 +1,11 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Provider, Terminal } from '../'
 import { output1 } from './assets/tty-output'
 import { Repl } from './assets/repl'
+import { isTakingScreenshot } from './helpers'
 import * as Readme from './README/Terminal.md'
 
 const outputArray = output1.split('\n')
@@ -16,6 +18,10 @@ class Logger extends React.Component {
   }
 
   componentDidMount () {
+    if (isTakingScreenshot) {
+      return
+    }
+
     this.interval = setInterval(() => {
       if (!this.term) {
         return
@@ -182,6 +188,7 @@ class PersistentTerm extends React.Component {
 
 storiesOf('Core/Terminal', module)
   .addDecorator(withReadme(Readme))
+  .addDecorator(withScreenshot())
   .add('Standard', () => {
     return (
       <Provider>

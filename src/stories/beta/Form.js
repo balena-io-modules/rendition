@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Flex, Provider, Txt } from '../../'
 import { Form } from '../../unstable/'
@@ -102,6 +103,7 @@ class FormDemo extends React.Component {
 
 storiesOf('Beta/Form', module)
   .addDecorator(withReadme(Readme))
+  .addDecorator(withScreenshot())
   .add('Simple', () => {
     return (
       <Provider>
