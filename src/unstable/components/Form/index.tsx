@@ -12,6 +12,7 @@ import { DescriptionField } from './fields/DescriptionField';
 import { TitleField } from './fields/TitleField';
 import ArrayFieldTemplate from './templates/ArrayFieldTemplate';
 import FieldTemplate from './templates/FieldTemplate';
+import ObjectFieldTemplate from './templates/ObjectFieldTemplate';
 import BaseInput from './widgets/BaseInput';
 
 const SUPPORTED_SCHEMA_FORMATS = [
@@ -126,6 +127,7 @@ export default class FormHOC extends React.Component<
 					widgets={widgets}
 					fields={fields}
 					FieldTemplate={FieldTemplate}
+					ObjectFieldTemplate={ObjectFieldTemplate}
 					ArrayFieldTemplate={ArrayFieldTemplate}
 				>
 					{hideSubmitButton && <span />}

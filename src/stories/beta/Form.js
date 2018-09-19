@@ -17,6 +17,7 @@ the relevant file from \`renditon/dist/extra/Form/\`.
 
 const basicPokedexSchema = {
   type: 'object',
+  title: 'Pokèmon',
   properties: {
     Name: {
       type: 'string'
@@ -156,6 +157,58 @@ storiesOf('Beta/Form', module)
     return (
       <Provider>
         <FormDemo schema={basicPokedexSchema} uiSchema={uiSchema} />
+      </Provider>
+    )
+  })
+  .add('Group titles', () => {
+    const schema = {
+      type: 'object',
+      title: 'Networking',
+      properties: {
+        vpn: {
+          type: 'object',
+          title: 'Virtual Private Network',
+          properties: {
+            endpoint: {
+              title: 'Endpoint',
+              type: 'string'
+            },
+            certificate: {
+              title: 'Certificate',
+              type: 'string'
+            }
+          }
+        },
+        wifiNetwork: {
+          type: 'object',
+          title: 'WiFi Network',
+          properties: {
+            wifi: {
+              type: 'object',
+              properties: {
+                ssid: {
+                  title: 'Network SSID',
+                  type: 'string'
+                }
+              }
+            },
+            wifiSecurity: {
+              type: 'object',
+              properties: {
+                psk: {
+                  title: 'Network Passphrase',
+                  type: 'string'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    return (
+      <Provider>
+        <FormDemo schema={schema} />
       </Provider>
     )
   })
