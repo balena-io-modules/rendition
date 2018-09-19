@@ -445,7 +445,7 @@ declare module 'rendition' {
 
 	interface TableProps<T> {
 		columns: Array<TableColumn<T>>;
-		data: T[];
+		data?: T[] | null;
 		getRowHref?: (row: T) => string;
 		// Only usable if a rowKey property is also provided.
 		// If an onCheck property is provided , then checkboxes will be renders,

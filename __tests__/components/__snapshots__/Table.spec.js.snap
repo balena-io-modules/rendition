@@ -2,10 +2,10 @@
 
 exports[`Table component should match the stored snapshot 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-eNQAEJ cMtItN"
 >
   <div
-    className="sc-jTzLTM gnDJTX"
+    className="sc-hMqMXs jypzAE"
   >
     <div
       data-display="table-head"
