@@ -134,13 +134,15 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 		};
 	}
 
-	show(e: Event, tooltipText: string, options: TooltipShowOptions = {}): void {
-		let top = 0;
-		let left = 0;
+	private getTooltipCoordinates(
+		target: HTMLElement,
+		placement: Placement | undefined,
+	) {
+		if (!this.tooltipElement) {
+			return;
+		}
 
-		const boundingClientRect = (e.target as HTMLElement).getBoundingClientRect();
-
-		type Mutable<T> = { -readonly [P in keyof T]-?: T[P] };
+		const boundingClientRect = target.getBoundingClientRect();
 
 		// Position the tooltip correctly
 		const boundingRect = pick(
@@ -152,52 +154,80 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 		boundingRect.top += window.scrollY;
 		boundingRect.left += window.scrollX;
 
-		const { placement, containerStyle, innerStyle, arrowStyle } = options;
+		if (!this.tooltipElement) {
+			return;
+		}
 
+		if (!placement || placement === 'top') {
+			return {
+				top:
+					boundingRect.top - this.tooltipElement.clientHeight - TARGET_OFFSET,
+				left:
+					boundingRect.left +
+					boundingRect.width / 2 -
+					this.tooltipElement.clientWidth / 2,
+			};
+		}
+		if (placement === 'right') {
+			return {
+				top:
+					boundingRect.top +
+					boundingRect.height / 2 -
+					this.tooltipElement.clientHeight / 2,
+				left: boundingRect.left + boundingRect.width + TARGET_OFFSET,
+			};
+		}
+		if (placement === 'bottom') {
+			return {
+				top: boundingRect.top + boundingRect.height + TARGET_OFFSET,
+				left:
+					boundingRect.left +
+					boundingRect.width / 2 -
+					this.tooltipElement.clientWidth / 2,
+			};
+		}
+		if (placement === 'left') {
+			return {
+				top:
+					boundingRect.top +
+					boundingRect.height / 2 -
+					this.tooltipElement.clientHeight / 2,
+				left:
+					boundingRect.left - this.tooltipElement.clientWidth - TARGET_OFFSET,
+			};
+		}
+	}
+
+	show(e: Event, tooltipText: string, options: TooltipShowOptions = {}): void {
 		// Set the contents of the tooltip using `ìnnerText` and adjust the styles
 		// now, so that the height can be properly calculated
 		if (this.tooltipElementInner) {
 			this.tooltipElementInner.innerText = tooltipText;
 		}
 
-		if (!placement || placement === 'top') {
-			top = boundingRect.top - this.tooltipElement.clientHeight - TARGET_OFFSET;
-			left =
-				boundingRect.left +
-				boundingRect.width / 2 -
-				this.tooltipElement.clientWidth / 2;
-		}
-		if (placement === 'right') {
-			top =
-				boundingRect.top +
-				boundingRect.height / 2 -
-				this.tooltipElement.clientHeight / 2;
-			left = boundingRect.left + boundingRect.width + TARGET_OFFSET;
-		}
-		if (placement === 'bottom') {
-			top = boundingRect.top + boundingRect.height + TARGET_OFFSET;
-			left =
-				boundingRect.left +
-				boundingRect.width / 2 -
-				this.tooltipElement.clientWidth / 2;
-		}
-		if (placement === 'left') {
-			top =
-				boundingRect.top +
-				boundingRect.height / 2 -
-				this.tooltipElement.clientHeight / 2;
-			left =
-				boundingRect.left - this.tooltipElement.clientWidth - TARGET_OFFSET;
-		}
+		const { placement, containerStyle, innerStyle, arrowStyle } = options;
 
-		this.setState({
-			coordinates: { top, left },
+		const coordinates = this.getTooltipCoordinates(
+			e.target as HTMLElement,
+			placement,
+		);
+
+		const newState = {
 			show: true,
 			placement,
 			containerStyle,
 			innerStyle,
 			arrowStyle,
-		});
+		};
+
+		if (coordinates) {
+			return this.setState({
+				...newState,
+				coordinates,
+			});
+		}
+
+		this.setState(newState);
 	}
 
 	hide(): void {

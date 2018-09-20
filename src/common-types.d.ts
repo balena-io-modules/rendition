@@ -1,3 +1,5 @@
+type Mutable<T> = { -readonly [P in keyof T]-?: T[P] };
+
 type ResponsiveStyle = string | number | Array<string | number>;
 
 interface Theme {
