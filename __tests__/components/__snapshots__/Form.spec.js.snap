@@ -2,10 +2,10 @@
 
 exports[`Form component should match the stored snapshot 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-jTzLTM bHwELW"
 >
   <div
-    className="sc-daURTG cllDlm sc-chPdSV dfDVBP sc-cSHVUG kBGaNN sc-jTzLTM cTXuEb"
+    className="sc-daURTG cllDlm sc-hMqMXs kYklEl sc-jKJlTe izQvgc sc-kpOJdX doLePh"
   >
     <form
       className="rjsf"
@@ -13,11 +13,11 @@ exports[`Form component should match the stored snapshot 1`] = `
       onSubmit={[Function]}
     >
       <div
-        className="form-group field field-object sc-chPdSV iqIpJd sc-cSHVUG kBGaNN sc-jTzLTM blsdOK"
+        className="form-group field field-object sc-hMqMXs foLzXp sc-jKJlTe izQvgc sc-kpOJdX eNsvfx"
       >
         <fieldset>
           <div
-            className="form-group field field-string sc-chPdSV iqIpJd sc-cSHVUG kBGaNN sc-jTzLTM blsdOK"
+            className="form-group field field-string sc-hMqMXs foLzXp sc-jKJlTe izQvgc sc-kpOJdX eNsvfx"
           >
             <label
               className="control-label sc-gojNiO cHANxq"
@@ -48,7 +48,7 @@ exports[`Form component should match the stored snapshot 1`] = `
         <div />
       </div>
       <button
-        className="sc-VigVT hegYug sc-htoDjs jrhxUu"
+        className="sc-kGXeez eHjdfB sc-jzJRlG byDNsL"
       >
         Submit
       </button>

@@ -186,4 +186,4 @@ export default withTheme(
 			);
 		}
 	}),
-);
+) as React.ComponentClass<AlertProps>;

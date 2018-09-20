@@ -4,6 +4,7 @@ import { mount } from 'enzyme'
 import React from 'react'
 import renderer from 'react-test-renderer'
 import sinon from 'sinon'
+import Alert from '../../src/components/Alert'
 import Provider from '../../src/components/Provider'
 import { Form } from '../../src/unstable/'
 
@@ -318,6 +319,31 @@ describe('Form component', () => {
           Array: [ value1 ]
         })
       })
+    })
+  })
+
+  describe('uiSchema property', () => {
+    const uiSchema = {
+      Name: {
+        'ui:warning': 'lorem ipsum dolor sit amet'
+      }
+    }
+
+    const component = mount(
+      <Provider>
+        <Form
+          uiSchema={uiSchema}
+          schema={schema}
+        />
+      </Provider>
+    )
+
+    it('should be able to add warnings using ui:warning', () => {
+      const warnings = component.find(Alert)
+
+      expect(warnings.length).toEqual(1)
+
+      expect(warnings.first().text()).toEqual(uiSchema.Name['ui:warning'])
     })
   })
 })

@@ -146,6 +146,19 @@ storiesOf('Beta/Form', module)
       </Provider>
     )
   })
+  .add('Warnings', () => {
+    const uiSchema = {
+      Name: {
+        'ui:warning': 'Once the "Name" is set it cannot be changed'
+      }
+    }
+
+    return (
+      <Provider>
+        <FormDemo schema={basicPokedexSchema} uiSchema={uiSchema} />
+      </Provider>
+    )
+  })
   .add('Extra widgets', () => {
     const extraSchema = {
       type: 'object',
