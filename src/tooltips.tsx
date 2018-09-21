@@ -154,10 +154,6 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 		boundingRect.top += window.scrollY;
 		boundingRect.left += window.scrollX;
 
-		if (!this.tooltipElement) {
-			return;
-		}
-
 		if (!placement || placement === 'top') {
 			return {
 				top:
