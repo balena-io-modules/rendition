@@ -11,7 +11,8 @@
   "types": "./typings/rendition.d.ts",
   "scripts": {
     "start": "start-storybook -p 6006",
-    "build": "rimraf dist && tsc",
+    "build": "rimraf dist && tsc && npm run build:docs",
+    "build:docs": "node ./scripts/generateDocs.js",
     "build:storybook": "build-storybook -o .out",
     "test": "npm run lint && npm run jest",
     "jest": "jest __tests__ --maxWorkers=4",
