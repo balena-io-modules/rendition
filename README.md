@@ -7,6 +7,15 @@
 
 A library of UI components, built using [React][react], [recompose][recompose], [styled-components][styled-components] and [styled-system][styled-system].
 
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Components](#components)
+* [Development](#development)
+* [Testing](#testing)
+* [Upgrading](#testing)
+
 ## Installation
 
 ```
@@ -435,7 +444,7 @@ Gauges are generated using an array of data, where each item represents
 a segment of the gauge. Each item should have the following properties:
 
 | Name          | Type      | Description                                          |
-| ------ | ------ | --------- | ---------- | ------------- |
+| ------------- | --------- | ---------------------------------------------------- |
 | value         | `number`  | A numerical value for this segment                   |
 | name          | `string`  | A descriptive name for this segment                  |
 | color         | `string`  | A CSS color string to use for this segment           |
@@ -918,7 +927,7 @@ If you need more control over the tooltip, you can set the attribute to an
 object with the following properties:
 
 | Name          | Type      | Required | Description                                          |
-| ------ | ------ | --------- | ---------- | ------------- |
+| ------------- | --------- | -------- | ---------------------------------------------------- |
 | text         | `string`  | ✓ | The text to display in the tooltip |
 | trigger | <code>'click' &#124; 'hover'</code> | - | Controls whether the tooltip is displayed on hover or click, defaults to `'hover'`
 | placement | <code>'top' &#124; 'right' &#124; 'bottom' &#124; 'left'</code> | - | Controls the position of the tooltip related to the component, defaults to `'top'` |
@@ -1019,7 +1028,7 @@ If you would like to try them out they can be loaded using
 `import * from 'rendition/dist/unstable'`.
 
 
-## Developing
+## Development
 
 Clone this repository and then run:
 
