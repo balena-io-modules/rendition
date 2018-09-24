@@ -5,7 +5,7 @@
 ## Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `emphasized`  | `boolean` | -         | -          | If true, use a larger size                           |
 | `monospace`  | `boolean` | - | - | If true, render text in a monospace font |
 | `onChange`  | `(e: Event) => void` | - | - | A function that is called when the input value changes |

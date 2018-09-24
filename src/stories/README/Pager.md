@@ -7,7 +7,7 @@ Displays a pager widget.
 ## Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `totalItems`  | `number`  | -         | -          | The total number of items to split into pages        |
 | `itemsPerPage`| `number`  | -         | -          | The number of items on each page                     |
 | `page`        | `number`  | -         | -          | The current page (zero-indexed)                      |

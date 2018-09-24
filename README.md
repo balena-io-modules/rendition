@@ -7,6 +7,15 @@
 
 A library of UI components, built using [React][react], [recompose][recompose], [styled-components][styled-components] and [styled-system][styled-system].
 
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Components](#components)
+* [Development](#development)
+* [Testing](#testing)
+* [Upgrading](#testing)
+
 ## Installation
 
 ```
@@ -79,7 +88,7 @@ For an interactive demo of all components, see https://resin-io-modules.github.i
 #### Props
 
 | Name   | Type   | Default   | Required   | Description   |
-| -------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `primary`     | `boolean` | - | - | If true, use the `primary` theme color     |
 | `secondary`   | `boolean` | - | - | If true, use the `secondary` theme color   |
 | `tertiary`    | `boolean` | - | - | If true, use the `tertiary` theme color    |
@@ -103,7 +112,7 @@ automatically from its `text` property, though this can be overridden.
 #### Props
 
 | Name   | Type   | Default   | Required   | Description   |
-| -------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `primary`     | `boolean` | - | - | If true, use the `primary` theme color     |
 | `secondary`   | `boolean` | - | - | If true, use the `secondary` theme color   |
 | `tertiary`    | `boolean` | - | - | If true, use the `tertiary` theme color    |
@@ -124,7 +133,7 @@ Displays a dropdown list, with each item displayed as a `Badge` component.
 #### Props
 
 | Name   | Type   | Default   | Required   | Description   |
-| -------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `items`  | `string[]` | - | ✓ | An array of strings that should be rendered as `Badge`components |
 | `extraPrefix`  | `string[]` | - | - | An array of strings that should be rendered in plaintext, before the main items |
 | `extraSuffix`  | `string[]` | - | - | An array of strings that should be rendered in plaintext, after the main items |
@@ -147,7 +156,7 @@ The properties of the [`DropDownButton`][1] component are also available.
 #### Props
 
 | Name   | Type   | Default   | Required   | Description   |
-| -------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `backgroundImage`| `string`| - | - | The path to an image that should be displayed in the background |
 | `minHeight`| `string`| - | - | The minimum height of the `Banner`, eg `180px` |
 
@@ -163,7 +172,7 @@ The basic building block of a rendition application.
 #### Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `flex`      | <code>string &#124; string[]</code> | - | - | Sets `flex`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
 | `order`      | <code>number &#124; string &#124; Array&lt;number &#124; string&gt;</code> | - | - | Sets `order`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
 
@@ -175,7 +184,7 @@ The basic building block of a rendition application.
 #### Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `primary`     | `boolean` | -         | -          | If true, use the `primary` theme color               |
 | `secondary`   | `boolean` | -         | -          | If true, use the `secondary` theme color             |
 | `tertiary`    | `boolean` | -         | -          | If true, use the `tertiary` theme color              |
@@ -202,7 +211,7 @@ Displays text formatted as `<code>` that can be copied to the clipboard.
 #### Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `text`      | `string` | -         | ✓          | The value that should be displayed, if the `copy` prop is not provided, this value will be copied to the clipboard
 | `copy`      | `string` | -         | -          | The value that should be copied to the clipboard
 | `showCopyButton`      | <code>'hover' &#124; 'always'</code> | <code>'always'</code>       | -          | Optionally show the copy button on hover or always show the button
@@ -237,7 +246,7 @@ are rendered inside a dropdown list.
 #### Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `primary`     | `boolean` | -         | -          | If true, use the `primary` theme color               |
 | `secondary`   | `boolean` | -         | -          | If true, use the `secondary` theme color             |
 | `tertiary`    | `boolean` | -         | -          | If true, use the `tertiary` theme color              |
@@ -321,7 +330,7 @@ the user can select a scope when creating a new view.
 A view scope has the following properties:
 
 | Name          | Type      | Description                                          |
-| -------------------------------------------------------------------------------- |
+| ------------- | --------- | ---------------------------------------------------- |
 | slug            | `string`  | A unique identifier for the scope                  |
 | name          | `string`  | A descriptive name for the scope                     |
 | label       | `string`  | An optional label to use for this scope when creating a view  |
@@ -329,7 +338,7 @@ A view scope has the following properties:
 A view has the following properties:
 
 | Name          | Type      | Description                                          |
-| -------------------------------------------------------------------------------- |
+| ------------- | --------- | ---------------------------------------------------- |
 | id            | `string`  | A unique identifier for the view                     |
 | name          | `string`  | A descriptive name for the view                      |
 | filters       | `string`  | An array of json schemas                             |
@@ -338,7 +347,7 @@ A view has the following properties:
 #### Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `schema`    | `object` | - | ✓ | A json schema describing the shape of the objects you want to filter |
 | `disabled`    | `boolean` | -         | -          | If true, disable the entire `Filters` interface
 | `filters`    | `object[]` | -         | -          | An array of json schemas to be displayed as the currently selected filters, typically used when loading when loading filters from storage |
@@ -366,7 +375,7 @@ Displays an element with a [`fixed`][1] position.
 #### Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `top`      | <code>boolean &#124; ResponsiveStyle</code> | - | - | Sets the distance to the top of the containing block. If true, sets the value to zero
 | `right`      | <code>boolean &#124; ResponsiveStyle</code> | - | - | Sets the distance to the right of the containing block. If true, sets the value to zero
 | `bottom`      | <code>boolean &#124; ResponsiveStyle</code> | - | - | Sets the distance to the bottom of the containing block. If true, sets the value to zero
@@ -384,7 +393,7 @@ Displays an element using [flexbox](1).
 #### Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `align`      | <code>string &#124; string[]</code> | - | - | Sets `align-items`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
 | `justify`      | <code>string &#124; string[]</code> | - | - | Sets `justify-content`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
 | `flexDirection`      | <code>string &#124; string[]</code> | - | - | Sets `flex-direction`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
@@ -412,7 +421,7 @@ use it, it can be imported using `import { Form } from 'rendition/dist/unstable'
 #### Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `schema`    | `object` | - | ✓ | A json schema describing the shape of the data you would like to gather |
 | `submitButtonText` | <code>string &#124; JSX.Element</code> | - | - | A string or JSX element to replace the text in the form submit button |
 | `hideSubmitButton` | `boolean` | - | - | If true, do not display the form submit button |
@@ -435,7 +444,7 @@ Gauges are generated using an array of data, where each item represents
 a segment of the gauge. Each item should have the following properties:
 
 | Name          | Type      | Description                                          |
-| -------------------------------------------------------------------------------- |
+| ------------- | --------- | ---------------------------------------------------- |
 | value         | `number`  | A numerical value for this segment                   |
 | name          | `string`  | A descriptive name for this segment                  |
 | color         | `string`  | A CSS color string to use for this segment           |
@@ -445,7 +454,7 @@ a segment of the gauge. Each item should have the following properties:
 #### Props
 
 | Name   | Type   | Default   | Required   | Description   |
-| -------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `title`  | `string` | - | ✓ | Text displayed in the center of the gauge |
 | `data`  | `object[]` | - | ✓ | An array of data as described above |
 | `placeholderColor`  | `string` | - | - | A CSS color string to use as the gauge background |
@@ -478,7 +487,7 @@ The attributes of an [`<img>`][1] element are also available.
 #### Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `emphasized`  | `boolean` | -         | -          | If true, use a larger size                           |
 | `monospace`  | `boolean` | - | - | If true, render text in a monospace font |
 | `onChange`  | `(e: Event) => void` | - | - | A function that is called when the input value changes |
@@ -500,7 +509,7 @@ Displays an anchor link.
 #### Props
 
 | Name   | Type   | Default   | Required   | Description   |
-| -------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `blank`  | `boolean` | - | - | If true, open the link in a new tab |
 | `disabled`  | `boolean` | - | - | If true, disable the link |
 
@@ -528,7 +537,7 @@ import { Markdown } from 'rendition/dist/extra/Markdown';
 #### Props
 
 | Name   | Type   | Default   | Required   | Description   |
-| -------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `children`  | `string` | - | ✓ | The markdown source that should be rendered |
 
 Any other properties supplied are spread to the root element ([`Txt`][2]).
@@ -556,7 +565,7 @@ import { Mermaid } from 'rendition/dist/extra/Mermaid';
 #### Props
 
 | Name   | Type   | Default   | Required   | Description   |
-| -------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `value`  | `string` | - | ✓ | The mermaid source that should be rendered |
 
 
@@ -597,7 +606,7 @@ A component used to render a navigation bar.
 #### Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `brand`    | `JSX.Element` | - | ✓ | A JSX element used as the main branding in the navbar |
 
 ### Pager
@@ -609,7 +618,7 @@ Displays a pager widget.
 #### Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `totalItems`  | `number`  | -         | -          | The total number of items to split into pages        |
 | `itemsPerPage`| `number`  | -         | -          | The number of items on each page                     |
 | `page`        | `number`  | -         | -          | The current page (zero-indexed)                      |
@@ -669,7 +678,7 @@ Displays an input styled as a search bar.
 #### Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `dark`    | `boolean` | - | - | If true, uses a light colorscheme for use on a dark background |
 | `disabled`    | `boolean` | -         | -          | If true, disable the input |
 | `placeholder`    | `string` | -         | -          | A placeholder to use in the input |
@@ -683,7 +692,7 @@ Displays an input styled as a search bar.
 #### Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `emphasized`  | `boolean` | -         | -          | If true, use a larger size                           |
 | `value`  | `string` | - | - | The selected value |
 | `disabled`      | `boolean` | -         | -          | If true, disabled the element |
@@ -715,7 +724,7 @@ are rendered and whether or not the column is sortable.
 The `columns` property should be an array of objects with the following properties:
 
 | Name          | Type      | Required | Description                                          |
-| -------------------------------------------------------------------------------- |
+| ------------- | --------- | -------- | ---------------------------------------------------- |
 | field         | `keyof T`  | ✓ | The name of the field this column should render, this should correspond to a key on the objects passed to the `data` property of the `Table` component |
 | cellAttributes | <code>object &#124; (value: any, row: T) => object</code> | - | Attributes that are passed to each cell in this column. This can also be a function, which will be called with the value of the `field` provided and the row data (`T`) |
 | label | <code>string &#124; JSX.Element</code> | - | A string or JSX element that will be used to display the name of the column. If this property is not provided, the `field` property will be used instead |
@@ -752,7 +761,7 @@ cause a re-render of the component and will not be reflected on the table.
 #### Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------------- | --------- | --------- | ---------- | ---------------------------------------------------- |
 | `columns`    | `object[]` | - | ✓ | An array of column objects, as described above |
 | `data`    | `T[]` | - | ✓ | An array of objects that will be displayed in the table |
 | `getRowHeref`    | `(row: T) => string` | - | - | If provided, each row in the table will be a clickable link, this function is used to create the link href |
@@ -849,7 +858,7 @@ instance instead of creating a new one.
 #### Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `ttyInstance`    | `object` | -         | -          | An existing `Terminal.tty` instance to use instead of creating a new one |
 | `persistent`    | `boolean` | -         | -          | If true, don't destroy the `Terminal.tty` instance when the component unmounts |
 | `nonInteractive`    | `boolean` | -         | -          | If true, the component will go into a "read-only" state, useful for displaying logs |
@@ -870,7 +879,7 @@ Displays text that can be copied to the clipboard.
 #### Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `copy`      | `string` | -         | ✓          | The value that should be copied to the clipboard
 | `showCopyButton`      | <code>'hover' &#124; 'always'</code> | - | - | Optionally show the copy button on hover or always show the button
 
@@ -881,7 +890,7 @@ Displays text that can be copied to the clipboard.
 #### Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `monospace`  | `boolean` | `false` | - | If true, render text in a monospace font |
 | `autoRows`  | `boolean` | `false` | - | If true, the textarea `rows` property will be changed automatically based on the content of the textarea, this behaviour will only work with a [controlled input][2] (i.e. you have used the `onChange` property |
 | `minRows`  | `number` | - | - | Set the minimum number of rows |
@@ -918,7 +927,7 @@ If you need more control over the tooltip, you can set the attribute to an
 object with the following properties:
 
 | Name          | Type      | Required | Description                                          |
-| -------------------------------------------------------------------------------- |
+| ------------- | --------- | -------- | ---------------------------------------------------- |
 | text         | `string`  | ✓ | The text to display in the tooltip |
 | trigger | <code>'click' &#124; 'hover'</code> | - | Controls whether the tooltip is displayed on hover or click, defaults to `'hover'`
 | placement | <code>'top' &#124; 'right' &#124; 'bottom' &#124; 'left'</code> | - | Controls the position of the tooltip related to the component, defaults to `'top'` |
@@ -955,7 +964,7 @@ tag can be used with `<Txt.p>`.
 #### Props
 
 | Name   | Type   | Default   | Required   | Description   |
-| -------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `monospace`  | `boolean` | - | - | If true, render text in a monospace font |
 | `bold`  | `boolean` | - | - | If true, render text in a bold font |
 | `caps`  | `boolean` | - | - | If true, render text in uppercase |
@@ -1019,7 +1028,7 @@ If you would like to try them out they can be loaded using
 `import * from 'rendition/dist/unstable'`.
 
 
-## Developing
+## Development
 
 Clone this repository and then run:
 
@@ -1030,8 +1039,10 @@ npm ci
 The interactive storybook can be launched by running:
 
 ```sh
-npm run storybook
+npm start
 ```
+
+The storybook can be accessed at http://localhost:6006.
 
 Code is automatically linted and formatted by [Husky][husky] as a pre-commit hook.
 

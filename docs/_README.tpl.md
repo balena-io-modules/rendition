@@ -7,6 +7,15 @@
 
 A library of UI components, built using [React][react], [recompose][recompose], [styled-components][styled-components] and [styled-system][styled-system].
 
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Components](#components)
+* [Development](#development)
+* [Testing](#testing)
+* [Upgrading](#testing)
+
 ## Installation
 
 ```
@@ -93,7 +102,7 @@ If you would like to try them out they can be loaded using
 `import * from 'rendition/dist/unstable'`.
 
 
-## Developing
+## Development
 
 Clone this repository and then run:
 
@@ -104,8 +113,10 @@ npm ci
 The interactive storybook can be launched by running:
 
 ```sh
-npm run storybook
+npm start
 ```
+
+The storybook can be accessed at http://localhost:6006.
 
 Code is automatically linted and formatted by [Husky][husky] as a pre-commit hook.
 

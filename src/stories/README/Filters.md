@@ -63,7 +63,7 @@ the user can select a scope when creating a new view.
 A view scope has the following properties:
 
 | Name          | Type      | Description                                          |
-| -------------------------------------------------------------------------------- |
+| ------------- | --------- | ---------------------------------------------------- |
 | slug            | `string`  | A unique identifier for the scope                  |
 | name          | `string`  | A descriptive name for the scope                     |
 | label       | `string`  | An optional label to use for this scope when creating a view  |
@@ -71,7 +71,7 @@ A view scope has the following properties:
 A view has the following properties:
 
 | Name          | Type      | Description                                          |
-| -------------------------------------------------------------------------------- |
+| ------------- | --------- | ---------------------------------------------------- |
 | id            | `string`  | A unique identifier for the view                     |
 | name          | `string`  | A descriptive name for the view                      |
 | filters       | `string`  | An array of json schemas                             |
@@ -80,7 +80,7 @@ A view has the following properties:
 ## Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `schema`    | `object` | - | ✓ | A json schema describing the shape of the objects you want to filter |
 | `disabled`    | `boolean` | -         | -          | If true, disable the entire `Filters` interface
 | `filters`    | `object[]` | -         | -          | An array of json schemas to be displayed as the currently selected filters, typically used when loading when loading filters from storage |

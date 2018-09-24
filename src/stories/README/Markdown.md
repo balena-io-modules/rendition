@@ -15,7 +15,7 @@ import { Markdown } from 'rendition/dist/extra/Markdown';
 ## Props
 
 | Name   | Type   | Default   | Required   | Description   |
-| -------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `children`  | `string` | - | ✓ | The markdown source that should be rendered |
 
 Any other properties supplied are spread to the root element ([`Txt`][2]).

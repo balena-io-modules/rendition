@@ -5,7 +5,7 @@
 ## Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `emphasized`  | `boolean` | -         | -          | If true, use a larger size                           |
 | `value`  | `string` | - | - | The selected value |
 | `disabled`      | `boolean` | -         | -          | If true, disabled the element |
