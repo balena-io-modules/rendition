@@ -343,7 +343,7 @@ describe('Form component', () => {
 
       expect(warnings.length).toEqual(1)
 
-      expect(warnings.first().text()).toEqual(uiSchema.Name['ui:warning'])
+      expect(warnings.first().text().trim()).toEqual(uiSchema.Name['ui:warning'])
     })
   })
 })

@@ -149,7 +149,7 @@ storiesOf('Beta/Form', module)
   .add('Warnings', () => {
     const uiSchema = {
       Name: {
-        'ui:warning': 'Once the "Name" is set it cannot be changed'
+        'ui:warning': 'Once the `Name` is set it cannot be changed'
       }
     }
 
