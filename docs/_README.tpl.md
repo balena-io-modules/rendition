@@ -104,8 +104,10 @@ npm ci
 The interactive storybook can be launched by running:
 
 ```sh
-npm run storybook
+npm start
 ```
+
+The storybook can be accessed at http://localhost:6006.
 
 Code is automatically linted and formatted by [Husky][husky] as a pre-commit hook.
 

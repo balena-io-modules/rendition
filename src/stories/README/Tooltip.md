@@ -19,7 +19,7 @@ If you need more control over the tooltip, you can set the attribute to an
 object with the following properties:
 
 | Name          | Type      | Required | Description                                          |
-| -------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | text         | `string`  | ✓ | The text to display in the tooltip |
 | trigger | <code>'click' &#124; 'hover'</code> | - | Controls whether the tooltip is displayed on hover or click, defaults to `'hover'`
 | placement | <code>'top' &#124; 'right' &#124; 'bottom' &#124; 'left'</code> | - | Controls the position of the tooltip related to the component, defaults to `'top'` |

@@ -5,7 +5,7 @@ Gauges are generated using an array of data, where each item represents
 a segment of the gauge. Each item should have the following properties:
 
 | Name          | Type      | Description                                          |
-| -------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | value         | `number`  | A numerical value for this segment                   |
 | name          | `string`  | A descriptive name for this segment                  |
 | color         | `string`  | A CSS color string to use for this segment           |
@@ -15,7 +15,7 @@ a segment of the gauge. Each item should have the following properties:
 ## Props
 
 | Name   | Type   | Default   | Required   | Description   |
-| -------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `title`  | `string` | - | ✓ | Text displayed in the center of the gauge |
 | `data`  | `object[]` | - | ✓ | An array of data as described above |
 | `placeholderColor`  | `string` | - | - | A CSS color string to use as the gauge background |

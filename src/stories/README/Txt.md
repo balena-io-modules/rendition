@@ -8,7 +8,7 @@ tag can be used with `<Txt.p>`.
 ## Props
 
 | Name   | Type   | Default   | Required   | Description   |
-| -------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `monospace`  | `boolean` | - | - | If true, render text in a monospace font |
 | `bold`  | `boolean` | - | - | If true, render text in a bold font |
 | `caps`  | `boolean` | - | - | If true, render text in uppercase |
