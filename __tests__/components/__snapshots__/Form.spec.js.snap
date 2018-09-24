@@ -8,17 +8,9 @@ exports[`Form component should match the stored snapshot 1`] = `
     className="sc-daURTG cllDlm sc-chPdSV dfDVBP sc-cSHVUG kBGaNN sc-jTzLTM cTXuEb"
   >
     <form
-      acceptCharset={undefined}
-      action={undefined}
-      autoComplete={undefined}
       className="rjsf"
-      encType={undefined}
-      id={undefined}
-      method={undefined}
-      name={undefined}
       noValidate={false}
       onSubmit={[Function]}
-      target={undefined}
     >
       <div
         className="form-group field field-object sc-chPdSV iqIpJd sc-cSHVUG kBGaNN sc-jTzLTM blsdOK"

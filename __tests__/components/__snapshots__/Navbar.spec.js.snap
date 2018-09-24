@@ -82,8 +82,6 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
                 className="sc-VigVT tcTAH sc-kEYyzF tuesb"
                 color="white"
                 href="/docs/"
-                rel={undefined}
-                target={undefined}
               >
                 Docs
               </a>
@@ -178,8 +176,6 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
                 className="sc-VigVT tcTAH sc-jKJlTe iYFCgQ"
                 color="white"
                 href="/docs/"
-                rel={undefined}
-                target={undefined}
               >
                 Docs
               </a>
@@ -192,8 +188,6 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
                 className="sc-VigVT tcTAH sc-eNQAEJ iestvo"
                 color="white"
                 href="/changelog/"
-                rel={undefined}
-                target={undefined}
               >
                 changelog
               </a>
@@ -206,8 +200,6 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
                 className="sc-VigVT tcTAH sc-hMqMXs bPxJSr"
                 color="white"
                 href="/gitter/"
-                rel={undefined}
-                target={undefined}
               >
                 gitter
               </a>

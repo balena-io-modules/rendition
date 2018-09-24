@@ -12,7 +12,6 @@ exports[`Filters component should match the stored snapshot 1`] = `
     >
       <button
         className="sc-VigVT iMLQux sc-htoDjs jrhxUu"
-        disabled={undefined}
         onClick={[Function]}
       >
         <svg
@@ -44,7 +43,6 @@ exports[`Filters component should match the stored snapshot 1`] = `
           className="sc-csuQGl kPtrgI"
         >
           <input
-            disabled={undefined}
             onChange={[Function]}
             placeholder="Search entries..."
             style={
@@ -82,11 +80,9 @@ exports[`Filters component should match the stored snapshot 1`] = `
       >
         <div
           className="sc-caSCKo gOedwQ"
-          disabled={undefined}
         >
           <button
             className="sc-cHGsZl kKmwRj sc-VigVT xuzkb sc-dnqmqq eWZAMQ"
-            disabled={undefined}
             onClick={[Function]}
           >
             <div

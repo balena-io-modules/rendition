@@ -8,15 +8,12 @@ exports[`Search renders correctly 1`] = `
     className="sc-gzVnrw iiDmSA"
   >
     <input
-      disabled={undefined}
-      onChange={undefined}
       placeholder="Placeholder Text"
       style={
         Object {
           "color": undefined,
         }
       }
-      value={undefined}
     />
     <svg
       className="search-icon"
