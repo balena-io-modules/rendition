@@ -6,7 +6,6 @@ exports[`ProgressBar renders correctly 1`] = `
 >
   <div
     className="sc-gZMcBi cmZZgb sc-iwsKbI ggJERy"
-    type={undefined}
   >
     <div
       className="sc-htoDjs iNxaeG"
