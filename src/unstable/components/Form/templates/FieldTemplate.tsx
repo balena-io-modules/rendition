@@ -1,6 +1,8 @@
 import * as React from 'react';
+import { UiSchema } from 'react-jsonschema-form';
 import { Box } from '../../../../components/Grid';
 import { LabelElement } from '../LabelElement';
+import { WarningField } from '../WarningField';
 
 const REQUIRED_FIELD_SYMBOL = '*';
 
@@ -34,6 +36,7 @@ interface FieldTemplateProps {
 	hidden: boolean;
 	required: boolean;
 	displayLabel: boolean;
+	uiSchema: UiSchema;
 }
 
 /**
@@ -53,14 +56,18 @@ const FieldTemplate = (props: FieldTemplateProps) => {
 		hidden = false,
 		required = false,
 		displayLabel = true,
+		uiSchema,
 	} = props;
 	if (hidden) {
 		return children;
 	}
 
+	const warning = uiSchema['ui:warning'];
+
 	return (
 		<Box mb={2} className={classNames}>
 			{displayLabel && <Label label={label} required={required} id={id} />}
+			{displayLabel && !!warning && <WarningField warning={warning} />}
 			{displayLabel && description ? description : null}
 			{children}
 			{errors}

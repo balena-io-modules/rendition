@@ -762,6 +762,10 @@ declare module 'rendition/dist/unstable' {
 		type?: string;
 	}
 
+	interface RenditionUiSchema {
+		'ui:warning'?: string;
+	}
+
 	interface FormProps extends BoxProps {
 		schema: JSONSchema6;
 		submitButtonText?: string | JSX.Element;
@@ -770,7 +774,7 @@ declare module 'rendition/dist/unstable' {
 		value?: number | string | boolean | AnyObject | any[] | null;
 		onFormChange?: (result: IChangeEvent) => void;
 		onFormSubmit?: (result: any) => void;
-		uiSchema?: UiSchema;
+		uiSchema?: RenditionUiSchema;
 	}
 
 	class Form extends RenderableElementWithProps<FormProps, any> {}

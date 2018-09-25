@@ -3,6 +3,7 @@ import { FaArrowDown, FaArrowUp, FaClose, FaPlus } from 'react-icons/lib/fa';
 import { ArrayFieldTemplateProps } from 'react-jsonschema-form';
 import styled from 'styled-components';
 import { Box, Button, Flex } from '../../../../';
+import { WarningField } from '../WarningField';
 
 interface ArrayFieldTitleProps {
 	// TODO: type this property correctly one this PR is merged https://github.com/DefinitelyTyped/DefinitelyTyped/pull/27164
@@ -49,6 +50,8 @@ const ActionButton = styled(Button)`
 `;
 
 export default (props: ArrayFieldTemplateProps) => {
+	const warning = props.uiSchema['ui:warning'];
+
 	return (
 		<div className={props.uiSchema.classNames}>
 			<ArrayFieldTitle
@@ -57,6 +60,8 @@ export default (props: ArrayFieldTemplateProps) => {
 				title={props.uiSchema['ui:title'] || props.title}
 				required={props.required}
 			/>
+
+			{!!warning && <WarningField warning={warning} />}
 
 			<ArrayFieldDescription
 				DescriptionField={props.DescriptionField}
