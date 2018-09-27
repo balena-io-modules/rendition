@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleButton renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <span>
+    <input
+      className="sc-htoDjs lflUtN"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <button
+      aria-label="Toggle"
+      className="sc-dnqmqq gDpXJY sc-gzVnrw fDNydB"
+      onClick={[Function]}
+    />
+  </span>
+</div>
+`;
