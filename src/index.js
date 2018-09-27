@@ -25,6 +25,7 @@ import { default as Terminal } from './components/Terminal'
 import { default as TextWithCopy } from './components/TextWithCopy'
 import { default as Txt } from './components/Txt'
 import { default as Textarea } from './components/Textarea'
+import { default as Toggle } from './components/Toggle'
 import { default as Img } from './components/Img'
 import { default as Heading } from './components/Heading'
 import { default as Container } from './components/Container'
@@ -74,5 +75,6 @@ export {
   Textarea,
   Terminal,
   Theme,
+  Toggle,
   migrations
 }
