@@ -4,6 +4,15 @@ exports[`ToggleButton renders correctly 1`] = `
 <div
   className="sc-bdVaJa jKopLr"
 >
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <button
+    aria-label="Toggle"
+    className="sc-htoDjs gDCMNh sc-gzVnrw hjtamY"
+    onClick={[Function]}
+    role="checkbox"
+  />
+=======
   <span>
     <input
       className="sc-htoDjs lflUtN"
@@ -16,5 +25,14 @@ exports[`ToggleButton renders correctly 1`] = `
       onClick={[Function]}
     />
   </span>
+>>>>>>> be2923b... updating the snapshot
+=======
+  <button
+    aria-label="Toggle"
+    className="sc-htoDjs gDCMNh sc-gzVnrw cEhTBz"
+    onClick={[Function]}
+    role="checkbox"
+  />
+>>>>>>> 771a537... update snapshots
 </div>
 `;

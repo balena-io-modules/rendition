@@ -346,7 +346,16 @@ declare module 'rendition' {
 
 	class Search extends RenderableElementWithProps<SearchProps, any> {}
 
+<<<<<<< HEAD
 	class Toggle extends RenderableElementWithProps<DefaultProps, any> {}
+=======
+	class Toggle extends RenderableElementWithProps<
+		DefaultProps & {
+			brand: JSX.Element;
+		},
+		any
+	> {}
+>>>>>>> 7c973e7... Introducing the Toggle switch button
 
 	interface ModalProps extends DefaultProps {
 		title?: string;

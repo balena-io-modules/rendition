@@ -28,7 +28,7 @@ const handle = props => {
     width: 55%;
     height: 100%;
     border-radius: 50%;
-    background: white;
+    background: white;q
     transition: all .4s ease;
     box-shadow: none;
   }
@@ -96,4 +96,7 @@ class Toggle extends React.Component {
   }
 }
 
-export default compose(withTheme, asRendition)(Toggle)
+export default compose(
+  withTheme,
+  asRendition
+)(Toggle)
