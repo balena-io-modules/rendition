@@ -12,7 +12,7 @@ exports[`ToggleButton renders correctly 1`] = `
     />
     <button
       aria-label="Toggle"
-      className="sc-dnqmqq gDpXJY sc-gzVnrw fDNydB"
+      className="sc-dnqmqq gDpXJY sc-gzVnrw kxwHSE"
       onClick={[Function]}
     />
   </span>
