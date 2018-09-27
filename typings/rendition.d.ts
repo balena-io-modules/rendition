@@ -346,6 +346,8 @@ declare module 'rendition' {
 
 	class Search extends RenderableElementWithProps<SearchProps, any> {}
 
+	class Toggle extends RenderableElementWithProps<DefaultProps, any> {}
+
 	interface ModalProps extends DefaultProps {
 		title?: string;
 		titleElement?: string | JSX.Element;
