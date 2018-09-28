@@ -94,9 +94,16 @@ class Toggle extends React.Component {
         return { on: !on }
       },
       () => {
-        this.props.onToggle(this.state.on)
+        if (this.props.onToggle && typeof this.props.onToggle === 'function') {
+          this.props.onToggle(this.state.on)
+        }
       }
     )
+  }
+  componentWillReceiveProps (nextProps) {
+    if (this.props.on !== nextProps.on) {
+      this.setState({ on: nextProps.on })
+    }
   }
 
   render () {
@@ -117,4 +124,7 @@ class Toggle extends React.Component {
   }
 }
 
-export default compose(withTheme, asRendition)(Toggle)
+export default compose(
+  withTheme,
+  asRendition
+)(Toggle)
