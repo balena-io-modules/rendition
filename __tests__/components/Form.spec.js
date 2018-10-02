@@ -151,6 +151,8 @@ describe('Form component', () => {
         component.find('form').simulate('submit')
         expect(callback.callCount).toEqual(1)
         expect(callback.getCall(0).args[0].formData).toEqual({ Name: value })
+
+        component.unmount()
       })
     })
   })
@@ -172,6 +174,8 @@ describe('Form component', () => {
       return Promise.delay(150).then(() => {
         expect(callback.callCount).toEqual(1)
         expect(callback.getCall(0).args[0].formData).toEqual({ Name: value })
+
+        component.unmount()
       })
     })
   })
@@ -187,6 +191,8 @@ describe('Form component', () => {
 
       const input = component.find('input')
       expect(input.props().value).toEqual('Squirtle')
+
+      component.unmount()
     })
 
     it('should set the value if the value is changed after the component mounts', () => {
@@ -199,6 +205,8 @@ describe('Form component', () => {
 
       const input = component.find('input')
       expect(input.props().value).toEqual('Squirtle')
+
+      component.unmount()
     })
   })
 
@@ -318,32 +326,77 @@ describe('Form component', () => {
         expect(callArg.formData).toEqual({
           Array: [ value1 ]
         })
+
+        component.unmount()
       })
     })
   })
 
   describe('uiSchema property', () => {
-    const uiSchema = {
-      Name: {
-        'ui:warning': 'lorem ipsum dolor sit amet'
-      }
-    }
-
-    const component = mount(
-      <Provider>
-        <Form
-          uiSchema={uiSchema}
-          schema={schema}
-        />
-      </Provider>
-    )
-
     it('should be able to add warnings using ui:warning', () => {
+      const uiSchema = {
+        Name: {
+          'ui:warning': 'lorem ipsum dolor sit amet'
+        }
+      }
+
+      const component = mount(
+        <Provider>
+          <Form
+            uiSchema={uiSchema}
+            schema={schema}
+          />
+        </Provider>
+      )
+
       const warnings = component.find(Alert)
 
       expect(warnings.length).toEqual(1)
 
       expect(warnings.first().text().trim()).toEqual(uiSchema.Name['ui:warning'])
+
+      component.unmount()
+    })
+  })
+
+  describe('field ids', () => {
+    it('should generate a unique class name for each field', () => {
+      const multiFieldSchema = {
+        type: 'object',
+        properties: {
+          Name: {
+            title: 'Pokemon Name',
+            type: 'string'
+          },
+          Height: {
+            type: 'number'
+          },
+          Weight: {
+            type: 'number'
+          },
+          Description: {
+            type: 'string'
+          }
+        }
+      }
+
+      const component = mount(
+        <Provider>
+          <Form
+            schema={multiFieldSchema}
+          />
+        </Provider>
+      )
+
+      const expectedClassNames = Object.keys(multiFieldSchema.properties).map((key) => {
+        return `rendition-form__field--root_${key}`
+      })
+
+      expectedClassNames.forEach((className) => {
+        expect(component.find(`.${className}`).hostNodes()).toHaveLength(1)
+      })
+
+      component.unmount()
     })
   })
 })
