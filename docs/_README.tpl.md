@@ -101,40 +101,13 @@ be used in a production application.
 If you would like to try them out they can be loaded using
 `import * from 'rendition/dist/unstable'`.
 
-
-## Development
-
-Clone this repository and then run:
-
-```sh
-npm ci
-```
-
-The interactive storybook can be launched by running:
-
-```sh
-npm start
-```
-
-The storybook can be accessed at http://localhost:6006.
-
-Code is automatically linted and formatted by [Husky][husky] as a pre-commit hook.
-
-The interactive storybook can be published by running:
-
-```sh
-npm run publish-storybook
-```
-
-## Testing
-
-```sh
-npm test
-```
-
 ## Upgrading
 
 [Upgrading from 3.x to 4.x](docs/migrating_3x-4x.md)
+
+## Contributing
+
+Please read our [contribution guidelines](docs/CONTRIBUTING.md)
 
 [react]:https://reactjs.org/
 [recompose]:https://github.com/acdlite/recompose
