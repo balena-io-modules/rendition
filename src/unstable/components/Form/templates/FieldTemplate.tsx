@@ -65,7 +65,7 @@ const FieldTemplate = (props: FieldTemplateProps) => {
 	const warning = uiSchema['ui:warning'];
 
 	return (
-		<Box mb={2} className={classNames}>
+		<Box mb={2} className={`${classNames || ''} rendition-form__field--${id}`}>
 			{displayLabel && <Label label={label} required={required} id={id} />}
 			{displayLabel && !!warning && <WarningField warning={warning} />}
 			{displayLabel && description ? description : null}
