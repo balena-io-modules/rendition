@@ -13,11 +13,11 @@ exports[`Form component should match the stored snapshot 1`] = `
       onSubmit={[Function]}
     >
       <div
-        className="form-group field field-object sc-gZMcBi jxxzwT sc-dnqmqq eheJhs sc-bZQynM gcuxEv"
+        className="form-group field field-object rendition-form__field--root sc-gZMcBi jxxzwT sc-dnqmqq eheJhs sc-bZQynM gcuxEv"
       >
         <fieldset>
           <div
-            className="form-group field field-string sc-gZMcBi jxxzwT sc-dnqmqq eheJhs sc-bZQynM gcuxEv"
+            className="form-group field field-string rendition-form__field--root_Name sc-gZMcBi jxxzwT sc-dnqmqq eheJhs sc-bZQynM gcuxEv"
           >
             <label
               className="control-label sc-lkqHmb gnPrYi"
