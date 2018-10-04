@@ -6,7 +6,7 @@ exports[`ToggleButton renders correctly 1`] = `
 >
   <button
     aria-label="Toggle"
-    className="sc-htoDjs gDCMNh sc-gzVnrw hjtamY"
+    className="sc-htoDjs gDCMNh sc-gzVnrw sjCnA"
     onClick={[Function]}
     role="checkbox"
   />
