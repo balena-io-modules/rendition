@@ -18,7 +18,7 @@ use it, it can be imported using `import { Form } from 'rendition/dist/unstable'
 ## Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `schema`    | `object` | - | ✓ | A json schema describing the shape of the data you would like to gather |
 | `submitButtonText` | <code>string &#124; JSX.Element</code> | - | - | A string or JSX element to replace the text in the form submit button |
 | `hideSubmitButton` | `boolean` | - | - | If true, do not display the form submit button |

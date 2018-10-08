@@ -7,6 +7,6 @@ Displays text that can be copied to the clipboard.
 ## Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `copy`      | `string` | -         | ✓          | The value that should be copied to the clipboard
 | `showCopyButton`      | <code>'hover' &#124; 'always'</code> | - | - | Optionally show the copy button on hover or always show the button

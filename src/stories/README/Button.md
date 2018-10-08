@@ -5,7 +5,7 @@
 ## Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `primary`     | `boolean` | -         | -          | If true, use the `primary` theme color               |
 | `secondary`   | `boolean` | -         | -          | If true, use the `secondary` theme color             |
 | `tertiary`    | `boolean` | -         | -          | If true, use the `tertiary` theme color              |

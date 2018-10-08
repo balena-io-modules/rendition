@@ -9,9 +9,6 @@ exports[`Select component should match the stored snapshot 1`] = `
   >
     <select
       className="sc-gzVnrw eSclAi"
-      disabled={undefined}
-      onChange={undefined}
-      value={undefined}
     >
       <option
         value={1}

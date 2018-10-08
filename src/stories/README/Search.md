@@ -7,7 +7,7 @@ Displays an input styled as a search bar.
 ## Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `dark`    | `boolean` | - | - | If true, uses a light colorscheme for use on a dark background |
 | `disabled`    | `boolean` | -         | -          | If true, disable the input |
 | `placeholder`    | `string` | -         | -          | A placeholder to use in the input |

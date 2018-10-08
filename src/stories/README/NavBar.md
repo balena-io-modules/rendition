@@ -7,5 +7,5 @@ A component used to render a navigation bar.
 ## Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| --------------------------------------------------------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `brand`    | `JSX.Element` | - | ✓ | A JSX element used as the main branding in the navbar |

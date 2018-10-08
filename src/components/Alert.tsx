@@ -7,6 +7,7 @@ import FaInfoCircle = require('react-icons/lib/fa/info-circle');
 import styled, { StyledFunction, withTheme } from 'styled-components';
 import asRendition from '../asRendition';
 import { bold, getColor, normal, px } from '../utils';
+import { Flex } from './Grid';
 
 interface AlertProps extends DefaultProps, Coloring, Sizing {
 	plaintext?: boolean;
@@ -157,10 +158,10 @@ export default withTheme(
 		if (plaintext) {
 			return (
 				<Plaintext {...restProps}>
-					<div>
+					<Flex>
 						{title && <AlertTitle children={title} />}
 						{props.children}
-					</div>
+					</Flex>
 					{props.onDismiss && <DismissAlert {...restProps} />}
 				</Plaintext>
 			);
@@ -186,4 +187,4 @@ export default withTheme(
 			);
 		}
 	}),
-);
+) as React.ComponentClass<AlertProps>;

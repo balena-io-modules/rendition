@@ -7,7 +7,7 @@ Displays an anchor link.
 ## Props
 
 | Name   | Type   | Default   | Required   | Description   |
-| -------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `blank`  | `boolean` | - | - | If true, open the link in a new tab |
 | `disabled`  | `boolean` | - | - | If true, disable the link |
 

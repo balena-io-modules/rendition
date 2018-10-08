@@ -6,7 +6,6 @@ exports[`Textarea component should match the stored snapshot 1`] = `
 >
   <textarea
     className="sc-htoDjs gDCMNh sc-gzVnrw jsCvhN"
-    rows={undefined}
   />
 </div>
 `;

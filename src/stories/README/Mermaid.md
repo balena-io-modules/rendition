@@ -14,6 +14,6 @@ import { Mermaid } from 'rendition/dist/extra/Mermaid';
 ## Props
 
 | Name   | Type   | Default   | Required   | Description   |
-| -------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `value`  | `string` | - | ✓ | The mermaid source that should be rendered |
 

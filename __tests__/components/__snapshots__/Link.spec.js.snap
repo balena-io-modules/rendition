@@ -7,8 +7,6 @@ exports[`Link renders correctly 1`] = `
   <a
     className="sc-jTzLTM bUWCnN sc-fjdhpX jDBYsh"
     color="primary.main"
-    rel={undefined}
-    target={undefined}
   >
     Link
   </a>

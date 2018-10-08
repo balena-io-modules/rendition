@@ -2,33 +2,25 @@
 
 exports[`Form component should match the stored snapshot 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-kgoBCf kOSFqw"
 >
   <div
-    className="sc-daURTG cllDlm sc-chPdSV dfDVBP sc-cSHVUG kBGaNN sc-jTzLTM cTXuEb"
+    className="sc-bXGyLb ebfLsG sc-gZMcBi cmZZgb sc-dnqmqq eheJhs sc-bZQynM gBdotH"
   >
     <form
-      acceptCharset={undefined}
-      action={undefined}
-      autoComplete={undefined}
       className="rjsf"
-      encType={undefined}
-      id={undefined}
-      method={undefined}
-      name={undefined}
       noValidate={false}
       onSubmit={[Function]}
-      target={undefined}
     >
       <div
-        className="form-group field field-object sc-chPdSV iqIpJd sc-cSHVUG kBGaNN sc-jTzLTM blsdOK"
+        className="form-group field field-object rendition-form__field--root sc-gZMcBi jxxzwT sc-dnqmqq eheJhs sc-bZQynM gcuxEv"
       >
         <fieldset>
           <div
-            className="form-group field field-string sc-chPdSV iqIpJd sc-cSHVUG kBGaNN sc-jTzLTM blsdOK"
+            className="form-group field field-string rendition-form__field--root_Name sc-gZMcBi jxxzwT sc-dnqmqq eheJhs sc-bZQynM gcuxEv"
           >
             <label
-              className="control-label sc-gojNiO cHANxq"
+              className="control-label sc-daURTG bZuOtf"
               htmlFor="root_Name"
             >
               Pokemon Name
@@ -56,7 +48,7 @@ exports[`Form component should match the stored snapshot 1`] = `
         <div />
       </div>
       <button
-        className="sc-VigVT hegYug sc-htoDjs jrhxUu"
+        className="sc-hMqMXs kYklEl sc-kpOJdX GGSVY"
       >
         Submit
       </button>

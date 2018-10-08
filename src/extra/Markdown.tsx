@@ -28,12 +28,7 @@ const GitHubMarkdown = styled(Txt)`
 	 {
 		-ms-text-size-adjust: 100%;
 		-webkit-text-size-adjust: 100%;
-		line-height: 1.5;
-		color: #24292e;
-		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
-			sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 		font-size: inherit;
-		line-height: 1.5;
 		word-wrap: break-word;
 	}
 
@@ -201,7 +196,7 @@ const GitHubMarkdown = styled(Txt)`
 	code,
 	kbd,
 	pre {
-		font-family: monospace, monospace;
+		font-family: ${props => props.theme.monospace};
 		font-size: 1em;
 	}
 
@@ -351,16 +346,15 @@ const GitHubMarkdown = styled(Txt)`
 	}
 
 	code {
-		font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
-			monospace;
-		font-size: 12px;
+		font-family: ${props => props.theme.monospace};
+		font-size: 1em;
 	}
 
 	pre {
 		margin-top: 0;
 		margin-bottom: 0;
-		font: 12px 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
-			monospace;
+		font-size: 1em;
+		font-family: ${props => props.theme.monospace};
 	}
 
 	.octicon {
@@ -621,7 +615,6 @@ const GitHubMarkdown = styled(Txt)`
 		padding-top: 0.2em;
 		padding-bottom: 0.2em;
 		margin: 0;
-		font-size: 85%;
 		background-color: rgba(27, 31, 35, 0.05);
 		border-radius: 3px;
 	}
@@ -659,7 +652,7 @@ const GitHubMarkdown = styled(Txt)`
 	pre {
 		padding: 16px;
 		overflow: auto;
-		font-size: 85%;
+		font-size: 95%;
 		line-height: 1.45;
 		background-color: #f6f8fa;
 		border-radius: 3px;
@@ -690,8 +683,8 @@ const GitHubMarkdown = styled(Txt)`
 	kbd {
 		display: inline-block;
 		padding: 3px 5px;
-		font: 11px 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
-			monospace;
+		font-size: 11px
+		font-family: ${props => props.theme.monospace};
 		line-height: 10px;
 		color: #444d56;
 		vertical-align: middle;

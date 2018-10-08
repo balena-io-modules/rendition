@@ -7,7 +7,7 @@ Displays a dropdown list, with each item displayed as a `Badge` component.
 ## Props
 
 | Name   | Type   | Default   | Required   | Description   |
-| -------------------------------------------------------- |
+| ------ | ------ | --------- | ---------- | ------------- |
 | `items`  | `string[]` | - | ✓ | An array of strings that should be rendered as `Badge`components |
 | `extraPrefix`  | `string[]` | - | - | An array of strings that should be rendered in plaintext, before the main items |
 | `extraSuffix`  | `string[]` | - | - | An array of strings that should be rendered in plaintext, after the main items |
