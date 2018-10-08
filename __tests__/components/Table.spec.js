@@ -743,7 +743,7 @@ describe('Table component', () => {
     })
   })
 
-  describe.only('itemsPerPage property', () => {
+  describe('itemsPerPage property', () => {
     it('should limit the number of items shown at one time', () => {
       const component = mount(
         <Provider>
@@ -856,5 +856,25 @@ describe('manually select rows', () => {
     component.instance().setRowSelection([])
     expect(component.state('checkedItems').length).toEqual(0)
     expect(component.state('allChecked')).toEqual(false)
+  })
+
+  it('should clear selection if data is set to null after instantiation', () => {
+    const component = mount(
+      <Table
+        rowKey='pokedex_number'
+        columns={columns}
+        data={PokeDex}
+      />
+    )
+
+    expect(component.state('checkedItems').length).toEqual(0)
+
+    component.instance().setRowSelection(PokeDex)
+    expect(component.state('checkedItems').length).toEqual(PokeDex.length)
+
+    component.setProps({ data: null })
+    component.instance().setRowSelection([])
+
+    expect(component.state().checkedItems.length).toEqual(0)
   })
 })
