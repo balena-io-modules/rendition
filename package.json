@@ -98,7 +98,7 @@
     "recompose": "0.26.0",
     "regex-parser": "^2.2.7",
     "resin-device-status": "^1.1.1",
-    "resin-semver": "^1.3.0",
+    "resin-semver": "^1.4.0",
     "showdown": "^1.7.3",
     "styled-components": "^3.2.3",
     "styled-system": "^1.0.5",
