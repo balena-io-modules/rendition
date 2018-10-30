@@ -101,6 +101,9 @@ For an interactive demo of all components, see https://resin-io-modules.github.i
 | `plaintText` | `boolean` | - | - | If true, the alert will be rendered without a border or a background |
 | `prefix` | <code>JSX.Element &#124; string &#124; false</code> | - | - | Set a prefix on the alert message, if this prop is set to false, the default prefix will not be shown |
 | `onDismiss` | `() => void` | - | - | A function that is called when dismissing an alert
+| `dismissButtonProps` | `object` | - | - | Properties that are passed to the dismiss button wrapper element. These are the same props used for the [`Box`][1] component |
+
+[1]: /?selectedKind=Box
 
 ### Badge
 

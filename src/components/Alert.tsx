@@ -4,16 +4,11 @@ import FaClose = require('react-icons/lib/fa/close');
 import FaExclamationCircle = require('react-icons/lib/fa/exclamation-circle');
 import FaExclamationTriangle = require('react-icons/lib/fa/exclamation-triangle');
 import FaInfoCircle = require('react-icons/lib/fa/info-circle');
+import { AlertProps } from 'rendition';
 import styled, { StyledFunction, withTheme } from 'styled-components';
 import asRendition from '../asRendition';
 import { bold, getColor, normal, px } from '../utils';
-import { Flex } from './Grid';
-
-interface AlertProps extends DefaultProps, Coloring, Sizing {
-	plaintext?: boolean;
-	prefix?: JSX.Element | string | false;
-	onDismiss?: () => void;
-}
+import { Box, Flex } from './Grid';
 
 const getPadding = (props: AlertProps) =>
 	props.emphasized ? '15px 40px' : '8px 32px';
@@ -43,7 +38,7 @@ const AlertTitle = styled.span`
 
 // Firefox didn't middle align absolute positioned elements
 // using flex, so we had to use an extra wrapper element
-const DismissButtonWrapper = (styled.div as StyledFunction<AlertProps>)`
+const DismissButtonWrapper = (styled(Box) as StyledFunction<AlertProps>)`
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -153,7 +148,18 @@ const DismissAlert = (props: AlertProps) => (
 
 export default withTheme(
 	asRendition((props: AlertProps) => {
-		const { emphasized, plaintext, prefix, ...restProps } = props;
+		const {
+			emphasized,
+			plaintext,
+			prefix,
+			onDismiss,
+			dismissButtonProps,
+			...restProps
+		} = props;
+		const dismissAlertProps = {
+			onDismiss,
+			...(dismissButtonProps || restProps),
+		};
 		const title = plaintext ? getIcon(props) : getTitle(props);
 		if (plaintext) {
 			return (
@@ -162,7 +168,7 @@ export default withTheme(
 						{title && <AlertTitle children={title} />}
 						{props.children}
 					</Flex>
-					{props.onDismiss && <DismissAlert {...restProps} />}
+					{onDismiss && <DismissAlert {...dismissAlertProps} />}
 				</Plaintext>
 			);
 		} else if (emphasized) {
@@ -172,7 +178,7 @@ export default withTheme(
 						{title && <AlertTitle children={title} />}
 						{props.children}
 					</div>
-					{props.onDismiss && <DismissAlert {...restProps} />}
+					{onDismiss && <DismissAlert {...dismissAlertProps} />}
 				</Filled>
 			);
 		} else {
@@ -182,7 +188,7 @@ export default withTheme(
 						{title && <AlertTitle children={title} />}
 						{props.children}
 					</div>
-					{props.onDismiss && <DismissAlert {...restProps} />}
+					{onDismiss && <DismissAlert {...dismissAlertProps} />}
 				</Outline>
 			);
 		}

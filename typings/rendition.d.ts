@@ -121,6 +121,7 @@ declare module 'rendition' {
 		plaintext?: boolean;
 		prefix?: JSX.Element | string | false;
 		onDismiss?: () => void;
+		dismissButtonProps?: BoxProps;
 	}
 
 	class Alert extends RenderableElementWithProps<AlertProps, any> {}
