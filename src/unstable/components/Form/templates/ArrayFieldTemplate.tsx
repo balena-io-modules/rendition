@@ -6,8 +6,7 @@ import { Box, Button, Flex } from '../../../../';
 import { WarningField } from '../WarningField';
 
 interface ArrayFieldTitleProps {
-	// TODO: type this property correctly one this PR is merged https://github.com/DefinitelyTyped/DefinitelyTyped/pull/27164
-	TitleField: any;
+	TitleField: ArrayFieldTemplateProps['TitleField'];
 	idSchema: ArrayFieldTemplateProps['idSchema'];
 	title?: string;
 	required: boolean;
@@ -27,8 +26,7 @@ const ArrayFieldTitle = ({
 };
 
 interface ArrayFieldDescriptionProps {
-	// TODO: type this property correctly one this PR is merged https://github.com/DefinitelyTyped/DefinitelyTyped/pull/27164
-	DescriptionField: any;
+	DescriptionField: ArrayFieldTemplateProps['DescriptionField'];
 	idSchema: ArrayFieldTemplateProps['idSchema'];
 	description?: string | JSX.Element;
 }
