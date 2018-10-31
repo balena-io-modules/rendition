@@ -3,7 +3,7 @@
 Displays a text block. A `<span>` tag can be used with `<Txt.span>` and a `<p>`
 tag can be used with `<Txt.p>`.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Typography.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Typography.js)
 
 ## Props
 

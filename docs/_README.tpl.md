@@ -1,8 +1,8 @@
 # Rendition
 
 [![npm version](https://badge.fury.io/js/rendition.svg)](http://badge.fury.io/js/rendition)
-[![Build Status](https://travis-ci.org/resin-io-modules/rendition.svg?branch=master)](https://travis-ci.org/resin-io-modules/rendition)
-[![Dependency Status](https://img.shields.io/david/resin-io-modules/rendition.svg)](https://david-dm.org/resin-io-modules/rendition)
+[![Build Status](https://travis-ci.org/balena-io-modules/rendition.svg?branch=master)](https://travis-ci.org/balena-io-modules/rendition)
+[![Dependency Status](https://img.shields.io/david/balena-io-modules/rendition.svg)](https://david-dm.org/balena-io-modules/rendition)
 [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 
 A library of UI components, built using [React][react], [recompose][recompose], [styled-components][styled-components] and [styled-system][styled-system].
@@ -43,7 +43,7 @@ ReactDOM.render(
 
 ## Components
 
-For an interactive demo of all components, see https://resin-io-modules.github.io/rendition
+For an interactive demo of all components, see https://balena-io-modules.github.io/rendition
 
 {% COMPONENT_DOCS %}
 
@@ -80,7 +80,7 @@ All components support [styled-system][styled-system] attributes, allowing you t
 
 ## Extra components
 
-Some components in the [storybook](https://resin-io-modules.github.io/rendition)
+Some components in the [storybook](https://balena-io-modules.github.io/rendition)
 are grouped separately under the `Extra` label. These components are not loaded by default 
 as they rely on other large packages that you may not want to include in your 
 application.
@@ -94,7 +94,7 @@ import { Markdown } from 'rendition/dist/extra/Markdown';
 
 ## Unstable/Beta components
 
-Some components in the [storybook](https://resin-io-modules.github.io/rendition)
+Some components in the [storybook](https://balena-io-modules.github.io/rendition)
 are grouped seperately under the `Beta` label. These components are experimental and still
 under development, as such their API may change without notice. They should not 
 be used in a production application.

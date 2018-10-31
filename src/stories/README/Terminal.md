@@ -2,7 +2,7 @@
 
 An xterm emulator built on top of [xterm.js][1].
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Terminal.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Terminal.js)
 
 ## API
 

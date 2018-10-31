@@ -1,8 +1,8 @@
 # Rendition
 
 [![npm version](https://badge.fury.io/js/rendition.svg)](http://badge.fury.io/js/rendition)
-[![Build Status](https://travis-ci.org/resin-io-modules/rendition.svg?branch=master)](https://travis-ci.org/resin-io-modules/rendition)
-[![Dependency Status](https://img.shields.io/david/resin-io-modules/rendition.svg)](https://david-dm.org/resin-io-modules/rendition)
+[![Build Status](https://travis-ci.org/balena-io-modules/rendition.svg?branch=master)](https://travis-ci.org/balena-io-modules/rendition)
+[![Dependency Status](https://img.shields.io/david/balena-io-modules/rendition.svg)](https://david-dm.org/balena-io-modules/rendition)
 [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 
 A library of UI components, built using [React][react], [recompose][recompose], [styled-components][styled-components] and [styled-system][styled-system].
@@ -43,7 +43,7 @@ ReactDOM.render(
 
 ## Components
 
-For an interactive demo of all components, see https://resin-io-modules.github.io/rendition
+For an interactive demo of all components, see https://balena-io-modules.github.io/rendition
 
 - [Alert](#alert)
 - [Badge](#badge)
@@ -83,7 +83,7 @@ For an interactive demo of all components, see https://resin-io-modules.github.i
 
 ### Alert
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Alert.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Alert.js)
 
 #### Props
 
@@ -107,7 +107,7 @@ For an interactive demo of all components, see https://resin-io-modules.github.i
 By default the background color of a `Badge` component is generated
 automatically from its `text` property, though this can be overridden.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Badge.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Badge.js)
 
 #### Props
 
@@ -128,7 +128,7 @@ automatically from its `text` property, though this can be overridden.
 
 Displays a dropdown list, with each item displayed as a `Badge` component.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/BadgeSelect.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/BadgeSelect.js)
 
 #### Props
 
@@ -151,7 +151,7 @@ The properties of the [`DropDownButton`][1] component are also available.
 
 ### Banner
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Banner.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Banner.js)
 
 #### Props
 
@@ -167,7 +167,7 @@ Displays a block level element.
 
 The basic building block of a rendition application.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Box.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Box.js)
 
 #### Props
 
@@ -179,7 +179,7 @@ The basic building block of a rendition application.
 
 ### Button
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Button.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Button.js)
 
 #### Props
 
@@ -206,7 +206,7 @@ The basic building block of a rendition application.
 
 Displays text formatted as `<code>` that can be copied to the clipboard.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/CodeWithCopy.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/CodeWithCopy.js)
 
 #### Props
 
@@ -220,14 +220,14 @@ Displays text formatted as `<code>` that can be copied to the clipboard.
 
 A padded container with a responsive width.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Container.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Container.js)
 
 
 ### Divider
 
 A styled horizontal rule.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Divider.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Divider.js)
 
 #### Props
 
@@ -241,7 +241,7 @@ A styled horizontal rule.
 Displays a button with an attached dropdown list, `children` of the component
 are rendered inside a dropdown list.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/DropDownButton.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/DropDownButton.js)
 
 #### Props
 
@@ -271,7 +271,7 @@ A component that can be used for generating filters in the form of [json schema]
 The filters created by this component can be used to filter a collection of
 objects using the `SchemaSieve` object.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Filters.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Filters.js)
 
 #### Schema
 
@@ -370,7 +370,7 @@ A view has the following properties:
 
 Displays an element with a [`fixed`][1] position.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Fixed.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Fixed.js)
 
 #### Props
 
@@ -388,7 +388,7 @@ Displays an element with a [`fixed`][1] position.
 
 Displays an element using [flexbox](1).
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Flex.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Flex.js)
 
 #### Props
 
@@ -449,7 +449,7 @@ a segment of the gauge. Each item should have the following properties:
 | name          | `string`  | A descriptive name for this segment                  |
 | color         | `string`  | A CSS color string to use for this segment           |
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Gauge.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Gauge.js)
 
 #### Props
 
@@ -466,13 +466,13 @@ A component that displays a heading. By default an `<h3>` tag is used. The exact
 heading type can be specifed by appending the element name to the component, for
 example `<Heading.h1>`, `<Heading.h2>`, `<Heading.h3>` etc.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Typography.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Typography.js)
 
 ### Img
 
 Displays an image.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Img.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Img.js)
 
 #### Inheritance
 
@@ -482,7 +482,7 @@ The attributes of an [`<img>`][1] element are also available.
 
 ### Input
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Input.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Input.js)
 
 #### Props
 
@@ -504,7 +504,7 @@ The attributes of an [`<input>`][1] element are also available.
 
 Displays an anchor link.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Typography.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Typography.js)
 
 #### Props
 
@@ -532,7 +532,7 @@ You can load this component using:
 import { Markdown } from 'rendition/dist/extra/Markdown';
 ```
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Markdown.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Markdown.js)
 
 #### Props
 
@@ -560,7 +560,7 @@ You can load this component using:
 import { Mermaid } from 'rendition/dist/extra/Mermaid';
 ```
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Mermaid.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Mermaid.js)
 
 #### Props
 
@@ -574,7 +574,7 @@ import { Mermaid } from 'rendition/dist/extra/Mermaid';
 Displays a centrally position modal overlay. Children passed to this component
 are rendered inside the modal.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Modal.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Modal.js)
 
 #### Props
 
@@ -601,7 +601,7 @@ are rendered inside the modal.
 
 A component used to render a navigation bar.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/NavBar.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/NavBar.js)
 
 #### Props
 
@@ -613,7 +613,7 @@ A component used to render a navigation bar.
 
 Displays a pager widget.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Pager.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Pager.js)
 
 #### Props
 
@@ -629,7 +629,7 @@ Displays a pager widget.
 
 Displays a text block with rounded corners.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Pill.tsx)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Pill.tsx)
 
 #### Props
 
@@ -650,7 +650,7 @@ Displays a text block with rounded corners.
 
 Displays a progress bar using a value representing a percentage.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/ProgressBar.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/ProgressBar.js)
 
 #### Props
 
@@ -673,7 +673,7 @@ Displays a progress bar using a value representing a percentage.
 
 Displays an input styled as a search bar.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Search.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Search.js)
 
 #### Props
 
@@ -687,7 +687,7 @@ Displays an input styled as a search bar.
 
 ### Select
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Select.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Select.js)
 
 #### Props
 
@@ -706,7 +706,7 @@ This story displays the colors available in the `Theme` object exported from
 the `Provider` component. See the [styled components documentation][1] for more
 information
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Swatches.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Swatches.js)
 
 [1]: https://www.styled-components.com/docs/advanced#theming
 
@@ -714,7 +714,7 @@ information
 
 A component used to generate a styled table.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Table.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Table.js)
 
 #### Columns
 
@@ -788,7 +788,7 @@ This method requires that you have provided a `rowKey` property.
 
 An xterm emulator built on top of [xterm.js][1].
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Terminal.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Terminal.js)
 
 #### API
 
@@ -874,7 +874,7 @@ instance instead of creating a new one.
 
 Displays text that can be copied to the clipboard.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/TextWithCopy.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/TextWithCopy.js)
 
 #### Props
 
@@ -885,7 +885,7 @@ Displays text that can be copied to the clipboard.
 
 ### Textarea
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Textarea.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Textarea.js)
 
 #### Props
 
@@ -950,7 +950,7 @@ The following rendition components support the `tooltip` attribute:
 - `Txt`
 - `Link`
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Tooltip.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Tooltip.js)
 
 [1]: https://reactjs.org/docs/dom-elements.html#style
 
@@ -959,7 +959,7 @@ The following rendition components support the `tooltip` attribute:
 Displays a text block. A `<span>` tag can be used with `<Txt.span>` and a `<p>`
 tag can be used with `<Txt.p>`.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Typography.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Typography.js)
 
 #### Props
 
@@ -1006,7 +1006,7 @@ All components support [styled-system][styled-system] attributes, allowing you t
 
 ## Extra components
 
-Some components in the [storybook](https://resin-io-modules.github.io/rendition)
+Some components in the [storybook](https://balena-io-modules.github.io/rendition)
 are grouped separately under the `Extra` label. These components are not loaded by default 
 as they rely on other large packages that you may not want to include in your 
 application.
@@ -1020,7 +1020,7 @@ import { Markdown } from 'rendition/dist/extra/Markdown';
 
 ## Unstable/Beta components
 
-Some components in the [storybook](https://resin-io-modules.github.io/rendition)
+Some components in the [storybook](https://balena-io-modules.github.io/rendition)
 are grouped seperately under the `Beta` label. These components are experimental and still
 under development, as such their API may change without notice. They should not 
 be used in a production application.

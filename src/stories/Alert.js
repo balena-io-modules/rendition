@@ -21,7 +21,7 @@ storiesOf('Core/Alert', module)
             This is an alert message
           </Alert>
           <Alert my={2} info onDismiss={action('case-4')}>
-            This is a general resin announcement
+            This is a general balena announcement
           </Alert>
         </Box>
       </Provider>
@@ -41,7 +41,7 @@ storiesOf('Core/Alert', module)
             This is an alert message
           </Alert>
           <Alert my={2} emphasized info onDismiss={action('case-4')}>
-            This is a general resin announcement
+            This is a general balena announcement
           </Alert>
         </Box>
       </Provider>

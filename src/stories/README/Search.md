@@ -2,7 +2,7 @@
 
 Displays an input styled as a search bar.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Search.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Search.js)
 
 ## Props
 
