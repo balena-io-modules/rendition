@@ -2,7 +2,7 @@
 
 Displays an element with a [`fixed`][1] position.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Fixed.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Fixed.js)
 
 ## Props
 

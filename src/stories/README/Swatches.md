@@ -5,6 +5,6 @@ This story displays the colors available in the `Theme` object exported from
 the `Provider` component. See the [styled components documentation][1] for more
 information
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Swatches.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Swatches.js)
 
 [1]: https://www.styled-components.com/docs/advanced#theming

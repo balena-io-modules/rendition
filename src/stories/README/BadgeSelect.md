@@ -2,7 +2,7 @@
 
 Displays a dropdown list, with each item displayed as a `Badge` component.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/BadgeSelect.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/BadgeSelect.js)
 
 ## Props
 

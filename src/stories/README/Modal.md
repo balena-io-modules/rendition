@@ -3,7 +3,7 @@
 Displays a centrally position modal overlay. Children passed to this component
 are rendered inside the modal.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Modal.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Modal.js)
 
 ## Props
 

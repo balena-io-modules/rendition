@@ -42,7 +42,7 @@ class ModalDemo extends React.Component {
               <div>
                 <p>Lorem ipsum dolor sit amet</p>
                 <a
-                  href='https://resin-io-modules.github.io/rendition/'
+                  href='https://balena-io-modules.github.io/rendition/'
                   target='_blank'
                 >
                   Rendition
@@ -64,7 +64,7 @@ storiesOf('Core/Modal', module)
         <Modal title='Modal title' cancel={cancelAction} done={doneAction}>
           <p>Lorem ipsum dolor sit amet</p>
           <a
-            href='https://resin-io-modules.github.io/rendition/'
+            href='https://balena-io-modules.github.io/rendition/'
             target='_blank'
           >
             Rendition
@@ -84,7 +84,7 @@ storiesOf('Core/Modal', module)
         >
           <p>Lorem ipsum dolor sit amet</p>
           <a
-            href='https://resin-io-modules.github.io/rendition/'
+            href='https://balena-io-modules.github.io/rendition/'
             target='_blank'
           >
             Rendition
@@ -99,7 +99,7 @@ storiesOf('Core/Modal', module)
         <Modal title='Modal title' done={doneAction}>
           <p>Lorem ipsum dolor sit amet</p>
           <a
-            href='https://resin-io-modules.github.io/rendition/'
+            href='https://balena-io-modules.github.io/rendition/'
             target='_blank'
           >
             Rendition
@@ -119,7 +119,7 @@ storiesOf('Core/Modal', module)
         >
           <p>Lorem ipsum dolor sit amet</p>
           <a
-            href='https://resin-io-modules.github.io/rendition/'
+            href='https://balena-io-modules.github.io/rendition/'
             target='_blank'
           >
             Rendition
@@ -140,7 +140,7 @@ storiesOf('Core/Modal', module)
         >
           <p>Lorem ipsum dolor sit amet</p>
           <a
-            href='https://resin-io-modules.github.io/rendition/'
+            href='https://balena-io-modules.github.io/rendition/'
             target='_blank'
           >
             Rendition
@@ -161,7 +161,7 @@ storiesOf('Core/Modal', module)
         >
           <p>Lorem ipsum dolor sit amet</p>
           <a
-            href='https://resin-io-modules.github.io/rendition/'
+            href='https://balena-io-modules.github.io/rendition/'
             target='_blank'
           >
             Rendition
@@ -185,7 +185,7 @@ storiesOf('Core/Modal', module)
         >
           <p>Lorem ipsum dolor sit amet</p>
           <a
-            href='https://resin-io-modules.github.io/rendition/'
+            href='https://balena-io-modules.github.io/rendition/'
             target='_blank'
           >
             Rendition
@@ -209,7 +209,7 @@ storiesOf('Core/Modal', module)
         >
           <p>Lorem ipsum dolor sit amet</p>
           <a
-            href='https://resin-io-modules.github.io/rendition/'
+            href='https://balena-io-modules.github.io/rendition/'
             target='_blank'
           >
             Rendition
@@ -243,7 +243,7 @@ storiesOf('Core/Modal', module)
         >
           <p>Lorem ipsum dolor sit amet</p>
           <a
-            href='https://resin-io-modules.github.io/rendition/'
+            href='https://balena-io-modules.github.io/rendition/'
             target='_blank'
           >
             Rendition

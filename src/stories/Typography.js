@@ -53,12 +53,12 @@ storiesOf('Core/Typography', module)
               <Link href={`#`}>Internal Link</Link>
             </div>
             <div>
-              <Link href={`https://resin.io`} blank>
+              <Link href={`https://balena.io`} blank>
                 External Link
               </Link>
             </div>
             <div>
-              <Link disabled href={`https://resin.io`} blank>
+              <Link disabled href={`https://balena.io`} blank>
                 Disabled Link
               </Link>
             </div>

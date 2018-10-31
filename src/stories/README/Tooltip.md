@@ -42,6 +42,6 @@ The following rendition components support the `tooltip` attribute:
 - `Txt`
 - `Link`
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Tooltip.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Tooltip.js)
 
 [1]: https://reactjs.org/docs/dom-elements.html#style

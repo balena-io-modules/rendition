@@ -2,7 +2,7 @@
 
 A component used to generate a styled table.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Table.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Table.js)
 
 ## Columns
 

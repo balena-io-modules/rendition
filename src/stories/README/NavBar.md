@@ -2,7 +2,7 @@
 
 A component used to render a navigation bar.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/NavBar.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/NavBar.js)
 
 ## Props
 

@@ -10,7 +10,7 @@ You can load this component using:
 import { Markdown } from 'rendition/dist/extra/Markdown';
 ```
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Markdown.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Markdown.js)
 
 ## Props
 

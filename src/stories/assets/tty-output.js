@@ -2,11 +2,11 @@ const ESC = '\u001b['
 
 export const output1 = `
 ${ESC}36m[Info]${ESC}39m    Starting build for screen
-${ESC}36m[Info]${ESC}39m    Dashboard link: https://dashboard.resins.io/apps/12345/devices
+${ESC}36m[Info]${ESC}39m    Dashboard link: https://dashboard.balena-cloud.com/apps/12345/devices
 ${ESC}36m[Info]${ESC}39m    Running locally emulated build
 ${ESC}36m[Info]${ESC}39m    Pulling previous images for caching purposes...
 ${ESC}32m[Success]${ESC}39m  Successfully pulled cache images
-${ESC}34m[Build]${ESC}39m  Step 1/7 : FROM resin/raspberrypi3-node:6-slim
+${ESC}34m[Build]${ESC}39m  Step 1/7 : FROM balena/raspberrypi3-node:6-slim
 ${ESC}34m[Build]${ESC}39m   ---> abb7202dab50
 ${ESC}34m[Build]${ESC}39m  Step 2/7 : WORKDIR /usr/src/app
 ${ESC}34m[Build]${ESC}39m  [42m[30mUsing cache[39m[49m

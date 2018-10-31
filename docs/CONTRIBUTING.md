@@ -7,7 +7,7 @@ serve as a friendly guide for making your first contribution.
 ### Cloning the project
 
 ```sh
-git clone https://github.com/resin-io-modules/rendition.git
+git clone https://github.com/balena-io-modules/rendition.git
 cd rendition
 ```
 

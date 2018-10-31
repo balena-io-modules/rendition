@@ -3,7 +3,7 @@
 By default the background color of a `Badge` component is generated
 automatically from its `text` property, though this can be overridden.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Badge.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Badge.js)
 
 ## Props
 
