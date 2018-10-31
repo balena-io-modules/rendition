@@ -201,7 +201,13 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 	}
 
 	hide(): void {
-		this.setState({ show: false });
+		this.setState({
+			show: false,
+			coordinates: {
+				top: 0,
+				left: 0,
+			},
+		});
 	}
 
 	render() {
