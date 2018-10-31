@@ -4,16 +4,11 @@ import FaClose = require('react-icons/lib/fa/close');
 import FaExclamationCircle = require('react-icons/lib/fa/exclamation-circle');
 import FaExclamationTriangle = require('react-icons/lib/fa/exclamation-triangle');
 import FaInfoCircle = require('react-icons/lib/fa/info-circle');
+import { AlertProps } from 'rendition';
 import styled, { StyledFunction, withTheme } from 'styled-components';
 import asRendition from '../asRendition';
 import { bold, getColor, normal, px } from '../utils';
 import { Flex } from './Grid';
-
-interface AlertProps extends DefaultProps, Coloring, Sizing {
-	plaintext?: boolean;
-	prefix?: JSX.Element | string | false;
-	onDismiss?: () => void;
-}
 
 const getPadding = (props: AlertProps) =>
 	props.emphasized ? '15px 40px' : '8px 32px';
@@ -153,7 +148,7 @@ const DismissAlert = (props: AlertProps) => (
 
 export default withTheme(
 	asRendition((props: AlertProps) => {
-		const { emphasized, plaintext, prefix, ...restProps } = props;
+		const { emphasized, plaintext, prefix, onDismiss, ...restProps } = props;
 		const title = plaintext ? getIcon(props) : getTitle(props);
 		if (plaintext) {
 			return (
@@ -162,7 +157,7 @@ export default withTheme(
 						{title && <AlertTitle children={title} />}
 						{props.children}
 					</Flex>
-					{props.onDismiss && <DismissAlert {...restProps} />}
+					{onDismiss && <DismissAlert onDismiss={onDismiss} />}
 				</Plaintext>
 			);
 		} else if (emphasized) {
@@ -172,7 +167,7 @@ export default withTheme(
 						{title && <AlertTitle children={title} />}
 						{props.children}
 					</div>
-					{props.onDismiss && <DismissAlert {...restProps} />}
+					{onDismiss && <DismissAlert onDismiss={onDismiss} />}
 				</Filled>
 			);
 		} else {
@@ -182,7 +177,7 @@ export default withTheme(
 						{title && <AlertTitle children={title} />}
 						{props.children}
 					</div>
-					{props.onDismiss && <DismissAlert {...restProps} />}
+					{onDismiss && <DismissAlert onDismiss={onDismiss} />}
 				</Outline>
 			);
 		}
