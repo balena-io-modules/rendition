@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Button, Heading, Modal, Provider } from '../'
 import { Progressor } from './ProgressBar'
@@ -58,6 +59,7 @@ class ModalDemo extends React.Component {
 
 storiesOf('Core/Modal', module)
   .addDecorator(withReadme(Readme))
+  .addDecorator(withScreenshot())
   .add('Standard', () => {
     return (
       <Provider>

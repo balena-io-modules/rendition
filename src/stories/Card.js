@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import { withScreenshot } from 'storybook-chrome-screenshot'
 import { Card, Link, Flex, Box, Button, Provider, TextWithCopy } from '../'
 
 const rows = [
@@ -19,6 +20,7 @@ const rows = [
 ]
 
 storiesOf('Core/Card', module)
+  .addDecorator(withScreenshot())
   .add('Standard', () => {
     return (
       <Provider>

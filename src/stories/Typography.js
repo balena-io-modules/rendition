@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Heading, Link, Provider, Txt } from '../'
 import * as headingReadme from './README/Heading.md'
@@ -7,6 +8,7 @@ import * as txtReadme from './README/Txt.md'
 import * as linkReadme from './README/Link.md'
 
 storiesOf('Core/Typography', module)
+  .addDecorator(withScreenshot())
   .add(
     'Headings',
     withReadme(headingReadme, () => {
