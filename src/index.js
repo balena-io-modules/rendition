@@ -1,4 +1,5 @@
 import { default as Alert } from './components/Alert'
+import { default as ArcSlider } from './components/ArcSlider'
 import { default as Badge } from './components/Badge'
 import { default as BadgeSelect } from './components/BadgeSelect'
 import { default as Banner } from './components/Banner'
@@ -39,6 +40,7 @@ import { Flex, Box } from './components/Grid'
 
 export {
   Alert,
+  ArcSlider,
   Badge,
   BadgeSelect,
   Banner,

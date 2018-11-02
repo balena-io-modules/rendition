@@ -178,3 +178,41 @@ export const stripSchemaFormats = (
 
 	return newSchema;
 };
+
+/**
+ * @name getAngleBetweenPoints
+ * @summary Gets the angle in degrees between two points, represented by objects
+ * with x and y values.
+ * @function
+ * @public
+ *
+ * @param {Object} p1 - The first point object
+ * @param {Object} p2 - The second point object
+ *
+ * @returns {Number} The angle in degrees
+ */
+type Point = { x: number; y: number };
+
+export const getAngleBetweenPoints = (p1: Point, p2: Point) => {
+	return Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180 / Math.PI;
+};
+
+/**
+ * @name constrainNumber
+ * @summary Constrains a number between an upper and lower bound
+ * @function
+ * @public
+ *
+ * @param {Number} value - The number to constrain
+ * @param {Number=0} lower - The lower bound
+ * @param {Number=100} upper - The upper bound
+ *
+ * @returns {Number} The constrained number
+ */
+export const constrainNumber = (
+	value: number,
+	lower: number = 0,
+	upper: number = 100,
+) => {
+	return Math.min(Math.max(value, lower), upper);
+};
