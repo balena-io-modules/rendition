@@ -17,7 +17,9 @@ echo "Copying Rendition files to Docker container"
 docker cp . $container_name:app
 
 echo "Installing project dependencies and generating screenshots"
+set +e
 docker exec $container_name bin/bash -c "cd /app && npm ci && npm run test:visual"
+set -e
 
 echo "Copying visual testing report to host filesystem"
 docker cp $container_name:/app/.reg/ .

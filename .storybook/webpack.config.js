@@ -17,5 +17,9 @@ module.exports = {
         use: ['file-loader']
       }
     ]
+  },
+  node: {
+    fs: 'empty',
+    child_process: 'empty'
   }
 }
