@@ -1,7 +1,10 @@
 #!/bin/sh
 
+# Exit if docker isn't running
+docker version > /dev/null || exit 1
+
 echo "Starting Docker container"
-docker run --name rendition-screenshot -dit buildkite/puppeteer:v1.8.0
+docker run --name rendition-screenshot -dit buildkite/puppeteer:v1.8.0 || exit 1
 
 echo "Copying Rendition files to Docker container"
 docker cp . rendition-screenshot:app
