@@ -7,6 +7,7 @@ import { Txt } from '../';
 const markedOptions = {
 	// Enable github flavored markdown
 	gfm: true,
+	breaks: true,
 	headerIds: false,
 	sanitize: true,
 };
