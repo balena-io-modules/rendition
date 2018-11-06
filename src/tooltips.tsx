@@ -13,6 +13,25 @@ const TARGET_OFFSET = 3;
 // The time in ms to show a tooltip after being triggered by a click event
 const CLICK_TIMEOUT = 1000;
 
+const createOnRemoveObserver = (
+	element: Node,
+	onDetachCallback: () => void,
+) => {
+	const observer = new MutationObserver(() => {
+		if (!document.contains(element)) {
+			observer.disconnect();
+			onDetachCallback();
+		}
+	});
+
+	observer.observe(document, {
+		childList: true,
+		subtree: true,
+	});
+
+	return observer;
+};
+
 const arrowStyle = `
 	position: absolute;
 	width: 0;
@@ -120,6 +139,7 @@ interface TooltipComponentState {
 class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 	private tooltipElement: HTMLDivElement;
 	private tooltipElementInner: HTMLDivElement;
+	private observer: MutationObserver | undefined;
 
 	constructor(props: {}) {
 		super(props);
@@ -134,11 +154,28 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 		};
 	}
 
+	// Create an observer that will hide the tooltip if the target element is
+	// removed from the dom
+	observe(target: HTMLElement) {
+		// If an observer exists, disconnect it
+		if (this.observer) {
+			this.observer.disconnect();
+		}
+
+		this.observer = createOnRemoveObserver(target, () => {
+			this.hide();
+		});
+	}
+
 	show(e: Event, tooltipText: string, options: TooltipShowOptions = {}): void {
 		let top = 0;
 		let left = 0;
 
-		const boundingClientRect = (e.target as HTMLElement).getBoundingClientRect();
+		const target = e.target as HTMLElement;
+
+		this.observe(target);
+
+		const boundingClientRect = target.getBoundingClientRect();
 
 		type Mutable<T> = { -readonly [P in keyof T]-?: T[P] };
 
@@ -201,7 +238,19 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 	}
 
 	hide(): void {
-		this.setState({ show: false });
+		// If an observer exists, disconnect it
+		if (this.observer) {
+			this.observer.disconnect();
+			this.observer = undefined;
+		}
+
+		this.setState({
+			show: false,
+			coordinates: {
+				top: 0,
+				left: 0,
+			},
+		});
 	}
 
 	render() {
