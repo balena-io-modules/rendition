@@ -57,7 +57,7 @@
     "jest-canvas-mock": "^1.1.0",
     "jsdom": "^11.6.2",
     "lint-staged": "^4.1.1",
-    "match-media-mock": "^0.1.0",
+    "match-media-mock": "^0.1.1",
     "prettier": "^1.12.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
