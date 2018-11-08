@@ -46,11 +46,13 @@ ReactDOM.render(
 For an interactive demo of all components, see https://balena-io-modules.github.io/rendition
 
 - [Alert](#alert)
+- [ArcSlider](#arcslider)
 - [Badge](#badge)
 - [BadgeSelect](#badgeselect)
 - [Banner](#banner)
 - [Box](#box)
 - [Button](#button)
+- [ButtonGroup](#buttongroup)
 - [CodeWithCopy](#codewithcopy)
 - [Container](#container)
 - [Divider](#divider)
@@ -101,6 +103,29 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 | `plaintText` | `boolean` | - | - | If true, the alert will be rendered without a border or a background |
 | `prefix` | <code>JSX.Element &#124; string &#124; false</code> | - | - | Set a prefix on the alert message, if this prop is set to false, the default prefix will not be shown |
 | `onDismiss` | `() => void` | - | - | A function that is called when dismissing an alert
+
+### ArcSlider
+
+A slider input that is displayed as an arc. This component will scale in size to
+fit it's container. A label can be added by placing a child element inside this
+component.
+
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/ArcSlider.js)
+
+#### Props
+
+| Name          | Type      | Default   | Required   | Description                                                   |
+| --------------|-----------|-----------|------------|-------------------------------------------------------------- |
+| `onValueChange`    | `(value: number) => void` | - | - | A function that is called when the slider value changes, this will always be a value between 0 and 1 |
+| `value`       | `number`  | -         | -          | A number between 0 and 1 that represents the progress         |
+| `fillColor`   | `string`  | -         | -          | A CSS color string to use for the color of the "filled" part of the arc |
+| `background`  | `string`  | -         | -          | A CSS color string to use for the color of the arc track      |
+
+#### Inheritance
+
+The properties of the [`Box`][1] component are also available.
+
+[1]: /?selectedKind=Box
 
 ### Badge
 
@@ -202,6 +227,11 @@ The basic building block of a rendition application.
 | `iconElement`      | `JSX.Element` | -         | -          | Optionally provide a JSX element that will be rendered before the text inside the button |
 
 
+### ButtonGroup
+
+Wrapper for buttons to make them stick together.
+
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/ButtonGroup.js)
 ### CodeWithCopy
 
 Displays text formatted as `<code>` that can be copied to the clipboard.
@@ -764,7 +794,7 @@ cause a re-render of the component and will not be reflected on the table.
 | ------------- | --------- | --------- | ---------- | ---------------------------------------------------- |
 | `columns`    | `object[]` | - | ✓ | An array of column objects, as described above |
 | `data`    | `T[]` | - | ✓ | An array of objects that will be displayed in the table |
-| `getRowHeref`    | `(row: T) => string` | - | - | If provided, each row in the table will be a clickable link, this function is used to create the link href |
+| `getRowHref`    | `(row: T) => string` | - | - | If provided, each row in the table will be a clickable link, this function is used to create the link href |
 | `onCheck`    | `(checkedItems: T[]) => string` | - | - | If provided, each row will begin with a checkbox. This function is called with every checked row every time a checkbox is toggled on or off. This property requires that you have provided a `rowKey` property |
 | `onRowClick`    | `(row: T, event: Event) => void` | - | - | A function that is called when a row is clicked. This property requires that you have provided a `rowKey` property |
 | `rowAnchorAttributes`    | `object` | - | - | Attributes to pass to the anchor element used in a row |

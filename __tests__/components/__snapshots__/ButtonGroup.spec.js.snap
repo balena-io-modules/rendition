@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonGroup renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <div
+    className="sc-kgoBCf hzrgZk sc-kAzzGY dirfrO sc-jzJRlG cmnKTT sc-fjdhpX jmbwCw"
+  >
+    <button
+      className="sc-VigVT hegYug sc-gqjmRU gECYIb"
+    >
+      First
+    </button>
+    <button
+      className="sc-VigVT hegYug sc-gqjmRU gECYIb"
+    >
+      Second
+    </button>
+    <button
+      className="sc-VigVT hegYug sc-gqjmRU gECYIb"
+    >
+      Third
+    </button>
+  </div>
+</div>
+`;
