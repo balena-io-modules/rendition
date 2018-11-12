@@ -278,3 +278,18 @@ storiesOf('Core/Modal', module)
       </Provider>
     )
   })
+  .add('With Tooltip', () => {
+    return (
+      <Provider>
+        <Box m={3}>
+          <Heading.h1>The text inside the modal has a tooltip.</Heading.h1>
+        </Box>
+
+        <ModalDemo>
+          <Heading.h5 tooltip={{ text: 'Good job!', trigger: 'hover' }}>
+            Hover me and a tooltip will be displayed.
+          </Heading.h5>
+        </ModalDemo>
+      </Provider>
+    )
+  })

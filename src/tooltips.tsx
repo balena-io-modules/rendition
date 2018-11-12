@@ -106,7 +106,7 @@ const TooltipElement = styled.div`
 	word-break: normal;
 	word-spacing: normal;
 	word-wrap: normal;
-	z-index: 1070;
+	z-index: 10000;
 	color: white;
 `;
 
