@@ -125,6 +125,15 @@ declare module 'rendition' {
 
 	class Alert extends RenderableElementWithProps<AlertProps, any> {}
 
+	interface ArcSliderProps extends BoxProps {
+		onValueChange?: (value: number) => void;
+		value?: number;
+		fillColor?: string;
+		background?: string;
+	}
+
+	class ArcSlider extends RenderableElementWithProps<ArcSliderProps, any> {}
+
 	interface BadgeProps extends BoxProps, Coloring {
 		text: string;
 		small?: boolean;

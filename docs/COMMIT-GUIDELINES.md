@@ -119,8 +119,8 @@ A commit can include multiple instances of this tag.
 Examples:
 
 ```
-Closes: https://github.com/resin-io-modules/rendition/issues/XXX
-Fixes: https://github.com/resin-io-modules/rendition/issues/XXX
+Closes: https://github.com/balena-io-modules/rendition/issues/XXX
+Fixes: https://github.com/balena-io-modules/rendition/issues/XXX
 ```
 
 ### `Change-type: <type>`

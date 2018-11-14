@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import { withScreenshot } from 'storybook-chrome-screenshot'
 import { DeviceStatusGauge, Provider } from '../../'
 
 const mockDeviceArray = [
@@ -40,10 +41,12 @@ const mockDeviceArray = [
   }
 ]
 
-storiesOf('Deprecated/DeviceStatusGauge', module).add('Standard', () => {
-  return (
-    <Provider>
-      <DeviceStatusGauge m={30} devices={mockDeviceArray} />
-    </Provider>
-  )
-})
+storiesOf('Deprecated/DeviceStatusGauge', module)
+  .addDecorator(withScreenshot())
+  .add('Standard', () => {
+    return (
+      <Provider>
+        <DeviceStatusGauge m={30} devices={mockDeviceArray} />
+      </Provider>
+    )
+  })

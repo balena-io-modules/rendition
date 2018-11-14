@@ -2,7 +2,7 @@
 
 Displays text formatted as `<code>` that can be copied to the clipboard.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/CodeWithCopy.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/CodeWithCopy.js)
 
 ## Props
 

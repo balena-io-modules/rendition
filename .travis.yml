@@ -1,27 +1,11 @@
-language: node_js
-matrix:
-  include:
-  - node_js:
-    - '6'
-    env:
-    - CAN_DEPLOY=true
-before_install:
-  - npm i -g npm@^5.8.0
-install: npm ci
-script: npm test && npm run build && npm run build:storybook
+sudo: required
+services:
+  - docker
+script: docker build .
 notifications:
   email:
     on_success: never
 deploy:
-  - provider: npm
-    email: accounts@resin.io
-    skip_cleanup: true
-    api_key:
-      secure: Qc0muG6T0biSVwGw3bHG3axnLO+tHLpy1WVKCPhabisSsidnyrLxYl7Otkxq8+KOrdRR2i43MDqxoJ0mKnv9j65bZGfpKa8/BSUSFq6uj296M2TckMlmu9kW08/h2z5ObyNxfvqohx9nL6gw7ezlu0i8x42nUbaKrZv7v/MnZ/N0QD2KL+d19Aqc5/NYNflWAeUMx1UAG4ohLm7iLhEy+X0IaCG7zCDfIP3vb4NR5+bI2ahEubqNPM+9Z9AesOtV6fXU0M3MPKeUNrtXZW0/1faukd78fGBMppUypWJxGXg7JA4QU9QFRacZEDid7Q5/gGXduWbvCnITBE63N9SuAGWS99WJkAUMCrd1XdQMkMenaFmenOVqSvEXcRSEDieLyw5qksH3W1jFbg/yjyVKFpOMwWNTfJkxfWv8ay3+tTnX5JwHaah80d6uSLNWZyYgahUC3cNz14OY7vJNh2DQ7EN3oVUFRC4pKkbmOemX/AZTSxZn/6Ito6Srb/C6zktnIoRgvitNhsm3H2NlYyGtSYCTgjaU44BjeqHzwOIrVPvXBHm1XF1QJnZvVnsSLt9TMG81YABol6TnOeYO4aI/Zuzi3oDMtpeBe30O2eLjRs5+Tv2sasqL1cIZDgNtoqaRXgeqtjY1jch75v0fBTpIXGkE5VEVU+vqDWtZo6on1oQ=
-    on:
-      tags: true
-      condition: $CAN_DEPLOY = 'true' && $TRAVIS_TAG =~ ^v?[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+
-      repo: resin-io-modules/rendition
   - provider: pages
     local_dir: .out
     skip_cleanup: true
@@ -29,7 +13,7 @@ deploy:
     on:
       branch: master
       tags: true
-      condition: $CAN_DEPLOY = 'true' && $TRAVIS_TAG =~ ^v?[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+
+      condition: $TRAVIS_TAG =~ ^v?[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+
 env:
   global:
     secure: RMI57fdrPztupNdU2b1whQ50z69mGzCztG4vrSe+Q/FBBz0xSWsGlAEfIrKEq47m5vGXRSD3A7Uz+8FOdvnW13tl1BB33LbilWz4dnmQUdxTpUsVcti0kWkzkfac7BWg+gkbMxe+SmSi+c6XylzSJLnjXrm/SjGSLZW7gdYJaYHtkXcp788MIonxB3ICfWyh9fPE6/AqfHfMLDWGcYlZs0CiyXFfNIqwzL1BnKsIcGoSVSPBLQBXuvfeW7Jg9DFxZ9RYq71xgC2RecfYEdHimstTCC8agfZdFdNxA069bhuxljkcqKA7jhcN9D13/YAtFzhqE9jb31likgNUeGtFgkbQM35xkQ2+p5GxKcFuKXcO/6y+X5Lk57HgGEKHLg4bEXvGMzho0zAKd8U7qGI5RpITvO9ffEbcn99Qjzh0tByfzhbeb8rNXv0JlocOgPipxIQoh/w8oMxtX0C39J67RVQv2G1VixWS8AiRXMiZS0ahJG7e2PmgsRQM1zs74OGcsU8zC2dltTAcgDeDqzr/NXmQLSW4Gp/Lg5H7EpscNXXQcdmVMHVCapNzqjVVXOeqzles0d/M2K/EpVp8+uo3BQKczVVCxN2zm5JEfNBG+EQuCbE9HN+kToX6DF6UXS7t+hN2Sr6p+TPryttnvTYoi4wCQvENz5v61DL052n5nH4=

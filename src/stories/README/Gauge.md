@@ -10,7 +10,7 @@ a segment of the gauge. Each item should have the following properties:
 | name          | `string`  | A descriptive name for this segment                  |
 | color         | `string`  | A CSS color string to use for this segment           |
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Gauge.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Gauge.js)
 
 ## Props
 

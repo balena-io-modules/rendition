@@ -101,3 +101,5 @@ dist
 .out
 
 package-lock.json
+.reg
+reg.json

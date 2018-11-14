@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Heading, Link, Provider, Txt } from '../'
 import * as headingReadme from './README/Heading.md'
@@ -7,6 +8,7 @@ import * as txtReadme from './README/Txt.md'
 import * as linkReadme from './README/Link.md'
 
 storiesOf('Core/Typography', module)
+  .addDecorator(withScreenshot())
   .add(
     'Headings',
     withReadme(headingReadme, () => {
@@ -53,12 +55,12 @@ storiesOf('Core/Typography', module)
               <Link href={`#`}>Internal Link</Link>
             </div>
             <div>
-              <Link href={`https://resin.io`} blank>
+              <Link href={`https://balena.io`} blank>
                 External Link
               </Link>
             </div>
             <div>
-              <Link disabled href={`https://resin.io`} blank>
+              <Link disabled href={`https://balena.io`} blank>
                 Disabled Link
               </Link>
             </div>

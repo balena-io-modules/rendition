@@ -1,7 +1,9 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Gauge, Provider } from '../'
+import { isTakingScreenshot } from './helpers'
 import * as Readme from './README/Gauge.md'
 
 const data = [
@@ -56,17 +58,28 @@ const zeroCount = [
 
 storiesOf('Core/Gauge', module)
   .addDecorator(withReadme(Readme))
+  .addDecorator(withScreenshot())
   .add('Standard', () => {
     return (
       <Provider>
-        <Gauge m={30} title='Ice Cream' data={data} />
+        <Gauge
+          disableAnimation={isTakingScreenshot}
+          m={30}
+          title='Ice Cream'
+          data={data}
+        />
       </Provider>
     )
   })
   .add('Single segment', () => {
     return (
       <Provider>
-        <Gauge m={30} title='Ice Cream' data={singleSegment} />
+        <Gauge
+          disableAnimation={isTakingScreenshot}
+          m={30}
+          title='Ice Cream'
+          data={singleSegment}
+        />
       </Provider>
     )
   })
@@ -74,6 +87,7 @@ storiesOf('Core/Gauge', module)
     return (
       <Provider>
         <Gauge
+          disableAnimation={isTakingScreenshot}
           m={30}
           title='Ice Cream'
           data={zeroCount}

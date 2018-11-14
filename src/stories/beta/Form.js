@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Flex, Provider, Txt } from '../../'
 import { Form } from '../../unstable/'
@@ -17,6 +18,7 @@ the relevant file from \`renditon/dist/extra/Form/\`.
 
 const basicPokedexSchema = {
   type: 'object',
+  title: 'Pokèmon',
   properties: {
     Name: {
       type: 'string'
@@ -101,6 +103,7 @@ class FormDemo extends React.Component {
 
 storiesOf('Beta/Form', module)
   .addDecorator(withReadme(Readme))
+  .addDecorator(withScreenshot())
   .add('Simple', () => {
     return (
       <Provider>
@@ -156,6 +159,58 @@ storiesOf('Beta/Form', module)
     return (
       <Provider>
         <FormDemo schema={basicPokedexSchema} uiSchema={uiSchema} />
+      </Provider>
+    )
+  })
+  .add('Group titles', () => {
+    const schema = {
+      type: 'object',
+      title: 'Networking',
+      properties: {
+        vpn: {
+          type: 'object',
+          title: 'Virtual Private Network',
+          properties: {
+            endpoint: {
+              title: 'Endpoint',
+              type: 'string'
+            },
+            certificate: {
+              title: 'Certificate',
+              type: 'string'
+            }
+          }
+        },
+        wifiNetwork: {
+          type: 'object',
+          title: 'WiFi Network',
+          properties: {
+            wifi: {
+              type: 'object',
+              properties: {
+                ssid: {
+                  title: 'Network SSID',
+                  type: 'string'
+                }
+              }
+            },
+            wifiSecurity: {
+              type: 'object',
+              properties: {
+                psk: {
+                  title: 'Network Passphrase',
+                  type: 'string'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    return (
+      <Provider>
+        <FormDemo schema={schema} />
       </Provider>
     )
   })

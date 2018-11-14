@@ -1,4 +1,4 @@
-import { Chart } from 'chart.js';
+import { Chart, ChartOptions } from 'chart.js';
 import { map, reduce } from 'lodash';
 import * as React from 'react';
 import { compose } from 'recompose';
@@ -19,6 +19,7 @@ interface GaugeProps {
 	title: string;
 	placeholderColor?: string;
 	data: ChartEntry[];
+	disableAnimation?: boolean;
 }
 
 const { font } = theme;
@@ -136,11 +137,11 @@ class StatusGauge extends React.Component<GaugeProps, {}> {
 		};
 	}
 
-	getGraphOptions(data: ChartEntry[], title: string) {
+	getGraphOptions(data: ChartEntry[], title: string): ChartOptions {
 		const count = reduce(data, (carry, item) => carry + item.value, 0);
 		const pluginOptions = this.getLabelOptions(count, title);
 
-		return {
+		const options: ChartOptions = {
 			responsive: true,
 			maintainAspectRatio: false,
 			legend: {
@@ -154,6 +155,14 @@ class StatusGauge extends React.Component<GaugeProps, {}> {
 			tooltips: { enabled: count > 0 },
 			plugins: { doughnutLabel: pluginOptions },
 		};
+
+		if (this.props.disableAnimation) {
+			options.animation = {
+				duration: 0,
+			};
+		}
+
+		return options;
 	}
 
 	getLabelOptions(count: number, title: string) {

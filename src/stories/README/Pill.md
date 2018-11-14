@@ -2,7 +2,7 @@
 
 Displays a text block with rounded corners.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/Pill.tsx)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Pill.tsx)
 
 ## Props
 

@@ -1,10 +1,11 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import { withScreenshot } from 'storybook-chrome-screenshot'
 import { Card, Link, Flex, Box, Button, Provider, TextWithCopy } from '../'
 
 const rows = [
   <div>Lorem Ipsum dolor si amet</div>,
-  <Link href='www.resin.io'>Link</Link>,
+  <Link href='www.balena.io'>Link</Link>,
   <TextWithCopy
     showCopyButton='always'
     copy='This value has been copied to your clipboard!'
@@ -19,6 +20,7 @@ const rows = [
 ]
 
 storiesOf('Core/Card', module)
+  .addDecorator(withScreenshot())
   .add('Standard', () => {
     return (
       <Provider>
@@ -55,7 +57,7 @@ storiesOf('Core/Card', module)
           <Card
             mt={3}
             title='Card with Link'
-            cta={<Link href='https://resin.io'>Link</Link>}
+            cta={<Link href='https://balena.io'>Link</Link>}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
             scelerisque euismod risus at gravida. Pellentesque a nunc semper,
@@ -72,7 +74,7 @@ storiesOf('Core/Card', module)
           <Card
             title='Title'
             rows={rows}
-            cta={<Link href='https://resin.io'>Link</Link>}
+            cta={<Link href='https://balena.io'>Link</Link>}
           />
         </Box>
       </Provider>
@@ -85,7 +87,7 @@ storiesOf('Core/Card', module)
           <Card
             title='Title'
             minHeight={'300px'}
-            cta={<Link href='https://resin.io'>Link</Link>}
+            cta={<Link href='https://balena.io'>Link</Link>}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
             scelerisque euismod risus at gravida. Pellentesque a nunc semper,

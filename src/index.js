@@ -1,8 +1,10 @@
 import { default as Alert } from './components/Alert'
+import { default as ArcSlider } from './components/ArcSlider'
 import { default as Badge } from './components/Badge'
 import { default as BadgeSelect } from './components/BadgeSelect'
 import { default as Banner } from './components/Banner'
 import { default as Button } from './components/Button'
+import { default as ButtonGroup } from './components/ButtonGroup'
 import { default as Card } from './components/Card'
 import { default as CodeWithCopy } from './components/CodeWithCopy'
 import { default as DeleteButton } from './components/DeleteButton'
@@ -39,11 +41,13 @@ import { Flex, Box } from './components/Grid'
 
 export {
   Alert,
+  ArcSlider,
   Badge,
   BadgeSelect,
   Banner,
   Box,
   Button,
+  ButtonGroup,
   Card,
   CodeWithCopy,
   Container,

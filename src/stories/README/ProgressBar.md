@@ -2,7 +2,7 @@
 
 Displays a progress bar using a value representing a percentage.
 
-[View story source](https://github.com/resin-io-modules/rendition/blob/master/src/stories/ProgressBar.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/ProgressBar.js)
 
 ## Props
 

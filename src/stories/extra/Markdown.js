@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Provider } from '../../'
 import { Markdown } from '../../extra/Markdown'
@@ -94,6 +95,7 @@ Any word wrapped with two tildes (like \`~~this~~\`) will appear crossed out.
 
 storiesOf('Extra/Markdown', module)
   .addDecorator(withReadme(Readme))
+  .addDecorator(withScreenshot())
   .add('Standard', () => {
     return (
       <Provider>
