@@ -11,11 +11,24 @@
         }
     </script>
     <title>Storybook</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto400,700|Ubuntu+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu+Mono:400,700" rel="stylesheet" onload="this.setAttribute('loaded', 'loaded')">
+<script>
+function fontLoading() {
+  const loaded = () => !!document.querySelector('link[loaded="loaded"]');
+  if (loaded()) return Promise.resolve();
+  return new Promise((resolve, reject) => {
+    const id = setInterval(() => {
+      if (!loaded()) return;
+      clearInterval(id);
+      resolve();
+    }, 50);
+  });
+}
+</script>
 
 </head>
 <body>
 <div id="root"></div>
 <div id="error-display"></div>
-<script type="text/javascript" src="static/preview.b9137a656551674db719.bundle.js"></script></body>
+<script type="text/javascript" src="static/preview.9656118fab429ed8d8c0.bundle.js"></script></body>
 </html>
