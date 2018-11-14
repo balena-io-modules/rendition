@@ -1,7 +1,9 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
+import withReadme from 'storybook-readme/with-readme'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import { Card, Link, Flex, Box, Button, Provider, TextWithCopy } from '../'
+import * as Readme from './README/Card.md'
 
 const rows = [
   <div>Lorem Ipsum dolor si amet</div>,
@@ -20,6 +22,7 @@ const rows = [
 ]
 
 storiesOf('Core/Card', module)
+  .addDecorator(withReadme(Readme))
   .addDecorator(withScreenshot())
   .add('Standard', () => {
     return (
