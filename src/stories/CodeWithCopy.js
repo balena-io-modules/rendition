@@ -17,6 +17,19 @@ storiesOf('Core/CodeWithCopy', module)
             copy='This value has been copied to your clipboard!'
           />
         </Box>
+
+        <Box m={3}>
+          <CodeWithCopy
+            text={3555432}
+            copy='This value has been copied to your clipboard!'
+          />
+        </Box>
+        <Box m={3}>
+          <CodeWithCopy copy='Specify only the copy prop' />
+        </Box>
+        <Box m={3}>
+          <CodeWithCopy text='Or only the text prop' />
+        </Box>
       </Provider>
     )
   })
