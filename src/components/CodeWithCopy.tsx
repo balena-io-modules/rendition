@@ -41,22 +41,19 @@ const Wrapper = withProps<Partial<CodeWithCopyProps>>()(styled(Txt.span))`
 	}
 `;
 
-const copyIt = (copy?: string, text?: string) => {
-	const copyText = (copy || text || '').trim();
-
-	copyToClipboard(copyText);
-};
-
 const Base = ({ copy, text, color, ...props }: CodeWithCopyProps) => {
+	const normalizedText = (text || '').toString().trim();
+	const normalizedCopy = (copy || normalizedText).toString().trim();
+
 	return (
 		<Wrapper {...props} className="code-with-copy">
-			<code title={copy}>{text.trim()}</code>
+			<code title={normalizedCopy}>{normalizedText || normalizedCopy}</code>
 
 			<span onClick={e => stopEvent((e as any) as Event)}>
 				<Button
 					plaintext
 					tooltip={{ text: 'Copied!', trigger: 'click' }}
-					onClick={() => copyIt(copy, text)}
+					onClick={() => copyToClipboard(normalizedCopy)}
 					className="code-with-copy__copy"
 				>
 					<FaClipboard color={color as string} />
