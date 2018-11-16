@@ -25,6 +25,11 @@ const highlightStyle = `
 	background-color: ${theme.colors.info.light};
 `;
 
+const BaseTableWrapper = styled.div`
+	overflow-x: auto;
+	max-width: 100%;
+`;
+
 const BaseTable = styled.div`
 	display: table;
 	width: 100%;
@@ -464,85 +469,87 @@ export default class Table<T> extends React.Component<
 						/>
 					)}
 
-				<BaseTable {...props}>
-					<div data-display="table-head">
-						<div data-display="table-row">
-							{this.props.onCheck && (
-								<div data-display="table-cell">
-									<input
-										checked={this.state.allChecked}
-										onChange={this.toggleAllChecked}
-										type="checkbox"
-									/>
-								</div>
-							)}
-							{map(columns, item => {
-								if (item.sortable) {
+				<BaseTableWrapper>
+					<BaseTable {...props}>
+						<div data-display="table-head">
+							<div data-display="table-row">
+								{this.props.onCheck && (
+									<div data-display="table-cell">
+										<input
+											checked={this.state.allChecked}
+											onChange={this.toggleAllChecked}
+											type="checkbox"
+										/>
+									</div>
+								)}
+								{map(columns, item => {
+									if (item.sortable) {
+										return (
+											<div data-display="table-cell" key={item.field}>
+												<HeaderButton
+													data-field={item.field}
+													plaintext
+													primary={this.state.sortColumn === item.field}
+													onClick={this.toggleSort}
+												>
+													{item.label || item.field}
+													&nbsp;
+													<FaSort
+														style={{ display: 'inline-block' }}
+														color={
+															this.state.sortColumn === item.field
+																? theme.colors.info.main
+																: ''
+														}
+													/>
+												</HeaderButton>
+											</div>
+										);
+									}
 									return (
 										<div data-display="table-cell" key={item.field}>
-											<HeaderButton
-												data-field={item.field}
-												plaintext
-												primary={this.state.sortColumn === item.field}
-												onClick={this.toggleSort}
-											>
-												{item.label || item.field}
-												&nbsp;
-												<FaSort
-													style={{ display: 'inline-block' }}
-													color={
-														this.state.sortColumn === item.field
-															? theme.colors.info.main
-															: ''
-													}
-												/>
-											</HeaderButton>
+											{item.label || item.field}
 										</div>
 									);
-								}
+								})}
+							</div>
+						</div>
+						<div data-display="table-body">
+							{this.props.tbodyPrefix}
+							{map(sortedData, (row, i) => {
+								const isChecked = this.props.onCheck
+									? this.isChecked(row)
+									: false;
+								const isHighlighted = this.isHighlighted(row);
+								const key = rowKey ? (row[rowKey] as any) : i;
+								const href = !!getRowHref ? getRowHref(row) : undefined;
+								const classNamesList = isFunction(getRowClass)
+									? getRowClass(row)
+									: [];
+								const className = isArray(classNamesList)
+									? classNamesList.join(' ')
+									: '';
 								return (
-									<div data-display="table-cell" key={item.field}>
-										{item.label || item.field}
-									</div>
+									<TableRow
+										isChecked={isChecked}
+										isHighlighted={isHighlighted}
+										key={key}
+										keyAttribute={key}
+										href={href}
+										data={row}
+										showCheck={!!this.props.onCheck}
+										columns={columns}
+										attributes={rowAnchorAttributes}
+										checkboxAttributes={this.props.rowCheckboxAttributes}
+										toggleChecked={this.toggleChecked}
+										onRowClick={this.onRowClick}
+										className={className}
+									/>
 								);
 							})}
 						</div>
-					</div>
-					<div data-display="table-body">
-						{this.props.tbodyPrefix}
-						{map(sortedData, (row, i) => {
-							const isChecked = this.props.onCheck
-								? this.isChecked(row)
-								: false;
-							const isHighlighted = this.isHighlighted(row);
-							const key = rowKey ? (row[rowKey] as any) : i;
-							const href = !!getRowHref ? getRowHref(row) : undefined;
-							const classNamesList = isFunction(getRowClass)
-								? getRowClass(row)
-								: [];
-							const className = isArray(classNamesList)
-								? classNamesList.join(' ')
-								: '';
-							return (
-								<TableRow
-									isChecked={isChecked}
-									isHighlighted={isHighlighted}
-									key={key}
-									keyAttribute={key}
-									href={href}
-									data={row}
-									showCheck={!!this.props.onCheck}
-									columns={columns}
-									attributes={rowAnchorAttributes}
-									checkboxAttributes={this.props.rowCheckboxAttributes}
-									toggleChecked={this.toggleChecked}
-									onRowClick={this.onRowClick}
-									className={className}
-								/>
-							);
-						})}
-					</div>
-				</BaseTable>
+					</BaseTable>
+				</BaseTableWrapper>
 
 				{!!usePager &&
 					(_pagerPosition === 'bottom' || _pagerPosition === 'both') && (
