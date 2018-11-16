@@ -686,7 +686,7 @@ Displays a progress bar using a value representing a percentage.
 
 | Name          | Type      | Default   | Required   | Description                                                   |
 | --------------|-----------|-----------|------------|-------------------------------------------------------------- |
-| `primary`     | `boolean` | -         | -          | If true, use the `primary` theme color                        |
+| `primary`     | `boolean` | `true`    | -          | If true, use the `primary` theme color                        |
 | `secondary`   | `boolean` | -         | -          | If true, use the `secondary` theme color                      |
 | `tertiary`    | `boolean` | -         | -          | If true, use the `tertiary` theme color                       |
 | `quarternary` | `boolean` | -         | -          | If true, use the `quarternary` theme color                    |

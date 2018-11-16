@@ -57,16 +57,16 @@ const getType = withProps(props => {
   const type = Object.keys(props).find(b =>
     Object.keys(props.theme.colors).find(k => k === b)
   )
+
   return assign({}, props, { type })
 })
 
-const setTypeProps = withProps(({ type, theme }) => {
-  // set type colors
-  if (!type) return
+const setTypeProps = withProps(({ type, theme, background, color }) => {
+  const themeBackground = get(theme.colors[type || 'primary'], 'main')
 
   return {
-    color: '#fff',
-    background: get(theme.colors[type], 'main')
+    color: color || '#fff',
+    background: background || themeBackground
   }
 })
 
