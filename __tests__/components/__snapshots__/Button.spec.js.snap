@@ -5,7 +5,7 @@ exports[`Button renders correctly 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <button
-    className="sc-VigVT hegYug sc-gqjmRU gECYIb"
+    className="sc-VigVT hegYug sc-gqjmRU byYeUZ"
   >
     Click me
   </button>

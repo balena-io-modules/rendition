@@ -48,7 +48,7 @@ exports[`Form component should match the stored snapshot 1`] = `
         <div />
       </div>
       <button
-        className="sc-hMqMXs kYklEl sc-kpOJdX GGSVY"
+        className="sc-hMqMXs kYklEl sc-kpOJdX fOdIHn"
       >
         Submit
       </button>

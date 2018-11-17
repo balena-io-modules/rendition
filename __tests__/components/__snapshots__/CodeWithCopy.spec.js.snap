@@ -16,7 +16,7 @@ exports[`CodeWithCopy renders correctly 1`] = `
       onClick={[Function]}
     >
       <button
-        className="code-with-copy__copy sc-VigVT hegYug sc-iwsKbI dLbaIT"
+        className="code-with-copy__copy sc-VigVT hegYug sc-iwsKbI bYxeWC"
         onClick={[Function]}
       >
         <svg
