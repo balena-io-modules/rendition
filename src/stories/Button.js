@@ -200,3 +200,41 @@ storiesOf('Core/Button', module)
       </Provider>
     )
   })
+  .add('Active', () => {
+    return (
+      <Provider>
+        <Box m={3}>
+          <Box mb={2}>
+            <Button m={2} outline>
+              Outline
+            </Button>
+            <Button m={2} outline active>
+              Outline active
+            </Button>
+          </Box>
+          <Box mb={2}>
+            <Button m={2} underline>
+              Underline
+            </Button>
+            <Button m={2} underline active>
+              Underline active
+            </Button>
+          </Box>
+          <Box mb={2}>
+            <Button m={2}>Default</Button>
+            <Button m={2} active>
+              Default active
+            </Button>
+          </Box>
+          <Box mb={2}>
+            <Button m={2} primary>
+              Primary
+            </Button>
+            <Button m={2} primary active>
+              Primary active
+            </Button>
+          </Box>
+        </Box>
+      </Provider>
+    )
+  })

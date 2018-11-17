@@ -168,6 +168,7 @@ declare module 'rendition' {
 	class Box extends RenderableElementWithProps<BoxProps, any> {}
 
 	interface ButtonProps extends DefaultProps, Coloring, Sizing, Tooltip {
+		active?: boolean;
 		square?: boolean;
 		disabled?: boolean;
 		outline?: boolean;

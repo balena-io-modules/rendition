@@ -47,7 +47,23 @@ const ButtonIcon = styled.span`
 	font-size: 0.875em;
 `;
 
+const buttonActiveStyles = (props: ThemedButtonProps) => `
+	color: ${props.color || '#fff'};
+	background-color: ${
+		props.bg
+			? darken(props.bg as string)
+			: darken(getColor(props, 'bg', 'main'))
+	};
+`;
+
 const Button = (styled.button as StyledFunction<ThemedButtonProps>)`
+	${props =>
+		props.active
+			? buttonActiveStyles(props)
+			: `
+		background: ${props.bg || getColor(props, 'bg', 'main')};
+		color: ${props.color || '#fff'};
+	`}
 	padding: 0 ${props => px(horizontalPadding(props))};
 	font-family: inherit;
 	display: inline-flex;
@@ -65,8 +81,6 @@ const Button = (styled.button as StyledFunction<ThemedButtonProps>)`
 	line-height: 1.1;
 	text-align: center;
 	cursor: pointer;
-	background: ${props => props.bg || getColor(props, 'bg', 'main')};
-	color: ${props => props.color || '#fff'};
 	height: ${(props: ThemedButtonProps) =>
 		px(props.emphasized ? props.theme.space[5] : props.theme.space[4])};
 	transition-property: color, background, border-color;
@@ -83,12 +97,8 @@ const Button = (styled.button as StyledFunction<ThemedButtonProps>)`
 		}
 	}
 	&:active {
-		color: ${props => props.color || '#fff'};
-		background-color: ${props =>
-			props.bg
-				? darken(props.bg as string)
-				: darken(getColor(props, 'bg', 'main'))}
-		}
+		${buttonActiveStyles}
+	}
 
 	&:disabled {
 		opacity: 0.65;
@@ -97,60 +107,85 @@ const Button = (styled.button as StyledFunction<ThemedButtonProps>)`
 `;
 
 const Outline = Button.extend`
-	color: ${props =>
-		getColor(props, 'color', 'main') || props.theme.colors.text.main};
-	background: ${props => props.color || 'none'};
+	${props =>
+		props.active
+			? ''
+			: `
+		color: ${getColor(props, 'color', 'main') || props.theme.colors.text.main};
+		background: ${props.color || 'none'};
+	`}
 	border: 1px solid ${props =>
 		props.bg ? props.bg : getColor(props, 'bg', 'main')}
 	}
 `;
 
+const plaintextButtonActiveStyles = (props: ThemedButtonProps) => `
+	background: none;
+	color: ${getColor(props, 'color', 'dark') || props.theme.colors.text.main};
+`;
+
 const Plaintext = Button.extend`
-	padding-left: 0;
+	${props =>
+		props.active
+			? plaintextButtonActiveStyles(props)
+			: `
+		color: ${getColor(props, 'color', 'main') || props.theme.colors.text.main};
+		background: ${props.color || 'none'};
+	`} padding-left: 0;
 	padding-right: 0;
 	height: auto;
 	border: 0;
 	border-radius: 0;
-	color: ${props =>
-		getColor(props, 'color', 'main') || props.theme.colors.text.main};
-	background: ${props => props.color || 'none'};
 	font-weight: ${props => normal(props)};
 
 	&:hover,
 	&:focus,
 	&:active {
-		background: none;
-		color: ${props =>
-			getColor(props, 'color', 'dark') || props.theme.colors.text.main};
+		${plaintextButtonActiveStyles};
 	}
 `;
 
+const underlineButtonActiveStyles = (props: ThemedButtonProps) => `
+	color: ${getColor(props, 'color', 'main') || props.theme.colors.text.main};
+	box-shadow: 0px -1px 0 0px inset;
+`;
+
 const Underline = Plaintext.extend`
-	padding-bottom: 2px;
+	${props =>
+		props.active
+			? underlineButtonActiveStyles(props)
+			: `
+	`} padding-bottom: 2px;
 	border-bottom: 1px solid;
 	font-weight: ${props => bold(props)};
 
 	&:hover,
 	&:focus,
 	&:active {
-		color: ${props =>
-			getColor(props, 'color', 'main') || props.theme.colors.text.main};
-		box-shadow: 0px -1px 0 0px inset;
+		${underlineButtonActiveStyles};
 	}
 `;
 
+const defaultButtonActiveStyles = (props: ThemedButtonProps) => `
+	color: #fff;
+	background-color: ${props.theme.colors.text.main};
+`;
+
 const DefaultButton = Button.extend`
-	background: #fff;
-	color: ${props => props.theme.colors.text.main};
+	${props =>
+		props.active
+			? defaultButtonActiveStyles(props)
+			: `
+		background: #fff;
+		color: ${props.theme.colors.text.main};
+	`}
 	border: 1px solid ${props => props.theme.colors.gray.main};
 	&:hover {
-		background: #fff;
-		color: ${props => props.theme.colors.text.main};
+		${defaultButtonActiveStyles}
 		border-color: ${props => props.theme.colors.text.main};
 	}
 	&:active {
-		color: #fff;
-		background-color: ${props => props.theme.colors.text.main};
+		${defaultButtonActiveStyles}
 	}
 `;
 

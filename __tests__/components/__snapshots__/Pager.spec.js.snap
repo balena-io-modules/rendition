@@ -28,7 +28,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
         className="sc-eNQAEJ hCBMuI sc-chPdSV dfDVBP sc-cSHVUG kBGaNN sc-jTzLTM cTXuEb"
       >
         <button
-          className="rendition-pager__btn--prev sc-VigVT hegYug sc-gqjmRU eUZmOA"
+          className="rendition-pager__btn--prev sc-VigVT hegYug sc-gqjmRU dBhPoi"
           disabled={true}
           onClick={[Function]}
         >
@@ -53,7 +53,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
           </svg>
         </button>
         <button
-          className="rendition-pager__btn--next sc-VigVT hegYug sc-gqjmRU eUZmOA"
+          className="rendition-pager__btn--next sc-VigVT hegYug sc-gqjmRU dBhPoi"
           disabled={false}
           onClick={[Function]}
         >

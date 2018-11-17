@@ -8,7 +8,7 @@ exports[`BadgeSelect renders correctly 1`] = `
     className="sc-kkGfuU cOTEVe"
   >
     <button
-      className="sc-eHgmQL cIgoKG sc-dxgOiQ fGHMFH sc-kpOJdX gOHWnN"
+      className="sc-eHgmQL cIgoKG sc-dxgOiQ fGHMFH sc-kpOJdX jzYCKw"
       onClick={[Function]}
     >
       <div

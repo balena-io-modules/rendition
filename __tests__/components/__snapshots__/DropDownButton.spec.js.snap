@@ -9,14 +9,14 @@ exports[`DropDownButton renders correctly 1`] = `
   >
     <span>
       <button
-        className="sc-jKJlTe gKAGRW sc-VigVT hegYug sc-htoDjs jrhxUu"
+        className="sc-jKJlTe gKAGRW sc-VigVT hegYug sc-htoDjs dgXajn"
       >
         <div>
           DropDown
         </div>
       </button>
       <button
-        className="sc-ckVGcZ dDNiOq sc-VigVT hegYug sc-htoDjs jrhxUu"
+        className="sc-ckVGcZ dDNiOq sc-VigVT hegYug sc-htoDjs dgXajn"
         onClick={[Function]}
       >
         <svg
