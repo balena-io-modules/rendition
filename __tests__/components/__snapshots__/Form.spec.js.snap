@@ -38,7 +38,7 @@ exports[`Form component should match the stored snapshot 1`] = `
               readOnly={false}
               required={false}
               type="text"
-              value=""
+              value="Bulbasaur"
             />
             <div />
             <div />

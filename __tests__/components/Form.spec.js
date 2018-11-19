@@ -15,14 +15,20 @@ const schema = {
       title: 'Pokemon Name',
       type: 'string'
     }
-  }
+  },
+  additionalProperties: true
 }
 
 describe('Form component', () => {
   it('should match the stored snapshot', () => {
+    const value = {
+      Name: 'Bulbasaur',
+      foo: 'bar'
+    }
+
     const component = renderer.create(
       <Provider>
-        <Form schema={schema} />
+        <Form schema={schema} value={value} />
       </Provider>
     )
     let tree = component.toJSON()
@@ -172,8 +178,8 @@ describe('Form component', () => {
       component.update()
 
       return Promise.delay(150).then(() => {
-        expect(callback.callCount).toEqual(1)
-        expect(callback.getCall(0).args[0].formData).toEqual({ Name: value })
+        expect(callback.called).toEqual(true)
+        expect(callback.lastCall.args[0].formData).toEqual({ Name: value })
 
         component.unmount()
       })

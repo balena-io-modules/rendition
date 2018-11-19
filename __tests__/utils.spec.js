@@ -76,4 +76,60 @@ describe('utils', () => {
       })
     })
   })
+
+  describe('.disallowAdditionalProperties()', () => {
+    const schema = {
+      type: 'object',
+      properties: {
+        foo: {
+          type: 'object',
+          properties: {
+            bar: {
+              type: 'string'
+            }
+          },
+          additionalProperties: true
+        }
+      },
+      additionalProperties: true
+    }
+
+    it('should remove formats from a schema', () => {
+      expect(utils.disallowAdditionalProperties(schema)).toEqual({
+        type: 'object',
+        properties: {
+          foo: {
+            type: 'object',
+            properties: {
+              bar: {
+                type: 'string'
+              }
+            },
+            additionalProperties: false
+          }
+        },
+        additionalProperties: false
+      })
+    })
+
+    it('should not modify the original schema', () => {
+      utils.disallowAdditionalProperties(schema)
+
+      expect(schema).toEqual({
+        type: 'object',
+        properties: {
+          foo: {
+            type: 'object',
+            properties: {
+              bar: {
+                type: 'string'
+              }
+            },
+            additionalProperties: true
+          }
+        },
+        additionalProperties: true
+      })
+    })
+  })
 })
