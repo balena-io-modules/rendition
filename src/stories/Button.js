@@ -172,6 +172,25 @@ storiesOf('Core/Button', module)
       </Provider>
     )
   })
+  .add('With icon', () => {
+    return (
+      <Provider>
+        <Box m={3}>
+          <Button
+            m={2}
+            tertiary
+            iconElement={<FaExpand />}
+            onClick={action('case-3')}
+          >
+            Expand
+          </Button>
+          <Button m={2} iconElement={<FaRecycle />} onClick={action('case-4')}>
+            Recycle
+          </Button>
+        </Box>
+      </Provider>
+    )
+  })
   .add('Square', () => {
     return (
       <Provider>
