@@ -5,13 +5,13 @@ exports[`Filters component should match the stored snapshot 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <div
-    className="sc-dNLxif hMEKxV sc-eNQAEJ hBBvhu sc-ckVGcZ bTbrkH sc-kGXeez iiFQGn"
+    className="sc-jqCOkK gEbIYX sc-hMqMXs iXgAPF sc-jKJlTe izQvgc sc-kpOJdX iDFmwO"
   >
     <div
-      className="sc-jKJlTe dCeOjK sc-dxgOiQ dtwKdh sc-kpOJdX kGHtPs"
+      className="sc-eNQAEJ cOpOPT sc-ckVGcZ bTbrkH sc-dxgOiQ bDgFjW"
     >
       <button
-        className="sc-VigVT iMLQux sc-htoDjs dgXajn"
+        className="sc-VigVT iMLQux sc-htoDjs hGZSIz"
         onClick={[Function]}
       >
         <svg
@@ -37,10 +37,10 @@ exports[`Filters component should match the stored snapshot 1`] = `
         Add filter
       </button>
       <div
-        className="sc-jbKcbu beJLgR"
+        className="sc-dNLxif cDutFD"
       >
         <div
-          className="sc-csuQGl kPtrgI"
+          className="sc-Rmtcm dOVVuC"
         >
           <input
             onChange={[Function]}
@@ -76,20 +76,20 @@ exports[`Filters component should match the stored snapshot 1`] = `
         </div>
       </div>
       <div
-        className="sc-TOsTZ kjYrri"
+        className="sc-kgAjT cuzzPp"
       >
         <div
-          className="sc-caSCKo gOedwQ"
+          className="sc-gisBJw fDpgmb"
         >
           <button
-            className="sc-cHGsZl kKmwRj sc-VigVT xuzkb sc-dnqmqq iMlymS"
+            className="sc-TOsTZ lZwVl sc-VigVT xuzkb sc-dnqmqq scmgy"
             onClick={[Function]}
           >
             <div
-              className="sc-jKJlTe dCeOjK sc-dxgOiQ dtwKdh sc-kpOJdX jwZFw"
+              className="sc-eNQAEJ cOpOPT sc-ckVGcZ bTbrkH sc-dxgOiQ gewqYl"
             >
               <div
-                className="sc-eNQAEJ tjatD sc-ckVGcZ bTbrkH sc-kGXeez cazHBK"
+                className="sc-hMqMXs fIGBRY sc-jKJlTe izQvgc sc-kpOJdX cPePIG"
               >
                 <span>
                   <svg
@@ -116,7 +116,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
                 </span>
               </div>
               <span
-                className="sc-kjoXOD dYrVjd"
+                className="sc-cHGsZl kJTVit"
               >
                 <svg
                   fill="currentColor"
