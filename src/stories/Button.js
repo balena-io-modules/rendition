@@ -257,3 +257,37 @@ storiesOf('Core/Button', module)
       </Provider>
     )
   })
+  .add('Link', () => {
+    return (
+      <Provider>
+        <Box m={3}>
+          <Button.a m={2} href={`#`} primary>
+            Primary
+          </Button.a>
+          <Button.a m={2} href={`#`} secondary>
+            Secondary
+          </Button.a>
+          <Button.a m={2} href={`#`} tertiary>
+            Tertiary
+          </Button.a>
+          <Button.a m={2} href={`#`} success>
+            Success
+          </Button.a>
+          <Button.a m={2} href={`#`} danger>
+            Danger
+          </Button.a>
+          <Button.a m={2} href={`#`}>
+            Default
+          </Button.a>
+        </Box>
+        <Box m={3}>
+          <Button.a m={2} underline href={`#`} primary>
+            Link Button
+          </Button.a>
+          <Button.a m={2} underline href={`#`}>
+            Link Button
+          </Button.a>
+        </Box>
+      </Provider>
+    )
+  })

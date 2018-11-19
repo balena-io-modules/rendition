@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { ButtonProps } from 'rendition';
+import { ButtonAnchorProps, ButtonProps } from 'rendition';
 import styled, { StyledFunction, withTheme } from 'styled-components';
-import asRendition from '../asRendition';
+import asRendition, { withStyledSystem } from '../asRendition';
 import {
 	bold,
 	darken,
@@ -56,7 +56,7 @@ const buttonActiveStyles = (props: ThemedButtonProps) => `
 	};
 `;
 
-const Button = (styled.button as StyledFunction<ThemedButtonProps>)`
+const ButtonBase = (styled.button as StyledFunction<ThemedButtonProps>)`
 	${props =>
 		props.active
 			? buttonActiveStyles(props)
@@ -88,12 +88,14 @@ const Button = (styled.button as StyledFunction<ThemedButtonProps>)`
 	transition-timing-function: ease-in;
 	outline: none;
 
-	&:hover {
+	&:hover,
+	&:focus {
+		text-decoration: none;
 		color: ${props => props.color || '#fff'};
-			background-color: ${props =>
-				props.bg
-					? lighten(props.bg as string)
-					: lighten(getColor(props, 'bg', 'main'))}
+		background-color: ${props =>
+			props.bg
+				? lighten(props.bg as string)
+				: lighten(getColor(props, 'bg', 'main'))}
 		}
 	}
 	&:active {
@@ -106,7 +108,7 @@ const Button = (styled.button as StyledFunction<ThemedButtonProps>)`
 	}
 `;
 
-const Outline = Button.extend`
+const Outline = ButtonBase.extend`
 	${props =>
 		props.active
 			? ''
@@ -124,7 +126,7 @@ const plaintextButtonActiveStyles = (props: ThemedButtonProps) => `
 	color: ${getColor(props, 'color', 'dark') || props.theme.colors.text.main};
 `;
 
-const Plaintext = Button.extend`
+const Plaintext = ButtonBase.extend`
 	${props =>
 		props.active
 			? plaintextButtonActiveStyles(props)
@@ -171,7 +173,7 @@ const defaultButtonActiveStyles = (props: ThemedButtonProps) => `
 	background-color: ${props.theme.colors.text.main};
 `;
 
-const DefaultButton = Button.extend`
+const DefaultButton = ButtonBase.extend`
 	${props =>
 		props.active
 			? defaultButtonActiveStyles(props)
@@ -189,52 +191,61 @@ const DefaultButton = Button.extend`
 	}
 `;
 
-export default withTheme(
-	asRendition(
-		({
+const getStyledButton = ({
+	outline,
+	underline,
+	plaintext,
+	...props
+}: ThemedButtonProps) => {
+	if (plaintext) {
+		return Plaintext;
+	}
+	if (outline) {
+		return Outline;
+	}
+	if (underline) {
+		return Underline;
+	}
+	if (!getColoringType(props) && !props.color && !props.bg) {
+		return DefaultButton;
+	}
+	return ButtonBase;
+};
+
+const ButtonFactory = <T extends keyof JSX.IntrinsicElements>(tag?: T) => {
+	const Button = (props: ThemedButtonProps) => {
+		const {
 			outline,
 			underline,
 			plaintext,
 			children,
 			iconElement,
-			...props
-		}: ThemedButtonProps) => {
-			if (plaintext) {
-				return (
-					<Plaintext {...props}>
-						{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
-						{children}
-					</Plaintext>
-				);
-			} else if (outline) {
-				return (
-					<Outline {...props}>
-						{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
-						{children}
-					</Outline>
-				);
-			} else if (underline) {
-				return (
-					<Underline {...props}>
-						{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
-						{children}
-					</Underline>
-				);
-			} else if (!getColoringType(props) && !props.color && !props.bg) {
-				return (
-					<DefaultButton {...props}>
-						{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
-						{children}
-					</DefaultButton>
-				);
-			} else {
-				return (
-					<Button {...props}>
-						{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
-						{children}
-					</Button>
-				);
-			}
-		},
-	),
-) as React.ComponentClass<ButtonProps>;
+			...restProps
+		} = props;
+
+		let StyledButton = getStyledButton(props);
+		if (tag) {
+			// when using withComponent we need to rewire the styled-system props
+			// when we upgrade to styled-components v4 this will be replaced with an `as={tag}`
+			StyledButton = withStyledSystem(StyledButton.withComponent(
+				tag,
+			) as any) as any;
+		}
+
+		return (
+			<StyledButton {...restProps}>
+				{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
+				{children}
+			</StyledButton>
+		);
+	};
+
+	return withTheme(asRendition(Button));
+};
+
+const Button = ButtonFactory() as React.ComponentClass<ButtonProps> & {
+	a: React.ComponentClass<ButtonAnchorProps>;
+};
+Button.a = ButtonFactory('a') as React.ComponentClass<ButtonAnchorProps>;
+
+export default Button;
