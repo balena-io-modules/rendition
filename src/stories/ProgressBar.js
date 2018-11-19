@@ -51,7 +51,7 @@ storiesOf('Core/ProgressBar', module)
     return (
       <Provider>
         <Box m={3}>
-          <Progressor mb={3} primary value={50} />
+          <Progressor mb={3} value={50} />
           <Progressor mb={3} secondary value={45} />
           <Progressor mb={3} tertiary value={40} />
           <Progressor mb={3} danger value={35} />
