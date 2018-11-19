@@ -180,6 +180,58 @@ export const stripSchemaFormats = (
 };
 
 /**
+ * @name disallowAdditionalProperties
+ * @summary Sets the "additionalProperties" keyword to false in a JSON schema
+ * @function
+ * @public
+ *
+ * @description Sets the "additionalProperties" keyword to false in a JSON schema
+ *
+ * @param {Object} schema - The json schema to filter
+ *
+ * @returns {Object} A new schema object
+ *
+ * @example
+ * const schema = {
+ * 	additionalProperties: true,
+ * 	type: 'object',
+ * 	properties: {
+ * 		foo: {
+ * 			type: 'string',
+ * 		}
+ * }
+ *
+ * const newSchema = utils.disallowAdditionalProperties(schema)
+ * console.log(newSchema) // -->
+ * {
+ * 	additionalProperties: true,
+ * 	type: 'object',
+ * 	properties: {
+ * 		foo: {
+ * 			type: 'string',
+ * 		}
+ * }
+ */
+export const disallowAdditionalProperties = (schema: JSONSchema6) => {
+	const newSchema = cloneDeep(schema);
+
+	const disallow = (schema: JSONSchema6) => {
+		if (schema.additionalProperties) {
+			schema.additionalProperties = false;
+		}
+		if (schema.properties) {
+			forEach(schema.properties, subSchema => {
+				disallow(subSchema as JSONSchema6);
+			});
+		}
+	};
+
+	disallow(newSchema);
+
+	return newSchema;
+};
+
+/**
  * @name getAngleBetweenPoints
  * @summary Gets the angle in degrees between two points, represented by objects
  * with x and y values.

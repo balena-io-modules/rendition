@@ -116,10 +116,12 @@ export default class FormHOC extends React.Component<
 			'uiSchema',
 		]);
 
+		const schema = utils.disallowAdditionalProperties(this.state.schema);
+
 		return (
 			<FormWrapper {...cleanProps}>
 				<Form
-					schema={this.state.schema}
+					schema={schema}
 					formData={this.state.value}
 					onSubmit={this.submit}
 					onChange={this.change}
