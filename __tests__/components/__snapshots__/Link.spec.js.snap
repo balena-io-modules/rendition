@@ -5,7 +5,7 @@ exports[`Link renders correctly 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <a
-    className="sc-jTzLTM bUWCnN sc-fjdhpX jDBYsh"
+    className="sc-jTzLTM kVIkyB sc-fjdhpX jDBYsh"
     color="primary.main"
   >
     Link

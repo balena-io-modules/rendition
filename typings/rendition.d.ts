@@ -324,7 +324,8 @@ declare module 'rendition' {
 		rel?: string;
 		target?: string;
 		type?: string;
-		as?: string;
+		is?: string;
+		decor?: string;
 	}
 
 	interface LinkProps extends DefaultProps, Tooltip, LinkBaseProps {}

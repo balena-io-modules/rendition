@@ -65,8 +65,8 @@ class FilterSummary extends React.Component<
 		});
 	}
 
-	handleChange(e: Event) {
-		const name = (e.target as HTMLInputElement).value;
+	handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+		const name = e.target.value;
 		this.setState({ name });
 	}
 
@@ -110,7 +110,7 @@ class FilterSummary extends React.Component<
 								width="100%"
 								value={this.state.name}
 								placeholder="Enter a name for the view"
-								onChange={(e: Event) => this.handleChange(e)}
+								onChange={e => this.handleChange(e)}
 								autoFocus
 							/>
 						</form>
