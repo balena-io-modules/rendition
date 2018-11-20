@@ -1,7 +1,7 @@
 import { JSONSchema6 } from 'json-schema';
 import assign = require('lodash/assign');
 import * as React from 'react';
-import { DataTypeEditProps, TextareaProps } from 'rendition';
+import { DataTypeEditProps, InputProps, TextareaProps } from 'rendition';
 import * as utils from '../../utils';
 import Input from '../Input';
 import Textarea from '../Textarea';
@@ -161,7 +161,7 @@ export const Edit = ({
 	onUpdate,
 	slim,
 	...props
-}: DataTypeEditProps & TextareaProps & { slim?: boolean }) => {
+}: DataTypeEditProps & TextareaProps & InputProps & { slim?: boolean }) => {
 	if (slim) {
 		return (
 			<Input
