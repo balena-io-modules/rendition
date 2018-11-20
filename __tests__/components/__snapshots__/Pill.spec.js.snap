@@ -5,7 +5,7 @@ exports[`Primary Pill renders correctly 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <div
-    className="sc-fjdhpX iBNkjm sc-VigVT gRVnTE sc-htoDjs gDCMNh sc-gzVnrw faVbst"
+    className="sc-fjdhpX iBNkjm sc-VigVT gRVnTE sc-htoDjs gDCMNh sc-gzVnrw yMjzV"
   >
     pill
   </div>
@@ -17,7 +17,7 @@ exports[`Small Danger Pill renders correctly 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <div
-    className="sc-fjdhpX iBNkjm sc-jTzLTM iHwAvD sc-htoDjs gDCMNh sc-gzVnrw faVbst"
+    className="sc-fjdhpX iBNkjm sc-jTzLTM iHwAvD sc-htoDjs gDCMNh sc-gzVnrw yMjzV"
   >
     pill
   </div>

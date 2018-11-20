@@ -519,6 +519,14 @@ declare module 'rendition' {
 		monospace?: boolean;
 		bold?: boolean;
 		caps?: boolean;
+		whitespace?:
+			| 'normal'
+			| 'nowrap'
+			| 'pre'
+			| 'pre-line'
+			| 'pre-wrap'
+			| 'initial'
+			| 'inherit';
 		align?:
 			| 'left'
 			| 'right'

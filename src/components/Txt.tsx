@@ -8,13 +8,11 @@ interface ThemedTxtProps extends TxtProps {
 	theme: Theme;
 }
 
+export const whitespace = (props: ThemedTxtProps) =>
+	props.whitespace ? { whiteSpace: props.whitespace } : null;
+
 export const caps = (props: ThemedTxtProps) =>
-	props.caps
-		? {
-				textTransform: 'uppercase',
-				letterSpacing: '0.2em',
-			}
-		: null;
+	props.caps ? { textTransform: 'uppercase', letterSpacing: '0.2em' } : null;
 
 export const bold = (props: ThemedTxtProps) =>
 	props.bold
@@ -27,8 +25,9 @@ const Txt = styled.div`
 	${align}
 	${color}
 	${fontSize}
-	${monospace as any};
 	${space}
+	${monospace as any}
+	${whitespace as any}
 
 	${caps as any}
 	${bold as any}
