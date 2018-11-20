@@ -5,20 +5,20 @@ exports[`ButtonGroup renders correctly 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <div
-    className="sc-kgoBCf hzrgZk sc-kAzzGY dirfrO sc-jzJRlG cmnKTT sc-fjdhpX jmbwCw"
+    className="sc-kGXeez dcSnUk sc-chPdSV dfDVBP sc-cSHVUG kBGaNN sc-jzJRlG jJxvfu"
   >
     <button
-      className="sc-VigVT hegYug sc-gqjmRU byYeUZ"
+      className="sc-VigVT hegYug sc-gqjmRU lmfpGz"
     >
       First
     </button>
     <button
-      className="sc-VigVT hegYug sc-gqjmRU byYeUZ"
+      className="sc-VigVT hegYug sc-gqjmRU lmfpGz"
     >
       Second
     </button>
     <button
-      className="sc-VigVT hegYug sc-gqjmRU byYeUZ"
+      className="sc-VigVT hegYug sc-gqjmRU lmfpGz"
     >
       Third
     </button>

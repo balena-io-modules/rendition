@@ -49,7 +49,7 @@ const withTooltip = (Base: React.StatelessComponent) => {
 	};
 };
 
-const withStyledSystem = (child: React.StatelessComponent) => {
+export const withStyledSystem = (child: React.StatelessComponent) => {
 	const Base = styled<BaseProps>(child)`
 		${space} ${width} ${fontSize} ${color};
 	`;

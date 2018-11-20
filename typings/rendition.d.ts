@@ -167,7 +167,7 @@ declare module 'rendition' {
 
 	class Box extends RenderableElementWithProps<BoxProps, any> {}
 
-	interface ButtonProps extends DefaultProps, Coloring, Sizing, Tooltip {
+	interface ButtonBaseProps extends DefaultProps, Coloring, Sizing, Tooltip {
 		active?: boolean;
 		square?: boolean;
 		disabled?: boolean;
@@ -175,10 +175,22 @@ declare module 'rendition' {
 		plaintext?: boolean;
 		underline?: boolean;
 		iconElement?: JSX.Element;
+	}
+
+	interface ButtonAnchorProps extends ButtonBaseProps, LinkBaseProps {}
+
+	class ButtonAnchor extends RenderableElementWithProps<
+		ButtonAnchorProps,
+		any
+	> {}
+
+	interface ButtonProps extends ButtonBaseProps {
 		type?: 'submit' | 'reset' | 'button';
 	}
 
-	class Button extends RenderableElementWithProps<ButtonProps, any> {}
+	class Button extends RenderableElementWithProps<ButtonProps, any> {
+		static a: typeof ButtonAnchor;
+	}
 
 	interface CodeWithCopyProps extends DefaultProps, Tooltip {
 		copy?: string;
@@ -302,7 +314,7 @@ declare module 'rendition' {
 		/* tslint:enable:class-name */
 	}
 
-	interface LinkProps extends DefaultProps, Tooltip {
+	interface LinkBaseProps {
 		blank?: boolean;
 		disabled?: boolean;
 		download?: any;
@@ -314,6 +326,8 @@ declare module 'rendition' {
 		type?: string;
 		as?: string;
 	}
+
+	interface LinkProps extends DefaultProps, Tooltip, LinkBaseProps {}
 
 	class Link extends RenderableElementWithProps<LinkProps, any> {}
 

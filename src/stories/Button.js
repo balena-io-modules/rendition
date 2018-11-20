@@ -172,6 +172,25 @@ storiesOf('Core/Button', module)
       </Provider>
     )
   })
+  .add('With icon', () => {
+    return (
+      <Provider>
+        <Box m={3}>
+          <Button
+            m={2}
+            tertiary
+            iconElement={<FaExpand />}
+            onClick={action('case-3')}
+          >
+            Expand
+          </Button>
+          <Button m={2} iconElement={<FaRecycle />} onClick={action('case-4')}>
+            Recycle
+          </Button>
+        </Box>
+      </Provider>
+    )
+  })
   .add('Square', () => {
     return (
       <Provider>
@@ -234,6 +253,40 @@ storiesOf('Core/Button', module)
               Primary active
             </Button>
           </Box>
+        </Box>
+      </Provider>
+    )
+  })
+  .add('Link', () => {
+    return (
+      <Provider>
+        <Box m={3}>
+          <Button.a m={2} href={`#`} primary>
+            Primary
+          </Button.a>
+          <Button.a m={2} href={`#`} secondary>
+            Secondary
+          </Button.a>
+          <Button.a m={2} href={`#`} tertiary>
+            Tertiary
+          </Button.a>
+          <Button.a m={2} href={`#`} success>
+            Success
+          </Button.a>
+          <Button.a m={2} href={`#`} danger>
+            Danger
+          </Button.a>
+          <Button.a m={2} href={`#`}>
+            Default
+          </Button.a>
+        </Box>
+        <Box m={3}>
+          <Button.a m={2} underline href={`#`} primary>
+            Link Button
+          </Button.a>
+          <Button.a m={2} underline href={`#`}>
+            Link Button
+          </Button.a>
         </Box>
       </Provider>
     )

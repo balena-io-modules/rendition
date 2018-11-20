@@ -2,13 +2,13 @@
 
 exports[`Table component should match the stored snapshot 1`] = `
 <div
-  className="sc-eNQAEJ cMtItN"
+  className="sc-hMqMXs cNiDxr"
 >
   <div
-    className="sc-hMqMXs htavSP"
+    className="sc-kEYyzF gYBsDo"
   >
     <div
-      className="sc-kEYyzF hKvgdH"
+      className="sc-kkGfuU jNDKcx"
     >
       <div
         data-display="table-head"

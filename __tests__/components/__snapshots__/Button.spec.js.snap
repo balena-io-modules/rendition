@@ -5,7 +5,32 @@ exports[`Button renders correctly 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <button
-    className="sc-VigVT hegYug sc-gqjmRU byYeUZ"
+    className="sc-VigVT hegYug sc-gqjmRU lmfpGz"
+  >
+    Click me
+  </button>
+</div>
+`;
+
+exports[`Styled Anchor Button renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <a
+    className="sc-jTzLTM ctytKv sc-jzJRlG fKAaUV sc-fjdhpX fchITh"
+    href="#"
+  >
+    Click me
+  </a>
+</div>
+`;
+
+exports[`Styled Button renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <button
+    className="sc-VigVT kKVfAK sc-gqjmRU lmfpGz"
   >
     Click me
   </button>
