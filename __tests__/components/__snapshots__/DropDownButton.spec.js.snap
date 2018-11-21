@@ -43,3 +43,84 @@ exports[`DropDownButton renders correctly 1`] = `
   </div>
 </div>
 `;
+
+exports[`Opened DropDownButton renders correctly 1`] = `
+<div
+  className="sc-bdVaJa jKopLr"
+>
+  <div
+    className="sc-kEYyzF hUuPit"
+  >
+    <span>
+      <button
+        className="sc-eNQAEJ llVJzJ sc-VigVT hegYug sc-htoDjs hGZSIz"
+      >
+        <div>
+          DropDown
+        </div>
+      </button>
+      <button
+        className="sc-jKJlTe bCfkET sc-VigVT hegYug sc-htoDjs hGZSIz"
+        onClick={[Function]}
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          preserveAspectRatio="xMidYMid meet"
+          style={
+            Object {
+              "color": undefined,
+              "verticalAlign": "middle",
+            }
+          }
+          viewBox="0 0 40 40"
+          width="1em"
+        >
+          <g>
+            <path
+              d="m31.4 27.1q0 0.6-0.5 1t-1 0.5h-20q-0.6 0-1-0.5t-0.4-1 0.4-1l10-10q0.4-0.4 1-0.4t1 0.4l10 10q0.5 0.5 0.5 1z"
+            />
+          </g>
+        </svg>
+      </button>
+    </span>
+    <div
+      className="sc-kAzzGY dirfrO sc-cSHVUG flWEyE"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-hMqMXs kdOMea"
+      onClick={[Function]}
+    >
+      <div
+        className="sc-kkGfuU gJOBHt"
+      >
+        <div>
+          Item
+        </div>
+      </div>
+      <div
+        className="sc-kkGfuU gJOBHt"
+      >
+        <div>
+          Item
+        </div>
+      </div>
+      <div
+        className="sc-kkGfuU gJOBHt"
+      >
+        <div>
+          Item
+        </div>
+      </div>
+      <div
+        className="sc-kkGfuU gJOBHt"
+      >
+        <div>
+          Item
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -18,3 +18,25 @@ test('DropDownButton renders correctly', () => {
   let tree = component.toJSON()
   expect(tree).toMatchSnapshot()
 })
+
+test('Opened DropDownButton renders correctly', () => {
+  const component = renderer.create(
+    <Provider>
+      <DropDownButton primary label={<div>DropDown</div>}>
+        <div>Item</div>
+        {[...Array(3).keys()].map((index) => (
+          <div key={index}>Item</div>
+        ))}
+      </DropDownButton>
+    </Provider>
+  )
+
+  let instance = component.root.findByType(DropDownButton).children[0].instance
+
+  instance.setState({
+    open: true
+  })
+
+  let tree = component.toJSON()
+  expect(tree).toMatchSnapshot()
+})
