@@ -9,7 +9,6 @@ import Fixed from './Fixed'
 import { Box, Flex } from './Grid'
 import theme from '../theme'
 import { compose } from 'recompose'
-const isArray = require('lodash/isArray')
 import { space, color, fontSize, width } from 'styled-system'
 
 const ToggleBase = styled(Button)`
@@ -136,8 +135,6 @@ class DropDownButton extends React.Component {
       ...props
     } = this.props
 
-    const dropdownContents = isArray(children) ? children : [children]
-
     return (
       <Wrapper {...props}>
         {joined ? (
@@ -170,7 +167,7 @@ class DropDownButton extends React.Component {
             onClick={e => this.toggle(e)}
             minWidth={`${this.state.minWidth}px`}
           >
-            {dropdownContents.map((child, i) => {
+            {React.Children.map(children, (child, i) => {
               if (noListFormat) {
                 return child
               }
