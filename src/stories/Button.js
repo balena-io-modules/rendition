@@ -137,6 +137,9 @@ storiesOf('Core/Button', module)
           <Button m={2} plaintext primary onClick={action('case-1')}>
             Button
           </Button>
+          <Button m={2} plaintext color='green' onClick={action('case-1')}>
+            Button
+          </Button>
           <Button
             m={2}
             plaintext

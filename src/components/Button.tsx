@@ -134,7 +134,7 @@ const Plaintext = ButtonBase.extend`
 			? plaintextButtonActiveStyles(props)
 			: `
 		color: ${getColor(props, 'color', 'main') || props.theme.colors.text.main};
-		background: ${props.color || 'none'};
+		background: none;
 	`} padding-left: 0;
 	padding-right: 0;
 	height: auto;
