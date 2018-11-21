@@ -91,6 +91,8 @@ const ButtonBase = (styled.button as StyledFunction<ThemedButtonProps>)`
 	&:hover,
 	&:focus {
 		text-decoration: none;
+	}
+	&:hover {
 		color: ${props => props.color || '#fff'};
 		background-color: ${props =>
 			props.bg
