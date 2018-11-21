@@ -60,13 +60,16 @@ const colors = {
 		main: '#ffb25e',
 	},
 	statusUpdating: {
-		main: primaryLight,
+		main: '#75C5F5',
 	},
 	statusPostProvisioning: {
 		main: '#aa96d5',
 	},
 	statusOffline: {
 		main: '#fd7c7c',
+	},
+	statusInactive: {
+		main: '#d3d6db',
 	},
 
 	gray: {
