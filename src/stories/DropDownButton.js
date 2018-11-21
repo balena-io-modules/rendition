@@ -40,44 +40,29 @@ storiesOf('Core/DropDownButton', module)
       </Provider>
     )
   })
-  .add('Borderless', () => {
+  .add('Bordered List', () => {
     return (
       <Provider>
         <Box m={3}>
-          <DropDownButton
-            mx={2}
-            border={false}
-            primary
-            label={<div>DropDown</div>}
-          >
+          <DropDownButton mx={2} border primary label={<div>DropDown</div>}>
             <div>Item</div>
             <div>Item</div>
             <div>Item</div>
             <div>Item</div>
           </DropDownButton>
-          <DropDownButton
-            mx={2}
-            border={false}
-            secondary
-            label={<div>DropDown</div>}
-          >
+          <DropDownButton mx={2} border secondary label={<div>DropDown</div>}>
             <div>Item</div>
             <div>Item</div>
             <div>Item</div>
             <div>Item</div>
           </DropDownButton>
-          <DropDownButton
-            mx={2}
-            border={false}
-            tertiary
-            label={<div>DropDown</div>}
-          >
+          <DropDownButton mx={2} border tertiary label={<div>DropDown</div>}>
             <div>Item</div>
             <div>Item</div>
             <div>Item</div>
             <div>Item</div>
           </DropDownButton>
-          <DropDownButton mx={2} border={false} label={<div>DropDown</div>}>
+          <DropDownButton mx={2} border label={<div>DropDown</div>}>
             <div>Item</div>
             <div>Item</div>
             <div>Item</div>

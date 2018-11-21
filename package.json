@@ -29,7 +29,7 @@
     "prettify-js": "prettier --config .prettierrc-js --write \"src/**/*.js\" \"test/**/*.js\"",
     "prettify-ts": "prettier --config .prettierrc-ts --write \"src/**/*.ts\" \"src/**/*.tsx\" \"typings.d.ts\"",
     "prettify": "npm run prettify-js && npm run eslint-fix && npm run prettify-ts && npm run tslint-fix",
-    "ci:screenshot": "STORYBOOK_MODE=screenshot storybook-chrome-screenshot --browser-timeout 60000 -p 6006",
+    "ci:screenshot": "STORYBOOK_MODE=screenshot storybook-chrome-screenshot --browser-timeout 100000 -p 6006",
     "deploy": "npm run build:storybook && gh-pages -d .out"
   },
   "devDependencies": {
