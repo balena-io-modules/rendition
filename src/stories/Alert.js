@@ -65,6 +65,11 @@ storiesOf('Core/Alert', module)
           <Alert my={2} plaintext warning>
             Warning text
           </Alert>
+          <Alert my={2} plaintext success>
+            <span>This is inline.</span>
+            <span>{' As well as this.'}</span>
+            <div>This is not</div>
+          </Alert>
         </Box>
       </Provider>
     )
