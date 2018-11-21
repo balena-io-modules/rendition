@@ -232,7 +232,7 @@ declare module 'rendition' {
 
 	class Divider extends RenderableElementWithProps<DividerProps, any> {}
 
-	interface DropDownButtonProps extends DefaultProps, Coloring {
+	interface DropDownButtonProps extends DefaultProps, Coloring, Tooltip {
 		disabled?: boolean;
 		label?: JSX.Element;
 		border?: boolean;
@@ -386,12 +386,11 @@ declare module 'rendition' {
 
 	class Modal extends RenderableElementWithProps<ModalProps, any> {}
 
-	class Navbar extends RenderableElementWithProps<
-		DefaultProps & {
-			brand: JSX.Element;
-		},
-		any
-	> {}
+	interface NavbarProps extends DefaultProps {
+		brand?: JSX.Element;
+	}
+
+	class Navbar extends RenderableElementWithProps<NavbarProps, any> {}
 
 	interface PagerProps extends DefaultProps {
 		totalItems: number;
