@@ -18,7 +18,7 @@ exports[`BadgeSelect renders correctly 1`] = `
           className="sc-gqjmRU iMncXr sc-iwsKbI khHCQa sc-gzVnrw gceidV"
         >
           <div
-            className="sc-brqgnP iGXVIf sc-jWBwVP hsfhCW"
+            className="sc-brqgnP iGXVIf sc-jWBwVP jyGMfK"
           >
             Select a target
           </div>

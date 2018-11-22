@@ -40,6 +40,7 @@ storiesOf('Core/Typography', module)
             <Txt.span color='blue'>Inline </Txt.span>
             <Txt.span color='red'>Inline </Txt.span>
             <Txt.span color='yellow'>Inline </Txt.span>
+            <Txt whitespace='pre'>{'Space   is   preserved'}</Txt>
           </Box>
         </Provider>
       )

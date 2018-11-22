@@ -5,7 +5,7 @@ exports[`CodeWithCopy renders correctly 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <span
-    className="code-with-copy sc-kGXeez jspWRf sc-kAzzGY dirfrO sc-cSHVUG gqcZkp"
+    className="code-with-copy sc-kGXeez jspWRf sc-kAzzGY dirfrO sc-cSHVUG gNHJJ"
   >
     <code
       title="This value has been copied to your clipboard!"
