@@ -32,7 +32,7 @@ const getTitle = (props: AlertProps) => {
 };
 
 const AlertTitle = styled.span`
-	display: inline-block;
+	display: inline-flex;
 	margin-right: 8px;
 `;
 
@@ -155,7 +155,7 @@ export default withTheme(
 				<Plaintext {...restProps}>
 					<Flex>
 						{title && <AlertTitle children={title} />}
-						{props.children}
+						<div>{props.children}</div>
 					</Flex>
 					{onDismiss && <DismissAlert onDismiss={onDismiss} />}
 				</Plaintext>
