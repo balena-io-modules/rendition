@@ -616,6 +616,12 @@ declare module 'rendition' {
 			success: ThemeColorSet & WithSemilight;
 			info: ThemeColorSet & WithSemilight;
 			text: ThemeColorSet;
+			statusIdle: ThemeColorSet;
+			statusConfiguring: ThemeColorSet;
+			statusUpdating: ThemeColorSet;
+			statusPostProvisioning: ThemeColorSet;
+			statusOffline: ThemeColorSet;
+			statusInactive: ThemeColorSet;
 			gray: ThemeColorSet;
 		};
 		radius: number;
