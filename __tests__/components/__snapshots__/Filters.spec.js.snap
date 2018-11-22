@@ -11,7 +11,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
       className="sc-eNQAEJ cOpOPT sc-ckVGcZ bTbrkH sc-dxgOiQ bDgFjW"
     >
       <button
-        className="sc-VigVT iMLQux sc-htoDjs hGZSIz"
+        className="sc-VigVT iMLQux sc-htoDjs grXDnB"
         onClick={[Function]}
       >
         <svg
@@ -82,7 +82,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
           className="sc-gisBJw fDpgmb"
         >
           <button
-            className="sc-TOsTZ kJgilM sc-VigVT xuzkb sc-dnqmqq scmgy"
+            className="sc-TOsTZ kJgilM sc-VigVT xuzkb sc-dnqmqq hJippy"
             onClick={[Function]}
           >
             <div

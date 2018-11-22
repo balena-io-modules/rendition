@@ -8,17 +8,17 @@ exports[`ButtonGroup renders correctly 1`] = `
     className="sc-kGXeez dcSnUk sc-chPdSV dfDVBP sc-cSHVUG kBGaNN sc-jzJRlG jJxvfu"
   >
     <button
-      className="sc-VigVT hegYug sc-gqjmRU lmfpGz"
+      className="sc-VigVT hegYug sc-gqjmRU dqQGrL"
     >
       First
     </button>
     <button
-      className="sc-VigVT hegYug sc-gqjmRU lmfpGz"
+      className="sc-VigVT hegYug sc-gqjmRU dqQGrL"
     >
       Second
     </button>
     <button
-      className="sc-VigVT hegYug sc-gqjmRU lmfpGz"
+      className="sc-VigVT hegYug sc-gqjmRU dqQGrL"
     >
       Third
     </button>
