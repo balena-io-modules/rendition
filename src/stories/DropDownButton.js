@@ -36,6 +36,14 @@ storiesOf('Core/DropDownButton', module)
             <div>Item</div>
             <div>Item</div>
           </DropDownButton>
+          <DropDownButton mx={2} maxHeight={120} label={<div>Max Height</div>}>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+          </DropDownButton>
         </Box>
       </Provider>
     )

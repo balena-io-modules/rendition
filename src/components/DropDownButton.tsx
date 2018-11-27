@@ -43,7 +43,7 @@ const MenuBase = (styled.div as StyledFunction<
   left: ${props => (props.alignRight ? 'auto' : 0)};
   right: ${props => (!props.alignRight ? 'auto' : 0)};
   white-space: nowrap;
-  max-height: 280px;
+  max-height: ${props => props.maxHeight || 'auto'};
   overflow-y: auto;
 `;
 
@@ -184,6 +184,7 @@ class DropDownButton extends React.Component<
 						alignRight={alignRight}
 						onClick={this.toggle}
 						minWidth={`${this.state.minWidth}px`}
+						maxHeight={px(this.props.maxHeight)}
 					>
 						{React.Children.map(children, (child, i) => {
 							if (noListFormat) {
