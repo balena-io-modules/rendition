@@ -240,6 +240,7 @@ declare module 'rendition' {
 		outline?: boolean;
 		alignRight?: boolean;
 		noListFormat?: boolean;
+		maxHeight?: string | number;
 	}
 
 	class DropDownButton extends RenderableElementWithProps<
