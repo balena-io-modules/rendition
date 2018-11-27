@@ -2,6 +2,7 @@ import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import { DeviceStatusGauge, Provider } from '../../'
+import { isTakingScreenshot } from '../helpers'
 
 const mockDeviceArray = [
   {
@@ -46,7 +47,11 @@ storiesOf('Deprecated/DeviceStatusGauge', module)
   .add('Standard', () => {
     return (
       <Provider>
-        <DeviceStatusGauge m={30} devices={mockDeviceArray} />
+        <DeviceStatusGauge
+          disableAnimation={true || isTakingScreenshot}
+          m={30}
+          devices={mockDeviceArray}
+        />
       </Provider>
     )
   })

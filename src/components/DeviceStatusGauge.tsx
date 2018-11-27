@@ -33,7 +33,7 @@ const pathFillColor = (status?: string) => {
 	}
 };
 
-const DeviceStatusGauge = ({ devices }: DeviceStatusGaugeProps) => {
+const DeviceStatusGauge = ({ devices, ...props }: DeviceStatusGaugeProps) => {
 	const data: any[] = [];
 	const allDevices = devices || [];
 
@@ -55,6 +55,7 @@ const DeviceStatusGauge = ({ devices }: DeviceStatusGaugeProps) => {
 
 	return (
 		<Gauge
+			{...props}
 			data={data}
 			title="Total Devices"
 			placeholderColor={colors.statusOffline.main}
