@@ -1,6 +1,6 @@
 # Flex
 
-Displays an element using [flexbox](1).
+Displays an element using [flexbox][1].
 
 [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Flex.js)
 
