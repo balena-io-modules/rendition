@@ -1,4 +1,4 @@
-import { Box as _Box, Flex as _Flex } from 'grid-styled';
+import { Box as _Box, Flex as _Flex } from '@balena/grid-styled';
 import { compose } from 'recompose';
 import { BoxProps, FlexProps } from 'rendition';
 import styled from 'styled-components';

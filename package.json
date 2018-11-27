@@ -74,6 +74,7 @@
     "typescript": "^2.6.2"
   },
   "dependencies": {
+    "@balena/grid-styled": "3.1.1",
     "@types/chart.js": "^2.7.14",
     "@types/color": "^2.0.0",
     "@types/grid-styled": "^3.2.0",
@@ -94,7 +95,6 @@
     "color": "^2.0.0",
     "color-hash": "^1.0.3",
     "copy-to-clipboard": "^3.0.8",
-    "grid-styled": "3.1.1",
     "lodash": "^4.17.4",
     "marked": "^0.4.0",
     "mermaid": "^8.0.0-rc.8",
