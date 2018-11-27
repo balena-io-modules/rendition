@@ -8,7 +8,7 @@ exports[`Select component should match the stored snapshot 1`] = `
     className="sc-dnqmqq gDpXJY sc-htoDjs etMeNl"
   >
     <select
-      className="sc-gzVnrw eSclAi"
+      className="sc-gzVnrw eqXzzS"
     >
       <option
         value={1}

@@ -24,7 +24,7 @@ const Base = withProps<
   width: 100%;
   min-width: 90px;
 
-  &:hover {
+  &:hover:enabled {
     box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1);
   }
 `;

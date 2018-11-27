@@ -126,6 +126,9 @@ storiesOf('Core/Button', module)
           <Button m={2} underline onClick={action('case-1')}>
             Button
           </Button>
+          <Button m={2} underline disabled>
+            Underline disabled
+          </Button>
         </Box>
       </Provider>
     )

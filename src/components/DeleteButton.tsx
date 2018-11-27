@@ -15,7 +15,7 @@ const BtnWrapper = styled.button`
 	color: rgba(0, 0, 0, 0.4);
 	cursor: pointer;
 
-	&:hover {
+	&:hover:enabled {
 		color: ${({ color }) => (color ? darken(color) : 'black')};
 	}
 `;
