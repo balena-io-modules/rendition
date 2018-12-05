@@ -462,10 +462,18 @@ declare module 'rendition' {
 			| React.AnchorHTMLAttributes<HTMLAnchorElement>
 			| ((value: any, row: T) => React.AnchorHTMLAttributes<HTMLAnchorElement>);
 		field: keyof T;
+		locked?: boolean;
 		icon?: string;
 		label?: string | JSX.Element;
 		render?: (value: any, row: T) => string | number | JSX.Element | null;
 		sortable?: boolean | TableSortFunction;
+	}
+
+	interface CustomColumnSelectorItemProps {
+		onClick: (columnField: string) => any;
+		icon?: JSX.Element;
+		label: string;
+		disabled?: boolean;
 	}
 
 	interface TableProps<T> {
@@ -477,8 +485,12 @@ declare module 'rendition' {
 		// allowing rows to be selected.
 		onCheck?: (checkedItems: T[]) => void;
 		onRowClick?: (row: T, event: React.MouseEvent<HTMLAnchorElement>) => void;
+		// This is called every time a column visibility selector is clicked. It returns a boolean saying whether it should run the default behavior.
+		onColumnSelectoItemClick?: (columnField: keyof T) => boolean;
 		rowAnchorAttributes?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
 		rowCheckboxAttributes?: React.InputHTMLAttributes<HTMLInputElement>;
+		// A unique id that if provided will store preferences in local storage
+		storageId?: string;
 		// Optionally provide a key that should be used as a unique identifier for each row
 		rowKey?: keyof T;
 		tbodyPrefix?: JSX.Element | JSX.Element[];
@@ -487,6 +499,10 @@ declare module 'rendition' {
 		// value is highlighted.
 		highlightedRows?: any;
 		getRowClass?: (row: T) => string[];
+		// If true, a column selector dropdown will shown for filtering visible columns.
+		useColumnSelector?: boolean;
+		// An array of custom column selectors that you can use to trigger custom actions.
+		customColumnSelectorItems?: CustomColumnSelectorItemProps[];
 		// If true, a pager will be used when displaying items.
 		usePager?: boolean;
 		// The number of items to be shown per page. Only used if `usePager` is true. Defaults to `50`.

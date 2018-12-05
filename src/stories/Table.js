@@ -1,5 +1,6 @@
 import * as _ from 'lodash'
 import * as React from 'react'
+import { FaPlus } from 'react-icons/lib/fa'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withScreenshot } from 'storybook-chrome-screenshot'
@@ -101,6 +102,31 @@ storiesOf('Core/Table', module)
       </Provider>
     )
   })
+
+  .add('With Column Selector', () => {
+    return (
+      <Provider>
+        <Box m={3}>
+          <Table
+            columns={columns}
+            data={PokeDex}
+            useColumnSelector
+            onColumnSelectorClick={action('column-selected')}
+            storageId={'standard-table'}
+            customColumnSelectorItems={[
+              {
+                label: 'Add Tag Column',
+                icon: <FaPlus />,
+                onClick: action('custom-column-selector-clicked'),
+                disabled: false
+              }
+            ]}
+          />
+        </Box>
+      </Provider>
+    )
+  })
+
   .add('Checkboxes', () => {
     return (
       <Provider>

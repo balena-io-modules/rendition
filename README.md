@@ -777,6 +777,7 @@ The `columns` property should be an array of objects with the following properti
 | label | <code>string &#124; JSX.Element</code> | - | A string or JSX element that will be used to display the name of the column. If this property is not provided, the `field` property will be used instead |
 | render | <code>(value: any, row: T) => string &#124; number &#124; number &#124; JSX.Element &#124; null</code> | - | Use a custom render function to display the value in each column cell. This function will be called with the value of the `field` provided and the row data (`T`) |
 | sortable | <code>boolean &#124; (a: T, b: T) => number</code> | - | If true, the column will be sortable using an alphanumeric sort, alternatively a function can be provided allowing finer grained control over sorting |
+| locked | boolean | - | If true, the column won't be able to be hidden using the column selector |
 
 #### Notes
 
@@ -814,12 +815,16 @@ cause a re-render of the component and will not be reflected on the table.
 | `getRowHref`    | `(row: T) => string` | - | - | If provided, each row in the table will be a clickable link, this function is used to create the link href |
 | `onCheck`    | `(checkedItems: T[]) => string` | - | - | If provided, each row will begin with a checkbox. This function is called with every checked row every time a checkbox is toggled on or off. This property requires that you have provided a `rowKey` property |
 | `onRowClick`    | `(row: T, event: Event) => void` | - | - | A function that is called when a row is clicked. This property requires that you have provided a `rowKey` property |
+| `onColumnSelectoItemClick`    | `(columnField: keyof T) => boolean` | - | - | Called every time a column selector item is clicked. It returns a boolean saying whether it should run the default selector behavior (uncheck and save to local storage). |
 | `rowAnchorAttributes`    | `object` | - | - | Attributes to pass to the anchor element used in a row |
 | `rowCheckboxAttributes`    | `object` | - | - | Attributes to pass to the checkbox element used in a row |
 | `rowKey`    | `key of T` | - | - | A field on a row that contains a unique identifier, can help speed up render performance and is required for the `onCheck` property |
+| `storageId`    | `string` | - | - | A unique id that, if provided, the table will store the preferences in local storage |
 | `toBodyPrefix`    | <code>JSX.element &#124; JSX.Element</code> | - | - | JSX element(s) to display at the top of the table body |
 | `highlightedRows`    | <code>&ast;[]</code> | - | - | Highlights one or more rows. This property requires that you have provided a `rowKey` property: the row with a `rowKey` property that matches one of these values is highlighted. 
 | `usePager`    | `boolean` | - | - | If true, a pager will be used when displaying items. 
+| `useColumnSelector`    | `CustomColumnSelectorItemProps[]` | - | - | An array of additional selector items to be shown under a divider in the column selector dropdown. 
+| `customColumnSelectorItems`    | `boolean` | - | - | If true, a column selector for toggling the visibility of columns will be shown. 
 | `itemsPerPage`    | `number` | `50` | - | The number of items to be shown per page. Only used if `usePager` is true. Defaults to `50`.
 | `pagerPosition`    | <code>'top' &#124; 'bottom' &#124; 'both'</code> | `top` | - | Sets wether the pager is displayed at the top of the table, the bottom of the table or in both positions. Only used if `usePager` is true. Defaults to `top`.
 

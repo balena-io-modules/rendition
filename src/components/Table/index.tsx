@@ -1,10 +1,8 @@
 import every = require('lodash/every');
 import filter = require('lodash/filter');
 import find = require('lodash/find');
-import get = require('lodash/get');
 import includes = require('lodash/includes');
 import isArray = require('lodash/isArray');
-import isEqual = require('lodash/isEqual');
 import isFunction = require('lodash/isFunction');
 import isPlainObject = require('lodash/isPlainObject');
 import map = require('lodash/map');
@@ -14,12 +12,14 @@ import some = require('lodash/some');
 import sortBy = require('lodash/sortBy');
 import * as React from 'react';
 import FaSort = require('react-icons/lib/fa/sort');
-import { TableColumn, TableProps } from 'rendition';
+import { TableProps } from 'rendition';
 import styled from 'styled-components';
 
-import theme from '../theme';
-import Button from './Button';
-import Pager from './Pager';
+import theme from '../../theme';
+import Button from '../Button';
+import Pager from '../Pager';
+import { TableColumnSelector } from './TableColumnSelector';
+import { TableRow } from './TableRow';
 
 const highlightStyle = `
 	background-color: ${theme.colors.info.light};
@@ -31,6 +31,7 @@ const BaseTableWrapper = styled.div`
 `;
 
 const BaseTable = styled.div`
+	position: relative;
 	display: table;
 	width: 100%;
 	border-spacing: 0;
@@ -103,102 +104,13 @@ const HeaderButton = styled(Button)`
 	display: block;
 `;
 
-/**
- * Get the value specified by the `field` value
- * If a `render` function is available, use it to get the display value.
- */
-const renderField = <T extends {}>(row: T, column: TableColumn<T>): any => {
-	const value = get(row, column.field);
-
-	if (column.render) {
-		return column.render(value, row);
-	}
-
-	return value == null ? '' : value;
-};
-
-interface TableRowProps<T> {
-	className?: string;
-	isChecked: boolean;
-	isHighlighted: boolean;
-	keyAttribute: string | number;
-	onRowClick: (e: any) => void;
-	toggleChecked: (e: any) => void;
-	showCheck: boolean;
-	columns: Array<TableColumn<T>>;
-	href?: string;
-	data: T;
-	attributes?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
-	checkboxAttributes?: React.InputHTMLAttributes<HTMLInputElement>;
-}
-
-class TableRow<T> extends React.Component<TableRowProps<T>, {}> {
-	shouldComponentUpdate(nextProps: TableRowProps<T>) {
-		const update = !isEqual(nextProps, this.props);
-
-		return update;
-	}
-
-	render() {
-		const {
-			attributes,
-			checkboxAttributes,
-			columns,
-			className,
-			data,
-			href,
-			keyAttribute,
-			isChecked,
-			isHighlighted,
-			showCheck,
-		} = this.props;
-
-		return (
-			<div
-				data-display="table-row"
-				data-highlight={isChecked || isHighlighted}
-				className={className}
-			>
-				{showCheck && (
-					<span data-display="table-cell">
-						<input
-							checked={isChecked}
-							data-key={keyAttribute}
-							onChange={this.props.toggleChecked}
-							{...checkboxAttributes}
-							type="checkbox"
-						/>
-					</span>
-				)}
-				{map(columns, column => {
-					const cellAttributes = isFunction(column.cellAttributes)
-						? column.cellAttributes(data, get(data, column.field))
-						: column.cellAttributes || {};
-					return (
-						<a
-							{...attributes}
-							href={href}
-							data-display="table-cell"
-							data-key={keyAttribute}
-							onClick={this.props.onRowClick}
-							{...cellAttributes}
-							key={column.field}
-						>
-							{renderField(data, column)}
-						</a>
-					);
-				})}
-			</div>
-		);
-	}
-}
-
 export default class Table<T> extends React.Component<
 	TableProps<T>,
 	{
 		allChecked: boolean;
 		reverse: boolean;
 		checkedItems: T[];
+		hiddenColumnFields: Array<keyof T>;
 		sortColumn: null | keyof T;
 		page: number;
 	}
@@ -216,6 +128,7 @@ export default class Table<T> extends React.Component<
 			allChecked: false,
 			reverse: false,
 			checkedItems: [],
+			hiddenColumnFields: this.getFromStorage('hiddenColumnFields') || [],
 			sortColumn: null,
 			page: 0,
 		};
@@ -415,6 +328,56 @@ export default class Table<T> extends React.Component<
 		}
 	};
 
+	getFromLocalStorage = () => {
+		const { storageId } = this.props;
+
+		if (storageId && localStorage) {
+			const preferencesJson = localStorage.getItem(storageId);
+			const preferences = preferencesJson ? JSON.parse(preferencesJson) : {};
+			return preferences;
+		}
+
+		return {};
+	};
+
+	getFromStorage = (id: string) => {
+		return this.getFromLocalStorage()[id];
+	};
+
+	saveToStorage = (id: string, data: any) => {
+		const { storageId } = this.props;
+
+		if (storageId && localStorage) {
+			const preferences = this.getFromLocalStorage();
+			localStorage.setItem(
+				storageId,
+				JSON.stringify({ ...preferences, [id]: data }),
+			);
+		}
+	};
+
+	handleColumnSelectorClick = (columnField: keyof T) => {
+		const { onColumnSelectoItemClick } = this.props;
+		const { hiddenColumnFields } = this.state;
+		let stopEvent = false;
+
+		if (onColumnSelectoItemClick) {
+			stopEvent = onColumnSelectoItemClick(columnField);
+		}
+
+		if (!stopEvent) {
+			let nextHiddenColumns;
+			if (hiddenColumnFields.indexOf(columnField) >= 0) {
+				nextHiddenColumns = hiddenColumnFields.filter(x => x !== columnField);
+			} else {
+				nextHiddenColumns = [...hiddenColumnFields, columnField];
+			}
+
+			this.setState({ hiddenColumnFields: nextHiddenColumns });
+			this.saveToStorage('hiddenColumnFields', nextHiddenColumns);
+		}
+	};
+
 	resetPager = () => {
 		this.setState({ page: 0 });
 	};
@@ -432,6 +395,8 @@ export default class Table<T> extends React.Component<
 			columns,
 			data,
 			usePager,
+			useColumnSelector,
+			customColumnSelectorItems,
 			itemsPerPage,
 			pagerPosition,
 			rowAnchorAttributes,
@@ -454,6 +419,9 @@ export default class Table<T> extends React.Component<
 			: totalItems;
 
 		const sortedData = this.sortData(items).slice(lowerBound, upperBound);
+		const shownColumns = (columns || []).filter(
+			column => this.state.hiddenColumnFields.indexOf(column.field) < 0,
+		);
 
 		return (
 			<>
@@ -482,7 +450,7 @@ export default class Table<T> extends React.Component<
 										/>
 									</div>
 								)}
-								{map(columns, item => {
+								{map(shownColumns, item => {
 									if (item.sortable) {
 										return (
 											<div data-display="table-cell" key={item.field}>
@@ -538,7 +506,7 @@ export default class Table<T> extends React.Component<
 										href={href}
 										data={row}
 										showCheck={!!this.props.onCheck}
-										columns={columns}
+										columns={shownColumns}
 										attributes={rowAnchorAttributes}
 										checkboxAttributes={this.props.rowCheckboxAttributes}
 										toggleChecked={this.toggleChecked}
@@ -548,6 +516,15 @@ export default class Table<T> extends React.Component<
 								);
 							})}
 						</div>
+						{useColumnSelector && (
+							<TableColumnSelector
+								onColumnFilterClick={this.handleColumnSelectorClick}
+								columns={columns}
+								hiddenColumnFields={this.state.hiddenColumnFields}
+								customColumnSelectorItems={customColumnSelectorItems}
+								theme={theme}
+							/>
+						)}
 					</BaseTable>
 				</BaseTableWrapper>
 
