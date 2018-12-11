@@ -3,7 +3,7 @@ import * as React from 'react';
 import { TerminalProps } from 'rendition';
 import styled from 'styled-components';
 import { ITerminalOptions, Terminal as Xterm } from 'xterm';
-import { fit as fitTerm } from 'xterm/dist/addons/fit/fit';
+import { fit as fitTerm } from 'xterm/lib/addons/fit/fit';
 import Theme from '../theme';
 import { Box } from './Grid';
 
