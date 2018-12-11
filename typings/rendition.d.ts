@@ -457,6 +457,11 @@ declare module 'rendition' {
 
 	type TableSortFunction = <T>(a: T, b: T) => number;
 
+	interface TableSortOptions<T> {
+		reverse: boolean;
+		field: keyof T | null;
+	}
+
 	interface TableColumn<T> {
 		cellAttributes?:
 			| React.AnchorHTMLAttributes<HTMLAnchorElement>
@@ -477,6 +482,8 @@ declare module 'rendition' {
 		// allowing rows to be selected.
 		onCheck?: (checkedItems: T[]) => void;
 		onRowClick?: (row: T, event: React.MouseEvent<HTMLAnchorElement>) => void;
+		onSort?: (sort: TableSortOptions<T>) => void;
+		sort?: TableSortOptions<T>;
 		rowAnchorAttributes?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
 		rowCheckboxAttributes?: React.InputHTMLAttributes<HTMLInputElement>;
 		// Optionally provide a key that should be used as a unique identifier for each row

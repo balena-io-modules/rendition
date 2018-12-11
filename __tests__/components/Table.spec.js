@@ -878,3 +878,33 @@ describe('manually select rows', () => {
     expect(component.state().checkedItems.length).toEqual(0)
   })
 })
+
+describe('sorting', () => {
+  it('should invoke the sort callback when sort header is clicked', () => {
+    const spy = sinon.spy()
+    const component = mount(
+      <Provider>
+        <Table rowKey='pokedex_number' onSort={spy} columns={columns} data={PokeDex} />
+      </Provider>
+    )
+
+    const elements = component.find('[data-display="table-head"] [data-display="table-cell"] button')
+
+    elements.first().simulate('click')
+    component.update()
+    expect(spy.callCount).toEqual(1)
+    expect(spy.firstCall.args[0]).toEqual({field: 'Name', reverse: false})
+  })
+
+  it('should set the sorted column based on the passed sort property', () => {
+    const defaultSort = {field: 'Name', reverse: true}
+    const updatedSort = {field: 'pokedex_number', reverse: false}
+    const component = mount(
+      <Table rowKey='pokedex_number' sort={defaultSort} columns={columns} data={PokeDex} />
+    )
+
+    expect(component.state('sort')).toEqual(defaultSort)
+    component.setProps({sort: updatedSort})
+    expect(component.state('sort')).toEqual(updatedSort)
+  })
+})
