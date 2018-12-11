@@ -96,7 +96,12 @@ storiesOf('Core/Table', module)
     return (
       <Provider>
         <Box m={3}>
-          <Table columns={columns} data={PokeDex} />
+          <Table
+            columns={columns}
+            data={PokeDex}
+            onSort={action('sorting')}
+            sort={{ field: 'Name', reverse: true }}
+          />
         </Box>
       </Provider>
     )

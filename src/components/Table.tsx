@@ -102,7 +102,6 @@ const BaseTable = styled.div`
 const HeaderButton = styled(Button)`
 	display: block;
 `;
-
 /**
  * Get the value specified by the `field` value
  * If a `render` function is available, use it to get the display value.
@@ -193,15 +192,19 @@ class TableRow<T> extends React.Component<TableRowProps<T>, {}> {
 	}
 }
 
+interface TableState<T> {
+	allChecked: boolean;
+	sort: {
+		reverse: boolean;
+		field: null | keyof T;
+	};
+	checkedItems: T[];
+	page: number;
+}
+
 export default class Table<T> extends React.Component<
 	TableProps<T>,
-	{
-		allChecked: boolean;
-		reverse: boolean;
-		checkedItems: T[];
-		sortColumn: null | keyof T;
-		page: number;
-	}
+	TableState<T>
 > {
 	constructor(props: TableProps<T>) {
 		super(props);
@@ -212,13 +215,23 @@ export default class Table<T> extends React.Component<
 			);
 		}
 
+		const sortState = props.sort || {
+			reverse: false,
+			field: null,
+		};
+
 		this.state = {
 			allChecked: false,
-			reverse: false,
+			sort: sortState,
 			checkedItems: [],
-			sortColumn: null,
 			page: 0,
 		};
+	}
+
+	componentWillReceiveProps(newProps: TableProps<T>) {
+		if (newProps.sort !== this.props.sort) {
+			this.setState({ sort: newProps.sort } as TableState<T>);
+		}
 	}
 
 	isChecked(item: T) {
@@ -260,11 +273,12 @@ export default class Table<T> extends React.Component<
 	}
 
 	sortData(data: T[]): T[] {
-		const { sortColumn } = this.state;
-		if (sortColumn === null) {
+		const { sort } = this.state;
+		if (sort.field === null) {
 			return data;
 		}
-		const column = find(this.props.columns, { field: sortColumn });
+
+		const column = find(this.props.columns, { field: sort.field });
 
 		if (!column) {
 			return data;
@@ -276,14 +290,14 @@ export default class Table<T> extends React.Component<
 			collection = data.slice().sort(column.sortable);
 		} else {
 			collection = sortBy<T>(data.slice(), item => {
-				const sortableValue = item[sortColumn];
+				const sortableValue = item[sort.field as keyof T];
 				return isPlainObject(sortableValue)
 					? (sortableValue as any).value
 					: sortableValue;
 			});
 		}
 
-		if (this.state.reverse) {
+		if (sort.reverse) {
 			reverse(collection);
 		}
 
@@ -362,19 +376,25 @@ export default class Table<T> extends React.Component<
 
 	toggleSort = (e: React.MouseEvent<HTMLButtonElement>) => {
 		const { field } = e.currentTarget.dataset;
-
+		const { sort } = this.state;
 		if (!field) {
 			return;
 		}
 
-		if (this.state.sortColumn === field) {
-			this.setState({ reverse: !this.state.reverse });
-			return;
-		}
-		this.setState({
-			sortColumn: field as keyof T,
+		let nextSort = {
+			field: field as keyof T,
 			reverse: false,
-		});
+		};
+
+		if (sort.field === field) {
+			nextSort = { field: sort.field, reverse: !sort.reverse };
+		}
+
+		this.setState({ sort: nextSort });
+
+		if (this.props.onSort) {
+			this.props.onSort(nextSort);
+		}
 	};
 
 	getElementFromKey(key: string) {
@@ -441,7 +461,7 @@ export default class Table<T> extends React.Component<
 
 		const { getRowHref, getRowClass } = props;
 
-		const { page } = this.state;
+		const { page, sort } = this.state;
 		const items = data || [];
 		const totalItems = items.length;
 
@@ -489,7 +509,7 @@ export default class Table<T> extends React.Component<
 												<HeaderButton
 													data-field={item.field}
 													plaintext
-													primary={this.state.sortColumn === item.field}
+													primary={sort.field === item.field}
 													onClick={this.toggleSort}
 												>
 													{item.label || item.field}
@@ -497,7 +517,7 @@ export default class Table<T> extends React.Component<
 													<FaSort
 														style={{ display: 'inline-block' }}
 														color={
-															this.state.sortColumn === item.field
+															sort.field === item.field
 																? theme.colors.info.main
 																: ''
 														}
