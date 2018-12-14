@@ -15,10 +15,8 @@ Displays a dropdown list, with each item displayed as a `Badge` component.
 | `defaultSelected`| `string`| - | - | The item that should be selected by default |
 | `placeholder`| `string`| - | - | The text to display if no item is selected by default |
 
-Any other properties supplied are spread to the root element ([`DropDownButton`][1]).
+Any other properties supplied are spread to the root element ([`DropDownButton`](#dropdownbutton)).
 
 ## Inheritance
 
-The properties of the [`DropDownButton`][1] component are also available.
-
-[1]: /?selectedKind=DropDownButton
+The properties of the [`DropDownButton`](#dropdownbutton) component are also available.

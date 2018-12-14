@@ -17,6 +17,4 @@ component.
 
 ## Inheritance
 
-The properties of the [`Box`][1] component are also available.
-
-[1]: /?selectedKind=Box
+The properties of the [`Box`](#box) component are also available.

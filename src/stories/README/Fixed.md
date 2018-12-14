@@ -1,6 +1,6 @@
 # Fixed
 
-Displays an element with a [`fixed`][1] position.
+Displays an element with a [`fixed`](https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed) position.
 
 [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Fixed.js)
 
@@ -13,5 +13,3 @@ Displays an element with a [`fixed`][1] position.
 | `bottom`      | <code>boolean &#124; ResponsiveStyle</code> | - | - | Sets the distance to the bottom of the containing block. If true, sets the value to zero
 | `left`      | <code>boolean &#124; ResponsiveStyle</code> | - | - | Sets the distance to the left of the containing block. If true, sets the value to zero
 | `z`      | `ResponsiveStyle` | - | - | Sets the z-index of the component |
-
-[1]: https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed

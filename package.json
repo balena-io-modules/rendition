@@ -9,6 +9,10 @@
   "license": "Apache-2.0",
   "main": "./dist/index.js",
   "types": "./typings/rendition.d.ts",
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=5.7.0"
+  },
   "scripts": {
     "start": "start-storybook -p 6006",
     "build": "rimraf dist && tsc && npm run build:docs",
