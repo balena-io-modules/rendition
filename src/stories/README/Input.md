@@ -12,8 +12,6 @@
 
 ## Inheritance
 
-The attributes of an [`<input>`][1] element are also available.
-
-[1]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+The attributes of an [`<input>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) element are also available.
 
 

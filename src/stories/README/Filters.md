@@ -88,13 +88,7 @@ A view has the following properties:
 | `viewScopes`    | `object[]` | - | - | An array of view scopes, as described above |
 | `onFiltersUpdate`    | `(filters: object[]) => void` | - | - | A function that is called when filters are updated |
 | `onViewsUpdate`    | `(views: object[]) => void` | - | - | A function that is called when views are updated |
-| `addFilterButtonProps` | `object` | - | - | Properties that are passed to the "Add filter" button, these are the same props used for the [`Button`][1] component |
-| `viewsMenuButtonProps` | `object` | - | - | Properties that are passed to the "Views" button, these are the same props used for the [`DropDownButton`][2] component |
+| `addFilterButtonProps` | `object` | - | - | Properties that are passed to the "Add filter" button, these are the same props used for the [`Button`](#button) component |
+| `viewsMenuButtonProps` | `object` | - | - | Properties that are passed to the "Views" button, these are the same props used for the [`DropDownButton`](#dropdownbutton) component |
 | `renderMode` | <code>string &#124; string[]</code> | - | - | Controls which parts of the `Filters` interface are displayed. One of `all`, `add`, `search`, `views`, `summary`, or an array containing any of these values |
 | `dark`    | `boolean` | -         | -          | If true, Set the `Filters` component against a dark background |
-
-[1]: /?selectedKind=Button
-[2]: /?selectedKind=DropDownButton
-
-
-

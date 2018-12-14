@@ -18,5 +18,5 @@ a segment of the gauge. Each item should have the following properties:
 | ------ | ------ | --------- | ---------- | ------------- |
 | `title`  | `string` | - | ✓ | Text displayed in the center of the gauge |
 | `data`  | `object[]` | - | ✓ | An array of data as described above |
-| `placeholderColor`  | `string` | - | - | A CSS color string to use as the gauge background |
+| `placeholderColor`  | `string` | - | - | A CSS color string to use as the gauge's background |
 

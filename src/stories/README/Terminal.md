@@ -1,6 +1,6 @@
 # Terminal
 
-An xterm emulator built on top of [xterm.js][1].
+An xterm emulator built on top of [xterm.js](https://xtermjs.org/).
 
 [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Terminal.js)
 
@@ -77,9 +77,4 @@ instance instead of creating a new one.
 | `persistent`    | `boolean` | -         | -          | If true, don't destroy the `Terminal.tty` instance when the component unmounts |
 | `nonInteractive`    | `boolean` | -         | -          | If true, the component will go into a "read-only" state, useful for displaying logs |
 | `color`    | `string` | -         | -          | A CSS color string that sets the background color of the terminal |
-| `config`    | `object` | -         | -          | Startup options to pass to the tty instance, see the [xterm.js options][2] for more detail |
-
-
-
-[1]: https://xtermjs.org/
-[2]: https://github.com/xtermjs/xterm.js/blob/master/typings/xterm.d.ts#L24
+| `config`    | `object` | -         | -          | Startup options to pass to the tty instance, see the [xterm.js options](https://github.com/xtermjs/xterm.js/blob/master/typings/xterm.d.ts#L24) for more detail |

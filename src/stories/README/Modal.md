@@ -16,12 +16,9 @@ are rendered inside the modal.
 | `action`    | <code>string &#124; JSX.Element</code> | - | - | A string or JSX element to display in the primary modal button, defaults to 'OK' |
 | `cancel`    | `() => any` | - | - | A function that is called if the modal is dismissed |
 | `done`    | `() => any` | - | ✓ | A function that is called if the primary modal button is clicked |
-| `primaryButtonProps` | `object` | - | - | Properties that are passed to the primary button, these are the same props used for the [`Button`][1] component |
-| `secondaryButtonProps` | `object` | - | - | If provided, will cause a secondary button to appear on the modal. These properties that are passed to that button, these are the same props used for the [`Button`][1] component |
-| `cancelButtonProps` | `object` | - | - | Properties that are passed to the cancel button, these are the same props used for the [`Button`][1] component |
-| `cancelButtonProps` | `object` | - | - | Properties that are passed to the cancel button, these are the same props used for the [`Button`][1] component |
-| style | `object` | - | - |  Apply custom styles to Modal, the object is applied as a [`style` attribute][2] |
-| containerStyle | `object` | - | - | Apply custom styles to the container of the Modal, the object is applied as a [`style` attribute][2] |
-
-[1]: /?selectedKind=Button
-[2]: https://reactjs.org/docs/dom-elements.html#style
+| `primaryButtonProps` | `object` | - | - | Properties that are passed to the primary button, these are the same props used for the [`Button`](#button) component |
+| `secondaryButtonProps` | `object` | - | - | If provided, will cause a secondary button to appear on the modal. These properties that are passed to that button, these are the same props used for the [`Button`](#button) component |
+| `cancelButtonProps` | `object` | - | - | Properties that are passed to the cancel button, these are the same props used for the [`Button`](#button) component |
+| `cancelButtonProps` | `object` | - | - | Properties that are passed to the cancel button, these are the same props used for the [`Button`](#button) component |
+| style | `object` | - | - |  Apply custom styles to Modal, the object is applied as a [`style` attribute](https://reactjs.org/docs/dom-elements.html#style) |
+| containerStyle | `object` | - | - | Apply custom styles to the container of the Modal, the object is applied as a [`style` attribute](https://reactjs.org/docs/dom-elements.html#style) |

@@ -81,7 +81,7 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [Terminal](#terminal)
 - [TextWithCopy](#textwithcopy)
 - [Textarea](#textarea)
-- [Tooltip](#tooltip)
+- [Tooltips](#tooltips)
 - [Txt](#txt)
 
 ### Alert
@@ -124,10 +124,7 @@ component.
 
 #### Inheritance
 
-The properties of the [`Box`][1] component are also available.
-
-[1]: /?selectedKind=Box
-
+The properties of the [`Box`](#box) component are also available.
 ### Badge
 
 By default the background color of a `Badge` component is generated
@@ -167,14 +164,11 @@ Displays a dropdown list, with each item displayed as a `Badge` component.
 | `defaultSelected`| `string`| - | - | The item that should be selected by default |
 | `placeholder`| `string`| - | - | The text to display if no item is selected by default |
 
-Any other properties supplied are spread to the root element ([`DropDownButton`][1]).
+Any other properties supplied are spread to the root element ([`DropDownButton`](#dropdownbutton)).
 
 #### Inheritance
 
-The properties of the [`DropDownButton`][1] component are also available.
-
-[1]: /?selectedKind=DropDownButton
-
+The properties of the [`DropDownButton`](#dropdownbutton) component are also available.
 ### Banner
 
 [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Banner.js)
@@ -402,20 +396,14 @@ A view has the following properties:
 | `viewScopes`    | `object[]` | - | - | An array of view scopes, as described above |
 | `onFiltersUpdate`    | `(filters: object[]) => void` | - | - | A function that is called when filters are updated |
 | `onViewsUpdate`    | `(views: object[]) => void` | - | - | A function that is called when views are updated |
-| `addFilterButtonProps` | `object` | - | - | Properties that are passed to the "Add filter" button, these are the same props used for the [`Button`][1] component |
-| `viewsMenuButtonProps` | `object` | - | - | Properties that are passed to the "Views" button, these are the same props used for the [`DropDownButton`][2] component |
+| `addFilterButtonProps` | `object` | - | - | Properties that are passed to the "Add filter" button, these are the same props used for the [`Button`](#button) component |
+| `viewsMenuButtonProps` | `object` | - | - | Properties that are passed to the "Views" button, these are the same props used for the [`DropDownButton`](#dropdownbutton) component |
 | `renderMode` | <code>string &#124; string[]</code> | - | - | Controls which parts of the `Filters` interface are displayed. One of `all`, `add`, `search`, `views`, `summary`, or an array containing any of these values |
 | `dark`    | `boolean` | -         | -          | If true, Set the `Filters` component against a dark background |
 
-[1]: /?selectedKind=Button
-[2]: /?selectedKind=DropDownButton
-
-
-
-
 ### Fixed
 
-Displays an element with a [`fixed`][1] position.
+Displays an element with a [`fixed`](https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed) position.
 
 [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Fixed.js)
 
@@ -428,12 +416,9 @@ Displays an element with a [`fixed`][1] position.
 | `bottom`      | <code>boolean &#124; ResponsiveStyle</code> | - | - | Sets the distance to the bottom of the containing block. If true, sets the value to zero
 | `left`      | <code>boolean &#124; ResponsiveStyle</code> | - | - | Sets the distance to the left of the containing block. If true, sets the value to zero
 | `z`      | `ResponsiveStyle` | - | - | Sets the z-index of the component |
-
-[1]: https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed
-
 ### Flex
 
-Displays an element using [flexbox][1].
+Displays an element using [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox).
 
 [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Flex.js)
 
@@ -445,19 +430,16 @@ Displays an element using [flexbox][1].
 | `justify`      | <code>string &#124; string[]</code> | - | - | Sets `justify-content`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
 | `flexDirection`      | <code>string &#124; string[]</code> | - | - | Sets `flex-direction`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
 | `wrap`      | <code>string &#124; string[]</code> | - | - | Sets `flex-wrap: wrap`
-
-[1]: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
-
 ### Form
 
 A component that can be used for generating a form from a [json schema](http://json-schema.org/) object. 
 The standard json schema types are supported, as well as the `date-time` format.
 
-Under the hood, this component uses [`react-jsonschema-form`][2] and support
-all [`uiSchema`][3] options from that project.
+Under the hood, this component uses [`react-jsonschema-form`](https://github.com/mozilla-services/react-jsonschema-form) and support
+all [`uiSchema`](https://github.com/mozilla-services/react-jsonschema-form#the-uischema-object) options from that project.
 
 Additional formats are supported, but require supporting widgets to be loaded.
-For example if you would like to support the [mermaid][1] format, you'll need to
+For example if you would like to support the [mermaid](https://mermaidjs.github.io/) format, you'll need to
 import the widget using `import 'renditon/dist/extra/Form/mermaid'`.
 This import only needs to happen once, so it is recommended that its done at the
 root level of your application.
@@ -472,18 +454,11 @@ use it, it can be imported using `import { Form } from 'rendition/dist/unstable'
 | `schema`    | `object` | - | ✓ | A json schema describing the shape of the data you would like to gather |
 | `submitButtonText` | <code>string &#124; JSX.Element</code> | - | - | A string or JSX element to replace the text in the form submit button |
 | `hideSubmitButton` | `boolean` | - | - | If true, do not display the form submit button |
-| `submitButtonProps` | `object` | - | - | Properties that are passed to the submit button, these are the same props used for the [`Button`][4] component |
+| `submitButtonProps` | `object` | - | - | Properties that are passed to the submit button, these are the same props used for the [`Button`](#button) component |
 | `value` | `*` | - | - | The data that should be displayed in the form |
 | `onFormChange` | `(result: object) => void` | - | - | A function that is called when form data changes |
 | `onFormSubmit` | `(result: object) => void` | - | - | A function that is called when the form is submitted |
-| `uiSchema` | `object` | - | - | A configuration object used to change the styling and layout of the form. See the [`react-jsonschema-form`][3] docs for more details |
-
-
-[1]: https://mermaidjs.github.io/
-[2]: https://github.com/mozilla-services/react-jsonschema-form
-[3]: https://github.com/mozilla-services/react-jsonschema-form#the-uischema-object
-[4]: /?selectedKind=Button
-
+| `uiSchema` | `object` | - | - | A configuration object used to change the styling and layout of the form. See the [`react-jsonschema-form`](https://github.com/mozilla-services/react-jsonschema-form) docs for more details |
 ### Gauge
 
 Generate a "gauge" shaped chart with a color coded legend.
@@ -504,7 +479,7 @@ a segment of the gauge. Each item should have the following properties:
 | ------ | ------ | --------- | ---------- | ------------- |
 | `title`  | `string` | - | ✓ | Text displayed in the center of the gauge |
 | `data`  | `object[]` | - | ✓ | An array of data as described above |
-| `placeholderColor`  | `string` | - | - | A CSS color string to use as the gauge background |
+| `placeholderColor`  | `string` | - | - | A CSS color string to use as the gauge's background |
 
 
 ### Heading
@@ -523,9 +498,7 @@ Displays an image.
 
 #### Inheritance
 
-The attributes of an [`<img>`][1] element are also available.
-
-[1]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img
+The attributes of an [`<img>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) element are also available.
 
 ### Input
 
@@ -541,9 +514,7 @@ The attributes of an [`<img>`][1] element are also available.
 
 #### Inheritance
 
-The attributes of an [`<input>`][1] element are also available.
-
-[1]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+The attributes of an [`<input>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) element are also available.
 
 
 
@@ -562,14 +533,12 @@ Displays an anchor link.
 
 #### Inheritance
 
-The attributes of an [`<a>`][1] element are also available.
-
-[1]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
+The attributes of an [`<a>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) element are also available.
 
 
 ### Markdown
 
-A simple component for rendering [GitHub flavored markdown][1]. This component
+A simple component for rendering [GitHub flavored markdown](https://github.github.com/gfm/). This component
 sanitizes input.
 This component is not loaded by default as it relies on a markdown parsing package 
 that you may not want to include in your application.
@@ -587,15 +556,11 @@ import { Markdown } from 'rendition/dist/extra/Markdown';
 | ------ | ------ | --------- | ---------- | ------------- |
 | `children`  | `string` | - | ✓ | The markdown source that should be rendered |
 
-Any other properties supplied are spread to the root element ([`Txt`][2]).
+Any other properties supplied are spread to the root element ([`Txt`](#txt)).
 
 #### Inheritance
 
-The properties of the [`Txt`][2] component are also available.
-
-[1]: https://github.github.com/gfm/
-[2]: /?selectedKind=Txt
-
+The properties of the [`Txt`](#txt) component are also available.
 ### Mermaid
 
 Generate charts from text using [mermaidjs](https://mermaidjs.github.io/).
@@ -634,16 +599,12 @@ are rendered inside the modal.
 | `action`    | <code>string &#124; JSX.Element</code> | - | - | A string or JSX element to display in the primary modal button, defaults to 'OK' |
 | `cancel`    | `() => any` | - | - | A function that is called if the modal is dismissed |
 | `done`    | `() => any` | - | ✓ | A function that is called if the primary modal button is clicked |
-| `primaryButtonProps` | `object` | - | - | Properties that are passed to the primary button, these are the same props used for the [`Button`][1] component |
-| `secondaryButtonProps` | `object` | - | - | If provided, will cause a secondary button to appear on the modal. These properties that are passed to that button, these are the same props used for the [`Button`][1] component |
-| `cancelButtonProps` | `object` | - | - | Properties that are passed to the cancel button, these are the same props used for the [`Button`][1] component |
-| `cancelButtonProps` | `object` | - | - | Properties that are passed to the cancel button, these are the same props used for the [`Button`][1] component |
-| style | `object` | - | - |  Apply custom styles to Modal, the object is applied as a [`style` attribute][2] |
-| containerStyle | `object` | - | - | Apply custom styles to the container of the Modal, the object is applied as a [`style` attribute][2] |
-
-[1]: /?selectedKind=Button
-[2]: https://reactjs.org/docs/dom-elements.html#style
-
+| `primaryButtonProps` | `object` | - | - | Properties that are passed to the primary button, these are the same props used for the [`Button`](#button) component |
+| `secondaryButtonProps` | `object` | - | - | If provided, will cause a secondary button to appear on the modal. These properties that are passed to that button, these are the same props used for the [`Button`](#button) component |
+| `cancelButtonProps` | `object` | - | - | Properties that are passed to the cancel button, these are the same props used for the [`Button`](#button) component |
+| `cancelButtonProps` | `object` | - | - | Properties that are passed to the cancel button, these are the same props used for the [`Button`](#button) component |
+| style | `object` | - | - |  Apply custom styles to Modal, the object is applied as a [`style` attribute](https://reactjs.org/docs/dom-elements.html#style) |
+| containerStyle | `object` | - | - | Apply custom styles to the container of the Modal, the object is applied as a [`style` attribute](https://reactjs.org/docs/dom-elements.html#style) |
 ### NavBar
 
 A component used to render a navigation bar.
@@ -750,12 +711,10 @@ Displays an input styled as a search bar.
 
 This story displays the colors available in the `Theme` object exported from
 `rendtion`. The values are also available to all styled components used within
-the `Provider` component. See the [styled components documentation][1] for more
+the `Provider` component. See the [styled components documentation](https://www.styled-components.com/docs/advanced#theming) for more
 information
 
 [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Swatches.js)
-
-[1]: https://www.styled-components.com/docs/advanced#theming
 
 ### Table
 
@@ -835,7 +794,7 @@ This method requires that you have provided a `rowKey` property.
 
 ### Terminal
 
-An xterm emulator built on top of [xterm.js][1].
+An xterm emulator built on top of [xterm.js](https://xtermjs.org/).
 
 [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Terminal.js)
 
@@ -912,13 +871,7 @@ instance instead of creating a new one.
 | `persistent`    | `boolean` | -         | -          | If true, don't destroy the `Terminal.tty` instance when the component unmounts |
 | `nonInteractive`    | `boolean` | -         | -          | If true, the component will go into a "read-only" state, useful for displaying logs |
 | `color`    | `string` | -         | -          | A CSS color string that sets the background color of the terminal |
-| `config`    | `object` | -         | -          | Startup options to pass to the tty instance, see the [xterm.js options][2] for more detail |
-
-
-
-[1]: https://xtermjs.org/
-[2]: https://github.com/xtermjs/xterm.js/blob/master/typings/xterm.d.ts#L24
-
+| `config`    | `object` | -         | -          | Startup options to pass to the tty instance, see the [xterm.js options](https://github.com/xtermjs/xterm.js/blob/master/typings/xterm.d.ts#L24) for more detail |
 ### TextWithCopy
 
 Displays text that can be copied to the clipboard.
@@ -941,18 +894,14 @@ Displays text that can be copied to the clipboard.
 | Name          | Type      | Default   | Required   | Description                                          |
 | ------ | ------ | --------- | ---------- | ------------- |
 | `monospace`  | `boolean` | `false` | - | If true, render text in a monospace font |
-| `autoRows`  | `boolean` | `false` | - | If true, the textarea `rows` property will be changed automatically based on the content of the textarea, this behaviour will only work with a [controlled input][2] (i.e. you have used the `onChange` property |
+| `autoRows`  | `boolean` | `false` | - | If true, the textarea `rows` property will be changed automatically based on the content of the textarea, this behaviour will only work with a [controlled input](https://reactjs.org/docs/forms.html#controlled-components) (i.e. you have used the `onChange` property |
 | `minRows`  | `number` | - | - | Set the minimum number of rows |
 | `maxRows`  | `number` | - | - | Set the maximum number of rows |
 | `onChange`  | `(e: Event) => void` | - | - | A function that is called when the textarea value changes |
 
 #### Inheritance
 
-The attributes of a [`<textarea>`][1] element are also available.
-
-[1]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea
-[2]: https://reactjs.org/docs/forms.html#controlled-components
-
+The attributes of a [`<textarea>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea) element are also available.
 
 
 ### Tooltips
@@ -980,9 +929,9 @@ object with the following properties:
 | text         | `string`  | ✓ | The text to display in the tooltip |
 | trigger | <code>'click' &#124; 'hover'</code> | - | Controls whether the tooltip is displayed on hover or click, defaults to `'hover'`
 | placement | <code>'top' &#124; 'right' &#124; 'bottom' &#124; 'left'</code> | - | Controls the position of the tooltip related to the component, defaults to `'top'` |
-| containerStyle | `object` | - | Apply custom styles to the tooltip outer container, the object is applied as a [`style` attribute][1] |
-| innerStyle | `object` | - | Apply custom styles to the tooltip inner container, the object is applied as a [`style` attribute][1] |
-| arrowStyle | `object` | - | Apply custom styles to the tooltip arrow, the object is applied as a [`style` attribute][1] |
+| containerStyle | `object` | - | Apply custom styles to the tooltip outer container, the object is applied as a [`style` attribute](https://reactjs.org/docs/dom-elements.html#style) |
+| innerStyle | `object` | - | Apply custom styles to the tooltip inner container, the object is applied as a [`style` attribute](https://reactjs.org/docs/dom-elements.html#style) |
+| arrowStyle | `object` | - | Apply custom styles to the tooltip arrow, the object is applied as a [`style` attribute](https://reactjs.org/docs/dom-elements.html#style) |
 
 The following rendition components support the `tooltip` attribute:
 
@@ -1000,8 +949,6 @@ The following rendition components support the `tooltip` attribute:
 - `Link`
 
 [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Tooltip.js)
-
-[1]: https://reactjs.org/docs/dom-elements.html#style
 
 ### Txt
 

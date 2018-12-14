@@ -18,8 +18,8 @@ import {
   Provider,
   Txt,
   Link
-} from '../'
-import * as Readme from './README/Tooltip.md'
+} from '..'
+import * as Readme from './README/Tooltips.md'
 
 storiesOf('Core/Tooltips', module)
   .addDecorator(withReadme(Readme))

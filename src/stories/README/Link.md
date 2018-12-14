@@ -13,7 +13,5 @@ Displays an anchor link.
 
 ## Inheritance
 
-The attributes of an [`<a>`][1] element are also available.
-
-[1]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
+The attributes of an [`<a>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) element are also available.
 
