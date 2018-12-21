@@ -80,4 +80,9 @@ export const withDefaultTheme = (
 
 const Tag = tag(blacklist);
 
-export default compose(withDefaultTheme, withTooltip, withStyledSystem, Tag);
+export default compose(
+	withDefaultTheme,
+	withTooltip,
+	withStyledSystem,
+	Tag,
+);

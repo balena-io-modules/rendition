@@ -89,7 +89,7 @@ const Base = ({ children, background, value, ...props }: ProgressBarProps) => {
 		<Sleeve {...omit(props, ['color'])}>
 			<LoadingContent>{children}</LoadingContent>
 			<Bar bg={background} style={{ width: `${value}%` }}>
-				<Content style={{ width: `${value && 100 * 100 / value}%` }}>
+				<Content style={{ width: `${value && (100 * 100) / value}%` }}>
 					{children}
 				</Content>
 			</Bar>
@@ -97,6 +97,9 @@ const Base = ({ children, background, value, ...props }: ProgressBarProps) => {
 	);
 };
 
-export default compose(withTheme, getType, setTypeProps, asRendition)(
-	Base,
-) as React.ComponentClass<ProgressBarProps>;
+export default compose(
+	withTheme,
+	getType,
+	setTypeProps,
+	asRendition,
+)(Base) as React.ComponentClass<ProgressBarProps>;

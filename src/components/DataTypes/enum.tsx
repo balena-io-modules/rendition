@@ -88,7 +88,7 @@ export const createFilter = (
 					const: value,
 				},
 			},
-			required: [ field ],
+			required: [field],
 		});
 	}
 
@@ -120,6 +120,8 @@ export const Edit = ({
 			onUpdate(e.currentTarget.value)
 		}
 	>
-		{map(schema.enum, (item: string) => <option key={item}>{item}</option>)}
+		{map(schema.enum, (item: string) => (
+			<option key={item}>{item}</option>
+		))}
 	</Select>
 );

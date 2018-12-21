@@ -32,6 +32,7 @@ const Base = (props: BaseProps) => {
 	);
 };
 
-export default compose(withTheme, asRendition)(Base) as React.ComponentClass<
-	BaseProps
->;
+export default compose(
+	withTheme,
+	asRendition,
+)(Base) as React.ComponentClass<BaseProps>;

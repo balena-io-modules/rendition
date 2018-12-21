@@ -67,6 +67,7 @@ const Base = (styled.input as StyledFunction<InputProps>)`
   ${monospace as any};
 `;
 
-export default compose(withTheme, asRendition)(Base) as React.ComponentClass<
-	InputProps
->;
+export default compose(
+	withTheme,
+	asRendition,
+)(Base) as React.ComponentClass<InputProps>;

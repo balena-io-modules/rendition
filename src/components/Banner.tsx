@@ -29,6 +29,8 @@ const Base = styled.div`
 	background-image: ${(props: any) => setBgImage(props.backgroundImage)};
 `;
 
-export default compose(withTheme, setDefaultProps, asRendition)(
-	Base,
-) as React.ComponentClass<BannerProps>;
+export default compose(
+	withTheme,
+	setDefaultProps,
+	asRendition,
+)(Base) as React.ComponentClass<BannerProps>;

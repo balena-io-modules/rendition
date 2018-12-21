@@ -12,6 +12,7 @@ const Base = (styled.hr as StyledFunction<
 	background-color: ${props => props.color || '#333'};
 `;
 
-export default compose(withTheme, asRendition)(Base) as React.ComponentClass<
-	DividerProps
->;
+export default compose(
+	withTheme,
+	asRendition,
+)(Base) as React.ComponentClass<DividerProps>;

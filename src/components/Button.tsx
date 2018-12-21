@@ -16,7 +16,7 @@ interface ThemedButtonProps extends ButtonProps {
 	theme: Theme;
 }
 
-const squareWidth = (val: number): number => val / 9 * 10;
+const squareWidth = (val: number): number => (val / 9) * 10;
 
 const minWidth = (props: ThemedButtonProps) => {
 	if (props.w == null && !props.square) {

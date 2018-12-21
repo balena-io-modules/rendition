@@ -68,6 +68,7 @@ const Component = ({
 	);
 };
 
-export default compose(withTheme, asRendition)(
-	Component,
-) as React.ComponentClass<SelectProps>;
+export default compose(
+	withTheme,
+	asRendition,
+)(Component) as React.ComponentClass<SelectProps>;

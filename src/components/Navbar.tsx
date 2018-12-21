@@ -118,4 +118,7 @@ const setDefaultProps = withProps((props: NavbarProps) => {
 	);
 });
 
-export default compose(withTheme, setDefaultProps)(Navbar);
+export default compose(
+	withTheme,
+	setDefaultProps,
+)(Navbar);

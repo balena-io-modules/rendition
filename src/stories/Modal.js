@@ -271,10 +271,16 @@ storiesOf('Core/Modal', module)
         </Box>
 
         <ModalDemo>
-          {PokeDex.map((x, i) => <p key={i}>{x.Description}</p>)}
+          {PokeDex.map((x, i) => (
+            <p key={i}>{x.Description}</p>
+          ))}
         </ModalDemo>
 
-        <Box m={3}>{PokeDex.map((x, i) => <p key={i}>{x.Description}</p>)}</Box>
+        <Box m={3}>
+          {PokeDex.map((x, i) => (
+            <p key={i}>{x.Description}</p>
+          ))}
+        </Box>
       </Provider>
     )
   })

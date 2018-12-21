@@ -57,6 +57,7 @@ const Card = ({ title, cta, rows, children, ...props }: CardProps) => {
 	);
 };
 
-export default compose(withTheme, asRendition)(Card) as React.ComponentClass<
-	CardProps
->;
+export default compose(
+	withTheme,
+	asRendition,
+)(Card) as React.ComponentClass<CardProps>;

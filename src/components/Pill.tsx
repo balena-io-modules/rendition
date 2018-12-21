@@ -35,6 +35,7 @@ const Pill = ({ small, children, ...props }: PillProps) => {
 	return <PillComponent {...props}>{children}</PillComponent>;
 };
 
-export default compose(withTheme, asRendition)(Pill) as React.ComponentClass<
-	PillProps
->;
+export default compose(
+	withTheme,
+	asRendition,
+)(Pill) as React.ComponentClass<PillProps>;

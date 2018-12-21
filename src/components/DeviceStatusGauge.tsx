@@ -63,6 +63,7 @@ const DeviceStatusGauge = ({ devices, ...props }: DeviceStatusGaugeProps) => {
 	);
 };
 
-export default compose(withTheme, asRendition)(
-	DeviceStatusGauge,
-) as React.ComponentClass<DeviceStatusGaugeProps>;
+export default compose(
+	withTheme,
+	asRendition,
+)(DeviceStatusGauge) as React.ComponentClass<DeviceStatusGaugeProps>;

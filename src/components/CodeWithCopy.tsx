@@ -63,6 +63,7 @@ const Base = ({ copy, text, color, ...props }: CodeWithCopyProps) => {
 	);
 };
 
-export default compose(withTheme, asRendition)(Base) as React.ComponentClass<
-	CodeWithCopyProps
->;
+export default compose(
+	withTheme,
+	asRendition,
+)(Base) as React.ComponentClass<CodeWithCopyProps>;

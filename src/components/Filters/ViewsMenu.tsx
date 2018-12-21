@@ -155,8 +155,8 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 													{view.name}
 													<br />
 													<Txt m={0} fontSize={12} color="#aaa">
-														{view.filters.length} filter{view.filters.length >
-															1 && 's'}
+														{view.filters.length} filter
+														{view.filters.length > 1 && 's'}
 													</Txt>
 												</ViewListItemLabel>
 												<button onClick={() => this.props.deleteView(view)}>

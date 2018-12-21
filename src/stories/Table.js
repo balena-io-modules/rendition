@@ -50,9 +50,8 @@ const columns = [
       const d = new Date(value)
       return (
         <span>
-          {d.getFullYear()}-{prefixNum(d.getMonth() + 1)}-{prefixNum(
-            d.getDay() + 1
-          )}
+          {d.getFullYear()}-{prefixNum(d.getMonth() + 1)}-
+          {prefixNum(d.getDay() + 1)}
         </span>
       )
     }

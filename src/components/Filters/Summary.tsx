@@ -82,29 +82,28 @@ class FilterSummary extends React.Component<
 						action="Save"
 					>
 						<form onSubmit={e => e.preventDefault() || this.save()}>
-							{!!scopes &&
-								scopes.length > 1 && (
-									<Flex mb={30}>
-										<Txt width={90}>Visible to:</Txt>
-										<Select
-											ml={10}
-											mt="-7px"
-											width="auto"
-											value={this.state.scope}
-											onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
-												this.setState({
-													scope: e.target.value,
-												})
-											}
-										>
-											{scopes.map(({ name, slug }) => (
-												<option key={slug} value={slug}>
-													{name}
-												</option>
-											))}
-										</Select>
-									</Flex>
-								)}
+							{!!scopes && scopes.length > 1 && (
+								<Flex mb={30}>
+									<Txt width={90}>Visible to:</Txt>
+									<Select
+										ml={10}
+										mt="-7px"
+										width="auto"
+										value={this.state.scope}
+										onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+											this.setState({
+												scope: e.target.value,
+											})
+										}
+									>
+										{scopes.map(({ name, slug }) => (
+											<option key={slug} value={slug}>
+												{name}
+											</option>
+										))}
+									</Select>
+								</Flex>
+							)}
 
 							<Input
 								width="100%"

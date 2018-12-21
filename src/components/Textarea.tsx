@@ -49,6 +49,7 @@ const Component = ({
 	return <Base rows={rowsProp} {...props} />;
 };
 
-export default compose(withTheme, asRendition)(
-	Component,
-) as React.ComponentClass<TextareaProps>;
+export default compose(
+	withTheme,
+	asRendition,
+)(Component) as React.ComponentClass<TextareaProps>;
