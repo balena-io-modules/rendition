@@ -62,7 +62,7 @@
     "jsdom": "^11.6.2",
     "lint-staged": "^4.1.1",
     "match-media-mock": "^0.1.1",
-    "prettier": "^1.12.1",
+    "prettier": "^1.15.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-test-renderer": "^16.2.0",
@@ -75,6 +75,7 @@
     "ts-loader": "^3.0.2",
     "ts-node": "^3.3.0",
     "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.17.0",
     "typescript": "^2.6.2"
   },
   "dependencies": {
