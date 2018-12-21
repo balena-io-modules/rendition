@@ -94,7 +94,7 @@ export const createFilter = (
 					const: value,
 				},
 			},
-			required: [ field ],
+			required: [field],
 		});
 	}
 
@@ -106,7 +106,7 @@ export const createFilter = (
 					exclusiveMinimum: value,
 				},
 			},
-			required: [ field ],
+			required: [field],
 		});
 	}
 

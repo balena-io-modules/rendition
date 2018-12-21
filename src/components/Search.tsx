@@ -61,6 +61,7 @@ const Search = ({
 	);
 };
 
-export default compose(withTheme, asRendition)(Search) as React.ComponentClass<
-	SearchProps
->;
+export default compose(
+	withTheme,
+	asRendition,
+)(Search) as React.ComponentClass<SearchProps>;

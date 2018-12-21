@@ -54,4 +54,7 @@ const Base = ({ copy, ...props }: TextWithCopyProps) => (
 	</Wrapper>
 );
 
-export default compose(withTheme, asRendition)(Base);
+export default compose(
+	withTheme,
+	asRendition,
+)(Base);

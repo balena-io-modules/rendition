@@ -246,7 +246,7 @@ export const disallowAdditionalProperties = (schema: JSONSchema6) => {
 type Point = { x: number; y: number };
 
 export const getAngleBetweenPoints = (p1: Point, p2: Point) => {
-	return Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180 / Math.PI;
+	return (Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180) / Math.PI;
 };
 
 /**

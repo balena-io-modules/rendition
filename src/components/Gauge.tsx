@@ -219,6 +219,7 @@ class StatusGauge extends React.Component<GaugeProps, {}> {
 	}
 }
 
-export default compose(withTheme, asRendition)(
-	StatusGauge,
-) as React.ComponentClass<GaugeProps>;
+export default compose(
+	withTheme,
+	asRendition,
+)(StatusGauge) as React.ComponentClass<GaugeProps>;

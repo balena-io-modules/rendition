@@ -164,7 +164,9 @@ class PersistentTerm extends React.Component {
           value={this.state.selectedTerm.name}
           onChange={e => this.setTerm(e.target.value)}
         >
-          {this.items.map(x => <option key={x.name}>{x.name}</option>)}
+          {this.items.map(x => (
+            <option key={x.name}>{x.name}</option>
+          ))}
         </select>
         <Box style={{ height: 500 }}>
           {this.items.map(t => {

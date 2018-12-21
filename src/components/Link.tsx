@@ -61,6 +61,7 @@ const setDefaultProps = withProps((props: LinkProps) => {
 	);
 });
 
-export default compose(setDefaultProps, asRendition)(
-	Link,
-) as React.ComponentClass<LinkProps>;
+export default compose(
+	setDefaultProps,
+	asRendition,
+)(Link) as React.ComponentClass<LinkProps>;
