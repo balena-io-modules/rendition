@@ -455,7 +455,7 @@ declare module 'rendition' {
 
 	class Select extends RenderableElementWithProps<SelectProps, any> {}
 
-	type TableSortFunction = <T>(a: T, b: T) => number;
+	type TableSortFunction<T> = (a: T, b: T) => number;
 
 	interface TableSortOptions<T> {
 		reverse: boolean;
@@ -470,7 +470,7 @@ declare module 'rendition' {
 		icon?: string;
 		label?: string | JSX.Element;
 		render?: (value: any, row: T) => string | number | JSX.Element | null;
-		sortable?: boolean | TableSortFunction;
+		sortable?: boolean | TableSortFunction<T>;
 	}
 
 	interface TableProps<T> {
@@ -721,13 +721,9 @@ declare module 'rendition' {
 	export const migrations: Migrations;
 }
 
-declare module 'rendition/dist/extra/Form/mermaid' {
+declare module 'rendition/dist/extra/Form/mermaid' {}
 
-}
-
-declare module 'rendition/dist/extra/Form/markdown' {
-
-}
+declare module 'rendition/dist/extra/Form/markdown' {}
 
 declare module 'rendition/dist/extra/Markdown' {
 	import { RenderableElementWithProps, TxtProps } from 'rendition';
