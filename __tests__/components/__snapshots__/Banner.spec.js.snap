@@ -9,10 +9,10 @@ exports[`Button renders correctly 1`] = `
     color="white"
   >
     <h1>
-      Resin.io
+      balena
     </h1>
     <p>
-      Resin.io brings the benefits of Linux containers to the IoT. Develop iteratively, deploy safely, and manage at scale.
+      Balena brings the benefits of Linux containers to the IoT. Develop iteratively, deploy safely, and manage at scale.
     </p>
   </div>
 </div>
