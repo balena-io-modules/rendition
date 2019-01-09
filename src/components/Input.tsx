@@ -37,11 +37,12 @@ const Base = (styled.input as StyledFunction<InputProps>)`
 
   &[disabled] {
     background-color: ${props => props.theme.colors.gray.light};
+    cursor: not-allowed;
   }
-  &:focus {
+  &:focus:enabled {
     border-color: ${props => props.theme.colors.secondary.main};
   }
-  &:hover {
+  &:hover:enabled {
     box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1);
   }
   &::placeholder {

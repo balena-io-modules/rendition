@@ -65,7 +65,7 @@ const Item = (styled.div as StyledFunction<DropDownButtonProps>)`
 		props.border ? `1px solid ${props.theme.colors.gray.main}` : '0'};
   border-radius: ${props => px(props.theme.radius)};
 
-  &:hover {
+  &:hover:enabled {
     background: ${props => props.theme.colors.gray.light};
   }
 `;

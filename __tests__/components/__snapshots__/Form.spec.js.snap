@@ -27,7 +27,7 @@ exports[`Form component should match the stored snapshot 1`] = `
             </label>
             <input
               autoFocus={false}
-              className="sc-dNLxif inGvoc sc-jbKcbu cdoiNX"
+              className="sc-dNLxif inGvoc sc-jbKcbu ihVCOq"
               disabled={false}
               id="root_Name"
               label="Pokemon Name"
@@ -48,7 +48,7 @@ exports[`Form component should match the stored snapshot 1`] = `
         <div />
       </div>
       <button
-        className="sc-hMqMXs kYklEl sc-kpOJdX iJQUXe"
+        className="sc-hMqMXs kYklEl sc-kpOJdX gJUwBw"
       >
         Submit
       </button>

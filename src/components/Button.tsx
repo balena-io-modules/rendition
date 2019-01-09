@@ -92,7 +92,7 @@ const ButtonBase = (styled.button as StyledFunction<ThemedButtonProps>)`
 	&:focus {
 		text-decoration: none;
 	}
-	&:hover {
+	&:hover:enabled {
 		color: ${props => props.color || '#fff'};
 		background-color: ${props =>
 			props.bg
@@ -100,7 +100,7 @@ const ButtonBase = (styled.button as StyledFunction<ThemedButtonProps>)`
 				: lighten(getColor(props, 'bg', 'main'))}
 		}
 	}
-	&:active {
+	&:active:enabled {
 		${buttonActiveStyles}
 	}
 
@@ -142,9 +142,9 @@ const Plaintext = ButtonBase.extend`
 	border-radius: 0;
 	font-weight: ${props => normal(props)};
 
-	&:hover,
-	&:focus,
-	&:active {
+	&:hover:enabled,
+	&:focus:enabled,
+	&:active:enabled {
 		${plaintextButtonActiveStyles};
 	}
 `;
@@ -163,9 +163,9 @@ const Underline = Plaintext.extend`
 	border-bottom: 1px solid;
 	font-weight: ${props => bold(props)};
 
-	&:hover,
-	&:focus,
-	&:active {
+	&:hover:enabled,
+	&:focus:enabled,
+	&:active:enabled {
 		${underlineButtonActiveStyles};
 	}
 `;
@@ -184,7 +184,7 @@ const DefaultButton = ButtonBase.extend`
 		color: ${props.theme.colors.text.main};
 	`}
 	border: 1px solid ${props => props.theme.colors.gray.main};
-	&:hover {
+	&:hover:enabled {
 		${defaultButtonActiveStyles}
 		border-color: ${props => props.theme.colors.text.main};
 	}
