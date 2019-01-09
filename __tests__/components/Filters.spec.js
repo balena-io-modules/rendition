@@ -4,6 +4,8 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import Provider from '../../src/components/Provider'
 import Filters from '../../src/components/Filters'
+import Txt from '../../src/components/Txt'
+import Select from '../../src/components/Select'
 import FiltersSummary from '../../src/components/Filters/Summary'
 import Search from '../../src/components/Search'
 import * as SchemaSieve from '../../src/components/Filters/SchemaSieve'
@@ -31,6 +33,17 @@ const view = {
   scope: null,
   filters: [ filter ]
 }
+
+const viewScopes = [
+  {
+    slug: 'foo',
+    name: 'foo'
+  },
+  {
+    slug: 'bar',
+    name: 'bar'
+  }
+]
 
 describe('Filters component', () => {
   it('should match the stored snapshot', () => {
@@ -106,6 +119,56 @@ describe('Filters component', () => {
     })
   })
 
+  describe('save views modal', () => {
+    it('should not show scopes selector if one or less scopes are passed', () => {
+      const withOneViewScope = mount(
+        <Provider>
+          <Filters
+            schema={schema}
+            filters={[filter]}
+            viewScopes={[viewScopes[0]]}
+          />
+        </Provider>
+      )
+
+      const withNoViewScopes = mount(
+        <Provider>
+          <Filters
+            schema={schema}
+            filters={[filter]}
+            viewScopes={[viewScopes[0]]}
+          />
+        </Provider>
+      )
+
+      withOneViewScope.find('button').at(2).simulate('click')
+      expect(withOneViewScope.find(Select)).toHaveLength(0)
+
+      withNoViewScopes.find('button').at(2).simulate('click')
+      expect(withNoViewScopes.find(Select)).toHaveLength(0)
+
+      withOneViewScope.unmount()
+      withNoViewScopes.unmount()
+    })
+
+    it('should show scopes selector if viewScopes are passed', () => {
+      const component = mount(
+        <Provider>
+          <Filters
+            schema={schema}
+            filters={[filter]}
+            viewScopes={viewScopes}
+          />
+        </Provider>
+      )
+
+      component.find('button').at(2).simulate('click')
+      expect(component.find(Select)).toHaveLength(1)
+
+      component.unmount()
+    })
+  })
+
   describe('views property', () => {
     it('should not render a views menu if there are no views', () => {
       const component = mount(
@@ -133,6 +196,79 @@ describe('Filters component', () => {
 
       component.find('button').at(1).simulate('click')
       expect(component.find(ViewListItem)).toHaveLength(1)
+      component.unmount()
+    })
+
+    it('should not render scoped views in the views menu if no scopes are passed', () => {
+      const component = mount(
+        <Provider>
+          <Filters
+            schema={schema}
+            views={[{...view, scope: 'foo'}]}
+          />
+        </Provider>
+      )
+
+      component.find('button').at(1).simulate('click')
+      expect(component.find("[children='foo']")).toHaveLength(0)
+      expect(component.find("[children='null']")).toHaveLength(0)
+
+      component.unmount()
+    })
+
+    it('should not render scoped views in the views menu if one or less scopes are passed', () => {
+      const component = mount(
+        <Provider>
+          <Filters
+            schema={schema}
+            views={[{...view, scope: 'foo'}]}
+            viewScopes={[viewScopes[0]]}
+          />
+        </Provider>
+      )
+
+      component.find('button').at(1).simulate('click')
+      expect(component.find("[children='foo']")).toHaveLength(0)
+
+      component.unmount()
+    })
+
+    it('should render scoped views in the views menu if more than one viewScopes are passed', () => {
+      const component = mount(
+        <Provider>
+          <Filters
+            schema={schema}
+            views={[{...view, scope: 'foo'}]}
+            viewScopes={viewScopes}
+          />
+        </Provider>
+      )
+
+      component.find('button').at(1).simulate('click')
+
+      expect(component.find(Txt).at(0).text()).toEqual('foo')
+      expect(component.find("[children='bar']")).toHaveLength(0)
+
+      component.unmount()
+    })
+
+    it('should render views as "Unscoped" if they do not have a scope and more than one viewScopes are passed', () => {
+      const component = mount(
+        <Provider>
+          <Filters
+            schema={schema}
+            views={[{...view}]}
+            viewScopes={viewScopes}
+          />
+        </Provider>
+      )
+
+      component.find('button').at(1).simulate('click')
+
+      expect(component.find(Txt).at(0).text()).toEqual('Unscoped')
+      expect(component.find("[children='foo']")).toHaveLength(0)
+      expect(component.find("[children='bar']")).toHaveLength(0)
+
       component.unmount()
     })
 

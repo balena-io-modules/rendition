@@ -188,10 +188,24 @@ storiesOf('Core/Filters', module)
   .addDecorator(withReadme(Readme))
   .addDecorator(withScreenshot())
   .add('Standard', () => {
+    const props = {
+      viewScopes: [
+        {
+          slug: 'bleh',
+          name: 'bleh',
+          label: 'bla'
+        },
+        {
+          slug: 'foo',
+          name: 'foo'
+        }
+      ]
+    }
+
     return (
       <Provider>
         <Box m={3}>
-          <FiltersDemo />
+          <FiltersDemo extra={props} />
         </Box>
       </Provider>
     )
