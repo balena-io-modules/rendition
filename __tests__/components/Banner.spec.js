@@ -8,9 +8,9 @@ test('Button renders correctly', () => {
   const component = renderer.create(
     <Provider>
       <Banner color='white'>
-        <h1>Resin.io</h1>
+        <h1>balena</h1>
         <p>
-          Resin.io brings the benefits of Linux containers to the IoT. Develop
+          Balena brings the benefits of Linux containers to the IoT. Develop
           iteratively, deploy safely, and manage at scale.
         </p>
       </Banner>

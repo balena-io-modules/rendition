@@ -13,9 +13,9 @@ storiesOf('Core/Banner', module)
     return (
       <Provider>
         <Banner color='white' backgroundImage={bgImage}>
-          <Heading.h1>Resin.io</Heading.h1>
+          <Heading.h1>balena</Heading.h1>
           <Txt>
-            Resin.io brings the benefits of Linux containers to the IoT. Develop
+            Balena brings the benefits of Linux containers to the IoT. Develop
             iteratively, deploy safely, and manage at scale.
           </Txt>
         </Banner>
