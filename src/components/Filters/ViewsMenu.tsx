@@ -79,6 +79,7 @@ interface ViewsMenuProps {
 	disabled?: boolean;
 	views: FiltersView[];
 	schema: JSONSchema6;
+	hasMultipleScopes?: boolean;
 	setFilters: (filters: JSONSchema6[]) => void;
 	deleteView: (view: FiltersView) => any;
 	renderMode?: FilterRenderMode | FilterRenderMode[];
@@ -104,9 +105,10 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 	}
 
 	render() {
-		const { views, renderMode } = this.props;
+		const { views, renderMode, hasMultipleScopes } = this.props;
 		const hasViews = views.length > 0;
-		const groupedViews = groupBy(views, 'scope');
+		const groupedViews = groupBy(views, item => item.scope || 'Unscoped');
+
 		let soloRender = false;
 		if (renderMode) {
 			const mode = Array.isArray(renderMode) ? renderMode : [renderMode];
@@ -140,7 +142,7 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 						{hasViews &&
 							map(groupedViews, (views: FiltersView[], scope) => (
 								<Box key={scope}>
-									{!!scope && (
+									{hasMultipleScopes && (
 										<Txt fontSize={13} ml={20} mb={2} mt={2} color="#aaa">
 											{scope}
 										</Txt>

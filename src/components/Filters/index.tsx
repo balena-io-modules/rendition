@@ -404,6 +404,9 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 							disabled={this.props.disabled}
 							views={this.state.views || []}
 							schema={this.props.schema}
+							hasMultipleScopes={
+								this.props.viewScopes && this.props.viewScopes.length > 1
+							}
 							setFilters={filters => this.setFilters(filters)}
 							deleteView={view => this.deleteView(view)}
 							renderMode={this.props.renderMode}
@@ -498,6 +501,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 					!!filters.length &&
 					!this.props.disabled && (
 						<Summary
+							scopes={this.props.viewScopes}
 							edit={(filter: JSONSchema6) => this.editFilter(filter)}
 							delete={(filter: JSONSchema6) => this.removeFilter(filter)}
 							saveView={(name, scope) => this.saveView(name, scope)}
