@@ -19,7 +19,7 @@
     "no-console": [false],
     "no-empty-interface": false,
     "no-string-literal": false,
-    "import-blacklist": [true, "react-icons/lib/fa/"],
+    "import-blacklist": [true, "lodash", "react-icons/lib/fa/"],
     "interface-name": [false],
     "interface-over-type-literal": false,
     "variable-name": [

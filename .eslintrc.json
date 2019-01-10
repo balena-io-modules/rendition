@@ -1,7 +1,7 @@
 {
   "rules": {
     "react/prop-types": 0,
-    "no-restricted-imports": ["error", "react-icons/lib/fa"],
+    "no-restricted-imports": ["error", "lodash", "react-icons/lib/fa"],
     "no-unused-expressions": 1,
     "import/first": 0,
     // Prevents clashes with jsx specific rules about indenting, by ignoring JSX elements
