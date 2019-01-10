@@ -1,6 +1,6 @@
 import * as copyToClipboard from 'copy-to-clipboard';
 import * as React from 'react';
-import { FaClipboard } from 'react-icons/lib/fa';
+import FaClipboard = require('react-icons/lib/fa/clipboard');
 import { compose } from 'recompose';
 import { CodeWithCopyProps } from 'rendition';
 import styled, { withTheme } from 'styled-components';

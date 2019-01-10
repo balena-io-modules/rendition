@@ -1,6 +1,6 @@
 import { JSONSchema6 } from 'json-schema';
 import * as React from 'react';
-import { FaBookmarkO } from 'react-icons/lib/fa/';
+import FaBookmarkO = require('react-icons/lib/fa/bookmark-o');
 import { FiltersView, ViewScope } from 'rendition';
 import styled from 'styled-components';
 import Button from '../Button';

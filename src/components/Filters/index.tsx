@@ -8,7 +8,7 @@ import isEqual = require('lodash/isEqual');
 import map = require('lodash/map');
 import reject = require('lodash/reject');
 import * as React from 'react';
-import { FaFilter } from 'react-icons/lib/fa';
+import FaFilter = require('react-icons/lib/fa/filter');
 import { FilterRenderMode, FiltersProps, FiltersView } from 'rendition';
 import styled from 'styled-components';
 import * as utils from '../../utils';
