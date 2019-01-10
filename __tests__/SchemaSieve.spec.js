@@ -1,5 +1,6 @@
 /* globals expect, describe, it */
-import * as _ from 'lodash'
+import isArray from 'lodash/isArray'
+import mapValues from 'lodash/mapValues'
 import { JSDOM } from 'jsdom'
 const Ajv = require('ajv')
 const ajvKeywords = require('ajv-keywords')
@@ -22,7 +23,7 @@ describe('SchemaSieve', () => {
         }
       }
 
-      const nestedCollection = _.mapValues(collection, (value) => ({ data: value }))
+      const nestedCollection = mapValues(collection, (value) => ({ data: value }))
 
       tests.forEach(({ operator, value, expected }) => {
         it(`should correctly test values using the "${operator}" operator with a value of "${value}"`, function () {
@@ -770,7 +771,7 @@ describe('SchemaSieve', () => {
           }
         }
 
-        const nestedCollection = _.mapValues(collection, (value) => ({ data: value }))
+        const nestedCollection = mapValues(collection, (value) => ({ data: value }))
 
         const filter = sieve.createFullTextSearchFilter(sieve.flattenSchema(nestedSchema), 'lorem')
 
@@ -819,7 +820,7 @@ describe('SchemaSieve', () => {
         }])
 
         const result = sieve.filter(filter, collection)
-        expect(_.isArray(result)).toBe(true)
+        expect(isArray(result)).toBe(true)
       })
 
       it('should return the correct values', function () {

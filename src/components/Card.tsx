@@ -1,4 +1,4 @@
-import { map } from 'lodash';
+import map = require('lodash/map');
 import * as React from 'react';
 import { compose } from 'recompose';
 import { CardProps } from 'rendition';

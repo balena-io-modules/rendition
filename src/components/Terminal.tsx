@@ -1,4 +1,5 @@
-import * as _ from 'lodash';
+import assign = require('lodash/assign');
+import cloneDeep = require('lodash/cloneDeep');
 import * as React from 'react';
 import { TerminalProps } from 'rendition';
 import styled from 'styled-components';
@@ -152,7 +153,7 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 	constructor(props: ThemedTerminalProps) {
 		super(props);
 
-		this.termConfig = _.assign({}, props.config, {
+		this.termConfig = assign({}, props.config, {
 			cols: 80,
 			cursorBlink: false,
 			rows: 24,
@@ -170,7 +171,7 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 		} else {
 			// Xterm mutates the options object passed into it, so we have to clone it
 			// here
-			this.tty = new Xterm(_.cloneDeep(this.termConfig));
+			this.tty = new Xterm(cloneDeep(this.termConfig));
 		}
 
 		this.resize = this.resize.bind(this);

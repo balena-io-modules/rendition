@@ -1,6 +1,6 @@
 /* globals expect, describe, it */
 import { mount } from 'enzyme'
-import * as _ from 'lodash'
+import noop from 'lodash/noop'
 import React from 'react'
 import renderer from 'react-test-renderer'
 import Provider from '../../src/components/Provider'
@@ -22,7 +22,7 @@ describe('Textarea component', () => {
 
     const component = mount(
       <Provider>
-        <Textarea value={value} onChange={_.noop} />
+        <Textarea value={value} onChange={noop} />
       </Provider>
     )
 
@@ -43,7 +43,7 @@ describe('Textarea component', () => {
 
     it('should resize the textarea to match the content', () => {
       const component = mount(
-        <Textarea autoRows value={value} onChange={_.noop} />
+        <Textarea autoRows value={value} onChange={noop} />
       )
 
       // Sanity check to make sure autoRows doesn't change the default behaviour
@@ -75,7 +75,7 @@ describe('Textarea component', () => {
             autoRows
             maxRows={maxRows}
             value={value}
-            onChange={_.noop}
+            onChange={noop}
           />
         </Provider>
       )
@@ -96,7 +96,7 @@ describe('Textarea component', () => {
             autoRows
             minRows={minRows}
             value={value}
-            onChange={_.noop}
+            onChange={noop}
           />
         </Provider>
       )

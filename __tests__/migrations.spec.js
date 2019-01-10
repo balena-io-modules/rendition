@@ -1,5 +1,5 @@
 /* globals expect, describe, it */
-import * as _ from 'lodash'
+import forEach from 'lodash/forEach'
 import { JSDOM } from 'jsdom'
 global.document = (new JSDOM('')).window.document
 
@@ -196,8 +196,8 @@ describe('migrations', () => {
       )
     })
 
-    _.forEach(legacyTypesAndOperators, ({ v4Type, operators, testValue }, legacyType) => {
-      _.forEach(operators, (legacyOperator, v4Operator) => {
+    forEach(legacyTypesAndOperators, ({ v4Type, operators, testValue }, legacyType) => {
+      forEach(operators, (legacyOperator, v4Operator) => {
         it(`should convert legacy '${legacyType}' type filters that use the legacy '${legacyOperator}' operator`, () => {
           const legacyFilter = {
             name: v4Type,

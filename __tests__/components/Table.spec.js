@@ -1,6 +1,11 @@
 /* globals expect, describe, it */
 import { mount } from 'enzyme'
-import * as _ from 'lodash'
+import first from 'lodash/first'
+import get from 'lodash/get'
+import last from 'lodash/last'
+import map from 'lodash/map'
+import noop from 'lodash/noop'
+import reverse from 'lodash/reverse'
 import React from 'react'
 import renderer from 'react-test-renderer'
 import sinon from 'sinon'
@@ -101,7 +106,7 @@ describe('Table component', () => {
         const cellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
           .map(element => element.text())
 
-        const dataText = _.map(PokeDex, cols[0].field)
+        const dataText = map(PokeDex, cols[0].field)
 
         expect(cellsText).toEqual(dataText)
       })
@@ -182,8 +187,8 @@ describe('Table component', () => {
 
         expect(spy.callCount).toEqual(PokeDex.length)
 
-        const calls = _.map(spy.getCalls(), 'args')
-        const expected = _.map(PokeDex, (item) => [item[field], item])
+        const calls = map(spy.getCalls(), 'args')
+        const expected = map(PokeDex, (item) => [item[field], item])
 
         expect(calls).toEqual(expected)
       })
@@ -257,7 +262,7 @@ describe('Table component', () => {
         const cellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
           .map(element => element.text())
 
-        const expected = _.map(PokeDex, field).sort()
+        const expected = map(PokeDex, field).sort()
 
         expect(cellsText).toEqual(expected)
       })
@@ -284,7 +289,7 @@ describe('Table component', () => {
         const cellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
           .map(element => element.text())
 
-        const expected = _.reverse(_.map(PokeDex, field).sort())
+        const expected = reverse(map(PokeDex, field).sort())
 
         expect(cellsText).toEqual(expected)
       })
@@ -311,14 +316,14 @@ describe('Table component', () => {
         const cellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
           .map(element => element.text())
 
-        const expected = _.reverse(_.map(PokeDex, field).sort())
+        const expected = reverse(map(PokeDex, field).sort())
 
         expect(cellsText).toEqual(expected)
       })
 
       it('should allow a custom sorting function', () => {
         const field = 'Name'
-        const biasName = _.get(_.last(PokeDex), field)
+        const biasName = get(last(PokeDex), field)
         const sorter = (a, b) => a[field] === biasName ? -1 : 1
         const cols = [
           {
@@ -370,7 +375,7 @@ describe('Table component', () => {
       const cellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
         .map(element => element.text())
 
-      const dataText = _.map(data, 'Name')
+      const dataText = map(data, 'Name')
 
       expect(cellsText).toEqual(dataText)
     })
@@ -400,7 +405,7 @@ describe('Table component', () => {
       const cellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
         .map(element => element.text())
 
-      const dataText = _.map(data, 'Name')
+      const dataText = map(data, 'Name')
 
       expect(cellsText).toEqual(dataText)
 
@@ -413,7 +418,7 @@ describe('Table component', () => {
       const updatedCellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
         .map(element => element.text())
 
-      const updatedDataText = _.map(data, 'Name')
+      const updatedDataText = map(data, 'Name')
 
       expect(updatedCellsText).toEqual(updatedDataText)
     })
@@ -450,7 +455,7 @@ describe('Table component', () => {
       const cellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
         .map(element => element.text())
 
-      const dataText = _.map(data, (field) => `Name: ${field.Name}`)
+      const dataText = map(data, (field) => `Name: ${field.Name}`)
 
       expect(cellsText).toEqual(dataText)
     })
@@ -480,7 +485,7 @@ describe('Table component', () => {
       const cellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
         .map(element => element.text())
 
-      const dataText = _.map(data, 'Name')
+      const dataText = map(data, 'Name')
 
       expect(cellsText).toEqual(dataText)
 
@@ -491,7 +496,7 @@ describe('Table component', () => {
       const updatedCellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
         .map(element => element.text())
 
-      const updatedDataText = _.map(data, 'Name')
+      const updatedDataText = map(data, 'Name')
 
       expect(updatedCellsText).not.toEqual(updatedDataText)
     })
@@ -521,7 +526,7 @@ describe('Table component', () => {
       const cellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
         .map(element => element.text())
 
-      const dataText = _.map(data, 'Name')
+      const dataText = map(data, 'Name')
 
       expect(cellsText).toEqual(dataText)
 
@@ -532,7 +537,7 @@ describe('Table component', () => {
       const updatedCellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
         .map(element => element.text())
 
-      const updatedDataText = _.map(data, 'Name')
+      const updatedDataText = map(data, 'Name')
 
       expect(updatedCellsText).toEqual(updatedDataText)
     })
@@ -565,7 +570,7 @@ describe('Table component', () => {
     it('should cause a checkbox to be rendered in the header', () => {
       const component = mount(
         <Provider>
-          <Table rowKey='pokedex_number' onCheck={_.noop} columns={columns} data={PokeDex} />
+          <Table rowKey='pokedex_number' onCheck={noop} columns={columns} data={PokeDex} />
         </Provider>
       )
       expect(component.find('[data-display="table-head"] input[type="checkbox"]')).toHaveLength(1)
@@ -574,7 +579,7 @@ describe('Table component', () => {
     it('should cause a checkbox to be rendered on each row', () => {
       const component = mount(
         <Provider>
-          <Table rowKey='pokedex_number' onCheck={_.noop} columns={columns} data={PokeDex} />
+          <Table rowKey='pokedex_number' onCheck={noop} columns={columns} data={PokeDex} />
         </Provider>
       )
       expect(component.find('[data-display="table-body"] input[type="checkbox"]')).toHaveLength(PokeDex.length)
@@ -653,7 +658,7 @@ describe('Table component', () => {
 
       component.find('[data-display="table-body"] [data-display="table-cell"]').first().simulate('click')
       expect(spy.callCount).toEqual(1)
-      expect(spy.firstCall.args[0]).toEqual(_.first(PokeDex))
+      expect(spy.firstCall.args[0]).toEqual(first(PokeDex))
 
       component.find('[data-display="table-body"] [data-display="table-cell"]').at(clickIndex).simulate('click')
       expect(spy.callCount).toEqual(2)

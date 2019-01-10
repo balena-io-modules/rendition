@@ -1,6 +1,6 @@
 /* globals expect, describe, it */
 import { mount } from 'enzyme'
-import * as _ from 'lodash'
+import noop from 'lodash/noop'
 import sinon from 'sinon'
 import React from 'react'
 import renderer from 'react-test-renderer'
@@ -26,7 +26,7 @@ describe('Select component', () => {
     it('should set the value of the select element', () => {
       const component = mount(
         <Provider>
-          <Select value={2} onChange={_.noop}>
+          <Select value={2} onChange={noop}>
             <option value={1}>Option 1</option>
             <option value={2}>Option 2</option>
             <option value={3}>Option 3</option>
