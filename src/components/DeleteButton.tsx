@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FaClose } from 'react-icons/lib/fa';
+import FaClose = require('react-icons/lib/fa/close');
 import { compose } from 'recompose';
 import { DefaultProps } from 'rendition';
 import styled, { withTheme } from 'styled-components';

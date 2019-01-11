@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FaSearch } from 'react-icons/lib/fa';
+import FaSearch = require('react-icons/lib/fa/search');
 import { compose } from 'recompose';
 import { SearchProps } from 'rendition';
 import styled, { withTheme } from 'styled-components';

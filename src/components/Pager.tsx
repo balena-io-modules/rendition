@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/lib/fa';
+import FaChevronLeft = require('react-icons/lib/fa/chevron-left');
+import FaChevronRight = require('react-icons/lib/fa/chevron-right');
 import { PagerProps } from 'rendition';
 import styled from 'styled-components';
 import Button from './Button';
