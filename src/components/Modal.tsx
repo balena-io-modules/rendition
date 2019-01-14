@@ -1,12 +1,17 @@
 import assign = require('lodash/assign');
 import * as React from 'react';
 import { ModalProps } from 'rendition';
-import styled, { injectGlobal } from 'styled-components';
+import styled, { injectGlobal, withTheme } from 'styled-components';
 import { stopPropagation } from '../utils';
+import { px } from '../utils';
 import Button from './Button';
 import Fixed from './Fixed';
 import { Box, Flex } from './Grid';
 import Txt from './Txt';
+
+interface ThemedModalProps extends ModalProps {
+	theme: Theme;
+}
 
 const bodyNoOverflowClass = `rendition-modal-open`;
 
@@ -35,12 +40,12 @@ const DEFAULT_MODAL_WIDTH = 700;
 
 const ModalHeader = styled(Txt)`
 	margin-bottom: 50px;
-	font-size: 24px;
+	font-size: ${props => px(props.theme.fontSizes[4])};
 `;
 
 const ModalTitleDetails = styled(Txt)`
 	color: ${props => props.theme.colors.text.light};
-	font-size: 16px;
+	font-size: ${props => px(props.theme.fontSizes[2])};
 `;
 
 const ModalSizer = styled(Box)`
@@ -57,7 +62,6 @@ const ModalSizer = styled(Box)`
 const ModalPanel = styled(Box)`
 	max-width: 100%;
 	min-height: 50px;
-	padding: 30px 50px;
 	margin: 15px auto;
 	border: solid 0.5px #9b9b9b;
 	border-radius: 2px;
@@ -65,10 +69,10 @@ const ModalPanel = styled(Box)`
 	box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.4);
 `;
 
-class Modal extends React.Component<ModalProps, any> {
+class Modal extends React.Component<ThemedModalProps, any> {
 	static mountedCount = 0;
 
-	constructor(props: ModalProps) {
+	constructor(props: ThemedModalProps) {
 		super(props);
 	}
 
@@ -87,7 +91,7 @@ class Modal extends React.Component<ModalProps, any> {
 	}
 
 	render() {
-		const { w, width, ...props } = this.props;
+		const { w, width, theme, ...props } = this.props;
 
 		const cancelButtonProps = assign(
 			{ style: { marginRight: 20 } },
@@ -117,6 +121,7 @@ class Modal extends React.Component<ModalProps, any> {
 				<ModalBackdrop z={8888} bg="rgba(0,0,0,0.4)" top right bottom left />
 				<ModalSizer style={props.containerStyle}>
 					<ModalPanel
+						p={[px(theme.space[3]), '30px 50px']}
 						w={w || width || DEFAULT_MODAL_WIDTH}
 						onClick={stopPropagation}
 						style={props.style}
@@ -155,4 +160,4 @@ class Modal extends React.Component<ModalProps, any> {
 	}
 }
 
-export default Modal;
+export default withTheme(Modal);
