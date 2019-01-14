@@ -35,7 +35,7 @@ let Base = (styled.a as StyledFunction<LinkProps>)`
   }
 `;
 
-const Link = ({ is, blank, ...props }: LinkProps) => {
+const Link = ({ is, blank, children, ...props }: LinkProps) => {
 	if (is) {
 		Base = Base.withComponent(is as any);
 	}
@@ -47,7 +47,9 @@ const Link = ({ is, blank, ...props }: LinkProps) => {
 			{...props}
 			rel={blank ? 'noopener' : undefined}
 			target={blank ? '_blank' : undefined}
-		/>
+		>
+			{children || props.href}
+		</Base>
 	);
 };
 
