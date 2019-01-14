@@ -16,7 +16,7 @@ exports[`Modal renders correctly 1`] = `
       className="sc-cvbbAY buKOFV sc-kpOJdX kXbjAC sc-kgoBCf fdAYGQ sc-cSHVUG BKrBN"
     >
       <div
-        className="sc-jWBwVP jRGueU sc-kpOJdX jtEtvT sc-kgoBCf fdAYGQ sc-cSHVUG dPvaMq"
+        className="sc-jWBwVP iltPXt sc-kpOJdX jJMSox sc-kgoBCf fdAYGQ sc-cSHVUG jTdXaS"
         onClick={[Function]}
       >
         Modal
