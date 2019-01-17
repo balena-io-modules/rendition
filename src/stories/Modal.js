@@ -59,7 +59,7 @@ class ModalDemo extends React.Component {
 
 storiesOf('Core/Modal', module)
   .addDecorator(withReadme(Readme))
-  .addDecorator(withScreenshot())
+  .addDecorator(withScreenshot({ viewport: { height: 768 } }))
   .add('Standard', () => {
     return (
       <Provider>
@@ -254,6 +254,10 @@ storiesOf('Core/Modal', module)
       </Provider>
     )
   })
+
+storiesOf('Core/Modal', module)
+  .addDecorator(withReadme(Readme))
+  .addDecorator(withScreenshot())
   .add('Open Modal Demo', () => {
     return (
       <Provider>
