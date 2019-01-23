@@ -24,7 +24,7 @@ const BasePill = withProps<PillProps>()(styled(Txt))`
 		getColor(props, 'bg', props.shade || 'main') || props.bg || '#7e8085'};
 `;
 
-const SmallPill = BasePill.extend`
+const SmallPill = styled(BasePill)`
 	padding: 1.4px 5.6px;
 	font-size: 8.4px;
 	line-height: 11px;

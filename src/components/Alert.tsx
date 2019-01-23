@@ -83,7 +83,7 @@ const AlertBase = (styled.div as StyledFunction<AlertProps>)`
 `;
 
 // That's the normal alert
-const Outline = AlertBase.extend`
+const Outline = styled(AlertBase)`
 	padding-left: 19px;
 	border: 1px solid ${props => getColor(props, 'bg', 'main')};
 	background: ${props => props.bg || getColor(props, 'bg', 'light')};
@@ -95,7 +95,7 @@ const Outline = AlertBase.extend`
 	}
 `;
 
-const Filled = AlertBase.extend`
+const Filled = styled(AlertBase)`
 	border: 0;
 	font-weight: ${props => bold(props)};
 	text-align: center;
@@ -103,7 +103,7 @@ const Filled = AlertBase.extend`
 	color: ${props => props.color || '#fff'};
 `;
 
-const Plaintext = AlertBase.extend`
+const Plaintext = styled(AlertBase)`
 	min-height: auto;
 	padding: 0;
 	font-size: 14px;

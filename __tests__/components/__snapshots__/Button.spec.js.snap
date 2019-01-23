@@ -5,7 +5,7 @@ exports[`Button renders correctly 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <button
-    className="sc-VigVT hegYug sc-gqjmRU yBQjZ"
+    className="sc-VigVT hegYug sc-gqjmRU fJhKKS sc-htoDjs blFLcR"
   >
     Click me
   </button>
@@ -17,7 +17,7 @@ exports[`Styled Anchor Button renders correctly 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <a
-    className="sc-jTzLTM ctytKv sc-jzJRlG fKAaUV sc-fjdhpX izaRYO"
+    className="sc-jTzLTM ctytKv sc-jzJRlG fKAaUV sc-fjdhpX gvSMLr"
     href="#"
   >
     Click me
@@ -30,7 +30,7 @@ exports[`Styled Button renders correctly 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <button
-    className="sc-VigVT kKVfAK sc-gqjmRU yBQjZ"
+    className="sc-VigVT kKVfAK sc-gqjmRU fJhKKS sc-htoDjs blFLcR"
   >
     Click me
   </button>

@@ -82,7 +82,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
           className="sc-gisBJw fDpgmb"
         >
           <button
-            className="sc-TOsTZ kJgilM sc-VigVT xuzkb sc-dnqmqq kGzuYt"
+            className="sc-TOsTZ kJgilM sc-VigVT xuzkb sc-dnqmqq kCPRut sc-htoDjs fAvRR"
             onClick={[Function]}
           >
             <div

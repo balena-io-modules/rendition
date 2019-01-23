@@ -110,7 +110,7 @@ const ButtonBase = (styled.button as StyledFunction<ThemedButtonProps>)`
 	}
 `;
 
-const Outline = ButtonBase.extend`
+const Outline = styled(ButtonBase)`
 	${props =>
 		props.active
 			? ''
@@ -128,7 +128,7 @@ const plaintextButtonActiveStyles = (props: ThemedButtonProps) => `
 	color: ${getColor(props, 'color', 'dark') || props.theme.colors.text.main};
 `;
 
-const Plaintext = ButtonBase.extend`
+const Plaintext = styled(ButtonBase)`
 	${props =>
 		props.active
 			? plaintextButtonActiveStyles(props)
@@ -154,7 +154,7 @@ const underlineButtonActiveStyles = (props: ThemedButtonProps) => `
 	box-shadow: 0px -1px 0 0px inset;
 `;
 
-const Underline = Plaintext.extend`
+const Underline = styled(Plaintext)`
 	${props =>
 		props.active
 			? underlineButtonActiveStyles(props)
@@ -175,7 +175,7 @@ const defaultButtonActiveStyles = (props: ThemedButtonProps) => `
 	background-color: ${props.theme.colors.text.main};
 `;
 
-const DefaultButton = ButtonBase.extend`
+const DefaultButton = styled(ButtonBase)`
 	${props =>
 		props.active
 			? defaultButtonActiveStyles(props)
