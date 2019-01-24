@@ -1,5 +1,4 @@
 import get = require('lodash/get');
-import isEqual = require('lodash/isEqual');
 import isFunction = require('lodash/isFunction');
 import map = require('lodash/map');
 import * as React from 'react';
@@ -32,11 +31,7 @@ export interface TableRowProps<T> {
 	checkboxAttributes?: React.InputHTMLAttributes<HTMLInputElement>;
 }
 
-export class TableRow<T> extends React.Component<TableRowProps<T>, {}> {
-	shouldComponentUpdate(nextProps: TableRowProps<T>) {
-		const update = !isEqual(nextProps, this.props);
-		return update;
-	}
+export class TableRow<T> extends React.PureComponent<TableRowProps<T>, {}> {
 	render() {
 		const {
 			attributes,
