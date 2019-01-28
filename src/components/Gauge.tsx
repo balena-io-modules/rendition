@@ -1,5 +1,6 @@
 import { Chart, ChartOptions } from 'chart.js';
-import { map, reduce } from 'lodash';
+import map = require('lodash/map');
+import reduce = require('lodash/reduce');
 import * as React from 'react';
 import { compose } from 'recompose';
 import styled, { withTheme } from 'styled-components';

@@ -1,4 +1,4 @@
-import * as _ from 'lodash'
+import * as cloneDeep from 'lodash/cloneDeep'
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
@@ -63,7 +63,7 @@ class HOC extends React.Component {
     super()
 
     this.state = {
-      PokeDex: _.cloneDeep(PokeDex)
+      PokeDex: cloneDeep(PokeDex)
     }
 
     this.changeName = this.changeName.bind(this)

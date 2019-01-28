@@ -1,6 +1,6 @@
 /* globals expect, describe, it */
 import { mount } from 'enzyme'
-import * as _ from 'lodash'
+import noop from 'lodash/noop'
 import React from 'react'
 import renderer from 'react-test-renderer'
 import sinon from 'sinon'
@@ -15,8 +15,8 @@ describe('Pager component', () => {
           totalItems={436}
           itemsPerPage={50}
           page={0}
-          nextPage={_.noop}
-          prevPage={_.noop}
+          nextPage={noop}
+          prevPage={noop}
         />
       </Provider>
     )
@@ -32,7 +32,7 @@ describe('Pager component', () => {
           totalItems={436}
           itemsPerPage={50}
           page={0}
-          nextPage={_.noop}
+          nextPage={noop}
           prevPage={callback}
         />
       </Provider>
@@ -54,7 +54,7 @@ describe('Pager component', () => {
           itemsPerPage={50}
           page={1}
           nextPage={callback}
-          prevPage={_.noop}
+          prevPage={noop}
         />
       </Provider>
     )

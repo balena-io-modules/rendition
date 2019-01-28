@@ -1,4 +1,4 @@
-import * as _ from 'lodash';
+import map = require('lodash/map');
 import * as React from 'react';
 import { Box, Button, Flex, Txt } from '../../../../';
 
@@ -34,7 +34,7 @@ export class TabbedBox extends React.Component<TabbedBoxProps, TabbedBoxState> {
 			<Box>
 				<Flex justify="space-between" mb={1}>
 					<Flex>
-						{_.map(this.props.tabs, (tab, index: number) => {
+						{map(this.props.tabs, (tab, index: number) => {
 							return (
 								<Button
 									key={index}
