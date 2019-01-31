@@ -75,7 +75,7 @@ export default (props: ArrayFieldTemplateProps) => {
 			{props.items.map(element => {
 				return (
 					<div className="rendition-form__array-item" key={element.index}>
-						<Flex>
+						<Flex align="start">
 							<Box flex="1">{element.children}</Box>
 
 							{props.items.length > 1 && (
@@ -83,6 +83,7 @@ export default (props: ArrayFieldTemplateProps) => {
 									className="rendition-form-array-item__move-up"
 									mb="6px"
 									px={1}
+									mt={1}
 									ml={1}
 									plaintext
 									disabled={
@@ -102,6 +103,7 @@ export default (props: ArrayFieldTemplateProps) => {
 									className="rendition-form-array-item__move-down"
 									mb="6px"
 									px={1}
+									mt={1}
 									ml={1}
 									plaintext
 									disabled={
@@ -121,6 +123,7 @@ export default (props: ArrayFieldTemplateProps) => {
 									className="rendition-form-array-item__remove-item"
 									plaintext
 									mb="6px"
+									mt={1}
 									px={1}
 									ml={1}
 									disabled={element.disabled || element.readonly}
