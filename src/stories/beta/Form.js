@@ -8,7 +8,7 @@ import { Form } from '../../unstable/'
 import { Markdown } from '../../extra/Markdown'
 import '../../extra/Form/mermaid'
 import '../../extra/Form/markdown'
-import * as Readme from '../README/Form.md'
+import Readme from '../README/Form.md'
 
 const extraWidgetsReadme = `
 # Extra widgets

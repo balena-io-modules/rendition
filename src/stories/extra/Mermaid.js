@@ -4,7 +4,7 @@ import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Provider } from '../../'
 import { Mermaid } from '../../extra/Mermaid'
-import * as Readme from '../README/Mermaid.md'
+import Readme from '../README/Mermaid.md'
 
 const source = `
 graph TD;

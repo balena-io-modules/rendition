@@ -4,7 +4,7 @@ import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Provider } from '../../'
 import { Markdown } from '../../extra/Markdown'
-import * as Readme from '../README/Markdown.md'
+import Readme from '../README/Markdown.md'
 
 const source = `
 # Markdown

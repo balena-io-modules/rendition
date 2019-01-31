@@ -4,7 +4,7 @@ import withReadme from 'storybook-readme/with-readme'
 import * as React from 'react'
 import styled from 'styled-components'
 import { ArcSlider, Box, Provider } from '../'
-import * as Readme from './README/ArcSlider.md'
+import Readme from './README/ArcSlider.md'
 
 const Container = styled(Box).attrs({
   m: 3

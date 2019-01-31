@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as debounce from 'lodash/debounce'
+import debounce from 'lodash/debounce'
 import { storiesOf } from '@storybook/react'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import { Box, Flex, Provider, Txt, Textarea } from '../../'

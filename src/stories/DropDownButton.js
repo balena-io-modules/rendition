@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Divider, DropDownButton, Flex, Provider } from '../'
-import * as Readme from './README/DropDownButton.md'
+import Readme from './README/DropDownButton.md'
 
 storiesOf('Core/DropDownButton', module)
   .addDecorator(withReadme(Readme))

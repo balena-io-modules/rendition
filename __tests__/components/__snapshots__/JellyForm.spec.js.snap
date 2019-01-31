@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Form component should match the stored snapshot 1`] = `
+exports[`JellyForm component should match the stored snapshot 1`] = `
 <div
   className="sc-kgoBCf kOSFqw"
 >
@@ -16,6 +16,12 @@ exports[`Form component should match the stored snapshot 1`] = `
         className="form-group field field-object rendition-form__field--root sc-gZMcBi jxxzwT sc-dnqmqq eheJhs sc-bZQynM gcuxEv"
       >
         <fieldset>
+          <legend
+            className="sc-brqgnP kQhMWK"
+            id="root__title"
+          >
+            Pokèmon
+          </legend>
           <div
             className="form-group field field-string rendition-form__field--root_Name sc-gZMcBi jxxzwT sc-dnqmqq eheJhs sc-bZQynM gcuxEv"
           >
@@ -23,20 +29,25 @@ exports[`Form component should match the stored snapshot 1`] = `
               className="control-label sc-fOKMvo cQLvMK"
               htmlFor="root_Name"
             >
-              Pokemon Name
+              Name
+              <span
+                className="required"
+              >
+                *
+              </span>
             </label>
             <input
               autoFocus={false}
               className="sc-jqCOkK jOizoc sc-dNLxif kQnAUg"
               disabled={false}
               id="root_Name"
-              label="Pokemon Name"
+              label="Name"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
               placeholder=""
               readOnly={false}
-              required={false}
+              required={true}
               type="text"
               value="Bulbasaur"
             />

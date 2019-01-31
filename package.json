@@ -47,8 +47,7 @@
     "@storybook/addon-actions": "^4.1.11",
     "@storybook/react": "^4.1.11",
     "@types/jest": "^23.3.2",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^23.4.2",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.0-beta.6",
     "css-loader": "^0.28.5",
     "enzyme": "^3.3.0",
@@ -64,7 +63,7 @@
     "gh-pages": "2.0.0",
     "git-url-parse": "^7.0.0",
     "husky": "^0.14.3",
-    "jest": "^23.6.0",
+    "jest": "^24.1.0",
     "jest-canvas-mock": "^1.1.0",
     "jsdom": "^11.6.2",
     "lint-staged": "^4.1.1",
@@ -93,6 +92,7 @@
     "@types/json-schema": "^6.0.1",
     "@types/lodash": "^4.14.77",
     "@types/marked": "^0.3.0",
+    "@types/node": "^10.12.21",
     "@types/prop-types": "^15.5.2",
     "@types/react": "^16.0.38",
     "@types/react-dom": "^16.0.4",
@@ -100,8 +100,12 @@
     "@types/react-jsonschema-form": "^1.0.9",
     "@types/recompose": "^0.26.2",
     "@types/uuid": "^3.4.3",
+    "acorn": "^6.0.7",
+    "acorn-dynamic-import": "^4.0.0",
     "ajv": "^6.7.0",
     "ajv-keywords": "^3.3.0",
+    "balena-cdsl": "^0.10.3",
+    "balena-temen": "^0.5.0",
     "chart.js": "^2.7.2",
     "color": "^2.0.0",
     "color-hash": "^1.0.3",
@@ -111,7 +115,7 @@
     "mermaid": "^8.0.0-rc.8",
     "moment": "^2.20.1",
     "react-icons": "^2.2.5",
-    "react-jsonschema-form": "^1.2.0",
+    "react-jsonschema-form": "^1.2.1",
     "recompose": "0.26.0",
     "regex-parser": "^2.2.7",
     "resin-device-status": "^1.1.1",
@@ -121,6 +125,7 @@
     "styled-system": "^1.0.5",
     "tag-hoc": "1.0.0",
     "uuid": "^3.2.1",
+    "webpack": "^4.28.4",
     "xterm": "^3.2.0"
   },
   "lint-staged": {
@@ -136,22 +141,15 @@
     ]
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>scripts/setupTests.js",
+    "preset": "ts-jest/presets/js-with-babel",
+    "setupFilesAfterEnv": [
+      "<rootDir>scripts/setupTests.js"
+    ],
     "collectCoverage": true,
     "verbose": true,
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest",
-      "^.+\\.js$": "babel-jest"
-    },
-    "globals": {
-      "ts-jest": {
-        "skipBabel": true
-      }
-    },
     "setupFiles": [
       "jest-canvas-mock"
     ],
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
       "ts",
       "tsx",

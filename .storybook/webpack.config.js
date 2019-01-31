@@ -1,25 +1,29 @@
-module.exports = {
-  name: 'client',
-  target: 'web',
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx']
-  },
-  devtool: 'source-map',
-  module: {
-    rules: [
-      {
-        test: /\.(t|j)sx?$/,
-        loader: 'ts-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: ['file-loader']
-      }
-    ]
-  },
-  node: {
-    fs: 'empty',
-    child_process: 'empty'
-  }
+module.exports = (defaultConfig, configtype) => {
+  defaultConfig.resolve.alias['balena-cdsl'] = 'balena-cdsl/balena_cdsl';
+  defaultConfig.resolve.alias['balena-temen'] = 'balena-temen/balena_temen';
+
+  defaultConfig.resolve.extensions.push('.ts')
+  defaultConfig.resolve.extensions.push('.tsx')
+  defaultConfig.resolve.extensions.push('.wasm')
+  defaultConfig.module.rules.push(
+    {
+      test: /\.tsx?$/,
+      loader: 'ts-loader',
+      exclude: /node_modules/
+    }
+  )
+  defaultConfig.module.rules.push(
+    {
+      test: /\.(png|svg|jpg|gif)$/,
+      use: ['file-loader']
+    }
+  )
+
+  defaultConfig.externals = [
+    {
+      xmlhttprequest: '{XMLHttpRequest:XMLHttpRequest}'
+    }
+  ]
+
+  return defaultConfig
 }

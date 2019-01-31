@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import { Card, Link, Flex, Box, Button, Provider, TextWithCopy } from '../'
-import * as Readme from './README/Card.md'
+import Readme from './README/Card.md'
 
 const rows = [
   <div>Lorem Ipsum dolor si amet</div>,

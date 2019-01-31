@@ -4,7 +4,7 @@ import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Gauge, Provider } from '../'
 import { isTakingScreenshot } from './helpers'
-import * as Readme from './README/Gauge.md'
+import Readme from './README/Gauge.md'
 
 const data = [
   {

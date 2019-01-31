@@ -4,7 +4,7 @@ import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, ProgressBar, Provider } from '../'
 import { isTakingScreenshot } from './helpers'
-import * as Readme from './README/ProgressBar.md'
+import Readme from './README/ProgressBar.md'
 
 export class Progressor extends React.Component {
   constructor (props) {

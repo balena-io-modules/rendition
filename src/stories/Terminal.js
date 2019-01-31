@@ -6,7 +6,7 @@ import { Box, Provider, Terminal } from '../'
 import { output1 } from './assets/tty-output'
 import { Repl } from './assets/repl'
 import { isTakingScreenshot } from './helpers'
-import * as Readme from './README/Terminal.md'
+import Readme from './README/Terminal.md'
 
 const outputArray = output1.split('\n')
 

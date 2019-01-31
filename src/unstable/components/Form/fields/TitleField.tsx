@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import asRendition from '../../../../asRendition';
 import { px } from '../../../../utils';
 
 export const LegendElement = styled.legend`
@@ -11,20 +12,24 @@ export const LegendElement = styled.legend`
 	width: 100%;
 `;
 
-export const TitleField = (props: {
+const TitleFieldBase = (props: {
 	id: string;
 	required: boolean;
 	title?: string;
+	theme: any;
 }) => {
-	const { id, required, title } = props;
+	const { id, required, title, theme } = props;
 	if (!title) {
 		return null;
 	}
 
 	return (
-		<LegendElement id={id}>
+		<LegendElement id={id} theme={theme}>
 			{title}
 			{required && '*'}
 		</LegendElement>
 	);
 };
+
+export const TitleField = asRendition(TitleFieldBase as any)
+
