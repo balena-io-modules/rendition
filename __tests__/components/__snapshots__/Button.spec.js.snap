@@ -6,6 +6,118 @@ exports[`Button renders correctly 1`] = `
 >
   <button
     className="sc-VigVT hegYug sc-gqjmRU fJhKKS sc-htoDjs blFLcR"
+    theme={
+      Object {
+        "breakpoints": Array [
+          32,
+          48,
+          64,
+          80,
+        ],
+        "colors": Object {
+          "danger": Object {
+            "dark": "#661B1B",
+            "light": "#FFECEC",
+            "main": "#FF4444",
+            "semilight": "#FFA1A1",
+          },
+          "gray": Object {
+            "dark": "#9f9f9f",
+            "light": "#f4f4f4",
+            "main": "#c6c8c9",
+          },
+          "info": Object {
+            "dark": "#0D3C58",
+            "light": "#E9F4FB",
+            "main": "#2297DE",
+            "semilight": "#90CBEE",
+          },
+          "primary": Object {
+            "dark": "#1E87C7",
+            "light": "#5FB3E7",
+            "main": "#2297DE",
+          },
+          "quartenary": Object {
+            "dark": "#D3D6DB",
+            "light": "#F0F3F7",
+            "main": "#EBEFF4",
+          },
+          "secondary": Object {
+            "dark": "#E5B01F",
+            "light": "#FFD45E",
+            "main": "#FFC523",
+          },
+          "statusConfiguring": Object {
+            "main": "#ffb25e",
+          },
+          "statusIdle": Object {
+            "main": "#89c683",
+          },
+          "statusInactive": Object {
+            "main": "#d3d6db",
+          },
+          "statusOffline": Object {
+            "main": "#fd7c7c",
+          },
+          "statusPostProvisioning": Object {
+            "main": "#aa96d5",
+          },
+          "statusUpdating": Object {
+            "main": "#75C5F5",
+          },
+          "success": Object {
+            "dark": "#1E4707",
+            "light": "#EDF7E7",
+            "main": "#4DB313",
+            "semilight": "#A6D989",
+          },
+          "tertiary": Object {
+            "dark": "#2F3033",
+            "light": "#7E8085",
+            "main": "#4D5057",
+          },
+          "text": Object {
+            "dark": "#1c1d1e",
+            "light": "#8f9297",
+            "main": "#3c3e42",
+          },
+          "warning": Object {
+            "dark": "#64410D",
+            "light": "#FEF5E9",
+            "main": "#FCA321",
+            "semilight": "#FDD190",
+          },
+        },
+        "font": "Roboto, Arial, sans-serif",
+        "fontSizes": Array [
+          12,
+          14,
+          16,
+          20,
+          24,
+          32,
+          48,
+          64,
+          72,
+          96,
+        ],
+        "monospace": "'Ubuntu Mono', 'Courier New', monospace",
+        "radius": 3,
+        "space": Array [
+          0,
+          4,
+          8,
+          16,
+          36,
+          48,
+          128,
+        ],
+        "weights": Array [
+          400,
+          700,
+        ],
+      }
+    }
   >
     Click me
   </button>
@@ -17,8 +129,121 @@ exports[`Styled Anchor Button renders correctly 1`] = `
   className="sc-bdVaJa jKopLr"
 >
   <a
-    className="sc-jTzLTM ctytKv sc-jzJRlG fKAaUV sc-fjdhpX gvSMLr"
+    className="sc-jTzLTM ctytKv sc-gqjmRU fJhKKS sc-htoDjs blFLcR"
     href="#"
+    m={2}
+    theme={
+      Object {
+        "breakpoints": Array [
+          32,
+          48,
+          64,
+          80,
+        ],
+        "colors": Object {
+          "danger": Object {
+            "dark": "#661B1B",
+            "light": "#FFECEC",
+            "main": "#FF4444",
+            "semilight": "#FFA1A1",
+          },
+          "gray": Object {
+            "dark": "#9f9f9f",
+            "light": "#f4f4f4",
+            "main": "#c6c8c9",
+          },
+          "info": Object {
+            "dark": "#0D3C58",
+            "light": "#E9F4FB",
+            "main": "#2297DE",
+            "semilight": "#90CBEE",
+          },
+          "primary": Object {
+            "dark": "#1E87C7",
+            "light": "#5FB3E7",
+            "main": "#2297DE",
+          },
+          "quartenary": Object {
+            "dark": "#D3D6DB",
+            "light": "#F0F3F7",
+            "main": "#EBEFF4",
+          },
+          "secondary": Object {
+            "dark": "#E5B01F",
+            "light": "#FFD45E",
+            "main": "#FFC523",
+          },
+          "statusConfiguring": Object {
+            "main": "#ffb25e",
+          },
+          "statusIdle": Object {
+            "main": "#89c683",
+          },
+          "statusInactive": Object {
+            "main": "#d3d6db",
+          },
+          "statusOffline": Object {
+            "main": "#fd7c7c",
+          },
+          "statusPostProvisioning": Object {
+            "main": "#aa96d5",
+          },
+          "statusUpdating": Object {
+            "main": "#75C5F5",
+          },
+          "success": Object {
+            "dark": "#1E4707",
+            "light": "#EDF7E7",
+            "main": "#4DB313",
+            "semilight": "#A6D989",
+          },
+          "tertiary": Object {
+            "dark": "#2F3033",
+            "light": "#7E8085",
+            "main": "#4D5057",
+          },
+          "text": Object {
+            "dark": "#1c1d1e",
+            "light": "#8f9297",
+            "main": "#3c3e42",
+          },
+          "warning": Object {
+            "dark": "#64410D",
+            "light": "#FEF5E9",
+            "main": "#FCA321",
+            "semilight": "#FDD190",
+          },
+        },
+        "font": "Roboto, Arial, sans-serif",
+        "fontSizes": Array [
+          12,
+          14,
+          16,
+          20,
+          24,
+          32,
+          48,
+          64,
+          72,
+          96,
+        ],
+        "monospace": "'Ubuntu Mono', 'Courier New', monospace",
+        "radius": 3,
+        "space": Array [
+          0,
+          4,
+          8,
+          16,
+          36,
+          48,
+          128,
+        ],
+        "weights": Array [
+          400,
+          700,
+        ],
+      }
+    }
   >
     Click me
   </a>
@@ -31,6 +256,119 @@ exports[`Styled Button renders correctly 1`] = `
 >
   <button
     className="sc-VigVT kKVfAK sc-gqjmRU fJhKKS sc-htoDjs blFLcR"
+    m={2}
+    theme={
+      Object {
+        "breakpoints": Array [
+          32,
+          48,
+          64,
+          80,
+        ],
+        "colors": Object {
+          "danger": Object {
+            "dark": "#661B1B",
+            "light": "#FFECEC",
+            "main": "#FF4444",
+            "semilight": "#FFA1A1",
+          },
+          "gray": Object {
+            "dark": "#9f9f9f",
+            "light": "#f4f4f4",
+            "main": "#c6c8c9",
+          },
+          "info": Object {
+            "dark": "#0D3C58",
+            "light": "#E9F4FB",
+            "main": "#2297DE",
+            "semilight": "#90CBEE",
+          },
+          "primary": Object {
+            "dark": "#1E87C7",
+            "light": "#5FB3E7",
+            "main": "#2297DE",
+          },
+          "quartenary": Object {
+            "dark": "#D3D6DB",
+            "light": "#F0F3F7",
+            "main": "#EBEFF4",
+          },
+          "secondary": Object {
+            "dark": "#E5B01F",
+            "light": "#FFD45E",
+            "main": "#FFC523",
+          },
+          "statusConfiguring": Object {
+            "main": "#ffb25e",
+          },
+          "statusIdle": Object {
+            "main": "#89c683",
+          },
+          "statusInactive": Object {
+            "main": "#d3d6db",
+          },
+          "statusOffline": Object {
+            "main": "#fd7c7c",
+          },
+          "statusPostProvisioning": Object {
+            "main": "#aa96d5",
+          },
+          "statusUpdating": Object {
+            "main": "#75C5F5",
+          },
+          "success": Object {
+            "dark": "#1E4707",
+            "light": "#EDF7E7",
+            "main": "#4DB313",
+            "semilight": "#A6D989",
+          },
+          "tertiary": Object {
+            "dark": "#2F3033",
+            "light": "#7E8085",
+            "main": "#4D5057",
+          },
+          "text": Object {
+            "dark": "#1c1d1e",
+            "light": "#8f9297",
+            "main": "#3c3e42",
+          },
+          "warning": Object {
+            "dark": "#64410D",
+            "light": "#FEF5E9",
+            "main": "#FCA321",
+            "semilight": "#FDD190",
+          },
+        },
+        "font": "Roboto, Arial, sans-serif",
+        "fontSizes": Array [
+          12,
+          14,
+          16,
+          20,
+          24,
+          32,
+          48,
+          64,
+          72,
+          96,
+        ],
+        "monospace": "'Ubuntu Mono', 'Courier New', monospace",
+        "radius": 3,
+        "space": Array [
+          0,
+          4,
+          8,
+          16,
+          36,
+          48,
+          128,
+        ],
+        "weights": Array [
+          400,
+          700,
+        ],
+      }
+    }
   >
     Click me
   </button>
