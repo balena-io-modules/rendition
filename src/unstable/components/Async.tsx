@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 
 // Load given React component asynchronously, needed when implementing WASM
-export const Async = (importComponent: () => Promise<any>) => {
-	return class extends Component {
+export const Async = (importComponent: () => any) => {
+	return class extends React.Component {
 		displayName = importComponent;
 
 		state = {
@@ -10,7 +10,7 @@ export const Async = (importComponent: () => Promise<any>) => {
 		};
 
 		componentDidMount() {
-			importComponent().then(cmp => {
+			importComponent().then((cmp: any) => {
 				this.setState({ component: cmp.default });
 			});
 		}
