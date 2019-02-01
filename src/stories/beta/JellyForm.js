@@ -5,8 +5,8 @@ import { action } from '@storybook/addon-actions'
 import { Async } from '../../unstable/'
 
 const JellyForm = Async(() => {
-  return import("../../unstable/components/JellyForm");
-});
+  return import('../../unstable/components/JellyForm')
+})
 
 const schema = `
   title: pricing
@@ -108,10 +108,6 @@ const schema = `
 
 `
 
-storiesOf('Beta/JellyForm', module)
-  .add('Standard', () => {
-    return (
-      <JellyForm schema={schema} />
-    )
-  })
-
+storiesOf('Beta/JellyForm', module).add('Standard', () => {
+  return <JellyForm schema={schema} />
+})
