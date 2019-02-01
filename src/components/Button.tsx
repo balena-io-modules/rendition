@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ButtonAnchorProps, ButtonProps } from 'rendition';
-import styled, { StyledFunction, withTheme } from 'styled-components';
-import asRendition, { withStyledSystem } from '../asRendition';
+import styled, { withTheme } from 'styled-components';
+import asRendition from '../asRendition';
 import {
 	bold,
 	darken,
@@ -56,7 +56,14 @@ const buttonActiveStyles = (props: ThemedButtonProps) => `
 	};
 `;
 
-const ButtonBase = (styled.button as StyledFunction<ThemedButtonProps>)`
+const ButtonRepresentation = ({
+	as: Representation,
+	...props
+}: { as: string | React.ComponentType } & ThemedButtonProps) => {
+	return <Representation {...props} />;
+};
+
+const ButtonBase = styled(ButtonRepresentation)`
 	${props =>
 		props.active
 			? buttonActiveStyles(props)
@@ -214,7 +221,7 @@ const getStyledButton = ({
 	return ButtonBase;
 };
 
-const ButtonFactory = <T extends keyof JSX.IntrinsicElements>(tag?: T) => {
+const ButtonFactory = <T extends keyof JSX.IntrinsicElements>(tag: T) => {
 	const Button = (props: ThemedButtonProps) => {
 		const {
 			outline,
@@ -225,17 +232,10 @@ const ButtonFactory = <T extends keyof JSX.IntrinsicElements>(tag?: T) => {
 			...restProps
 		} = props;
 
-		let StyledButton = getStyledButton(props);
-		if (tag) {
-			// when using withComponent we need to rewire the styled-system props
-			// when we upgrade to styled-components v4 this will be replaced with an `as={tag}`
-			StyledButton = withStyledSystem(StyledButton.withComponent(
-				tag,
-			) as any) as any;
-		}
+		const StyledButton = getStyledButton(props);
 
 		return (
-			<StyledButton {...restProps}>
+			<StyledButton as={tag} {...restProps}>
 				{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
 				{children}
 			</StyledButton>
@@ -245,7 +245,7 @@ const ButtonFactory = <T extends keyof JSX.IntrinsicElements>(tag?: T) => {
 	return withTheme(asRendition(Button));
 };
 
-const Button = ButtonFactory() as React.ComponentClass<ButtonProps> & {
+const Button = ButtonFactory('button') as React.ComponentClass<ButtonProps> & {
 	a: React.ComponentClass<ButtonAnchorProps>;
 };
 Button.a = ButtonFactory('a') as React.ComponentClass<ButtonAnchorProps>;
