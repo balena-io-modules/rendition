@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Link renders correctly 1`] = `
+exports[`Link component Should match the stored snapshot 1`] = `
 <div
   className="sc-bdVaJa jKopLr"
 >
