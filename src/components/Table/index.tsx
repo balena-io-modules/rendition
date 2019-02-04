@@ -416,7 +416,7 @@ export default class Table<T> extends React.Component<
 								{map(columns, item => {
 									if (item.sortable) {
 										return (
-											<div data-display="table-cell" key={item.field}>
+											<div data-display="table-cell" key={item.field as string}>
 												<HeaderButton
 													data-field={item.field}
 													plaintext
@@ -438,7 +438,7 @@ export default class Table<T> extends React.Component<
 										);
 									}
 									return (
-										<div data-display="table-cell" key={item.field}>
+										<div data-display="table-cell" key={item.field as string}>
 											{item.label || item.field}
 										</div>
 									);

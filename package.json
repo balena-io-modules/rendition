@@ -80,10 +80,10 @@
     "storybook-readme": "^4.0.5",
     "ts-jest": "^23.10.1",
     "ts-loader": "^5.3.0",
-    "ts-node": "^3.3.0",
+    "ts-node": "^8.0.2",
     "tslint": "^5.9.1",
     "tslint-config-prettier": "^1.17.0",
-    "typescript": "^2.6.2"
+    "typescript": "3.2.2"
   },
   "dependencies": {
     "@balena/grid-styled": "3.1.1",

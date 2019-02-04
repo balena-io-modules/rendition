@@ -74,7 +74,7 @@ export class TableRow<T> extends React.PureComponent<TableRowProps<T>, {}> {
 							data-key={keyAttribute}
 							onClick={this.props.onRowClick}
 							{...cellAttributes}
-							key={column.field}
+							key={column.field as string}
 						>
 							{renderField(data, column)}
 						</a>

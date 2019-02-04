@@ -168,7 +168,7 @@ export const getOperators = (schema: JSONSchema6, field: string) => {
 
 	return map(model.operators, (value, key) => ({
 		slug: key,
-		label: value.getLabel(subSchema),
+		label: (value as any).getLabel(subSchema),
 	}));
 };
 
