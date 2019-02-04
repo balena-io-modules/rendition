@@ -38,8 +38,10 @@ const FilterInput = (props: FilterInputProps) => {
 		return null;
 	}
 
+	const Edit = model.Edit as React.SFC<any>;
+
 	return (
-		<model.Edit
+		<Edit
 			schema={props.schema}
 			value={props.value}
 			operator={props.operator}

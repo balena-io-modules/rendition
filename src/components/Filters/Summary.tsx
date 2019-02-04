@@ -49,7 +49,11 @@ class FilterSummary extends React.Component<
 		};
 	}
 
-	save() {
+	save = (event?: React.FormEvent<HTMLFormElement>) => {
+		if (event) {
+			event.preventDefault();
+		}
+
 		const { name, scope } = this.state;
 
 		if (!name) {
@@ -63,7 +67,7 @@ class FilterSummary extends React.Component<
 			showForm: false,
 			id: '',
 		});
-	}
+	};
 
 	handleChange(e: React.ChangeEvent<HTMLInputElement>) {
 		const name = e.target.value;
@@ -78,10 +82,10 @@ class FilterSummary extends React.Component<
 					<Modal
 						title="Save current view"
 						cancel={() => this.setState({ showForm: false })}
-						done={() => this.save()}
+						done={this.save}
 						action="Save"
 					>
-						<form onSubmit={e => e.preventDefault() || this.save()}>
+						<form onSubmit={this.save}>
 							{!!scopes && scopes.length > 1 && (
 								<Flex mb={30}>
 									<Txt width={90}>Visible to:</Txt>

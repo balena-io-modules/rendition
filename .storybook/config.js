@@ -11,7 +11,12 @@ injectGlobal([], {
   body: {
     lineHeight: 1.5,
     margin: 0,
-    fontFamily: theme.font
+    fontFamily: theme.font,
+    height: '100%',
+    background: 'white'
+  },
+  html: {
+    height: '100%'
   }
 })
 
@@ -23,7 +28,7 @@ addDecorator(initScreenshot())
 // systems, otherwise a screenshot could be rendered using the incorrect font
 // and cause a conflict
 setScreenshotOptions({
-  waitFor: 'fontLoading',
+  waitFor: 'fontLoading'
 })
 
 const req = require.context('../src', true, /\.js$/)
