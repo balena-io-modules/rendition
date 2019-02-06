@@ -1,5 +1,4 @@
-import { configure, setAddon, addDecorator } from '@storybook/react'
-import * as React from 'react'
+import { configure, addDecorator } from '@storybook/react'
 import { initScreenshot, setScreenshotOptions } from 'storybook-chrome-screenshot'
 import { injectGlobal } from 'styled-components'
 import theme from '../src/theme'

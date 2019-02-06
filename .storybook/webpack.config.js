@@ -1,6 +1,6 @@
 module.exports = (defaultConfig) => {
-  defaultConfig.resolve.alias['balena-cdsl'] = 'balena-cdsl/balena_cdsl';
-  defaultConfig.resolve.alias['balena-temen'] = 'balena-temen/balena_temen';
+  defaultConfig.resolve.alias['balena-cdsl'] = 'balena-cdsl/balena_cdsl'
+  defaultConfig.resolve.alias['balena-temen'] = 'balena-temen/balena_temen'
 
   defaultConfig.resolve.extensions.push('.ts')
   defaultConfig.resolve.extensions.push('.tsx')
