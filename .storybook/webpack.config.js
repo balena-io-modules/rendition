@@ -1,4 +1,4 @@
-module.exports = (defaultConfig, configtype) => {
+module.exports = (defaultConfig) => {
   defaultConfig.resolve.alias['balena-cdsl'] = 'balena-cdsl/balena_cdsl';
   defaultConfig.resolve.alias['balena-temen'] = 'balena-temen/balena_temen';
 
