@@ -150,13 +150,11 @@ describe('JellyForm component', () => {
       input.simulate('change', { target: { value } })
       component.update()
 
-      return Promise.delay(150).then(() => {
-        component.find('form').simulate('submit')
-        expect(callback.callCount).toEqual(1)
-        expect(callback.getCall(0).args[0].formData).toEqual({ Name: value })
+      component.find('form').simulate('submit')
+      expect(callback.callCount).toEqual(1)
+      expect(callback.getCall(0).args[0].formData).toEqual({ Name: value })
 
-        component.unmount()
-      })
+      component.unmount()
     })
   })
 
