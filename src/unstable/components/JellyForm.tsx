@@ -65,6 +65,21 @@ const runFormulas = (schema: any, value: any) => {
 	return merge({}, value, evaluate);
 };
 
+const computeFormSchemas = (jellySchema: string, uiSchema: any) => {
+	const { json_schema, ui_object } = cdsl.generate_ui(jellySchema);
+
+	ui_object['ui:order'] = json_schema.$$order;
+
+	return {
+		schema: json_schema,
+
+		// Merge the UI schema that is computed from the Jelly schema with any UI
+		// Schema provided via props. This allows the computed values to be
+		// overridden or augmented.
+		uiSchema: merge({}, ui_object, uiSchema),
+	};
+};
+
 interface JellyFormState {
 	schema: any;
 	uiSchema: any;
@@ -75,13 +90,15 @@ class JellyForm extends React.Component<JellyFormProps, JellyFormState> {
 	constructor(props: JellyFormProps) {
 		super(props);
 
-		const schema = cdsl.generate_ui(props.schema);
-		schema.ui_object['ui:order'] = schema.json_schema.$$order;
+		const { schema, uiSchema } = computeFormSchemas(
+			props.schema,
+			props.uiSchema,
+		);
 
 		this.state = {
 			value: props.value || {},
-			schema: schema.json_schema,
-			uiSchema: schema.ui_object,
+			schema,
+			uiSchema,
 		};
 	}
 
@@ -92,13 +109,18 @@ class JellyForm extends React.Component<JellyFormProps, JellyFormState> {
 			});
 		}
 
-		if (!isEqual(this.props.schema, nextProps.schema)) {
-			const schema = cdsl.generate_ui(nextProps.schema);
-			schema.ui_object['ui:order'] = schema.json_schema.$$order;
+		if (
+			!isEqual(this.props.schema, nextProps.schema) ||
+			!isEqual(this.props.uiSchema, nextProps.uiSchema)
+		) {
+			const { schema, uiSchema } = computeFormSchemas(
+				nextProps.schema,
+				nextProps.uiSchema,
+			);
 
 			this.setState({
-				schema: schema.json_schema,
-				uiSchema: schema.ui_object,
+				schema,
+				uiSchema,
 			});
 		}
 	}
@@ -124,12 +146,7 @@ class JellyForm extends React.Component<JellyFormProps, JellyFormState> {
 	};
 
 	render() {
-		const { value, schema } = this.state;
-
-		// Merge the UI schema that is computed from the Jelly schema with any UI
-		// Schema provided via props. This allows the computed values to be
-		// overridden or augmented.
-		const uiSchema = merge({}, this.state.uiSchema, this.props.uiSchema);
+		const { value, schema, uiSchema } = this.state;
 
 		const options: Partial<BaseFormProps> = omit(this.props, [
 			'value',
