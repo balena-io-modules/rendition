@@ -17,7 +17,7 @@ const getFormulaKeys = function(obj: any, prefix: string = '') {
 	const keys = Object.keys(obj);
 	prefix = prefix ? prefix + '.' : '';
 	return keys.reduce(
-		function(result, key) {
+		(result, key) => {
 			if (isPlainObject(obj[key])) {
 				result = result.concat(getFormulaKeys(obj[key], prefix + key));
 			} else if (key === '$$formula') {
