@@ -79,7 +79,7 @@ class JellyForm extends React.Component<JellyFormProps, JellyFormState> {
 		schema.ui_object['ui:order'] = schema.json_schema.$$order;
 
 		this.state = {
-			value: this.props.value || {},
+			value: props.value || {},
 			schema: schema.json_schema,
 			uiSchema: schema.ui_object,
 		};
