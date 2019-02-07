@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Img, Link, Navbar, Provider } from '../'
-import * as logo from './assets/etcher.svg'
-import * as Readme from './README/NavBar.md'
+import logo from './assets/etcher.svg'
+import Readme from './README/NavBar.md'
 
 storiesOf('Core/Navbar', module)
   .addDecorator(withReadme(Readme))

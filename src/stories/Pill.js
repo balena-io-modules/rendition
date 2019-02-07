@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Pill, Provider } from '../'
-import * as Readme from './README/Pill.md'
+import Readme from './README/Pill.md'
 
 storiesOf('Core/Pill', module)
   .addDecorator(withReadme(Readme))

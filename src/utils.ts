@@ -76,7 +76,8 @@ export const getColoringType = (props: {
 	// get primary, tertiary, secondary etc
 	const type = find<string>(
 		Object.keys(props),
-		b => !!props[b] && !!find(Object.keys(props.theme.colors), k => k === b),
+		(b: any) =>
+			!!props[b] && !!find(Object.keys(props.theme.colors), k => k === b),
 	);
 	return type;
 };

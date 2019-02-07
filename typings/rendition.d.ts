@@ -808,8 +808,7 @@ declare module 'rendition/dist/unstable' {
 		'ui:warning'?: string;
 	}
 
-	interface FormProps extends BoxProps {
-		schema: JSONSchema6;
+	interface BaseFormProps extends BoxProps {
 		submitButtonText?: string | JSX.Element;
 		hideSubmitButton?: boolean;
 		submitButtonProps?: ButtonProps;
@@ -819,5 +818,20 @@ declare module 'rendition/dist/unstable' {
 		uiSchema?: RenditionUiSchema;
 	}
 
+	interface FormProps extends BaseFormProps {
+		schema: JSONSchema6;
+	}
+
 	class Form extends RenderableElementWithProps<FormProps, any> {}
+}
+
+declare module 'rendition/dist/unstable/components/JellyForm' {
+	import { RenderableElementWithProps } from 'rendition';
+	import { BaseFormProps } from 'rendition/dist/unstable';
+
+	interface JellyFormProps extends BaseFormProps {
+		schema: string;
+	}
+
+	class JellyForm extends RenderableElementWithProps<JellyFormProps, any> {}
 }

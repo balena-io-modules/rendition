@@ -1,5 +1,5 @@
-import * as React from 'react'
-import * as FaPlus from 'react-icons/lib/fa/spinner'
+import React from 'react'
+import FaPlus from 'react-icons/lib/fa/spinner'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withScreenshot } from 'storybook-chrome-screenshot'
@@ -19,7 +19,7 @@ import {
   Txt,
   Link
 } from '..'
-import * as Readme from './README/Tooltips.md'
+import Readme from './README/Tooltips.md'
 
 storiesOf('Core/Tooltips', module)
   .addDecorator(withReadme(Readme))

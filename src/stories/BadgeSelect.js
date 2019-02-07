@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { BadgeSelect, Box, Provider } from '../'
-import * as Readme from './README/BadgeSelect.md'
+import Readme from './README/BadgeSelect.md'
 
 storiesOf('Core/BadgeSelect', module)
   .addDecorator(withReadme(Readme))

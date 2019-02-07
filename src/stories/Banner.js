@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Banner, Heading, Provider, Txt } from '../'
-import * as bgImage from './assets/bg.png'
-import * as Readme from './README/Banner.md'
+import bgImage from './assets/bg.png'
+import Readme from './README/Banner.md'
 
 storiesOf('Core/Banner', module)
   .addDecorator(withReadme(Readme))

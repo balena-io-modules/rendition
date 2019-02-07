@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as uniq from 'lodash/uniq'
+import uniq from 'lodash/uniq'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withScreenshot } from 'storybook-chrome-screenshot'
@@ -7,7 +7,7 @@ import withReadme from 'storybook-readme/with-readme'
 import styled from 'styled-components'
 import { Box, Divider, Filters, Heading, Provider, SchemaSieve } from '../'
 import PokeDex from './assets/pokedex'
-import * as Readme from './README/Filters.md'
+import Readme from './README/Filters.md'
 
 const StyledTable = styled.table`
   width: 100%;

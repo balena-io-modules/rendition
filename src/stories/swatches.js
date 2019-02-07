@@ -4,7 +4,7 @@ import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Flex, Heading, Provider } from '../'
 import { withTheme } from 'styled-components'
-import * as Readme from './README/Swatches.md'
+import Readme from './README/Swatches.md'
 
 const S = ({ style, border, theme }) => {
   const { main, light, dark, semilight } = theme.colors[style]

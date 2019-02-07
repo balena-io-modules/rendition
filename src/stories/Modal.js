@@ -6,7 +6,7 @@ import withReadme from 'storybook-readme/with-readme'
 import { Box, Button, Heading, Modal, Provider } from '../'
 import { Progressor } from './ProgressBar'
 import PokeDex from './assets/pokedex'
-import * as Readme from './README/Modal.md'
+import Readme from './README/Modal.md'
 
 const cancelAction = action('Modal.cancel')
 const secondaryAction = action('Modal.secondary')

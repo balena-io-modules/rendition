@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Provider, Textarea } from '../'
-import * as Readme from './README/Textarea.md'
+import Readme from './README/Textarea.md'
 
 class TextareaHOC extends React.Component {
   constructor (props) {

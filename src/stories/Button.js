@@ -3,11 +3,11 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
-import * as FaExpand from 'react-icons/lib/fa/expand'
-import * as FaRecycle from 'react-icons/lib/fa/recycle'
-import * as FaSpinner from 'react-icons/lib/fa/spinner'
+import FaExpand from 'react-icons/lib/fa/expand'
+import FaRecycle from 'react-icons/lib/fa/recycle'
+import FaSpinner from 'react-icons/lib/fa/spinner'
 import { Box, Button, Provider } from '../'
-import * as Readme from './README/Button.md'
+import Readme from './README/Button.md'
 
 storiesOf('Core/Button', module)
   .addDecorator(withReadme(Readme))

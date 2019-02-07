@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Input, Provider } from '../'
-import * as Readme from './README/Input.md'
+import Readme from './README/Input.md'
 
 storiesOf('Core/Input', module)
   .addDecorator(withReadme(Readme))

@@ -16,6 +16,10 @@
     "baseUrl": ".",
     "keyofStringsOnly": true,
     "jsx": "react",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
     "paths": {
       "~/*": [
         "./src/*"
