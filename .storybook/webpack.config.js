@@ -1,5 +1,5 @@
 module.exports = (defaultConfig) => {
-  defaultConfig.resolve.alias['balena-cdsl'] = 'balena-cdsl/balena_cdsl'
+  defaultConfig.resolve.alias['jellyschema'] = 'jellyschema/jellyschema'
   defaultConfig.resolve.alias['balena-temen'] = 'balena-temen/balena_temen'
 
   defaultConfig.resolve.extensions.push('.ts')
