@@ -1,5 +1,5 @@
-import * as cdsl from 'balena-cdsl';
 import * as temen from 'balena-temen';
+import * as jellyschema from 'jellyschema';
 import { JSONSchema6 } from 'json-schema';
 import cloneDeep = require('lodash/cloneDeep');
 import get = require('lodash/get');
@@ -66,17 +66,15 @@ const runFormulas = (schema: any, value: any) => {
 };
 
 const computeFormSchemas = (jellySchema: string, uiSchema: any) => {
-	const { json_schema, ui_object } = cdsl.generate_ui(jellySchema);
-
-	ui_object['ui:order'] = json_schema.$$order;
+	const computed = jellyschema.generateJsonAndUiSchema(jellySchema);
 
 	return {
-		schema: json_schema,
+		schema: computed.jsonSchema,
 
 		// Merge the UI schema that is computed from the Jelly schema with any UI
 		// Schema provided via props. This allows the computed values to be
 		// overridden or augmented.
-		uiSchema: merge({}, ui_object, uiSchema),
+		uiSchema: merge({}, computed.uiSchema, uiSchema),
 	};
 };
 
