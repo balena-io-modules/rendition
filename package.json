@@ -47,6 +47,8 @@
     "@storybook/addon-actions": "^4.1.11",
     "@storybook/react": "^4.1.11",
     "@types/jest": "^23.3.2",
+    "acorn": "^6.0.7",
+    "acorn-dynamic-import": "^4.0.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.0-beta.6",
     "css-loader": "^0.28.5",
@@ -82,7 +84,8 @@
     "ts-node": "^8.0.2",
     "tslint": "^5.9.1",
     "tslint-config-prettier": "^1.17.0",
-    "typescript": "3.2.2"
+    "typescript": "3.2.2",
+    "webpack": "^4.28.4"
   },
   "dependencies": {
     "@balena/grid-styled": "3.1.1",
@@ -100,8 +103,6 @@
     "@types/react-jsonschema-form": "^1.0.9",
     "@types/recompose": "^0.26.2",
     "@types/uuid": "^3.4.3",
-    "acorn": "^6.0.7",
-    "acorn-dynamic-import": "^4.0.0",
     "ajv": "^6.7.0",
     "ajv-keywords": "^3.3.0",
     "balena-temen": "^0.5.0",
@@ -120,12 +121,10 @@
     "regex-parser": "^2.2.7",
     "resin-device-status": "^1.1.1",
     "resin-semver": "^1.4.0",
-    "showdown": "^1.7.3",
     "styled-components": "^3.2.3",
     "styled-system": "^1.0.5",
     "tag-hoc": "1.0.0",
     "uuid": "^3.2.1",
-    "webpack": "^4.28.4",
     "xterm": "^3.11.0"
   },
   "lint-staged": {
