@@ -70,7 +70,7 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [Markdown](#markdown)
 - [Mermaid](#mermaid)
 - [Modal](#modal)
-- [NavBar](#navbar)
+- [Navbar](#navbar)
 - [Pager](#pager)
 - [Pill](#pill)
 - [ProgressBar](#progressbar)
@@ -604,11 +604,11 @@ are rendered inside the modal.
 | `cancelButtonProps` | `object` | - | - | Properties that are passed to the cancel button, these are the same props used for the [`Button`](#button) component |
 | style | `object` | - | - |  Apply custom styles to Modal, the object is applied as a [`style` attribute](https://reactjs.org/docs/dom-elements.html#style) |
 | containerStyle | `object` | - | - | Apply custom styles to the container of the Modal, the object is applied as a [`style` attribute](https://reactjs.org/docs/dom-elements.html#style) |
-### NavBar
+### Navbar
 
 A component used to render a navigation bar.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/NavBar.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Navbar.js)
 
 #### Props
 
