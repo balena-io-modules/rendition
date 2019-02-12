@@ -2,9 +2,9 @@ import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
-import { Img, Link, Navbar, Provider } from '../'
+import { Img, Link, Navbar, Provider } from '..'
 import logo from './assets/etcher.svg'
-import Readme from './README/NavBar.md'
+import Readme from './README/Navbar.md'
 
 storiesOf('Core/Navbar', module)
   .addDecorator(withReadme(Readme))
