@@ -173,6 +173,9 @@ export const stripSchemaFormats = (
 				_strip(subSchema as JSONSchema6);
 			});
 		}
+		if (schema.items) {
+			_strip(schema.items as JSONSchema6);
+		}
 	};
 
 	_strip(newSchema);

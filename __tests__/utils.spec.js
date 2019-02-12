@@ -6,6 +6,13 @@ describe('utils', () => {
     const schema = {
       type: 'object',
       properties: {
+        array: {
+          type: 'array',
+          items: {
+            type: 'string',
+            format: 'dnsmasq-address'
+          }
+        },
         foo: {
           type: 'object',
           properties: {
@@ -30,6 +37,12 @@ describe('utils', () => {
       expect(utils.stripSchemaFormats(schema)).toEqual({
         type: 'object',
         properties: {
+          array: {
+            type: 'array',
+            items: {
+              type: 'string'
+            }
+          },
           foo: {
             type: 'object',
             properties: {
@@ -56,6 +69,12 @@ describe('utils', () => {
       expect(utils.stripSchemaFormats(schema, whitelist)).toEqual({
         type: 'object',
         properties: {
+          array: {
+            type: 'array',
+            items: {
+              type: 'string'
+            }
+          },
           foo: {
             type: 'object',
             properties: {
