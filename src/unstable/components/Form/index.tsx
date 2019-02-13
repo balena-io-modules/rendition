@@ -1,4 +1,5 @@
 import { JSONSchema6 } from 'json-schema';
+import get = require('lodash/get');
 import isEqual = require('lodash/isEqual');
 import omit = require('lodash/omit');
 import * as React from 'react';
@@ -46,6 +47,15 @@ const FormWrapper = styled(Box)`
 		margin: 0;
 		padding: 0;
 		border: 0;
+	}
+
+	// Style the error list, since it can't be templated
+	.panel-danger,
+	.error-detail {
+		font-size: ${props => utils.px(get(props, 'theme.fontSizes[1]', 14))};
+		margin-top: ${props => utils.px(get(props, 'theme.space[1]', 4))};
+		margin-bottom: ${props => utils.px(get(props, 'theme.space[1]', 4))};
+		color: ${props => get(props, 'theme.colors.danger.main', '#a94442')};
 	}
 `;
 
@@ -123,6 +133,7 @@ export default class FormHOC extends React.Component<
 		return (
 			<FormWrapper {...cleanProps}>
 				<Form
+					showErrorList={false}
 					schema={schema}
 					formData={this.state.value}
 					onSubmit={this.submit}

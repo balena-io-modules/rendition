@@ -62,6 +62,9 @@ const FieldTemplate = (props: FieldTemplateProps) => {
 		return children;
 	}
 
+	console.log({ errors });
+	console.log({ props });
+
 	const warning = uiSchema['ui:warning'];
 
 	return (
