@@ -5,7 +5,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   className="sc-kgoBCf kOSFqw"
 >
   <div
-    className="sc-dUjcNx kALNIx sc-gZMcBi cmZZgb sc-dnqmqq eheJhs sc-bZQynM gBdotH"
+    className="sc-gHboQg idlJVO sc-gZMcBi cmZZgb sc-dnqmqq eheJhs sc-bZQynM gBdotH"
   >
     <form
       className="rjsf"
@@ -17,7 +17,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
       >
         <fieldset>
           <legend
-            className="sc-brqgnP kQhMWK"
+            className="sc-cbkKFq SHexe"
             id="root__title"
           >
             Pokèmon
@@ -26,7 +26,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
             className="form-group field field-string rendition-form__field--root_Name sc-gZMcBi jxxzwT sc-dnqmqq eheJhs sc-bZQynM gcuxEv"
           >
             <label
-              className="control-label sc-fOKMvo cQLvMK"
+              className="control-label sc-dUjcNx bAvoZg"
               htmlFor="root_Name"
             >
               Name
@@ -38,7 +38,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
             </label>
             <input
               autoFocus={false}
-              className="sc-jqCOkK jOizoc sc-dNLxif kQnAUg"
+              className="sc-jbKcbu enNwek sc-hqyNC eZjNAG"
               disabled={false}
               id="root_Name"
               label="Name"

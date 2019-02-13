@@ -1,7 +1,5 @@
 /* globals expect, describe, it */
 import forEach from 'lodash/forEach'
-import { JSDOM } from 'jsdom'
-global.document = (new JSDOM('')).window.document
 
 import { migrations, SchemaSieve as sieve } from '../src'
 
