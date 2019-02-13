@@ -67,7 +67,7 @@ class FormDemo extends React.Component {
     super(props)
 
     this.state = {
-      formData: {}
+      formData: this.props.formData || {}
     }
 
     this.change = ({ formData }) => {
@@ -235,6 +235,35 @@ storiesOf('Beta/Form', module)
         </Box>
 
         <FormDemo schema={extraSchema} />
+      </Provider>
+    )
+  })
+  .add('patternProperties', () => {
+    const patternPropertiesSchema = {
+      type: 'object',
+      properties: {
+        dynamicObject: {
+          patternProperties: {
+            '^[0-9]+$': {
+              title: 'Rule',
+              type: 'string'
+            }
+          },
+          title: 'Rules',
+          type: 'object'
+        }
+      }
+    }
+
+    const formData = {
+      dynamicObject: {
+        '123': 'foo'
+      }
+    }
+
+    return (
+      <Provider>
+        <FormDemo schema={patternPropertiesSchema} formData={formData} />
       </Provider>
     )
   })

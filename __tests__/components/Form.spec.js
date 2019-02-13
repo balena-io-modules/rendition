@@ -405,4 +405,31 @@ describe('Form component', () => {
       component.unmount()
     })
   })
+
+  describe('patternProperties', () => {
+    it('should allow you to add new key value pairs', () => {
+      const schema = {
+        type: 'object',
+        patternProperties: {
+          '^[0-9]+$': {
+            'title': 'Rule',
+            'type': 'string'
+          }
+        }
+      }
+
+      const component = mount(
+        <Provider>
+          <Form
+            schema={schema}
+          />
+        </Provider>
+      )
+
+      const valueInput = component.find('input.rendition-form-pattern-properties__value-field')
+      expect(valueInput.length).toEqual(1)
+      const keyInput = component.find('.rendition-form-pattern-properties__key-field').first()
+      expect(keyInput.length).toEqual(1)
+    })
+  })
 })

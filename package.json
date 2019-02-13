@@ -141,13 +141,11 @@
   },
   "jest": {
     "preset": "ts-jest/presets/js-with-babel",
-    "setupFilesAfterEnv": [
-      "<rootDir>scripts/setupTests.js"
-    ],
     "collectCoverage": true,
     "verbose": true,
     "setupFiles": [
-      "jest-canvas-mock"
+      "jest-canvas-mock",
+      "<rootDir>scripts/setupTests.js"
     ],
     "moduleFileExtensions": [
       "ts",

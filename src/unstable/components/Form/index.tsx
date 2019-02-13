@@ -9,6 +9,7 @@ import Button from '../../../components/Button';
 import { Box } from '../../../components/Grid';
 import * as utils from '../../../utils';
 import { DescriptionField } from './fields/DescriptionField';
+import ObjectField from './fields/ObjectField';
 import { TitleField } from './fields/TitleField';
 import ArrayFieldTemplate from './templates/ArrayFieldTemplate';
 import FieldTemplate from './templates/FieldTemplate';
@@ -36,6 +37,7 @@ const fields: {
 	[k: string]: any;
 } = {
 	DescriptionField,
+	ObjectField,
 	TitleField,
 };
 

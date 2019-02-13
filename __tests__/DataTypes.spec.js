@@ -1,7 +1,5 @@
 /* globals expect, describe, it */
-import { JSDOM } from 'jsdom'
 import { getDataModel } from '../src/components/DataTypes'
-global.document = (new JSDOM('')).window.document
 
 const expectMatchesKeys = (data, keys) =>
   expect(Object.keys(data).sort()).toEqual(keys.sort())

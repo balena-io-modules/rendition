@@ -1,11 +1,9 @@
 /* globals expect, describe, it */
 import isArray from 'lodash/isArray'
 import mapValues from 'lodash/mapValues'
-import { JSDOM } from 'jsdom'
 const Ajv = require('ajv')
 const ajvKeywords = require('ajv-keywords')
 const metaSchema6 = require('ajv/lib/refs/json-schema-draft-06.json')
-global.document = (new JSDOM('')).window.document
 
 import { SchemaSieve as sieve } from '../src'
 
