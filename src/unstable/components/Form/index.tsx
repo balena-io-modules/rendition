@@ -28,6 +28,10 @@ const SUPPORTED_SCHEMA_FORMATS = [
 	'uri',
 ];
 
+// Some keywords cause errors in RJSF validation, so they are removed from the
+// schema before being passed as a prop
+const KEYWORD_BLACKLIST = ['$schema'];
+
 const widgets: {
 	[k: string]: any;
 } = {
@@ -128,7 +132,10 @@ export default class FormHOC extends React.Component<
 			'uiSchema',
 		]);
 
-		const schema = utils.disallowAdditionalProperties(this.state.schema);
+		const schema = omit(
+			utils.disallowAdditionalProperties(this.state.schema),
+			KEYWORD_BLACKLIST,
+		);
 
 		return (
 			<FormWrapper {...cleanProps}>
