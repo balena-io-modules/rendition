@@ -6,6 +6,8 @@ import { Box, Provider } from '../../'
 import { Markdown } from '../../extra/Markdown'
 import Readme from '../README/Markdown.md'
 
+import image from '../assets/GitHub-Mark-120px-plus.png'
+
 const source = `
 # Markdown
 A simple component for rendering *GitHub flavored markdown*.
@@ -45,7 +47,7 @@ _You **can** combine them_
 
 ## Images
 
-![GitHub Logo](https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png)
+![Example Image](${image})
 
 ## Links
 
