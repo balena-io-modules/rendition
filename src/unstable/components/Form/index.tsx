@@ -148,7 +148,7 @@ export default class FormHOC extends React.Component<
 					{hideSubmitButton && <span />}
 
 					{!hideSubmitButton && (
-						<Button primary {...submitButtonProps}>
+						<Button primary {...submitButtonProps} type="submit">
 							{submitButtonText || 'Submit'}
 						</Button>
 					)}

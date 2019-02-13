@@ -80,6 +80,7 @@ export default (props: ArrayFieldTemplateProps) => {
 
 							{props.items.length > 1 && (
 								<ActionButton
+									type="button"
 									className="rendition-form-array-item__move-up"
 									mb="6px"
 									px={1}
@@ -100,6 +101,7 @@ export default (props: ArrayFieldTemplateProps) => {
 
 							{props.items.length > 1 && (
 								<ActionButton
+									type="button"
 									className="rendition-form-array-item__move-down"
 									mb="6px"
 									px={1}
@@ -120,6 +122,7 @@ export default (props: ArrayFieldTemplateProps) => {
 
 							{element.hasRemove && (
 								<ActionButton
+									type="button"
 									className="rendition-form-array-item__remove-item"
 									plaintext
 									mb="6px"
@@ -139,6 +142,7 @@ export default (props: ArrayFieldTemplateProps) => {
 
 			{props.canAdd && (
 				<Button
+					type="button"
 					className="rendition-form-array-item__add-item"
 					iconElement={<FaPlus />}
 					onClick={props.onAddClick}
