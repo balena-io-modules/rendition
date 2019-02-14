@@ -5,7 +5,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   className="sc-kgoBCf kOSFqw"
 >
   <div
-    className="sc-gHboQg idlJVO sc-gZMcBi cmZZgb sc-dnqmqq eheJhs sc-bZQynM gBdotH"
+    className="sc-gHboQg kStFAs sc-gZMcBi cmZZgb sc-dnqmqq eheJhs sc-bZQynM gBdotH"
   >
     <form
       className="rjsf"
@@ -60,6 +60,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
       </div>
       <button
         className="sc-hMqMXs kYklEl sc-kpOJdX gJUwBw"
+        type="submit"
       >
         Submit
       </button>

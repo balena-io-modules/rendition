@@ -1,4 +1,5 @@
 import { JSONSchema6 } from 'json-schema';
+import get = require('lodash/get');
 import isEqual = require('lodash/isEqual');
 import omit = require('lodash/omit');
 import * as React from 'react';
@@ -27,6 +28,10 @@ const SUPPORTED_SCHEMA_FORMATS = [
 	'uri',
 ];
 
+// Some keywords cause errors in RJSF validation, so they are removed from the
+// schema before being passed as a prop
+const KEYWORD_BLACKLIST = ['$schema'];
+
 const widgets: {
 	[k: string]: any;
 } = {
@@ -46,6 +51,15 @@ const FormWrapper = styled(Box)`
 		margin: 0;
 		padding: 0;
 		border: 0;
+	}
+
+	// Style the error list, since it can't be templated
+	.panel-danger,
+	.error-detail {
+		font-size: ${props => utils.px(get(props, 'theme.fontSizes[1]', 14))};
+		margin-top: ${props => utils.px(get(props, 'theme.space[1]', 4))};
+		margin-bottom: ${props => utils.px(get(props, 'theme.space[1]', 4))};
+		color: ${props => get(props, 'theme.colors.danger.main', '#a94442')};
 	}
 `;
 
@@ -118,11 +132,15 @@ export default class FormHOC extends React.Component<
 			'uiSchema',
 		]);
 
-		const schema = utils.disallowAdditionalProperties(this.state.schema);
+		const schema = omit(
+			utils.disallowAdditionalProperties(this.state.schema),
+			KEYWORD_BLACKLIST,
+		);
 
 		return (
 			<FormWrapper {...cleanProps}>
 				<Form
+					showErrorList={false}
 					schema={schema}
 					formData={this.state.value}
 					onSubmit={this.submit}
@@ -137,7 +155,7 @@ export default class FormHOC extends React.Component<
 					{hideSubmitButton && <span />}
 
 					{!hideSubmitButton && (
-						<Button primary {...submitButtonProps}>
+						<Button primary {...submitButtonProps} type="submit">
 							{submitButtonText || 'Submit'}
 						</Button>
 					)}

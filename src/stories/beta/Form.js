@@ -21,7 +21,8 @@ const basicPokedexSchema = {
   title: 'Pokèmon',
   properties: {
     Name: {
-      type: 'string'
+      type: 'string',
+      minLength: 5
     },
     Height: {
       type: 'number'
@@ -33,7 +34,8 @@ const basicPokedexSchema = {
       type: 'string'
     },
     Category: {
-      type: 'string'
+      type: 'string',
+      maxLength: 20
     },
     Abilities: {
       type: 'string'

@@ -1,12 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import {
-  Box,
-  Flex,
-  Provider,
-  Txt
-} from '../../'
+import { Box, Flex, Provider, Txt } from '../../'
 
 import { Async } from '../../unstable/'
 
@@ -20,16 +15,10 @@ const schema = `
   properties:
     - Name:
         type: string
-    - Height:
-        type: number
-    - Weight:
-        type: number
-    - Description:
-        type: string
+        minLength: 5
     - Category:
         type: string
-    - Abilities:
-        type: string
+        maxLength: 20
     - pokedex_number:
         title: National Pokèdex Number
         type: number
