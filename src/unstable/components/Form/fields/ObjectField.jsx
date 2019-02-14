@@ -4,7 +4,7 @@
  */
 
 import AddButton from "react-jsonschema-form/lib/components/AddButton";
-import React, { Component } from "react";
+import * as React from "react";
 import PatternPropertiesField from "./PatternPropertiesField";
 
 import {
@@ -63,7 +63,7 @@ function DefaultObjectFieldTemplate(props) {
   );
 }
 
-class ObjectField extends Component {
+class ObjectField extends React.Component {
   static defaultProps = {
     uiSchema: {},
     formData: {},
