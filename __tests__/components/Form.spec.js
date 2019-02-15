@@ -387,6 +387,36 @@ describe('Form component', () => {
     })
   })
 
+  describe('description keyword', () => {
+    it('should support markdown', () => {
+      const descriptionSchema = {
+        type: 'object',
+        properties: {
+          foo: {
+            type: 'string',
+            description: 'Lorem ipsum *dolor* sit amet'
+          }
+        }
+      }
+
+      const component = mount(
+        <Provider>
+          <Form
+            schema={descriptionSchema}
+          />
+        </Provider>
+      )
+
+      const description = component.find('.rendition-form-description').first()
+
+      expect(description.html()).toMatch(
+        '<p>Lorem ipsum <em>dolor</em> sit amet</p>'
+      )
+
+      component.unmount()
+    })
+  })
+
   describe('field ids', () => {
     it('should generate a unique class name for each field', () => {
       const multiFieldSchema = {
