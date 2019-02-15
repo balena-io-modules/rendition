@@ -431,5 +431,39 @@ describe('Form component', () => {
       const keyInput = component.find('.rendition-form-pattern-properties__key-field').first()
       expect(keyInput.length).toEqual(1)
     })
+
+    it('should seperate out defined keys', () => {
+      const schema = {
+        type: 'object',
+        properties: {
+          foo: {
+            type: 'string'
+          }
+        },
+        patternProperties: {
+          '^[0-9]+$': {
+            'title': 'Rule',
+            'type': 'string'
+          }
+        }
+      }
+
+      const component = mount(
+        <Provider>
+          <Form
+            schema={schema}
+            value={{
+              foo: 'bar'
+            }}
+          />
+        </Provider>
+      )
+
+      const keyInput = component.find('.rendition-form-pattern-properties__key-field').first()
+      expect(keyInput.props().value).toEqual('')
+
+      const fooInput = component.find('input#root_foo')
+      expect(fooInput.props().value).toEqual('bar')
+    })
   })
 })

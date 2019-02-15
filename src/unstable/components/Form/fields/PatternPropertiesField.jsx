@@ -1,5 +1,6 @@
 import * as React from 'react';
 const map = require('lodash/map')
+const reduce = require('lodash/reduce')
 const FaClose = require('react-icons/lib/fa/close');
 import styled from 'styled-components';
 import { Button, Input, Table } from '../../../../'
@@ -57,12 +58,15 @@ export default class PatternPropertiesField extends React.Component {
     // Start by extracting the pattern value
     const pattern = Object.keys(schema.patternProperties)[0]
 
-    const tableData = map(formData, (value, key) => {
-      return {
-        value,
-        key
+    const tableData = reduce(formData, (carry, value, key) => {
+      if (!schema.properties || !schema.properties[key]) {
+        carry.push({
+          value,
+          key
+        })
       }
-    })
+      return carry
+    }, [])
 
     // Sort the table data according to the cached keys array
     tableData.sort((a, b) => {
@@ -81,60 +85,58 @@ export default class PatternPropertiesField extends React.Component {
     const subSchema = schema.patternProperties[pattern]
 
     return (
-      <>
-        <table>
-          <thead>
-            <tr>
-              <th>Key</th>
-              <th>{subSchema.title || 'Value'}</th>
-            </tr>
-          </thead>
+      <table>
+        <thead>
+          <tr>
+            <th>Key</th>
+            <th>{subSchema.title || 'Value'}</th>
+          </tr>
+        </thead>
 
-          <tbody>
-            {map(tableData, (item, index) => {
-              const isLast = index + 1 === tableData.length
-              return (
-                <tr key={index}>
-                  <td>
-                    <Input
-                      value={item.key}
-                      className="rendition-form-pattern-properties__key-field"
-                      disabled={isLast}
-                      pattern={pattern}
-                      placeholder={'Key'}
-                      onChange={this.handleKeyChange(item.key)}
-                    />
-                  </td>
-                  <td>
-                    <Input
-                      value={item.value}
-                      id="foo"
-                      className="rendition-form-pattern-properties__value-field"
-                      placeholder={subSchema.title || 'Value'}
-                      onChange={handleChange(this.props.onPropertyChange(item.key))}
-                    />
+        <tbody>
+          {map(tableData, (item, index) => {
+            const isLast = index + 1 === tableData.length
+            return (
+              <tr key={index}>
+                <td>
+                  <Input
+                    value={item.key}
+                    className="rendition-form-pattern-properties__key-field"
+                    disabled={isLast}
+                    pattern={pattern}
+                    placeholder={'Key'}
+                    onChange={this.handleKeyChange(item.key)}
+                  />
+                </td>
+                <td>
+                  <Input
+                    value={item.value}
+                    id="foo"
+                    className="rendition-form-pattern-properties__value-field"
+                    placeholder={subSchema.title || 'Value'}
+                    onChange={handleChange(this.props.onPropertyChange(item.key))}
+                  />
 
-                    {!isLast && (
-                      <ActionButton
-                        type="button"
-                        className="rendition-form-pattern-properties__remove-field"
-                        plaintext
-                        mb={2}
-                        mt={1}
-                        px={1}
-                        ml={1}
-                        onClick={this.props.onDropPropertyClick(item.key)}
-                      >
-                        <FaClose />
-                      </ActionButton>
-                    )}
-                  </td>
-                </tr>
-              )
-            })}
-          </tbody>
-        </table>
-      </>
+                  {!isLast && (
+                    <ActionButton
+                      type="button"
+                      className="rendition-form-pattern-properties__remove-field"
+                      plaintext
+                      mb={2}
+                      mt={1}
+                      px={1}
+                      ml={1}
+                      onClick={this.props.onDropPropertyClick(item.key)}
+                    >
+                      <FaClose />
+                    </ActionButton>
+                  )}
+                </td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
     )
   }
 }
