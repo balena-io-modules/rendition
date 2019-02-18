@@ -216,6 +216,28 @@ describe('Form component', () => {
     })
   })
 
+  describe('top-level array fields', () => {
+    const arraySchema = {
+      'items': {
+        'type': 'string'
+      },
+      'type': 'array'
+    }
+
+    const callback = sinon.spy()
+
+    it('should not crash on render', () => {
+      mount(
+        <Provider>
+          <Form
+            schema={arraySchema}
+            onFormChange={callback}
+          />
+        </Provider>
+      )
+    })
+  })
+
   describe('array fields', () => {
     const arraySchema = {
       type: 'object',

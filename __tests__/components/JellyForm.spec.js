@@ -211,6 +211,28 @@ describe('JellyForm component', () => {
     })
   })
 
+  describe('top-level array fields', () => {
+    const schema = `
+      type: array
+      items:
+        type: string
+        formula: UUIDV4()
+    `
+
+    const callback = sinon.spy()
+
+    it('should not crash on render', () => {
+      mount(
+        <Provider>
+          <JellyForm
+            schema={schema}
+            onFormChange={callback}
+          />
+        </Provider>
+      )
+    })
+  })
+
   describe('array fields', () => {
     const arraySchema = `
       version: 1
