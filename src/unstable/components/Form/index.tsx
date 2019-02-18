@@ -71,8 +71,8 @@ export default class FormHOC extends React.Component<
 		super(props);
 
 		this.state = {
-			value: this.props.value || {},
-			schema: this.parseSchema(this.props.schema),
+			value: props.value || (props.schema.type === 'array' ? [] : {}),
+			schema: this.parseSchema(props.schema),
 		};
 	}
 
