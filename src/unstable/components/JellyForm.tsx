@@ -94,7 +94,7 @@ class JellyForm extends React.Component<JellyFormProps, JellyFormState> {
 		);
 
 		this.state = {
-			value: props.value || {},
+			value: props.value || (schema.type === 'array' ? [] : {}),
 			schema,
 			uiSchema,
 		};
