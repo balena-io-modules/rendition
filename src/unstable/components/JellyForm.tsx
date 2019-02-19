@@ -31,7 +31,7 @@ const getFormulaKeys = function(obj: any, prefix: string = '') {
 
 // Given a JSON Schema, find all fields that have a formula field, evaluate the
 // formula and then update the provided value with the result
-const runFormulas = (schema: any, value: any) => {
+const runFormulas = (schema: JSONSchema6, value: any) => {
 	// Start by cloning the value to avoid any awkward mutation bugs
 	const data = cloneDeep(value);
 
@@ -61,8 +61,12 @@ const runFormulas = (schema: any, value: any) => {
 		console.error('Caught error when evaluating formulas', e);
 		evaluate = value;
 	}
+	const startingState = defaultValueForSchema(schema);
+	return merge(startingState, value, evaluate);
+};
 
-	return merge({}, value, evaluate);
+const defaultValueForSchema = (schema: JSONSchema6) => {
+	return schema.type === 'array' ? [] : {};
 };
 
 const computeFormSchemas = (jellySchema: string, uiSchema: any) => {
@@ -94,7 +98,7 @@ class JellyForm extends React.Component<JellyFormProps, JellyFormState> {
 		);
 
 		this.state = {
-			value: props.value || (schema.type === 'array' ? [] : {}),
+			value: props.value || defaultValueForSchema(schema),
 			schema,
 			uiSchema,
 		};
@@ -125,13 +129,12 @@ class JellyForm extends React.Component<JellyFormProps, JellyFormState> {
 
 	onChange = (changeData: any) => {
 		const { formData } = changeData;
-		const { schema } = this.state;
-
+		const schema = this.state.schema as JSONSchema6;
 		const data = cloneDeep(formData);
 
 		const evaluate = runFormulas(schema, data);
-
-		const result = merge({}, formData, evaluate);
+		const startingState = defaultValueForSchema(schema);
+		const result = merge(startingState, formData, evaluate);
 
 		this.setState({ value: result });
 

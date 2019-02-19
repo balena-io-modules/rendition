@@ -216,7 +216,6 @@ describe('JellyForm component', () => {
       type: array
       items:
         type: string
-        formula: UUIDV4()
     `
 
     const callback = sinon.spy()
@@ -231,8 +230,40 @@ describe('JellyForm component', () => {
         </Provider>
       )
     })
-  })
 
+    it('should not crash on add', () => {
+      const component = mount(
+        <Provider>
+          <JellyForm
+            schema={schema}
+            onFormChange={callback}
+          />
+        </Provider>
+      )
+      const value = 'foobarbaz'
+
+      component.find('.rendition-form-array-item__add-item')
+        .first()
+        .simulate('click')
+
+      const input = component.find('input').first()
+
+      input.simulate('change', {
+        target: {
+          value: value
+        }
+      })
+
+      component.update()
+
+      return Promise.delay(150).then(() => {
+        const callArg = callback.lastCall.args[0]
+        expect(callArg.formData).toEqual(
+          [ value ]
+        )
+      })
+    })
+  })
   describe('array fields', () => {
     const arraySchema = `
       version: 1
