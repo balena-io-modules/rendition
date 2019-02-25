@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Txt from '../../../../components/Txt';
+import { Markdown } from '../../../../extra/Markdown';
 import Theme from '../../../../theme';
 
 export const DescriptionField = ({
@@ -14,8 +14,13 @@ export const DescriptionField = ({
 	}
 
 	return (
-		<Txt mb={1} id={id} color={Theme.colors.text.light}>
+		<Markdown
+			mb={1}
+			id={id}
+			className="rendition-form-description"
+			color={Theme.colors.text.light}
+		>
 			{description}
-		</Txt>
+		</Markdown>
 	);
 };
