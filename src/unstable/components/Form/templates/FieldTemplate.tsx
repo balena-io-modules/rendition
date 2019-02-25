@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { UiSchema } from 'react-jsonschema-form';
 import { Box } from '../../../../components/Grid';
+import { Markdown } from '../../../../extra/Markdown';
+import Theme from '../../../../theme';
 import { LabelElement } from '../LabelElement';
 import { WarningField } from '../WarningField';
 
@@ -32,6 +34,7 @@ interface FieldTemplateProps {
 	children: JSX.Element;
 	errors: JSX.Element;
 	help: JSX.Element;
+	rawHelp?: string;
 	description: JSX.Element;
 	hidden: boolean;
 	required: boolean;
@@ -51,7 +54,7 @@ const FieldTemplate = (props: FieldTemplateProps) => {
 		label,
 		children,
 		errors,
-		help,
+		rawHelp,
 		description,
 		hidden = false,
 		required = false,
@@ -71,7 +74,15 @@ const FieldTemplate = (props: FieldTemplateProps) => {
 			{displayLabel && description ? description : null}
 			{children}
 			{errors}
-			{help}
+			{rawHelp && (
+				<Markdown
+					mt={1}
+					className="rendition-form-help"
+					color={Theme.colors.text.light}
+				>
+					{rawHelp}
+				</Markdown>
+			)}
 		</Box>
 	);
 };
