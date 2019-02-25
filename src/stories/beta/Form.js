@@ -164,6 +164,19 @@ storiesOf('Beta/Form', module)
       </Provider>
     )
   })
+  .add('Help Text', () => {
+    const uiSchema = {
+      Name: {
+        'ui:help': 'Once the `Name` is set it cannot be changed'
+      }
+    }
+
+    return (
+      <Provider>
+        <FormDemo schema={basicPokedexSchema} uiSchema={uiSchema} />
+      </Provider>
+    )
+  })
   .add('Group titles', () => {
     const schema = {
       type: 'object',

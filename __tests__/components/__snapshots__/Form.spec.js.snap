@@ -41,10 +41,8 @@ exports[`Form component should match the stored snapshot 1`] = `
               value="Bulbasaur"
             />
             <div />
-            <div />
           </div>
         </fieldset>
-        <div />
         <div />
       </div>
       <button

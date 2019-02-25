@@ -417,6 +417,38 @@ describe('Form component', () => {
     })
   })
 
+  describe('ui:help keyword', () => {
+    it('should support markdown', () => {
+      const component = mount(
+        <Provider>
+          <Form
+            schema={{
+              type: 'object',
+              properties: {
+                foo: {
+                  type: 'string'
+                }
+              }
+            }}
+            uiSchema={{
+              foo: {
+                'ui:help': 'Lorem ipsum *dolor* sit amet'
+              }
+            }}
+          />
+        </Provider>
+      )
+
+      const description = component.find('.rendition-form-help').first()
+
+      expect(description.html()).toMatch(
+        '<p>Lorem ipsum <em>dolor</em> sit amet</p>'
+      )
+
+      component.unmount()
+    })
+  })
+
   describe('field ids', () => {
     it('should generate a unique class name for each field', () => {
       const multiFieldSchema = {
