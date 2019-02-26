@@ -9,7 +9,105 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   margin-bottom: 8px;
 }
 
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  margin: 0px;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0px;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  margin: 0px;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 0px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  margin: 0px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0px;
+}
+
 .c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  margin: 0px;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  margin: 0px;
+  border-bottom: solid 1px #DDE1f0;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0px;
+}
+
+.c17 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
@@ -34,8 +132,31 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   transition: 0.1s ease-in-out;
 }
 
-.c10:hover {
+.c17:hover {
   box-shadow: 0px 0px 0px 2px #00AEEF;
+}
+
+.c7 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  text-align: inherit;
+}
+
+.c12 {
+  max-height: unset;
+  visibility: visible;
 }
 
 .c1 {
@@ -49,7 +170,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c9 {
+.c16 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -70,18 +191,18 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   color: white;
 }
 
-.c9 svg {
+.c16 svg {
   color: inherit !important;
   font-size: 0.925em;
 }
 
-.c9:disabled {
+.c16:disabled {
   cursor: not-allowed;
 }
 
-.c9:hover:enabled,
-.c9:focus:enabled,
-.c9:active:enabled {
+.c16:hover:enabled,
+.c16:focus:enabled,
+.c16:active:enabled {
   box-shadow: none;
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
@@ -89,13 +210,13 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   opacity: undefined;
 }
 
-.c9:hover:enabled svg,
-.c9:focus:enabled svg,
-.c9:active:enabled svg {
+.c16:hover:enabled svg,
+.c16:focus:enabled svg,
+.c16:active:enabled svg {
   color: white !important;
 }
 
-.c8 {
+.c15 {
   border-radius: 3px;
   height: 38px;
   color: #2A506F;
@@ -105,52 +226,57 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   box-sizing: border-box;
 }
 
-.c8[disabled] {
+.c15[disabled] {
   border-color: rgba(221,225,240,0.4);
   cursor: not-allowed;
 }
 
-.c8:focus:enabled {
+.c15:focus:enabled {
   border-color: #527699;
   outline: none;
 }
 
-.c8:hover:enabled {
+.c15:hover:enabled {
   box-shadow: 0 0 4px 1px rgba(0,0,0,0.1);
 }
 
-.c8::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: #abb9c5;
 }
 
-.c8::-moz-placeholder {
+.c15::-moz-placeholder {
   color: #abb9c5;
 }
 
-.c8:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: #abb9c5;
 }
 
-.c8::placeholder {
+.c15::placeholder {
   color: #abb9c5;
 }
 
-.c8[type='checkbox'] {
+.c15[type='checkbox'] {
   height: auto;
   font-size: 14px;
 }
 
-.c8[type='date' i]::-webkit-inner-spin-button,
-.c8[type='datetime-local' i]::-webkit-inner-spin-button,
-.c8[type='month' i]::-webkit-inner-spin-button,
-.c8[type='time' i]::-webkit-inner-spin-button,
-.c8[type='week' i]::-webkit-inner-spin-button {
+.c15[type='date' i]::-webkit-inner-spin-button,
+.c15[type='datetime-local' i]::-webkit-inner-spin-button,
+.c15[type='month' i]::-webkit-inner-spin-button,
+.c15[type='time' i]::-webkit-inner-spin-button,
+.c15[type='week' i]::-webkit-inner-spin-button {
   height: 20px;
   margin-top: 8px;
 }
 
-.c7 {
+.c14 {
   width: 100%;
+}
+
+.c9 {
+  margin: 0;
+  font-size: 20px;
 }
 
 .c0 {
@@ -168,16 +294,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   font-family: CircularStd,Arial,sans-serif;
 }
 
-.c5 {
-  font-size: 20px;
-  color: #252629;
-  margin-top: 16px;
-  margin-bottom: 8px;
-  border-bottom: 1px solid #f4f4f4;
-  width: 100%;
-}
-
-.c6 {
+.c13 {
   display: inline-block;
   font-size: 12px;
   margin-bottom: 4px;
@@ -203,6 +320,73 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   color: #FF423D;
 }
 
+@media only screen and (max-width:768px) {
+  .c5 {
+    margin: 0px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c5 {
+    padding: 0px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c6 {
+    margin: 0px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c6 {
+    padding: 0px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c8 {
+    margin: 0px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c8 {
+    padding: 0px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c10 {
+    margin: 0px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c10 {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c11 {
+    margin: 0px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c11 {
+    border-bottom: solid 1px #DDE1f0;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c11 {
+    padding: 0px;
+  }
+}
+
 <div
   className="c0 c1"
 >
@@ -218,46 +402,106 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
         className="form-group field field-object rendition-form__field--root c4 c3"
       >
         <fieldset>
-          <legend
-            className="c5"
-            id="root__title"
-          >
-            Pokèmon
-          </legend>
           <div
-            className="form-group field field-string rendition-form__field--root_Name c4 c3"
+            className="c5"
+            role="tablist"
           >
-            <label
-              className="control-label c6"
-              htmlFor="root_Name"
+            <div
+              className="c6"
             >
-              Name
-              <span
-                className="required"
+              <button
+                aria-expanded={true}
+                aria-selected={true}
+                className="c7"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseOut={[Function]}
+                onMouseOver={[Function]}
+                role="tab"
+                type="button"
               >
-                *
-              </span>
-            </label>
-            <input
-              autoFocus={false}
-              className="c7 c8"
-              disabled={false}
-              id="root_Name"
-              label="Name"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              placeholder=""
-              readOnly={false}
-              required={true}
-              type="text"
-              value="Bulbasaur"
-            />
+                <div
+                  className="c8"
+                >
+                  <h4
+                    className="c9 "
+                  >
+                    Pokèmon 
+                  </h4>
+                  <div
+                    className="c10"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      preserveAspectRatio="xMidYMid meet"
+                      style={
+                        Object {
+                          "color": "#3c3e42",
+                          "verticalAlign": "middle",
+                        }
+                      }
+                      viewBox="0 0 40 40"
+                      width="1em"
+                    >
+                      <g>
+                        <path
+                          d="m37.6 29.7l-3.7 3.7q-0.5 0.4-1 0.4t-1-0.4l-11.9-11.9-11.8 11.9q-0.5 0.4-1.1 0.4t-1-0.4l-3.7-3.7q-0.4-0.4-0.4-1t0.4-1l16.6-16.6q0.4-0.4 1-0.4t1 0.4l16.6 16.6q0.4 0.4 0.4 1t-0.4 1z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </button>
+              <div
+                className="c11"
+              >
+                <div
+                  aria-hidden={false}
+                  className="c12 c5"
+                  open={true}
+                >
+                  <div
+                    className="form-group field field-string rendition-form__field--root_Name c4 c3"
+                  >
+                    <label
+                      className="control-label c13"
+                      htmlFor="root_Name"
+                    >
+                      Name
+                      <span
+                        className="required"
+                      >
+                        *
+                      </span>
+                    </label>
+                    <input
+                      autoFocus={false}
+                      className="c14 c15"
+                      disabled={false}
+                      id="root_Name"
+                      label="Name"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      placeholder=""
+                      readOnly={false}
+                      required={true}
+                      type="text"
+                      value="Bulbasaur"
+                    />
+                    <div />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </fieldset>
+        <div />
       </div>
       <button
-        className="c9 c10"
+        className="c16 c17"
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}

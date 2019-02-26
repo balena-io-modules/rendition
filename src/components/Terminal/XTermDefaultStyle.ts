@@ -117,12 +117,4 @@ export default `
 	height: 1px;
 	overflow: hidden;
 }
-
-.xterm-dim {
-	opacity: 0.5;
-}
-
-.xterm-underline {
-	text-decoration: underline;
-}
 `;

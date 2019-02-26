@@ -61,7 +61,7 @@ describe('JellyForm component', () => {
         </Provider>
       )
 
-      expect(component.find('button')).toHaveLength(1)
+      expect(component.find('button[type="submit"]')).toHaveLength(1)
 
       component.unmount()
     })
@@ -73,7 +73,7 @@ describe('JellyForm component', () => {
         </Provider>
       )
 
-      expect(component.find('button')).toHaveLength(1)
+      expect(component.find('button[type="submit"]')).toHaveLength(1)
 
       component.unmount()
     })
@@ -85,7 +85,7 @@ describe('JellyForm component', () => {
         </Provider>
       )
 
-      expect(component.find('button')).toHaveLength(0)
+      expect(component.find('button[type="submit"]')).toHaveLength(0)
 
       component.unmount()
     })
@@ -100,7 +100,7 @@ describe('JellyForm component', () => {
         </Provider>
       )
 
-      expect(component.find('button').text()).toEqual(submitText)
+      expect(component.find('button[type="submit"]').text()).toEqual(submitText)
 
       component.unmount()
     })
@@ -115,7 +115,7 @@ describe('JellyForm component', () => {
         </Provider>
       )
 
-      expect(component.find('button').text()).toEqual(submitText)
+      expect(component.find('button[type="submit"]').text()).toEqual(submitText)
 
       component.unmount()
     })
@@ -133,7 +133,7 @@ describe('JellyForm component', () => {
         </Provider>
       )
 
-      expect(component.find('button').hasClass(submitButtonProps.className)).toEqual(true)
+      expect(component.find('button[type="submit"]').hasClass(submitButtonProps.className)).toEqual(true)
 
       component.unmount()
     })

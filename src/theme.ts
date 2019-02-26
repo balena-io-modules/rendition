@@ -1,3 +1,5 @@
+import ChevronDown from 'react-icons/lib/fa/chevron-down';
+import ChevronUp from 'react-icons/lib/fa/chevron-up';
 import { px } from 'styled-system';
 
 const primary = '#00AEEF';
@@ -245,6 +247,18 @@ export default {
 	tab: {
 		extend: 'border: none;',
 		color: colors.primary.main,
+	},
+	accordion: {
+		border: {
+			color: colors.quartenary.main,
+		},
+		icons: {
+			// collapse: <ChevronUp />,
+			// expand: <ChevronDown />
+			collapse: ChevronUp,
+			expand: ChevronDown,
+			color: colors.text.main,
+		},
 	},
 	checkBox: {
 		size: '20px',

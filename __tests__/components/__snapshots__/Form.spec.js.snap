@@ -208,33 +208,33 @@ exports[`Form component should match the stored snapshot 1`] = `
       <div
         className="form-group field field-object rendition-form__field--root c4 c3"
       >
-        <fieldset>
-          <div
-            className="form-group field field-string rendition-form__field--root_Name c4 c3"
+        <div
+          className="form-group field field-string rendition-form__field--root_Name c4 c3"
+        >
+          <label
+            className="control-label c5"
+            htmlFor="root_Name"
           >
-            <label
-              className="control-label c5"
-              htmlFor="root_Name"
-            >
-              Pokemon Name
-            </label>
-            <input
-              autoFocus={false}
-              className="c6 c7"
-              disabled={false}
-              id="root_Name"
-              label="Pokemon Name"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              placeholder=""
-              readOnly={false}
-              required={false}
-              type="text"
-              value="Bulbasaur"
-            />
-          </div>
-        </fieldset>
+            Pokemon Name
+          </label>
+          <input
+            autoFocus={false}
+            className="c6 c7"
+            disabled={false}
+            id="root_Name"
+            label="Pokemon Name"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            placeholder=""
+            readOnly={false}
+            required={false}
+            type="text"
+            value="Bulbasaur"
+          />
+          <div />
+        </div>
+        <div />
       </div>
       <button
         className="c8 c9"
