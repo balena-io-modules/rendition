@@ -658,6 +658,63 @@ describe('SchemaSieve', () => {
       testFilter('category', schema, collection, tests)
     })
 
+    describe('oneOf types', () => {
+      const schema = {
+        type: 'object',
+        properties: {
+          nationality: {
+            oneOf: [{
+              title: 'Georgian',
+              const: 'georgian'
+            }, {
+              title: 'South African',
+              const: 'south_african'
+            }, {
+              title: 'New Zealand',
+              const: 'new_zealand'
+            }]
+          }
+        }
+      }
+
+      const collection = {
+        'Entry 1': {
+          nationality: 'georgian'
+        },
+        'Entry 2': {
+          nationality: 'south_african'
+        },
+        'Entry 3': {
+          nationality: 'south_african'
+        },
+        'Entry 4': {
+          nationality: null
+        },
+        'Entry 5': {
+          nationality: 'new_zealand'
+        }
+      }
+
+      const tests = [
+        {
+          operator: 'is',
+          value: 'new_zealand',
+          expected: ['Entry 5']
+        },
+        {
+          operator: 'is_not',
+          value: 'south_african',
+          expected: [
+            'Entry 1',
+            'Entry 4',
+            'Entry 5'
+          ]
+        }
+      ]
+
+      testFilter('nationality', schema, collection, tests)
+    })
+
     describe('array types', () => {
       describe('where items are strings', () => {
         const schema = {

@@ -178,6 +178,10 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 				value = subschema.enum[0] || '';
 			}
 
+			if (subschema.oneOf) {
+				value = subschema.oneOf[0].const || '';
+			}
+
 			if (subschema.type === 'boolean') {
 				value = true;
 			}

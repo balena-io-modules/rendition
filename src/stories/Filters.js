@@ -6,7 +6,7 @@ import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import styled from 'styled-components'
 import { Box, Divider, Filters, Heading, Provider, SchemaSieve } from '../'
-import PokeDex from './assets/pokedex'
+import PokeDex, { getNameFromSlug } from './assets/pokedex'
 import Readme from './README/Filters.md'
 
 const StyledTable = styled.table`
@@ -92,6 +92,13 @@ const schema = {
     },
     Category: {
       enum: uniq(PokeDex.map(p => p.Category))
+    },
+    nationality: {
+      title: 'Nationality',
+      oneOf: uniq(PokeDex.map(p => p.nationality)).map(slug => ({
+        title: getNameFromSlug(slug),
+        const: slug
+      }))
     }
   }
 }
@@ -140,6 +147,10 @@ class FiltersDemo extends React.Component {
                 <tr>
                   <td>Category</td>
                   <td>{item.Category}</td>
+                </tr>
+                <tr>
+                  <td>Nationality</td>
+                  <td>{getNameFromSlug(item.nationality)}</td>
                 </tr>
                 <tr>
                   <td>Height</td>
