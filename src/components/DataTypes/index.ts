@@ -5,6 +5,7 @@ import * as dateTimeType from './date-time';
 import * as enumType from './enum';
 import * as numberType from './number';
 import * as objectType from './object';
+import * as oneOfType from './oneOf';
 import * as stringType from './string';
 
 export const getDataModel = (schema?: JSONSchema6) => {
@@ -16,6 +17,9 @@ export const getDataModel = (schema?: JSONSchema6) => {
 
 	if (schema.enum) {
 		return enumType;
+	}
+	if (schema.oneOf) {
+		return oneOfType;
 	}
 	if (type === 'array') {
 		return arrayType;
