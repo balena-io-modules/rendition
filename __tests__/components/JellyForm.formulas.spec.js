@@ -34,6 +34,7 @@ describe('JellyForm formula runner should', () => {
   describe('substitute formula text from schema', () => {
     it('on the the top level', () => {
       const schema = {
+        type: 'object',
         properties: {
           time: {
             type: 'string',
@@ -49,14 +50,20 @@ describe('JellyForm formula runner should', () => {
       expect(ran).not.toEqual(data)
       expect(ran.time).toBeTruthy()
     })
-    it('when wrapped in object', () => {
+
+    it('when wrapped in an object', () => {
       const schema = {
+        type: 'object',
         properties: {
           wrapper: {
-            time: {
-              type: 'string',
-              $$formula: 'NOW()'
-            }}
+            type: 'object',
+            properties: {
+              time: {
+                type: 'string',
+                $$formula: 'NOW()'
+              }
+            }
+          }
         }
       }
       const data = {
@@ -68,6 +75,61 @@ describe('JellyForm formula runner should', () => {
       const ran = runFormulas(schema, data)
       expect(ran).not.toEqual(data)
       expect(ran.wrapper.time).toBeTruthy()
+    })
+
+    it('when wrapped in an array', () => {
+      const schema = {
+        type: 'object',
+        properties: {
+          wrapper: {
+            type: 'array',
+            items: {
+              type: 'string',
+              $$formula: 'NOW()'
+            }
+          }
+        }
+      }
+      const data = {
+        wrapper: [{
+          time: 'some previous value'
+        }]
+      }
+
+      const ran = runFormulas(schema, data)
+      expect(ran).not.toEqual(data)
+      expect(ran.wrapper[0]).toBeTruthy()
+    })
+
+    it('when wrapped in a nested array', () => {
+      const schema = {
+        type: 'object',
+        properties: {
+          wrapper: {
+            type: 'array',
+            items: {
+              type: 'object',
+              properties: {
+                anotherWrapper: {
+                  type: 'array',
+                  items:
+                    {
+                      type: 'string',
+                      $$formula: 'NOW()'
+                    }}}}}}
+      }
+
+      const data = {
+        wrapper: [{
+          anotherWrapper: [{
+            time: 'some previous value'
+          }]
+        }]
+      }
+
+      const ran = runFormulas(schema, data)
+      expect(ran).not.toEqual(data)
+      expect(ran.wrapper[0].anotherWrapper[0]).toBeTruthy()
     })
   })
 })
