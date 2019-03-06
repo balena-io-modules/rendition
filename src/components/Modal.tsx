@@ -80,6 +80,8 @@ class Modal extends React.Component<ThemedModalProps, any> {
 		if (!Modal.mountedCount) {
 			document.body.classList.add(bodyNoOverflowClass);
 		}
+
+		window.document.addEventListener('keydown', this.handleKeyDown);
 		Modal.mountedCount++;
 	}
 
@@ -88,7 +90,26 @@ class Modal extends React.Component<ThemedModalProps, any> {
 		if (!Modal.mountedCount) {
 			document.body.classList.remove(bodyNoOverflowClass);
 		}
+
+		window.document.removeEventListener('keydown', this.handleKeyDown);
 	}
+
+	handleKeyDown = (e: KeyboardEvent) => {
+		if (!e.defaultPrevented && (e.which === 13 || e.which === 27)) {
+			e.preventDefault();
+			e.stopPropagation();
+
+			// Enter key
+			if (e.which === 13) {
+				this.props.done();
+			}
+
+			// Escape key
+			if (e.which === 27) {
+				(this.props.cancel || this.props.done)();
+			}
+		}
+	};
 
 	render() {
 		const { w, width, theme, ...props } = this.props;
