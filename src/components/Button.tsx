@@ -108,6 +108,11 @@ const ButtonBase = (styled.button as StyledFunction<ThemedButtonProps>)`
 		opacity: 0.65;
 		cursor: not-allowed;
 	}
+
+	& > * {
+		//This makes sure that elements inside the button don't fire pointer events and the target is always the button itself.
+		pointer-events: none;
+	}
 `;
 
 const Outline = ButtonBase.extend`

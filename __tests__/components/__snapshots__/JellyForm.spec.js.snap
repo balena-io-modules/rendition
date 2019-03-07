@@ -57,7 +57,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
         <div />
       </div>
       <button
-        className="sc-hMqMXs kYklEl sc-kpOJdX gJUwBw"
+        className="sc-hMqMXs kYklEl sc-kpOJdX XGxKL"
         type="submit"
       >
         Submit
