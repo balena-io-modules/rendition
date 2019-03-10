@@ -503,7 +503,9 @@ declare module 'rendition' {
 		pagerPosition?: 'top' | 'bottom' | 'both';
 	}
 
-	class Table<T> extends RenderableElementWithProps<TableProps<T>, any> {}
+	class Table<T> extends RenderableElementWithProps<TableProps<T>, any> {
+		setRowSelection: (selectedRows: T[]) => void;
+	}
 
 	interface TerminalProps {
 		ttyInstance?: Xterm.Terminal | null;
