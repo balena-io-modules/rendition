@@ -125,6 +125,8 @@ class DropDownButton extends React.Component<
 	DropDownButtonProps,
 	DropDownButtonState
 > {
+	dropdownNode: HTMLDivElement;
+
 	constructor(props: DropDownButtonProps) {
 		super(props);
 		this.state = {
@@ -133,11 +135,39 @@ class DropDownButton extends React.Component<
 		};
 	}
 
+	componentWillUnmount() {
+		if (this.state.open) {
+			this.removeListener();
+		}
+	}
+
+	handleOutsideClick = (e: MouseEvent) => {
+		if (this.dropdownNode && !this.dropdownNode.contains(e.target as Node)) {
+			if (this.state.open) {
+				this.removeListener();
+				this.setState({
+					open: false,
+				});
+			}
+		}
+	};
+
 	toggle = () => {
+		const isNextOpen = !this.state.open;
+		if (isNextOpen) {
+			window.document.addEventListener('click', this.handleOutsideClick);
+		} else {
+			this.removeListener();
+		}
+
 		this.setState({
-			open: !this.state.open,
+			open: isNextOpen,
 			minWidth: (this as any).base && (this as any).base.offsetWidth,
 		});
+	};
+
+	removeListener = () => {
+		window.document.removeEventListener('click', this.handleOutsideClick);
 	};
 
 	render() {
@@ -154,7 +184,7 @@ class DropDownButton extends React.Component<
 		} = this.props;
 
 		return (
-			<Wrapper {...props}>
+			<Wrapper {...props} innerRef={node => (this.dropdownNode = node)}>
 				{joined ? (
 					<Toggle
 						{...props}

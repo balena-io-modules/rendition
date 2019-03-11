@@ -24,7 +24,7 @@ exports[`Modal renders correctly 1`] = `
           className="sc-kGXeez bCXttU sc-chPdSV hzgnFO sc-kAzzGY hDwzdL"
         >
           <button
-            className="sc-VigVT hegYug sc-htoDjs fAvRR"
+            className="sc-VigVT hegYug sc-htoDjs hQVMTw"
           >
             OK
           </button>
