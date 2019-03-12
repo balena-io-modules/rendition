@@ -114,7 +114,6 @@
     "lodash": "^4.17.4",
     "marked": "^0.4.0",
     "mermaid": "^8.0.0-rc.8",
-    "moment": "^2.20.1",
     "react-icons": "^2.2.5",
     "react-jsonschema-form": "^1.2.1",
     "recompose": "0.26.0",

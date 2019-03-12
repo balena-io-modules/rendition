@@ -1,5 +1,4 @@
 import memoize = require('lodash/memoize');
-import * as moment from 'moment';
 
 const pad = (n: number) => (n < 10 ? `0${n}` : n);
 
@@ -12,7 +11,7 @@ export const getDefaultDate = (): string => {
 
 // Normalize a timestamp to a RFC3339 timestamp, which is required for JSON
 // schema.
-export const normalizeDateTimeNew = memoize((timestamp: string) => {
+export const normalizeDateTime = memoize((timestamp: string) => {
 	const d = new Date(timestamp);
 	if (isNaN(d.getTime())) {
 		return 'Invalid date';
@@ -23,9 +22,3 @@ export const normalizeDateTimeNew = memoize((timestamp: string) => {
 		d.getUTCSeconds(),
 	)}Z`;
 });
-
-export const normalizeDateTime = memoize((timestamp: string) =>
-	moment(timestamp)
-		.utc()
-		.format(),
-);
