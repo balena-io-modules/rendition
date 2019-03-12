@@ -1,29 +1,10 @@
 import { JSONSchema6 } from 'json-schema';
 import assign = require('lodash/assign');
-import memoize = require('lodash/memoize');
-import * as moment from 'moment';
 import * as React from 'react';
 import { DataTypeEditProps, InputProps } from 'rendition';
 import * as utils from '../../utils';
 import Input from '../Input';
-
-const getDefaultDate = (): string => {
-	const now = new Date();
-	const day = ('0' + now.getDate()).slice(-2);
-	const month = ('0' + (now.getMonth() + 1)).slice(-2);
-	const today = now.getFullYear() + '-' + month + '-' + day;
-
-	return `${today}T00:00`;
-};
-
-// Normalize a timestamp to a RFC3339 timestamp, which is required for JSON
-// schema.
-// https://momentjs.com/docs/#default-format
-const normalizeDateTime = memoize((timestamp: string) =>
-	moment(timestamp)
-		.utc()
-		.format(),
-);
+import { getDefaultDate, normalizeDateTime } from './date-time-helpers';
 
 export const operators = {
 	is: {
