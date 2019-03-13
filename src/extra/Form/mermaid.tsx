@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { FormWidgetProps } from 'rendition/dist/unstable';
-import { Link, Textarea, Theme } from '../../';
+import { Link, Tabs, Textarea, Theme } from '../../';
 import { Form } from '../../unstable';
-import { TabbedBox } from '../../unstable/components/Form/widgets/TabbedBox';
 import { Mermaid } from '../Mermaid';
 
 class Widget extends React.Component<FormWidgetProps, {}> {
@@ -43,7 +42,7 @@ class Widget extends React.Component<FormWidgetProps, {}> {
 		} = this.props;
 
 		return (
-			<TabbedBox
+			<Tabs
 				tabs={['Write', 'Preview']}
 				help={
 					<Link fontSize={2} href={'https://mermaidjs.github.io/'} blank>
@@ -74,7 +73,7 @@ class Widget extends React.Component<FormWidgetProps, {}> {
 					}}
 					value={value}
 				/>
-			</TabbedBox>
+			</Tabs>
 		);
 	}
 }
