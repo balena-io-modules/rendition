@@ -254,6 +254,31 @@ storiesOf('Core/Modal', module)
       </Provider>
     )
   })
+  .add('Anchor Buttons', () => {
+    return (
+      <Provider>
+        <Modal
+          title='Some info'
+          cancel={cancelAction}
+          done={doneAction}
+          action='Learn more'
+          cancelButtonProps={{ children: 'Close' }}
+          primaryButtonProps={{
+            href: 'https://github.com/balena-io-modules/rendition',
+            target: '_blank'
+          }}
+        >
+          <p>Lorem ipsum dolor sit amet</p>
+          <a
+            href='https://balena-io-modules.github.io/rendition/'
+            target='_blank'
+          >
+            Rendition
+          </a>
+        </Modal>
+      </Provider>
+    )
+  })
 
 storiesOf('Core/Modal', module)
   .addDecorator(withReadme(Readme))

@@ -379,9 +379,9 @@ declare module 'rendition' {
 		action?: string | JSX.Element;
 		cancel?: () => any;
 		done: () => any;
-		primaryButtonProps?: ButtonProps;
-		secondaryButtonProps?: ButtonProps;
-		cancelButtonProps?: ButtonProps;
+		primaryButtonProps?: ButtonProps | ButtonAnchorProps;
+		secondaryButtonProps?: ButtonProps | ButtonAnchorProps;
+		cancelButtonProps?: ButtonProps | ButtonAnchorProps;
 		containerStyle?: React.CSSProperties;
 	}
 
