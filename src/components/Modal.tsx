@@ -1,6 +1,6 @@
 import assign = require('lodash/assign');
 import * as React from 'react';
-import { ModalProps } from 'rendition';
+import { ButtonAnchorProps, ButtonProps, ModalProps } from 'rendition';
 import styled, { injectGlobal, withTheme } from 'styled-components';
 import { stopPropagation } from '../utils';
 import { px } from '../utils';
@@ -68,6 +68,14 @@ const ModalPanel = styled(Box)`
 	background-color: #ffffff;
 	box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.4);
 `;
+
+const ModalButton = (props: ButtonProps | ButtonAnchorProps) => {
+	return 'href' in props && props.href ? (
+		<Button.a {...props} />
+	) : (
+		<Button {...props as ButtonProps} />
+	);
+};
 
 class Modal extends React.Component<ThemedModalProps, any> {
 	static mountedCount = 0;
@@ -162,17 +170,17 @@ class Modal extends React.Component<ThemedModalProps, any> {
 						{props.children}
 						<Flex mt={50} align="center" justify="flex-end">
 							{props.cancel && (
-								<Button {...cancelButtonProps} onClick={props.cancel}>
+								<ModalButton {...cancelButtonProps} onClick={props.cancel}>
 									{(cancelButtonProps && cancelButtonProps.children) ||
 										'Cancel'}
-								</Button>
+								</ModalButton>
 							)}
 							{props.secondaryButtonProps && (
-								<Button {...secondaryButtonProps} />
+								<ModalButton {...secondaryButtonProps} />
 							)}
-							<Button {...primaryButtonProps} onClick={props.done}>
+							<ModalButton {...primaryButtonProps} onClick={props.done}>
 								{props.action || 'OK'}
-							</Button>
+							</ModalButton>
 						</Flex>
 					</ModalPanel>
 				</ModalSizer>
