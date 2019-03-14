@@ -1,5 +1,6 @@
 /* globals expect, describe, it */
 import { getDataModel } from '../src/components/DataTypes'
+import { normalizeDateTime } from '../src/components/DataTypes/date-time-helpers'
 
 const expectMatchesKeys = (data, keys) =>
   expect(Object.keys(data).sort()).toEqual(keys.sort())
@@ -67,6 +68,21 @@ describe('DataTypes', () => {
         type: 'number'
       }
       expectMatchesKeys(getDataModel(schema), dataModelKeys)
+    })
+  })
+
+  describe('normalizeDateTime', () => {
+    it('rejects invalid date', () => {
+      expect(normalizeDateTime('wrong time')).toEqual('Invalid date')
+      expect(normalizeDateTime('')).toEqual('Invalid date')
+    })
+
+    it('formats the date correctly', () => {
+      expect(normalizeDateTime('2017-01-01T08:49:26Z')).toEqual('2017-01-01T08:49:26Z')
+      // This case will fail, if you are in a different TZ than UTC
+      // Set a TZ when running tests: $ TZ='Europe/London' npm test
+      expect(normalizeDateTime('2018-03-26T11:43')).toEqual('2018-03-26T11:43:00Z')
+      expect(normalizeDateTime('Sun, 01 Jan 2017 08:49:26 +0000')).toEqual('2017-01-01T08:49:26Z')
     })
   })
 })
