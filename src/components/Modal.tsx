@@ -80,6 +80,8 @@ const ModalButton = (props: ButtonProps | ButtonAnchorProps) => {
 class Modal extends React.Component<ThemedModalProps, any> {
 	static mountedCount = 0;
 
+	ownIndex = 0;
+
 	constructor(props: ThemedModalProps) {
 		super(props);
 	}
@@ -91,6 +93,7 @@ class Modal extends React.Component<ThemedModalProps, any> {
 
 		window.document.addEventListener('keydown', this.handleKeyDown);
 		Modal.mountedCount++;
+		this.ownIndex = Modal.mountedCount;
 	}
 
 	componentWillUnmount() {
@@ -103,6 +106,11 @@ class Modal extends React.Component<ThemedModalProps, any> {
 	}
 
 	handleKeyDown = (e: KeyboardEvent) => {
+		// Only trigger on top-most modal if there are multiple nested modals.
+		if (Modal.mountedCount !== this.ownIndex) {
+			return;
+		}
+
 		if (!e.defaultPrevented && (e.which === 13 || e.which === 27)) {
 			e.preventDefault();
 			e.stopPropagation();
