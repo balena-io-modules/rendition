@@ -57,6 +57,51 @@ class ModalDemo extends React.Component {
   }
 }
 
+class NestedModalDemo extends React.Component {
+  state = {
+    show1: false,
+    show2: false
+  }
+
+  render () {
+    return (
+      <Box m={3}>
+        <Button primary onClick={() => this.setState({ show1: true })}>
+          Open Modal
+        </Button>
+        {this.state.show1 && (
+          <Modal
+            title='First Modal'
+            cancel={() => {
+              cancelAction()
+              this.setState({ show1: false })
+            }}
+            done={x => {
+              doneAction(x)
+              this.setState({ show2: true })
+            }}
+            action='Open another modal'
+          >
+            {this.state.show2 && (
+              <Modal
+                title='Second Modal'
+                cancel={() => {
+                  cancelAction()
+                  this.setState({ show2: false })
+                }}
+                done={x => {
+                  doneAction(x)
+                  this.setState({ show2: false })
+                }}
+              />
+            )}
+          </Modal>
+        )}
+      </Box>
+    )
+  }
+}
+
 storiesOf('Core/Modal', module)
   .addDecorator(withReadme(Readme))
   .addDecorator(withScreenshot({ viewport: { height: 768 } }))
@@ -325,6 +370,13 @@ storiesOf('Core/Modal', module)
             Hover me and a tooltip will be displayed.
           </Heading.h5>
         </ModalDemo>
+      </Provider>
+    )
+  })
+  .add('Nested Modals', () => {
+    return (
+      <Provider>
+        <NestedModalDemo />
       </Provider>
     )
   })
