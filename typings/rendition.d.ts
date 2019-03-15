@@ -387,6 +387,14 @@ declare module 'rendition' {
 
 	class Modal extends RenderableElementWithProps<ModalProps, any> {}
 
+	interface TabsProps extends DefaultProps {
+		tabs: string[];
+		help?: JSX.Element;
+		children: JSX.Element[];
+	}
+
+	class Tabs extends RenderableElementWithProps<TabsProps, any> {}
+
 	interface NavbarProps extends DefaultProps {
 		brand?: JSX.Element;
 	}
