@@ -78,6 +78,7 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [Select](#select)
 - [Swatches](#swatches)
 - [Table](#table)
+- [Tabs](#tabs)
 - [Terminal](#terminal)
 - [TextWithCopy](#textwithcopy)
 - [Textarea](#textarea)
@@ -790,6 +791,12 @@ The component has a `setRowSelection` method that can be accesssed via <a href='
 It will accept an array of rows `T[]`, or an empty array in order to clear the selection.
 
 This method requires that you have provided a `rowKey` property.
+
+### Tabs
+
+A component used to render tabbed children components.
+
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Tabs.js)
 
 ### Terminal
 
