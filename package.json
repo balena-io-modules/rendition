@@ -19,7 +19,7 @@
     "build:docs": "node ./scripts/generateDocs.js",
     "generate-screenshots": "./scripts/generate-screenshots.sh",
     "build:storybook": "build-storybook -o .out",
-    "test": "npm run lint && npm run jest",
+    "test": "npm run lint && TZ='Etc/UTC' npm run jest",
     "test:local-visual": "./scripts/test-screenshots.sh",
     "test:visual": "npm run ci:screenshot -- -o .reg/current && reg-cli .reg/current __screenshots__ .reg/diff -R .reg/report.html",
     "jest": "jest __tests__ --maxWorkers=4",
