@@ -31,5 +31,4 @@ const TitleFieldBase = (props: {
 	);
 };
 
-export const TitleField = asRendition(TitleFieldBase as any)
-
+export const TitleField = asRendition(TitleFieldBase as any);
