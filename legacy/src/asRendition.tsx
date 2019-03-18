@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { color, fontSize, space, width } from 'styled-system';
 import tag from 'tag-hoc';
 import blacklist from './blacklist';
+import theme from './theme';
 import { Tooltips } from './tooltips';
 
 const tooltip = new Tooltips();
@@ -13,6 +14,7 @@ const prop = oneOfType([number, string, arrayOf(oneOfType([number, string]))]);
 
 const propTypes = {
 	width: prop,
+	w: prop,
 	fontSize: prop,
 	f: prop,
 	color: prop,
@@ -33,6 +35,10 @@ const propTypes = {
 	py: prop,
 };
 
+type BaseProps = {
+	[k in keyof typeof propTypes]?: string | string[] | number | number[]
+};
+
 const withTooltip = (Base: React.StatelessComponent) => {
 	return ({ ...props }: any) => {
 		if (props.tooltip) {
@@ -44,7 +50,7 @@ const withTooltip = (Base: React.StatelessComponent) => {
 };
 
 export const withStyledSystem = (child: React.StatelessComponent) => {
-	const Base = styled(child)`
+	const Base = styled<BaseProps>(child)`
 		${space} ${width} ${fontSize} ${color};
 	`;
 
@@ -56,9 +62,26 @@ export const withStyledSystem = (child: React.StatelessComponent) => {
 	};
 };
 
+// This middleware allows component to fallback to the default theme when
+// rendered without a ThemeProvider wrappwer
+export const withDefaultTheme = (
+	Base: React.ComponentClass | React.StatelessComponent,
+) => {
+	if (!Base.defaultProps) {
+		Base.defaultProps = {};
+	}
+
+	(Base.defaultProps as any).theme = theme;
+
+	return (props: any) => {
+		return <Base {...props} />;
+	};
+};
+
 const Tag = tag(blacklist);
 
 export default compose(
+	withDefaultTheme,
 	withTooltip,
 	withStyledSystem,
 	Tag,

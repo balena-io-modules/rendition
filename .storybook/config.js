@@ -3,6 +3,7 @@ import { initScreenshot, setScreenshotOptions } from 'storybook-chrome-screensho
 import { injectGlobal } from 'styled-components'
 import theme from '../src/theme'
 
+/*
 injectGlobal([], {
   '*': {
     boxSizing: 'border-box'
@@ -18,6 +19,7 @@ injectGlobal([], {
     height: '100%'
   }
 })
+*/
 
 addDecorator(initScreenshot())
 
