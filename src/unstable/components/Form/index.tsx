@@ -3,7 +3,7 @@ import get = require('lodash/get');
 import isEqual = require('lodash/isEqual');
 import omit = require('lodash/omit');
 import * as React from 'react';
-import Form, { IChangeEvent } from 'react-jsonschema-form';
+import Form, { FormValidation, IChangeEvent } from 'react-jsonschema-form';
 import { FormProps } from 'rendition/dist/unstable';
 import styled from 'styled-components';
 import Button from '../../../components/Button';
@@ -113,6 +113,13 @@ export default class FormHOC extends React.Component<
 		}
 	};
 
+	validate = (data: any, errors: FormValidation) => {
+		if (this.props.onFormValidate) {
+			return this.props.onFormValidate(data, errors);
+		}
+		return errors;
+	};
+
 	render() {
 		const {
 			hideSubmitButton,
@@ -129,6 +136,7 @@ export default class FormHOC extends React.Component<
 			'value',
 			'onFormChange',
 			'onFormSubmit',
+			'onFormValidate',
 			'uiSchema',
 		]);
 
@@ -145,6 +153,7 @@ export default class FormHOC extends React.Component<
 					formData={this.state.value}
 					onSubmit={this.submit}
 					onChange={this.change}
+					validate={this.validate}
 					uiSchema={uiSchema}
 					widgets={widgets}
 					fields={fields}

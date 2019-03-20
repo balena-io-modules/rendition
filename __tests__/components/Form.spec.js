@@ -33,6 +33,7 @@ describe('Form component', () => {
     )
     let tree = component.toJSON()
     expect(tree).toMatchSnapshot()
+    component.unmount()
   })
 
   it('should still render if an unknown format is used', () => {
@@ -46,13 +47,38 @@ describe('Form component', () => {
       }
     }
 
-    mount(
+    const component = mount(
       <Provider>
         <Form schema={uuidSchema} />
       </Provider>
     )
+    component.unmount()
   })
 
+  describe('validation', () => {
+    it('should render properly with identity validator set', () => {
+      const schema = {
+        type: 'object',
+        properties: {
+          id: {
+            type: 'string'
+          }
+        }
+      }
+
+      const validator = (data, errors) => {
+        return errors
+      }
+
+      const component = mount(
+        <Provider>
+          <Form schema={schema} onFormValidate={validator} />
+        </Provider>
+      )
+
+      component.unmount()
+    })
+  })
   describe('hideSubmitButton property', () => {
     it('should render a submit button if the property is not specified', () => {
       const component = mount(

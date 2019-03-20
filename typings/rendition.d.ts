@@ -758,7 +758,11 @@ declare module 'rendition/dist/extra/Mermaid' {
 declare module 'rendition/dist/unstable' {
 	import { JSONSchema6 } from 'json-schema';
 	import { Component } from 'react';
-	import { IChangeEvent, UiSchema } from 'react-jsonschema-form';
+	import {
+		FormValidation,
+		IChangeEvent,
+		UiSchema,
+	} from 'react-jsonschema-form';
 	import {
 		AnyObject,
 		BoxProps,
@@ -769,7 +773,7 @@ declare module 'rendition/dist/unstable' {
 	/**
 	 * Properties passed to custom Form widgets
 	 *
-	 * @see https://github.com/mozilla-services/react-jsonschema-form#custom-widget-components
+	 * @see https://react-jsonschema-form.readthedocs.io/en/latest/advanced-customization/#custom-widget-components
 	 */
 	interface FormWidgetProps {
 		/** The generated id for this field */
@@ -830,6 +834,7 @@ declare module 'rendition/dist/unstable' {
 
 	interface FormProps extends BaseFormProps {
 		schema: JSONSchema6;
+		onFormValidate?: (formData: any, errors: FormValidation) => FormValidation;
 	}
 
 	class Form extends RenderableElementWithProps<FormProps, any> {}
