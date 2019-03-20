@@ -62,7 +62,6 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [Fixed](#fixed)
 - [Flex](#flex)
 - [Form](#form)
-- [Gauge](#gauge)
 - [Heading](#heading)
 - [Img](#img)
 - [Input](#input)

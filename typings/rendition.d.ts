@@ -217,15 +217,6 @@ declare module 'rendition' {
 
 	class DeleteButton extends RenderableElementWithProps<DefaultProps, any> {}
 
-	interface DeviceStatusGaugeProps extends DefaultProps {
-		devices: any[];
-	}
-
-	class DeviceStatusGauge extends RenderableElementWithProps<
-		DeviceStatusGaugeProps,
-		any
-	> {}
-
 	interface DividerProps extends DefaultProps {
 		height?: number;
 	}
