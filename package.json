@@ -124,7 +124,7 @@
     "styled-system": "^1.0.5",
     "tag-hoc": "1.0.0",
     "uuid": "^3.2.1",
-    "xterm": "^3.11.0"
+    "xterm": "^3.12.0"
   },
   "lint-staged": {
     "{src, test}/**/*.js": [
