@@ -9,10 +9,9 @@ import Theme from '../theme';
 import { Box } from './Grid';
 
 // Default styles for xterm.js, taken from
-// https://github.com/xtermjs/xterm.js/blob/master/src/xterm.css
+// ~/node_modules/xterm/dist/xterm.css
 const defaultXtermStyle = `
 	.xterm {
-		font-family: courier-new, courier, monospace;
 		font-feature-settings: "liga" 0;
 		position: relative;
 		user-select: none;
@@ -93,11 +92,17 @@ const defaultXtermStyle = `
 		visibility: hidden;
 	}
 
-	.xterm .xterm-char-measure-element {
+	.xterm-char-measure-element {
 		display: inline-block;
 		visibility: hidden;
 		position: absolute;
+		top: 0;
 		left: -9999em;
+		line-height: normal;
+	}
+
+	.xterm {
+		cursor: text;
 	}
 
 	.xterm.enable-mouse-events {
@@ -105,8 +110,32 @@ const defaultXtermStyle = `
 		cursor: default;
 	}
 
-	.xterm:not(.enable-mouse-events) {
-		cursor: text;
+	.xterm.xterm-cursor-pointer {
+		cursor: pointer;
+	}
+
+	.xterm.column-select.focus {
+		/* Column selection mode */
+		cursor: crosshair;
+	}
+
+	.xterm .xterm-accessibility,
+	.xterm .xterm-message {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 100;
+		color: transparent;
+	}
+
+	.xterm .live-region {
+		position: absolute;
+		left: -9999px;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
 	}
 `;
 

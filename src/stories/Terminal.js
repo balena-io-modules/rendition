@@ -83,12 +83,7 @@ class InteractiveTerm extends Terminal {
         const printable =
           !ev.altKey && !ev.altGraphKey && !ev.ctrlKey && !ev.metaKey
         // Ignore arrow keys
-        if (
-          ev.code === 'ArrowUp' ||
-          ev.code === 'ArrowDown' ||
-          ev.code === 'ArrowLeft' ||
-          ev.code === 'ArrowRight'
-        ) {
+        if (ev.code === 'ArrowUp' || ev.code === 'ArrowDown') {
           return
         }
 
