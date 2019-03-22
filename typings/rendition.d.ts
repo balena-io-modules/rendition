@@ -215,8 +215,6 @@ declare module 'rendition' {
 
 	class Container extends RenderableElementWithProps<DefaultProps, any> {}
 
-	class DeleteButton extends RenderableElementWithProps<DefaultProps, any> {}
-
 	interface DividerProps extends DefaultProps {
 		height?: number;
 	}

@@ -7,7 +7,6 @@ import { default as Button } from './components/Button'
 import { default as ButtonGroup } from './components/ButtonGroup'
 import { default as Card } from './components/Card'
 import { default as CodeWithCopy } from './components/CodeWithCopy'
-import { default as DeleteButton } from './components/DeleteButton'
 import { default as Divider } from './components/Divider'
 import { default as Filters } from './components/Filters'
 import { default as Fixed } from './components/Fixed'
@@ -50,7 +49,6 @@ export {
   Card,
   CodeWithCopy,
   Container,
-  DeleteButton,
   Divider,
   DropDownButton,
   Filters,

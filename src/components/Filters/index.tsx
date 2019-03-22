@@ -8,13 +8,13 @@ import isEqual = require('lodash/isEqual');
 import map = require('lodash/map');
 import reject = require('lodash/reject');
 import * as React from 'react';
+import FaClose = require('react-icons/lib/fa/close');
 import FaFilter = require('react-icons/lib/fa/filter');
 import { FilterRenderMode, FiltersProps, FiltersView } from 'rendition';
 import styled from 'styled-components';
 import * as utils from '../../utils';
 import Button from '../Button';
 import { getDataModel } from '../DataTypes';
-import DeleteBtn from '../DeleteButton';
 import { Box, Flex } from '../Grid';
 import Modal from '../Modal';
 import Search from '../Search';
@@ -55,7 +55,8 @@ const RelativeBox = styled(Box)`
 	position: relative;
 `;
 
-const ExtraRuleDeleteBtn = styled(DeleteBtn)`
+const DeleteButton = styled(Button)`
+	color: rgba(0, 0, 0, 0.4);
 	position: absolute;
 	bottom: 7px;
 	right: -35px;
@@ -483,9 +484,14 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 											/>
 										</Flex>
 										{index > 0 && (
-											<ExtraRuleDeleteBtn
+											<DeleteButton
+												plaintext
+												fontSize={1}
+												p={1}
 												onClick={() => this.removeCompound(index)}
-											/>
+											>
+												<FaClose />
+											</DeleteButton>
 										)}
 									</RelativeBox>
 								);
