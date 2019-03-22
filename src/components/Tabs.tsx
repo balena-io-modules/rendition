@@ -27,10 +27,10 @@ const FlexTab = styled(Flex)`
 `;
 
 const ButtonBase = styled(Button)`
-	margin: 4px;
-	margin-top: 6px;
-	margin-left: 6px;
-	padding: 10px;
+	padding: 4px 10px 2px;
+	border: 1px solid white;
+	border-radius: 0;
+	border-bottom: none;
 	${props =>
 		props.active
 			? `
@@ -39,13 +39,18 @@ const ButtonBase = styled(Button)`
 		border-color: ${props.theme.colors.gray.main};
 		border-top-right-radius: 4px;
 		border-top-left-radius: 4px;
-		transform: translateY(5px);
-		border-bottom: white;
-		border-bottom-width: 2px;
-		border-bottom-style: solid;
+		transform: translateY(1px);
+		&::after {
+			content: '';
+			height: 3px;
+			background: white;
+			position: absolute;
+			bottom: -2px;
+			left: 0;
+			right: 0;
+		}
 		`
 			: `
-		transform: translateY(4px);
 		`}
 `;
 
@@ -65,23 +70,23 @@ class Tabs extends React.Component<TabsProps, TabsState> {
 	};
 
 	public render() {
-		const visibleChild = this.props.children[this.state.show];
-		console.log(this.props);
+		const { tabs, help, children, ...props } = this.props;
+
+		const visibleChild = children[this.state.show];
 
 		return (
-			<Box>
-				<FlexTab justify="space-between" mb={1} {...this.props}>
+			<Box {...props}>
+				<FlexTab justify="space-between" mb={1}>
 					<Flex>
-						{map(this.props.tabs, (tab, index: number) => {
+						{map(tabs, (tab, index: number) => {
 							return (
 								<ButtonBase
 									key={index}
 									plaintext
 									active={index === this.state.show}
 									data-index={index}
-									mr={3}
+									mr={2}
 									onClick={this.showTab}
-									{...this.props}
 								>
 									<Txt>{tab}</Txt>
 								</ButtonBase>
@@ -89,7 +94,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
 						})}
 					</Flex>
 
-					{this.props.help}
+					{help}
 				</FlexTab>
 
 				{visibleChild}
