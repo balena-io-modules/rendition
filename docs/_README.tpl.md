@@ -105,6 +105,8 @@ If you would like to try them out they can be loaded using
 
 [Upgrading from 3.x to 4.x](docs/migrating_3x-4x.md)
 
+[Upgrading from 4.x to 5.x](docs/migrating_4x-5x.md)
+
 ## Contributing
 
 Please read our [contribution guidelines](docs/CONTRIBUTING.md)
