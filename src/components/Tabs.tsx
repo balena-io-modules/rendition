@@ -27,10 +27,10 @@ const FlexTab = styled(Flex)`
 `;
 
 const ButtonBase = styled(Button)`
-	margin: 4px;
-	margin-top: 6px;
-	margin-left: 6px;
-	padding: 10px;
+	padding: 4px 10px 2px;
+	border: 1px solid white;
+	border-radius: 0;
+	border-bottom: none;
 	${props =>
 		props.active
 			? `
@@ -39,13 +39,18 @@ const ButtonBase = styled(Button)`
 		border-color: ${props.theme.colors.gray.main};
 		border-top-right-radius: 4px;
 		border-top-left-radius: 4px;
-		transform: translateY(5px);
-		border-bottom: white;
-		border-bottom-width: 2px;
-		border-bottom-style: solid;
+		transform: translateY(1px);
+		&::after {
+			content: '';
+			height: 3px;
+			background: white;
+			position: absolute;
+			bottom: -2px;
+			left: 0;
+			right: 0;
+		}
 		`
 			: `
-		transform: translateY(4px);
 		`}
 `;
 
@@ -80,7 +85,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
 									plaintext
 									active={index === this.state.show}
 									data-index={index}
-									mr={3}
+									mr={2}
 									onClick={this.showTab}
 								>
 									<Txt>{tab}</Txt>
