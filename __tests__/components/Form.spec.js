@@ -79,6 +79,7 @@ describe('Form component', () => {
       component.unmount()
     })
   })
+
   describe('hideSubmitButton property', () => {
     it('should render a submit button if the property is not specified', () => {
       const component = mount(

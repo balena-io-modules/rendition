@@ -43,13 +43,64 @@ describe('JellyForm component', () => {
             format: uuid
     `
 
-    mount(
+    const component = mount(
       <Provider>
         <JellyForm schema={uuidSchema} />
       </Provider>
     )
+    component.unmount()
   })
 
+  describe('validation', () => {
+    it('should not give any errors when validation succeeds', () => {
+      const schema = `
+      properties:
+        - id:
+            type: string
+    `
+
+      const component = mount(
+        <Provider>
+          <JellyForm schema={schema} />
+        </Provider>
+      )
+
+      const validValue = 'some string'
+      const input = component.find('input')
+      input.simulate('change', { target: { validValue } })
+      component.update()
+
+      component.find('form').simulate('submit')
+
+      component.unmount()
+      throw new Error("TODO: get the validation ui component and assert it's empty")
+    })
+
+    it('should not give any errors when validation succeeds', () => {
+      const schema = `
+      properties:
+        - id:
+            type: string
+    `
+
+      const component = mount(
+        <Provider>
+          <JellyForm schema={schema} />
+        </Provider>
+      )
+
+      const invalidValue = null
+
+      const input = component.find('input')
+      input.simulate('change', { target: { invalidValue } })
+      component.update()
+
+      component.find('form').simulate('submit')
+
+      component.unmount()
+      throw new Error('TODO: get the validation ui component and assert it has the error message')
+    })
+  })
 
   describe('hideSubmitButton property', () => {
     it('should render a submit button if the property is not specified', () => {
