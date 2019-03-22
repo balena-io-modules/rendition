@@ -65,14 +65,15 @@ class Tabs extends React.Component<TabsProps, TabsState> {
 	};
 
 	public render() {
-		const visibleChild = this.props.children[this.state.show];
-		console.log(this.props);
+		const { tabs, help, children, ...props } = this.props;
+
+		const visibleChild = children[this.state.show];
 
 		return (
-			<Box>
-				<FlexTab justify="space-between" mb={1} {...this.props}>
+			<Box {...props}>
+				<FlexTab justify="space-between" mb={1}>
 					<Flex>
-						{map(this.props.tabs, (tab, index: number) => {
+						{map(tabs, (tab, index: number) => {
 							return (
 								<ButtonBase
 									key={index}
@@ -81,7 +82,6 @@ class Tabs extends React.Component<TabsProps, TabsState> {
 									data-index={index}
 									mr={3}
 									onClick={this.showTab}
-									{...this.props}
 								>
 									<Txt>{tab}</Txt>
 								</ButtonBase>
@@ -89,7 +89,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
 						})}
 					</Flex>
 
-					{this.props.help}
+					{help}
 				</FlexTab>
 
 				{visibleChild}
