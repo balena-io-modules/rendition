@@ -15,6 +15,6 @@
 | `success`     | `boolean` | - | - | If true, use the `success` theme color     |
 | `info`        | `boolean` | - | - | If true, use the `info` theme color        |
 | `emphasized`  | `boolean` | - | - | If true, use the use bolder colors and a larger size |
-| `plaintText` | `boolean` | - | - | If true, the alert will be rendered without a border or a background |
+| `plainText` | `boolean` | - | - | If true, the alert will be rendered without a border or a background |
 | `prefix` | <code>JSX.Element &#124; string &#124; false</code> | - | - | Set a prefix on the alert message, if this prop is set to false, the default prefix will not be shown |
 | `onDismiss` | `() => void` | - | - | A function that is called when dismissing an alert
