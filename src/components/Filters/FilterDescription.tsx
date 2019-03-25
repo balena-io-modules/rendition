@@ -1,8 +1,9 @@
 import { JSONSchema6 } from 'json-schema';
 import noop = require('lodash/noop');
 import * as React from 'react';
+import FaClose = require('react-icons/lib/fa/close');
 import styled from 'styled-components';
-import DeleteBtn from '../DeleteButton';
+import Button from '../Button';
 import { Box, Flex } from '../Grid';
 
 const ButtonWrapper = styled.button`
@@ -16,6 +17,10 @@ const ButtonWrapper = styled.button`
 
 const WrappingEm = styled.em`
 	white-space: pre-wrap;
+`;
+
+const DeleteButton = styled(Button)`
+	color: rgba(0, 0, 0, 0.4);
 `;
 
 const FilterDescriptionInner = (props: { filter: JSONSchema6 }) => (
@@ -48,10 +53,16 @@ const FilterDescription = (props: FilterDescriptionProps) => {
 			</ButtonWrapper>
 
 			{!!props.delete && (
-				<DeleteBtn
+				<DeleteButton
+					plaintext
+					p={1}
+					fontSize={1}
+					ml={1}
 					color={props.dark ? '#fff' : undefined}
 					onClick={props.delete}
-				/>
+				>
+					<FaClose />
+				</DeleteButton>
 			)}
 		</div>
 	);

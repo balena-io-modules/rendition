@@ -62,7 +62,6 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [Fixed](#fixed)
 - [Flex](#flex)
 - [Form](#form)
-- [Gauge](#gauge)
 - [Heading](#heading)
 - [Img](#img)
 - [Input](#input)
@@ -460,29 +459,6 @@ use it, it can be imported using `import { Form } from 'rendition/dist/unstable'
 | `onFormChange` | `(result: object) => void` | - | - | A function that is called when form data changes |
 | `onFormSubmit` | `(result: object) => void` | - | - | A function that is called when the form is submitted |
 | `uiSchema` | `object` | - | - | A configuration object used to change the styling and layout of the form. See the [`react-jsonschema-form`](https://github.com/mozilla-services/react-jsonschema-form) docs for more details |
-### Gauge
-
-Generate a "gauge" shaped chart with a color coded legend.
-Gauges are generated using an array of data, where each item represents
-a segment of the gauge. Each item should have the following properties:
-
-| Name          | Type      | Description                                          |
-| ------------- | --------- | ---------------------------------------------------- |
-| value         | `number`  | A numerical value for this segment                   |
-| name          | `string`  | A descriptive name for this segment                  |
-| color         | `string`  | A CSS color string to use for this segment           |
-
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Gauge.js)
-
-#### Props
-
-| Name   | Type   | Default   | Required   | Description   |
-| ------ | ------ | --------- | ---------- | ------------- |
-| `title`  | `string` | - | ✓ | Text displayed in the center of the gauge |
-| `data`  | `object[]` | - | ✓ | An array of data as described above |
-| `placeholderColor`  | `string` | - | - | A CSS color string to use as the gauge's background |
-
-
 ### Heading
 
 A component that displays a heading. By default an `<h3>` tag is used. The exact
@@ -1032,6 +1008,8 @@ If you would like to try them out they can be loaded using
 ## Upgrading
 
 [Upgrading from 3.x to 4.x](docs/migrating_3x-4x.md)
+
+[Upgrading from 4.x to 5.x](docs/migrating_4x-5x.md)
 
 ## Contributing
 

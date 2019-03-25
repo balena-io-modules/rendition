@@ -7,12 +7,9 @@ import { default as Button } from './components/Button'
 import { default as ButtonGroup } from './components/ButtonGroup'
 import { default as Card } from './components/Card'
 import { default as CodeWithCopy } from './components/CodeWithCopy'
-import { default as DeleteButton } from './components/DeleteButton'
-import { default as DeviceStatusGauge } from './components/DeviceStatusGauge'
 import { default as Divider } from './components/Divider'
 import { default as Filters } from './components/Filters'
 import { default as Fixed } from './components/Fixed'
-import { default as Gauge } from './components/Gauge'
 import { default as Input } from './components/Input'
 import { default as Modal } from './components/Modal'
 import { default as Pager } from './components/Pager'
@@ -52,14 +49,11 @@ export {
   Card,
   CodeWithCopy,
   Container,
-  DeleteButton,
-  DeviceStatusGauge,
   Divider,
   DropDownButton,
   Filters,
   Fixed,
   Flex,
-  Gauge,
   Heading,
   Link,
   Input,
