@@ -24,6 +24,6 @@ describe('Link component', () => {
       </Provider>
     )
 
-    expect(component.find(`a [href="${url}"]`).text()).toEqual(url)
+    expect(component.find(`a[href="${url}"]`).text()).toEqual(url)
   })
 })

@@ -114,7 +114,7 @@ const TooltipElementInner = styled.div`
 	background: black;
 	border-radius: 4px;
 	padding: 3px 8px;
-	textalign: center;
+	text-align: center;
 `;
 
 interface TooltipShowOptions {
@@ -330,10 +330,11 @@ export class Tooltips {
 			this.hideOnMouseOut = null;
 		});
 
-		this.component = ReactDOM.render(
+		// TODO: In future versions, the render function will return void, reference here: https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/react-dom/index.d.ts
+		this.component = (ReactDOM.render(
 			<TooltipComponent />,
 			tooltipRoot,
-		) as TooltipComponent;
+		) as unknown) as TooltipComponent;
 
 		this.initialised = true;
 	}

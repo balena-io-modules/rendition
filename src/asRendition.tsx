@@ -55,6 +55,9 @@ export const withStyledSystem = (child: React.StatelessComponent) => {
 	`;
 
 	Base.displayName = getDisplayName(child);
+
+	// The styled component messes up with the propTypes typings. We don't really need typesafety here anyway, so it is safe to just ignore it.
+	// @ts-ignore
 	Base.propTypes = propTypes;
 
 	return (props: any) => {
