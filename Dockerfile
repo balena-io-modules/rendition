@@ -7,6 +7,5 @@ RUN npm ci
 COPY . ./
 
 RUN npm test
-RUN npm run build
 RUN npm run test:visual
 RUN npm run build:storybook
