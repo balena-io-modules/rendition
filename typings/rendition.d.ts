@@ -338,6 +338,7 @@ declare module 'rendition' {
 		required?: boolean;
 		type?: string;
 		value?: string | string[] | number;
+		pattern?: string;
 
 		invalid?: boolean;
 		valid?: boolean;
