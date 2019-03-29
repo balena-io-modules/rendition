@@ -16,7 +16,6 @@ import {
 	getUiOptions,
 	orderProperties,
 	retrieveSchema,
-	// @ts-ignore
 } from 'react-jsonschema-form/lib/utils';
 
 interface Properties {

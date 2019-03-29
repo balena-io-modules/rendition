@@ -1,10 +1,34 @@
 import * as React from 'react';
 import { compose } from 'recompose';
-import { TextareaProps } from 'rendition';
 import styled, { withTheme } from 'styled-components';
 import asRendition from '../asRendition';
+import { DefaultProps } from '../common-types';
 import { radius } from '../theme';
 import { monospace, px } from '../utils';
+
+export interface TextareaProps extends DefaultProps {
+	monospace?: boolean;
+	autoComplete?: string;
+	autoFocus?: boolean;
+	cols?: number;
+	dirName?: string;
+	disabled?: boolean;
+	form?: string;
+	maxLength?: number;
+	minLength?: number;
+	name?: string;
+	placeholder?: string;
+	readOnly?: boolean;
+	required?: boolean;
+	rows?: number;
+	value?: string;
+	wrap?: string;
+
+	onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
+	autoRows?: boolean;
+	maxRows?: number;
+	minRows?: number;
+}
 
 const Base = styled.textarea`
 	border-radius: ${px(radius)};
@@ -30,6 +54,7 @@ const Component = ({
 	maxRows,
 	minRows,
 	rows,
+	color,
 	...props
 }: TextareaProps) => {
 	let rowsProp = rows;

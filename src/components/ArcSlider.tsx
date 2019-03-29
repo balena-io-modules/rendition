@@ -1,8 +1,14 @@
 import * as React from 'react';
-import { ArcSliderProps } from 'rendition';
 import styled from 'styled-components';
 import { constrainNumber, darken, getAngleBetweenPoints } from '../utils';
-import { Box, Flex } from './Grid';
+import { Box, BoxProps, Flex } from './Grid';
+
+export interface ArcSliderProps extends BoxProps {
+	onValueChange?: (value: number) => void;
+	value?: number;
+	fillColor?: string;
+	background?: string;
+}
 
 const ANGLERANGE = 135;
 

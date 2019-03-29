@@ -3,12 +3,28 @@ import get = require('lodash/get');
 import omit = require('lodash/omit');
 import * as React from 'react';
 import { compose, withProps } from 'recompose';
-import { LinkProps } from 'rendition';
 import styled, { StyledFunction } from 'styled-components';
 import { color, fontSize, space } from 'styled-system';
 import asRendition from '../asRendition';
+import { DefaultProps, Tooltip } from '../common-types';
 import { darken, monospace } from '../utils';
 import { align, bold, caps } from './Txt';
+
+export interface LinkBaseProps {
+	blank?: boolean;
+	disabled?: boolean;
+	download?: any;
+	href?: string;
+	hrefLang?: string;
+	media?: string;
+	rel?: string;
+	target?: string;
+	type?: string;
+	is?: string;
+	decor?: string;
+}
+
+export interface LinkProps extends DefaultProps, Tooltip, LinkBaseProps {}
 
 let Base = (styled.a as StyledFunction<LinkProps>)`
   ${align}

@@ -1,17 +1,18 @@
 import { JSONSchema6 } from 'json-schema';
 import forEach = require('lodash/forEach');
 import isArray = require('lodash/isArray');
-import {
-	FilterSignature,
-	FiltersView,
-	MigrateLegacyViewsOutput,
-	v3,
-	ViewScope,
-} from 'rendition';
+import { FilterSignature, FiltersView, ViewScope } from './components/Filters';
 import {
 	createFilter,
 	createFullTextSearchFilter,
 } from './components/Filters/SchemaSieve';
+
+import { v3 } from './migration-types';
+
+interface MigrateLegacyViewsOutput {
+	views: FiltersView[];
+	viewScopes: ViewScope[];
+}
 
 const convertToBooleanSignature = (
 	legacyFilter: v3.BaseFilter,

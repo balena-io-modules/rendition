@@ -3,11 +3,15 @@ import * as React from 'react';
 import CloseIcon = require('react-icons/lib/md/close');
 import MenuIcon = require('react-icons/lib/md/dehaze');
 import { compose, withProps } from 'recompose';
-import { BoxProps, FlexProps, NavbarProps } from 'rendition';
 import styled, { StyledFunction, withTheme } from 'styled-components';
 import { responsiveStyle } from 'styled-system';
+import { DefaultProps } from '../common-types';
 import Container from './Container';
-import { Box, Flex } from './Grid';
+import { Box, BoxProps, Flex, FlexProps } from './Grid';
+
+export interface NavbarProps extends DefaultProps {
+	brand?: JSX.Element;
+}
 
 const display = responsiveStyle('display', 'display');
 const maxHeight = responsiveStyle('max-height', 'maxHeight');

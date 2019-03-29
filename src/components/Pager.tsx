@@ -1,11 +1,19 @@
 import * as React from 'react';
 import FaChevronLeft = require('react-icons/lib/fa/chevron-left');
 import FaChevronRight = require('react-icons/lib/fa/chevron-right');
-import { PagerProps } from 'rendition';
 import styled from 'styled-components';
+import { DefaultProps } from '../common-types';
 import Button from './Button';
 import { Box, Flex } from './Grid';
 import Txt from './Txt';
+
+export interface PagerProps extends DefaultProps {
+	totalItems: number;
+	itemsPerPage: number;
+	page: number;
+	nextPage: () => void;
+	prevPage: () => void;
+}
 
 const ButtonGroup = styled(Box)`
 	padding-right: 1px;
@@ -35,6 +43,7 @@ export default ({
 	page,
 	nextPage,
 	prevPage,
+	color,
 	...props
 }: PagerProps) => {
 	const lowerBound = page * itemsPerPage;

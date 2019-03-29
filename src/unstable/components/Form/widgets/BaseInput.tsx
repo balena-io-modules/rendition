@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { FormWidgetProps } from 'rendition/dist/unstable';
 import { Input } from '../../../../';
+import { FormWidgetProps } from '../../../unstable-typings';
 
 const BaseInput = (props: FormWidgetProps) => {
 	// Note: since React 15.2.0 we can't forward unknown element attributes, so we

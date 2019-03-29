@@ -1,8 +1,11 @@
 import { mermaidAPI } from 'mermaid';
 import * as React from 'react';
-import { MermaidProps } from 'rendition/dist/extra/Mermaid';
 import uuid = require('uuid/v4');
-import { Box } from '../';
+import { Box, BoxProps } from '../components/Grid';
+
+interface MermaidProps extends BoxProps {
+	value: string;
+}
 
 export class Mermaid extends React.Component<MermaidProps, {}> {
 	private renderArea: null | HTMLElement;

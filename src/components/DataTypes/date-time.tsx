@@ -1,9 +1,9 @@
 import { JSONSchema6 } from 'json-schema';
 import assign = require('lodash/assign');
 import * as React from 'react';
-import { DataTypeEditProps, InputProps } from 'rendition';
 import * as utils from '../../utils';
-import Input from '../Input';
+import { DataTypeEditProps } from '../Filters';
+import Input, { InputProps } from '../Input';
 import { getDefaultDate, normalizeDateTime } from './date-time-helpers';
 
 export const operators = {

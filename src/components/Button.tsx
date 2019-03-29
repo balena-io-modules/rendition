@@ -1,7 +1,13 @@
 import * as React from 'react';
-import { ButtonAnchorProps, ButtonProps } from 'rendition';
 import styled, { StyledFunction, withTheme } from 'styled-components';
 import asRendition, { withStyledSystem } from '../asRendition';
+import {
+	Coloring,
+	DefaultProps,
+	Sizing,
+	Theme,
+	Tooltip,
+} from '../common-types';
 import {
 	bold,
 	darken,
@@ -11,8 +17,29 @@ import {
 	normal,
 	px,
 } from '../utils';
+import { LinkBaseProps } from './Link';
 
-interface ThemedButtonProps extends ButtonProps {
+export interface ButtonBaseProps
+	extends DefaultProps,
+		Coloring,
+		Sizing,
+		Tooltip {
+	active?: boolean;
+	square?: boolean;
+	disabled?: boolean;
+	outline?: boolean;
+	plaintext?: boolean;
+	underline?: boolean;
+	iconElement?: JSX.Element;
+}
+
+export interface ButtonAnchorProps extends ButtonBaseProps, LinkBaseProps {}
+
+export interface ButtonProps extends ButtonBaseProps {
+	type?: 'submit' | 'reset' | 'button';
+}
+
+export interface ThemedButtonProps extends ButtonProps {
 	theme: Theme;
 }
 

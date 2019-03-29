@@ -2,15 +2,26 @@ import * as React from 'react';
 import IconCaretDown = require('react-icons/lib/fa/caret-down');
 import IconCaretUp = require('react-icons/lib/fa/caret-up');
 import { compose } from 'recompose';
-import { DropDownButtonProps } from 'rendition';
 import styled, { StyledFunction, withTheme } from 'styled-components';
 import { color, fontSize, space, width } from 'styled-system';
+import { Coloring, DefaultProps, Tooltip } from '../common-types';
 import theme from '../theme';
 import { px } from '../utils';
 import Button from './Button';
 import Divider from './Divider';
 import Fixed from './Fixed';
 import { Box, Flex } from './Grid';
+
+export interface DropDownButtonProps extends DefaultProps, Coloring, Tooltip {
+	disabled?: boolean;
+	label?: JSX.Element;
+	border?: boolean;
+	joined?: boolean;
+	outline?: boolean;
+	alignRight?: boolean;
+	noListFormat?: boolean;
+	maxHeight?: string | number;
+}
 
 const ToggleBase = styled(Button)`
 	min-width: 0;
@@ -180,6 +191,7 @@ class DropDownButton extends React.Component<
 			noListFormat,
 			outline,
 			tooltip,
+			color,
 			...props
 		} = this.props;
 

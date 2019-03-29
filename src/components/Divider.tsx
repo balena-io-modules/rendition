@@ -1,8 +1,13 @@
 import { compose } from 'recompose';
-import { DividerProps } from 'rendition';
 import styled, { StyledFunction, withTheme } from 'styled-components';
 import asRendition from '../asRendition';
+import { DefaultProps } from '../common-types';
 import { px } from '../utils';
+
+export interface DividerProps extends DefaultProps {
+	height?: number;
+	color?: string;
+}
 
 const Base = (styled.hr as StyledFunction<
 	DividerProps & React.HTMLProps<HTMLInputElement>

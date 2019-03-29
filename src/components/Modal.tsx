@@ -1,15 +1,28 @@
 import assign = require('lodash/assign');
 import * as React from 'react';
-import { ButtonAnchorProps, ButtonProps, ModalProps } from 'rendition';
 import styled, { injectGlobal, withTheme } from 'styled-components';
+import { DefaultProps, Theme } from '../common-types';
 import { stopPropagation } from '../utils';
 import { px } from '../utils';
-import Button from './Button';
+import Button, { ButtonAnchorProps, ButtonProps } from './Button';
 import Fixed from './Fixed';
 import { Box, Flex } from './Grid';
 import Txt from './Txt';
 
-interface ThemedModalProps extends ModalProps {
+export interface ModalProps extends DefaultProps {
+	title?: string;
+	titleElement?: string | JSX.Element;
+	titleDetails?: string | JSX.Element;
+	action?: string | JSX.Element;
+	cancel?: () => any;
+	done: () => any;
+	primaryButtonProps?: ButtonProps | ButtonAnchorProps;
+	secondaryButtonProps?: ButtonProps | ButtonAnchorProps;
+	cancelButtonProps?: ButtonProps | ButtonAnchorProps;
+	containerStyle?: React.CSSProperties;
+}
+
+export interface ThemedModalProps extends ModalProps {
 	theme: Theme;
 }
 

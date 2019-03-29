@@ -1,14 +1,22 @@
 import map = require('lodash/map');
 import * as React from 'react';
 import { compose } from 'recompose';
-import { CardProps } from 'rendition';
 import styled, { StyledFunction, withTheme } from 'styled-components';
+import { DefaultProps } from '../common-types';
 
 import asRendition from '../asRendition';
 import { px } from '../utils';
 import Divider from './Divider';
 import { Box, Flex } from './Grid';
 import Txt from './Txt';
+
+export interface CardProps extends DefaultProps {
+	title?: string;
+	cta?: JSX.Element;
+	rows?: JSX.Element[];
+	children?: any;
+	minHeight?: string;
+}
 
 const Wrapper = (styled.div as StyledFunction<CardProps>)`
 	border: solid 1px #dfdede;

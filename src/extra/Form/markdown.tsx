@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { FormWidgetProps } from 'rendition/dist/unstable';
 import { Link, Tabs, Textarea, Theme } from '../../';
 import { Form } from '../../unstable';
 import { Markdown } from '../Markdown';
+
+type FormWidgetProps = any;
 
 class Widget extends React.Component<FormWidgetProps, {}> {
 	public handleChange = ({

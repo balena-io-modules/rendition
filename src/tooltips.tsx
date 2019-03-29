@@ -4,8 +4,8 @@ import noop = require('lodash/noop');
 import pick = require('lodash/pick');
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { TooltipPlacement as Placement } from 'rendition';
 import styled from 'styled-components';
+import { TooltipPlacement } from './common-types';
 
 // The distance between the tooltip arrow and the target element
 const TARGET_OFFSET = 3;
@@ -72,7 +72,7 @@ const TooltipBottomArrow = styled.div`
 	border-bottom-color: #000;
 `;
 
-const getArrowElement = (placement?: Placement) => {
+const getArrowElement = (placement?: TooltipPlacement) => {
 	switch (placement) {
 		case 'right':
 			return TooltipRightArrow;
@@ -118,14 +118,14 @@ const TooltipElementInner = styled.div`
 `;
 
 interface TooltipShowOptions {
-	placement?: Placement;
+	placement?: TooltipPlacement;
 	containerStyle?: React.CSSProperties;
 	innerStyle?: React.CSSProperties;
 	arrowStyle?: React.CSSProperties;
 }
 
 interface TooltipComponentState {
-	placement: 'top' | 'right' | 'bottom' | 'left' | undefined;
+	placement?: TooltipPlacement;
 	show: boolean;
 	coordinates: {
 		top: number;

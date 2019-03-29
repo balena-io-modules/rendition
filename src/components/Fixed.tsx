@@ -1,10 +1,18 @@
 import defaultTo = require('lodash/defaultTo');
 import { compose, withProps } from 'recompose';
-import { FixedProps } from 'rendition';
 import styled, { StyledFunction, withTheme } from 'styled-components';
 import asRendition from '../asRendition';
+import { DefaultProps, ResponsiveStyle } from '../common-types';
 
-interface FixedBaseProps extends DefaultProps {
+export interface FixedProps extends DefaultProps {
+	top?: boolean | ResponsiveStyle;
+	right?: boolean | ResponsiveStyle;
+	bottom?: boolean | ResponsiveStyle;
+	left?: boolean | ResponsiveStyle;
+	z?: ResponsiveStyle;
+}
+
+export interface FixedBaseProps extends DefaultProps {
 	top?: ResponsiveStyle;
 	right?: ResponsiveStyle;
 	bottom?: ResponsiveStyle;

@@ -1,9 +1,10 @@
 import * as React from 'react';
 import styled, { StyledFunction, ThemeProvider } from 'styled-components';
+import { DefaultProps, Theme } from '../common-types';
 import defaultTheme from '../theme';
 
-interface ThemedBaseProps extends DefaultProps {
-	theme: Theme;
+export interface ThemedBaseProps extends DefaultProps {
+	theme?: Theme;
 }
 
 const Base = (styled.div as StyledFunction<DefaultProps>)`

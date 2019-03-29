@@ -1,10 +1,36 @@
-import { Theme, TxtProps } from 'rendition';
 import styled from 'styled-components';
 import { color, fontSize, responsiveStyle, space } from 'styled-system';
 import asRendition from '../asRendition';
+import { DefaultProps, Theme, Tooltip } from '../common-types';
 import { monospace } from '../utils';
 
-interface ThemedTxtProps extends TxtProps {
+export interface TxtProps extends DefaultProps, Tooltip {
+	monospace?: boolean;
+	bold?: boolean;
+	caps?: boolean;
+	whitespace?:
+		| 'normal'
+		| 'nowrap'
+		| 'pre'
+		| 'pre-line'
+		| 'pre-wrap'
+		| 'initial'
+		| 'inherit';
+	align?:
+		| 'left'
+		| 'right'
+		| 'center'
+		| 'justify'
+		| 'justify-all'
+		| 'start'
+		| 'end'
+		| 'match-parent'
+		| 'inherit'
+		| 'initial'
+		| 'unset';
+}
+
+export interface ThemedTxtProps extends TxtProps {
 	theme: Theme;
 }
 

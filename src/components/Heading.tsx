@@ -1,8 +1,8 @@
-import { FlexProps } from 'rendition';
 import styled, { StyledFunction } from 'styled-components';
 import { color, fontSize, space } from 'styled-system';
 import asRendition from '../asRendition';
 import { monospace } from '../utils';
+import { FlexProps } from './Grid';
 import { align, bold, caps } from './Txt';
 
 const Heading = (styled.h3 as StyledFunction<FlexProps>)`

@@ -6,6 +6,7 @@ import forEach = require('lodash/forEach');
 import get = require('lodash/get');
 import isObject = require('lodash/isObject');
 import { ThemedStyledFunction } from 'styled-components';
+import { DefaultProps, Theme } from './common-types';
 const matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;
 
 interface ThemedDefaultProps extends DefaultProps {
