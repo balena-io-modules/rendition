@@ -1,10 +1,15 @@
 import * as React from 'react';
 import { compose } from 'recompose';
-import { PillProps } from 'rendition';
 import styled, { withTheme } from 'styled-components';
 import asRendition from '../asRendition';
+import { Coloring, Shading } from '../common-types';
 import { getColor, withProps } from '../utils';
-import Txt from './Txt';
+import Txt, { TxtProps } from './Txt';
+
+export interface PillProps extends Coloring, Shading, TxtProps {
+	small?: boolean;
+	style?: React.CSSProperties;
+}
 
 const BasePill = withProps<PillProps>()(styled(Txt))`
 	display: inline-flex;

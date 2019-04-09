@@ -5,10 +5,13 @@ import isEqual = require('lodash/isEqual');
 import merge = require('lodash/merge');
 import omit = require('lodash/omit');
 import * as React from 'react';
-import { BaseFormProps } from 'rendition/dist/unstable';
-import { JellyFormProps } from 'rendition/dist/unstable/components/JellyForm';
+import { BaseFormProps } from '../../unstable-typings';
 import { default as Form } from '../Form';
 import { defaultValueForSchema, runFormulas } from './formulas';
+
+export interface JellyFormProps extends BaseFormProps {
+	schema: string;
+}
 
 const computeFormSchemas = (jellySchema: string, uiSchema: any) => {
 	const computed = jellyschema.generateJsonAndUiSchema(jellySchema);

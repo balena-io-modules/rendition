@@ -1,11 +1,34 @@
 import { compose } from 'recompose';
-import { InputProps } from 'rendition';
 import styled, { StyledFunction, withTheme } from 'styled-components';
 import asRendition from '../asRendition';
+import { DefaultProps, Sizing, Theme } from '../common-types';
 import { radius } from '../theme';
 import { monospace, px } from '../utils';
 
-interface ThemedInputProps extends InputProps {
+export interface InputProps extends DefaultProps, Sizing {
+	monospace?: boolean;
+	autoComplete?: string;
+	autoFocus?: boolean;
+	disabled?: boolean;
+	form?: string;
+	max?: number | string;
+	maxLength?: number;
+	min?: number | string;
+	minLength?: number;
+	name?: string;
+	placeholder?: string;
+	readOnly?: boolean;
+	required?: boolean;
+	type?: string;
+	value?: string | string[] | number;
+	pattern?: string;
+
+	invalid?: boolean;
+	valid?: boolean;
+	onChange?: React.ChangeEventHandler<HTMLInputElement>;
+}
+
+export interface ThemedInputProps extends InputProps {
 	theme: Theme;
 }
 

@@ -4,11 +4,17 @@ import FaClose = require('react-icons/lib/fa/close');
 import FaExclamationCircle = require('react-icons/lib/fa/exclamation-circle');
 import FaExclamationTriangle = require('react-icons/lib/fa/exclamation-triangle');
 import FaInfoCircle = require('react-icons/lib/fa/info-circle');
-import { AlertProps } from 'rendition';
 import styled, { StyledFunction, withTheme } from 'styled-components';
 import asRendition from '../asRendition';
+import { Coloring, DefaultProps, Sizing } from '../common-types';
 import { bold, getColor, normal, px } from '../utils';
 import { Flex } from './Grid';
+
+export interface AlertProps extends DefaultProps, Coloring, Sizing {
+	plaintext?: boolean;
+	prefix?: JSX.Element | string | false;
+	onDismiss?: () => void;
+}
 
 const getPadding = (props: AlertProps) =>
 	props.emphasized ? '15px 40px' : '8px 32px';

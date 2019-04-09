@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { DefaultProps, Theme } from 'rendition';
 import styled, { withTheme } from 'styled-components';
 import {
 	color,
@@ -8,6 +7,7 @@ import {
 	space,
 	textAlign,
 } from 'styled-system';
+import { DefaultProps, Theme } from '../common-types';
 
 const maxWidth = responsiveStyle('max-width', 'maxWidth');
 

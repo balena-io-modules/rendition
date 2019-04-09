@@ -1,8 +1,13 @@
 import assign = require('lodash/assign');
 import { compose, withProps } from 'recompose';
-import { BannerProps } from 'rendition';
 import styled, { withTheme } from 'styled-components';
 import asRendition from '../asRendition';
+import { DefaultProps } from '../common-types';
+
+export interface BannerProps extends DefaultProps {
+	backgroundImage?: string;
+	minHeight?: string;
+}
 
 const setDefaultProps = withProps((props: BannerProps) => {
 	// set defaults

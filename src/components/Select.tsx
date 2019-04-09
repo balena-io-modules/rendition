@@ -1,10 +1,16 @@
 import * as React from 'react';
 import { compose } from 'recompose';
-import { SelectProps } from 'rendition';
 import styled, { withTheme } from 'styled-components';
 import asRendition from '../asRendition';
+import { DefaultProps, Sizing } from '../common-types';
 import { radius } from '../theme';
 import { px, withProps } from '../utils';
+
+export interface SelectProps extends DefaultProps, Sizing {
+	value?: string | string[] | number | null;
+	disabled?: boolean;
+	onChange?: React.ChangeEventHandler<HTMLSelectElement>;
+}
 
 const Base = withProps<
 	{ emphasized?: boolean } & React.HTMLProps<HTMLSelectElement>
@@ -53,6 +59,7 @@ const Component = ({
 	emphasized,
 	onChange,
 	value,
+	color,
 	...props
 }: SelectProps) => {
 	return (

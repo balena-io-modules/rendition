@@ -14,7 +14,7 @@ import pickBy = require('lodash/pickBy');
 import reduce = require('lodash/reduce');
 import startsWith = require('lodash/startsWith');
 import trimStart = require('lodash/trimStart');
-import { FilterSignature } from 'rendition';
+import { FilterSignature } from '.';
 import * as utils from '../../utils';
 import { getDataModel } from '../DataTypes';
 

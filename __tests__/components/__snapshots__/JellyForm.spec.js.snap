@@ -38,7 +38,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
             </label>
             <input
               autoFocus={false}
-              className="sc-ksYbfQ lkmgCu sc-cJSrbW fVRTuS"
+              className="sc-hmzhuo cwbGSS sc-ksYbfQ cBOQyn"
               disabled={false}
               id="root_Name"
               label="Name"

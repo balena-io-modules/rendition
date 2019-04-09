@@ -4,13 +4,19 @@ import get = require('lodash/get');
 import omit = require('lodash/omit');
 import * as React from 'react';
 import { compose, withProps } from 'recompose';
-import { ProgressBarProps } from 'rendition';
 import styled, { StyledFunction, withTheme } from 'styled-components';
 import asRendition from '../asRendition';
+import { Coloring, DefaultProps, Sizing, Theme } from '../common-types';
 import { radius } from '../theme';
 import { px } from '../utils';
 
-interface ThemedProgressBarProps extends ProgressBarProps {
+export interface ProgressBarProps extends DefaultProps, Coloring, Sizing {
+	value: number;
+	color?: string;
+	background?: string;
+}
+
+export interface ThemedProgressBarProps extends ProgressBarProps {
 	theme: Theme;
 }
 

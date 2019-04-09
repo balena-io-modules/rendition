@@ -2,7 +2,19 @@ import get = require('lodash/get');
 import isFunction = require('lodash/isFunction');
 import map = require('lodash/map');
 import * as React from 'react';
-import { TableColumn } from 'rendition';
+
+export type TableSortFunction<T> = (a: T, b: T) => number;
+
+export interface TableColumn<T> {
+	cellAttributes?:
+		| React.AnchorHTMLAttributes<HTMLAnchorElement>
+		| ((value: any, row: T) => React.AnchorHTMLAttributes<HTMLAnchorElement>);
+	field: keyof T;
+	icon?: string;
+	label?: string | JSX.Element;
+	render?: (value: any, row: T) => string | number | JSX.Element | null;
+	sortable?: boolean | TableSortFunction<T>;
+}
 
 /*
  * Get the value specified by the `field` value

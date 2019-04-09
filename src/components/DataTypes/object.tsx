@@ -6,8 +6,8 @@ import includes = require('lodash/includes');
 import isString = require('lodash/isString');
 import mapValues = require('lodash/mapValues');
 import * as React from 'react';
-import { DataTypeEditProps } from 'rendition';
 import * as utils from '../../utils';
+import { DataTypeEditProps } from '../Filters';
 import { Flex } from '../Grid';
 import Input from '../Input';
 

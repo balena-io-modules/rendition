@@ -1,8 +1,8 @@
 import { JSONSchema6 } from 'json-schema';
 import * as React from 'react';
 import FaBookmarkO = require('react-icons/lib/fa/bookmark-o');
-import { FiltersView, ViewScope } from 'rendition';
 import styled from 'styled-components';
+import { FiltersView, ViewScope } from '.';
 import Button from '../Button';
 import { Box, Flex } from '../Grid';
 import Input from '../Input';
@@ -17,7 +17,7 @@ const BorderedDiv = styled.div`
 	border: solid 1px #979797;
 `;
 
-interface FilterSummaryProps {
+export interface FilterSummaryProps {
 	edit: (rule: JSONSchema6) => void;
 	delete: (rule: JSONSchema6) => void;
 	saveView: (name: string, scope: string | null) => void;
@@ -28,7 +28,7 @@ interface FilterSummaryProps {
 	dark?: boolean;
 }
 
-interface FilterSummaryState {
+export interface FilterSummaryState {
 	name: string;
 	showForm: boolean;
 	id: string;

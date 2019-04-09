@@ -2,9 +2,9 @@ import { JSONSchema6 } from 'json-schema';
 import assign = require('lodash/assign');
 import map = require('lodash/map');
 import * as React from 'react';
-import { DataTypeEditProps, SelectProps } from 'rendition';
 import * as utils from '../../utils';
-import Select from '../Select';
+import { DataTypeEditProps } from '../Filters';
+import Select, { SelectProps } from '../Select';
 
 export const operators = {
 	is: {

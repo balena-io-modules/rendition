@@ -7,13 +7,13 @@ import Button from './Button';
 import { Box, Flex } from './Grid';
 import Txt from './Txt';
 
-interface TabsProps {
+export interface TabsProps {
 	tabs: string[];
 	help?: JSX.Element;
 	children: JSX.Element[];
 }
 
-interface TabsState {
+export interface TabsState {
 	show: number;
 }
 

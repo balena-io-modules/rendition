@@ -1,13 +1,22 @@
 import assign = require('lodash/assign');
 import cloneDeep = require('lodash/cloneDeep');
 import * as React from 'react';
-import { TerminalProps } from 'rendition';
 import styled from 'styled-components';
 import { ITerminalOptions, Terminal as Xterm } from 'xterm';
 import { fit as fitTerm } from 'xterm/lib/addons/fit/fit';
+import { Theme as ThemeType } from '../../common-types';
 import Theme from '../../theme';
 import { Box } from '../Grid';
 import defaultXtermStyle from './XTermDefaultStyle';
+
+export interface TerminalProps {
+	ttyInstance?: Xterm | null;
+	// Prevents tty instance from being destroyed when terminal unmounts
+	persistent?: boolean;
+	nonInteractive?: boolean;
+	color?: string;
+	config?: ITerminalOptions;
+}
 
 const TtyContainer = styled(Box)`
 	position: relative;
@@ -39,8 +48,8 @@ const TtyInner = styled.div`
 	bottom: 0;
 `;
 
-interface ThemedTerminalProps extends TerminalProps {
-	theme: Theme;
+export interface ThemedTerminalProps extends TerminalProps {
+	theme: ThemeType;
 }
 
 class Terminal extends React.Component<ThemedTerminalProps, {}> {

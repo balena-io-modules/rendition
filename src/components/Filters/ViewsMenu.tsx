@@ -1,17 +1,16 @@
+import { JSONSchema6 } from 'json-schema';
 import cloneDeep = require('lodash/cloneDeep');
 import groupBy = require('lodash/groupBy');
 import map = require('lodash/map');
 import * as React from 'react';
 import FaPieChart = require('react-icons/lib/fa/pie-chart');
 import FaTrash = require('react-icons/lib/fa/trash');
-import { DropDownButtonProps, FilterRenderMode, FiltersView } from 'rendition';
 import styled from 'styled-components';
-import DropDownButton from '../DropDownButton';
+import { FilterRenderMode, FiltersView } from '.';
+import DropDownButton, { DropDownButtonProps } from '../DropDownButton';
 import { Box } from '../Grid';
 import Txt from '../Txt';
 import FilterDescription from './FilterDescription';
-
-import { JSONSchema6 } from 'json-schema';
 
 const Wrapper = styled.div``;
 

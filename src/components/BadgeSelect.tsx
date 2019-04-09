@@ -1,12 +1,25 @@
 import has = require('lodash/has');
 import includes = require('lodash/includes');
 import * as React from 'react';
-import { BadgeSelectProps } from 'rendition';
 import styled from 'styled-components';
 import Badge from './Badge';
 import Divider from './Divider';
-import DropDownButton from './DropDownButton';
+import DropDownButton, { DropDownButtonProps } from './DropDownButton';
 import Txt from './Txt';
+
+export interface BadgeSelectProps extends DropDownButtonProps {
+	items: string[];
+	extraPrefix?: string[];
+	extraSuffix?: string[];
+	extra?: string[];
+	onItemChange?: (value: string) => void;
+	defaultSelected?: string;
+	placeholder?: string;
+}
+
+export interface BadgeSelectState {
+	selected: string | null | undefined;
+}
 
 const ButtonWrapper = styled.button`
 	border: 0;
@@ -26,10 +39,6 @@ const ButtonWrapper = styled.button`
 		background-color: #f0f3f7;
 	}
 `;
-
-interface BadgeSelectState {
-	selected: string | null | undefined;
-}
 
 class BadgeSelect extends React.Component<BadgeSelectProps, BadgeSelectState> {
 	constructor(props: BadgeSelectProps) {
@@ -52,9 +61,12 @@ class BadgeSelect extends React.Component<BadgeSelectProps, BadgeSelectState> {
 		const {
 			items,
 			extra,
+			extraPrefix,
+			extraSuffix,
 			onItemChange,
 			defaultSelected,
 			placeholder,
+			color,
 			...props
 		} = this.props;
 		return (
@@ -64,32 +76,26 @@ class BadgeSelect extends React.Component<BadgeSelectProps, BadgeSelectState> {
 				joined
 				label={
 					<Txt>
-						{this.state.selected == null &&
-							!!this.props.placeholder &&
-							this.props.placeholder}
-						{this.state.selected == null &&
-							!this.props.placeholder &&
-							'Choose an option'}
+						{this.state.selected == null && !!placeholder && placeholder}
+						{this.state.selected == null && !placeholder && 'Choose an option'}
 						{this.state.selected != null &&
-							includes(this.props.items, this.state.selected) && (
+							includes(items, this.state.selected) && (
 								<Badge text={this.state.selected} />
 							)}
 						{this.state.selected != null &&
-							!includes(this.props.items, this.state.selected) &&
+							!includes(items, this.state.selected) &&
 							this.state.selected}
 					</Txt>
 				}
 			>
-				{!!this.props.extraPrefix &&
-					this.props.extraPrefix.map(item => (
+				{!!extraPrefix &&
+					extraPrefix.map(item => (
 						<ButtonWrapper key={item} onClick={() => this.setSelected(item)}>
 							<Txt fontSize={2}>{item}</Txt>
 						</ButtonWrapper>
 					))}
 
-				{!!this.props.extraPrefix && (
-					<Divider height={1} color="#dadada" mx={10} />
-				)}
+				{!!extraPrefix && <Divider height={1} color="#dadada" mx={10} />}
 
 				{this.props.items.map(item => (
 					<ButtonWrapper key={item} onClick={() => this.setSelected(item)}>
@@ -97,19 +103,19 @@ class BadgeSelect extends React.Component<BadgeSelectProps, BadgeSelectState> {
 					</ButtonWrapper>
 				))}
 
-				{(!!this.props.extra || this.props.extraSuffix) && (
+				{(!!extra || extraSuffix) && (
 					<Divider height={1} color="#dadada" mx={10} />
 				)}
 
-				{!!this.props.extra &&
-					this.props.extra.map(item => (
+				{!!extra &&
+					extra.map(item => (
 						<ButtonWrapper key={item} onClick={() => this.setSelected(item)}>
 							<Txt fontSize={2}>{item}</Txt>
 						</ButtonWrapper>
 					))}
 
-				{!!this.props.extraSuffix &&
-					this.props.extraSuffix.map(item => (
+				{!!extraSuffix &&
+					extraSuffix.map(item => (
 						<ButtonWrapper key={item} onClick={() => this.setSelected(item)}>
 							<Txt fontSize={2}>{item}</Txt>
 						</ButtonWrapper>

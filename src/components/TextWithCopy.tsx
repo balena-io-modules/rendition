@@ -2,12 +2,17 @@ import copyToClipboard = require('copy-to-clipboard');
 import * as React from 'react';
 import FaClipboard = require('react-icons/lib/fa/clipboard');
 import { compose } from 'recompose';
-import { TextWithCopyProps } from 'rendition';
 import styled, { withTheme } from 'styled-components';
 import asRendition from '../asRendition';
+import { DefaultProps } from '../common-types';
 import { stopEvent, withProps } from '../utils';
 import { Box } from './Grid';
 import Txt from './Txt';
+
+export interface TextWithCopyProps extends DefaultProps {
+	copy: string;
+	showCopyButton?: 'hover' | 'always';
+}
 
 const Wrapper = withProps<TextWithCopyProps>()(styled(Txt.span))`
 	display: inline-block;

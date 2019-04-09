@@ -1,6 +1,6 @@
-type ResponsiveStyle = string | number | Array<string | number>;
+export type ResponsiveStyle = string | number | Array<string | number>;
 
-interface Theme {
+export interface Theme {
 	breakpoints: number[];
 	space: number[];
 	fontSizes: number[];
@@ -17,7 +17,7 @@ interface Theme {
 	radius: number;
 }
 
-interface StyledSystemProps {
+export interface StyledSystemProps {
 	width?: ResponsiveStyle;
 	w?: ResponsiveStyle;
 	fontSize?: ResponsiveStyle;
@@ -41,7 +41,7 @@ interface StyledSystemProps {
 }
 
 // Cherry pick the react attributes that don't conflict with styled-system
-interface DefaultProps
+export interface DefaultProps
 	extends StyledSystemProps,
 		React.DOMAttributes<HTMLElement> {
 	// React-specific Attributes
@@ -66,7 +66,7 @@ interface DefaultProps
 	title?: string;
 }
 
-type PineDataType =
+export type PineDataType =
 	| 'Boolean'
 	| 'Case Insensitive Text'
 	| 'Date Time'
@@ -80,17 +80,17 @@ type PineDataType =
 	| 'Semver Range'
 	| 'Semver';
 
-interface SchemaEntry {
+export interface SchemaEntry {
 	type: PineDataType;
 	values?: string[];
 	label?: string;
 }
 
-interface Schema {
+export interface Schema {
 	[key: string]: SchemaEntry;
 }
 
-interface FilterRule {
+export interface FilterRule {
 	availableOperators: Array<{ value: string; label: string }>;
 	id: string;
 	label: string;
@@ -100,21 +100,21 @@ interface FilterRule {
 	value: any;
 }
 
-interface SingleFilterView {
+export interface SingleFilterView {
 	id: string;
 	name: string;
 	scopeKey: string;
 	rules: FilterRule[];
 }
 
-interface FilterViewScope {
+export interface FilterViewScope {
 	key: string;
 	scopeLabel?: string;
 	title?: string;
 	data: SingleFilterView[];
 }
 
-interface Coloring {
+export interface Coloring {
 	primary?: boolean;
 	secondary?: boolean;
 	tertiary?: boolean;
@@ -125,6 +125,41 @@ interface Coloring {
 	info?: boolean;
 }
 
-interface Sizing {
+export interface ThemeColorSet {
+	main: string;
+	light: string;
+	dark: string;
+}
+
+export interface WithSemilight {
+	semilight: string;
+}
+
+export type ColorShade = keyof ThemeColorSet;
+
+export type Shading = { shade?: ColorShade };
+
+export interface Sizing {
 	emphasized?: boolean;
+}
+
+export type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left';
+
+export interface TooltipProps {
+	text: string;
+	trigger?: 'click' | 'hover';
+	placement?: TooltipPlacement;
+	containerStyle?: React.CSSProperties;
+	innerStyle?: React.CSSProperties;
+	arrowStyle?: React.CSSProperties;
+}
+
+/* Used by:
+	1. CodeWithCopy.tsx
+	2. DropdownButton.tsx
+	3. Link.tsx
+	4. Txt.tsx
+*/
+export interface Tooltip {
+	tooltip?: string | TooltipProps;
 }

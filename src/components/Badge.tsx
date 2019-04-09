@@ -2,16 +2,22 @@ import ColorHash = require('color-hash');
 import assign = require('lodash/assign');
 import memoize = require('lodash/memoize');
 import * as React from 'react';
-import { BadgeProps } from 'rendition';
 import styled, { withTheme } from 'styled-components';
 import asRendition from '../asRendition';
+import { Coloring, Theme } from '../common-types';
 import { getColor, px } from '../utils';
-import { Box } from './Grid';
+import { Box, BoxProps } from './Grid';
+
+export interface BadgeProps extends BoxProps, Coloring {
+	text: string;
+	small?: boolean;
+	color?: string;
+}
 
 const colorHash = new ColorHash();
 const backgroundColor = memoize((text: string): string => colorHash.hex(text));
 
-interface ThemedBadgeProps extends BadgeProps {
+export interface ThemedBadgeProps extends BadgeProps {
 	theme: Theme;
 }
 

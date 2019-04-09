@@ -1,8 +1,11 @@
 import memoize = require('lodash/memoize');
 import * as marked from 'marked';
 import * as React from 'react';
-import { MarkdownProps } from 'rendition/dist/extra/Markdown';
-import { Txt } from '../';
+import Txt, { TxtProps } from '../components/Txt';
+
+interface MarkdownProps extends TxtProps {
+	children: string;
+}
 
 const markedOptions = {
 	// Enable github flavored markdown

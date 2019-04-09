@@ -1,10 +1,18 @@
 import * as React from 'react';
 import FaSearch = require('react-icons/lib/fa/search');
 import { compose } from 'recompose';
-import { SearchProps } from 'rendition';
 import styled, { withTheme } from 'styled-components';
 import asRendition from '../asRendition';
+import { DefaultProps } from '../common-types';
 import Theme from '../theme';
+
+export interface SearchProps extends DefaultProps {
+	dark?: boolean;
+	disabled?: boolean;
+	placeholder?: string;
+	value: string;
+	onChange: (value: any) => void;
+}
 
 const Wrapper = styled.div`
 	position: relative;
