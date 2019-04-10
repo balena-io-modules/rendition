@@ -43,5 +43,3 @@ build/
 deployment/
 config/env
 config/nginx.conf
-
-.git
