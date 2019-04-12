@@ -14,8 +14,10 @@ import * as React from 'react';
 import FaSort = require('react-icons/lib/fa/sort');
 import styled from 'styled-components';
 
+// TODO: Remove explicit import and depend on provider instead.
+import { EnhancedType } from '../../common-types';
 import theme from '../../theme';
-import Button from '../Button';
+import Button, { ButtonProps } from '../Button';
 import Pager from '../Pager';
 import { TableColumn, TableRow } from './TableRow';
 
@@ -136,7 +138,7 @@ const BaseTable = styled.div`
 
 const HeaderButton = styled(Button)`
 	display: block;
-`;
+` as React.ComponentType<EnhancedType<ButtonProps>>;
 
 interface TableState<T> {
 	allChecked: boolean;

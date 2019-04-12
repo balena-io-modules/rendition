@@ -2,12 +2,12 @@ import * as React from 'react';
 import FaChevronLeft = require('react-icons/lib/fa/chevron-left');
 import FaChevronRight = require('react-icons/lib/fa/chevron-right');
 import styled from 'styled-components';
-import { DefaultProps } from '../common-types';
+import { EnhancedType } from '../common-types';
 import Button from './Button';
-import { Box, Flex } from './Grid';
+import { Box, BoxProps, Flex, FlexProps } from './Grid';
 import Txt from './Txt';
 
-export interface PagerProps extends DefaultProps {
+export interface PagerProps extends FlexProps {
 	totalItems: number;
 	itemsPerPage: number;
 	page: number;
@@ -35,7 +35,7 @@ const ButtonGroup = styled(Box)`
 			border-bottom-right-radius: 3px;
 		}
 	}
-`;
+` as React.ComponentType<EnhancedType<BoxProps>>;
 
 export default ({
 	totalItems,
@@ -45,12 +45,12 @@ export default ({
 	prevPage,
 	color,
 	...props
-}: PagerProps) => {
+}: EnhancedType<PagerProps>) => {
 	const lowerBound = page * itemsPerPage;
 	const upperBound = Math.min((page + 1) * itemsPerPage, totalItems);
 
 	return (
-		<Flex justify="flex-end" align="center" {...props}>
+		<Flex justifyContent="flex-end" alignItems="center" {...props}>
 			<Txt mr={2}>
 				<strong>
 					{lowerBound + 1} - {upperBound}

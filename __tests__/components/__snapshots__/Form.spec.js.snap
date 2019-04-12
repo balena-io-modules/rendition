@@ -2,10 +2,10 @@
 
 exports[`Form component should match the stored snapshot 1`] = `
 <div
-  className="sc-kgoBCf kOSFqw"
+  className="sc-cSHVUG qvjIL"
 >
   <div
-    className="sc-dUjcNx kcdjS sc-gZMcBi cmZZgb sc-dnqmqq eheJhs sc-bZQynM gBdotH"
+    className="sc-cQFLBn lcYzlH sc-gzVnrw pznRG sc-bZQynM kMvugX"
   >
     <form
       className="rjsf"
@@ -13,21 +13,21 @@ exports[`Form component should match the stored snapshot 1`] = `
       onSubmit={[Function]}
     >
       <div
-        className="form-group field field-object rendition-form__field--root sc-gZMcBi jxxzwT sc-dnqmqq eheJhs sc-bZQynM gcuxEv"
+        className="form-group field field-object rendition-form__field--root sc-gzVnrw fcRkeO sc-bZQynM kMvugX"
       >
         <fieldset>
           <div
-            className="form-group field field-string rendition-form__field--root_Name sc-gZMcBi jxxzwT sc-dnqmqq eheJhs sc-bZQynM gcuxEv"
+            className="form-group field field-string rendition-form__field--root_Name sc-gzVnrw fcRkeO sc-bZQynM kMvugX"
           >
             <label
-              className="control-label sc-fOKMvo cQLvMK"
+              className="control-label sc-exAgwC jNeAjG"
               htmlFor="root_Name"
             >
               Pokemon Name
             </label>
             <input
               autoFocus={false}
-              className="sc-hmzhuo cwbGSS sc-ksYbfQ cBOQyn"
+              className="sc-TOsTZ iaAvvw sc-cHGsZl gRExkK"
               disabled={false}
               id="root_Name"
               label="Pokemon Name"
@@ -46,7 +46,7 @@ exports[`Form component should match the stored snapshot 1`] = `
         <div />
       </div>
       <button
-        className="sc-hMqMXs kYklEl sc-kpOJdX XGxKL"
+        className="sc-ckVGcZ cobMRw sc-chPdSV RVROT"
         type="submit"
       >
         Submit

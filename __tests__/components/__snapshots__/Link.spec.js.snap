@@ -2,10 +2,10 @@
 
 exports[`Link component Should match the stored snapshot 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-bdVaJa iLLxmY"
 >
   <a
-    className="sc-jTzLTM kVIkyB sc-fjdhpX jDBYsh"
+    className="sc-gqjmRU huqeNB sc-gZMcBi iozIhE"
     color="primary.main"
   >
     Link

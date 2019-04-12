@@ -11,12 +11,12 @@ import * as React from 'react';
 import FaClose = require('react-icons/lib/fa/close');
 import FaFilter = require('react-icons/lib/fa/filter');
 import styled from 'styled-components';
-import { DefaultProps } from '../../common-types';
+import { DefaultProps, EnhancedType } from '../../common-types';
 import * as utils from '../../utils';
 import Button, { ButtonProps } from '../Button';
 import { getDataModel } from '../DataTypes';
 import { DropDownButtonProps } from '../DropDownButton';
-import { Box, Flex } from '../Grid';
+import { Box, BoxProps, Flex } from '../Grid';
 import Modal from '../Modal';
 import Search from '../Search';
 import Select from '../Select';
@@ -99,14 +99,14 @@ const FilterInput = (props: FilterInputProps) => {
 
 const RelativeBox = styled(Box)`
 	position: relative;
-`;
+` as React.ComponentType<EnhancedType<BoxProps>>;
 
 const DeleteButton = styled(Button)`
 	color: rgba(0, 0, 0, 0.4);
 	position: absolute;
 	bottom: 7px;
 	right: -35px;
-`;
+` as React.ComponentType<EnhancedType<ButtonProps>>;
 
 const SearchWrapper = styled.div`
 	flex-basis: 500px;
@@ -114,7 +114,7 @@ const SearchWrapper = styled.div`
 
 const FilterWrapper = styled(Box)`
 	position: relative;
-`;
+` as React.ComponentType<EnhancedType<BoxProps>>;
 
 export interface EditModel {
 	field: string;
@@ -438,7 +438,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 
 		return (
 			<FilterWrapper mb={3}>
-				<Flex justify="space-between">
+				<Flex justifyContent="space-between">
 					{this.shouldRenderComponent('add') && (
 						<Button
 							mr={30}
@@ -460,7 +460,9 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 								dark={this.props.dark}
 								disabled={this.props.disabled}
 								value={this.state.searchString}
-								onChange={e => this.setSimpleSearch(e.target.value)}
+								onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+									this.setSimpleSearch(e.target.value)
+								}
 							/>
 						</SearchWrapper>
 					)}

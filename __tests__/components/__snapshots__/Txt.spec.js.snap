@@ -2,10 +2,10 @@
 
 exports[`Txt renders correctly 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-bdVaJa iLLxmY"
 >
   <div
-    className="sc-htoDjs gDCMNh sc-gzVnrw yMjzV"
+    className="sc-htoDjs jslKMR sc-gzVnrw jCPitn"
   >
     Hello world
   </div>

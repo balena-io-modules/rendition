@@ -199,7 +199,14 @@ describe('JellyForm component', () => {
     it('should set the value if the value is changed after the component mounts', () => {
       const value = { Name: 'Squirtle' }
       const component = mount(
-        <JellyForm schema={schema} />
+        React.createElement(
+          props => (
+            <Provider>
+              <JellyForm {...props} />
+            </Provider>
+          ),
+          { schema }
+        )
       )
 
       component.setProps({ value })

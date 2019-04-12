@@ -1,9 +1,10 @@
+import React from 'react'
 import { configure, addDecorator } from '@storybook/react'
 import { initScreenshot, setScreenshotOptions } from 'storybook-chrome-screenshot'
-import { injectGlobal } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 import theme from '../src/theme'
 
-injectGlobal([], {
+const GlobalStyle = createGlobalStyle([], {
   '*': {
     boxSizing: 'border-box'
   },
@@ -19,6 +20,16 @@ injectGlobal([], {
   }
 })
 
+function withGlobalStyles (storyFn) {
+  return (
+    <React.Fragment>
+      <GlobalStyle />
+      {storyFn()}
+    </React.Fragment>
+  )
+}
+
+addDecorator(withGlobalStyles)
 addDecorator(initScreenshot())
 
 // The 'fontLoading' global is defined in '.storybook/preview-head.html' and

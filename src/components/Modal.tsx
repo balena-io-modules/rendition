@@ -1,16 +1,22 @@
 import assign = require('lodash/assign');
 import * as React from 'react';
-import styled, { injectGlobal, withTheme } from 'styled-components';
-import { DefaultProps, Theme } from '../common-types';
+import styled, { createGlobalStyle, withTheme } from 'styled-components';
+import {
+	DefaultProps,
+	EnhancedType,
+	ResponsiveStyle,
+	Theme,
+} from '../common-types';
 import { stopPropagation } from '../utils';
 import { px } from '../utils';
 import Button, { ButtonAnchorProps, ButtonProps } from './Button';
-import Fixed from './Fixed';
-import { Box, Flex } from './Grid';
-import Txt from './Txt';
+import Fixed, { FixedProps } from './Fixed';
+import { Box, BoxProps, Flex, FlexProps } from './Grid';
+import Txt, { TxtProps } from './Txt';
 
 export interface ModalProps extends DefaultProps {
 	title?: string;
+	width?: ResponsiveStyle;
 	titleElement?: string | JSX.Element;
 	titleDetails?: string | JSX.Element;
 	action?: string | JSX.Element;
@@ -29,7 +35,7 @@ export interface ThemedModalProps extends ModalProps {
 const bodyNoOverflowClass = `rendition-modal-open`;
 
 // tslint:disable-next-line no-unused-expression
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
 	.${bodyNoOverflowClass} {
 		overflow: hidden;
 	}
@@ -43,23 +49,23 @@ const ModalWrapper = styled(Flex)`
 	bottom: 0;
 	z-index: 9999;
 	pointer-events: none;
-`;
+` as React.ComponentType<EnhancedType<FlexProps>>;
 
 const ModalBackdrop = styled(Fixed)`
 	pointer-events: auto;
-`;
+` as React.ComponentType<EnhancedType<FixedProps>>;
 
 const DEFAULT_MODAL_WIDTH = 700;
 
 const ModalHeader = styled(Txt)`
 	margin-bottom: 50px;
 	font-size: ${props => px(props.theme.fontSizes[4])};
-`;
+` as React.ComponentType<EnhancedType<TxtProps>>;
 
 const ModalTitleDetails = styled(Txt)`
 	color: ${props => props.theme.colors.text.light};
 	font-size: ${props => px(props.theme.fontSizes[2])};
-`;
+` as React.ComponentType<EnhancedType<TxtProps>>;
 
 const ModalSizer = styled(Box)`
 	position: relative;
@@ -70,7 +76,7 @@ const ModalSizer = styled(Box)`
 	background-color: transparent;
 	z-index: 9999;
 	pointer-events: auto;
-`;
+` as React.ComponentType<EnhancedType<BoxProps>>;
 
 const ModalPanel = styled(Box)`
 	max-width: 100%;
@@ -80,7 +86,7 @@ const ModalPanel = styled(Box)`
 	border-radius: 2px;
 	background-color: #ffffff;
 	box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.4);
-`;
+` as React.ComponentType<EnhancedType<BoxProps>>;
 
 const ModalButton = (props: ButtonProps | ButtonAnchorProps) => {
 	return 'href' in props && props.href ? (
@@ -141,7 +147,7 @@ class Modal extends React.Component<ThemedModalProps, any> {
 	};
 
 	render() {
-		const { w, width, theme, ...props } = this.props;
+		const { width, theme, ...props } = this.props;
 
 		const cancelButtonProps = assign(
 			{ style: { marginRight: 20 } },
@@ -164,15 +170,16 @@ class Modal extends React.Component<ThemedModalProps, any> {
 
 		return (
 			<ModalWrapper
-				align="center"
-				justify="center"
+				alignItems="center"
+				justifyContent="center"
 				onClick={() => (props.cancel || props.done)()}
 			>
+				<GlobalStyle />
 				<ModalBackdrop z={8888} bg="rgba(0,0,0,0.4)" top right bottom left />
 				<ModalSizer style={props.containerStyle}>
 					<ModalPanel
 						p={[px(theme.space[3]), '30px 50px']}
-						w={w || width || DEFAULT_MODAL_WIDTH}
+						width={width || DEFAULT_MODAL_WIDTH}
 						onClick={stopPropagation}
 						style={props.style}
 					>
@@ -189,7 +196,7 @@ class Modal extends React.Component<ThemedModalProps, any> {
 							)
 						)}
 						{props.children}
-						<Flex mt={50} align="center" justify="flex-end">
+						<Flex mt={50} alignItems="center" justifyContent="flex-end">
 							{props.cancel && (
 								<ModalButton {...cancelButtonProps} onClick={props.cancel}>
 									{(cancelButtonProps && cancelButtonProps.children) ||
@@ -210,4 +217,4 @@ class Modal extends React.Component<ThemedModalProps, any> {
 	}
 }
 
-export default withTheme(Modal);
+export default withTheme(Modal) as React.ComponentType<ModalProps>;

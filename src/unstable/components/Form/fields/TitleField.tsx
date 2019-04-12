@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../../../../asRendition';
+import { DefaultProps, Theme } from '../../../../common-types';
 import { px } from '../../../../utils';
 
 export const LegendElement = styled.legend`
@@ -12,12 +13,13 @@ export const LegendElement = styled.legend`
 	width: 100%;
 `;
 
-const TitleFieldBase = (props: {
+export interface TitleFieldProps extends DefaultProps {
 	id: string;
 	required: boolean;
 	title?: string;
-	theme: any;
-}) => {
+}
+
+const TitleFieldBase = (props: TitleFieldProps & { theme: Theme }) => {
 	const { id, required, title, theme } = props;
 	if (!title) {
 		return null;
@@ -31,5 +33,4 @@ const TitleFieldBase = (props: {
 	);
 };
 
-export const TitleField = asRendition(TitleFieldBase as any)
-
+export const TitleField = asRendition<TitleFieldProps>(TitleFieldBase);

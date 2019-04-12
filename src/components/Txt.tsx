@@ -1,33 +1,37 @@
+import * as React from 'react';
 import styled from 'styled-components';
-import { color, fontSize, responsiveStyle, space } from 'styled-system';
+import { style } from 'styled-system';
 import asRendition from '../asRendition';
-import { DefaultProps, Theme, Tooltip } from '../common-types';
+import { DefaultProps, EnhancedType, Theme } from '../common-types';
 import { monospace } from '../utils';
 
-export interface TxtProps extends DefaultProps, Tooltip {
+type Whitespace =
+	| 'normal'
+	| 'nowrap'
+	| 'pre'
+	| 'pre-line'
+	| 'pre-wrap'
+	| 'initial'
+	| 'inherit';
+type Align =
+	| 'left'
+	| 'right'
+	| 'center'
+	| 'justify'
+	| 'justify-all'
+	| 'start'
+	| 'end'
+	| 'match-parent'
+	| 'inherit'
+	| 'initial'
+	| 'unset';
+
+export interface TxtProps extends DefaultProps {
 	monospace?: boolean;
 	bold?: boolean;
 	caps?: boolean;
-	whitespace?:
-		| 'normal'
-		| 'nowrap'
-		| 'pre'
-		| 'pre-line'
-		| 'pre-wrap'
-		| 'initial'
-		| 'inherit';
-	align?:
-		| 'left'
-		| 'right'
-		| 'center'
-		| 'justify'
-		| 'justify-all'
-		| 'start'
-		| 'end'
-		| 'match-parent'
-		| 'inherit'
-		| 'initial'
-		| 'unset';
+	whitespace?: Whitespace;
+	align?: Align;
 }
 
 export interface ThemedTxtProps extends TxtProps {
@@ -45,13 +49,14 @@ export const bold = (props: ThemedTxtProps) =>
 		? { fontWeight: props.theme.weights[props.theme.weights.length - 1] }
 		: null;
 
-export const align = responsiveStyle('text-align', 'align');
+export const align = style({
+	key: 'text-align',
+	prop: 'align',
+	cssProperty: 'text-align',
+});
 
-const Txt = styled.div`
+const Txt = styled.div<TxtProps>`
 	${align}
-	${color}
-	${fontSize}
-	${space}
 	${monospace as any}
 	${whitespace as any}
 
@@ -59,12 +64,19 @@ const Txt = styled.div`
 	${bold as any}
 `;
 
-const Base = asRendition(Txt) as React.ComponentClass<TxtProps> & {
-	span: React.ComponentClass<TxtProps>;
-	p: React.ComponentClass<TxtProps>;
+const Factory = (tag?: string) => {
+	return asRendition<TxtProps>((props: any) => {
+		return <Txt as={tag} {...props} />;
+	});
 };
+
+const Base = Factory() as React.ComponentType<EnhancedType<TxtProps>> & {
+	p: React.ComponentType<EnhancedType<TxtProps>>;
+	span: React.ComponentType<EnhancedType<TxtProps>>;
+};
+
 Base.displayName = 'Txt';
-Base.span = asRendition(Txt.withComponent('span'));
-Base.p = asRendition(Txt.withComponent('p'));
+Base.span = Factory('span');
+Base.p = Factory('p');
 
 export default Base;

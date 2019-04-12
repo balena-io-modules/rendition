@@ -2,10 +2,10 @@
 
 exports[`Button renders correctly 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-bdVaJa iLLxmY"
 >
   <button
-    className="sc-VigVT hegYug sc-gqjmRU hdWNYH"
+    className="sc-htoDjs sc-VigVT dzpHnm sc-gqjmRU hdWNYH"
   >
     Click me
   </button>
@@ -14,10 +14,10 @@ exports[`Button renders correctly 1`] = `
 
 exports[`Styled Anchor Button renders correctly 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-bdVaJa iLLxmY"
 >
   <a
-    className="sc-jTzLTM ctytKv sc-jzJRlG fKAaUV sc-fjdhpX doKGXR"
+    className="sc-htoDjs sc-jTzLTM fBIESj sc-gqjmRU hdWNYH"
     href="#"
   >
     Click me
@@ -27,10 +27,10 @@ exports[`Styled Anchor Button renders correctly 1`] = `
 
 exports[`Styled Button renders correctly 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-bdVaJa iLLxmY"
 >
   <button
-    className="sc-VigVT kKVfAK sc-gqjmRU hdWNYH"
+    className="sc-htoDjs sc-VigVT dJfJRg sc-gqjmRU hdWNYH"
   >
     Click me
   </button>

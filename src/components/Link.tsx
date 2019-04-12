@@ -2,15 +2,14 @@ import assign = require('lodash/assign');
 import get = require('lodash/get');
 import omit = require('lodash/omit');
 import * as React from 'react';
-import { compose, withProps } from 'recompose';
-import styled, { StyledFunction } from 'styled-components';
-import { color, fontSize, space } from 'styled-system';
+import { withProps } from 'recompose';
+import styled from 'styled-components';
 import asRendition from '../asRendition';
-import { DefaultProps, Tooltip } from '../common-types';
+import { DefaultProps } from '../common-types';
 import { darken, monospace } from '../utils';
 import { align, bold, caps } from './Txt';
 
-export interface LinkBaseProps {
+export interface LinkProps extends DefaultProps {
 	blank?: boolean;
 	disabled?: boolean;
 	download?: any;
@@ -22,17 +21,12 @@ export interface LinkBaseProps {
 	type?: string;
 	is?: string;
 	decor?: string;
+	color?: string;
 }
 
-export interface LinkProps extends DefaultProps, Tooltip, LinkBaseProps {}
-
-let Base = (styled.a as StyledFunction<LinkProps>)`
+let Base = styled.a<LinkProps>`
   ${align}
-  ${color}
-  ${fontSize}
   ${monospace as any};
-  ${space}
-
   ${caps as any}
   ${bold as any}
 
@@ -72,14 +66,10 @@ const Link = ({ is, blank, children, ...props }: LinkProps) => {
 const setDefaultProps = withProps((props: LinkProps) => {
 	return assign(
 		{
-			is: 'a',
 			color: `primary.main`,
 		},
 		props,
 	);
 });
 
-export default compose(
-	setDefaultProps,
-	asRendition,
-)(Link) as React.ComponentClass<LinkProps>;
+export default asRendition<LinkProps>(Link, [setDefaultProps], ['color']);

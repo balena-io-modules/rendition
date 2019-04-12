@@ -5,8 +5,8 @@ import find = require('lodash/find');
 import forEach = require('lodash/forEach');
 import get = require('lodash/get');
 import isObject = require('lodash/isObject');
-import { ThemedStyledFunction } from 'styled-components';
 import { DefaultProps, Theme } from './common-types';
+
 const matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;
 
 interface ThemedDefaultProps extends DefaultProps {
@@ -104,14 +104,6 @@ export const getColor = (
 
 export const monospace = (props: { monospace?: boolean; theme: Theme }) =>
 	props.monospace ? { fontFamily: props.theme.monospace } : null;
-
-// TODO: replace the method call with a simple interface
-// utilizing `infer`, once TS 2.8 is out
-export function withProps<U>() {
-	return <P, T, O>(
-		fn: ThemedStyledFunction<P, T, O>,
-	): ThemedStyledFunction<P & U, T, O & U> => fn;
-}
 
 export const regexEscape = (str: string) =>
 	str.replace(matchOperatorsRe, '\\$&');

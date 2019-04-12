@@ -57,7 +57,7 @@ All components support [styled-system][styled-system] attributes, allowing you t
 
 | Name          | Type              | Description                                  |
 | --------------|-------------------|--------------------------------------------- |
-|	w             | `ResponsiveStyle` | sets the width
+|	width         | `ResponsiveStyle` | sets the width
 |	fontSize      | `ResponsiveStyle` | sets the font size
 |	color         | `ResponsiveStyle` | sets the `color` css property
 |	bg            | `ResponsiveStyle` | sets the `background` css property
@@ -106,6 +106,8 @@ If you would like to try them out they can be loaded using
 [Upgrading from 3.x to 4.x](docs/migrating_3x-4x.md)
 
 [Upgrading from 4.x to 5.x](docs/migrating_4x-5x.md)
+
+[Upgrading from 6.x to 7.x](docs/migrating_6x-7x.md)
 
 ## Contributing
 

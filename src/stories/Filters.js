@@ -233,10 +233,10 @@ storiesOf('Core/Filters', module)
   .add('Button props', () => {
     const props = {
       addFilterButtonProps: {
-        w: 200
+        width: 200
       },
       viewsMenuButtonProps: {
-        w: 200,
+        width: 200,
         danger: true
       }
     }

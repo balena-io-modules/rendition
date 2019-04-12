@@ -138,7 +138,7 @@ interface TooltipComponentState {
 
 class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 	private tooltipElement: HTMLDivElement;
-	private tooltipElementInner: HTMLDivElement;
+	private tooltipElementInner: HTMLDivElement | null;
 	private observer: MutationObserver | undefined;
 
 	constructor(props: {}) {
@@ -268,10 +268,10 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 		return (
 			<TooltipElement
 				style={tooltipStyle}
-				innerRef={(el: any) => (this.tooltipElement = el)}
+				ref={(el: any) => (this.tooltipElement = el)}
 			>
 				<TooltipElementInner
-					innerRef={el => (this.tooltipElementInner = el)}
+					ref={el => (this.tooltipElementInner = el)}
 					style={innerStyle}
 				/>
 

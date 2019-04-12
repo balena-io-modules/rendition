@@ -2,10 +2,10 @@
 
 exports[`Container renders correctly 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-bdVaJa iLLxmY"
 >
   <div
-    className="sc-bwzfXH cbUfgU"
+    className="sc-htoDjs dCPrfN sc-gzVnrw fROHjj"
   >
     Container
   </div>

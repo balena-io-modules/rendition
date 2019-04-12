@@ -1,20 +1,19 @@
 import copyToClipboard = require('copy-to-clipboard');
 import * as React from 'react';
 import FaClipboard = require('react-icons/lib/fa/clipboard');
-import { compose } from 'recompose';
-import styled, { withTheme } from 'styled-components';
+import styled from 'styled-components';
 import asRendition from '../asRendition';
-import { DefaultProps } from '../common-types';
-import { stopEvent, withProps } from '../utils';
+import { DefaultProps, EnhancedType } from '../common-types';
+import { stopEvent } from '../utils';
 import { Box } from './Grid';
-import Txt from './Txt';
+import Txt, { TxtProps } from './Txt';
 
-export interface TextWithCopyProps extends DefaultProps {
+export interface TextWithCopyProps extends DefaultProps, TxtProps {
 	copy: string;
 	showCopyButton?: 'hover' | 'always';
 }
 
-const Wrapper = withProps<TextWithCopyProps>()(styled(Txt.span))`
+const Wrapper = styled(Txt.span)<TextWithCopyProps>`
 	display: inline-block;
 	white-space: nowrap;
 
@@ -39,7 +38,7 @@ const Wrapper = withProps<TextWithCopyProps>()(styled(Txt.span))`
 	&:hover .text-with-copy__copy {
 		visibility: visible;
 	}
-`;
+` as React.ComponentType<EnhancedType<TextWithCopyProps>>;
 
 const Base = ({ copy, ...props }: TextWithCopyProps) => (
 	<Wrapper copy={copy} title={copy} {...props} className="text-with-copy">
@@ -59,7 +58,4 @@ const Base = ({ copy, ...props }: TextWithCopyProps) => (
 	</Wrapper>
 );
 
-export default compose(
-	withTheme,
-	asRendition,
-)(Base);
+export default asRendition<TextWithCopyProps>(Base);

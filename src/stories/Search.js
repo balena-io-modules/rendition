@@ -11,7 +11,7 @@ storiesOf('Core/Search', module)
   .add('Standard', () => {
     return (
       <Provider>
-        <Box m={3} w={500}>
+        <Box m={3} width={500}>
           <Search />
         </Box>
       </Provider>
@@ -20,7 +20,7 @@ storiesOf('Core/Search', module)
   .add('Disabled', () => {
     return (
       <Provider>
-        <Box m={3} w={500}>
+        <Box m={3} width={500}>
           <Search disabled />
         </Box>
       </Provider>
@@ -29,7 +29,7 @@ storiesOf('Core/Search', module)
   .add('Dark', () => {
     return (
       <Provider>
-        <Box m={3} w={500} bg='rgb(52, 52, 52)'>
+        <Box m={3} width={500} bg='rgb(52, 52, 52)'>
           <Search dark />
         </Box>
       </Provider>
@@ -38,7 +38,7 @@ storiesOf('Core/Search', module)
   .add('Placeholder', () => {
     return (
       <Provider>
-        <Box m={3} w={500}>
+        <Box m={3} width={500}>
           <Search placeholder='Placeholder Text' />
         </Box>
       </Provider>

@@ -1,10 +1,9 @@
 import assign = require('lodash/assign');
 import find = require('lodash/find');
 import get = require('lodash/get');
-import omit = require('lodash/omit');
 import * as React from 'react';
-import { compose, withProps } from 'recompose';
-import styled, { StyledFunction, withTheme } from 'styled-components';
+import { withProps } from 'recompose';
+import styled from 'styled-components';
 import asRendition from '../asRendition';
 import { Coloring, DefaultProps, Sizing, Theme } from '../common-types';
 import { radius } from '../theme';
@@ -26,16 +25,14 @@ const transition = 'width linear 250ms';
 declare var { value, ...rest }: ProgressBarProps;
 type ProgressBarRestProps = typeof rest;
 
-const Bar = (styled.div as StyledFunction<
-	ProgressBarRestProps & { bg?: string }
->)`
-  position: relative;
-  height: ${props =>
+const Bar = styled.div<ProgressBarRestProps & { bg?: string }>`
+	position: relative;
+	height: ${props =>
 		px(props.emphasized ? props.theme.space[5] : props.theme.space[4])};
-  overflow: hidden;
-  background: ${props => props.bg || props.theme.colors.primary.main};
-  transition: ${transition};
-  text-align: center;
+	overflow: hidden;
+	background: ${props => props.bg || props.theme.colors.primary.main};
+	transition: ${transition};
+	text-align: center;
 `;
 
 const LoadingContent = styled.div`
@@ -59,16 +56,16 @@ const Content = styled.div`
 	transition: ${transition};
 `;
 
-const Sleeve = (styled.div as StyledFunction<ProgressBarRestProps>)`
-  position: relative;
-  border-radius: ${px(radius)};
-  height: ${props =>
+const Sleeve = styled.div<ProgressBarRestProps>`
+	position: relative;
+	border-radius: ${px(radius)};
+	height: ${props =>
 		px(props.emphasized ? props.theme.space[4] : props.theme.space[3])};
-  line-height: ${props =>
+	line-height: ${props =>
 		px(props.emphasized ? props.theme.space[4] : props.theme.space[3])};
-  background: ${props => props.theme.colors.quartenary.main};
-  font-size: ${props => (props.emphasized ? 1 : 0.6)}em;
-  overflow: hidden;
+	background: ${props => props.theme.colors.quartenary.main};
+	font-size: ${props => (props.emphasized ? 1 : 0.6)}em;
+	overflow: hidden;
 `;
 
 const getType = withProps((props: ThemedProgressBarProps) => {
@@ -91,8 +88,7 @@ const setTypeProps = withProps(({ type, theme, background, color }) => {
 
 const Base = ({ children, background, value, ...props }: ProgressBarProps) => {
 	return (
-		// The color prop is used by asRendition HOC and should not be passed to the Sleeve component
-		<Sleeve {...omit(props, ['color'])}>
+		<Sleeve {...props}>
 			<LoadingContent>{children}</LoadingContent>
 			<Bar bg={background} style={{ width: `${value}%` }}>
 				<Content style={{ width: `${value && (100 * 100) / value}%` }}>
@@ -103,9 +99,8 @@ const Base = ({ children, background, value, ...props }: ProgressBarProps) => {
 	);
 };
 
-export default compose(
-	withTheme,
-	getType,
-	setTypeProps,
-	asRendition,
-)(Base) as React.ComponentClass<ProgressBarProps>;
+export default asRendition<ProgressBarProps>(
+	Base,
+	[getType, setTypeProps],
+	['color'],
+);

@@ -22,7 +22,7 @@ storiesOf('Core/TextWithCopy', module)
   .add('Wrapping text', () => {
     return (
       <Provider>
-        <Box m={3} w={300}>
+        <Box m={3} width={300}>
           <TextWithCopy copy='This value has been copied to your clipboard!'>
             hover & click ... ... ... ... ... ... ... ... ... ... ... ... the
             icon on the wrapped text
@@ -34,7 +34,7 @@ storiesOf('Core/TextWithCopy', module)
   .add('Always showing the copy icon', () => {
     return (
       <Provider>
-        <Box m={3} w={300}>
+        <Box m={3} width={300}>
           <TextWithCopy
             showCopyButton='always'
             copy='This value has been copied to your clipboard!'

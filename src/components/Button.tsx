@@ -1,12 +1,13 @@
 import * as React from 'react';
-import styled, { StyledFunction, withTheme } from 'styled-components';
-import asRendition, { withStyledSystem } from '../asRendition';
+import styled from 'styled-components';
+import asRendition from '../asRendition';
 import {
 	Coloring,
 	DefaultProps,
+	EnhancedType,
+	ResponsiveStyle,
 	Sizing,
 	Theme,
-	Tooltip,
 } from '../common-types';
 import {
 	bold,
@@ -17,13 +18,12 @@ import {
 	normal,
 	px,
 } from '../utils';
-import { LinkBaseProps } from './Link';
+import { LinkProps } from './Link';
 
-export interface ButtonBaseProps
-	extends DefaultProps,
-		Coloring,
-		Sizing,
-		Tooltip {
+interface ButtonBaseProps extends Coloring, Sizing {
+	width?: ResponsiveStyle;
+	color?: string;
+	bg?: string;
 	active?: boolean;
 	square?: boolean;
 	disabled?: boolean;
@@ -33,9 +33,9 @@ export interface ButtonBaseProps
 	iconElement?: JSX.Element;
 }
 
-export interface ButtonAnchorProps extends ButtonBaseProps, LinkBaseProps {}
+export interface ButtonAnchorProps extends ButtonBaseProps, LinkProps {}
 
-export interface ButtonProps extends ButtonBaseProps {
+export interface ButtonProps extends ButtonBaseProps, DefaultProps {
 	type?: 'submit' | 'reset' | 'button';
 }
 
@@ -46,7 +46,7 @@ export interface ThemedButtonProps extends ButtonProps {
 const squareWidth = (val: number): number => (val / 9) * 10;
 
 const minWidth = (props: ThemedButtonProps) => {
-	if (props.w == null && !props.square) {
+	if (props.width == null && !props.square) {
 		return 'auto';
 	}
 	if (props.square) {
@@ -55,14 +55,14 @@ const minWidth = (props: ThemedButtonProps) => {
 			: squareWidth(props.theme.space[4]);
 	}
 
-	return props.w;
+	return props.width;
 };
 
 const horizontalPadding = (props: ButtonProps) => {
-	if (props.w == null && !props.square) {
+	if (props.width == null && !props.square) {
 		return props.emphasized ? 50 : 30;
 	}
-	if (props.square || props.w) {
+	if (props.square || props.width) {
 		return 0;
 	}
 
@@ -83,7 +83,7 @@ const buttonActiveStyles = (props: ThemedButtonProps) => `
 	};
 `;
 
-const ButtonBase = (styled.button as StyledFunction<ThemedButtonProps>)`
+const ButtonBase = styled.button<ThemedButtonProps>`
 	${props =>
 		props.active
 			? buttonActiveStyles(props)
@@ -108,7 +108,7 @@ const ButtonBase = (styled.button as StyledFunction<ThemedButtonProps>)`
 	line-height: 1.1;
 	text-align: center;
 	cursor: pointer;
-	height: ${(props: ThemedButtonProps) =>
+	height: ${props =>
 		px(props.emphasized ? props.theme.space[5] : props.theme.space[4])};
 	transition-property: color, background, border-color;
 	transition-duration: .1s;
@@ -142,7 +142,7 @@ const ButtonBase = (styled.button as StyledFunction<ThemedButtonProps>)`
 	}
 `;
 
-const Outline = ButtonBase.extend`
+const Outline = styled(ButtonBase)`
 	${props =>
 		props.active
 			? ''
@@ -151,7 +151,7 @@ const Outline = ButtonBase.extend`
 		background: ${props.color || 'none'};
 	`}
 	border: 1px solid ${props =>
-		props.bg ? props.bg : getColor(props, 'bg', 'main')}
+		props.bg ? props.bg : getColor(props, 'bg', 'main')};
 	}
 `;
 
@@ -160,7 +160,7 @@ const plaintextButtonActiveStyles = (props: ThemedButtonProps) => `
 	color: ${getColor(props, 'color', 'dark') || props.theme.colors.text.main};
 `;
 
-const Plaintext = ButtonBase.extend`
+const Plaintext = styled(ButtonBase)`
 	${props =>
 		props.active
 			? plaintextButtonActiveStyles(props)
@@ -186,7 +186,7 @@ const underlineButtonActiveStyles = (props: ThemedButtonProps) => `
 	box-shadow: 0px -1px 0 0px inset;
 `;
 
-const Underline = Plaintext.extend`
+const Underline = styled(Plaintext)`
 	${props =>
 		props.active
 			? underlineButtonActiveStyles(props)
@@ -207,7 +207,7 @@ const defaultButtonActiveStyles = (props: ThemedButtonProps) => `
 	background-color: ${props.theme.colors.text.main};
 `;
 
-const DefaultButton = ButtonBase.extend`
+const DefaultButton = styled(ButtonBase)`
 	${props =>
 		props.active
 			? defaultButtonActiveStyles(props)
@@ -257,29 +257,27 @@ const ButtonFactory = <T extends keyof JSX.IntrinsicElements>(tag?: T) => {
 			...restProps
 		} = props;
 
-		let StyledButton = getStyledButton(props);
-		if (tag) {
-			// when using withComponent we need to rewire the styled-system props
-			// when we upgrade to styled-components v4 this will be replaced with an `as={tag}`
-			StyledButton = withStyledSystem(StyledButton.withComponent(
-				tag,
-			) as any) as any;
-		}
+		const StyledButton = getStyledButton(props);
 
 		return (
-			<StyledButton {...restProps}>
+			<StyledButton {...restProps} as={tag ? 'a' : 'button'}>
 				{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
 				{children}
 			</StyledButton>
 		);
 	};
 
-	return withTheme(asRendition(Button));
+	return asRendition<ButtonProps>(Button, [], ['width', 'color', 'bg']);
 };
 
-const Button = ButtonFactory() as React.ComponentClass<ButtonProps> & {
-	a: React.ComponentClass<ButtonAnchorProps>;
+const Base = ButtonFactory() as React.ComponentType<
+	EnhancedType<ButtonProps>
+> & {
+	a: React.ComponentType<EnhancedType<ButtonAnchorProps>>;
 };
-Button.a = ButtonFactory('a') as React.ComponentClass<ButtonAnchorProps>;
 
-export default Button;
+Base.a = ButtonFactory('a') as React.ComponentType<
+	EnhancedType<ButtonAnchorProps>
+>;
+
+export default Base;

@@ -30,7 +30,7 @@ const BaseInput = (props: FormWidgetProps) => {
 
 	return (
 		<Input
-			w="100%"
+			width="100%"
 			readOnly={readonly}
 			disabled={disabled}
 			autoFocus={autofocus}

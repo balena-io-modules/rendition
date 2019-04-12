@@ -20,8 +20,8 @@ const S = ({ style, border, theme }) => {
       >
       <Flex
         style={{ height: 75, backgroundColor: main }}
-        align='center'
-        justify='center'
+        alignItems='center'
+        justifyContent='center'
         flexDirection='column'
       >
         <div>main</div>
@@ -30,8 +30,8 @@ const S = ({ style, border, theme }) => {
       {semilight && (
         <Flex
           style={{ height: 45, backgroundColor: semilight }}
-          align='center'
-          justify='center'
+          alignItems='center'
+          justifyContent='center'
           flexDirection='column'
         >
           <div>semilight</div>
@@ -42,8 +42,8 @@ const S = ({ style, border, theme }) => {
         <Flex
           flex={1}
           style={{ backgroundColor: light }}
-          align='center'
-          justify='center'
+          alignItems='center'
+          justifyContent='center'
           flexDirection='column'
         >
           <div>light</div>
@@ -52,8 +52,8 @@ const S = ({ style, border, theme }) => {
         <Flex
           flex={1}
           style={{ backgroundColor: dark }}
-          align='center'
-          justify='center'
+          alignItems='center'
+          justifyContent='center'
           flexDirection='column'
         >
           <div>dark</div>
@@ -85,33 +85,33 @@ storiesOf('Core/Swatches', module)
   .add('All', () => {
     return (
       <Provider>
-        <Box is='section' m={15}>
-          <Box is='h2' mx={15}>
+        <Box as='section' m={15}>
+          <Box as='h2' mx={15}>
             Primary
           </Box>
-          <Flex wrap>
+          <Flex flexWrap='wrap'>
             <Swatch style='primary' />
             <Swatch style='secondary' />
             <Swatch style='tertiary' />
             <Swatch style='quartenary' />
           </Flex>
         </Box>
-        <Box is='section' m={15}>
-          <Box is='h2' mx={15}>
+        <Box as='section' m={15}>
+          <Box as='h2' mx={15}>
             Secondary
           </Box>
-          <Flex wrap>
+          <Flex flexWrap='wrap'>
             <Swatch border style='success' />
             <Swatch border style='danger' />
             <Swatch border style='warning' />
             <Swatch border style='info' />
           </Flex>
         </Box>
-        <Box is='section' m={15}>
-          <Box is='h2' mx={15}>
+        <Box as='section' m={15}>
+          <Box as='h2' mx={15}>
             Utility
           </Box>
-          <Flex wrap>
+          <Flex flexWrap='wrap'>
             <Swatch border style='text' />
             <Swatch border style='gray' />
           </Flex>

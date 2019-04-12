@@ -1,10 +1,9 @@
 import * as React from 'react';
-import { compose } from 'recompose';
-import styled, { withTheme } from 'styled-components';
+import styled from 'styled-components';
 import asRendition from '../asRendition';
 import { DefaultProps, Sizing } from '../common-types';
 import { radius } from '../theme';
-import { px, withProps } from '../utils';
+import { px } from '../utils';
 
 export interface SelectProps extends DefaultProps, Sizing {
 	value?: string | string[] | number | null;
@@ -12,35 +11,35 @@ export interface SelectProps extends DefaultProps, Sizing {
 	onChange?: React.ChangeEventHandler<HTMLSelectElement>;
 }
 
-const Base = withProps<
+const Base = styled.select<
 	{ emphasized?: boolean } & React.HTMLProps<HTMLSelectElement>
->()(styled.select)`
-  border-radius: ${px(radius)};
-  height: ${props =>
+>`
+	border-radius: ${px(radius)};
+	height: ${props =>
 		px(props.emphasized ? props.theme.space[5] : props.theme.space[4])};
-  font-size: inherit;
-  border: 1px solid ${props => props.theme.colors.gray.main};
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 16px;
-  padding-right: ${props =>
+	font-size: inherit;
+	border: 1px solid ${props => props.theme.colors.gray.main};
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 16px;
+	padding-right: ${props =>
 		px(props.emphasized ? props.theme.space[5] : props.theme.space[4])};
-  background-color: white;
-  appearance: none;
-  width: 100%;
-  min-width: 90px;
+	background-color: white;
+	appearance: none;
+	width: 100%;
+	min-width: 90px;
 
-  &:hover:enabled {
-    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1);
-  }
+	&:hover:enabled {
+		box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1);
+	}
 `;
 
-const Wrapper = withProps<SelectProps>()(styled.span)`
+const Wrapper = styled.span<SelectProps>`
 	display: inline-block;
 	position: relative;
 
 	&::after {
-		content: "";
+		content: '';
 		width: 0;
 		height: 0;
 		border-left: 4px solid transparent;
@@ -59,7 +58,6 @@ const Component = ({
 	emphasized,
 	onChange,
 	value,
-	color,
 	...props
 }: SelectProps) => {
 	return (
@@ -75,7 +73,4 @@ const Component = ({
 	);
 };
 
-export default compose(
-	withTheme,
-	asRendition,
-)(Component) as React.ComponentClass<SelectProps>;
+export default asRendition<SelectProps>(Component);

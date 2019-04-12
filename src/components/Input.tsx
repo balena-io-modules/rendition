@@ -1,5 +1,4 @@
-import { compose } from 'recompose';
-import styled, { StyledFunction, withTheme } from 'styled-components';
+import styled from 'styled-components';
 import asRendition from '../asRendition';
 import { DefaultProps, Sizing, Theme } from '../common-types';
 import { radius } from '../theme';
@@ -51,47 +50,44 @@ const getHeight = (props: ThemedInputProps) =>
 const getSpinButtonMargin = (props: ThemedInputProps) =>
 	(getHeight(props) - 2 - 20) / 2;
 
-const Base = (styled.input as StyledFunction<InputProps>)`
-  border-radius: ${px(radius)};
-  height: ${props => px(getHeight(props))};
-  font-size: inherit;
-  border: 1px solid ${getColor};
-  padding: 0px 16px;
+const Base = styled.input<InputProps>`
+	border-radius: ${px(radius)};
+	height: ${props => px(getHeight(props))};
+	font-size: inherit;
+	border: 1px solid ${getColor};
+	padding: 0px 16px;
 
-  &[disabled] {
-    background-color: ${props => props.theme.colors.gray.light};
-    cursor: not-allowed;
-  }
-  &:focus:enabled {
-    border-color: ${props => props.theme.colors.secondary.main};
-  }
-  &:hover:enabled {
-    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1);
-  }
-  &::placeholder {
-    color: ${props => props.theme.colors.gray.main};
-  }
+	&[disabled] {
+		background-color: ${props => props.theme.colors.gray.light};
+		cursor: not-allowed;
+	}
+	&:focus:enabled {
+		border-color: ${props => props.theme.colors.secondary.main};
+	}
+	&:hover:enabled {
+		box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1);
+	}
+	&::placeholder {
+		color: ${props => props.theme.colors.gray.main};
+	}
 
-  &[type='checkbox'] {
-    height: auto;
-    font-size: ${props => px(props.theme.fontSizes[1])};
-  }
+	&[type='checkbox'] {
+		height: auto;
+		font-size: ${props => px(props.theme.fontSizes[1])};
+	}
 
-  &[type='date' i],
-  &[type='datetime-local' i],
-  &[type='month' i],
-  &[type='time' i],
-  &[type='week' i] {
-    &::-webkit-inner-spin-button {
-      height: 20px;
-      margin-top: ${props => px(getSpinButtonMargin(props))};
-    }
-  }
+	&[type='date' i],
+	&[type='datetime-local' i],
+	&[type='month' i],
+	&[type='time' i],
+	&[type='week' i] {
+		&::-webkit-inner-spin-button {
+			height: 20px;
+			margin-top: ${props => px(getSpinButtonMargin(props))};
+		}
+	}
 
-  ${monospace as any};
+	${monospace as any};
 `;
 
-export default compose(
-	withTheme,
-	asRendition,
-)(Base) as React.ComponentClass<InputProps>;
+export default asRendition<InputProps>(Base);

@@ -43,7 +43,14 @@ describe('Textarea component', () => {
 
     it('should resize the textarea to match the content', () => {
       const component = mount(
-        <Textarea autoRows value={value} onChange={noop} />
+        React.createElement(
+          props => (
+            <Provider>
+              <Textarea {...props} />
+            </Provider>
+          ),
+          { autoRows: true, value, onChange: noop }
+        )
       )
 
       // Sanity check to make sure autoRows doesn't change the default behaviour

@@ -3,9 +3,14 @@ import * as React from 'react';
 import CloseIcon = require('react-icons/lib/md/close');
 import MenuIcon = require('react-icons/lib/md/dehaze');
 import { compose, withProps } from 'recompose';
-import styled, { StyledFunction, withTheme } from 'styled-components';
-import { responsiveStyle } from 'styled-system';
-import { DefaultProps } from '../common-types';
+import styled from 'styled-components';
+import {
+	display,
+	DisplayProps,
+	maxHeight,
+	MaxHeightProps,
+} from 'styled-system';
+import { DefaultProps, EnhancedType } from '../common-types';
 import Container from './Container';
 import { Box, BoxProps, Flex, FlexProps } from './Grid';
 
@@ -13,37 +18,33 @@ export interface NavbarProps extends DefaultProps {
 	brand?: JSX.Element;
 }
 
-const display = responsiveStyle('display', 'display');
-const maxHeight = responsiveStyle('max-height', 'maxHeight');
-
 const BrandBox = styled(Box)`
 	display: flex;
 	height: auto;
 	min-width: 150px;
 	align-self: center;
-`;
+` as React.ComponentType<EnhancedType<BoxProps>>;
 
-const IconBox = (styled(Box) as StyledFunction<
-	BoxProps & { display?: string | string[] }
->)`
-  ${display} align-self: center;
-  cursor: pointer;
-`;
+const IconBox = styled(Box)`
+	${display} align-self: center;
+	cursor: pointer;
+` as React.ComponentType<EnhancedType<BoxProps & DisplayProps>>;
 
-const MenuBox = (styled(Flex) as StyledFunction<
-	FlexProps & { maxHeight?: string | string[] }
->)`
-  ${display} ${maxHeight};
-  text-align: center;
-  transition: max-height 0.4s ease-in-out;
-  align-self: center;
-  overflow: hidden;
+const MenuBox = styled(Flex)`
+	${display}
+	${maxHeight};
+	text-align: center;
+	transition: max-height 0.4s ease-in-out;
+	align-self: center;
+	overflow: hidden;
 
-  a {
-    width: 100%;
-    display: inline-block;
-  }
-`;
+	a {
+		width: 100%;
+		display: inline-block;
+	}
+` as React.ComponentType<
+	EnhancedType<FlexProps & DisplayProps & MaxHeightProps>
+>;
 
 interface NavbarState {
 	open: boolean;
@@ -122,7 +123,6 @@ const setDefaultProps = withProps((props: NavbarProps) => {
 	);
 });
 
-export default compose(
-	withTheme,
-	setDefaultProps,
-)(Navbar);
+export default compose(setDefaultProps)(Navbar) as React.ComponentType<
+	NavbarProps
+>;

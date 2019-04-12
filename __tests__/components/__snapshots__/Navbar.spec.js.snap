@@ -2,25 +2,25 @@
 
 exports[`Navbar renders correctly with a single children prop 1`] = `
 <div
-  className="sc-jTzLTM bHwELW"
+  className="sc-gqjmRU dHvWsG"
 >
   <div
-    className="sc-kGXeez eelSaA sc-chPdSV jDMihD sc-jzJRlG cBavTA"
+    className="sc-jzJRlG ePCFxN sc-fjdhpX fGySkI"
   >
     <div
-      className="sc-fjdhpX gKwwVP"
+      className="sc-jTzLTM cHhUzV sc-VigVT cDDakZ"
     >
       <div
-        className="sc-kgoBCf jIcSzk sc-kAzzGY bHluuy sc-cSHVUG cxgYtf"
+        className="sc-cSHVUG jupnHv sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
       >
         <div
-          className="sc-kgoBCf jIcSzk sc-kAzzGY bHluuy sc-cSHVUG dAZIH"
+          className="sc-cSHVUG dzaSRZ sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
         >
           <div
-            className="sc-kpOJdX HlSnN sc-kGXeez cjCqQQ sc-chPdSV hzgnFO sc-jzJRlG jtJFqe"
+            className="sc-kAzzGY eBRrrJ sc-jzJRlG VNfXw sc-fjdhpX fGySkI"
           />
           <div
-            className="sc-dxgOiQ bTZgME sc-kGXeez kOXEhf sc-chPdSV hzgnFO sc-jzJRlG gAPSKm"
+            className="sc-chPdSV kZPspx sc-jzJRlG igYAJh sc-fjdhpX fGySkI"
             display={
               Array [
                 "block",
@@ -51,23 +51,17 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
           </div>
         </div>
         <div
-          className="sc-ckVGcZ izzoql sc-kgoBCf egukuV sc-kAzzGY bHluuy sc-cSHVUG egkyNr"
-          maxHeight={
-            Array [
-              "0vh",
-              "none",
-            ]
-          }
+          className="sc-cSHVUG sc-kgoBCf grUVNe sc-jzJRlG cmiCuG sc-fjdhpX fGySkI"
         >
           <div
-            className="sc-kgoBCf kafbUk sc-kAzzGY bHluuy sc-cSHVUG kTvoeN"
+            className="sc-cSHVUG jupnHv sc-jzJRlG hNbcNm sc-fjdhpX fGySkI"
           >
             <div
-              className="sc-kGXeez iJmSPK sc-chPdSV hzgnFO sc-jzJRlG edudin"
+              className="sc-jzJRlG ibRXJq sc-fjdhpX fGySkI"
               onClick={[Function]}
             >
               <a
-                className="sc-VigVT tcTAH sc-kEYyzF tuesb"
+                className="sc-gZMcBi krgeid sc-iwsKbI jkCyoU"
                 color="white"
                 href="/docs/"
               >
@@ -84,25 +78,25 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
 
 exports[`Navbar renders correctly with more than one children prop 1`] = `
 <div
-  className="sc-jTzLTM bHwELW"
+  className="sc-gqjmRU dHvWsG"
 >
   <div
-    className="sc-kGXeez eelSaA sc-chPdSV jDMihD sc-jzJRlG cBavTA"
+    className="sc-jzJRlG ePCFxN sc-fjdhpX fGySkI"
   >
     <div
-      className="sc-fjdhpX gKwwVP"
+      className="sc-jTzLTM cHhUzV sc-VigVT cDDakZ"
     >
       <div
-        className="sc-kgoBCf jIcSzk sc-kAzzGY bHluuy sc-cSHVUG cxgYtf"
+        className="sc-cSHVUG jupnHv sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
       >
         <div
-          className="sc-kgoBCf jIcSzk sc-kAzzGY bHluuy sc-cSHVUG dAZIH"
+          className="sc-cSHVUG dzaSRZ sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
         >
           <div
-            className="sc-kpOJdX HlSnN sc-kGXeez cjCqQQ sc-chPdSV hzgnFO sc-jzJRlG jtJFqe"
+            className="sc-kAzzGY eBRrrJ sc-jzJRlG VNfXw sc-fjdhpX fGySkI"
           />
           <div
-            className="sc-dxgOiQ bTZgME sc-kGXeez kOXEhf sc-chPdSV hzgnFO sc-jzJRlG gAPSKm"
+            className="sc-chPdSV kZPspx sc-jzJRlG igYAJh sc-fjdhpX fGySkI"
             display={
               Array [
                 "block",
@@ -133,23 +127,17 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
           </div>
         </div>
         <div
-          className="sc-ckVGcZ izzoql sc-kgoBCf egukuV sc-kAzzGY bHluuy sc-cSHVUG egkyNr"
-          maxHeight={
-            Array [
-              "0vh",
-              "none",
-            ]
-          }
+          className="sc-cSHVUG sc-kgoBCf grUVNe sc-jzJRlG cmiCuG sc-fjdhpX fGySkI"
         >
           <div
-            className="sc-kgoBCf kafbUk sc-kAzzGY bHluuy sc-cSHVUG kTvoeN"
+            className="sc-cSHVUG jupnHv sc-jzJRlG hNbcNm sc-fjdhpX fGySkI"
           >
             <div
-              className="sc-kGXeez iJmSPK sc-chPdSV hzgnFO sc-jzJRlG edudin"
+              className="sc-jzJRlG ibRXJq sc-fjdhpX fGySkI"
               onClick={[Function]}
             >
               <a
-                className="sc-VigVT tcTAH sc-jKJlTe iYFCgQ"
+                className="sc-gZMcBi krgeid sc-iwsKbI jkCyoU"
                 color="white"
                 href="/docs/"
               >
@@ -157,11 +145,11 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
               </a>
             </div>
             <div
-              className="sc-kGXeez iJmSPK sc-chPdSV hzgnFO sc-jzJRlG edudin"
+              className="sc-jzJRlG ibRXJq sc-fjdhpX fGySkI"
               onClick={[Function]}
             >
               <a
-                className="sc-VigVT tcTAH sc-eNQAEJ iestvo"
+                className="sc-gZMcBi krgeid sc-iwsKbI jkCyoU"
                 color="white"
                 href="/changelog/"
               >
@@ -169,11 +157,11 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
               </a>
             </div>
             <div
-              className="sc-kGXeez iJmSPK sc-chPdSV hzgnFO sc-jzJRlG edudin"
+              className="sc-jzJRlG ibRXJq sc-fjdhpX fGySkI"
               onClick={[Function]}
             >
               <a
-                className="sc-VigVT tcTAH sc-hMqMXs bPxJSr"
+                className="sc-gZMcBi krgeid sc-iwsKbI jkCyoU"
                 color="white"
                 href="/gitter/"
               >
@@ -190,25 +178,25 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
 
 exports[`Navbar renders correctly with no children prop 1`] = `
 <div
-  className="sc-jTzLTM bHwELW"
+  className="sc-gqjmRU dHvWsG"
 >
   <div
-    className="sc-kGXeez eelSaA sc-chPdSV jDMihD sc-jzJRlG cBavTA"
+    className="sc-jzJRlG ePCFxN sc-fjdhpX fGySkI"
   >
     <div
-      className="sc-fjdhpX gKwwVP"
+      className="sc-jTzLTM cHhUzV sc-VigVT cDDakZ"
     >
       <div
-        className="sc-kgoBCf jIcSzk sc-kAzzGY bHluuy sc-cSHVUG cxgYtf"
+        className="sc-cSHVUG jupnHv sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
       >
         <div
-          className="sc-kgoBCf jIcSzk sc-kAzzGY bHluuy sc-cSHVUG dAZIH"
+          className="sc-cSHVUG dzaSRZ sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
         >
           <div
-            className="sc-kpOJdX HlSnN sc-kGXeez cjCqQQ sc-chPdSV hzgnFO sc-jzJRlG jtJFqe"
+            className="sc-kAzzGY eBRrrJ sc-jzJRlG VNfXw sc-fjdhpX fGySkI"
           />
           <div
-            className="sc-dxgOiQ bTZgME sc-kGXeez kOXEhf sc-chPdSV hzgnFO sc-jzJRlG gAPSKm"
+            className="sc-chPdSV kZPspx sc-jzJRlG igYAJh sc-fjdhpX fGySkI"
             display={
               Array [
                 "block",
@@ -239,13 +227,7 @@ exports[`Navbar renders correctly with no children prop 1`] = `
           </div>
         </div>
         <div
-          className="sc-ckVGcZ izzoql sc-kgoBCf egukuV sc-kAzzGY bHluuy sc-cSHVUG egkyNr"
-          maxHeight={
-            Array [
-              "0vh",
-              "none",
-            ]
-          }
+          className="sc-cSHVUG sc-kgoBCf grUVNe sc-jzJRlG cmiCuG sc-fjdhpX fGySkI"
         />
       </div>
     </div>

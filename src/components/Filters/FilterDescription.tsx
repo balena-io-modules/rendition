@@ -3,7 +3,8 @@ import noop = require('lodash/noop');
 import * as React from 'react';
 import FaClose = require('react-icons/lib/fa/close');
 import styled from 'styled-components';
-import Button from '../Button';
+import { EnhancedType } from '../../common-types';
+import Button, { ButtonProps } from '../Button';
 import { Box, Flex } from '../Grid';
 
 const ButtonWrapper = styled.button`
@@ -21,7 +22,7 @@ const WrappingEm = styled.em`
 
 const DeleteButton = styled(Button)`
 	color: rgba(0, 0, 0, 0.4);
-`;
+` as React.ComponentType<EnhancedType<ButtonProps>>;
 
 const FilterDescriptionInner = (props: { filter: JSONSchema6 }) => (
 	<Box>

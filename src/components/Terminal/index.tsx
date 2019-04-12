@@ -4,9 +4,9 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { ITerminalOptions, Terminal as Xterm } from 'xterm';
 import { fit as fitTerm } from 'xterm/lib/addons/fit/fit';
-import { Theme as ThemeType } from '../../common-types';
+import { EnhancedType, Theme as ThemeType } from '../../common-types';
 import Theme from '../../theme';
-import { Box } from '../Grid';
+import { Box, BoxProps } from '../Grid';
 import defaultXtermStyle from './XTermDefaultStyle';
 
 export interface TerminalProps {
@@ -25,7 +25,7 @@ const TtyContainer = styled(Box)`
 	${defaultXtermStyle}
 
 	.xterm-viewport::-webkit-scrollbar-track {
-		background-color: transparent
+		background-color: transparent;
 		border-bottom-right-radius: 0;
 	}
 
@@ -38,7 +38,7 @@ const TtyContainer = styled(Box)`
 	.xterm-viewport::-webkit-scrollbar-thumb {
 		background-color: #e9e9e9;
 	}
-`;
+` as React.ComponentType<EnhancedType<BoxProps>>;
 
 const TtyInner = styled.div`
 	position: absolute;
@@ -55,7 +55,7 @@ export interface ThemedTerminalProps extends TerminalProps {
 class Terminal extends React.Component<ThemedTerminalProps, {}> {
 	readonly tty: Xterm;
 	// Used as the element to mount XTERM into
-	private mountElement: HTMLDivElement;
+	private mountElement: HTMLDivElement | null;
 	private termConfig: ITerminalOptions;
 
 	constructor(props: ThemedTerminalProps) {
@@ -133,7 +133,7 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 	}
 
 	open() {
-		this.tty.open(this.mountElement);
+		this.tty.open(this.mountElement!);
 		this.tty.focus();
 	}
 
@@ -156,7 +156,7 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 	render() {
 		return (
 			<TtyContainer color={this.props.color}>
-				<TtyInner innerRef={el => (this.mountElement = el)} />
+				<TtyInner ref={el => (this.mountElement = el)} />
 			</TtyContainer>
 		);
 	}

@@ -1,4 +1,9 @@
-export type ResponsiveStyle = string | number | Array<string | number>;
+import {
+	ColorProps,
+	FontSizeProps,
+	SpaceProps,
+	WidthProps,
+} from 'styled-system';
 
 export interface Theme {
 	breakpoints: number[];
@@ -17,33 +22,16 @@ export interface Theme {
 	radius: number;
 }
 
-export interface StyledSystemProps {
-	width?: ResponsiveStyle;
-	w?: ResponsiveStyle;
-	fontSize?: ResponsiveStyle;
-	f?: ResponsiveStyle;
-	color?: ResponsiveStyle;
-	bg?: ResponsiveStyle;
-	m?: ResponsiveStyle;
-	mt?: ResponsiveStyle;
-	mr?: ResponsiveStyle;
-	mb?: ResponsiveStyle;
-	ml?: ResponsiveStyle;
-	mx?: ResponsiveStyle;
-	my?: ResponsiveStyle;
-	p?: ResponsiveStyle;
-	pt?: ResponsiveStyle;
-	pr?: ResponsiveStyle;
-	pb?: ResponsiveStyle;
-	pl?: ResponsiveStyle;
-	px?: ResponsiveStyle;
-	py?: ResponsiveStyle;
-}
+export interface StyledSystemProps
+	extends SpaceProps,
+		FontSizeProps,
+		ColorProps,
+		WidthProps {}
+
+export type ResponsiveStyle = string | number | Array<string | number>;
 
 // Cherry pick the react attributes that don't conflict with styled-system
-export interface DefaultProps
-	extends StyledSystemProps,
-		React.DOMAttributes<HTMLElement> {
+export interface DefaultProps extends React.DOMAttributes<HTMLElement> {
 	// React-specific Attributes
 	defaultChecked?: boolean;
 	defaultValue?: string | string[];
@@ -143,6 +131,8 @@ export interface Sizing {
 	emphasized?: boolean;
 }
 
+export type EnhancedType<T> = T & Tooltip & StyledSystemProps;
+
 export type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left';
 
 export interface TooltipProps {
@@ -154,12 +144,6 @@ export interface TooltipProps {
 	arrowStyle?: React.CSSProperties;
 }
 
-/* Used by:
-	1. CodeWithCopy.tsx
-	2. DropdownButton.tsx
-	3. Link.tsx
-	4. Txt.tsx
-*/
 export interface Tooltip {
 	tooltip?: string | TooltipProps;
 }

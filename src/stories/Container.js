@@ -20,7 +20,7 @@ storiesOf('Core/Container', module)
   .add('Center Text', () => {
     return (
       <Provider>
-        <Container align='center'>
+        <Container textAlign='center'>
           <Heading>I am in a container</Heading>
         </Container>
       </Provider>

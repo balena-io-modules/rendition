@@ -2,13 +2,13 @@
 
 exports[`Terminal renders correctly 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-bdVaJa iLLxmY"
 >
   <div
-    className="sc-VigVT jqdeBa sc-gqjmRU bCjhLA sc-iwsKbI khHCQa sc-bwzfXH ihgQcP"
+    className="sc-iwsKbI hePVUk sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
   >
     <div
-      className="sc-jTzLTM kUYmvY"
+      className="sc-gZMcBi eGBZpp"
     />
   </div>
 </div>
