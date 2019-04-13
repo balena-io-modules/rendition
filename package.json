@@ -126,7 +126,7 @@
     "styled-system": "^1.0.5",
     "tag-hoc": "1.0.0",
     "uuid": "^3.2.1",
-    "xterm": "^3.12.0"
+    "xterm": "^3.12.2"
   },
   "lint-staged": {
     "{package.json, package-lock.json}": [
