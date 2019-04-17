@@ -2,10 +2,10 @@
 
 exports[`Textarea component should match the stored snapshot 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-bdVaJa iLLxmY"
 >
   <textarea
-    className="sc-htoDjs gDCMNh sc-gzVnrw jsCvhN"
+    className="sc-htoDjs jslKMR sc-gzVnrw jsCvhN"
   />
 </div>
 `;

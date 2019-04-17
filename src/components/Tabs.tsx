@@ -1,13 +1,12 @@
 import map = require('lodash/map');
 import * as React from 'react';
-import { compose } from 'recompose';
-import styled, { withTheme } from 'styled-components';
-import asRendition from '../asRendition';
-import Button from './Button';
-import { Box, Flex } from './Grid';
+import styled from 'styled-components';
+import { EnhancedType } from '../common-types';
+import Button, { ButtonProps } from './Button';
+import { Box, BoxProps, Flex, FlexProps } from './Grid';
 import Txt from './Txt';
 
-export interface TabsProps {
+export interface TabsProps extends EnhancedType<BoxProps> {
 	tabs: string[];
 	help?: JSX.Element;
 	children: JSX.Element[];
@@ -24,9 +23,9 @@ const FlexTab = styled(Flex)`
 	border-style: hidden;
 	border-width: 1px;
 	border-bottom-style: solid;
-`;
+` as React.ComponentType<EnhancedType<FlexProps>>;
 
-const ButtonBase = styled(Button)`
+const ButtonBase = styled(Button)<{ active: boolean }>`
 	padding: 4px 10px 2px;
 	border: 1px solid white;
 	border-radius: 0;
@@ -52,7 +51,7 @@ const ButtonBase = styled(Button)`
 		`
 			: `
 		`}
-`;
+` as React.ComponentType<EnhancedType<ButtonProps & { active: boolean }>>;
 
 class Tabs extends React.Component<TabsProps, TabsState> {
 	constructor(props: TabsProps) {
@@ -76,7 +75,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
 
 		return (
 			<Box {...props}>
-				<FlexTab justify="space-between" mb={1}>
+				<FlexTab justifyContent="space-between" mb={1}>
 					<Flex>
 						{map(tabs, (tab, index: number) => {
 							return (
@@ -103,7 +102,4 @@ class Tabs extends React.Component<TabsProps, TabsState> {
 	}
 }
 
-export default compose(
-	withTheme,
-	asRendition,
-)(Tabs) as React.ComponentClass<TabsProps>;
+export default Tabs;

@@ -2,6 +2,7 @@ import has = require('lodash/has');
 import includes = require('lodash/includes');
 import * as React from 'react';
 import styled from 'styled-components';
+import { EnhancedType } from '../common-types';
 import Badge from './Badge';
 import Divider from './Divider';
 import DropDownButton, { DropDownButtonProps } from './DropDownButton';
@@ -40,8 +41,11 @@ const ButtonWrapper = styled.button`
 	}
 `;
 
-class BadgeSelect extends React.Component<BadgeSelectProps, BadgeSelectState> {
-	constructor(props: BadgeSelectProps) {
+class BadgeSelect extends React.Component<
+	EnhancedType<BadgeSelectProps>,
+	BadgeSelectState
+> {
+	constructor(props: EnhancedType<BadgeSelectProps>) {
 		super(props);
 
 		this.state = {

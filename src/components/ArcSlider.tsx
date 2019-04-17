@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { constrainNumber, darken, getAngleBetweenPoints } from '../utils';
-import { Box, BoxProps, Flex } from './Grid';
+import { Box, BoxProps, Flex, FlexProps } from './Grid';
 
 export interface ArcSliderProps extends BoxProps {
 	onValueChange?: (value: number) => void;
@@ -20,10 +20,10 @@ const StyledSVG = styled.svg`
 
 const ArcSliderContainer = styled(Box)`
 	position: relative;
-`;
+` as React.ComponentType<BoxProps>;
 
 const LabelContainer = styled(Flex).attrs({
-	justify: 'center',
+	justifyContent: 'center',
 	flexDirection: 'column',
 })`
 	position: absolute;
@@ -33,7 +33,7 @@ const LabelContainer = styled(Flex).attrs({
 	left: 0;
 	text-align: center;
 	pointer-events: none;
-`;
+` as React.ComponentType<FlexProps>;
 
 const polarToCartesian = (
 	centerX: number,
@@ -178,7 +178,7 @@ class ArcSlider extends React.Component<ArcSliderProps, ArcSliderState> {
 					style={{
 						cursor: this.state.isDragging ? 'grabbing' : 'grab',
 					}}
-					innerRef={(elem: any) => (this.$slider = elem)}
+					ref={(elem: any) => (this.$slider = elem)}
 					viewBox="0 0 600 600"
 					onMouseDown={this.handleMouseDown}
 					onTouchStart={this.handleMouseDown}

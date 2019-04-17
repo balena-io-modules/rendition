@@ -1,34 +1,49 @@
+import assign = require('lodash/assign');
 import * as React from 'react';
-import styled, { withTheme } from 'styled-components';
+import { withProps } from 'recompose';
+import styled from 'styled-components';
 import {
-	color,
-	fontSize,
-	responsiveStyle,
-	space,
+	maxWidth,
+	MaxWidthProps,
 	textAlign,
+	TextAlignProps,
 } from 'styled-system';
-import { DefaultProps, Theme } from '../common-types';
+import asRendition from '../asRendition';
+import { Theme } from '../common-types';
 
-const maxWidth = responsiveStyle('max-width', 'maxWidth');
+interface ContainerProps extends MaxWidthProps, TextAlignProps {}
+interface ThemedContainerProps extends ContainerProps {
+	theme: Theme;
+}
 
-const Container = styled.div`
-  ${textAlign} ${maxWidth} ${fontSize} ${space} ${color};
-` as React.ComponentClass<DefaultProps & { maxWidth?: string[] }>;
+const ContainerBase = styled.div<ThemedContainerProps>`
+	${textAlign}
+	${maxWidth}
+`;
+
+const Container = (props: ThemedContainerProps) => {
+	return (
+		<ContainerBase
+			{...props}
+			maxWidth={props.theme.breakpoints.map(
+				(bp, i) => `${bp - props.theme.space[i]}em`,
+			)}
+		/>
+	);
+};
 
 Container.displayName = 'Container';
-Container.defaultProps = {
-	px: 3,
-	ml: 'auto',
-	mr: 'auto',
-} as any;
+Container.defaultProps = {} as any;
 
-export default withTheme(
-	({ theme, ...props }: DefaultProps & { theme: Theme }) => {
-		return (
-			<Container
-				{...props}
-				maxWidth={theme.breakpoints.map((bp, i) => `${bp - theme.space[i]}em`)}
-			/>
-		);
-	},
-) as React.ComponentClass<DefaultProps>;
+const setDefaultProps = withProps((props: ContainerProps) => {
+	return assign(
+		{
+			px: 3,
+			ml: 'auto',
+			mr: 'auto',
+		},
+		props,
+	);
+});
+
+export default asRendition<ContainerProps>(Container, [setDefaultProps]);

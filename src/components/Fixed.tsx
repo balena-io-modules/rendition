@@ -1,6 +1,6 @@
 import defaultTo = require('lodash/defaultTo');
-import { compose, withProps } from 'recompose';
-import styled, { StyledFunction, withTheme } from 'styled-components';
+import { withProps } from 'recompose';
+import styled from 'styled-components';
 import asRendition from '../asRendition';
 import { DefaultProps, ResponsiveStyle } from '../common-types';
 
@@ -10,17 +10,19 @@ export interface FixedProps extends DefaultProps {
 	bottom?: boolean | ResponsiveStyle;
 	left?: boolean | ResponsiveStyle;
 	z?: ResponsiveStyle;
+	bg?: string;
 }
 
-export interface FixedBaseProps extends DefaultProps {
+interface FixedBaseProps extends DefaultProps {
 	top?: ResponsiveStyle;
 	right?: ResponsiveStyle;
 	bottom?: ResponsiveStyle;
 	left?: ResponsiveStyle;
 	z?: ResponsiveStyle;
+	bg?: string;
 }
 
-const Base = (styled.div as StyledFunction<FixedBaseProps>)`
+const Base = styled.div<FixedBaseProps>`
 	position: fixed;
 	top: ${props => defaultTo(props.top, 'auto')};
 	right: ${props => defaultTo(props.right, 'auto')};
@@ -39,8 +41,4 @@ const dimensions = withProps((props: FixedProps) => {
 	};
 });
 
-export default compose<FixedBaseProps, FixedProps>(
-	withTheme,
-	dimensions,
-	asRendition,
-)(Base);
+export default asRendition<FixedProps>(Base, [dimensions], ['bg']);

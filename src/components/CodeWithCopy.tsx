@@ -1,21 +1,25 @@
 import * as copyToClipboard from 'copy-to-clipboard';
 import * as React from 'react';
 import FaClipboard = require('react-icons/lib/fa/clipboard');
-import { compose } from 'recompose';
-import styled, { withTheme } from 'styled-components';
+import styled from 'styled-components';
 import asRendition from '../asRendition';
-import { DefaultProps, Tooltip } from '../common-types';
-import { stopEvent, withProps } from '../utils';
+import { DefaultProps, EnhancedType, Tooltip } from '../common-types';
+import { stopEvent } from '../utils';
 import Button from './Button';
-import Txt from './Txt';
+import Txt, { TxtProps } from './Txt';
 
-export interface CodeWithCopyProps extends DefaultProps, Tooltip {
+export interface CodeWithCopyProps extends DefaultProps, Tooltip, TxtProps {
+	color?: string;
 	copy?: string;
 	text: string;
 	showCopyButton?: 'hover' | 'always';
 }
 
-const Wrapper = withProps<Partial<CodeWithCopyProps>>()(styled(Txt.span))`
+export interface CodeWithCopyBaseProps extends DefaultProps, Tooltip, TxtProps {
+	showCopyButton?: 'hover' | 'always';
+}
+
+const Wrapper = styled(Txt.span)<CodeWithCopyBaseProps>`
 	white-space: initial;
 
 	code {
@@ -45,7 +49,7 @@ const Wrapper = withProps<Partial<CodeWithCopyProps>>()(styled(Txt.span))`
 	&:hover .code-with-copy__copy {
 		visibility: visible;
 	}
-`;
+` as React.ComponentType<EnhancedType<CodeWithCopyBaseProps>>;
 
 const Base = ({ copy, text, color, ...props }: CodeWithCopyProps) => {
 	const normalizedText = (text || '').toString().trim();
@@ -69,7 +73,4 @@ const Base = ({ copy, text, color, ...props }: CodeWithCopyProps) => {
 	);
 };
 
-export default compose(
-	withTheme,
-	asRendition,
-)(Base) as React.ComponentClass<CodeWithCopyProps>;
+export default asRendition<CodeWithCopyProps>(Base, [], ['color']);

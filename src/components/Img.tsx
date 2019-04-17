@@ -1,11 +1,15 @@
 import styled from 'styled-components';
-import { space, width } from 'styled-system';
+import { space, SpaceProps, width, WidthProps } from 'styled-system';
+import { DefaultProps } from '../common-types';
 
-const Img = styled.img`
+interface ImgProps extends DefaultProps, SpaceProps, WidthProps {}
+
+const Img = styled.img<ImgProps>`
 	display: block;
 	max-width: 100%;
 	height: auto;
-	${space} ${width};
+	${space};
+	${width};
 `;
 
 Img.displayName = 'Img';

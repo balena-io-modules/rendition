@@ -1,33 +1,60 @@
-import { Box as _Box, Flex as _Flex } from '@balena/grid-styled';
-import { compose } from 'recompose';
+import { RefObject } from 'react';
 import styled from 'styled-components';
-import { color, fontSize } from 'styled-system';
+import {
+	alignItems,
+	AlignItemsProps,
+	alignSelf,
+	AlignSelfProps,
+	flex,
+	flexDirection,
+	FlexDirectionProps,
+	FlexProps as StyledFlexProps,
+	flexWrap,
+	FlexWrapProps,
+	justifyContent,
+	JustifyContentProps,
+	order,
+	OrderProps,
+} from 'styled-system';
 import asRendition from '../asRendition';
-import { DefaultProps, Tooltip } from '../common-types';
+import { DefaultProps, EnhancedType } from '../common-types';
 
-export interface FlexProps extends BoxProps {
-	align?: string | string[];
-	justify?: string | string[];
-	flexDirection?: string | string[];
-	wrap?: boolean | boolean[] | string;
+export interface BoxProps
+	extends DefaultProps,
+		StyledFlexProps,
+		OrderProps,
+		AlignSelfProps {
+	ref?:
+		| string
+		| ((instance: any | null) => void)
+		| RefObject<any>
+		| null
+		| undefined;
 }
+export const Box = asRendition<BoxProps>(
+	styled.div<BoxProps>`
+		box-sizing: border-box;
+		${flex};
+		${order};
+		${alignSelf};
+	`,
+);
 
-export interface BoxProps extends DefaultProps, Tooltip {
-	flex?: string | string[];
-	order?: number | string | Array<number | string>;
-}
+Box.displayName = 'Box';
 
-const FlexBase = styled(_Flex)`
-	${fontSize} ${color};
-`;
+export interface FlexProps
+	extends BoxProps,
+		FlexWrapProps,
+		FlexDirectionProps,
+		AlignItemsProps,
+		JustifyContentProps {}
 
-const BoxBase = styled(_Box)`
-	${fontSize} ${color};
-`;
+export const Flex = styled(Box)<FlexProps>`
+	display: flex;
+	${flexWrap};
+	${flexDirection};
+	${alignItems};
+	${justifyContent};
+` as React.ComponentType<EnhancedType<FlexProps>>;
 
-export const Flex = compose(asRendition)(FlexBase) as React.ComponentClass<
-	FlexProps
->;
-export const Box = compose(asRendition)(BoxBase) as React.ComponentClass<
-	BoxProps
->;
+Flex.displayName = 'Flex';

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { Flex } from './Grid';
+import { EnhancedType } from '../common-types';
+import { Flex, FlexProps } from './Grid';
 
 export default styled(Flex)`
 	> * {
@@ -20,4 +21,4 @@ export default styled(Flex)`
 			border-bottom-right-radius: ${props => props.theme.radius}px;
 		}
 	}
-`;
+` as React.ComponentType<EnhancedType<FlexProps>>;

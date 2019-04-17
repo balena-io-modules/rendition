@@ -1,10 +1,8 @@
 import * as React from 'react';
 import FaSearch = require('react-icons/lib/fa/search');
-import { compose } from 'recompose';
-import styled, { withTheme } from 'styled-components';
+import styled from 'styled-components';
 import asRendition from '../asRendition';
 import { DefaultProps } from '../common-types';
-import Theme from '../theme';
 
 export interface SearchProps extends DefaultProps {
 	dark?: boolean;
@@ -17,12 +15,12 @@ export interface SearchProps extends DefaultProps {
 const Wrapper = styled.div`
 	position: relative;
 	width: 100%;
-	border-bottom: 1px solid ${Theme.colors.gray.main};
+	border-bottom: 1px solid ${props => props.theme.colors.gray.main};
 	padding-left: 24px;
 	padding-top: 3px;
 
 	.search-icon {
-		color: ${Theme.colors.gray.main};
+		color: ${props => props.theme.colors.gray.main};
 		font-size: 0.9em;
 		position: absolute;
 		top: 50%;
@@ -42,7 +40,7 @@ const Wrapper = styled.div`
 			box-shadow: none;
 		}
 		::placeholder {
-			color: ${Theme.colors.gray.main};
+			color: ${props => props.theme.colors.gray.main};
 			font-weight: 300;
 		}
 	}
@@ -69,7 +67,4 @@ const Search = ({
 	);
 };
 
-export default compose(
-	withTheme,
-	asRendition,
-)(Search) as React.ComponentClass<SearchProps>;
+export default asRendition<SearchProps>(Search);

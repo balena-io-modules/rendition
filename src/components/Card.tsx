@@ -1,7 +1,6 @@
 import map = require('lodash/map');
 import * as React from 'react';
-import { compose } from 'recompose';
-import styled, { StyledFunction, withTheme } from 'styled-components';
+import styled from 'styled-components';
 import { DefaultProps } from '../common-types';
 
 import asRendition from '../asRendition';
@@ -18,7 +17,7 @@ export interface CardProps extends DefaultProps {
 	minHeight?: string;
 }
 
-const Wrapper = (styled.div as StyledFunction<CardProps>)`
+const Wrapper = styled.div<CardProps>`
 	border: solid 1px #dfdede;
 	border-radius: ${props => px(props.theme.radius || 3)};
 	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
@@ -35,7 +34,7 @@ const Card = ({ title, cta, rows, children, ...props }: CardProps) => {
 
 	const Header = hasHeader && (
 		<React.Fragment>
-			<Flex justify="space-between" mb={14}>
+			<Flex justifyContent="space-between" mb={14}>
 				<Txt bold fontSize="16px" color="#000">
 					{title}
 				</Txt>
@@ -65,7 +64,4 @@ const Card = ({ title, cta, rows, children, ...props }: CardProps) => {
 	);
 };
 
-export default compose(
-	withTheme,
-	asRendition,
-)(Card) as React.ComponentClass<CardProps>;
+export default asRendition<CardProps>(Card);

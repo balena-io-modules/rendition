@@ -14,7 +14,7 @@ const rows = [
     >
     Row with Copy component
   </TextWithCopy>,
-  <Flex justify='space-between'>
+  <Flex justifyContent='space-between'>
     <div>Row with</div>
     <div>Flex</div>
   </Flex>,
@@ -27,7 +27,7 @@ storiesOf('Core/Card', module)
   .add('Standard', () => {
     return (
       <Provider>
-        <Box w={350} m={3}>
+        <Box width={350} m={3}>
           <Card>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
             scelerisque euismod risus at gravida. Pellentesque a nunc semper,
@@ -40,7 +40,7 @@ storiesOf('Core/Card', module)
   .add('With Header', () => {
     return (
       <Provider>
-        <Box w={350} m={3}>
+        <Box width={350} m={3}>
           <Card
             title='Card with Button'
             cta={
@@ -73,7 +73,7 @@ storiesOf('Core/Card', module)
   .add('With rows', () => {
     return (
       <Provider>
-        <Box w={350} m={3}>
+        <Box width={350} m={3}>
           <Card
             title='Title'
             rows={rows}
@@ -86,7 +86,7 @@ storiesOf('Core/Card', module)
   .add('Title', () => {
     return (
       <Provider>
-        <Box w={350} m={3}>
+        <Box width={350} m={3}>
           <Card
             title='Title'
             minHeight={'300px'}

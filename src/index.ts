@@ -1,10 +1,6 @@
 export { default as Alert, AlertProps } from './components/Alert';
 export { default as ArcSlider, ArcSliderProps } from './components/ArcSlider';
-export {
-	default as Badge,
-	BadgeProps,
-	ThemedBadgeProps,
-} from './components/Badge';
+export { default as Badge, BadgeProps } from './components/Badge';
 export {
 	default as BadgeSelect,
 	BadgeSelectProps,
@@ -12,10 +8,8 @@ export {
 export { default as Banner, BannerProps } from './components/Banner';
 export {
 	default as Button,
-	ButtonBaseProps,
 	ButtonAnchorProps,
 	ButtonProps,
-	ThemedButtonProps,
 } from './components/Button';
 export { default as ButtonGroup } from './components/ButtonGroup';
 export { default as Card, CardProps } from './components/Card';
@@ -37,29 +31,16 @@ export {
 	EditModel,
 	FiltersState,
 } from './components/Filters';
-export {
-	default as Fixed,
-	FixedProps,
-	FixedBaseProps,
-} from './components/Fixed';
-export {
-	default as Input,
-	InputProps,
-	ThemedInputProps,
-} from './components/Input';
-export {
-	default as Modal,
-	ModalProps,
-	ThemedModalProps,
-} from './components/Modal';
+export { default as Fixed, FixedProps } from './components/Fixed';
+export { default as Input, InputProps } from './components/Input';
+export { default as Modal, ModalProps } from './components/Modal';
 export { default as Pager, PagerProps } from './components/Pager';
 export { default as Pill, PillProps } from './components/Pill';
 export {
 	default as ProgressBar,
 	ProgressBarProps,
-	ThemedProgressBarProps,
 } from './components/ProgressBar';
-export { default as Provider, ThemedBaseProps } from './components/Provider';
+export { default as Provider } from './components/Provider';
 export { default as Search, SearchProps } from './components/Search';
 export { default as Select, SelectProps } from './components/Select';
 export {
@@ -69,16 +50,12 @@ export {
 	TableSortOptions,
 	TableProps,
 } from './components/Table';
-export {
-	default as Terminal,
-	TerminalProps,
-	ThemedTerminalProps,
-} from './components/Terminal';
+export { default as Terminal, TerminalProps } from './components/Terminal';
 export {
 	default as TextWithCopy,
 	TextWithCopyProps,
 } from './components/TextWithCopy';
-export { default as Txt, TxtProps, ThemedTxtProps } from './components/Txt';
+export { default as Txt, TxtProps } from './components/Txt';
 export { default as Textarea, TextareaProps } from './components/Textarea';
 export { default as Img } from './components/Img';
 export { default as Heading } from './components/Heading';
@@ -88,11 +65,16 @@ export {
 	DropDownButtonProps,
 } from './components/DropDownButton';
 export { default as Navbar, NavbarProps } from './components/Navbar';
-export { default as Link, LinkBaseProps, LinkProps } from './components/Link';
+export { default as Link, LinkProps } from './components/Link';
 export { default as Tabs, TabsProps } from './components/Tabs';
 
 export { Flex, Box, FlexProps, BoxProps } from './components/Grid';
 export { default as Theme } from './theme';
+export {
+	default as asRendition,
+	withStyledSystem,
+	withTooltip,
+} from './asRendition';
 
 import * as SchemaSieve from './components/Filters/SchemaSieve';
 import * as migrations from './migrations';
@@ -117,4 +99,5 @@ export {
 	TooltipPlacement,
 	TooltipProps,
 	Tooltip,
+	EnhancedType,
 } from './common-types';

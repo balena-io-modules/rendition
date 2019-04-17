@@ -6,6 +6,8 @@ import FaPlus = require('react-icons/lib/fa/plus');
 import { ArrayFieldTemplateProps } from 'react-jsonschema-form';
 import styled from 'styled-components';
 import { Box, Button, Flex } from '../../../../';
+import { EnhancedType } from '../../../../common-types';
+import { ButtonProps } from '../../../../components/Button';
 import { WarningField } from '../WarningField';
 
 interface ArrayFieldTitleProps {
@@ -48,7 +50,7 @@ const ArrayFieldDescription = ({
 
 const ActionButton = styled(Button)`
 	color: ${({ theme }) => theme.colors.text.light};
-`;
+` as React.ComponentType<EnhancedType<ButtonProps>>;
 
 export default (props: ArrayFieldTemplateProps) => {
 	const warning = props.uiSchema['ui:warning'];
@@ -75,7 +77,7 @@ export default (props: ArrayFieldTemplateProps) => {
 			{props.items.map(element => {
 				return (
 					<div className="rendition-form__array-item" key={element.index}>
-						<Flex align="start">
+						<Flex alignItems="flex-start">
 							<Box flex="1">{element.children}</Box>
 
 							{props.items.length > 1 && (

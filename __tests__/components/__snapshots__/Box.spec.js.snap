@@ -2,10 +2,10 @@
 
 exports[`Box renders correctly 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-bdVaJa iLLxmY"
 >
   <div
-    className="sc-gqjmRU bCjhLA sc-iwsKbI khHCQa sc-bwzfXH ihgQcP"
+    className="sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
   >
     A box
   </div>

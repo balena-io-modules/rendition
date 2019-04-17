@@ -1,17 +1,17 @@
 import * as React from 'react';
-import styled, { StyledFunction, ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import { DefaultProps, Theme } from '../common-types';
 import defaultTheme from '../theme';
 
-export interface ThemedBaseProps extends DefaultProps {
+const Base = styled.div<ThemedProvider>`
+	font-family: ${props => props.theme.font};
+`;
+
+export interface ThemedProvider extends DefaultProps {
 	theme?: Theme;
 }
 
-const Base = (styled.div as StyledFunction<DefaultProps>)`
-  font-family: ${props => props.theme.font};
-`;
-
-const Provider = ({ theme, ...props }: ThemedBaseProps) => {
+const Provider = ({ theme, ...props }: ThemedProvider) => {
 	return (
 		<ThemeProvider theme={theme || defaultTheme}>
 			<Base {...props} />

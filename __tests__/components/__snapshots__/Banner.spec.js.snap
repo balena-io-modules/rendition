@@ -2,11 +2,10 @@
 
 exports[`Button renders correctly 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-bdVaJa iLLxmY"
 >
   <div
-    className="sc-htoDjs kpLPJf sc-gzVnrw hnoozl"
-    color="white"
+    className="sc-htoDjs ckGGnw sc-gzVnrw hnoozl"
   >
     <h1>
       balena

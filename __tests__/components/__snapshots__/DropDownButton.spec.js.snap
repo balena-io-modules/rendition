@@ -2,21 +2,21 @@
 
 exports[`DropDownButton renders correctly 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-bdVaJa iLLxmY"
 >
   <div
-    className="sc-kEYyzF hUuPit"
+    className="sc-kkGfuU bijuKn sc-jKJlTe idmetn sc-kgoBCf jWgjbN sc-chPdSV dZFyhg"
   >
     <span>
       <button
-        className="sc-eNQAEJ gDidKo sc-VigVT hegYug sc-htoDjs hQVMTw"
+        className="sc-dxgOiQ kMQyTb sc-VigVT dzpHnm sc-htoDjs hQVMTw"
       >
         <div>
           DropDown
         </div>
       </button>
       <button
-        className="sc-jKJlTe dkFSFP sc-VigVT hegYug sc-htoDjs hQVMTw"
+        className="sc-kpOJdX cbQIFk sc-VigVT dzpHnm sc-htoDjs hQVMTw"
         onClick={[Function]}
       >
         <svg
@@ -46,21 +46,21 @@ exports[`DropDownButton renders correctly 1`] = `
 
 exports[`Opened DropDownButton renders correctly 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-bdVaJa iLLxmY"
 >
   <div
-    className="sc-kEYyzF hUuPit"
+    className="sc-kkGfuU bijuKn sc-jKJlTe idmetn sc-kgoBCf jWgjbN sc-chPdSV dZFyhg"
   >
     <span>
       <button
-        className="sc-eNQAEJ gDidKo sc-VigVT hegYug sc-htoDjs hQVMTw"
+        className="sc-dxgOiQ kMQyTb sc-VigVT dzpHnm sc-htoDjs hQVMTw"
       >
         <div>
           DropDown
         </div>
       </button>
       <button
-        className="sc-jKJlTe dkFSFP sc-VigVT hegYug sc-htoDjs hQVMTw"
+        className="sc-kpOJdX cbQIFk sc-VigVT dzpHnm sc-htoDjs hQVMTw"
         onClick={[Function]}
       >
         <svg
@@ -85,36 +85,36 @@ exports[`Opened DropDownButton renders correctly 1`] = `
       </button>
     </span>
     <div
-      className="sc-kAzzGY dirfrO sc-cSHVUG flWEyE"
+      className="sc-kAzzGY ikexOF sc-cSHVUG flWEyE"
       onClick={[Function]}
     />
     <div
-      className="sc-hMqMXs fzIFeV"
+      className="sc-ckVGcZ kxEyes"
       onClick={[Function]}
     >
       <div
-        className="sc-kkGfuU kqdaVq"
+        className="sc-eNQAEJ hDOerh"
       >
         <div>
           Item
         </div>
       </div>
       <div
-        className="sc-kkGfuU kqdaVq"
+        className="sc-eNQAEJ hDOerh"
       >
         <div>
           Item
         </div>
       </div>
       <div
-        className="sc-kkGfuU kqdaVq"
+        className="sc-eNQAEJ hDOerh"
       >
         <div>
           Item
         </div>
       </div>
       <div
-        className="sc-kkGfuU kqdaVq"
+        className="sc-eNQAEJ hDOerh"
       >
         <div>
           Item

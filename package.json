@@ -94,9 +94,7 @@
     "webpack": "^4.29.6"
   },
   "dependencies": {
-    "@balena/grid-styled": "3.1.1",
     "@types/color": "^2.0.0",
-    "@types/grid-styled": "^3.2.0",
     "@types/json-schema": "^6.0.1",
     "@types/lodash": "^4.14.77",
     "@types/marked": "^0.3.0",
@@ -105,6 +103,8 @@
     "@types/react-icons": "^2.2.4",
     "@types/react-jsonschema-form": "^1.0.9",
     "@types/recompose": "^0.26.2",
+    "@types/styled-components": "^4.1.8",
+    "@types/styled-system": "^4.0.0",
     "@types/uuid": "^3.4.3",
     "ajv": "^6.7.0",
     "ajv-keywords": "^3.3.0",
@@ -122,9 +122,8 @@
     "recompose": "0.26.0",
     "regex-parser": "^2.2.7",
     "resin-semver": "^1.4.0",
-    "styled-components": "^3.2.3",
-    "styled-system": "^1.0.5",
-    "tag-hoc": "1.0.0",
+    "styled-components": "^4.2.0",
+    "styled-system": "^4.1.0",
     "uuid": "^3.2.1",
     "xterm": "^3.12.2"
   },

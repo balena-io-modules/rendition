@@ -160,17 +160,17 @@ storiesOf('Core/Button', module)
     return (
       <Provider>
         <Box m={3}>
-          <Button w={95} m={2} primary onClick={action('case-1')}>
+          <Button width={95} m={2} primary onClick={action('case-1')}>
             Button
           </Button>
-          <Button w={60} m={2} secondary onClick={action('case-2')}>
+          <Button width={60} m={2} secondary onClick={action('case-2')}>
             Button
           </Button>
-          <Button w={120} m={2} tertiary onClick={action('case-3')}>
+          <Button width={120} m={2} tertiary onClick={action('case-3')}>
             Button
           </Button>
           <div style={{ width: 300 }}>
-            <Button w='100%' m={2} onClick={action('case-4')}>
+            <Button width='100%' m={2} onClick={action('case-4')}>
               Button
             </Button>
           </div>

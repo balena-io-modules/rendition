@@ -399,7 +399,14 @@ describe('Table component', () => {
       ]
 
       const component = mount(
-        <Table columns={cols} data={data} />
+        React.createElement(
+          props => (
+            <Provider>
+              <Table {...props} />
+            </Provider>
+          ),
+          { columns: cols, data }
+        )
       )
 
       const cellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
@@ -443,7 +450,14 @@ describe('Table component', () => {
       ]
 
       const component = mount(
-        <Table columns={cols} data={data} />
+        React.createElement(
+          props => (
+            <Provider>
+              <Table {...props} />
+            </Provider>
+          ),
+          { columns: cols, data }
+        )
       )
 
       data.push({
@@ -479,7 +493,14 @@ describe('Table component', () => {
       ]
 
       const component = mount(
-        <Table columns={cols} data={data} />
+        React.createElement(
+          props => (
+            <Provider>
+              <Table {...props} />
+            </Provider>
+          ),
+          { columns: cols, data }
+        )
       )
 
       const cellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
@@ -520,7 +541,14 @@ describe('Table component', () => {
       ]
 
       const component = mount(
-        <Table columns={cols} data={data} />
+        React.createElement(
+          props => (
+            <Provider>
+              <Table {...props} />
+            </Provider>
+          ),
+          { columns: cols, data }
+        )
       )
 
       const cellsText = component.find('[data-display="table-body"] [data-display="table-cell"]')
@@ -813,74 +841,87 @@ describe('getRowClass property', () => {
 describe('manually select rows', () => {
   it('should select the first two rows', () => {
     const component = mount(
-      <Table
-        rowKey='pokedex_number'
-        columns={columns}
-        data={PokeDex}
+      <Provider>
+        <Table
+          rowKey='pokedex_number'
+          columns={columns}
+          data={PokeDex}
       />
+      </Provider>
     )
 
-    expect(component.state('checkedItems').length).toEqual(0)
+    const table = component.find(Table).instance()
+    expect(table.state.checkedItems.length).toEqual(0)
 
-    component.instance().setRowSelection(PokeDex.slice(0, 2))
-    expect(component.state('checkedItems').length).toEqual(2)
-    expect(component.state('allChecked')).toEqual(false)
+    table.setRowSelection(PokeDex.slice(0, 2))
+    expect(table.state.checkedItems.length).toEqual(2)
+    expect(table.state.allChecked).toEqual(false)
   })
 
   it('should select all rows', () => {
     const component = mount(
-      <Table
-        rowKey='pokedex_number'
-        columns={columns}
-        data={PokeDex}
+      <Provider>
+        <Table
+          rowKey='pokedex_number'
+          columns={columns}
+          data={PokeDex}
       />
+      </Provider>
     )
 
-    expect(component.state('checkedItems').length).toEqual(0)
+    const table = component.find(Table).instance()
+    expect(table.state.checkedItems.length).toEqual(0)
 
-    component.instance().setRowSelection(PokeDex)
-    expect(component.state('checkedItems').length).toEqual(PokeDex.length)
-    expect(component.state('allChecked')).toEqual(true)
+    table.setRowSelection(PokeDex)
+    expect(table.state.checkedItems.length).toEqual(PokeDex.length)
+    expect(table.state.allChecked).toEqual(true)
   })
 
   it('should clear all rows', () => {
     const component = mount(
-      <Table
-        rowKey='pokedex_number'
-        columns={columns}
-        data={PokeDex}
+      <Provider>
+        <Table
+          rowKey='pokedex_number'
+          columns={columns}
+          data={PokeDex}
       />
+      </Provider>
     )
 
-    expect(component.state('checkedItems').length).toEqual(0)
+    const table = component.find(Table).instance()
+    expect(table.state.checkedItems.length).toEqual(0)
 
-    component.instance().setRowSelection(PokeDex)
-    expect(component.state('checkedItems').length).toEqual(PokeDex.length)
-    expect(component.state('allChecked')).toEqual(true)
+    table.setRowSelection(PokeDex)
+    expect(table.state.checkedItems.length).toEqual(PokeDex.length)
+    expect(table.state.allChecked).toEqual(true)
 
-    component.instance().setRowSelection([])
-    expect(component.state('checkedItems').length).toEqual(0)
-    expect(component.state('allChecked')).toEqual(false)
+    table.setRowSelection([])
+    expect(table.state.checkedItems.length).toEqual(0)
+    expect(table.state.allChecked).toEqual(false)
   })
 
   it('should clear selection if data is set to null after instantiation', () => {
     const component = mount(
-      <Table
-        rowKey='pokedex_number'
-        columns={columns}
-        data={PokeDex}
-      />
+      React.createElement(
+        props => (
+          <Provider>
+            <Table {...props} />
+          </Provider>
+        ),
+        { columns, rowKey: 'pokedex_number', data: PokeDex }
+      )
     )
 
-    expect(component.state('checkedItems').length).toEqual(0)
+    const table = component.find(Table).instance()
+    expect(table.state.checkedItems.length).toEqual(0)
 
-    component.instance().setRowSelection(PokeDex)
-    expect(component.state('checkedItems').length).toEqual(PokeDex.length)
+    table.setRowSelection(PokeDex)
+    expect(table.state.checkedItems.length).toEqual(PokeDex.length)
 
     component.setProps({ data: null })
-    component.instance().setRowSelection([])
+    table.setRowSelection([])
 
-    expect(component.state().checkedItems.length).toEqual(0)
+    expect(table.state.checkedItems.length).toEqual(0)
   })
 })
 
@@ -905,11 +946,19 @@ describe('sorting', () => {
     const defaultSort = {field: 'Name', reverse: true}
     const updatedSort = {field: 'pokedex_number', reverse: false}
     const component = mount(
-      <Table rowKey='pokedex_number' sort={defaultSort} columns={columns} data={PokeDex} />
+      React.createElement(
+        props => (
+          <Provider>
+            <Table {...props} />
+          </Provider>
+        ),
+        { rowKey: 'pokedex_number', sort: defaultSort, columns: columns, data: PokeDex }
+      )
     )
 
-    expect(component.state('sort')).toEqual(defaultSort)
+    const table = component.find(Table).instance()
+    expect(table.state.sort).toEqual(defaultSort)
     component.setProps({sort: updatedSort})
-    expect(component.state('sort')).toEqual(updatedSort)
+    expect(table.state.sort).toEqual(updatedSort)
   })
 })

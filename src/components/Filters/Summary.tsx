@@ -113,13 +113,15 @@ class FilterSummary extends React.Component<
 								width="100%"
 								value={this.state.name}
 								placeholder="Enter a name for the view"
-								onChange={e => this.handleChange(e)}
+								onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+									this.handleChange(e)
+								}
 								autoFocus
 							/>
 						</form>
 					</Modal>
 				)}
-				<Flex justify="space-between">
+				<Flex justifyContent="space-between">
 					<Txt
 						fontSize={13}
 						mb={10}
@@ -139,7 +141,7 @@ class FilterSummary extends React.Component<
 						Save view
 					</Button>
 				</Flex>
-				<Flex wrap>
+				<Flex flexWrap="wrap">
 					{this.props.filters.map((filter, index) => {
 						return (
 							<Box mb={10} mr={10} key={index}>

@@ -2,13 +2,13 @@
 
 exports[`Search renders correctly 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-bdVaJa iLLxmY"
 >
   <div
-    className="sc-kpOJdX kXbjAC sc-kGXeez kEYKeg"
+    className="sc-cSHVUG caRVuD sc-jzJRlG hnQKFB"
   >
     <div
-      className="sc-jTzLTM kiXjdo sc-gqjmRU jowXRS sc-dnqmqq kiTpof"
+      className="sc-iwsKbI eCiFOJ sc-dnqmqq krhTjU"
     >
       Lorem ipsum dolor so ammet
     </div>

@@ -4,7 +4,7 @@ import FaClose = require('react-icons/lib/fa/close');
 import FaExclamationCircle = require('react-icons/lib/fa/exclamation-circle');
 import FaExclamationTriangle = require('react-icons/lib/fa/exclamation-triangle');
 import FaInfoCircle = require('react-icons/lib/fa/info-circle');
-import styled, { StyledFunction, withTheme } from 'styled-components';
+import styled from 'styled-components';
 import asRendition from '../asRendition';
 import { Coloring, DefaultProps, Sizing } from '../common-types';
 import { bold, getColor, normal, px } from '../utils';
@@ -12,6 +12,7 @@ import { Flex } from './Grid';
 
 export interface AlertProps extends DefaultProps, Coloring, Sizing {
 	plaintext?: boolean;
+	bg?: string;
 	prefix?: JSX.Element | string | false;
 	onDismiss?: () => void;
 }
@@ -44,14 +45,14 @@ const AlertTitle = styled.span`
 
 // Firefox didn't middle align absolute positioned elements
 // using flex, so we had to use an extra wrapper element
-const DismissButtonWrapper = (styled.div as StyledFunction<AlertProps>)`
+const DismissButtonWrapper = styled.div<AlertProps>`
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	right: ${props => px(props.emphasized ? 20 : 12)}
+	right: ${props => px(props.emphasized ? 20 : 12)};
 `;
 
 const DismissButton = styled.button`
@@ -67,7 +68,7 @@ const DismissButton = styled.button`
 	}
 `;
 
-const AlertBase = (styled.div as StyledFunction<AlertProps>)`
+const AlertBase = styled.div<AlertProps>`
 	display: flex;
 	align-items: center;
 	justify-content: normal;
@@ -89,7 +90,7 @@ const AlertBase = (styled.div as StyledFunction<AlertProps>)`
 `;
 
 // That's the normal alert
-const Outline = AlertBase.extend`
+const Outline = styled(AlertBase)<AlertProps>`
 	padding-left: 19px;
 	border: 1px solid ${props => getColor(props, 'bg', 'main')};
 	background: ${props => props.bg || getColor(props, 'bg', 'light')};
@@ -101,7 +102,7 @@ const Outline = AlertBase.extend`
 	}
 `;
 
-const Filled = AlertBase.extend`
+const Filled = styled(AlertBase)<AlertProps>`
 	border: 0;
 	font-weight: ${props => bold(props)};
 	text-align: center;
@@ -109,7 +110,7 @@ const Filled = AlertBase.extend`
 	color: ${props => props.color || '#fff'};
 `;
 
-const Plaintext = AlertBase.extend`
+const Plaintext = styled(AlertBase)<AlertProps>`
 	min-height: auto;
 	padding: 0;
 	font-size: 14px;
@@ -144,48 +145,48 @@ const getIcon = (props: AlertProps) => {
 	);
 };
 
-const DismissAlert = (props: AlertProps) => (
-	<DismissButtonWrapper {...props}>
-		<DismissButton onClick={() => props.onDismiss && props.onDismiss()}>
+const DismissAlert = ({ onDismiss }: { onDismiss: () => void }) => (
+	<DismissButtonWrapper>
+		<DismissButton onClick={() => onDismiss && onDismiss()}>
 			<FaClose />
 		</DismissButton>
 	</DismissButtonWrapper>
 );
 
-export default withTheme(
-	asRendition((props: AlertProps) => {
-		const { emphasized, plaintext, prefix, onDismiss, ...restProps } = props;
-		const title = plaintext ? getIcon(props) : getTitle(props);
-		if (plaintext) {
-			return (
-				<Plaintext {...restProps}>
-					<Flex>
-						{title && <AlertTitle children={title} />}
-						<div>{props.children}</div>
-					</Flex>
-					{onDismiss && <DismissAlert onDismiss={onDismiss} />}
-				</Plaintext>
-			);
-		} else if (emphasized) {
-			return (
-				<Filled emphasized {...restProps}>
-					<div>
-						{title && <AlertTitle children={title} />}
-						{props.children}
-					</div>
-					{onDismiss && <DismissAlert onDismiss={onDismiss} />}
-				</Filled>
-			);
-		} else {
-			return (
-				<Outline {...restProps}>
-					<div>
-						{title && <AlertTitle children={title} />}
-						{props.children}
-					</div>
-					{onDismiss && <DismissAlert onDismiss={onDismiss} />}
-				</Outline>
-			);
-		}
-	}),
-) as React.ComponentClass<AlertProps>;
+const Alert = (props: AlertProps) => {
+	const { emphasized, plaintext, prefix, onDismiss, ...restProps } = props;
+	const title = plaintext ? getIcon(props) : getTitle(props);
+	if (plaintext) {
+		return (
+			<Plaintext {...restProps}>
+				<Flex>
+					{title && <AlertTitle children={title} />}
+					<div>{props.children}</div>
+				</Flex>
+				{onDismiss && <DismissAlert onDismiss={onDismiss} />}
+			</Plaintext>
+		);
+	} else if (emphasized) {
+		return (
+			<Filled emphasized {...restProps}>
+				<div>
+					{title && <AlertTitle children={title} />}
+					{props.children}
+				</div>
+				{onDismiss && <DismissAlert onDismiss={onDismiss} />}
+			</Filled>
+		);
+	} else {
+		return (
+			<Outline {...restProps}>
+				<div>
+					{title && <AlertTitle children={title} />}
+					{props.children}
+				</div>
+				{onDismiss && <DismissAlert onDismiss={onDismiss} />}
+			</Outline>
+		);
+	}
+};
+
+export default asRendition<AlertProps>(Alert, [], ['bg']);

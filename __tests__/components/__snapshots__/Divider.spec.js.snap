@@ -2,10 +2,10 @@
 
 exports[`Divider renders correctly 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-bdVaJa iLLxmY"
 >
   <hr
-    className="sc-htoDjs gDCMNh sc-gzVnrw dFonrj"
+    className="sc-htoDjs jslKMR sc-gzVnrw dFonrj"
   />
 </div>
 `;

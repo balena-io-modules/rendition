@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { compose } from 'recompose';
-import styled, { withTheme } from 'styled-components';
+import styled from 'styled-components';
 import asRendition from '../asRendition';
-import { Coloring, Shading } from '../common-types';
-import { getColor, withProps } from '../utils';
+import { Coloring, EnhancedType, Shading } from '../common-types';
+import { getColor } from '../utils';
 import Txt, { TxtProps } from './Txt';
 
 export interface PillProps extends Coloring, Shading, TxtProps {
@@ -11,7 +10,7 @@ export interface PillProps extends Coloring, Shading, TxtProps {
 	style?: React.CSSProperties;
 }
 
-const BasePill = withProps<PillProps>()(styled(Txt))`
+const BasePill = styled(Txt)<PillProps>`
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -27,20 +26,17 @@ const BasePill = withProps<PillProps>()(styled(Txt))`
 	color: #fff;
 	background-color: ${props =>
 		getColor(props, 'bg', props.shade || 'main') || props.bg || '#7e8085'};
-`;
+` as React.ComponentType<EnhancedType<PillProps>>;
 
-const SmallPill = BasePill.extend`
+const SmallPill = styled(BasePill)`
 	padding: 1.4px 5.6px;
 	font-size: 8.4px;
 	line-height: 11px;
-`;
+` as React.ComponentType<EnhancedType<PillProps>>;
 
 const Pill = ({ small, children, ...props }: PillProps) => {
 	const PillComponent = !small ? BasePill : SmallPill;
 	return <PillComponent {...props}>{children}</PillComponent>;
 };
 
-export default compose(
-	withTheme,
-	asRendition,
-)(Pill) as React.ComponentClass<PillProps>;
+export default asRendition<PillProps>(Pill);

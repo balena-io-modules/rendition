@@ -2,13 +2,13 @@
 
 exports[`Pager component should match the stored snapshot 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-bdVaJa iLLxmY"
 >
   <div
-    className="sc-chPdSV dfDVBP sc-cSHVUG kBGaNN sc-jzJRlG dUvHwz"
+    className="sc-cSHVUG ddiRBz sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
   >
     <div
-      className="sc-kpOJdX duIozc sc-kGXeez eKxrBp"
+      className="sc-chPdSV bErQmz sc-kAzzGY duiWHn"
     >
       <strong>
         1
@@ -22,13 +22,13 @@ exports[`Pager component should match the stored snapshot 1`] = `
       </strong>
     </div>
     <div
-      className="sc-chPdSV dfDVBP sc-cSHVUG kBGaNN sc-jzJRlG jJxvfu"
+      className="sc-cSHVUG dzaSRZ sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
     >
       <div
-        className="sc-hMqMXs cyeuh sc-kgoBCf jIcSzk sc-kAzzGY bHluuy sc-fjdhpX jWzEVr"
+        className="sc-kpOJdX brCIVB sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
       >
         <button
-          className="rendition-pager__btn--prev sc-VigVT hegYug sc-gqjmRU dTxmFc"
+          className="sc-htoDjs rendition-pager__btn--prev sc-VigVT dzpHnm sc-gqjmRU dTxmFc"
           disabled={true}
           onClick={[Function]}
         >
@@ -53,7 +53,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
           </svg>
         </button>
         <button
-          className="rendition-pager__btn--next sc-VigVT hegYug sc-gqjmRU dTxmFc"
+          className="sc-htoDjs rendition-pager__btn--next sc-VigVT dzpHnm sc-gqjmRU dTxmFc"
           disabled={false}
           onClick={[Function]}
         >

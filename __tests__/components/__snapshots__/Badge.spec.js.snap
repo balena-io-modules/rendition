@@ -2,10 +2,10 @@
 
 exports[`Badge renders correctly 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-bdVaJa iLLxmY"
 >
   <div
-    className="sc-jTzLTM bUWCnN sc-VigVT eREvoF sc-gqjmRU kejeVR sc-iwsKbI kNQFsJ sc-gzVnrw gdsMeq"
+    className="sc-gZMcBi wADvy sc-iwsKbI hLyHMt sc-htoDjs QHiav sc-gzVnrw jnVFiX"
   >
     badge
   </div>

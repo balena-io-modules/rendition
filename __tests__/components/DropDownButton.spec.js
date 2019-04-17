@@ -20,9 +20,10 @@ test('DropDownButton renders correctly', () => {
 })
 
 test('Opened DropDownButton renders correctly', () => {
+  let componentInstance
   const component = renderer.create(
     <Provider>
-      <DropDownButton primary label={<div>DropDown</div>}>
+      <DropDownButton primary ref={ref => { componentInstance = ref }} label={<div>DropDown</div>}>
         <div>Item</div>
         {[...Array(3).keys()].map((index) => (
           <div key={index}>Item</div>
@@ -31,9 +32,7 @@ test('Opened DropDownButton renders correctly', () => {
     </Provider>
   )
 
-  let instance = component.root.findByType(DropDownButton).children[0].instance
-
-  instance.setState({
+  componentInstance.setState({
     open: true
   })
 

@@ -2,16 +2,16 @@
 
 exports[`Filters component should match the stored snapshot 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-bdVaJa iLLxmY"
 >
   <div
-    className="sc-dNLxif hMEKxV sc-hMqMXs iXgAPF sc-jKJlTe izQvgc sc-kpOJdX iDFmwO"
+    className="sc-frDJqD gxGuKI sc-dxgOiQ XkPcn sc-kpOJdX hbNmBi"
   >
     <div
-      className="sc-eNQAEJ cOpOPT sc-ckVGcZ bTbrkH sc-dxgOiQ bDgFjW"
+      className="sc-ckVGcZ guBPtk sc-dxgOiQ fZnRKS sc-kpOJdX hbNmBi"
     >
       <button
-        className="sc-VigVT iMLQux sc-htoDjs hQVMTw"
+        className="sc-VigVT dOLVZT sc-htoDjs hQVMTw"
         onClick={[Function]}
       >
         <svg
@@ -37,10 +37,10 @@ exports[`Filters component should match the stored snapshot 1`] = `
         Add filter
       </button>
       <div
-        className="sc-jbKcbu beJLgR"
+        className="sc-hmzhuo ecrAyx"
       >
         <div
-          className="sc-gipzik idXKAJ"
+          className="sc-jAaTju giWzda"
         >
           <input
             onChange={[Function]}
@@ -76,20 +76,20 @@ exports[`Filters component should match the stored snapshot 1`] = `
         </div>
       </div>
       <div
-        className="sc-TOsTZ kjYrri"
+        className="sc-caSCKo jjNSwx"
       >
         <div
-          className="sc-caSCKo gOedwQ"
+          className="sc-fAjcbJ bDiRjS sc-fBuWsC hOEicF sc-dxgOiQ fZnRKS sc-kpOJdX hbNmBi"
         >
           <button
-            className="sc-cHGsZl foOQYa sc-VigVT xuzkb sc-dnqmqq fkeFEN"
+            className="sc-htoDjs sc-eqIVtm eVOTUO sc-VigVT coWwFf sc-dnqmqq fRuXJX"
             onClick={[Function]}
           >
             <div
-              className="sc-eNQAEJ cOpOPT sc-ckVGcZ bTbrkH sc-dxgOiQ gewqYl"
+              className="sc-ckVGcZ cDQDJq sc-dxgOiQ fZnRKS sc-kpOJdX hbNmBi"
             >
               <div
-                className="sc-hMqMXs fIGBRY sc-jKJlTe izQvgc sc-kpOJdX cPePIG"
+                className="sc-dxgOiQ eSJPKV sc-kpOJdX hbNmBi"
               >
                 <span>
                   <svg
@@ -116,7 +116,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
                 </span>
               </div>
               <span
-                className="sc-kjoXOD hIjYCS"
+                className="sc-dVhcbM bZcfcS"
               >
                 <svg
                   fill="currentColor"

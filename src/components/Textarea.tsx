@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { compose } from 'recompose';
-import styled, { withTheme } from 'styled-components';
+import styled from 'styled-components';
 import asRendition from '../asRendition';
 import { DefaultProps } from '../common-types';
 import { radius } from '../theme';
@@ -54,7 +53,6 @@ const Component = ({
 	maxRows,
 	minRows,
 	rows,
-	color,
 	...props
 }: TextareaProps) => {
 	let rowsProp = rows;
@@ -74,7 +72,4 @@ const Component = ({
 	return <Base rows={rowsProp} {...props} />;
 };
 
-export default compose(
-	withTheme,
-	asRendition,
-)(Component) as React.ComponentClass<TextareaProps>;
+export default asRendition<TextareaProps>(Component);

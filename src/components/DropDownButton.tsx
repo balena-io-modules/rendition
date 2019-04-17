@@ -1,18 +1,21 @@
 import * as React from 'react';
 import IconCaretDown = require('react-icons/lib/fa/caret-down');
 import IconCaretUp = require('react-icons/lib/fa/caret-up');
-import { compose } from 'recompose';
-import styled, { StyledFunction, withTheme } from 'styled-components';
-import { color, fontSize, space, width } from 'styled-system';
-import { Coloring, DefaultProps, Tooltip } from '../common-types';
-import theme from '../theme';
+import styled from 'styled-components';
+import asRendition from '../asRendition';
+import {
+	Coloring,
+	DefaultProps,
+	EnhancedType,
+	ResponsiveStyle,
+} from '../common-types';
 import { px } from '../utils';
-import Button from './Button';
+import Button, { ButtonProps } from './Button';
 import Divider from './Divider';
 import Fixed from './Fixed';
-import { Box, Flex } from './Grid';
+import { Box, BoxProps, Flex } from './Grid';
 
-export interface DropDownButtonProps extends DefaultProps, Coloring, Tooltip {
+export interface DropDownButtonProps extends DefaultProps, Coloring {
 	disabled?: boolean;
 	label?: JSX.Element;
 	border?: boolean;
@@ -20,6 +23,7 @@ export interface DropDownButtonProps extends DefaultProps, Coloring, Tooltip {
 	outline?: boolean;
 	alignRight?: boolean;
 	noListFormat?: boolean;
+	width?: ResponsiveStyle;
 	maxHeight?: string | number;
 }
 
@@ -31,57 +35,51 @@ const ToggleBase = styled(Button)`
 	border-left: 0;
 	margin: 0;
 	vertical-align: top;
-`;
+` as React.ComponentType<EnhancedType<ButtonProps>>;
 
 const ButtonBase = styled(Button)`
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 	border-right: 0;
 	margin: 0;
+` as React.ComponentType<EnhancedType<ButtonProps>>;
+
+const MenuBase = styled.div<DropDownButtonProps & { minWidth: string }>`
+	background: white;
+	position: absolute;
+	min-width: ${props => props.minWidth};
+	box-shadow: ${props => '1px 1px 5px' + props.theme.colors.gray.light};
+	border-radius: ${props => px(props.theme.radius)};
+	border: ${props => '1px solid ' + props.theme.colors.gray.main};
+	z-index: 1;
+	margin-top: 2px;
+	left: ${props => (props.alignRight ? 'auto' : 0)};
+	right: ${props => (!props.alignRight ? 'auto' : 0)};
+	white-space: nowrap;
+	max-height: ${props => props.maxHeight || 'auto'};
+	overflow-y: auto;
 `;
 
-const MenuBase = (styled.div as StyledFunction<
-	DropDownButtonProps & { minWidth: string }
->)`
-  background: white;
-  position: absolute;
-  min-width: ${props => props.minWidth};
-  box-shadow: ${props => '1px 1px 5px' + props.theme.colors.gray.light};
-  border-radius: ${props => px(props.theme.radius)};
-  border: ${props => '1px solid ' + props.theme.colors.gray.main};
-  z-index: 1;
-  margin-top: 2px;
-  left: ${props => (props.alignRight ? 'auto' : 0)};
-  right: ${props => (!props.alignRight ? 'auto' : 0)};
-  white-space: nowrap;
-  max-height: ${props => props.maxHeight || 'auto'};
-  overflow-y: auto;
-`;
+const Wrapper = styled(Box)`
+	display: inline-block;
+	border-radius: ${props => px(props.theme.radius)};
+	vertical-align: top;
+	position: relative;
+` as React.ComponentType<EnhancedType<BoxProps>>;
 
-MenuBase.defaultProps = { theme };
-
-const Wrapper = styled.div`
-  ${space} ${width} ${fontSize} ${color} display: inline-block;
-  border-radius: ${props => px(props.theme.radius)};
-  vertical-align: top;
-  position: relative;
-`;
-
-const Item = (styled.div as StyledFunction<DropDownButtonProps>)`
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 16px;
-  padding-right: 16px;
-  border-top: ${props =>
+const Item = styled.div<DropDownButtonProps>`
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 16px;
+	padding-right: 16px;
+	border-top: ${props =>
 		props.border ? `1px solid ${props.theme.colors.gray.main}` : '0'};
-  border-radius: ${props => px(props.theme.radius)};
+	border-radius: ${props => px(props.theme.radius)};
 
-  &:hover:enabled {
-    background: ${props => props.theme.colors.gray.light};
-  }
-`;
-
-Item.defaultProps = { theme };
+	&:hover:enabled {
+		background: ${props => props.theme.colors.gray.light};
+	}
+` as React.ComponentType<EnhancedType<DropDownButtonProps>>;
 
 const IconWrapper = styled.span`
 	width: 28px;
@@ -89,7 +87,7 @@ const IconWrapper = styled.span`
 
 const JoinedButton = styled(Button)`
 	margin: 0;
-`;
+` as React.ComponentType<EnhancedType<ButtonProps>>;
 
 const Toggle = ({
 	open,
@@ -105,7 +103,7 @@ const Toggle = ({
 		if (label) {
 			return (
 				<JoinedButton {...props} pl={16} pr={0} onClick={handler}>
-					<Flex justify="space-between" align="center">
+					<Flex justifyContent="space-between" alignItems="center">
 						<Box mt="1px">{label}</Box>
 						<IconWrapper>
 							{open ? <IconCaretUp /> : <IconCaretDown />}
@@ -136,7 +134,7 @@ class DropDownButton extends React.Component<
 	DropDownButtonProps,
 	DropDownButtonState
 > {
-	dropdownNode: HTMLDivElement;
+	dropdownNode: HTMLDivElement | null;
 
 	constructor(props: DropDownButtonProps) {
 		super(props);
@@ -190,17 +188,19 @@ class DropDownButton extends React.Component<
 			joined,
 			noListFormat,
 			outline,
-			tooltip,
-			color,
+			className,
 			...props
 		} = this.props;
 
 		return (
-			<Wrapper {...props} innerRef={node => (this.dropdownNode = node)}>
+			<Wrapper
+				className={className}
+				{...props}
+				ref={(node: any) => (this.dropdownNode = node)}
+			>
 				{joined ? (
 					<Toggle
 						{...props}
-						tooltip={tooltip}
 						outline={outline}
 						joined={joined}
 						label={label}
@@ -209,7 +209,7 @@ class DropDownButton extends React.Component<
 					/>
 				) : (
 					<span>
-						<ButtonBase {...props} tooltip={tooltip} outline={outline}>
+						<ButtonBase {...props} outline={outline}>
 							{label}
 						</ButtonBase>
 						<Toggle
@@ -251,6 +251,4 @@ class DropDownButton extends React.Component<
 	}
 }
 
-export default compose(withTheme)(DropDownButton) as React.ComponentClass<
-	DropDownButtonProps
->;
+export default asRendition<DropDownButtonProps>(DropDownButton, [], ['width']);

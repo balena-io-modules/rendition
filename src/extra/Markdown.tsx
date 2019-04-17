@@ -1,11 +1,13 @@
 import memoize = require('lodash/memoize');
 import * as marked from 'marked';
 import * as React from 'react';
+import styled from 'styled-components';
+import { EnhancedType } from '../common-types';
 import Txt, { TxtProps } from '../components/Txt';
 
-interface MarkdownProps extends TxtProps {
+type MarkdownProps = EnhancedType<TxtProps> & {
 	children: string;
-}
+};
 
 const markedOptions = {
 	// Enable github flavored markdown
@@ -17,8 +19,6 @@ const markedOptions = {
 
 const render = memoize((text: string = '') => marked(text, markedOptions));
 
-import styled from 'styled-components';
-
 /*
  Taken From: https://github.com/sindresorhus/github-markdown-css
  */
@@ -29,7 +29,7 @@ const GitHubMarkdown = styled(Txt)`
 			format('woff');
 	}
 
-	 {
+	{
 		-ms-text-size-adjust: 100%;
 		-webkit-text-size-adjust: 100%;
 		font-size: inherit;
@@ -721,7 +721,7 @@ const GitHubMarkdown = styled(Txt)`
 	hr {
 		border-bottom-color: #eee;
 	}
-`;
+` as React.ComponentType<EnhancedType<TxtProps>>;
 
 export const Markdown = ({ children, ...props }: MarkdownProps) => {
 	return (

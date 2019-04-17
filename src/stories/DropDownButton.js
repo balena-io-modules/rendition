@@ -198,7 +198,7 @@ storiesOf('Core/DropDownButton', module)
     return (
       <Provider>
         <Box m={3}>
-          <Flex justify='space-between'>
+          <Flex justifyContent='space-between'>
             <DropDownButton mx={2} primary label={<div>DropDown</div>}>
               <div>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.

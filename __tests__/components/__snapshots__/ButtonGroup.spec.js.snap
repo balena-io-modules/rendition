@@ -2,23 +2,23 @@
 
 exports[`ButtonGroup renders correctly 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-bdVaJa iLLxmY"
 >
   <div
-    className="sc-kGXeez dcSnUk sc-chPdSV dfDVBP sc-cSHVUG kBGaNN sc-jzJRlG jJxvfu"
+    className="sc-cSHVUG sc-kAzzGY lirxSB sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
   >
     <button
-      className="sc-VigVT hegYug sc-gqjmRU hdWNYH"
+      className="sc-htoDjs sc-VigVT dzpHnm sc-gqjmRU hdWNYH"
     >
       First
     </button>
     <button
-      className="sc-VigVT hegYug sc-gqjmRU hdWNYH"
+      className="sc-htoDjs sc-VigVT dzpHnm sc-gqjmRU hdWNYH"
     >
       Second
     </button>
     <button
-      className="sc-VigVT hegYug sc-gqjmRU hdWNYH"
+      className="sc-htoDjs sc-VigVT dzpHnm sc-gqjmRU hdWNYH"
     >
       Third
     </button>

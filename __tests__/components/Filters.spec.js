@@ -10,6 +10,7 @@ import FiltersSummary from '../../src/components/Filters/Summary'
 import Search from '../../src/components/Search'
 import * as SchemaSieve from '../../src/components/Filters/SchemaSieve'
 import { ViewListItem } from '../../src/components/Filters/ViewsMenu'
+import theme from '../../src/theme'
 
 const schema = {
   type: 'object',
@@ -88,13 +89,19 @@ describe('Filters component', () => {
 
     it('should render a summary of filters that are added as props after the component mounts', () => {
       const component = mount(
-        <Filters
-          schema={schema}
-        />
+        React.createElement(
+          props => (
+            <Provider>
+              <Filters
+                {...props}
+          />
+            </Provider>
+          ),
+          { theme, schema }
+        )
       )
 
       component.setProps({ filters: [ filter ] })
-
       component.update()
 
       expect(component.find(FiltersSummary)).toHaveLength(1)
@@ -104,14 +111,19 @@ describe('Filters component', () => {
 
     it('should not render a summary of filters if they are removed after the component mounts', () => {
       const component = mount(
-        <Filters
-          schema={schema}
-          filters={[filter]}
-        />
+        React.createElement(
+          props => (
+            <Provider>
+              <Filters
+                {...props}
+          />
+            </Provider>
+          ),
+          { theme, schema, filters: [filter] }
+        )
       )
 
       component.setProps({ filters: null })
-
       component.update()
 
       expect(component.find(FiltersSummary)).toHaveLength(0)
@@ -274,9 +286,16 @@ describe('Filters component', () => {
 
     it('should render a list of views that are added as props after the component mounts', () => {
       const component = mount(
-        <Filters
-          schema={schema}
-        />
+        React.createElement(
+          props => (
+            <Provider>
+              <Filters
+                {...props}
+          />
+            </Provider>
+          ),
+          { theme, schema }
+        )
       )
 
       component.setProps({ views: [ view ] })
@@ -288,10 +307,16 @@ describe('Filters component', () => {
 
     it('should not render a list of views if they are removed after the component mounts', () => {
       const component = mount(
-        <Filters
-          schema={schema}
-          views={[view]}
-        />
+        React.createElement(
+          props => (
+            <Provider>
+              <Filters
+                {...props}
+          />
+            </Provider>
+          ),
+          { theme, schema, views: [view] }
+        )
       )
 
       component.setProps({ views: null })
@@ -311,9 +336,12 @@ describe('Filters component', () => {
         }
       }
       const component = mount(
-        <Filters
-          schema={unknownSchema}
+        <Provider>
+          <Filters
+            theme={theme}
+            schema={unknownSchema}
         />
+        </Provider>
       )
 
       component.unmount()
@@ -321,20 +349,25 @@ describe('Filters component', () => {
 
     it('should clear the `searchString` state prop after search filter removal', () => {
       const component = mount(
-        <Filters
-          schema={schema}
-          views={[view]}
+        <Provider>
+          <Filters
+            theme={theme}
+            schema={schema}
+            views={[view]}
         />
+        </Provider>
       )
 
+      const filters = component.find(Filters).instance()
+
       expect(component.find(Search)).toHaveLength(1)
-      expect(component.state('searchString')).toEqual('')
+      expect(filters.state.searchString).toEqual('')
 
       component.find('input').simulate('change', { target: { value: 'Squirtle' } })
-      expect(component.state('searchString')).toEqual('Squirtle')
+      expect(filters.state.searchString).toEqual('Squirtle')
 
       component.find(FiltersSummary).find('button').at(2).simulate('click')
-      expect(component.state('searchString')).toEqual('')
+      expect(filters.state.searchString).toEqual('')
 
       component.unmount()
     })

@@ -2,29 +2,29 @@
 
 exports[`Modal renders correctly 1`] = `
 <div
-  className="sc-bdVaJa jKopLr"
+  className="sc-bdVaJa iLLxmY"
 >
   <div
-    className="sc-kkGfuU bMTFJJ sc-kGXeez eHjdfB sc-chPdSV hzgnFO sc-kAzzGY jkqrgI"
+    className="sc-chPdSV sc-ckVGcZ cLHgGt sc-kAzzGY ikexOF sc-cSHVUG gbsWRV"
     onClick={[Function]}
   >
     <div
-      className="sc-iAyFgw fxSvqC sc-jzJRlG ljsNDl sc-fjdhpX fNNSIL"
+      className="sc-jKJlTe cXwbpL sc-jzJRlG cvFLEa sc-fjdhpX fNNSIL"
       z={8888}
     />
     <div
-      className="sc-cvbbAY buKOFV sc-kpOJdX kXbjAC sc-kgoBCf fdAYGQ sc-cSHVUG BKrBN"
+      className="sc-kEYyzF iSkjgM sc-kAzzGY ikexOF sc-cSHVUG gbsWRV"
     >
       <div
-        className="sc-jWBwVP iltPXt sc-kpOJdX jJMSox sc-kgoBCf fdAYGQ sc-cSHVUG jTdXaS"
+        className="sc-kkGfuU bBINRA sc-kAzzGY fLGkVM sc-cSHVUG gbsWRV"
         onClick={[Function]}
       >
         Modal
         <div
-          className="sc-kGXeez bCXttU sc-chPdSV hzgnFO sc-kAzzGY hDwzdL"
+          className="sc-chPdSV gWTjoX sc-kAzzGY cEhHZr sc-cSHVUG gbsWRV"
         >
           <button
-            className="sc-VigVT hegYug sc-htoDjs hQVMTw"
+            className="sc-VigVT dzpHnm sc-htoDjs hQVMTw"
           >
             OK
           </button>

@@ -426,10 +426,10 @@ Displays an element using [flexbox](https://developer.mozilla.org/en-US/docs/Web
 
 | Name          | Type      | Default   | Required   | Description                                          |
 | ------ | ------ | --------- | ---------- | ------------- |
-| `align`      | <code>string &#124; string[]</code> | - | - | Sets `align-items`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
-| `justify`      | <code>string &#124; string[]</code> | - | - | Sets `justify-content`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
+| `alignItems`      | <code>string &#124; string[]</code> | - | - | Sets `align-items`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
+| `justifyContent`      | <code>string &#124; string[]</code> | - | - | Sets `justify-content`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
 | `flexDirection`      | <code>string &#124; string[]</code> | - | - | Sets `flex-direction`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
-| `wrap`      | <code>string &#124; string[]</code> | - | - | Sets `flex-wrap: wrap`
+| `flexWrap`      | <code>string &#124; string[]</code> | - | - | Sets `flex-wrap` css property
 ### Form
 
 A component that can be used for generating a form from a [json schema](http://json-schema.org/) object. 
@@ -961,7 +961,7 @@ All components support [styled-system][styled-system] attributes, allowing you t
 
 | Name          | Type              | Description                                  |
 | --------------|-------------------|--------------------------------------------- |
-|	w             | `ResponsiveStyle` | sets the width
+|	width         | `ResponsiveStyle` | sets the width
 |	fontSize      | `ResponsiveStyle` | sets the font size
 |	color         | `ResponsiveStyle` | sets the `color` css property
 |	bg            | `ResponsiveStyle` | sets the `background` css property
@@ -1010,6 +1010,8 @@ If you would like to try them out they can be loaded using
 [Upgrading from 3.x to 4.x](docs/migrating_3x-4x.md)
 
 [Upgrading from 4.x to 5.x](docs/migrating_4x-5x.md)
+
+[Upgrading from 6.x to 7.x](docs/migrating_6x-7x.md)
 
 ## Contributing
 

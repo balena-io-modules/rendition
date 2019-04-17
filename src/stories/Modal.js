@@ -179,7 +179,7 @@ storiesOf('Core/Modal', module)
     return (
       <Provider>
         <Modal
-          w={1000}
+          width={1000}
           title='Modal title'
           titleDetails='Optional details'
           cancel={cancelAction}
@@ -200,7 +200,7 @@ storiesOf('Core/Modal', module)
     return (
       <Provider>
         <Modal
-          w={['auto', 500, 1000]}
+          width={['auto', 500, 1000]}
           title='Modal title'
           titleDetails='Optional details'
           cancel={cancelAction}
@@ -245,7 +245,7 @@ storiesOf('Core/Modal', module)
     return (
       <Provider>
         <Modal
-          w={['auto', 500, 1000]}
+          width={['auto', 500, 1000]}
           title='Some info'
           secondaryButtonProps={{
             children: 'Refresh',
@@ -269,20 +269,20 @@ storiesOf('Core/Modal', module)
     return (
       <Provider>
         <Modal
-          w={['auto', 500, 1000]}
+          width={['auto', 500, 1000]}
           title='Are you sure?'
           cancel={cancelAction}
           done={doneAction}
           action='Delete'
           cancelButtonProps={{
             children: 'Abort',
-            w: 150,
+            width: 150,
             style: {
               marginRight: 30
             }
           }}
           primaryButtonProps={{
-            w: 150,
+            width: 150,
             danger: true,
             primary: false,
             disabled: true

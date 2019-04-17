@@ -203,8 +203,16 @@ describe('Form component', () => {
 
     it('should set the value if the value is changed after the component mounts', () => {
       const value = { Name: 'Squirtle' }
+
       const component = mount(
-        <Form schema={schema} />
+        React.createElement(
+          props => (
+            <Provider>
+              <Form {...props} />
+            </Provider>
+          ),
+          { schema }
+        )
       )
 
       component.setProps({ value })

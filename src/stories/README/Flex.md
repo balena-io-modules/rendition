@@ -8,7 +8,7 @@ Displays an element using [flexbox](https://developer.mozilla.org/en-US/docs/Web
 
 | Name          | Type      | Default   | Required   | Description                                          |
 | ------ | ------ | --------- | ---------- | ------------- |
-| `align`      | <code>string &#124; string[]</code> | - | - | Sets `align-items`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
-| `justify`      | <code>string &#124; string[]</code> | - | - | Sets `justify-content`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
+| `alignItems`      | <code>string &#124; string[]</code> | - | - | Sets `align-items`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
+| `justifyContent`      | <code>string &#124; string[]</code> | - | - | Sets `justify-content`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
 | `flexDirection`      | <code>string &#124; string[]</code> | - | - | Sets `flex-direction`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
-| `wrap`      | <code>string &#124; string[]</code> | - | - | Sets `flex-wrap: wrap`
+| `flexWrap`      | <code>string &#124; string[]</code> | - | - | Sets `flex-wrap` css property
