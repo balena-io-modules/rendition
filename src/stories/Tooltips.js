@@ -10,7 +10,6 @@ import {
   BadgeSelect,
   Box,
   Button,
-  CodeWithCopy,
   DropDownButton,
   Fixed,
   Flex,
@@ -169,9 +168,6 @@ storiesOf('Core/Tooltips', module)
           >
             <Txt>Lorem ipsum</Txt>
           </Button>
-
-          <Heading.h3 mt={30}>CodeWithCopy</Heading.h3>
-          <CodeWithCopy text='Lorem' tooltip='CodeWithCopy tooltip' />
 
           <Heading.h3 mt={30}>DropDownButton</Heading.h3>
           <DropDownButton

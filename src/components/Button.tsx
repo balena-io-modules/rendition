@@ -1,176 +1,86 @@
+import { Button } from 'grommet';
 import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../asRendition';
 import {
 	Coloring,
 	DefaultProps,
-	RenditionSystemProps,
 	ResponsiveStyle,
 	Sizing,
 	Theme,
 } from '../common-types';
-import {
-	bold,
-	darken,
-	getColor,
-	getColoringType,
-	lighten,
-	normal,
-	px,
-} from '../utils';
-import { InternalLinkProps } from './Link';
+import { bold, getColor, getColoringType, normal, px } from '../utils';
 
-const squareWidth = (val: number): number => (val / 9) * 10;
+interface ButtonBaseProps extends Coloring, Sizing {
+	width?: ResponsiveStyle;
+	color?: string;
+	bg?: string;
+	active?: boolean;
+	disabled?: boolean;
+	outline?: boolean;
+	underline?: boolean;
+	plain?: boolean;
 
-const minWidth = (props: ThemedButtonProps) => {
-	if (props.width == null && !props.square) {
-		return 'auto';
+	href?: string;
+}
+
+export interface ButtonProps extends ButtonBaseProps, DefaultProps {
+	type?: 'submit' | 'reset' | 'button';
+	label?: 'string' | JSX.Element;
+}
+
+export interface ThemedButtonProps extends ButtonProps {
+	theme: Theme;
+}
+
+// TODO: remove the border-radius style once this issue is resolved
+// https://github.com/grommet/grommet/issues/3030
+const ButtonBase = styled(Button)`
+	border-radius: ${props => props.theme.button.border.radius};
+
+	font-family: ${props => props.theme.titleFont};
+	font-weight: ${props => bold(props)};
+	height: ${props => px(props.theme.space[4])};
+
+	svg {
+		color: inherit !important;
+		font-size: 0.875em;
 	}
-	if (props.square) {
-		return props.emphasized
-			? squareWidth(props.theme.space[5])
-			: squareWidth(props.theme.space[4]);
-	}
 
-	return props.width;
-};
-
-const horizontalPadding = (props: ButtonProps) => {
-	if (props.width == null && !props.square) {
-		return props.emphasized ? 50 : 30;
-	}
-	if (props.square || props.width) {
-		return 0;
-	}
-
-	return props.emphasized ? 50 : 30;
-};
-
-const ButtonIcon = styled.span`
-	margin-right: ${props => px(props.theme.space[2])};
-	font-size: 0.875em;
-`;
-
-const buttonActiveStyles = (props: ThemedButtonProps) => `
-	color: ${props.color || '#fff'};
-	background-color: ${
-		props.bg
-			? darken(props.bg as string)
-			: darken(getColor(props, 'bg', 'main'))
-	};
-`;
-
-const ButtonBase = styled.button<ThemedButtonProps>`
-	${props =>
-		props.active
-			? buttonActiveStyles(props)
-			: `
-		background: ${props.bg || getColor(props, 'bg', 'main')};
-		color: ${props.color || '#fff'};
-	`}
-	padding: 0 ${props => px(horizontalPadding(props))};
-	font-family: inherit;
+	/* These rules cause consistent styling when the button is rendered as a link */
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	font-weight: ${props => normal(props)};
-	border-radius: ${props => px(props.theme.radius)};
-	appearance: none;
-	text-decoration: none;
-	border: 0;
-	margin: 0;
-	min-width: ${props => px(minWidth(props))};
-	vertical-align: middle;
-	font-size: inherit;
-	line-height: 1.1;
-	text-align: center;
-	cursor: pointer;
-	height: ${props =>
-		px(props.emphasized ? props.theme.space[5] : props.theme.space[4])};
-	transition-property: color, background, border-color;
-	transition-duration: .1s;
-	transition-timing-function: ease-in;
-	outline: none;
+`;
 
-	&:hover,
-	&:focus {
-		text-decoration: none;
-	}
-	&:hover:enabled {
-		color: ${props => props.color || '#fff'};
-		background-color: ${props =>
-			props.bg
-				? lighten(props.bg as string)
-				: lighten(getColor(props, 'bg', 'main'))}
-		}
-	}
-	&:active:enabled {
-		${buttonActiveStyles}
-	}
-
-	&:disabled {
-		opacity: 0.65;
-		cursor: not-allowed;
-	}
-
-	& > * {
-		//This makes sure that elements inside the button don't fire pointer events and the target is always the button itself.
-		pointer-events: none;
-	}
+const ColouredButton = styled(ButtonBase)`
+	color: white;
 `;
 
 const Outline = styled(ButtonBase)`
-	${props =>
-		props.active
-			? ''
-			: `
-		color: ${getColor(props, 'color', 'main') || props.theme.colors.text.main};
-		background: ${props.color || 'none'};
-	`}
-	border: 1px solid ${props =>
-		props.bg ? props.bg : getColor(props, 'bg', 'main')};
-	}
-`;
-
-const plaintextButtonActiveStyles = (props: ThemedButtonProps) => `
-	background: none;
-	color: ${getColor(props, 'color', 'dark') || props.theme.colors.text.main};
+	color: ${props =>
+		getColor(props, 'color', 'main') || props.theme.colors.text.main};
 `;
 
 const Plaintext = styled(ButtonBase)`
-	${props =>
-		props.active
-			? plaintextButtonActiveStyles(props)
-			: `
-		color: ${getColor(props, 'color', 'main') || props.theme.colors.text.main};
-		background: none;
-	`} padding-left: 0;
-	padding-right: 0;
+	color: ${props =>
+		getColor(props, 'color', 'main') || props.theme.colors.text.main};
 	height: auto;
-	border: 0;
-	border-radius: 0;
 	font-weight: ${props => normal(props)};
-
-	&:hover:enabled,
-	&:focus:enabled,
-	&:active:enabled {
-		${plaintextButtonActiveStyles};
-	}
+	border-radius: 0;
 `;
 
 const underlineButtonActiveStyles = (props: ThemedButtonProps) => `
 	color: ${getColor(props, 'color', 'main') || props.theme.colors.text.main};
+	background: none;
 	box-shadow: 0px -1px 0 0px inset;
 `;
 
-const Underline = styled(Plaintext)`
-	${props =>
-		props.active
-			? underlineButtonActiveStyles(props)
-			: `
-	`} padding-bottom: 2px;
+const Underline = styled(Plaintext).attrs({
+	plain: true,
+})`
+	${props => (props.active ? underlineButtonActiveStyles(props) : '')}
 	border-bottom: 1px solid;
-	font-weight: ${props => bold(props)};
 
 	&:hover:enabled,
 	&:focus:enabled,
@@ -179,111 +89,59 @@ const Underline = styled(Plaintext)`
 	}
 `;
 
-const defaultButtonActiveStyles = (props: ThemedButtonProps) => `
-	color: #fff;
-	background-color: ${props.theme.colors.text.main};
-`;
-
-const DefaultButton = styled(ButtonBase)`
-	${props =>
-		props.active
-			? defaultButtonActiveStyles(props)
-			: `
-		background: #fff;
-		color: ${props.theme.colors.text.main};
-	`}
-	border: 1px solid ${props => props.theme.colors.gray.main};
-	&:hover:enabled {
-		${defaultButtonActiveStyles}
-		border-color: ${props => props.theme.colors.text.main};
-	}
-	&:active {
-		${defaultButtonActiveStyles}
-	}
-`;
-
-const getStyledButton = ({
-	outline,
-	underline,
-	plaintext,
-	...props
-}: ThemedButtonProps) => {
-	if (plaintext) {
+const getStyledButton = (
+	{ outline, underline, plain }: ThemedButtonProps,
+	isPrimary: boolean,
+) => {
+	if (plain) {
 		return Plaintext;
 	}
-	if (outline) {
-		return Outline;
-	}
+
 	if (underline) {
 		return Underline;
 	}
-	if (!getColoringType(props) && !props.color && !props.bg) {
-		return DefaultButton;
+
+	if (outline || !isPrimary) {
+		return Outline;
 	}
-	return ButtonBase;
+
+	return ColouredButton;
 };
 
-const ButtonFactory = <T extends keyof JSX.IntrinsicElements>(tag?: T) => {
-	const Button = (props: ThemedButtonProps) => {
-		const {
-			outline,
-			underline,
-			plaintext,
-			children,
-			iconElement,
-			...restProps
-		} = props;
+const Base = (props: ThemedButtonProps) => {
+	const {
+		outline,
+		underline,
+		children,
+		label,
+		primary,
+		color,
+		...restProps
+	} = props;
 
-		const StyledButton = getStyledButton(props);
+	// the 'primary' and 'color' props map to semantically different properties in
+	// grommet, so you perform the mapping here to keep the styling cleaner.
+	// In grommet, 'primary' indicates that the button is filled with a solid
+	// color, whereas in rendition 'primary' is a shorthand for the primary theme
+	// color. In grommet 'color' referes to the fill or outline color of the
+	// button, whereas in grommet it refers to the text color of the button
+	const basePrimary =
+		!!props.bg ||
+		(!!getColoringType(props) && !outline && !underline && !props.plain);
+	const baseColor = props.bg || getColor(props, 'bg', 'main');
 
-		return (
-			<StyledButton {...restProps} as={tag ? 'a' : 'button'}>
-				{iconElement && <ButtonIcon>{iconElement}</ButtonIcon>}
-				{children}
-			</StyledButton>
-		);
-	};
+	const StyledButton = getStyledButton(props, basePrimary);
 
-	return asRendition<React.FunctionComponent<ButtonProps>>(
-		Button,
-		[],
-		['width', 'color', 'bg'],
+	return (
+		<StyledButton
+			primary={basePrimary}
+			color={baseColor}
+			{...restProps}
+			label={label || children}
+		/>
 	);
 };
 
-interface ButtonBaseProps extends Coloring, Sizing {
-	width?: ResponsiveStyle;
-	color?: string;
-	bg?: string;
-	active?: boolean;
-	square?: boolean;
-	disabled?: boolean;
-	outline?: boolean;
-	plaintext?: boolean;
-	underline?: boolean;
-	iconElement?: JSX.Element;
-}
-
-export interface InternalButtonAnchorProps
-	extends ButtonBaseProps,
-		InternalLinkProps {}
-
-export interface InternalButtonProps extends ButtonBaseProps, DefaultProps {
-	type?: 'submit' | 'reset' | 'button';
-}
-
-export interface ThemedButtonProps extends InternalButtonProps {
-	theme: Theme;
-}
-
-export type ButtonProps = InternalButtonProps & RenditionSystemProps;
-export type ButtonAnchorProps = InternalButtonAnchorProps &
-	RenditionSystemProps;
-
-const Base = ButtonFactory() as React.FunctionComponent<ButtonProps> & {
-	a: React.FunctionComponent<ButtonAnchorProps>;
-};
-
-Base.a = ButtonFactory('a');
-
-export default Base;
+export default asRendition<ButtonProps>(Base) as React.FunctionComponent<
+	ButtonProps
+>;

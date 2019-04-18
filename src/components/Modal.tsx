@@ -65,9 +65,9 @@ const ModalPanel = styled(Box)`
 	box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.4);
 `;
 
-const ModalButton = (props: ButtonProps | ButtonAnchorProps) => {
+const ModalButton = (props: ButtonProps) => {
 	return 'href' in props && props.href ? (
-		<Button.a {...props} />
+		<Button as="a" {...props} />
 	) : (
 		<Button {...props as ButtonProps} />
 	);

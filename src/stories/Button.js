@@ -9,7 +9,7 @@ import FaSpinner from 'react-icons/lib/fa/spinner'
 import { Box, Button, Provider } from '../'
 import Readme from './README/Button.md'
 
-storiesOf('Core/Button', module)
+storiesOf('Next/Button', module)
   .addDecorator(withReadme(Readme))
   .addDecorator(withScreenshot())
   .add('Standard', () => {
@@ -32,32 +32,6 @@ storiesOf('Core/Button', module)
             Danger
           </Button>
           <Button m={2} onClick={action('case-6')}>
-            Default
-          </Button>
-        </Box>
-      </Provider>
-    )
-  })
-  .add('Emphasized', () => {
-    return (
-      <Provider>
-        <Box m={3}>
-          <Button m={2} emphasized primary onClick={action('case-1')}>
-            Primary
-          </Button>
-          <Button m={2} emphasized secondary onClick={action('case-2')}>
-            Secondary
-          </Button>
-          <Button m={2} emphasized tertiary onClick={action('case-3')}>
-            Tertiary
-          </Button>
-          <Button m={2} emphasized success onClick={action('case-4')}>
-            Success
-          </Button>
-          <Button m={2} emphasized danger onClick={action('case-5')}>
-            Danger
-          </Button>
-          <Button m={2} emphasized onClick={action('case-6')}>
             Default
           </Button>
         </Box>
@@ -133,21 +107,21 @@ storiesOf('Core/Button', module)
       </Provider>
     )
   })
-  .add('Plaintext', () => {
+  .add('Plain', () => {
     return (
       <Provider>
         <Box m={3}>
-          <Button m={2} plaintext primary onClick={action('case-1')}>
+          <Button m={2} plain primary onClick={action('case-1')}>
             Button
           </Button>
-          <Button m={2} plaintext color='green' onClick={action('case-1')}>
+          <Button m={2} plain color='green' onClick={action('case-1')}>
             Button
           </Button>
           <Button
             m={2}
-            plaintext
+            plain
             primary
-            iconElement={<FaSpinner />}
+            icon={<FaSpinner />}
             onClick={action('case-2')}
           >
             Button
@@ -160,17 +134,17 @@ storiesOf('Core/Button', module)
     return (
       <Provider>
         <Box m={3}>
-          <Button width={95} m={2} primary onClick={action('case-1')}>
+          <Button width={120} m={2} primary onClick={action('case-1')}>
             Button
           </Button>
-          <Button width={60} m={2} secondary onClick={action('case-2')}>
+          <Button width={180} m={2} secondary onClick={action('case-2')}>
             Button
           </Button>
-          <Button width={120} m={2} tertiary onClick={action('case-3')}>
+          <Button width={240} m={2} tertiary onClick={action('case-3')}>
             Button
           </Button>
           <div style={{ width: 300 }}>
-            <Button width='100%' m={2} onClick={action('case-4')}>
+            <Button fill m={2} onClick={action('case-4')}>
               Button
             </Button>
           </div>
@@ -182,45 +156,27 @@ storiesOf('Core/Button', module)
     return (
       <Provider>
         <Box m={3}>
-          <Button
-            m={2}
-            tertiary
-            iconElement={<FaExpand />}
-            onClick={action('case-3')}
-          >
+          <Button m={2} tertiary icon={<FaExpand />} onClick={action('case-3')}>
             Expand
           </Button>
-          <Button m={2} iconElement={<FaRecycle />} onClick={action('case-4')}>
+          <Button m={2} icon={<FaRecycle />} onClick={action('case-4')}>
             Recycle
           </Button>
         </Box>
       </Provider>
     )
   })
-  .add('Square', () => {
+  .add('Icon only', () => {
     return (
       <Provider>
         <Box m={3}>
-          <Button m={2} tertiary square onClick={action('case-3')}>
-            <FaExpand />
-          </Button>
-          <Button m={2} square onClick={action('case-4')}>
-            <FaRecycle />
-          </Button>
-        </Box>
-      </Provider>
-    )
-  })
-  .add('Square Emphasized', () => {
-    return (
-      <Provider>
-        <Box m={3}>
-          <Button m={2} emphasized tertiary square onClick={action('case-3')}>
-            <FaExpand />
-          </Button>
-          <Button m={2} emphasized square onClick={action('case-4')}>
-            <FaRecycle />
-          </Button>
+          <Button
+            m={2}
+            tertiary
+            icon={<FaExpand />}
+            onClick={action('case-3')}
+          />
+          <Button m={2} onClick={action('case-4')} icon={<FaRecycle />} />
         </Box>
       </Provider>
     )
@@ -267,32 +223,32 @@ storiesOf('Core/Button', module)
     return (
       <Provider>
         <Box m={3}>
-          <Button.a m={2} href={`#`} primary>
+          <Button m={2} href={`#`} primary>
             Primary
-          </Button.a>
-          <Button.a m={2} href={`#`} secondary>
+          </Button>
+          <Button m={2} href={`#`} secondary>
             Secondary
-          </Button.a>
-          <Button.a m={2} href={`#`} tertiary>
+          </Button>
+          <Button m={2} href={`#`} tertiary>
             Tertiary
-          </Button.a>
-          <Button.a m={2} href={`#`} success>
+          </Button>
+          <Button m={2} href={`#`} success>
             Success
-          </Button.a>
-          <Button.a m={2} href={`#`} danger>
+          </Button>
+          <Button m={2} href={`#`} danger>
             Danger
-          </Button.a>
-          <Button.a m={2} href={`#`}>
+          </Button>
+          <Button m={2} href={`#`}>
             Default
-          </Button.a>
+          </Button>
         </Box>
         <Box m={3}>
-          <Button.a m={2} underline href={`#`} primary>
+          <Button m={2} underline href={`#`} primary>
             Link Button
-          </Button.a>
-          <Button.a m={2} underline href={`#`}>
+          </Button>
+          <Button m={2} underline href={`#`}>
             Link Button
-          </Button.a>
+          </Button>
         </Box>
       </Provider>
     )

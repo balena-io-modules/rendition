@@ -99,7 +99,8 @@ export const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 72, 96];
 export const weights = [400, 700];
 
 export const radius = 3;
-export const font = `Roboto, Arial, sans-serif`;
+export const font = `'Nunito', Arial, sans-serif`;
+export const titleFont = `CircularStd, Arial, sans-serif`;
 export const monospace = `'Ubuntu Mono', 'Courier New', monospace`;
 
 export default {
@@ -108,7 +109,41 @@ export default {
 	fontSizes,
 	weights,
 	font,
+	titleFont,
 	monospace,
 	colors,
 	radius,
+	global: {
+		font: {
+			family: font,
+			size: '14px',
+		},
+		control: {
+			disabled: {
+				opacity: 0.4,
+			},
+			border: {
+				radius: '20px',
+			},
+		},
+		colors: {
+			focus: '#73AAF5',
+		},
+	},
+	button: {
+		border: {
+			width: '1px',
+			radius: '20px',
+			color: colors.text.main,
+		},
+		padding: {
+			horizontal: '30px',
+		},
+	},
+	text: {
+		medium: {
+			size: '14px',
+			height: 1.1,
+		},
+	},
 };

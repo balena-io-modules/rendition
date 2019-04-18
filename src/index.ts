@@ -6,11 +6,7 @@ export {
 	BadgeSelectProps,
 } from './components/BadgeSelect';
 export { default as Banner, BannerProps } from './components/Banner';
-export {
-	default as Button,
-	ButtonAnchorProps,
-	ButtonProps,
-} from './components/Button';
+export { default as Button, ButtonProps } from './components/Button';
 export { default as ButtonGroup } from './components/ButtonGroup';
 export { default as Card, CardProps } from './components/Card';
 export {
