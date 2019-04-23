@@ -2,25 +2,11 @@ import defaultTo = require('lodash/defaultTo');
 import { withProps } from 'recompose';
 import styled from 'styled-components';
 import asRendition from '../asRendition';
-import { DefaultProps, ResponsiveStyle } from '../common-types';
-
-export interface FixedProps extends DefaultProps {
-	top?: boolean | ResponsiveStyle;
-	right?: boolean | ResponsiveStyle;
-	bottom?: boolean | ResponsiveStyle;
-	left?: boolean | ResponsiveStyle;
-	z?: ResponsiveStyle;
-	bg?: string;
-}
-
-interface FixedBaseProps extends DefaultProps {
-	top?: ResponsiveStyle;
-	right?: ResponsiveStyle;
-	bottom?: ResponsiveStyle;
-	left?: ResponsiveStyle;
-	z?: ResponsiveStyle;
-	bg?: string;
-}
+import {
+	DefaultProps,
+	RenditionSystemProps,
+	ResponsiveStyle,
+} from '../common-types';
 
 const Base = styled.div<FixedBaseProps>`
 	position: fixed;
@@ -41,4 +27,28 @@ const dimensions = withProps((props: FixedProps) => {
 	};
 });
 
-export default asRendition<FixedProps>(Base, [dimensions], ['bg']);
+interface FixedBaseProps extends DefaultProps {
+	top?: ResponsiveStyle;
+	right?: ResponsiveStyle;
+	bottom?: ResponsiveStyle;
+	left?: ResponsiveStyle;
+	z?: ResponsiveStyle;
+	bg?: string;
+}
+
+export interface InternalFixedProps extends DefaultProps {
+	top?: boolean | ResponsiveStyle;
+	right?: boolean | ResponsiveStyle;
+	bottom?: boolean | ResponsiveStyle;
+	left?: boolean | ResponsiveStyle;
+	z?: ResponsiveStyle;
+	bg?: string;
+}
+
+export type FixedProps = InternalFixedProps & RenditionSystemProps;
+
+export default asRendition<
+	React.ForwardRefExoticComponent<
+		FixedProps & React.RefAttributes<HTMLDivElement>
+	>
+>(Base, [dimensions], ['bg']);

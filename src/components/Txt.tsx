@@ -2,41 +2,8 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { style } from 'styled-system';
 import asRendition from '../asRendition';
-import { DefaultProps, EnhancedType, Theme } from '../common-types';
+import { DefaultProps, RenditionSystemProps, Theme } from '../common-types';
 import { monospace } from '../utils';
-
-type Whitespace =
-	| 'normal'
-	| 'nowrap'
-	| 'pre'
-	| 'pre-line'
-	| 'pre-wrap'
-	| 'initial'
-	| 'inherit';
-type Align =
-	| 'left'
-	| 'right'
-	| 'center'
-	| 'justify'
-	| 'justify-all'
-	| 'start'
-	| 'end'
-	| 'match-parent'
-	| 'inherit'
-	| 'initial'
-	| 'unset';
-
-export interface TxtProps extends DefaultProps {
-	monospace?: boolean;
-	bold?: boolean;
-	caps?: boolean;
-	whitespace?: Whitespace;
-	align?: Align;
-}
-
-export interface ThemedTxtProps extends TxtProps {
-	theme: Theme;
-}
 
 export const whitespace = (props: ThemedTxtProps) =>
 	props.whitespace ? { whiteSpace: props.whitespace } : null;
@@ -65,15 +32,50 @@ const Txt = styled.div<TxtProps>`
 `;
 
 const Factory = (tag?: string) => {
-	return asRendition<TxtProps>((props: any) => {
+	return asRendition<React.FunctionComponent<TxtProps>>((props: any) => {
 		return <Txt as={tag} {...props} />;
 	});
 };
 
-const Base = Factory() as React.ComponentType<EnhancedType<TxtProps>> & {
-	p: React.ComponentType<EnhancedType<TxtProps>>;
-	span: React.ComponentType<EnhancedType<TxtProps>>;
+const Base = Factory() as React.FunctionComponent<TxtProps> & {
+	p: React.FunctionComponent<TxtProps>;
+	span: React.FunctionComponent<TxtProps>;
 };
+
+export type Whitespace =
+	| 'normal'
+	| 'nowrap'
+	| 'pre'
+	| 'pre-line'
+	| 'pre-wrap'
+	| 'initial'
+	| 'inherit';
+export type Align =
+	| 'left'
+	| 'right'
+	| 'center'
+	| 'justify'
+	| 'justify-all'
+	| 'start'
+	| 'end'
+	| 'match-parent'
+	| 'inherit'
+	| 'initial'
+	| 'unset';
+
+export interface InternalTxtProps extends DefaultProps {
+	monospace?: boolean;
+	bold?: boolean;
+	caps?: boolean;
+	whitespace?: Whitespace;
+	align?: Align;
+}
+
+export interface ThemedTxtProps extends InternalTxtProps {
+	theme: Theme;
+}
+
+export type TxtProps = InternalTxtProps & RenditionSystemProps;
 
 Base.displayName = 'Txt';
 Base.span = Factory('span');

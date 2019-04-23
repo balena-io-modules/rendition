@@ -4,7 +4,7 @@ import asRendition from '../asRendition';
 import {
 	Coloring,
 	DefaultProps,
-	EnhancedType,
+	RenditionSystemProps,
 	ResponsiveStyle,
 	Sizing,
 	Theme,
@@ -18,30 +18,7 @@ import {
 	normal,
 	px,
 } from '../utils';
-import { LinkProps } from './Link';
-
-interface ButtonBaseProps extends Coloring, Sizing {
-	width?: ResponsiveStyle;
-	color?: string;
-	bg?: string;
-	active?: boolean;
-	square?: boolean;
-	disabled?: boolean;
-	outline?: boolean;
-	plaintext?: boolean;
-	underline?: boolean;
-	iconElement?: JSX.Element;
-}
-
-export interface ButtonAnchorProps extends ButtonBaseProps, LinkProps {}
-
-export interface ButtonProps extends ButtonBaseProps, DefaultProps {
-	type?: 'submit' | 'reset' | 'button';
-}
-
-export interface ThemedButtonProps extends ButtonProps {
-	theme: Theme;
-}
+import { InternalLinkProps } from './Link';
 
 const squareWidth = (val: number): number => (val / 9) * 10;
 
@@ -267,17 +244,46 @@ const ButtonFactory = <T extends keyof JSX.IntrinsicElements>(tag?: T) => {
 		);
 	};
 
-	return asRendition<ButtonProps>(Button, [], ['width', 'color', 'bg']);
+	return asRendition<React.FunctionComponent<ButtonProps>>(
+		Button,
+		[],
+		['width', 'color', 'bg'],
+	);
 };
 
-const Base = ButtonFactory() as React.ComponentType<
-	EnhancedType<ButtonProps>
-> & {
-	a: React.ComponentType<EnhancedType<ButtonAnchorProps>>;
+interface ButtonBaseProps extends Coloring, Sizing {
+	width?: ResponsiveStyle;
+	color?: string;
+	bg?: string;
+	active?: boolean;
+	square?: boolean;
+	disabled?: boolean;
+	outline?: boolean;
+	plaintext?: boolean;
+	underline?: boolean;
+	iconElement?: JSX.Element;
+}
+
+export interface InternalButtonAnchorProps
+	extends ButtonBaseProps,
+		InternalLinkProps {}
+
+export interface InternalButtonProps extends ButtonBaseProps, DefaultProps {
+	type?: 'submit' | 'reset' | 'button';
+}
+
+export interface ThemedButtonProps extends InternalButtonProps {
+	theme: Theme;
+}
+
+export type ButtonProps = InternalButtonProps & RenditionSystemProps;
+export type ButtonAnchorProps = InternalButtonAnchorProps &
+	RenditionSystemProps;
+
+const Base = ButtonFactory() as React.FunctionComponent<ButtonProps> & {
+	a: React.FunctionComponent<ButtonAnchorProps>;
 };
 
-Base.a = ButtonFactory('a') as React.ComponentType<
-	EnhancedType<ButtonAnchorProps>
->;
+Base.a = ButtonFactory('a');
 
 export default Base;

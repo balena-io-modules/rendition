@@ -3,29 +3,12 @@ import IconCaretDown = require('react-icons/lib/fa/caret-down');
 import IconCaretUp = require('react-icons/lib/fa/caret-up');
 import styled from 'styled-components';
 import asRendition from '../asRendition';
-import {
-	Coloring,
-	DefaultProps,
-	EnhancedType,
-	ResponsiveStyle,
-} from '../common-types';
+import { RenditionSystemProps } from '../common-types';
 import { px } from '../utils';
 import Button, { ButtonProps } from './Button';
 import Divider from './Divider';
 import Fixed from './Fixed';
-import { Box, BoxProps, Flex } from './Grid';
-
-export interface DropDownButtonProps extends DefaultProps, Coloring {
-	disabled?: boolean;
-	label?: JSX.Element;
-	border?: boolean;
-	joined?: boolean;
-	outline?: boolean;
-	alignRight?: boolean;
-	noListFormat?: boolean;
-	width?: ResponsiveStyle;
-	maxHeight?: string | number;
-}
+import { Box, Flex } from './Grid';
 
 const ToggleBase = styled(Button)`
 	min-width: 0;
@@ -35,16 +18,20 @@ const ToggleBase = styled(Button)`
 	border-left: 0;
 	margin: 0;
 	vertical-align: top;
-` as React.ComponentType<EnhancedType<ButtonProps>>;
+`;
 
 const ButtonBase = styled(Button)`
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 	border-right: 0;
 	margin: 0;
-` as React.ComponentType<EnhancedType<ButtonProps>>;
+`;
 
-const MenuBase = styled.div<DropDownButtonProps & { minWidth: string }>`
+const MenuBase = styled.div<{
+	minWidth: string;
+	alignRight?: boolean;
+	maxHeight: string | number;
+}>`
 	background: white;
 	position: absolute;
 	min-width: ${props => props.minWidth};
@@ -65,9 +52,9 @@ const Wrapper = styled(Box)`
 	border-radius: ${props => px(props.theme.radius)};
 	vertical-align: top;
 	position: relative;
-` as React.ComponentType<EnhancedType<BoxProps>>;
+`;
 
-const Item = styled.div<DropDownButtonProps>`
+const Item = styled.div<{ border: boolean }>`
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-left: 16px;
@@ -79,7 +66,7 @@ const Item = styled.div<DropDownButtonProps>`
 	&:hover:enabled {
 		background: ${props => props.theme.colors.gray.light};
 	}
-` as React.ComponentType<EnhancedType<DropDownButtonProps>>;
+`;
 
 const IconWrapper = styled.span`
 	width: 28px;
@@ -87,7 +74,7 @@ const IconWrapper = styled.span`
 
 const JoinedButton = styled(Button)`
 	margin: 0;
-` as React.ComponentType<EnhancedType<ButtonProps>>;
+`;
 
 const Toggle = ({
 	open,
@@ -95,7 +82,7 @@ const Toggle = ({
 	label,
 	joined,
 	...props
-}: DropDownButtonProps & {
+}: InternalDropDownButtonProps & {
 	open: boolean;
 	handler: React.MouseEventHandler<HTMLElement>;
 }) => {
@@ -131,12 +118,12 @@ interface DropDownButtonState {
 }
 
 class DropDownButton extends React.Component<
-	DropDownButtonProps,
+	InternalDropDownButtonProps,
 	DropDownButtonState
 > {
 	dropdownNode: HTMLDivElement | null;
 
-	constructor(props: DropDownButtonProps) {
+	constructor(props: InternalDropDownButtonProps) {
 		super(props);
 		this.state = {
 			open: false,
@@ -196,7 +183,7 @@ class DropDownButton extends React.Component<
 			<Wrapper
 				className={className}
 				{...props}
-				ref={(node: any) => (this.dropdownNode = node)}
+				ref={node => (this.dropdownNode = node)}
 			>
 				{joined ? (
 					<Toggle
@@ -251,4 +238,20 @@ class DropDownButton extends React.Component<
 	}
 }
 
-export default asRendition<DropDownButtonProps>(DropDownButton, [], ['width']);
+export interface InternalDropDownButtonProps extends ButtonProps {
+	label?: JSX.Element;
+	border?: boolean;
+	joined?: boolean;
+	alignRight?: boolean;
+	noListFormat?: boolean;
+	maxHeight?: string | number;
+}
+
+export type DropDownButtonProps = InternalDropDownButtonProps &
+	RenditionSystemProps;
+
+export default asRendition<
+	React.ForwardRefExoticComponent<
+		DropDownButtonProps & React.RefAttributes<DropDownButton>
+	>
+>(DropDownButton, [], ['width']);

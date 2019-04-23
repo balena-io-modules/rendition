@@ -4,30 +4,19 @@ import memoize = require('lodash/memoize');
 import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../asRendition';
-import { Coloring, EnhancedType, Theme } from '../common-types';
+import { Coloring, RenditionSystemProps, Theme } from '../common-types';
 import { getColor, px } from '../utils';
 import { Box, BoxProps } from './Grid';
 
-export interface BadgeProps extends BoxProps, Coloring {
-	text: string;
-	small?: boolean;
-	color?: string;
-	bg?: string;
-}
-
 const colorHash = new ColorHash();
 const backgroundColor = memoize((text: string): string => colorHash.hex(text));
-
-export interface ThemedBadgeProps extends BadgeProps {
-	theme: Theme;
-}
 
 const BaseBadge = styled(Box)`
 	border-radius: ${props => px(props.theme.radius)};
 	display: inline-block;
 	min-width: 40px;
 	text-align: center;
-` as React.ComponentType<EnhancedType<BoxProps>>;
+`;
 
 const Badge = ({ small, text, theme, ...props }: ThemedBadgeProps) => {
 	return (
@@ -46,4 +35,21 @@ const Badge = ({ small, text, theme, ...props }: ThemedBadgeProps) => {
 	);
 };
 
-export default asRendition<BadgeProps>(Badge, [], ['bg', 'color']);
+export interface InternalBadgeProps extends BoxProps, Coloring {
+	text: string;
+	small?: boolean;
+	color?: string;
+	bg?: string;
+}
+
+export interface ThemedBadgeProps extends InternalBadgeProps {
+	theme: Theme;
+}
+
+export type BadgeProps = InternalBadgeProps & RenditionSystemProps;
+
+export default asRendition<React.FunctionComponent<BadgeProps>>(
+	Badge,
+	[],
+	['bg', 'color'],
+);

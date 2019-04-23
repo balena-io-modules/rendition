@@ -1,6 +1,5 @@
 import { JSONSchema6 } from 'json-schema';
 import { IChangeEvent } from 'react-jsonschema-form';
-import { EnhancedType } from '../common-types';
 import { ButtonProps } from '../components/Button';
 import { BoxProps } from '../components/Grid';
 
@@ -67,7 +66,7 @@ export interface RenditionUiSchema {
 export interface BaseFormProps extends BoxProps {
 	submitButtonText?: string | JSX.Element;
 	hideSubmitButton?: boolean;
-	submitButtonProps?: EnhancedType<ButtonProps>;
+	submitButtonProps?: ButtonProps;
 	value?: number | string | boolean | AnyObject | any[] | null;
 	onFormChange?: (result: IChangeEvent) => void;
 	onFormSubmit?: (result: any) => void;

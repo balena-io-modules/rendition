@@ -5,7 +5,7 @@ import * as React from 'react';
 import { compose, getDisplayName } from 'recompose';
 import styled, { withTheme } from 'styled-components';
 import { color, fontSize, space, width } from 'styled-system';
-import { EnhancedType, StyledSystemProps } from './common-types';
+import { StyledSystemProps } from './common-types';
 import { Tooltips } from './tooltips';
 
 const tooltip = new Tooltips();
@@ -78,7 +78,7 @@ export const withTooltip = (Base: React.ComponentType) => {
 };
 
 export default function asRendition<T>(
-	component: React.ComponentType<T>,
+	component: React.ComponentType,
 	additionalEnhancers: Array<
 		(Base: React.ComponentType) => React.ComponentType
 	> = [],
@@ -90,5 +90,5 @@ export default function asRendition<T>(
 		withTooltip,
 		withStyledSystem,
 		filterStyledSystemProps(passthroughProps),
-	)(component) as unknown) as React.ComponentType<EnhancedType<T>>;
+	)(component) as unknown) as T;
 }

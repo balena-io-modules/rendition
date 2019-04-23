@@ -2,10 +2,9 @@ import memoize = require('lodash/memoize');
 import * as marked from 'marked';
 import * as React from 'react';
 import styled from 'styled-components';
-import { EnhancedType } from '../common-types';
 import Txt, { TxtProps } from '../components/Txt';
 
-type MarkdownProps = EnhancedType<TxtProps> & {
+type MarkdownProps = TxtProps & {
 	children: string;
 };
 
@@ -721,7 +720,7 @@ const GitHubMarkdown = styled(Txt)`
 	hr {
 		border-bottom-color: #eee;
 	}
-` as React.ComponentType<EnhancedType<TxtProps>>;
+`;
 
 export const Markdown = ({ children, ...props }: MarkdownProps) => {
 	return (

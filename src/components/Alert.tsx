@@ -6,16 +6,14 @@ import FaExclamationTriangle = require('react-icons/lib/fa/exclamation-triangle'
 import FaInfoCircle = require('react-icons/lib/fa/info-circle');
 import styled from 'styled-components';
 import asRendition from '../asRendition';
-import { Coloring, DefaultProps, Sizing } from '../common-types';
+import {
+	Coloring,
+	DefaultProps,
+	RenditionSystemProps,
+	Sizing,
+} from '../common-types';
 import { bold, getColor, normal, px } from '../utils';
 import { Flex } from './Grid';
-
-export interface AlertProps extends DefaultProps, Coloring, Sizing {
-	plaintext?: boolean;
-	bg?: string;
-	prefix?: JSX.Element | string | false;
-	onDismiss?: () => void;
-}
 
 const getPadding = (props: AlertProps) =>
 	props.emphasized ? '15px 40px' : '8px 32px';
@@ -45,7 +43,7 @@ const AlertTitle = styled.span`
 
 // Firefox didn't middle align absolute positioned elements
 // using flex, so we had to use an extra wrapper element
-const DismissButtonWrapper = styled.div<AlertProps>`
+const DismissButtonWrapper = styled.div<InternalAlertProps>`
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -68,7 +66,7 @@ const DismissButton = styled.button`
 	}
 `;
 
-const AlertBase = styled.div<AlertProps>`
+const AlertBase = styled.div<InternalAlertProps>`
 	display: flex;
 	align-items: center;
 	justify-content: normal;
@@ -90,7 +88,7 @@ const AlertBase = styled.div<AlertProps>`
 `;
 
 // That's the normal alert
-const Outline = styled(AlertBase)<AlertProps>`
+const Outline = styled(AlertBase)<InternalAlertProps>`
 	padding-left: 19px;
 	border: 1px solid ${props => getColor(props, 'bg', 'main')};
 	background: ${props => props.bg || getColor(props, 'bg', 'light')};
@@ -102,7 +100,7 @@ const Outline = styled(AlertBase)<AlertProps>`
 	}
 `;
 
-const Filled = styled(AlertBase)<AlertProps>`
+const Filled = styled(AlertBase)<InternalAlertProps>`
 	border: 0;
 	font-weight: ${props => bold(props)};
 	text-align: center;
@@ -110,7 +108,7 @@ const Filled = styled(AlertBase)<AlertProps>`
 	color: ${props => props.color || '#fff'};
 `;
 
-const Plaintext = styled(AlertBase)<AlertProps>`
+const Plaintext = styled(AlertBase)<InternalAlertProps>`
 	min-height: auto;
 	padding: 0;
 	font-size: 14px;
@@ -125,7 +123,7 @@ const Plaintext = styled(AlertBase)<AlertProps>`
 	}
 `;
 
-const getIcon = (props: AlertProps) => {
+const getIcon = (props: InternalAlertProps) => {
 	if (props.prefix === false) {
 		return;
 	}
@@ -153,7 +151,7 @@ const DismissAlert = ({ onDismiss }: { onDismiss: () => void }) => (
 	</DismissButtonWrapper>
 );
 
-const Alert = (props: AlertProps) => {
+const Alert = (props: InternalAlertProps) => {
 	const { emphasized, plaintext, prefix, onDismiss, ...restProps } = props;
 	const title = plaintext ? getIcon(props) : getTitle(props);
 	if (plaintext) {
@@ -189,4 +187,16 @@ const Alert = (props: AlertProps) => {
 	}
 };
 
-export default asRendition<AlertProps>(Alert, [], ['bg']);
+interface InternalAlertProps extends DefaultProps, Coloring, Sizing {
+	plaintext?: boolean;
+	bg?: string;
+	prefix?: JSX.Element | string | false;
+	onDismiss?: () => void;
+}
+
+export type AlertProps = InternalAlertProps & RenditionSystemProps;
+export default asRendition<React.FunctionComponent<AlertProps>>(
+	Alert,
+	[],
+	['bg'],
+);

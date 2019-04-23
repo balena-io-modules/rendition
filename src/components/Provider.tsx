@@ -7,10 +7,6 @@ const Base = styled.div<ThemedProvider>`
 	font-family: ${props => props.theme.font};
 `;
 
-export interface ThemedProvider extends DefaultProps {
-	theme?: Theme;
-}
-
 const Provider = ({ theme, ...props }: ThemedProvider) => {
 	return (
 		<ThemeProvider theme={theme || defaultTheme}>
@@ -18,5 +14,9 @@ const Provider = ({ theme, ...props }: ThemedProvider) => {
 		</ThemeProvider>
 	);
 };
+
+export interface ThemedProvider extends DefaultProps {
+	theme?: Theme;
+}
 
 export default Provider;

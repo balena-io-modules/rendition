@@ -3,6 +3,18 @@ import isFunction = require('lodash/isFunction');
 import map = require('lodash/map');
 import * as React from 'react';
 
+/*
+ * Get the value specified by the `field` value
+ * If a `render` function is available, use it to get the display value.
+ */
+const renderField = <T extends {}>(row: T, column: TableColumn<T>): any => {
+	const value = get(row, column.field);
+	if (column.render) {
+		return column.render(value, row);
+	}
+	return value == null ? '' : value;
+};
+
 export type TableSortFunction<T> = (a: T, b: T) => number;
 
 export interface TableColumn<T> {
@@ -15,18 +27,6 @@ export interface TableColumn<T> {
 	render?: (value: any, row: T) => string | number | JSX.Element | null;
 	sortable?: boolean | TableSortFunction<T>;
 }
-
-/*
- * Get the value specified by the `field` value
- * If a `render` function is available, use it to get the display value.
- */
-const renderField = <T extends {}>(row: T, column: TableColumn<T>): any => {
-	const value = get(row, column.field);
-	if (column.render) {
-		return column.render(value, row);
-	}
-	return value == null ? '' : value;
-};
 
 export interface TableRowProps<T> {
 	className?: string;

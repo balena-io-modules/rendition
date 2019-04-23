@@ -1,11 +1,10 @@
 import { mermaidAPI } from 'mermaid';
 import * as React from 'react';
 import uuid = require('uuid/v4');
-import { EnhancedType } from '../common-types';
 import { DefaultProps } from '../common-types';
 import { Box, BoxProps } from '../components/Grid';
 
-interface MermaidProps extends DefaultProps, EnhancedType<BoxProps> {
+interface MermaidProps extends DefaultProps, BoxProps {
 	value: string;
 }
 

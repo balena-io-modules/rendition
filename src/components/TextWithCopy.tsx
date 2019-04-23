@@ -3,17 +3,12 @@ import * as React from 'react';
 import FaClipboard = require('react-icons/lib/fa/clipboard');
 import styled from 'styled-components';
 import asRendition from '../asRendition';
-import { DefaultProps, EnhancedType } from '../common-types';
+import { DefaultProps, RenditionSystemProps } from '../common-types';
 import { stopEvent } from '../utils';
 import { Box } from './Grid';
 import Txt, { TxtProps } from './Txt';
 
-export interface TextWithCopyProps extends DefaultProps, TxtProps {
-	copy: string;
-	showCopyButton?: 'hover' | 'always';
-}
-
-const Wrapper = styled(Txt.span)<TextWithCopyProps>`
+const Wrapper = styled(Txt.span)<InternalTextWithCopyProps>`
 	display: inline-block;
 	white-space: nowrap;
 
@@ -38,9 +33,9 @@ const Wrapper = styled(Txt.span)<TextWithCopyProps>`
 	&:hover .text-with-copy__copy {
 		visibility: visible;
 	}
-` as React.ComponentType<EnhancedType<TextWithCopyProps>>;
+`;
 
-const Base = ({ copy, ...props }: TextWithCopyProps) => (
+const Base = ({ copy, ...props }: InternalTextWithCopyProps) => (
 	<Wrapper copy={copy} title={copy} {...props} className="text-with-copy">
 		{!!props.children && (
 			<span className="text-with-copy__content">{props.children}</span>
@@ -58,4 +53,12 @@ const Base = ({ copy, ...props }: TextWithCopyProps) => (
 	</Wrapper>
 );
 
-export default asRendition<TextWithCopyProps>(Base);
+export interface InternalTextWithCopyProps extends DefaultProps, TxtProps {
+	copy: string;
+	showCopyButton?: 'hover' | 'always';
+}
+
+export type TextWithCopyProps = InternalTextWithCopyProps &
+	RenditionSystemProps;
+
+export default asRendition<React.FunctionComponent<TextWithCopyProps>>(Base);

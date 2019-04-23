@@ -1,33 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../asRendition';
-import { DefaultProps } from '../common-types';
+import { DefaultProps, RenditionSystemProps } from '../common-types';
 import { radius } from '../theme';
 import { monospace, px } from '../utils';
-
-export interface TextareaProps extends DefaultProps {
-	monospace?: boolean;
-	autoComplete?: string;
-	autoFocus?: boolean;
-	cols?: number;
-	dirName?: string;
-	disabled?: boolean;
-	form?: string;
-	maxLength?: number;
-	minLength?: number;
-	name?: string;
-	placeholder?: string;
-	readOnly?: boolean;
-	required?: boolean;
-	rows?: number;
-	value?: string;
-	wrap?: string;
-
-	onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
-	autoRows?: boolean;
-	maxRows?: number;
-	minRows?: number;
-}
 
 const Base = styled.textarea`
 	border-radius: ${px(radius)};
@@ -54,7 +30,7 @@ const Component = ({
 	minRows,
 	rows,
 	...props
-}: TextareaProps) => {
+}: InternalTextareaProps) => {
 	let rowsProp = rows;
 
 	if (autoRows && props.onChange) {
@@ -72,4 +48,30 @@ const Component = ({
 	return <Base rows={rowsProp} {...props} />;
 };
 
-export default asRendition<TextareaProps>(Component);
+export interface InternalTextareaProps extends DefaultProps {
+	monospace?: boolean;
+	autoComplete?: string;
+	autoFocus?: boolean;
+	cols?: number;
+	dirName?: string;
+	disabled?: boolean;
+	form?: string;
+	maxLength?: number;
+	minLength?: number;
+	name?: string;
+	placeholder?: string;
+	readOnly?: boolean;
+	required?: boolean;
+	rows?: number;
+	value?: string;
+	wrap?: string;
+
+	onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
+	autoRows?: boolean;
+	maxRows?: number;
+	minRows?: number;
+}
+
+export type TextareaProps = InternalTextareaProps & RenditionSystemProps;
+
+export default asRendition<React.FunctionComponent<TextareaProps>>(Component);

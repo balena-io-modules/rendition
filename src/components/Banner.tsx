@@ -4,11 +4,6 @@ import styled from 'styled-components';
 import asRendition from '../asRendition';
 import { DefaultProps } from '../common-types';
 
-export interface BannerProps extends DefaultProps {
-	backgroundImage?: string;
-	minHeight?: string;
-}
-
 const setDefaultProps = withProps((props: BannerProps) => {
 	// set defaults
 	// always allow override with provided props
@@ -34,4 +29,13 @@ const Base = styled.div`
 	background-image: ${(props: any) => setBgImage(props.backgroundImage)};
 `;
 
-export default asRendition<BannerProps>(Base, [setDefaultProps]);
+export interface BannerProps extends DefaultProps {
+	backgroundImage?: string;
+	minHeight?: string;
+}
+
+export default asRendition<
+	React.ForwardRefExoticComponent<
+		BannerProps & React.RefAttributes<HTMLDivElement>
+	>
+>(Base, [setDefaultProps]);

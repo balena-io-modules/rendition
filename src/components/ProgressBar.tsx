@@ -5,27 +5,19 @@ import * as React from 'react';
 import { withProps } from 'recompose';
 import styled from 'styled-components';
 import asRendition from '../asRendition';
-import { Coloring, DefaultProps, Sizing, Theme } from '../common-types';
+import {
+	Coloring,
+	DefaultProps,
+	RenditionSystemProps,
+	Sizing,
+	Theme,
+} from '../common-types';
 import { radius } from '../theme';
 import { px } from '../utils';
 
-export interface ProgressBarProps extends DefaultProps, Coloring, Sizing {
-	value: number;
-	color?: string;
-	background?: string;
-}
-
-export interface ThemedProgressBarProps extends ProgressBarProps {
-	theme: Theme;
-}
-
 const transition = 'width linear 250ms';
 
-// TODO: Use "Exclude" type after upgrading to TypeScript 2.8+
-declare var { value, ...rest }: ProgressBarProps;
-type ProgressBarRestProps = typeof rest;
-
-const Bar = styled.div<ProgressBarRestProps & { bg?: string }>`
+const Bar = styled.div<{ bg?: string; emphasized?: boolean }>`
 	position: relative;
 	height: ${props =>
 		px(props.emphasized ? props.theme.space[5] : props.theme.space[4])};
@@ -56,7 +48,7 @@ const Content = styled.div`
 	transition: ${transition};
 `;
 
-const Sleeve = styled.div<ProgressBarRestProps>`
+const Sleeve = styled.div<{ emphasized?: boolean }>`
 	position: relative;
 	border-radius: ${px(radius)};
 	height: ${props =>
@@ -86,7 +78,12 @@ const setTypeProps = withProps(({ type, theme, background, color }) => {
 	};
 });
 
-const Base = ({ children, background, value, ...props }: ProgressBarProps) => {
+const Base = ({
+	children,
+	background,
+	value,
+	...props
+}: InternalProgressBarProps) => {
 	return (
 		<Sleeve {...props}>
 			<LoadingContent>{children}</LoadingContent>
@@ -99,7 +96,22 @@ const Base = ({ children, background, value, ...props }: ProgressBarProps) => {
 	);
 };
 
-export default asRendition<ProgressBarProps>(
+export interface InternalProgressBarProps
+	extends DefaultProps,
+		Coloring,
+		Sizing {
+	value: number;
+	color?: string;
+	background?: string;
+}
+
+export interface ThemedProgressBarProps extends InternalProgressBarProps {
+	theme: Theme;
+}
+
+export type ProgressBarProps = InternalProgressBarProps & RenditionSystemProps;
+
+export default asRendition<React.FunctionComponent<ProgressBarProps>>(
 	Base,
 	[getType, setTypeProps],
 	['color'],

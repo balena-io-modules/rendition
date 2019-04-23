@@ -29,15 +29,6 @@ const FilterInput = (props: {
 	);
 };
 
-interface FilterFormProps {
-	handleEditChange: (value: string, key: string) => void;
-	inputModels: any;
-	name: string;
-	value: string;
-	operator: string;
-	schema: Schema;
-}
-
 const FilterForm = (props: FilterFormProps) => {
 	const {
 		handleEditChange,
@@ -91,5 +82,14 @@ const FilterForm = (props: FilterFormProps) => {
 		</Flex>
 	);
 };
+
+export interface FilterFormProps {
+	handleEditChange: (value: string, key: string) => void;
+	inputModels: any;
+	name: string;
+	value: string;
+	operator: string;
+	schema: Schema;
+}
 
 export default FilterForm;

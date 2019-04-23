@@ -1,4 +1,3 @@
-import { RefObject } from 'react';
 import styled from 'styled-components';
 import {
 	alignItems,
@@ -17,21 +16,20 @@ import {
 	OrderProps,
 } from 'styled-system';
 import asRendition from '../asRendition';
-import { DefaultProps, EnhancedType } from '../common-types';
+import { DefaultProps, RenditionSystemProps } from '../common-types';
 
 export interface BoxProps
 	extends DefaultProps,
 		StyledFlexProps,
 		OrderProps,
-		AlignSelfProps {
-	ref?:
-		| string
-		| ((instance: any | null) => void)
-		| RefObject<any>
-		| null
-		| undefined;
-}
-export const Box = asRendition<BoxProps>(
+		AlignSelfProps,
+		RenditionSystemProps {}
+
+export const Box = asRendition<
+	React.ForwardRefExoticComponent<
+		BoxProps & React.RefAttributes<HTMLDivElement>
+	>
+>(
 	styled.div<BoxProps>`
 		box-sizing: border-box;
 		${flex};
@@ -55,6 +53,6 @@ export const Flex = styled(Box)<FlexProps>`
 	${flexDirection};
 	${alignItems};
 	${justifyContent};
-` as React.ComponentType<EnhancedType<FlexProps>>;
+`;
 
 Flex.displayName = 'Flex';

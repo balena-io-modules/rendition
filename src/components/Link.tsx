@@ -5,26 +5,11 @@ import * as React from 'react';
 import { withProps } from 'recompose';
 import styled from 'styled-components';
 import asRendition from '../asRendition';
-import { DefaultProps } from '../common-types';
+import { DefaultProps, RenditionSystemProps } from '../common-types';
 import { darken, monospace } from '../utils';
 import { align, bold, caps } from './Txt';
 
-export interface LinkProps extends DefaultProps {
-	blank?: boolean;
-	disabled?: boolean;
-	download?: any;
-	href?: string;
-	hrefLang?: string;
-	media?: string;
-	rel?: string;
-	target?: string;
-	type?: string;
-	is?: string;
-	decor?: string;
-	color?: string;
-}
-
-let Base = styled.a<LinkProps>`
+let Base = styled.a<InternalLinkProps>`
   ${align}
   ${monospace as any};
   ${caps as any}
@@ -45,7 +30,7 @@ let Base = styled.a<LinkProps>`
   }
 `;
 
-const Link = ({ is, blank, children, ...props }: LinkProps) => {
+const Link = ({ is, blank, children, ...props }: InternalLinkProps) => {
 	if (is) {
 		Base = Base.withComponent(is as any);
 	}
@@ -63,7 +48,7 @@ const Link = ({ is, blank, children, ...props }: LinkProps) => {
 	);
 };
 
-const setDefaultProps = withProps((props: LinkProps) => {
+const setDefaultProps = withProps((props: InternalLinkProps) => {
 	return assign(
 		{
 			color: `primary.main`,
@@ -72,4 +57,25 @@ const setDefaultProps = withProps((props: LinkProps) => {
 	);
 });
 
-export default asRendition<LinkProps>(Link, [setDefaultProps], ['color']);
+export interface InternalLinkProps extends DefaultProps {
+	blank?: boolean;
+	disabled?: boolean;
+	download?: any;
+	href?: string;
+	hrefLang?: string;
+	media?: string;
+	rel?: string;
+	target?: string;
+	type?: string;
+	is?: string;
+	decor?: string;
+	color?: string;
+}
+
+export type LinkProps = InternalLinkProps & RenditionSystemProps;
+
+export default asRendition<React.FunctionComponent<LinkProps>>(
+	Link,
+	[setDefaultProps],
+	['color'],
+);

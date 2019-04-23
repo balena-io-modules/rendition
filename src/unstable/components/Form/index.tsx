@@ -5,9 +5,8 @@ import omit = require('lodash/omit');
 import * as React from 'react';
 import Form, { IChangeEvent } from 'react-jsonschema-form';
 import styled from 'styled-components';
-import { EnhancedType } from '../../../common-types';
 import Button from '../../../components/Button';
-import { Box, BoxProps } from '../../../components/Grid';
+import { Box } from '../../../components/Grid';
 import * as utils from '../../../utils';
 import { FormProps } from '../../unstable-typings';
 import { DescriptionField } from './fields/DescriptionField';
@@ -62,7 +61,7 @@ const FormWrapper = styled(Box)`
 		margin-bottom: ${props => utils.px(get(props, 'theme.space[1]', 4))};
 		color: ${props => get(props, 'theme.colors.danger.main', '#a94442')};
 	}
-` as React.ComponentType<EnhancedType<BoxProps>>;
+`;
 
 export default class FormHOC extends React.Component<
 	FormProps,

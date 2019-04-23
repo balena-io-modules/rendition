@@ -7,10 +7,9 @@ import FaPieChart = require('react-icons/lib/fa/pie-chart');
 import FaTrash = require('react-icons/lib/fa/trash');
 import styled from 'styled-components';
 import { FilterRenderMode, FiltersView } from '.';
-import { EnhancedType } from '../../common-types';
 import DropDownButton, { DropDownButtonProps } from '../DropDownButton';
 import { Box } from '../Grid';
-import Txt, { TxtProps } from '../Txt';
+import Txt from '../Txt';
 import FilterDescription from './FilterDescription';
 
 const Wrapper = styled.div``;
@@ -73,22 +72,7 @@ export const ViewListItem = styled.li`
 
 const ViewListItemLabel = styled(Txt)`
 	cursor: pointer;
-` as React.ComponentType<EnhancedType<TxtProps>>;
-
-interface ViewsMenuProps {
-	buttonProps?: DropDownButtonProps;
-	disabled?: boolean;
-	views: FiltersView[];
-	schema: JSONSchema6;
-	hasMultipleScopes?: boolean;
-	setFilters: (filters: JSONSchema6[]) => void;
-	deleteView: (view: FiltersView) => any;
-	renderMode?: FilterRenderMode | FilterRenderMode[];
-}
-
-interface ViewsMenuState {
-	showViewsMenu: boolean;
-}
+`;
 
 class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 	constructor(props: ViewsMenuProps) {
@@ -182,6 +166,21 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 			</Wrapper>
 		);
 	}
+}
+
+export interface ViewsMenuProps {
+	buttonProps?: DropDownButtonProps;
+	disabled?: boolean;
+	views: FiltersView[];
+	schema: JSONSchema6;
+	hasMultipleScopes?: boolean;
+	setFilters: (filters: JSONSchema6[]) => void;
+	deleteView: (view: FiltersView) => any;
+	renderMode?: FilterRenderMode | FilterRenderMode[];
+}
+
+interface ViewsMenuState {
+	showViewsMenu: boolean;
 }
 
 export default ViewsMenu;
