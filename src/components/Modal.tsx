@@ -1,3 +1,4 @@
+import { Layer } from 'grommet';
 import assign = require('lodash/assign');
 import * as React from 'react';
 import styled, { createGlobalStyle, withTheme } from 'styled-components';
@@ -5,7 +6,6 @@ import { DefaultProps, ResponsiveStyle, Theme } from '../common-types';
 import { stopPropagation } from '../utils';
 import { px } from '../utils';
 import Button, { ButtonAnchorProps, ButtonProps } from './Button';
-import Fixed from './Fixed';
 import { Box, Flex } from './Grid';
 import Txt from './Txt';
 
@@ -16,20 +16,6 @@ const GlobalStyle = createGlobalStyle`
 	.${bodyNoOverflowClass} {
 		overflow: hidden;
 	}
-`;
-
-const ModalWrapper = styled(Flex)`
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 9999;
-	pointer-events: none;
-`;
-
-const ModalBackdrop = styled(Fixed)`
-	pointer-events: auto;
 `;
 
 const DEFAULT_MODAL_WIDTH = 700;
@@ -45,31 +31,15 @@ const ModalTitleDetails = styled(Txt)`
 `;
 
 const ModalSizer = styled(Box)`
-	position: relative;
-	width: 100%;
-	max-height: 100%;
-	padding: 0 15px;
-	overflow-y: auto;
-	background-color: transparent;
-	z-index: 9999;
-	pointer-events: auto;
-`;
-
-const ModalPanel = styled(Box)`
 	max-width: 100%;
-	min-height: 50px;
-	margin: 15px auto;
-	border: solid 0.5px #9b9b9b;
-	border-radius: 2px;
-	background-color: #ffffff;
-	box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.4);
+	overflow-y: auto;
 `;
 
 const ModalButton = (props: ButtonProps) => {
 	return 'href' in props && props.href ? (
-		<Button as="a" {...props} />
+		<Button as="a" {...props as any} />
 	) : (
-		<Button {...props as ButtonProps} />
+		<Button {...props as any} />
 	);
 };
 
@@ -146,50 +116,47 @@ class Modal extends React.Component<ThemedModalProps, any> {
 		);
 
 		return (
-			<ModalWrapper
-				alignItems="center"
-				justifyContent="center"
-				onClick={() => (props.cancel || props.done)()}
+			<Layer
+				onEsc={() => (props.cancel || props.done)()}
+				onClickOutside={() => (props.cancel || props.done)()}
+				responsive={false}
+				margin="small"
 			>
 				<GlobalStyle />
-				<ModalBackdrop z={8888} bg="rgba(0,0,0,0.4)" top right bottom left />
-				<ModalSizer style={props.containerStyle}>
-					<ModalPanel
-						p={[px(theme.space[3]), '30px 50px']}
-						width={width || DEFAULT_MODAL_WIDTH}
-						onClick={stopPropagation}
-						style={props.style}
-					>
-						{props.titleElement ? (
-							<ModalHeader>{props.titleElement}</ModalHeader>
-						) : (
-							!!props.title && (
-								<ModalHeader>
-									<strong>{props.title}</strong>
-									{!!props.titleDetails && (
-										<ModalTitleDetails>{props.titleDetails}</ModalTitleDetails>
-									)}
-								</ModalHeader>
-							)
-						)}
-						{props.children}
-						<Flex mt={50} alignItems="center" justifyContent="flex-end">
-							{props.cancel && (
-								<ModalButton {...cancelButtonProps} onClick={props.cancel}>
-									{(cancelButtonProps && cancelButtonProps.children) ||
-										'Cancel'}
-								</ModalButton>
-							)}
-							{props.secondaryButtonProps && (
-								<ModalButton {...secondaryButtonProps} />
-							)}
-							<ModalButton {...primaryButtonProps} onClick={props.done}>
-								{props.action || 'OK'}
+				<ModalSizer
+					p={[px(theme.space[3]), '30px 50px']}
+					width={width || DEFAULT_MODAL_WIDTH}
+					onClick={stopPropagation}
+					style={props.style}
+				>
+					{props.titleElement ? (
+						<ModalHeader>{props.titleElement}</ModalHeader>
+					) : (
+						!!props.title && (
+							<ModalHeader>
+								<strong>{props.title}</strong>
+								{!!props.titleDetails && (
+									<ModalTitleDetails>{props.titleDetails}</ModalTitleDetails>
+								)}
+							</ModalHeader>
+						)
+					)}
+					{props.children}
+					<Flex mt={50} alignItems="center" justifyContent="flex-end">
+						{props.cancel && (
+							<ModalButton {...cancelButtonProps} onClick={props.cancel}>
+								{(cancelButtonProps && cancelButtonProps.children) || 'Cancel'}
 							</ModalButton>
-						</Flex>
-					</ModalPanel>
+						)}
+						{props.secondaryButtonProps && (
+							<ModalButton {...secondaryButtonProps} />
+						)}
+						<ModalButton {...primaryButtonProps} onClick={props.done}>
+							{props.action || 'OK'}
+						</ModalButton>
+					</Flex>
 				</ModalSizer>
-			</ModalWrapper>
+			</Layer>
 		);
 	}
 }

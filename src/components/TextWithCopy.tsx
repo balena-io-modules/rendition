@@ -10,7 +10,7 @@ import Txt, { TxtProps } from './Txt';
 
 const Wrapper = styled(Txt.span)<InternalTextWithCopyProps>`
 	display: inline-block;
-	white-space: nowrap;
+	white-space: ${props => (props.code ? 'initial' : 'nowrap')};
 
 	.text-with-copy__content {
 		white-space: normal;
@@ -30,28 +30,55 @@ const Wrapper = styled(Txt.span)<InternalTextWithCopyProps>`
 			props.showCopyButton === 'always' ? 'visible' : 'hidden'};
 	}
 
+	code {
+		font-family: ${props => props.theme.monospace};
+		padding: 2px 4px;
+		font-size: 90%;
+		color: #c7254e;
+		background-color: #f9f2f4;
+		border-radius: 2px;
+		white-space: normal;
+		word-wrap: break-word;
+		font-size: 1em;
+		margin-right: 3px;
+	}
+
 	&:hover .text-with-copy__copy {
 		visibility: visible;
 	}
 `;
 
-const Base = ({ copy, ...props }: InternalTextWithCopyProps) => (
-	<Wrapper copy={copy} title={copy} {...props} className="text-with-copy">
-		{!!props.children && (
-			<span className="text-with-copy__content">{props.children}</span>
-		)}
+const Base = ({ copy, code, text, children, ...props }: InternalTextWithCopyProps) => {
+	const normalizedText = (text || children || '').toString().trim();
+	const normalizedCopy = (copy || normalizedText).toString().trim();
 
-		<span onClick={e => stopEvent(e)} className="text-with-copy__copy_wrapper">
-			<Box
-				tooltip={{ text: 'Copied!', trigger: 'click' }}
-				onClick={() => copyToClipboard((copy || '').trim())}
-				className="text-with-copy__copy"
+	return (
+		<Wrapper copy={copy} title={copy} {...props} className="text-with-copy">
+			{!code && (
+				<span className="text-with-copy__content">
+					{normalizedText || normalizedCopy}
+				</span>
+			)}
+
+			{code && (
+				<code title={normalizedCopy}>{normalizedText || normalizedCopy}</code>
+			)}
+
+			<span
+				onClick={e => stopEvent(e)}
+				className="text-with-copy__copy_wrapper"
 			>
-				<FaClipboard />
-			</Box>
-		</span>
-	</Wrapper>
-);
+				<Box
+					tooltip={{ text: 'Copied!', trigger: 'click' }}
+					onClick={() => copyToClipboard(normalizedCopy)}
+					className="text-with-copy__copy"
+				>
+					<FaClipboard />
+				</Box>
+			</span>
+		</Wrapper>
+	);
+};
 
 export interface InternalTextWithCopyProps extends DefaultProps, TxtProps {
 	copy: string;

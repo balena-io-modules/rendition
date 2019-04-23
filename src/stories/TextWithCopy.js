@@ -5,7 +5,7 @@ import withReadme from 'storybook-readme/with-readme'
 import { Box, Flex, Link, Provider, TextWithCopy } from '../'
 import Readme from './README/TextWithCopy.md'
 
-storiesOf('Core/TextWithCopy', module)
+storiesOf('Next/TextWithCopy', module)
   .addDecorator(withReadme(Readme))
   .addDecorator(withScreenshot())
   .add('Standard', () => {
@@ -59,6 +59,35 @@ storiesOf('Core/TextWithCopy', module)
               </Box>
             </Flex>
           </Link>
+        </Box>
+      </Provider>
+    )
+  })
+  .add('Code', () => {
+    return (
+      <Provider>
+        <Box m={3}>
+          <TextWithCopy
+            code
+            copy='This value has been copied to your clipboard!'
+          >
+            22ab7io
+          </TextWithCopy>
+        </Box>
+
+        <Box m={3}>
+          <TextWithCopy
+            code
+            copy='This value has been copied to your clipboard!'
+          >
+            3555432
+          </TextWithCopy>
+        </Box>
+        <Box m={3}>
+          <TextWithCopy code copy='Specify only the copy prop' />
+        </Box>
+        <Box m={3}>
+          <TextWithCopy code text='Or only the text prop' />
         </Box>
       </Provider>
     )

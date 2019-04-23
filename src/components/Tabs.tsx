@@ -1,7 +1,7 @@
 import map = require('lodash/map');
 import * as React from 'react';
 import styled from 'styled-components';
-import Button from './Button';
+import { Button } from '../';
 import { Box, BoxProps, Flex } from './Grid';
 import Txt from './Txt';
 
@@ -14,7 +14,7 @@ const FlexTab = styled(Flex)`
 	border-bottom-style: solid;
 `;
 
-const ButtonBase = styled(Button)<{ active: boolean }>`
+const ButtonBase = styled(Button)`
 	padding: 4px 10px 2px;
 	border: 1px solid white;
 	border-radius: 0;
@@ -28,15 +28,6 @@ const ButtonBase = styled(Button)<{ active: boolean }>`
 		border-top-right-radius: 4px;
 		border-top-left-radius: 4px;
 		transform: translateY(1px);
-		&::after {
-			content: '';
-			height: 3px;
-			background: white;
-			position: absolute;
-			bottom: -2px;
-			left: 0;
-			right: 0;
-		}
 		`
 			: `
 		`}
@@ -70,7 +61,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
 							return (
 								<ButtonBase
 									key={index}
-									plaintext
+									plain
 									active={index === this.state.show}
 									data-index={index}
 									mr={2}

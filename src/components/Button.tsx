@@ -1,10 +1,12 @@
-import { Button } from 'grommet';
+import { Button, ButtonProps as GrommetButtonProps } from 'grommet';
 import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../asRendition';
 import {
 	Coloring,
 	DefaultProps,
+	EnhancedType,
+	Omit,
 	ResponsiveStyle,
 	Sizing,
 	Theme,
@@ -13,18 +15,17 @@ import { bold, getColor, getColoringType, normal, px } from '../utils';
 
 interface ButtonBaseProps extends Coloring, Sizing {
 	width?: ResponsiveStyle;
-	color?: string;
 	bg?: string;
-	active?: boolean;
-	disabled?: boolean;
 	outline?: boolean;
 	underline?: boolean;
-	plain?: boolean;
-
-	href?: string;
 }
 
-export interface ButtonProps extends ButtonBaseProps, DefaultProps {
+// Grommet has its own declaration for the 'onClick' attribute, so the default
+// one is omitted as Grommet takes precedence here
+export interface ButtonProps
+	extends ButtonBaseProps,
+		Omit<DefaultProps, 'onClick'>,
+		GrommetButtonProps {
 	type?: 'submit' | 'reset' | 'button';
 	label?: 'string' | JSX.Element;
 }
@@ -142,6 +143,6 @@ const Base = (props: ThemedButtonProps) => {
 	);
 };
 
-export default asRendition<ButtonProps>(Base) as React.FunctionComponent<
-	ButtonProps
+export default asRendition<ButtonProps>(Base) as React.ComponentClass<
+	EnhancedType<ButtonProps>
 >;

@@ -14,9 +14,10 @@ import * as React from 'react';
 import FaSort = require('react-icons/lib/fa/sort');
 import styled from 'styled-components';
 
+import { Button } from '../../';
+
 // TODO: Remove explicit import and depend on provider instead.
 import theme from '../../theme';
-import Button from '../Button';
 import Pager from '../Pager';
 import { TableColumn, TableRow } from './TableRow';
 
@@ -415,7 +416,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 											<div data-display="table-cell" key={item.field as string}>
 												<HeaderButton
 													data-field={item.field}
-													plaintext
+													plain
 													primary={sort.field === item.field}
 													onClick={this.toggleSort}
 												>

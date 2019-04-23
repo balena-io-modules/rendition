@@ -143,7 +143,7 @@ export default {
 	text: {
 		medium: {
 			size: '14px',
-			height: 1.1,
+			height: 1.5,
 		},
 	},
 };

@@ -31,7 +31,7 @@ class PagerHOC extends React.Component {
   }
 }
 
-storiesOf('Core/Pager', module)
+storiesOf('Next/Pager', module)
   .addDecorator(withReadme(Readme))
   .addDecorator(withScreenshot())
   .add('Standard', () => {

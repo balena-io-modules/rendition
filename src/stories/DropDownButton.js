@@ -5,7 +5,7 @@ import withReadme from 'storybook-readme/with-readme'
 import { Box, Divider, DropDownButton, Flex, Provider } from '../'
 import Readme from './README/DropDownButton.md'
 
-storiesOf('Core/DropDownButton', module)
+storiesOf('Next/DropDownButton', module)
   .addDecorator(withReadme(Readme))
   .addDecorator(withScreenshot())
   .add('Standard', () => {
