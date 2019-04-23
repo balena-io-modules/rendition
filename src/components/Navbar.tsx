@@ -10,27 +10,23 @@ import {
 	maxHeight,
 	MaxHeightProps,
 } from 'styled-system';
-import { DefaultProps, EnhancedType } from '../common-types';
+import { DefaultProps } from '../common-types';
 import Container from './Container';
 import { Box, BoxProps, Flex, FlexProps } from './Grid';
-
-export interface NavbarProps extends DefaultProps {
-	brand?: JSX.Element;
-}
 
 const BrandBox = styled(Box)`
 	display: flex;
 	height: auto;
 	min-width: 150px;
 	align-self: center;
-` as React.ComponentType<EnhancedType<BoxProps>>;
+`;
 
-const IconBox = styled(Box)`
+const IconBox = styled(Box)<BoxProps & DisplayProps>`
 	${display} align-self: center;
 	cursor: pointer;
-` as React.ComponentType<EnhancedType<BoxProps & DisplayProps>>;
+`;
 
-const MenuBox = styled(Flex)`
+const MenuBox = styled(Flex)<FlexProps & MaxHeightProps & DisplayProps>`
 	${display}
 	${maxHeight};
 	text-align: center;
@@ -42,9 +38,7 @@ const MenuBox = styled(Flex)`
 		width: 100%;
 		display: inline-block;
 	}
-` as React.ComponentType<
-	EnhancedType<FlexProps & DisplayProps & MaxHeightProps>
->;
+`;
 
 interface NavbarState {
 	open: boolean;
@@ -123,6 +117,12 @@ const setDefaultProps = withProps((props: NavbarProps) => {
 	);
 });
 
-export default compose(setDefaultProps)(Navbar) as React.ComponentType<
-	NavbarProps
+export interface NavbarProps extends DefaultProps {
+	brand?: JSX.Element;
+}
+
+export default (compose(setDefaultProps)(
+	Navbar,
+) as unknown) as React.ForwardRefExoticComponent<
+	NavbarProps & React.RefAttributes<Navbar>
 >;

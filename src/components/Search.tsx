@@ -2,15 +2,7 @@ import * as React from 'react';
 import FaSearch = require('react-icons/lib/fa/search');
 import styled from 'styled-components';
 import asRendition from '../asRendition';
-import { DefaultProps } from '../common-types';
-
-export interface SearchProps extends DefaultProps {
-	dark?: boolean;
-	disabled?: boolean;
-	placeholder?: string;
-	value: string;
-	onChange: (value: any) => void;
-}
+import { DefaultProps, RenditionSystemProps } from '../common-types';
 
 const Wrapper = styled.div`
 	position: relative;
@@ -52,7 +44,7 @@ const Search = ({
 	placeholder,
 	value,
 	onChange,
-}: SearchProps) => {
+}: InternalSearchProps) => {
 	return (
 		<Wrapper>
 			<input
@@ -67,4 +59,14 @@ const Search = ({
 	);
 };
 
-export default asRendition<SearchProps>(Search);
+export interface InternalSearchProps extends DefaultProps {
+	dark?: boolean;
+	disabled?: boolean;
+	placeholder?: string;
+	value: string;
+	onChange: (value: any) => void;
+}
+
+export type SearchProps = InternalSearchProps & RenditionSystemProps;
+
+export default asRendition<React.FunctionComponent<SearchProps>>(Search);

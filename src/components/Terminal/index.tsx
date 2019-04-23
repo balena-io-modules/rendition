@@ -4,19 +4,11 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { ITerminalOptions, Terminal as Xterm } from 'xterm';
 import { fit as fitTerm } from 'xterm/lib/addons/fit/fit';
-import { EnhancedType, Theme as ThemeType } from '../../common-types';
-import Theme from '../../theme';
-import { Box, BoxProps } from '../Grid';
+import { Theme as ThemeType } from '../../common-types';
+// TODO: Remove explicit import and use withTheme. There are some issues with the resulting typings when using withTheme, therefore the current workaround.
+import theme from '../../theme';
+import { Box } from '../Grid';
 import defaultXtermStyle from './XTermDefaultStyle';
-
-export interface TerminalProps {
-	ttyInstance?: Xterm | null;
-	// Prevents tty instance from being destroyed when terminal unmounts
-	persistent?: boolean;
-	nonInteractive?: boolean;
-	color?: string;
-	config?: ITerminalOptions;
-}
 
 const TtyContainer = styled(Box)`
 	position: relative;
@@ -38,7 +30,7 @@ const TtyContainer = styled(Box)`
 	.xterm-viewport::-webkit-scrollbar-thumb {
 		background-color: #e9e9e9;
 	}
-` as React.ComponentType<EnhancedType<BoxProps>>;
+`;
 
 const TtyInner = styled.div`
 	position: absolute;
@@ -47,10 +39,6 @@ const TtyInner = styled.div`
 	right: 0;
 	bottom: 0;
 `;
-
-export interface ThemedTerminalProps extends TerminalProps {
-	theme: ThemeType;
-}
 
 class Terminal extends React.Component<ThemedTerminalProps, {}> {
 	readonly tty: Xterm;
@@ -65,7 +53,7 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 			cols: 80,
 			cursorBlink: false,
 			rows: 24,
-			fontFamily: Theme.monospace,
+			fontFamily: props.theme ? props.theme.monospace : theme.monospace,
 			lineHeight: 1.4,
 			theme: {
 				background: '#343434',
@@ -160,6 +148,19 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 			</TtyContainer>
 		);
 	}
+}
+
+export interface TerminalProps {
+	ttyInstance?: Xterm | null;
+	// Prevents tty instance from being destroyed when terminal unmounts
+	persistent?: boolean;
+	nonInteractive?: boolean;
+	color?: string;
+	config?: ITerminalOptions;
+}
+
+interface ThemedTerminalProps extends TerminalProps {
+	theme?: ThemeType;
 }
 
 export default Terminal;

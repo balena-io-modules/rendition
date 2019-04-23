@@ -1,35 +1,13 @@
 import styled from 'styled-components';
 import asRendition from '../asRendition';
-import { DefaultProps, Sizing, Theme } from '../common-types';
+import {
+	DefaultProps,
+	RenditionSystemProps,
+	Sizing,
+	Theme,
+} from '../common-types';
 import { radius } from '../theme';
 import { monospace, px } from '../utils';
-
-export interface InputProps extends DefaultProps, Sizing {
-	monospace?: boolean;
-	autoComplete?: string;
-	autoFocus?: boolean;
-	disabled?: boolean;
-	form?: string;
-	max?: number | string;
-	maxLength?: number;
-	min?: number | string;
-	minLength?: number;
-	name?: string;
-	placeholder?: string;
-	readOnly?: boolean;
-	required?: boolean;
-	type?: string;
-	value?: string | string[] | number;
-	pattern?: string;
-
-	invalid?: boolean;
-	valid?: boolean;
-	onChange?: React.ChangeEventHandler<HTMLInputElement>;
-}
-
-export interface ThemedInputProps extends InputProps {
-	theme: Theme;
-}
 
 const getColor = (props: ThemedInputProps): any => {
 	if (props.invalid) {
@@ -50,7 +28,7 @@ const getHeight = (props: ThemedInputProps) =>
 const getSpinButtonMargin = (props: ThemedInputProps) =>
 	(getHeight(props) - 2 - 20) / 2;
 
-const Base = styled.input<InputProps>`
+const Base = styled.input`
 	border-radius: ${px(radius)};
 	height: ${props => px(getHeight(props))};
 	font-size: inherit;
@@ -90,4 +68,37 @@ const Base = styled.input<InputProps>`
 	${monospace as any};
 `;
 
-export default asRendition<InputProps>(Base);
+export interface InternalInputProps extends DefaultProps, Sizing {
+	monospace?: boolean;
+	autoComplete?: string;
+	autoFocus?: boolean;
+	disabled?: boolean;
+	form?: string;
+	max?: number | string;
+	maxLength?: number;
+	min?: number | string;
+	minLength?: number;
+	name?: string;
+	placeholder?: string;
+	readOnly?: boolean;
+	required?: boolean;
+	type?: string;
+	value?: string | string[] | number;
+	pattern?: string;
+
+	invalid?: boolean;
+	valid?: boolean;
+	onChange?: React.ChangeEventHandler<HTMLInputElement>;
+}
+
+export interface ThemedInputProps extends InternalInputProps {
+	theme: Theme;
+}
+
+export type InputProps = InternalInputProps & RenditionSystemProps;
+
+export default asRendition<
+	React.ForwardRefExoticComponent<
+		InputProps & React.RefAttributes<HTMLInputElement>
+	>
+>(Base);

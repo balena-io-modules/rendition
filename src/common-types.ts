@@ -131,7 +131,7 @@ export interface Sizing {
 	emphasized?: boolean;
 }
 
-export type EnhancedType<T> = T & Tooltip & StyledSystemProps;
+export type RenditionSystemProps = Tooltip & StyledSystemProps;
 
 export type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left';
 

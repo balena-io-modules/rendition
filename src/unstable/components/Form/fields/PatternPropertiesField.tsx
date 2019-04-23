@@ -6,8 +6,6 @@ import FaClose = require('react-icons/lib/fa/close');
 import { FormValidation } from 'react-jsonschema-form';
 import styled from 'styled-components';
 import { Button, Input } from '../../../..';
-import { EnhancedType } from '../../../../common-types';
-import { ButtonProps } from '../../../../components/Button';
 
 interface PatternPropertiesFieldProps {
 	onKeyChange: (
@@ -38,7 +36,7 @@ interface ChangeTargetHandlerParams {
 
 const ActionButton = styled(Button)`
 	color: ${({ theme }) => theme.colors.text.light};
-` as React.ComponentType<EnhancedType<ButtonProps>>;
+`;
 
 const handleChange = (
 	func: (value: string, errorSchema?: FormValidation) => void,

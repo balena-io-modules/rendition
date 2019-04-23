@@ -3,8 +3,7 @@ import noop = require('lodash/noop');
 import * as React from 'react';
 import FaClose = require('react-icons/lib/fa/close');
 import styled from 'styled-components';
-import { EnhancedType } from '../../common-types';
-import Button, { ButtonProps } from '../Button';
+import Button from '../Button';
 import { Box, Flex } from '../Grid';
 
 const ButtonWrapper = styled.button`
@@ -22,7 +21,7 @@ const WrappingEm = styled.em`
 
 const DeleteButton = styled(Button)`
 	color: rgba(0, 0, 0, 0.4);
-` as React.ComponentType<EnhancedType<ButtonProps>>;
+`;
 
 const FilterDescriptionInner = (props: { filter: JSONSchema6 }) => (
 	<Box>
@@ -36,13 +35,6 @@ const FilterDescriptionInner = (props: { filter: JSONSchema6 }) => (
 		{!props.filter.anyOf && <span>{props.filter.description}</span>}
 	</Box>
 );
-
-interface FilterDescriptionProps {
-	dark?: boolean;
-	filter: JSONSchema6;
-	edit?: false | (() => void);
-	delete?: () => void;
-}
 
 const FilterDescription = (props: FilterDescriptionProps) => {
 	return (
@@ -68,5 +60,12 @@ const FilterDescription = (props: FilterDescriptionProps) => {
 		</div>
 	);
 };
+
+export interface FilterDescriptionProps {
+	dark?: boolean;
+	filter: JSONSchema6;
+	edit?: false | (() => void);
+	delete?: () => void;
+}
 
 export default FilterDescription;

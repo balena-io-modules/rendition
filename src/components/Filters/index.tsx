@@ -11,12 +11,12 @@ import * as React from 'react';
 import FaClose = require('react-icons/lib/fa/close');
 import FaFilter = require('react-icons/lib/fa/filter');
 import styled from 'styled-components';
-import { DefaultProps, EnhancedType } from '../../common-types';
+import { DefaultProps } from '../../common-types';
 import * as utils from '../../utils';
 import Button, { ButtonProps } from '../Button';
 import { getDataModel } from '../DataTypes';
 import { DropDownButtonProps } from '../DropDownButton';
-import { Box, BoxProps, Flex } from '../Grid';
+import { Box, Flex } from '../Grid';
 import Modal from '../Modal';
 import Search from '../Search';
 import Select from '../Select';
@@ -24,58 +24,6 @@ import Txt from '../Txt';
 import * as SchemaSieve from './SchemaSieve';
 import Summary from './Summary';
 import ViewsMenu from './ViewsMenu';
-
-export interface FilterInputProps {
-	schema: JSONSchema6;
-	value: any;
-	operator: string;
-	onUpdate: (value: any) => void;
-}
-
-export interface ViewScope {
-	slug: string;
-	name: string;
-	label?: string;
-}
-
-export interface FiltersView {
-	id: string;
-	name: string;
-	scope?: string | null;
-	filters: JSONSchema6[];
-}
-
-export interface FilterSignature {
-	field: string;
-	operator: string;
-	value: string | number | boolean | { [k: string]: string };
-}
-
-export type FilterRenderMode = 'all' | 'add' | 'search' | 'views' | 'summary';
-
-export interface DataTypeModel {
-	operators: {
-		[key: string]: {
-			getLabel: (schema: JSONSchema6) => string;
-		};
-	};
-	decodeFilter(filter: JSONSchema6): null | FilterSignature;
-	createFilter(
-		field: string,
-		operator: string,
-		value: any,
-		schema: JSONSchema6,
-	): JSONSchema6;
-	Edit(props: DataTypeEditProps): JSX.Element;
-}
-
-export interface DataTypeEditProps {
-	schema: JSONSchema6;
-	value?: any;
-	onUpdate: (value: string | number | boolean) => void;
-	operator: string;
-	slim?: boolean;
-}
 
 const FilterInput = (props: FilterInputProps) => {
 	const model = getDataModel(props.schema);
@@ -99,14 +47,14 @@ const FilterInput = (props: FilterInputProps) => {
 
 const RelativeBox = styled(Box)`
 	position: relative;
-` as React.ComponentType<EnhancedType<BoxProps>>;
+`;
 
 const DeleteButton = styled(Button)`
 	color: rgba(0, 0, 0, 0.4);
 	position: absolute;
 	bottom: 7px;
 	right: -35px;
-` as React.ComponentType<EnhancedType<ButtonProps>>;
+`;
 
 const SearchWrapper = styled.div`
 	flex-basis: 500px;
@@ -114,37 +62,7 @@ const SearchWrapper = styled.div`
 
 const FilterWrapper = styled(Box)`
 	position: relative;
-` as React.ComponentType<EnhancedType<BoxProps>>;
-
-export interface EditModel {
-	field: string;
-	operator: string;
-	value: string | number | { [k: string]: string };
-}
-
-export interface FiltersState {
-	showModal: boolean;
-	edit: EditModel[];
-	editingFilter: string | null;
-	searchString: string;
-	filters: JSONSchema6[];
-	views: FiltersView[];
-	schema: JSONSchema6;
-}
-
-export interface FiltersProps extends DefaultProps {
-	disabled?: boolean;
-	filters?: JSONSchema6[];
-	views?: FiltersView[];
-	viewScopes?: ViewScope[];
-	onFiltersUpdate?: (filters: JSONSchema6[]) => void;
-	onViewsUpdate?: (views: FiltersView[]) => void;
-	schema: JSONSchema6;
-	addFilterButtonProps?: ButtonProps;
-	viewsMenuButtonProps?: DropDownButtonProps;
-	renderMode?: FilterRenderMode | FilterRenderMode[];
-	dark?: boolean;
-}
+`;
 
 class Filters extends React.Component<FiltersProps, FiltersState> {
 	constructor(props: FiltersProps) {
@@ -588,6 +506,88 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 			</FilterWrapper>
 		);
 	}
+}
+
+export interface EditModel {
+	field: string;
+	operator: string;
+	value: string | number | { [k: string]: string };
+}
+
+export interface FilterInputProps {
+	schema: JSONSchema6;
+	value: any;
+	operator: string;
+	onUpdate: (value: any) => void;
+}
+
+export interface ViewScope {
+	slug: string;
+	name: string;
+	label?: string;
+}
+
+export interface FiltersView {
+	id: string;
+	name: string;
+	scope?: string | null;
+	filters: JSONSchema6[];
+}
+
+export interface FilterSignature {
+	field: string;
+	operator: string;
+	value: string | number | boolean | { [k: string]: string };
+}
+
+export type FilterRenderMode = 'all' | 'add' | 'search' | 'views' | 'summary';
+
+export interface DataTypeModel {
+	operators: {
+		[key: string]: {
+			getLabel: (schema: JSONSchema6) => string;
+		};
+	};
+	decodeFilter(filter: JSONSchema6): null | FilterSignature;
+	createFilter(
+		field: string,
+		operator: string,
+		value: any,
+		schema: JSONSchema6,
+	): JSONSchema6;
+	Edit(props: DataTypeEditProps): JSX.Element;
+}
+
+export interface DataTypeEditProps {
+	schema: JSONSchema6;
+	value?: any;
+	onUpdate: (value: string | number | boolean) => void;
+	operator: string;
+	slim?: boolean;
+}
+
+export interface FiltersState {
+	showModal: boolean;
+	edit: EditModel[];
+	editingFilter: string | null;
+	searchString: string;
+	filters: JSONSchema6[];
+	views: FiltersView[];
+	schema: JSONSchema6;
+}
+
+export interface FiltersProps extends DefaultProps {
+	disabled?: boolean;
+	filters?: JSONSchema6[];
+	views?: FiltersView[];
+	viewScopes?: ViewScope[];
+	onFiltersUpdate?: (filters: JSONSchema6[]) => void;
+	onViewsUpdate?: (views: FiltersView[]) => void;
+	schema: JSONSchema6;
+	addFilterButtonProps?: ButtonProps;
+	viewsMenuButtonProps?: DropDownButtonProps;
+	renderMode?: FilterRenderMode | FilterRenderMode[];
+	dark?: boolean;
 }
 
 export default Filters;

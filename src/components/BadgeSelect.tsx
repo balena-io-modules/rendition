@@ -2,25 +2,10 @@ import has = require('lodash/has');
 import includes = require('lodash/includes');
 import * as React from 'react';
 import styled from 'styled-components';
-import { EnhancedType } from '../common-types';
 import Badge from './Badge';
 import Divider from './Divider';
 import DropDownButton, { DropDownButtonProps } from './DropDownButton';
 import Txt from './Txt';
-
-export interface BadgeSelectProps extends DropDownButtonProps {
-	items: string[];
-	extraPrefix?: string[];
-	extraSuffix?: string[];
-	extra?: string[];
-	onItemChange?: (value: string) => void;
-	defaultSelected?: string;
-	placeholder?: string;
-}
-
-export interface BadgeSelectState {
-	selected: string | null | undefined;
-}
 
 const ButtonWrapper = styled.button`
 	border: 0;
@@ -41,11 +26,8 @@ const ButtonWrapper = styled.button`
 	}
 `;
 
-class BadgeSelect extends React.Component<
-	EnhancedType<BadgeSelectProps>,
-	BadgeSelectState
-> {
-	constructor(props: EnhancedType<BadgeSelectProps>) {
+class BadgeSelect extends React.Component<BadgeSelectProps, BadgeSelectState> {
+	constructor(props: BadgeSelectProps) {
 		super(props);
 
 		this.state = {
@@ -127,6 +109,20 @@ class BadgeSelect extends React.Component<
 			</DropDownButton>
 		);
 	}
+}
+
+export interface BadgeSelectProps extends DropDownButtonProps {
+	items: string[];
+	extraPrefix?: string[];
+	extraSuffix?: string[];
+	extra?: string[];
+	onItemChange?: (value: string) => void;
+	defaultSelected?: string;
+	placeholder?: string;
+}
+
+export interface BadgeSelectState {
+	selected: string | null | undefined;
 }
 
 export default BadgeSelect;

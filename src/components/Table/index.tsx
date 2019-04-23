@@ -15,48 +15,10 @@ import FaSort = require('react-icons/lib/fa/sort');
 import styled from 'styled-components';
 
 // TODO: Remove explicit import and depend on provider instead.
-import { EnhancedType } from '../../common-types';
 import theme from '../../theme';
-import Button, { ButtonProps } from '../Button';
+import Button from '../Button';
 import Pager from '../Pager';
 import { TableColumn, TableRow } from './TableRow';
-
-export { TableColumn, TableRow };
-
-export interface TableSortOptions<T> {
-	reverse: boolean;
-	field: keyof T | null;
-}
-
-export interface TableProps<T> {
-	columns: Array<TableColumn<T>>;
-	data?: T[] | null;
-	getRowHref?: (row: T) => string;
-	// Only usable if a rowKey property is also provided.
-	// If an onCheck property is provided , then checkboxes will be renders,
-	// allowing rows to be selected.
-	onCheck?: (checkedItems: T[]) => void;
-	onRowClick?: (row: T, event: React.MouseEvent<HTMLAnchorElement>) => void;
-	onSort?: (sort: TableSortOptions<T>) => void;
-	sort?: TableSortOptions<T>;
-	rowAnchorAttributes?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
-	rowCheckboxAttributes?: React.InputHTMLAttributes<HTMLInputElement>;
-	// Optionally provide a key that should be used as a unique identifier for each row
-	rowKey?: keyof T;
-	tbodyPrefix?: JSX.Element | JSX.Element[];
-	// Highlights a row. This property requires that you have provided a
-	// `rowKey` property: the row with a `rowKey` property that matches this
-	// value is highlighted.
-	highlightedRows?: any;
-	getRowClass?: (row: T) => string[];
-	// If true, a pager will be used when displaying items.
-	usePager?: boolean;
-	// The number of items to be shown per page. Only used if `usePager` is true. Defaults to `50`.
-	itemsPerPage?: number;
-	// Sets whether the pager is displayed at the top of the table, the bottom of the table or
-	// in both positions. Only used if `usePager` is true. Defaults to `top`.
-	pagerPosition?: 'top' | 'bottom' | 'both';
-}
 
 const highlightStyle = `
 	background-color: ${theme.colors.info.light};
@@ -138,7 +100,7 @@ const BaseTable = styled.div`
 
 const HeaderButton = styled(Button)`
 	display: block;
-` as React.ComponentType<EnhancedType<ButtonProps>>;
+`;
 
 interface TableState<T> {
 	allChecked: boolean;
@@ -150,10 +112,7 @@ interface TableState<T> {
 	page: number;
 }
 
-export default class Table<T> extends React.Component<
-	TableProps<T>,
-	TableState<T>
-> {
+class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 	constructor(props: TableProps<T>) {
 		super(props);
 
@@ -534,3 +493,42 @@ export default class Table<T> extends React.Component<
 		);
 	}
 }
+
+export interface TableSortOptions<T> {
+	reverse: boolean;
+	field: keyof T | null;
+}
+
+export interface TableProps<T> {
+	columns: Array<TableColumn<T>>;
+	data?: T[] | null;
+	getRowHref?: (row: T) => string;
+	// Only usable if a rowKey property is also provided.
+	// If an onCheck property is provided , then checkboxes will be renders,
+	// allowing rows to be selected.
+	onCheck?: (checkedItems: T[]) => void;
+	onRowClick?: (row: T, event: React.MouseEvent<HTMLAnchorElement>) => void;
+	onSort?: (sort: TableSortOptions<T>) => void;
+	sort?: TableSortOptions<T>;
+	rowAnchorAttributes?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
+	rowCheckboxAttributes?: React.InputHTMLAttributes<HTMLInputElement>;
+	// Optionally provide a key that should be used as a unique identifier for each row
+	rowKey?: keyof T;
+	tbodyPrefix?: JSX.Element | JSX.Element[];
+	// Highlights a row. This property requires that you have provided a
+	// `rowKey` property: the row with a `rowKey` property that matches this
+	// value is highlighted.
+	highlightedRows?: any;
+	getRowClass?: (row: T) => string[];
+	// If true, a pager will be used when displaying items.
+	usePager?: boolean;
+	// The number of items to be shown per page. Only used if `usePager` is true. Defaults to `50`.
+	itemsPerPage?: number;
+	// Sets whether the pager is displayed at the top of the table, the bottom of the table or
+	// in both positions. Only used if `usePager` is true. Defaults to `top`.
+	pagerPosition?: 'top' | 'bottom' | 'both';
+}
+
+export { TableColumn, TableRow };
+
+export default Table;

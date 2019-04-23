@@ -9,12 +9,7 @@ import {
 	TextAlignProps,
 } from 'styled-system';
 import asRendition from '../asRendition';
-import { Theme } from '../common-types';
-
-interface ContainerProps extends MaxWidthProps, TextAlignProps {}
-interface ThemedContainerProps extends ContainerProps {
-	theme: Theme;
-}
+import { DefaultProps, RenditionSystemProps, Theme } from '../common-types';
 
 const ContainerBase = styled.div<ThemedContainerProps>`
 	${textAlign}
@@ -35,7 +30,7 @@ const Container = (props: ThemedContainerProps) => {
 Container.displayName = 'Container';
 Container.defaultProps = {} as any;
 
-const setDefaultProps = withProps((props: ContainerProps) => {
+const setDefaultProps = withProps((props: InternalContainerProps) => {
 	return assign(
 		{
 			px: 3,
@@ -46,4 +41,16 @@ const setDefaultProps = withProps((props: ContainerProps) => {
 	);
 });
 
-export default asRendition<ContainerProps>(Container, [setDefaultProps]);
+export interface InternalContainerProps
+	extends DefaultProps,
+		MaxWidthProps,
+		TextAlignProps {}
+export interface ThemedContainerProps extends InternalContainerProps {
+	theme: Theme;
+}
+
+export type ContainerProps = InternalContainerProps & RenditionSystemProps;
+
+export default asRendition<React.FunctionComponent<ContainerProps>>(Container, [
+	setDefaultProps,
+]);

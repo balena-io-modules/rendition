@@ -1,15 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../asRendition';
-import { DefaultProps, Sizing } from '../common-types';
+import { DefaultProps, RenditionSystemProps, Sizing } from '../common-types';
 import { radius } from '../theme';
 import { px } from '../utils';
-
-export interface SelectProps extends DefaultProps, Sizing {
-	value?: string | string[] | number | null;
-	disabled?: boolean;
-	onChange?: React.ChangeEventHandler<HTMLSelectElement>;
-}
 
 const Base = styled.select<
 	{ emphasized?: boolean } & React.HTMLProps<HTMLSelectElement>
@@ -34,7 +28,7 @@ const Base = styled.select<
 	}
 `;
 
-const Wrapper = styled.span<SelectProps>`
+const Wrapper = styled.span<{ emphasized?: boolean }>`
 	display: inline-block;
 	position: relative;
 
@@ -59,7 +53,7 @@ const Component = ({
 	onChange,
 	value,
 	...props
-}: SelectProps) => {
+}: InternalSelectProps) => {
 	return (
 		<Wrapper emphasized={emphasized} {...props}>
 			<Base
@@ -73,4 +67,12 @@ const Component = ({
 	);
 };
 
-export default asRendition<SelectProps>(Component);
+export interface InternalSelectProps extends DefaultProps, Sizing {
+	value?: string | string[] | number | null;
+	disabled?: boolean;
+	onChange?: React.ChangeEventHandler<HTMLSelectElement>;
+}
+
+export type SelectProps = InternalSelectProps & RenditionSystemProps;
+
+export default asRendition<React.FunctionComponent<SelectProps>>(Component);

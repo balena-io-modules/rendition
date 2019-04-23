@@ -5,7 +5,7 @@ exports[`Heading renders correctly 1`] = `
   className="sc-bdVaJa iLLxmY"
 >
   <h3
-    className="sc-gqjmRU fFRxtu sc-gZMcBi binHFK"
+    className="sc-gqjmRU fFRxtu sc-gZMcBi ZBeRI"
   >
     Heading
   </h3>

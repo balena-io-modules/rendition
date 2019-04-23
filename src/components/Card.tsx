@@ -1,7 +1,7 @@
 import map = require('lodash/map');
 import * as React from 'react';
 import styled from 'styled-components';
-import { DefaultProps } from '../common-types';
+import { DefaultProps, RenditionSystemProps } from '../common-types';
 
 import asRendition from '../asRendition';
 import { px } from '../utils';
@@ -9,15 +9,7 @@ import Divider from './Divider';
 import { Box, Flex } from './Grid';
 import Txt from './Txt';
 
-export interface CardProps extends DefaultProps {
-	title?: string;
-	cta?: JSX.Element;
-	rows?: JSX.Element[];
-	children?: any;
-	minHeight?: string;
-}
-
-const Wrapper = styled.div<CardProps>`
+const Wrapper = styled.div<{ minHeight?: string }>`
 	border: solid 1px #dfdede;
 	border-radius: ${props => px(props.theme.radius || 3)};
 	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
@@ -29,7 +21,7 @@ const Wrapper = styled.div<CardProps>`
 
 const styledDivider = <Divider height={1} color="#dfdede" />;
 
-const Card = ({ title, cta, rows, children, ...props }: CardProps) => {
+const Card = ({ title, cta, rows, children, ...props }: InternalCardProps) => {
 	const hasHeader = title || cta;
 
 	const Header = hasHeader && (
@@ -64,4 +56,14 @@ const Card = ({ title, cta, rows, children, ...props }: CardProps) => {
 	);
 };
 
-export default asRendition<CardProps>(Card);
+export interface InternalCardProps extends DefaultProps {
+	title?: string;
+	cta?: JSX.Element;
+	rows?: JSX.Element[];
+	children?: any;
+	minHeight?: string;
+}
+
+export type CardProps = InternalCardProps & RenditionSystemProps;
+
+export default asRendition<React.FunctionComponent<CardProps>>(Card);

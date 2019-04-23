@@ -70,6 +70,9 @@ export { default as Tabs, TabsProps } from './components/Tabs';
 
 export { Flex, Box, FlexProps, BoxProps } from './components/Grid';
 export { default as Theme } from './theme';
+export { Theme as ThemeType } from './common-types';
+export { v3 } from './migration-types';
+
 export {
 	default as asRendition,
 	withStyledSystem,
@@ -99,5 +102,5 @@ export {
 	TooltipPlacement,
 	TooltipProps,
 	Tooltip,
-	EnhancedType,
+	RenditionSystemProps,
 } from './common-types';

@@ -1,14 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { constrainNumber, darken, getAngleBetweenPoints } from '../utils';
-import { Box, BoxProps, Flex, FlexProps } from './Grid';
-
-export interface ArcSliderProps extends BoxProps {
-	onValueChange?: (value: number) => void;
-	value?: number;
-	fillColor?: string;
-	background?: string;
-}
+import { Box, BoxProps, Flex } from './Grid';
 
 const ANGLERANGE = 135;
 
@@ -20,7 +13,7 @@ const StyledSVG = styled.svg`
 
 const ArcSliderContainer = styled(Box)`
 	position: relative;
-` as React.ComponentType<BoxProps>;
+`;
 
 const LabelContainer = styled(Flex).attrs({
 	justifyContent: 'center',
@@ -33,7 +26,7 @@ const LabelContainer = styled(Flex).attrs({
 	left: 0;
 	text-align: center;
 	pointer-events: none;
-` as React.ComponentType<FlexProps>;
+`;
 
 const polarToCartesian = (
 	centerX: number,
@@ -178,7 +171,7 @@ class ArcSlider extends React.Component<ArcSliderProps, ArcSliderState> {
 					style={{
 						cursor: this.state.isDragging ? 'grabbing' : 'grab',
 					}}
-					ref={(elem: any) => (this.$slider = elem)}
+					ref={elem => (this.$slider = elem)}
 					viewBox="0 0 600 600"
 					onMouseDown={this.handleMouseDown}
 					onTouchStart={this.handleMouseDown}
@@ -247,6 +240,13 @@ class ArcSlider extends React.Component<ArcSliderProps, ArcSliderState> {
 			</ArcSliderContainer>
 		);
 	}
+}
+
+export interface ArcSliderProps extends BoxProps {
+	onValueChange?: (value: number) => void;
+	value?: number;
+	fillColor?: string;
+	background?: string;
 }
 
 export default ArcSlider;

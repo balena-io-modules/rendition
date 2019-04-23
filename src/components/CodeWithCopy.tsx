@@ -3,23 +3,12 @@ import * as React from 'react';
 import FaClipboard = require('react-icons/lib/fa/clipboard');
 import styled from 'styled-components';
 import asRendition from '../asRendition';
-import { DefaultProps, EnhancedType, Tooltip } from '../common-types';
+import { DefaultProps, RenditionSystemProps, Tooltip } from '../common-types';
 import { stopEvent } from '../utils';
 import Button from './Button';
 import Txt, { TxtProps } from './Txt';
 
-export interface CodeWithCopyProps extends DefaultProps, Tooltip, TxtProps {
-	color?: string;
-	copy?: string;
-	text: string;
-	showCopyButton?: 'hover' | 'always';
-}
-
-export interface CodeWithCopyBaseProps extends DefaultProps, Tooltip, TxtProps {
-	showCopyButton?: 'hover' | 'always';
-}
-
-const Wrapper = styled(Txt.span)<CodeWithCopyBaseProps>`
+const Wrapper = styled(Txt.span)<{ showCopyButton?: 'hover' | 'always' }>`
 	white-space: initial;
 
 	code {
@@ -49,9 +38,9 @@ const Wrapper = styled(Txt.span)<CodeWithCopyBaseProps>`
 	&:hover .code-with-copy__copy {
 		visibility: visible;
 	}
-` as React.ComponentType<EnhancedType<CodeWithCopyBaseProps>>;
+`;
 
-const Base = ({ copy, text, color, ...props }: CodeWithCopyProps) => {
+const Base = ({ copy, text, color, ...props }: InternalCodeWithCopyProps) => {
 	const normalizedText = (text || '').toString().trim();
 	const normalizedCopy = (copy || normalizedText).toString().trim();
 
@@ -73,4 +62,21 @@ const Base = ({ copy, text, color, ...props }: CodeWithCopyProps) => {
 	);
 };
 
-export default asRendition<CodeWithCopyProps>(Base, [], ['color']);
+export interface InternalCodeWithCopyProps
+	extends DefaultProps,
+		Tooltip,
+		TxtProps {
+	color?: string;
+	copy?: string;
+	text: string;
+	showCopyButton?: 'hover' | 'always';
+}
+
+export type CodeWithCopyProps = InternalCodeWithCopyProps &
+	RenditionSystemProps;
+
+export default asRendition<React.FunctionComponent<CodeWithCopyProps>>(
+	Base,
+	[],
+	['color'],
+);

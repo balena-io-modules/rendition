@@ -17,24 +17,6 @@ const BorderedDiv = styled.div`
 	border: solid 1px #979797;
 `;
 
-export interface FilterSummaryProps {
-	edit: (rule: JSONSchema6) => void;
-	delete: (rule: JSONSchema6) => void;
-	saveView: (name: string, scope: string | null) => void;
-	filters: JSONSchema6[];
-	views: FiltersView[];
-	scopes?: ViewScope[];
-	schema: JSONSchema6;
-	dark?: boolean;
-}
-
-export interface FilterSummaryState {
-	name: string;
-	showForm: boolean;
-	id: string;
-	scope: string | null;
-}
-
 class FilterSummary extends React.Component<
 	FilterSummaryProps,
 	FilterSummaryState
@@ -158,6 +140,24 @@ class FilterSummary extends React.Component<
 			</BorderedDiv>
 		);
 	}
+}
+
+export interface FilterSummaryProps {
+	edit: (rule: JSONSchema6) => void;
+	delete: (rule: JSONSchema6) => void;
+	saveView: (name: string, scope: string | null) => void;
+	filters: JSONSchema6[];
+	views: FiltersView[];
+	scopes?: ViewScope[];
+	schema: JSONSchema6;
+	dark?: boolean;
+}
+
+export interface FilterSummaryState {
+	name: string;
+	showForm: boolean;
+	id: string;
+	scope: string | null;
 }
 
 export default FilterSummary;

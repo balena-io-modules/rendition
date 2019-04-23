@@ -1,20 +1,9 @@
 import map = require('lodash/map');
 import * as React from 'react';
 import styled from 'styled-components';
-import { EnhancedType } from '../common-types';
-import Button, { ButtonProps } from './Button';
-import { Box, BoxProps, Flex, FlexProps } from './Grid';
+import Button from './Button';
+import { Box, BoxProps, Flex } from './Grid';
 import Txt from './Txt';
-
-export interface TabsProps extends EnhancedType<BoxProps> {
-	tabs: string[];
-	help?: JSX.Element;
-	children: JSX.Element[];
-}
-
-export interface TabsState {
-	show: number;
-}
 
 const FlexTab = styled(Flex)`
 	${props => `border-bottom: ${props.theme.colors.gray.main};
@@ -23,7 +12,7 @@ const FlexTab = styled(Flex)`
 	border-style: hidden;
 	border-width: 1px;
 	border-bottom-style: solid;
-` as React.ComponentType<EnhancedType<FlexProps>>;
+`;
 
 const ButtonBase = styled(Button)<{ active: boolean }>`
 	padding: 4px 10px 2px;
@@ -51,7 +40,7 @@ const ButtonBase = styled(Button)<{ active: boolean }>`
 		`
 			: `
 		`}
-` as React.ComponentType<EnhancedType<ButtonProps & { active: boolean }>>;
+`;
 
 class Tabs extends React.Component<TabsProps, TabsState> {
 	constructor(props: TabsProps) {
@@ -100,6 +89,16 @@ class Tabs extends React.Component<TabsProps, TabsState> {
 			</Box>
 		);
 	}
+}
+
+export interface TabsState {
+	show: number;
+}
+
+export interface TabsProps extends BoxProps {
+	tabs: string[];
+	help?: JSX.Element;
+	children: JSX.Element[];
 }
 
 export default Tabs;
