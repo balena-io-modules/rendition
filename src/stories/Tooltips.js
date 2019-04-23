@@ -7,7 +7,6 @@ import withReadme from 'storybook-readme/with-readme'
 import {
   Alert,
   Badge,
-  BadgeSelect,
   Box,
   Button,
   DropDownButton,
@@ -134,12 +133,6 @@ storiesOf('Core/Tooltips', module)
 
           <Heading.h3 mt={30}>Badge</Heading.h3>
           <Badge tooltip='Badge tooltip' text='lorem' />
-
-          <Heading.h3 mt={30}>BadgeSelect</Heading.h3>
-          <BadgeSelect
-            tooltip='BadgeSelect tooltip'
-            items={['wpe', 'web', 'redis']}
-          />
 
           <Heading.h3 mt={30}>Box</Heading.h3>
           <Box tooltip='Box tooltip'>Lorem ipsum dolor sit amet.</Box>

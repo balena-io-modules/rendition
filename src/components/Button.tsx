@@ -5,40 +5,15 @@ import asRendition from '../asRendition';
 import {
 	Coloring,
 	DefaultProps,
-	EnhancedType,
 	Omit,
+	RenditionSystemProps,
 	ResponsiveStyle,
 	Sizing,
 	Theme,
 } from '../common-types';
 import { bold, getColor, getColoringType, normal, px } from '../utils';
 
-interface ButtonBaseProps extends Coloring, Sizing {
-	width?: ResponsiveStyle;
-	bg?: string;
-	outline?: boolean;
-	underline?: boolean;
-}
-
-// Grommet has its own declaration for the 'onClick' attribute, so the default
-// one is omitted as Grommet takes precedence here
-export interface ButtonProps
-	extends ButtonBaseProps,
-		Omit<DefaultProps, 'onClick'>,
-		GrommetButtonProps {
-	type?: 'submit' | 'reset' | 'button';
-	label?: 'string' | JSX.Element;
-}
-
-export interface ThemedButtonProps extends ButtonProps {
-	theme: Theme;
-}
-
-// TODO: remove the border-radius style once this issue is resolved
-// https://github.com/grommet/grommet/issues/3030
 const ButtonBase = styled(Button)`
-	border-radius: ${props => props.theme.button.border.radius};
-
 	font-family: ${props => props.theme.titleFont};
 	font-weight: ${props => bold(props)};
 	height: ${props => px(props.theme.space[4])};
@@ -82,6 +57,7 @@ const Underline = styled(Plaintext).attrs({
 })`
 	${props => (props.active ? underlineButtonActiveStyles(props) : '')}
 	border-bottom: 1px solid;
+	background: none;
 
 	&:hover:enabled,
 	&:focus:enabled,
@@ -91,7 +67,7 @@ const Underline = styled(Plaintext).attrs({
 `;
 
 const getStyledButton = (
-	{ outline, underline, plain }: ThemedButtonProps,
+	{ outline, underline, plain, active }: ThemedButtonProps,
 	isPrimary: boolean,
 ) => {
 	if (plain) {
@@ -102,7 +78,7 @@ const getStyledButton = (
 		return Underline;
 	}
 
-	if (outline || !isPrimary) {
+	if ((outline && !active) || !isPrimary) {
 		return Outline;
 	}
 
@@ -117,6 +93,8 @@ const Base = (props: ThemedButtonProps) => {
 		label,
 		primary,
 		color,
+		plain,
+		active,
 		...restProps
 	} = props;
 
@@ -126,23 +104,66 @@ const Base = (props: ThemedButtonProps) => {
 	// color, whereas in rendition 'primary' is a shorthand for the primary theme
 	// color. In grommet 'color' referes to the fill or outline color of the
 	// button, whereas in grommet it refers to the text color of the button
-	const basePrimary =
+	let basePrimary =
 		!!props.bg ||
 		(!!getColoringType(props) && !outline && !underline && !props.plain);
-	const baseColor = props.bg || getColor(props, 'bg', 'main');
+	let baseColor = props.bg || getColor(props, 'bg', 'main');
+
+	// If the button is active, invert the background and text colors
+	if (active) {
+		basePrimary = !basePrimary;
+		if (basePrimary && !baseColor) {
+			// If there is no base color, use the 'tertiary' color as a default
+			baseColor = getColor(
+				{ tertiary: true, theme: props.theme },
+				'bg',
+				'main',
+			);
+		}
+	}
 
 	const StyledButton = getStyledButton(props, basePrimary);
 
+	// Note that the 'plain' property is case to a Boolean to simplify Grommets
+	// default behaviour when providing an icon attribute and no label
+	// see: https://github.com/grommet/grommet/issues/3030
 	return (
 		<StyledButton
 			primary={basePrimary}
 			color={baseColor}
+			active={active && (underline || plain)}
 			{...restProps}
+			plain={!!plain || !!underline}
 			label={label || children}
 		/>
 	);
 };
 
-export default asRendition<ButtonProps>(Base) as React.ComponentClass<
-	EnhancedType<ButtonProps>
->;
+interface ButtonBaseProps extends Coloring, Sizing {
+	width?: ResponsiveStyle;
+	bg?: string;
+	outline?: boolean;
+	underline?: boolean;
+}
+
+// Grommet has its own declaration for the 'onClick' attribute, so the default
+// one is omitted as Grommet takes precedence here
+export interface InternalButtonProps
+	extends ButtonBaseProps,
+		Omit<DefaultProps, 'onClick'>,
+		GrommetButtonProps {
+	type?: 'submit' | 'reset' | 'button';
+	label?: 'string' | JSX.Element;
+}
+
+export type ButtonProps = InternalButtonProps & RenditionSystemProps;
+
+export interface ThemedButtonProps extends ButtonProps {
+	theme: Theme;
+}
+
+export default asRendition<ButtonProps>(
+	Base,
+	[],
+	['width', 'color', 'bg'],
+) as React.FunctionComponent<ButtonProps>;

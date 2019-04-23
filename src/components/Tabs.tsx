@@ -6,7 +6,6 @@ import {
 import map = require('lodash/map');
 import * as React from 'react';
 import asRendition from '../asRendition';
-import { EnhancedType } from '../common-types';
 
 export interface TabsProps extends GrommetTabsProps {
 	tabs: string[];
@@ -27,6 +26,4 @@ const TabsBase = ({ children, tabs, ...props }: TabsProps) => {
 	);
 };
 
-export default asRendition<TabsProps>(TabsBase) as React.ComponentClass<
-	EnhancedType<TabsProps>
->;
+export default asRendition(TabsBase) as React.FunctionComponent<TabsProps>;

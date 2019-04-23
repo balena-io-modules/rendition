@@ -117,6 +117,7 @@ export default {
 		font: {
 			family: font,
 			size: '14px',
+			height: 1.5,
 		},
 		control: {
 			disabled: {
@@ -143,7 +144,7 @@ export default {
 	text: {
 		medium: {
 			size: '14px',
-			height: 1.5,
+			height: '1.5',
 		},
 	},
 	tab: {

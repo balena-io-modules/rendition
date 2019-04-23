@@ -195,7 +195,7 @@ class FiltersDemo extends React.Component {
   }
 }
 
-storiesOf('Core/Filters', module)
+storiesOf('Next/Filters', module)
   .addDecorator(withReadme(Readme))
   .addDecorator(withScreenshot())
   .add('Standard', () => {

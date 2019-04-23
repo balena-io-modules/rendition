@@ -5,7 +5,7 @@ import styled, { createGlobalStyle, withTheme } from 'styled-components';
 import { DefaultProps, ResponsiveStyle, Theme } from '../common-types';
 import { stopPropagation } from '../utils';
 import { px } from '../utils';
-import Button, { ButtonAnchorProps, ButtonProps } from './Button';
+import Button, { ButtonProps } from './Button';
 import { Box, Flex } from './Grid';
 import Txt from './Txt';
 
@@ -124,7 +124,7 @@ class Modal extends React.Component<ThemedModalProps, any> {
 			>
 				<GlobalStyle />
 				<ModalSizer
-					p={[px(theme.space[3]), '30px 50px']}
+					p={[px(theme.space[3]), '40px 50px 30px']}
 					width={width || DEFAULT_MODAL_WIDTH}
 					onClick={stopPropagation}
 					style={props.style}
@@ -169,9 +169,9 @@ export interface ModalProps extends DefaultProps {
 	action?: string | JSX.Element;
 	cancel?: () => any;
 	done: () => any;
-	primaryButtonProps?: ButtonProps | ButtonAnchorProps;
-	secondaryButtonProps?: ButtonProps | ButtonAnchorProps;
-	cancelButtonProps?: ButtonProps | ButtonAnchorProps;
+	primaryButtonProps?: ButtonProps;
+	secondaryButtonProps?: ButtonProps;
+	cancelButtonProps?: ButtonProps;
 	containerStyle?: React.CSSProperties;
 }
 

@@ -2,12 +2,16 @@
 
 exports[`Box renders correctly 1`] = `
 <div
-  className="sc-bdVaJa iLLxmY"
+  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
+    className="sc-bdVaJa lgVSbN"
   >
-    A box
+    <div
+      className="sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
+    >
+      A box
+    </div>
   </div>
 </div>
 `;

@@ -2,10 +2,14 @@
 
 exports[`Img renders correctly 1`] = `
 <div
-  className="sc-bdVaJa iLLxmY"
+  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
-  <img
-    className="sc-bwzfXH OesNc"
-  />
+  <div
+    className="sc-bdVaJa lgVSbN"
+  >
+    <img
+      className="sc-bwzfXH OesNc"
+    />
+  </div>
 </div>
 `;

@@ -2,81 +2,95 @@
 
 exports[`Pager component should match the stored snapshot 1`] = `
 <div
-  className="sc-bdVaJa iLLxmY"
+  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-cSHVUG ddiRBz sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
+    className="sc-bdVaJa lgVSbN"
   >
     <div
-      className="sc-chPdSV bErQmz sc-kAzzGY duiWHn"
-    >
-      <strong>
-        1
-         - 
-        50
-      </strong>
-       
-      of 
-      <strong>
-        436
-      </strong>
-    </div>
-    <div
-      className="sc-cSHVUG dzaSRZ sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
+      className="sc-dnqmqq zTVjo sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
     >
       <div
-        className="sc-kpOJdX brCIVB sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
+        className="sc-brqgnP jmbHqO sc-jWBwVP cKtoUq"
       >
-        <button
-          className="sc-htoDjs rendition-pager__btn--prev sc-VigVT dzpHnm sc-gqjmRU dTxmFc"
-          disabled={true}
-          onClick={[Function]}
+        <strong>
+          1
+           - 
+          50
+        </strong>
+         
+        of 
+        <strong>
+          436
+        </strong>
+      </div>
+      <div
+        className="sc-dnqmqq ewhxIw sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
+      >
+        <div
+          className="sc-dnqmqq sc-hSdWYo glFGuN sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
         >
-          <svg
-            fill="currentColor"
-            height="1em"
-            preserveAspectRatio="xMidYMid meet"
-            style={
-              Object {
-                "color": undefined,
-                "verticalAlign": "middle",
-              }
-            }
-            viewBox="0 0 40 40"
-            width="1em"
+          <button
+            className="sc-jKJlTe rendition-pager__btn--prev sc-iAyFgw jPnWnC sc-hMqMXs gRhMBo StyledButton-sc-323bzc-0 kjejRQ"
+            disabled={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onMouseOut={[Function]}
+            onMouseOver={[Function]}
+            type="button"
           >
-            <g>
-              <path
-                d="m31.1 6.7l-11.8 11.9 11.8 11.8q0.5 0.4 0.5 1t-0.5 1l-3.7 3.7q-0.4 0.5-1 0.5t-1-0.5l-16.5-16.5q-0.5-0.4-0.5-1t0.5-1l16.5-16.6q0.5-0.4 1-0.4t1 0.4l3.7 3.7q0.5 0.4 0.5 1t-0.5 1z"
-              />
-            </g>
-          </svg>
-        </button>
-        <button
-          className="sc-htoDjs rendition-pager__btn--next sc-VigVT dzpHnm sc-gqjmRU dTxmFc"
-          disabled={false}
-          onClick={[Function]}
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            preserveAspectRatio="xMidYMid meet"
-            style={
-              Object {
-                "color": undefined,
-                "verticalAlign": "middle",
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
               }
-            }
-            viewBox="0 0 40 40"
-            width="1em"
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m31.1 6.7l-11.8 11.9 11.8 11.8q0.5 0.4 0.5 1t-0.5 1l-3.7 3.7q-0.4 0.5-1 0.5t-1-0.5l-16.5-16.5q-0.5-0.4-0.5-1t0.5-1l16.5-16.6q0.5-0.4 1-0.4t1 0.4l3.7 3.7q0.5 0.4 0.5 1t-0.5 1z"
+                />
+              </g>
+            </svg>
+          </button>
+          <button
+            className="sc-jKJlTe rendition-pager__btn--next sc-iAyFgw jPnWnC sc-hMqMXs gRhMBo StyledButton-sc-323bzc-0 djTlJn"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onMouseOut={[Function]}
+            onMouseOver={[Function]}
+            type="button"
           >
-            <g>
-              <path
-                d="m31.2 19.6l-16.6 16.5q-0.4 0.5-1 0.5t-1-0.5l-3.7-3.7q-0.4-0.4-0.4-1t0.4-1l11.9-11.8-11.9-11.9q-0.4-0.4-0.4-1t0.4-1l3.7-3.7q0.5-0.4 1-0.4t1 0.4l16.6 16.6q0.4 0.4 0.4 1t-0.4 1z"
-              />
-            </g>
-          </svg>
-        </button>
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m31.2 19.6l-16.6 16.5q-0.4 0.5-1 0.5t-1-0.5l-3.7-3.7q-0.4-0.4-0.4-1t0.4-1l11.9-11.8-11.9-11.9q-0.4-0.4-0.4-1t0.4-1l3.7-3.7q0.5-0.4 1-0.4t1 0.4l16.6 16.6q0.4 0.4 0.4 1t-0.4 1z"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </div>

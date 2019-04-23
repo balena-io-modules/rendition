@@ -31,7 +31,6 @@ The following rendition components support the `tooltip` attribute:
 
 - `Alert`
 - `Badge`
-- `BadgeSelect`
 - `Box`
 - `Button`
 - `CodeWithCopy`

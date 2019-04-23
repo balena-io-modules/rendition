@@ -48,7 +48,13 @@ const Wrapper = styled(Txt.span)<InternalTextWithCopyProps>`
 	}
 `;
 
-const Base = ({ copy, code, text, children, ...props }: InternalTextWithCopyProps) => {
+const Base = ({
+	copy,
+	code,
+	text,
+	children,
+	...props
+}: InternalTextWithCopyProps) => {
 	const normalizedText = (text || children || '').toString().trim();
 	const normalizedCopy = (copy || normalizedText).toString().trim();
 
@@ -83,6 +89,8 @@ const Base = ({ copy, code, text, children, ...props }: InternalTextWithCopyProp
 export interface InternalTextWithCopyProps extends DefaultProps, TxtProps {
 	copy: string;
 	showCopyButton?: 'hover' | 'always';
+	code?: boolean;
+	text?: string;
 }
 
 export type TextWithCopyProps = InternalTextWithCopyProps &

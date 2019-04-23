@@ -54,7 +54,6 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [Button](#button)
 - [ButtonGroup](#buttongroup)
 - [Card](#card)
-- [CodeWithCopy](#codewithcopy)
 - [Container](#container)
 - [Divider](#divider)
 - [DropDownButton](#dropdownbutton)
@@ -242,20 +241,6 @@ Section containing content and actions on the same topic.
 | `rows`  | `JSX.Element[]` | - | - | Subsections separated by a horizontal separator |
 | `minHeight`  | `string` | `auto` | - | CSS minHeight property |
 | `children`  | `JSX.Element` | - | - | Any content that is internally wrapped in a Box |
-
-### CodeWithCopy
-
-Displays text formatted as `<code>` that can be copied to the clipboard.
-
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/CodeWithCopy.js)
-
-#### Props
-
-| Name          | Type      | Default   | Required   | Description                                          |
-| ------ | ------ | --------- | ---------- | ------------- |
-| `text`      | `string` | -         | ✓          | The value that should be displayed, if the `copy` prop is not provided, this value will be copied to the clipboard
-| `copy`      | `string` | -         | -          | The value that should be copied to the clipboard
-| `showCopyButton`      | <code>'hover' &#124; 'always'</code> | <code>'always'</code>       | -          | Optionally show the copy button on hover or always show the button
 
 ### Container
 

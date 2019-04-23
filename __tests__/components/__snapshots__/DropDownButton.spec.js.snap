@@ -2,122 +2,150 @@
 
 exports[`DropDownButton renders correctly 1`] = `
 <div
-  className="sc-bdVaJa iLLxmY"
+  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-kkGfuU bijuKn sc-jKJlTe idmetn sc-kgoBCf jWgjbN sc-chPdSV dZFyhg"
+    className="sc-bdVaJa lgVSbN"
   >
-    <span>
-      <button
-        className="sc-dxgOiQ kMQyTb sc-VigVT dzpHnm sc-htoDjs hQVMTw"
-      >
-        <div>
-          DropDown
-        </div>
-      </button>
-      <button
-        className="sc-kpOJdX cbQIFk sc-VigVT dzpHnm sc-htoDjs hQVMTw"
-        onClick={[Function]}
-      >
-        <svg
-          fill="currentColor"
-          height="1em"
-          preserveAspectRatio="xMidYMid meet"
-          style={
-            Object {
-              "color": undefined,
-              "verticalAlign": "middle",
-            }
-          }
-          viewBox="0 0 40 40"
-          width="1em"
+    <div
+      className="sc-hMqMXs hBBlEw sc-dxgOiQ hZGxcl sc-kAzzGY ikexOF sc-cSHVUG gbsWRV"
+    >
+      <span>
+        <button
+          className="sc-gzVnrw sc-kGXeez dHtHTU sc-gqjmRU juqtoI sc-htoDjs jfETHI StyledButton-sc-323bzc-0 litbIy"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          type="button"
         >
-          <g>
-            <path
-              d="m31.4 15.7q0 0.6-0.5 1l-10 10q-0.4 0.4-1 0.4t-1-0.4l-10-10q-0.4-0.4-0.4-1t0.4-1 1-0.4h20q0.6 0 1 0.4t0.5 1z"
-            />
-          </g>
-        </svg>
-      </button>
-    </span>
+          <div>
+            DropDown
+          </div>
+        </button>
+        <button
+          className="sc-gzVnrw sc-kgoBCf gJxdnh sc-gqjmRU juqtoI sc-htoDjs jfETHI StyledButton-sc-323bzc-0 litbIy"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            preserveAspectRatio="xMidYMid meet"
+            style={
+              Object {
+                "color": undefined,
+                "verticalAlign": "middle",
+              }
+            }
+            viewBox="0 0 40 40"
+            width="1em"
+          >
+            <g>
+              <path
+                d="m31.4 15.7q0 0.6-0.5 1l-10 10q-0.4 0.4-1 0.4t-1-0.4l-10-10q-0.4-0.4-0.4-1t0.4-1 1-0.4h20q0.6 0 1 0.4t0.5 1z"
+              />
+            </g>
+          </svg>
+        </button>
+      </span>
+    </div>
   </div>
 </div>
 `;
 
 exports[`Opened DropDownButton renders correctly 1`] = `
 <div
-  className="sc-bdVaJa iLLxmY"
+  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-kkGfuU bijuKn sc-jKJlTe idmetn sc-kgoBCf jWgjbN sc-chPdSV dZFyhg"
+    className="sc-bdVaJa lgVSbN"
   >
-    <span>
-      <button
-        className="sc-dxgOiQ kMQyTb sc-VigVT dzpHnm sc-htoDjs hQVMTw"
-      >
-        <div>
-          DropDown
-        </div>
-      </button>
-      <button
-        className="sc-kpOJdX cbQIFk sc-VigVT dzpHnm sc-htoDjs hQVMTw"
+    <div
+      className="sc-hMqMXs hBBlEw sc-dxgOiQ hZGxcl sc-kAzzGY ikexOF sc-cSHVUG gbsWRV"
+    >
+      <span>
+        <button
+          className="sc-gzVnrw sc-kGXeez dHtHTU sc-gqjmRU juqtoI sc-htoDjs jfETHI StyledButton-sc-323bzc-0 litbIy"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          type="button"
+        >
+          <div>
+            DropDown
+          </div>
+        </button>
+        <button
+          className="sc-gzVnrw sc-kgoBCf gJxdnh sc-gqjmRU juqtoI sc-htoDjs jfETHI StyledButton-sc-323bzc-0 litbIy"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            preserveAspectRatio="xMidYMid meet"
+            style={
+              Object {
+                "color": undefined,
+                "verticalAlign": "middle",
+              }
+            }
+            viewBox="0 0 40 40"
+            width="1em"
+          >
+            <g>
+              <path
+                d="m31.4 27.1q0 0.6-0.5 1t-1 0.5h-20q-0.6 0-1-0.5t-0.4-1 0.4-1l10-10q0.4-0.4 1-0.4t1 0.4l10 10q0.5 0.5 0.5 1z"
+              />
+            </g>
+          </svg>
+        </button>
+      </span>
+      <div
+        className="sc-jzJRlG chuvNI sc-fjdhpX hchDZz"
+        onClick={[Function]}
+      />
+      <div
+        className="sc-kpOJdX YGWKg"
         onClick={[Function]}
       >
-        <svg
-          fill="currentColor"
-          height="1em"
-          preserveAspectRatio="xMidYMid meet"
-          style={
-            Object {
-              "color": undefined,
-              "verticalAlign": "middle",
-            }
-          }
-          viewBox="0 0 40 40"
-          width="1em"
+        <div
+          className="sc-ckVGcZ gJapCo"
         >
-          <g>
-            <path
-              d="m31.4 27.1q0 0.6-0.5 1t-1 0.5h-20q-0.6 0-1-0.5t-0.4-1 0.4-1l10-10q0.4-0.4 1-0.4t1 0.4l10 10q0.5 0.5 0.5 1z"
-            />
-          </g>
-        </svg>
-      </button>
-    </span>
-    <div
-      className="sc-kAzzGY ikexOF sc-cSHVUG flWEyE"
-      onClick={[Function]}
-    />
-    <div
-      className="sc-ckVGcZ kxEyes"
-      onClick={[Function]}
-    >
-      <div
-        className="sc-eNQAEJ hDOerh"
-      >
-        <div>
-          Item
+          <div>
+            Item
+          </div>
         </div>
-      </div>
-      <div
-        className="sc-eNQAEJ hDOerh"
-      >
-        <div>
-          Item
+        <div
+          className="sc-ckVGcZ gJapCo"
+        >
+          <div>
+            Item
+          </div>
         </div>
-      </div>
-      <div
-        className="sc-eNQAEJ hDOerh"
-      >
-        <div>
-          Item
+        <div
+          className="sc-ckVGcZ gJapCo"
+        >
+          <div>
+            Item
+          </div>
         </div>
-      </div>
-      <div
-        className="sc-eNQAEJ hDOerh"
-      >
-        <div>
-          Item
+        <div
+          className="sc-ckVGcZ gJapCo"
+        >
+          <div>
+            Item
+          </div>
         </div>
       </div>
     </div>

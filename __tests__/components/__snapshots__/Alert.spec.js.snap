@@ -2,14 +2,18 @@
 
 exports[`Alert renders correctly 1`] = `
 <div
-  className="sc-bdVaJa iLLxmY"
+  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-VigVT sc-cSHVUG caRVuD sc-jTzLTM bUrYzn"
+    className="sc-bdVaJa lgVSbN"
   >
-    <div>
-      
-      An alert
+    <div
+      className="sc-VigVT sc-cSHVUG caRVuD sc-jTzLTM bUrYzn"
+    >
+      <div>
+        
+        An alert
+      </div>
     </div>
   </div>
 </div>

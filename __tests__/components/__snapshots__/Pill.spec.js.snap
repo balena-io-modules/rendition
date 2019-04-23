@@ -2,24 +2,32 @@
 
 exports[`Primary Pill renders correctly 1`] = `
 <div
-  className="sc-bdVaJa iLLxmY"
+  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-VigVT dzpHnm sc-gZMcBi llrEny sc-htoDjs jslKMR sc-gzVnrw jCPitn"
+    className="sc-bdVaJa lgVSbN"
   >
-    pill
+    <div
+      className="sc-VigVT dzpHnm sc-gZMcBi huovEK sc-htoDjs jslKMR sc-gzVnrw jCPitn"
+    >
+      pill
+    </div>
   </div>
 </div>
 `;
 
 exports[`Small Danger Pill renders correctly 1`] = `
 <div
-  className="sc-bdVaJa iLLxmY"
+  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-gZMcBi sc-VigVT dzpHnm sc-gqjmRU fLsPOS sc-htoDjs jslKMR sc-gzVnrw jCPitn"
+    className="sc-bdVaJa lgVSbN"
   >
-    pill
+    <div
+      className="sc-gZMcBi sc-VigVT dzpHnm sc-gqjmRU kFKahL sc-htoDjs jslKMR sc-gzVnrw jCPitn"
+    >
+      pill
+    </div>
   </div>
 </div>
 `;

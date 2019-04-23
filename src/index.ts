@@ -1,10 +1,6 @@
 export { default as Alert, AlertProps } from './components/Alert';
 export { default as ArcSlider, ArcSliderProps } from './components/ArcSlider';
 export { default as Badge, BadgeProps } from './components/Badge';
-export {
-	default as BadgeSelect,
-	BadgeSelectProps,
-} from './components/BadgeSelect';
 export { default as Banner, BannerProps } from './components/Banner';
 export { default as Button, ButtonProps } from './components/Button';
 export { default as ButtonGroup } from './components/ButtonGroup';
