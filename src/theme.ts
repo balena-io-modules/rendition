@@ -146,4 +146,8 @@ export default {
 			height: 1.5,
 		},
 	},
+	tab: {
+		extend: 'border: none;',
+		color: colors.primary.main,
+	},
 };
