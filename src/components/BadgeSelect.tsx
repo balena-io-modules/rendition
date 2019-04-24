@@ -52,7 +52,6 @@ class BadgeSelect extends React.Component<BadgeSelectProps, BadgeSelectState> {
 			onItemChange,
 			defaultSelected,
 			placeholder,
-			color,
 			...props
 		} = this.props;
 		return (
