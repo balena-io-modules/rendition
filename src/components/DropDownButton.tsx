@@ -254,4 +254,4 @@ export default asRendition<
 	React.ForwardRefExoticComponent<
 		DropDownButtonProps & React.RefAttributes<DropDownButton>
 	>
->(DropDownButton, [], ['width']);
+>(DropDownButton, [], ['width', 'color', 'bg', 'backgroundColor']);
