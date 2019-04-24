@@ -4,16 +4,11 @@ exports[`Heading renders correctly 1`] = `
 <div
   className="StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
-<<<<<<< HEAD
-  <h3
-    className="sc-gqjmRU fFRxtu sc-gZMcBi ZBeRI"
-=======
   <div
     className="sc-bdVaJa lgVSbN"
->>>>>>> fb7638a... update snapshots
   >
     <h3
-      className="sc-gqjmRU fFRxtu sc-gZMcBi binHFK"
+      className="sc-gqjmRU fFRxtu sc-gZMcBi ZBeRI"
     >
       Heading
     </h3>
