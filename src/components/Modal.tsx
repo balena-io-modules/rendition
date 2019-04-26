@@ -37,9 +37,9 @@ const ModalSizer = styled(Box)`
 
 const ModalButton = (props: ButtonProps) => {
 	return 'href' in props && props.href ? (
-		<Button as="a" {...props as any} />
+		<Button as="a" {...props} />
 	) : (
-		<Button {...props as any} />
+		<Button {...props} />
 	);
 };
 
@@ -121,6 +121,7 @@ class Modal extends React.Component<ThemedModalProps, any> {
 				onClickOutside={() => (props.cancel || props.done)()}
 				responsive={false}
 				margin="small"
+				animate={false}
 			>
 				<GlobalStyle />
 				<ModalSizer

@@ -19,6 +19,8 @@ import {
 } from '..'
 import Readme from './README/Tooltips.md'
 
+console.log({ Badge })
+
 storiesOf('Core/Tooltips', module)
   .addDecorator(withReadme(Readme))
   .addDecorator(withScreenshot())
@@ -132,7 +134,7 @@ storiesOf('Core/Tooltips', module)
           </Alert>
 
           <Heading.h3 mt={30}>Badge</Heading.h3>
-          <Badge tooltip='Badge tooltip' text='lorem' />
+          <Badge tooltip='Badge tooltip'>Lorem</Badge>
 
           <Heading.h3 mt={30}>Box</Heading.h3>
           <Box tooltip='Box tooltip'>Lorem ipsum dolor sit amet.</Box>

@@ -365,7 +365,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 							onClick={() =>
 								this.setState({ showModal: true, editingFilter: null })
 							}
-							{...this.props.addFilterButtonProps as any}
+							{...this.props.addFilterButtonProps}
 						>
 							<FaFilter style={{ marginRight: 10 }} />
 							Add filter

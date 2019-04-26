@@ -23,7 +23,6 @@ export { default as Fixed, FixedProps } from './components/Fixed';
 export { default as Input, InputProps } from './components/Input';
 export { default as Modal, ModalProps } from './components/Modal';
 export { default as Pager, PagerProps } from './components/Pager';
-export { default as Pill, PillProps } from './components/Pill';
 export {
 	default as ProgressBar,
 	ProgressBarProps,

@@ -38,12 +38,18 @@ const Outline = styled(ButtonBase)`
 		getColor(props, 'color', 'main') || props.theme.colors.text.main};
 `;
 
-const Plaintext = styled(ButtonBase)`
+const Plain = styled(ButtonBase)`
 	color: ${props =>
 		getColor(props, 'color', 'main') || props.theme.colors.text.main};
 	height: auto;
 	font-weight: ${props => normal(props)};
 	border-radius: 0;
+
+	&:hover:enabled,
+	&:focus:enabled,
+	&:active:enabled {
+		border-bottom: 1px solid;
+	}
 `;
 
 const underlineButtonActiveStyles = (props: ThemedButtonProps) => `
@@ -52,7 +58,7 @@ const underlineButtonActiveStyles = (props: ThemedButtonProps) => `
 	box-shadow: 0px -1px 0 0px inset;
 `;
 
-const Underline = styled(Plaintext).attrs({
+const Underline = styled(Plain).attrs({
 	plain: true,
 })`
 	${props => (props.active ? underlineButtonActiveStyles(props) : '')}
@@ -71,7 +77,7 @@ const getStyledButton = (
 	isPrimary: boolean,
 ) => {
 	if (plain) {
-		return Plaintext;
+		return Plain;
 	}
 
 	if (underline) {
@@ -98,12 +104,12 @@ const Base = (props: ThemedButtonProps) => {
 		...restProps
 	} = props;
 
-	// the 'primary' and 'color' props map to semantically different properties in
-	// grommet, so you perform the mapping here to keep the styling cleaner.
+	// The 'primary' and 'color' props map to semantically different properties in
+	// grommet, so mapping is performed here to keep the styling cleaner.
 	// In grommet, 'primary' indicates that the button is filled with a solid
 	// color, whereas in rendition 'primary' is a shorthand for the primary theme
-	// color. In grommet 'color' referes to the fill or outline color of the
-	// button, whereas in grommet it refers to the text color of the button
+	// color. In grommet 'color' refers to the fill or outline color of the
+	// button, whereas in rendition it refers to the text color of the button
 	let basePrimary =
 		!!props.bg ||
 		(!!getColoringType(props) && !outline && !underline && !props.plain);

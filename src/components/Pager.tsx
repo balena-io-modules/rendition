@@ -29,24 +29,20 @@ const Pager = ({
 			<Flex>
 				<ButtonGroup>
 					<Button
-						px={11}
 						className="rendition-pager__btn--prev"
 						disabled={totalItems <= itemsPerPage || page <= 0}
 						onClick={() => prevPage()}
-					>
-						<FaChevronLeft />
-					</Button>
+						icon={<FaChevronLeft />}
+					/>
 					<Button
-						px={11}
 						className="rendition-pager__btn--next"
 						disabled={
 							totalItems <= itemsPerPage ||
 							totalItems / itemsPerPage <= page + 1
 						}
 						onClick={() => nextPage()}
-					>
-						<FaChevronRight />
-					</Button>
+						icon={<FaChevronRight />}
+					/>
 				</ButtonGroup>
 			</Flex>
 		</Flex>

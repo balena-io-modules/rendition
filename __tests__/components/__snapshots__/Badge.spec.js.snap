@@ -8,9 +8,9 @@ exports[`Badge renders correctly 1`] = `
     className="sc-bdVaJa lgVSbN"
   >
     <div
-      className="sc-gZMcBi wADvy sc-iwsKbI hLyHMt sc-htoDjs QHiav sc-gzVnrw jnVFiX"
+      className="sc-gqjmRU juqtoI sc-gZMcBi bhtlIA sc-htoDjs giRJYk sc-gzVnrw jCPitn"
     >
-      badge
+      Badge
     </div>
   </div>
 </div>

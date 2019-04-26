@@ -8,7 +8,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
     className="sc-cSHVUG cVRlef"
   >
     <div
-      className="sc-cmthru cGDizE sc-gzVnrw pznRG sc-bZQynM kMvugX"
+      className="sc-cMhqgX eOVIdE sc-gzVnrw pznRG sc-bZQynM kMvugX"
     >
       <form
         className="rjsf"
@@ -20,7 +20,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
         >
           <fieldset>
             <legend
-              className="sc-hZSUBg itFcTN"
+              className="sc-epnACN dunoRN"
               id="root__title"
             >
               Pokèmon
@@ -29,7 +29,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
               className="form-group field field-string rendition-form__field--root_Name sc-gzVnrw fcRkeO sc-bZQynM kMvugX"
             >
               <label
-                className="control-label sc-esOvli fADHvf"
+                className="control-label sc-hZSUBg ezsVLv"
                 htmlFor="root_Name"
               >
                 Name
