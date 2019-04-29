@@ -86,7 +86,7 @@ export default (props: ArrayFieldTemplateProps) => {
 									px={1}
 									mt={1}
 									ml={1}
-									plaintext
+									plain
 									disabled={
 										element.disabled || element.readonly || !element.hasMoveUp
 									}
@@ -107,7 +107,7 @@ export default (props: ArrayFieldTemplateProps) => {
 									px={1}
 									mt={1}
 									ml={1}
-									plaintext
+									plain
 									disabled={
 										element.disabled || element.readonly || !element.hasMoveDown
 									}
@@ -124,7 +124,7 @@ export default (props: ArrayFieldTemplateProps) => {
 								<ActionButton
 									type="button"
 									className="rendition-form-array-item__remove-item"
-									plaintext
+									plain
 									mb="6px"
 									mt={1}
 									px={1}
@@ -144,7 +144,7 @@ export default (props: ArrayFieldTemplateProps) => {
 				<Button
 					type="button"
 					className="rendition-form-array-item__add-item"
-					iconElement={<FaPlus />}
+					icon={<FaPlus />}
 					onClick={props.onAddClick}
 				>
 					Add item

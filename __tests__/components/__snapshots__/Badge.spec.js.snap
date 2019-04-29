@@ -2,12 +2,16 @@
 
 exports[`Badge renders correctly 1`] = `
 <div
-  className="sc-bdVaJa iLLxmY"
+  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-gZMcBi wADvy sc-iwsKbI hLyHMt sc-htoDjs QHiav sc-gzVnrw jnVFiX"
+    className="sc-bdVaJa lgVSbN"
   >
-    badge
+    <div
+      className="sc-gqjmRU juqtoI sc-gZMcBi bhtlIA sc-htoDjs giRJYk sc-gzVnrw jCPitn"
+    >
+      Badge
+    </div>
   </div>
 </div>
 `;

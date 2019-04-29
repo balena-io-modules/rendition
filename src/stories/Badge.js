@@ -12,9 +12,9 @@ storiesOf('Core/Badge', module)
     return (
       <Provider>
         <Box m={3}>
-          <Badge text='badge1' mr={2} />
-          <Badge text='badge2' mr={2} />
-          <Badge text='badge3' />
+          <Badge mr={2}>Badge 1</Badge>
+          <Badge mr={2}>Badge 2</Badge>
+          <Badge>Badge 3</Badge>
         </Box>
       </Provider>
     )
@@ -23,10 +23,54 @@ storiesOf('Core/Badge', module)
     return (
       <Provider>
         <Box m={3}>
-          <Badge primary text='Primary' mr={2} />
-          <Badge secondary text='Secondary' mr={2} />
-          <Badge tertiary text='Tertiary' mr={2} />
-          <Badge bg='purple' color='green' text='Custom' />
+          <Badge primary mr={2}>
+            Primary
+          </Badge>
+          <Badge secondary mr={2}>
+            Secondary
+          </Badge>
+          <Badge tertiary mr={2}>
+            Tertiary
+          </Badge>
+          <Badge bg='purple' color='green'>
+            Custom
+          </Badge>
+        </Box>
+      </Provider>
+    )
+  })
+  .add('Small', () => {
+    return (
+      <Provider>
+        <Box m={3}>
+          <Badge small primary mr={2}>
+            Primary
+          </Badge>
+          <Badge small secondary mr={2}>
+            Secondary
+          </Badge>
+          <Badge small tertiary mr={2}>
+            Tertiary
+          </Badge>
+          <Badge small>Default</Badge>
+        </Box>
+      </Provider>
+    )
+  })
+  .add('Xsmall', () => {
+    return (
+      <Provider>
+        <Box m={3}>
+          <Badge xsmall primary mr={2}>
+            Primary
+          </Badge>
+          <Badge xsmall secondary mr={2}>
+            Secondary
+          </Badge>
+          <Badge xsmall tertiary mr={2}>
+            Tertiary
+          </Badge>
+          <Badge xsmall>Default</Badge>
         </Box>
       </Provider>
     )

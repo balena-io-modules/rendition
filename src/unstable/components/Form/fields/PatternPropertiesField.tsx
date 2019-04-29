@@ -157,7 +157,7 @@ export default class PatternPropertiesField extends React.Component<
 										<ActionButton
 											type="button"
 											className="rendition-form-pattern-properties__remove-field"
-											plaintext
+											plain
 											mb={2}
 											mt={1}
 											px={1}

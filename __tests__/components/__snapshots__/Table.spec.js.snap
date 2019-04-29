@@ -2,24 +2,28 @@
 
 exports[`Table component should match the stored snapshot 1`] = `
 <div
-  className="sc-kpOJdX XaoNw"
+  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-dxgOiQ dWDHno"
+    className="sc-cmTdod ePZXKJ"
   >
     <div
-      className="sc-ckVGcZ lmhPCi"
+      className="sc-jwKygS Cdvzk"
     >
       <div
-        data-display="table-head"
+        className="sc-btzYZH cgYEEM"
       >
         <div
-          data-display="table-row"
+          data-display="table-head"
+        >
+          <div
+            data-display="table-row"
+          />
+        </div>
+        <div
+          data-display="table-body"
         />
       </div>
-      <div
-        data-display="table-body"
-      />
     </div>
   </div>
 </div>

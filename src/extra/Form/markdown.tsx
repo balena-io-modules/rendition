@@ -1,5 +1,6 @@
+import { Tab, Tabs } from 'grommet';
 import * as React from 'react';
-import { Link, Tabs, Textarea, Theme } from '../../';
+import { Link, Textarea, Theme } from '../../';
 import { Form } from '../../unstable';
 import { Markdown } from '../Markdown';
 
@@ -43,42 +44,45 @@ class Widget extends React.Component<FormWidgetProps, {}> {
 		} = this.props;
 
 		return (
-			<Tabs
-				tabs={['Write', 'Preview']}
-				help={
-					<Link
-						fontSize={2}
-						href={'https://guides.github.com/features/mastering-markdown/'}
-						blank
-					>
-						About markdown
-					</Link>
-				}
-			>
-				<Textarea
-					placeholder="This text supports markdown"
-					readOnly={readonly}
-					disabled={disabled}
-					autoFocus={autofocus}
-					value={value || ''}
-					{...inputProps}
-					onChange={this.handleChange}
-					onBlur={this.handleBlur}
-					onFocus={this.handleFocus}
-					rows={5}
-				/>
+			<React.Fragment>
+				<Tabs justify="start">
+					<Tab title="Write">
+						<Textarea
+							placeholder="This text supports markdown"
+							readOnly={readonly}
+							disabled={disabled}
+							autoFocus={autofocus}
+							value={value || ''}
+							{...inputProps}
+							onChange={this.handleChange}
+							onBlur={this.handleBlur}
+							onFocus={this.handleFocus}
+							rows={5}
+						/>
+					</Tab>
 
-				<Markdown
-					p={3}
-					style={{
-						borderRadius: Theme.radius,
-						width: '100%',
-						minHeight: 180,
-					}}
+					<Tab title="Preview">
+						<Markdown
+							p={3}
+							style={{
+								borderRadius: Theme.radius,
+								width: '100%',
+								minHeight: 180,
+							}}
+						>
+							{value}
+						</Markdown>
+					</Tab>
+				</Tabs>
+
+				<Link
+					fontSize={0}
+					href={'https://guides.github.com/features/mastering-markdown/'}
+					blank
 				>
-					{value}
-				</Markdown>
-			</Tabs>
+					About markdown
+				</Link>
+			</React.Fragment>
 		);
 	}
 }

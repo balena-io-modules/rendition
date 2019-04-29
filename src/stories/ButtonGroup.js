@@ -5,7 +5,7 @@ import withReadme from 'storybook-readme/with-readme'
 import { Box, Button, ButtonGroup, Provider } from '../'
 import Readme from './README/ButtonGroup.md'
 
-storiesOf('Core/ButtonGroup', module)
+storiesOf('Next/ButtonGroup', module)
   .addDecorator(withReadme(Readme))
   .addDecorator(withScreenshot())
   .add('Standard', () => {

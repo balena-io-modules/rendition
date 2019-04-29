@@ -5,7 +5,7 @@ import withReadme from 'storybook-readme/with-readme'
 import { Provider, Tabs, Txt } from '..'
 import Readme from './README/Tabs.md'
 
-storiesOf('Core/Tabs', module)
+storiesOf('Next/Tabs', module)
   .addDecorator(withReadme(Readme))
   .addDecorator(withScreenshot())
   .add('Standard', () => {

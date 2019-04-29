@@ -2,67 +2,75 @@
 
 exports[`JellyForm component should match the stored snapshot 1`] = `
 <div
-  className="sc-cSHVUG qvjIL"
+  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-cQFLBn lcYzlH sc-gzVnrw pznRG sc-bZQynM kMvugX"
+    className="sc-cSHVUG cVRlef"
   >
-    <form
-      className="rjsf"
-      noValidate={false}
-      onSubmit={[Function]}
+    <div
+      className="sc-cMhqgX eOVIdE sc-gzVnrw pznRG sc-bZQynM kMvugX"
     >
-      <div
-        className="form-group field field-object rendition-form__field--root sc-gzVnrw fcRkeO sc-bZQynM kMvugX"
+      <form
+        className="rjsf"
+        noValidate={false}
+        onSubmit={[Function]}
       >
-        <fieldset>
-          <legend
-            className="sc-bAeIUo jCPbKS"
-            id="root__title"
-          >
-            Pokèmon
-          </legend>
-          <div
-            className="form-group field field-string rendition-form__field--root_Name sc-gzVnrw fcRkeO sc-bZQynM kMvugX"
-          >
-            <label
-              className="control-label sc-exAgwC jNeAjG"
-              htmlFor="root_Name"
+        <div
+          className="form-group field field-object rendition-form__field--root sc-gzVnrw fcRkeO sc-bZQynM kMvugX"
+        >
+          <fieldset>
+            <legend
+              className="sc-epnACN dunoRN"
+              id="root__title"
             >
-              Name
-              <span
-                className="required"
+              Pokèmon
+            </legend>
+            <div
+              className="form-group field field-string rendition-form__field--root_Name sc-gzVnrw fcRkeO sc-bZQynM kMvugX"
+            >
+              <label
+                className="control-label sc-hZSUBg ezsVLv"
+                htmlFor="root_Name"
               >
-                *
-              </span>
-            </label>
-            <input
-              autoFocus={false}
-              className="sc-TOsTZ iaAvvw sc-cHGsZl gRExkK"
-              disabled={false}
-              id="root_Name"
-              label="Name"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              placeholder=""
-              readOnly={false}
-              required={true}
-              type="text"
-              value="Bulbasaur"
-            />
-            <div />
-          </div>
-        </fieldset>
-        <div />
-      </div>
-      <button
-        className="sc-ckVGcZ cobMRw sc-chPdSV RVROT"
-        type="submit"
-      >
-        Submit
-      </button>
-    </form>
+                Name
+                <span
+                  className="required"
+                >
+                  *
+                </span>
+              </label>
+              <input
+                autoFocus={false}
+                className="sc-gipzik jGrCwz sc-jlyJG PZCUU"
+                disabled={false}
+                id="root_Name"
+                label="Name"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                placeholder=""
+                readOnly={false}
+                required={true}
+                type="text"
+                value="Bulbasaur"
+              />
+              <div />
+            </div>
+          </fieldset>
+          <div />
+        </div>
+        <button
+          className="sc-kAzzGY sc-dxgOiQ fZnRKS sc-chPdSV gHrcHq StyledButton-sc-323bzc-0 litbIy"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
   </div>
 </div>
 `;

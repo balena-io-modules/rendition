@@ -114,7 +114,7 @@ class FilterSummary extends React.Component<
 
 					<Button
 						primary
-						plaintext
+						plain
 						fontSize={13}
 						mt={-7}
 						onClick={() => this.setState({ showForm: !this.state.showForm })}

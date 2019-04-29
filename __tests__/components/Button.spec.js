@@ -27,7 +27,7 @@ test('Styled Button renders correctly', () => {
 test('Styled Anchor Button renders correctly', () => {
   const component = renderer.create(
     <Provider>
-      <Button.a href={'#'} m={2}>Click me</Button.a>
+      <Button href={'#'} m={2}>Click me</Button>
     </Provider>
   )
   let tree = component.toJSON()

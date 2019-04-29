@@ -2,32 +2,51 @@
 
 exports[`Modal renders correctly 1`] = `
 <div
-  className="sc-bdVaJa iLLxmY"
+  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-chPdSV sc-ckVGcZ cLHgGt sc-kAzzGY ikexOF sc-cSHVUG gbsWRV"
-    onClick={[Function]}
+    className="sc-cmTdod ePZXKJ"
   >
     <div
-      className="sc-jKJlTe cXwbpL sc-jzJRlG cvFLEa sc-fjdhpX fNNSIL"
-      z={8888}
-    />
-    <div
-      className="sc-kEYyzF iSkjgM sc-kAzzGY ikexOF sc-cSHVUG gbsWRV"
+      aria-hidden={false}
     >
       <div
-        className="sc-kkGfuU bBINRA sc-kAzzGY fLGkVM sc-cSHVUG gbsWRV"
-        onClick={[Function]}
+        className="StyledLayer-rmtehz-0 exVYop"
+        onKeyDown={[Function]}
+        tabIndex="-1"
       >
-        Modal
         <div
-          className="sc-chPdSV gWTjoX sc-kAzzGY cEhHZr sc-cSHVUG gbsWRV"
+          className="StyledLayer__StyledOverlay-rmtehz-1 jDYYNt"
+          onMouseDown={[Function]}
+        />
+        <div
+          className="StyledLayer__StyledContainer-rmtehz-2 hWJDps"
         >
-          <button
-            className="sc-VigVT dzpHnm sc-htoDjs hQVMTw"
+          <a
+            aria-hidden="true"
+            className="LayerContainer__HiddenAnchor-sc-1srj14c-0 LMZHJ"
+            tabIndex="-1"
+          />
+          <div
+            className="sc-fBuWsC ijsQEk sc-gzVnrw hDMqvH sc-bZQynM kMvugX"
+            onClick={[Function]}
           >
-            OK
-          </button>
+            Modal
+            <div
+              className="sc-htoDjs iWrvzc sc-gzVnrw PpHOL sc-bZQynM kMvugX"
+            >
+              <button
+                className="sc-kEYyzF sc-cvbbAY ldJHua sc-kkGfuU IOckn StyledButton-sc-323bzc-0 litbIy"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onMouseOut={[Function]}
+                onMouseOver={[Function]}
+                type="button"
+              >
+                OK
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

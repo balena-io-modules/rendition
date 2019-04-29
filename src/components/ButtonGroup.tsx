@@ -3,21 +3,24 @@ import { Flex } from './Grid';
 
 export default styled(Flex)`
 	> * {
-		border-radius: 0;
 		margin-right: -1px;
 
-		&:hover {
-			z-index: 1;
-		}
-
 		&:first-child {
-			border-top-left-radius: ${props => props.theme.radius}px;
-			border-bottom-left-radius: ${props => props.theme.radius}px;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
 		}
 
 		&:last-child {
-			border-top-right-radius: ${props => props.theme.radius}px;
-			border-bottom-right-radius: ${props => props.theme.radius}px;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+
+		&:not(:last-child):not(:first-child) {
+			border-radius: 0;
+		}
+
+		&:hover {
+			z-index: 1;
 		}
 	}
 `;

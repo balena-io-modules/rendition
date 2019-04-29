@@ -2,37 +2,63 @@
 
 exports[`Button renders correctly 1`] = `
 <div
-  className="sc-bdVaJa iLLxmY"
+  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
-  <button
-    className="sc-htoDjs sc-VigVT dzpHnm sc-gqjmRU hdWNYH"
+  <div
+    className="sc-bdVaJa lgVSbN"
   >
-    Click me
-  </button>
+    <button
+      className="sc-gzVnrw sc-gqjmRU juqtoI sc-dnqmqq kINCPD StyledButton-sc-323bzc-0 djTlJn"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      type="button"
+    >
+      Click me
+    </button>
+  </div>
 </div>
 `;
 
 exports[`Styled Anchor Button renders correctly 1`] = `
 <div
-  className="sc-bdVaJa iLLxmY"
+  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
-  <a
-    className="sc-htoDjs sc-jTzLTM fBIESj sc-gqjmRU hdWNYH"
-    href="#"
+  <div
+    className="sc-bdVaJa lgVSbN"
   >
-    Click me
-  </a>
+    <a
+      className="sc-gzVnrw sc-gqjmRU gNVwjg sc-dnqmqq kINCPD StyledButton-sc-323bzc-0 djTlJn"
+      href="#"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    >
+      Click me
+    </a>
+  </div>
 </div>
 `;
 
 exports[`Styled Button renders correctly 1`] = `
 <div
-  className="sc-bdVaJa iLLxmY"
+  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
-  <button
-    className="sc-htoDjs sc-VigVT dJfJRg sc-gqjmRU hdWNYH"
+  <div
+    className="sc-bdVaJa lgVSbN"
   >
-    Click me
-  </button>
+    <button
+      className="sc-gzVnrw sc-gqjmRU gNVwjg sc-dnqmqq kINCPD StyledButton-sc-323bzc-0 djTlJn"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      type="button"
+    >
+      Click me
+    </button>
+  </div>
 </div>
 `;

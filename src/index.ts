@@ -1,22 +1,10 @@
 export { default as Alert, AlertProps } from './components/Alert';
 export { default as ArcSlider, ArcSliderProps } from './components/ArcSlider';
 export { default as Badge, BadgeProps } from './components/Badge';
-export {
-	default as BadgeSelect,
-	BadgeSelectProps,
-} from './components/BadgeSelect';
 export { default as Banner, BannerProps } from './components/Banner';
-export {
-	default as Button,
-	ButtonAnchorProps,
-	ButtonProps,
-} from './components/Button';
+export { default as Button, ButtonProps } from './components/Button';
 export { default as ButtonGroup } from './components/ButtonGroup';
 export { default as Card, CardProps } from './components/Card';
-export {
-	default as CodeWithCopy,
-	CodeWithCopyProps,
-} from './components/CodeWithCopy';
 export { default as Divider, DividerProps } from './components/Divider';
 export {
 	default as Filters,
@@ -35,7 +23,6 @@ export { default as Fixed, FixedProps } from './components/Fixed';
 export { default as Input, InputProps } from './components/Input';
 export { default as Modal, ModalProps } from './components/Modal';
 export { default as Pager, PagerProps } from './components/Pager';
-export { default as Pill, PillProps } from './components/Pill';
 export {
 	default as ProgressBar,
 	ProgressBarProps,

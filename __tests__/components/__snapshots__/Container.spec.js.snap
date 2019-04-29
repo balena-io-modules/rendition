@@ -2,12 +2,16 @@
 
 exports[`Container renders correctly 1`] = `
 <div
-  className="sc-bdVaJa iLLxmY"
+  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-htoDjs dCPrfN sc-gzVnrw fROHjj"
+    className="sc-bdVaJa lgVSbN"
   >
-    Container
+    <div
+      className="sc-htoDjs dCPrfN sc-gzVnrw fROHjj"
+    >
+      Container
+    </div>
   </div>
 </div>
 `;

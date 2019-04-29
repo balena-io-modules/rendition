@@ -325,7 +325,7 @@ storiesOf('Core/Modal', module)
     )
   })
 
-storiesOf('Core/Modal', module)
+storiesOf('Next/Modal', module)
   .addDecorator(withReadme(Readme))
   .addDecorator(withScreenshot())
   .add('Open Modal Demo', () => {
@@ -377,6 +377,13 @@ storiesOf('Core/Modal', module)
     return (
       <Provider>
         <NestedModalDemo />
+      </Provider>
+    )
+  })
+  .add('test', () => {
+    return (
+      <Provider>
+        <Modal>modal</Modal>
       </Provider>
     )
   })

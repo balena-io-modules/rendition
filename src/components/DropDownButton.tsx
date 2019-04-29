@@ -18,6 +18,8 @@ const ToggleBase = styled(Button)`
 	border-left: 0;
 	margin: 0;
 	vertical-align: top;
+	padding-left: 16px;
+	padding-right: 16px;
 `;
 
 const ButtonBase = styled(Button)`
@@ -100,7 +102,7 @@ const Toggle = ({
 			);
 		}
 		return (
-			<JoinedButton {...props} square onClick={handler}>
+			<JoinedButton {...props} onClick={handler}>
 				{open ? <IconCaretUp /> : <IconCaretDown />}
 			</JoinedButton>
 		);

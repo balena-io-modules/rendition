@@ -7,10 +7,8 @@ import withReadme from 'storybook-readme/with-readme'
 import {
   Alert,
   Badge,
-  BadgeSelect,
   Box,
   Button,
-  CodeWithCopy,
   DropDownButton,
   Fixed,
   Flex,
@@ -20,6 +18,8 @@ import {
   Link
 } from '..'
 import Readme from './README/Tooltips.md'
+
+console.log({ Badge })
 
 storiesOf('Core/Tooltips', module)
   .addDecorator(withReadme(Readme))
@@ -134,13 +134,7 @@ storiesOf('Core/Tooltips', module)
           </Alert>
 
           <Heading.h3 mt={30}>Badge</Heading.h3>
-          <Badge tooltip='Badge tooltip' text='lorem' />
-
-          <Heading.h3 mt={30}>BadgeSelect</Heading.h3>
-          <BadgeSelect
-            tooltip='BadgeSelect tooltip'
-            items={['wpe', 'web', 'redis']}
-          />
+          <Badge tooltip='Badge tooltip'>Lorem</Badge>
 
           <Heading.h3 mt={30}>Box</Heading.h3>
           <Box tooltip='Box tooltip'>Lorem ipsum dolor sit amet.</Box>
@@ -169,9 +163,6 @@ storiesOf('Core/Tooltips', module)
           >
             <Txt>Lorem ipsum</Txt>
           </Button>
-
-          <Heading.h3 mt={30}>CodeWithCopy</Heading.h3>
-          <CodeWithCopy text='Lorem' tooltip='CodeWithCopy tooltip' />
 
           <Heading.h3 mt={30}>DropDownButton</Heading.h3>
           <DropDownButton

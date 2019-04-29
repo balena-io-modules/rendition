@@ -7,7 +7,7 @@ import Badge from '../../src/components/Badge'
 test('Badge renders correctly', () => {
   const component = renderer.create(
     <Provider>
-      <Badge text='badge' />
+      <Badge>Badge</Badge>
     </Provider>
   )
   let tree = component.toJSON()

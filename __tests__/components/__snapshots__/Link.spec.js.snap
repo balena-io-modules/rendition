@@ -2,13 +2,17 @@
 
 exports[`Link component Should match the stored snapshot 1`] = `
 <div
-  className="sc-bdVaJa iLLxmY"
+  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
-  <a
-    className="sc-gqjmRU huqeNB sc-gZMcBi iozIhE"
-    color="primary.main"
+  <div
+    className="sc-bdVaJa lgVSbN"
   >
-    Link
-  </a>
+    <a
+      className="sc-gqjmRU huqeNB sc-gZMcBi iozIhE"
+      color="primary.main"
+    >
+      Link
+    </a>
+  </div>
 </div>
 `;

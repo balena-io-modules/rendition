@@ -1,5 +1,6 @@
+import { Tab, Tabs } from 'grommet';
 import * as React from 'react';
-import { Link, Tabs, Textarea, Theme } from '../../';
+import { Link, Textarea, Theme } from '../../';
 import { Form } from '../../unstable';
 import { Mermaid } from '../Mermaid';
 
@@ -43,38 +44,41 @@ class Widget extends React.Component<FormWidgetProps, {}> {
 		} = this.props;
 
 		return (
-			<Tabs
-				tabs={['Write', 'Preview']}
-				help={
-					<Link fontSize={2} href={'https://mermaidjs.github.io/'} blank>
-						About mermaid
-					</Link>
-				}
-			>
-				<Textarea
-					placeholder="This text supports mermaid charts"
-					readOnly={readonly}
-					disabled={disabled}
-					autoFocus={autofocus}
-					value={value || ''}
-					{...inputProps}
-					onChange={this.handleChange}
-					onBlur={this.handleBlur}
-					onFocus={this.handleFocus}
-					rows={5}
-				/>
+			<React.Fragment>
+				<Tabs justify="start">
+					<Tab title="Write">
+						<Textarea
+							placeholder="This text supports mermaid charts"
+							readOnly={readonly}
+							disabled={disabled}
+							autoFocus={autofocus}
+							value={value || ''}
+							{...inputProps}
+							onChange={this.handleChange}
+							onBlur={this.handleBlur}
+							onFocus={this.handleFocus}
+							rows={5}
+						/>
+					</Tab>
 
-				<Mermaid
-					bg={Theme.colors.gray.light}
-					p={3}
-					style={{
-						borderRadius: Theme.radius,
-						width: '100%',
-						minHeight: 180,
-					}}
-					value={value}
-				/>
-			</Tabs>
+					<Tab title="Preview">
+						<Mermaid
+							bg={Theme.colors.gray.light}
+							p={3}
+							style={{
+								borderRadius: Theme.radius,
+								width: '100%',
+								minHeight: 180,
+							}}
+							value={value}
+						/>
+					</Tab>
+				</Tabs>
+
+				<Link fontSize={0} href={'https://mermaidjs.github.io/'} blank>
+					About mermaid
+				</Link>
+			</React.Fragment>
 		);
 	}
 }

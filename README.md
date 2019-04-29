@@ -48,13 +48,11 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [Alert](#alert)
 - [ArcSlider](#arcslider)
 - [Badge](#badge)
-- [BadgeSelect](#badgeselect)
 - [Banner](#banner)
 - [Box](#box)
 - [Button](#button)
 - [ButtonGroup](#buttongroup)
 - [Card](#card)
-- [CodeWithCopy](#codewithcopy)
 - [Container](#container)
 - [Divider](#divider)
 - [DropDownButton](#dropdownbutton)
@@ -71,7 +69,6 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [Modal](#modal)
 - [Navbar](#navbar)
 - [Pager](#pager)
-- [Pill](#pill)
 - [ProgressBar](#progressbar)
 - [Search](#search)
 - [Select](#select)
@@ -147,28 +144,6 @@ automatically from its `text` property, though this can be overridden.
 | `text`  | `string` | - | ✓ | The text to display inside the badge |
 | `small`  | `boolean` | - | - | If true, reduce the scale of the badge |
 
-### BadgeSelect
-
-Displays a dropdown list, with each item displayed as a `Badge` component.
-
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/BadgeSelect.js)
-
-#### Props
-
-| Name   | Type   | Default   | Required   | Description   |
-| ------ | ------ | --------- | ---------- | ------------- |
-| `items`  | `string[]` | - | ✓ | An array of strings that should be rendered as `Badge`components |
-| `extraPrefix`  | `string[]` | - | - | An array of strings that should be rendered in plaintext, before the main items |
-| `extraSuffix`  | `string[]` | - | - | An array of strings that should be rendered in plaintext, after the main items |
-| `onItemChange`  | `(value: string) => void` | - | - | A function that is called when an item is selected |
-| `defaultSelected`| `string`| - | - | The item that should be selected by default |
-| `placeholder`| `string`| - | - | The text to display if no item is selected by default |
-
-Any other properties supplied are spread to the root element ([`DropDownButton`](#dropdownbutton)).
-
-#### Inheritance
-
-The properties of the [`DropDownButton`](#dropdownbutton) component are also available.
 ### Banner
 
 [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Banner.js)
@@ -242,20 +217,6 @@ Section containing content and actions on the same topic.
 | `rows`  | `JSX.Element[]` | - | - | Subsections separated by a horizontal separator |
 | `minHeight`  | `string` | `auto` | - | CSS minHeight property |
 | `children`  | `JSX.Element` | - | - | Any content that is internally wrapped in a Box |
-
-### CodeWithCopy
-
-Displays text formatted as `<code>` that can be copied to the clipboard.
-
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/CodeWithCopy.js)
-
-#### Props
-
-| Name          | Type      | Default   | Required   | Description                                          |
-| ------ | ------ | --------- | ---------- | ------------- |
-| `text`      | `string` | -         | ✓          | The value that should be displayed, if the `copy` prop is not provided, this value will be copied to the clipboard
-| `copy`      | `string` | -         | -          | The value that should be copied to the clipboard
-| `showCopyButton`      | <code>'hover' &#124; 'always'</code> | <code>'always'</code>       | -          | Optionally show the copy button on hover or always show the button
 
 ### Container
 
@@ -609,27 +570,6 @@ Displays a pager widget.
 | `nextPage`    | `() => void` | -         | -          | Callback invoked when the "next page" button is clicked
 | `prevPage`    | `() => void` | -         | -          | Callback invoked when the "previous page" button is clicked
 
-### Pill
-
-Displays a text block with rounded corners.
-
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Pill.tsx)
-
-#### Props
-
-| Name          | Type                        | Default   | Required   | Description                                      |
-| --------------|-----------------------------|-----------|------------|------------------------------------------------- |
-| `primary`     | `boolean`                   | -         | -          | If true, use the `primary` theme color           |
-| `secondary`   | `boolean`                   | -         | -          | If true, use the `secondary` theme color         |
-| `tertiary`    | `boolean`                   | -         | -          | If true, use the `tertiary` theme color          |
-| `quarternary` | `boolean`                   | -         | -          | If true, use the `quarternary` theme color       |
-| `danger`      | `boolean`                   | -         | -          | If true, use the `danger` theme color            |
-| `warning`     | `boolean`                   | -         | -          | If true, use the `warning` theme color           |
-| `success`     | `boolean`                   | -         | -          | If true, use the `success` theme color           |
-| `info`        | `boolean`                   | -         | -          | If true, use the `info` theme color              |
-| `shade`       | `main` or `light` or `dark` | -         | -          | Can be set to use a variation of the theme color |
-| `small`       | `boolean`                   | -         | -          | Scales down the badge                            |
-
 ### ProgressBar
 
 Displays a progress bar using a value representing a percentage.
@@ -919,7 +859,6 @@ The following rendition components support the `tooltip` attribute:
 
 - `Alert`
 - `Badge`
-- `BadgeSelect`
 - `Box`
 - `Button`
 - `CodeWithCopy`

@@ -3,7 +3,7 @@ import noop = require('lodash/noop');
 import * as React from 'react';
 import FaClose = require('react-icons/lib/fa/close');
 import styled from 'styled-components';
-import Button from '../Button';
+import { Button } from '../../';
 import { Box, Flex } from '../Grid';
 
 const ButtonWrapper = styled.button`
@@ -47,7 +47,7 @@ const FilterDescription = (props: FilterDescriptionProps) => {
 
 			{!!props.delete && (
 				<DeleteButton
-					plaintext
+					plain
 					p={1}
 					fontSize={1}
 					ml={1}

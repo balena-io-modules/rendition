@@ -11,9 +11,9 @@ import * as React from 'react';
 import FaClose = require('react-icons/lib/fa/close');
 import FaFilter = require('react-icons/lib/fa/filter');
 import styled from 'styled-components';
+import { Button, ButtonProps } from '../../';
 import { DefaultProps } from '../../common-types';
 import * as utils from '../../utils';
-import Button, { ButtonProps } from '../Button';
 import { getDataModel } from '../DataTypes';
 import { DropDownButtonProps } from '../DropDownButton';
 import { Box, Flex } from '../Grid';
@@ -465,7 +465,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 										</Flex>
 										{index > 0 && (
 											<DeleteButton
-												plaintext
+												plain
 												fontSize={1}
 												p={1}
 												onClick={() => this.removeCompound(index)}
