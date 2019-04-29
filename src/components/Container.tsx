@@ -21,7 +21,7 @@ const Container = (props: ThemedContainerProps) => {
 		<ContainerBase
 			{...props}
 			maxWidth={props.theme.breakpoints.map(
-				(bp, i) => `${bp - props.theme.space[i]}em`,
+				(bp, i) => `calc(${bp} - ${props.theme.space[i]}em)`,
 			)}
 		/>
 	);

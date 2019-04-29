@@ -82,7 +82,7 @@ const colors = {
 const defaultControlHeight = 36;
 const emphasizedControlHeight = 48;
 
-export const breakpoints = [32, 48, 64, 80];
+export const breakpoints = ['32em', '48em', '64em', '80em'];
 
 export const space = [
 	0,
