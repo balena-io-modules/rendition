@@ -1,4 +1,5 @@
 import { Grommet } from 'grommet';
+import merge = require('lodash/merge');
 import * as React from 'react';
 import styled from 'styled-components';
 import { DefaultProps, Theme } from '../common-types';
@@ -21,7 +22,7 @@ const Base = styled.div<ThemedProvider>`
 
 const Provider = ({ theme, ...props }: ThemedProvider) => {
 	return (
-		<Grommet theme={Object.assign({}, defaultTheme, theme)}>
+		<Grommet theme={merge(defaultTheme, theme)}>
 			<Base {...props} />
 		</Grommet>
 	);
