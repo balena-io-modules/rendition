@@ -33,7 +33,8 @@ const ColouredButton = styled(ButtonBase)`
 	color: white;
 `;
 
-const Outline = styled(ButtonBase)`
+const Outline = styled(ButtonBase)<ButtonBaseProps>`
+	background: ${props => props.bg || 'white'};
 	color: ${props =>
 		getColor(props, 'color', 'main') || props.theme.colors.text.main};
 `;

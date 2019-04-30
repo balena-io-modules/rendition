@@ -31,7 +31,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
           className="sc-dnqmqq sc-brqgnP hNdaTS sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
         >
           <button
-            className="sc-kkGfuU rendition-pager__btn--prev sc-jWBwVP ikgZSL sc-hSdWYo cfCmvn StyledButton-sc-323bzc-0 hIKTNd"
+            className="sc-kkGfuU rendition-pager__btn--prev sc-jWBwVP ikgZSL sc-hSdWYo eOEmaH StyledButton-sc-323bzc-0 hIKTNd"
             disabled={true}
             onBlur={[Function]}
             onClick={[Function]}
@@ -61,7 +61,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
             </svg>
           </button>
           <button
-            className="sc-kkGfuU rendition-pager__btn--next sc-jWBwVP ikgZSL sc-hSdWYo cfCmvn StyledButton-sc-323bzc-0 kTZdmm"
+            className="sc-kkGfuU rendition-pager__btn--next sc-jWBwVP ikgZSL sc-hSdWYo eOEmaH StyledButton-sc-323bzc-0 kTZdmm"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}

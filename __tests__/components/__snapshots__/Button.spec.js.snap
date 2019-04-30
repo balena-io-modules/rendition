@@ -8,7 +8,7 @@ exports[`Button renders correctly 1`] = `
     className="sc-bdVaJa lgVSbN"
   >
     <button
-      className="sc-gzVnrw sc-gqjmRU juqtoI sc-dnqmqq kINCPD StyledButton-sc-323bzc-0 djTlJn"
+      className="sc-gzVnrw sc-gqjmRU juqtoI sc-dnqmqq dZhiEv StyledButton-sc-323bzc-0 djTlJn"
       onBlur={[Function]}
       onFocus={[Function]}
       onMouseOut={[Function]}
@@ -29,7 +29,7 @@ exports[`Styled Anchor Button renders correctly 1`] = `
     className="sc-bdVaJa lgVSbN"
   >
     <a
-      className="sc-gzVnrw sc-gqjmRU gNVwjg sc-dnqmqq kINCPD StyledButton-sc-323bzc-0 djTlJn"
+      className="sc-gzVnrw sc-gqjmRU gNVwjg sc-dnqmqq dZhiEv StyledButton-sc-323bzc-0 djTlJn"
       href="#"
       onBlur={[Function]}
       onFocus={[Function]}
@@ -50,7 +50,7 @@ exports[`Styled Button renders correctly 1`] = `
     className="sc-bdVaJa lgVSbN"
   >
     <button
-      className="sc-gzVnrw sc-gqjmRU gNVwjg sc-dnqmqq kINCPD StyledButton-sc-323bzc-0 djTlJn"
+      className="sc-gzVnrw sc-gqjmRU gNVwjg sc-dnqmqq dZhiEv StyledButton-sc-323bzc-0 djTlJn"
       onBlur={[Function]}
       onFocus={[Function]}
       onMouseOut={[Function]}
