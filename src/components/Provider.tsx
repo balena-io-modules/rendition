@@ -21,7 +21,7 @@ const Base = styled.div<ThemedProvider>`
 
 const Provider = ({ theme, ...props }: ThemedProvider) => {
 	return (
-		<Grommet theme={theme || defaultTheme}>
+		<Grommet theme={Object.assign({}, defaultTheme, theme)}>
 			<Base {...props} />
 		</Grommet>
 	);
