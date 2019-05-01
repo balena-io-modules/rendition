@@ -11,10 +11,10 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
       className="sc-jzJRlG ePCFxN sc-fjdhpX fGySkI"
     >
       <div
-        className="sc-jTzLTM cHhUzV sc-VigVT cDDakZ"
+        className="sc-jTzLTM cHhUzV sc-VigVT jBgDm"
       >
         <div
-          className="sc-cSHVUG jupnHv sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
+          className="sc-cSHVUG jXEWLU sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
         >
           <div
             className="sc-cSHVUG dzaSRZ sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
@@ -23,7 +23,7 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
               className="sc-kAzzGY eBRrrJ sc-jzJRlG VNfXw sc-fjdhpX fGySkI"
             />
             <div
-              className="sc-chPdSV kZPspx sc-jzJRlG igYAJh sc-fjdhpX fGySkI"
+              className="sc-chPdSV lkxntg sc-jzJRlG exaDfR sc-fjdhpX fGySkI"
               display={
                 Array [
                   "block",
@@ -54,13 +54,13 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
             </div>
           </div>
           <div
-            className="sc-cSHVUG sc-kgoBCf grUVNe sc-jzJRlG cmiCuG sc-fjdhpX fGySkI"
+            className="sc-cSHVUG sc-kgoBCf jCVmHt sc-jzJRlG jltOFs sc-fjdhpX fGySkI"
           >
             <div
-              className="sc-cSHVUG jupnHv sc-jzJRlG hNbcNm sc-fjdhpX fGySkI"
+              className="sc-cSHVUG jXEWLU sc-jzJRlG iggMMu sc-fjdhpX fGySkI"
             >
               <div
-                className="sc-jzJRlG ibRXJq sc-fjdhpX fGySkI"
+                className="sc-jzJRlG utfzA sc-fjdhpX fGySkI"
                 onClick={[Function]}
               >
                 <a
@@ -91,10 +91,10 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
       className="sc-jzJRlG ePCFxN sc-fjdhpX fGySkI"
     >
       <div
-        className="sc-jTzLTM cHhUzV sc-VigVT cDDakZ"
+        className="sc-jTzLTM cHhUzV sc-VigVT jBgDm"
       >
         <div
-          className="sc-cSHVUG jupnHv sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
+          className="sc-cSHVUG jXEWLU sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
         >
           <div
             className="sc-cSHVUG dzaSRZ sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
@@ -103,7 +103,7 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
               className="sc-kAzzGY eBRrrJ sc-jzJRlG VNfXw sc-fjdhpX fGySkI"
             />
             <div
-              className="sc-chPdSV kZPspx sc-jzJRlG igYAJh sc-fjdhpX fGySkI"
+              className="sc-chPdSV lkxntg sc-jzJRlG exaDfR sc-fjdhpX fGySkI"
               display={
                 Array [
                   "block",
@@ -134,13 +134,13 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
             </div>
           </div>
           <div
-            className="sc-cSHVUG sc-kgoBCf grUVNe sc-jzJRlG cmiCuG sc-fjdhpX fGySkI"
+            className="sc-cSHVUG sc-kgoBCf jCVmHt sc-jzJRlG jltOFs sc-fjdhpX fGySkI"
           >
             <div
-              className="sc-cSHVUG jupnHv sc-jzJRlG hNbcNm sc-fjdhpX fGySkI"
+              className="sc-cSHVUG jXEWLU sc-jzJRlG iggMMu sc-fjdhpX fGySkI"
             >
               <div
-                className="sc-jzJRlG ibRXJq sc-fjdhpX fGySkI"
+                className="sc-jzJRlG utfzA sc-fjdhpX fGySkI"
                 onClick={[Function]}
               >
                 <a
@@ -152,7 +152,7 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
                 </a>
               </div>
               <div
-                className="sc-jzJRlG ibRXJq sc-fjdhpX fGySkI"
+                className="sc-jzJRlG utfzA sc-fjdhpX fGySkI"
                 onClick={[Function]}
               >
                 <a
@@ -164,7 +164,7 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
                 </a>
               </div>
               <div
-                className="sc-jzJRlG ibRXJq sc-fjdhpX fGySkI"
+                className="sc-jzJRlG utfzA sc-fjdhpX fGySkI"
                 onClick={[Function]}
               >
                 <a
@@ -195,10 +195,10 @@ exports[`Navbar renders correctly with no children prop 1`] = `
       className="sc-jzJRlG ePCFxN sc-fjdhpX fGySkI"
     >
       <div
-        className="sc-jTzLTM cHhUzV sc-VigVT cDDakZ"
+        className="sc-jTzLTM cHhUzV sc-VigVT jBgDm"
       >
         <div
-          className="sc-cSHVUG jupnHv sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
+          className="sc-cSHVUG jXEWLU sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
         >
           <div
             className="sc-cSHVUG dzaSRZ sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
@@ -207,7 +207,7 @@ exports[`Navbar renders correctly with no children prop 1`] = `
               className="sc-kAzzGY eBRrrJ sc-jzJRlG VNfXw sc-fjdhpX fGySkI"
             />
             <div
-              className="sc-chPdSV kZPspx sc-jzJRlG igYAJh sc-fjdhpX fGySkI"
+              className="sc-chPdSV lkxntg sc-jzJRlG exaDfR sc-fjdhpX fGySkI"
               display={
                 Array [
                   "block",
@@ -238,7 +238,7 @@ exports[`Navbar renders correctly with no children prop 1`] = `
             </div>
           </div>
           <div
-            className="sc-cSHVUG sc-kgoBCf grUVNe sc-jzJRlG cmiCuG sc-fjdhpX fGySkI"
+            className="sc-cSHVUG sc-kgoBCf jCVmHt sc-jzJRlG jltOFs sc-fjdhpX fGySkI"
           />
         </div>
       </div>
