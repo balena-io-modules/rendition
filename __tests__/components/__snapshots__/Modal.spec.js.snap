@@ -28,7 +28,7 @@ exports[`Modal renders correctly 1`] = `
             tabIndex="-1"
           />
           <div
-            className="sc-fBuWsC ijsQEk sc-gzVnrw hDMqvH sc-bZQynM kMvugX"
+            className="sc-fBuWsC ijsQEk sc-gzVnrw iVQgQP sc-bZQynM kMvugX"
             onClick={[Function]}
           >
             Modal
