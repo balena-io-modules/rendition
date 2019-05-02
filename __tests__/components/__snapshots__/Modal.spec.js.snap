@@ -36,7 +36,7 @@ exports[`Modal renders correctly 1`] = `
               className="sc-htoDjs iWrvzc sc-gzVnrw PpHOL sc-bZQynM kMvugX"
             >
               <button
-                className="sc-kEYyzF sc-cvbbAY ldJHua sc-kkGfuU IOckn StyledButton-sc-323bzc-0 litbIy"
+                className="sc-kEYyzF sc-cvbbAY ldJHua sc-kkGfuU kqxvkn StyledButton-sc-323bzc-0 litbIy"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onMouseOut={[Function]}

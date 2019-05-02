@@ -11,11 +11,11 @@ import {
 	Sizing,
 	Theme,
 } from '../common-types';
-import { bold, getColor, getColoringType, normal, px } from '../utils';
+import { getColor, getColoringType, normal, px } from '../utils';
 
 const ButtonBase = styled(Button)`
 	font-family: ${props => props.theme.titleFont};
-	font-weight: ${props => bold(props)};
+	font-weight: ${props => normal(props)};
 	height: ${props => px(props.theme.space[4])};
 
 	svg {

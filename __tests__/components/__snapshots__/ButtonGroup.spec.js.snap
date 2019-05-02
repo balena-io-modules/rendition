@@ -11,7 +11,7 @@ exports[`ButtonGroup renders correctly 1`] = `
       className="sc-fjdhpX sc-jzJRlG bMJuuP sc-jTzLTM byxFdN sc-VigVT gFvedl"
     >
       <button
-        className="sc-gzVnrw sc-gqjmRU juqtoI sc-dnqmqq kINCPD StyledButton-sc-323bzc-0 djTlJn"
+        className="sc-gzVnrw sc-gqjmRU juqtoI sc-dnqmqq hiYIXu StyledButton-sc-323bzc-0 djTlJn"
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}
@@ -21,7 +21,7 @@ exports[`ButtonGroup renders correctly 1`] = `
         First
       </button>
       <button
-        className="sc-gzVnrw sc-gqjmRU juqtoI sc-dnqmqq kINCPD StyledButton-sc-323bzc-0 djTlJn"
+        className="sc-gzVnrw sc-gqjmRU juqtoI sc-dnqmqq hiYIXu StyledButton-sc-323bzc-0 djTlJn"
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}
@@ -31,7 +31,7 @@ exports[`ButtonGroup renders correctly 1`] = `
         Second
       </button>
       <button
-        className="sc-gzVnrw sc-gqjmRU juqtoI sc-dnqmqq kINCPD StyledButton-sc-323bzc-0 djTlJn"
+        className="sc-gzVnrw sc-gqjmRU juqtoI sc-dnqmqq hiYIXu StyledButton-sc-323bzc-0 djTlJn"
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}
