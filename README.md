@@ -192,9 +192,9 @@ The basic building block of a rendition application.
 | `square`      | `boolean` | -         | -          | If true, render the button with equal length width and height |
 | `disabled`      | `boolean` | -         | -          | If true, disabled the button |
 | `outline`      | `boolean` | -         | -          | If true, the button will have a transparent background, and the border and text color will match |
-| `plaintext`      | `boolean` | -         | -          | If true, render the button without padding, background or border |
+| `plain`      | `boolean` | -         | -          | If true, render the button without padding, background or border |
 | `underline`      | `boolean` | -         | -          | Similar to the `plaintext` prop, but displays a line underneath the button text |
-| `iconElement`      | `JSX.Element` | -         | -          | Optionally provide a JSX element that will be rendered before the text inside the button |
+| `icon`      | `JSX.Element` | -         | -          | Optionally provide a JSX element that will be rendered before the text inside the button |
 
 
 ### ButtonGroup
