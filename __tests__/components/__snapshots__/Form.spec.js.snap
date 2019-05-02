@@ -49,7 +49,7 @@ exports[`Form component should match the stored snapshot 1`] = `
           <div />
         </div>
         <button
-          className="sc-kAzzGY sc-dxgOiQ fZnRKS sc-chPdSV gHrcHq StyledButton-sc-323bzc-0 litbIy"
+          className="sc-kAzzGY sc-dxgOiQ fZnRKS sc-chPdSV eKGfJl StyledButton-sc-323bzc-0 litbIy"
           onBlur={[Function]}
           onFocus={[Function]}
           onMouseOut={[Function]}
