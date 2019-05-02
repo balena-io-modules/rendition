@@ -1,50 +1,70 @@
-/* used multiple times below */
-const primaryLight = '#5FB3E7';
+import * as Color from 'color';
+
+const darken = (percent: number, color: string) =>
+	Color(color)
+		.darken(percent)
+		.hex();
+
+const lighten = (percent: number, color: string) =>
+	Color(color)
+		.lighten(percent)
+		.hex();
+
+const primary = '#00AEEF';
+const secondary = '#2A506F';
+const tertiary = '#527699';
+const quartenary = '#F8F9FD';
+
+const danger = '#FF423D';
+const warning = '#FCA321';
+const success = '#1AC135';
+const info = '#1496E1';
+
 const colors = {
 	primary: {
-		main: '#2297DE',
-		light: primaryLight,
-		dark: '#1E87C7',
+		main: primary,
+		light: lighten(0.1, primary),
+		dark: darken(0.1, primary),
 	},
 	secondary: {
-		main: '#FFC523',
-		light: '#FFD45E',
-		dark: '#E5B01F',
+		main: secondary,
+		light: lighten(0.1, secondary),
+		dark: darken(0.1, secondary),
 	},
 	tertiary: {
-		main: '#4D5057',
-		light: '#7E8085',
-		dark: '#2F3033',
+		main: tertiary,
+		light: lighten(0.1, tertiary),
+		dark: darken(0.1, tertiary),
 	},
 	quartenary: {
-		main: '#EBEFF4',
-		light: '#F0F3F7',
-		dark: '#D3D6DB',
+		main: quartenary,
+		light: lighten(0.1, quartenary),
+		dark: darken(0.1, quartenary),
 	},
 
 	danger: {
-		main: '#FF4444',
-		semilight: '#FFA1A1',
-		light: '#FFECEC',
-		dark: '#661B1B',
+		main: danger,
+		semilight: lighten(0.2, danger),
+		light: lighten(0.55, danger),
+		dark: darken(0.2, danger),
 	},
 	warning: {
-		main: '#FCA321',
-		semilight: '#FDD190',
-		light: '#FEF5E9',
-		dark: '#64410D',
+		main: warning,
+		semilight: lighten(0.2, warning),
+		light: lighten(0.7, warning),
+		dark: darken(0.2, warning),
 	},
 	success: {
-		main: '#4DB313',
-		semilight: '#A6D989',
-		light: '#EDF7E7',
-		dark: '#1E4707',
+		main: success,
+		semilight: lighten(0.22, success),
+		light: lighten(1.25, success),
+		dark: darken(0.2, success),
 	},
 	info: {
-		main: '#2297DE',
-		semilight: '#90CBEE',
-		light: '#E9F4FB',
-		dark: '#0D3C58',
+		main: info,
+		semilight: lighten(0.27, info),
+		light: lighten(1, info),
+		dark: darken(0.2, info),
 	},
 
 	text: {
