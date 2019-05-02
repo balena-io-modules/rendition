@@ -20,5 +20,5 @@
 | `outline`      | `boolean` | -         | -          | If true, the button will have a transparent background, and the border and text color will match |
 | `plain`      | `boolean` | -         | -          | If true, render the button without padding, background or border |
 | `underline`      | `boolean` | -         | -          | Similar to the `plaintext` prop, but displays a line underneath the button text |
-| `iconElement`      | `JSX.Element` | -         | -          | Optionally provide a JSX element that will be rendered before the text inside the button |
+| `icon`      | `JSX.Element` | -         | -          | Optionally provide a JSX element that will be rendered before the text inside the button |
 
