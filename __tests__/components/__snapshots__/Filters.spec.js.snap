@@ -2,34 +2,70 @@
 
 exports[`Filters component should match the stored snapshot 1`] = `
 <div
-  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-bdVaJa lgVSbN StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-bdVaJa lgVSbN"
+    className="sc-eTuwsz bpxOry sc-htoDjs ecIxdc sc-gzVnrw jnVFiX"
   >
     <div
-      className="sc-eTuwsz bpxOry sc-htoDjs ecIxdc sc-gzVnrw jnVFiX"
+      className="sc-dnqmqq cTPVoH sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
     >
-      <div
-        className="sc-dnqmqq cTPVoH sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
+      <button
+        className="sc-kkGfuU sc-jWBwVP gsgKMS sc-iAyFgw hdoHQK StyledButton-sc-323bzc-0 jfOEyc"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        type="button"
       >
-        <button
-          className="sc-kkGfuU sc-jWBwVP gsgKMS sc-iAyFgw hdoHQK StyledButton-sc-323bzc-0 jfOEyc"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          type="button"
+        <svg
+          fill="currentColor"
+          height="1em"
+          preserveAspectRatio="xMidYMid meet"
+          style={
+            Object {
+              "color": undefined,
+              "marginRight": 10,
+              "verticalAlign": "middle",
+            }
+          }
+          viewBox="0 0 40 40"
+          width="1em"
         >
+          <g>
+            <path
+              d="m35.8 6.6q0.4 0.9-0.3 1.5l-11 11.1v16.5q0 1-0.9 1.3-0.3 0.1-0.5 0.1-0.6 0-1-0.4l-5.7-5.7q-0.5-0.4-0.5-1v-10.8l-11-11q-0.7-0.7-0.3-1.6 0.4-0.9 1.3-0.9h28.6q0.9 0 1.3 0.9z"
+            />
+          </g>
+        </svg>
+        Add filter
+      </button>
+      <div
+        className="sc-hrWEMg gqKeuN"
+      >
+        <div
+          className="sc-fAjcbJ eVsFrm"
+        >
+          <input
+            onChange={[Function]}
+            placeholder="Search entries..."
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            value=""
+          />
           <svg
+            className="search-icon"
             fill="currentColor"
             height="1em"
+            name="search"
             preserveAspectRatio="xMidYMid meet"
             style={
               Object {
                 "color": undefined,
-                "marginRight": 10,
                 "verticalAlign": "middle",
               }
             }
@@ -38,99 +74,34 @@ exports[`Filters component should match the stored snapshot 1`] = `
           >
             <g>
               <path
-                d="m35.8 6.6q0.4 0.9-0.3 1.5l-11 11.1v16.5q0 1-0.9 1.3-0.3 0.1-0.5 0.1-0.6 0-1-0.4l-5.7-5.7q-0.5-0.4-0.5-1v-10.8l-11-11q-0.7-0.7-0.3-1.6 0.4-0.9 1.3-0.9h28.6q0.9 0 1.3 0.9z"
+                d="m27.2 18.6q0-4.2-2.9-7.1t-7.1-2.9-7 2.9-3 7.1 2.9 7 7.1 3 7.1-3 2.9-7z m11.4 18.5q0 1.2-0.8 2.1t-2 0.8q-1.2 0-2-0.8l-7.7-7.7q-4 2.8-8.9 2.8-3.2 0-6.1-1.3t-5-3.3-3.4-5-1.2-6.1 1.2-6.1 3.4-5.1 5-3.3 6.1-1.2 6.1 1.2 5 3.3 3.4 5.1 1.2 6.1q0 4.9-2.7 8.9l7.6 7.6q0.8 0.9 0.8 2z"
               />
             </g>
           </svg>
-          Add filter
-        </button>
-        <div
-          className="sc-hrWEMg gqKeuN"
-        >
-          <div
-            className="sc-fAjcbJ eVsFrm"
-          >
-            <input
-              onChange={[Function]}
-              placeholder="Search entries..."
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              value=""
-            />
-            <svg
-              className="search-icon"
-              fill="currentColor"
-              height="1em"
-              name="search"
-              preserveAspectRatio="xMidYMid meet"
-              style={
-                Object {
-                  "color": undefined,
-                  "verticalAlign": "middle",
-                }
-              }
-              viewBox="0 0 40 40"
-              width="1em"
-            >
-              <g>
-                <path
-                  d="m27.2 18.6q0-4.2-2.9-7.1t-7.1-2.9-7 2.9-3 7.1 2.9 7 7.1 3 7.1-3 2.9-7z m11.4 18.5q0 1.2-0.8 2.1t-2 0.8q-1.2 0-2-0.8l-7.7-7.7q-4 2.8-8.9 2.8-3.2 0-6.1-1.3t-5-3.3-3.4-5-1.2-6.1 1.2-6.1 3.4-5.1 5-3.3 6.1-1.2 6.1 1.2 5 3.3 3.4 5.1 1.2 6.1q0 4.9-2.7 8.9l7.6 7.6q0.8 0.9 0.8 2z"
-                />
-              </g>
-            </svg>
-          </div>
         </div>
+      </div>
+      <div
+        className="sc-kfGgVZ eravuG"
+      >
         <div
-          className="sc-kfGgVZ eravuG"
+          className="sc-bYSBpT eEjvxb sc-cmTdod jTfYSK sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
         >
-          <div
-            className="sc-bYSBpT eEjvxb sc-cmTdod jTfYSK sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
+          <button
+            className="sc-kkGfuU sc-lhVmIH ZLSBK sc-jWBwVP bYITgC sc-hSdWYo gKpjBf StyledButton-sc-323bzc-0 gDxBx"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onMouseOut={[Function]}
+            onMouseOver={[Function]}
+            type="button"
           >
-            <button
-              className="sc-kkGfuU sc-lhVmIH ZLSBK sc-jWBwVP bYITgC sc-hSdWYo gKpjBf StyledButton-sc-323bzc-0 gDxBx"
-              onBlur={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onMouseOut={[Function]}
-              onMouseOver={[Function]}
-              type="button"
+            <div
+              className="sc-dnqmqq gEwcOt sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
             >
               <div
-                className="sc-dnqmqq gEwcOt sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
+                className="sc-htoDjs hOFLRy sc-gzVnrw jnVFiX"
               >
-                <div
-                  className="sc-htoDjs hOFLRy sc-gzVnrw jnVFiX"
-                >
-                  <span>
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      preserveAspectRatio="xMidYMid meet"
-                      style={
-                        Object {
-                          "color": undefined,
-                          "marginRight": 10,
-                          "verticalAlign": "middle",
-                        }
-                      }
-                      viewBox="0 0 40 40"
-                      width="1em"
-                    >
-                      <g>
-                        <path
-                          d="m17.6 19.9l12.2 12.2q-2.3 2.4-5.5 3.7t-6.7 1.3q-4.6 0-8.6-2.3t-6.2-6.2-2.3-8.6 2.3-8.6 6.2-6.2 8.6-2.3v17z m4.2 0.1h17.3q0 3.5-1.4 6.7t-3.7 5.5z m15.8-2.9h-17.1v-17.1q4.7 0 8.6 2.3t6.2 6.2 2.3 8.6z"
-                        />
-                      </g>
-                    </svg>
-                    Views
-                  </span>
-                </div>
-                <span
-                  className="sc-btzYZH bXeyGr"
-                >
+                <span>
                   <svg
                     fill="currentColor"
                     height="1em"
@@ -138,6 +109,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
                     style={
                       Object {
                         "color": undefined,
+                        "marginRight": 10,
                         "verticalAlign": "middle",
                       }
                     }
@@ -146,14 +118,38 @@ exports[`Filters component should match the stored snapshot 1`] = `
                   >
                     <g>
                       <path
-                        d="m31.4 15.7q0 0.6-0.5 1l-10 10q-0.4 0.4-1 0.4t-1-0.4l-10-10q-0.4-0.4-0.4-1t0.4-1 1-0.4h20q0.6 0 1 0.4t0.5 1z"
+                        d="m17.6 19.9l12.2 12.2q-2.3 2.4-5.5 3.7t-6.7 1.3q-4.6 0-8.6-2.3t-6.2-6.2-2.3-8.6 2.3-8.6 6.2-6.2 8.6-2.3v17z m4.2 0.1h17.3q0 3.5-1.4 6.7t-3.7 5.5z m15.8-2.9h-17.1v-17.1q4.7 0 8.6 2.3t6.2 6.2 2.3 8.6z"
                       />
                     </g>
                   </svg>
+                  Views
                 </span>
               </div>
-            </button>
-          </div>
+              <span
+                className="sc-btzYZH bXeyGr"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  preserveAspectRatio="xMidYMid meet"
+                  style={
+                    Object {
+                      "color": undefined,
+                      "verticalAlign": "middle",
+                    }
+                  }
+                  viewBox="0 0 40 40"
+                  width="1em"
+                >
+                  <g>
+                    <path
+                      d="m31.4 15.7q0 0.6-0.5 1l-10 10q-0.4 0.4-1 0.4t-1-0.4l-10-10q-0.4-0.4-0.4-1t0.4-1 1-0.4h20q0.6 0 1 0.4t0.5 1z"
+                    />
+                  </g>
+                </svg>
+              </span>
+            </div>
+          </button>
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { DefaultProps, Theme } from '../common-types';
 import defaultTheme from '../theme';
 
-const Base = styled.div<ThemedProvider>`
+const Base = styled(Grommet)`
 	font-family: ${props => props.theme.font};
 
 	h1,
@@ -21,11 +21,7 @@ const Base = styled.div<ThemedProvider>`
 `;
 
 const Provider = ({ theme, ...props }: ThemedProvider) => {
-	return (
-		<Grommet theme={merge(defaultTheme, theme)}>
-			<Base {...props} />
-		</Grommet>
-	);
+	return <Base theme={merge(defaultTheme, theme)} {...props} />;
 };
 
 export interface ThemedProvider extends DefaultProps {

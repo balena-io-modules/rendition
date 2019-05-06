@@ -2,63 +2,51 @@
 
 exports[`Button renders correctly 1`] = `
 <div
-  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-bdVaJa lgVSbN StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
-  <div
-    className="sc-bdVaJa lgVSbN"
+  <button
+    className="sc-gzVnrw sc-gqjmRU juqtoI sc-dnqmqq hiYIXu StyledButton-sc-323bzc-0 djTlJn"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
   >
-    <button
-      className="sc-gzVnrw sc-gqjmRU juqtoI sc-dnqmqq hiYIXu StyledButton-sc-323bzc-0 djTlJn"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      type="button"
-    >
-      Click me
-    </button>
-  </div>
+    Click me
+  </button>
 </div>
 `;
 
 exports[`Styled Anchor Button renders correctly 1`] = `
 <div
-  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-bdVaJa lgVSbN StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
-  <div
-    className="sc-bdVaJa lgVSbN"
+  <a
+    className="sc-gzVnrw sc-gqjmRU gNVwjg sc-dnqmqq hiYIXu StyledButton-sc-323bzc-0 djTlJn"
+    href="#"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
   >
-    <a
-      className="sc-gzVnrw sc-gqjmRU gNVwjg sc-dnqmqq hiYIXu StyledButton-sc-323bzc-0 djTlJn"
-      href="#"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      onMouseOut={[Function]}
-      onMouseOver={[Function]}
-    >
-      Click me
-    </a>
-  </div>
+    Click me
+  </a>
 </div>
 `;
 
 exports[`Styled Button renders correctly 1`] = `
 <div
-  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-bdVaJa lgVSbN StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
-  <div
-    className="sc-bdVaJa lgVSbN"
+  <button
+    className="sc-gzVnrw sc-gqjmRU gNVwjg sc-dnqmqq hiYIXu StyledButton-sc-323bzc-0 djTlJn"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
   >
-    <button
-      className="sc-gzVnrw sc-gqjmRU gNVwjg sc-dnqmqq hiYIXu StyledButton-sc-323bzc-0 djTlJn"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      type="button"
-    >
-      Click me
-    </button>
-  </div>
+    Click me
+  </button>
 </div>
 `;

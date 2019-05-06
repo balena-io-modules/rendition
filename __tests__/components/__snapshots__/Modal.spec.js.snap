@@ -2,50 +2,46 @@
 
 exports[`Modal renders correctly 1`] = `
 <div
-  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-cmTdod ePZXKJ StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-cmTdod ePZXKJ"
+    aria-hidden={false}
   >
     <div
-      aria-hidden={false}
+      className="StyledLayer-rmtehz-0 exVYop"
+      onKeyDown={[Function]}
+      tabIndex="-1"
     >
       <div
-        className="StyledLayer-rmtehz-0 exVYop"
-        onKeyDown={[Function]}
-        tabIndex="-1"
+        className="StyledLayer__StyledOverlay-rmtehz-1 jDYYNt"
+        onMouseDown={[Function]}
+      />
+      <div
+        className="StyledLayer__StyledContainer-rmtehz-2 hWJDps"
       >
-        <div
-          className="StyledLayer__StyledOverlay-rmtehz-1 jDYYNt"
-          onMouseDown={[Function]}
+        <a
+          aria-hidden="true"
+          className="LayerContainer__HiddenAnchor-sc-1srj14c-0 LMZHJ"
+          tabIndex="-1"
         />
         <div
-          className="StyledLayer__StyledContainer-rmtehz-2 hWJDps"
+          className="sc-fBuWsC ijsQEk sc-gzVnrw iVQgQP sc-bZQynM kMvugX"
+          onClick={[Function]}
         >
-          <a
-            aria-hidden="true"
-            className="LayerContainer__HiddenAnchor-sc-1srj14c-0 LMZHJ"
-            tabIndex="-1"
-          />
+          Modal
           <div
-            className="sc-fBuWsC ijsQEk sc-gzVnrw iVQgQP sc-bZQynM kMvugX"
-            onClick={[Function]}
+            className="sc-htoDjs iWrvzc sc-gzVnrw PpHOL sc-bZQynM kMvugX"
           >
-            Modal
-            <div
-              className="sc-htoDjs iWrvzc sc-gzVnrw PpHOL sc-bZQynM kMvugX"
+            <button
+              className="sc-kEYyzF sc-cvbbAY ldJHua sc-kkGfuU kqxvkn StyledButton-sc-323bzc-0 jfOEyc"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              type="button"
             >
-              <button
-                className="sc-kEYyzF sc-cvbbAY ldJHua sc-kkGfuU kqxvkn StyledButton-sc-323bzc-0 jfOEyc"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                onMouseOut={[Function]}
-                onMouseOver={[Function]}
-                type="button"
-              >
-                OK
-              </button>
-            </div>
+              OK
+            </button>
           </div>
         </div>
       </div>
