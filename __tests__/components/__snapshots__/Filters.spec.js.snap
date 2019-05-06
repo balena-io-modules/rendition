@@ -14,7 +14,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
         className="sc-dnqmqq cTPVoH sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
       >
         <button
-          className="sc-kkGfuU sc-jWBwVP gsgKMS sc-iAyFgw hdoHQK StyledButton-sc-323bzc-0 litbIy"
+          className="sc-kkGfuU sc-jWBwVP gsgKMS sc-iAyFgw hdoHQK StyledButton-sc-323bzc-0 jfOEyc"
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
@@ -90,7 +90,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
             className="sc-bYSBpT eEjvxb sc-cmTdod jTfYSK sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
           >
             <button
-              className="sc-kkGfuU sc-lhVmIH ZLSBK sc-jWBwVP bYITgC sc-hSdWYo jxonNE StyledButton-sc-323bzc-0 clBrrd"
+              className="sc-kkGfuU sc-lhVmIH ZLSBK sc-jWBwVP bYITgC sc-hSdWYo gKpjBf StyledButton-sc-323bzc-0 gDxBx"
               onBlur={[Function]}
               onClick={[Function]}
               onFocus={[Function]}

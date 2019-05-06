@@ -8,7 +8,7 @@ exports[`ProgressBar renders correctly 1`] = `
     className="sc-bdVaJa lgVSbN"
   >
     <div
-      className="sc-gZMcBi eHXulF sc-iwsKbI gnkuHL"
+      className="sc-gZMcBi eHXulF sc-iwsKbI jmZukC"
       color="#fff"
     >
       <div
@@ -18,7 +18,7 @@ exports[`ProgressBar renders correctly 1`] = `
         %
       </div>
       <div
-        className="sc-gzVnrw heOvIq"
+        className="sc-gzVnrw kYhhHL"
         style={
           Object {
             "width": "50%",
