@@ -55,20 +55,17 @@ const Base = ({
 	children,
 	...props
 }: InternalTextWithCopyProps) => {
-	const normalizedText = (text || children || '').toString().trim();
+	const normalizedText = (text || '').toString().trim();
 	const normalizedCopy = (copy || normalizedText).toString().trim();
+	const contentToRender = children || normalizedText || normalizedCopy;
 
 	return (
 		<Wrapper copy={copy} title={copy} {...props} className="text-with-copy">
 			{!code && (
-				<span className="text-with-copy__content">
-					{normalizedText || normalizedCopy}
-				</span>
+				<span className="text-with-copy__content">{contentToRender}</span>
 			)}
 
-			{code && (
-				<code title={normalizedCopy}>{normalizedText || normalizedCopy}</code>
-			)}
+			{code && <code title={normalizedCopy}>{contentToRender}</code>}
 
 			<span
 				onClick={e => stopEvent(e)}
