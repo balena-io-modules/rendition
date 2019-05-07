@@ -31,7 +31,13 @@ storiesOf('Next/Button', module)
           <Button m={2} danger onClick={action('case-5')}>
             Danger
           </Button>
-          <Button m={2} onClick={action('case-6')}>
+          <Button m={2} warning onClick={action('case-6')}>
+            Warning
+          </Button>
+          <Button m={2} info onClick={action('case-7')}>
+            Info
+          </Button>
+          <Button m={2} onClick={action('case-8')}>
             Default
           </Button>
         </Box>
@@ -57,7 +63,13 @@ storiesOf('Next/Button', module)
           <Button m={2} disabled danger onClick={action('case-5')}>
             Danger
           </Button>
-          <Button m={2} disabled onClick={action('case-6')}>
+          <Button m={2} disabled warning onClick={action('case-6')}>
+            Warning
+          </Button>
+          <Button m={2} disabled info onClick={action('case-7')}>
+            Info
+          </Button>
+          <Button m={2} disabled onClick={action('case-8')}>
             Default
           </Button>
         </Box>
@@ -83,7 +95,13 @@ storiesOf('Next/Button', module)
           <Button m={2} outline danger onClick={action('case-5')}>
             Danger
           </Button>
-          <Button m={2} outline onClick={action('case-6')}>
+          <Button m={2} outline warning onClick={action('case-6')}>
+            Warning
+          </Button>
+          <Button m={2} outline info onClick={action('case-7')}>
+            Info
+          </Button>
+          <Button m={2} outline onClick={action('case-8')}>
             Default
           </Button>
         </Box>
