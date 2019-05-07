@@ -8,7 +8,7 @@ exports[`Modal renders correctly 1`] = `
     aria-hidden={false}
   >
     <div
-      className="StyledLayer-rmtehz-0 exVYop"
+      className="StyledLayer-rmtehz-0 hISvz"
       onKeyDown={[Function]}
       tabIndex="-1"
     >
@@ -17,7 +17,7 @@ exports[`Modal renders correctly 1`] = `
         onMouseDown={[Function]}
       />
       <div
-        className="StyledLayer__StyledContainer-rmtehz-2 hWJDps"
+        className="StyledLayer__StyledContainer-rmtehz-2 ergMLu"
       >
         <a
           aria-hidden="true"

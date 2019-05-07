@@ -161,6 +161,12 @@ export default {
 			horizontal: '30px',
 		},
 	},
+	layer: {
+		container: {
+			zIndex: 40,
+		},
+		zIndex: 30,
+	},
 	text: {
 		medium: {
 			size: '14px',
