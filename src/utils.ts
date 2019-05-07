@@ -89,7 +89,7 @@ export const getColor = (
 	shade: 'main' | 'light' | 'dark',
 ) => {
 	if (get(props, key)) {
-		return get(props, key);
+		return shadeCustomColor(get(props, key), shade);
 	}
 	const type = getColoringType(props);
 	if (type) {
@@ -97,9 +97,23 @@ export const getColor = (
 		if (isObject(color)) {
 			return color[shade];
 		} else {
-			return color;
+			// We checked that this is not an object color, so we can ignore the typescript error
+			// @ts-ignore
+			return shadeCustomColor(color, shade);
 		}
 	}
+};
+
+const shadeCustomColor = (color: string, shade: 'main' | 'light' | 'dark') => {
+	if (shade === 'main') {
+		return color;
+	}
+
+	if (shade === 'light') {
+		return lighten(color);
+	}
+
+	return darken(color);
 };
 
 export const monospace = (props: { monospace?: boolean; theme: Theme }) =>

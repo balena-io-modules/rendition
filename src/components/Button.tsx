@@ -33,14 +33,12 @@ const ColouredButton = styled(ButtonBase)`
 	color: white;
 `;
 
-const Outline = styled(ButtonBase)`
-	color: ${props =>
-		getColor(props, 'color', 'main') || props.theme.colors.text.main};
+const Outline = styled(ButtonBase)<{ color?: string }>`
+	color: ${props => props.color || props.theme.colors.text.main};
 `;
 
-const Plain = styled(ButtonBase)`
-	color: ${props =>
-		getColor(props, 'color', 'main') || props.theme.colors.text.main};
+const Plain = styled(ButtonBase)<{ hoverColor?: string; color?: string }>`
+	color: ${props => props.color || props.theme.colors.text.main};
 	height: auto;
 	font-weight: ${props => normal(props)};
 	border-radius: 0;
@@ -48,19 +46,17 @@ const Plain = styled(ButtonBase)`
 	&:hover:enabled,
 	&:focus:enabled,
 	&:active:enabled {
-		border-bottom: 1px solid;
+		color: ${props => props.hoverColor || props.theme.colors.text.light};
 	}
 `;
 
 const underlineButtonActiveStyles = (props: ThemedButtonProps) => `
-	color: ${getColor(props, 'color', 'main') || props.theme.colors.text.main};
+	color: ${props.color || props.theme.colors.text.main};
 	background: none;
 	box-shadow: 0px -1px 0 0px inset;
 `;
 
-const Underline = styled(Plain).attrs({
-	plain: true,
-})`
+const Underline = styled(Plain)<{ active?: boolean; color?: string }>`
 	${props => (props.active ? underlineButtonActiveStyles(props) : '')}
 	border-bottom: 1px solid;
 	background: none;
@@ -73,19 +69,33 @@ const Underline = styled(Plain).attrs({
 `;
 
 const getStyledButton = (
-	{ outline, underline, plain, active }: ThemedButtonProps,
+	{ outline, underline, plain, active, ...originalProps }: ThemedButtonProps,
 	isPrimary: boolean,
 ) => {
 	if (plain) {
-		return Plain;
+		return (props: GrommetButtonProps) => (
+			<Plain
+				{...props}
+				color={getColor(originalProps, 'color', 'main')}
+				hoverColor={getColor(originalProps, 'color', 'light')}
+			/>
+		);
 	}
 
 	if (underline) {
-		return Underline;
+		return (props: GrommetButtonProps) => (
+			<Underline
+				{...props}
+				plain={true}
+				color={getColor(originalProps, 'color', 'main')}
+			/>
+		);
 	}
 
 	if ((outline && !active) || !isPrimary) {
-		return Outline;
+		return (props: GrommetButtonProps) => (
+			<Outline {...props} color={getColor(originalProps, 'color', 'main')} />
+		);
 	}
 
 	return ColouredButton;
