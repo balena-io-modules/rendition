@@ -25,7 +25,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
       className="sc-dnqmqq ewhxIw sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
     >
       <div
-        className="sc-dnqmqq sc-brqgnP hNdaTS sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
+        className="sc-dnqmqq sc-brqgnP kEsgre sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
       >
         <button
           className="sc-kkGfuU rendition-pager__btn--prev sc-jWBwVP ikgZSL sc-hSdWYo gnTlmo StyledButton-sc-323bzc-0 hIKTNd"

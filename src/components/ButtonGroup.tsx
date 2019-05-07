@@ -3,8 +3,6 @@ import { Flex } from './Grid';
 
 export default styled(Flex)`
 	> * {
-		margin-right: -1px;
-
 		&:first-child {
 			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
