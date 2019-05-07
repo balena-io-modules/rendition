@@ -2,64 +2,60 @@
 
 exports[`Form component should match the stored snapshot 1`] = `
 <div
-  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-cSHVUG cVRlef StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-cSHVUG cVRlef"
+    className="sc-cMhqgX frkgZi sc-gzVnrw pznRG sc-bZQynM kMvugX"
   >
-    <div
-      className="sc-cMhqgX frkgZi sc-gzVnrw pznRG sc-bZQynM kMvugX"
+    <form
+      className="rjsf"
+      noValidate={false}
+      onSubmit={[Function]}
     >
-      <form
-        className="rjsf"
-        noValidate={false}
-        onSubmit={[Function]}
+      <div
+        className="form-group field field-object rendition-form__field--root sc-gzVnrw fcRkeO sc-bZQynM kMvugX"
       >
-        <div
-          className="form-group field field-object rendition-form__field--root sc-gzVnrw fcRkeO sc-bZQynM kMvugX"
-        >
-          <fieldset>
-            <div
-              className="form-group field field-string rendition-form__field--root_Name sc-gzVnrw fcRkeO sc-bZQynM kMvugX"
+        <fieldset>
+          <div
+            className="form-group field field-string rendition-form__field--root_Name sc-gzVnrw fcRkeO sc-bZQynM kMvugX"
+          >
+            <label
+              className="control-label sc-hZSUBg ezsVLv"
+              htmlFor="root_Name"
             >
-              <label
-                className="control-label sc-hZSUBg ezsVLv"
-                htmlFor="root_Name"
-              >
-                Pokemon Name
-              </label>
-              <input
-                autoFocus={false}
-                className="sc-gipzik jGrCwz sc-jlyJG jocwzb"
-                disabled={false}
-                id="root_Name"
-                label="Pokemon Name"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                placeholder=""
-                readOnly={false}
-                required={false}
-                type="text"
-                value="Bulbasaur"
-              />
-              <div />
-            </div>
-          </fieldset>
-          <div />
-        </div>
-        <button
-          className="sc-kAzzGY sc-dxgOiQ fZnRKS sc-chPdSV eKGfJl StyledButton-sc-323bzc-0 jfOEyc"
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          type="submit"
-        >
-          Submit
-        </button>
-      </form>
-    </div>
+              Pokemon Name
+            </label>
+            <input
+              autoFocus={false}
+              className="sc-gipzik jGrCwz sc-jlyJG jocwzb"
+              disabled={false}
+              id="root_Name"
+              label="Pokemon Name"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              placeholder=""
+              readOnly={false}
+              required={false}
+              type="text"
+              value="Bulbasaur"
+            />
+            <div />
+          </div>
+        </fieldset>
+        <div />
+      </div>
+      <button
+        className="sc-kAzzGY sc-dxgOiQ fZnRKS sc-chPdSV eKGfJl StyledButton-sc-323bzc-0 jfOEyc"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
   </div>
 </div>
 `;

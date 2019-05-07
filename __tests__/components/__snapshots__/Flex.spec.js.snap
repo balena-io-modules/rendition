@@ -2,16 +2,12 @@
 
 exports[`Flex renders correctly 1`] = `
 <div
-  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-bdVaJa lgVSbN StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-bdVaJa lgVSbN"
+    className="sc-dnqmqq ewhxIw sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
   >
-    <div
-      className="sc-dnqmqq ewhxIw sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
-    >
-      Flex
-    </div>
+    Flex
   </div>
 </div>
 `;

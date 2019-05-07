@@ -2,75 +2,71 @@
 
 exports[`Navbar renders correctly with a single children prop 1`] = `
 <div
-  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-gqjmRU eXdhol StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-gqjmRU eXdhol"
+    className="sc-jzJRlG ePCFxN sc-fjdhpX fGySkI"
   >
     <div
-      className="sc-jzJRlG ePCFxN sc-fjdhpX fGySkI"
+      className="sc-jTzLTM cHhUzV sc-VigVT jBgDm"
     >
       <div
-        className="sc-jTzLTM cHhUzV sc-VigVT jBgDm"
+        className="sc-cSHVUG jXEWLU sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
       >
         <div
-          className="sc-cSHVUG jXEWLU sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
+          className="sc-cSHVUG dzaSRZ sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
         >
           <div
-            className="sc-cSHVUG dzaSRZ sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
+            className="sc-kAzzGY eBRrrJ sc-jzJRlG VNfXw sc-fjdhpX fGySkI"
+          />
+          <div
+            className="sc-chPdSV lkxntg sc-jzJRlG exaDfR sc-fjdhpX fGySkI"
+            display={
+              Array [
+                "block",
+                "none",
+              ]
+            }
+            onClick={[Function]}
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m3.4 9.1h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.2h-33.2v-3.2z"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          className="sc-cSHVUG sc-kgoBCf jCVmHt sc-jzJRlG jltOFs sc-fjdhpX fGySkI"
+        >
+          <div
+            className="sc-cSHVUG jXEWLU sc-jzJRlG iggMMu sc-fjdhpX fGySkI"
           >
             <div
-              className="sc-kAzzGY eBRrrJ sc-jzJRlG VNfXw sc-fjdhpX fGySkI"
-            />
-            <div
-              className="sc-chPdSV lkxntg sc-jzJRlG exaDfR sc-fjdhpX fGySkI"
-              display={
-                Array [
-                  "block",
-                  "none",
-                ]
-              }
+              className="sc-jzJRlG utfzA sc-fjdhpX fGySkI"
               onClick={[Function]}
             >
-              <svg
-                fill="currentColor"
-                height="1em"
-                preserveAspectRatio="xMidYMid meet"
-                style={
-                  Object {
-                    "color": undefined,
-                    "verticalAlign": "middle",
-                  }
-                }
-                viewBox="0 0 40 40"
-                width="1em"
+              <a
+                className="sc-gZMcBi krgeid sc-iwsKbI jkCyoU"
+                color="white"
+                href="/docs/"
               >
-                <g>
-                  <path
-                    d="m3.4 9.1h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.2h-33.2v-3.2z"
-                  />
-                </g>
-              </svg>
-            </div>
-          </div>
-          <div
-            className="sc-cSHVUG sc-kgoBCf jCVmHt sc-jzJRlG jltOFs sc-fjdhpX fGySkI"
-          >
-            <div
-              className="sc-cSHVUG jXEWLU sc-jzJRlG iggMMu sc-fjdhpX fGySkI"
-            >
-              <div
-                className="sc-jzJRlG utfzA sc-fjdhpX fGySkI"
-                onClick={[Function]}
-              >
-                <a
-                  className="sc-gZMcBi krgeid sc-iwsKbI jkCyoU"
-                  color="white"
-                  href="/docs/"
-                >
-                  Docs
-                </a>
-              </div>
+                Docs
+              </a>
             </div>
           </div>
         </div>
@@ -82,99 +78,95 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
 
 exports[`Navbar renders correctly with more than one children prop 1`] = `
 <div
-  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-gqjmRU eXdhol StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-gqjmRU eXdhol"
+    className="sc-jzJRlG ePCFxN sc-fjdhpX fGySkI"
   >
     <div
-      className="sc-jzJRlG ePCFxN sc-fjdhpX fGySkI"
+      className="sc-jTzLTM cHhUzV sc-VigVT jBgDm"
     >
       <div
-        className="sc-jTzLTM cHhUzV sc-VigVT jBgDm"
+        className="sc-cSHVUG jXEWLU sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
       >
         <div
-          className="sc-cSHVUG jXEWLU sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
+          className="sc-cSHVUG dzaSRZ sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
         >
           <div
-            className="sc-cSHVUG dzaSRZ sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
+            className="sc-kAzzGY eBRrrJ sc-jzJRlG VNfXw sc-fjdhpX fGySkI"
+          />
+          <div
+            className="sc-chPdSV lkxntg sc-jzJRlG exaDfR sc-fjdhpX fGySkI"
+            display={
+              Array [
+                "block",
+                "none",
+              ]
+            }
+            onClick={[Function]}
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m3.4 9.1h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.2h-33.2v-3.2z"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          className="sc-cSHVUG sc-kgoBCf jCVmHt sc-jzJRlG jltOFs sc-fjdhpX fGySkI"
+        >
+          <div
+            className="sc-cSHVUG jXEWLU sc-jzJRlG iggMMu sc-fjdhpX fGySkI"
           >
             <div
-              className="sc-kAzzGY eBRrrJ sc-jzJRlG VNfXw sc-fjdhpX fGySkI"
-            />
-            <div
-              className="sc-chPdSV lkxntg sc-jzJRlG exaDfR sc-fjdhpX fGySkI"
-              display={
-                Array [
-                  "block",
-                  "none",
-                ]
-              }
+              className="sc-jzJRlG utfzA sc-fjdhpX fGySkI"
               onClick={[Function]}
             >
-              <svg
-                fill="currentColor"
-                height="1em"
-                preserveAspectRatio="xMidYMid meet"
-                style={
-                  Object {
-                    "color": undefined,
-                    "verticalAlign": "middle",
-                  }
-                }
-                viewBox="0 0 40 40"
-                width="1em"
+              <a
+                className="sc-gZMcBi krgeid sc-iwsKbI jkCyoU"
+                color="white"
+                href="/docs/"
               >
-                <g>
-                  <path
-                    d="m3.4 9.1h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.2h-33.2v-3.2z"
-                  />
-                </g>
-              </svg>
+                Docs
+              </a>
             </div>
-          </div>
-          <div
-            className="sc-cSHVUG sc-kgoBCf jCVmHt sc-jzJRlG jltOFs sc-fjdhpX fGySkI"
-          >
             <div
-              className="sc-cSHVUG jXEWLU sc-jzJRlG iggMMu sc-fjdhpX fGySkI"
+              className="sc-jzJRlG utfzA sc-fjdhpX fGySkI"
+              onClick={[Function]}
             >
-              <div
-                className="sc-jzJRlG utfzA sc-fjdhpX fGySkI"
-                onClick={[Function]}
+              <a
+                className="sc-gZMcBi krgeid sc-iwsKbI jkCyoU"
+                color="white"
+                href="/changelog/"
               >
-                <a
-                  className="sc-gZMcBi krgeid sc-iwsKbI jkCyoU"
-                  color="white"
-                  href="/docs/"
-                >
-                  Docs
-                </a>
-              </div>
-              <div
-                className="sc-jzJRlG utfzA sc-fjdhpX fGySkI"
-                onClick={[Function]}
+                changelog
+              </a>
+            </div>
+            <div
+              className="sc-jzJRlG utfzA sc-fjdhpX fGySkI"
+              onClick={[Function]}
+            >
+              <a
+                className="sc-gZMcBi krgeid sc-iwsKbI jkCyoU"
+                color="white"
+                href="/gitter/"
               >
-                <a
-                  className="sc-gZMcBi krgeid sc-iwsKbI jkCyoU"
-                  color="white"
-                  href="/changelog/"
-                >
-                  changelog
-                </a>
-              </div>
-              <div
-                className="sc-jzJRlG utfzA sc-fjdhpX fGySkI"
-                onClick={[Function]}
-              >
-                <a
-                  className="sc-gZMcBi krgeid sc-iwsKbI jkCyoU"
-                  color="white"
-                  href="/gitter/"
-                >
-                  gitter
-                </a>
-              </div>
+                gitter
+              </a>
             </div>
           </div>
         </div>
@@ -186,61 +178,57 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
 
 exports[`Navbar renders correctly with no children prop 1`] = `
 <div
-  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-gqjmRU eXdhol StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-gqjmRU eXdhol"
+    className="sc-jzJRlG ePCFxN sc-fjdhpX fGySkI"
   >
     <div
-      className="sc-jzJRlG ePCFxN sc-fjdhpX fGySkI"
+      className="sc-jTzLTM cHhUzV sc-VigVT jBgDm"
     >
       <div
-        className="sc-jTzLTM cHhUzV sc-VigVT jBgDm"
+        className="sc-cSHVUG jXEWLU sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
       >
         <div
-          className="sc-cSHVUG jXEWLU sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
+          className="sc-cSHVUG dzaSRZ sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
         >
           <div
-            className="sc-cSHVUG dzaSRZ sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
-          >
-            <div
-              className="sc-kAzzGY eBRrrJ sc-jzJRlG VNfXw sc-fjdhpX fGySkI"
-            />
-            <div
-              className="sc-chPdSV lkxntg sc-jzJRlG exaDfR sc-fjdhpX fGySkI"
-              display={
-                Array [
-                  "block",
-                  "none",
-                ]
-              }
-              onClick={[Function]}
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                preserveAspectRatio="xMidYMid meet"
-                style={
-                  Object {
-                    "color": undefined,
-                    "verticalAlign": "middle",
-                  }
-                }
-                viewBox="0 0 40 40"
-                width="1em"
-              >
-                <g>
-                  <path
-                    d="m3.4 9.1h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.2h-33.2v-3.2z"
-                  />
-                </g>
-              </svg>
-            </div>
-          </div>
-          <div
-            className="sc-cSHVUG sc-kgoBCf jCVmHt sc-jzJRlG jltOFs sc-fjdhpX fGySkI"
+            className="sc-kAzzGY eBRrrJ sc-jzJRlG VNfXw sc-fjdhpX fGySkI"
           />
+          <div
+            className="sc-chPdSV lkxntg sc-jzJRlG exaDfR sc-fjdhpX fGySkI"
+            display={
+              Array [
+                "block",
+                "none",
+              ]
+            }
+            onClick={[Function]}
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m3.4 9.1h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.2h-33.2v-3.2z"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
+        <div
+          className="sc-cSHVUG sc-kgoBCf jCVmHt sc-jzJRlG jltOFs sc-fjdhpX fGySkI"
+        />
       </div>
     </div>
   </div>

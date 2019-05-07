@@ -2,34 +2,30 @@
 
 exports[`Select component should match the stored snapshot 1`] = `
 <div
-  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-bdVaJa lgVSbN StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
-  <div
-    className="sc-bdVaJa lgVSbN"
+  <span
+    className="sc-dnqmqq kOponb sc-htoDjs dwvAKv"
   >
-    <span
-      className="sc-dnqmqq kOponb sc-htoDjs dwvAKv"
+    <select
+      className="sc-gzVnrw bFJYZV"
     >
-      <select
-        className="sc-gzVnrw bFJYZV"
+      <option
+        value={1}
       >
-        <option
-          value={1}
-        >
-          Option 1
-        </option>
-        <option
-          value={2}
-        >
-          Option 2
-        </option>
-        <option
-          value={3}
-        >
-          Option 3
-        </option>
-      </select>
-    </span>
-  </div>
+        Option 1
+      </option>
+      <option
+        value={2}
+      >
+        Option 2
+      </option>
+      <option
+        value={3}
+      >
+        Option 3
+      </option>
+    </select>
+  </span>
 </div>
 `;

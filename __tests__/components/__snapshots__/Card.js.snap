@@ -2,19 +2,15 @@
 
 exports[`Search renders correctly 1`] = `
 <div
-  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-bdVaJa lgVSbN StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-bdVaJa lgVSbN"
+    className="sc-cSHVUG caRVuD sc-jzJRlG hnQKFB"
   >
     <div
-      className="sc-cSHVUG caRVuD sc-jzJRlG hnQKFB"
+      className="sc-iwsKbI eCiFOJ sc-dnqmqq krhTjU"
     >
-      <div
-        className="sc-iwsKbI eCiFOJ sc-dnqmqq krhTjU"
-      >
-        Lorem ipsum dolor so ammet
-      </div>
+      Lorem ipsum dolor so ammet
     </div>
   </div>
 </div>

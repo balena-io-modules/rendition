@@ -2,21 +2,17 @@
 
 exports[`Button renders correctly 1`] = `
 <div
-  className="StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-bdVaJa lgVSbN StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-bdVaJa lgVSbN"
+    className="sc-htoDjs iwPXXD sc-gzVnrw hnoozl"
   >
-    <div
-      className="sc-htoDjs iwPXXD sc-gzVnrw hnoozl"
-    >
-      <h1>
-        balena
-      </h1>
-      <p>
-        Balena brings the benefits of Linux containers to the IoT. Develop iteratively, deploy safely, and manage at scale.
-      </p>
-    </div>
+    <h1>
+      balena
+    </h1>
+    <p>
+      Balena brings the benefits of Linux containers to the IoT. Develop iteratively, deploy safely, and manage at scale.
+    </p>
   </div>
 </div>
 `;
