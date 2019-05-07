@@ -194,6 +194,38 @@ storiesOf('Next/DropDownButton', module)
       </Provider>
     )
   })
+  .add('Only Caret Icon', () => {
+    return (
+      <Provider>
+        <Box m={3}>
+          <DropDownButton mx={2} joined primary>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+          </DropDownButton>
+          <DropDownButton mx={2} joined danger>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+          </DropDownButton>
+          <DropDownButton mx={2} tertiary>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+          </DropDownButton>
+          <DropDownButton mx={2} joined>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+          </DropDownButton>
+        </Box>
+      </Provider>
+    )
+  })
   .add('Alignment', () => {
     return (
       <Provider>

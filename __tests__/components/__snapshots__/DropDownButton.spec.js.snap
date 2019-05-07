@@ -21,7 +21,7 @@ exports[`DropDownButton renders correctly 1`] = `
         </div>
       </button>
       <button
-        className="sc-gzVnrw sc-kgoBCf gJxdnh sc-gqjmRU juqtoI sc-htoDjs ofCvO StyledButton-sc-323bzc-0 jfOEyc"
+        className="sc-gzVnrw sc-kgoBCf heIWmr sc-gqjmRU juqtoI sc-htoDjs ofCvO StyledButton-sc-323bzc-0 dQGtHJ"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -35,7 +35,7 @@ exports[`DropDownButton renders correctly 1`] = `
           preserveAspectRatio="xMidYMid meet"
           style={
             Object {
-              "color": undefined,
+              "color": "#444444",
               "verticalAlign": "middle",
             }
           }
@@ -75,7 +75,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
         </div>
       </button>
       <button
-        className="sc-gzVnrw sc-kgoBCf gJxdnh sc-gqjmRU juqtoI sc-htoDjs ofCvO StyledButton-sc-323bzc-0 jfOEyc"
+        className="sc-gzVnrw sc-kgoBCf heIWmr sc-gqjmRU juqtoI sc-htoDjs ofCvO StyledButton-sc-323bzc-0 dQGtHJ"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -89,7 +89,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
           preserveAspectRatio="xMidYMid meet"
           style={
             Object {
-              "color": undefined,
+              "color": "#444444",
               "verticalAlign": "middle",
             }
           }
@@ -113,28 +113,28 @@ exports[`Opened DropDownButton renders correctly 1`] = `
       onClick={[Function]}
     >
       <div
-        className="sc-ckVGcZ gJapCo"
+        className="sc-ckVGcZ cyTWij"
       >
         <div>
           Item
         </div>
       </div>
       <div
-        className="sc-ckVGcZ gJapCo"
+        className="sc-ckVGcZ cyTWij"
       >
         <div>
           Item
         </div>
       </div>
       <div
-        className="sc-ckVGcZ gJapCo"
+        className="sc-ckVGcZ cyTWij"
       >
         <div>
           Item
         </div>
       </div>
       <div
-        className="sc-ckVGcZ gJapCo"
+        className="sc-ckVGcZ cyTWij"
       >
         <div>
           Item

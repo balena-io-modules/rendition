@@ -14,7 +14,6 @@ const ToggleBase = styled(Button)`
 	min-width: 0;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
-	margin-left: -1px;
 	border-left: 0;
 	margin: 0;
 	vertical-align: top;
@@ -57,10 +56,7 @@ const Wrapper = styled(Box)`
 `;
 
 const Item = styled.div<{ border: boolean }>`
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-left: 16px;
-	padding-right: 16px;
+	padding: 5px 16px;
 	border-top: ${props =>
 		props.border ? `1px solid ${props.theme.colors.gray.main}` : '0'};
 	border-radius: ${props => px(props.theme.radius)};
@@ -102,15 +98,19 @@ const Toggle = ({
 			);
 		}
 		return (
-			<JoinedButton {...props} onClick={handler}>
-				{open ? <IconCaretUp /> : <IconCaretDown />}
-			</JoinedButton>
+			<JoinedButton
+				{...props}
+				icon={open ? <IconCaretUp /> : <IconCaretDown />}
+				onClick={handler}
+			/>
 		);
 	}
 	return (
-		<ToggleBase {...props} onClick={handler}>
-			{open ? <IconCaretUp /> : <IconCaretDown />}
-		</ToggleBase>
+		<ToggleBase
+			{...props}
+			icon={open ? <IconCaretUp /> : <IconCaretDown />}
+			onClick={handler}
+		/>
 	);
 };
 
