@@ -9,7 +9,7 @@ exports[`DropDownButton renders correctly 1`] = `
   >
     <span>
       <button
-        className="sc-gzVnrw sc-kGXeez dHtHTU sc-gqjmRU juqtoI sc-htoDjs ofCvO StyledButton-sc-323bzc-0 jfOEyc"
+        className="sc-gzVnrw sc-kGXeez iMFKVN sc-gqjmRU juqtoI sc-htoDjs ofCvO StyledButton-sc-323bzc-0 jfOEyc"
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}
@@ -21,7 +21,7 @@ exports[`DropDownButton renders correctly 1`] = `
         </div>
       </button>
       <button
-        className="sc-gzVnrw sc-kgoBCf heIWmr sc-gqjmRU juqtoI sc-htoDjs ofCvO StyledButton-sc-323bzc-0 dQGtHJ"
+        className="sc-gzVnrw sc-kgoBCf lprHpw sc-gqjmRU juqtoI sc-htoDjs ofCvO StyledButton-sc-323bzc-0 dQGtHJ"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -63,7 +63,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   >
     <span>
       <button
-        className="sc-gzVnrw sc-kGXeez dHtHTU sc-gqjmRU juqtoI sc-htoDjs ofCvO StyledButton-sc-323bzc-0 jfOEyc"
+        className="sc-gzVnrw sc-kGXeez iMFKVN sc-gqjmRU juqtoI sc-htoDjs ofCvO StyledButton-sc-323bzc-0 jfOEyc"
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}
@@ -75,7 +75,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
         </div>
       </button>
       <button
-        className="sc-gzVnrw sc-kgoBCf heIWmr sc-gqjmRU juqtoI sc-htoDjs ofCvO StyledButton-sc-323bzc-0 dQGtHJ"
+        className="sc-gzVnrw sc-kgoBCf lprHpw sc-gqjmRU juqtoI sc-htoDjs ofCvO StyledButton-sc-323bzc-0 dQGtHJ"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}

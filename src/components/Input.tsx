@@ -34,6 +34,7 @@ const Base = styled.input`
 	font-size: inherit;
 	border: 1px solid ${getColor};
 	padding: 0px 16px;
+	box-sizing: border-box;
 
 	&[disabled] {
 		background-color: ${props => props.theme.colors.gray.light};
