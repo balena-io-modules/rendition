@@ -10,6 +10,9 @@ import Divider from './Divider';
 import Fixed from './Fixed';
 import { Box, Flex } from './Grid';
 
+const TOGGLE_BUTTON_X_PADDING = 16;
+const TOGGLE_BUTTON_WIDTH = 2 * TOGGLE_BUTTON_X_PADDING + 12;
+
 const ToggleBase = styled(Button)`
 	min-width: 0;
 	border-top-left-radius: 0;
@@ -17,8 +20,8 @@ const ToggleBase = styled(Button)`
 	border-left: 0;
 	margin: 0;
 	vertical-align: top;
-	padding-left: 16px;
-	padding-right: 16px;
+	padding: 0 ${px(TOGGLE_BUTTON_X_PADDING)};
+	width: ${px(TOGGLE_BUTTON_WIDTH)};
 `;
 
 const ButtonBase = styled(Button)`
@@ -26,6 +29,7 @@ const ButtonBase = styled(Button)`
 	border-bottom-right-radius: 0;
 	border-right: 0;
 	margin: 0;
+	width: calc(100% - ${px(TOGGLE_BUTTON_WIDTH)});
 `;
 
 const MenuBase = styled.div<{
@@ -72,6 +76,7 @@ const IconWrapper = styled.span`
 
 const JoinedButton = styled(Button)`
 	margin: 0;
+	width: 100%;
 `;
 
 const Toggle = ({
@@ -256,4 +261,4 @@ export default asRendition<
 	React.ForwardRefExoticComponent<
 		DropDownButtonProps & React.RefAttributes<DropDownButton>
 	>
->(DropDownButton, [], ['width', 'color', 'bg', 'backgroundColor']);
+>(DropDownButton, [], ['color', 'bg', 'backgroundColor']);
