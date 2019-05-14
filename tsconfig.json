@@ -3,6 +3,7 @@
     "module": "commonjs",
     "target": "es5",
     "outDir": "dist",
+    "rootDir": "./src",
     "declaration": true,
     "noImplicitAny": true,
     "noUnusedLocals": true,
@@ -29,11 +30,5 @@
         "*"
       ]
     }
-  },
-  "include": [
-    "./src/**/*.js",
-    "./src/**/*.ts",
-    "./src/**/*.d.ts",
-    "./typings/**/*.d.ts"
-  ]
+  }
 }
