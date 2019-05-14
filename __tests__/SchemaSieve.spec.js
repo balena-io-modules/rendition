@@ -5,7 +5,7 @@ const Ajv = require('ajv')
 const ajvKeywords = require('ajv-keywords')
 const metaSchema6 = require('ajv/lib/refs/json-schema-draft-06.json')
 
-import { SchemaSieve as sieve } from '../src'
+import { SchemaSieve as sieve } from '../dist'
 
 const expectMatchesKeys = (data, keys) =>
   expect(Object.keys(data).sort()).toEqual(keys.sort())

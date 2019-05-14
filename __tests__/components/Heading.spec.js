@@ -1,8 +1,10 @@
 /* globals expect, test */
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Provider from '../../src/components/Provider'
-import Heading from '../../src/components/Heading'
+import {
+  Heading,
+  Provider
+} from '../../dist'
 
 test('Heading renders correctly', () => {
   const component = renderer.create(

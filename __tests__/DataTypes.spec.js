@@ -1,6 +1,6 @@
 /* globals expect, describe, it */
-import { getDataModel } from '../src/components/DataTypes'
-import { normalizeDateTime } from '../src/components/DataTypes/date-time-helpers'
+import { getDataModel } from '../dist/components/DataTypes'
+import { normalizeDateTime } from '../dist/components/DataTypes/date-time-helpers'
 
 const expectMatchesKeys = (data, keys) =>
   expect(Object.keys(data).sort()).toEqual(keys.sort())

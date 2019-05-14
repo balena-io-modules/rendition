@@ -1,8 +1,10 @@
 /* globals expect, test */
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Provider from '../../src/components/Provider'
-import DropDownButton from '../../src/components/DropDownButton'
+import {
+  DropDownButton,
+  Provider
+} from '../../dist'
 
 test('DropDownButton renders correctly', () => {
   const component = renderer.create(

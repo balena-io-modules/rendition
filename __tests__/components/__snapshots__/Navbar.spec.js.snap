@@ -2,25 +2,25 @@
 
 exports[`Navbar renders correctly with a single children prop 1`] = `
 <div
-  className="sc-gqjmRU eXdhol StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-iyvyFf gFhKYN StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-jzJRlG ePCFxN sc-fjdhpX fGySkI"
+    className="sc-chPdSV GFDdw sc-kAzzGY dLnIPy"
   >
     <div
-      className="sc-jTzLTM cHhUzV sc-VigVT jBgDm"
+      className="sc-hZSUBg eoZWeN sc-bsbRJL tKRUY"
     >
       <div
-        className="sc-cSHVUG jXEWLU sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
+        className="sc-kgoBCf kqLfuS sc-chPdSV jpfrZo sc-kAzzGY dLnIPy"
       >
         <div
-          className="sc-cSHVUG dzaSRZ sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
+          className="sc-kgoBCf cRCsAq sc-chPdSV jpfrZo sc-kAzzGY dLnIPy"
         >
           <div
-            className="sc-kAzzGY eBRrrJ sc-jzJRlG VNfXw sc-fjdhpX fGySkI"
+            className="sc-cMhqgX kOxYlb sc-chPdSV gwIGaM sc-kAzzGY dLnIPy"
           />
           <div
-            className="sc-chPdSV lkxntg sc-jzJRlG exaDfR sc-fjdhpX fGySkI"
+            className="sc-iuJeZd bLYkWY sc-chPdSV yrOiB sc-kAzzGY dLnIPy"
             display={
               Array [
                 "block",
@@ -51,13 +51,13 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
           </div>
         </div>
         <div
-          className="sc-cSHVUG sc-kgoBCf jCVmHt sc-jzJRlG jltOFs sc-fjdhpX fGySkI"
+          className="sc-kgoBCf sc-esOvli jSeSux sc-chPdSV jgcBzP sc-kAzzGY dLnIPy"
         >
           <div
-            className="sc-cSHVUG jXEWLU sc-jzJRlG iggMMu sc-fjdhpX fGySkI"
+            className="sc-kgoBCf kqLfuS sc-chPdSV kDIXHv sc-kAzzGY dLnIPy"
           >
             <div
-              className="sc-jzJRlG utfzA sc-fjdhpX fGySkI"
+              className="sc-chPdSV kDQfPd sc-kAzzGY dLnIPy"
               onClick={[Function]}
             >
               <a
@@ -78,25 +78,25 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
 
 exports[`Navbar renders correctly with more than one children prop 1`] = `
 <div
-  className="sc-gqjmRU eXdhol StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-iyvyFf gFhKYN StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-jzJRlG ePCFxN sc-fjdhpX fGySkI"
+    className="sc-chPdSV GFDdw sc-kAzzGY dLnIPy"
   >
     <div
-      className="sc-jTzLTM cHhUzV sc-VigVT jBgDm"
+      className="sc-hZSUBg eoZWeN sc-bsbRJL tKRUY"
     >
       <div
-        className="sc-cSHVUG jXEWLU sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
+        className="sc-kgoBCf kqLfuS sc-chPdSV jpfrZo sc-kAzzGY dLnIPy"
       >
         <div
-          className="sc-cSHVUG dzaSRZ sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
+          className="sc-kgoBCf cRCsAq sc-chPdSV jpfrZo sc-kAzzGY dLnIPy"
         >
           <div
-            className="sc-kAzzGY eBRrrJ sc-jzJRlG VNfXw sc-fjdhpX fGySkI"
+            className="sc-cMhqgX kOxYlb sc-chPdSV gwIGaM sc-kAzzGY dLnIPy"
           />
           <div
-            className="sc-chPdSV lkxntg sc-jzJRlG exaDfR sc-fjdhpX fGySkI"
+            className="sc-iuJeZd bLYkWY sc-chPdSV yrOiB sc-kAzzGY dLnIPy"
             display={
               Array [
                 "block",
@@ -127,13 +127,13 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
           </div>
         </div>
         <div
-          className="sc-cSHVUG sc-kgoBCf jCVmHt sc-jzJRlG jltOFs sc-fjdhpX fGySkI"
+          className="sc-kgoBCf sc-esOvli jSeSux sc-chPdSV jgcBzP sc-kAzzGY dLnIPy"
         >
           <div
-            className="sc-cSHVUG jXEWLU sc-jzJRlG iggMMu sc-fjdhpX fGySkI"
+            className="sc-kgoBCf kqLfuS sc-chPdSV kDIXHv sc-kAzzGY dLnIPy"
           >
             <div
-              className="sc-jzJRlG utfzA sc-fjdhpX fGySkI"
+              className="sc-chPdSV kDQfPd sc-kAzzGY dLnIPy"
               onClick={[Function]}
             >
               <a
@@ -145,7 +145,7 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
               </a>
             </div>
             <div
-              className="sc-jzJRlG utfzA sc-fjdhpX fGySkI"
+              className="sc-chPdSV kDQfPd sc-kAzzGY dLnIPy"
               onClick={[Function]}
             >
               <a
@@ -157,7 +157,7 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
               </a>
             </div>
             <div
-              className="sc-jzJRlG utfzA sc-fjdhpX fGySkI"
+              className="sc-chPdSV kDQfPd sc-kAzzGY dLnIPy"
               onClick={[Function]}
             >
               <a
@@ -178,25 +178,25 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
 
 exports[`Navbar renders correctly with no children prop 1`] = `
 <div
-  className="sc-gqjmRU eXdhol StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-iyvyFf gFhKYN StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-jzJRlG ePCFxN sc-fjdhpX fGySkI"
+    className="sc-chPdSV GFDdw sc-kAzzGY dLnIPy"
   >
     <div
-      className="sc-jTzLTM cHhUzV sc-VigVT jBgDm"
+      className="sc-hZSUBg eoZWeN sc-bsbRJL tKRUY"
     >
       <div
-        className="sc-cSHVUG jXEWLU sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
+        className="sc-kgoBCf kqLfuS sc-chPdSV jpfrZo sc-kAzzGY dLnIPy"
       >
         <div
-          className="sc-cSHVUG dzaSRZ sc-jzJRlG chuvNI sc-fjdhpX fGySkI"
+          className="sc-kgoBCf cRCsAq sc-chPdSV jpfrZo sc-kAzzGY dLnIPy"
         >
           <div
-            className="sc-kAzzGY eBRrrJ sc-jzJRlG VNfXw sc-fjdhpX fGySkI"
+            className="sc-cMhqgX kOxYlb sc-chPdSV gwIGaM sc-kAzzGY dLnIPy"
           />
           <div
-            className="sc-chPdSV lkxntg sc-jzJRlG exaDfR sc-fjdhpX fGySkI"
+            className="sc-iuJeZd bLYkWY sc-chPdSV yrOiB sc-kAzzGY dLnIPy"
             display={
               Array [
                 "block",
@@ -227,7 +227,7 @@ exports[`Navbar renders correctly with no children prop 1`] = `
           </div>
         </div>
         <div
-          className="sc-cSHVUG sc-kgoBCf jCVmHt sc-jzJRlG jltOFs sc-fjdhpX fGySkI"
+          className="sc-kgoBCf sc-esOvli jSeSux sc-chPdSV jgcBzP sc-kAzzGY dLnIPy"
         />
       </div>
     </div>

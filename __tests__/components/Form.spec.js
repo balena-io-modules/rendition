@@ -4,9 +4,12 @@ import { mount } from 'enzyme'
 import React from 'react'
 import renderer from 'react-test-renderer'
 import sinon from 'sinon'
-import Alert from '../../src/components/Alert'
-import Provider from '../../src/components/Provider'
-import { Form } from '../../src/unstable/'
+
+import { Form } from '../../dist/unstable/'
+import {
+  Alert,
+  Provider
+} from '../../dist'
 
 const schema = {
   type: 'object',

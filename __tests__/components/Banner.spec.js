@@ -1,10 +1,12 @@
 /* globals expect, test */
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Provider from '../../src/components/Provider'
-import Banner from '../../src/components/Banner'
+import {
+  Banner,
+  Provider
+} from '../../dist'
 
-test('Button renders correctly', () => {
+test('Banner renders correctly', () => {
   const component = renderer.create(
     <Provider>
       <Banner color='white'>

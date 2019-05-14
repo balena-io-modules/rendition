@@ -1,8 +1,10 @@
 /* globals expect, test */
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Provider from '../../src/components/Provider'
-import Search from '../../src/components/Search'
+import {
+  Provider,
+  Search
+} from '../../dist'
 
 test('Search renders correctly', () => {
   const component = renderer.create(

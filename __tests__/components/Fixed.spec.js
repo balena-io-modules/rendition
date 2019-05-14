@@ -1,8 +1,10 @@
 /* globals expect, test */
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Provider from '../../src/components/Provider'
-import Fixed from '../../src/components/Fixed'
+import {
+  Fixed,
+  Provider
+} from '../../dist'
 
 test('Fixed renders correctly', () => {
   const component = renderer.create(

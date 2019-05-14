@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer'
 import {
   Modal,
   Provider
-} from '../../src'
+} from '../../dist'
 
 // react-test-renderer does not play nicely with ReactDOM.createPortal(), which
 // is used by Grommet's Layer component in the Modal component. To get it to

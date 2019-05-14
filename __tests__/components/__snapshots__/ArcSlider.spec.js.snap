@@ -2,13 +2,13 @@
 
 exports[`ArcSlider component should match the stored snapshot 1`] = `
 <div
-  className="sc-bdVaJa lgVSbN StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-cmTdod ePZXKJ StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-gZMcBi kUisJP sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
+    className="sc-kAzzGY dMfzxP sc-gzVnrw pznRG sc-bZQynM kMvugX"
   >
     <svg
-      className="sc-iwsKbI hZjppE"
+      className="sc-cSHVUG fhdDsO"
       onMouseDown={[Function]}
       onTouchStart={[Function]}
       style={
@@ -88,7 +88,7 @@ exports[`ArcSlider component should match the stored snapshot 1`] = `
       />
     </svg>
     <div
-      className="sc-dnqmqq sc-gqjmRU WdBNa sc-htoDjs jslKMR sc-gzVnrw jnVFiX"
+      className="sc-htoDjs sc-chPdSV NULXb sc-gzVnrw pznRG sc-bZQynM kMvugX"
     />
   </div>
 </div>

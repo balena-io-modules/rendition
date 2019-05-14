@@ -3,8 +3,10 @@ import { mount } from 'enzyme'
 import noop from 'lodash/noop'
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Provider from '../../src/components/Provider'
-import Textarea from '../../src/components/Textarea'
+import {
+  Provider,
+  Textarea
+} from '../../dist'
 
 describe('Textarea component', () => {
   it('should match the stored snapshot', () => {

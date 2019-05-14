@@ -1,8 +1,10 @@
 /* globals expect, test */
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Provider from '../../src/components/Provider'
-import { Box } from '../../src/components/Grid'
+import {
+  Box,
+  Provider
+} from '../../dist'
 
 test('Box renders correctly', () => {
   const component = renderer.create(

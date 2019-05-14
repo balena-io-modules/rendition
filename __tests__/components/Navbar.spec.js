@@ -2,8 +2,10 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import Link from '../../src/components/Link'
-import Provider from '../../src/components/Provider'
-import Navbar from '../../src/components/Navbar'
+import {
+  Navbar,
+  Provider
+} from '../../dist'
 
 describe('Navbar renders correctly', () => {
   test('with more than one children prop', () => {

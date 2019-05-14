@@ -1,5 +1,5 @@
 /* globals expect, describe, it */
-import * as utils from '../src/utils'
+import * as utils from '../dist/utils'
 
 describe('utils', () => {
   describe('.stripSchemaFormats()', () => {
