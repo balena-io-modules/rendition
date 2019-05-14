@@ -1,6 +1,6 @@
 import { Button, ButtonProps as GrommetButtonProps } from 'grommet';
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import asRendition from '../asRendition';
 import {
 	Coloring,
@@ -12,6 +12,12 @@ import {
 	Theme,
 } from '../common-types';
 import { getColor, getColoringType, normal, px } from '../utils';
+
+const overrideHoverEffect = css`
+	box-shadow: none;
+	background: ${props => getColor(props, 'color', 'light')};
+	border-color: ${props => getColor(props, 'color', 'light')};
+`;
 
 const ButtonBase = styled(Button)`
 	font-family: ${props => props.theme.titleFont};
@@ -31,10 +37,40 @@ const ButtonBase = styled(Button)`
 
 const ColouredButton = styled(ButtonBase)`
 	color: white;
+	&:hover {
+		${overrideHoverEffect}
+	}
+`;
+
+const DefaultColouredButton = styled(ButtonBase)`
+	color: ${props => props.theme.colors.text.main};
+	border: white;
+	background: white;
+	&:hover {
+		${overrideHoverEffect}
+		background: ${props => props.theme.colors.gray.light};
+		border-color: ${props => props.theme.colors.gray.light};
+	}
 `;
 
 const Outline = styled(ButtonBase)<{ color?: string }>`
 	color: ${props => props.color || props.theme.colors.text.main};
+	&:hover {
+		${overrideHoverEffect}
+		color: white;
+	}
+`;
+
+const DefaultOutlineButton = styled(ButtonBase)`
+	color: white;
+	background: transparent;
+	border-color: white;
+	&:hover {
+		${overrideHoverEffect}
+		color: ${props => props.theme.colors.text.main};
+		background: white;
+		border-color: white;
+	}
 `;
 
 const Plain = styled(ButtonBase)<{ hoverColor?: string; color?: string }>`
@@ -92,7 +128,27 @@ const getStyledButton = (
 		);
 	}
 
-	if ((outline && !active) || !isPrimary) {
+	const hasColorVariant = getColor(originalProps, 'color', 'main');
+
+	// There is no styling - fallback to our default cases.
+	// The active state for the any default button is the same as the solid one
+	if (!hasColorVariant) {
+		return (props: GrommetButtonProps) =>
+			outline && !active ? (
+				<DefaultOutlineButton {...props} />
+			) : (
+				<DefaultColouredButton {...props} />
+			);
+	}
+
+	// Ensure that any active button uses the solid state
+	if (active || isPrimary) {
+		return (props: GrommetButtonProps) => (
+			<ColouredButton {...props} primary={true} />
+		);
+	}
+
+	if (outline) {
 		return (props: GrommetButtonProps) => (
 			<Outline {...props} color={getColor(originalProps, 'color', 'main')} />
 		);
