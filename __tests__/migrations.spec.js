@@ -1,7 +1,7 @@
 /* globals expect, describe, it */
 import forEach from 'lodash/forEach'
 
-import { migrations, SchemaSieve as sieve } from '../src'
+import { migrations, SchemaSieve as sieve } from '../dist'
 
 // Small filter function to help with asserting function output
 // This strips the '$id' key from filter schemas

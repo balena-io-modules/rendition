@@ -1,8 +1,10 @@
 /* globals expect, test */
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Provider from '../../src/components/Provider'
-import Alert from '../../src/components/Alert'
+import {
+  Alert,
+  Provider
+} from '../../dist'
 
 test('Alert renders correctly', () => {
   const component = renderer.create(

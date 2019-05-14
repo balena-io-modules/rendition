@@ -4,8 +4,10 @@ import noop from 'lodash/noop'
 import sinon from 'sinon'
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Provider from '../../src/components/Provider'
-import Select from '../../src/components/Select'
+import {
+  Provider,
+  Select
+} from '../../dist'
 
 describe('Select component', () => {
   it('should match the stored snapshot', () => {

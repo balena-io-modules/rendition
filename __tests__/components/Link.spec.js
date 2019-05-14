@@ -2,8 +2,10 @@
 import { mount } from 'enzyme'
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Provider from '../../src/components/Provider'
-import Link from '../../src/components/Link'
+import {
+  Link,
+  Provider
+} from '../../dist'
 
 describe('Link component', () => {
   it('Should match the stored snapshot', () => {

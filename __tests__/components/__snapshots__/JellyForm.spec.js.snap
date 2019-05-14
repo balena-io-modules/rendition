@@ -2,7 +2,7 @@
 
 exports[`JellyForm component should match the stored snapshot 1`] = `
 <div
-  className="sc-cSHVUG cVRlef StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-cmTdod ePZXKJ StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
     className="sc-cMhqgX frkgZi sc-gzVnrw pznRG sc-bZQynM kMvugX"
@@ -38,7 +38,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
             </label>
             <input
               autoFocus={false}
-              className="sc-gipzik jGrCwz sc-jlyJG cmjebS"
+              className="sc-iRbamj iRUwhm sc-gPEVay bomWPW"
               disabled={false}
               id="root_Name"
               label="Name"
@@ -57,7 +57,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
         <div />
       </div>
       <button
-        className="sc-kAzzGY sc-dxgOiQ fZnRKS sc-chPdSV eKGfJl StyledButton-sc-323bzc-0 jfOEyc"
+        className="sc-kEYyzF sc-cvbbAY ldJHua sc-kkGfuU kqxvkn StyledButton-sc-323bzc-0 jfOEyc"
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}

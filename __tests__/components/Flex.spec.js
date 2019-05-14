@@ -1,8 +1,10 @@
 /* globals expect, test */
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Provider from '../../src/components/Provider'
-import { Flex } from '../../src/components/Grid'
+import {
+  Flex,
+  Provider
+} from '../../dist'
 
 test('Flex renders correctly', () => {
   const component = renderer.create(

@@ -1,8 +1,10 @@
 /* globals expect, test */
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Provider from '../../src/components/Provider'
-import Divider from '../../src/components/Divider'
+import {
+  Divider,
+  Provider
+} from '../../dist'
 
 test('Divider renders correctly', () => {
   const component = renderer.create(

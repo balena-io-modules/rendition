@@ -1,6 +1,6 @@
 /* globals expect, describe, it */
 
-import { runFormulas } from '../../src/unstable/components/JellyForm/formulas'
+import { runFormulas } from '../../dist/unstable/components/JellyForm/formulas'
 
 describe('JellyForm formula runner should', () => {
   it('not modify empty object', () => {

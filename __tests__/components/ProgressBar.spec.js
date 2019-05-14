@@ -1,8 +1,10 @@
 /* globals expect, test */
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Provider from '../../src/components/Provider'
-import ProgressBar from '../../src/components/ProgressBar'
+import {
+  ProgressBar,
+  Provider
+} from '../../dist'
 
 test('ProgressBar renders correctly', () => {
   const value = 50

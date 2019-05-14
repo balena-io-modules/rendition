@@ -4,8 +4,10 @@ import noop from 'lodash/noop'
 import React from 'react'
 import renderer from 'react-test-renderer'
 import sinon from 'sinon'
-import Provider from '../../src/components/Provider'
-import Pager from '../../src/components/Pager'
+import {
+  Pager,
+  Provider
+} from '../../dist'
 
 describe('Pager component', () => {
   it('should match the stored snapshot', () => {

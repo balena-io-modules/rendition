@@ -9,10 +9,13 @@ import reverse from 'lodash/reverse'
 import React from 'react'
 import renderer from 'react-test-renderer'
 import sinon from 'sinon'
-import Pager from '../../src/components/Pager'
-import Provider from '../../src/components/Provider'
-import Table from '../../src/components/Table'
 import PokeDex from '../../src/stories/assets/pokedex'
+
+import {
+  Pager,
+  Provider,
+  Table
+} from '../../dist'
 
 const columns = [
   {

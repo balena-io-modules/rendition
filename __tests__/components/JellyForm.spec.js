@@ -4,10 +4,13 @@ import { mount } from 'enzyme'
 import React from 'react'
 import renderer from 'react-test-renderer'
 import sinon from 'sinon'
-import Alert from '../../src/components/Alert'
-import Provider from '../../src/components/Provider'
 
-import JellyForm from '../../src/unstable/components/JellyForm'
+import {
+  Alert,
+  Provider
+} from '../../dist'
+
+import JellyForm from '../../dist/unstable/components/JellyForm'
 
 const schema = `
   title: Pokèmon

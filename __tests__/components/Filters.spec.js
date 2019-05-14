@@ -2,15 +2,18 @@
 import { mount } from 'enzyme'
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Provider from '../../src/components/Provider'
-import Filters from '../../src/components/Filters'
-import Txt from '../../src/components/Txt'
-import Select from '../../src/components/Select'
-import FiltersSummary from '../../src/components/Filters/Summary'
-import Search from '../../src/components/Search'
-import * as SchemaSieve from '../../src/components/Filters/SchemaSieve'
-import { ViewListItem } from '../../src/components/Filters/ViewsMenu'
-import theme from '../../src/theme'
+
+import {
+  Filters,
+  Provider,
+  SchemaSieve,
+  Search,
+  Select,
+  Theme,
+  Txt
+} from '../../dist'
+import FiltersSummary from '../../dist/components/Filters/Summary'
+import { ViewListItem } from '../../dist/components/Filters/ViewsMenu'
 
 const schema = {
   type: 'object',
@@ -97,7 +100,7 @@ describe('Filters component', () => {
           />
             </Provider>
           ),
-          { theme, schema }
+          { theme: Theme, schema }
         )
       )
 
@@ -119,7 +122,7 @@ describe('Filters component', () => {
           />
             </Provider>
           ),
-          { theme, schema, filters: [filter] }
+          { theme: Theme, schema, filters: [filter] }
         )
       )
 
@@ -294,7 +297,7 @@ describe('Filters component', () => {
           />
             </Provider>
           ),
-          { theme, schema }
+          { theme: Theme, schema }
         )
       )
 
@@ -315,7 +318,7 @@ describe('Filters component', () => {
           />
             </Provider>
           ),
-          { theme, schema, views: [view] }
+          { theme: Theme, schema, views: [view] }
         )
       )
 
@@ -338,7 +341,7 @@ describe('Filters component', () => {
       const component = mount(
         <Provider>
           <Filters
-            theme={theme}
+            theme={Theme}
             schema={unknownSchema}
         />
         </Provider>
@@ -351,7 +354,7 @@ describe('Filters component', () => {
       const component = mount(
         <Provider>
           <Filters
-            theme={theme}
+            theme={Theme}
             schema={schema}
             views={[view]}
         />

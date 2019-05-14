@@ -1,8 +1,10 @@
 /* globals expect, jest, test */
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Provider from '../../src/components/Provider'
-import Terminal from '../../src/components/Terminal'
+import {
+  Provider,
+  Terminal
+} from '../../dist'
 
 // Terminal implements xterm.js v3, which uses window.matchMedia
 // This API is not supported by jsDom, so we have to mock it here

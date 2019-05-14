@@ -2,10 +2,10 @@
 
 exports[`Fixed renders correctly 1`] = `
 <div
-  className="sc-bdVaJa lgVSbN StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-cmTdod ePZXKJ StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-htoDjs jslKMR sc-gzVnrw jLwIZh"
+    className="sc-cHGsZl bsJgGW sc-kjoXOD hMWlni"
   >
     Fixed
   </div>

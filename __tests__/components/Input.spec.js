@@ -1,8 +1,10 @@
 /* globals expect, test */
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Provider from '../../src/components/Provider'
-import Input from '../../src/components/Input'
+import {
+  Input,
+  Provider
+} from '../../dist'
 
 test('Input renders correctly', () => {
   const component = renderer.create(

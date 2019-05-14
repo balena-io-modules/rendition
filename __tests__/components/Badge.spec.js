@@ -1,8 +1,10 @@
 /* globals expect, test */
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Provider from '../../src/components/Provider'
-import Badge from '../../src/components/Badge'
+import {
+  Badge,
+  Provider
+} from '../../dist'
 
 test('Badge renders correctly', () => {
   const component = renderer.create(

@@ -1,8 +1,10 @@
 /* globals expect, test */
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Provider from '../../src/components/Provider'
-import Img from '../../src/components/Img'
+import {
+  Img,
+  Provider
+} from '../../dist'
 
 test('Img renders correctly', () => {
   const component = renderer.create(
