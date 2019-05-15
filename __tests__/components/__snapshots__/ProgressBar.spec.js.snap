@@ -2,20 +2,20 @@
 
 exports[`ProgressBar renders correctly 1`] = `
 <div
-  className="sc-cmTdod ePZXKJ StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-btzYZH jBDBBH StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-iELTvK kAKPZj sc-feJyhm kFRggS"
+    className="sc-jwKygS ZWfuR sc-cmTdod jjxkIy"
     color="#fff"
   >
     <div
-      className="sc-cIShpX fbUMjg"
+      className="sc-feJyhm hBdPTU"
     >
       50
       %
     </div>
     <div
-      className="sc-ktHwxA xuZlY"
+      className="sc-kafWEX bsITjK"
       style={
         Object {
           "width": "50%",
@@ -23,7 +23,7 @@ exports[`ProgressBar renders correctly 1`] = `
       }
     >
       <div
-        className="sc-kafWEX fKbNOs"
+        className="sc-iELTvK hnTcXc"
         style={
           Object {
             "width": "200%",
