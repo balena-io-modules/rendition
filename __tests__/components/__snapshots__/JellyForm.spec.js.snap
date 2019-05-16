@@ -2,10 +2,10 @@
 
 exports[`JellyForm component should match the stored snapshot 1`] = `
 <div
-  className="sc-cmTdod ePZXKJ StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-btzYZH jBDBBH StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-cMhqgX frkgZi sc-gzVnrw pznRG sc-bZQynM kMvugX"
+    className="sc-esOvli gEemTu sc-gzVnrw pznRG sc-bZQynM kMvugX"
   >
     <form
       className="rjsf"
@@ -17,7 +17,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
       >
         <fieldset>
           <legend
-            className="sc-epnACN dunoRN"
+            className="sc-bsbRJL iVsEFF"
             id="root__title"
           >
             Pokèmon
@@ -26,7 +26,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
             className="form-group field field-string rendition-form__field--root_Name sc-gzVnrw fcRkeO sc-bZQynM kMvugX"
           >
             <label
-              className="control-label sc-hZSUBg ezsVLv"
+              className="control-label sc-iuJeZd gkgfBa"
               htmlFor="root_Name"
             >
               Name
@@ -38,7 +38,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
             </label>
             <input
               autoFocus={false}
-              className="sc-iRbamj iRUwhm sc-gPEVay bomWPW"
+              className="sc-gipzik jGrCwz sc-jlyJG cmjebS"
               disabled={false}
               id="root_Name"
               label="Name"
@@ -57,7 +57,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
         <div />
       </div>
       <button
-        className="sc-kEYyzF sc-cvbbAY ldJHua sc-kkGfuU kqxvkn StyledButton-sc-323bzc-0 jfOEyc"
+        className="sc-kEYyzF sc-brqgnP fjrEUv sc-kkGfuU eBOsQm StyledButton-sc-323bzc-0 jfOEyc"
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}

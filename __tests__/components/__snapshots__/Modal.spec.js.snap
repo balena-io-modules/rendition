@@ -2,7 +2,7 @@
 
 exports[`Modal renders correctly 1`] = `
 <div
-  className="sc-cmTdod ePZXKJ StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-btzYZH jBDBBH StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
     aria-hidden={false}
@@ -25,7 +25,7 @@ exports[`Modal renders correctly 1`] = `
           tabIndex="-1"
         />
         <div
-          className="sc-fBuWsC ijsQEk sc-gzVnrw iVQgQP sc-bZQynM kMvugX"
+          className="sc-dVhcbM hgqudO sc-gzVnrw iVQgQP sc-bZQynM kMvugX"
           onClick={[Function]}
         >
           Modal
@@ -33,7 +33,7 @@ exports[`Modal renders correctly 1`] = `
             className="sc-htoDjs iWrvzc sc-gzVnrw PpHOL sc-bZQynM kMvugX"
           >
             <button
-              className="sc-kEYyzF sc-cvbbAY ldJHua sc-kkGfuU kqxvkn StyledButton-sc-323bzc-0 jfOEyc"
+              className="sc-kEYyzF sc-brqgnP fjrEUv sc-kkGfuU eBOsQm StyledButton-sc-323bzc-0 jfOEyc"
               onBlur={[Function]}
               onFocus={[Function]}
               onMouseOut={[Function]}
