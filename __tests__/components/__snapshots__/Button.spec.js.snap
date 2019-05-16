@@ -2,10 +2,10 @@
 
 exports[`Button renders correctly 1`] = `
 <div
-  className="sc-btzYZH jBDBBH StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-cmTdod ePZXKJ StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <button
-    className="sc-kEYyzF sc-brqgnP fjrEUv sc-iAyFgw kTGuvf StyledButton-sc-323bzc-0 djTlJn"
+    className="sc-kEYyzF sc-cvbbAY ldJHua sc-iAyFgw ivKaOf StyledButton-sc-323bzc-0 djTlJn"
     onBlur={[Function]}
     onFocus={[Function]}
     onMouseOut={[Function]}
@@ -19,10 +19,10 @@ exports[`Button renders correctly 1`] = `
 
 exports[`Styled Anchor Button renders correctly 1`] = `
 <div
-  className="sc-btzYZH jBDBBH StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-cmTdod ePZXKJ StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <a
-    className="sc-kEYyzF sc-brqgnP kHRNhU sc-iAyFgw kTGuvf StyledButton-sc-323bzc-0 djTlJn"
+    className="sc-kEYyzF sc-cvbbAY dnQubt sc-iAyFgw ivKaOf StyledButton-sc-323bzc-0 djTlJn"
     href="#"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -36,10 +36,10 @@ exports[`Styled Anchor Button renders correctly 1`] = `
 
 exports[`Styled Button renders correctly 1`] = `
 <div
-  className="sc-btzYZH jBDBBH StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-cmTdod ePZXKJ StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <button
-    className="sc-kEYyzF sc-brqgnP kHRNhU sc-iAyFgw kTGuvf StyledButton-sc-323bzc-0 djTlJn"
+    className="sc-kEYyzF sc-cvbbAY dnQubt sc-iAyFgw ivKaOf StyledButton-sc-323bzc-0 djTlJn"
     onBlur={[Function]}
     onFocus={[Function]}
     onMouseOut={[Function]}
