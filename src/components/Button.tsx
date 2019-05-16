@@ -17,18 +17,19 @@ const overrideHoverEffect = css`
 	box-shadow: none;
 	background: ${props => getColor(props, 'color', 'light')};
 	border-color: ${props => getColor(props, 'color', 'light')};
+	:disabled {
+		cursor: not-allowed;
+	}
 `;
 
 const ButtonBase = styled(Button)`
 	font-family: ${props => props.theme.titleFont};
 	font-weight: ${props => normal(props)};
 	height: ${props => px(props.theme.space[4])};
-
 	svg {
 		color: inherit !important;
 		font-size: 0.875em;
 	}
-
 	/* These rules cause consistent styling when the button is rendered as a link */
 	display: inline-flex;
 	align-items: center;
@@ -42,34 +43,13 @@ const ColouredButton = styled(ButtonBase)`
 	}
 `;
 
-const DefaultColouredButton = styled(ButtonBase)`
-	color: ${props => props.theme.colors.text.main};
-	border: white;
-	background: white;
-	&:hover {
-		${overrideHoverEffect}
-		background: ${props => props.theme.colors.gray.light};
-		border-color: ${props => props.theme.colors.gray.light};
-	}
-`;
-
 const Outline = styled(ButtonBase)<{ color?: string }>`
 	color: ${props => props.color || props.theme.colors.text.main};
+	border-color: ${props => props.color || props.theme.colors.text.main};
 	&:hover {
-		${overrideHoverEffect}
+		${overrideHoverEffect};
+		background: ${props => props.color || props.theme.colors.text.main};
 		color: white;
-	}
-`;
-
-const DefaultOutlineButton = styled(ButtonBase)`
-	color: white;
-	background: transparent;
-	border-color: white;
-	&:hover {
-		${overrideHoverEffect}
-		color: ${props => props.theme.colors.text.main};
-		background: white;
-		border-color: white;
 	}
 `;
 
@@ -78,7 +58,6 @@ const Plain = styled(ButtonBase)<{ hoverColor?: string; color?: string }>`
 	height: auto;
 	font-weight: ${props => normal(props)};
 	border-radius: 0;
-
 	&:hover:enabled,
 	&:focus:enabled,
 	&:active:enabled {
@@ -96,7 +75,6 @@ const Underline = styled(Plain)<{ active?: boolean; color?: string }>`
 	${props => (props.active ? underlineButtonActiveStyles(props) : '')}
 	border-bottom: 1px solid;
 	background: none;
-
 	&:hover:enabled,
 	&:focus:enabled,
 	&:active:enabled {
@@ -128,27 +106,7 @@ const getStyledButton = (
 		);
 	}
 
-	const hasColorVariant = getColor(originalProps, 'color', 'main');
-
-	// There is no styling - fallback to our default cases.
-	// The active state for the any default button is the same as the solid one
-	if (!hasColorVariant) {
-		return (props: GrommetButtonProps) =>
-			outline && !active ? (
-				<DefaultOutlineButton {...props} />
-			) : (
-				<DefaultColouredButton {...props} />
-			);
-	}
-
-	// Ensure that any active button uses the solid state
-	if (active || isPrimary) {
-		return (props: GrommetButtonProps) => (
-			<ColouredButton {...props} primary={true} />
-		);
-	}
-
-	if (outline) {
+	if ((outline && !active) || !isPrimary) {
 		return (props: GrommetButtonProps) => (
 			<Outline {...props} color={getColor(originalProps, 'color', 'main')} />
 		);

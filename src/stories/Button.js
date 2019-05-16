@@ -31,17 +31,9 @@ storiesOf('Next/Button', module)
           <Button m={2} danger onClick={action('case-5')}>
             Danger
           </Button>
-          <Button m={2} warning onClick={action('case-6')}>
-            Warning
+          <Button m={2} onClick={action('case-6')}>
+            Default
           </Button>
-          <Button m={2} info onClick={action('case-7')}>
-            Info
-          </Button>
-          <Box bg='#ddd' style={{ display: 'inline-block' }}>
-            <Button m={2} onClick={action('case-8')}>
-              Default
-            </Button>
-          </Box>
         </Box>
       </Provider>
     )
@@ -65,17 +57,9 @@ storiesOf('Next/Button', module)
           <Button m={2} disabled danger onClick={action('case-5')}>
             Danger
           </Button>
-          <Button m={2} disabled warning onClick={action('case-6')}>
-            Warning
+          <Button m={2} disabled onClick={action('case-6')}>
+            Default
           </Button>
-          <Button m={2} disabled info onClick={action('case-7')}>
-            Info
-          </Button>
-          <Box bg='#ddd' style={{ display: 'inline-block' }}>
-            <Button m={2} disavled onClick={action('case-8')}>
-              Default
-            </Button>
-          </Box>
         </Box>
       </Provider>
     )
@@ -99,17 +83,9 @@ storiesOf('Next/Button', module)
           <Button m={2} outline danger onClick={action('case-5')}>
             Danger
           </Button>
-          <Button m={2} outline warning onClick={action('case-6')}>
-            Warning
+          <Button m={2} outline onClick={action('case-6')}>
+            Default
           </Button>
-          <Button m={2} outline info onClick={action('case-7')}>
-            Info
-          </Button>
-          <Box bg='#ddd' style={{ display: 'inline-block' }}>
-            <Button m={2} outline onClick={action('case-8')}>
-              Default
-            </Button>
-          </Box>
         </Box>
       </Provider>
     )
@@ -167,11 +143,11 @@ storiesOf('Next/Button', module)
           <Button width={240} m={2} tertiary onClick={action('case-3')}>
             Button
           </Button>
-          <Box width={300} bg='#ddd' px={2}>
-            <Button fill my={2} onClick={action('case-4')}>
+          <div style={{ width: 300 }}>
+            <Button fill m={2} onClick={action('case-4')}>
               Button
             </Button>
-          </Box>
+          </div>
         </Box>
       </Provider>
     )
@@ -183,11 +159,9 @@ storiesOf('Next/Button', module)
           <Button m={2} tertiary icon={<FaExpand />} onClick={action('case-3')}>
             Expand
           </Button>
-          <Box bg='#ddd' style={{ display: 'inline-block' }}>
-            <Button m={2} icon={<FaRecycle />} onClick={action('case-4')}>
-              Recycle
-            </Button>
-          </Box>
+          <Button m={2} icon={<FaRecycle />} onClick={action('case-4')}>
+            Recycle
+          </Button>
         </Box>
       </Provider>
     )
@@ -202,9 +176,7 @@ storiesOf('Next/Button', module)
             icon={<FaExpand />}
             onClick={action('case-3')}
           />
-          <Box bg='#ddd' style={{ display: 'inline-block' }}>
-            <Button m={2} onClick={action('case-4')} icon={<FaRecycle />} />
-          </Box>
+          <Button m={2} onClick={action('case-4')} icon={<FaRecycle />} />
         </Box>
       </Provider>
     )
@@ -214,18 +186,10 @@ storiesOf('Next/Button', module)
       <Provider>
         <Box m={3}>
           <Box mb={2}>
-            <Box mb={2}>
-              <Button m={2} primary>
-                Primary
-              </Button>
-              <Button m={2} primary active>
-                Primary active
-              </Button>
-            </Box>
-            <Button m={2} primary outline>
+            <Button m={2} outline>
               Outline
             </Button>
-            <Button m={2} primary outline active>
+            <Button m={2} outline active>
               Outline active
             </Button>
           </Box>
@@ -235,6 +199,20 @@ storiesOf('Next/Button', module)
             </Button>
             <Button m={2} underline active>
               Underline active
+            </Button>
+          </Box>
+          <Box mb={2}>
+            <Button m={2}>Default</Button>
+            <Button m={2} active>
+              Default active
+            </Button>
+          </Box>
+          <Box mb={2}>
+            <Button m={2} primary>
+              Primary
+            </Button>
+            <Button m={2} primary active>
+              Primary active
             </Button>
           </Box>
         </Box>
@@ -260,11 +238,9 @@ storiesOf('Next/Button', module)
           <Button m={2} href={`#`} danger>
             Danger
           </Button>
-          <Box bg='#ddd' style={{ display: 'inline-block' }}>
-            <Button m={2} href={`#`}>
-              Default
-            </Button>
-          </Box>
+          <Button m={2} href={`#`}>
+            Default
+          </Button>
         </Box>
         <Box m={3}>
           <Button m={2} underline href={`#`} primary>
