@@ -2,13 +2,13 @@
 
 exports[`Navbar renders correctly with a single children prop 1`] = `
 <div
-  className="sc-kPVwWT jlRNvi StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-iyvyFf gFhKYN StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
     className="sc-chPdSV GFDdw sc-kAzzGY dLnIPy"
   >
     <div
-      className="sc-iuJeZd gSRwAy sc-cMhqgX iRVSHK"
+      className="sc-hZSUBg eoZWeN sc-bsbRJL tKRUY"
     >
       <div
         className="sc-kgoBCf kqLfuS sc-chPdSV jpfrZo sc-kAzzGY dLnIPy"
@@ -17,10 +17,10 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
           className="sc-kgoBCf cRCsAq sc-chPdSV jpfrZo sc-kAzzGY dLnIPy"
         >
           <div
-            className="sc-esOvli Abxwx sc-chPdSV gwIGaM sc-kAzzGY dLnIPy"
+            className="sc-cMhqgX kOxYlb sc-chPdSV gwIGaM sc-kAzzGY dLnIPy"
           />
           <div
-            className="sc-cmthru iKdrXs sc-chPdSV yrOiB sc-kAzzGY dLnIPy"
+            className="sc-iuJeZd bLYkWY sc-chPdSV yrOiB sc-kAzzGY dLnIPy"
             display={
               Array [
                 "block",
@@ -51,7 +51,7 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
           </div>
         </div>
         <div
-          className="sc-kgoBCf sc-hMFtBS bfgFqv sc-chPdSV jgcBzP sc-kAzzGY dLnIPy"
+          className="sc-kgoBCf sc-esOvli jSeSux sc-chPdSV jgcBzP sc-kAzzGY dLnIPy"
         >
           <div
             className="sc-kgoBCf kqLfuS sc-chPdSV kDIXHv sc-kAzzGY dLnIPy"
@@ -78,13 +78,13 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
 
 exports[`Navbar renders correctly with more than one children prop 1`] = `
 <div
-  className="sc-kPVwWT jlRNvi StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-iyvyFf gFhKYN StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
     className="sc-chPdSV GFDdw sc-kAzzGY dLnIPy"
   >
     <div
-      className="sc-iuJeZd gSRwAy sc-cMhqgX iRVSHK"
+      className="sc-hZSUBg eoZWeN sc-bsbRJL tKRUY"
     >
       <div
         className="sc-kgoBCf kqLfuS sc-chPdSV jpfrZo sc-kAzzGY dLnIPy"
@@ -93,10 +93,10 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
           className="sc-kgoBCf cRCsAq sc-chPdSV jpfrZo sc-kAzzGY dLnIPy"
         >
           <div
-            className="sc-esOvli Abxwx sc-chPdSV gwIGaM sc-kAzzGY dLnIPy"
+            className="sc-cMhqgX kOxYlb sc-chPdSV gwIGaM sc-kAzzGY dLnIPy"
           />
           <div
-            className="sc-cmthru iKdrXs sc-chPdSV yrOiB sc-kAzzGY dLnIPy"
+            className="sc-iuJeZd bLYkWY sc-chPdSV yrOiB sc-kAzzGY dLnIPy"
             display={
               Array [
                 "block",
@@ -127,7 +127,7 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
           </div>
         </div>
         <div
-          className="sc-kgoBCf sc-hMFtBS bfgFqv sc-chPdSV jgcBzP sc-kAzzGY dLnIPy"
+          className="sc-kgoBCf sc-esOvli jSeSux sc-chPdSV jgcBzP sc-kAzzGY dLnIPy"
         >
           <div
             className="sc-kgoBCf kqLfuS sc-chPdSV kDIXHv sc-kAzzGY dLnIPy"
@@ -178,13 +178,13 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
 
 exports[`Navbar renders correctly with no children prop 1`] = `
 <div
-  className="sc-kPVwWT jlRNvi StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-iyvyFf gFhKYN StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
     className="sc-chPdSV GFDdw sc-kAzzGY dLnIPy"
   >
     <div
-      className="sc-iuJeZd gSRwAy sc-cMhqgX iRVSHK"
+      className="sc-hZSUBg eoZWeN sc-bsbRJL tKRUY"
     >
       <div
         className="sc-kgoBCf kqLfuS sc-chPdSV jpfrZo sc-kAzzGY dLnIPy"
@@ -193,10 +193,10 @@ exports[`Navbar renders correctly with no children prop 1`] = `
           className="sc-kgoBCf cRCsAq sc-chPdSV jpfrZo sc-kAzzGY dLnIPy"
         >
           <div
-            className="sc-esOvli Abxwx sc-chPdSV gwIGaM sc-kAzzGY dLnIPy"
+            className="sc-cMhqgX kOxYlb sc-chPdSV gwIGaM sc-kAzzGY dLnIPy"
           />
           <div
-            className="sc-cmthru iKdrXs sc-chPdSV yrOiB sc-kAzzGY dLnIPy"
+            className="sc-iuJeZd bLYkWY sc-chPdSV yrOiB sc-kAzzGY dLnIPy"
             display={
               Array [
                 "block",
@@ -227,7 +227,7 @@ exports[`Navbar renders correctly with no children prop 1`] = `
           </div>
         </div>
         <div
-          className="sc-kgoBCf sc-hMFtBS bfgFqv sc-chPdSV jgcBzP sc-kAzzGY dLnIPy"
+          className="sc-kgoBCf sc-esOvli jSeSux sc-chPdSV jgcBzP sc-kAzzGY dLnIPy"
         />
       </div>
     </div>
