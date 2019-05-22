@@ -8,6 +8,10 @@
   },
   "license": "Apache-2.0",
   "main": "./dist/index.js",
+  "files": [
+    "dist/",
+    "docs/"
+  ],
   "engines": {
     "node": ">=8.0.0",
     "npm": ">=5.7.0"
