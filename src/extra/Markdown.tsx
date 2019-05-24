@@ -1,4 +1,3 @@
-import memoize = require('lodash/memoize');
 import * as marked from 'marked';
 import * as React from 'react';
 import styled from 'styled-components';
@@ -16,7 +15,7 @@ const markedOptions = {
 	sanitize: true,
 };
 
-const render = memoize((text: string = '') => marked(text, markedOptions));
+const render = (text: string = '') => marked(text, markedOptions);
 
 /*
  Taken From: https://github.com/sindresorhus/github-markdown-css
