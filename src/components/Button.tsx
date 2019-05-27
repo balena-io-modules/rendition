@@ -11,7 +11,7 @@ import {
 	Sizing,
 	Theme,
 } from '../common-types';
-import { getColor, getColoringType, normal, px } from '../utils';
+import { getColor, getColoringType, normal } from '../utils';
 
 const getHoverEffectOverride = (
 	bg: string,
@@ -34,7 +34,7 @@ const getHoverEffectOverride = (
 const ButtonBase = styled(Button)`
 	font-family: ${props => props.theme.titleFont};
 	font-weight: ${props => normal(props)};
-	height: ${props => px(props.theme.space[4])};
+	height: 38px;
 	svg {
 		color: inherit !important;
 		font-size: 0.875em;
