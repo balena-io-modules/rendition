@@ -2,10 +2,10 @@
 
 exports[`Heading renders correctly 1`] = `
 <div
-  className="sc-cmTdod ePZXKJ StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-jwKygS cBmECM StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <h3
-    className="sc-dfVpRl lecxbI sc-gxMtzJ hoSOEK"
+    className="sc-gzOgki lbWabF sc-dfVpRl dmxTZL"
   >
     Heading
   </h3>
