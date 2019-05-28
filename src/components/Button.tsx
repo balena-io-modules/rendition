@@ -1,6 +1,6 @@
 import { Button, ButtonProps as GrommetButtonProps } from 'grommet';
 import * as React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import asRendition from '../asRendition';
 import {
 	Coloring,
@@ -13,14 +13,23 @@ import {
 } from '../common-types';
 import { getColor, getColoringType, normal, px } from '../utils';
 
-const overrideHoverEffect = css`
-	box-shadow: none;
-	background: ${props => getColor(props, 'color', 'light')};
-	border-color: ${props => getColor(props, 'color', 'light')};
-	:disabled {
-		cursor: not-allowed;
-	}
-`;
+const getHoverEffectOverride = (
+	bg: string,
+	color: string,
+	opacity?: string,
+) => {
+	return `
+		&:hover:enabled,
+		&:focus:enabled,
+		&:active:enabled {
+			box-shadow: none;
+			background: ${bg};
+			border-color: ${bg};
+			color: ${color};
+			opacity: ${opacity};
+		}
+	`;
+};
 
 const ButtonBase = styled(Button)`
 	font-family: ${props => props.theme.titleFont};
@@ -34,22 +43,42 @@ const ButtonBase = styled(Button)`
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+
+	&:disabled {
+		cursor: not-allowed;
+	}
 `;
 
 const ColouredButton = styled(ButtonBase)`
 	color: white;
-	&:hover {
-		${overrideHoverEffect}
-	}
+	${props => getHoverEffectOverride(getColor(props, 'color', 'dark'), 'white')};
 `;
 
 const Outline = styled(ButtonBase)<{ color?: string }>`
 	color: ${props => props.color || props.theme.colors.text.main};
 	border-color: ${props => props.color || props.theme.colors.text.main};
-	&:hover {
-		${overrideHoverEffect};
-		background: ${props => props.color || props.theme.colors.text.main};
-		color: white;
+	${props =>
+		getHoverEffectOverride(
+			props.color || props.theme.colors.text.main,
+			'white',
+		)};
+`;
+
+const Light = styled(ButtonBase)`
+	color: ${props => props.theme.colors.text.main};
+	border-color: ${props => props.theme.colors.text.main};
+	background: white;
+	border: none
+		${props =>
+			getHoverEffectOverride(
+				'white',
+				props.theme.colors.secondary.main,
+				'0.9',
+			)};
+
+	&:disabled {
+		opacity: 1;
+		color: #c6c8c9;
 	}
 `;
 
@@ -58,11 +87,11 @@ const Plain = styled(ButtonBase)<{ hoverColor?: string; color?: string }>`
 	height: auto;
 	font-weight: ${props => normal(props)};
 	border-radius: 0;
-	&:hover:enabled,
-	&:focus:enabled,
-	&:active:enabled {
-		color: ${props => props.hoverColor || props.theme.colors.text.light};
-	}
+	${props =>
+		getHoverEffectOverride(
+			'none',
+			props.hoverColor || props.theme.colors.text.light,
+		)};
 `;
 
 const underlineButtonActiveStyles = (props: ThemedButtonProps) => `
@@ -83,7 +112,14 @@ const Underline = styled(Plain)<{ active?: boolean; color?: string }>`
 `;
 
 const getStyledButton = (
-	{ outline, underline, plain, active, ...originalProps }: ThemedButtonProps,
+	{
+		outline,
+		underline,
+		plain,
+		active,
+		light,
+		...originalProps
+	}: ThemedButtonProps,
 	isPrimary: boolean,
 ) => {
 	if (plain) {
@@ -94,6 +130,10 @@ const getStyledButton = (
 				hoverColor={getColor(originalProps, 'color', 'light')}
 			/>
 		);
+	}
+
+	if (light) {
+		return Light;
 	}
 
 	if (underline) {
@@ -125,6 +165,7 @@ const Base = (props: ThemedButtonProps) => {
 		color,
 		plain,
 		active,
+		light,
 		...restProps
 	} = props;
 
@@ -174,6 +215,7 @@ interface ButtonBaseProps extends Coloring, Sizing {
 	bg?: string;
 	outline?: boolean;
 	underline?: boolean;
+	light?: boolean;
 }
 
 // Grommet has its own declaration for the 'onClick' attribute, so the default
