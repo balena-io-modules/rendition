@@ -93,7 +93,12 @@ storiesOf('Next/Button', module)
           <Button m={2} outline danger onClick={action('case-5')}>
             Danger
           </Button>
-          <Button m={2} outline onClick={action('case-6')}>
+          <Box bg='lightgray' style={{ display: 'inline-block' }}>
+            <Button m={2} outline light onClick={action('case-6')}>
+              Light
+            </Button>
+          </Box>
+          <Button m={2} outline onClick={action('case-7')}>
             Default
           </Button>
         </Box>

@@ -68,13 +68,22 @@ const Light = styled(ButtonBase)`
 	color: ${props => props.theme.colors.text.main};
 	border-color: ${props => props.theme.colors.text.main};
 	background: white;
-	border: none
-		${props =>
-			getHoverEffectOverride(
-				'white',
-				props.theme.colors.secondary.main,
-				'0.9',
-			)};
+	border: none;
+	${props =>
+		getHoverEffectOverride('white', props.theme.colors.secondary.main, '0.9')};
+
+	&:disabled {
+		opacity: 1;
+		color: #c6c8c9;
+	}
+`;
+
+const LightOutline = styled(Light)`
+	color: white;
+	border: 1px solid white;
+	background: transparent;
+	${props =>
+		getHoverEffectOverride('white', props.theme.colors.secondary.main, '0.9')};
 
 	&:disabled {
 		opacity: 1;
@@ -133,6 +142,9 @@ const getStyledButton = (
 	}
 
 	if (light) {
+		if (outline) {
+			return LightOutline;
+		}
 		return Light;
 	}
 

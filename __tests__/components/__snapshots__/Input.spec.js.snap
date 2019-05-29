@@ -2,10 +2,10 @@
 
 exports[`Input renders correctly 1`] = `
 <div
-  className="sc-jwKygS cBmECM StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-btzYZH jBDBBH StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <input
-    className="sc-jlyJG fKdYZD sc-iRbamj ilmVDb"
+    className="sc-gipzik hcsWGl sc-jlyJG cmjebS"
     placeholder="Placeholder Text"
   />
 </div>

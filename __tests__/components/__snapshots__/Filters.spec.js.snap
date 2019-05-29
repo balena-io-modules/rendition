@@ -2,16 +2,16 @@
 
 exports[`Filters component should match the stored snapshot 1`] = `
 <div
-  className="sc-jwKygS cBmECM StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-btzYZH jBDBBH StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <div
-    className="sc-ktHwxA cUhyij sc-gzVnrw cFgNtB sc-bZQynM kMvugX"
+    className="sc-cIShpX bMeIVo sc-gzVnrw cFgNtB sc-bZQynM kMvugX"
   >
     <div
       className="sc-htoDjs hqveFW sc-gzVnrw pznRG sc-bZQynM kMvugX"
     >
       <button
-        className="sc-kEYyzF sc-jWBwVP gsgKMS sc-kkGfuU gYcgar StyledButton-sc-323bzc-0 jfOEyc"
+        className="sc-kEYyzF sc-brqgnP cGdyOb sc-kkGfuU gYcgar StyledButton-sc-323bzc-0 jfOEyc"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -42,10 +42,10 @@ exports[`Filters component should match the stored snapshot 1`] = `
         Add filter
       </button>
       <div
-        className="sc-hEsumM jsoADM"
+        className="sc-ktHwxA bUnSFl"
       >
         <div
-          className="sc-dVhcbM eIAWth"
+          className="sc-eqIVtm itPwrV"
         >
           <input
             onChange={[Function]}
@@ -81,13 +81,13 @@ exports[`Filters component should match the stored snapshot 1`] = `
         </div>
       </div>
       <div
-        className="sc-dNLxif KzmkZ"
+        className="sc-jqCOkK heXNii"
       >
         <div
-          className="sc-jbKcbu NESFt sc-hmzhuo dgDnmv sc-gzVnrw pznRG sc-bZQynM kMvugX"
+          className="sc-dNLxif bDVbLF sc-frDJqD dCYbIk sc-gzVnrw pznRG sc-bZQynM kMvugX"
         >
           <button
-            className="sc-kEYyzF sc-hqyNC NgZSD sc-jWBwVP bYITgC sc-iAyFgw jHRzkA StyledButton-sc-323bzc-0 gDxBx"
+            className="sc-kEYyzF sc-jbKcbu gPeakb sc-brqgnP hQPokf sc-iAyFgw jHRzkA StyledButton-sc-323bzc-0 gDxBx"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -126,7 +126,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
                 </span>
               </div>
               <span
-                className="sc-kvZOFW dswASR"
+                className="sc-hqyNC jKVNEu"
               >
                 <svg
                   fill="currentColor"
