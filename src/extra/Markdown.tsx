@@ -1,6 +1,6 @@
-import memoize = require('lodash/memoize');
 import * as marked from 'marked';
 import * as React from 'react';
+import * as sanitizeHtml from 'sanitize-html';
 import styled from 'styled-components';
 import Txt, { TxtProps } from '../components/Txt';
 
@@ -13,10 +13,39 @@ const markedOptions = {
 	gfm: true,
 	breaks: true,
 	headerIds: false,
-	sanitize: true,
+	// Input text is sanitized using `sanitize-html` prior to being transformed by
+	// `marked`
+	sanitize: false,
 };
 
-const render = memoize((text: string = '') => marked(text, markedOptions));
+const sanitizerOptions = {
+	allowedTags: sanitizeHtml.defaults.allowedTags.concat([
+		'del',
+		'h1',
+		'h2',
+		'img',
+		'input',
+	]),
+	allowedAttributes: {
+		a: ['href', 'name', 'target'],
+		img: ['src'],
+		input: [
+			{
+				name: 'type',
+				multiple: false,
+				values: ['checkbox'],
+			},
+			'disabled',
+			'checked',
+		],
+	},
+};
+
+const render = (text: string = '') => {
+	const html = marked(text, markedOptions);
+	const clean = sanitizeHtml(html, sanitizerOptions as any);
+	return clean;
+};
 
 /*
  Taken From: https://github.com/sindresorhus/github-markdown-css

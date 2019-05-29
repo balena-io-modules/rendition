@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Markdown component should match the stored snapshot 1`] = `
+<div
+  className="sc-jwKygS cBmECM StyledGrommet-sc-19lkkz7-0 bBubtL"
+>
+  <div
+    className="sc-hXRMBi diCpyp sc-kGXeez giCiqz sc-kgoBCf kRuyZZ"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<p>Hello world</p>
+",
+      }
+    }
+  />
+</div>
+`;

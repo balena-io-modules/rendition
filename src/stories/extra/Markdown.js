@@ -14,9 +14,9 @@ A simple component for rendering *GitHub flavored markdown*.
 
 ## Headers
 
-# This is an <h1> tag
-## This is an <h2> tag
-###### This is an <h6> tag
+# This is an \`<h1>\` tag
+## This is an \`<h2>\` tag
+###### This is an \`<h6>\` tag
 
 ## Emphasis
 
@@ -93,6 +93,14 @@ Content in the first column | Content in the second column
 
 Any word wrapped with two tildes (like \`~~this~~\`) will appear crossed out.
 
+## Inline HTML
+
+<strong>An image:</strong>
+<br>
+<img src="${image}" />
+<br>
+<em>A link:</em>
+<a target="_blank" href="http://github.com/">http://github.com/</a>
 `
 
 storiesOf('Extra/Markdown', module)
