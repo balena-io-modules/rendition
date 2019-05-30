@@ -1,11 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Txt renders correctly 1`] = `
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+}
+
+.c0 h1,
+.c0 h2,
+.c0 h3,
+.c0 h4,
+.c0 h5,
+.c0 h6,
+.c0 label,
+.c0 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
 <div
-  className="sc-btzYZH jBDBBH StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="c0 c1"
 >
   <div
-    className="sc-kGXeez giCiqz sc-kgoBCf kRuyZZ"
+    className=""
   >
     Hello world
   </div>

@@ -1,11 +1,738 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Markdown component should match the stored snapshot 1`] = `
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+}
+
+.c0 h1,
+.c0 h2,
+.c0 h3,
+.c0 h4,
+.c0 h5,
+.c0 h6,
+.c0 label,
+.c0 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+.c2 {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: inherit;
+  word-wrap: break-word;
+}
+
+.c2 .pl-c {
+  color: #6a737d;
+}
+
+.c2 .pl-c1,
+.c2 .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.c2 .pl-e,
+.c2 .pl-en {
+  color: #6f42c1;
+}
+
+.c2 .pl-smi,
+.c2 .pl-s .pl-s1 {
+  color: #24292e;
+}
+
+.c2 .pl-ent {
+  color: #22863a;
+}
+
+.c2 .pl-k {
+  color: #d73a49;
+}
+
+.c2 .pl-s,
+.c2 .pl-pds,
+.c2 .pl-s .pl-pse .pl-s1,
+.c2 .pl-sr,
+.c2 .pl-sr .pl-cce,
+.c2 .pl-sr .pl-sre,
+.c2 .pl-sr .pl-sra {
+  color: #032f62;
+}
+
+.c2 .pl-v,
+.c2 .pl-smw {
+  color: #e36209;
+}
+
+.c2 .pl-bu {
+  color: #b31d28;
+}
+
+.c2 .pl-ii {
+  color: #fafbfc;
+  background-color: #b31d28;
+}
+
+.c2 .pl-c2 {
+  color: #fafbfc;
+  background-color: #d73a49;
+}
+
+.c2 .pl-c2::before {
+  content: '^M';
+}
+
+.c2 .pl-sr .pl-cce {
+  font-weight: bold;
+  color: #22863a;
+}
+
+.c2 .pl-ml {
+  color: #735c0f;
+}
+
+.c2 .pl-mh,
+.c2 .pl-mh .pl-en,
+.c2 .pl-ms {
+  font-weight: bold;
+  color: #005cc5;
+}
+
+.c2 .pl-mi {
+  font-style: italic;
+  color: #24292e;
+}
+
+.c2 .pl-mb {
+  font-weight: bold;
+  color: #24292e;
+}
+
+.c2 .pl-md {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+
+.c2 .pl-mi1 {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+.c2 .pl-mc {
+  color: #e36209;
+  background-color: #ffebda;
+}
+
+.c2 .pl-mi2 {
+  color: #f6f8fa;
+  background-color: #005cc5;
+}
+
+.c2 .pl-mdr {
+  font-weight: bold;
+  color: #6f42c1;
+}
+
+.c2 .pl-ba {
+  color: #586069;
+}
+
+.c2 .pl-sg {
+  color: #959da5;
+}
+
+.c2 .pl-corl {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #032f62;
+}
+
+.c2 .octicon {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: currentColor;
+}
+
+.c2 a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+.c2 a:active,
+.c2 a:hover {
+  outline-width: 0;
+}
+
+.c2 strong {
+  font-weight: inherit;
+}
+
+.c2 strong {
+  font-weight: bolder;
+}
+
+.c2 h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.c2 img {
+  border-style: none;
+}
+
+.c2 svg:not(:root) {
+  overflow: hidden;
+}
+
+.c2 code,
+.c2 kbd,
+.c2 pre {
+  font-family: 'Ubuntu Mono','Courier New',monospace;
+  font-size: 1em;
+}
+
+.c2 hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+.c2 input {
+  font: inherit;
+  margin: 0;
+}
+
+.c2 input {
+  overflow: visible;
+}
+
+.c2 [type='checkbox'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c2 * {
+  box-sizing: border-box;
+}
+
+.c2 input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c2 a {
+  color: #0366d6;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c2 a:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c2 strong {
+  font-weight: 600;
+}
+
+.c2 hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.c2 hr::before {
+  display: table;
+  content: '';
+}
+
+.c2 hr::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.c2 table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.c2 td,
+.c2 th {
+  padding: 0;
+}
+
+.c2 h1,
+.c2 h2,
+.c2 h3,
+.c2 h4,
+.c2 h5,
+.c2 h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c2 h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.c2 h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.c2 h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.c2 h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.c2 h5 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.c2 h6 {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.c2 p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.c2 blockquote {
+  margin: 0;
+}
+
+.c2 ul,
+.c2 ol {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c2 ol ol,
+.c2 ul ol {
+  list-style-type: lower-roman;
+}
+
+.c2 ul ul ol,
+.c2 ul ol ol,
+.c2 ol ul ol,
+.c2 ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.c2 dd {
+  margin-left: 0;
+}
+
+.c2 code {
+  font-family: 'Ubuntu Mono','Courier New',monospace;
+  font-size: 1em;
+}
+
+.c2 pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1em;
+  font-family: 'Ubuntu Mono','Courier New',monospace;
+}
+
+.c2 .octicon {
+  vertical-align: text-bottom;
+}
+
+.c2 .pl-0 {
+  padding-left: 0 !important;
+}
+
+.c2 .pl-1 {
+  padding-left: 4px !important;
+}
+
+.c2 .pl-2 {
+  padding-left: 8px !important;
+}
+
+.c2 .pl-3 {
+  padding-left: 16px !important;
+}
+
+.c2 .pl-4 {
+  padding-left: 24px !important;
+}
+
+.c2 .pl-5 {
+  padding-left: 32px !important;
+}
+
+.c2 .pl-6 {
+  padding-left: 40px !important;
+}
+
+.c2 .markdown-body::before {
+  display: table;
+  content: '';
+}
+
+.c2 .markdown-body::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.c2 > *:first-child {
+  margin-top: 0 !important;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+.c2 a:not([href]) {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c2 .anchor {
+  float: left;
+  padding-right: 4px;
+  margin-left: -20px;
+  line-height: 1;
+}
+
+.c2 .anchor:focus {
+  outline: none;
+}
+
+.c2 p,
+.c2 blockquote,
+.c2 ul,
+.c2 ol,
+.c2 dl,
+.c2 table,
+.c2 pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.c2 hr {
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+.c2 blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5;
+}
+
+.c2 blockquote > :first-child {
+  margin-top: 0;
+}
+
+.c2 blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.c2 kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: solid 1px #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+}
+
+.c2 h1,
+.c2 h2,
+.c2 h3,
+.c2 h4,
+.c2 h5,
+.c2 h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.c2 h1 .octicon-link,
+.c2 h2 .octicon-link,
+.c2 h3 .octicon-link,
+.c2 h4 .octicon-link,
+.c2 h5 .octicon-link,
+.c2 h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.c2 h1:hover .anchor,
+.c2 h2:hover .anchor,
+.c2 h3:hover .anchor,
+.c2 h4:hover .anchor,
+.c2 h5:hover .anchor,
+.c2 h6:hover .anchor {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c2 h1:hover .anchor .octicon-link,
+.c2 h2:hover .anchor .octicon-link,
+.c2 h3:hover .anchor .octicon-link,
+.c2 h4:hover .anchor .octicon-link,
+.c2 h5:hover .anchor .octicon-link,
+.c2 h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.c2 h1 {
+  padding-bottom: 0.3em;
+  font-size: 2em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.c2 h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.c2 h3 {
+  font-size: 1.25em;
+}
+
+.c2 h4 {
+  font-size: 1em;
+}
+
+.c2 h5 {
+  font-size: 0.875em;
+}
+
+.c2 h6 {
+  font-size: 0.85em;
+  color: #6a737d;
+}
+
+.c2 ul,
+.c2 ol {
+  padding-left: 2em;
+}
+
+.c2 ul ul,
+.c2 ul ol,
+.c2 ol ol,
+.c2 ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c2 li > p {
+  margin-top: 16px;
+}
+
+.c2 li + li {
+  margin-top: 0.25em;
+}
+
+.c2 dl {
+  padding: 0;
+}
+
+.c2 dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.c2 dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.c2 table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.c2 table th {
+  font-weight: 600;
+}
+
+.c2 table th,
+.c2 table td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.c2 table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.c2 table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.c2 img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.c2 code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 3px;
+}
+
+.c2 code::before,
+.c2 code::after {
+  -webkit-letter-spacing: -0.2em;
+  -moz-letter-spacing: -0.2em;
+  -ms-letter-spacing: -0.2em;
+  letter-spacing: -0.2em;
+  content: '\\00a0';
+}
+
+.c2 pre {
+  word-wrap: normal;
+}
+
+.c2 pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.c2 .highlight {
+  margin-bottom: 16px;
+}
+
+.c2 .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.c2 .highlight pre,
+.c2 pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 95%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.c2 pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.c2 pre code::before,
+.c2 pre code::after {
+  content: normal;
+}
+
+.c2 .full-commit .btn-outline:not(:disabled):hover {
+  color: #005cc5;
+  border-color: #005cc5;
+}
+
+.c2 kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  font-family: 'Ubuntu Mono','Courier New',monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: solid 1px #d1d5da;
+  border-bottom-color: #c6cbd1;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+}
+
+.c2:checked + .radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+
+.c2 .task-list-item {
+  list-style-type: none;
+}
+
+.c2 .task-list-item + .task-list-item {
+  margin-top: 3px;
+}
+
+.c2 .task-list-item input {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.c2 hr {
+  border-bottom-color: #eee;
+}
+
 <div
-  className="sc-btzYZH jBDBBH StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="c0 c1"
 >
   <div
-    className="sc-epnACN beqwcJ sc-kGXeez giCiqz sc-kgoBCf kRuyZZ"
+    className="c2 "
     dangerouslySetInnerHTML={
       Object {
         "__html": "<p>Hello world</p>

@@ -1,14 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ArcSlider component should match the stored snapshot 1`] = `
+.c3 {
+  box-sizing: border-box;
+}
+
+.c4 {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.c2 {
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  pointer-events: none;
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+}
+
+.c0 h1,
+.c0 h2,
+.c0 h3,
+.c0 h4,
+.c0 h5,
+.c0 h6,
+.c0 label,
+.c0 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
 <div
-  className="sc-btzYZH jBDBBH StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="c0 c1"
 >
   <div
-    className="sc-kAzzGY dMfzxP sc-gzVnrw pznRG sc-bZQynM kMvugX"
+    className="c2 c3"
   >
     <svg
-      className="sc-cSHVUG fhdDsO"
+      className="c4"
       onMouseDown={[Function]}
       onTouchStart={[Function]}
       style={
@@ -88,7 +149,7 @@ exports[`ArcSlider component should match the stored snapshot 1`] = `
       />
     </svg>
     <div
-      className="sc-htoDjs sc-chPdSV NULXb sc-gzVnrw pznRG sc-bZQynM kMvugX"
+      className="c5 c3"
     />
   </div>
 </div>

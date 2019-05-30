@@ -1,14 +1,189 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Terminal renders correctly 1`] = `
+.c3 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+}
+
+.c0 h1,
+.c0 h2,
+.c0 h3,
+.c0 h4,
+.c0 h5,
+.c0 h6,
+.c0 label,
+.c0 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+.c2 {
+  position: relative;
+  height: 100%;
+}
+
+.c2 .xterm {
+  font-feature-settings: "liga" 0;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+.c2 .xterm.focus,
+.c2 .xterm:focus {
+  outline: none;
+}
+
+.c2 .xterm .xterm-helpers {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.c2 .xterm .xterm-helper-textarea {
+  position: absolute;
+  opacity: 0;
+  left: -9999em;
+  top: 0;
+  width: 0;
+  height: 0;
+  z-index: -10;
+  white-space: nowrap;
+  overflow: hidden;
+  resize: none;
+}
+
+.c2 .xterm .composition-view {
+  background: #000;
+  color: #fff;
+  display: none;
+  position: absolute;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c2 .xterm .composition-view.active {
+  display: block;
+}
+
+.c2 .xterm .xterm-viewport {
+  background-color: #000;
+  overflow-y: scroll;
+  cursor: default;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.c2 .xterm .xterm-screen {
+  position: relative;
+}
+
+.c2 .xterm .xterm-screen canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.c2 .xterm .xterm-scroll-area {
+  visibility: hidden;
+}
+
+.c2 .xterm-char-measure-element {
+  display: inline-block;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: -9999em;
+  line-height: normal;
+}
+
+.c2 .xterm {
+  cursor: text;
+}
+
+.c2 .xterm.enable-mouse-events {
+  cursor: default;
+}
+
+.c2 .xterm.xterm-cursor-pointer {
+  cursor: pointer;
+}
+
+.c2 .xterm.column-select.focus {
+  cursor: crosshair;
+}
+
+.c2 .xterm .xterm-accessibility,
+.c2 .xterm .xterm-message {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  color: transparent;
+}
+
+.c2 .xterm .live-region {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.c2 .xterm-viewport::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-bottom-right-radius: 0;
+}
+
+.c2 .xterm-viewport::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.c2 .xterm-viewport::-webkit-scrollbar-thumb {
+  background-color: #e9e9e9;
+}
+
+.c4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 <div
-  className="sc-btzYZH jBDBBH StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="c0 c1"
 >
   <div
-    className="sc-jtRfpW gVnVFb sc-gzVnrw pznRG sc-bZQynM kMvugX"
+    className="c2 c3"
   >
     <div
-      className="sc-kTUwUJ ejEWUb"
+      className="c4"
     />
   </div>
 </div>

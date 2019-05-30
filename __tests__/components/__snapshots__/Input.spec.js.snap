@@ -1,11 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input renders correctly 1`] = `
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  border-radius: 3px;
+  height: 36px;
+  font-size: inherit;
+  border: 1px solid #c6c8c9;
+  padding: 0px 16px;
+  box-sizing: border-box;
+}
+
+.c2[disabled] {
+  background-color: #f4f4f4;
+  cursor: not-allowed;
+}
+
+.c2:focus:enabled {
+  border-color: #2A506F;
+}
+
+.c2:hover:enabled {
+  box-shadow: 0 0 4px 1px rgba(0,0,0,0.1);
+}
+
+.c2::-webkit-input-placeholder {
+  color: #c6c8c9;
+}
+
+.c2::-moz-placeholder {
+  color: #c6c8c9;
+}
+
+.c2:-ms-input-placeholder {
+  color: #c6c8c9;
+}
+
+.c2::placeholder {
+  color: #c6c8c9;
+}
+
+.c2[type='checkbox'] {
+  height: auto;
+  font-size: 14px;
+}
+
+.c2[type='date' i]::-webkit-inner-spin-button,
+.c2[type='datetime-local' i]::-webkit-inner-spin-button,
+.c2[type='month' i]::-webkit-inner-spin-button,
+.c2[type='time' i]::-webkit-inner-spin-button,
+.c2[type='week' i]::-webkit-inner-spin-button {
+  height: 20px;
+  margin-top: 7px;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+}
+
+.c0 h1,
+.c0 h2,
+.c0 h3,
+.c0 h4,
+.c0 h5,
+.c0 h6,
+.c0 label,
+.c0 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
 <div
-  className="sc-btzYZH jBDBBH StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="c0 c1"
 >
   <input
-    className="sc-gipzik hcsWGl sc-jlyJG cmjebS"
+    className="c2"
     placeholder="Placeholder Text"
   />
 </div>

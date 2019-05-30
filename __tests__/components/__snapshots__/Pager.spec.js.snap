@@ -1,14 +1,188 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pager component should match the stored snapshot 1`] = `
+.c3 {
+  box-sizing: border-box;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 {
+  margin-right: 8px;
+}
+
+.c8 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  border: 1px solid #3c3e42;
+  border-radius: 20px;
+  color: #444444;
+  padding: 4px 30px;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.4;
+  cursor: default;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  line-height: 0;
+  padding: 12px;
+}
+
+.c9 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  border: 1px solid #3c3e42;
+  border-radius: 20px;
+  color: #444444;
+  padding: 4px 30px;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  line-height: 0;
+  padding: 12px;
+}
+
+.c9:hover {
+  box-shadow: 0px 0px 0px 2px #3c3e42;
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c7 {
+  font-family: CircularStd,Arial,sans-serif;
+  font-weight: 400;
+  height: 36px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #3c3e42;
+  border-color: #3c3e42;
+}
+
+.c7 svg {
+  color: inherit !important;
+  font-size: 0.875em;
+}
+
+.c7:disabled {
+  cursor: not-allowed;
+}
+
+.c7:hover:enabled,
+.c7:focus:enabled,
+.c7:active:enabled {
+  box-shadow: none;
+  background: #3c3e42;
+  border-color: #3c3e42;
+  color: white;
+  opacity: undefined;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c6 > *:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c6 > *:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c6 > *:not(:last-child):not(:first-child) {
+  border-radius: 0;
+}
+
+.c6 > *:hover {
+  z-index: 1;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+}
+
+.c0 h1,
+.c0 h2,
+.c0 h3,
+.c0 h4,
+.c0 h5,
+.c0 h6,
+.c0 label,
+.c0 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
 <div
-  className="sc-btzYZH jBDBBH StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="c0 c1"
 >
   <div
-    className="sc-htoDjs iWrvzc sc-gzVnrw pznRG sc-bZQynM kMvugX"
+    className="c2 c3"
   >
     <div
-      className="sc-kGXeez gKOuJr sc-kgoBCf kRuyZZ"
+      className="c4 "
     >
       <strong>
         1
@@ -22,13 +196,13 @@ exports[`Pager component should match the stored snapshot 1`] = `
       </strong>
     </div>
     <div
-      className="sc-htoDjs cimPsI sc-gzVnrw pznRG sc-bZQynM kMvugX"
+      className="c5 c3"
     >
       <div
-        className="sc-htoDjs sc-cMljjf dQmdry sc-gzVnrw pznRG sc-bZQynM kMvugX"
+        className="c6 c3"
       >
         <button
-          className="sc-kEYyzF rendition-pager__btn--prev sc-brqgnP fjrEUv sc-iAyFgw hgxYpe StyledButton-sc-323bzc-0 hIKTNd"
+          className="rendition-pager__btn--prev c7 c8"
           disabled={true}
           onBlur={[Function]}
           onClick={[Function]}
@@ -58,7 +232,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
           </svg>
         </button>
         <button
-          className="sc-kEYyzF rendition-pager__btn--next sc-brqgnP fjrEUv sc-iAyFgw hgxYpe StyledButton-sc-323bzc-0 kTZdmm"
+          className="rendition-pager__btn--next c7 c9"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
