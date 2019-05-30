@@ -46,6 +46,7 @@ exports[`ButtonGroup renders correctly 1`] = `
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 400;
   height: 38px;
+  white-space: nowrap;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;

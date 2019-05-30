@@ -35,6 +35,7 @@ const ButtonBase = styled(Button)`
 	font-family: ${props => props.theme.titleFont};
 	font-weight: ${props => normal(props)};
 	height: 38px;
+	white-space: nowrap;
 	svg {
 		color: inherit !important;
 		font-size: 0.875em;
