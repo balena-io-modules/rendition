@@ -2,13 +2,13 @@
 
 exports[`Select component should match the stored snapshot 1`] = `
 <div
-  className="sc-jwKygS cBmECM StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="sc-btzYZH jBDBBH StyledGrommet-sc-19lkkz7-0 bBubtL"
 >
   <span
-    className="sc-hzDkRC dKPvfG sc-bRBYWo iNWTSb"
+    className="sc-jhAzac eNEMZP sc-hzDkRC jWTBTG"
   >
     <select
-      className="sc-Rmtcm eStiER"
+      className="sc-bRBYWo jMUPDA"
     >
       <option
         value={1}
