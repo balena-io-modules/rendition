@@ -1,11 +1,91 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Search renders correctly 1`] = `
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #c6c8c9;
+  padding-left: 24px;
+  padding-top: 3px;
+}
+
+.c2 .search-icon {
+  color: #c6c8c9;
+  font-size: 0.9em;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c2 input {
+  outline: none;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  width: 100%;
+  font-size: inherit;
+  padding: 5px 5px 8px;
+  height: auto;
+}
+
+.c2 input:hover {
+  box-shadow: none;
+}
+
+.c2 input::-webkit-input-placeholder {
+  color: #c6c8c9;
+  font-weight: 300;
+}
+
+.c2 input::-moz-placeholder {
+  color: #c6c8c9;
+  font-weight: 300;
+}
+
+.c2 input:-ms-input-placeholder {
+  color: #c6c8c9;
+  font-weight: 300;
+}
+
+.c2 input::placeholder {
+  color: #c6c8c9;
+  font-weight: 300;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+}
+
+.c0 h1,
+.c0 h2,
+.c0 h3,
+.c0 h4,
+.c0 h5,
+.c0 h6,
+.c0 label,
+.c0 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
 <div
-  className="sc-btzYZH jBDBBH StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="c0 c1"
 >
   <div
-    className="sc-eqIVtm itPwrV"
+    className="c2"
   >
     <input
       placeholder="Placeholder Text"

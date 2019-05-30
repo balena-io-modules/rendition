@@ -1,14 +1,114 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Table component should match the stored snapshot 1`] = `
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+}
+
+.c0 h1,
+.c0 h2,
+.c0 h3,
+.c0 h4,
+.c0 h5,
+.c0 h6,
+.c0 label,
+.c0 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+.c2 {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.c3 {
+  display: table;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.c3 > [data-display='table-head'] {
+  display: table-header-group;
+  background-color: #f2f2f2;
+}
+
+.c3 > [data-display='table-head'] > [data-display='table-row'] {
+  display: table-row;
+}
+
+.c3 > [data-display='table-head'] > [data-display='table-row'] > [data-display='table-cell'] {
+  display: table-cell;
+  text-align: left;
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+.c3 > [data-display='table-body'] {
+  display: table-row-group;
+}
+
+.c3 > [data-display='table-body'] > [data-display='table-row'] {
+  display: table-row;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.c3 > [data-display='table-body'] > [data-display='table-row'] > [data-display='table-cell'] {
+  display: table-cell;
+  font-size: 14px;
+  text-align: left;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 40px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.c3 > [data-display='table-body'] > [data-display='table-row'] > a[data-display='table-cell'] {
+  cursor: auto;
+}
+
+.c3 > [data-display='table-body'] > [data-display='table-row']:nth-of-type(even) {
+  background-color: #f8f8f8;
+}
+
+.c3 > [data-display='table-body'] > [data-display='table-row']:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.c3 > [data-display='table-body'] > [data-display='table-row'][data-highlight='true'] {
+  background-color: #EDF7FD;
+}
+
+.c3 > [data-display='table-body'] > [data-display='table-row'][data-highlight='true'] > [data-display="table-cell"]:first-child {
+  box-shadow: inset 3px 0px 0 #1496E1;
+}
+
 <div
-  className="sc-btzYZH jBDBBH StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="c0 c1"
 >
   <div
-    className="sc-lhVmIH fuwFDy"
+    className="c2"
   >
     <div
-      className="sc-bYSBpT hTqmcI"
+      className="c3"
     >
       <div
         data-display="table-head"

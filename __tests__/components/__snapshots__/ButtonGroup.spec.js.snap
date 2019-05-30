@@ -1,14 +1,134 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ButtonGroup renders correctly 1`] = `
+.c3 {
+  box-sizing: border-box;
+}
+
+.c5 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  border: 1px solid #3c3e42;
+  border-radius: 20px;
+  color: #444444;
+  padding: 4px 30px;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+.c5:hover {
+  box-shadow: 0px 0px 0px 2px #3c3e42;
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c4 {
+  font-family: CircularStd,Arial,sans-serif;
+  font-weight: 400;
+  height: 36px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #3c3e42;
+  border-color: #3c3e42;
+}
+
+.c4 svg {
+  color: inherit !important;
+  font-size: 0.875em;
+}
+
+.c4:disabled {
+  cursor: not-allowed;
+}
+
+.c4:hover:enabled,
+.c4:focus:enabled,
+.c4:active:enabled {
+  box-shadow: none;
+  background: #3c3e42;
+  border-color: #3c3e42;
+  color: white;
+  opacity: undefined;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 > *:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c2 > *:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c2 > *:not(:last-child):not(:first-child) {
+  border-radius: 0;
+}
+
+.c2 > *:hover {
+  z-index: 1;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+}
+
+.c0 h1,
+.c0 h2,
+.c0 h3,
+.c0 h4,
+.c0 h5,
+.c0 h6,
+.c0 label,
+.c0 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
 <div
-  className="sc-btzYZH jBDBBH StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="c0 c1"
 >
   <div
-    className="sc-htoDjs sc-cMljjf dQmdry sc-gzVnrw pznRG sc-bZQynM kMvugX"
+    className="c2 c3"
   >
     <button
-      className="sc-kEYyzF sc-brqgnP fjrEUv sc-iAyFgw hgxYpe StyledButton-sc-323bzc-0 djTlJn"
+      className="c4 c5"
       onBlur={[Function]}
       onFocus={[Function]}
       onMouseOut={[Function]}
@@ -18,7 +138,7 @@ exports[`ButtonGroup renders correctly 1`] = `
       First
     </button>
     <button
-      className="sc-kEYyzF sc-brqgnP fjrEUv sc-iAyFgw hgxYpe StyledButton-sc-323bzc-0 djTlJn"
+      className="c4 c5"
       onBlur={[Function]}
       onFocus={[Function]}
       onMouseOut={[Function]}
@@ -28,7 +148,7 @@ exports[`ButtonGroup renders correctly 1`] = `
       Second
     </button>
     <button
-      className="sc-kEYyzF sc-brqgnP fjrEUv sc-iAyFgw hgxYpe StyledButton-sc-323bzc-0 djTlJn"
+      className="c4 c5"
       onBlur={[Function]}
       onFocus={[Function]}
       onMouseOut={[Function]}

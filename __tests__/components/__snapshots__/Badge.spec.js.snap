@@ -1,11 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Badge renders correctly 1`] = `
+.c3 {
+  padding: 2px 5px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #8dc587;
+}
+
+.c2 {
+  border-radius: 3px;
+  display: inline-block;
+  min-width: 40px;
+  text-align: center;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+}
+
+.c0 h1,
+.c0 h2,
+.c0 h3,
+.c0 h4,
+.c0 h5,
+.c0 h6,
+.c0 label,
+.c0 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
 <div
-  className="sc-btzYZH jBDBBH StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="c0 c1"
 >
   <div
-    className="sc-jKJlTe gKSgKv sc-ckVGcZ ligfVN sc-kGXeez iDsUmx sc-kgoBCf kRuyZZ"
+    className="c2 c3 "
   >
     Badge
   </div>

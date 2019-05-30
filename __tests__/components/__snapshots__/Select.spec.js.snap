@@ -1,14 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select component should match the stored snapshot 1`] = `
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c3 {
+  border-radius: 3px;
+  height: 36px;
+  font-size: inherit;
+  border: 1px solid #c6c8c9;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 16px;
+  padding-right: 36px;
+  background-color: white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  min-width: 90px;
+}
+
+.c3:hover:enabled {
+  box-shadow: 0 0 4px 1px rgba(0,0,0,0.1);
+}
+
+.c2 {
+  display: inline-block;
+  position: relative;
+}
+
+.c2::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #9f9f9f;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+}
+
+.c0 h1,
+.c0 h2,
+.c0 h3,
+.c0 h4,
+.c0 h5,
+.c0 h6,
+.c0 label,
+.c0 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
 <div
-  className="sc-btzYZH jBDBBH StyledGrommet-sc-19lkkz7-0 bBubtL"
+  className="c0 c1"
 >
   <span
-    className="sc-jhAzac eNEMZP sc-hzDkRC jWTBTG"
+    className="c2"
   >
     <select
-      className="sc-bRBYWo jMUPDA"
+      className="c3"
     >
       <option
         value={1}
