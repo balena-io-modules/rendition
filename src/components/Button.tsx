@@ -11,7 +11,7 @@ import {
 	Sizing,
 	Theme,
 } from '../common-types';
-import { getColor, getColoringType, normal } from '../utils';
+import { getColor, getColoringType } from '../utils';
 
 const getHoverEffectOverride = (
 	bg: string,
@@ -33,7 +33,7 @@ const getHoverEffectOverride = (
 
 const ButtonBase = styled(Button)`
 	font-family: ${props => props.theme.titleFont};
-	font-weight: ${props => normal(props)};
+	font-weight: 500;
 	height: 38px;
 	white-space: nowrap;
 	svg {
@@ -95,7 +95,7 @@ const LightOutline = styled(Light)`
 const Plain = styled(ButtonBase)<{ hoverColor?: string; color?: string }>`
 	color: ${props => props.color || props.theme.colors.text.main};
 	height: auto;
-	font-weight: ${props => normal(props)};
+	font-weight: 500;
 	border-radius: 0;
 	${props =>
 		getHoverEffectOverride(

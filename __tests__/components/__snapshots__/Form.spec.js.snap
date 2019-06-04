@@ -43,7 +43,7 @@ exports[`Form component should match the stored snapshot 1`] = `
 
 .c8 {
   font-family: CircularStd,Arial,sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
