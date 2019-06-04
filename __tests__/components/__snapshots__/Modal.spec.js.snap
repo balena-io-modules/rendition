@@ -145,8 +145,9 @@ exports[`Modal renders correctly 1`] = `
 
 .c11 {
   font-family: CircularStd,Arial,sans-serif;
-  font-weight: 400;
-  height: 36px;
+  font-weight: 500;
+  height: 38px;
+  white-space: nowrap;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;

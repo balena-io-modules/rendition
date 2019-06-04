@@ -152,6 +152,10 @@ export default {
 		},
 	},
 	button: {
+		height: '38px',
+		font: {
+			weight: 500,
+		},
 		border: {
 			width: '1px',
 			radius: '20px',
