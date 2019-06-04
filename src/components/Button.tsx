@@ -192,20 +192,16 @@ const Base = (props: ThemedButtonProps) => {
 		(!!getColoringType(props) && !outline && !underline && !props.plain);
 	let baseColor = props.bg || getColor(props, 'bg', 'main');
 
+	// Set default to 'secondary'
+	const secondary = baseColor ? false : true;
+	baseColor = baseColor || props.theme.colors.secondary.main;
+
 	// If the button is active, invert the background and text colors
 	if (active) {
 		basePrimary = !basePrimary;
-		if (basePrimary && !baseColor) {
-			// If there is no base color, use the 'tertiary' color as a default
-			baseColor = getColor(
-				{ tertiary: true, theme: props.theme },
-				'bg',
-				'main',
-			);
-		}
 	}
 
-	const StyledButton = getStyledButton(props, basePrimary);
+	const StyledButton = getStyledButton({ secondary, ...props }, basePrimary);
 
 	// Note that the 'plain' property is case to a Boolean to simplify Grommets
 	// default behaviour when providing an icon attribute and no label
