@@ -33,8 +33,8 @@ const getHoverEffectOverride = (
 
 const ButtonBase = styled(Button)`
 	font-family: ${props => props.theme.titleFont};
-	font-weight: 500;
-	height: 38px;
+	font-weight: ${props => props.theme.button.font.weight};
+	height: ${props => props.theme.button.height};
 	white-space: nowrap;
 	svg {
 		color: inherit !important;
@@ -95,7 +95,7 @@ const LightOutline = styled(Light)`
 const Plain = styled(ButtonBase)<{ hoverColor?: string; color?: string }>`
 	color: ${props => props.color || props.theme.colors.text.main};
 	height: auto;
-	font-weight: 500;
+	font-weight: ${props => props.theme.button.font.weight};
 	border-radius: 0;
 	${props =>
 		getHoverEffectOverride(
