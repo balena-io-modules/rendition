@@ -129,6 +129,8 @@ class Modal extends React.Component<ThemedModalProps, any> {
 					width={width || DEFAULT_MODAL_WIDTH}
 					onClick={stopPropagation}
 					style={props.style}
+					id={props.id}
+					className={props.className}
 				>
 					{props.titleElement ? (
 						<ModalHeader>{props.titleElement}</ModalHeader>
@@ -173,7 +175,6 @@ export interface ModalProps extends DefaultProps {
 	primaryButtonProps?: ButtonProps;
 	secondaryButtonProps?: ButtonProps;
 	cancelButtonProps?: ButtonProps;
-	containerStyle?: React.CSSProperties;
 }
 
 export interface ThemedModalProps extends ModalProps {
