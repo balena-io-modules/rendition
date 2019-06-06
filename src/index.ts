@@ -31,6 +31,15 @@ export { default as Provider } from './components/Provider';
 export { default as Search, SearchProps } from './components/Search';
 export { default as Select, SelectProps } from './components/Select';
 export {
+	default as RadioButton,
+	RadioButtonProps,
+} from './components/RadioButton';
+export {
+	default as RadioButtonGroup,
+	RadioButtonGroupProps,
+} from './components/RadioButtonGroup';
+
+export {
 	default as Table,
 	TableRow,
 	TableColumn,

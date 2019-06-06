@@ -165,6 +165,34 @@ export default {
 			horizontal: '30px',
 		},
 	},
+	radioButton: {
+		border: {
+			color: {
+				dark: colors.quartenary.dark,
+				light: colors.quartenary.dark,
+			},
+			width: '1px',
+		},
+		check: {
+			// radius: '100%',
+			color: {
+				dark: 'white',
+				light: 'white',
+			},
+		},
+		hover: {
+			border: {
+				color: {
+					dark: colors.quartenary.dark,
+					light: colors.quartenary.dark,
+				},
+			},
+		},
+		// This actually sets the circle diameter to 6px;
+		icon: { size: '12px' },
+		gap: '10px',
+		size: '20px',
+	},
 	layer: {
 		container: {
 			zIndex: 40,
