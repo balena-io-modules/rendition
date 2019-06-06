@@ -70,6 +70,8 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [Navbar](#navbar)
 - [Pager](#pager)
 - [ProgressBar](#progressbar)
+- [RadioButton](#radiobutton)
+- [RadioButtonGroup](#radiobuttongroup)
 - [Search](#search)
 - [Select](#select)
 - [Swatches](#swatches)
@@ -590,6 +592,33 @@ Displays a progress bar using a value representing a percentage.
 | `value`       | `number`  | -         | ✓          | A value between 1 and 100 that represents the progress        |
 |  background   | `string`  | -         | -          | A CSS color string to use for the progress bar                |
 |  color        | `string`  | -         | -          | A CSS color string to use for the content of the progress bar |
+
+### RadioButton
+
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/RadioButton.js)
+
+#### Props
+
+| Name          | Type      | Default   | Required   | Description                                          |
+| ------ | ------ | --------- | ---------- | ------------- |
+| `checked`     | `boolean` | -         | -          | If true, render the radio button as checked               |
+| `disabled`    | `boolean` | -         | -          | If true, set the radio button as disabled             |
+| `label`       | `string`  | -         | -          | The label to render next to the radio button              |
+| `onChange`    | `(event: Event) => void` | -         | -          | Function called when the value of the radio button changes           |
+
+
+### RadioButtonGroup
+
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/RadioButtonGroup.js)
+
+#### Props
+
+| Name          | Type      | Default   | Required   | Description                                          |
+| ------ | ------ | --------- | ---------- | ------------- |
+| `value` | `string` | -         | -          | Currently selected option value             |
+| `options`  | `["string"] | [{"disabled": boolean, "id": string, "label": string, "name": string, "value": string}]`  | -     | -     | Settings for each radio button |
+| `onChange` | `(event: Event) => void` | -         | -          | Function called when the value of the radio button changes           |
+
 
 ### Search
 
