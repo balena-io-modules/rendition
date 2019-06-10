@@ -8,8 +8,11 @@
   },
   "license": "Apache-2.0",
   "main": "./dist/index.js",
+  "module": "./dist_esm5/index.js",
+  "sideEffects": false,
   "files": [
     "dist/",
+    "dist_esm5/",
     "docs/"
   ],
   "engines": {
@@ -19,8 +22,10 @@
   "scripts": {
     "tsify:xterm-css": "node ./scripts/tsifyXTermCss.js",
     "start": "start-storybook -p 6006",
-    "build": "rimraf dist && npm run tsify:xterm-css && tsc && npm run build:docs",
+    "build:cjs": "rimraf dist && tsc",
+    "build:esm5": "rimraf dist_esm5 && tsc -p ./tsconfig.esm5.json",
     "build:docs": "node ./scripts/generateDocs.js",
+    "build": "npm run tsify:xterm-css && npm run build:cjs && npm run build:esm5 && npm run build:docs",
     "generate-screenshots": "./scripts/generate-screenshots.sh",
     "build:storybook": "build-storybook -o .out",
     "catch-uncommitted": "catch-uncommitted --catch-no-git --skip-node-versionbot-changes",
