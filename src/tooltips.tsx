@@ -1,7 +1,7 @@
-import isString = require('lodash/isString');
-import merge = require('lodash/merge');
-import noop = require('lodash/noop');
-import pick = require('lodash/pick');
+import isString from 'lodash/isString';
+import merge from 'lodash/merge';
+import noop from 'lodash/noop';
+import pick from 'lodash/pick';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import styled from 'styled-components';

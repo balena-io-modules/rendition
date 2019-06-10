@@ -1,7 +1,7 @@
 import { JSONSchema6 } from 'json-schema';
-import noop = require('lodash/noop');
+import noop from 'lodash/noop';
 import * as React from 'react';
-import FaClose = require('react-icons/lib/fa/close');
+import FaClose from 'react-icons/lib/fa/close';
 import styled from 'styled-components';
 import { Button } from '../../';
 import { Box, Flex } from '../Grid';

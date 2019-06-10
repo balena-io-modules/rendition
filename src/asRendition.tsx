@@ -1,5 +1,5 @@
-import difference = require('lodash/difference');
-import omit = require('lodash/omit');
+import difference from 'lodash/difference';
+import omit from 'lodash/omit';
 import { arrayOf, number, oneOfType, string } from 'prop-types';
 import * as React from 'react';
 import { compose, getDisplayName } from 'recompose';

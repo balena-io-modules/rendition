@@ -1,6 +1,6 @@
-import get = require('lodash/get');
-import isFunction = require('lodash/isFunction');
-import map = require('lodash/map');
+import get from 'lodash/get';
+import isFunction from 'lodash/isFunction';
+import map from 'lodash/map';
 import * as React from 'react';
 
 /*

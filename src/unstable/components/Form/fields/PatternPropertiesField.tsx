@@ -1,8 +1,8 @@
 import { JSONSchema6 } from 'json-schema';
-import map = require('lodash/map');
-import reduce = require('lodash/reduce');
+import map from 'lodash/map';
+import reduce from 'lodash/reduce';
 import * as React from 'react';
-import FaClose = require('react-icons/lib/fa/close');
+import FaClose from 'react-icons/lib/fa/close';
 import { FormValidation } from 'react-jsonschema-form';
 import styled from 'styled-components';
 import { Button, Input } from '../../../..';

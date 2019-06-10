@@ -1,6 +1,6 @@
 import * as React from 'react';
-import IconCaretDown = require('react-icons/lib/fa/caret-down');
-import IconCaretUp = require('react-icons/lib/fa/caret-up');
+import IconCaretDown from 'react-icons/lib/fa/caret-down';
+import IconCaretUp from 'react-icons/lib/fa/caret-up';
 import styled from 'styled-components';
 import asRendition from '../asRendition';
 import { RenditionSystemProps } from '../common-types';

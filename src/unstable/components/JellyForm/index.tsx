@@ -1,9 +1,9 @@
 import * as jellyschema from 'jellyschema';
 import { JSONSchema6 } from 'json-schema';
-import cloneDeep = require('lodash/cloneDeep');
-import isEqual = require('lodash/isEqual');
-import merge = require('lodash/merge');
-import omit = require('lodash/omit');
+import cloneDeep from 'lodash/cloneDeep';
+import isEqual from 'lodash/isEqual';
+import merge from 'lodash/merge';
+import omit from 'lodash/omit';
 import * as React from 'react';
 import { BaseFormProps } from '../../unstable-typings';
 import { default as Form } from '../Form';

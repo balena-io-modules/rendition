@@ -1,10 +1,10 @@
-import * as Color from 'color';
+import Color from 'color';
 import { JSONSchema6 } from 'json-schema';
-import cloneDeep = require('lodash/cloneDeep');
-import find = require('lodash/find');
-import forEach = require('lodash/forEach');
-import get = require('lodash/get');
-import isObject = require('lodash/isObject');
+import cloneDeep from 'lodash/cloneDeep';
+import find from 'lodash/find';
+import forEach from 'lodash/forEach';
+import get from 'lodash/get';
+import isObject from 'lodash/isObject';
 import { DefaultProps, Theme } from './common-types';
 
 const matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;

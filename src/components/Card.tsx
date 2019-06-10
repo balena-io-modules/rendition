@@ -1,4 +1,4 @@
-import map = require('lodash/map');
+import map from 'lodash/map';
 import * as React from 'react';
 import styled from 'styled-components';
 import { DefaultProps, RenditionSystemProps } from '../common-types';

@@ -1,10 +1,10 @@
 import * as temen from 'balena-temen';
 import { JSONSchema6 } from 'json-schema';
-import cloneDeep = require('lodash/cloneDeep');
-import get = require('lodash/get');
-import isPlainObject = require('lodash/isPlainObject');
-import merge = require('lodash/merge');
-import set = require('lodash/set');
+import cloneDeep from 'lodash/cloneDeep';
+import get from 'lodash/get';
+import isPlainObject from 'lodash/isPlainObject';
+import merge from 'lodash/merge';
+import set from 'lodash/set';
 
 // Given a JSON Schema, find all fields that have a formula field, evaluate the
 // formula and then update the provided value with the result

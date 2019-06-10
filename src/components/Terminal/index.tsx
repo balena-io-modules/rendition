@@ -1,5 +1,5 @@
-import assign = require('lodash/assign');
-import cloneDeep = require('lodash/cloneDeep');
+import assign from 'lodash/assign';
+import cloneDeep from 'lodash/cloneDeep';
 import * as React from 'react';
 import styled from 'styled-components';
 import { ITerminalOptions, Terminal as Xterm } from 'xterm';

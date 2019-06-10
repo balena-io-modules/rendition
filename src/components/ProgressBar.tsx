@@ -1,6 +1,6 @@
-import assign = require('lodash/assign');
-import find = require('lodash/find');
-import get = require('lodash/get');
+import assign from 'lodash/assign';
+import find from 'lodash/find';
+import get from 'lodash/get';
 import * as React from 'react';
 import { withProps } from 'recompose';
 import styled from 'styled-components';

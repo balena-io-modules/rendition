@@ -3,7 +3,7 @@ import {
 	Tabs as GrommetTabs,
 	TabsProps as GrommetTabsProps,
 } from 'grommet';
-import map = require('lodash/map');
+import map from 'lodash/map';
 import * as React from 'react';
 import asRendition from '../asRendition';
 

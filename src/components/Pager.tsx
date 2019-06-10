@@ -1,6 +1,6 @@
 import * as React from 'react';
-import FaChevronLeft = require('react-icons/lib/fa/chevron-left');
-import FaChevronRight = require('react-icons/lib/fa/chevron-right');
+import FaChevronLeft from 'react-icons/lib/fa/chevron-left';
+import FaChevronRight from 'react-icons/lib/fa/chevron-right';
 import { ButtonGroup } from '../';
 import Button from './Button';
 import { Flex, FlexProps } from './Grid';

@@ -1,4 +1,4 @@
-import * as Color from 'color';
+import Color from 'color';
 
 const darken = (percent: number, color: string) =>
 	Color(color)

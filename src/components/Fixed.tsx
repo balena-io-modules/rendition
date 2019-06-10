@@ -1,4 +1,4 @@
-import defaultTo = require('lodash/defaultTo');
+import defaultTo from 'lodash/defaultTo';
 import { withProps } from 'recompose';
 import styled from 'styled-components';
 import asRendition from '../asRendition';

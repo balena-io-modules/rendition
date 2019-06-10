@@ -1,8 +1,8 @@
 import * as React from 'react';
-import FaArrowDown = require('react-icons/lib/fa/arrow-down');
-import FaArrowUp = require('react-icons/lib/fa/arrow-up');
-import FaClose = require('react-icons/lib/fa/close');
-import FaPlus = require('react-icons/lib/fa/plus');
+import FaArrowDown from 'react-icons/lib/fa/arrow-down';
+import FaArrowUp from 'react-icons/lib/fa/arrow-up';
+import FaClose from 'react-icons/lib/fa/close';
+import FaPlus from 'react-icons/lib/fa/plus';
 import { ArrayFieldTemplateProps } from 'react-jsonschema-form';
 import styled from 'styled-components';
 import { Box, Button, Flex } from '../../../../';

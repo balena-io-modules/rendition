@@ -1,4 +1,4 @@
-import assign = require('lodash/assign');
+import assign from 'lodash/assign';
 import { withProps } from 'recompose';
 import styled from 'styled-components';
 import asRendition from '../asRendition';

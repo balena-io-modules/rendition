@@ -1,4 +1,4 @@
-import memoize = require('lodash/memoize');
+import memoize from 'lodash/memoize';
 
 export const getDefaultDate = (): string => {
 	const date = new Date();
