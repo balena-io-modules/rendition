@@ -29,6 +29,10 @@ export const getBaseStyle = (props: any) => `
 	& label input[checked] + div {
 		background: ${props.theme.colors.primary.main};
 	}
+
+	& label[disabled] {
+		opacity: 0.4
+	}
 `;
 
 const RadioButtonWrapper = styled.div`

@@ -135,6 +135,10 @@ exports[`RadioButton renders correctly 1`] = `
   background: #00AEEF;
 }
 
+.c2 label[disabled] {
+  opacity: 0.4;
+}
+
 .c2 label:hover input:not([disabled]) + div,
 .c2 label:hover input:not([disabled]) + span {
   box-shadow: 0 0 4px 0 rgba(221,225,240,0.7);
