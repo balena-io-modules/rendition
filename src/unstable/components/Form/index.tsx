@@ -1,7 +1,7 @@
 import { JSONSchema6 } from 'json-schema';
-import get = require('lodash/get');
-import isEqual = require('lodash/isEqual');
-import omit = require('lodash/omit');
+import get from 'lodash/get';
+import isEqual from 'lodash/isEqual';
+import omit from 'lodash/omit';
 import * as React from 'react';
 import Form, { IChangeEvent } from 'react-jsonschema-form';
 import styled from 'styled-components';

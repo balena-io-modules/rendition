@@ -1,6 +1,6 @@
 import { JSONSchema6 } from 'json-schema';
 import * as React from 'react';
-import FaBookmarkO = require('react-icons/lib/fa/bookmark-o');
+import FaBookmarkO from 'react-icons/lib/fa/bookmark-o';
 import styled from 'styled-components';
 import { FiltersView, ViewScope } from '.';
 import Button from '../Button';

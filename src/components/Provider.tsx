@@ -1,5 +1,5 @@
 import { Grommet } from 'grommet';
-import merge = require('lodash/merge');
+import merge from 'lodash/merge';
 import * as React from 'react';
 import styled from 'styled-components';
 import { DefaultProps, Theme } from '../common-types';

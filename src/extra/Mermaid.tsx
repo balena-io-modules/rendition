@@ -1,6 +1,6 @@
 import { mermaidAPI } from 'mermaid';
 import * as React from 'react';
-import uuid = require('uuid/v4');
+import uuid from 'uuid/v4';
 import { DefaultProps } from '../common-types';
 import { Box, BoxProps } from '../components/Grid';
 

@@ -1,6 +1,6 @@
-import copyToClipboard = require('copy-to-clipboard');
+import copyToClipboard from 'copy-to-clipboard';
 import * as React from 'react';
-import FaClipboard = require('react-icons/lib/fa/clipboard');
+import FaClipboard from 'react-icons/lib/fa/clipboard';
 import styled from 'styled-components';
 import asRendition from '../asRendition';
 import { DefaultProps, RenditionSystemProps } from '../common-types';

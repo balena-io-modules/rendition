@@ -1,9 +1,9 @@
 import * as React from 'react';
-import FaCheckCircle = require('react-icons/lib/fa/check-circle');
-import FaClose = require('react-icons/lib/fa/close');
-import FaExclamationCircle = require('react-icons/lib/fa/exclamation-circle');
-import FaExclamationTriangle = require('react-icons/lib/fa/exclamation-triangle');
-import FaInfoCircle = require('react-icons/lib/fa/info-circle');
+import FaCheckCircle from 'react-icons/lib/fa/check-circle';
+import FaClose from 'react-icons/lib/fa/close';
+import FaExclamationCircle from 'react-icons/lib/fa/exclamation-circle';
+import FaExclamationTriangle from 'react-icons/lib/fa/exclamation-triangle';
+import FaInfoCircle from 'react-icons/lib/fa/info-circle';
 import styled from 'styled-components';
 import asRendition from '../asRendition';
 import {

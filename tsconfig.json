@@ -14,6 +14,7 @@
     "strictNullChecks": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "baseUrl": ".",
     "keyofStringsOnly": true,
     "jsx": "react",
@@ -30,5 +31,9 @@
         "*"
       ]
     }
-  }
+  },
+  "exclude": [
+    "dist",
+    "dist_esm5"
+  ]
 }

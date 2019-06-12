@@ -1,6 +1,6 @@
-import * as marked from 'marked';
+import marked from 'marked';
 import * as React from 'react';
-import * as sanitizeHtml from 'sanitize-html';
+import sanitizeHtml from 'sanitize-html';
 import styled from 'styled-components';
 import Txt, { TxtProps } from '../components/Txt';
 

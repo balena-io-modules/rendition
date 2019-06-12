@@ -1,5 +1,5 @@
 import { Layer } from 'grommet';
-import assign = require('lodash/assign');
+import assign from 'lodash/assign';
 import * as React from 'react';
 import styled, { createGlobalStyle, withTheme } from 'styled-components';
 import { DefaultProps, ResponsiveStyle, Theme } from '../common-types';

@@ -1,6 +1,6 @@
-import ColorHash = require('color-hash');
-import assign = require('lodash/assign');
-import memoize = require('lodash/memoize');
+import ColorHash from 'color-hash';
+import assign from 'lodash/assign';
+import memoize from 'lodash/memoize';
 import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../asRendition';

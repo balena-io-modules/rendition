@@ -1,10 +1,10 @@
 import { JSONSchema6 } from 'json-schema';
-import cloneDeep = require('lodash/cloneDeep');
-import groupBy = require('lodash/groupBy');
-import map = require('lodash/map');
+import cloneDeep from 'lodash/cloneDeep';
+import groupBy from 'lodash/groupBy';
+import map from 'lodash/map';
 import * as React from 'react';
-import FaPieChart = require('react-icons/lib/fa/pie-chart');
-import FaTrash = require('react-icons/lib/fa/trash');
+import FaPieChart from 'react-icons/lib/fa/pie-chart';
+import FaTrash from 'react-icons/lib/fa/trash';
 import styled from 'styled-components';
 import { FilterRenderMode, FiltersView } from '.';
 import DropDownButton, { DropDownButtonProps } from '../DropDownButton';

@@ -1,6 +1,6 @@
 import { JSONSchema6 } from 'json-schema';
-import assign = require('lodash/assign');
-import map = require('lodash/map');
+import assign from 'lodash/assign';
+import map from 'lodash/map';
 import * as React from 'react';
 import * as utils from '../../utils';
 import { DataTypeEditProps } from '../Filters';

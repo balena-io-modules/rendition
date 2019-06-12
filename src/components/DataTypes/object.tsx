@@ -1,10 +1,10 @@
 import { JSONSchema6 } from 'json-schema';
-import assign = require('lodash/assign');
-import find = require('lodash/find');
-import findKey = require('lodash/findKey');
-import includes = require('lodash/includes');
-import isString = require('lodash/isString');
-import mapValues = require('lodash/mapValues');
+import assign from 'lodash/assign';
+import find from 'lodash/find';
+import findKey from 'lodash/findKey';
+import includes from 'lodash/includes';
+import isString from 'lodash/isString';
+import mapValues from 'lodash/mapValues';
 import * as React from 'react';
 import * as utils from '../../utils';
 import { DataTypeEditProps } from '../Filters';

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import FaSearch = require('react-icons/lib/fa/search');
+import FaSearch from 'react-icons/lib/fa/search';
 import styled from 'styled-components';
 import asRendition from '../asRendition';
 import { DefaultProps, RenditionSystemProps } from '../common-types';

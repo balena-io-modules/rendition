@@ -1,6 +1,6 @@
 import { JSONSchema6 } from 'json-schema';
-import forEach = require('lodash/forEach');
-import isArray = require('lodash/isArray');
+import forEach from 'lodash/forEach';
+import isArray from 'lodash/isArray';
 import { FilterSignature, FiltersView, ViewScope } from './components/Filters';
 import {
 	createFilter,

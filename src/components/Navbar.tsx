@@ -1,7 +1,7 @@
-import assign = require('lodash/assign');
+import assign from 'lodash/assign';
 import * as React from 'react';
-import CloseIcon = require('react-icons/lib/md/close');
-import MenuIcon = require('react-icons/lib/md/dehaze');
+import CloseIcon from 'react-icons/lib/md/close';
+import MenuIcon from 'react-icons/lib/md/dehaze';
 import { compose, withProps } from 'recompose';
 import styled from 'styled-components';
 import {

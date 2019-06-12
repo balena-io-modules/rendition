@@ -1,4 +1,4 @@
-import assign = require('lodash/assign');
+import assign from 'lodash/assign';
 import * as React from 'react';
 import { withProps } from 'recompose';
 import styled from 'styled-components';
