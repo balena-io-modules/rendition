@@ -4,10 +4,17 @@
 
 ## Props
 
+You can refer to the [grommet select page](https://v2.grommet.io/select) for all possible props. 
+
+### Excluded props are:
+
+`'size' | 'selected' | 'focusIndicator' | 'margin'`
+
+
+### Additional props are:
+
 | Name          | Type      | Default   | Required   | Description                                          |
 | ------ | ------ | --------- | ---------- | ------------- |
 | `emphasized`  | `boolean` | -         | -          | If true, use a larger size                           |
-| `value`  | `string` | - | - | The selected value |
-| `disabled`      | `boolean` | -         | -          | If true, disabled the element |
-| `onChange`  | `(e: Event) => void` | - | - | A function that is called when the value changes |
+
 

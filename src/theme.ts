@@ -144,11 +144,47 @@ export default {
 				opacity: 0.4,
 			},
 			border: {
-				radius: '20px',
+				radius: '4px',
+				color: colors.quartenary.dark,
 			},
 		},
 		colors: {
 			focus: '#73AAF5',
+		},
+		selected: {
+			background: colors.primary.main,
+		},
+		hover: {
+			background: {
+				color: colors.quartenary.main,
+				opacity: 1,
+			},
+
+			color: {
+				dark: 'inherit',
+				light: 'inherit',
+			},
+		},
+		active: {
+			background: {
+				color: colors.quartenary.main,
+				opacity: 1,
+			},
+
+			color: {
+				dark: 'inherit',
+				light: 'inherit',
+			},
+		},
+		drop: {
+			border: {
+				radius: '4px',
+			},
+			zIndex: 45,
+			// TODO: Border color should be tertiary.main once the TODOs in the Select component are resolved.
+			extend: `color: ${colors.secondary.main}; border: 1px solid ${
+				colors.quartenary.dark
+			};`,
 		},
 	},
 	button: {
@@ -167,10 +203,6 @@ export default {
 	},
 	radioButton: {
 		border: {
-			color: {
-				dark: colors.quartenary.dark,
-				light: colors.quartenary.dark,
-			},
 			width: '1px',
 		},
 		check: {
@@ -180,18 +212,18 @@ export default {
 				light: 'white',
 			},
 		},
-		hover: {
-			border: {
-				color: {
-					dark: colors.quartenary.dark,
-					light: colors.quartenary.dark,
-				},
-			},
-		},
 		// This actually sets the circle diameter to 6px;
 		icon: { size: '12px' },
 		gap: '10px',
 		size: '20px',
+	},
+	select: {
+		icons: {
+			color: colors.secondary.main,
+		},
+		control: {
+			extend: `color: ${colors.secondary.main}`,
+		},
 	},
 	layer: {
 		container: {

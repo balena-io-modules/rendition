@@ -81,15 +81,11 @@ export const Edit = ({
 	value,
 	onUpdate,
 	...props
-}: DataTypeEditProps & SelectProps & { slim?: boolean }) => (
-	<Select
+}: DataTypeEditProps & SelectProps<string>) => (
+	<Select<string>
 		{...props}
+		options={['true', 'false']}
 		value={value ? 'true' : 'false'}
-		onChange={(e: React.FormEvent<HTMLSelectElement>) =>
-			onUpdate(e.currentTarget.value === 'true')
-		}
-	>
-		<option>true</option>
-		<option>false</option>
-	</Select>
+		onChange={({ option }) => onUpdate(option === 'true')}
+	/>
 );

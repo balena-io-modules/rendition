@@ -1,6 +1,170 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select component should match the stored snapshot 1`] = `
+.c12 {
+  display: inline-block;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  fill: #2A506F;
+  stroke: #2A506F;
+}
+
+.c12 g {
+  fill: inherit;
+  stroke: inherit;
+}
+
+.c12 *:not([stroke])[fill="none"] {
+  stroke-width: 0;
+}
+
+.c12 *[stroke*="#"],
+.c12 *[STROKE*="#"] {
+  stroke: inherit;
+  fill: none;
+}
+
+.c12 *[fill-rule],
+.c12 *[FILL-RULE],
+.c12 *[fill*="#"],
+.c12 *[FILL*="#"] {
+  fill: inherit;
+  stroke: none;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  margin: 0px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0px;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0px;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex: 1 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  padding: 0px;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  margin-left: 12px;
+  margin-right: 12px;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 0px;
+}
+
+.c4 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  text-align: inherit;
+}
+
+.c10 {
+  box-sizing: border-box;
+  font-size: inherit;
+  font-family: inherit;
+  border: none;
+  -webkit-appearance: none;
+  padding: 11px;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font-weight: 600;
+  margin: 0;
+  border: 1px solid #D1D8F2;
+  border-radius: 4px;
+  width: 100%;
+  border: none;
+}
+
+.c10::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.c10::-webkit-input-placeholder {
+  color: #AAAAAA;
+}
+
+.c10::-moz-placeholder {
+  color: #AAAAAA;
+}
+
+.c10:-ms-input-placeholder {
+  color: #AAAAAA;
+}
+
+.c10::-moz-focus-inner {
+  border: none;
+  outline: none;
+}
+
+.c7 {
+  position: relative;
+  width: 100%;
+}
+
 .c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
@@ -12,42 +176,27 @@ exports[`Select component should match the stored snapshot 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
+.c9 {
+  cursor: pointer;
+}
+
 .c3 {
-  border-radius: 3px;
+  border: 1px solid #D1D8F2;
+  border-radius: 4px;
+  color: #2A506F;
+}
+
+.c8 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  font-weight: normal;
   height: 36px;
-  font-size: inherit;
-  border: 1px solid #c6c8c9;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 16px;
-  padding-right: 36px;
-  background-color: white;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.c2 > button {
   width: 100%;
-  min-width: 90px;
-}
-
-.c3:hover:enabled {
-  box-shadow: 0 0 4px 1px rgba(0,0,0,0.1);
-}
-
-.c2 {
-  display: inline-block;
-  position: relative;
-}
-
-.c2::after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 5px solid #9f9f9f;
-  position: absolute;
-  right: 16px;
-  top: 16px;
 }
 
 .c0 {
@@ -65,31 +214,106 @@ exports[`Select component should match the stored snapshot 1`] = `
   font-family: CircularStd,Arial,sans-serif;
 }
 
+@media only screen and (max-width:768px) {
+  .c5 {
+    margin: 0px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c5 {
+    padding: 0px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c6 {
+    margin: 0px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c6 {
+    padding: 0px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c11 {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c11 {
+    padding: 0px;
+  }
+}
+
 <div
   className="c0 c1"
 >
-  <span
+  <div
     className="c2"
   >
-    <select
-      className="c3"
+    <button
+      aria-label="Open Drop"
+      className="c3 c4"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      type="button"
     >
-      <option
-        value={1}
+      <div
+        className="c5"
       >
-        Option 1
-      </option>
-      <option
-        value={2}
-      >
-        Option 2
-      </option>
-      <option
-        value={3}
-      >
-        Option 3
-      </option>
-    </select>
-  </span>
+        <div
+          className="c6"
+        >
+          <div
+            className="c7"
+          >
+            <input
+              autoComplete="off"
+              className="c8 c9 c10"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              readOnly={true}
+              tabIndex="-1"
+              type="text"
+            />
+          </div>
+        </div>
+        <div
+          className="c11"
+          style={
+            Object {
+              "minWidth": "auto",
+            }
+          }
+        >
+          <svg
+            aria-label="FormDown"
+            className="c12"
+            viewBox="0 0 24 24"
+          >
+            <polyline
+              fill="none"
+              points="18 9 12 15 6 9"
+              stroke="#000"
+              strokeWidth="2"
+            />
+          </svg>
+        </div>
+      </div>
+    </button>
+  </div>
 </div>
 `;

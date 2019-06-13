@@ -1,6 +1,5 @@
 import { JSONSchema6 } from 'json-schema';
 import assign from 'lodash/assign';
-import map from 'lodash/map';
 import * as React from 'react';
 import * as utils from '../../utils';
 import { DataTypeEditProps } from '../Filters';
@@ -123,18 +122,13 @@ export const Edit = ({
 	value,
 	onUpdate,
 	...props
-}: DataTypeEditProps & SelectProps & { slim?: boolean }) => (
-	<Select
+}: DataTypeEditProps & SelectProps<OneOf>) => (
+	<Select<OneOf>
 		{...props}
-		value={value}
-		onChange={(e: React.FormEvent<HTMLSelectElement>) =>
-			onUpdate(e.currentTarget.value)
-		}
-	>
-		{map(schema.oneOf, (item: OneOf) => (
-			<option key={'' + item.const} value={'' + item.const}>
-				{item.title}
-			</option>
-		))}
-	</Select>
+		options={schema.oneOf || []}
+		valueKey="const"
+		labelKey="title"
+		value={(schema.oneOf || []).find(x => x.const === value)}
+		onChange={({ option }) => onUpdate(option.const.toString())}
+	/>
 );
