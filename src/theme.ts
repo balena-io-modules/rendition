@@ -204,9 +204,20 @@ export default {
 	radioButton: {
 		border: {
 			width: '1px',
+			color: {
+				dark: colors.quartenary.dark,
+				light: colors.quartenary.dark,
+			},
+		},
+		hover: {
+			border: {
+				color: {
+					dark: colors.tertiary.main,
+					light: colors.tertiary.main,
+				},
+			},
 		},
 		check: {
-			// radius: '100%',
 			color: {
 				dark: 'white',
 				light: 'white',

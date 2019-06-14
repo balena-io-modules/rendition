@@ -10,11 +10,10 @@ import asRendition from '../asRendition';
 
 // Override styles to match our styleguide
 export const getHoverStyle = (props: any) => `
-	& label:hover input:not([disabled]) + div,
-	& label:hover input:not([disabled]) + span {
-		box-shadow: 0 0 4px 0 rgba(221, 225, 240, 0.7);
-		border-color: ${props.theme.colors.primary.main}
-	}
+	& label:hover input[checked] + div {
+		border-color: ${props.theme.colors.primary.dark};
+		background: ${props.theme.colors.primary.dark};
+	},
 `;
 
 export const getBaseStyle = (props: any) => `
@@ -22,10 +21,8 @@ export const getBaseStyle = (props: any) => `
 		font-family: ${props.theme.font};
 	}
 
-	& > label input + div {
-		border-color: ${props.theme.colors.primary.main};
-	}
 	& label input[checked] + div {
+		border-color: ${props.theme.colors.primary.main};
 		background: ${props.theme.colors.primary.main};
 	}
 

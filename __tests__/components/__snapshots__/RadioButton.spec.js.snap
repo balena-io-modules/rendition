@@ -89,7 +89,7 @@ exports[`RadioButton renders correctly 1`] = `
 
 .c3:hover input:not([disabled]) + div,
 .c3:hover input:not([disabled]) + span {
-  border-color: #000000;
+  border-color: #527699;
 }
 
 .c6 {
@@ -127,11 +127,8 @@ exports[`RadioButton renders correctly 1`] = `
   font-family: 'Nunito',Arial,sans-serif;
 }
 
-.c2 > label input + div {
-  border-color: #00AEEF;
-}
-
 .c2 label input[checked] + div {
+  border-color: #00AEEF;
   background: #00AEEF;
 }
 
@@ -139,10 +136,9 @@ exports[`RadioButton renders correctly 1`] = `
   opacity: 0.4;
 }
 
-.c2 label:hover input:not([disabled]) + div,
-.c2 label:hover input:not([disabled]) + span {
-  box-shadow: 0 0 4px 0 rgba(221,225,240,0.7);
-  border-color: #00AEEF;
+.c2 label:hover input[checked] + div {
+  border-color: #009DD7;
+  background: #009DD7;
 }
 
 @media only screen and (max-width:768px) {
