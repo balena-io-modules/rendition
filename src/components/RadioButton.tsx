@@ -17,7 +17,6 @@ export const getHoverStyle = (props: any) => `
 	}
 `;
 
-// TODO: Disabled style doesn't match our styleguide, but it is impossible to override it currently in the RadioButtonGroup component.
 export const getBaseStyle = (props: any) => `
 	& > label > span { 
 		font-family: ${props.theme.font};

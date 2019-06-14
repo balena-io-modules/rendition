@@ -416,44 +416,50 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 									<RelativeBox key={index}>
 										{index > 0 && <Txt my={2}>OR</Txt>}
 										<Flex>
-											<Select
-												value={field}
-												onChange={(v: any) =>
-													this.setEditField(v.target.value, index)
-												}
-											>
-												{map(
+											<Select<{ field: string; title: string }>
+												options={map(
 													this.state.schema.properties,
-													(s: JSONSchema6, field) => (
-														<option key={field} value={field}>
-															{s.title || field}
-														</option>
-													),
+													(s: JSONSchema6, field) => ({
+														field,
+														title: s.title || field,
+													}),
 												)}
-											</Select>
-
+												valueKey="field"
+												labelKey="title"
+												// TODO: Remove this logic and pass the primitive value when this is fixed: https://github.com/grommet/grommet/issues/3154
+												value={
+													this.state.schema.properties
+														? {
+																field,
+																title:
+																	(this.state.schema.properties[
+																		field
+																	] as JSONSchema6).title || field,
+														  }
+														: { field }
+												}
+												onChange={({ option }) =>
+													this.setEditField(option.field, index)
+												}
+											/>
 											{operators.length === 1 && (
 												<Txt mx={1} p="7px 20px 0">
 													{operators[0].label}
 												</Txt>
 											)}
-
 											{operators.length > 1 && (
-												<Select
+												<Select<{ slug: string; label: any }>
 													ml={1}
-													value={operator}
-													onChange={(v: any) =>
-														this.setEditOperator(v.target.value, index)
+													options={operators}
+													valueKey="slug"
+													labelKey="label"
+													// TODO: Remove this logic and pass the primitive value when this is fixed: https://github.com/grommet/grommet/issues/3154
+													value={operators.find(x => x.slug === operator)}
+													onChange={({ option }) =>
+														this.setEditOperator(option.slug, index)
 													}
-												>
-													{map(operators, ({ slug, label }) => (
-														<option key={slug} value={slug}>
-															{label}
-														</option>
-													))}
-												</Select>
+												/>
 											)}
-
 											<FilterInput
 												operator={operator}
 												value={value}

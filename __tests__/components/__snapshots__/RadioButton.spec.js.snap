@@ -89,7 +89,7 @@ exports[`RadioButton renders correctly 1`] = `
 
 .c3:hover input:not([disabled]) + div,
 .c3:hover input:not([disabled]) + span {
-  border-color: #D1D8F2;
+  border-color: #000000;
 }
 
 .c6 {

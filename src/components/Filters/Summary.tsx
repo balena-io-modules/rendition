@@ -71,23 +71,21 @@ class FilterSummary extends React.Component<
 							{!!scopes && scopes.length > 1 && (
 								<Flex mb={30}>
 									<Txt width={90}>Visible to:</Txt>
-									<Select
+									<Select<ViewScope>
 										ml={10}
 										mt="-7px"
 										width="auto"
-										value={this.state.scope}
-										onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+										options={scopes}
+										valueKey="slug"
+										labelKey="name"
+										// TODO: Remove this logic and pass the primitive value when this is fixed: https://github.com/grommet/grommet/issues/3154
+										value={scopes.find(x => x.slug === this.state.scope)}
+										onChange={({ option }) =>
 											this.setState({
-												scope: e.target.value,
+												scope: option.slug,
 											})
 										}
-									>
-										{scopes.map(({ name, slug }) => (
-											<option key={slug} value={slug}>
-												{name}
-											</option>
-										))}
-									</Select>
+									/>
 								</Flex>
 							)}
 

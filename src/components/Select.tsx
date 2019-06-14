@@ -1,78 +1,84 @@
+import {
+	Select as GrommetSelect,
+	SelectProps as GrommetSelectProps,
+} from 'grommet';
 import * as React from 'react';
 import styled from 'styled-components';
+
 import asRendition from '../asRendition';
-import { DefaultProps, RenditionSystemProps, Sizing } from '../common-types';
-import { radius } from '../theme';
+import { DefaultProps, Omit, RenditionSystemProps } from '../common-types';
 import { px } from '../utils';
 
-const Base = styled.select<
-	{ emphasized?: boolean } & React.HTMLProps<HTMLSelectElement>
->`
-	border-radius: ${px(radius)};
-	height: ${props =>
-		px(props.emphasized ? props.theme.space[5] : props.theme.space[4])};
-	font-size: inherit;
-	border: 1px solid ${props => props.theme.colors.gray.main};
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 16px;
-	padding-right: ${props =>
-		px(props.emphasized ? props.theme.space[5] : props.theme.space[4])};
-	background-color: white;
-	appearance: none;
-	width: 100%;
-	min-width: 90px;
+// This is applied to the input, but we have additional 1px borders that we need to account for.
+const StyledGrommetSelect = styled(GrommetSelect)<InternalSelectProps<any>>`
+	font-family: ${props => props.theme.font};
+	font-size: ${props => px(props.theme.fontSizes[1])};
+	font-weight: normal;
+	height: ${props => (props.emphasized ? '46px' : '36px')};
+	padding: ${props => (props.emphasized ? '14px' : '10px')};
+	padding-left: 20px;
+`;
 
-	&:hover:enabled {
-		box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1);
+// Set button to occupy parent's width, and a default width.
+const Container = styled.div`
+	& > button {
+		width: 100%;
 	}
 `;
 
-const Wrapper = styled.span<{ emphasized?: boolean }>`
-	display: inline-block;
-	position: relative;
+// TODO: Remove the border and radius when the drop is open (it can open either on bottom or top, so it should be handled in Grommet)
+// Issue in grommet: https://github.com/grommet/grommet/issues/3156
 
-	&::after {
-		content: '';
-		width: 0;
-		height: 0;
-		border-left: 4px solid transparent;
-		border-right: 4px solid transparent;
-		border-top: 5px solid ${props => props.theme.colors.gray.dark};
-
-		position: absolute;
-		right: 16px;
-		top: ${props => px(props.emphasized ? 20 : 16)};
-	}
-`;
-
-const Component = ({
-	children,
-	disabled,
-	emphasized,
-	onChange,
-	value,
-	...props
-}: InternalSelectProps) => {
+// TODO: Make the select borders darker when the Select is open. Opened an issue in grommet: https://github.com/grommet/grommet/issues/3157
+function Select<T>({
+	size,
+	selected,
+	focusIndicator,
+	margin,
+	className,
+	dropProps,
+	...otherProps
+}: InternalSelectProps<T>) {
 	return (
-		<Wrapper emphasized={emphasized} {...props}>
-			<Base
-				disabled={disabled}
-				emphasized={emphasized}
-				value={value === null ? undefined : value}
-				onChange={onChange}
-				children={children}
+		// Rendition system props should be applied to the wrapper, otherwise it is applied to the input tag of the Select component.
+		<Container className={className}>
+			<StyledGrommetSelect
+				{...otherProps}
+				dropProps={{ ...dropProps, elevation: 'none' }}
+				focusIndicator={false}
 			/>
-		</Wrapper>
+		</Container>
 	);
-};
-
-export interface InternalSelectProps extends DefaultProps, Sizing {
-	value?: string | string[] | number | null;
-	disabled?: boolean;
-	onChange?: React.ChangeEventHandler<HTMLSelectElement>;
 }
 
-export type SelectProps = InternalSelectProps & RenditionSystemProps;
+interface InternalSelectProps<T>
+	extends Omit<GrommetSelectProps, 'onChange' | 'children'>,
+		Omit<DefaultProps, 'onChange'> {
+	emphasized?: boolean;
+	onChange: (
+		data: {
+			option: T;
+			selected: number;
+			target: React.ChangeEvent<HTMLElement>;
+			value: T;
+		},
+	) => void;
+	children?: (
+		option: T,
+		index: number,
+		options: T[],
+		state: { active: boolean; disabled: boolean; selected: boolean },
+	) => void;
+}
 
-export default asRendition<React.FunctionComponent<SelectProps>>(Component);
+// Some of the props in Grommet are undesired or deprecated.
+export interface SelectProps<T>
+	extends Omit<
+			InternalSelectProps<T>,
+			'size' | 'selected' | 'focusIndicator' | 'margin'
+		>,
+		RenditionSystemProps {}
+
+export default asRendition<
+	(<T extends {}>(props: SelectProps<T>) => JSX.Element)
+>(Select);
