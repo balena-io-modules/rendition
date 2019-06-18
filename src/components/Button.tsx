@@ -14,7 +14,7 @@ import {
 import { getColor, getColoringType } from '../utils';
 
 const getHoverEffectOverride = (
-	bg: string,
+	bg: string | undefined,
 	color: string,
 	opacity?: string,
 ) => {

@@ -18,7 +18,7 @@ docker cp . $container_name:app
 
 echo "Installing project dependencies and generating screenshots"
 set +e
-docker exec $container_name bin/bash -c "cd /app && npm ci && npm run test:visual"
+docker exec $container_name bin/bash -c "cd /app && rm -r node_modules && npm install && npm run test:visual && npm cache clean --force"
 set -e
 
 echo "Copying visual testing report to host filesystem"

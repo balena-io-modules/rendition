@@ -1,8 +1,8 @@
 FROM buildkite/puppeteer:v1.8.0
 WORKDIR /app
 
-COPY package.json package-lock.json ./
-RUN npm ci
+COPY package.json ./
+RUN npm install && npm cache clean --force
 
 COPY . ./
 

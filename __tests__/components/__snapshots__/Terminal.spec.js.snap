@@ -153,6 +153,15 @@ exports[`Terminal renders correctly 1`] = `
   overflow: hidden;
 }
 
+.c2 .xterm-dim {
+  opacity: 0.5;
+}
+
+.c2 .xterm-underline {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
 .c2 .xterm-viewport::-webkit-scrollbar-track {
   background-color: transparent;
   border-bottom-right-radius: 0;

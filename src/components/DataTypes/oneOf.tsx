@@ -6,8 +6,10 @@ import { DataTypeEditProps } from '../Filters';
 import Select, { SelectProps } from '../Select';
 
 const getCaption = (value: any, schema: JSONSchema6) => {
-	const item = schema.oneOf!.find(item => item.const === value);
-	return item ? item.title : '';
+	const item = schema.oneOf!.find(
+		item => item && (item as JSONSchema6).const === value,
+	);
+	return item ? (item as JSONSchema6).title : '';
 };
 
 export const operators = {
@@ -125,10 +127,10 @@ export const Edit = ({
 }: DataTypeEditProps & SelectProps<OneOf>) => (
 	<Select<OneOf>
 		{...props}
-		options={schema.oneOf || []}
+		options={(schema.oneOf as OneOf[]) || []}
 		valueKey="const"
 		labelKey="title"
-		value={(schema.oneOf || []).find(x => x.const === value)}
+		value={(schema.oneOf || []).find((x: OneOf) => x.const === value) as OneOf}
 		onChange={({ option }) => onUpdate(option.const.toString())}
 	/>
 );

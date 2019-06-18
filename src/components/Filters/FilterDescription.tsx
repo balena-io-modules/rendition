@@ -29,7 +29,7 @@ const FilterDescriptionInner = (props: { filter: JSONSchema6 }) => (
 			props.filter.anyOf.map((f, i) => (
 				<React.Fragment key={i}>
 					{i > 0 && <WrappingEm> or </WrappingEm>}
-					<span>{f.description}</span>
+					<span>{f ? (f as JSONSchema6).description : ''}</span>
 				</React.Fragment>
 			))}
 		{!props.filter.anyOf && <span>{props.filter.description}</span>}

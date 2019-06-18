@@ -135,15 +135,19 @@ export const createFilter = (
 };
 
 export const decodeFilter = (schema: JSONSchema6, filter: JSONSchema6) => {
-	const signatures = filter.anyOf!.map(f => {
+	const signatures = filter.anyOf!.map((f: JSONSchema6) => {
+		if (!f) {
+			return null;
+		}
+
 		if (
 			!f.properties &&
-			(!f.anyOf || !f.anyOf.length || !f.anyOf[0].properties)
+			(!f.anyOf || !f.anyOf.length || !(f.anyOf[0] as JSONSchema6).properties)
 		) {
 			return null;
 		}
 		const schemaField = f.anyOf
-			? Object.keys(f.anyOf[0].properties!).shift()!
+			? Object.keys((f.anyOf[0] as JSONSchema6).properties!).shift()!
 			: Object.keys(f.properties!).shift()!;
 		const subSchema = schema.properties![schemaField] as JSONSchema6;
 		const model = getDataModel(subSchema);
@@ -190,7 +194,7 @@ const flattenAccumulator = (
 
 	if (schema.anyOf && isArray(schema.anyOf)) {
 		accumulator.anyOf = schema.anyOf.map(subSchema =>
-			flattenAccumulator(subSchema, delimiter, parentKey),
+			flattenAccumulator(subSchema as JSONSchema6, delimiter, parentKey),
 		);
 	}
 
@@ -289,7 +293,7 @@ export const unflattenSchema = (
 	// If the schema uses `anyOf` then use recursion to populate the array
 	if (unflattenedSchema.anyOf) {
 		unflattenedSchema.anyOf = unflattenedSchema.anyOf.map(subSchema =>
-			unflattenSchema(subSchema, delimiter),
+			unflattenSchema(subSchema as JSONSchema6, delimiter),
 		);
 	}
 
