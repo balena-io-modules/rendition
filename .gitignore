@@ -39,6 +39,10 @@ build/Release
 node_modules/
 jspm_packages/
 
+# Lock files
+yarn.lock
+package-lock.json
+
 # Optional npm cache directory
 .npm
 

@@ -240,10 +240,8 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
               type="text"
               value="Bulbasaur"
             />
-            <div />
           </div>
         </fieldset>
-        <div />
       </div>
       <button
         className="c9 c10"

@@ -158,7 +158,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 			}
 
 			if (subschema.oneOf) {
-				value = subschema.oneOf[0].const || '';
+				value = (subschema.oneOf[0] as JSONSchema6).const || '';
 			}
 
 			if (subschema.type === 'boolean') {

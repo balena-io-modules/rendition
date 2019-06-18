@@ -220,10 +220,8 @@ exports[`Form component should match the stored snapshot 1`] = `
               type="text"
               value="Bulbasaur"
             />
-            <div />
           </div>
         </fieldset>
-        <div />
       </div>
       <button
         className="c8 c9"

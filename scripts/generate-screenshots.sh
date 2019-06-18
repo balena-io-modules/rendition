@@ -10,7 +10,7 @@ echo "Copying Rendition files to Docker container"
 docker cp . rendition-screenshot:app
 
 echo "Installing project dependencies and generating screenshots"
-docker exec rendition-screenshot bin/bash -c "cd /app && npm ci && npm run ci:screenshot"
+docker exec rendition-screenshot bin/bash -c "cd /app && rm -r node_modules && npm install && npm run ci:screenshot && npm cache clean --force"
 
 echo "Copying generated screenshots to host filesystem"
 docker cp rendition-screenshot:/app/__screenshots__ .
