@@ -53,6 +53,7 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [Button](#button)
 - [ButtonGroup](#buttongroup)
 - [Card](#card)
+- [Checkbox](#checkbox)
 - [Container](#container)
 - [Divider](#divider)
 - [DropDownButton](#dropdownbutton)
@@ -218,6 +219,15 @@ Section containing content and actions on the same topic.
 | `rows`  | `JSX.Element[]` | - | - | Subsections separated by a horizontal separator |
 | `minHeight`  | `string` | `auto` | - | CSS minHeight property |
 | `children`  | `JSX.Element` | - | - | Any content that is internally wrapped in a Box |
+
+### Checkbox
+
+
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Input.js)
+
+#### Props
+
+`Checkbox` implements all properties from [Grommet's CheckBox component](https://v2.grommet.io/checkbox)
 
 ### Container
 

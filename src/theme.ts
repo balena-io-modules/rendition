@@ -252,4 +252,36 @@ export default {
 		extend: 'border: none;',
 		color: colors.primary.main,
 	},
+	checkBox: {
+		size: '20px',
+		color: colors.primary.main,
+		border: {
+			color: {
+				dark: colors.quartenary.dark,
+				light: colors.quartenary.dark,
+			},
+			width: '1px',
+		},
+		check: {
+			radius: '4px',
+			thickness: '2px',
+		},
+		hover: {
+			border: {
+				color: {
+					dark: colors.quartenary.dark,
+					light: colors.quartenary.dark,
+				},
+			},
+		},
+		toggle: {
+			color: {
+				dark: colors.primary.main,
+				light: colors.quartenary.dark,
+			},
+			radius: '20px',
+			size: '40px',
+			knob: {},
+		},
+	},
 };
