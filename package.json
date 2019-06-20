@@ -27,6 +27,7 @@
     "build:docs": "node ./scripts/generateDocs.js",
     "build": "npm run tsify:xterm-css && npm run build:cjs && npm run build:esm5 && npm run build:docs",
     "generate-screenshots": "./scripts/generate-screenshots.sh",
+    "update-snapshots": "npm run build && npm run jest -- -u",
     "build:storybook": "build-storybook -o .out",
     "catch-uncommitted": "catch-uncommitted --catch-no-git --skip-node-versionbot-changes",
     "test:fast": "npm run lint && TZ='Etc/UTC' npm run jest",
