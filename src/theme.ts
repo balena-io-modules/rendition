@@ -1,19 +1,7 @@
-import Color from 'color';
-
-const darken = (percent: number, color: string) =>
-	Color(color)
-		.darken(percent)
-		.hex();
-
-const lighten = (percent: number, color: string) =>
-	Color(color)
-		.lighten(percent)
-		.hex();
-
 const primary = '#00AEEF';
 const secondary = '#2A506F';
 const tertiary = '#527699';
-const quartenary = '#F8F9FD';
+const quartenary = '#DDE1f0';
 
 const danger = '#FF423D';
 const warning = '#FCA321';
@@ -23,48 +11,51 @@ const info = '#1496E1';
 const colors = {
 	primary: {
 		main: primary,
-		light: lighten(0.1, primary),
-		dark: darken(0.1, primary),
+		semilight: '#aedff9',
+		light: '#08bcff',
+		dark: '#009dd7',
 	},
 	secondary: {
 		main: secondary,
-		light: lighten(0.1, secondary),
-		dark: darken(0.1, secondary),
+		semilight: '#abb9c5',
+		light: '#2e587a',
+		dark: '#23445e',
 	},
 	tertiary: {
 		main: tertiary,
-		light: lighten(0.1, tertiary),
-		dark: darken(0.1, tertiary),
+		light: '#5b82a7',
+		semilight: '#bbc8d6',
+		dark: '#456482',
 	},
 	quartenary: {
 		main: quartenary,
-		light: lighten(0.1, quartenary),
-		dark: darken(0.1, quartenary),
+		light: '#f8f9fd',
+		dark: '#b7bed3',
 	},
 
 	danger: {
 		main: danger,
-		semilight: lighten(0.2, danger),
-		light: lighten(0.55, danger),
-		dark: darken(0.2, danger),
+		semilight: '#ffa1a1',
+		light: '#ffebeb',
+		dark: '#dc2823',
 	},
 	warning: {
 		main: warning,
-		semilight: lighten(0.2, warning),
-		light: lighten(0.7, warning),
-		dark: darken(0.2, warning),
+		semilight: '#fdd190',
+		light: '#fff5e6',
+		dark: '#ee8d00',
 	},
 	success: {
 		main: success,
-		semilight: lighten(0.22, success),
-		light: lighten(1.25, success),
-		dark: darken(0.2, success),
+		semilight: '#8ce09a',
+		light: '#f0fdf2',
+		dark: '#16a52d',
 	},
 	info: {
 		main: info,
-		semilight: lighten(0.27, info),
-		light: lighten(1, info),
-		dark: darken(0.2, info),
+		semilight: '#90cbee',
+		light: '#e9f4fb',
+		dark: '#1078b4',
 	},
 
 	text: {
@@ -145,7 +136,7 @@ export default {
 			},
 			border: {
 				radius: '4px',
-				color: colors.quartenary.dark,
+				color: colors.quartenary.main,
 			},
 		},
 		colors: {
@@ -182,9 +173,7 @@ export default {
 			},
 			zIndex: 45,
 			// TODO: Border color should be tertiary.main once the TODOs in the Select component are resolved.
-			extend: `color: ${colors.secondary.main}; border: 1px solid ${
-				colors.quartenary.dark
-			};`,
+			extend: `color: ${colors.secondary.main}; border: 1px solid ${colors.quartenary.main};`,
 		},
 	},
 	button: {
@@ -205,8 +194,8 @@ export default {
 		border: {
 			width: '1px',
 			color: {
-				dark: colors.quartenary.dark,
-				light: colors.quartenary.dark,
+				dark: colors.quartenary.main,
+				light: colors.quartenary.main,
 			},
 		},
 		hover: {
@@ -257,8 +246,8 @@ export default {
 		color: colors.primary.main,
 		border: {
 			color: {
-				dark: colors.quartenary.dark,
-				light: colors.quartenary.dark,
+				dark: colors.quartenary.main,
+				light: colors.quartenary.main,
 			},
 			width: '1px',
 		},
@@ -269,15 +258,15 @@ export default {
 		hover: {
 			border: {
 				color: {
-					dark: colors.quartenary.dark,
-					light: colors.quartenary.dark,
+					dark: colors.quartenary.main,
+					light: colors.quartenary.main,
 				},
 			},
 		},
 		toggle: {
 			color: {
 				dark: colors.primary.main,
-				light: colors.quartenary.dark,
+				light: colors.quartenary.main,
 			},
 			radius: '20px',
 			size: '40px',

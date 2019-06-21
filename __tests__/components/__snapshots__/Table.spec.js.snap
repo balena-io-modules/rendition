@@ -94,7 +94,7 @@ exports[`Table component should match the stored snapshot 1`] = `
 }
 
 .c3 > [data-display='table-body'] > [data-display='table-row'][data-highlight='true'] {
-  background-color: #EDF7FD;
+  background-color: #e9f4fb;
 }
 
 .c3 > [data-display='table-body'] > [data-display='table-row'][data-highlight='true'] > [data-display="table-cell"]:first-child {
