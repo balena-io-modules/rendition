@@ -137,8 +137,8 @@ exports[`RadioButton renders correctly 1`] = `
 }
 
 .c2 label:hover input[checked] + div {
-  border-color: #009DD7;
-  background: #009DD7;
+  border-color: #009dd7;
+  background: #009dd7;
 }
 
 @media only screen and (max-width:768px) {

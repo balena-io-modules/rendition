@@ -133,7 +133,7 @@ exports[`Select component should match the stored snapshot 1`] = `
   color: inherit;
   font-weight: 600;
   margin: 0;
-  border: 1px solid #D1D8F2;
+  border: 1px solid #DDE1f0;
   border-radius: 4px;
   width: 100%;
   border: none;
@@ -181,7 +181,7 @@ exports[`Select component should match the stored snapshot 1`] = `
 }
 
 .c3 {
-  border: 1px solid #D1D8F2;
+  border: 1px solid #DDE1f0;
   border-radius: 4px;
   color: #2A506F;
 }

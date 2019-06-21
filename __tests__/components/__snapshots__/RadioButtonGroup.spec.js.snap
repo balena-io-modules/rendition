@@ -71,7 +71,7 @@ exports[`RadioButtonGroup renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: solid 1px #D1D8F2;
+  border: solid 1px #DDE1f0;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
@@ -199,8 +199,8 @@ exports[`RadioButtonGroup renders correctly 1`] = `
 }
 
 .c2 label:hover input[checked] + div {
-  border-color: #009DD7;
-  background: #009DD7;
+  border-color: #009dd7;
+  background: #009dd7;
 }
 
 .c2,
@@ -261,7 +261,7 @@ exports[`RadioButtonGroup renders correctly 1`] = `
 
 @media only screen and (max-width:768px) {
   .c8 {
-    border: solid 1px #D1D8F2;
+    border: solid 1px #DDE1f0;
   }
 }
 
