@@ -1,10 +1,13 @@
 import * as React from 'react'
+import Color from 'color'
 import { storiesOf } from '@storybook/react'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
-import { Box, Flex, Heading, Provider } from '../'
+import { Box, Flex, Heading, Provider, Txt } from '../'
 import { withTheme } from 'styled-components'
 import Readme from './README/Swatches.md'
+
+const getColor = color => (Color(color).dark() ? '#fff' : '#3c3e42')
 
 const S = ({ style, border, theme }) => {
   const { main, light, dark, semilight } = theme.colors[style]
@@ -16,7 +19,7 @@ const S = ({ style, border, theme }) => {
         overflow: 'hidden',
         border: border ? `1px solid ${main}` : 'none'
       }}
-      fontSize={10}
+      fontSize={11}
       >
       <Flex
         style={{ height: 75, backgroundColor: main }}
@@ -24,8 +27,10 @@ const S = ({ style, border, theme }) => {
         justifyContent='center'
         flexDirection='column'
       >
-        <div>main</div>
-        {main}
+        <Txt color={getColor(main)} align='center'>
+          <div>main</div>
+          <div>{main.toUpperCase()}</div>
+        </Txt>
       </Flex>
       {semilight && (
         <Flex
@@ -34,8 +39,10 @@ const S = ({ style, border, theme }) => {
           justifyContent='center'
           flexDirection='column'
         >
-          <div>semilight</div>
-          {semilight}
+          <Txt color={getColor(semilight)} align='center'>
+            <div>semilight</div>
+            <div>{semilight.toUpperCase()}</div>
+          </Txt>
         </Flex>
       )}
       <Flex style={{ height: 45 }}>
@@ -46,8 +53,10 @@ const S = ({ style, border, theme }) => {
           justifyContent='center'
           flexDirection='column'
         >
-          <div>light</div>
-          {light}
+          <Txt color={getColor(light)} align='center'>
+            <div>light</div>
+            <div>{light.toUpperCase()}</div>
+          </Txt>
         </Flex>
         <Flex
           flex={1}
@@ -56,8 +65,10 @@ const S = ({ style, border, theme }) => {
           justifyContent='center'
           flexDirection='column'
         >
-          <div>dark</div>
-          {dark}
+          <Txt color={getColor(dark)} align='center'>
+            <div>dark</div>
+            <div>{dark.toUpperCase()}</div>
+          </Txt>
         </Flex>
       </Flex>
     </Box>
