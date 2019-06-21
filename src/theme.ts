@@ -136,7 +136,7 @@ export default {
 			},
 			border: {
 				radius: '4px',
-				color: colors.quartenary.dark,
+				color: colors.quartenary.main,
 			},
 		},
 		colors: {
@@ -173,7 +173,7 @@ export default {
 			},
 			zIndex: 45,
 			// TODO: Border color should be tertiary.main once the TODOs in the Select component are resolved.
-			extend: `color: ${colors.secondary.main}; border: 1px solid ${colors.quartenary.dark};`,
+			extend: `color: ${colors.secondary.main}; border: 1px solid ${colors.quartenary.main};`,
 		},
 	},
 	button: {
@@ -194,8 +194,8 @@ export default {
 		border: {
 			width: '1px',
 			color: {
-				dark: colors.quartenary.dark,
-				light: colors.quartenary.dark,
+				dark: colors.quartenary.main,
+				light: colors.quartenary.main,
 			},
 		},
 		hover: {
@@ -246,8 +246,8 @@ export default {
 		color: colors.primary.main,
 		border: {
 			color: {
-				dark: colors.quartenary.dark,
-				light: colors.quartenary.dark,
+				dark: colors.quartenary.main,
+				light: colors.quartenary.main,
 			},
 			width: '1px',
 		},
@@ -258,15 +258,15 @@ export default {
 		hover: {
 			border: {
 				color: {
-					dark: colors.quartenary.dark,
-					light: colors.quartenary.dark,
+					dark: colors.quartenary.main,
+					light: colors.quartenary.main,
 				},
 			},
 		},
 		toggle: {
 			color: {
 				dark: colors.primary.main,
-				light: colors.quartenary.dark,
+				light: colors.quartenary.main,
 			},
 			radius: '20px',
 			size: '40px',
