@@ -13,11 +13,8 @@ const GlobalStyle = createGlobalStyle([], {
     lineHeight: 1.5,
     margin: 0,
     fontFamily: theme.font,
-    height: '100%',
-    background: 'white'
-  },
-  html: {
-    height: '100%'
+    background: 'white',
+    webkitFontSmoothing: 'antialiased'
   }
 })
 
