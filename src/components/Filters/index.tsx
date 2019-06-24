@@ -5,6 +5,7 @@ import findIndex from 'lodash/findIndex';
 import includes from 'lodash/includes';
 import isEmpty from 'lodash/isEmpty';
 import isEqual from 'lodash/isEqual';
+import last from 'lodash/last';
 import map from 'lodash/map';
 import reject from 'lodash/reject';
 import * as React from 'react';
@@ -13,7 +14,7 @@ import FaFilter from 'react-icons/lib/fa/filter';
 import styled from 'styled-components';
 import { Button, ButtonProps } from '../../';
 import { DefaultProps } from '../../common-types';
-import * as utils from '../../utils';
+import { px, randomString } from '../../utils';
 import { getDataModel } from '../DataTypes';
 import { DropDownButtonProps } from '../DropDownButton';
 import { Box, Flex } from '../Grid';
@@ -56,12 +57,26 @@ const DeleteButton = styled(Button)`
 	right: -35px;
 `;
 
-const SearchWrapper = styled.div`
-	flex-basis: 500px;
-`;
-
 const FilterWrapper = styled(Box)`
 	position: relative;
+`;
+
+const SearchWrapper = styled(Box)`
+	min-width: 80px;
+`;
+
+const FilterElementsWrapper = styled(Flex)`
+	& > * {
+		margin: 0 ${props => px(props.theme.space[2])};
+	}
+
+	& > *:first-child {
+		margin-left: 0;
+	}
+
+	& > *:last-child {
+		margin-right: 0;
+	}
 `;
 
 class Filters extends React.Component<FiltersProps, FiltersState> {
@@ -291,7 +306,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 
 	saveView(name: string, scope: string | null) {
 		const view: FiltersView = {
-			id: utils.randomString(),
+			id: randomString(),
 			name,
 			scope,
 			filters: cloneDeep(this.state.filters),
@@ -353,53 +368,81 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 
 	render() {
 		const { filters } = this.state;
+		const { renderOrder } = this.props;
+		const filterComponents: any = {};
+
+		if (this.shouldRenderComponent('add')) {
+			filterComponents.add = (
+				<Button
+					disabled={this.props.disabled}
+					primary
+					onClick={() =>
+						this.setState({ showModal: true, editingFilter: null })
+					}
+					{...this.props.addFilterButtonProps}
+				>
+					<FaFilter style={{ marginRight: 10 }} />
+					Add filter
+				</Button>
+			);
+		}
+
+		if (this.shouldRenderComponent('search')) {
+			filterComponents.search = (
+				<SearchWrapper flex={1}>
+					<Search
+						dark={this.props.dark}
+						disabled={this.props.disabled}
+						value={this.state.searchString}
+						onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+							this.setSimpleSearch(e.target.value)
+						}
+					/>
+				</SearchWrapper>
+			);
+		}
+
+		if (this.shouldRenderComponent('views')) {
+			filterComponents.views = (
+				<ViewsMenu
+					alignRight={last(renderOrder) === 'views' ? true : false}
+					buttonProps={this.props.viewsMenuButtonProps}
+					disabled={this.props.disabled}
+					views={this.state.views || []}
+					schema={this.props.schema}
+					hasMultipleScopes={
+						this.props.viewScopes && this.props.viewScopes.length > 1
+					}
+					setFilters={filters => this.setFilters(filters)}
+					deleteView={view => this.deleteView(view)}
+				/>
+			);
+		}
+
+		const summaryComponent = this.shouldRenderComponent('summary') &&
+			!!filters.length &&
+			!this.props.disabled && (
+				<Summary
+					scopes={this.props.viewScopes}
+					edit={(filter: JSONSchema6) => this.editFilter(filter)}
+					delete={(filter: JSONSchema6) => this.removeFilter(filter)}
+					saveView={(name, scope) => this.saveView(name, scope)}
+					filters={filters}
+					views={this.state.views || []}
+					schema={this.state.schema}
+					dark={!!this.props.dark}
+				/>
+			);
 
 		return (
-			<FilterWrapper mb={3}>
-				<Flex justifyContent="space-between">
-					{this.shouldRenderComponent('add') && (
-						<Button
-							mr={30}
-							disabled={this.props.disabled}
-							primary
-							onClick={() =>
-								this.setState({ showModal: true, editingFilter: null })
-							}
-							{...this.props.addFilterButtonProps}
-						>
-							<FaFilter style={{ marginRight: 10 }} />
-							Add filter
-						</Button>
-					)}
+			<FilterWrapper>
+				<FilterElementsWrapper>
+					{renderOrder && renderOrder.length > 0
+						? renderOrder.map(elemName => filterComponents[elemName])
+						: Object.values(filterComponents)}
+				</FilterElementsWrapper>
 
-					{this.shouldRenderComponent('search') && (
-						<SearchWrapper>
-							<Search
-								dark={this.props.dark}
-								disabled={this.props.disabled}
-								value={this.state.searchString}
-								onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-									this.setSimpleSearch(e.target.value)
-								}
-							/>
-						</SearchWrapper>
-					)}
-
-					{this.shouldRenderComponent('views') && (
-						<ViewsMenu
-							buttonProps={this.props.viewsMenuButtonProps}
-							disabled={this.props.disabled}
-							views={this.state.views || []}
-							schema={this.props.schema}
-							hasMultipleScopes={
-								this.props.viewScopes && this.props.viewScopes.length > 1
-							}
-							setFilters={filters => this.setFilters(filters)}
-							deleteView={view => this.deleteView(view)}
-							renderMode={this.props.renderMode}
-						/>
-					)}
-				</Flex>
+				{summaryComponent}
 
 				{this.state.showModal && (
 					<div>
@@ -494,21 +537,6 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 						</Modal>
 					</div>
 				)}
-
-				{this.shouldRenderComponent('summary') &&
-					!!filters.length &&
-					!this.props.disabled && (
-						<Summary
-							scopes={this.props.viewScopes}
-							edit={(filter: JSONSchema6) => this.editFilter(filter)}
-							delete={(filter: JSONSchema6) => this.removeFilter(filter)}
-							saveView={(name, scope) => this.saveView(name, scope)}
-							filters={filters}
-							views={this.state.views || []}
-							schema={this.state.schema}
-							dark={!!this.props.dark}
-						/>
-					)}
 			</FilterWrapper>
 		);
 	}
@@ -546,7 +574,8 @@ export interface FilterSignature {
 	value: string | number | boolean | { [k: string]: string };
 }
 
-export type FilterRenderMode = 'all' | 'add' | 'search' | 'views' | 'summary';
+export type FilterRenderOrder = 'add' | 'search' | 'views';
+export type FilterRenderMode = 'all' | FilterRenderOrder | 'summary';
 
 export interface DataTypeModel {
 	operators: {
@@ -593,6 +622,7 @@ export interface FiltersProps extends DefaultProps {
 	addFilterButtonProps?: ButtonProps;
 	viewsMenuButtonProps?: DropDownButtonProps;
 	renderMode?: FilterRenderMode | FilterRenderMode[];
+	renderOrder?: FilterRenderOrder[];
 	dark?: boolean;
 }
 

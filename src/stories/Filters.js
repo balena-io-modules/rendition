@@ -317,6 +317,16 @@ storiesOf('Next/Filters', module)
           <Heading.h3>You can also use an array of modes</Heading.h3>
           <Filters schema={schema} renderMode={['add', 'search']} />
           <Divider color='#eee' mt={40} mb={90} />
+
+          <Heading.h3>
+            <code>custom ordering</code>
+          </Heading.h3>
+          <Filters
+            schema={schema}
+            renderMode='all'
+            renderOrder={['add', 'views', 'search']}
+          />
+          <Divider color='#eee' mt={40} mb={90} />
         </Box>
       </Provider>
     )

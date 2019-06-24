@@ -9,11 +9,9 @@ import { getColor, px } from '../utils';
 import Txt, { TxtProps } from './Txt';
 
 const colorHash = new ColorHash();
-const backgroundColor = memoize(
-	(text: string): string => {
-		return colorHash.hex(text.replace(/\s/g, ''));
-	},
-);
+const backgroundColor = memoize((text: string): string => {
+	return colorHash.hex(text.replace(/\s/g, ''));
+});
 
 const BaseBadge = styled(Txt)`
 	border-radius: ${props => px(props.theme.radius)};

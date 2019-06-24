@@ -1,30 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Filters component should match the stored snapshot 1`] = `
-.c4 {
+.c3 {
   box-sizing: border-box;
 }
 
-.c3 {
-  margin-bottom: 16px;
+.c8 {
+  box-sizing: border-box;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
-.c18 {
+.c16 {
   margin-top: 1px;
 }
 
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.c17 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -39,7 +31,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   justify-content: space-between;
 }
 
-.c8 {
+.c6 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
@@ -64,11 +56,11 @@ exports[`Filters component should match the stored snapshot 1`] = `
   transition: 0.1s ease-in-out;
 }
 
-.c8:hover {
+.c6:hover {
   box-shadow: 0px 0px 0px 2px #00AEEF;
 }
 
-.c16 {
+.c14 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
@@ -90,7 +82,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   transition: 0.1s ease-in-out;
 }
 
-.c16:hover {
+.c14:hover {
   box-shadow: 0px 0px 0px 2px #00AEEF;
 }
 
@@ -105,7 +97,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c7 {
+.c5 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
   height: 38px;
@@ -125,18 +117,18 @@ exports[`Filters component should match the stored snapshot 1`] = `
   color: white;
 }
 
-.c7 svg {
+.c5 svg {
   color: inherit !important;
   font-size: 0.875em;
 }
 
-.c7:disabled {
+.c5:disabled {
   cursor: not-allowed;
 }
 
-.c7:hover:enabled,
-.c7:focus:enabled,
-.c7:active:enabled {
+.c5:hover:enabled,
+.c5:focus:enabled,
+.c5:active:enabled {
   box-shadow: none;
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
@@ -144,7 +136,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   opacity: undefined;
 }
 
-.c15 {
+.c13 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
   height: 38px;
@@ -165,18 +157,18 @@ exports[`Filters component should match the stored snapshot 1`] = `
   border-color: #00AEEF;
 }
 
-.c15 svg {
+.c13 svg {
   color: inherit !important;
   font-size: 0.875em;
 }
 
-.c15:disabled {
+.c13:disabled {
   cursor: not-allowed;
 }
 
-.c15:hover:enabled,
-.c15:focus:enabled,
-.c15:active:enabled {
+.c13:hover:enabled,
+.c13:focus:enabled,
+.c13:active:enabled {
   box-shadow: none;
   background: #00AEEF;
   border-color: #00AEEF;
@@ -184,16 +176,12 @@ exports[`Filters component should match the stored snapshot 1`] = `
   opacity: undefined;
 }
 
-.c6 {
-  margin-right: 30px;
-}
-
-.c14 {
+.c12 {
   padding-left: 16px;
   padding-right: 0;
 }
 
-.c10 {
+.c9 {
   position: relative;
   width: 100%;
   border-bottom: 1px solid #c6c8c9;
@@ -201,7 +189,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   padding-top: 3px;
 }
 
-.c10 .search-icon {
+.c9 .search-icon {
   color: #c6c8c9;
   font-size: 0.9em;
   position: absolute;
@@ -212,7 +200,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   transform: translateY(-50%);
 }
 
-.c10 input {
+.c9 input {
   outline: none;
   background: transparent;
   box-shadow: none;
@@ -223,58 +211,71 @@ exports[`Filters component should match the stored snapshot 1`] = `
   height: auto;
 }
 
-.c10 input:hover {
+.c9 input:hover {
   box-shadow: none;
 }
 
-.c10 input::-webkit-input-placeholder {
+.c9 input::-webkit-input-placeholder {
   color: #c6c8c9;
   font-weight: 300;
 }
 
-.c10 input::-moz-placeholder {
+.c9 input::-moz-placeholder {
   color: #c6c8c9;
   font-weight: 300;
 }
 
-.c10 input:-ms-input-placeholder {
+.c9 input:-ms-input-placeholder {
   color: #c6c8c9;
   font-weight: 300;
 }
 
-.c10 input::placeholder {
+.c9 input::placeholder {
   color: #c6c8c9;
   font-weight: 300;
 }
 
-.c12 {
+.c10 {
   display: inline-block;
   border-radius: 3px;
   vertical-align: top;
   position: relative;
 }
 
-.c19 {
+.c17 {
   width: 28px;
 }
 
-.c13 {
+.c11 {
   margin: 0;
   width: 100%;
 }
 
-.c11 {
-  margin-left: 30px;
-}
-
-.c9 {
-  -webkit-flex-basis: 500px;
-  -ms-flex-preferred-size: 500px;
-  flex-basis: 500px;
-}
-
 .c2 {
   position: relative;
+}
+
+.c7 {
+  min-width: 80px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 > * {
+  margin: 0 8px;
+}
+
+.c4 > *:first-child {
+  margin-left: 0;
+}
+
+.c4 > *:last-child {
+  margin-right: 0;
 }
 
 .c0 {
@@ -296,13 +297,13 @@ exports[`Filters component should match the stored snapshot 1`] = `
   className="c0 c1"
 >
   <div
-    className="c2 c3 c4"
+    className="c2 c3"
   >
     <div
-      className="c5 c4"
+      className="c4 c3"
     >
       <button
-        className="c6 c7 c8"
+        className="c5 c6"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -333,10 +334,10 @@ exports[`Filters component should match the stored snapshot 1`] = `
         Add filter
       </button>
       <div
-        className="c9"
+        className="c7 c8"
       >
         <div
-          className="c10"
+          className="c9"
         >
           <input
             onChange={[Function]}
@@ -375,10 +376,10 @@ exports[`Filters component should match the stored snapshot 1`] = `
         className=""
       >
         <div
-          className="c11 c12 c4"
+          className="c10 c3"
         >
           <button
-            className="c13 c14 c15 c16"
+            className="c11 c12 c13 c14"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -387,10 +388,10 @@ exports[`Filters component should match the stored snapshot 1`] = `
             type="button"
           >
             <div
-              className="c17 c4"
+              className="c15 c3"
             >
               <div
-                className="c18 c4"
+                className="c16 c3"
               >
                 <span>
                   <svg
@@ -417,7 +418,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
                 </span>
               </div>
               <span
-                className="c19"
+                className="c17"
               >
                 <svg
                   fill="currentColor"

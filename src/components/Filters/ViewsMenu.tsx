@@ -6,7 +6,7 @@ import * as React from 'react';
 import FaPieChart from 'react-icons/lib/fa/pie-chart';
 import FaTrash from 'react-icons/lib/fa/trash';
 import styled from 'styled-components';
-import { FilterRenderMode, FiltersView } from '.';
+import { FiltersView } from '.';
 import DropDownButton, { DropDownButtonProps } from '../DropDownButton';
 import { Box } from '../Grid';
 import Txt from '../Txt';
@@ -90,25 +90,18 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 	}
 
 	render() {
-		const { views, renderMode, hasMultipleScopes } = this.props;
+		const { views, hasMultipleScopes } = this.props;
 		const hasViews = views.length > 0;
 		const groupedViews = groupBy(views, item => item.scope || 'Unscoped');
-
-		let soloRender = false;
-		if (renderMode) {
-			const mode = Array.isArray(renderMode) ? renderMode : [renderMode];
-			soloRender = mode.length === 1 && mode[0] === 'views';
-		}
 
 		return (
 			<Wrapper>
 				<DropDownButton
-					ml={soloRender ? 0 : 30}
+					alignRight={this.props.alignRight}
 					disabled={this.props.disabled}
 					primary
 					outline
 					joined
-					alignRight={!soloRender}
 					noListFormat
 					label={
 						<span>
@@ -176,7 +169,7 @@ export interface ViewsMenuProps {
 	hasMultipleScopes?: boolean;
 	setFilters: (filters: JSONSchema6[]) => void;
 	deleteView: (view: FiltersView) => any;
-	renderMode?: FilterRenderMode | FilterRenderMode[];
+	alignRight?: boolean;
 }
 
 interface ViewsMenuState {
