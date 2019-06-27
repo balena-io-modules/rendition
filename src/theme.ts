@@ -173,7 +173,10 @@ export default {
 			},
 			zIndex: 45,
 			// TODO: Border color should be tertiary.main once the TODOs in the Select component are resolved.
-			extend: `color: ${colors.secondary.main}; border: 1px solid ${colors.quartenary.main};`,
+			extend: `
+				color: ${colors.secondary.main}; border: 1px solid ${colors.quartenary.main};
+				animation-duration: 0s;
+			`,
 		},
 	},
 	button: {
