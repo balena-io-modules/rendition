@@ -1,13 +1,13 @@
 import * as React from 'react'
-import Color from 'color'
 import { storiesOf } from '@storybook/react'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Flex, Heading, Provider, Txt } from '../'
 import { withTheme } from 'styled-components'
 import Readme from './README/Swatches.md'
+import { isLight } from '../utils'
 
-const getColor = color => (Color(color).dark() ? '#fff' : '#3c3e42')
+const getColor = color => (isLight(color) ? '#3c3e42' : '#fff')
 
 const S = ({ style, border, theme }) => {
   const { main, light, dark, semilight } = theme.colors[style]

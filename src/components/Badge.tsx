@@ -5,15 +5,13 @@ import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../asRendition';
 import { Coloring, RenditionSystemProps, Theme } from '../common-types';
-import { getColor, px } from '../utils';
+import { getColor, isLight, px } from '../utils';
 import Txt, { TxtProps } from './Txt';
 
 const colorHash = new ColorHash();
-const backgroundColor = memoize(
-	(text: string): string => {
-		return colorHash.hex(text.replace(/\s/g, ''));
-	},
-);
+const backgroundColor = memoize((text: string): string => {
+	return colorHash.hex(text.replace(/\s/g, ''));
+});
 
 const BaseBadge = styled(Txt)`
 	border-radius: ${props => px(props.theme.radius)};
@@ -47,16 +45,17 @@ const Badge = ({
 		);
 	}
 
+	const bgColor =
+		getColor(assign(props, { theme }), 'bg', 'main') ||
+		backgroundColor(children);
+
 	return (
 		<BaseBadge
 			p="2px 5px"
 			fontSize={fontSize}
 			{...props}
-			color={props.color || '#fff'}
-			bg={
-				getColor(assign(props, { theme }), 'bg', 'main') ||
-				backgroundColor(children)
-			}
+			color={props.color || isLight(bgColor) ? 'text.main' : '#fff'}
+			bg={bgColor}
 		>
 			{children}
 		</BaseBadge>

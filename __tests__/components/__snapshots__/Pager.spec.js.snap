@@ -113,7 +113,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #2A506F;
+  color: #3c3e42;
   border-color: #2A506F;
 }
 

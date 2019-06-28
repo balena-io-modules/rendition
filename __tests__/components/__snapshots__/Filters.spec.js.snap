@@ -193,7 +193,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #DDE1f0;
+  color: #3c3e42;
   border-color: #DDE1f0;
 }
 
@@ -212,7 +212,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   box-shadow: none;
   background: #DDE1f0;
   border-color: #DDE1f0;
-  color: white;
+  color: #3c3e42;
   opacity: undefined;
 }
 

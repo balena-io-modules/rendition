@@ -11,7 +11,7 @@ import {
 	Sizing,
 	Theme,
 } from '../common-types';
-import { getColor, getColoringType } from '../utils';
+import { getColor, getColoringType, isLight } from '../utils';
 
 const getHoverEffectOverride = (
 	bg: string | undefined,
@@ -51,17 +51,26 @@ const ButtonBase = styled(Button)`
 `;
 
 const ColouredButton = styled(ButtonBase)`
-	color: white;
-	${props => getHoverEffectOverride(getColor(props, 'color', 'dark'), 'white')};
+	color: ${props =>
+		isLight(getColor(props, 'color', 'main'))
+			? props.theme.colors.text.main
+			: 'white'};
+	${props => {
+		const color = getColor(props, 'color', 'dark');
+		return getHoverEffectOverride(
+			color,
+			isLight(color) ? props.theme.colors.text.main : 'white',
+		);
+	}};
 `;
 
 const Outline = styled(ButtonBase)<{ color?: string }>`
-	color: ${props => props.color || props.theme.colors.text.main};
+	color: ${props => props.theme.colors.text.main};
 	border-color: ${props => props.color || props.theme.colors.text.main};
 	${props =>
 		getHoverEffectOverride(
 			props.color || props.theme.colors.text.main,
-			'white',
+			isLight(props.color) ? props.theme.colors.text.main : 'white',
 		)};
 `;
 
