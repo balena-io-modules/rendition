@@ -362,12 +362,12 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 							mr={30}
 							disabled={this.props.disabled}
 							primary
+							icon={<FaFilter />}
 							onClick={() =>
 								this.setState({ showModal: true, editingFilter: null })
 							}
 							{...this.props.addFilterButtonProps}
 						>
-							<FaFilter style={{ marginRight: 10 }} />
 							Add filter
 						</Button>
 					)}

@@ -7,12 +7,14 @@ import { Button } from '../../';
 import { Box, Flex } from '../Grid';
 
 const ButtonWrapper = styled.button`
-	font-size: 13px;
+	cursor: pointer;
+	font-size: 12px;
 	min-height: 22px;
-	border: 0;
-	border-radius: 3px;
-	background-color: #e9e9e9;
-	padding: 3px 8px;
+	border: 1px solid ${props => props.theme.colors.quartenary.main};
+	color: ${props => props.theme.colors.tertiary.main};
+	border-radius: 16px;
+	background-color: white;
+	padding: 4px 8px;
 `;
 
 const WrappingEm = styled.em`
@@ -20,7 +22,7 @@ const WrappingEm = styled.em`
 `;
 
 const DeleteButton = styled(Button)`
-	color: rgba(0, 0, 0, 0.4);
+	color: ${props => props.theme.colors.tertiary.semilight};
 `;
 
 const FilterDescriptionInner = (props: { filter: JSONSchema6 }) => (
@@ -38,7 +40,7 @@ const FilterDescriptionInner = (props: { filter: JSONSchema6 }) => (
 
 const FilterDescription = (props: FilterDescriptionProps) => {
 	return (
-		<div>
+		<Flex alignItems="center" justifyContent="center">
 			<ButtonWrapper onClick={!!props.edit ? props.edit : noop}>
 				<Flex>
 					<FilterDescriptionInner filter={props.filter} />
@@ -57,7 +59,7 @@ const FilterDescription = (props: FilterDescriptionProps) => {
 					<FaClose />
 				</DeleteButton>
 			)}
-		</div>
+		</Flex>
 	);
 };
 

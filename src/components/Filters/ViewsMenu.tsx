@@ -105,17 +105,13 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 				<DropDownButton
 					ml={soloRender ? 0 : 30}
 					disabled={this.props.disabled}
-					primary
+					quartenary
 					outline
 					joined
 					alignRight={!soloRender}
 					noListFormat
-					label={
-						<span>
-							<FaPieChart style={{ marginRight: 10 }} />
-							Views
-						</span>
-					}
+					icon={<FaPieChart />}
+					label="Views"
 					{...this.props.buttonProps}
 				>
 					<Box py={1}>
