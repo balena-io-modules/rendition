@@ -246,7 +246,7 @@ class DropDownButton extends React.Component<
 }
 
 export interface InternalDropDownButtonProps extends ButtonProps {
-	label?: JSX.Element;
+	label?: string | JSX.Element;
 	border?: boolean;
 	joined?: boolean;
 	alignRight?: boolean;

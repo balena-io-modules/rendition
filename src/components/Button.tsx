@@ -234,7 +234,7 @@ export interface InternalButtonProps
 		Omit<DefaultProps, 'onClick'>,
 		GrommetButtonProps {
 	type?: 'submit' | 'reset' | 'button';
-	label?: 'string' | JSX.Element;
+	label?: string | JSX.Element;
 }
 
 export type ButtonProps = InternalButtonProps & RenditionSystemProps;

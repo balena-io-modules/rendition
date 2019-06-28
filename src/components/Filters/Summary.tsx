@@ -1,7 +1,5 @@
 import { JSONSchema6 } from 'json-schema';
 import * as React from 'react';
-import FaBookmarkO from 'react-icons/lib/fa/bookmark-o';
-import styled from 'styled-components';
 import { FiltersView, ViewScope } from '.';
 import Button from '../Button';
 import { Box, Flex } from '../Grid';
@@ -10,12 +8,6 @@ import Modal from '../Modal';
 import Select from '../Select';
 import Txt from '../Txt';
 import FilterDescription from './FilterDescription';
-
-const BorderedDiv = styled.div`
-	margin-top: 15px;
-	padding: 6px 11px 0;
-	border: solid 1px #979797;
-`;
 
 class FilterSummary extends React.Component<
 	FilterSummaryProps,
@@ -59,7 +51,7 @@ class FilterSummary extends React.Component<
 	render() {
 		const { scopes } = this.props;
 		return (
-			<BorderedDiv>
+			<Box p={3} mt={3} width="100%" bg="quartenary.light">
 				{this.state.showForm && (
 					<Modal
 						title="Save current view"
@@ -69,11 +61,10 @@ class FilterSummary extends React.Component<
 					>
 						<form onSubmit={this.save}>
 							{!!scopes && scopes.length > 1 && (
-								<Flex mb={30}>
+								<Flex mb={4} alignItems="center">
 									<Txt width={90}>Visible to:</Txt>
 									<Select<ViewScope>
-										ml={10}
-										mt="-7px"
+										ml={2}
 										width="auto"
 										options={scopes}
 										valueKey="slug"
@@ -101,11 +92,10 @@ class FilterSummary extends React.Component<
 						</form>
 					</Modal>
 				)}
-				<Flex justifyContent="space-between">
+				<Flex mb={2}>
 					<Txt
 						fontSize={13}
-						mb={10}
-						color={this.props.dark ? '#fff' : undefined}
+						color={this.props.dark ? '#fff' : 'secondary.main'}
 					>
 						Filters ({this.props.filters.length})
 					</Txt>
@@ -114,17 +104,16 @@ class FilterSummary extends React.Component<
 						primary
 						plain
 						fontSize={13}
-						mt={-7}
+						ml={3}
 						onClick={() => this.setState({ showForm: !this.state.showForm })}
 					>
-						<FaBookmarkO style={{ marginRight: 6 }} />
 						Save view
 					</Button>
 				</Flex>
 				<Flex flexWrap="wrap">
 					{this.props.filters.map((filter, index) => {
 						return (
-							<Box mb={10} mr={10} key={index}>
+							<Box mr={3} mt={2} key={index}>
 								<FilterDescription
 									dark={this.props.dark}
 									filter={filter}
@@ -135,7 +124,7 @@ class FilterSummary extends React.Component<
 						);
 					})}
 				</Flex>
-			</BorderedDiv>
+			</Box>
 		);
 	}
 }

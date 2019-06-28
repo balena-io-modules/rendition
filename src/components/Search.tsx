@@ -7,12 +7,12 @@ import { DefaultProps, RenditionSystemProps } from '../common-types';
 const Wrapper = styled.div`
 	position: relative;
 	width: 100%;
-	border-bottom: 1px solid ${props => props.theme.colors.gray.main};
+	border-bottom: 1px solid ${props => props.theme.colors.quartenary.dark};
 	padding-left: 24px;
-	padding-top: 3px;
+	padding-top: 4px;
 
 	.search-icon {
-		color: ${props => props.theme.colors.gray.main};
+		color: ${props => props.theme.colors.quartenary.dark};
 		font-size: 0.9em;
 		position: absolute;
 		top: 50%;
@@ -26,13 +26,13 @@ const Wrapper = styled.div`
 		border: none;
 		width: 100%;
 		font-size: inherit;
-		padding: 5px 5px 8px;
+		padding: 4px 4px 8px;
 		height: auto;
 		&:hover {
 			box-shadow: none;
 		}
 		::placeholder {
-			color: ${props => props.theme.colors.gray.main};
+			color: ${props => props.theme.colors.quartenary.dark};
 			font-weight: 300;
 		}
 	}
