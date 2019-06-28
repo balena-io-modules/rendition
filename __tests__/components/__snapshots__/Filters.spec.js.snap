@@ -9,8 +9,8 @@ exports[`Filters component should match the stored snapshot 1`] = `
   margin-bottom: 16px;
 }
 
-.c20 {
-  margin-top: 1px;
+.c19 {
+  margin-right: 8px;
 }
 
 .c5 {
@@ -24,7 +24,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   justify-content: space-between;
 }
 
-.c19 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -100,7 +100,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   box-shadow: 0px 0px 0px 2px #00AEEF;
 }
 
-.c18 {
+.c17 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
@@ -122,7 +122,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   transition: 0.1s ease-in-out;
 }
 
-.c18:hover {
+.c17:hover {
   box-shadow: 0px 0px 0px 2px #DDE1f0;
 }
 
@@ -176,7 +176,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   opacity: undefined;
 }
 
-.c17 {
+.c16 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
   height: 38px;
@@ -197,18 +197,18 @@ exports[`Filters component should match the stored snapshot 1`] = `
   border-color: #DDE1f0;
 }
 
-.c17 svg {
+.c16 svg {
   color: inherit !important;
   font-size: 0.875em;
 }
 
-.c17:disabled {
+.c16:disabled {
   cursor: not-allowed;
 }
 
-.c17:hover:enabled,
-.c17:focus:enabled,
-.c17:active:enabled {
+.c16:hover:enabled,
+.c16:focus:enabled,
+.c16:active:enabled {
   box-shadow: none;
   background: #DDE1f0;
   border-color: #DDE1f0;
@@ -218,11 +218,6 @@ exports[`Filters component should match the stored snapshot 1`] = `
 
 .c6 {
   margin-right: 30px;
-}
-
-.c16 {
-  padding-left: 16px;
-  padding-right: 0;
 }
 
 .c12 {
@@ -284,10 +279,6 @@ exports[`Filters component should match the stored snapshot 1`] = `
   border-radius: 3px;
   vertical-align: top;
   position: relative;
-}
-
-.c21 {
-  width: 28px;
 }
 
 .c15 {
@@ -428,7 +419,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
           className="c13 c14 c4"
         >
           <button
-            className="c15 c16 c17 c18"
+            className="c15 c16 c17"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -462,36 +453,32 @@ exports[`Filters component should match the stored snapshot 1`] = `
                 className="c10"
               />
               <div
-                className="c19 c4"
+                className="c18 c4"
               >
                 <div
-                  className="c20 c4"
+                  className="c19 c4"
                 >
                   Views
                 </div>
-                <span
-                  className="c21"
-                >
-                  <svg
-                    fill="currentColor"
-                    height="1em"
-                    preserveAspectRatio="xMidYMid meet"
-                    style={
-                      Object {
-                        "color": undefined,
-                        "verticalAlign": "middle",
-                      }
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  preserveAspectRatio="xMidYMid meet"
+                  style={
+                    Object {
+                      "color": undefined,
+                      "verticalAlign": "middle",
                     }
-                    viewBox="0 0 40 40"
-                    width="1em"
-                  >
-                    <g>
-                      <path
-                        d="m31.4 15.7q0 0.6-0.5 1l-10 10q-0.4 0.4-1 0.4t-1-0.4l-10-10q-0.4-0.4-0.4-1t0.4-1 1-0.4h20q0.6 0 1 0.4t0.5 1z"
-                      />
-                    </g>
-                  </svg>
-                </span>
+                  }
+                  viewBox="0 0 40 40"
+                  width="1em"
+                >
+                  <g>
+                    <path
+                      d="m37.6 18l-16.6 16.6q-0.4 0.4-1 0.4t-1-0.4l-16.6-16.6q-0.4-0.4-0.4-1t0.4-1l3.7-3.7q0.5-0.4 1-0.4t1 0.4l11.9 11.9 11.9-11.9q0.4-0.4 1-0.4t1 0.4l3.7 3.7q0.4 0.4 0.4 1t-0.4 1z"
+                    />
+                  </g>
+                </svg>
               </div>
             </div>
           </button>
