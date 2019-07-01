@@ -6,7 +6,8 @@ import { px } from '../utils';
 const Base = styled.hr<InternalDividerProps>`
 	border: none;
 	height: ${props => px(props.height || 2)};
-	background-color: ${props => props.color || '#333'};
+	background-color: ${props =>
+		props.color || props.theme.colors.tertiary.semilight};
 `;
 
 export interface InternalDividerProps extends DefaultProps {

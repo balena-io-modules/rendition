@@ -15,7 +15,7 @@ exports[`Divider renders correctly 1`] = `
 .c2 {
   border: none;
   height: 2px;
-  background-color: #333;
+  background-color: #bbc8d6;
 }
 
 .c0 {

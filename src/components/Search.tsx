@@ -7,12 +7,12 @@ import { DefaultProps, RenditionSystemProps } from '../common-types';
 const Wrapper = styled.div`
 	position: relative;
 	width: 100%;
-	border-bottom: 1px solid ${props => props.theme.colors.quartenary.dark};
+	border-bottom: 1px solid ${props => props.theme.colors.quartenary.main};
 	padding-left: 24px;
 	padding-top: 4px;
 
 	.search-icon {
-		color: ${props => props.theme.colors.quartenary.dark};
+		color: ${props => props.theme.colors.tertiary.semilight};
 		font-size: 0.9em;
 		position: absolute;
 		top: 50%;
@@ -32,7 +32,7 @@ const Wrapper = styled.div`
 			box-shadow: none;
 		}
 		::placeholder {
-			color: ${props => props.theme.colors.quartenary.dark};
+			color: ${props => props.theme.colors.tertiary.semilight};
 			font-weight: 300;
 		}
 	}

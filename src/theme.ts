@@ -1,3 +1,5 @@
+import { px } from 'styled-system';
+
 const primary = '#00AEEF';
 const secondary = '#2A506F';
 const tertiary = '#527699';
@@ -110,6 +112,7 @@ export const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 72, 96];
 export const weights = [400, 700];
 
 export const radius = 3;
+
 export const font = `'Nunito', Arial, sans-serif`;
 export const titleFont = `CircularStd, Arial, sans-serif`;
 export const monospace = `'Ubuntu Mono', 'Courier New', monospace`;
@@ -127,7 +130,7 @@ export default {
 	global: {
 		font: {
 			family: font,
-			size: '14px',
+			size: px(fontSizes[1]),
 			height: 1.5,
 		},
 		control: {
@@ -236,7 +239,7 @@ export default {
 	},
 	text: {
 		medium: {
-			size: '14px',
+			size: px(fontSizes[1]),
 			height: '1.5',
 		},
 	},

@@ -248,7 +248,13 @@ storiesOf('Core/Table', module)
       <Provider>
         <Provider>
           <Box m={3}>
-            <Table columns={columns} data={PokeDex} usePager itemsPerPage={3} />
+            <Table
+              columns={columns}
+              data={PokeDex}
+              usePager
+              pagerPosition='both'
+              itemsPerPage={3}
+            />
           </Box>
         </Provider>
       </Provider>

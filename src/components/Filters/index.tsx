@@ -387,6 +387,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 
 					{this.shouldRenderComponent('views') && (
 						<ViewsMenu
+							dark={this.props.dark}
 							buttonProps={this.props.viewsMenuButtonProps}
 							disabled={this.props.disabled}
 							views={this.state.views || []}

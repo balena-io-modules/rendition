@@ -223,13 +223,13 @@ exports[`Filters component should match the stored snapshot 1`] = `
 .c12 {
   position: relative;
   width: 100%;
-  border-bottom: 1px solid #b7bed3;
+  border-bottom: 1px solid #DDE1f0;
   padding-left: 24px;
   padding-top: 4px;
 }
 
 .c12 .search-icon {
-  color: #b7bed3;
+  color: #bbc8d6;
   font-size: 0.9em;
   position: absolute;
   top: 50%;
@@ -255,22 +255,22 @@ exports[`Filters component should match the stored snapshot 1`] = `
 }
 
 .c12 input::-webkit-input-placeholder {
-  color: #b7bed3;
+  color: #bbc8d6;
   font-weight: 300;
 }
 
 .c12 input::-moz-placeholder {
-  color: #b7bed3;
+  color: #bbc8d6;
   font-weight: 300;
 }
 
 .c12 input:-ms-input-placeholder {
-  color: #b7bed3;
+  color: #bbc8d6;
   font-weight: 300;
 }
 
 .c12 input::placeholder {
-  color: #b7bed3;
+  color: #bbc8d6;
   font-weight: 300;
 }
 

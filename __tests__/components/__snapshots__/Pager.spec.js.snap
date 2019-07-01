@@ -43,7 +43,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
   background: transparent;
   overflow: visible;
   text-transform: none;
-  border: 1px solid #2A506F;
+  border: 1px solid #DDE1f0;
   border-radius: 20px;
   color: #444444;
   padding: 4px 30px;
@@ -69,7 +69,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
   background: transparent;
   overflow: visible;
   text-transform: none;
-  border: 1px solid #2A506F;
+  border: 1px solid #DDE1f0;
   border-radius: 20px;
   color: #444444;
   padding: 4px 30px;
@@ -82,7 +82,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
 }
 
 .c9:hover {
-  box-shadow: 0px 0px 0px 2px #2A506F;
+  box-shadow: 0px 0px 0px 2px #DDE1f0;
 }
 
 .c1 {
@@ -114,7 +114,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   color: #3c3e42;
-  border-color: #2A506F;
+  border-color: #DDE1f0;
 }
 
 .c7 svg {
@@ -130,9 +130,9 @@ exports[`Pager component should match the stored snapshot 1`] = `
 .c7:focus:enabled,
 .c7:active:enabled {
   box-shadow: none;
-  background: #2A506F;
-  border-color: #2A506F;
-  color: white;
+  background: #DDE1f0;
+  border-color: #DDE1f0;
+  color: #3c3e42;
   opacity: undefined;
 }
 
