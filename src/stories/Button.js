@@ -25,6 +25,9 @@ storiesOf('Next/Button', module)
           <Button m={2} tertiary onClick={action('case-3')}>
             Tertiary
           </Button>
+          <Button m={2} quartenary onClick={action('case-3')}>
+            Quartenary
+          </Button>
           <Button m={2} success onClick={action('case-4')}>
             Success
           </Button>
@@ -56,6 +59,9 @@ storiesOf('Next/Button', module)
           <Button m={2} disabled tertiary onClick={action('case-3')}>
             Tertiary
           </Button>
+          <Button m={2} disabled quartenary onClick={action('case-3')}>
+            Quartenary
+          </Button>
           <Button m={2} disabled success onClick={action('case-4')}>
             Success
           </Button>
@@ -86,6 +92,9 @@ storiesOf('Next/Button', module)
           </Button>
           <Button m={2} outline tertiary onClick={action('case-3')}>
             Tertiary
+          </Button>
+          <Button m={2} outline quartenary onClick={action('case-3')}>
+            Quartenary
           </Button>
           <Button m={2} outline success onClick={action('case-4')}>
             Success
@@ -156,6 +165,9 @@ storiesOf('Next/Button', module)
             Button
           </Button>
           <Button width={240} m={2} tertiary onClick={action('case-3')}>
+            Button
+          </Button>
+          <Button width={240} m={2} quartenary onClick={action('case-3')}>
             Button
           </Button>
           <div style={{ width: 300 }}>
@@ -246,6 +258,9 @@ storiesOf('Next/Button', module)
           </Button>
           <Button m={2} href={`#`} tertiary>
             Tertiary
+          </Button>
+          <Button m={2} href={`#`} quartenary>
+            Quartenary
           </Button>
           <Button m={2} href={`#`} success>
             Success

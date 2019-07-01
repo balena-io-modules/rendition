@@ -13,6 +13,10 @@ interface ThemedDefaultProps extends DefaultProps {
 	theme: Theme;
 }
 
+export const isLight = (color?: string) => {
+	return Color(color).luminosity() > 0.5;
+};
+
 export const lighten = (color: string) =>
 	Color(color)
 		.fade(0.3)

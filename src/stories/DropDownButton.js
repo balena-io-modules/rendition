@@ -30,6 +30,12 @@ storiesOf('Next/DropDownButton', module)
             <div>Item</div>
             <div>Item</div>
           </DropDownButton>
+          <DropDownButton mx={2} quartenary label={<div>DropDown</div>}>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+          </DropDownButton>
           <DropDownButton mx={2} label={<div>DropDown</div>}>
             <div>Item</div>
             <div>Item</div>
@@ -70,6 +76,12 @@ storiesOf('Next/DropDownButton', module)
             <div>Item</div>
             <div>Item</div>
           </DropDownButton>
+          <DropDownButton mx={2} border quartenary label={<div>DropDown</div>}>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+          </DropDownButton>
           <DropDownButton mx={2} border label={<div>DropDown</div>}>
             <div>Item</div>
             <div>Item</div>
@@ -102,6 +114,12 @@ storiesOf('Next/DropDownButton', module)
             <div>Item</div>
             <div>Item</div>
           </DropDownButton>
+          <DropDownButton mx={2} joined quartenary label={<div>DropDown</div>}>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+          </DropDownButton>
           <DropDownButton mx={2} joined>
             <div>Item</div>
             <div>Item</div>
@@ -129,6 +147,12 @@ storiesOf('Next/DropDownButton', module)
             <div>Item</div>
           </DropDownButton>
           <DropDownButton mx={2} tertiary outline label={<div>DropDown</div>}>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+          </DropDownButton>
+          <DropDownButton mx={2} quartenary outline label={<div>DropDown</div>}>
             <div>Item</div>
             <div>Item</div>
             <div>Item</div>
@@ -184,6 +208,18 @@ storiesOf('Next/DropDownButton', module)
             <div>Item</div>
             <div>Item</div>
           </DropDownButton>
+          <DropDownButton
+            mx={2}
+            quartenary
+            joined
+            outline
+            label={<div>DropDown</div>}
+          >
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+          </DropDownButton>
           <DropDownButton mx={2} joined outline label={<div>DropDown</div>}>
             <div>Item</div>
             <div>Item</div>
@@ -211,6 +247,12 @@ storiesOf('Next/DropDownButton', module)
             <div>Item</div>
           </DropDownButton>
           <DropDownButton mx={2} tertiary>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+            <div>Item</div>
+          </DropDownButton>
+          <DropDownButton mx={2} quartenary>
             <div>Item</div>
             <div>Item</div>
             <div>Item</div>
