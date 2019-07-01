@@ -1,6 +1,6 @@
 import * as React from 'react';
-import IconCaretDown from 'react-icons/lib/fa/caret-down';
-import IconCaretUp from 'react-icons/lib/fa/caret-up';
+import ChevronDown from 'react-icons/lib/fa/chevron-down';
+import ChevronUp from 'react-icons/lib/fa/chevron-up';
 import styled from 'styled-components';
 import asRendition from '../asRendition';
 import { RenditionSystemProps } from '../common-types';
@@ -11,7 +11,8 @@ import Fixed from './Fixed';
 import { Box, Flex } from './Grid';
 
 const TOGGLE_BUTTON_X_PADDING = 16;
-const TOGGLE_BUTTON_WIDTH = 2 * TOGGLE_BUTTON_X_PADDING + 12;
+// 12.25 is the width of the Chevron icon + 1px for the right border
+const TOGGLE_BUTTON_WIDTH = 2 * TOGGLE_BUTTON_X_PADDING + 13.25;
 
 const ToggleBase = styled(Button)`
 	min-width: 0;
@@ -60,7 +61,7 @@ const Wrapper = styled(Box)`
 `;
 
 const Item = styled.div<{ border: boolean }>`
-	padding: 5px 16px;
+	padding: 4px 16px;
 	border-top: ${props =>
 		props.border ? `1px solid ${props.theme.colors.gray.main}` : '0'};
 	border-radius: ${props => px(props.theme.radius)};
@@ -68,10 +69,6 @@ const Item = styled.div<{ border: boolean }>`
 	&:hover:enabled {
 		background: ${props => props.theme.colors.gray.light};
 	}
-`;
-
-const IconWrapper = styled.span`
-	width: 28px;
 `;
 
 const JoinedButton = styled(Button)`
@@ -92,12 +89,10 @@ const Toggle = ({
 	if (joined) {
 		if (label) {
 			return (
-				<JoinedButton {...props} pl={16} pr={0} onClick={handler}>
+				<JoinedButton {...props} onClick={handler}>
 					<Flex justifyContent="space-between" alignItems="center">
-						<Box mt="1px">{label}</Box>
-						<IconWrapper>
-							{open ? <IconCaretUp /> : <IconCaretDown />}
-						</IconWrapper>
+						<Box mr={2}>{label}</Box>
+						{open ? <ChevronUp /> : <ChevronDown />}
 					</Flex>
 				</JoinedButton>
 			);
@@ -105,7 +100,7 @@ const Toggle = ({
 		return (
 			<JoinedButton
 				{...props}
-				icon={open ? <IconCaretUp /> : <IconCaretDown />}
+				icon={open ? <ChevronUp /> : <ChevronDown />}
 				onClick={handler}
 			/>
 		);
@@ -113,7 +108,7 @@ const Toggle = ({
 	return (
 		<ToggleBase
 			{...props}
-			icon={open ? <IconCaretUp /> : <IconCaretDown />}
+			icon={open ? <ChevronUp /> : <ChevronDown />}
 			onClick={handler}
 		/>
 	);

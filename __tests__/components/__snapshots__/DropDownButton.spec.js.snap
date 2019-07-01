@@ -123,7 +123,7 @@ exports[`DropDownButton renders correctly 1`] = `
   margin: 0;
   vertical-align: top;
   padding: 0 16px;
-  width: 44px;
+  width: 45.25px;
 }
 
 .c4 {
@@ -131,7 +131,7 @@ exports[`DropDownButton renders correctly 1`] = `
   border-bottom-right-radius: 0;
   border-right: 0;
   margin: 0;
-  width: calc(100% - 44px);
+  width: calc(100% - 45.25px);
 }
 
 .c2 {
@@ -199,7 +199,7 @@ exports[`DropDownButton renders correctly 1`] = `
         >
           <g>
             <path
-              d="m31.4 15.7q0 0.6-0.5 1l-10 10q-0.4 0.4-1 0.4t-1-0.4l-10-10q-0.4-0.4-0.4-1t0.4-1 1-0.4h20q0.6 0 1 0.4t0.5 1z"
+              d="m37.6 18l-16.6 16.6q-0.4 0.4-1 0.4t-1-0.4l-16.6-16.6q-0.4-0.4-0.4-1t0.4-1l3.7-3.7q0.5-0.4 1-0.4t1 0.4l11.9 11.9 11.9-11.9q0.4-0.4 1-0.4t1 0.4l3.7 3.7q0.4 0.4 0.4 1t-0.4 1z"
             />
           </g>
         </svg>
@@ -342,7 +342,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   margin: 0;
   vertical-align: top;
   padding: 0 16px;
-  width: 44px;
+  width: 45.25px;
 }
 
 .c4 {
@@ -350,7 +350,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   border-bottom-right-radius: 0;
   border-right: 0;
   margin: 0;
-  width: calc(100% - 44px);
+  width: calc(100% - 45.25px);
 }
 
 .c10 {
@@ -377,7 +377,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
 }
 
 .c11 {
-  padding: 5px 16px;
+  padding: 4px 16px;
   border-top: 0;
   border-radius: 3px;
 }
@@ -444,7 +444,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
         >
           <g>
             <path
-              d="m31.4 27.1q0 0.6-0.5 1t-1 0.5h-20q-0.6 0-1-0.5t-0.4-1 0.4-1l10-10q0.4-0.4 1-0.4t1 0.4l10 10q0.5 0.5 0.5 1z"
+              d="m37.6 29.7l-3.7 3.7q-0.5 0.4-1 0.4t-1-0.4l-11.9-11.9-11.8 11.9q-0.5 0.4-1.1 0.4t-1-0.4l-3.7-3.7q-0.4-0.4-0.4-1t0.4-1l16.6-16.6q0.4-0.4 1-0.4t1 0.4l16.6 16.6q0.4 0.4 0.4 1t-0.4 1z"
             />
           </g>
         </svg>
