@@ -66,12 +66,12 @@ exports[`Table component should match the stored snapshot 1`] = `
   display: table-row;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: inherit;
+  color: #527699;
+  font-size: 14px;
 }
 
 .c3 > [data-display='table-body'] > [data-display='table-row'] > [data-display='table-cell'] {
   display: table-cell;
-  font-size: 14px;
   text-align: left;
   padding-top: 14px;
   padding-bottom: 14px;
@@ -92,7 +92,6 @@ exports[`Table component should match the stored snapshot 1`] = `
 .c3 > [data-display='table-body'] > [data-display='table-row']:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: inherit;
 }
 
 .c3 > [data-display='table-body'] > [data-display='table-row'][data-highlight='true'] {

@@ -66,7 +66,7 @@ const Base = styled.input`
 		}
 	}
 
-	${monospace as any};
+	${monospace};
 `;
 
 export interface InternalInputProps extends DefaultProps, Sizing {

@@ -22,6 +22,10 @@ const getHoverEffectOverride = (
 		&:hover:enabled,
 		&:focus:enabled,
 		&:active:enabled {
+			svg {
+				color: ${color} !important;
+			}
+
 			box-shadow: none;
 			background: ${bg};
 			border-color: ${bg};
@@ -34,6 +38,7 @@ const getHoverEffectOverride = (
 const ButtonBase = styled(Button)`
 	font-family: ${props => props.theme.titleFont};
 	font-weight: ${props => props.theme.button.font.weight};
+	font-size: ${props => props.theme.fontSizes[1]};
 	height: ${props => props.theme.button.height};
 	white-space: nowrap;
 	svg {
@@ -67,6 +72,9 @@ const ColouredButton = styled(ButtonBase)`
 const Outline = styled(ButtonBase)<{ color?: string }>`
 	color: ${props => props.theme.colors.text.main};
 	border-color: ${props => props.color || props.theme.colors.text.main};
+	svg {
+		color: ${props => props.theme.colors.tertiary.main} !important;
+	}
 	${props =>
 		getHoverEffectOverride(
 			props.color || props.theme.colors.text.main,

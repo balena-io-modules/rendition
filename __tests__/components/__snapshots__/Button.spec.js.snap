@@ -41,6 +41,7 @@ exports[`Button renders correctly 1`] = `
 .c2 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
+  font-size: 14;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
@@ -68,6 +69,10 @@ exports[`Button renders correctly 1`] = `
   cursor: not-allowed;
 }
 
+.c2 svg {
+  color: #527699 !important;
+}
+
 .c2:hover:enabled,
 .c2:focus:enabled,
 .c2:active:enabled {
@@ -76,6 +81,12 @@ exports[`Button renders correctly 1`] = `
   border-color: #2A506F;
   color: white;
   opacity: undefined;
+}
+
+.c2:hover:enabled svg,
+.c2:focus:enabled svg,
+.c2:active:enabled svg {
+  color: white !important;
 }
 
 .c0 {
@@ -150,6 +161,7 @@ exports[`Styled Anchor Button renders correctly 1`] = `
 .c3 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
+  font-size: 14;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
@@ -177,6 +189,10 @@ exports[`Styled Anchor Button renders correctly 1`] = `
   cursor: not-allowed;
 }
 
+.c3 svg {
+  color: #527699 !important;
+}
+
 .c3:hover:enabled,
 .c3:focus:enabled,
 .c3:active:enabled {
@@ -185,6 +201,12 @@ exports[`Styled Anchor Button renders correctly 1`] = `
   border-color: #2A506F;
   color: white;
   opacity: undefined;
+}
+
+.c3:hover:enabled svg,
+.c3:focus:enabled svg,
+.c3:active:enabled svg {
+  color: white !important;
 }
 
 .c2 {
@@ -263,6 +285,7 @@ exports[`Styled Button renders correctly 1`] = `
 .c3 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
+  font-size: 14;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
@@ -290,6 +313,10 @@ exports[`Styled Button renders correctly 1`] = `
   cursor: not-allowed;
 }
 
+.c3 svg {
+  color: #527699 !important;
+}
+
 .c3:hover:enabled,
 .c3:focus:enabled,
 .c3:active:enabled {
@@ -298,6 +325,12 @@ exports[`Styled Button renders correctly 1`] = `
   border-color: #2A506F;
   color: white;
   opacity: undefined;
+}
+
+.c3:hover:enabled svg,
+.c3:focus:enabled svg,
+.c3:active:enabled svg {
+  color: white !important;
 }
 
 .c2 {

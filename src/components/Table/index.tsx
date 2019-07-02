@@ -62,11 +62,11 @@ const BaseTable = styled.div`
 		> [data-display='table-row'] {
 			display: table-row;
 			text-decoration: none;
-			color: inherit;
+			color: ${props => props.theme.colors.tertiary.main};
+			font-size: ${props => px(props.theme.fontSizes[1])};
 
 			> [data-display='table-cell'] {
 				display: table-cell;
-				font-size: ${props => px(props.theme.fontSizes[1])};
 				text-align: left;
 				padding-top: 14px;
 				padding-bottom: 14px;
@@ -86,7 +86,6 @@ const BaseTable = styled.div`
 
 			&: hover {
 				text-decoration: none;
-				color: inherit;
 				${(props: any) =>
 					!!props.onRowClick || !!props.getRowHref || !!props.onCheck
 						? highlightStyle

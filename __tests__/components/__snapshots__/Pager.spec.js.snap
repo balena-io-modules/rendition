@@ -99,6 +99,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
 .c7 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
+  font-size: 14;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
@@ -126,6 +127,10 @@ exports[`Pager component should match the stored snapshot 1`] = `
   cursor: not-allowed;
 }
 
+.c7 svg {
+  color: #527699 !important;
+}
+
 .c7:hover:enabled,
 .c7:focus:enabled,
 .c7:active:enabled {
@@ -134,6 +139,12 @@ exports[`Pager component should match the stored snapshot 1`] = `
   border-color: #DDE1f0;
   color: #3c3e42;
   opacity: undefined;
+}
+
+.c7:hover:enabled svg,
+.c7:focus:enabled svg,
+.c7:active:enabled svg {
+  color: #3c3e42 !important;
 }
 
 .c6 {

@@ -12,6 +12,11 @@ exports[`Heading renders correctly 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
+.c2 {
+  margin: 0;
+  font-size: 24px;
+}
+
 .c0 {
   font-family: 'Nunito',Arial,sans-serif;
 }
@@ -25,11 +30,6 @@ exports[`Heading renders correctly 1`] = `
 .c0 label,
 .c0 button {
   font-family: CircularStd,Arial,sans-serif;
-}
-
-.c2 {
-  margin: 0;
-  font-size: 24px;
 }
 
 <div

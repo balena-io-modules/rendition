@@ -140,6 +140,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
 .c7 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
+  font-size: 14;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
@@ -176,9 +177,16 @@ exports[`Filters component should match the stored snapshot 1`] = `
   opacity: undefined;
 }
 
+.c7:hover:enabled svg,
+.c7:focus:enabled svg,
+.c7:active:enabled svg {
+  color: white !important;
+}
+
 .c16 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
+  font-size: 14;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
@@ -206,6 +214,10 @@ exports[`Filters component should match the stored snapshot 1`] = `
   cursor: not-allowed;
 }
 
+.c16 svg {
+  color: #527699 !important;
+}
+
 .c16:hover:enabled,
 .c16:focus:enabled,
 .c16:active:enabled {
@@ -214,6 +226,12 @@ exports[`Filters component should match the stored snapshot 1`] = `
   border-color: #DDE1f0;
   color: #3c3e42;
   opacity: undefined;
+}
+
+.c16:hover:enabled svg,
+.c16:focus:enabled svg,
+.c16:active:enabled svg {
+  color: #3c3e42 !important;
 }
 
 .c6 {

@@ -11,7 +11,7 @@ import { align, bold, caps } from './Txt';
 const Heading = styled.h3<InternalHeadingProps>`
 	${align}
 	${monospace};
-	${caps as any}
+	${caps}
 	${bold}
 `;
 

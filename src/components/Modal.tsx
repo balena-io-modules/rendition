@@ -7,6 +7,7 @@ import { stopPropagation } from '../utils';
 import { px } from '../utils';
 import Button, { ButtonProps } from './Button';
 import { Box, Flex } from './Grid';
+import Heading from './Heading';
 import Txt from './Txt';
 
 const bodyNoOverflowClass = `rendition-modal-open`;
@@ -20,19 +21,13 @@ const GlobalStyle = createGlobalStyle`
 
 const DEFAULT_MODAL_WIDTH = 700;
 
-const ModalHeader = styled(Txt)`
-	margin-bottom: 50px;
-	font-size: ${props => px(props.theme.fontSizes[4])};
-`;
-
-const ModalTitleDetails = styled(Txt)`
-	color: ${props => props.theme.colors.text.light};
-	font-size: ${props => px(props.theme.fontSizes[2])};
-`;
-
 const ModalSizer = styled(Box)`
 	max-width: 100%;
 	overflow-y: auto;
+`;
+
+const HeadingDescription = styled(Txt)`
+	font-weight: normal;
 `;
 
 const ModalButton = (props: ButtonProps) => {
@@ -133,15 +128,17 @@ class Modal extends React.Component<ThemedModalProps, any> {
 					className={props.className}
 				>
 					{props.titleElement ? (
-						<ModalHeader>{props.titleElement}</ModalHeader>
+						<Heading.h3 mb={50}>{props.titleElement}</Heading.h3>
 					) : (
 						!!props.title && (
-							<ModalHeader>
-								<strong>{props.title}</strong>
+							<Heading.h3 mb={50}>
+								{props.title}
 								{!!props.titleDetails && (
-									<ModalTitleDetails>{props.titleDetails}</ModalTitleDetails>
+									<HeadingDescription color="text.light" fontSize={2}>
+										{props.titleDetails}
+									</HeadingDescription>
 								)}
-							</ModalHeader>
+							</Heading.h3>
 						)
 					)}
 					{props.children}
