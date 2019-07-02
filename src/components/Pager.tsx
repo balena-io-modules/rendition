@@ -29,12 +29,16 @@ const Pager = ({
 			<Flex>
 				<ButtonGroup>
 					<Button
+						quartenary
+						outline
 						className="rendition-pager__btn--prev"
 						disabled={totalItems <= itemsPerPage || page <= 0}
 						onClick={() => prevPage()}
 						icon={<FaChevronLeft />}
 					/>
 					<Button
+						quartenary
+						outline
 						className="rendition-pager__btn--next"
 						disabled={
 							totalItems <= itemsPerPage ||

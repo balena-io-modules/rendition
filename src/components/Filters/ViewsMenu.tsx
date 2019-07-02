@@ -105,7 +105,8 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 				<DropDownButton
 					ml={soloRender ? 0 : 30}
 					disabled={this.props.disabled}
-					quartenary
+					quartenary={!this.props.dark}
+					light={this.props.dark}
 					outline
 					joined
 					alignRight={!soloRender}
@@ -167,6 +168,7 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 export interface ViewsMenuProps {
 	buttonProps?: DropDownButtonProps;
 	disabled?: boolean;
+	dark?: boolean;
 	views: FiltersView[];
 	schema: JSONSchema6;
 	hasMultipleScopes?: boolean;

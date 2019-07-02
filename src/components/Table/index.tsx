@@ -18,6 +18,7 @@ import { Button } from '../../';
 
 // TODO: Remove explicit import and depend on provider instead.
 import theme from '../../theme';
+import { px } from '../../utils';
 import Pager from '../Pager';
 import { TableColumn, TableRow } from './TableRow';
 
@@ -34,21 +35,23 @@ const BaseTable = styled.div`
 	display: table;
 	width: 100%;
 	border-spacing: 0;
+	border-bottom: 1px solid ${props => props.theme.colors.quartenary.main};
 
 	> [data-display='table-head'] {
 		display: table-header-group;
-		background-color: #f2f2f2;
+		background-color: ${props => props.theme.colors.quartenary.light};
 
 		> [data-display='table-row'] {
 			display: table-row;
 
 			> [data-display='table-cell'] {
 				display: table-cell;
+				border-bottom: 1px solid ${props => props.theme.colors.quartenary.main};
 				text-align: left;
 				padding-left: 40px;
 				padding-top: 10px;
 				padding-bottom: 10px;
-				font-size: 16px;
+				font-size: ${props => px(props.theme.fontSizes[1])};
 			}
 		}
 	}
@@ -63,7 +66,7 @@ const BaseTable = styled.div`
 
 			> [data-display='table-cell'] {
 				display: table-cell;
-				font-size: 14px;
+				font-size: ${props => px(props.theme.fontSizes[1])};
 				text-align: left;
 				padding-top: 14px;
 				padding-bottom: 14px;
@@ -78,7 +81,7 @@ const BaseTable = styled.div`
 			}
 
 			&:nth-of-type(even) {
-				background-color: #f8f8f8;
+				background-color: ${props => props.theme.colors.quartenary.light};
 			}
 
 			&: hover {
@@ -92,7 +95,7 @@ const BaseTable = styled.div`
 
 			&[data-highlight='true'] {
 				${highlightStyle} > [data-display="table-cell"]:first-child {
-					box-shadow: inset 3px 0px 0 ${theme.colors.info.main};
+					box-shadow: inset 3px 0px 0 ${props => props.theme.colors.info.main};
 				}
 			}
 		}
@@ -487,7 +490,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 							page={page}
 							nextPage={this.incrementPage}
 							prevPage={this.decrementPage}
-							mb={2}
+							mt={2}
 						/>
 					)}
 			</>

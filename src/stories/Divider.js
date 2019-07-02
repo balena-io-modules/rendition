@@ -13,6 +13,7 @@ storiesOf('Core/Divider', module)
       <Provider>
         <Box m={3}>
           <Divider color='#ccc' />
+          <Divider mt={4} />
         </Box>
       </Provider>
     )
