@@ -108,9 +108,7 @@ export const space = [
 ];
 
 export const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 72, 96];
-
 export const weights = [400, 700];
-
 export const radius = 3;
 
 export const font = `'Nunito', Arial, sans-serif`;

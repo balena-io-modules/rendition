@@ -6,14 +6,14 @@ import { DefaultProps, RenditionSystemProps, Theme } from '../common-types';
 import { monospace } from '../utils';
 
 export const whitespace = (props: ThemedTxtProps) =>
-	props.whitespace ? { whiteSpace: props.whitespace } : null;
+	props.whitespace ? `white-space: ${props.whitespace}` : null;
 
 export const caps = (props: ThemedTxtProps) =>
-	props.caps ? { textTransform: 'uppercase', letterSpacing: '0.2em' } : null;
+	props.caps ? `text-transform: uppercase, letterSpacing: 0.2em` : null;
 
 export const bold = (props: ThemedTxtProps) =>
 	props.bold
-		? { fontWeight: props.theme.weights[props.theme.weights.length - 1] }
+		? `font-weight: ${props.theme.weights[props.theme.weights.length - 1]}`
 		: null;
 
 export const align = style({
@@ -24,11 +24,11 @@ export const align = style({
 
 const Txt = styled.div<TxtProps>`
 	${align}
-	${monospace as any}
-	${whitespace as any}
+	${monospace}
+	${whitespace}
 
-	${caps as any}
-	${bold as any}
+	${caps}
+	${bold}
 `;
 
 const Factory = (tag?: string) => {

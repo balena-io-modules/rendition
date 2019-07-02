@@ -11,9 +11,9 @@ import { align, bold, caps } from './Txt';
 
 let Base = styled.a<InternalLinkProps>`
   ${align}
-  ${monospace as any};
-  ${caps as any}
-  ${bold as any}
+  ${monospace};
+  ${caps}
+  ${bold}
 
   text-decoration: ${props => props.decor || 'none'};
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};

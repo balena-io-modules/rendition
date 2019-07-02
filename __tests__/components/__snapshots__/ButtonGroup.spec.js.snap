@@ -45,6 +45,7 @@ exports[`ButtonGroup renders correctly 1`] = `
 .c4 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
+  font-size: 14;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
@@ -72,6 +73,10 @@ exports[`ButtonGroup renders correctly 1`] = `
   cursor: not-allowed;
 }
 
+.c4 svg {
+  color: #527699 !important;
+}
+
 .c4:hover:enabled,
 .c4:focus:enabled,
 .c4:active:enabled {
@@ -80,6 +85,12 @@ exports[`ButtonGroup renders correctly 1`] = `
   border-color: #2A506F;
   color: white;
   opacity: undefined;
+}
+
+.c4:hover:enabled svg,
+.c4:focus:enabled svg,
+.c4:active:enabled svg {
+  color: white !important;
 }
 
 .c2 {

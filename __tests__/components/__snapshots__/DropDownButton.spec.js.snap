@@ -79,6 +79,7 @@ exports[`DropDownButton renders correctly 1`] = `
 .c5 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
+  font-size: 14;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
@@ -113,6 +114,12 @@ exports[`DropDownButton renders correctly 1`] = `
   border-color: hsl(196.29999999999995,100%,37.5%);
   color: white;
   opacity: undefined;
+}
+
+.c5:hover:enabled svg,
+.c5:focus:enabled svg,
+.c5:active:enabled svg {
+  color: white !important;
 }
 
 .c7 {
@@ -288,6 +295,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
 .c5 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
+  font-size: 14;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
@@ -322,6 +330,12 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   border-color: hsl(196.29999999999995,100%,37.5%);
   color: white;
   opacity: undefined;
+}
+
+.c5:hover:enabled svg,
+.c5:focus:enabled svg,
+.c5:active:enabled svg {
+  color: white !important;
 }
 
 .c9 {

@@ -21,7 +21,7 @@ const Base = styled.textarea`
 		color: ${props => props.theme.colors.gray.main};
 	}
 
-	${monospace as any};
+	${monospace};
 `;
 
 const Component = ({
