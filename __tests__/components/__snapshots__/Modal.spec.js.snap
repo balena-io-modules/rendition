@@ -146,7 +146,7 @@ exports[`Modal renders correctly 1`] = `
 .c11 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
-  font-size: 14;
+  font-size: 14px;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
@@ -196,6 +196,7 @@ exports[`Modal renders correctly 1`] = `
 
 .c0 {
   font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
 }
 
 .c0 h1,

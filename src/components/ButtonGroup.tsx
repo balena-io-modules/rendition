@@ -13,6 +13,10 @@ export default styled(Flex)`
 			border-bottom-left-radius: 0;
 		}
 
+		&:not(:last-child) {
+			border-right: 0;
+		}
+
 		&:not(:last-child):not(:first-child) {
 			border-radius: 0;
 		}

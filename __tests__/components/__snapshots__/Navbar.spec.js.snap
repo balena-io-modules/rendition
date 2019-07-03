@@ -80,6 +80,7 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
 
 .c0 {
   font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
 }
 
 .c0 h1,
@@ -367,6 +368,7 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
 
 .c0 {
   font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
 }
 
 .c0 h1,
@@ -652,6 +654,7 @@ exports[`Navbar renders correctly with no children prop 1`] = `
 
 .c0 {
   font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
 }
 
 .c0 h1,

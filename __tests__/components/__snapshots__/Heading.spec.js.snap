@@ -19,6 +19,7 @@ exports[`Heading renders correctly 1`] = `
 
 .c0 {
   font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
 }
 
 .c0 h1,

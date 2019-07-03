@@ -45,7 +45,7 @@ exports[`ButtonGroup renders correctly 1`] = `
 .c4 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
-  font-size: 14;
+  font-size: 14px;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
@@ -110,6 +110,10 @@ exports[`ButtonGroup renders correctly 1`] = `
   border-bottom-left-radius: 0;
 }
 
+.c2 > *:not(:last-child) {
+  border-right: 0;
+}
+
 .c2 > *:not(:last-child):not(:first-child) {
   border-radius: 0;
 }
@@ -120,6 +124,7 @@ exports[`ButtonGroup renders correctly 1`] = `
 
 .c0 {
   font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
 }
 
 .c0 h1,
