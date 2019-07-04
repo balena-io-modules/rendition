@@ -99,7 +99,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
 .c7 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
-  font-size: 14;
+  font-size: 14px;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
@@ -164,6 +164,10 @@ exports[`Pager component should match the stored snapshot 1`] = `
   border-bottom-left-radius: 0;
 }
 
+.c6 > *:not(:last-child) {
+  border-right: 0;
+}
+
 .c6 > *:not(:last-child):not(:first-child) {
   border-radius: 0;
 }
@@ -174,6 +178,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
 
 .c0 {
   font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
 }
 
 .c0 h1,

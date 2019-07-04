@@ -14,6 +14,7 @@ exports[`Table component should match the stored snapshot 1`] = `
 
 .c0 {
   font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
 }
 
 .c0 h1,
@@ -66,7 +67,7 @@ exports[`Table component should match the stored snapshot 1`] = `
   display: table-row;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #527699;
+  color: #2A506F;
   font-size: 14px;
 }
 

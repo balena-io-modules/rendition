@@ -49,6 +49,7 @@ exports[`ArcSlider component should match the stored snapshot 1`] = `
 
 .c0 {
   font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
 }
 
 .c0 h1,

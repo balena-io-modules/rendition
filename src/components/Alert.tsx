@@ -111,7 +111,7 @@ const Filled = styled(AlertBase)<InternalAlertProps>`
 const Plaintext = styled(AlertBase)<InternalAlertProps>`
 	min-height: auto;
 	padding: 0;
-	font-size: 14px;
+	font-size: ${props => px(props.theme.fontSizes[1])};
 
 	&,
 	& ${DismissButtonWrapper} > ${DismissButton} {

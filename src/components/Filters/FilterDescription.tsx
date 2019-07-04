@@ -3,12 +3,13 @@ import noop from 'lodash/noop';
 import * as React from 'react';
 import FaClose from 'react-icons/lib/fa/close';
 import styled from 'styled-components';
-import { Button } from '../../';
+import { px } from '../../utils';
+import Button from '../Button';
 import { Box, Flex } from '../Grid';
 
 const ButtonWrapper = styled.button`
 	cursor: pointer;
-	font-size: 12px;
+	font-size: ${props => px(props.theme.fontSizes[0])};
 	min-height: 22px;
 	border: 1px solid ${props => props.theme.colors.quartenary.main};
 	color: ${props => props.theme.colors.tertiary.main};

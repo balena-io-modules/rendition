@@ -79,7 +79,7 @@ exports[`DropDownButton renders correctly 1`] = `
 .c5 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
-  font-size: 14;
+  font-size: 14px;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
@@ -150,6 +150,7 @@ exports[`DropDownButton renders correctly 1`] = `
 
 .c0 {
   font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
 }
 
 .c0 h1,
@@ -295,7 +296,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
 .c5 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
-  font-size: 14;
+  font-size: 14px;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
@@ -402,6 +403,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
 
 .c0 {
   font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
 }
 
 .c0 h1,

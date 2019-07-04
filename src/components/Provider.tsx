@@ -4,9 +4,11 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { DefaultProps, Theme } from '../common-types';
 import defaultTheme from '../theme';
+import { px } from '../utils';
 
 const Base = styled(Grommet)`
 	font-family: ${props => props.theme.font};
+	font-size: ${props => px(props.theme.fontSizes[1])};
 
 	h1,
 	h2,
