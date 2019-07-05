@@ -72,7 +72,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
 
 .c9 svg {
   color: inherit !important;
-  font-size: 0.875em;
+  font-size: 0.925em;
 }
 
 .c9:disabled {

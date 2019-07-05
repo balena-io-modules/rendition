@@ -62,7 +62,7 @@ exports[`Button renders correctly 1`] = `
 
 .c2 svg {
   color: inherit !important;
-  font-size: 0.875em;
+  font-size: 0.925em;
 }
 
 .c2:disabled {
@@ -183,7 +183,7 @@ exports[`Styled Anchor Button renders correctly 1`] = `
 
 .c3 svg {
   color: inherit !important;
-  font-size: 0.875em;
+  font-size: 0.925em;
 }
 
 .c3:disabled {
@@ -308,7 +308,7 @@ exports[`Styled Button renders correctly 1`] = `
 
 .c3 svg {
   color: inherit !important;
-  font-size: 0.875em;
+  font-size: 0.925em;
 }
 
 .c3:disabled {

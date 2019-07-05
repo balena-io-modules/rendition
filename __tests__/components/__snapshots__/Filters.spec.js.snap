@@ -68,7 +68,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  width: 12px;
+  width: 8px;
 }
 
 .c8 {
@@ -160,7 +160,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
 
 .c7 svg {
   color: inherit !important;
-  font-size: 0.875em;
+  font-size: 0.925em;
 }
 
 .c7:disabled {
@@ -207,7 +207,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
 
 .c16 svg {
   color: inherit !important;
-  font-size: 0.875em;
+  font-size: 0.925em;
 }
 
 .c16:disabled {
@@ -248,10 +248,9 @@ exports[`Filters component should match the stored snapshot 1`] = `
 
 .c12 .search-icon {
   color: #bbc8d6;
-  font-size: 0.9em;
   position: absolute;
   top: 50%;
-  left: 4px;
+  left: 8px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -264,7 +263,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   border: none;
   width: 100%;
   font-size: inherit;
-  padding: 4px 4px 8px;
+  padding: 4px;
   height: auto;
 }
 

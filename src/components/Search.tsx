@@ -3,6 +3,7 @@ import FaSearch from 'react-icons/lib/fa/search';
 import styled from 'styled-components';
 import asRendition from '../asRendition';
 import { DefaultProps, RenditionSystemProps } from '../common-types';
+import { px } from '../utils';
 
 const Wrapper = styled.div`
 	position: relative;
@@ -13,10 +14,9 @@ const Wrapper = styled.div`
 
 	.search-icon {
 		color: ${props => props.theme.colors.tertiary.semilight};
-		font-size: 0.9em;
 		position: absolute;
 		top: 50%;
-		left: 4px;
+		left: ${props => px(props.theme.space[2])};
 		transform: translateY(-50%);
 	}
 	input {
@@ -26,7 +26,7 @@ const Wrapper = styled.div`
 		border: none;
 		width: 100%;
 		font-size: inherit;
-		padding: 4px 4px 8px;
+		padding: 4px;
 		height: auto;
 		&:hover {
 			box-shadow: none;
@@ -39,6 +39,7 @@ const Wrapper = styled.div`
 `;
 
 const Search = ({
+	className,
 	dark,
 	disabled,
 	placeholder,
@@ -46,7 +47,7 @@ const Search = ({
 	onChange,
 }: InternalSearchProps) => {
 	return (
-		<Wrapper>
+		<Wrapper className={className}>
 			<input
 				style={{ color: dark ? '#fff' : undefined }}
 				disabled={disabled}

@@ -427,7 +427,10 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 													{item.label || item.field}
 													&nbsp;
 													<FaSort
-														style={{ display: 'inline-block' }}
+														style={{
+															display: 'inline-block',
+															marginBottom: '2px',
+														}}
 														color={
 															sort.field === item.field
 																? theme.colors.info.main

@@ -166,7 +166,7 @@ exports[`Modal renders correctly 1`] = `
 
 .c11 svg {
   color: inherit !important;
-  font-size: 0.875em;
+  font-size: 0.925em;
 }
 
 .c11:disabled {

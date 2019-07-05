@@ -43,7 +43,7 @@ const ButtonBase = styled(Button)`
 	white-space: nowrap;
 	svg {
 		color: inherit !important;
-		font-size: 0.875em;
+		font-size: 0.925em;
 	}
 	/* These rules cause consistent styling when the button is rendered as a link */
 	display: inline-flex;
@@ -229,6 +229,7 @@ const Base = (props: ThemedButtonProps) => {
 			primary={basePrimary}
 			color={baseColor}
 			active={active && (underline || plain)}
+			gap={px(props.theme.space[2])}
 			{...restProps}
 			plain={!!plain || !!underline}
 			label={label || children}
