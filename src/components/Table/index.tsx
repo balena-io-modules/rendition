@@ -368,6 +368,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 			pagerPosition,
 			rowAnchorAttributes,
 			rowKey,
+			onCheck,
 			...props
 		} = this.props;
 
@@ -405,7 +406,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 					<BaseTable {...props}>
 						<div data-display="table-head">
 							<div data-display="table-row">
-								{this.props.onCheck && (
+								{onCheck && (
 									<div data-display="table-cell">
 										<input
 											checked={this.state.allChecked}
@@ -452,9 +453,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 						<div data-display="table-body">
 							{this.props.tbodyPrefix}
 							{map(sortedData, (row, i) => {
-								const isChecked = this.props.onCheck
-									? this.isChecked(row)
-									: false;
+								const isChecked = onCheck ? this.isChecked(row) : false;
 								const isHighlighted = this.isHighlighted(row);
 								const key = rowKey ? (row[rowKey] as any) : i;
 								const href = !!getRowHref ? getRowHref(row) : undefined;
@@ -472,7 +471,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 										keyAttribute={key}
 										href={href}
 										data={row}
-										showCheck={!!this.props.onCheck}
+										showCheck={!!onCheck}
 										columns={columns}
 										attributes={rowAnchorAttributes}
 										checkboxAttributes={this.props.rowCheckboxAttributes}
