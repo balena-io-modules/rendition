@@ -22,10 +22,9 @@ exports[`Search renders correctly 1`] = `
 
 .c2 .search-icon {
   color: #bbc8d6;
-  font-size: 0.9em;
   position: absolute;
   top: 50%;
-  left: 4px;
+  left: 8px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -38,7 +37,7 @@ exports[`Search renders correctly 1`] = `
   border: none;
   width: 100%;
   font-size: inherit;
-  padding: 4px 4px 8px;
+  padding: 4px;
   height: auto;
 }
 

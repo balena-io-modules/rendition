@@ -66,7 +66,7 @@ exports[`ButtonGroup renders correctly 1`] = `
 
 .c4 svg {
   color: inherit !important;
-  font-size: 0.875em;
+  font-size: 0.925em;
 }
 
 .c4:disabled {
