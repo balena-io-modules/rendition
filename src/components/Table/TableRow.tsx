@@ -32,6 +32,7 @@ export interface TableRowProps<T> {
 	className?: string;
 	isChecked: boolean;
 	isHighlighted: boolean;
+	isDisabled: boolean;
 	keyAttribute: string | number;
 	onRowClick: (e: any) => void;
 	toggleChecked: (e: any) => void;
@@ -55,6 +56,7 @@ export class TableRow<T> extends React.PureComponent<TableRowProps<T>, {}> {
 			keyAttribute,
 			isChecked,
 			isHighlighted,
+			isDisabled,
 			showCheck,
 		} = this.props;
 		return (
@@ -67,6 +69,7 @@ export class TableRow<T> extends React.PureComponent<TableRowProps<T>, {}> {
 					<span data-display="table-cell">
 						<input
 							checked={isChecked}
+							disabled={isDisabled}
 							data-key={keyAttribute}
 							onChange={this.props.toggleChecked}
 							{...checkboxAttributes}

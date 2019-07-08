@@ -616,11 +616,35 @@ describe('Table component', () => {
       expect(component.find('[data-display="table-body"] input[type="checkbox"]')).toHaveLength(PokeDex.length)
     })
 
-    it('should select all rows when clicking the header checkbox', () => {
+    it('should show a disabled checkbox for disabled rows', () => {
+      const component = mount(
+        <Provider>
+          <Table
+            rowKey='pokedex_number'
+            onCheck={noop}
+            columns={columns}
+            data={PokeDex}
+            disabledRows={PokeDex.slice(0, 2).map(r => r.pokedex_number)}
+          />
+        </Provider>
+      )
+      expect(component.findWhere(n => {
+        return (n.type() === 'input' && n.prop('type') === 'checkbox' && n.prop('disabled') === true)
+      })).toHaveLength(2)
+    })
+
+    it('should select all rows except the disabled ones when clicking the header checkbox', () => {
+      const disabled = 2
       const spy = sinon.spy()
       const component = mount(
         <Provider>
-          <Table rowKey='pokedex_number' onCheck={spy} columns={columns} data={PokeDex} />
+          <Table
+            rowKey='pokedex_number'
+            onCheck={spy}
+            columns={columns}
+            data={PokeDex}
+            disabledRows={PokeDex.slice(0, disabled).map(r => r.pokedex_number)}
+          />
         </Provider>
       )
 
@@ -630,9 +654,9 @@ describe('Table component', () => {
       const elements = component.find('[data-display="table-body"] input[type="checkbox"]')
         .filterWhere(element => element.props().checked)
 
-      expect(elements).toHaveLength(PokeDex.length)
+      expect(elements).toHaveLength(PokeDex.length - disabled)
       expect(spy.callCount).toEqual(1)
-      expect(spy.firstCall.args).toEqual([PokeDex])
+      expect(spy.firstCall.args).toEqual([PokeDex.slice(disabled)])
     })
 
     it('should increment or decrement the checked rows as you check/uncheck checkboxes', () => {
