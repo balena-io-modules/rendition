@@ -2,7 +2,6 @@ declare module 'react-jsonschema-form/lib/utils' {
 	import { JSONSchema6 } from 'json-schema';
 	import { UiSchema } from 'react-jsonschema-form';
 
-	export const ADDITIONAL_PROPERTY_FLAG: string;
 	export function getDefaultRegistry(): any;
 	export function getUiOptions(schema: UiSchema): any;
 	export function orderProperties(
