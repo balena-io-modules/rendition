@@ -171,6 +171,20 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		return includes(this.props.highlightedRows, identifier);
 	}
 
+	isDisabled(item: T) {
+		if (!this.props.disabledRows || this.props.disabledRows.length === 0) {
+			return false;
+		}
+
+		const rowKey = this.props.rowKey;
+		if (!rowKey) {
+			return false;
+		}
+
+		const identifier = item[rowKey];
+		return includes(this.props.disabledRows, identifier);
+	}
+
 	isEachRowChecked(checkedItems: T[]): boolean {
 		const rowKey = this.props.rowKey;
 		if (!rowKey) {
@@ -245,7 +259,9 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		const { data } = this.props;
 
 		const allChecked = !this.state.allChecked;
-		const checkedItems = allChecked ? (data || []).slice() : [];
+		const checkedItems = allChecked
+			? (data || []).slice().filter(r => !this.isDisabled(r))
+			: [];
 
 		if (this.props.onCheck) {
 			this.props.onCheck(checkedItems);
@@ -455,6 +471,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 							{map(sortedData, (row, i) => {
 								const isChecked = onCheck ? this.isChecked(row) : false;
 								const isHighlighted = this.isHighlighted(row);
+								const isDisabled = this.isDisabled(row);
 								const key = rowKey ? (row[rowKey] as any) : i;
 								const href = !!getRowHref ? getRowHref(row) : undefined;
 								const classNamesList = isFunction(getRowClass)
@@ -467,6 +484,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 									<TableRow
 										isChecked={isChecked}
 										isHighlighted={isHighlighted}
+										isDisabled={isDisabled}
 										key={key}
 										keyAttribute={key}
 										href={href}
@@ -526,6 +544,7 @@ export interface TableProps<T> {
 	// `rowKey` property: the row with a `rowKey` property that matches this
 	// value is highlighted.
 	highlightedRows?: any;
+	disabledRows?: Array<T[keyof T]>;
 	getRowClass?: (row: T) => string[];
 	// If true, a pager will be used when displaying items.
 	usePager?: boolean;
