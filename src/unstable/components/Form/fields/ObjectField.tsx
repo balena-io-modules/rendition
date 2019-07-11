@@ -11,6 +11,7 @@ import PatternPropertiesField from './PatternPropertiesField';
 import { JSONSchema6 } from 'json-schema';
 import { FormValidation, IdSchema, UiSchema } from 'react-jsonschema-form';
 import {
+	// @ts-ignore
 	ADDITIONAL_PROPERTY_FLAG,
 	getDefaultRegistry,
 	getUiOptions,

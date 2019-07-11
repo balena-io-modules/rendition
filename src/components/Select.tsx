@@ -55,14 +55,12 @@ interface InternalSelectProps<T>
 	extends Omit<GrommetSelectProps, 'onChange' | 'children'>,
 		Omit<DefaultProps, 'onChange'> {
 	emphasized?: boolean;
-	onChange: (
-		data: {
-			option: T;
-			selected: number;
-			target: React.ChangeEvent<HTMLElement>;
-			value: T;
-		},
-	) => void;
+	onChange: (data: {
+		option: T;
+		selected: number;
+		target: React.ChangeEvent<HTMLElement>;
+		value: T;
+	}) => void;
 	children?: (
 		option: T,
 		index: number,
@@ -80,5 +78,5 @@ export interface SelectProps<T>
 		RenditionSystemProps {}
 
 export default asRendition<
-	(<T extends {}>(props: SelectProps<T>) => JSX.Element)
+	<T extends {}>(props: SelectProps<T>) => JSX.Element
 >(Select);
