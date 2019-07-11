@@ -53,6 +53,23 @@ const basicPokedexSchema = {
       type: 'string',
       format: 'date-time'
     },
+    environment: {
+      type: 'string',
+      oneOf: [
+        {
+          const: 'earth',
+          title: 'Earth'
+        },
+        {
+          const: 'water',
+          title: 'Water'
+        },
+        {
+          const: 'fire',
+          title: 'Fire'
+        }
+      ]
+    },
     tags: {
       title: 'Tags',
       description: 'Add useful tags to your pokèmon',

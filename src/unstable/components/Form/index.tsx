@@ -16,6 +16,7 @@ import ArrayFieldTemplate from './templates/ArrayFieldTemplate';
 import FieldTemplate from './templates/FieldTemplate';
 import ObjectFieldTemplate from './templates/ObjectFieldTemplate';
 import BaseInput from './widgets/BaseInput';
+import SelectWidget from './widgets/SelectWidget';
 
 const SUPPORTED_SCHEMA_FORMATS = [
 	'data-url',
@@ -36,6 +37,7 @@ const widgets: {
 	[k: string]: any;
 } = {
 	BaseInput,
+	SelectWidget,
 };
 
 const fields: {

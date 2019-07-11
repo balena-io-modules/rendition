@@ -227,6 +227,63 @@ describe('Form component', () => {
     })
   })
 
+  describe('enum field', () => {
+    const schema = {
+      type: 'object',
+      properties: {
+        testfield: {
+          title: 'Test',
+          description: 'Test field description',
+          enum: [
+            'foo',
+            'bar'
+          ],
+          enumNames: [
+            'Foo',
+            'Bar'
+          ]
+        }
+      }
+    }
+
+    it('should display the enum names', () => {
+      const callback = sinon.spy()
+      const component = mount(
+        <Provider>
+          <Form
+            schema={schema}
+            onFormChange={callback}
+          />
+        </Provider>
+      )
+
+      component.find('button').first().simulate('click')
+      expect(component.find('button[role="menuitem"]').first().find('span').first().text()).toBe('Foo')
+      expect(component.find('button[role="menuitem"]').at(1).find('span').first().text()).toBe('Bar')
+    })
+
+    it('should call form change when an option is selected', () => {
+      const callback = sinon.spy()
+      const component = mount(
+        <Provider>
+          <Form
+            schema={schema}
+            onFormChange={callback}
+          />
+        </Provider>
+      )
+
+      component.find('button').first().simulate('click')
+      component.find('button[role="menuitem"]').first().find('span').first().simulate('click')
+      component.update()
+
+      return Promise.delay(150).then(() => {
+        const callArg = callback.lastCall.args[0]
+        expect(callArg.formData).toEqual({testfield: 'foo'})
+      })
+    })
+  })
+
   describe('top-level array fields', () => {
     const arraySchema = {
       'items': {
