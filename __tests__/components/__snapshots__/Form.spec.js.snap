@@ -97,20 +97,22 @@ exports[`Form component should match the stored snapshot 1`] = `
 
 .c7 {
   border-radius: 3px;
-  height: 36px;
+  height: 38px;
+  color: #2A506F;
   font-size: inherit;
-  border: 1px solid #c6c8c9;
+  border: 1px solid #DDE1f0;
   padding: 0px 16px;
   box-sizing: border-box;
 }
 
 .c7[disabled] {
-  background-color: #f4f4f4;
+  border-color: rgba(221,225,240,0.4);
   cursor: not-allowed;
 }
 
 .c7:focus:enabled {
-  border-color: #2A506F;
+  border-color: #527699;
+  outline: none;
 }
 
 .c7:hover:enabled {
@@ -118,19 +120,19 @@ exports[`Form component should match the stored snapshot 1`] = `
 }
 
 .c7::-webkit-input-placeholder {
-  color: #c6c8c9;
+  color: #abb9c5;
 }
 
 .c7::-moz-placeholder {
-  color: #c6c8c9;
+  color: #abb9c5;
 }
 
 .c7:-ms-input-placeholder {
-  color: #c6c8c9;
+  color: #abb9c5;
 }
 
 .c7::placeholder {
-  color: #c6c8c9;
+  color: #abb9c5;
 }
 
 .c7[type='checkbox'] {
@@ -144,7 +146,7 @@ exports[`Form component should match the stored snapshot 1`] = `
 .c7[type='time' i]::-webkit-inner-spin-button,
 .c7[type='week' i]::-webkit-inner-spin-button {
   height: 20px;
-  margin-top: 7px;
+  margin-top: 8px;
 }
 
 .c6 {
@@ -162,17 +164,15 @@ exports[`Form component should match the stored snapshot 1`] = `
 .c0 h4,
 .c0 h5,
 .c0 h6,
-.c0 label,
 .c0 button {
   font-family: CircularStd,Arial,sans-serif;
 }
 
 .c5 {
-  font-size: 11px;
-  color: #252629;
-  text-transform: uppercase;
   display: inline-block;
-  margin-bottom: 6px;
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: #2A506F;
 }
 
 .c2 fieldset {

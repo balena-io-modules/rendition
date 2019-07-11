@@ -1,9 +1,9 @@
 import styled from 'styled-components';
+import { px } from '../../../utils';
 
 export const LabelElement = styled.label`
-	font-size: 11px;
-	color: #252629;
-	text-transform: uppercase;
 	display: inline-block;
-	margin-bottom: 6px;
+	font-size: ${props => px(props.theme.fontSizes[0])};
+	margin-bottom: ${props => px(props.theme.space[1])};
+	color: ${props => props.theme.colors.secondary.main};
 `;

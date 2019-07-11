@@ -17,6 +17,9 @@ export const isLight = (color?: string) => {
 	return Color(color).luminosity() > 0.5;
 };
 
+export const opaque = (color: string, opacity: number) =>
+	new Color([...Color(color).array(), opacity]).string();
+
 export const lighten = (color: string) =>
 	Color(color)
 		.fade(0.3)
