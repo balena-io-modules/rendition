@@ -7,7 +7,7 @@ import {
 	Theme,
 } from '../common-types';
 import { radius } from '../theme';
-import { monospace, px } from '../utils';
+import { monospace, opaque, px } from '../utils';
 
 const getColor = (props: ThemedInputProps): any => {
 	if (props.invalid) {
@@ -16,14 +16,11 @@ const getColor = (props: ThemedInputProps): any => {
 	if (props.valid) {
 		return props.theme.colors.success.main;
 	}
-	if (props.disabled) {
-		return props.theme.colors.gray.light;
-	}
-	return props.theme.colors.gray.main;
+
+	return props.theme.colors.quartenary.main;
 };
 
-const getHeight = (props: ThemedInputProps) =>
-	props.emphasized ? props.theme.space[5] : props.theme.space[4];
+const getHeight = (props: ThemedInputProps) => (props.emphasized ? 48 : 38);
 
 const getSpinButtonMargin = (props: ThemedInputProps) =>
 	(getHeight(props) - 2 - 20) / 2;
@@ -31,23 +28,25 @@ const getSpinButtonMargin = (props: ThemedInputProps) =>
 const Base = styled.input`
 	border-radius: ${px(radius)};
 	height: ${props => px(getHeight(props))};
+	color: ${props => props.theme.colors.secondary.main};
 	font-size: inherit;
 	border: 1px solid ${getColor};
 	padding: 0px 16px;
 	box-sizing: border-box;
 
 	&[disabled] {
-		background-color: ${props => props.theme.colors.gray.light};
+		border-color: ${props => opaque(props.theme.colors.quartenary.main, 0.4)};
 		cursor: not-allowed;
 	}
 	&:focus:enabled {
-		border-color: ${props => props.theme.colors.secondary.main};
+		border-color: ${props => props.theme.colors.tertiary.main};
+		outline: none;
 	}
 	&:hover:enabled {
 		box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1);
 	}
 	&::placeholder {
-		color: ${props => props.theme.colors.gray.main};
+		color: ${props => props.theme.colors.secondary.semilight};
 	}
 
 	&[type='checkbox'] {

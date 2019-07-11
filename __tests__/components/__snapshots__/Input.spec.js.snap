@@ -14,20 +14,22 @@ exports[`Input renders correctly 1`] = `
 
 .c2 {
   border-radius: 3px;
-  height: 36px;
+  height: 38px;
+  color: #2A506F;
   font-size: inherit;
-  border: 1px solid #c6c8c9;
+  border: 1px solid #DDE1f0;
   padding: 0px 16px;
   box-sizing: border-box;
 }
 
 .c2[disabled] {
-  background-color: #f4f4f4;
+  border-color: rgba(221,225,240,0.4);
   cursor: not-allowed;
 }
 
 .c2:focus:enabled {
-  border-color: #2A506F;
+  border-color: #527699;
+  outline: none;
 }
 
 .c2:hover:enabled {
@@ -35,19 +37,19 @@ exports[`Input renders correctly 1`] = `
 }
 
 .c2::-webkit-input-placeholder {
-  color: #c6c8c9;
+  color: #abb9c5;
 }
 
 .c2::-moz-placeholder {
-  color: #c6c8c9;
+  color: #abb9c5;
 }
 
 .c2:-ms-input-placeholder {
-  color: #c6c8c9;
+  color: #abb9c5;
 }
 
 .c2::placeholder {
-  color: #c6c8c9;
+  color: #abb9c5;
 }
 
 .c2[type='checkbox'] {
@@ -61,7 +63,7 @@ exports[`Input renders correctly 1`] = `
 .c2[type='time' i]::-webkit-inner-spin-button,
 .c2[type='week' i]::-webkit-inner-spin-button {
   height: 20px;
-  margin-top: 7px;
+  margin-top: 8px;
 }
 
 .c0 {
@@ -75,7 +77,6 @@ exports[`Input renders correctly 1`] = `
 .c0 h4,
 .c0 h5,
 .c0 h6,
-.c0 label,
 .c0 button {
   font-family: CircularStd,Arial,sans-serif;
 }

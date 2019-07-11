@@ -16,7 +16,6 @@ const Base = styled(Grommet)`
 	h4,
 	h5,
 	h6,
-	label,
 	button {
 		font-family: ${props => props.theme.titleFont};
 	}

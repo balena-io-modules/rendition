@@ -159,7 +159,6 @@ exports[`DropDownButton renders correctly 1`] = `
 .c0 h4,
 .c0 h5,
 .c0 h6,
-.c0 label,
 .c0 button {
   font-family: CircularStd,Arial,sans-serif;
 }
@@ -412,7 +411,6 @@ exports[`Opened DropDownButton renders correctly 1`] = `
 .c0 h4,
 .c0 h5,
 .c0 h6,
-.c0 label,
 .c0 button {
   font-family: CircularStd,Arial,sans-serif;
 }
