@@ -121,29 +121,29 @@ export default class FormHOC extends React.Component<
 			submitButtonText,
 			submitButtonProps,
 			uiSchema,
+			validate,
+			liveValidate,
+			noValidate,
+			schema,
+			value,
+			onFormChange,
+			onFormSubmit,
+			...props
 		} = this.props;
 
-		const cleanProps = omit(this.props, [
-			'schema',
-			'submitButtonText',
-			'hideSubmitButton',
-			'submitButtonProps',
-			'value',
-			'onFormChange',
-			'onFormSubmit',
-			'uiSchema',
-		]);
-
-		const schema = omit(
+		const localSchema = omit(
 			utils.disallowAdditionalProperties(this.state.schema),
 			KEYWORD_BLACKLIST,
 		);
 
 		return (
-			<FormWrapper {...cleanProps}>
+			<FormWrapper {...props}>
 				<Form
+					liveValidate={liveValidate}
+					noValidate={noValidate}
+					validate={validate}
 					showErrorList={false}
-					schema={schema}
+					schema={localSchema}
 					formData={this.state.value}
 					onSubmit={this.submit}
 					onChange={this.change}

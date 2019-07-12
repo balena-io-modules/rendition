@@ -1,5 +1,9 @@
 import { JSONSchema6 } from 'json-schema';
-import { IChangeEvent } from 'react-jsonschema-form';
+import {
+	FormProps as JsonSchemaFormProps,
+	IChangeEvent,
+	UiSchema,
+} from 'react-jsonschema-form';
 import { ButtonProps } from '../components/Button';
 import { BoxProps } from '../components/Grid';
 
@@ -59,11 +63,13 @@ export interface FormWidgetProps {
 	type?: string;
 }
 
-export interface RenditionUiSchema {
+export interface RenditionUiSchema extends UiSchema {
 	'ui:warning'?: string;
 }
 
-export interface BaseFormProps extends BoxProps {
+export interface BaseFormProps
+	extends BoxProps,
+		Pick<JsonSchemaFormProps<any>, 'validate' | 'noValidate' | 'liveValidate'> {
 	submitButtonText?: string | JSX.Element;
 	hideSubmitButton?: boolean;
 	submitButtonProps?: ButtonProps;
