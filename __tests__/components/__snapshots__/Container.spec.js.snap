@@ -28,7 +28,7 @@ exports[`Container renders correctly 1`] = `
 }
 
 .c3 {
-  max-width: calc(32em - 0em);
+  max-width: 540px;
 }
 
 .c2 {
@@ -38,21 +38,21 @@ exports[`Container renders correctly 1`] = `
   padding-right: 16px;
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c3 {
-    max-width: calc(48em - 4em);
+    max-width: 720px;
   }
 }
 
-@media screen and (min-width:48em) {
+@media screen and (min-width:768px) {
   .c3 {
-    max-width: calc(64em - 8em);
+    max-width: 960px;
   }
 }
 
-@media screen and (min-width:64em) {
+@media screen and (min-width:992px) {
   .c3 {
-    max-width: calc(80em - 16em);
+    max-width: 1140px;
   }
 }
 

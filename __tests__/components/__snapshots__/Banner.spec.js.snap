@@ -54,7 +54,7 @@ exports[`Banner renders correctly 1`] = `
   font-family: CircularStd,Arial,sans-serif;
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c2 {
     padding: 36px;
   }

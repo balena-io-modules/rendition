@@ -95,7 +95,8 @@ const colors = {
 const defaultControlHeight = 36;
 const emphasizedControlHeight = 48;
 
-export const breakpoints = ['32em', '48em', '64em', '80em'];
+export const breakpoints = ['576px', '768px', '992px', '1200px'];
+export const containers = ['540px', '720px', '960px', '1140px'];
 
 export const space = [
 	0,
@@ -118,6 +119,7 @@ export const monospace = `'Ubuntu Mono', 'Courier New', monospace`;
 
 export default {
 	breakpoints,
+	containers,
 	space,
 	fontSizes,
 	weights,

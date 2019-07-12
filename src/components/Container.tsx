@@ -17,14 +17,7 @@ const ContainerBase = styled.div<ThemedContainerProps>`
 `;
 
 const Container = (props: ThemedContainerProps) => {
-	return (
-		<ContainerBase
-			{...props}
-			maxWidth={props.theme.breakpoints.map(
-				(bp, i) => `calc(${bp} - ${props.theme.space[i]}em)`,
-			)}
-		/>
-	);
+	return <ContainerBase {...props} maxWidth={props.theme.containers} />;
 };
 
 Container.displayName = 'Container';

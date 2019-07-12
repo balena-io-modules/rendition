@@ -9,6 +9,7 @@ export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
 export interface Theme {
 	breakpoints: string[];
+	containers: string[];
 	space: number[];
 	fontSizes: number[];
 	weights: number[];
