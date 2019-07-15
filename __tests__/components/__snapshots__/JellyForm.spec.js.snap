@@ -195,6 +195,11 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   font-size: 14px;
   margin-top: 4px;
   margin-bottom: 4px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.c2 .text-danger {
   color: #FF423D;
 }
 

@@ -61,6 +61,11 @@ const FormWrapper = styled(Box)`
 		font-size: ${props => utils.px(get(props, 'theme.fontSizes[1]', 14))};
 		margin-top: ${props => utils.px(get(props, 'theme.space[1]', 4))};
 		margin-bottom: ${props => utils.px(get(props, 'theme.space[1]', 4))};
+		list-style-type: none;
+		padding-left: 0;
+	}
+
+	.text-danger {
 		color: ${props => get(props, 'theme.colors.danger.main', '#a94442')};
 	}
 `;
