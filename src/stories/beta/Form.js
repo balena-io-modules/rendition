@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
-import { Box, Flex, Provider, Txt } from '../../'
+import { Box, Flex, Provider, Txt, Button } from '../../'
 import { Form } from '../../unstable/'
 import { Markdown } from '../../extra/Markdown'
 import '../../extra/Form/mermaid'
@@ -141,6 +141,18 @@ storiesOf('Beta/Form', module)
     return (
       <Provider>
         <FormDemo schema={basicPokedexSchema} submitButtonText='Save' />
+      </Provider>
+    )
+  })
+  .add('Custom form button children', () => {
+    return (
+      <Provider>
+        <FormDemo schema={basicPokedexSchema}>
+          <Txt my={2}>Are you sure you want to submit this form?</Txt>
+          <Button danger type='submit'>
+            Submit Now
+          </Button>
+        </FormDemo>
       </Provider>
     )
   })

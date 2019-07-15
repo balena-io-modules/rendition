@@ -128,12 +128,21 @@ export default class FormHOC extends React.Component<
 			value,
 			onFormChange,
 			onFormSubmit,
+			children,
 			...props
 		} = this.props;
 
 		const localSchema = omit(
 			utils.disallowAdditionalProperties(this.state.schema),
 			KEYWORD_BLACKLIST,
+		);
+
+		const defaultChildren = hideSubmitButton ? (
+			<span />
+		) : (
+			<Button primary {...submitButtonProps} type="submit">
+				{submitButtonText || 'Submit'}
+			</Button>
 		);
 
 		return (
@@ -154,13 +163,7 @@ export default class FormHOC extends React.Component<
 					ObjectFieldTemplate={ObjectFieldTemplate}
 					ArrayFieldTemplate={ArrayFieldTemplate}
 				>
-					{hideSubmitButton && <span />}
-
-					{!hideSubmitButton && (
-						<Button primary {...submitButtonProps} type="submit">
-							{submitButtonText || 'Submit'}
-						</Button>
-					)}
+					{children ? children : defaultChildren}
 				</Form>
 			</FormWrapper>
 		);
