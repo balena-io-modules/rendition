@@ -78,11 +78,13 @@ describe('DataTypes', () => {
     })
 
     it('formats the date correctly', () => {
-      expect(normalizeDateTime('2017-01-01T08:49:26Z')).toEqual('2017-01-01T08:49:26Z')
-      // This case will fail, if you are in a different TZ than UTC
-      // Set a TZ when running tests: $ TZ='Etc/UTC' npm test
-      expect(normalizeDateTime('2018-03-26T11:43')).toEqual('2018-03-26T11:43:00Z')
-      expect(normalizeDateTime('Sun, 01 Jan 2017 08:49:26 +0000')).toEqual('2017-01-01T08:49:26Z')
+      // Format expected timestamps to account for timezone changes
+      const tzFormat = (stamp) => {
+        return new Date(stamp).toISOString().replace(/\.000/, '')
+      }
+      expect(normalizeDateTime('2017-01-01T08:49:26Z')).toEqual(tzFormat('2017-01-01T08:49:26'))
+      expect(normalizeDateTime('2018-03-26T11:43')).toEqual(tzFormat('2018-03-26T11:43'))
+      expect(normalizeDateTime('Sun, 01 Jan 2017 08:49:26 +0000')).toEqual(tzFormat('2017-01-01T08:49:26'))
     })
   })
 })
