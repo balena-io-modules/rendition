@@ -104,7 +104,8 @@
     "tslint": "^5.13.1",
     "tslint-config-prettier": "^1.17.0",
     "typescript": "^3.5.2",
-    "webpack": "^4.29.6"
+    "webpack": "^4.29.6",
+    "zxcvbn": "^4.4.2"
   },
   "dependencies": {
     "@types/color": "^3.0.0",

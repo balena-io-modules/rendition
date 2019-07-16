@@ -10,6 +10,9 @@ import '../../extra/Form/mermaid'
 import '../../extra/Form/markdown'
 import Readme from '../README/Form.md'
 
+import zxcvbn from 'zxcvbn'
+window.zxcvbn = zxcvbn
+
 const extraWidgetsReadme = `
 # Extra widgets
 Additional widgets for handling different formats can be loaded by importing
@@ -52,6 +55,11 @@ const basicPokedexSchema = {
       description: 'The first time you saw this pokèmon',
       type: 'string',
       format: 'date-time'
+    },
+    poke_password: {
+      title: 'Poke Password',
+      description: "Password to access the pokèmon's abilities",
+      type: 'string'
     },
     environment: {
       type: 'string',
@@ -145,12 +153,23 @@ storiesOf('Beta/Form', module)
     )
   })
   .add('UI schema', () => {
+    const formData = {
+      poke_password: 'Secret password'
+    }
+
     return (
       <Provider>
         <FormDemo
+          formData={formData}
           schema={basicPokedexSchema}
           uiSchema={{
-            'ui:order': ['Name', 'caught', 'Description', 'Abilities', '*']
+            'ui:order': ['Name', 'caught', 'Description', 'Abilities', '*'],
+            poke_password: {
+              'ui:widget': 'password',
+              'ui:options': {
+                showPasswordStrengthMeter: true
+              }
+            }
           }}
         />
       </Provider>

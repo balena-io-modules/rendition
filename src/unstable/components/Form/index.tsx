@@ -16,6 +16,7 @@ import ArrayFieldTemplate from './templates/ArrayFieldTemplate';
 import FieldTemplate from './templates/FieldTemplate';
 import ObjectFieldTemplate from './templates/ObjectFieldTemplate';
 import BaseInput from './widgets/BaseInput';
+import PasswordWidget from './widgets/PasswordWidget';
 import SelectWidget from './widgets/SelectWidget';
 
 const SUPPORTED_SCHEMA_FORMATS = [
@@ -38,6 +39,7 @@ const widgets: {
 } = {
 	BaseInput,
 	SelectWidget,
+	PasswordWidget,
 };
 
 const fields: {
