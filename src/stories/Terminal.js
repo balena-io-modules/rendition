@@ -19,6 +19,10 @@ class Logger extends React.Component {
 
   componentDidMount () {
     if (isTakingScreenshot) {
+      for (const line of this.lines) {
+        this.term.writeln(line)
+      }
+
       return
     }
 
@@ -185,7 +189,8 @@ class PersistentTerm extends React.Component {
 
 storiesOf('Core/Terminal', module)
   .addDecorator(withReadme(Readme))
-  .addDecorator(withScreenshot())
+  // This leaves enough time for the terminal to finish rendering.
+  .addDecorator(withScreenshot({ delay: 2000 }))
   .add('Standard', () => {
     return (
       <Provider>
