@@ -1,8 +1,10 @@
 import { JSONSchema6 } from 'json-schema';
 import {
+	Field,
 	FormProps as JsonSchemaFormProps,
 	IChangeEvent,
 	UiSchema,
+	Widget,
 } from 'react-jsonschema-form';
 import { ButtonProps } from '../components/Button';
 import { BoxProps } from '../components/Grid';
@@ -30,6 +32,8 @@ export interface FormWidgetProps {
 	/** The current value for this field */
 	value: any;
 
+	label: string;
+
 	/** The required status of this field */
 	required: boolean;
 
@@ -56,6 +60,13 @@ export interface FormWidgetProps {
 	 * @see https://github.com/mozilla-services/react-jsonschema-form#custom-widget-options
 	 */
 	options: AnyObject;
+
+	registry: {
+		fields: { [name: string]: Field };
+		widgets: { [name: string]: Widget };
+		definitions: { [name: string]: any };
+		formContext: any;
+	};
 
 	/** The formContext object that you passed to Form. */
 	formContext: any;
