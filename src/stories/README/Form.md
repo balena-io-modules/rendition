@@ -15,6 +15,12 @@ root level of your application.
 This component is experimental and still under development, if you would like to
 use it, it can be imported using `import { Form } from 'rendition/dist/unstable'`.
 
+## API
+
+### `registerWidget(format, widget)`
+
+Register a widget that will be used to render fields of the specified format.
+
 ## Props
 
 | Name          | Type      | Default   | Required   | Description                                          |

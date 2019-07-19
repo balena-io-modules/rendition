@@ -1,12 +1,11 @@
 import { Tab, Tabs } from 'grommet';
 import * as React from 'react';
 import { Link, Textarea, Theme } from '../../';
-import { Form } from '../../unstable';
 import { Mermaid } from '../Mermaid';
 
 type FormWidgetProps = any;
 
-class Widget extends React.Component<FormWidgetProps, {}> {
+export class MermaidWidget extends React.Component<FormWidgetProps, {}> {
 	public handleChange = ({
 		target: { value },
 	}: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -82,6 +81,3 @@ class Widget extends React.Component<FormWidgetProps, {}> {
 		);
 	}
 }
-
-// Register the mermaid widget to the Form component
-Form.registerWidget('mermaid', Widget);
