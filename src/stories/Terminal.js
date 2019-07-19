@@ -18,26 +18,28 @@ class Logger extends React.Component {
   }
 
   componentDidMount () {
-    if (isTakingScreenshot) {
-      for (const line of this.lines) {
-        this.term.writeln(line)
-      }
+    setTimeout(() => {
+      if (isTakingScreenshot) {
+        for (const line of this.lines) {
+          this.term.writeln(line)
+        }
 
-      return
-    }
-
-    this.interval = setInterval(() => {
-      if (!this.term) {
         return
       }
 
-      if (this.lines.length) {
-        this.term.writeln(this.lines.shift())
-      } else {
-        window.clearInterval(this.interval)
-        this.interval = null
-      }
-    }, 300)
+      this.interval = setInterval(() => {
+        if (!this.term) {
+          return
+        }
+
+        if (this.lines.length) {
+          this.term.writeln(this.lines.shift())
+        } else {
+          window.clearInterval(this.interval)
+          this.interval = null
+        }
+      }, 300)
+    }, 1000)
   }
 
   componentWillUnmount () {
@@ -190,7 +192,7 @@ class PersistentTerm extends React.Component {
 storiesOf('Core/Terminal', module)
   .addDecorator(withReadme(Readme))
   // This leaves enough time for the terminal to finish rendering.
-  .addDecorator(withScreenshot({ delay: 2000 }))
+  .addDecorator(withScreenshot({ delay: 5000 }))
   .add('Standard', () => {
     return (
       <Provider>
