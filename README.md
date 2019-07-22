@@ -419,6 +419,12 @@ root level of your application.
 This component is experimental and still under development, if you would like to
 use it, it can be imported using `import { Form } from 'rendition/dist/unstable'`.
 
+#### API
+
+##### `registerWidget(format, widget)`
+
+Register a widget that will be used to render fields of the specified format.
+
 #### Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
@@ -431,6 +437,7 @@ use it, it can be imported using `import { Form } from 'rendition/dist/unstable'
 | `onFormChange` | `(result: object) => void` | - | - | A function that is called when form data changes |
 | `onFormSubmit` | `(result: object) => void` | - | - | A function that is called when the form is submitted |
 | `uiSchema` | `object` | - | - | A configuration object used to change the styling and layout of the form. See the [`react-jsonschema-form`](https://github.com/mozilla-services/react-jsonschema-form) docs for more details |
+
 ### Heading
 
 A component that displays a heading. By default an `<h3>` tag is used. The exact

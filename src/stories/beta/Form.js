@@ -6,17 +6,49 @@ import withReadme from 'storybook-readme/with-readme'
 import { Box, Flex, Provider, Txt } from '../../'
 import { Form } from '../../unstable/'
 import { Markdown } from '../../extra/Markdown'
-import '../../extra/Form/mermaid'
-import '../../extra/Form/markdown'
+import { MermaidWidget } from '../../extra/Form/mermaid'
+import { MarkdownWidget } from '../../extra/Form/markdown'
 import Readme from '../README/Form.md'
+
+// Register the extra format widgets to the Form component
+Form.registerWidget('markdown', MarkdownWidget)
+Form.registerWidget('mermaid', MermaidWidget)
 
 import zxcvbn from 'zxcvbn'
 window.zxcvbn = zxcvbn
 
 const extraWidgetsReadme = `
 # Extra widgets
-Additional widgets for handling different formats can be loaded by importing
-the relevant file from \`renditon/dist/extra/Form/\`.
+Additional widgets for handling different formats can be registered using the \`Form.registerWidget\` method.
+Rendition contains widgets for rendering Markdown and Mermaid text formats that can be used in the following way:
+\`\`\`js
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
+import { Form } from 'rendition/dist/unstable/'
+import { MermaidWidget } from 'rendition/dist/extra/Form/mermaid'
+import { MarkdownWidget } from 'rendition/dist/extra/Form/markdown'
+
+// Register the extra format widgets to the Form component
+Form.registerWidget('markdown', MarkdownWidget)
+Form.registerWidget('mermaid', MermaidWidget)
+
+const schema = {
+  type: 'object',
+  properties: {
+    Markdown: {
+      format: 'markdown',
+      type: 'string'
+    },
+    Mermaid: {
+      format: 'mermaid',
+      type: 'string'
+    }
+  }
+}
+
+const rootElement = document.getElementById('root')
+ReactDOM.render(<Form schema={schema} />, rootElement)
+\`\`\`
 `
 
 const basicPokedexSchema = {
