@@ -141,6 +141,12 @@ storiesOf('Next/Button', module)
           <Button m={2} plain color='green' onClick={action('case-1')}>
             Button
           </Button>
+          <Button m={2} plain danger onClick={action('case-1')}>
+            Button
+          </Button>
+          <Button m={2} plain danger disabled onClick={action('case-1')}>
+            Button
+          </Button>
           <Button
             m={2}
             plain

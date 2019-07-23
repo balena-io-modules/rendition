@@ -154,7 +154,7 @@ const getStyledButton = (
 			<Plain
 				{...props}
 				color={getColor(originalProps, 'color', 'main')}
-				hoverColor={getColor(originalProps, 'color', 'light')}
+				hoverColor={getColor(originalProps, 'color', 'dark')}
 			/>
 		);
 	}
