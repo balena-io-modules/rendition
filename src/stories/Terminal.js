@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Provider, Terminal } from '../'
 import { output1 } from './assets/tty-output'
@@ -189,8 +188,6 @@ class PersistentTerm extends React.Component {
 
 storiesOf('Core/Terminal', module)
   .addDecorator(withReadme(Readme))
-  // This leaves enough time for the terminal to finish rendering.
-  .addDecorator(withScreenshot({ delay: 2000 }))
   .add('Standard', () => {
     return (
       <Provider>
