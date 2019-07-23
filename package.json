@@ -30,7 +30,7 @@
     "generate-snapshots": "npm run build && npm run jest -- -u",
     "build:storybook": "build-storybook -o .out",
     "catch-uncommitted": "catch-uncommitted --catch-no-git --skip-node-versionbot-changes",
-    "test:fast": "npm run lint && TZ='Etc/UTC' npm run jest",
+    "test:fast": "npm run lint && npm run jest",
     "test": "npm run build && npm run test:fast && npm run catch-uncommitted",
     "test:local-visual": "./scripts/test-screenshots.sh",
     "test:visual": "npm run ci:screenshot -- -o .reg/current && reg-cli .reg/current __screenshots__ .reg/diff -R .reg/report.html",
