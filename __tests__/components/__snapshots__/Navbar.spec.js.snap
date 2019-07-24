@@ -94,7 +94,7 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
 }
 
 .c5 {
-  max-width: calc(32em - 0em);
+  max-width: 1184px;
 }
 
 .c4 {
@@ -144,37 +144,37 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
   display: inline-block;
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c11 {
     margin-left: 0;
   }
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c13 {
     margin-left: auto;
   }
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c13 {
     width: auto;
   }
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c14 {
     width: auto;
   }
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c15 {
     width: auto;
   }
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c6 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -182,31 +182,13 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
   }
 }
 
-@media screen and (min-width:32em) {
-  .c5 {
-    max-width: calc(48em - 4em);
-  }
-}
-
-@media screen and (min-width:48em) {
-  .c5 {
-    max-width: calc(64em - 8em);
-  }
-}
-
-@media screen and (min-width:64em) {
-  .c5 {
-    max-width: calc(80em - 16em);
-  }
-}
-
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c10 {
     display: none;
   }
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c12 {
     max-height: none;
   }
@@ -381,7 +363,7 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
 }
 
 .c5 {
-  max-width: calc(32em - 0em);
+  max-width: 1184px;
 }
 
 .c4 {
@@ -431,37 +413,37 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
   display: inline-block;
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c11 {
     margin-left: 0;
   }
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c13 {
     margin-left: auto;
   }
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c13 {
     width: auto;
   }
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c14 {
     width: auto;
   }
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c15 {
     width: auto;
   }
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c6 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -469,31 +451,13 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
   }
 }
 
-@media screen and (min-width:32em) {
-  .c5 {
-    max-width: calc(48em - 4em);
-  }
-}
-
-@media screen and (min-width:48em) {
-  .c5 {
-    max-width: calc(64em - 8em);
-  }
-}
-
-@media screen and (min-width:64em) {
-  .c5 {
-    max-width: calc(80em - 16em);
-  }
-}
-
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c10 {
     display: none;
   }
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c12 {
     max-height: none;
   }
@@ -666,7 +630,7 @@ exports[`Navbar renders correctly with no children prop 1`] = `
 }
 
 .c5 {
-  max-width: calc(32em - 0em);
+  max-width: 1184px;
 }
 
 .c4 {
@@ -716,25 +680,25 @@ exports[`Navbar renders correctly with no children prop 1`] = `
   display: inline-block;
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c11 {
     margin-left: 0;
   }
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c13 {
     margin-left: auto;
   }
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c13 {
     width: auto;
   }
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c6 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -742,31 +706,13 @@ exports[`Navbar renders correctly with no children prop 1`] = `
   }
 }
 
-@media screen and (min-width:32em) {
-  .c5 {
-    max-width: calc(48em - 4em);
-  }
-}
-
-@media screen and (min-width:48em) {
-  .c5 {
-    max-width: calc(64em - 8em);
-  }
-}
-
-@media screen and (min-width:64em) {
-  .c5 {
-    max-width: calc(80em - 16em);
-  }
-}
-
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c10 {
     display: none;
   }
 }
 
-@media screen and (min-width:32em) {
+@media screen and (min-width:576px) {
   .c12 {
     max-height: none;
   }

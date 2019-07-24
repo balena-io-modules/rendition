@@ -28,7 +28,7 @@ exports[`Container renders correctly 1`] = `
 }
 
 .c3 {
-  max-width: calc(32em - 0em);
+  max-width: 1184px;
 }
 
 .c2 {
@@ -36,24 +36,6 @@ exports[`Container renders correctly 1`] = `
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
-}
-
-@media screen and (min-width:32em) {
-  .c3 {
-    max-width: calc(48em - 4em);
-  }
-}
-
-@media screen and (min-width:48em) {
-  .c3 {
-    max-width: calc(64em - 8em);
-  }
-}
-
-@media screen and (min-width:64em) {
-  .c3 {
-    max-width: calc(80em - 16em);
-  }
 }
 
 <div
