@@ -15,7 +15,7 @@ exports[`Alert renders correctly 1`] = `
   -ms-flex-pack: normal;
   justify-content: normal;
   position: relative;
-  min-height: 36px;
+  min-height: 38px;
   padding: 8px 32px;
   margin: 0;
   border-radius: 3px;

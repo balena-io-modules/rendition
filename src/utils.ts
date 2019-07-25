@@ -126,6 +126,11 @@ const shadeCustomColor = (color: string, shade: 'main' | 'light' | 'dark') => {
 export const monospace = (props: { monospace?: boolean; theme: Theme }) =>
 	props.monospace ? `font-family: ${props.theme.monospace}` : null;
 
+export const emphasized = (props: { emphasized?: boolean; theme: Theme }) =>
+	`height: ${px(
+		props.emphasized ? props.theme.space[5] : props.theme.space[4],
+	)}`;
+
 export const regexEscape = (str: string) =>
 	str.replace(matchOperatorsRe, '\\$&');
 

@@ -9,12 +9,13 @@ import asRendition from '../asRendition';
 import { DefaultProps, Omit, RenditionSystemProps } from '../common-types';
 import { px } from '../utils';
 
-// This is applied to the input, but we have additional 1px borders that we need to account for.
 const StyledGrommetSelect = styled(GrommetSelect)<InternalSelectProps<any>>`
 	font-family: ${props => props.theme.font};
 	font-size: ${props => px(props.theme.fontSizes[1])};
 	font-weight: normal;
-	height: ${props => (props.emphasized ? '46px' : '36px')};
+	/* The wrapping button component has borders of 1px, and changing it's height messes up the drop alignment, so we subtract the border width on the input */
+	height: ${props =>
+		px((props.emphasized ? props.theme.space[5] : props.theme.space[4]) - 2)};
 	padding: ${props => (props.emphasized ? '14px' : '10px')};
 	padding-left: 20px;
 `;

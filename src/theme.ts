@@ -92,7 +92,7 @@ const colors = {
 	},
 };
 
-const defaultControlHeight = 36;
+const defaultControlHeight = 38;
 const emphasizedControlHeight = 48;
 
 export const breakpoints = ['32em', '48em', '64em', '80em'];
@@ -142,7 +142,8 @@ export default {
 			},
 		},
 		colors: {
-			focus: '#73AAF5',
+			focus: 'none',
+			placeholder: colors.secondary.semilight,
 		},
 		selected: {
 			background: colors.primary.main,
@@ -179,6 +180,9 @@ export default {
 				color: ${colors.secondary.main}; border: 1px solid ${colors.quartenary.main};
 				animation-duration: 0s;
 			`,
+		},
+		input: {
+			weight: 400,
 		},
 	},
 	button: {

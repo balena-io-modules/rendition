@@ -56,7 +56,7 @@ exports[`Banner renders correctly 1`] = `
 
 @media screen and (min-width:32em) {
   .c2 {
-    padding: 36px;
+    padding: 38px;
   }
 }
 

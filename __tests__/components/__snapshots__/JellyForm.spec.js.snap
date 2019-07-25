@@ -9,7 +9,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   margin-bottom: 8px;
 }
 
-.c10 {
+.c12 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
@@ -34,8 +34,51 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   transition: 0.1s ease-in-out;
 }
 
-.c10:hover {
+.c12:hover {
   box-shadow: 0px 0px 0px 2px #00AEEF;
+}
+
+.c10 {
+  box-sizing: border-box;
+  font-size: inherit;
+  font-family: inherit;
+  border: none;
+  -webkit-appearance: none;
+  padding: 11px;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font-weight: 400;
+  margin: 0;
+  border: 1px solid #DDE1f0;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.c10::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.c10::-webkit-input-placeholder {
+  color: #abb9c5;
+}
+
+.c10::-moz-placeholder {
+  color: #abb9c5;
+}
+
+.c10:-ms-input-placeholder {
+  color: #abb9c5;
+}
+
+.c10::-moz-focus-inner {
+  border: none;
+  outline: none;
+}
+
+.c7 {
+  position: relative;
+  width: 100%;
 }
 
 .c1 {
@@ -49,7 +92,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c9 {
+.c11 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -70,18 +113,18 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   color: white;
 }
 
-.c9 svg {
+.c11 svg {
   color: inherit !important;
   font-size: 0.925em;
 }
 
-.c9:disabled {
+.c11:disabled {
   cursor: not-allowed;
 }
 
-.c9:hover:enabled,
-.c9:focus:enabled,
-.c9:active:enabled {
+.c11:hover:enabled,
+.c11:focus:enabled,
+.c11:active:enabled {
   box-shadow: none;
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
@@ -89,67 +132,25 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   opacity: undefined;
 }
 
-.c9:hover:enabled svg,
-.c9:focus:enabled svg,
-.c9:active:enabled svg {
+.c11:hover:enabled svg,
+.c11:focus:enabled svg,
+.c11:active:enabled svg {
   color: white !important;
 }
 
-.c8 {
-  border-radius: 3px;
+.c9 {
   height: 38px;
-  color: #2A506F;
-  font-size: inherit;
-  border: 1px solid #DDE1f0;
-  padding: 0px 16px;
-  box-sizing: border-box;
+  padding: 10px;
+  padding-left: 20px;
+  color: #3c3e42;
+  cursor: auto;
 }
 
-.c8[disabled] {
-  border-color: rgba(221,225,240,0.4);
-  cursor: not-allowed;
-}
-
-.c8:focus:enabled {
+.c9:focus {
   border-color: #527699;
-  outline: none;
 }
 
-.c8:hover:enabled {
-  box-shadow: 0 0 4px 1px rgba(0,0,0,0.1);
-}
-
-.c8::-webkit-input-placeholder {
-  color: #abb9c5;
-}
-
-.c8::-moz-placeholder {
-  color: #abb9c5;
-}
-
-.c8:-ms-input-placeholder {
-  color: #abb9c5;
-}
-
-.c8::placeholder {
-  color: #abb9c5;
-}
-
-.c8[type='checkbox'] {
-  height: auto;
-  font-size: 14px;
-}
-
-.c8[type='date' i]::-webkit-inner-spin-button,
-.c8[type='datetime-local' i]::-webkit-inner-spin-button,
-.c8[type='month' i]::-webkit-inner-spin-button,
-.c8[type='time' i]::-webkit-inner-spin-button,
-.c8[type='week' i]::-webkit-inner-spin-button {
-  height: 20px;
-  margin-top: 8px;
-}
-
-.c7 {
+.c8 {
   width: 100%;
 }
 
@@ -238,26 +239,32 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
                 *
               </span>
             </label>
-            <input
-              autoFocus={false}
-              className="c7 c8"
-              disabled={false}
-              id="root_Name"
-              label="Name"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              placeholder=""
-              readOnly={false}
-              required={true}
-              type="text"
-              value="Bulbasaur"
-            />
+            <div
+              className="c7"
+            >
+              <input
+                autoComplete="off"
+                autoFocus={false}
+                className="c8 c9 c10"
+                disabled={false}
+                id="root_Name"
+                label="Name"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                readOnly={false}
+                required={true}
+                type="text"
+                value="Bulbasaur"
+              />
+            </div>
           </div>
         </fieldset>
       </div>
       <button
-        className="c9 c10"
+        className="c11 c12"
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}

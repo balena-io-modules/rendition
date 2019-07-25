@@ -14,7 +14,7 @@ exports[`ProgressBar renders correctly 1`] = `
 
 .c5 {
   position: relative;
-  height: 36px;
+  height: 38px;
   overflow: hidden;
   background: #00AEEF;
   -webkit-transition: width linear 250ms;

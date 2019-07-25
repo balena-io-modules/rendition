@@ -131,7 +131,7 @@ exports[`Select component should match the stored snapshot 1`] = `
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  font-weight: 400;
   margin: 0;
   border: 1px solid #DDE1f0;
   border-radius: 4px;
@@ -144,15 +144,15 @@ exports[`Select component should match the stored snapshot 1`] = `
 }
 
 .c10::-webkit-input-placeholder {
-  color: #AAAAAA;
+  color: #abb9c5;
 }
 
 .c10::-moz-placeholder {
-  color: #AAAAAA;
+  color: #abb9c5;
 }
 
 .c10:-ms-input-placeholder {
-  color: #AAAAAA;
+  color: #abb9c5;
 }
 
 .c10::-moz-focus-inner {

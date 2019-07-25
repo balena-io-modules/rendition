@@ -1,6 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input renders correctly 1`] = `
+.c4 {
+  box-sizing: border-box;
+  font-size: inherit;
+  font-family: inherit;
+  border: none;
+  -webkit-appearance: none;
+  padding: 11px;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font-weight: 400;
+  margin: 0;
+  border: 1px solid #DDE1f0;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.c4::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.c4::-webkit-input-placeholder {
+  color: #abb9c5;
+}
+
+.c4::-moz-placeholder {
+  color: #abb9c5;
+}
+
+.c4:-ms-input-placeholder {
+  color: #abb9c5;
+}
+
+.c4::-moz-focus-inner {
+  border: none;
+  outline: none;
+}
+
+.c2 {
+  position: relative;
+  width: 100%;
+}
+
 .c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
@@ -12,58 +55,16 @@ exports[`Input renders correctly 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c2 {
-  border-radius: 3px;
+.c3 {
   height: 38px;
-  color: #2A506F;
-  font-size: inherit;
-  border: 1px solid #DDE1f0;
-  padding: 0px 16px;
-  box-sizing: border-box;
+  padding: 10px;
+  padding-left: 20px;
+  color: #3c3e42;
+  cursor: auto;
 }
 
-.c2[disabled] {
-  border-color: rgba(221,225,240,0.4);
-  cursor: not-allowed;
-}
-
-.c2:focus:enabled {
+.c3:focus {
   border-color: #527699;
-  outline: none;
-}
-
-.c2:hover:enabled {
-  box-shadow: 0 0 4px 1px rgba(0,0,0,0.1);
-}
-
-.c2::-webkit-input-placeholder {
-  color: #abb9c5;
-}
-
-.c2::-moz-placeholder {
-  color: #abb9c5;
-}
-
-.c2:-ms-input-placeholder {
-  color: #abb9c5;
-}
-
-.c2::placeholder {
-  color: #abb9c5;
-}
-
-.c2[type='checkbox'] {
-  height: auto;
-  font-size: 14px;
-}
-
-.c2[type='date' i]::-webkit-inner-spin-button,
-.c2[type='datetime-local' i]::-webkit-inner-spin-button,
-.c2[type='month' i]::-webkit-inner-spin-button,
-.c2[type='time' i]::-webkit-inner-spin-button,
-.c2[type='week' i]::-webkit-inner-spin-button {
-  height: 20px;
-  margin-top: 8px;
 }
 
 .c0 {
@@ -84,9 +85,18 @@ exports[`Input renders correctly 1`] = `
 <div
   className="c0 c1"
 >
-  <input
+  <div
     className="c2"
-    placeholder="Placeholder Text"
-  />
+  >
+    <input
+      autoComplete="off"
+      className="c3 c4"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Placeholder Text"
+    />
+  </div>
 </div>
 `;
