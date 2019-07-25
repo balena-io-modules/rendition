@@ -8,7 +8,7 @@ import {
 export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
 export interface Theme {
-	breakpoints: string[];
+	breakpoints: number[];
 	space: number[];
 	fontSizes: number[];
 	weights: number[];
