@@ -8,6 +8,12 @@ type MarkdownProps = TxtProps & {
 	children: string;
 };
 
+const renderer = new marked.Renderer();
+renderer.link = function(_href, _title, _text) {
+	const link = marked.Renderer.prototype.link.apply(this, arguments);
+	return link.replace('<a', '<a target="_blank" rel="noopener noreferrer"');
+};
+
 const markedOptions = {
 	// Enable github flavored markdown
 	gfm: true,
@@ -16,6 +22,7 @@ const markedOptions = {
 	// Input text is sanitized using `sanitize-html` prior to being transformed by
 	// `marked`
 	sanitize: false,
+	renderer,
 };
 
 const sanitizerOptions = {
@@ -27,7 +34,7 @@ const sanitizerOptions = {
 		'input',
 	]),
 	allowedAttributes: {
-		a: ['href', 'name', 'target'],
+		a: ['href', 'name', 'target', 'rel'],
 		img: ['src'],
 		input: [
 			{
