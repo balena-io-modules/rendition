@@ -72,12 +72,12 @@
   {
     "name": "should render markdown links",
     "source": "[GitHub](https://github.com)",
-    "expected": "<p><a href=\"https://github.com\">GitHub</a></p>"
+    "expected": "<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com\">GitHub</a></p>"
   },
   {
     "name": "should render link type strings as links",
     "source": "https://github.com",
-    "expected": "<p><a href=\"https://github.com\">https://github.com</a></p>"
+    "expected": "<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com\">https://github.com</a></p>"
   },
   {
     "name": "should render markdown blockquotes",
@@ -1152,7 +1152,7 @@
   {
     "name": "xss: 205",
     "source": "<a href=http://foo.bar/#x=`y></a><img alt=\"`><img src=x:x onerror=javascript:alert(1)></a>\">",
-    "expected": "<p>&lt;a href=<a href=\"http://foo.bar/#x=%60y&gt;\">http://foo.bar/#x=`y&gt;</a><img></p>"
+    "expected": "<p>&lt;a href=<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://foo.bar/#x=%60y&gt;\">http://foo.bar/#x=`y&gt;</a><img></p>"
   },
   {
     "name": "xss: 206",
@@ -1247,7 +1247,7 @@
   {
     "name": "xss: 224",
     "source": "<SCRIPT/XSS SRC=\"http://ha.ckers.org/xss.js\"></SCRIPT>",
-    "expected": "<p>&lt;SCRIPT/XSS SRC=&quot;<a href=\"http://ha.ckers.org/xss.js&quot;&gt;\">http://ha.ckers.org/xss.js&quot;&gt;</a></p>"
+    "expected": "<p>&lt;SCRIPT/XSS SRC=&quot;<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://ha.ckers.org/xss.js&quot;&gt;\">http://ha.ckers.org/xss.js&quot;&gt;</a></p>"
   },
   {
     "name": "xss: 225",
@@ -1257,7 +1257,7 @@
   {
     "name": "xss: 226",
     "source": "<SCRIPT/SRC=\"http://ha.ckers.org/xss.js\"></SCRIPT>",
-    "expected": "<p>&lt;SCRIPT/SRC=&quot;<a href=\"http://ha.ckers.org/xss.js&quot;&gt;\">http://ha.ckers.org/xss.js&quot;&gt;</a></p>"
+    "expected": "<p>&lt;SCRIPT/SRC=&quot;<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://ha.ckers.org/xss.js&quot;&gt;\">http://ha.ckers.org/xss.js&quot;&gt;</a></p>"
   },
   {
     "name": "xss: 227",
@@ -1307,7 +1307,7 @@
   {
     "name": "xss: 236",
     "source": "http://a/%%30%30",
-    "expected": "<p><a href=\"http://a/%%30%30\">http://a/%%30%30</a></p>"
+    "expected": "<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://a/%%30%30\">http://a/%%30%30</a></p>"
   },
   {
     "name": "xss: 237",
