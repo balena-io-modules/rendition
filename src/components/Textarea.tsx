@@ -20,7 +20,7 @@ const getBorderColor = (props: InternalTextareaProps & { theme: any }) => {
 const StyledGrommetTextArea = styled(GrommetTextArea)`
 	${monospace};
 
-	padding: 15px 20px;
+	padding: 14px 20px;
 	color: ${props => props.theme.colors.text.main};
 	cursor: ${props => (props.disabled ? 'not-allowed' : 'auto')};
 	border-color: ${getBorderColor};
