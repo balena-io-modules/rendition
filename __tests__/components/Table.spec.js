@@ -787,22 +787,6 @@ describe('Table component', () => {
     })
   })
 
-  describe('usePager property', () => {
-    it('should display a pager', () => {
-      const component = mount(
-        <Provider>
-          <Table
-            columns={[ { field: 'Name' } ]}
-            data={PokeDex}
-            usePager
-          />
-        </Provider>
-      )
-
-      expect(component.find(Pager)).toHaveLength(1)
-    })
-  })
-
   describe('itemsPerPage property', () => {
     it('should limit the number of items shown at one time', () => {
       const component = mount(
@@ -822,6 +806,36 @@ describe('Table component', () => {
       const result = PokeDex.slice(0, 3).map(p => p.Name)
 
       expect(match.map(e => e.text())).toEqual(result)
+    })
+  })
+
+  describe('usePager property', () => {
+    it('should display a pager', () => {
+      const component = mount(
+        <Provider>
+          <Table
+            columns={[ { field: 'Name' } ]}
+            data={PokeDex}
+            usePager
+          />
+        </Provider>
+      )
+
+      expect(component.find(Pager)).toHaveLength(1)
+    })
+
+    it('shouldn\'t display a pager if there are no items', () => {
+      const component = mount(
+        <Provider>
+          <Table
+            columns={[ { field: 'Name' } ]}
+            data={[]}
+            usePager
+          />
+        </Provider>
+      )
+
+      expect(component.find(Pager)).toHaveLength(0)
     })
   })
 })

@@ -404,9 +404,11 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 
 		const sortedData = this.sortData(items).slice(lowerBound, upperBound);
 
+		const shouldShowPaper = !!usePager && totalItems > 0;
+
 		return (
 			<>
-				{!!usePager &&
+				{shouldShowPaper &&
 					(_pagerPosition === 'top' || _pagerPosition === 'both') && (
 						<Pager
 							totalItems={totalItems}
@@ -503,7 +505,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 					</BaseTable>
 				</BaseTableWrapper>
 
-				{!!usePager &&
+				{shouldShowPaper &&
 					(_pagerPosition === 'bottom' || _pagerPosition === 'both') && (
 						<Pager
 							totalItems={totalItems}
