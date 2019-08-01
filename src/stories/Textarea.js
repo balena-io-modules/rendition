@@ -26,7 +26,7 @@ class TextareaHOC extends React.Component {
   }
 }
 
-storiesOf('Core/Textarea', module)
+storiesOf('Next/Textarea', module)
   .addDecorator(withReadme(Readme))
   .addDecorator(withScreenshot())
   .add('Standard', () => {
@@ -43,6 +43,28 @@ storiesOf('Core/Textarea', module)
       <Provider>
         <Box m={3}>
           <Textarea monospace placeholder='Placeholder text' />
+        </Box>
+      </Provider>
+    )
+  })
+  .add('Disabled', () => {
+    return (
+      <Provider>
+        <Box m={3}>
+          <Textarea disabled placeholder='Placeholder text' />
+        </Box>
+      </Provider>
+    )
+  })
+  .add('Read only', () => {
+    return (
+      <Provider>
+        <Box m={3}>
+          <Textarea
+            readOnly
+            placeholder='Placeholder text'
+            value='Read only value'
+          />
         </Box>
       </Provider>
     )

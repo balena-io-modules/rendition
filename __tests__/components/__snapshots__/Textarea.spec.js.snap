@@ -12,34 +12,55 @@ exports[`Textarea component should match the stored snapshot 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c2 {
-  border-radius: 3px;
+.c3 {
+  box-sizing: border-box;
   font-size: inherit;
-  border: 1px solid #c6c8c9;
-  padding: 8px 16px;
+  font-family: inherit;
+  border: none;
+  -webkit-appearance: none;
+  padding: 11px;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font-weight: 400;
+  margin: 0;
+  border: 1px solid #DDE1f0;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.c3::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #abb9c5;
+}
+
+.c3::-moz-placeholder {
+  color: #abb9c5;
+}
+
+.c3:-ms-input-placeholder {
+  color: #abb9c5;
+}
+
+.c3::-moz-focus-inner {
+  border: none;
+  outline: none;
+}
+
+.c2 {
+  padding: 14px 20px;
+  color: #3c3e42;
+  cursor: auto;
   resize: vertical;
   display: block;
   width: 100%;
 }
 
-.c2:hover {
-  box-shadow: 0 0 4px 1px rgba(0,0,0,0.1);
-}
-
-.c2::-webkit-input-placeholder {
-  color: #c6c8c9;
-}
-
-.c2::-moz-placeholder {
-  color: #c6c8c9;
-}
-
-.c2:-ms-input-placeholder {
-  color: #c6c8c9;
-}
-
-.c2::placeholder {
-  color: #c6c8c9;
+.c2:focus {
+  border-color: #527699;
 }
 
 .c0 {
@@ -61,7 +82,10 @@ exports[`Textarea component should match the stored snapshot 1`] = `
   className="c0 c1"
 >
   <textarea
-    className="c2"
+    className="c2 c3"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
   />
 </div>
 `;

@@ -1,27 +1,37 @@
+import {
+	TextArea as GrommetTextArea,
+	TextAreaProps as GrommetTextAreaProps,
+} from 'grommet';
 import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../asRendition';
 import { DefaultProps, RenditionSystemProps } from '../common-types';
-import { radius } from '../theme';
-import { monospace, px } from '../utils';
+import { monospace } from '../utils';
 
-const Base = styled.textarea`
-	border-radius: ${px(radius)};
-	font-size: inherit;
-	border: 1px solid ${props => props.theme.colors.gray.main};
-	padding: 8px 16px;
+const getBorderColor = (props: InternalTextareaProps & { theme: any }) => {
+	if (props.invalid) {
+		return props.theme.colors.danger.main;
+	}
+	if (props.valid) {
+		return props.theme.colors.success.main;
+	}
+};
+
+const StyledGrommetTextArea = styled(GrommetTextArea)`
+	${monospace};
+
+	padding: 14px 20px;
+	color: ${props => props.theme.colors.text.main};
+	cursor: ${props => (props.disabled ? 'not-allowed' : 'auto')};
+	border-color: ${getBorderColor};
+
 	resize: vertical;
 	display: block;
 	width: 100%;
 
-	&:hover {
-		box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1);
+	&:focus {
+		border-color: ${props => props.theme.colors.tertiary.main};
 	}
-	&::placeholder {
-		color: ${props => props.theme.colors.gray.main};
-	}
-
-	${monospace};
 `;
 
 const Component = ({
@@ -45,10 +55,12 @@ const Component = ({
 		rowsProp = minRows;
 	}
 
-	return <Base rows={rowsProp} {...props} />;
+	return <StyledGrommetTextArea rows={rowsProp} {...props} />;
 };
 
-export interface InternalTextareaProps extends DefaultProps {
+export interface InternalTextareaProps
+	extends DefaultProps,
+		GrommetTextAreaProps {
 	monospace?: boolean;
 	autoComplete?: string;
 	autoFocus?: boolean;
@@ -58,18 +70,18 @@ export interface InternalTextareaProps extends DefaultProps {
 	form?: string;
 	maxLength?: number;
 	minLength?: number;
-	name?: string;
-	placeholder?: string;
 	readOnly?: boolean;
 	required?: boolean;
 	rows?: number;
-	value?: string;
 	wrap?: string;
 
 	onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
 	autoRows?: boolean;
 	maxRows?: number;
 	minRows?: number;
+
+	invalid?: boolean;
+	valid?: boolean;
 }
 
 export type TextareaProps = InternalTextareaProps & RenditionSystemProps;
