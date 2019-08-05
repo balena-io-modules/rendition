@@ -9,7 +9,12 @@
   "license": "Apache-2.0",
   "main": "./dist/index.js",
   "module": "./dist_esm5/index.js",
-  "sideEffects": false,
+  "sideEffects": [
+    "./src/asRendition.tsx",
+    "./src/components/Provider.tsx",
+    "./dist_esm5/asRendition.js",
+    "./dist_esm5/components/Provider.js"
+  ],
   "files": [
     "dist/",
     "dist_esm5/",
