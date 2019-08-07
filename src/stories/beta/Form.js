@@ -8,11 +8,16 @@ import { Form } from '../../unstable/'
 import { Markdown } from '../../extra/Markdown'
 import { MermaidWidget } from '../../extra/Form/mermaid'
 import { MarkdownWidget } from '../../extra/Form/markdown'
+import { CaptchaWidget } from '../../extra/Form/captcha'
 import Readme from '../README/Form.md'
 
 // Register the extra format widgets to the Form component
 Form.registerWidget('markdown', MarkdownWidget)
 Form.registerWidget('mermaid', MermaidWidget)
+Form.registerWidget('captcha', CaptchaWidget)
+
+// Any valid key would work in order to show the captcha in the story.
+window.RECAPTCHA_V2_API_KEY = '6Ld-faYUAAAAAF92j1FX-GgG0uNPbw9sCCmnbJ2D'
 
 import zxcvbn from 'zxcvbn'
 window.zxcvbn = zxcvbn
@@ -308,6 +313,10 @@ storiesOf('Beta/Form', module)
         Markdown: {
           type: 'string',
           format: 'markdown'
+        },
+        Captcha: {
+          type: 'string',
+          format: 'captcha'
         }
       }
     }
