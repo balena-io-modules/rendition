@@ -13,10 +13,30 @@ storiesOf('Next/Tabs', module)
       <Provider>
         <Tabs p={3}>
           <Tab title='Tab 1'>
-            <Txt>Here is tab #1</Txt>
+            <Txt mt={3}>Here is tab #1</Txt>
           </Tab>
           <Tab title='Tab 2'>
-            <Txt>Here is tab #2</Txt>
+            <Txt mt={3}>Here is tab #2</Txt>
+          </Tab>
+          <Tab title='Tab 3'>
+            <Txt mt={3}>Here is tab #3</Txt>
+          </Tab>
+        </Tabs>
+      </Provider>
+    )
+  })
+  .add('Long tab names', () => {
+    return (
+      <Provider>
+        <Tabs p={3}>
+          <Tab title='This is a very long tab name'>
+            <Txt mt={3}>Here is tab #1</Txt>
+          </Tab>
+          <Tab title='This is another very long tab name'>
+            <Txt mt={3}>Here is tab #2</Txt>
+          </Tab>
+          <Tab title='And this is a third very long tab name'>
+            <Txt mt={3}>Here is tab #3</Txt>
           </Tab>
         </Tabs>
       </Provider>
