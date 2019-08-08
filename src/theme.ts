@@ -247,8 +247,25 @@ export default {
 		},
 	},
 	tab: {
-		extend: 'border: none;',
-		color: colors.primary.main,
+		extend: `padding: ${px(space[1])} ${px(space[3])}`,
+		color: colors.secondary.main,
+		margin: 'none',
+		border: {
+			size: 'xsmall',
+			color: colors.quartenary.main,
+			active: {
+				color: colors.primary.main,
+			},
+			hover: {
+				color: colors.quartenary.main,
+			},
+		},
+		hover: {
+			color: colors.primary.dark,
+		},
+		active: {
+			color: colors.primary.main,
+		},
 	},
 	checkBox: {
 		size: '20px',
