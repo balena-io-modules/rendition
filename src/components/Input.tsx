@@ -35,14 +35,16 @@ const StyledGrommetInput = styled(GrommetTextInput)<{
 	}
 `;
 
-const Input = ({ ...otherProps }: InternalInputProps) => {
-	return <StyledGrommetInput {...otherProps} />;
-};
+const Input = React.forwardRef(({ ...otherProps }: InternalInputProps, ref) => {
+	// @ts-ignore The grommet typings don't include `ref`, but they do pass it to the input component.
+	return <StyledGrommetInput {...otherProps} ref={ref} />;
+});
 
 // TODO: Fix all typings in grommet
 export interface InternalInputProps
 	extends Omit<GrommetTextInputProps, 'placeholder'>,
-		Omit<DefaultProps, 'onSelect'> {
+		Omit<DefaultProps, 'onSelect'>,
+		React.RefAttributes<HTMLInputElement> {
 	onChange?: React.ChangeEventHandler<HTMLInputElement>;
 
 	placeholder?: string;
@@ -51,6 +53,8 @@ export interface InternalInputProps
 	readOnly?: boolean;
 	disabled?: boolean;
 	pattern?: string;
+	maxLength?: number;
+	form?: string;
 
 	invalid?: boolean;
 	valid?: boolean;
