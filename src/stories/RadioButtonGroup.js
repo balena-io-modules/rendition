@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Flex, Provider, RadioButtonGroup } from '..'
-import Readme from './README/Button.md'
+import Readme from './README/RadioButtonGroup.md'
 
 storiesOf('Next/RadioButtonGroup', module)
   .addDecorator(withReadme(Readme))

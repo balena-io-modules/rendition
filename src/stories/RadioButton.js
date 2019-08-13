@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Provider, RadioButton } from '../'
-import Readme from './README/Button.md'
+import Readme from './README/RadioButton.md'
 
 storiesOf('Next/RadioButton', module)
   .addDecorator(withReadme(Readme))
