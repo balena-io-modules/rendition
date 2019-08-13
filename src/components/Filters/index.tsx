@@ -417,58 +417,63 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 									<RelativeBox key={index}>
 										{index > 0 && <Txt my={2}>OR</Txt>}
 										<Flex>
-											<Select<{ field: string; title: string }>
-												options={map(
-													this.state.schema.properties,
-													(s: JSONSchema6, field) => ({
-														field,
-														title: s.title || field,
-													}),
-												)}
-												valueKey="field"
-												labelKey="title"
-												// TODO: Remove this logic and pass the primitive value when this is fixed: https://github.com/grommet/grommet/issues/3154
-												value={
-													this.state.schema.properties
-														? {
-																field,
-																title:
-																	(this.state.schema.properties[
-																		field
-																	] as JSONSchema6).title || field,
-														  }
-														: { field }
-												}
-												onChange={({ option }) =>
-													this.setEditField(option.field, index)
-												}
-											/>
+											<Box flex={1}>
+												<Select<{ field: string; title: string }>
+													options={map(
+														this.state.schema.properties,
+														(s: JSONSchema6, field) => ({
+															field,
+															title: s.title || field,
+														}),
+													)}
+													valueKey="field"
+													labelKey="title"
+													// TODO: Remove this logic and pass the primitive value when this is fixed https://github.com/grommet/grommet/issues/3154
+													value={
+														this.state.schema.properties
+															? {
+																	field,
+																	title:
+																		(this.state.schema.properties[
+																			field
+																		] as JSONSchema6).title || field,
+															  }
+															: { field }
+													}
+													onChange={({ option }) =>
+														this.setEditField(option.field, index)
+													}
+												/>
+											</Box>
 											{operators.length === 1 && (
-												<Txt mx={1} p="7px 20px 0">
+												<Txt py={2} px={3} align="center">
 													{operators[0].label}
 												</Txt>
 											)}
 											{operators.length > 1 && (
-												<Select<{ slug: string; label: any }>
-													ml={1}
-													options={operators}
-													valueKey="slug"
-													labelKey="label"
-													// TODO: Remove this logic and pass the primitive value when this is fixed: https://github.com/grommet/grommet/issues/3154
-													value={operators.find(x => x.slug === operator)}
-													onChange={({ option }) =>
-														this.setEditOperator(option.slug, index)
-													}
-												/>
+												<Box flex={1} mx={1}>
+													<Select<{ slug: string; label: any }>
+														options={operators}
+														valueKey="slug"
+														labelKey="label"
+														// TODO: Remove this logic and pass the primitive value when this is fixed: https://github.com/grommet/grommet/issues/3154
+														value={operators.find(x => x.slug === operator)}
+														onChange={({ option }) =>
+															this.setEditOperator(option.slug, index)
+														}
+													/>
+												</Box>
 											)}
-											<FilterInput
-												operator={operator}
-												value={value}
-												schema={
-													this.state.schema.properties![field] as JSONSchema6
-												}
-												onUpdate={(v: any) => this.setEditValue(v, index)}
-											/>
+											<Box flex={1}>
+												<FilterInput
+													operator={operator}
+													value={value}
+													schema={
+														this.state.schema.properties![field] as JSONSchema6
+													}
+													onUpdate={(v: any) => this.setEditValue(v, index)}
+												/>
+											</Box>
 										</Flex>
 										{index > 0 && (
 											<DeleteButton
