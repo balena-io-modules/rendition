@@ -2,8 +2,7 @@ import memoize from 'lodash/memoize';
 
 export const getDefaultDate = (): string => {
 	const date = new Date();
-	date.setUTCHours(0, 0, 0, 0);
-	return date.toISOString().split('.')[0] + 'Z';
+	return date.toISOString().split('.')[0];
 };
 
 // Normalize a timestamp to a RFC3339 timestamp, which is required for JSON schema.
