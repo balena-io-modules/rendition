@@ -39,6 +39,7 @@ const sanitizerOptions = {
 			'disabled',
 			'checked',
 		],
+		span: ['class'],
 	},
 };
 
