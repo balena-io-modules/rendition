@@ -89,7 +89,7 @@ export default class FormHOC extends React.Component<
 		widgets[name] = value;
 	}
 
-	componentWillReceiveProps(nextProps: FormProps) {
+	UNSAFE_componentWillReceiveProps(nextProps: FormProps) {
 		if (!isEqual(this.props.value, nextProps.value)) {
 			this.setState({
 				value: nextProps.value,

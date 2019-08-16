@@ -88,7 +88,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		this.state.edit.push(this.getCleanEditModel());
 	}
 
-	componentWillReceiveProps(nextProps: FiltersProps) {
+	UNSAFE_componentWillReceiveProps(nextProps: FiltersProps) {
 		const newState: any = {};
 
 		// If the schema prop updates, also update the internal 'flat' schema

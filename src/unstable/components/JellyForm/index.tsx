@@ -48,7 +48,7 @@ class JellyForm extends React.Component<JellyFormProps, JellyFormState> {
 		};
 	}
 
-	componentWillReceiveProps(nextProps: JellyFormProps) {
+	UNSAFE_componentWillReceiveProps(nextProps: JellyFormProps) {
 		if (!isEqual(this.props.value, nextProps.value)) {
 			this.setState({
 				value: runFormulas(this.state.schema, nextProps.value),

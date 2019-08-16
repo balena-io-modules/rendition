@@ -138,7 +138,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		};
 	}
 
-	componentWillReceiveProps(newProps: TableProps<T>) {
+	UNSAFE_componentWillReceiveProps(newProps: TableProps<T>) {
 		if (newProps.sort !== this.props.sort) {
 			this.setState({ sort: newProps.sort } as TableState<T>);
 		}
