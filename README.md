@@ -78,6 +78,7 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [Swatches](#swatches)
 - [Table](#table)
 - [Tabs](#tabs)
+- [Tag](#tag)
 - [Terminal](#terminal)
 - [TextWithCopy](#textwithcopy)
 - [Textarea](#textarea)
@@ -774,6 +775,23 @@ A component used to render tabbed children components.
 
 [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Tabs.js)
 
+### Tag
+
+Represents a name-value pair with an optional operator between.
+
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Tag.js)
+
+#### Props
+
+| Name   | Type   | Default   | Required   | Description   |
+| ------ | ------ | --------- | ---------- | ------------- |
+| `value`     | `string` | - | - | The value part of the tag  |
+| `operator`   | `boolean` | `':'` | - | The operator that goes between the name and value of the tag  |
+| `name`    | `boolean` | - | - | The name part of the tag, if not provided, only the value will be shown  |
+| `multiple`    | `Array<{name?: string, value?: string, operator?: string, prefix?: string}>` | - | - | An array of name-value pairs, with an optional delimiter to be used between the previous and current tag entry |
+| `onClose` | `() => void` | - | - | Callback method, that if passed, a "close" button will be added to the right-hand side of the tag|
+| `onClick` | `() => void` | - | - | Callback method, that if passed, the tag will become clickable |
+
 ### Terminal
 
 An xterm emulator built on top of [xterm.js](https://xtermjs.org/).
@@ -944,6 +962,7 @@ tag can be used with `<Txt.p>`.
 | ------ | ------ | --------- | ---------- | ------------- |
 | `monospace`  | `boolean` | - | - | If true, render text in a monospace font |
 | `bold`  | `boolean` | - | - | If true, render text in a bold font |
+| `italic`  | `boolean` | - | - | If true, render text in an italic font style |
 | `caps`  | `boolean` | - | - | If true, render text in uppercase |
 | `align`  | `string` | - | - | Align text inside the component, one of 'left', 'right', 'center', 'justify', 'justify-all', 'start', 'end', 'match-parent', 'inherit', 'initial', 'unset' |
 | `whitespace`  | `string` | - | - | Equivalent to the CSS `white-space` property, one of 'normal', 'nowrap', 'pre', 'pre-line', 'pre-wrap', 'initial', 'inherit' |

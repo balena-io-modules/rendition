@@ -64,6 +64,7 @@ export {
 export { default as Navbar, NavbarProps } from './components/Navbar';
 export { default as Link, LinkProps } from './components/Link';
 export { Tab, TabProps, Tabs, TabsProps } from './components/Tabs';
+export { Tag, TagProps } from './components/Tag';
 
 export { Flex, Box, FlexProps, BoxProps } from './components/Grid';
 export { default as Theme } from './theme';

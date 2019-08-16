@@ -36,6 +36,7 @@ storiesOf('Core/Typography', module)
             <Txt align='center'>Centered</Txt>
             <Txt align='right'>Right</Txt>
             <Txt bold>Bold</Txt>
+            <Txt italic>Italic</Txt>
             <Txt monospace>Monospace</Txt>
             <Txt.span color='blue'>Inline </Txt.span>
             <Txt.span color='red'>Inline </Txt.span>
