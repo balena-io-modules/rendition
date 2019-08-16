@@ -15,6 +15,13 @@ import {
 import FiltersSummary from '../../dist/components/Filters/Summary'
 import { ViewListItem } from '../../dist/components/Filters/ViewsMenu'
 
+/* FieldSummary buttons in order:
+  0. Clear all filters
+  1. Save view
+  2. Edit single filter
+  3. Remove filter
+*/
+
 const schema = {
   type: 'object',
   properties: {
@@ -156,10 +163,11 @@ describe('Filters component', () => {
         </Provider>
       )
 
-      withOneViewScope.find('button').at(2).simulate('click')
+      // Looking for 'Save view' button
+      withOneViewScope.find('button').at(3).simulate('click')
       expect(withOneViewScope.find(Select)).toHaveLength(0)
 
-      withNoViewScopes.find('button').at(2).simulate('click')
+      withNoViewScopes.find('button').at(3).simulate('click')
       expect(withNoViewScopes.find(Select)).toHaveLength(0)
 
       withOneViewScope.unmount()
@@ -177,7 +185,8 @@ describe('Filters component', () => {
         </Provider>
       )
 
-      component.find('button').at(2).simulate('click')
+      // Looking for 'Save view' button
+      component.find('button').at(3).simulate('click')
       expect(component.find(Select)).toHaveLength(1)
 
       component.unmount()
@@ -369,12 +378,6 @@ describe('Filters component', () => {
       component.find('input').simulate('change', { target: { value: 'Squirtle' } })
       expect(filters.state.searchString).toEqual('Squirtle')
 
-      /* Buttons in order:
-        0. Save view
-        1. Clear all filters
-        2. Edit single filter
-        3. Remove filter
-      */
       component.find(FiltersSummary).find('button').at(3).simulate('click')
       expect(filters.state.searchString).toEqual('')
 
@@ -405,7 +408,7 @@ describe('Filters component', () => {
       component
         .find(FiltersSummary)
         .find('button')
-        .at(1)
+        .at(0)
         .simulate('click')
       expect(component.find(FiltersSummary)).toHaveLength(0)
       expect(filters.state.searchString).toEqual('')

@@ -1,5 +1,6 @@
 import { JSONSchema6 } from 'json-schema';
 import * as React from 'react';
+import FaChartPie from 'react-icons/lib/fa/pie-chart';
 import { FiltersView, ViewScope } from '.';
 import Button from '../Button';
 import { Box, Flex } from '../Grid';
@@ -94,30 +95,20 @@ class FilterSummary extends React.Component<
 				)}
 				<Flex mb={2} justifyContent="space-between">
 					<Flex>
-						<Txt
-							fontSize={13}
-							color={this.props.dark ? '#fff' : 'secondary.main'}
-						>
-							Filters ({this.props.filters.length})
+						<Txt mr={2} color={this.props.dark ? '#fff' : 'secondary.main'}>
+							<Txt.span bold>Filters</Txt.span> ({this.props.filters.length})
 						</Txt>
-
-						<Button
-							primary
-							plain
-							fontSize={13}
-							ml={3}
-							onClick={() => this.setState({ showForm: !this.state.showForm })}
-						>
-							Save view
+						<Button plain primary onClick={this.props.clearAllFilters}>
+							Clear all
 						</Button>
 					</Flex>
 					<Button
-						danger
+						primary
 						plain
-						fontSize={13}
-						onClick={this.props.clearAllFilters}
+						onClick={() => this.setState({ showForm: !this.state.showForm })}
+						icon={<FaChartPie />}
 					>
-						Clear all filters
+						Save as view
 					</Button>
 				</Flex>
 				<Flex flexWrap="wrap">
