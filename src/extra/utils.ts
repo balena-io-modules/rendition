@@ -26,6 +26,7 @@ const sanitizerOptions = {
 		'h2',
 		'img',
 		'input',
+		'span',
 	]),
 	allowedAttributes: {
 		a: ['href', 'name', 'target', 'rel'],
