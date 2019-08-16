@@ -92,22 +92,32 @@ class FilterSummary extends React.Component<
 						</form>
 					</Modal>
 				)}
-				<Flex mb={2}>
-					<Txt
-						fontSize={13}
-						color={this.props.dark ? '#fff' : 'secondary.main'}
-					>
-						Filters ({this.props.filters.length})
-					</Txt>
+				<Flex mb={2} justifyContent="space-between">
+					<Flex>
+						<Txt
+							fontSize={13}
+							color={this.props.dark ? '#fff' : 'secondary.main'}
+						>
+							Filters ({this.props.filters.length})
+						</Txt>
 
+						<Button
+							primary
+							plain
+							fontSize={13}
+							ml={3}
+							onClick={() => this.setState({ showForm: !this.state.showForm })}
+						>
+							Save view
+						</Button>
+					</Flex>
 					<Button
-						primary
+						danger
 						plain
 						fontSize={13}
-						ml={3}
-						onClick={() => this.setState({ showForm: !this.state.showForm })}
+						onClick={this.props.clearAllFilters}
 					>
-						Save view
+						Clear all filters
 					</Button>
 				</Flex>
 				<Flex flexWrap="wrap">
@@ -133,6 +143,7 @@ export interface FilterSummaryProps {
 	edit: (rule: JSONSchema6) => void;
 	delete: (rule: JSONSchema6) => void;
 	saveView: (name: string, scope: string | null) => void;
+	clearAllFilters: () => void;
 	filters: JSONSchema6[];
 	views: FiltersView[];
 	scopes?: ViewScope[];

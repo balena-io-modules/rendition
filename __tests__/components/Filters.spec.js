@@ -369,7 +369,45 @@ describe('Filters component', () => {
       component.find('input').simulate('change', { target: { value: 'Squirtle' } })
       expect(filters.state.searchString).toEqual('Squirtle')
 
-      component.find(FiltersSummary).find('button').at(2).simulate('click')
+      /* Buttons in order:
+        0. Save view
+        1. Clear all filters
+        2. Edit single filter
+        3. Remove filter
+      */
+      component.find(FiltersSummary).find('button').at(3).simulate('click')
+      expect(filters.state.searchString).toEqual('')
+
+      component.unmount()
+    })
+
+    it('should clear all filters and `searchString` when `clear all filters` gets clicked', () => {
+      const defaultFilters = SchemaSieve.createFilter(schema, [
+        { field: 'Name', operator: 'contains', value: 's' },
+        { field: 'Name', operator: 'contains', value: 'q' }
+      ])
+
+      const component = mount(
+        <Provider>
+          <Filters schema={schema} filters={[defaultFilters]} />
+        </Provider>
+      )
+
+      const filters = component.find(Filters).instance()
+
+      expect(component.find(FiltersSummary)).toHaveLength(1)
+
+      component
+        .find('input')
+        .simulate('change', { target: { value: 'Squirtle' } })
+      expect(filters.state.searchString).toEqual('Squirtle')
+
+      component
+        .find(FiltersSummary)
+        .find('button')
+        .at(1)
+        .simulate('click')
+      expect(component.find(FiltersSummary)).toHaveLength(0)
       expect(filters.state.searchString).toEqual('')
 
       component.unmount()
