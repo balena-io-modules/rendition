@@ -1,5 +1,6 @@
 import { JSONSchema6 } from 'json-schema';
 import * as React from 'react';
+import FaChartPie from 'react-icons/lib/fa/pie-chart';
 import { FiltersView, ViewScope } from '.';
 import Button from '../Button';
 import { Box, Flex } from '../Grid';
@@ -92,22 +93,22 @@ class FilterSummary extends React.Component<
 						</form>
 					</Modal>
 				)}
-				<Flex mb={2}>
-					<Txt
-						fontSize={13}
-						color={this.props.dark ? '#fff' : 'secondary.main'}
-					>
-						Filters ({this.props.filters.length})
-					</Txt>
-
+				<Flex mb={2} justifyContent="space-between">
+					<Flex>
+						<Txt mr={2} color={this.props.dark ? '#fff' : 'secondary.main'}>
+							<Txt.span bold>Filters</Txt.span> ({this.props.filters.length})
+						</Txt>
+						<Button plain primary onClick={this.props.clearAllFilters}>
+							Clear all
+						</Button>
+					</Flex>
 					<Button
 						primary
 						plain
-						fontSize={13}
-						ml={3}
 						onClick={() => this.setState({ showForm: !this.state.showForm })}
+						icon={<FaChartPie />}
 					>
-						Save view
+						Save as view
 					</Button>
 				</Flex>
 				<Flex flexWrap="wrap">
@@ -133,6 +134,7 @@ export interface FilterSummaryProps {
 	edit: (rule: JSONSchema6) => void;
 	delete: (rule: JSONSchema6) => void;
 	saveView: (name: string, scope: string | null) => void;
+	clearAllFilters: () => void;
 	filters: JSONSchema6[];
 	views: FiltersView[];
 	scopes?: ViewScope[];

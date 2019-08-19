@@ -275,6 +275,13 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		this.setState({ filters }, () => this.emitFilterUpdate());
 	}
 
+	clearAllFilters = () => {
+		this.setFilters([]);
+		this.setState({
+			searchString: '',
+		});
+	};
+
 	addCompound() {
 		this.setState(prevState => ({
 			edit: prevState.edit.concat(this.getCleanEditModel()),
@@ -509,6 +516,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 							edit={(filter: JSONSchema6) => this.editFilter(filter)}
 							delete={(filter: JSONSchema6) => this.removeFilter(filter)}
 							saveView={(name, scope) => this.saveView(name, scope)}
+							clearAllFilters={this.clearAllFilters}
 							filters={filters}
 							views={this.state.views || []}
 							schema={this.state.schema}
