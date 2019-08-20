@@ -102,7 +102,7 @@ class NestedModalDemo extends React.Component {
   }
 }
 
-storiesOf('Core/Modal', module)
+storiesOf('Next/Modal', module)
   .addDecorator(withReadme(Readme))
   .addDecorator(withScreenshot({ viewport: { height: 768 } }))
   .add('Standard', () => {
@@ -377,13 +377,6 @@ storiesOf('Next/Modal', module)
     return (
       <Provider>
         <NestedModalDemo />
-      </Provider>
-    )
-  })
-  .add('test', () => {
-    return (
-      <Provider>
-        <Modal>modal</Modal>
       </Provider>
     )
   })
