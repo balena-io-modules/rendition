@@ -11,6 +11,9 @@ export const whitespace = (props: ThemedTxtProps) =>
 export const caps = (props: ThemedTxtProps) =>
 	props.caps ? `text-transform: uppercase, letterSpacing: 0.2em` : null;
 
+export const italic = (props: ThemedTxtProps) =>
+	props.italic ? `font-style: italic` : null;
+
 export const bold = (props: ThemedTxtProps) =>
 	props.bold
 		? `font-weight: ${props.theme.weights[props.theme.weights.length - 1]}`
@@ -29,6 +32,7 @@ const Txt = styled.div<TxtProps>`
 
 	${caps}
 	${bold}
+	${italic}
 `;
 
 const Factory = (tag?: string) => {
@@ -66,6 +70,7 @@ export type Align =
 export interface InternalTxtProps extends DefaultProps {
 	monospace?: boolean;
 	bold?: boolean;
+	italic?: boolean;
 	caps?: boolean;
 	whitespace?: Whitespace;
 	align?: Align;
