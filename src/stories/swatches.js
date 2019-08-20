@@ -90,7 +90,7 @@ const Swatch = withTheme(props => (
   </Flex>
 ))
 
-storiesOf('Core/Swatches', module)
+storiesOf('Next/Swatches', module)
   .addDecorator(withReadme(Readme))
   .addDecorator(withScreenshot())
   .add('All', () => {
