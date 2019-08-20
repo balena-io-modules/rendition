@@ -4,6 +4,7 @@ import * as React from 'react';
 import * as utils from '../../utils';
 import { DataTypeEditProps } from '../Filters';
 import Select, { SelectProps } from '../Select';
+import { getJsonDescription } from './utils';
 
 const getCaption = (value: any, schema: JSONSchema6) => {
 	const item = schema.oneOf!.find(
@@ -82,9 +83,11 @@ export const createFilter = (
 	const base: OneOfFilter = {
 		$id: utils.randomString(),
 		title: operator,
-		description: `${title || field} ${operators[operator].getLabel(
-			schema,
-		)} ${getCaption(value, schema)}`,
+		description: getJsonDescription(
+			title || field,
+			operators[operator].getLabel(schema),
+			getCaption(value, schema) || '',
+		),
 		type: 'object',
 	};
 

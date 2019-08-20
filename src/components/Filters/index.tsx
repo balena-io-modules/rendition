@@ -520,7 +520,6 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 							filters={filters}
 							views={this.state.views || []}
 							schema={this.state.schema}
-							dark={!!this.props.dark}
 						/>
 					)}
 			</FilterWrapper>

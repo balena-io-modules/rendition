@@ -5,6 +5,7 @@ import * as utils from '../../utils';
 import { DataTypeEditProps } from '../Filters';
 import Input, { InputProps } from '../Input';
 import { getDefaultDate, normalizeDateTime } from './date-time-helpers';
+import { getJsonDescription } from './utils';
 
 export const operators = {
 	is: {
@@ -80,9 +81,11 @@ export const createFilter = (
 	const base: DateTimeFilter = {
 		$id: utils.randomString(),
 		title: operator,
-		description: `${title || field} ${operators[operator].getLabel(
-			schema,
-		)} ${value}`,
+		description: getJsonDescription(
+			title || field,
+			operators[operator].getLabel(schema),
+			value,
+		),
 		type: 'object',
 	};
 
