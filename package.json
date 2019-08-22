@@ -13,7 +13,8 @@
   "files": [
     "dist/",
     "dist_esm5/",
-    "docs/"
+    "docs/",
+    "README.md"
   ],
   "engines": {
     "node": ">=8.0.0",
