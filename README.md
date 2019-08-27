@@ -973,6 +973,21 @@ tag can be used with `<Txt.p>`.
 
 Wrap your application in the `<Provider>` component so that child components can correctly inherit the default theme. You can optionally provide your own theme.
 
+### Accessing the theme object
+
+You can access the theme object in `<Provider>`'s descendant components using the `useTheme` hook:
+
+```jsx
+import React from 'react'
+import { useTheme } from 'rendition';
+
+const MyComponent = () => {
+  const theme = useTheme()
+
+  // ...
+}
+```
+
 ### Styled system
 
 All components support [styled-system][styled-system] attributes, allowing you to use a shorthand properties for styling components. The properties can have the properties in the form of `string | number | Array<string | number>`. If an array is provided, then a property is chosen based on the width of the screen. The screen width corresponds to a breakpoint set in the `theme` property of the `Provider` component, by default this is set to `[32, 48, 64, 80]` where each number is the screen width in ems.
