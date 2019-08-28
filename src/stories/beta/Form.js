@@ -217,7 +217,7 @@ storiesOf('Beta/Form', module)
       <Provider>
         <FormDemo
           schema={basicPokedexSchema}
-          value={{
+          formData={{
             Name: 'Squirtle'
           }}
         />
