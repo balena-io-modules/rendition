@@ -95,7 +95,7 @@ class FilterSummary extends React.Component<
 				)}
 				<Flex mb={2} justifyContent="space-between">
 					<Flex>
-						<Txt mr={2} color={this.props.dark ? '#fff' : 'secondary.main'}>
+						<Txt mr={2}>
 							<Txt.span bold>Filters</Txt.span> ({this.props.filters.length})
 						</Txt>
 						<Button plain primary onClick={this.props.clearAllFilters}>
@@ -114,14 +114,12 @@ class FilterSummary extends React.Component<
 				<Flex flexWrap="wrap">
 					{this.props.filters.map((filter, index) => {
 						return (
-							<Box mr={3} mt={2} key={index}>
-								<FilterDescription
-									dark={this.props.dark}
-									filter={filter}
-									edit={() => this.props.edit(filter)}
-									delete={() => this.props.delete(filter)}
-								/>
-							</Box>
+							<FilterDescription
+								key={filter.$id || index}
+								filter={filter}
+								onClick={() => this.props.edit(filter)}
+								onClose={() => this.props.delete(filter)}
+							/>
 						);
 					})}
 				</Flex>
@@ -139,7 +137,6 @@ export interface FilterSummaryProps {
 	views: FiltersView[];
 	scopes?: ViewScope[];
 	schema: JSONSchema6;
-	dark?: boolean;
 }
 
 export interface FilterSummaryState {

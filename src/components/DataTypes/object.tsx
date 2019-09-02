@@ -10,6 +10,7 @@ import * as utils from '../../utils';
 import { DataTypeEditProps } from '../Filters';
 import { Flex } from '../Grid';
 import Input from '../Input';
+import { getJsonDescription } from './utils';
 
 const getKeyLabel = (schema: JSONSchema6) => {
 	const s = find(schema.properties!, { description: 'key' })! as JSONSchema6;
@@ -195,9 +196,11 @@ export const createFilter = (
 	const { title } = schema;
 	const base: ObjectFilter = {
 		title: operator,
-		description: `${title || field} ${operators[operator].getLabel(
-			schema,
-		)} ${format(schema, value)}`,
+		description: getJsonDescription(
+			title || field,
+			operators[operator].getLabel(schema),
+			format(schema, value),
+		),
 		type: 'object',
 	};
 

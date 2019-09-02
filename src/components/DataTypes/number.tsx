@@ -4,6 +4,7 @@ import * as React from 'react';
 import * as utils from '../../utils';
 import { DataTypeEditProps } from '../Filters';
 import Input, { InputProps } from '../Input';
+import { getJsonDescription } from './utils';
 
 export const operators = {
 	is: {
@@ -79,9 +80,11 @@ export const createFilter = (
 	const base: NumberFilter = {
 		$id: utils.randomString(),
 		title: operator,
-		description: `${title || field} ${operators[operator].getLabel(
-			schema,
-		)} ${value}`,
+		description: getJsonDescription(
+			title || field,
+			operators[operator].getLabel(schema),
+			value,
+		),
 		type: 'object',
 		required: [field],
 	};

@@ -265,12 +265,26 @@ storiesOf('Next/Filters', module)
         {
           $id: 'QXe1ev3KzutxZ0lK',
           title: 'is',
-          description: 'Pokemon Name is Squirtle',
+          description:
+            '{"name": "Pokemon Name", "operator": "is", "value": "Squirtle"}',
           type: 'object',
           properties: {
             Name: {
               title: 'Pokemon Name',
               const: 'Squirtle'
+            }
+          }
+        },
+        {
+          $id: 'QXe1ev3KzutxZ0lm',
+          title: 'is',
+          description:
+            '{"name": "Pokemon Name", "operator": "is", "value": "Pikachu"}',
+          type: 'object',
+          properties: {
+            Name: {
+              title: 'Pokemon Name',
+              const: 'Pikachu'
             }
           }
         }

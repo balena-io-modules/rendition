@@ -4,6 +4,7 @@ import * as React from 'react';
 import * as utils from '../../utils';
 import { DataTypeEditProps, FilterSignature } from '../Filters';
 import Select, { SelectProps } from '../Select';
+import { getJsonDescription } from './utils';
 
 export const operators = {
 	is: {
@@ -57,9 +58,11 @@ export const createFilter = (
 	const base: BooleanFilter = {
 		$id: utils.randomString(),
 		title: operator,
-		description: `${title || field} ${operators[operator].getLabel(
-			schema,
-		)} ${value}`,
+		description: getJsonDescription(
+			title || field,
+			operators[operator].getLabel(schema),
+			value,
+		),
 		type: 'object',
 	};
 
