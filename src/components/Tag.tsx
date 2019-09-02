@@ -36,6 +36,10 @@ const TagBase = ({
 	const tagContent = (
 		<Container py={1} px={2}>
 			{tagArray.map((tagEntry, index) => {
+				const nameValueSeparator = tagEntry.operator
+					? ` ${tagEntry.operator} `
+					: ': ';
+
 				return (
 					<React.Fragment key={index}>
 						{index > 0 && (
@@ -47,11 +51,15 @@ const TagBase = ({
 							>{`  ${tagEntry.prefix || ','}  `}</Txt>
 						)}
 
+						{!tagEntry.value && !tagEntry.name && (
+							<TagText italic color="info.main" fontSize={0}>
+								no value
+							</TagText>
+						)}
+
 						{tagEntry.name && (
 							<TagText whitespace="pre" color="info.main" fontSize={0}>
-								{`${tagEntry.name}${
-									tagEntry.operator ? ` ${tagEntry.operator} ` : ': '
-								}`}
+								{`${tagEntry.name}${tagEntry.value ? nameValueSeparator : ''}`}
 							</TagText>
 						)}
 
