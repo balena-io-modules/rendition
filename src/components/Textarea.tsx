@@ -76,6 +76,8 @@ export interface InternalTextareaProps
 	wrap?: string;
 
 	onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
+	onBlur?: React.FocusEventHandler<HTMLTextAreaElement>;
+	onFocus?: React.FocusEventHandler<HTMLTextAreaElement>;
 	autoRows?: boolean;
 	maxRows?: number;
 	minRows?: number;

@@ -43,6 +43,9 @@ export interface FormWidgetProps {
 	/** true if the widget should be autofocused */
 	autofocus: boolean;
 
+	/** the placeholder value for the widget */
+	placeholder: string;
+
 	/** true if the widget is read-only */
 	readonly: boolean;
 

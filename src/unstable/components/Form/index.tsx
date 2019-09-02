@@ -18,6 +18,7 @@ import ObjectFieldTemplate from './templates/ObjectFieldTemplate';
 import BaseInput from './widgets/BaseInput';
 import PasswordWidget from './widgets/PasswordWidget';
 import SelectWidget from './widgets/SelectWidget';
+import TextareaWidget from './widgets/TextareaWidget';
 
 const SUPPORTED_SCHEMA_FORMATS = [
 	'data-url',
@@ -40,6 +41,7 @@ const widgets: {
 	BaseInput,
 	SelectWidget,
 	PasswordWidget,
+	TextareaWidget,
 };
 
 const fields: {

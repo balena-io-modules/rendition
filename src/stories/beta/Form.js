@@ -206,6 +206,12 @@ storiesOf('Beta/Form', module)
               'ui:options': {
                 showPasswordStrengthMeter: true
               }
+            },
+            Description: {
+              'ui:widget': 'textarea',
+              'ui:options': {
+                rows: 5
+              }
             }
           }}
         />
