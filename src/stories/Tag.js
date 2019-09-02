@@ -16,6 +16,8 @@ storiesOf('Next/Tag', module)
           <Tag m={2} name='Tag1' value='value1' />
           <Tag m={2} name='Tag2' operator='has' value='operator' />
           <Tag m={2} value='only value' />
+          <Tag m={2} name='only name' />
+          <Tag m={2} />
         </Box>
       </Provider>
     )
