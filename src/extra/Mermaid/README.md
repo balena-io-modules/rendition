@@ -9,7 +9,7 @@ You can load this component using:
 import { Mermaid } from 'rendition/dist/extra/Mermaid';
 ```
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Mermaid.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/extra/Mermaid/story.js)
 
 ## Props
 

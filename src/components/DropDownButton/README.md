@@ -3,7 +3,7 @@
 Displays a button with an attached dropdown list, `children` of the component
 are rendered inside a dropdown list.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/DropDownButton.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/DropDownButton/story.js)
 
 ## Props
 

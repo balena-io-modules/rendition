@@ -2,7 +2,7 @@
 
 A styled horizontal rule.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Divider.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Divider/story.js)
 
 ## Props
 

@@ -2,7 +2,7 @@
 
 Displays text that can be copied to the clipboard.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/TextWithCopy.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/TextWithCopy/story.js)
 
 ## Props
 

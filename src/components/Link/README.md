@@ -2,7 +2,7 @@
 
 Displays an anchor link.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Typography.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Link/story.js)
 
 ## Props
 

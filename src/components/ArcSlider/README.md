@@ -4,7 +4,7 @@ A slider input that is displayed as an arc. This component will scale in size to
 fit it's container. A label can be added by placing a child element inside this
 component.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/ArcSlider.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/ArcSlider/story.js)
 
 ## Props
 

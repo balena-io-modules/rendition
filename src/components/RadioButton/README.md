@@ -1,6 +1,6 @@
 # RadioButton
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/RadioButton.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/RadioButton/story.js)
 
 ## Props
 

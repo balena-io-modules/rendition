@@ -2,7 +2,7 @@
 
 Section containing content and actions on the same topic. 
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Card.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Card/story.js)
 
 ## Props
 

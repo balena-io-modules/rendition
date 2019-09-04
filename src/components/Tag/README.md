@@ -2,7 +2,7 @@
 
 Represents a name-value pair with an optional operator between.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Tag.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Tag/story.js)
 
 ## Props
 

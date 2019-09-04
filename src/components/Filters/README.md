@@ -4,7 +4,7 @@ A component that can be used for generating filters in the form of [json schema]
 The filters created by this component can be used to filter a collection of
 objects using the `SchemaSieve` object.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Filters.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Filters/story.js)
 
 ## Schema
 

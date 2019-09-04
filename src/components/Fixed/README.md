@@ -2,7 +2,7 @@
 
 Displays an element with a [`fixed`](https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed) position.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Fixed.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Fixed/story.js)
 
 ## Props
 

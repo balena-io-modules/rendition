@@ -2,7 +2,7 @@
 
 Displays an element using [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox).
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Flex.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Grid/Flex.js)
 
 ## Props
 

@@ -1,6 +1,6 @@
 # Banner
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Banner.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Banner/story.js)
 
 ## Props
 
