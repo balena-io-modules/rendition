@@ -49,7 +49,6 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [ArcSlider](#arcslider)
 - [Badge](#badge)
 - [Banner](#banner)
-- [Box](#box)
 - [Button](#button)
 - [ButtonGroup](#buttongroup)
 - [Card](#card)
@@ -59,14 +58,12 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [DropDownButton](#dropdownbutton)
 - [Filters](#filters)
 - [Fixed](#fixed)
+- [Box](#box)
 - [Flex](#flex)
-- [Form](#form)
 - [Heading](#heading)
 - [Img](#img)
 - [Input](#input)
 - [Link](#link)
-- [Markdown](#markdown)
-- [Mermaid](#mermaid)
 - [Modal](#modal)
 - [Navbar](#navbar)
 - [Pager](#pager)
@@ -75,7 +72,6 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [RadioButtonGroup](#radiobuttongroup)
 - [Search](#search)
 - [Select](#select)
-- [Swatches](#swatches)
 - [Table](#table)
 - [Tabs](#tabs)
 - [Tag](#tag)
@@ -84,10 +80,13 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [Textarea](#textarea)
 - [Tooltips](#tooltips)
 - [Txt](#txt)
+- [Markdown](#markdown)
+- [Mermaid](#mermaid)
+- [Form](#form)
 
 ### Alert
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Alert.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Alert/story.js)
 
 #### Props
 
@@ -112,7 +111,7 @@ A slider input that is displayed as an arc. This component will scale in size to
 fit it's container. A label can be added by placing a child element inside this
 component.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/ArcSlider.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/ArcSlider/story.js)
 
 #### Props
 
@@ -131,7 +130,7 @@ The properties of the [`Box`](#box) component are also available.
 By default the background color of a `Badge` component is generated
 automatically from its `text` property, though this can be overridden.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Badge.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Badge/story.js)
 
 #### Props
 
@@ -150,7 +149,7 @@ automatically from its `text` property, though this can be overridden.
 
 ### Banner
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Banner.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Banner/story.js)
 
 #### Props
 
@@ -160,25 +159,9 @@ automatically from its `text` property, though this can be overridden.
 | `minHeight`| `string`| - | - | The minimum height of the `Banner`, eg `180px` |
 
 
-### Box
-
-Displays a block level element.
-
-The basic building block of a rendition application.
-
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Box.js)
-
-#### Props
-
-| Name          | Type      | Default   | Required   | Description                                          |
-| ------ | ------ | --------- | ---------- | ------------- |
-| `flex`      | <code>string &#124; string[]</code> | - | - | Sets `flex`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
-| `order`      | <code>number &#124; string &#124; Array&lt;number &#124; string&gt;</code> | - | - | Sets `order`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
-
-
 ### Button
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Button.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Button/story.js)
 
 #### Props
 
@@ -204,12 +187,12 @@ The basic building block of a rendition application.
 
 Wrapper for buttons to make them stick together.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/ButtonGroup.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/ButtonGroup/story.js)
 ### Card
 
 Section containing content and actions on the same topic. 
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Card.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Card/story.js)
 
 #### Props
 
@@ -223,8 +206,7 @@ Section containing content and actions on the same topic.
 
 ### Checkbox
 
-
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Checkbox.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Checkbox/story.js)
 
 #### Props
 
@@ -234,14 +216,14 @@ Section containing content and actions on the same topic.
 
 A padded container with a responsive width.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Container.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Container/story.js)
 
 
 ### Divider
 
 A styled horizontal rule.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Divider.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Divider/story.js)
 
 #### Props
 
@@ -255,7 +237,7 @@ A styled horizontal rule.
 Displays a button with an attached dropdown list, `children` of the component
 are rendered inside a dropdown list.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/DropDownButton.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/DropDownButton/story.js)
 
 #### Props
 
@@ -285,7 +267,7 @@ A component that can be used for generating filters in the form of [json schema]
 The filters created by this component can be used to filter a collection of
 objects using the `SchemaSieve` object.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Filters.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Filters/story.js)
 
 #### Schema
 
@@ -378,7 +360,7 @@ A view has the following properties:
 
 Displays an element with a [`fixed`](https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed) position.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Fixed.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Fixed/story.js)
 
 #### Props
 
@@ -389,11 +371,27 @@ Displays an element with a [`fixed`](https://developer.mozilla.org/en-US/docs/We
 | `bottom`      | <code>boolean &#124; ResponsiveStyle</code> | - | - | Sets the distance to the bottom of the containing block. If true, sets the value to zero
 | `left`      | <code>boolean &#124; ResponsiveStyle</code> | - | - | Sets the distance to the left of the containing block. If true, sets the value to zero
 | `z`      | `ResponsiveStyle` | - | - | Sets the z-index of the component |
+### Box
+
+Displays a block level element.
+
+The basic building block of a rendition application.
+
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Grid/Box.js)
+
+#### Props
+
+| Name          | Type      | Default   | Required   | Description                                          |
+| ------ | ------ | --------- | ---------- | ------------- |
+| `flex`      | <code>string &#124; string[]</code> | - | - | Sets `flex`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
+| `order`      | <code>number &#124; string &#124; Array&lt;number &#124; string&gt;</code> | - | - | Sets `order`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
+
+
 ### Flex
 
 Displays an element using [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox).
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Flex.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Grid/Flex.js)
 
 #### Props
 
@@ -403,64 +401,19 @@ Displays an element using [flexbox](https://developer.mozilla.org/en-US/docs/Web
 | `justifyContent`      | <code>string &#124; string[]</code> | - | - | Sets `justify-content`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
 | `flexDirection`      | <code>string &#124; string[]</code> | - | - | Sets `flex-direction`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
 | `flexWrap`      | <code>string &#124; string[]</code> | - | - | Sets `flex-wrap` css property
-### Form
-
-A component that can be used for generating a form from a [json schema](http://json-schema.org/) object. 
-The standard json schema types are supported, as well as the `date-time` format.
-
-Under the hood, this component uses [`react-jsonschema-form`](https://github.com/mozilla-services/react-jsonschema-form) and support
-all [`uiSchema`](https://github.com/mozilla-services/react-jsonschema-form#the-uischema-object) options from that project.
-
-Additional formats are supported, but require supporting widgets to be loaded.
-For example if you would like to support the [mermaid](https://mermaidjs.github.io/) format, you'll need to
-import the widget using `import 'renditon/dist/extra/Form/mermaid'`.
-
-This import only needs to happen once, so it is recommended that its done at the
-root level of your application.
-
-This component is experimental and still under development, if you would like to
-use it, it can be imported using `import { Form } from 'rendition/dist/unstable'`.
-
-
-#### Captcha
-
-If you wish to use a captcha (google recaptcha v2) in your form, you need to load the `captcha` widget using `import { CaptchaWidget } from 'rendition/dist/extra/Form/captcha'` and register it using `registerWidget` (see [story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Form.js)).
-
-In order for the captcha to work, you also need to set a valid recaptcha API key to the `window.RECAPTCHA_V2_API_KEY` variable.
-A gotcha with the captcha widget is, upon submitting, you need to reset the captcha form value where you manage its state. Google only allows a captcha value (generated by clicking the captcha widget) to be verified only once against their API, after which it will be invalid so it needs to be reset.
-
-#### API
-
-##### `registerWidget(format, widget)`
-
-Register a widget that will be used to render fields of the specified format.
-
-#### Props
-
-| Name          | Type      | Default   | Required   | Description                                          |
-| ------ | ------ | --------- | ---------- | ------------- |
-| `schema`    | `object` | - | ✓ | A json schema describing the shape of the data you would like to gather |
-| `submitButtonText` | <code>string &#124; JSX.Element</code> | - | - | A string or JSX element to replace the text in the form submit button |
-| `hideSubmitButton` | `boolean` | - | - | If true, do not display the form submit button |
-| `submitButtonProps` | `object` | - | - | Properties that are passed to the submit button, these are the same props used for the [`Button`](#button) component |
-| `value` | `*` | - | - | The data that should be displayed in the form |
-| `onFormChange` | `(result: object) => void` | - | - | A function that is called when form data changes |
-| `onFormSubmit` | `(result: object) => void` | - | - | A function that is called when the form is submitted |
-| `uiSchema` | `object` | - | - | A configuration object used to change the styling and layout of the form. See the [`react-jsonschema-form`](https://github.com/mozilla-services/react-jsonschema-form) docs for more details |
-
 ### Heading
 
 A component that displays a heading. By default an `<h3>` tag is used. The exact
 heading type can be specifed by appending the element name to the component, for
 example `<Heading.h1>`, `<Heading.h2>`, `<Heading.h3>` etc.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Typography.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Heading/story.js)
 
 ### Img
 
 Displays an image.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Img.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Img/story.js)
 
 #### Inheritance
 
@@ -468,7 +421,7 @@ The attributes of an [`<img>`](https://developer.mozilla.org/en-US/docs/Web/HTML
 
 ### Input
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Input.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Input/story.js)
 
 #### Props
 
@@ -488,7 +441,7 @@ The attributes of an [`<input>`](https://developer.mozilla.org/en-US/docs/Web/HT
 
 Displays an anchor link.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Typography.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Link/story.js)
 
 #### Props
 
@@ -502,57 +455,12 @@ Displays an anchor link.
 The attributes of an [`<a>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) element are also available.
 
 
-### Markdown
-
-A simple component for rendering [GitHub flavored markdown](https://github.github.com/gfm/). This component
-sanitizes input.
-This component is not loaded by default as it relies on a markdown parsing package 
-that you may not want to include in your application.
-You can load this component using:
-
-```
-import { Markdown } from 'rendition/dist/extra/Markdown';
-```
-
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Markdown.js)
-
-#### Props
-
-| Name   | Type   | Default   | Required   | Description   |
-| ------ | ------ | --------- | ---------- | ------------- |
-| `children`  | `string` | - | ✓ | The markdown source that should be rendered |
-
-Any other properties supplied are spread to the root element ([`Txt`](#txt)).
-
-#### Inheritance
-
-The properties of the [`Txt`](#txt) component are also available.
-### Mermaid
-
-Generate charts from text using [mermaidjs](https://mermaidjs.github.io/).
-This component is not loaded by default as it relies on the mermaidjs library
-that you may not want to include in your application.
-You can load this component using:
-
-```
-import { Mermaid } from 'rendition/dist/extra/Mermaid';
-```
-
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Mermaid.js)
-
-#### Props
-
-| Name   | Type   | Default   | Required   | Description   |
-| ------ | ------ | --------- | ---------- | ------------- |
-| `value`  | `string` | - | ✓ | The mermaid source that should be rendered |
-
-
 ### Modal
 
 Displays a centrally position modal overlay. Children passed to this component
 are rendered inside the modal.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Modal.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Modal/story.js)
 
 #### Props
 
@@ -573,7 +481,7 @@ are rendered inside the modal.
 
 A component used to render a navigation bar.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Navbar.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Navbar/story.js)
 
 #### Props
 
@@ -585,7 +493,7 @@ A component used to render a navigation bar.
 
 Displays a pager widget.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Pager.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Pager/story.js)
 
 #### Props
 
@@ -601,7 +509,7 @@ Displays a pager widget.
 
 Displays a progress bar using a value representing a percentage.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/ProgressBar.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/ProgressBar/story.js)
 
 #### Props
 
@@ -622,7 +530,7 @@ Displays a progress bar using a value representing a percentage.
 
 ### RadioButton
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/RadioButton.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/RadioButton/story.js)
 
 #### Props
 
@@ -636,7 +544,7 @@ Displays a progress bar using a value representing a percentage.
 
 ### RadioButtonGroup
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/RadioButtonGroup.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Search/story.js)
 
 #### Props
 
@@ -651,7 +559,7 @@ Displays a progress bar using a value representing a percentage.
 
 Displays an input styled as a search bar.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Search.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Search/story.js)
 
 #### Props
 
@@ -665,7 +573,7 @@ Displays an input styled as a search bar.
 
 ### Select
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Select.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Select/story.js)
 
 #### Props
 
@@ -684,20 +592,11 @@ You can refer to the [grommet select page](https://v2.grommet.io/select) for all
 
 
 
-### Swatches
-
-This story displays the colors available in the `Theme` object exported from
-`rendtion`. The values are also available to all styled components used within
-the `Provider` component. See the [styled components documentation](https://www.styled-components.com/docs/advanced#theming) for more
-information
-
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/swatches.js)
-
 ### Table
 
 A component used to generate a styled table.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Table.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Table/story.js)
 
 #### Columns
 
@@ -773,13 +672,13 @@ This method requires that you have provided a `rowKey` property.
 
 A component used to render tabbed children components.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Tabs.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Tabs/story.js)
 
 ### Tag
 
 Represents a name-value pair with an optional operator between.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Tag.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Tag/story.js)
 
 #### Props
 
@@ -796,7 +695,7 @@ Represents a name-value pair with an optional operator between.
 
 An xterm emulator built on top of [xterm.js](https://xtermjs.org/).
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Terminal.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Terminal/story.js)
 
 #### API
 
@@ -876,7 +775,7 @@ instance instead of creating a new one.
 
 Displays text that can be copied to the clipboard.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/TextWithCopy.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/TextWithCopy/story.js)
 
 #### Props
 
@@ -887,7 +786,7 @@ Displays text that can be copied to the clipboard.
 
 ### Textarea
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Textarea.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Textarea/story.js)
 
 #### Props
 
@@ -906,7 +805,8 @@ The attributes of a [`<textarea>`](https://developer.mozilla.org/en-US/docs/Web/
 
 ### Tooltips
 
-Tooltips can be added to a supported component using the `tooltip` attribute.
+Tooltips are somewhat special in how they are used. 
+Instead of using them as a typical React component, they can be added to a supported component using the `tooltip` attribute.
 For example, to add a tooltip to a `Button` component you would do the
 following:
 
@@ -947,14 +847,14 @@ The following rendition components support the `tooltip` attribute:
 - `Txt`
 - `Link`
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Tooltip.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Tooltip/story.js)
 
 ### Txt
 
 Displays a text block. A `<span>` tag can be used with `<Txt.span>` and a `<p>`
 tag can be used with `<Txt.p>`.
 
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/stories/Typography.js)
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Txt/story.js)
 
 #### Props
 
@@ -967,6 +867,96 @@ tag can be used with `<Txt.p>`.
 | `align`  | `string` | - | - | Align text inside the component, one of 'left', 'right', 'center', 'justify', 'justify-all', 'start', 'end', 'match-parent', 'inherit', 'initial', 'unset' |
 | `whitespace`  | `string` | - | - | Equivalent to the CSS `white-space` property, one of 'normal', 'nowrap', 'pre', 'pre-line', 'pre-wrap', 'initial', 'inherit' |
 
+
+### Markdown
+
+A simple component for rendering [GitHub flavored markdown](https://github.github.com/gfm/). This component
+sanitizes input.
+This component is not loaded by default as it relies on a markdown parsing package 
+that you may not want to include in your application.
+You can load this component using:
+
+```
+import { Markdown } from 'rendition/dist/extra/Markdown';
+```
+
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/extra/Markdown/story.js)
+
+#### Props
+
+| Name   | Type   | Default   | Required   | Description   |
+| ------ | ------ | --------- | ---------- | ------------- |
+| `children`  | `string` | - | ✓ | The markdown source that should be rendered |
+
+Any other properties supplied are spread to the root element ([`Txt`](#txt)).
+
+#### Inheritance
+
+The properties of the [`Txt`](#txt) component are also available.
+### Mermaid
+
+Generate charts from text using [mermaidjs](https://mermaidjs.github.io/).
+This component is not loaded by default as it relies on the mermaidjs library
+that you may not want to include in your application.
+You can load this component using:
+
+```
+import { Mermaid } from 'rendition/dist/extra/Mermaid';
+```
+
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/extra/Mermaid/story.js)
+
+#### Props
+
+| Name   | Type   | Default   | Required   | Description   |
+| ------ | ------ | --------- | ---------- | ------------- |
+| `value`  | `string` | - | ✓ | The mermaid source that should be rendered |
+
+
+### Form
+
+A component that can be used for generating a form from a [json schema](http://json-schema.org/) object. 
+The standard json schema types are supported, as well as the `date-time` format.
+
+Under the hood, this component uses [`react-jsonschema-form`](https://github.com/mozilla-services/react-jsonschema-form) and support
+all [`uiSchema`](https://github.com/mozilla-services/react-jsonschema-form#the-uischema-object) options from that project.
+
+Additional formats are supported, but require supporting widgets to be loaded.
+For example if you would like to support the [mermaid](https://mermaidjs.github.io/) format, you'll need to
+import the widget using `import 'renditon/dist/extra/Form/mermaid'`.
+
+This import only needs to happen once, so it is recommended that its done at the
+root level of your application.
+
+This component is experimental and still under development, if you would like to
+use it, it can be imported using `import { Form } from 'rendition/dist/unstable'`.
+
+
+#### Captcha
+
+If you wish to use a captcha (google recaptcha v2) in your form, you need to load the `captcha` widget using `import { CaptchaWidget } from 'rendition/dist/extra/Form/captcha'` and register it using `registerWidget` (see [story source](https://github.com/balena-io-modules/rendition/blob/master/src/unstable/components/Form/story.js)).
+
+In order for the captcha to work, you also need to set a valid recaptcha API key to the `window.RECAPTCHA_V2_API_KEY` variable.
+A gotcha with the captcha widget is, upon submitting, you need to reset the captcha form value where you manage its state. Google only allows a captcha value (generated by clicking the captcha widget) to be verified only once against their API, after which it will be invalid so it needs to be reset.
+
+#### API
+
+##### `registerWidget(format, widget)`
+
+Register a widget that will be used to render fields of the specified format.
+
+#### Props
+
+| Name          | Type      | Default   | Required   | Description                                          |
+| ------ | ------ | --------- | ---------- | ------------- |
+| `schema`    | `object` | - | ✓ | A json schema describing the shape of the data you would like to gather |
+| `submitButtonText` | <code>string &#124; JSX.Element</code> | - | - | A string or JSX element to replace the text in the form submit button |
+| `hideSubmitButton` | `boolean` | - | - | If true, do not display the form submit button |
+| `submitButtonProps` | `object` | - | - | Properties that are passed to the submit button, these are the same props used for the [`Button`](#button) component |
+| `value` | `*` | - | - | The data that should be displayed in the form |
+| `onFormChange` | `(result: object) => void` | - | - | A function that is called when form data changes |
+| `onFormSubmit` | `(result: object) => void` | - | - | A function that is called when the form is submitted |
+| `uiSchema` | `object` | - | - | A configuration object used to change the styling and layout of the form. See the [`react-jsonschema-form`](https://github.com/mozilla-services/react-jsonschema-form) docs for more details |
 
 
 ### Provider
