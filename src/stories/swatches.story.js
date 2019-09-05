@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withScreenshot } from 'storybook-chrome-screenshot'
-import { Box, Flex, Heading, Provider, Txt } from '../../'
+import { Box, Flex, Heading, Provider, Txt } from '../../dist'
 import { withTheme } from 'styled-components'
 import { isLight } from '../utils'
 

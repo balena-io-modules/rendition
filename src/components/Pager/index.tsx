@@ -3,7 +3,7 @@ import FaChevronLeft from 'react-icons/lib/fa/chevron-left';
 import FaChevronRight from 'react-icons/lib/fa/chevron-right';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
-import { Flex, FlexProps } from '../Grid';
+import { Flex, FlexProps } from '../Flex';
 import Txt from '../Txt';
 
 const Pager = ({

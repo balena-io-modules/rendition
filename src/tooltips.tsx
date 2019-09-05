@@ -155,7 +155,7 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 	}
 
 	// Create an observer that will hide the tooltip if the target element is
-	// removed from the dom
+	// removed from the DOM
 	observe(target: HTMLElement) {
 		// If an observer exists, disconnect it
 		if (this.observer) {

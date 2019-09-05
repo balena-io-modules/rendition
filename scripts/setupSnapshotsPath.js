@@ -1,3 +1,4 @@
+// Co-locate snaphots with tests, the only difference being the added extension.
 module.exports = {
   // resolves from test to snapshot path
   resolveSnapshotPath: (testPath, snapshotExtension) =>

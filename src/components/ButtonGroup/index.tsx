@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Flex } from '../Grid';
+import { Flex } from '../Flex';
 
 export default styled(Flex)`
 	> * {

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { UiSchema } from 'react-jsonschema-form';
-import { Box } from '../../../../components/Grid';
+import { Box } from '../../../../components/Box';
 import { Markdown } from '../../../../extra/Markdown';
 import Theme from '../../../../theme';
 import { LabelElement } from '../LabelElement';

@@ -66,7 +66,8 @@ export { default as Link, LinkProps } from './components/Link';
 export { Tab, TabProps, Tabs, TabsProps } from './components/Tabs';
 export { Tag, TagProps } from './components/Tag';
 
-export { Flex, Box, FlexProps, BoxProps } from './components/Grid';
+export { Box, BoxProps } from './components/Box';
+export { Flex, FlexProps } from './components/Flex';
 export { useTheme } from './hooks/useTheme';
 export { default as Theme } from './theme';
 export { Theme as ThemeType } from './common-types';

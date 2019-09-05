@@ -49,6 +49,7 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [ArcSlider](#arcslider)
 - [Badge](#badge)
 - [Banner](#banner)
+- [Box](#box)
 - [Button](#button)
 - [ButtonGroup](#buttongroup)
 - [Card](#card)
@@ -58,7 +59,6 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [DropDownButton](#dropdownbutton)
 - [Filters](#filters)
 - [Fixed](#fixed)
-- [Box](#box)
 - [Flex](#flex)
 - [Heading](#heading)
 - [Img](#img)
@@ -157,6 +157,22 @@ automatically from its `text` property, though this can be overridden.
 | ------ | ------ | --------- | ---------- | ------------- |
 | `backgroundImage`| `string`| - | - | The path to an image that should be displayed in the background |
 | `minHeight`| `string`| - | - | The minimum height of the `Banner`, eg `180px` |
+
+
+### Box
+
+Displays a block level element.
+
+The basic building block of a rendition application.
+
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Grid/Box.js)
+
+#### Props
+
+| Name          | Type      | Default   | Required   | Description                                          |
+| ------ | ------ | --------- | ---------- | ------------- |
+| `flex`      | <code>string &#124; string[]</code> | - | - | Sets `flex`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
+| `order`      | <code>number &#124; string &#124; Array&lt;number &#124; string&gt;</code> | - | - | Sets `order`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
 
 
 ### Button
@@ -371,22 +387,6 @@ Displays an element with a [`fixed`](https://developer.mozilla.org/en-US/docs/We
 | `bottom`      | <code>boolean &#124; ResponsiveStyle</code> | - | - | Sets the distance to the bottom of the containing block. If true, sets the value to zero
 | `left`      | <code>boolean &#124; ResponsiveStyle</code> | - | - | Sets the distance to the left of the containing block. If true, sets the value to zero
 | `z`      | `ResponsiveStyle` | - | - | Sets the z-index of the component |
-### Box
-
-Displays a block level element.
-
-The basic building block of a rendition application.
-
-[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Grid/Box.js)
-
-#### Props
-
-| Name          | Type      | Default   | Required   | Description                                          |
-| ------ | ------ | --------- | ---------- | ------------- |
-| `flex`      | <code>string &#124; string[]</code> | - | - | Sets `flex`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
-| `order`      | <code>number &#124; string &#124; Array&lt;number &#124; string&gt;</code> | - | - | Sets `order`, if the value is an array, sets a responsive style corresponding to the theme's breakpoints
-
-
 ### Flex
 
 Displays an element using [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox).

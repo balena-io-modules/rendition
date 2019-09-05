@@ -7,8 +7,8 @@ import FaPieChart from 'react-icons/lib/fa/pie-chart';
 import FaTrash from 'react-icons/lib/fa/trash';
 import styled from 'styled-components';
 import { FilterRenderMode, FiltersView } from '.';
+import { Box } from '../Box';
 import DropDownButton, { DropDownButtonProps } from '../DropDownButton';
-import { Box } from '../Grid';
 import Txt from '../Txt';
 import FilterDescription from './FilterDescription';
 

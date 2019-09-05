@@ -11,8 +11,9 @@ import {
 	MaxHeightProps,
 } from 'styled-system';
 import { DefaultProps } from '../../common-types';
+import { Box, BoxProps } from '../Box';
 import Container from '../Container';
-import { Box, BoxProps, Flex, FlexProps } from '../Grid';
+import { Flex, FlexProps } from '../Flex';
 
 const BrandBox = styled(Box)`
 	display: flex;

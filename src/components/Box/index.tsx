@@ -1,17 +1,9 @@
 import styled from 'styled-components';
 import {
-	alignItems,
-	AlignItemsProps,
 	alignSelf,
 	AlignSelfProps,
 	flex,
-	flexDirection,
-	FlexDirectionProps,
 	FlexProps as StyledFlexProps,
-	flexWrap,
-	FlexWrapProps,
-	justifyContent,
-	JustifyContentProps,
 	order,
 	OrderProps,
 } from 'styled-system';
@@ -39,20 +31,3 @@ export const Box = asRendition<
 );
 
 Box.displayName = 'Box';
-
-export interface FlexProps
-	extends BoxProps,
-		FlexWrapProps,
-		FlexDirectionProps,
-		AlignItemsProps,
-		JustifyContentProps {}
-
-export const Flex = styled(Box)<FlexProps>`
-	display: flex;
-	${flexWrap};
-	${flexDirection};
-	${alignItems};
-	${justifyContent};
-`;
-
-Flex.displayName = 'Flex';

@@ -13,7 +13,7 @@ import {
 	Sizing,
 } from '../../common-types';
 import { bold, getColor, normal, px } from '../../utils';
-import { Flex } from '../Grid';
+import { Flex } from '../Flex';
 
 const getPadding = (props: AlertProps) =>
 	props.emphasized ? '15px 40px' : '8px 32px';

@@ -1,6 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Form component should match the stored snapshot 1`] = `
+.c3 {
+  box-sizing: border-box;
+}
+
+.c4 {
+  margin-bottom: 8px;
+}
+
 .c11 {
   display: inline-block;
   box-sizing: border-box;
@@ -128,14 +136,6 @@ exports[`Form component should match the stored snapshot 1`] = `
 .c10:focus:enabled svg,
 .c10:active:enabled svg {
   color: white !important;
-}
-
-.c3 {
-  box-sizing: border-box;
-}
-
-.c4 {
-  margin-bottom: 8px;
 }
 
 .c8 {

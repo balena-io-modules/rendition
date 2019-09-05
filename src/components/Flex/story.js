@@ -2,8 +2,8 @@ import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
-import { Box, Flex, Provider } from '../../'
-import Readme from './Flex.md'
+import { Box, Flex, Provider } from '../..'
+import Readme from './README.md'
 
 storiesOf('Core/Flex', module)
   .addDecorator(withReadme(Readme))

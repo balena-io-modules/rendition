@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { RenditionSystemProps } from '../../common-types';
 import Button from '../Button';
-import { Flex } from '../Grid';
+import { Flex } from '../Flex';
 import Txt from '../Txt';
 
 const Container = styled(Flex)`
