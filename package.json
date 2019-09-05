@@ -35,9 +35,9 @@
     "test": "npm run build && npm run test:fast && npm run catch-uncommitted",
     "test:local-visual": "./scripts/test-screenshots.sh",
     "test:visual": "npm run ci:screenshot -- -o .reg/current && reg-cli .reg/current __screenshots__ .reg/diff -R .reg/report.html",
-    "jest": "jest __tests__ --maxWorkers=4",
-    "eslint": "eslint src __tests__ .storybook",
-    "eslint-fix": "eslint src __tests__ .storybook --fix",
+    "jest": "jest --maxWorkers=4",
+    "eslint": "eslint src **/*.spec.js .storybook",
+    "eslint-fix": "eslint src **/*.spec.js .storybook --fix",
     "tslint": "tslint -t stylish \"src/**/*.ts\" \"src/**/*.tsx\" \"typings/**/*.d.ts\"",
     "tslint-fix": "tslint -t stylish --fix \"src/**/*.ts\" \"src/**/*.tsx\" \"typings/**/*.d.ts\"",
     "lint": "npm run eslint && npm run tslint",
@@ -172,6 +172,7 @@
     "setupFilesAfterEnv": [
       "<rootDir>scripts/setupTestsAfterEnv.js"
     ],
+    "snapshotResolver": "<rootDir>scripts/setupSnapshotsPath.js",
     "moduleFileExtensions": [
       "ts",
       "tsx",
