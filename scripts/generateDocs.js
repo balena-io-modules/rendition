@@ -1,24 +1,45 @@
 const fs = require('fs')
 const path = require('path')
 
-const README_DIR = './src/stories/README'
 const REPLACE_TARGET = '{% COMPONENT_DOCS %}'
 
-const fileNames = fs.readdirSync('./src/stories/README')
+function findByExtension(base, ext, files, result) {
+  files = files || fs.readdirSync(base)
+  result = result || []
 
-const docs = fileNames.map(name => {
-  const file = fs.readFileSync(path.join(README_DIR, name), 'utf8')
+  files.forEach(
+    function (file) {
+      var newbase = path.join(base, file)
+      if (fs.statSync(newbase).isDirectory()) {
+        result = findByExtension(newbase, ext, fs.readdirSync(newbase), result)
+      }
+      else {
+        if (file.substr(-1 * (ext.length + 1)) == '.' + ext) {
+          result.push(newbase)
+        }
+      }
+    }
+  )
+
+  return result
+}
+
+const readmeFilePaths = findByExtension('./src', 'md')
+const tableOfContents = []
+
+const docs = readmeFilePaths.map(readmePath => {
+  const file = fs.readFileSync(readmePath, 'utf8')
+
+  // Extract the component name from the README title
+  const componentName = file.match(/(^#\s*)([\S|:blank:]*)/)[2].trim();
+  tableOfContents.push(`- [${componentName}](#${componentName.toLowerCase()})`)
+
   // Reduce size of markdown headers to better fit the main README format
   return file.replace(/(^|\n)#/g, '$&##')
 })
 
 const content =
-  fileNames
-    .map(file => {
-      const name = file.replace('.md', '')
-      return `- [${name}](#${name.toLowerCase()})`
-    })
-    .join('\n') +
+  tableOfContents.join('\n') +
   '\n\n' +
   docs.join('\n')
 

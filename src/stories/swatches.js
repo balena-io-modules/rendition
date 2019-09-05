@@ -1,10 +1,8 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withScreenshot } from 'storybook-chrome-screenshot'
-import withReadme from 'storybook-readme/with-readme'
-import { Box, Flex, Heading, Provider, Txt } from '../'
+import { Box, Flex, Heading, Provider, Txt } from '../../'
 import { withTheme } from 'styled-components'
-import Readme from './README/Swatches.md'
 import { isLight } from '../utils'
 
 const getColor = color => (isLight(color) ? '#3c3e42' : '#fff')
@@ -91,7 +89,6 @@ const Swatch = withTheme(props => (
 ))
 
 storiesOf('Next/Swatches', module)
-  .addDecorator(withReadme(Readme))
   .addDecorator(withScreenshot())
   .add('All', () => {
     return (
