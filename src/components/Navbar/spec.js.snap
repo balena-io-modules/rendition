@@ -1,0 +1,777 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar renders correctly with a single children prop 1`] = `
+.c3 {
+  box-sizing: border-box;
+}
+
+.c2 {
+  color: white;
+  background-color: #9f9f9f;
+}
+
+.c9 {
+  padding: 8px;
+}
+
+.c11 {
+  margin-left: auto;
+  padding: 8px;
+}
+
+.c13 {
+  margin-left: 0;
+  width: 100%;
+}
+
+.c14 {
+  width: 100%;
+}
+
+.c15 {
+  padding: 8px;
+  width: 100%;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+}
+
+.c0 h1,
+.c0 h2,
+.c0 h3,
+.c0 h4,
+.c0 h5,
+.c0 h6,
+.c0 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+.c5 {
+  max-width: 1184px;
+}
+
+.c4 {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  min-width: 150px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c10 {
+  display: block;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  cursor: pointer;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 0vh;
+  text-align: center;
+  -webkit-transition: max-height 0.4s ease-in-out;
+  transition: max-height 0.4s ease-in-out;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  overflow: hidden;
+}
+
+.c12 a {
+  width: 100%;
+  display: inline-block;
+}
+
+.c17 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c17:active,
+.c17:hover {
+  color: hsl(0,0%,80%);
+}
+
+.c16 {
+  color: white;
+}
+
+@media screen and (min-width:576px) {
+  .c11 {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c13 {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c13 {
+    width: auto;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c14 {
+    width: auto;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c15 {
+    width: auto;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c6 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c10 {
+    display: none;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c12 {
+    max-height: none;
+  }
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2 c3"
+  >
+    <div
+      className="c4 c5"
+    >
+      <div
+        className="c6 c3"
+      >
+        <div
+          className="c7 c3"
+        >
+          <div
+            className="c8 c9 c3"
+          />
+          <div
+            className="c10 c11 c3"
+            display={
+              Array [
+                "block",
+                "none",
+              ]
+            }
+            onClick={[Function]}
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m3.4 9.1h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.2h-33.2v-3.2z"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          className="c12 c13 c3"
+        >
+          <div
+            className="c6 c14 c3"
+          >
+            <div
+              className="c15 c3"
+              onClick={[Function]}
+            >
+              <a
+                className="c16 c17"
+                color="white"
+                href="/docs/"
+              >
+                Docs
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Navbar renders correctly with more than one children prop 1`] = `
+.c3 {
+  box-sizing: border-box;
+}
+
+.c2 {
+  color: white;
+  background-color: #9f9f9f;
+}
+
+.c9 {
+  padding: 8px;
+}
+
+.c11 {
+  margin-left: auto;
+  padding: 8px;
+}
+
+.c13 {
+  margin-left: 0;
+  width: 100%;
+}
+
+.c14 {
+  width: 100%;
+}
+
+.c15 {
+  padding: 8px;
+  width: 100%;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+}
+
+.c0 h1,
+.c0 h2,
+.c0 h3,
+.c0 h4,
+.c0 h5,
+.c0 h6,
+.c0 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+.c5 {
+  max-width: 1184px;
+}
+
+.c4 {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  min-width: 150px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c10 {
+  display: block;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  cursor: pointer;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 0vh;
+  text-align: center;
+  -webkit-transition: max-height 0.4s ease-in-out;
+  transition: max-height 0.4s ease-in-out;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  overflow: hidden;
+}
+
+.c12 a {
+  width: 100%;
+  display: inline-block;
+}
+
+.c17 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c17:active,
+.c17:hover {
+  color: hsl(0,0%,80%);
+}
+
+.c16 {
+  color: white;
+}
+
+@media screen and (min-width:576px) {
+  .c11 {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c13 {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c13 {
+    width: auto;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c14 {
+    width: auto;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c15 {
+    width: auto;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c6 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c10 {
+    display: none;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c12 {
+    max-height: none;
+  }
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2 c3"
+  >
+    <div
+      className="c4 c5"
+    >
+      <div
+        className="c6 c3"
+      >
+        <div
+          className="c7 c3"
+        >
+          <div
+            className="c8 c9 c3"
+          />
+          <div
+            className="c10 c11 c3"
+            display={
+              Array [
+                "block",
+                "none",
+              ]
+            }
+            onClick={[Function]}
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m3.4 9.1h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.2h-33.2v-3.2z"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          className="c12 c13 c3"
+        >
+          <div
+            className="c6 c14 c3"
+          >
+            <div
+              className="c15 c3"
+              onClick={[Function]}
+            >
+              <a
+                className="c16 c17"
+                color="white"
+                href="/docs/"
+              >
+                Docs
+              </a>
+            </div>
+            <div
+              className="c15 c3"
+              onClick={[Function]}
+            >
+              <a
+                className="c16 c17"
+                color="white"
+                href="/changelog/"
+              >
+                changelog
+              </a>
+            </div>
+            <div
+              className="c15 c3"
+              onClick={[Function]}
+            >
+              <a
+                className="c16 c17"
+                color="white"
+                href="/gitter/"
+              >
+                gitter
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Navbar renders correctly with no children prop 1`] = `
+.c3 {
+  box-sizing: border-box;
+}
+
+.c2 {
+  color: white;
+  background-color: #9f9f9f;
+}
+
+.c9 {
+  padding: 8px;
+}
+
+.c11 {
+  margin-left: auto;
+  padding: 8px;
+}
+
+.c13 {
+  margin-left: 0;
+  width: 100%;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+}
+
+.c0 h1,
+.c0 h2,
+.c0 h3,
+.c0 h4,
+.c0 h5,
+.c0 h6,
+.c0 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+.c5 {
+  max-width: 1184px;
+}
+
+.c4 {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  min-width: 150px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c10 {
+  display: block;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  cursor: pointer;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 0vh;
+  text-align: center;
+  -webkit-transition: max-height 0.4s ease-in-out;
+  transition: max-height 0.4s ease-in-out;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  overflow: hidden;
+}
+
+.c12 a {
+  width: 100%;
+  display: inline-block;
+}
+
+@media screen and (min-width:576px) {
+  .c11 {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c13 {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c13 {
+    width: auto;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c6 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c10 {
+    display: none;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c12 {
+    max-height: none;
+  }
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2 c3"
+  >
+    <div
+      className="c4 c5"
+    >
+      <div
+        className="c6 c3"
+      >
+        <div
+          className="c7 c3"
+        >
+          <div
+            className="c8 c9 c3"
+          />
+          <div
+            className="c10 c11 c3"
+            display={
+              Array [
+                "block",
+                "none",
+              ]
+            }
+            onClick={[Function]}
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m3.4 9.1h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.2h-33.2v-3.2z"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          className="c12 c13 c3"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

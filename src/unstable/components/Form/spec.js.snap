@@ -1,0 +1,259 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form component should match the stored snapshot 1`] = `
+.c3 {
+  box-sizing: border-box;
+}
+
+.c4 {
+  margin-bottom: 8px;
+}
+
+.c11 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  border: 1px solid #00AEEF;
+  border-radius: 20px;
+  color: #444444;
+  padding: 4px 30px;
+  font-size: 14px;
+  line-height: 1.5;
+  background: #00AEEF;
+  color: #444444;
+  border-radius: 20px;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+.c11:hover {
+  box-shadow: 0px 0px 0px 2px #00AEEF;
+}
+
+.c9 {
+  box-sizing: border-box;
+  font-size: inherit;
+  font-family: inherit;
+  border: none;
+  -webkit-appearance: none;
+  padding: 11px;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font-weight: 400;
+  margin: 0;
+  border: 1px solid #DDE1f0;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.c9::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.c9::-webkit-input-placeholder {
+  color: #abb9c5;
+}
+
+.c9::-moz-placeholder {
+  color: #abb9c5;
+}
+
+.c9:-ms-input-placeholder {
+  color: #abb9c5;
+}
+
+.c9::-moz-focus-inner {
+  border: none;
+  outline: none;
+}
+
+.c6 {
+  position: relative;
+  width: 100%;
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c10 {
+  font-family: CircularStd,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  height: 38px;
+  white-space: nowrap;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: white;
+}
+
+.c10 svg {
+  color: inherit !important;
+  font-size: 0.925em;
+}
+
+.c10:disabled {
+  cursor: not-allowed;
+}
+
+.c10:hover:enabled,
+.c10:focus:enabled,
+.c10:active:enabled {
+  box-shadow: none;
+  background: hsl(196.29999999999995,100%,37.5%);
+  border-color: hsl(196.29999999999995,100%,37.5%);
+  color: white;
+  opacity: undefined;
+}
+
+.c10:hover:enabled svg,
+.c10:focus:enabled svg,
+.c10:active:enabled svg {
+  color: white !important;
+}
+
+.c8 {
+  height: 38px;
+  padding: 10px;
+  padding-left: 20px;
+  color: #3c3e42;
+  cursor: auto;
+}
+
+.c8:focus {
+  border-color: #527699;
+}
+
+.c7 {
+  width: 100%;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+}
+
+.c0 h1,
+.c0 h2,
+.c0 h3,
+.c0 h4,
+.c0 h5,
+.c0 h6,
+.c0 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+.c5 {
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: #2A506F;
+}
+
+.c2 fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.c2 .panel-danger,
+.c2 .error-detail {
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.c2 .text-danger {
+  color: #FF423D;
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2 c3"
+  >
+    <form
+      className="rjsf"
+      noValidate={false}
+      onSubmit={[Function]}
+    >
+      <div
+        className="form-group field field-object rendition-form__field--root c4 c3"
+      >
+        <fieldset>
+          <div
+            className="form-group field field-string rendition-form__field--root_Name c4 c3"
+          >
+            <label
+              className="control-label c5"
+              htmlFor="root_Name"
+            >
+              Pokemon Name
+            </label>
+            <div
+              className="c6"
+            >
+              <input
+                autoComplete="off"
+                autoFocus={false}
+                className="c7 c8 c9"
+                disabled={false}
+                id="root_Name"
+                label="Pokemon Name"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                readOnly={false}
+                required={false}
+                type="text"
+                value="Bulbasaur"
+              />
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button
+        className="c10 c11"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+`;

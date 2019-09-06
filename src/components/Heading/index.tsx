@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { DefaultProps, RenditionSystemProps } from '../../common-types';
 import { monospace } from '../../utils';
-import { FlexProps } from '../Grid';
+import { FlexProps } from '../Flex';
 import { align, bold, caps } from '../Txt';
 
 const Heading = styled.h3<InternalHeadingProps>`

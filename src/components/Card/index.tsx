@@ -5,8 +5,9 @@ import { DefaultProps, RenditionSystemProps } from '../../common-types';
 
 import asRendition from '../../asRendition';
 import { px } from '../../utils';
+import { Box } from '../Box';
 import Divider from '../Divider';
-import { Box, Flex } from '../Grid';
+import { Flex } from '../Flex';
 import Txt from '../Txt';
 
 const Wrapper = styled.div<{ minHeight?: string }>`

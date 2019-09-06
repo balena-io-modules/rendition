@@ -7,7 +7,7 @@ import { fit as fitTerm } from 'xterm/lib/addons/fit/fit';
 import { Theme as ThemeType } from '../../common-types';
 // TODO: Remove explicit import and use withTheme. There are some issues with the resulting typings when using withTheme, therefore the current workaround.
 import theme from '../../theme';
-import { Box } from '../Grid';
+import { Box } from '../Box';
 import defaultXtermStyle from './XTermDefaultStyle';
 
 const TtyContainer = styled(Box)`

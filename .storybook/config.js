@@ -39,7 +39,7 @@ setScreenshotOptions({
   waitFor: 'fontLoading'
 })
 
-const req = require.context('../src', true, /\.js$/)
+const req = require.context('../src', true, /.*story\.js$/)
 
 const load = () => {
   req.keys().forEach(req)

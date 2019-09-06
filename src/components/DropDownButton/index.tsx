@@ -5,10 +5,11 @@ import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { RenditionSystemProps } from '../../common-types';
 import { px } from '../../utils';
+import { Box } from '../Box';
 import Button, { ButtonProps } from '../Button';
 import Divider from '../Divider';
 import Fixed from '../Fixed';
-import { Box, Flex } from '../Grid';
+import { Flex } from '../Flex';
 
 const TOGGLE_BUTTON_X_PADDING = 16;
 // 12.25 is the width of the Chevron icon + 1px for the right border

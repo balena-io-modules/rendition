@@ -1,7 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { constrainNumber, darken, getAngleBetweenPoints } from '../../utils';
-import { Box, BoxProps, Flex } from '../Grid';
+import { Box, BoxProps } from '../Box';
+import { Flex } from '../Flex';
 
 const ANGLERANGE = 135;
 

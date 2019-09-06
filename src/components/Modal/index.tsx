@@ -5,8 +5,9 @@ import styled, { createGlobalStyle, withTheme } from 'styled-components';
 import { DefaultProps, ResponsiveStyle, Theme } from '../../common-types';
 import { stopPropagation } from '../../utils';
 import { px } from '../../utils';
+import { Box } from '../Box';
 import Button, { ButtonProps } from '../Button';
-import { Box, Flex } from '../Grid';
+import { Flex } from '../Flex';
 import Heading from '../Heading';
 import Txt from '../Txt';
 

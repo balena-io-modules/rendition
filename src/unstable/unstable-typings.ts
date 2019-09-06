@@ -6,8 +6,8 @@ import {
 	UiSchema,
 	Widget,
 } from 'react-jsonschema-form';
+import { BoxProps } from '../components/Box';
 import { ButtonProps } from '../components/Button';
-import { BoxProps } from '../components/Grid';
 
 export interface FormButtonProps extends ButtonProps {
 	type?: 'submit' | 'reset' | 'button';

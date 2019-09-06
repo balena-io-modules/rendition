@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { DefaultProps, RenditionSystemProps } from '../../common-types';
 import { stopEvent } from '../../utils';
-import { Box } from '../Grid';
+import { Box } from '../Box';
 import Txt, { TxtProps } from '../Txt';
 
 const Wrapper = styled(Txt.span)<InternalTextWithCopyProps>`
