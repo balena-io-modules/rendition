@@ -63,6 +63,7 @@ export {
 } from './components/DropDownButton';
 export { default as Navbar, NavbarProps } from './components/Navbar';
 export { default as Link, LinkProps } from './components/Link';
+export { default as List, ListProps } from './components/List';
 export { Tab, TabProps, Tabs, TabsProps } from './components/Tabs';
 export { Tag, TagProps } from './components/Tag';
 

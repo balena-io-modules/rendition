@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ordered list renders correctly 1`] = `
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+}
+
+.c0 h1,
+.c0 h2,
+.c0 h3,
+.c0 h4,
+.c0 h5,
+.c0 h6,
+.c0 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+.c2 {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  counter-reset: ordered-list-counter;
+}
+
+.c2 > li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 > li:first-child {
+  margin-top: 0;
+}
+
+.c2 > li:last-child {
+  margin-bottom: 0;
+}
+
+.c2 > li:before {
+  text-align: center;
+}
+
+.c2 > li {
+  margin: 16px 0;
+  counter-increment: ordered-list-counter;
+}
+
+.c2 > li:before {
+  content: counter(ordered-list-counter);
+  margin-right: 16px;
+  background: #00AEEF;
+  height: 1.5em;
+  width: 1.5em;
+  line-height: 1.5em;
+  color: white;
+  border-radius: 50%;
+}
+
+<div
+  className="c0 c1"
+>
+  <ol
+    className="c2"
+  >
+    <li>
+      <span>
+        Item 1
+      </span>
+    </li>
+    <li>
+      <span>
+        Item 2
+      </span>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`Unordered list renders correctly 1`] = `
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+}
+
+.c0 h1,
+.c0 h2,
+.c0 h3,
+.c0 h4,
+.c0 h5,
+.c0 h6,
+.c0 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+.c2 {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.c2 > li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 > li:first-child {
+  margin-top: 0;
+}
+
+.c2 > li:last-child {
+  margin-bottom: 0;
+}
+
+.c2 > li:before {
+  text-align: center;
+}
+
+.c2 > li {
+  margin: 4px 0;
+}
+
+.c2 > li:before {
+  content: '\\2022';
+  margin-right: 16px;
+  -webkit-transform: translateY( -1px );
+  -ms-transform: translateY( -1px );
+  transform: translateY( -1px );
+  color: #527699;
+}
+
+<div
+  className="c0 c1"
+>
+  <ul
+    className="c2"
+  >
+    <li>
+      <span>
+        Item 1
+      </span>
+    </li>
+    <li>
+      <span>
+        Item 2
+      </span>
+    </li>
+  </ul>
+</div>
+`;
