@@ -8,5 +8,8 @@ A styled horizontal rule.
 
 | Name   | Type   | Default   | Required   | Description   |
 | -------|--------|-----------|------------|-------------- |
-| `height`  | `number` | `2` | - | The height of the divider |
-| `background-color`  | `string` | `#333` | - | The color of the divider |
+| `height`  | `number` | `0.5` | - | The height of the divider |
+| `color`  | `string` | `quartenary.main` | - | The color of the divider |
+| `type`  | `'solid' | 'dashed'` | `'solid` | - | The type of divider |
+| `children`  | `string` | - | - | Textual explanation to go in the middle of the divider |
+

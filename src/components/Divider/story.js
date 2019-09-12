@@ -5,7 +5,7 @@ import * as React from 'react'
 import { Box, Divider, Provider } from '../../'
 import Readme from './README.md'
 
-storiesOf('Core/Divider', module)
+storiesOf('Next/Divider', module)
   .addDecorator(withReadme(Readme))
   .addDecorator(withScreenshot())
   .add('Standard', () => {
@@ -14,6 +14,10 @@ storiesOf('Core/Divider', module)
         <Box m={3}>
           <Divider color='#ccc' />
           <Divider mt={4} />
+          <Divider type='dashed' mt={4} />
+          <Divider type='dashed' mt={4}>
+            some textual context
+          </Divider>
         </Box>
       </Provider>
     )
