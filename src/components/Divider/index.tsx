@@ -10,7 +10,8 @@ const Base = styled.hr<InternalDividerProps>`
 	border: ${props =>
 		`${px(props.height || 0.5)} ${props.type || 'solid'} ${props.color ||
 			props.theme.colors.quartenary.main}}`};
-	height: ${props => px(props.height || 0.5)};
+	width: 100%;
+	height: 0;
 `;
 
 const FlexBase = styled(Base)`

@@ -38,7 +38,7 @@ const Factory = (tag?: string) => {
 };
 
 interface InternalHeadingProps extends DefaultProps {
-	align?: boolean;
+	align?: string;
 	monospace?: boolean;
 	caps?: boolean;
 	bold?: boolean;
