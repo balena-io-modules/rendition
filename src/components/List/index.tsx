@@ -41,6 +41,7 @@ const OrderedList = styled(ListBase).attrs({ as: 'ol' })`
 			background: ${props => props.theme.colors.primary.main};
 			height: ${ORDERED_LIST_SIZE}em;
 			width: ${ORDERED_LIST_SIZE}em;
+			min-width: ${ORDERED_LIST_SIZE}em;
 			line-height: ${ORDERED_LIST_SIZE}em;
 			color: white;
 			border-radius: 50%;
