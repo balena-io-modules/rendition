@@ -25,6 +25,7 @@ const SelectWidget = (props: FormWidgetProps) => {
 				onChange(option.value);
 			}}
 			options={selectOptions}
+			emphasized={options.emphasized}
 			valueKey="value"
 			labelKey="label"
 			disabledKey="disabled"

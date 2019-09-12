@@ -207,6 +207,16 @@ storiesOf('Beta/Form', module)
                 showPasswordStrengthMeter: true
               }
             },
+            Height: {
+              'ui:options': {
+                emphasized: true
+              }
+            },
+            environment: {
+              'ui:options': {
+                emphasized: true
+              }
+            },
             Description: {
               'ui:widget': 'textarea',
               'ui:options': {
