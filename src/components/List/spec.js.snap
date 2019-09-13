@@ -64,6 +64,7 @@ exports[`Ordered list renders correctly 1`] = `
   background: #00AEEF;
   height: 1.5em;
   width: 1.5em;
+  min-width: 1.5em;
   line-height: 1.5em;
   color: white;
   border-radius: 50%;
