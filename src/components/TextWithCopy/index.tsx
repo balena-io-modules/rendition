@@ -41,6 +41,7 @@ const Wrapper = styled(Txt.span)<InternalTextWithCopyProps>`
 		word-wrap: break-word;
 		font-size: 1em;
 		margin-right: 3px;
+		display: inline-block;
 	}
 
 	&:hover .text-with-copy__copy {
