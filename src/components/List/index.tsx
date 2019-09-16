@@ -38,7 +38,7 @@ const OrderedList = styled(ListBase).attrs({ as: 'ol' })`
 		:before {
 			content: counter(ordered-list-counter);
 			margin-right: ${props => props.theme.space[3]}px;
-			background: ${props => props.theme.colors.primary.main};
+			background: ${props => props.theme.colors.info.main};
 			height: ${ORDERED_LIST_SIZE}em;
 			width: ${ORDERED_LIST_SIZE}em;
 			min-width: ${ORDERED_LIST_SIZE}em;

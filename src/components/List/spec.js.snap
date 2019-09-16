@@ -61,7 +61,7 @@ exports[`Ordered list renders correctly 1`] = `
 .c2 > li:before {
   content: counter(ordered-list-counter);
   margin-right: 16px;
-  background: #00AEEF;
+  background: #1496E1;
   height: 1.5em;
   width: 1.5em;
   min-width: 1.5em;
