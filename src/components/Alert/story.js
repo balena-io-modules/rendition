@@ -3,10 +3,10 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
-import { Alert, Box, Provider } from '../../'
+import { Alert, Box, Provider, Link } from '../../'
 import AlertReadme from './README.md'
 
-storiesOf('Core/Alert', module)
+storiesOf('Next/Alert', module)
   .addDecorator(withReadme(AlertReadme))
   .addDecorator(withScreenshot())
   .add('Standard', () => {
@@ -69,6 +69,31 @@ storiesOf('Core/Alert', module)
             <span>This is inline.</span>
             <span>{' As well as this.'}</span>
             <div>This is not</div>
+          </Alert>
+        </Box>
+      </Provider>
+    )
+  })
+  .add('Variants', () => {
+    return (
+      <Provider>
+        <Box m={3}>
+          <Alert my={2} success prefix={null}>
+            Without a prefix
+          </Alert>
+          <Alert my={2} success>
+            Without dismiss
+          </Alert>
+          <Alert my={2} warning>
+            Custom prefix
+          </Alert>
+          <Alert
+            my={2}
+            warning
+            prefix='Custom prefix!'
+            onDismiss={action('case-5')}
+          >
+            With a link element <Link href='test'>link</Link>
           </Alert>
         </Box>
       </Provider>
