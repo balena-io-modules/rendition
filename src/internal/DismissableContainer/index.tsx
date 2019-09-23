@@ -8,11 +8,12 @@ import { getColor, opaque, px } from '../../utils';
 
 const ICON_SIZE = 14;
 
-const Wrapper = styled(Flex)<{ solid?: boolean }>`
+const Wrapper = styled(Flex)<{ solid?: boolean; hasDismissButton: boolean }>`
 	position: relative;
 	margin: 0;
 	padding: ${props => px(props.theme.space[3])};
-	padding-right: ${props => px(props.theme.space[4])};
+	padding-right: ${props =>
+		px(props.hasDismissButton ? props.theme.space[4] : props.theme.space[3])};
 	box-shadow: 0 0 10px 0
 		${props => opaque(props.theme.colors.quartenary.main, 0.15)};
 	border-radius: 10px;
@@ -31,12 +32,20 @@ const DismissButton = styled(Button)<{
 	baselineHeight: number;
 }>`
 	position: absolute;
-	height: ${px(ICON_SIZE)};
-	width: ${px(ICON_SIZE)};
+	& svg {
+		height: ${px(ICON_SIZE)};
+		width: ${px(ICON_SIZE)};
+	}
 	font-size: ${px(ICON_SIZE)};
+	padding: ${props =>
+		px(props.theme.space[2])}; /* give more clickable surface area */
 	top: ${props =>
-		px(props.theme.space[3] + (props.baselineHeight - ICON_SIZE) / 2)};
-	right: ${props => px(props.theme.space[3])};
+		px(
+			props.theme.space[3] -
+				props.theme.space[2] +
+				(props.baselineHeight - ICON_SIZE) / 2,
+		)};
+	right: ${props => px(props.theme.space[3] - props.theme.space[2])};
 `;
 
 export interface DismissableContainerProps extends FlexProps {
@@ -66,7 +75,12 @@ export const DismissableContainer = withTheme(React.forwardRef(
 		const baseline = baselineHeight || theme.fontSizes[1] * theme.lineHeight;
 
 		return (
-			<Wrapper solid={solid} ref={ref as any} {...restProps}>
+			<Wrapper
+				solid={solid}
+				hasDismissButton={Boolean(onDismiss)}
+				ref={ref as any}
+				{...restProps}
+			>
 				{children}
 				{onDismiss && (
 					<DismissButton

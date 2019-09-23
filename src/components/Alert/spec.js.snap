@@ -31,7 +31,7 @@ exports[`Alert renders correctly 1`] = `
   position: relative;
   margin: 0;
   padding: 16px;
-  padding-right: 38px;
+  padding-right: 16px;
   box-shadow: 0 0 10px 0 rgba(221,225,240,0.15);
   border-radius: 10px;
   border: 1px solid #DDE1f0;

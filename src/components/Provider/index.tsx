@@ -1,3 +1,4 @@
+import 'animate.css/animate.min.css';
 import { Grommet } from 'grommet';
 import merge from 'lodash/merge';
 import * as React from 'react';
