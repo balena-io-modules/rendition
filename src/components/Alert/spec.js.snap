@@ -1,43 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Alert renders correctly 1`] = `
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -webkit-justify-content: normal;
-  -ms-flex-pack: normal;
-  justify-content: normal;
-  position: relative;
-  min-height: 38px;
-  padding: 8px 32px;
-  margin: 0;
-  border-radius: 3px;
-  font-family: inherit;
-  font-size: 16px;
-  font-kerning: none;
-  font-weight: 400;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  vertical-align: middle;
-  line-height: 1.1;
-  padding-left: 19px;
-  border: 1px solid;
-  color: #3c3e42;
+.c3 {
+  box-sizing: border-box;
 }
 
-.c2 .c3,
-.c2 .sc-iwsKbI > .sc-gZMcBi {
-  font-weight: 700;
+.c4 {
+  box-sizing: border-box;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .c1 {
@@ -49,6 +21,24 @@ exports[`Alert renders correctly 1`] = `
   -ms-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0;
+  border: 1px solid;
+  min-height: 38px;
+  padding: 8px 16px;
+  border-radius: 3px;
+  font-size: 16px;
+  color: #3c3e42;
 }
 
 .c0 {
@@ -70,9 +60,12 @@ exports[`Alert renders correctly 1`] = `
   className="c0 c1"
 >
   <div
-    className="c2"
+    className="c2 c3"
   >
-    <div>
+    
+    <div
+      className="c4"
+    >
       
       An alert
     </div>

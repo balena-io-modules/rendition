@@ -1,6 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Banner renders correctly 1`] = `
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -26,17 +37,6 @@ exports[`Banner renders correctly 1`] = `
 .c2 {
   padding: 16px;
   color: white;
-}
-
-.c1 {
-  font-family: 'Nunito',Arial,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
 }
 
 .c0 {

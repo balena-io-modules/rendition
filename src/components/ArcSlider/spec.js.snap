@@ -5,6 +5,17 @@ exports[`ArcSlider component should match the stored snapshot 1`] = `
   box-sizing: border-box;
 }
 
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
 .c4 {
   display: block;
   width: 100%;
@@ -34,17 +45,6 @@ exports[`ArcSlider component should match the stored snapshot 1`] = `
   left: 0;
   text-align: center;
   pointer-events: none;
-}
-
-.c1 {
-  font-family: 'Nunito',Arial,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
 }
 
 .c0 {
