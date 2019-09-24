@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Link component Should match the stored snapshot 1`] = `
-.c1 {
+.c0 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -12,22 +12,22 @@ exports[`Link component Should match the stored snapshot 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c0 {
+.c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
 }
 
-.c0 h1,
-.c0 h2,
-.c0 h3,
-.c0 h4,
-.c0 h5,
-.c0 h6,
-.c0 button {
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
   font-family: CircularStd,Arial,sans-serif;
 }
 
-.c3 {
+.c2 {
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
@@ -35,12 +35,12 @@ exports[`Link component Should match the stored snapshot 1`] = `
   display: inline-block;
 }
 
-.c3:active,
-.c3:hover {
+.c2:active,
+.c2:hover {
   color: hsl(196.29999999999995,100%,37.5%);
 }
 
-.c2 {
+.c3 {
   color: #00AEEF;
 }
 

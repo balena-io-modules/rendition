@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox renders correctly 1`] = `
-.c5 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -101,13 +101,13 @@ exports[`Checkbox renders correctly 1`] = `
   background: #00AEEF;
 }
 
-.c4 {
+.c5 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
-.c1 {
+.c0 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -149,29 +149,29 @@ exports[`Checkbox renders correctly 1`] = `
   background: #009dd7;
 }
 
-.c0 {
+.c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
 }
 
-.c0 h1,
-.c0 h2,
-.c0 h3,
-.c0 h4,
-.c0 h5,
-.c0 h6,
-.c0 button {
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
   font-family: CircularStd,Arial,sans-serif;
 }
 
 @media only screen and (max-width:768px) {
-  .c5 {
+  .c4 {
     margin: 0px;
   }
 }
 
 @media only screen and (max-width:768px) {
-  .c5 {
+  .c4 {
     padding: 0px;
   }
 }
@@ -211,14 +211,14 @@ exports[`Checkbox renders correctly 1`] = `
       >
         <input
           checked={true}
-          className="c6"
+          className="c6 "
           onBlur={[Function]}
           onFocus={[Function]}
           type="checkbox"
         />
         <div
           checked={true}
-          className="c7"
+          className="c7 "
         >
           <svg
             checked={true}

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Textarea component should match the stored snapshot 1`] = `
-.c1 {
+.c0 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -12,7 +12,7 @@ exports[`Textarea component should match the stored snapshot 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c3 {
+.c2 {
   box-sizing: border-box;
   font-size: inherit;
   font-family: inherit;
@@ -29,28 +29,28 @@ exports[`Textarea component should match the stored snapshot 1`] = `
   width: 100%;
 }
 
-.c3::-webkit-search-decoration {
+.c2::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-.c3::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   color: #abb9c5;
 }
 
-.c3::-moz-placeholder {
+.c2::-moz-placeholder {
   color: #abb9c5;
 }
 
-.c3:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   color: #abb9c5;
 }
 
-.c3::-moz-focus-inner {
+.c2::-moz-focus-inner {
   border: none;
   outline: none;
 }
 
-.c2 {
+.c3 {
   padding: 14px 20px;
   color: #3c3e42;
   cursor: auto;
@@ -59,22 +59,22 @@ exports[`Textarea component should match the stored snapshot 1`] = `
   width: 100%;
 }
 
-.c2:focus {
+.c3:focus {
   border-color: #527699;
 }
 
-.c0 {
+.c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
 }
 
-.c0 h1,
-.c0 h2,
-.c0 h3,
-.c0 h4,
-.c0 h5,
-.c0 h6,
-.c0 button {
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
   font-family: CircularStd,Arial,sans-serif;
 }
 
@@ -82,7 +82,7 @@ exports[`Textarea component should match the stored snapshot 1`] = `
   className="c0 c1"
 >
   <textarea
-    className="c2 c3"
+    className="c2 c3 "
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}

@@ -115,6 +115,7 @@ export const radius = 3;
 export const font = `'Nunito', Arial, sans-serif`;
 export const titleFont = `CircularStd, Arial, sans-serif`;
 export const monospace = `'Ubuntu Mono', 'Courier New', monospace`;
+export const lineHeight = 1.5;
 
 export default {
 	breakpoints,
@@ -124,13 +125,14 @@ export default {
 	font,
 	titleFont,
 	monospace,
+	lineHeight,
 	colors,
 	radius,
 	global: {
 		font: {
 			family: font,
 			size: px(fontSizes[1]),
-			height: 1.5,
+			height: lineHeight,
 		},
 		control: {
 			disabled: {
@@ -243,7 +245,7 @@ export default {
 	text: {
 		medium: {
 			size: px(fontSizes[1]),
-			height: '1.5',
+			height: lineHeight,
 		},
 	},
 	tab: {

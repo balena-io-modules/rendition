@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RadioButtonGroup renders correctly 1`] = `
-.c3 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18,7 +18,7 @@ exports[`RadioButtonGroup renders correctly 1`] = `
   padding: 0px;
 }
 
-.c5 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -121,7 +121,7 @@ exports[`RadioButtonGroup renders correctly 1`] = `
   height: 12px;
 }
 
-.c1 {
+.c0 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -132,7 +132,7 @@ exports[`RadioButtonGroup renders correctly 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c4 {
+.c5 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -141,8 +141,8 @@ exports[`RadioButtonGroup renders correctly 1`] = `
   cursor: default;
 }
 
-.c4:hover input:not([disabled]) + div,
-.c4:hover input:not([disabled]) + span {
+.c5:hover input:not([disabled]) + div,
+.c5:hover input:not([disabled]) + span {
   border-color: #527699;
 }
 
@@ -183,60 +183,60 @@ exports[`RadioButtonGroup renders correctly 1`] = `
   fill: #FFFFFF;
 }
 
-.c0 {
+.c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
 }
 
-.c0 h1,
-.c0 h2,
-.c0 h3,
-.c0 h4,
-.c0 h5,
-.c0 h6,
-.c0 button {
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
   font-family: CircularStd,Arial,sans-serif;
 }
 
-.c2 label:hover input[checked] + div {
+.c3 label:hover input[checked] + div {
   border-color: #009dd7;
   background: #009dd7;
 }
 
-.c2,
-.c2 > label > span {
+.c3,
+.c3 > label > span {
   font-family: 'Nunito',Arial,sans-serif;
 }
 
-.c2 label input[checked] + div {
+.c3 label input[checked] + div {
   border-color: #00AEEF;
   background: #00AEEF;
 }
 
-.c2 label[disabled] {
+.c3 label[disabled] {
   opacity: 0.4;
 }
 
 @media only screen and (max-width:768px) {
-  .c3 {
+  .c2 {
     margin: 0px;
   }
 }
 
 @media only screen and (max-width:768px) {
-  .c3 {
+  .c2 {
     padding: 0px;
   }
 }
 
 @media only screen and (max-width:768px) {
-  .c5 {
+  .c4 {
     margin: 0px;
   }
 }
 
 @media only screen and (max-width:768px) {
-  .c5 {
+  .c4 {
     padding: 0px;
   }
 }
@@ -299,7 +299,7 @@ exports[`RadioButtonGroup renders correctly 1`] = `
   className="c0 c1"
 >
   <div
-    className="c2 c3"
+    className="c2 c3 "
     value="selected"
   >
     <label
@@ -308,7 +308,7 @@ exports[`RadioButtonGroup renders correctly 1`] = `
       onClick={[Function]}
     >
       <div
-        className="c6"
+        className="c6 "
       >
         <input
           checked={false}
@@ -321,7 +321,7 @@ exports[`RadioButtonGroup renders correctly 1`] = `
           value="disabled"
         />
         <div
-          className="c8"
+          className="c8 "
         />
       </div>
       <span>
@@ -332,12 +332,12 @@ exports[`RadioButtonGroup renders correctly 1`] = `
       className="c9"
     />
     <label
-      className="c10 c5"
+      className="c4 c10"
       disabled={false}
       onClick={[Function]}
     >
       <div
-        className="c6"
+        className="c6 "
       >
         <input
           checked={false}
@@ -350,7 +350,7 @@ exports[`RadioButtonGroup renders correctly 1`] = `
           value="enabled"
         />
         <div
-          className="c8"
+          className="c8 "
         />
       </div>
       <span>
@@ -361,12 +361,12 @@ exports[`RadioButtonGroup renders correctly 1`] = `
       className="c9"
     />
     <label
-      className="c10 c5"
+      className="c4 c10"
       disabled={false}
       onClick={[Function]}
     >
       <div
-        className="c6"
+        className="c6 "
       >
         <input
           checked={true}
@@ -379,7 +379,7 @@ exports[`RadioButtonGroup renders correctly 1`] = `
           value="selected"
         />
         <div
-          className="c12"
+          className="c12 "
         >
           <svg
             className="c13"

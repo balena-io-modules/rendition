@@ -1,11 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pager component should match the stored snapshot 1`] = `
-.c3 {
-  box-sizing: border-box;
-}
-
-.c8 {
+.c7 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
@@ -59,7 +55,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
   box-shadow: 0px 0px 0px 2px #DDE1f0;
 }
 
-.c1 {
+.c0 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -70,7 +66,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c7 {
+.c8 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -92,22 +88,22 @@ exports[`Pager component should match the stored snapshot 1`] = `
   border-color: #DDE1f0;
 }
 
-.c7 svg {
+.c8 svg {
   color: inherit !important;
   font-size: 0.925em;
 }
 
-.c7:disabled {
+.c8:disabled {
   cursor: not-allowed;
 }
 
-.c7 svg {
+.c8 svg {
   color: #527699 !important;
 }
 
-.c7:hover:enabled,
-.c7:focus:enabled,
-.c7:active:enabled {
+.c8:hover:enabled,
+.c8:focus:enabled,
+.c8:active:enabled {
   box-shadow: none;
   background: #DDE1f0;
   border-color: #DDE1f0;
@@ -115,13 +111,17 @@ exports[`Pager component should match the stored snapshot 1`] = `
   opacity: undefined;
 }
 
-.c7:hover:enabled svg,
-.c7:focus:enabled svg,
-.c7:active:enabled svg {
+.c8:hover:enabled svg,
+.c8:focus:enabled svg,
+.c8:active:enabled svg {
   color: #3c3e42 !important;
 }
 
 .c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -176,18 +176,18 @@ exports[`Pager component should match the stored snapshot 1`] = `
   z-index: 1;
 }
 
-.c0 {
+.c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
 }
 
-.c0 h1,
-.c0 h2,
-.c0 h3,
-.c0 h4,
-.c0 h5,
-.c0 h6,
-.c0 button {
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
   font-family: CircularStd,Arial,sans-serif;
 }
 
@@ -198,7 +198,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
     className="c2 c3"
   >
     <div
-      className="c4 "
+      className="c4"
     >
       <strong>
         1
@@ -212,13 +212,13 @@ exports[`Pager component should match the stored snapshot 1`] = `
       </strong>
     </div>
     <div
-      className="c5 c3"
+      className="c2 c5"
     >
       <div
-        className="c6 c3"
+        className="c2 c6"
       >
         <button
-          className="rendition-pager__btn--prev c7 c8"
+          className="c7 c8 rendition-pager__btn--prev"
           disabled={true}
           onBlur={[Function]}
           onClick={[Function]}
@@ -248,7 +248,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
           </svg>
         </button>
         <button
-          className="rendition-pager__btn--next c7 c9"
+          className="c9 c8 rendition-pager__btn--next"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}

@@ -1,11 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ButtonGroup renders correctly 1`] = `
-.c3 {
-  box-sizing: border-box;
-}
-
-.c5 {
+.c4 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
@@ -27,11 +23,11 @@ exports[`ButtonGroup renders correctly 1`] = `
   transition: 0.1s ease-in-out;
 }
 
-.c5:hover {
+.c4:hover {
   box-shadow: 0px 0px 0px 2px #2A506F;
 }
 
-.c1 {
+.c0 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -42,7 +38,7 @@ exports[`ButtonGroup renders correctly 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c4 {
+.c5 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -64,22 +60,22 @@ exports[`ButtonGroup renders correctly 1`] = `
   border-color: #2A506F;
 }
 
-.c4 svg {
+.c5 svg {
   color: inherit !important;
   font-size: 0.925em;
 }
 
-.c4:disabled {
+.c5:disabled {
   cursor: not-allowed;
 }
 
-.c4 svg {
+.c5 svg {
   color: #527699 !important;
 }
 
-.c4:hover:enabled,
-.c4:focus:enabled,
-.c4:active:enabled {
+.c5:hover:enabled,
+.c5:focus:enabled,
+.c5:active:enabled {
   box-shadow: none;
   background: #2A506F;
   border-color: #2A506F;
@@ -87,53 +83,57 @@ exports[`ButtonGroup renders correctly 1`] = `
   opacity: undefined;
 }
 
-.c4:hover:enabled svg,
-.c4:focus:enabled svg,
-.c4:active:enabled svg {
+.c5:hover:enabled svg,
+.c5:focus:enabled svg,
+.c5:active:enabled svg {
   color: white !important;
 }
 
 .c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c2 > *:first-child {
+.c3 > *:first-child {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.c2 > *:last-child {
+.c3 > *:last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.c2 > *:not(:last-child) {
+.c3 > *:not(:last-child) {
   border-right: 0;
 }
 
-.c2 > *:not(:last-child):not(:first-child) {
+.c3 > *:not(:last-child):not(:first-child) {
   border-radius: 0;
 }
 
-.c2 > *:hover {
+.c3 > *:hover {
   z-index: 1;
 }
 
-.c0 {
+.c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
 }
 
-.c0 h1,
-.c0 h2,
-.c0 h3,
-.c0 h4,
-.c0 h5,
-.c0 h6,
-.c0 button {
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
   font-family: CircularStd,Arial,sans-serif;
 }
 
@@ -144,7 +144,7 @@ exports[`ButtonGroup renders correctly 1`] = `
     className="c2 c3"
   >
     <button
-      className="c4 c5"
+      className="c4 c5 "
       onBlur={[Function]}
       onFocus={[Function]}
       onMouseOut={[Function]}
@@ -154,7 +154,7 @@ exports[`ButtonGroup renders correctly 1`] = `
       First
     </button>
     <button
-      className="c4 c5"
+      className="c4 c5 "
       onBlur={[Function]}
       onFocus={[Function]}
       onMouseOut={[Function]}
@@ -164,7 +164,7 @@ exports[`ButtonGroup renders correctly 1`] = `
       Second
     </button>
     <button
-      className="c4 c5"
+      className="c4 c5 "
       onBlur={[Function]}
       onFocus={[Function]}
       onMouseOut={[Function]}

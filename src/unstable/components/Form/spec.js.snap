@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Form component should match the stored snapshot 1`] = `
-.c3 {
+.c2 {
   box-sizing: border-box;
 }
 
@@ -9,7 +9,7 @@ exports[`Form component should match the stored snapshot 1`] = `
   margin-bottom: 8px;
 }
 
-.c11 {
+.c10 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
@@ -34,11 +34,11 @@ exports[`Form component should match the stored snapshot 1`] = `
   transition: 0.1s ease-in-out;
 }
 
-.c11:hover {
+.c10:hover {
   box-shadow: 0px 0px 0px 2px #00AEEF;
 }
 
-.c9 {
+.c7 {
   box-sizing: border-box;
   font-size: inherit;
   font-family: inherit;
@@ -55,23 +55,23 @@ exports[`Form component should match the stored snapshot 1`] = `
   width: 100%;
 }
 
-.c9::-webkit-search-decoration {
+.c7::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-.c9::-webkit-input-placeholder {
+.c7::-webkit-input-placeholder {
   color: #abb9c5;
 }
 
-.c9::-moz-placeholder {
+.c7::-moz-placeholder {
   color: #abb9c5;
 }
 
-.c9:-ms-input-placeholder {
+.c7:-ms-input-placeholder {
   color: #abb9c5;
 }
 
-.c9::-moz-focus-inner {
+.c7::-moz-focus-inner {
   border: none;
   outline: none;
 }
@@ -81,7 +81,7 @@ exports[`Form component should match the stored snapshot 1`] = `
   width: 100%;
 }
 
-.c1 {
+.c0 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -92,7 +92,7 @@ exports[`Form component should match the stored snapshot 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c10 {
+.c11 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -113,18 +113,18 @@ exports[`Form component should match the stored snapshot 1`] = `
   color: white;
 }
 
-.c10 svg {
+.c11 svg {
   color: inherit !important;
   font-size: 0.925em;
 }
 
-.c10:disabled {
+.c11:disabled {
   cursor: not-allowed;
 }
 
-.c10:hover:enabled,
-.c10:focus:enabled,
-.c10:active:enabled {
+.c11:hover:enabled,
+.c11:focus:enabled,
+.c11:active:enabled {
   box-shadow: none;
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
@@ -132,9 +132,9 @@ exports[`Form component should match the stored snapshot 1`] = `
   opacity: undefined;
 }
 
-.c10:hover:enabled svg,
-.c10:focus:enabled svg,
-.c10:active:enabled svg {
+.c11:hover:enabled svg,
+.c11:focus:enabled svg,
+.c11:active:enabled svg {
   color: white !important;
 }
 
@@ -150,22 +150,22 @@ exports[`Form component should match the stored snapshot 1`] = `
   border-color: #527699;
 }
 
-.c7 {
+.c9 {
   width: 100%;
 }
 
-.c0 {
+.c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
 }
 
-.c0 h1,
-.c0 h2,
-.c0 h3,
-.c0 h4,
-.c0 h5,
-.c0 h6,
-.c0 button {
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
   font-family: CircularStd,Arial,sans-serif;
 }
 
@@ -176,14 +176,14 @@ exports[`Form component should match the stored snapshot 1`] = `
   color: #2A506F;
 }
 
-.c2 fieldset {
+.c3 fieldset {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-.c2 .panel-danger,
-.c2 .error-detail {
+.c3 .panel-danger,
+.c3 .error-detail {
   font-size: 14px;
   margin-top: 4px;
   margin-bottom: 4px;
@@ -191,7 +191,7 @@ exports[`Form component should match the stored snapshot 1`] = `
   padding-left: 0;
 }
 
-.c2 .text-danger {
+.c3 .text-danger {
   color: #FF423D;
 }
 
@@ -207,14 +207,14 @@ exports[`Form component should match the stored snapshot 1`] = `
       onSubmit={[Function]}
     >
       <div
-        className="form-group field field-object rendition-form__field--root c4 c3"
+        className="c2 c4 form-group field field-object rendition-form__field--root"
       >
         <fieldset>
           <div
-            className="form-group field field-string rendition-form__field--root_Name c4 c3"
+            className="c2 c4 form-group field field-string rendition-form__field--root_Name"
           >
             <label
-              className="control-label c5"
+              className="c5 control-label"
               htmlFor="root_Name"
             >
               Pokemon Name
@@ -244,7 +244,7 @@ exports[`Form component should match the stored snapshot 1`] = `
         </fieldset>
       </div>
       <button
-        className="c10 c11"
+        className="c10 c11 "
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}

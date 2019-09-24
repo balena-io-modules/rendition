@@ -1,11 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Terminal renders correctly 1`] = `
-.c3 {
-  box-sizing: border-box;
-}
-
-.c1 {
+.c0 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -16,27 +12,31 @@ exports[`Terminal renders correctly 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c0 {
+.c2 {
+  box-sizing: border-box;
+}
+
+.c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
 }
 
-.c0 h1,
-.c0 h2,
-.c0 h3,
-.c0 h4,
-.c0 h5,
-.c0 h6,
-.c0 button {
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
   font-family: CircularStd,Arial,sans-serif;
 }
 
-.c2 {
+.c3 {
   position: relative;
   height: 100%;
 }
 
-.c2 .xterm {
+.c3 .xterm {
   font-feature-settings: "liga" 0;
   position: relative;
   -webkit-user-select: none;
@@ -47,18 +47,18 @@ exports[`Terminal renders correctly 1`] = `
   -webkit-user-select: none;
 }
 
-.c2 .xterm.focus,
-.c2 .xterm:focus {
+.c3 .xterm.focus,
+.c3 .xterm:focus {
   outline: none;
 }
 
-.c2 .xterm .xterm-helpers {
+.c3 .xterm .xterm-helpers {
   position: absolute;
   top: 0;
   z-index: 10;
 }
 
-.c2 .xterm .xterm-helper-textarea {
+.c3 .xterm .xterm-helper-textarea {
   position: absolute;
   opacity: 0;
   left: -9999em;
@@ -71,7 +71,7 @@ exports[`Terminal renders correctly 1`] = `
   resize: none;
 }
 
-.c2 .xterm .composition-view {
+.c3 .xterm .composition-view {
   background: #000;
   color: #fff;
   display: none;
@@ -80,11 +80,11 @@ exports[`Terminal renders correctly 1`] = `
   z-index: 1;
 }
 
-.c2 .xterm .composition-view.active {
+.c3 .xterm .composition-view.active {
   display: block;
 }
 
-.c2 .xterm .xterm-viewport {
+.c3 .xterm .xterm-viewport {
   background-color: #000;
   overflow-y: scroll;
   cursor: default;
@@ -95,21 +95,21 @@ exports[`Terminal renders correctly 1`] = `
   bottom: 0;
 }
 
-.c2 .xterm .xterm-screen {
+.c3 .xterm .xterm-screen {
   position: relative;
 }
 
-.c2 .xterm .xterm-screen canvas {
+.c3 .xterm .xterm-screen canvas {
   position: absolute;
   left: 0;
   top: 0;
 }
 
-.c2 .xterm .xterm-scroll-area {
+.c3 .xterm .xterm-scroll-area {
   visibility: hidden;
 }
 
-.c2 .xterm-char-measure-element {
+.c3 .xterm-char-measure-element {
   display: inline-block;
   visibility: hidden;
   position: absolute;
@@ -118,24 +118,24 @@ exports[`Terminal renders correctly 1`] = `
   line-height: normal;
 }
 
-.c2 .xterm {
+.c3 .xterm {
   cursor: text;
 }
 
-.c2 .xterm.enable-mouse-events {
+.c3 .xterm.enable-mouse-events {
   cursor: default;
 }
 
-.c2 .xterm.xterm-cursor-pointer {
+.c3 .xterm.xterm-cursor-pointer {
   cursor: pointer;
 }
 
-.c2 .xterm.column-select.focus {
+.c3 .xterm.column-select.focus {
   cursor: crosshair;
 }
 
-.c2 .xterm .xterm-accessibility,
-.c2 .xterm .xterm-message {
+.c3 .xterm .xterm-accessibility,
+.c3 .xterm .xterm-message {
   position: absolute;
   left: 0;
   top: 0;
@@ -145,7 +145,7 @@ exports[`Terminal renders correctly 1`] = `
   color: transparent;
 }
 
-.c2 .xterm .live-region {
+.c3 .xterm .live-region {
   position: absolute;
   left: -9999px;
   width: 1px;
@@ -153,27 +153,27 @@ exports[`Terminal renders correctly 1`] = `
   overflow: hidden;
 }
 
-.c2 .xterm-dim {
+.c3 .xterm-dim {
   opacity: 0.5;
 }
 
-.c2 .xterm-underline {
+.c3 .xterm-underline {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c2 .xterm-viewport::-webkit-scrollbar-track {
+.c3 .xterm-viewport::-webkit-scrollbar-track {
   background-color: transparent;
   border-bottom-right-radius: 0;
 }
 
-.c2 .xterm-viewport::-webkit-scrollbar {
+.c3 .xterm-viewport::-webkit-scrollbar {
   width: 10px;
   background-color: transparent;
   border-radius: 0;
 }
 
-.c2 .xterm-viewport::-webkit-scrollbar-thumb {
+.c3 .xterm-viewport::-webkit-scrollbar-thumb {
   background-color: #e9e9e9;
 }
 
