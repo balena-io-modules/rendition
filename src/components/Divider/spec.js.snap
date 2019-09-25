@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Divider renders correctly 1`] = `
-.c1 {
+.c0 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -18,18 +18,18 @@ exports[`Divider renders correctly 1`] = `
   height: 0;
 }
 
-.c0 {
+.c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
 }
 
-.c0 h1,
-.c0 h2,
-.c0 h3,
-.c0 h4,
-.c0 h5,
-.c0 h6,
-.c0 button {
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
   font-family: CircularStd,Arial,sans-serif;
 }
 
@@ -37,7 +37,7 @@ exports[`Divider renders correctly 1`] = `
   className="c0 c1"
 >
   <hr
-    className="c2"
+    className="c2 "
   />
 </div>
 `;

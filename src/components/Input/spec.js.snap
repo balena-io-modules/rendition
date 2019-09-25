@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input renders correctly 1`] = `
-.c4 {
+.c3 {
   box-sizing: border-box;
   font-size: inherit;
   font-family: inherit;
@@ -18,23 +18,23 @@ exports[`Input renders correctly 1`] = `
   width: 100%;
 }
 
-.c4::-webkit-search-decoration {
+.c3::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-.c4::-webkit-input-placeholder {
+.c3::-webkit-input-placeholder {
   color: #abb9c5;
 }
 
-.c4::-moz-placeholder {
+.c3::-moz-placeholder {
   color: #abb9c5;
 }
 
-.c4:-ms-input-placeholder {
+.c3:-ms-input-placeholder {
   color: #abb9c5;
 }
 
-.c4::-moz-focus-inner {
+.c3::-moz-focus-inner {
   border: none;
   outline: none;
 }
@@ -44,7 +44,7 @@ exports[`Input renders correctly 1`] = `
   width: 100%;
 }
 
-.c1 {
+.c0 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -55,7 +55,7 @@ exports[`Input renders correctly 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c3 {
+.c4 {
   height: 38px;
   padding: 10px;
   padding-left: 20px;
@@ -63,22 +63,22 @@ exports[`Input renders correctly 1`] = `
   cursor: auto;
 }
 
-.c3:focus {
+.c4:focus {
   border-color: #527699;
 }
 
-.c0 {
+.c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
 }
 
-.c0 h1,
-.c0 h2,
-.c0 h3,
-.c0 h4,
-.c0 h5,
-.c0 h6,
-.c0 button {
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
   font-family: CircularStd,Arial,sans-serif;
 }
 
@@ -90,7 +90,7 @@ exports[`Input renders correctly 1`] = `
   >
     <input
       autoComplete="off"
-      className="c3 c4"
+      className="c3 c4 "
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}

@@ -1,20 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Modal renders correctly 1`] = `
-.c8 {
-  box-sizing: border-box;
-}
-
-.c7 {
-  padding: 16px;
-  width: 700px;
-}
-
-.c10 {
-  margin-top: 50px;
-}
-
-.c12 {
+.c11 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
@@ -39,11 +26,11 @@ exports[`Modal renders correctly 1`] = `
   transition: 0.1s ease-in-out;
 }
 
-.c12:hover {
+.c11:hover {
   box-shadow: 0px 0px 0px 2px #00AEEF;
 }
 
-.c1 {
+.c0 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -128,7 +115,7 @@ exports[`Modal renders correctly 1`] = `
   position: absolute;
 }
 
-.c11 {
+.c12 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -149,18 +136,18 @@ exports[`Modal renders correctly 1`] = `
   color: white;
 }
 
-.c11 svg {
+.c12 svg {
   color: inherit !important;
   font-size: 0.925em;
 }
 
-.c11:disabled {
+.c12:disabled {
   cursor: not-allowed;
 }
 
-.c11:hover:enabled,
-.c11:focus:enabled,
-.c11:active:enabled {
+.c12:hover:enabled,
+.c12:focus:enabled,
+.c12:active:enabled {
   box-shadow: none;
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
@@ -168,13 +155,26 @@ exports[`Modal renders correctly 1`] = `
   opacity: undefined;
 }
 
-.c11:hover:enabled svg,
-.c11:focus:enabled svg,
-.c11:active:enabled svg {
+.c12:hover:enabled svg,
+.c12:focus:enabled svg,
+.c12:active:enabled svg {
   color: white !important;
 }
 
+.c6 {
+  box-sizing: border-box;
+}
+
+.c7 {
+  padding: 16px;
+  width: 700px;
+}
+
 .c9 {
+  margin-top: 50px;
+}
+
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -189,23 +189,23 @@ exports[`Modal renders correctly 1`] = `
   justify-content: flex-end;
 }
 
-.c6 {
+.c8 {
   max-width: 100%;
   overflow-y: auto;
 }
 
-.c0 {
+.c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
 }
 
-.c0 h1,
-.c0 h2,
-.c0 h3,
-.c0 h4,
-.c0 h5,
-.c0 h6,
-.c0 button {
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
   font-family: CircularStd,Arial,sans-serif;
 }
 
@@ -244,10 +244,10 @@ exports[`Modal renders correctly 1`] = `
         >
           Modal
           <div
-            className="c9 c10 c8"
+            className="c6 c9 c10"
           >
             <button
-              className="c11 c12"
+              className="c11 c12 "
               onBlur={[Function]}
               onFocus={[Function]}
               onMouseOut={[Function]}

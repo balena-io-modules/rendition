@@ -14,6 +14,7 @@ export interface Theme {
 	weights: number[];
 	font: string;
 	monospace: string;
+	lineHeight: number;
 	colors: {
 		[key: string]: {
 			main: string;

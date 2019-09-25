@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Ordered list renders correctly 1`] = `
-.c1 {
+.c0 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -12,18 +12,18 @@ exports[`Ordered list renders correctly 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c0 {
+.c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
 }
 
-.c0 h1,
-.c0 h2,
-.c0 h3,
-.c0 h4,
-.c0 h5,
-.c0 h6,
-.c0 button {
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
   font-family: CircularStd,Arial,sans-serif;
 }
 
@@ -74,7 +74,7 @@ exports[`Ordered list renders correctly 1`] = `
   className="c0 c1"
 >
   <ol
-    className="c2"
+    className="c2 "
   >
     <li>
       <span>
@@ -91,7 +91,7 @@ exports[`Ordered list renders correctly 1`] = `
 `;
 
 exports[`Unordered list renders correctly 1`] = `
-.c1 {
+.c0 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -102,18 +102,18 @@ exports[`Unordered list renders correctly 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c0 {
+.c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
 }
 
-.c0 h1,
-.c0 h2,
-.c0 h3,
-.c0 h4,
-.c0 h5,
-.c0 h6,
-.c0 button {
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
   font-family: CircularStd,Arial,sans-serif;
 }
 
@@ -159,7 +159,7 @@ exports[`Unordered list renders correctly 1`] = `
   className="c0 c1"
 >
   <ul
-    className="c2"
+    className="c2 "
   >
     <li>
       <span>

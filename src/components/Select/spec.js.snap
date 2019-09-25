@@ -103,7 +103,7 @@ exports[`Select component should match the stored snapshot 1`] = `
   padding: 0px;
 }
 
-.c4 {
+.c3 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
@@ -121,7 +121,7 @@ exports[`Select component should match the stored snapshot 1`] = `
   text-align: inherit;
 }
 
-.c10 {
+.c8 {
   box-sizing: border-box;
   font-size: inherit;
   font-family: inherit;
@@ -139,23 +139,23 @@ exports[`Select component should match the stored snapshot 1`] = `
   border: none;
 }
 
-.c10::-webkit-search-decoration {
+.c8::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-.c10::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   color: #abb9c5;
 }
 
-.c10::-moz-placeholder {
+.c8::-moz-placeholder {
   color: #abb9c5;
 }
 
-.c10:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   color: #abb9c5;
 }
 
-.c10::-moz-focus-inner {
+.c8::-moz-focus-inner {
   border: none;
   outline: none;
 }
@@ -165,7 +165,7 @@ exports[`Select component should match the stored snapshot 1`] = `
   width: 100%;
 }
 
-.c1 {
+.c0 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -180,13 +180,13 @@ exports[`Select component should match the stored snapshot 1`] = `
   cursor: pointer;
 }
 
-.c3 {
+.c4 {
   border: 1px solid #DDE1f0;
   border-radius: 4px;
   color: #2A506F;
 }
 
-.c8 {
+.c10 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
   font-weight: normal;
@@ -199,18 +199,18 @@ exports[`Select component should match the stored snapshot 1`] = `
   width: 100%;
 }
 
-.c0 {
+.c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
 }
 
-.c0 h1,
-.c0 h2,
-.c0 h3,
-.c0 h4,
-.c0 h5,
-.c0 h6,
-.c0 button {
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
   font-family: CircularStd,Arial,sans-serif;
 }
 
@@ -255,7 +255,7 @@ exports[`Select component should match the stored snapshot 1`] = `
   className="c0 c1"
 >
   <div
-    className="c2"
+    className="c2 "
   >
     <button
       aria-label="Open Drop"

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RadioButton renders correctly 1`] = `
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -68,7 +68,7 @@ exports[`RadioButton renders correctly 1`] = `
   border-radius: 100%;
 }
 
-.c1 {
+.c0 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -79,7 +79,7 @@ exports[`RadioButton renders correctly 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c3 {
+.c4 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -87,8 +87,8 @@ exports[`RadioButton renders correctly 1`] = `
   cursor: pointer;
 }
 
-.c3:hover input:not([disabled]) + div,
-.c3:hover input:not([disabled]) + span {
+.c4:hover input:not([disabled]) + div,
+.c4:hover input:not([disabled]) + span {
   border-color: #527699;
 }
 
@@ -108,18 +108,18 @@ exports[`RadioButton renders correctly 1`] = `
   fill: #FFFFFF;
 }
 
-.c0 {
+.c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
 }
 
-.c0 h1,
-.c0 h2,
-.c0 h3,
-.c0 h4,
-.c0 h5,
-.c0 h6,
-.c0 button {
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
   font-family: CircularStd,Arial,sans-serif;
 }
 
@@ -142,13 +142,13 @@ exports[`RadioButton renders correctly 1`] = `
 }
 
 @media only screen and (max-width:768px) {
-  .c4 {
+  .c3 {
     margin: 0px;
   }
 }
 
 @media only screen and (max-width:768px) {
-  .c4 {
+  .c3 {
     padding: 0px;
   }
 }
@@ -187,14 +187,14 @@ exports[`RadioButton renders correctly 1`] = `
   className="c0 c1"
 >
   <div
-    className="c2"
+    className="c2 "
   >
     <label
       className="c3 c4"
       onClick={[Function]}
     >
       <div
-        className="c5"
+        className="c5 "
       >
         <input
           checked={true}
@@ -203,7 +203,7 @@ exports[`RadioButton renders correctly 1`] = `
           type="radio"
         />
         <div
-          className="c7"
+          className="c7 "
         >
           <svg
             className="c8"
