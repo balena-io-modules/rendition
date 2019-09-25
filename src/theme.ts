@@ -61,9 +61,9 @@ const colors = {
 	},
 
 	text: {
-		main: '#3c3e42',
-		light: '#8f9297',
-		dark: '#1c1d1e',
+		main: '#2A506F',
+		light: '#527699',
+		dark: '#23445e',
 	},
 
 	statusIdle: {

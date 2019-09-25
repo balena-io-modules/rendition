@@ -72,7 +72,7 @@ exports[`ButtonGroup renders correctly 1`] = `
 }
 
 .c5 {
-  color: #3c3e42;
+  color: #2A506F;
   border-color: #2A506F;
 }
 

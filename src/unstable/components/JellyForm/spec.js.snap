@@ -149,7 +149,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   height: 38px;
   padding: 10px;
   padding-left: 20px;
-  color: #3c3e42;
+  color: #2A506F;
   cursor: auto;
 }
 

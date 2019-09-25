@@ -72,7 +72,7 @@ exports[`Button renders correctly 1`] = `
 }
 
 .c3 {
-  color: #3c3e42;
+  color: #2A506F;
   border-color: #2A506F;
 }
 
@@ -199,7 +199,7 @@ exports[`Styled Anchor Button renders correctly 1`] = `
 }
 
 .c3 {
-  color: #3c3e42;
+  color: #2A506F;
   border-color: #2A506F;
 }
 
@@ -330,7 +330,7 @@ exports[`Styled Button renders correctly 1`] = `
 }
 
 .c3 {
-  color: #3c3e42;
+  color: #2A506F;
   border-color: #2A506F;
 }
 

@@ -60,9 +60,8 @@ exports[`Ordered list renders correctly 1`] = `
 
 .c2 > li:before {
   content: counter(ordered-list-counter);
-  margin-right: 16px;
+  margin-right: 8px;
   background: #1496E1;
-  font-size: 12px;
   height: 1.5em;
   width: 1.5em;
   min-width: 1.5em;
@@ -149,7 +148,7 @@ exports[`Unordered list renders correctly 1`] = `
 
 .c2 > li:before {
   content: '\\2022';
-  margin-right: 16px;
+  margin-right: 8px;
   -webkit-transform: translateY( -1px );
   -ms-transform: translateY( -1px );
   transform: translateY( -1px );
