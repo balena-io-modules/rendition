@@ -31,8 +31,11 @@ exports[`Alert renders correctly 1`] = `
   position: relative;
   margin: 0;
   padding: 8px 38px 8px 16px;
-  border-radius: 3px;
-  border: 1px solid;
+  box-shadow: 0 0 10px 0 rgba(221,225,240,0.15);
+  border-radius: 10px;
+  border: 1px solid #DDE1f0;
+  background-color: white;
+  color: inherit;
 }
 
 .c5 {

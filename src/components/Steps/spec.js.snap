@@ -1,0 +1,492 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Steps component should match the stored snapshot 1`] = `
+.c19 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  color: #2A506F;
+  border: none;
+  padding: 0;
+  text-align: inherit;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c20 {
+  font-family: CircularStd,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  height: 38px;
+  white-space: nowrap;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #2A506F;
+  height: auto;
+  font-weight: 500;
+  border-radius: 0;
+}
+
+.c20 svg {
+  color: inherit !important;
+  font-size: 0.925em;
+}
+
+.c20:disabled {
+  cursor: not-allowed;
+}
+
+.c20:hover:enabled,
+.c20:focus:enabled,
+.c20:active:enabled {
+  box-shadow: none;
+  background: none;
+  border-color: none;
+  color: #23445e;
+  opacity: undefined;
+}
+
+.c20:hover:enabled svg,
+.c20:focus:enabled svg,
+.c20:active:enabled svg {
+  color: #23445e !important;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  padding: 16px;
+}
+
+.c6 {
+  margin-left: 8px;
+  margin-right: 38px;
+}
+
+.c9 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c16 {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  margin: 0;
+  padding: 8px 38px 8px 16px;
+  box-shadow: 0 0 10px 0 rgba(221,225,240,0.15);
+  border-radius: 10px;
+  border: 1px solid #DDE1f0;
+  background-color: white;
+  color: inherit;
+}
+
+.c21 {
+  color: inherit;
+  position: absolute;
+  margin-top: 1px;
+  top: 16px;
+  right: 16px;
+}
+
+.c8 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+}
+
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+.c14 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c14:active,
+.c14:hover {
+  color: hsl(196.29999999999995,100%,37.5%);
+}
+
+.c15 {
+  margin-left: 8px;
+  color: #00AEEF;
+}
+
+.c13 {
+  font-size: 32px;
+  color: #bbc8d6;
+  line-height: 0.8;
+}
+
+.c18 {
+  font-size: 32px;
+  color: #1AC135;
+  line-height: 0.8;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 32px;
+}
+
+.c5 {
+  margin: 16px;
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2 c3 c4 c5"
+  >
+    <div
+      className="c2 c6 c7"
+    >
+      <h6
+        className="c8"
+      >
+        Beginners Guide
+      </h6>
+    </div>
+    <div
+      className="c2 c9 c10"
+    >
+      <div
+        className="c2 c11"
+      >
+        <div
+          className="c2 c12"
+        >
+          <span
+            className="c13"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m31.7 16.4q0-0.6-0.4-1l-2.1-2.1q-0.4-0.4-1-0.4t-1 0.4l-9.1 9.1-5-5q-0.5-0.4-1-0.4t-1 0.4l-2.1 2q-0.4 0.4-0.4 1 0 0.6 0.4 1l8.1 8.1q0.4 0.4 1 0.4 0.6 0 1-0.4l12.2-12.1q0.4-0.4 0.4-1z m5.6 3.6q0 4.7-2.3 8.6t-6.3 6.2-8.6 2.3-8.6-2.3-6.2-6.2-2.3-8.6 2.3-8.6 6.2-6.2 8.6-2.3 8.6 2.3 6.3 6.2 2.3 8.6z"
+                />
+              </g>
+            </svg>
+          </span>
+          <a
+            className="c14 c15"
+            color="primary.main"
+            onClick={[Function]}
+          >
+            Do this
+          </a>
+        </div>
+        <div
+          className="c2 c16 c17"
+        >
+          <svg
+            height="9"
+            viewBox="0 0 29.4 9"
+            width="29.4"
+            x="0"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              transform="translate(1.000000, 4.000000)"
+            >
+              <path
+                d="M20-4c0.1,0,0.2,0,0.2,0.1l0,0l7.9,4c0.3,0.1,0.4,0.5,0.2,0.7c-0.1,0.1-0.1,0.2-0.2,0.2l0,0
+			l-8,3.9c-0.3,0.1-0.6,0-0.7-0.2c0-0.1-0.1-0.2-0.1-0.2l0,0l0-3.5l-3.9,0C15.2,1,15,0.8,15,0.5l0-0.1C15,0.2,15.2,0,15.5,0l0,0
+			l3.9,0l0-3.5C19.4-3.7,19.6-4,20-4L20-4z M7.5-0.1l4,0c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5l0,0l-4,0C7.2,0.9,7,0.7,7,0.4
+			C7,0.1,7.2-0.1,7.5-0.1L7.5-0.1z M-0.5-0.2l4,0C3.8-0.1,4,0.1,4,0.4S3.8,0.9,3.5,0.9l0,0l-4,0C-0.8,0.8-1,0.6-1,0.3
+			C-1,0-0.8-0.2-0.5-0.2L-0.5-0.2z"
+                fill="#5B82A7"
+                fill-rule="nonzero"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div
+        className="c2 c11"
+      >
+        <div
+          className="c2 c12"
+        >
+          <span
+            className="c18"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m31.7 16.4q0-0.6-0.4-1l-2.1-2.1q-0.4-0.4-1-0.4t-1 0.4l-9.1 9.1-5-5q-0.5-0.4-1-0.4t-1 0.4l-2.1 2q-0.4 0.4-0.4 1 0 0.6 0.4 1l8.1 8.1q0.4 0.4 1 0.4 0.6 0 1-0.4l12.2-12.1q0.4-0.4 0.4-1z m5.6 3.6q0 4.7-2.3 8.6t-6.3 6.2-8.6 2.3-8.6-2.3-6.2-6.2-2.3-8.6 2.3-8.6 6.2-6.2 8.6-2.3 8.6 2.3 6.3 6.2 2.3 8.6z"
+                />
+              </g>
+            </svg>
+          </span>
+          <a
+            className="c14 c15"
+            color="primary.main"
+            onClick={[Function]}
+          >
+            And then this
+          </a>
+        </div>
+        <div
+          className="c2 c16 c17"
+        >
+          <svg
+            height="9"
+            viewBox="0 0 29.4 9"
+            width="29.4"
+            x="0"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              transform="translate(1.000000, 4.000000)"
+            >
+              <path
+                d="M20-4c0.1,0,0.2,0,0.2,0.1l0,0l7.9,4c0.3,0.1,0.4,0.5,0.2,0.7c-0.1,0.1-0.1,0.2-0.2,0.2l0,0
+			l-8,3.9c-0.3,0.1-0.6,0-0.7-0.2c0-0.1-0.1-0.2-0.1-0.2l0,0l0-3.5l-3.9,0C15.2,1,15,0.8,15,0.5l0-0.1C15,0.2,15.2,0,15.5,0l0,0
+			l3.9,0l0-3.5C19.4-3.7,19.6-4,20-4L20-4z M7.5-0.1l4,0c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5l0,0l-4,0C7.2,0.9,7,0.7,7,0.4
+			C7,0.1,7.2-0.1,7.5-0.1L7.5-0.1z M-0.5-0.2l4,0C3.8-0.1,4,0.1,4,0.4S3.8,0.9,3.5,0.9l0,0l-4,0C-0.8,0.8-1,0.6-1,0.3
+			C-1,0-0.8-0.2-0.5-0.2L-0.5-0.2z"
+                fill="#5B82A7"
+                fill-rule="nonzero"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div
+        className="c2 c11"
+      >
+        <div
+          className="c2 c12"
+        >
+          <span
+            className="c13"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m31.7 16.4q0-0.6-0.4-1l-2.1-2.1q-0.4-0.4-1-0.4t-1 0.4l-9.1 9.1-5-5q-0.5-0.4-1-0.4t-1 0.4l-2.1 2q-0.4 0.4-0.4 1 0 0.6 0.4 1l8.1 8.1q0.4 0.4 1 0.4 0.6 0 1-0.4l12.2-12.1q0.4-0.4 0.4-1z m5.6 3.6q0 4.7-2.3 8.6t-6.3 6.2-8.6 2.3-8.6-2.3-6.2-6.2-2.3-8.6 2.3-8.6 6.2-6.2 8.6-2.3 8.6 2.3 6.3 6.2 2.3 8.6z"
+                />
+              </g>
+            </svg>
+          </span>
+          <a
+            className="c14 c15"
+            color="primary.main"
+            onClick={[Function]}
+          >
+            And finally this
+          </a>
+        </div>
+      </div>
+    </div>
+    <button
+      className="c19 c20 c21"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      type="button"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        preserveAspectRatio="xMidYMid meet"
+        style={
+          Object {
+            "color": undefined,
+            "verticalAlign": "middle",
+          }
+        }
+        viewBox="0 0 40 40"
+        width="1em"
+      >
+        <g>
+          <path
+            d="m33.5 29.5q0 0.9-0.7 1.5l-3 3.1q-0.6 0.6-1.5 0.6t-1.5-0.6l-6.6-6.6-6.5 6.6q-0.7 0.6-1.6 0.6t-1.5-0.6l-3-3.1q-0.6-0.6-0.6-1.5t0.6-1.5l6.5-6.6-6.5-6.5q-0.6-0.7-0.6-1.6t0.6-1.5l3-3q0.6-0.6 1.5-0.6t1.6 0.6l6.5 6.6 6.6-6.6q0.6-0.6 1.5-0.6t1.5 0.6l3.1 3q0.6 0.7 0.6 1.5t-0.6 1.6l-6.6 6.5 6.6 6.6q0.6 0.6 0.6 1.5z"
+          />
+        </g>
+      </svg>
+    </button>
+  </div>
+</div>
+`;

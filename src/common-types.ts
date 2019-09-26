@@ -20,6 +20,7 @@ export interface Theme {
 			main: string;
 			light?: string;
 			dark?: string;
+			semilight?: string;
 		};
 	};
 	radius: number;
