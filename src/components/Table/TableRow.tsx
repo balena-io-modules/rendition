@@ -2,6 +2,7 @@ import get from 'lodash/get';
 import isFunction from 'lodash/isFunction';
 import map from 'lodash/map';
 import * as React from 'react';
+import Checkbox from '../Checkbox';
 
 /*
  * Get the value specified by the `field` value
@@ -67,13 +68,12 @@ export class TableRow<T> extends React.PureComponent<TableRowProps<T>, {}> {
 			>
 				{showCheck && (
 					<span data-display="table-cell">
-						<input
+						<Checkbox
 							checked={isChecked}
 							disabled={isDisabled}
 							data-key={keyAttribute}
 							onChange={this.props.toggleChecked}
 							{...checkboxAttributes}
-							type="checkbox"
 						/>
 					</span>
 				)}
