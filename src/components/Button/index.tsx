@@ -35,23 +35,29 @@ const getHoverEffectOverride = (
 	`;
 };
 
+/* Using '&' to add an extra layer of specificity and make sure
+the rendition styles override the Grommet global ones.
+https://www.styled-components.com/docs/advanced#issues-with-specificity
+*/
 const ButtonBase = styled(Button)`
-	font-family: ${props => props.theme.titleFont};
-	font-weight: ${props => props.theme.button.font.weight};
-	font-size: ${props => px(props.theme.fontSizes[1])};
-	height: ${props => props.theme.button.height};
-	white-space: nowrap;
-	svg {
-		color: inherit !important;
-		font-size: 0.925em;
-	}
-	/* These rules cause consistent styling when the button is rendered as a link */
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
+	& {
+		font-family: ${props => props.theme.titleFont};
+		font-weight: ${props => props.theme.button.font.weight};
+		font-size: ${props => px(props.theme.fontSizes[1])};
+		height: ${props => props.theme.button.height};
+		white-space: nowrap;
+		svg {
+			color: inherit !important;
+			font-size: 0.925em;
+		}
+		/* These rules cause consistent styling when the button is rendered as a link */
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 
-	&:disabled {
-		cursor: not-allowed;
+		&:disabled {
+			cursor: not-allowed;
+		}
 	}
 `;
 
