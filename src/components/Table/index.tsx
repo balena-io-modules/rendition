@@ -49,10 +49,16 @@ const BaseTable = styled.div`
 				display: table-cell;
 				border-bottom: 1px solid ${props => props.theme.colors.quartenary.main};
 				text-align: left;
-				padding-left: 40px;
-				padding-top: 10px;
-				padding-bottom: 10px;
+				padding: 10px 20px;
 				font-size: ${props => px(props.theme.fontSizes[1])};
+			}
+
+			> [data-display='table-cell']:first-child {
+				padding-left: 40px;
+			}
+
+			> [data-display='table-cell']:last-child {
+				padding-right: 40px;
 			}
 		}
 	}
@@ -69,11 +75,17 @@ const BaseTable = styled.div`
 			> [data-display='table-cell'] {
 				display: table-cell;
 				text-align: left;
-				padding-top: 14px;
-				padding-bottom: 14px;
-				padding-left: 40px;
+				padding: 14px 20px;
 				text-decoration: none;
 				color: inherit;
+			}
+
+			> [data-display='table-cell']:first-child {
+				padding-left: 40px;
+			}
+
+			> [data-display='table-cell']:last-child {
+				padding-right: 40px;
 			}
 
 			> a[data-display='table-cell'] {
