@@ -118,6 +118,10 @@ exports[`Checkbox renders correctly 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
+.c2 > label > div {
+  background-color: white;
+}
+
 .c2 > label > span {
   font-family: 'Nunito',Arial,sans-serif;
 }
@@ -198,7 +202,7 @@ exports[`Checkbox renders correctly 1`] = `
   className="c0 c1"
 >
   <div
-    className="c2"
+    className="c2 "
   >
     <label
       checked={true}
@@ -211,7 +215,7 @@ exports[`Checkbox renders correctly 1`] = `
       >
         <input
           checked={true}
-          className="c6 "
+          className="c6"
           onBlur={[Function]}
           onFocus={[Function]}
           type="checkbox"

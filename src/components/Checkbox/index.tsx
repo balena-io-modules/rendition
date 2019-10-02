@@ -28,6 +28,9 @@ export const getHoverStyle = (props: any) => `
 `;
 
 const getBaseStyle = (props: any) => `
+	& > label > div {
+		background-color: white;
+	}
 	& > label > span {
 		font-family: ${props.theme.font};
 	}
@@ -48,10 +51,10 @@ const CheckboxWrapper = styled.div`
 	${getHoverStyle}
 `;
 
-const Checkbox = (props: InternalCheckboxProps) => {
+const Checkbox = ({ className, ...otherProps }: InternalCheckboxProps) => {
 	return (
-		<CheckboxWrapper>
-			<GrommetCheckbox {...props} />
+		<CheckboxWrapper className={className}>
+			<GrommetCheckbox {...otherProps} />
 		</CheckboxWrapper>
 	);
 };

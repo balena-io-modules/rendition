@@ -19,6 +19,7 @@ import { Button } from '../../';
 // TODO: Remove explicit import and depend on provider instead.
 import theme from '../../theme';
 import { px } from '../../utils';
+import Checkbox from '../Checkbox';
 import Pager from '../Pager';
 import { TableColumn, TableRow } from './TableRow';
 
@@ -426,10 +427,9 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 							<div data-display="table-row">
 								{onCheck && (
 									<div data-display="table-cell">
-										<input
+										<Checkbox
 											checked={this.state.allChecked}
 											onChange={this.toggleAllChecked}
-											type="checkbox"
 										/>
 									</div>
 								)}
