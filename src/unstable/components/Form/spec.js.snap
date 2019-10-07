@@ -110,7 +110,6 @@ exports[`Form component should match the stored snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: white;
 }
 
 .c11 svg {
@@ -120,6 +119,10 @@ exports[`Form component should match the stored snapshot 1`] = `
 
 .c11:disabled {
   cursor: not-allowed;
+}
+
+.c11 {
+  color: white;
 }
 
 .c11:hover:enabled,

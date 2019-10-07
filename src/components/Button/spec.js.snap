@@ -56,8 +56,6 @@ exports[`Button renders correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #3c3e42;
-  border-color: #2A506F;
 }
 
 .c3 svg {
@@ -67,6 +65,11 @@ exports[`Button renders correctly 1`] = `
 
 .c3:disabled {
   cursor: not-allowed;
+}
+
+.c3 {
+  color: #3c3e42;
+  border-color: #2A506F;
 }
 
 .c3 svg {
@@ -176,8 +179,6 @@ exports[`Styled Anchor Button renders correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #3c3e42;
-  border-color: #2A506F;
 }
 
 .c3 svg {
@@ -187,6 +188,11 @@ exports[`Styled Anchor Button renders correctly 1`] = `
 
 .c3:disabled {
   cursor: not-allowed;
+}
+
+.c3 {
+  color: #3c3e42;
+  border-color: #2A506F;
 }
 
 .c3 svg {
@@ -300,8 +306,6 @@ exports[`Styled Button renders correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #3c3e42;
-  border-color: #2A506F;
 }
 
 .c3 svg {
@@ -311,6 +315,11 @@ exports[`Styled Button renders correctly 1`] = `
 
 .c3:disabled {
   cursor: not-allowed;
+}
+
+.c3 {
+  color: #3c3e42;
+  border-color: #2A506F;
 }
 
 .c3 svg {

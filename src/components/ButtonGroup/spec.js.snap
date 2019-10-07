@@ -56,8 +56,6 @@ exports[`ButtonGroup renders correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #3c3e42;
-  border-color: #2A506F;
 }
 
 .c5 svg {
@@ -67,6 +65,11 @@ exports[`ButtonGroup renders correctly 1`] = `
 
 .c5:disabled {
   cursor: not-allowed;
+}
+
+.c5 {
+  color: #3c3e42;
+  border-color: #2A506F;
 }
 
 .c5 svg {
