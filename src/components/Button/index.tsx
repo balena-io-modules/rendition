@@ -62,85 +62,107 @@ const ButtonBase = styled(Button)`
 `;
 
 const ColouredButton = styled(ButtonBase)`
-	color: ${props =>
-		isLight(getColor(props, 'color', 'main'))
-			? props.theme.colors.text.main
-			: 'white'};
-	${props => {
-		const color = getColor(props, 'color', 'dark');
-		return getHoverEffectOverride(
-			color,
-			isLight(color) ? props.theme.colors.text.main : 'white',
-		);
-	}};
+	& {
+		color: ${props =>
+			isLight(getColor(props, 'color', 'main'))
+				? props.theme.colors.text.main
+				: 'white'};
+		${props => {
+			const color = getColor(props, 'color', 'dark');
+			return getHoverEffectOverride(
+				color,
+				isLight(color) ? props.theme.colors.text.main : 'white',
+			);
+		}};
+	}
 `;
 
 const Outline = styled(ButtonBase)<{ color?: string }>`
-	color: ${props => props.theme.colors.text.main};
-	border-color: ${props => props.color || props.theme.colors.text.main};
-	svg {
-		color: ${props => props.theme.colors.tertiary.main} !important;
+	& {
+		color: ${props => props.theme.colors.text.main};
+		border-color: ${props => props.color || props.theme.colors.text.main};
+		svg {
+			color: ${props => props.theme.colors.tertiary.main} !important;
+		}
+		${props =>
+			getHoverEffectOverride(
+				props.color || props.theme.colors.text.main,
+				isLight(props.color) ? props.theme.colors.text.main : 'white',
+			)};
 	}
-	${props =>
-		getHoverEffectOverride(
-			props.color || props.theme.colors.text.main,
-			isLight(props.color) ? props.theme.colors.text.main : 'white',
-		)};
 `;
 
 const Light = styled(ButtonBase)`
-	color: ${props => props.theme.colors.text.main};
-	border-color: ${props => props.theme.colors.text.main};
-	background: white;
-	border: none;
-	${props =>
-		getHoverEffectOverride('white', props.theme.colors.secondary.main, '0.9')};
+	& {
+		color: ${props => props.theme.colors.text.main};
+		border-color: ${props => props.theme.colors.text.main};
+		background: white;
+		border: none;
+		${props =>
+			getHoverEffectOverride(
+				'white',
+				props.theme.colors.secondary.main,
+				'0.9',
+			)};
 
-	&:disabled {
-		opacity: 1;
-		color: #c6c8c9;
+		&:disabled {
+			opacity: 1;
+			color: #c6c8c9;
+		}
 	}
 `;
 
 const LightOutline = styled(Light)`
-	color: white;
-	border: 1px solid white;
-	background: transparent;
-	${props =>
-		getHoverEffectOverride('white', props.theme.colors.secondary.main, '0.9')};
+	& {
+		color: white;
+		border: 1px solid white;
+		background: transparent;
+		${props =>
+			getHoverEffectOverride(
+				'white',
+				props.theme.colors.secondary.main,
+				'0.9',
+			)};
 
-	&:disabled {
-		opacity: 1;
-		color: #c6c8c9;
+		&:disabled {
+			opacity: 1;
+			color: #c6c8c9;
+		}
 	}
 `;
 
 const Plain = styled(ButtonBase)<{ hoverColor?: string; color?: string }>`
-	color: ${props => props.color || props.theme.colors.text.main};
-	height: auto;
-	font-weight: ${props => props.theme.button.font.weight};
-	border-radius: 0;
-	${props =>
-		getHoverEffectOverride(
-			'none',
-			props.hoverColor || props.theme.colors.text.light,
-		)};
+	& {
+		color: ${props => props.color || props.theme.colors.text.main};
+		height: auto;
+		font-weight: ${props => props.theme.button.font.weight};
+		border-radius: 0;
+		${props =>
+			getHoverEffectOverride(
+				'none',
+				props.hoverColor || props.theme.colors.text.light,
+			)};
+	}
 `;
 
 const underlineButtonActiveStyles = (props: ThemedButtonProps) => `
-	color: ${props.color || props.theme.colors.text.main};
-	background: none;
-	box-shadow: 0px -1px 0 0px inset;
+	& {
+		color: ${props.color || props.theme.colors.text.main};
+		background: none;
+		box-shadow: 0px -1px 0 0px inset;
+	}
 `;
 
 const Underline = styled(Plain)<{ active?: boolean; color?: string }>`
-	${props => (props.active ? underlineButtonActiveStyles(props) : '')}
-	border-bottom: 1px solid;
-	background: none;
-	&:hover:enabled,
-	&:focus:enabled,
-	&:active:enabled {
-		${underlineButtonActiveStyles};
+	& {
+		${props => (props.active ? underlineButtonActiveStyles(props) : '')}
+		border-bottom: 1px solid;
+		background: none;
+		&:hover:enabled,
+		&:focus:enabled,
+		&:active:enabled {
+			${underlineButtonActiveStyles};
+		}
 	}
 `;
 
