@@ -13,7 +13,7 @@ exports[`Steps component should match the stored snapshot 1`] = `
   background: transparent;
   overflow: visible;
   text-transform: none;
-  color: #2A506F;
+  color: #00AEEF;
   border: none;
   padding: 0;
   text-align: inherit;
@@ -60,7 +60,7 @@ exports[`Steps component should match the stored snapshot 1`] = `
 }
 
 .c20 {
-  color: #2A506F;
+  color: #00AEEF;
   height: auto;
   font-weight: 500;
   border-radius: 0;
@@ -72,14 +72,14 @@ exports[`Steps component should match the stored snapshot 1`] = `
   box-shadow: none;
   background: none;
   border-color: none;
-  color: #23445e;
+  color: #009dd7;
   opacity: undefined;
 }
 
 .c20:hover:enabled svg,
 .c20:focus:enabled svg,
 .c20:active:enabled svg {
-  color: #23445e !important;
+  color: #009dd7 !important;
 }
 
 .c2 {
@@ -190,7 +190,8 @@ exports[`Steps component should match the stored snapshot 1`] = `
   justify-content: space-between;
   position: relative;
   margin: 0;
-  padding: 8px 38px 8px 16px;
+  padding: 16px;
+  padding-right: 38px;
   box-shadow: 0 0 10px 0 rgba(221,225,240,0.15);
   border-radius: 10px;
   border: 1px solid #DDE1f0;
@@ -199,16 +200,18 @@ exports[`Steps component should match the stored snapshot 1`] = `
 }
 
 .c21 {
-  color: inherit;
   position: absolute;
-  margin-top: 1px;
-  top: 16px;
+  height: 14px;
+  width: 14px;
+  font-size: 14px;
+  top: 25px;
   right: 16px;
 }
 
 .c8 {
   margin: 0;
   font-size: 14px;
+  color: #527699;
 }
 
 .c1 {

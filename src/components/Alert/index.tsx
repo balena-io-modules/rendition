@@ -60,17 +60,17 @@ const Alert = (props: ThemedAlertProps) => {
 	const icon = getIcon(props);
 	const title = plaintext ? null : getTitle(props);
 	const color = getColor(props, 'color', 'main');
-	const lineHeight = props.theme.fontSizes[2] * props.theme.lineHeight;
+	const lineHeight = props.theme.fontSizes[1] * props.theme.lineHeight;
 
 	if (plaintext) {
 		return (
 			<Flex color={color} {...restProps}>
 				{icon && (
-					<Txt fontSize={2} mt={'-1px'} mb="auto" mr={2}>
+					<Txt fontSize={1} mt={'-1px'} mb="auto" mr={2}>
 						{icon}
 					</Txt>
 				)}
-				<Txt.span fontSize={2}>{props.children}</Txt.span>
+				<Txt.span fontSize={1}>{props.children}</Txt.span>
 			</Flex>
 		);
 	}
@@ -84,17 +84,17 @@ const Alert = (props: ThemedAlertProps) => {
 			{...restProps}
 		>
 			{icon && (
-				<Txt fontSize={2} mt={'-1px'} mb="auto" mr={3}>
+				<Txt fontSize={1} mt={'-1px'} mb="auto" mr={3}>
 					{icon}
 				</Txt>
 			)}
 			<Box flex={1}>
 				{title && (
-					<Txt.span fontSize={2} bold mr={2}>
+					<Txt.span fontSize={1} bold mr={2}>
 						{title}
 					</Txt.span>
 				)}
-				<Txt.span fontSize={2} color={emphasized ? 'white' : 'text.main'}>
+				<Txt.span fontSize={1} color={emphasized ? 'white' : 'text.main'}>
 					{props.children}
 				</Txt.span>
 			</Box>

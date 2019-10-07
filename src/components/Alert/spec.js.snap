@@ -30,7 +30,8 @@ exports[`Alert renders correctly 1`] = `
   display: flex;
   position: relative;
   margin: 0;
-  padding: 8px 38px 8px 16px;
+  padding: 16px;
+  padding-right: 38px;
   box-shadow: 0 0 10px 0 rgba(221,225,240,0.15);
   border-radius: 10px;
   border: 1px solid #DDE1f0;
@@ -39,7 +40,7 @@ exports[`Alert renders correctly 1`] = `
 }
 
 .c5 {
-  font-size: 16px;
+  font-size: 14px;
   color: #3c3e42;
 }
 
