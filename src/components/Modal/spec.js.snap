@@ -133,7 +133,6 @@ exports[`Modal renders correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: white;
 }
 
 .c12 svg {
@@ -143,6 +142,10 @@ exports[`Modal renders correctly 1`] = `
 
 .c12:disabled {
   cursor: not-allowed;
+}
+
+.c12 {
+  color: white;
 }
 
 .c12:hover:enabled,

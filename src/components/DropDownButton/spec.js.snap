@@ -90,7 +90,6 @@ exports[`DropDownButton renders correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: white;
 }
 
 .c5 svg {
@@ -100,6 +99,10 @@ exports[`DropDownButton renders correctly 1`] = `
 
 .c5:disabled {
   cursor: not-allowed;
+}
+
+.c5 {
+  color: white;
 }
 
 .c5:hover:enabled,
@@ -306,7 +309,6 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: white;
 }
 
 .c5 svg {
@@ -316,6 +318,10 @@ exports[`Opened DropDownButton renders correctly 1`] = `
 
 .c5:disabled {
   cursor: not-allowed;
+}
+
+.c5 {
+  color: white;
 }
 
 .c5:hover:enabled,

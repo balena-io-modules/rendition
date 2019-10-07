@@ -84,8 +84,6 @@ exports[`Pager component should match the stored snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #3c3e42;
-  border-color: #DDE1f0;
 }
 
 .c8 svg {
@@ -95,6 +93,11 @@ exports[`Pager component should match the stored snapshot 1`] = `
 
 .c8:disabled {
   cursor: not-allowed;
+}
+
+.c8 {
+  color: #3c3e42;
+  border-color: #DDE1f0;
 }
 
 .c8 svg {

@@ -2,7 +2,7 @@ import get from 'lodash/get';
 import isFunction from 'lodash/isFunction';
 import map from 'lodash/map';
 import * as React from 'react';
-import Checkbox from '../Checkbox';
+import Checkbox, { CheckboxProps } from '../Checkbox';
 
 /*
  * Get the value specified by the `field` value
@@ -42,7 +42,7 @@ export interface TableRowProps<T> {
 	href?: string;
 	data: T;
 	attributes?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
-	checkboxAttributes?: React.InputHTMLAttributes<HTMLInputElement>;
+	checkboxAttributes?: CheckboxProps;
 }
 
 export class TableRow<T> extends React.PureComponent<TableRowProps<T>, {}> {

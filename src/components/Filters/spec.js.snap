@@ -117,7 +117,6 @@ exports[`Filters component should match the stored snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: white;
 }
 
 .c7 svg {
@@ -127,6 +126,10 @@ exports[`Filters component should match the stored snapshot 1`] = `
 
 .c7:disabled {
   cursor: not-allowed;
+}
+
+.c7 {
+  color: white;
 }
 
 .c7:hover:enabled,
@@ -163,8 +166,6 @@ exports[`Filters component should match the stored snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #3c3e42;
-  border-color: #DDE1f0;
 }
 
 .c16 svg {
@@ -174,6 +175,11 @@ exports[`Filters component should match the stored snapshot 1`] = `
 
 .c16:disabled {
   cursor: not-allowed;
+}
+
+.c16 {
+  color: #3c3e42;
+  border-color: #DDE1f0;
 }
 
 .c16 svg {

@@ -48,10 +48,6 @@ exports[`Steps component should match the stored snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #2A506F;
-  height: auto;
-  font-weight: 500;
-  border-radius: 0;
 }
 
 .c20 svg {
@@ -61,6 +57,13 @@ exports[`Steps component should match the stored snapshot 1`] = `
 
 .c20:disabled {
   cursor: not-allowed;
+}
+
+.c20 {
+  color: #2A506F;
+  height: auto;
+  font-weight: 500;
+  border-radius: 0;
 }
 
 .c20:hover:enabled,
