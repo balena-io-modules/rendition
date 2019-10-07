@@ -1,6 +1,7 @@
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons/faChevronLeft';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons/faChevronRight';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
-import FaChevronLeft from 'react-icons/lib/fa/chevron-left';
-import FaChevronRight from 'react-icons/lib/fa/chevron-right';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import { Flex, FlexProps } from '../Flex';
@@ -34,7 +35,7 @@ const Pager = ({
 						className="rendition-pager__btn--prev"
 						disabled={totalItems <= itemsPerPage || page <= 0}
 						onClick={() => prevPage()}
-						icon={<FaChevronLeft />}
+						icon={<FontAwesomeIcon icon={faChevronLeft} />}
 					/>
 					<Button
 						quartenary
@@ -45,7 +46,7 @@ const Pager = ({
 							totalItems / itemsPerPage <= page + 1
 						}
 						onClick={() => nextPage()}
-						icon={<FaChevronRight />}
+						icon={<FontAwesomeIcon icon={faChevronRight} />}
 					/>
 				</ButtonGroup>
 			</Flex>

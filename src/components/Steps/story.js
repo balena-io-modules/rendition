@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
-import FaMapSigns from 'react-icons/lib/fa/map-signs'
+import { faMapSigns } from '@fortawesome/free-solid-svg-icons/faMapSigns'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import withReadme from 'storybook-readme/with-readme'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import { Provider, Steps, Step } from '../../'
@@ -35,7 +36,7 @@ storiesOf('Next/Steps', module)
 
         <Steps
           m={3}
-          titleIcon={<FaMapSigns />}
+          titleIcon={<FontAwesomeIcon icon={faMapSigns} />}
           titleText={'Beginners Guide'}
           onClose={() => null}
         >

@@ -223,23 +223,21 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
             onClick={[Function]}
           >
             <svg
-              fill="currentColor"
-              height="1em"
-              preserveAspectRatio="xMidYMid meet"
-              style={
-                Object {
-                  "color": undefined,
-                  "verticalAlign": "middle",
-                }
-              }
-              viewBox="0 0 40 40"
-              width="1em"
+              aria-hidden="true"
+              className="svg-inline--fa fa-bars fa-w-14 "
+              data-icon="bars"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <g>
-                <path
-                  d="m3.4 9.1h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.2h-33.2v-3.2z"
-                />
-              </g>
+              <path
+                d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                fill="currentColor"
+                style={Object {}}
+              />
             </svg>
           </div>
         </div>
@@ -492,23 +490,21 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
             onClick={[Function]}
           >
             <svg
-              fill="currentColor"
-              height="1em"
-              preserveAspectRatio="xMidYMid meet"
-              style={
-                Object {
-                  "color": undefined,
-                  "verticalAlign": "middle",
-                }
-              }
-              viewBox="0 0 40 40"
-              width="1em"
+              aria-hidden="true"
+              className="svg-inline--fa fa-bars fa-w-14 "
+              data-icon="bars"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <g>
-                <path
-                  d="m3.4 9.1h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.2h-33.2v-3.2z"
-                />
-              </g>
+              <path
+                d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                fill="currentColor"
+                style={Object {}}
+              />
             </svg>
           </div>
         </div>
@@ -747,23 +743,21 @@ exports[`Navbar renders correctly with no children prop 1`] = `
             onClick={[Function]}
           >
             <svg
-              fill="currentColor"
-              height="1em"
-              preserveAspectRatio="xMidYMid meet"
-              style={
-                Object {
-                  "color": undefined,
-                  "verticalAlign": "middle",
-                }
-              }
-              viewBox="0 0 40 40"
-              width="1em"
+              aria-hidden="true"
+              className="svg-inline--fa fa-bars fa-w-14 "
+              data-icon="bars"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <g>
-                <path
-                  d="m3.4 9.1h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.4h-33.2v-3.4z m0 8.4h33.2v3.2h-33.2v-3.2z"
-                />
-              </g>
+              <path
+                d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                fill="currentColor"
+                style={Object {}}
+              />
             </svg>
           </div>
         </div>

@@ -1,6 +1,7 @@
+import { faChartPie } from '@fortawesome/free-solid-svg-icons/faChartPie';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { JSONSchema6 } from 'json-schema';
 import * as React from 'react';
-import FaChartPie from 'react-icons/lib/fa/pie-chart';
 import { FiltersView, ViewScope } from '.';
 import { Box } from '../Box';
 import Button from '../Button';
@@ -107,7 +108,7 @@ class FilterSummary extends React.Component<
 						primary
 						plain
 						onClick={() => this.setState({ showForm: !this.state.showForm })}
-						icon={<FaChartPie />}
+						icon={<FontAwesomeIcon icon={faChartPie} />}
 					>
 						Save as view
 					</Button>

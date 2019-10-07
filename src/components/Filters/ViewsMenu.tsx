@@ -1,10 +1,11 @@
+import { faChartPie } from '@fortawesome/free-solid-svg-icons/faChartPie';
+import { faTrash } from '@fortawesome/free-solid-svg-icons/faTrash';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { JSONSchema6 } from 'json-schema';
 import cloneDeep from 'lodash/cloneDeep';
 import groupBy from 'lodash/groupBy';
 import map from 'lodash/map';
 import * as React from 'react';
-import FaPieChart from 'react-icons/lib/fa/pie-chart';
-import FaTrash from 'react-icons/lib/fa/trash';
 import styled from 'styled-components';
 import { FilterRenderMode, FiltersView } from '.';
 import { Box } from '../Box';
@@ -111,7 +112,7 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 					joined
 					alignRight={!soloRender}
 					noListFormat
-					icon={<FaPieChart />}
+					icon={<FontAwesomeIcon icon={faChartPie} />}
 					label="Views"
 					{...this.props.buttonProps}
 				>
@@ -144,7 +145,7 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 													</Txt>
 												</ViewListItemLabel>
 												<button onClick={() => this.props.deleteView(view)}>
-													<FaTrash name="trash" />
+													<FontAwesomeIcon icon={faTrash} />
 												</button>
 												<Preview>
 													{view.filters.map(filter => (

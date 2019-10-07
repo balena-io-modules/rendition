@@ -1,8 +1,9 @@
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons/faArrowDown';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons/faArrowUp';
+import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus';
+import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
-import FaArrowDown from 'react-icons/lib/fa/arrow-down';
-import FaArrowUp from 'react-icons/lib/fa/arrow-up';
-import FaClose from 'react-icons/lib/fa/close';
-import FaPlus from 'react-icons/lib/fa/plus';
 import { ArrayFieldTemplateProps } from 'react-jsonschema-form';
 import styled from 'styled-components';
 import { Box, Button, Flex } from '../../../../';
@@ -95,7 +96,7 @@ export default (props: ArrayFieldTemplateProps) => {
 										element.index - 1,
 									)}
 								>
-									<FaArrowUp />
+									<FontAwesomeIcon icon={faArrowUp} />
 								</ActionButton>
 							)}
 
@@ -116,7 +117,7 @@ export default (props: ArrayFieldTemplateProps) => {
 										element.index + 1,
 									)}
 								>
-									<FaArrowDown />
+									<FontAwesomeIcon icon={faArrowDown} />
 								</ActionButton>
 							)}
 
@@ -132,7 +133,7 @@ export default (props: ArrayFieldTemplateProps) => {
 									disabled={element.disabled || element.readonly}
 									onClick={element.onDropIndexClick(element.index)}
 								>
-									<FaClose />
+									<FontAwesomeIcon icon={faTimes} />
 								</ActionButton>
 							)}
 						</Flex>
@@ -144,7 +145,7 @@ export default (props: ArrayFieldTemplateProps) => {
 				<Button
 					type="button"
 					className="rendition-form-array-item__add-item"
-					icon={<FaPlus />}
+					icon={<FontAwesomeIcon icon={faPlus} />}
 					onClick={props.onAddClick}
 				>
 					Add item

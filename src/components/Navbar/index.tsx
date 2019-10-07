@@ -1,7 +1,8 @@
+import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
+import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import assign from 'lodash/assign';
 import * as React from 'react';
-import CloseIcon from 'react-icons/lib/md/close';
-import MenuIcon from 'react-icons/lib/md/dehaze';
 import { compose, withProps } from 'recompose';
 import styled from 'styled-components';
 import {
@@ -73,7 +74,11 @@ class Navbar extends React.Component<NavbarProps, NavbarState> {
 								p={2}
 								display={['block', 'none']}
 							>
-								{this.state.open ? <CloseIcon /> : <MenuIcon />}
+								{this.state.open ? (
+									<FontAwesomeIcon icon={faTimes} />
+								) : (
+									<FontAwesomeIcon icon={faBars} />
+								)}
 							</IconBox>
 						</Flex>
 						<MenuBox

@@ -1,3 +1,5 @@
+import { faSort } from '@fortawesome/free-solid-svg-icons/faSort';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import every from 'lodash/every';
 import filter from 'lodash/filter';
 import find from 'lodash/find';
@@ -12,7 +14,6 @@ import reverse from 'lodash/reverse';
 import some from 'lodash/some';
 import sortBy from 'lodash/sortBy';
 import * as React from 'react';
-import FaSort from 'react-icons/lib/fa/sort';
 import styled from 'styled-components';
 
 import { Button } from '../../';
@@ -482,11 +483,8 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 												>
 													{item.label || item.field}
 													&nbsp;
-													<FaSort
-														style={{
-															display: 'inline-block',
-															marginBottom: '2px',
-														}}
+													<FontAwesomeIcon
+														icon={faSort}
 														color={
 															sort.field === item.field
 																? theme.colors.info.main

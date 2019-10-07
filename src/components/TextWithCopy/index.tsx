@@ -1,10 +1,11 @@
+import { faCopy } from '@fortawesome/free-regular-svg-icons/faCopy';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import copyToClipboard from 'copy-to-clipboard';
 import * as React from 'react';
-import FaClipboard from 'react-icons/lib/fa/clipboard';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { DefaultProps, RenditionSystemProps } from '../../common-types';
-import { stopEvent } from '../../utils';
+import { px, stopEvent } from '../../utils';
 import { Box } from '../Box';
 import Txt, { TxtProps } from '../Txt';
 
@@ -15,7 +16,7 @@ const Wrapper = styled(Txt.span)<InternalTextWithCopyProps>`
 	.text-with-copy__content {
 		white-space: normal;
 		word-wrap: break-word;
-		margin-right: 3px;
+		margin-right: ${props => px(props.theme.space[1])};
 	}
 
 	& > .text-with-copy__copy_wrapper {
@@ -23,8 +24,6 @@ const Wrapper = styled(Txt.span)<InternalTextWithCopyProps>`
 	}
 
 	.text-with-copy__copy {
-		font-size: 0.875em;
-		transform: translateY(-0.08em);
 		cursor: pointer;
 		visibility: ${props =>
 			props.showCopyButton === 'always' ? 'visible' : 'hidden'};
@@ -40,7 +39,7 @@ const Wrapper = styled(Txt.span)<InternalTextWithCopyProps>`
 		white-space: normal;
 		word-wrap: break-word;
 		font-size: 1em;
-		margin-right: 3px;
+		margin-right: ${props => px(props.theme.space[1])};
 		display: inline-block;
 	}
 
@@ -77,7 +76,7 @@ const Base = ({
 					onClick={() => copyToClipboard(normalizedCopy)}
 					className="text-with-copy__copy"
 				>
-					<FaClipboard />
+					<FontAwesomeIcon icon={faCopy} />
 				</Box>
 			</span>
 		</Wrapper>

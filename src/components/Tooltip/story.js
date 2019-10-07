@@ -1,5 +1,4 @@
 import React from 'react'
-import FaPlus from 'react-icons/lib/fa/spinner'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withScreenshot } from 'storybook-chrome-screenshot'
@@ -143,24 +142,13 @@ storiesOf('Core/Tooltips', module)
           <Button tooltip='Button tooltip' mr={2} mb={2}>
             Lorem ipsum
           </Button>
-          <Button
-            tooltip='Button tooltip'
-            iconElement={<FaPlus />}
-            mr={2}
-            mb={2}
-          >
+          <Button tooltip='Button tooltip' mr={2} mb={2}>
             Lorem ipsum
           </Button>
           <Button tooltip='Button tooltip' mr={2} mb={2} disabled>
             Lorem ipsum
           </Button>
-          <Button
-            tooltip='Button tooltip'
-            iconElement={<FaPlus />}
-            mr={2}
-            mb={2}
-            disabled
-          >
+          <Button tooltip='Button tooltip' mr={2} mb={2} disabled>
             <Txt>Lorem ipsum</Txt>
           </Button>
 
