@@ -19,7 +19,7 @@ import { Button } from '../../';
 // TODO: Remove explicit import and depend on provider instead.
 import theme from '../../theme';
 import { px } from '../../utils';
-import Checkbox from '../Checkbox';
+import Checkbox, { CheckboxProps } from '../Checkbox';
 import Pager from '../Pager';
 import { TableColumn, TableRow } from './TableRow';
 
@@ -550,7 +550,7 @@ export interface TableProps<T> {
 	onSort?: (sort: TableSortOptions<T>) => void;
 	sort?: TableSortOptions<T>;
 	rowAnchorAttributes?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
-	rowCheckboxAttributes?: React.InputHTMLAttributes<HTMLInputElement>;
+	rowCheckboxAttributes?: CheckboxProps;
 	// Optionally provide a key that should be used as a unique identifier for each row
 	rowKey?: keyof T;
 	tbodyPrefix?: JSX.Element | JSX.Element[];
