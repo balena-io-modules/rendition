@@ -39,7 +39,7 @@ const StatusIconPlaceholder = styled.span<{ status: StepProps['status'] }>`
 `;
 
 const HeaderContainer = styled(Flex)`
-	min-height: 32px;
+	min-height: ${props => px(props.theme.fontSizes[5])};
 `;
 
 export const Step = ({ status, children, onClick }: StepProps) => {
@@ -119,11 +119,13 @@ const Steps = React.forwardRef(
 						mr={4}
 					>
 						{titleIcon && (
-							<Txt fontSize={2} mr={2}>
+							<Txt fontSize={2} mr={2} color="tertiary.semilight">
 								{titleIcon}
 							</Txt>
 						)}
-						{titleText && <Heading.h6>{titleText}</Heading.h6>}
+						{titleText && (
+							<Heading.h6 color="tertiary.main">{titleText}</Heading.h6>
+						)}
 					</HeaderContainer>
 				)}
 				<FramelessSteps>{children}</FramelessSteps>
