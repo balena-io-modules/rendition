@@ -118,7 +118,8 @@ exports[`Checkbox renders correctly 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c2 > label > div {
+.c2 > label > div > div,
+.c2 > label > div > span {
   background-color: white;
 }
 
