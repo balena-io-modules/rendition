@@ -2,6 +2,7 @@ import get from 'lodash/get';
 import isFunction from 'lodash/isFunction';
 import map from 'lodash/map';
 import * as React from 'react';
+import styled from 'styled-components';
 import Checkbox, { CheckboxProps } from '../Checkbox';
 
 /*
@@ -15,6 +16,11 @@ const renderField = <T extends {}>(row: T, column: TableColumn<T>): any => {
 	}
 	return value == null ? '' : value;
 };
+
+export const CheckboxWrapper = styled.div`
+	display: inline-block;
+	vertical-align: middle;
+`;
 
 export type TableSortFunction<T> = (a: T, b: T) => number;
 
@@ -67,7 +73,7 @@ export class TableRow<T> extends React.PureComponent<TableRowProps<T>, {}> {
 				className={className}
 			>
 				{showCheck && (
-					<span data-display="table-cell">
+					<CheckboxWrapper data-display="table-cell">
 						<Checkbox
 							checked={isChecked}
 							disabled={isDisabled}
@@ -75,7 +81,7 @@ export class TableRow<T> extends React.PureComponent<TableRowProps<T>, {}> {
 							onChange={this.props.toggleChecked}
 							{...checkboxAttributes}
 						/>
-					</span>
+					</CheckboxWrapper>
 				)}
 				{map(columns, column => {
 					const cellAttributes = isFunction(column.cellAttributes)
