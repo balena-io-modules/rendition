@@ -21,7 +21,7 @@ import theme from '../../theme';
 import { px } from '../../utils';
 import Checkbox, { CheckboxProps } from '../Checkbox';
 import Pager from '../Pager';
-import { TableColumn, TableRow } from './TableRow';
+import { CheckboxWrapper, TableColumn, TableRow } from './TableRow';
 
 const highlightStyle = `
 	background-color: ${theme.colors.info.light};
@@ -97,7 +97,7 @@ const BaseTable = styled.div`
 				background-color: ${props => props.theme.colors.quartenary.light};
 			}
 
-			&: hover {
+			&:hover {
 				text-decoration: none;
 				${(props: any) =>
 					!!props.onRowClick || !!props.getRowHref || !!props.onCheck
@@ -438,12 +438,12 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 						<div data-display="table-head">
 							<div data-display="table-row">
 								{onCheck && (
-									<div data-display="table-cell">
+									<CheckboxWrapper data-display="table-cell">
 										<Checkbox
 											checked={this.state.allChecked}
 											onChange={this.toggleAllChecked}
 										/>
-									</div>
+									</CheckboxWrapper>
 								)}
 								{map(columns, item => {
 									if (item.sortable) {
