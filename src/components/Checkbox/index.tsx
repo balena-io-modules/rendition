@@ -28,7 +28,10 @@ export const getHoverStyle = (props: any) => `
 `;
 
 const getBaseStyle = (props: any) => `
-	& > label > div {
+	/* for the checkbox */
+	& > label > div > div,
+	/* for the toggle */
+	& > label > div > span {
 		background-color: white;
 	}
 	& > label > span {

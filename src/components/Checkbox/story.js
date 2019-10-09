@@ -16,7 +16,10 @@ storiesOf('Next/Checkbox', module)
           <label>
             <Heading.h6>Default</Heading.h6>
             <Flex mb={3}>
-              <Box m={2}>
+              <Box p={2}>
+                <Checkbox onChange={action('action-1')} />
+              </Box>
+              <Box p={2} bg='gray.main'>
                 <Checkbox onChange={action('action-1')} />
               </Box>
             </Flex>
@@ -24,7 +27,10 @@ storiesOf('Next/Checkbox', module)
           <label>
             <Heading.h6>Checked</Heading.h6>
             <Flex mb={3}>
-              <Box m={2}>
+              <Box p={2}>
+                <Checkbox checked onChange={action('action-2')} />
+              </Box>
+              <Box p={2} bg='gray.main'>
                 <Checkbox checked onChange={action('action-2')} />
               </Box>
             </Flex>
@@ -32,7 +38,14 @@ storiesOf('Next/Checkbox', module)
           <label>
             <Heading.h6>With Label</Heading.h6>
             <Flex mb={3}>
-              <Box m={2}>
+              <Box p={2}>
+                <Checkbox
+                  checked
+                  label='Checkbox Label'
+                  onChange={action('action-3')}
+                />
+              </Box>
+              <Box p={2} bg='gray.main'>
                 <Checkbox
                   checked
                   label='Checkbox Label'
@@ -41,7 +54,15 @@ storiesOf('Next/Checkbox', module)
               </Box>
             </Flex>
             <Flex mb={3}>
-              <Box m={2}>
+              <Box p={2}>
+                <Checkbox
+                  checked
+                  reverse
+                  label='Checkbox Label'
+                  onChange={action('action-3')}
+                />
+              </Box>
+              <Box p={2} bg='gray.main'>
                 <Checkbox
                   checked
                   reverse
@@ -54,10 +75,16 @@ storiesOf('Next/Checkbox', module)
           <label>
             <Heading.h6>Disabled</Heading.h6>
             <Flex mb={3}>
-              <Box m={2}>
+              <Box p={2}>
                 <Checkbox disabled onChange={action('action-4')} />
               </Box>
-              <Box m={2}>
+              <Box p={2} bg='gray.main'>
+                <Checkbox disabled onChange={action('action-4')} />
+              </Box>
+              <Box p={2}>
+                <Checkbox checked disabled onChange={action('action-4')} />
+              </Box>
+              <Box p={2} bg='gray.main'>
                 <Checkbox checked disabled onChange={action('action-4')} />
               </Box>
             </Flex>
@@ -73,7 +100,10 @@ storiesOf('Next/Checkbox', module)
           <label>
             <Heading.h6>Default</Heading.h6>
             <Flex mb={3}>
-              <Box m={2}>
+              <Box p={2}>
+                <Checkbox toggle onChange={action('action-1')} />
+              </Box>
+              <Box p={2} bg='gray.main'>
                 <Checkbox toggle onChange={action('action-1')} />
               </Box>
             </Flex>
@@ -81,7 +111,10 @@ storiesOf('Next/Checkbox', module)
           <label>
             <Heading.h6>Checked</Heading.h6>
             <Flex mb={3}>
-              <Box m={2}>
+              <Box p={2}>
+                <Checkbox toggle checked onChange={action('action-2')} />
+              </Box>
+              <Box p={2} bg='gray.main'>
                 <Checkbox toggle checked onChange={action('action-2')} />
               </Box>
             </Flex>
@@ -89,7 +122,15 @@ storiesOf('Next/Checkbox', module)
           <label>
             <Heading.h6>With Label</Heading.h6>
             <Flex mb={3}>
-              <Box m={2}>
+              <Box p={2}>
+                <Checkbox
+                  toggle
+                  checked
+                  label='Toggle Label'
+                  onChange={action('action-3')}
+                />
+              </Box>
+              <Box p={2} bg='gray.main'>
                 <Checkbox
                   toggle
                   checked
@@ -99,7 +140,16 @@ storiesOf('Next/Checkbox', module)
               </Box>
             </Flex>
             <Flex mb={3}>
-              <Box m={2}>
+              <Box p={2}>
+                <Checkbox
+                  toggle
+                  checked
+                  reverse
+                  label='Toggle Label'
+                  onChange={action('action-3')}
+                />
+              </Box>
+              <Box p={2} bg='gray.main'>
                 <Checkbox
                   toggle
                   checked
@@ -113,10 +163,21 @@ storiesOf('Next/Checkbox', module)
           <label>
             <Heading.h6>Disabled</Heading.h6>
             <Flex mb={3}>
-              <Box m={2}>
+              <Box p={2}>
                 <Checkbox toggle disabled onChange={action('action-4')} />
               </Box>
-              <Box m={2}>
+              <Box p={2} bg='gray.main'>
+                <Checkbox toggle disabled onChange={action('action-4')} />
+              </Box>
+              <Box p={2}>
+                <Checkbox
+                  toggle
+                  checked
+                  disabled
+                  onChange={action('action-4')}
+                />
+              </Box>
+              <Box p={2} bg='gray.main'>
                 <Checkbox
                   toggle
                   checked
