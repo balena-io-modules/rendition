@@ -32,7 +32,7 @@ const BaseTableWrapper = styled.div`
 	max-width: 100%;
 `;
 
-const BaseTable = styled.div`
+const BaseTable = styled.div<{ hasCheckbox: boolean }>`
 	display: table;
 	width: 100%;
 	border-spacing: 0;
@@ -49,12 +49,14 @@ const BaseTable = styled.div`
 				display: table-cell;
 				border-bottom: 1px solid ${props => props.theme.colors.quartenary.main};
 				text-align: left;
+				vertical-align: middle;
 				padding: 10px 20px;
 				font-size: ${props => px(props.theme.fontSizes[1])};
 			}
 
 			> [data-display='table-cell']:first-child {
-				padding-left: 40px;
+				padding-left: ${props => (props.hasCheckbox ? '20px' : '40px')};
+				${props => (props.hasCheckbox ? 'width: 60px' : '')};
 			}
 
 			> [data-display='table-cell']:last-child {
@@ -75,13 +77,15 @@ const BaseTable = styled.div`
 			> [data-display='table-cell'] {
 				display: table-cell;
 				text-align: left;
+				vertical-align: middle;
 				padding: 14px 20px;
 				text-decoration: none;
 				color: inherit;
 			}
 
 			> [data-display='table-cell']:first-child {
-				padding-left: 40px;
+				padding-left: ${props => (props.hasCheckbox ? '20px' : '40px')};
+				${props => (props.hasCheckbox ? 'width: 60px' : '')};
 			}
 
 			> [data-display='table-cell']:last-child {
@@ -434,7 +438,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 					)}
 
 				<BaseTableWrapper>
-					<BaseTable {...props}>
+					<BaseTable {...props} hasCheckbox={Boolean(onCheck)}>
 						<div data-display="table-head">
 							<div data-display="table-row">
 								{onCheck && (
