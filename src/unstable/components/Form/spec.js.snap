@@ -226,7 +226,6 @@ exports[`Form component should match the stored snapshot 1`] = `
               className="c6"
             >
               <input
-                autoComplete="off"
                 autoFocus={false}
                 className="c7 c8 c9"
                 disabled={false}

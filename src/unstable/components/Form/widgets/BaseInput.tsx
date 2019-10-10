@@ -34,6 +34,7 @@ const BaseInput = (props: FormWidgetProps) => {
 			readOnly={readonly}
 			disabled={disabled}
 			autoFocus={autofocus}
+			autoComplete={options.autocomplete}
 			emphasized={options.emphasized}
 			value={value == null ? '' : value}
 			{...inputProps}

@@ -201,6 +201,9 @@ storiesOf('Beta/Form', module)
           schema={basicPokedexSchema}
           uiSchema={{
             'ui:order': ['Name', 'caught', 'Description', 'Abilities', '*'],
+            Name: {
+              'ui:autocomplete': 'on'
+            },
             poke_password: {
               'ui:widget': 'password',
               'ui:options': {
