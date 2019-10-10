@@ -1,6 +1,6 @@
 import * as React from 'react';
-import FaBan from 'react-icons/lib/fa/ban';
 import FaCheckCircle from 'react-icons/lib/fa/check-circle';
+import FaExclamationCircle from 'react-icons/lib/fa/exclamation-circle';
 import FaExclamationTriangle from 'react-icons/lib/fa/exclamation-triangle';
 import FaLightbulb from 'react-icons/lib/fa/lightbulb-o';
 import asRendition from '../../asRendition';
@@ -25,7 +25,7 @@ const getTitle = (props: AlertProps) => {
 		return props.prefix;
 	}
 	return props.danger
-		? 'Oh snap!'
+		? 'Danger!'
 		: props.warning
 		? 'Warning!'
 		: props.success
@@ -43,7 +43,7 @@ const getIcon = (props: InternalAlertProps) => {
 		return;
 	}
 	return props.danger ? (
-		<FaBan />
+		<FaExclamationCircle />
 	) : props.warning ? (
 		<FaExclamationTriangle />
 	) : props.success ? (
@@ -94,7 +94,11 @@ const Alert = (props: ThemedAlertProps) => {
 						{title}
 					</Txt.span>
 				)}
-				<Txt.span fontSize={1} color={emphasized ? 'white' : 'text.main'}>
+				<Txt.span
+					fontSize={1}
+					bold={emphasized}
+					color={emphasized ? 'white' : 'text.main'}
+				>
 					{props.children}
 				</Txt.span>
 			</Box>
