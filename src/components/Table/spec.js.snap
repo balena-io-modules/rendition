@@ -52,6 +52,7 @@ exports[`Table component should match the stored snapshot 1`] = `
   display: table-cell;
   border-bottom: 1px solid #DDE1f0;
   text-align: left;
+  vertical-align: middle;
   padding: 10px 20px;
   font-size: 14px;
 }
@@ -79,6 +80,7 @@ exports[`Table component should match the stored snapshot 1`] = `
 .c3 > [data-display='table-body'] > [data-display='table-row'] > [data-display='table-cell'] {
   display: table-cell;
   text-align: left;
+  vertical-align: middle;
   padding: 14px 20px;
   -webkit-text-decoration: none;
   text-decoration: none;
