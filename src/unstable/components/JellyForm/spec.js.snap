@@ -246,7 +246,6 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
               className="c7"
             >
               <input
-                autoComplete="off"
                 autoFocus={false}
                 className="c8 c9 c10"
                 disabled={false}

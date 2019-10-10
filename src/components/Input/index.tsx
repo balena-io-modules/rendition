@@ -50,6 +50,7 @@ export interface InternalInputProps
 	placeholder?: string;
 	type?: string;
 	autoFocus?: boolean;
+	autoComplete?: 'off' | 'on';
 	readOnly?: boolean;
 	disabled?: boolean;
 	pattern?: string;
