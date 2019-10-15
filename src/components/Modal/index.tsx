@@ -73,7 +73,7 @@ class Modal extends React.Component<ThemedModalProps, any> {
 			return;
 		}
 
-		if (!e.defaultPrevented && (e.which === 13 || e.which === 27)) {
+		if (!e.defaultPrevented && e.which === 13) {
 			e.preventDefault();
 			e.stopPropagation();
 
@@ -81,12 +81,15 @@ class Modal extends React.Component<ThemedModalProps, any> {
 			if (e.which === 13) {
 				this.props.done();
 			}
-
-			// Escape key
-			if (e.which === 27) {
-				(this.props.cancel || this.props.done)();
-			}
 		}
+	};
+
+	popModal = () => {
+		if (Modal.mountedCount !== this.ownIndex) {
+			return;
+		}
+
+		(this.props.cancel || this.props.done)();
 	};
 
 	render() {
@@ -113,8 +116,8 @@ class Modal extends React.Component<ThemedModalProps, any> {
 
 		return (
 			<Layer
-				onEsc={() => (props.cancel || props.done)()}
-				onClickOutside={() => (props.cancel || props.done)()}
+				onEsc={this.popModal}
+				onClickOutside={this.popModal}
 				responsive={false}
 				margin="small"
 				animate={false}
