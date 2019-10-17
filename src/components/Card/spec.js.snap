@@ -12,21 +12,33 @@ exports[`Search renders correctly 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c3 {
+.c2 {
   box-sizing: border-box;
 }
 
-.c4 {
-  margin-top: 0;
+.c5 {
+  width: 100%;
 }
 
-.c2 {
-  border: solid 1px #dfdede;
-  border-radius: 3px;
-  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
-  padding: 20px;
-  background-color: #ffffff;
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 16px;
+  padding-right: 38px;
+  box-shadow: 0 0 10px 0 rgba(221,225,240,0.15);
+  border-radius: 10px;
+  border: 1px solid #DDE1f0;
+  background-color: white;
+  color: inherit;
+}
+
+.c4 {
   min-height: auto;
+  padding: 32px 44px;
 }
 
 .c1 {
@@ -48,12 +60,16 @@ exports[`Search renders correctly 1`] = `
   className="c0 c1"
 >
   <div
-    className="c2 "
+    className="c2 c3 c4 "
   >
     <div
-      className="c3 c4"
+      className="c2 c5"
     >
-      Lorem ipsum dolor so ammet
+      <div
+        className="c2 "
+      >
+        Lorem ipsum dolor so ammet
+      </div>
     </div>
   </div>
 </div>
