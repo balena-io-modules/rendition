@@ -4,7 +4,7 @@ import { ObjectFieldTemplateProps } from 'react-jsonschema-form';
 const ObjectFieldTemplate = (props: ObjectFieldTemplateProps) => {
 	const { TitleField, DescriptionField } = props;
 	return (
-		<fieldset>
+		<section>
 			{props.schema.title && (props.uiSchema['ui:title'] || props.title) && (
 				<TitleField
 					id={`${props.idSchema.$id}__title`}
@@ -19,7 +19,7 @@ const ObjectFieldTemplate = (props: ObjectFieldTemplateProps) => {
 				/>
 			)}
 			{props.properties.map((prop: any) => prop.content)}
-		</fieldset>
+		</section>
 	);
 };
 

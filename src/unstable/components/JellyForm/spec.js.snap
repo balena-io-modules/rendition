@@ -188,7 +188,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   color: #2A506F;
 }
 
-.c3 fieldset {
+.c3 section {
   margin: 0;
   padding: 0;
   border: 0;
@@ -221,7 +221,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
       <div
         className="c2 c4 form-group field field-object rendition-form__field--root"
       >
-        <fieldset>
+        <section>
           <legend
             className="c5"
             id="root__title"
@@ -263,7 +263,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
               />
             </div>
           </div>
-        </fieldset>
+        </section>
       </div>
       <button
         className="c11 c12 "
