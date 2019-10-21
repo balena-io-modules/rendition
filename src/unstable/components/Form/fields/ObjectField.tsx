@@ -77,7 +77,7 @@ function DefaultObjectFieldTemplate(props: ObjectFieldProps) {
 
 	const { TitleField, DescriptionField } = props;
 	return (
-		<fieldset id={props.idSchema.$id}>
+		<section id={props.idSchema.$id}>
 			{(props.uiSchema['ui:title'] || props.title) && (
 				<TitleField
 					id={`${props.idSchema.$id}__title`}
@@ -99,7 +99,7 @@ function DefaultObjectFieldTemplate(props: ObjectFieldProps) {
 					disabled={props.disabled || props.readonly}
 				/>
 			)}
-		</fieldset>
+		</section>
 	);
 }
 

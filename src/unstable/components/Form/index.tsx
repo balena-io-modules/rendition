@@ -53,7 +53,7 @@ const fields: {
 };
 
 const FormWrapper = styled(Box)`
-	fieldset {
+	section {
 		margin: 0;
 		padding: 0;
 		border: 0;

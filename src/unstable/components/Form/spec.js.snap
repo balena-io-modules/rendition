@@ -179,7 +179,7 @@ exports[`Form component should match the stored snapshot 1`] = `
   color: #2A506F;
 }
 
-.c3 fieldset {
+.c3 section {
   margin: 0;
   padding: 0;
   border: 0;
@@ -212,7 +212,7 @@ exports[`Form component should match the stored snapshot 1`] = `
       <div
         className="c2 c4 form-group field field-object rendition-form__field--root"
       >
-        <fieldset>
+        <section>
           <div
             className="c2 c4 form-group field field-string rendition-form__field--root_Name"
           >
@@ -243,7 +243,7 @@ exports[`Form component should match the stored snapshot 1`] = `
               />
             </div>
           </div>
-        </fieldset>
+        </section>
       </div>
       <button
         className="c10 c11 "
