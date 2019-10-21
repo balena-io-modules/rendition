@@ -83,6 +83,7 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [Tooltips](#tooltips)
 - [Txt](#txt)
 - [Markdown](#markdown)
+- [MarkdownEditor](#markdowneditor)
 - [Mermaid](#mermaid)
 - [Form](#form)
 
@@ -934,6 +935,23 @@ Any other properties supplied are spread to the root element ([`Txt`](#txt)).
 #### Inheritance
 
 The properties of the [`Txt`](#txt) component are also available.
+### MarkdownEditor
+
+A markdown editor based on [simple MDE editor](https://github.com/RIP21/react-simplemde-editor)
+
+```
+import { MarkdownEditor } from 'rendition/dist/extra/MarkdownEditor';
+```
+
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/extra/MarkdownEditor/story.js)
+
+#### Props
+
+| Name   | Type   | Default   | Required   | Description   |
+| ------ | ------ | --------- | ---------- | ------------- |
+| `value`  | `string` | - | ✓ | The markdown-flavored text |
+| `onChange`  | `(text: string) => void` | - | ✓ | Callback called on every content change |
+
 ### Mermaid
 
 Generate charts from text using [mermaidjs](https://mermaidjs.github.io/).
