@@ -28,6 +28,9 @@ storiesOf('Next/Steps', module)
           <Step status='pending' onClick={() => null}>
             Title or dismiss button
           </Step>
+          <Step status='none' onClick={() => null}>
+            That's it (no icon)
+          </Step>
         </Steps>
 
         <Steps
