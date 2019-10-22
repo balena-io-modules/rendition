@@ -78,6 +78,8 @@ export default class FormHOC extends React.Component<
 	FormProps,
 	{ value: any; schema: JSONSchema6 }
 > {
+	private formRef = React.createRef<Form<any>>();
+
 	constructor(props: FormProps) {
 		super(props);
 
@@ -118,9 +120,9 @@ export default class FormHOC extends React.Component<
 		}
 	};
 
-	submit = (data: any) => {
-		if (this.props.onFormSubmit) {
-			this.props.onFormSubmit(data);
+	submit = () => {
+		if (this.formRef.current) {
+			this.formRef.current.submit();
 		}
 	};
 
@@ -148,14 +150,15 @@ export default class FormHOC extends React.Component<
 		return (
 			<FormWrapper {...props}>
 				<Form
+					ref={this.formRef}
 					liveValidate={liveValidate}
 					noValidate={noValidate}
 					validate={validate}
 					showErrorList={false}
 					schema={localSchema}
 					formData={this.state.value}
-					onSubmit={this.submit}
-					onChange={this.change}
+					onSubmit={this.props.onFormSubmit}
+					onChange={this.props.onFormChange}
 					uiSchema={uiSchema}
 					widgets={widgets}
 					fields={fields}
