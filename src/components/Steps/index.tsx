@@ -19,7 +19,7 @@ export interface InternalStepsProps extends DefaultProps {
 
 export interface StepProps {
 	children: string;
-	status: 'pending' | 'completed';
+	status: 'none' | 'pending' | 'completed';
 	onClick?: () => void;
 }
 
@@ -49,11 +49,13 @@ export const Step = ({ status, children, onClick }: StepProps) => {
 
 	return (
 		<Flex flexDirection="row" justifyContent="center" alignItems="center">
-			<StatusIconPlaceholder status={status}>
-				<FaCheckMarkCircle />
-			</StatusIconPlaceholder>
+			{status !== 'none' && (
+				<StatusIconPlaceholder status={status}>
+					<FaCheckMarkCircle />
+				</StatusIconPlaceholder>
+			)}
 			{onClick ? (
-				<Link ml={2} onClick={onClick}>
+				<Link ml={status === 'none' ? 0 : 2} onClick={onClick}>
 					{children}
 				</Link>
 			) : (
