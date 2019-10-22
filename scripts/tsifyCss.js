@@ -7,3 +7,9 @@ tsifyFileContent(
   './src/components/Terminal/XTermDefaultStyle.ts',
   str => '\n' + prettier.format(stripCssComments(str), { parser: 'css', useTabs: true })
 )
+
+tsifyFileContent(
+  './node_modules/easymde/dist/easymde.min.css',
+  './src/extra/MarkdownEditor/defaultStyle.ts',
+  str => '\n' + prettier.format(stripCssComments(str), { parser: 'css', useTabs: true })
+)
