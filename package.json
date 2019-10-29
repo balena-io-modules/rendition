@@ -4,7 +4,7 @@
   "description": "React components library",
   "repository": {
     "type": "git",
-    "url": "https://github.com/resin-io-modules/rendition"
+    "url": "https://github.com/balena-io-modules/rendition"
   },
   "license": "Apache-2.0",
   "main": "./dist/index.js",
