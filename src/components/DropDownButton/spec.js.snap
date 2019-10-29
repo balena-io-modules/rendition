@@ -22,8 +22,12 @@ exports[`DropDownButton renders correctly 1`] = `
   background: #00AEEF;
   color: #444444;
   border-radius: 20px;
-  -webkit-transition: 0.1s ease-in-out;
-  transition: 0.1s ease-in-out;
+  -webkit-transition-property: color, background-color, border-color, box-shadow;
+  transition-property: color, background-color, border-color, box-shadow;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 
 .c4:hover {
@@ -51,8 +55,12 @@ exports[`DropDownButton renders correctly 1`] = `
   background: #00AEEF;
   color: #444444;
   border-radius: 20px;
-  -webkit-transition: 0.1s ease-in-out;
-  transition: 0.1s ease-in-out;
+  -webkit-transition-property: color, background-color, border-color, box-shadow;
+  transition-property: color, background-color, border-color, box-shadow;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
   line-height: 0;
   padding: 12px;
 }
@@ -241,8 +249,12 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   background: #00AEEF;
   color: #444444;
   border-radius: 20px;
-  -webkit-transition: 0.1s ease-in-out;
-  transition: 0.1s ease-in-out;
+  -webkit-transition-property: color, background-color, border-color, box-shadow;
+  transition-property: color, background-color, border-color, box-shadow;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 
 .c4:hover {
@@ -270,8 +282,12 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   background: #00AEEF;
   color: #444444;
   border-radius: 20px;
-  -webkit-transition: 0.1s ease-in-out;
-  transition: 0.1s ease-in-out;
+  -webkit-transition-property: color, background-color, border-color, box-shadow;
+  transition-property: color, background-color, border-color, box-shadow;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
   line-height: 0;
   padding: 12px;
 }

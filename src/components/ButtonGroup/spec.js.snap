@@ -19,8 +19,12 @@ exports[`ButtonGroup renders correctly 1`] = `
   padding: 4px 30px;
   font-size: 14px;
   line-height: 1.5;
-  -webkit-transition: 0.1s ease-in-out;
-  transition: 0.1s ease-in-out;
+  -webkit-transition-property: color, background-color, border-color, box-shadow;
+  transition-property: color, background-color, border-color, box-shadow;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 
 .c4:hover {
