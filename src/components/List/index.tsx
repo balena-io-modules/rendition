@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { RenditionSystemProps } from '../../common-types';
+import { px } from '../../utils';
 
 // We use `em` so the list item size scales with the font size used.
 const ORDERED_LIST_SIZE = 1.5;
@@ -37,8 +38,9 @@ const OrderedList = styled(ListBase).attrs({ as: 'ol' })`
 
 		:before {
 			content: counter(ordered-list-counter);
-			margin-right: ${props => props.theme.space[3]}px;
+			margin-right: ${props => px(props.theme.space[3])};
 			background: ${props => props.theme.colors.info.main};
+			font-size: ${props => px(props.theme.fontSizes[0])};
 			height: ${ORDERED_LIST_SIZE}em;
 			width: ${ORDERED_LIST_SIZE}em;
 			min-width: ${ORDERED_LIST_SIZE}em;
