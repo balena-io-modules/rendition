@@ -9,7 +9,15 @@ import asRendition from '../../asRendition';
 import { DefaultProps, Omit, RenditionSystemProps } from '../../common-types';
 import { px } from '../../utils';
 
-const StyledGrommetSelect = styled(GrommetSelect)<InternalSelectProps<any>>`
+type AdjustedGrommetSelectProps = Omit<
+	GrommetSelectProps,
+	'onChange' | 'children'
+>;
+
+const StyledGrommetSelect = styled(GrommetSelect as React.ComponentClass<
+	AdjustedGrommetSelectProps,
+	any
+>)<InternalSelectProps<any>>`
 	font-family: ${props => props.theme.font};
 	font-size: ${props => px(props.theme.fontSizes[1])};
 	font-weight: normal;
@@ -53,7 +61,7 @@ function Select<T>({
 }
 
 interface InternalSelectProps<T>
-	extends Omit<GrommetSelectProps, 'onChange' | 'children'>,
+	extends AdjustedGrommetSelectProps,
 		Omit<DefaultProps, 'onChange'> {
 	emphasized?: boolean;
 	onChange: (data: {
