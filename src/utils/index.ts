@@ -14,7 +14,7 @@ interface ThemedDefaultProps extends DefaultProps {
 }
 
 export const isLight = (color?: string) => {
-	return Color(color).luminosity() > 0.5;
+	return Color(color).luminosity() > 0.65;
 };
 
 export const opaque = (color: string, opacity: number) =>
