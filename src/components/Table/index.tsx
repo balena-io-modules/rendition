@@ -32,7 +32,13 @@ const BaseTableWrapper = styled.div`
 	max-width: 100%;
 `;
 
-const BaseTable = styled.div<{ hasCheckbox: boolean }>`
+interface BaseTableProps {
+	hasCheckbox: boolean;
+	hasRowClick: boolean;
+	hasGetRowRef: boolean;
+}
+
+const BaseTable = styled.div<BaseTableProps>`
 	display: table;
 	width: 100%;
 	border-spacing: 0;
@@ -93,8 +99,8 @@ const BaseTable = styled.div<{ hasCheckbox: boolean }>`
 			}
 
 			> a[data-display='table-cell'] {
-				cursor: ${(props: any) =>
-					!!props.onRowClick || !!props.getRowHref ? 'pointer' : 'auto'};
+				cursor: ${props =>
+					props.hasRowClick || props.hasGetRowRef ? 'pointer' : 'auto'};
 			}
 
 			&:nth-of-type(even) {
@@ -103,8 +109,8 @@ const BaseTable = styled.div<{ hasCheckbox: boolean }>`
 
 			&:hover {
 				text-decoration: none;
-				${(props: any) =>
-					!!props.onRowClick || !!props.getRowHref || !!props.onCheck
+				${props =>
+					props.hasRowClick || props.hasGetRowRef || props.hasCheckbox
 						? highlightStyle
 						: ''};
 			}
@@ -438,7 +444,11 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 					)}
 
 				<BaseTableWrapper>
-					<BaseTable {...props} hasCheckbox={Boolean(onCheck)}>
+					<BaseTable
+						hasRowClick={!!props.onRowClick}
+						hasGetRowRef={!!props.getRowHref}
+						hasCheckbox={!!onCheck}
+					>
 						<div data-display="table-head">
 							<div data-display="table-row">
 								{onCheck && (
