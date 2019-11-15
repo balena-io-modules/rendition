@@ -57,6 +57,10 @@ export { default as Txt, TxtProps } from './components/Txt';
 export { default as Textarea, TextareaProps } from './components/Textarea';
 export { default as Img } from './components/Img';
 export { default as Heading } from './components/Heading';
+export {
+	NotificationsContainer,
+	notifications,
+} from './components/Notifications';
 export { default as Container } from './components/Container';
 export {
 	default as DropDownButton,

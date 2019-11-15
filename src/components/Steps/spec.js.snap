@@ -201,11 +201,15 @@ exports[`Steps component should match the stored snapshot 1`] = `
 
 .c21 {
   position: absolute;
+  font-size: 14px;
+  padding: 8px;
+  top: 17px;
+  right: 8px;
+}
+
+.c21 svg {
   height: 14px;
   width: 14px;
-  font-size: 14px;
-  top: 25px;
-  right: 16px;
 }
 
 .c8 {
