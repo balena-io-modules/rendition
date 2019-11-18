@@ -93,16 +93,16 @@ export default class FormHOC extends React.Component<
 		widgets[name] = value;
 	}
 
-	componentWillReceiveProps(nextProps: FormProps) {
-		if (!isEqual(this.props.value, nextProps.value)) {
+	componentDidUpdate(prevProps: FormProps) {
+		if (!isEqual(this.props.value, prevProps.value)) {
 			this.setState({
-				value: nextProps.value,
+				value: this.props.value,
 			});
 		}
 
-		if (!isEqual(this.props.schema, nextProps.schema)) {
+		if (!isEqual(this.props.schema, prevProps.schema)) {
 			this.setState({
-				schema: this.parseSchema(nextProps.schema),
+				schema: this.parseSchema(this.props.schema),
 			});
 		}
 	}

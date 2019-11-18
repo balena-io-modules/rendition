@@ -29,9 +29,9 @@ export class CaptchaWidget extends React.Component<CaptchaWidgetProps> {
 		}
 	}
 
-	componentWillReceiveProps(newProps: CaptchaWidgetProps) {
+	componentDidUpdate(prevProps: CaptchaWidgetProps) {
 		// Reset the captcha component if the form was submitted, since a captcha value can only be used once (and it will error if used again). The caller is obliged to empty the captcha value on submit
-		if (newProps.value !== this.props.value && !Boolean(newProps.value)) {
+		if (prevProps.value !== this.props.value && !Boolean(this.props.value)) {
 			this.recaptchaRef.current.reset();
 		}
 	}

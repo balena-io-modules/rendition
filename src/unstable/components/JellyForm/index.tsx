@@ -48,20 +48,20 @@ class JellyForm extends React.Component<JellyFormProps, JellyFormState> {
 		};
 	}
 
-	componentWillReceiveProps(nextProps: JellyFormProps) {
-		if (!isEqual(this.props.value, nextProps.value)) {
+	componentDidUpdate(prevProps: JellyFormProps) {
+		if (!isEqual(this.props.value, prevProps.value)) {
 			this.setState({
-				value: runFormulas(this.state.schema, nextProps.value),
+				value: runFormulas(this.state.schema, this.props.value),
 			});
 		}
 
 		if (
-			!isEqual(this.props.schema, nextProps.schema) ||
-			!isEqual(this.props.uiSchema, nextProps.uiSchema)
+			!isEqual(this.props.schema, prevProps.schema) ||
+			!isEqual(this.props.uiSchema, prevProps.uiSchema)
 		) {
 			const { schema, uiSchema } = computeFormSchemas(
-				nextProps.schema,
-				nextProps.uiSchema,
+				this.props.schema,
+				this.props.uiSchema,
 			);
 
 			this.setState({
