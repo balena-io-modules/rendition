@@ -89,23 +89,23 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		this.state.edit.push(this.getCleanEditModel());
 	}
 
-	componentWillReceiveProps(nextProps: FiltersProps) {
+	componentDidUpdate(prevProps: FiltersProps) {
 		const newState: any = {};
 
 		// If the schema prop updates, also update the internal 'flat' schema
-		if (!isEqual(nextProps.schema, this.props.schema)) {
-			newState.schema = SchemaSieve.flattenSchema(nextProps.schema);
+		if (!isEqual(prevProps.schema, this.props.schema)) {
+			newState.schema = SchemaSieve.flattenSchema(this.props.schema);
 		}
 
-		if (!isEqual(nextProps.filters, this.props.filters)) {
-			const filters = nextProps.filters || [];
+		if (!isEqual(prevProps.filters, this.props.filters)) {
+			const filters = this.props.filters || [];
 			newState.filters = filters.map(filter =>
 				SchemaSieve.flattenSchema(filter),
 			);
 		}
 
-		if (!isEqual(nextProps.views, this.props.views)) {
-			const views = nextProps.views || [];
+		if (!isEqual(prevProps.views, this.props.views)) {
+			const views = this.props.views || [];
 			newState.views = this.flattenViews(views);
 		}
 

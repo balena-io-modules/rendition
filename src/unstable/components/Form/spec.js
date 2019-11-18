@@ -218,6 +218,7 @@ describe('Form component', () => {
       )
 
       component.setProps({ value })
+      component.update()
 
       const input = component.find('input')
       expect(input.props().value).toEqual('Squirtle')

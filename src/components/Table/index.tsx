@@ -3,6 +3,7 @@ import filter from 'lodash/filter';
 import find from 'lodash/find';
 import includes from 'lodash/includes';
 import isArray from 'lodash/isArray';
+import isEqual from 'lodash/isEqual';
 import isFunction from 'lodash/isFunction';
 import isPlainObject from 'lodash/isPlainObject';
 import map from 'lodash/map';
@@ -161,9 +162,11 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		};
 	}
 
-	componentWillReceiveProps(newProps: TableProps<T>) {
-		if (newProps.sort !== this.props.sort) {
-			this.setState({ sort: newProps.sort } as TableState<T>);
+	componentDidUpdate(prevProps: TableProps<T>) {
+		if (this.props.sort && !isEqual(prevProps.sort, this.props.sort)) {
+			this.setState({
+				sort: this.props.sort,
+			});
 		}
 	}
 
@@ -221,7 +224,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 
 	sortData(data: T[]): T[] {
 		const { sort } = this.state;
-		if (sort.field === null) {
+		if (!sort || sort.field === null) {
 			return data;
 		}
 
