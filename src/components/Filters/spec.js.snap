@@ -186,7 +186,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
 }
 
 .c16 {
-  color: #3c3e42;
+  color: #2A506F;
   border-color: #DDE1f0;
 }
 
@@ -200,14 +200,14 @@ exports[`Filters component should match the stored snapshot 1`] = `
   box-shadow: none;
   background: #DDE1f0;
   border-color: #DDE1f0;
-  color: #3c3e42;
+  color: #2A506F;
   opacity: undefined;
 }
 
 .c16:hover:enabled svg,
 .c16:focus:enabled svg,
 .c16:active:enabled svg {
-  color: #3c3e42 !important;
+  color: #2A506F !important;
 }
 
 .c8 {

@@ -41,7 +41,7 @@ exports[`Alert renders correctly 1`] = `
 
 .c5 {
   font-size: 14px;
-  color: #3c3e42;
+  color: #2A506F;
 }
 
 .c1 {

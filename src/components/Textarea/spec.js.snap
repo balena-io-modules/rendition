@@ -52,7 +52,7 @@ exports[`Textarea component should match the stored snapshot 1`] = `
 
 .c3 {
   padding: 14px 20px;
-  color: #3c3e42;
+  color: #2A506F;
   cursor: auto;
   resize: vertical;
   display: block;
