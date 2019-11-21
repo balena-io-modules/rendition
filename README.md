@@ -55,6 +55,7 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [Card](#card)
 - [Checkbox](#checkbox)
 - [Container](#container)
+- [Copy](#copy)
 - [Divider](#divider)
 - [DropDownButton](#dropdownbutton)
 - [Filters](#filters)
@@ -238,6 +239,20 @@ A padded container with a responsive width.
 
 [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Container/story.js)
 
+
+### Copy
+
+Wrapper that adds a "copy to clipboard" button to any component and copies the passed content to the user's clipboard.
+
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Copy/story.js)
+
+#### Props
+
+| Name          | Type      | Default   | Required   | Description                                          |
+| ------ | ------ | --------- | ---------- | ------------- |
+| `content`      | `string` | -         | ✓          | The value that should be copied to the clipboard
+| `show`      | <code>'hover' &#124; 'always'</code> | - | - | Optionally show the copy button on hover or always show the button
+| `children`      | `React.ReactNode` | -         | - | The content next to which the clipboard button should be shown
 
 ### Divider
 
