@@ -168,6 +168,12 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 				sort: this.props.sort,
 			});
 		}
+
+		const totalItems = this.props.data?.length ?? 0;
+		const itemsPerPage = this.props.itemsPerPage ?? 50;
+		if (this.state.page !== 0 && totalItems <= this.state.page * itemsPerPage) {
+			this.resetPager();
+		}
 	}
 
 	isChecked(item: T) {

@@ -908,6 +908,32 @@ describe('Table component', () => {
 
       expect(component.find(Pager)).toHaveLength(0)
     })
+
+    it('should reset the page if the data length becomes less than the current pager value', () => {
+      const component = mount(
+        React.createElement(
+          props => (
+            <Provider>
+              <Table {...props} />
+            </Provider>
+          ),
+          {
+            columns: [{ field: 'Name' }],
+            data: PokeDex,
+            itemsPerPage: 2,
+            usePager: true
+          }
+        )
+      )
+
+      const table = component.find(Table).instance()
+      expect(table.state.page).toEqual(0)
+      table.incrementPage()
+      table.incrementPage()
+      expect(table.state.page).toEqual(2)
+      component.setProps({ data: PokeDex.slice(0, 2) })
+      expect(table.state.page).toEqual(0)
+    })
   })
 })
 
