@@ -29,7 +29,8 @@ environment.
 The interactive storybook can be launched by running:
 
 ```sh
-npm start
+npm run build
+npm run start
 ```
 
 The storybook can be accessed at http://localhost:6006.
