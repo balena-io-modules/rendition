@@ -1,4 +1,14 @@
 - commits:
+    - subject: Update steps for running the storybook.
+      hash: 69952fb2e06c51a1436482c44084a9554d994278
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Fidel Sanchez-Bueno
+  version: 11.32.2
+  date: 2019-11-26T21:34:41.783Z
+- commits:
     - subject: Add a machine-readable versionbot Changelog
       hash: 0c8b9544b534a256d67586adb3ea1fd1bac769bd
       body: |
