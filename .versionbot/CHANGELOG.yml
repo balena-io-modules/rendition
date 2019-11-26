@@ -1,1 +1,15 @@
-[]
+- commits:
+    - subject: Add a machine-readable versionbot Changelog
+      hash: 0c8b9544b534a256d67586adb3ea1fd1bac769bd
+      body: |
+        Once this is added, it will start adding a changelog
+        entry for all new changes that can be used to get
+        nested changelogs.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 11.32.1
+  date: 2019-11-26T18:48:55.198Z
