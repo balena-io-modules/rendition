@@ -411,10 +411,11 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 			rowAnchorAttributes,
 			rowKey,
 			onCheck,
+			onRowClick,
+			getRowHref,
+			getRowClass,
 			...props
 		} = this.props;
-
-		const { getRowHref, getRowClass } = props;
 
 		const { page, sort } = this.state;
 		const items = data || [];
@@ -448,8 +449,9 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 
 				<BaseTableWrapper>
 					<BaseTable
-						hasRowClick={!!props.onRowClick}
-						hasGetRowRef={!!props.getRowHref}
+						{...props}
+						hasRowClick={!!onRowClick}
+						hasGetRowRef={!!getRowHref}
 						hasCheckbox={!!onCheck}
 					>
 						<div data-display="table-head">
