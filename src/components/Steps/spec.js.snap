@@ -203,7 +203,7 @@ exports[`Steps component should match the stored snapshot 1`] = `
   position: absolute;
   font-size: 14px;
   padding: 8px;
-  top: 17px;
+  top: 18px;
   right: 8px;
 }
 
@@ -252,15 +252,15 @@ exports[`Steps component should match the stored snapshot 1`] = `
 }
 
 .c13 {
-  font-size: 32px;
+  font-size: 24px;
+  line-height: 24px;
   color: #bbc8d6;
-  line-height: 0.8;
 }
 
 .c18 {
-  font-size: 32px;
+  font-size: 24px;
+  line-height: 24px;
   color: #1AC135;
-  line-height: 0.8;
 }
 
 .c7 {
@@ -311,23 +311,21 @@ exports[`Steps component should match the stored snapshot 1`] = `
             className="c13"
           >
             <svg
-              fill="currentColor"
-              height="1em"
-              preserveAspectRatio="xMidYMid meet"
-              style={
-                Object {
-                  "color": undefined,
-                  "verticalAlign": "middle",
-                }
-              }
-              viewBox="0 0 40 40"
-              width="1em"
+              aria-hidden="true"
+              className="svg-inline--fa fa-check-circle fa-w-16 "
+              data-icon="check-circle"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <g>
-                <path
-                  d="m31.7 16.4q0-0.6-0.4-1l-2.1-2.1q-0.4-0.4-1-0.4t-1 0.4l-9.1 9.1-5-5q-0.5-0.4-1-0.4t-1 0.4l-2.1 2q-0.4 0.4-0.4 1 0 0.6 0.4 1l8.1 8.1q0.4 0.4 1 0.4 0.6 0 1-0.4l12.2-12.1q0.4-0.4 0.4-1z m5.6 3.6q0 4.7-2.3 8.6t-6.3 6.2-8.6 2.3-8.6-2.3-6.2-6.2-2.3-8.6 2.3-8.6 6.2-6.2 8.6-2.3 8.6 2.3 6.3 6.2 2.3 8.6z"
-                />
-              </g>
+              <path
+                d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                fill="currentColor"
+                style={Object {}}
+              />
             </svg>
           </span>
           <a
@@ -375,23 +373,21 @@ exports[`Steps component should match the stored snapshot 1`] = `
             className="c18"
           >
             <svg
-              fill="currentColor"
-              height="1em"
-              preserveAspectRatio="xMidYMid meet"
-              style={
-                Object {
-                  "color": undefined,
-                  "verticalAlign": "middle",
-                }
-              }
-              viewBox="0 0 40 40"
-              width="1em"
+              aria-hidden="true"
+              className="svg-inline--fa fa-check-circle fa-w-16 "
+              data-icon="check-circle"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <g>
-                <path
-                  d="m31.7 16.4q0-0.6-0.4-1l-2.1-2.1q-0.4-0.4-1-0.4t-1 0.4l-9.1 9.1-5-5q-0.5-0.4-1-0.4t-1 0.4l-2.1 2q-0.4 0.4-0.4 1 0 0.6 0.4 1l8.1 8.1q0.4 0.4 1 0.4 0.6 0 1-0.4l12.2-12.1q0.4-0.4 0.4-1z m5.6 3.6q0 4.7-2.3 8.6t-6.3 6.2-8.6 2.3-8.6-2.3-6.2-6.2-2.3-8.6 2.3-8.6 6.2-6.2 8.6-2.3 8.6 2.3 6.3 6.2 2.3 8.6z"
-                />
-              </g>
+              <path
+                d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                fill="currentColor"
+                style={Object {}}
+              />
             </svg>
           </span>
           <a
@@ -439,23 +435,21 @@ exports[`Steps component should match the stored snapshot 1`] = `
             className="c13"
           >
             <svg
-              fill="currentColor"
-              height="1em"
-              preserveAspectRatio="xMidYMid meet"
-              style={
-                Object {
-                  "color": undefined,
-                  "verticalAlign": "middle",
-                }
-              }
-              viewBox="0 0 40 40"
-              width="1em"
+              aria-hidden="true"
+              className="svg-inline--fa fa-check-circle fa-w-16 "
+              data-icon="check-circle"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <g>
-                <path
-                  d="m31.7 16.4q0-0.6-0.4-1l-2.1-2.1q-0.4-0.4-1-0.4t-1 0.4l-9.1 9.1-5-5q-0.5-0.4-1-0.4t-1 0.4l-2.1 2q-0.4 0.4-0.4 1 0 0.6 0.4 1l8.1 8.1q0.4 0.4 1 0.4 0.6 0 1-0.4l12.2-12.1q0.4-0.4 0.4-1z m5.6 3.6q0 4.7-2.3 8.6t-6.3 6.2-8.6 2.3-8.6-2.3-6.2-6.2-2.3-8.6 2.3-8.6 6.2-6.2 8.6-2.3 8.6 2.3 6.3 6.2 2.3 8.6z"
-                />
-              </g>
+              <path
+                d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                fill="currentColor"
+                style={Object {}}
+              />
             </svg>
           </span>
           <a
@@ -478,23 +472,21 @@ exports[`Steps component should match the stored snapshot 1`] = `
       type="button"
     >
       <svg
-        fill="currentColor"
-        height="1em"
-        preserveAspectRatio="xMidYMid meet"
-        style={
-          Object {
-            "color": undefined,
-            "verticalAlign": "middle",
-          }
-        }
-        viewBox="0 0 40 40"
-        width="1em"
+        aria-hidden="true"
+        className="svg-inline--fa fa-times fa-w-11 "
+        data-icon="times"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 352 512"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <g>
-          <path
-            d="m33.5 29.5q0 0.9-0.7 1.5l-3 3.1q-0.6 0.6-1.5 0.6t-1.5-0.6l-6.6-6.6-6.5 6.6q-0.7 0.6-1.6 0.6t-1.5-0.6l-3-3.1q-0.6-0.6-0.6-1.5t0.6-1.5l6.5-6.6-6.5-6.5q-0.6-0.7-0.6-1.6t0.6-1.5l3-3q0.6-0.6 1.5-0.6t1.6 0.6l6.5 6.6 6.6-6.6q0.6-0.6 1.5-0.6t1.5 0.6l3.1 3q0.6 0.7 0.6 1.5t-0.6 1.6l-6.6 6.5 6.6 6.6q0.6 0.6 0.6 1.5z"
-          />
-        </g>
+        <path
+          d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+          fill="currentColor"
+          style={Object {}}
+        />
       </svg>
     </button>
   </div>

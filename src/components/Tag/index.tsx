@@ -1,5 +1,6 @@
+import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
-import FaClose from 'react-icons/lib/fa/close';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { RenditionSystemProps } from '../../common-types';
@@ -85,7 +86,7 @@ const TagBase = ({
 			)}
 			{onClose && (
 				<DeleteButton plain p={1} pl={2} pr={3} fontSize={0} onClick={onClose}>
-					<FaClose />
+					<FontAwesomeIcon icon={faTimes} />
 				</DeleteButton>
 			)}
 		</Flex>

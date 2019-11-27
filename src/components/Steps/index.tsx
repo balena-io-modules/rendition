@@ -1,5 +1,6 @@
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons/faCheckCircle';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
-import FaCheckMarkCircle from 'react-icons/lib/fa/check-circle';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { DefaultProps, RenditionSystemProps, Theme } from '../../common-types';
@@ -33,9 +34,9 @@ const getStatusColor = (theme: Theme, status: StepProps['status']) => {
 };
 
 const StatusIconPlaceholder = styled.span<{ status: StepProps['status'] }>`
-	font-size: ${props => px(props.theme.fontSizes[5])};
+	font-size: ${props => px(props.theme.fontSizes[4])};
+	line-height: ${props => px(props.theme.fontSizes[4])};
 	color: ${props => getStatusColor(props.theme, props.status)};
-	line-height: 0.8; /* We need this to normalize the icon's height */
 `;
 
 const HeaderContainer = styled(Flex)`
@@ -51,7 +52,7 @@ export const Step = ({ status, children, onClick }: StepProps) => {
 		<Flex flexDirection="row" justifyContent="center" alignItems="center">
 			{status !== 'none' && (
 				<StatusIconPlaceholder status={status}>
-					<FaCheckMarkCircle />
+					<FontAwesomeIcon icon={faCheckCircle} />
 				</StatusIconPlaceholder>
 			)}
 			{onClick ? (
@@ -110,7 +111,7 @@ const Steps = React.forwardRef(
 				flexWrap="wrap"
 				alignItems="center"
 				onDismiss={onClose}
-				baselineHeight={32}
+				baselineHeight={34}
 				ref={ref as any}
 			>
 				{(titleText || titleIcon) && (

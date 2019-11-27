@@ -312,6 +312,11 @@ exports[`Filters component should match the stored snapshot 1`] = `
   position: relative;
 }
 
+.c13 svg {
+  width: 12px;
+  height: translateY(1px);
+}
+
 .c17 {
   margin: 0;
   width: 100%;
@@ -380,23 +385,22 @@ exports[`Filters component should match the stored snapshot 1`] = `
           className="c9"
         >
           <svg
-            fill="currentColor"
-            height="1em"
-            preserveAspectRatio="xMidYMid meet"
-            style={
-              Object {
-                "color": "#444444",
-                "verticalAlign": "middle",
-              }
-            }
-            viewBox="0 0 40 40"
-            width="1em"
+            aria-hidden="true"
+            className="svg-inline--fa fa-filter fa-w-16 "
+            color="#444444"
+            data-icon="filter"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <g>
-              <path
-                d="m35.8 6.6q0.4 0.9-0.3 1.5l-11 11.1v16.5q0 1-0.9 1.3-0.3 0.1-0.5 0.1-0.6 0-1-0.4l-5.7-5.7q-0.5-0.4-0.5-1v-10.8l-11-11q-0.7-0.7-0.3-1.6 0.4-0.9 1.3-0.9h28.6q0.9 0 1.3 0.9z"
-              />
-            </g>
+            <path
+              d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"
+              fill="currentColor"
+              style={Object {}}
+            />
           </svg>
           <div
             className="c10"
@@ -421,25 +425,21 @@ exports[`Filters component should match the stored snapshot 1`] = `
             value=""
           />
           <svg
-            className="search-icon"
-            fill="currentColor"
-            height="1em"
-            name="search"
-            preserveAspectRatio="xMidYMid meet"
-            style={
-              Object {
-                "color": undefined,
-                "verticalAlign": "middle",
-              }
-            }
-            viewBox="0 0 40 40"
-            width="1em"
+            aria-hidden="true"
+            className="svg-inline--fa fa-search fa-w-16 search-icon"
+            data-icon="search"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <g>
-              <path
-                d="m27.2 18.6q0-4.2-2.9-7.1t-7.1-2.9-7 2.9-3 7.1 2.9 7 7.1 3 7.1-3 2.9-7z m11.4 18.5q0 1.2-0.8 2.1t-2 0.8q-1.2 0-2-0.8l-7.7-7.7q-4 2.8-8.9 2.8-3.2 0-6.1-1.3t-5-3.3-3.4-5-1.2-6.1 1.2-6.1 3.4-5.1 5-3.3 6.1-1.2 6.1 1.2 5 3.3 3.4 5.1 1.2 6.1q0 4.9-2.7 8.9l7.6 7.6q0.8 0.9 0.8 2z"
-              />
-            </g>
+            <path
+              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+              fill="currentColor"
+              style={Object {}}
+            />
           </svg>
         </div>
       </div>
@@ -462,23 +462,21 @@ exports[`Filters component should match the stored snapshot 1`] = `
               className="c9"
             >
               <svg
-                fill="currentColor"
-                height="1em"
-                preserveAspectRatio="xMidYMid meet"
-                style={
-                  Object {
-                    "color": undefined,
-                    "verticalAlign": "middle",
-                  }
-                }
-                viewBox="0 0 40 40"
-                width="1em"
+                aria-hidden="true"
+                className="svg-inline--fa fa-chart-pie fa-w-17 "
+                data-icon="chart-pie"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 544 512"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <g>
-                  <path
-                    d="m17.6 19.9l12.2 12.2q-2.3 2.4-5.5 3.7t-6.7 1.3q-4.6 0-8.6-2.3t-6.2-6.2-2.3-8.6 2.3-8.6 6.2-6.2 8.6-2.3v17z m4.2 0.1h17.3q0 3.5-1.4 6.7t-3.7 5.5z m15.8-2.9h-17.1v-17.1q4.7 0 8.6 2.3t6.2 6.2 2.3 8.6z"
-                  />
-                </g>
+                <path
+                  d="M527.79 288H290.5l158.03 158.03c6.04 6.04 15.98 6.53 22.19.68 38.7-36.46 65.32-85.61 73.13-140.86 1.34-9.46-6.51-17.85-16.06-17.85zm-15.83-64.8C503.72 103.74 408.26 8.28 288.8.04 279.68-.59 272 7.1 272 16.24V240h223.77c9.14 0 16.82-7.68 16.19-16.8zM224 288V50.71c0-9.55-8.39-17.4-17.84-16.06C86.99 51.49-4.1 155.6.14 280.37 4.5 408.51 114.83 513.59 243.03 511.98c50.4-.63 96.97-16.87 135.26-44.03 7.9-5.6 8.42-17.23 1.57-24.08L224 288z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
               </svg>
               <div
                 className="c10"
@@ -492,23 +490,21 @@ exports[`Filters component should match the stored snapshot 1`] = `
                   Views
                 </div>
                 <svg
-                  fill="currentColor"
-                  height="1em"
-                  preserveAspectRatio="xMidYMid meet"
-                  style={
-                    Object {
-                      "color": undefined,
-                      "verticalAlign": "middle",
-                    }
-                  }
-                  viewBox="0 0 40 40"
-                  width="1em"
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-chevron-down fa-w-14 "
+                  data-icon="chevron-down"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 448 512"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g>
-                    <path
-                      d="m37.6 18l-16.6 16.6q-0.4 0.4-1 0.4t-1-0.4l-16.6-16.6q-0.4-0.4-0.4-1t0.4-1l3.7-3.7q0.5-0.4 1-0.4t1 0.4l11.9 11.9 11.9-11.9q0.4-0.4 1-0.4t1 0.4l3.7 3.7q0.4 0.4 0.4 1t-0.4 1z"
-                    />
-                  </g>
+                  <path
+                    d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
                 </svg>
               </div>
             </div>

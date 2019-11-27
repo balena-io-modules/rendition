@@ -1,5 +1,6 @@
+import { faSearch } from '@fortawesome/free-solid-svg-icons/faSearch';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
-import FaSearch from 'react-icons/lib/fa/search';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { DefaultProps, RenditionSystemProps } from '../../common-types';
@@ -55,7 +56,7 @@ const Search = ({
 				value={value}
 				onChange={onChange}
 			/>
-			<FaSearch className="search-icon" name="search" />
+			<FontAwesomeIcon icon={faSearch} className="search-icon" />
 		</Wrapper>
 	);
 };

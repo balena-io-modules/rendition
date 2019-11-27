@@ -1,6 +1,7 @@
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons/faChevronDown';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons/faChevronUp';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
-import ChevronDown from 'react-icons/lib/fa/chevron-down';
-import ChevronUp from 'react-icons/lib/fa/chevron-up';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { RenditionSystemProps } from '../../common-types';
@@ -12,8 +13,8 @@ import Fixed from '../Fixed';
 import { Flex } from '../Flex';
 
 const TOGGLE_BUTTON_X_PADDING = 16;
-// 12.25 is the width of the Chevron icon + 1px for the right border
-const TOGGLE_BUTTON_WIDTH = 2 * TOGGLE_BUTTON_X_PADDING + 13.25;
+const CHEVRON_ICON_WIDTH = 12;
+const TOGGLE_BUTTON_WIDTH = 2 * TOGGLE_BUTTON_X_PADDING + CHEVRON_ICON_WIDTH;
 
 const ToggleBase = styled(Button)`
 	min-width: 0;
@@ -59,6 +60,11 @@ const Wrapper = styled(Box)`
 	border-radius: ${props => px(props.theme.radius)};
 	vertical-align: top;
 	position: relative;
+
+	svg {
+		width: ${px(CHEVRON_ICON_WIDTH)};
+		height: translateY(1px);
+	}
 `;
 
 const Item = styled.div<{ border: boolean }>`
@@ -93,7 +99,11 @@ const Toggle = ({
 				<JoinedButton {...props} onClick={handler}>
 					<Flex justifyContent="space-between" alignItems="center">
 						<Box mr={2}>{label}</Box>
-						{open ? <ChevronUp /> : <ChevronDown />}
+						{open ? (
+							<FontAwesomeIcon icon={faChevronUp} />
+						) : (
+							<FontAwesomeIcon icon={faChevronDown} />
+						)}
 					</Flex>
 				</JoinedButton>
 			);
@@ -101,7 +111,13 @@ const Toggle = ({
 		return (
 			<JoinedButton
 				{...props}
-				icon={open ? <ChevronUp /> : <ChevronDown />}
+				icon={
+					open ? (
+						<FontAwesomeIcon icon={faChevronUp} />
+					) : (
+						<FontAwesomeIcon icon={faChevronDown} />
+					)
+				}
 				onClick={handler}
 			/>
 		);
@@ -109,7 +125,13 @@ const Toggle = ({
 	return (
 		<ToggleBase
 			{...props}
-			icon={open ? <ChevronUp /> : <ChevronDown />}
+			icon={
+				open ? (
+					<FontAwesomeIcon icon={faChevronUp} />
+				) : (
+					<FontAwesomeIcon icon={faChevronDown} />
+				)
+			}
 			onClick={handler}
 		/>
 	);

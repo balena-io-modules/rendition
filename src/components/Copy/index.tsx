@@ -1,6 +1,7 @@
+import { faCopy } from '@fortawesome/free-regular-svg-icons/faCopy';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import copyToClipboard from 'copy-to-clipboard';
 import * as React from 'react';
-import FaClipboard from 'react-icons/lib/fa/clipboard';
 import styled from 'styled-components';
 import { RenditionSystemProps } from '../../common-types';
 import { px, stopEvent } from '../../utils';
@@ -52,7 +53,7 @@ export default ({
 					copyToClipboard(normalizedText);
 				}}
 			>
-				<FaClipboard />
+				<FontAwesomeIcon icon={faCopy} />
 			</ClipboardContainer>
 		</CopyContainer>
 	);

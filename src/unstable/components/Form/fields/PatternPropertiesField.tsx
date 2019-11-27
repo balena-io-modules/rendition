@@ -1,8 +1,9 @@
+import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { JSONSchema6 } from 'json-schema';
 import map from 'lodash/map';
 import reduce from 'lodash/reduce';
 import * as React from 'react';
-import FaClose from 'react-icons/lib/fa/close';
 import { FormValidation } from 'react-jsonschema-form';
 import styled from 'styled-components';
 import { Button, Input } from '../../../..';
@@ -164,7 +165,7 @@ export default class PatternPropertiesField extends React.Component<
 											ml={1}
 											onClick={this.props.onDropPropertyClick(item.key)}
 										>
-											<FaClose />
+											<FontAwesomeIcon icon={faTimes} />
 										</ActionButton>
 									)}
 								</td>

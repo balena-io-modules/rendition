@@ -1,3 +1,6 @@
+import { faFilter } from '@fortawesome/free-solid-svg-icons/faFilter';
+import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { JSONSchema6 } from 'json-schema';
 import castArray from 'lodash/castArray';
 import cloneDeep from 'lodash/cloneDeep';
@@ -8,8 +11,6 @@ import isEqual from 'lodash/isEqual';
 import map from 'lodash/map';
 import reject from 'lodash/reject';
 import * as React from 'react';
-import FaClose from 'react-icons/lib/fa/close';
-import FaFilter from 'react-icons/lib/fa/filter';
 import styled from 'styled-components';
 import { Button, ButtonProps } from '../../';
 import { DefaultProps } from '../../common-types';
@@ -370,7 +371,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 							mr={30}
 							disabled={this.props.disabled}
 							primary
-							icon={<FaFilter />}
+							icon={<FontAwesomeIcon icon={faFilter} />}
 							onClick={() =>
 								this.setState({ showModal: true, editingFilter: null })
 							}
@@ -490,7 +491,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 												p={1}
 												onClick={() => this.removeCompound(index)}
 											>
-												<FaClose />
+												<FontAwesomeIcon icon={faTimes} />
 											</DeleteButton>
 										)}
 									</RelativeBox>

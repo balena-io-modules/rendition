@@ -3,9 +3,10 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
-import FaExpand from 'react-icons/lib/fa/expand'
-import FaRecycle from 'react-icons/lib/fa/recycle'
-import FaSpinner from 'react-icons/lib/fa/spinner'
+import { faExpand } from '@fortawesome/free-solid-svg-icons/faExpand'
+import { faRecycle } from '@fortawesome/free-solid-svg-icons/faRecycle'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons/faSpinner'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Box, Button, Provider } from '../../'
 import Readme from './README.md'
 
@@ -151,7 +152,7 @@ storiesOf('Next/Button', module)
             m={2}
             plain
             primary
-            icon={<FaSpinner />}
+            icon={<FontAwesomeIcon icon={faSpinner} />}
             onClick={action('case-2')}
           >
             Button
@@ -189,10 +190,19 @@ storiesOf('Next/Button', module)
     return (
       <Provider>
         <Box m={3}>
-          <Button m={2} tertiary icon={<FaExpand />} onClick={action('case-3')}>
+          <Button
+            m={2}
+            tertiary
+            icon={<FontAwesomeIcon icon={faExpand} />}
+            onClick={action('case-3')}
+          >
             Expand
           </Button>
-          <Button m={2} icon={<FaRecycle />} onClick={action('case-4')}>
+          <Button
+            m={2}
+            icon={<FontAwesomeIcon icon={faRecycle} />}
+            onClick={action('case-4')}
+          >
             Recycle
           </Button>
         </Box>
@@ -206,10 +216,14 @@ storiesOf('Next/Button', module)
           <Button
             m={2}
             tertiary
-            icon={<FaExpand />}
+            icon={<FontAwesomeIcon icon={faExpand} />}
             onClick={action('case-3')}
           />
-          <Button m={2} onClick={action('case-4')} icon={<FaRecycle />} />
+          <Button
+            m={2}
+            onClick={action('case-4')}
+            icon={<FontAwesomeIcon icon={faRecycle} />}
+          />
         </Box>
       </Provider>
     )

@@ -2,7 +2,7 @@
   "parser": "babel-eslint",
   "rules": {
     "react/prop-types": 0,
-    "no-restricted-imports": ["error", "lodash", "react-icons/lib/fa"],
+    "no-restricted-imports": ["error", "lodash", "@fortawesome/free-solid-svg-icons", "@fortawesome/free-regular-svg-icons"],
     "no-unused-expressions": 1,
     "import/first": 0,
     // Prevents clashes with jsx specific rules about indenting, by ignoring JSX elements

@@ -1,8 +1,9 @@
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons/faCheckCircle';
+import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons/faExclamationCircle';
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons/faExclamationTriangle';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons/faLightbulb';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
-import FaCheckCircle from 'react-icons/lib/fa/check-circle';
-import FaExclamationCircle from 'react-icons/lib/fa/exclamation-circle';
-import FaExclamationTriangle from 'react-icons/lib/fa/exclamation-triangle';
-import FaLightbulb from 'react-icons/lib/fa/lightbulb-o';
 import asRendition from '../../asRendition';
 import {
 	Coloring,
@@ -42,17 +43,15 @@ const getIcon = (props: InternalAlertProps) => {
 	if (props.prefix !== undefined) {
 		return;
 	}
-	return props.danger ? (
-		<FaExclamationCircle />
-	) : props.warning ? (
-		<FaExclamationTriangle />
-	) : props.success ? (
-		<FaCheckCircle />
-	) : props.info ? (
-		<FaLightbulb />
-	) : (
-		''
-	);
+	return props.danger
+		? faExclamationCircle
+		: props.warning
+		? faExclamationTriangle
+		: props.success
+		? faCheckCircle
+		: props.info
+		? faLightbulb
+		: '';
 };
 
 const Alert = (props: ThemedAlertProps) => {
@@ -66,8 +65,8 @@ const Alert = (props: ThemedAlertProps) => {
 		return (
 			<Flex color={color} {...restProps}>
 				{icon && (
-					<Txt fontSize={1} mt={'-1px'} mb="auto" mr={2}>
-						{icon}
+					<Txt fontSize={1} mb="auto" mr={2}>
+						<FontAwesomeIcon icon={icon} />
 					</Txt>
 				)}
 				<Txt.span fontSize={1}>{props.children}</Txt.span>
@@ -84,8 +83,8 @@ const Alert = (props: ThemedAlertProps) => {
 			{...restProps}
 		>
 			{icon && (
-				<Txt fontSize={1} mt={'-1px'} mb="auto" mr={3}>
-					{icon}
+				<Txt fontSize={1} mb="auto" mr={3}>
+					<FontAwesomeIcon icon={icon} />
 				</Txt>
 			)}
 			<Box flex={1}>
