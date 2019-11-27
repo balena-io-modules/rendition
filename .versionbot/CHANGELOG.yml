@@ -1,4 +1,20 @@
 - commits:
+    - subject: Fix table not displaying data when data length reduces
+      hash: fc9bbcb80731230bde33459c16bdc1fa512cd174
+      body: |
+        If the data length becomes less than the initial one
+        (like when you apply a filter), the data would not show
+        up, and the pager will get stuck at whatever page the user
+        was at.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 11.32.4
+  date: 2019-11-27T09:20:25.459Z
+- commits:
     - subject: 'minifix: Change how React is imported to work with Typescript'
       hash: 7664665eb3b5408471e8f49687f83796165a2d0b
       body: ''
