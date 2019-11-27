@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import ReactNotification, { store } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css';
 import styled from 'styled-components';
