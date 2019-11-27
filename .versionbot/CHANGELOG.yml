@@ -1,4 +1,16 @@
 - commits:
+    - subject: Replace react-icons with font-awesome 5 free icons
+      hash: 2f59f08e460fd8f010e0e7f1f6cf0b897fc065df
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 11.33.0
+  date: 2019-11-27T09:52:45.014Z
+- commits:
     - subject: Fix table not displaying data when data length reduces
       hash: fc9bbcb80731230bde33459c16bdc1fa512cd174
       body: |
