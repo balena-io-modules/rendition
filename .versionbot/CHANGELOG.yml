@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'minifix: Change how React is imported to work with Typescript'
+      hash: 7664665eb3b5408471e8f49687f83796165a2d0b
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 11.32.3
+  date: 2019-11-27T09:00:35.521Z
+- commits:
     - subject: Update steps for running the storybook.
       hash: 69952fb2e06c51a1436482c44084a9554d994278
       body: ''
