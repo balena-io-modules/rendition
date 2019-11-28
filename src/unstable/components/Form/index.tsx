@@ -74,19 +74,29 @@ const FormWrapper = styled(Box)`
 	}
 `;
 
-export default class FormHOC extends React.Component<
-	FormProps,
-	{ value: any; schema: JSONSchema6 }
-> {
+const parseSchema = (schema: JSONSchema6) => {
+	const whitelist = SUPPORTED_SCHEMA_FORMATS.concat(Object.keys(widgets));
+	return utils.stripSchemaFormats(schema, whitelist);
+};
+
+interface FormState {
+	value: any;
+	schema: JSONSchema6;
+}
+
+export default class FormHOC extends React.Component<FormProps, FormState> {
 	private formRef = React.createRef<Form<any>>();
 
-	constructor(props: FormProps) {
-		super(props);
+	static getDerivedStateFromProps(props: FormProps, state: FormState) {
+		if (!state) {
+			return { schema: parseSchema(props.schema), value: props.value };
+		}
 
-		this.state = {
-			value: props.value || (props.schema.type === 'array' ? [] : {}),
-			schema: this.parseSchema(props.schema),
-		};
+		if (!isEqual(state.value, props.value)) {
+			return {
+				value: props.value,
+			};
+		}
 	}
 
 	static registerWidget(name: string, value: any) {
@@ -94,22 +104,11 @@ export default class FormHOC extends React.Component<
 	}
 
 	componentDidUpdate(prevProps: FormProps) {
-		if (!isEqual(this.props.value, prevProps.value)) {
-			this.setState({
-				value: this.props.value,
-			});
-		}
-
 		if (!isEqual(this.props.schema, prevProps.schema)) {
 			this.setState({
-				schema: this.parseSchema(this.props.schema),
+				schema: parseSchema(this.props.schema),
 			});
 		}
-	}
-
-	parseSchema(schema: JSONSchema6) {
-		const whitelist = SUPPORTED_SCHEMA_FORMATS.concat(Object.keys(widgets));
-		return utils.stripSchemaFormats(schema, whitelist);
 	}
 
 	change = (data: IChangeEvent) => {
