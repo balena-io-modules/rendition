@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'Add onclick handler to Copy, fix children typings'
+      hash: 3c1cf243e9b522dbbba680b75df51c4290347d41
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 11.34.0
+  date: 2019-11-29T10:54:24.872Z
+- commits:
     - subject: Fix regression in Form recreating itself on every change
       hash: d36826ed0d8979b627fa1faf2069160414c5ff1a
       body: ''
