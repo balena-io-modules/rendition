@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix regression in Form recreating itself on every change
+      hash: d36826ed0d8979b627fa1faf2069160414c5ff1a
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 11.33.1
+  date: 2019-11-28T18:51:35.220Z
+- commits:
     - subject: Replace react-icons with font-awesome 5 free icons
       hash: 2f59f08e460fd8f010e0e7f1f6cf0b897fc065df
       body: ''
