@@ -33,6 +33,7 @@ export default ({
 	content,
 	show,
 	children,
+	onClick,
 	...otherProps
 }: InternalCopyProps) => {
 	const normalizedText = (content || '').toString().trim();
@@ -51,6 +52,9 @@ export default ({
 				onClick={e => {
 					stopEvent(e);
 					copyToClipboard(normalizedText);
+					if (onClick) {
+						onClick(normalizedText);
+					}
 				}}
 			>
 				<FontAwesomeIcon icon={faCopy} />
@@ -59,10 +63,11 @@ export default ({
 	);
 };
 
-export interface InternalCopyProps extends FlexProps {
+export interface InternalCopyProps extends Omit<FlexProps, 'onClick'> {
 	content: string;
 	show?: 'hover' | 'always';
-	children: React.ReactNode;
+	onClick?: (content: string) => void;
+	children?: React.ReactNode;
 }
 
 export type CopyProps = InternalCopyProps & RenditionSystemProps;
