@@ -33,7 +33,10 @@ export class Mermaid extends React.Component<MermaidProps, {}> {
 		try {
 			mermaidAPI.render(this.id, value, (svgCode, bindFunctions) => {
 				renderArea.innerHTML = svgCode;
-				bindFunctions(renderArea);
+
+				if (typeof bindFunctions === 'function') {
+					bindFunctions(renderArea);
+				}
 			});
 		} catch (error) {
 			renderArea.innerHTML = `Unable to parse input: ${error.message}`;
