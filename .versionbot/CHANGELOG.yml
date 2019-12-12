@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix bug where mermaid sequence diagrams don't render
+      hash: c8631b1b2db59652357046b5310715d26b1c1841
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+  version: 11.34.1
+  date: 2019-12-12T17:22:54.954Z
+- commits:
     - subject: 'Add onclick handler to Copy, fix children typings'
       hash: 3c1cf243e9b522dbbba680b75df51c4290347d41
       body: ''
