@@ -995,6 +995,25 @@ describe('SchemaSieve', () => {
 
       expect(ajv.compile(filter)).not.toThrow()
     })
+
+    it.only('should work when "type" is an array', () => {
+      const schema = {
+        type: 'object',
+        properties: {
+          foo: { type: ['string', 'null'] },
+          bar: { type: 'string' }
+        }
+      }
+
+      const value = {
+        foo: 'test',
+        bar: 'baz'
+      }
+
+      const filter = sieve.createFullTextSearchFilter(schema, 'test')
+
+      expect(ajv.validate(filter, value)).toBe(true)
+    })
   })
 
   describe('.upsertFullTextSearch()', () => {
