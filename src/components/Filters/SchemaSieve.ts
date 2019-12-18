@@ -7,6 +7,7 @@ import defaults from 'lodash/defaults';
 import every from 'lodash/every';
 import findIndex from 'lodash/findIndex';
 import findKey from 'lodash/findKey';
+import includes from 'lodash/includes';
 import isArray from 'lodash/isArray';
 import isBoolean from 'lodash/isBoolean';
 import map from 'lodash/map';
@@ -50,7 +51,10 @@ export const createFullTextSearchFilter = (
 	const stringKeys = reduce(
 		schema.properties,
 		(carry, item: JSONSchema6, key) => {
-			if (item.type === 'string') {
+			if (
+				item.type === 'string' ||
+				(isArray(item.type) && includes(item.type, 'string'))
+			) {
 				carry.push(key);
 			}
 

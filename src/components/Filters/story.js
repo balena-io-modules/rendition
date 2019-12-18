@@ -40,7 +40,7 @@ const schema = {
   properties: {
     Name: {
       title: 'Pokemon Name',
-      type: 'string'
+      type: ['string', 'null']
     },
     Description: {
       type: 'string'
