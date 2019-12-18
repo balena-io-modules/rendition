@@ -1,4 +1,16 @@
 - commits:
+    - subject: Hide hamburger button when there are no menu items
+      hash: e82f9ea25a60aa384c2eb5203995e5e201f12c3d
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Amit Solanki <amit@balena.io>
+        signed-off-by: Amit Solanki <amit@balena.io>
+      author: Amit Solanki
+  version: 11.34.2
+  date: 2019-12-18T09:14:34.869Z
+- commits:
     - subject: Fix bug where mermaid sequence diagrams don't render
       hash: c8631b1b2db59652357046b5310715d26b1c1841
       body: ''
