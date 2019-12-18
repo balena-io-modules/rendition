@@ -1,72 +1,67 @@
-import ColorHash from 'color-hash';
-import assign from 'lodash/assign';
-import memoize from 'lodash/memoize';
+import Color from 'color';
 import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { Coloring, RenditionSystemProps, Theme } from '../../common-types';
-import { getColor, isLight, px } from '../../utils';
-import Txt, { TxtProps } from '../Txt';
+import Txt from '../Txt';
 
-const colorHash = new ColorHash();
-const backgroundColor = memoize((text: string): string => {
-	return colorHash.hex(text.replace(/\s/g, ''));
-});
+const shades = [
+	'#B3D2E5',
+	'#BAECC2',
+	'#FDC7EB',
+	'#E5C7EA',
+	'#BCE6F5',
+	'#FCB9B6',
+	'#B6E3DF',
+	'#D6D3FA',
+	'#C3C7CA',
+	'#FBDBB2',
+	'#E1E3B9',
+	'#DBE0E3',
+	'#ffef62',
+	'#fbe6f4',
+];
 
-const BaseBadge = styled(Txt)`
-	border-radius: ${props => px(props.theme.radius)};
+const getColors = (shade: string) => {
+	const base = new Color(shade);
+	// The values are derived by trial and error, making sure each pre-defined shades has background to text color ratio of at least 4:1.
+	const text = base.darken(0.6).desaturate(0.3);
+	return { bg: base.hex(), color: text.hex() };
+};
+
+const BaseBadge = styled(Txt.span)`
+	font-family: ${props => props.theme.titleFont};
 	display: inline-block;
-	min-width: 40px;
-	text-align: center;
-	font-weight: 800;
-	font-style: normal;
-	font-stretch: normal;
-	letter-spacing: 0.5px;
+	border-radius: 1em;
+	line-height: 1;
 `;
 
-const Badge = ({
-	xsmall,
-	small,
-	children,
-	theme,
-	...props
-}: ThemedBadgeProps) => {
-	let fontSize = 2;
-	if (small) {
-		fontSize = 1;
-	}
-	if (xsmall) {
-		fontSize = 10;
-	}
-
+const Badge = ({ children, className, shade }: ThemedBadgeProps) => {
 	if (typeof children !== 'string') {
 		throw new Error(
 			`The child element of the Badge component must be a string, received: ${typeof children}`,
 		);
 	}
 
-	const bgColor =
-		getColor(assign(props, { theme }), 'bg', 'main') ||
-		backgroundColor(children);
+	const shadeHex = shades[(shade || 0) % shades.length];
 
 	return (
 		<BaseBadge
-			p="2px 5px"
-			fontSize={fontSize}
-			{...props}
-			color={props.color || isLight(bgColor) ? 'text.main' : '#fff'}
-			bg={bgColor}
+			className={className}
+			py={1}
+			px="12px"
+			fontSize={0}
+			{...getColors(shadeHex)}
 		>
 			{children}
 		</BaseBadge>
 	);
 };
 
-export interface InternalBadgeProps extends TxtProps, Coloring {
-	small?: boolean;
-	xsmall?: boolean;
-	color?: string;
-	bg?: string;
+export interface InternalBadgeProps extends Coloring {
+	children: string;
+	className: string;
+	shade?: number;
 }
 
 export interface ThemedBadgeProps extends InternalBadgeProps {
@@ -75,8 +70,4 @@ export interface ThemedBadgeProps extends InternalBadgeProps {
 
 export type BadgeProps = InternalBadgeProps & RenditionSystemProps;
 
-export default asRendition<React.FunctionComponent<BadgeProps>>(
-	Badge,
-	[],
-	['bg', 'color'],
-);
+export default asRendition<React.FunctionComponent<BadgeProps>>(Badge);

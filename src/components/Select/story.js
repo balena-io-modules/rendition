@@ -28,11 +28,7 @@ storiesOf('Next/Select', module)
           value={'Custom render'}
           open
         >
-          {option => (
-            <Badge m={1} small>
-              {option}
-            </Badge>
-          )}
+          {option => <Badge m={1}>{option}</Badge>}
         </Select>
 
         <Select
