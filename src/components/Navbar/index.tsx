@@ -68,18 +68,20 @@ class Navbar extends React.Component<NavbarProps, NavbarState> {
 					<Flex flexDirection={['column', 'row']}>
 						<Flex>
 							<BrandBox p={2}>{brand}</BrandBox>
-							<IconBox
-								onClick={() => this.toggle()}
-								ml={['auto', 0]}
-								p={2}
-								display={['block', 'none']}
-							>
-								{this.state.open ? (
-									<FontAwesomeIcon icon={faTimes} />
-								) : (
-									<FontAwesomeIcon icon={faBars} />
-								)}
-							</IconBox>
+							{children && (
+								<IconBox
+									onClick={() => this.toggle()}
+									ml={['auto', 0]}
+									p={2}
+									display={['block', 'none']}
+								>
+									{this.state.open ? (
+										<FontAwesomeIcon icon={faTimes} />
+									) : (
+										<FontAwesomeIcon icon={faBars} />
+									)}
+								</IconBox>
+							)}
 						</Flex>
 						<MenuBox
 							maxHeight={[this.state.open ? '100vh' : '0vh', 'none']}
