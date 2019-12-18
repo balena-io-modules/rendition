@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'Filters: make full text search work with "type" array values'
+      hash: ac125b02fa665429313cda8e33701b0ea06f0ac3
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+  version: 11.34.3
+  date: 2019-12-18T11:19:47.851Z
+- commits:
     - subject: Hide hamburger button when there are no menu items
       hash: e82f9ea25a60aa384c2eb5203995e5e201f12c3d
       body: ''
