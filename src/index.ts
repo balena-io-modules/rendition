@@ -22,6 +22,10 @@ export {
 	FiltersState,
 } from './components/Filters';
 export { default as Fixed, FixedProps } from './components/Fixed';
+export {
+	default as HighlightedName,
+	HighlightedNameProps,
+} from './components/HighlightedName';
 export { default as Input, InputProps } from './components/Input';
 export { default as Modal, ModalProps } from './components/Modal';
 export { default as Pager, PagerProps } from './components/Pager';
