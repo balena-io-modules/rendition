@@ -5,6 +5,7 @@ import findKey from 'lodash/findKey';
 import includes from 'lodash/includes';
 import isString from 'lodash/isString';
 import mapValues from 'lodash/mapValues';
+import pick from 'lodash/pick';
 import * as React from 'react';
 import * as utils from '../../utils';
 import { DataTypeEditProps } from '../Filters';
@@ -187,6 +188,21 @@ const format = (schema: JSONSchema6, object: { [k: string]: string }) => {
 	return key && value ? `${key} : ${value}` : key || value;
 };
 
+function getValueForOperation(
+	operator: OperatorSlug,
+	schema: JSONSchema6,
+	value: string | object,
+) {
+	if (keyOperators.includes(operator)) {
+		const schemaKey = findKey(schema.properties!, { description: 'key' })!;
+		value = pick(value, schemaKey);
+	} else if (valueOperators.includes(operator)) {
+		const schemaValue = findKey(schema.properties!, { description: 'value' })!;
+		value = pick(value, schemaValue);
+	}
+	return value;
+}
+
 export const createFilter = (
 	field: string,
 	operator: OperatorSlug,
@@ -194,6 +210,9 @@ export const createFilter = (
 	schema: JSONSchema6,
 ): JSONSchema6 => {
 	const { title } = schema;
+
+	value = getValueForOperation(operator, schema, value);
+
 	const base: ObjectFilter = {
 		title: operator,
 		description: getJsonDescription(

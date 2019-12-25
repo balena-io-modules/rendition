@@ -1175,7 +1175,13 @@ describe('SchemaSieve', () => {
             value = 900122
             break
           case 'object':
-            value = { tag_name: 'foo', tag_value: 'bar' }
+            if (slug.includes('key')) {
+              value = { tag_name: 'foo' }
+            } else if (slug.includes('value')) {
+              value = { tag_value: 'bar' }
+            } else {
+              value = { tag_name: 'foo', tag_value: 'bar' }
+            }
             break
           default:
             value = 'test'
