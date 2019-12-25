@@ -188,6 +188,21 @@ const format = (schema: JSONSchema6, object: { [k: string]: string }) => {
 	return key && value ? `${key} : ${value}` : key || value;
 };
 
+function getValueForOperation(
+	operator: OperatorSlug,
+	schema: JSONSchema6,
+	value: string | object,
+) {
+	if (keyOperators.includes(operator)) {
+		const schemaKey = findKey(schema.properties!, { description: 'key' })!;
+		value = pick(value, schemaKey);
+	} else if (valueOperators.includes(operator)) {
+		const schemaValue = findKey(schema.properties!, { description: 'value' })!;
+		value = pick(value, schemaValue);
+	}
+	return value;
+}
+
 export const createFilter = (
 	field: string,
 	operator: OperatorSlug,
@@ -196,13 +211,7 @@ export const createFilter = (
 ): JSONSchema6 => {
 	const { title } = schema;
 
-	if (operator.includes('key')) {
-		const schemaKey = findKey(schema.properties!, { description: 'key' })!;
-		value = pick(value, schemaKey);
-	} else if (operator.includes('value')) {
-		const schemaValue = findKey(schema.properties!, { description: 'value' })!;
-		value = pick(value, schemaValue);
-	}
+	value = getValueForOperation(operator, schema, value);
 
 	const base: ObjectFilter = {
 		title: operator,
