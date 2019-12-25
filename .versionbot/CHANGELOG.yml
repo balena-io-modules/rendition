@@ -1,4 +1,25 @@
 - commits:
+    - subject: Refactor condition into func to be more readable
+      hash: 912af11511168125f686ddbd78a37853d87a9095
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Amit Solanki <amit@balena.io>
+        signed-off-by: Amit Solanki <amit@balena.io>
+      author: Amit Solanki
+    - subject: 'fix(Filters): hidden fields are applied to Tag Filter'
+      hash: 674e7aec86ca60d430fd53fdcd2b591d134c467f
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Amit Solanki <amit@balena.io>
+        signed-off-by: Amit Solanki <amit@balena.io>
+      author: Amit Solanki
+  version: 11.34.5
+  date: 2019-12-25T08:37:45.733Z
+- commits:
     - subject: Reduce the lumonocity threshold in the isLight method
       hash: 68a192860d32b7afee24f85d0532c7328297bd06
       body: ''
