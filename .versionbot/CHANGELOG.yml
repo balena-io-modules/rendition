@@ -1,4 +1,14 @@
 - commits:
+    - subject: 'minifix(Screenshots): Generate fresh screenshots'
+      hash: d0469ee07635c5261fdd515255b2e088115d6d5f
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Banana
+  version: 11.34.6
+  date: 2019-12-26T20:47:14.828Z
+- commits:
     - subject: Refactor condition into func to be more readable
       hash: 912af11511168125f686ddbd78a37853d87a9095
       body: ''
