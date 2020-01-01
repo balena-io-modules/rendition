@@ -67,7 +67,7 @@
   {
     "name": "should render markdown images",
     "source": "![GitHub logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)",
-    "expected": "<p><img src=\"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png\"></p>"
+    "expected": "<p><img src=\"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png\" alt=\"GitHub logo\"></p>"
   },
   {
     "name": "should render markdown links",
@@ -1152,7 +1152,7 @@
   {
     "name": "xss: 205",
     "source": "<a href=http://foo.bar/#x=`y></a><img alt=\"`><img src=x:x onerror=javascript:alert(1)></a>\">",
-    "expected": "<p>&lt;a href=<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://foo.bar/#x=%60y&gt;\">http://foo.bar/#x=`y&gt;</a><img></p>"
+    "expected": "<p>&lt;a href=<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://foo.bar/#x=%60y&gt;\">http://foo.bar/#x=`y&gt;</a><img alt=\"`&gt;&lt;img src=x:x onerror=javascript:alert(1)&gt;&lt;/a&gt;\"></p>"
   },
   {
     "name": "xss: 206",
