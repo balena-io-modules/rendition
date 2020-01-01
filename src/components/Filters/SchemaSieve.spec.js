@@ -996,7 +996,7 @@ describe('SchemaSieve', () => {
       expect(ajv.compile(filter)).not.toThrow()
     })
 
-    it.only('should work when "type" is an array', () => {
+    it('should work when "type" is an array', () => {
       const schema = {
         type: 'object',
         properties: {
@@ -1180,7 +1180,7 @@ describe('SchemaSieve', () => {
             } else if (slug.includes('value')) {
               value = { tag_value: 'bar' }
             } else {
-              value = { tag_name: 'foo', tag_value: 'bar' }
+              value = { tag_name: 'foo' }
             }
             break
           default:
