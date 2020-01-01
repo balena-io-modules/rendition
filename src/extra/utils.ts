@@ -21,16 +21,20 @@ const markedOptions = {
 
 const sanitizerOptions = {
 	allowedTags: sanitizeHtml.defaults.allowedTags.concat([
+		'article',
+		'aside',
 		'del',
+		'div',
 		'h1',
 		'h2',
+		'header',
 		'img',
 		'input',
 		'span',
 	]),
 	allowedAttributes: {
 		a: ['href', 'name', 'target', 'rel'],
-		img: ['src'],
+		img: ['src', 'class', 'title', 'alt'],
 		input: [
 			{
 				name: 'type',
@@ -41,6 +45,10 @@ const sanitizerOptions = {
 			'checked',
 		],
 		span: ['class'],
+		div: ['class'],
+		aside: ['class'],
+		article: ['class'],
+		header: ['class'],
 	},
 };
 
