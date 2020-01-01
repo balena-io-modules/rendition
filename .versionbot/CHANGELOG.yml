@@ -1,4 +1,16 @@
 - commits:
+    - subject: Remove leftover ".only" statement
+      hash: 6fd8fd5914e5d81ac11a728e133a8e486fcbbee7
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+  version: 11.35.1
+  date: 2020-01-01T13:54:05.336Z
+- commits:
     - subject: 'Markdown: extend allowed set of tags and attributes'
       hash: 1ff6fd7dd38b235e9045333b8923005098409b99
       body: |
