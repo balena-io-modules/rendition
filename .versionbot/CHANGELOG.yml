@@ -1,4 +1,25 @@
 - commits:
+    - subject: 'Markdown: extend allowed set of tags and attributes'
+      hash: 1ff6fd7dd38b235e9045333b8923005098409b99
+      body: |
+        To better support structured contend, extend the set of allowed tags to
+        include:
+        - article
+        - aside
+        - div
+        - header
+
+        The img tag has also been extended to allow the alt, title and class
+        attributes.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+  version: 11.35.0
+  date: 2020-01-01T11:11:25.739Z
+- commits:
     - subject: 'minifix(Screenshots): Generate fresh screenshots'
       hash: d0469ee07635c5261fdd515255b2e088115d6d5f
       body: ''
