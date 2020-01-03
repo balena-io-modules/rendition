@@ -13,7 +13,8 @@ exports[`Divider renders correctly 1`] = `
 }
 
 .c2 {
-  border: 0.5px solid #DDE1f0;
+  border: 0 none;
+  border-top: 1px solid #DDE1f0;
   width: 100%;
   height: 0;
 }
