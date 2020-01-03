@@ -10,7 +10,7 @@ import Divider from '../Divider';
 import { Flex } from '../Flex';
 import Heading from '../Heading';
 
-const Wrapper = styled(DismissableContainer)<{ minHeight?: string }>`
+const Wrapper = styled(DismissableContainer)<WrapperProps>`
 	& {
 		min-height: ${props => props.minHeight || 'auto'};
 		padding: ${props => (props.small ? '24px' : '32px 44px')};
@@ -52,12 +52,16 @@ const Card = ({ title, cta, rows, children, ...props }: InternalCardProps) => {
 	);
 };
 
-export interface InternalCardProps extends DefaultProps {
+interface WrapperProps extends DefaultProps {
+	minHeight?: string;
+	small?: boolean;
+}
+
+export interface InternalCardProps extends WrapperProps {
 	title?: string;
 	cta?: JSX.Element;
 	rows?: JSX.Element[];
 	children?: any;
-	minHeight?: string;
 }
 
 export type CardProps = InternalCardProps & RenditionSystemProps;

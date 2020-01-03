@@ -223,6 +223,7 @@ Section containing content and actions on the same topic.
 | `cta`  | `JSX.Element` | - | - | React component added to the header |
 | `rows`  | `JSX.Element[]` | - | - | Subsections separated by a horizontal separator |
 | `minHeight`  | `string` | `auto` | - | CSS minHeight property |
+| `small`  | `boolean` | - | - | If true, reduces the scale of the card |
 | `children`  | `JSX.Element` | - | - | Any content that is internally wrapped in a Box |
 
 ### Checkbox
