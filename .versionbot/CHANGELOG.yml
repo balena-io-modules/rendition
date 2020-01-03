@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'Card: Add `typings for the small` prop'
+      hash: 26b6314f1ae32f52002087f13e7ce3bd0c8314ea
+      body: ''
+      footer:
+        Resolves: '#1035'
+        resolves: '#1035'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 11.35.2
+  date: 2020-01-03T15:33:52.489Z
+- commits:
     - subject: Remove leftover ".only" statement
       hash: 6fd8fd5914e5d81ac11a728e133a8e486fcbbee7
       body: ''
