@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'Divider: Fix browser inconsistency of the rendered height'
+      hash: 1301792db19620fb0435c6c166de748b5fcf6b55
+      body: ''
+      footer:
+        Resolves: '#1037'
+        resolves: '#1037'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 11.35.3
+  date: 2020-01-03T19:09:32.984Z
+- commits:
     - subject: 'Card: Add `typings for the small` prop'
       hash: 26b6314f1ae32f52002087f13e7ce3bd0c8314ea
       body: ''
