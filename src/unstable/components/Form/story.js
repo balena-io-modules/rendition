@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { withScreenshot } from 'storybook-chrome-screenshot'
+import { withScreenshot } from 'storycap'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Flex, Provider, Txt } from '../../../'
 import { Form } from '../..'
@@ -167,7 +167,6 @@ class FormDemo extends React.Component {
 
 storiesOf('Beta/Form', module)
   .addDecorator(withReadme(Readme))
-  .addDecorator(withScreenshot())
   .add('Simple', () => {
     return (
       <Provider>
@@ -321,6 +320,8 @@ storiesOf('Beta/Form', module)
       </Provider>
     )
   })
+  // There is no good way to wait for the captcha. If this proves to be flaky, find a better solution
+  .addDecorator(withScreenshot({ delay: 2000 }))
   .add('Extra widgets', () => {
     const extraSchema = {
       type: 'object',

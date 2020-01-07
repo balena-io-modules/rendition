@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Copy, Flex, Provider, Tag, Table, Txt } from '../../'
 import Readme from './README.md'
@@ -13,7 +12,6 @@ const data = [
 
 storiesOf('Next/Copy', module)
   .addDecorator(withReadme(Readme))
-  .addDecorator(withScreenshot())
   .add('Standard', () => {
     return (
       <Provider>

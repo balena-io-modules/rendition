@@ -1,28 +1,28 @@
-module.exports = (defaultConfig) => {
-  defaultConfig.resolve.alias['jellyschema'] = 'jellyschema/jellyschema'
-  defaultConfig.resolve.alias['balena-temen'] = 'balena-temen/balena_temen'
+module.exports = ({config}) => {
+  config.module.rules = config.module.rules.filter(x => !(x.query && x.query.name.includes('static/media')))
 
-  defaultConfig.resolve.extensions.push('.ts')
-  defaultConfig.resolve.extensions.push('.tsx')
-  defaultConfig.resolve.extensions.push('.wasm')
-  defaultConfig.module.rules.push(
+  config.resolve.alias['jellyschema'] = 'jellyschema/jellyschema'
+  config.resolve.alias['balena-temen'] = 'balena-temen/balena_temen'
+
+  config.resolve.extensions.push('.ts')
+  config.resolve.extensions.push('.tsx')
+  config.resolve.extensions.push('.wasm')
+  config.module.rules.push(
     {
       test: /\.tsx?$/,
       loader: 'ts-loader',
       exclude: /node_modules/
     }
   )
-  defaultConfig.module.rules.push(
+
+  config.module.rules.push(
     {
       test: /\.(png|svg|jpg|gif)$/,
       use: ['file-loader']
     }
   )
-  defaultConfig.module.rules.push(
-    {
-      test: /\.css$/,
-      use: ['style-loader', 'css-loader']
-    },
+
+  config.module.rules.push(
     {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
       use: [{
@@ -34,11 +34,5 @@ module.exports = (defaultConfig) => {
     }
   )
 
-  defaultConfig.externals = [
-    {
-      xmlhttprequest: '{XMLHttpRequest:XMLHttpRequest}'
-    }
-  ]
-
-  return defaultConfig
+  return config
 }

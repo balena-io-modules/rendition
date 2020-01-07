@@ -2,7 +2,6 @@ import * as React from 'react'
 import uniq from 'lodash/uniq'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import styled from 'styled-components'
 import { Box, Divider, Filters, Heading, Provider, SchemaSieve } from '../../'
@@ -197,7 +196,6 @@ class FiltersDemo extends React.Component {
 
 storiesOf('Next/Filters', module)
   .addDecorator(withReadme(Readme))
-  .addDecorator(withScreenshot())
   .add('Standard', () => {
     const props = {
       viewScopes: [

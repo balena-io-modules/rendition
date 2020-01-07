@@ -1,7 +1,6 @@
 import * as React from 'react'
 import debounce from 'lodash/debounce'
 import { storiesOf } from '@storybook/react'
-import { withScreenshot } from 'storybook-chrome-screenshot'
 import { Box, Flex, Provider, Txt, Textarea } from '../../'
 
 const Ajv = require('ajv')
@@ -111,12 +110,10 @@ class Validator extends React.Component {
   }
 }
 
-storiesOf('Tools/JSON Schema Validator', module)
-  .addDecorator(withScreenshot())
-  .add('Draft 6', () => {
-    return (
-      <Provider>
-        <Validator />
-      </Provider>
-    )
-  })
+storiesOf('Tools/JSON Schema Validator', module).add('Draft 6', () => {
+  return (
+    <Provider>
+      <Validator />
+    </Provider>
+  )
+})

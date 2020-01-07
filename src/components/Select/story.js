@@ -1,13 +1,11 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
-import { withScreenshot } from 'storybook-chrome-screenshot'
 import { Provider, Select, Badge, Flex } from '../../'
 import Readme from './README.md'
 
 storiesOf('Next/Select', module)
   .addDecorator(withReadme(Readme))
-  .addDecorator(withScreenshot())
   .add('Standard', () => {
     return (
       <Provider>

@@ -3,13 +3,11 @@ import { storiesOf } from '@storybook/react'
 import { faMapSigns } from '@fortawesome/free-solid-svg-icons/faMapSigns'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import withReadme from 'storybook-readme/with-readme'
-import { withScreenshot } from 'storybook-chrome-screenshot'
 import { Provider, Steps, Step } from '../../'
 import Readme from './README.md'
 
 storiesOf('Next/Steps', module)
   .addDecorator(withReadme(Readme))
-  .addDecorator(withScreenshot())
   .add('Standard', () => {
     return (
       <Provider>

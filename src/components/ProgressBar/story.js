@@ -1,9 +1,8 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withScreenshot } from 'storybook-chrome-screenshot'
+import { isScreenshot } from 'storycap'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, ProgressBar, Provider } from '../../'
-import { isTakingScreenshot } from '../../stories/helpers'
 import Readme from './README.md'
 
 export class Progressor extends React.Component {
@@ -16,7 +15,7 @@ export class Progressor extends React.Component {
   }
 
   componentDidMount () {
-    if (isTakingScreenshot) {
+    if (isScreenshot()) {
       return
     }
     this.progressInterval = setInterval(() => {
@@ -46,7 +45,6 @@ export class Progressor extends React.Component {
 
 storiesOf('Core/ProgressBar', module)
   .addDecorator(withReadme(Readme))
-  .addDecorator(withScreenshot())
   .add('Standard', () => {
     return (
       <Provider>

@@ -2,7 +2,6 @@ import cloneDeep from 'lodash/cloneDeep'
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Input, Provider, Table } from '../../'
 import PokeDex from '../../stories/assets/pokedex'
@@ -90,7 +89,6 @@ class HOC extends React.Component {
 
 storiesOf('Core/Table', module)
   .addDecorator(withReadme(Readme))
-  .addDecorator(withScreenshot())
   .add('Standard', () => {
     return (
       <Provider>
