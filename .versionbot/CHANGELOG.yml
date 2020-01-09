@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update the version of the screenshot taking library
+      hash: 2e73e1059c2f9b6594a424cf45ea061057ab94a3
+      body: |
+        The library was taken by new maintainers and changed its name.
+        There are some breaking changes that this PR fixes
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 11.35.4
+  date: 2020-01-08T17:51:51.889Z
+- commits:
     - subject: 'Divider: Fix browser inconsistency of the rendered height'
       hash: 1301792db19620fb0435c6c166de748b5fcf6b55
       body: ''
