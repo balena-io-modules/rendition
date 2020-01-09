@@ -1,4 +1,18 @@
 - commits:
+    - subject: Remove unused travis configuration
+      hash: 81ef618d2de29eb5a821d018aea7382fce23a553
+      body: ''
+      footer:
+        Connects-to: '#575'
+        connects-to: '#575'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 11.35.5
+  date: 2020-01-09T13:55:05.725Z
+- commits:
     - subject: Update the version of the screenshot taking library
       hash: 2e73e1059c2f9b6594a424cf45ea061057ab94a3
       body: |
