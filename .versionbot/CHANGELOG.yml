@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update several dependencies to resolve vulnerabilities
+      hash: e0b15f927345d385a1751ac7bcf913c9681e5a99
+      body: ''
+      footer:
+        Connects-to: '#971'
+        connects-to: '#971'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 11.35.6
+  date: 2020-01-09T15:21:15.786Z
+- commits:
     - subject: Remove unused travis configuration
       hash: 81ef618d2de29eb5a821d018aea7382fce23a553
       body: ''
