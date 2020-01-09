@@ -112,7 +112,7 @@
   {
     "name": "should render html images",
     "source": "<img src=\"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png\" />",
-    "expected": "<p><img src=\"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png\"></p>"
+    "expected": "<img src=\"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png\">"
   },
   {
     "name": "should render html links",
@@ -142,7 +142,7 @@
   {
     "name": "xss: 3",
     "source": "<img src=x onerror=alert(123) />",
-    "expected": "<p><img src=\"x\"></p>"
+    "expected": "<img src=\"x\">"
   },
   {
     "name": "xss: 4",
@@ -237,12 +237,12 @@
   {
     "name": "xss: 22",
     "source": "\"><script>alert(123);</script x=\"",
-    "expected": "<p>&quot;&gt;</p>"
+    "expected": "<p>&quot;&gt;\n</p>"
   },
   {
     "name": "xss: 23",
     "source": "'><script>alert(123);</script x='",
-    "expected": "<p>&apos;&gt;</p>"
+    "expected": "<p>&apos;&gt;\n</p>"
   },
   {
     "name": "xss: 24",
@@ -1182,12 +1182,12 @@
   {
     "name": "xss: 211",
     "source": "<IMG SRC=javascript:alert(String.fromCharCode(88,83,83))>",
-    "expected": "<p><img></p>"
+    "expected": "<img>"
   },
   {
     "name": "xss: 212",
     "source": "<IMG SRC=# onmouseover=\"alert('xxs')\">",
-    "expected": "<p><img src=\"#\"></p>"
+    "expected": "<img src=\"#\">"
   },
   {
     "name": "xss: 213",
@@ -1197,42 +1197,42 @@
   {
     "name": "xss: 214",
     "source": "<IMG onmouseover=\"alert('xxs')\">",
-    "expected": "<p><img></p>"
+    "expected": "<img>"
   },
   {
     "name": "xss: 215",
     "source": "<IMG SRC=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;>",
-    "expected": "<p><img></p>"
+    "expected": "<img>"
   },
   {
     "name": "xss: 216",
     "source": "<IMG SRC=&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041>",
-    "expected": "<p><img></p>"
+    "expected": "<img>"
   },
   {
     "name": "xss: 217",
     "source": "<IMG SRC=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29>",
-    "expected": "<p><img></p>"
+    "expected": "<img>"
   },
   {
     "name": "xss: 218",
     "source": "<IMG SRC=\"jav   ascript:alert('XSS');\">",
-    "expected": "<p><img></p>"
+    "expected": "<img>"
   },
   {
     "name": "xss: 219",
     "source": "<IMG SRC=\"jav&#x09;ascript:alert('XSS');\">",
-    "expected": "<p><img></p>"
+    "expected": "<img>"
   },
   {
     "name": "xss: 220",
     "source": "<IMG SRC=\"jav&#x0A;ascript:alert('XSS');\">",
-    "expected": "<p><img></p>"
+    "expected": "<img>"
   },
   {
     "name": "xss: 221",
     "source": "<IMG SRC=\"jav&#x0D;ascript:alert('XSS');\">",
-    "expected": "<p><img></p>"
+    "expected": "<img>"
   },
   {
     "name": "xss: 222",
@@ -1242,7 +1242,7 @@
   {
     "name": "xss: 223",
     "source": "<IMG SRC=\" &#14;  javascript:alert('XSS');\">",
-    "expected": "<p><img></p>"
+    "expected": "<img>"
   },
   {
     "name": "xss: 224",
@@ -1302,7 +1302,7 @@
   {
     "name": "xss: 235",
     "source": "<plaintext>",
-    "expected": "<p></p>"
+    "expected": ""
   },
   {
     "name": "xss: 236",
