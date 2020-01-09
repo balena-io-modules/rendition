@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { faExpand } from '@fortawesome/free-solid-svg-icons/faExpand'
 import { faRecycle } from '@fortawesome/free-solid-svg-icons/faRecycle'
@@ -11,7 +10,6 @@ import Readme from './README.md'
 
 storiesOf('Next/ButtonGroup', module)
   .addDecorator(withReadme(Readme))
-  .addDecorator(withScreenshot())
   .add('Standard', () => {
     return (
       <Provider>

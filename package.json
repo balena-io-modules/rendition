@@ -46,7 +46,7 @@
     "prettify-js": "prettier --config .prettierrc-js --write \"src/**/*.js\" \"test/**/*.js\"",
     "prettify-ts": "prettier --config .prettierrc-ts --write \"src/**/*.ts\" \"src/**/*.tsx\" \"typings.d.ts\"",
     "prettify": "npm run prettify-js && npm run eslint-fix && npm run prettify-ts && npm run tslint-fix",
-    "ci:screenshot": "STORYBOOK_MODE=screenshot storybook-chrome-screenshot --browser-timeout 100000 -p 6006",
+    "ci:screenshot": "storycap http://localhost:6006 --serverTimeout 600000 --captureTimeout 10000 --disableCssAnimation --serverCmd \"npm run start\"",
     "deploy": "npm run build:storybook && gh-pages -d .out"
   },
   "devDependencies": {
@@ -57,8 +57,8 @@
     "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/plugin-transform-react-jsx": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
-    "@storybook/addon-actions": "^4.1.11",
-    "@storybook/react": "^4.1.11",
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/react": "^5.2.8",
     "@types/jest": "^23.3.2",
     "@types/react": "^16.8.8",
     "@types/react-dom": "^16.8.3",
@@ -95,8 +95,7 @@
     "reg-cli": "^0.13.0-beta.1",
     "rimraf": "^2.6.2",
     "sinon": "^4.5.0",
-    "storybook-chrome-screenshot": "^1.4.0",
-    "storybook-readme": "^4.0.5",
+    "storybook-readme": "^5.0.8",
     "strip-css-comments": "^3.0.0",
     "style-loader": "^0.23.1",
     "ts-jest": "^23.10.1",
@@ -145,11 +144,12 @@
     "recompose": "0.26.0",
     "regex-parser": "^2.2.7",
     "sanitize-html": "^1.20.1",
+    "storycap": "^2.3.2",
     "styled-components": "^4.2.0",
     "styled-system": "^4.1.0",
     "tslib": "^1.10.0",
     "uuid": "^3.2.1",
-    "xterm": "^3.12.2"
+    "xterm": "^3.14.5"
   },
   "lint-staged": {
     "{package.json, package-lock.json}": [

@@ -2,7 +2,7 @@ import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 import { action } from '@storybook/addon-actions'
-import { withScreenshot } from 'storybook-chrome-screenshot'
+import { withScreenshot } from 'storycap'
 import {
   NotificationsContainer,
   notifications,

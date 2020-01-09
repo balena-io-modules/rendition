@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withScreenshot } from 'storybook-chrome-screenshot'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Provider, Textarea } from '../../'
 import Readme from './README.md'
@@ -28,7 +27,6 @@ class TextareaHOC extends React.Component {
 
 storiesOf('Next/Textarea', module)
   .addDecorator(withReadme(Readme))
-  .addDecorator(withScreenshot())
   .add('Standard', () => {
     return (
       <Provider>

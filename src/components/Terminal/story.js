@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
+import { isScreenshot, withScreenshot } from 'storycap'
 import { Box, Provider, Terminal } from '../../'
 import { output1 } from '../../stories/assets/tty-output'
 import { Repl } from '../../stories/assets/repl'
-import { isTakingScreenshot } from '../../stories/helpers'
 import Readme from './README.md'
 
 const outputArray = output1.split('\n')
@@ -17,7 +17,7 @@ class Logger extends React.Component {
   }
 
   componentDidMount () {
-    if (isTakingScreenshot) {
+    if (isScreenshot()) {
       for (const line of this.lines) {
         this.term.writeln(line)
       }
@@ -62,6 +62,9 @@ class InteractiveTerm extends Terminal {
   componentDidMount () {
     super.componentDidMount()
 
+    setTimeout(() => {
+      this.tty.setOption('bellStyle', 'visual')
+    }, 2000)
     if (!this.props.ttyInstance) {
       this.tty._repl = new Repl(line => {
         if (this.tty) {
@@ -186,32 +189,65 @@ class PersistentTerm extends React.Component {
   }
 }
 
+// This is due to https://github.com/xtermjs/xterm.js/issues/2058.
+// If the font that the Terminal is set to use is not used on the page, and it hasn't been loaded when xterm renders, it will not rerender. In order to fix that, especially for when we take screenshots, we render the terminal once, remove it from the DOM, and render it again with the correct font family. This might not be necessary when we bump Xterm to 4.0 and use the WebGL renderer.
+class ScreenshotWrapper extends React.Component {
+  state = {
+    show: true
+  }
+
+  componentDidMount () {
+    setTimeout(() => {
+      this.setState({ show: false })
+    }, 500)
+
+    setTimeout(() => {
+      this.setState({ show: true })
+    }, 1000)
+  }
+
+  render () {
+    if (!this.state.show) {
+      return null
+    }
+
+    return <>{this.props.children}</>
+  }
+}
+
 storiesOf('Core/Terminal', module)
   .addDecorator(withReadme(Readme))
+  .addDecorator(withScreenshot({ delay: 2000 }))
   .add('Standard', () => {
     return (
-      <Provider>
-        <Box p={30} style={{ height: 500 }}>
-          <InteractiveTerm />
-        </Box>
-      </Provider>
+      <ScreenshotWrapper>
+        <Provider>
+          <Box p={5} style={{ height: 500 }}>
+            <InteractiveTerm />
+          </Box>
+        </Provider>
+      </ScreenshotWrapper>
     )
   })
   .add('Non interactive', () => {
     return (
-      <Provider>
-        <Box p={30} style={{ height: 500 }}>
-          <Logger termProps={{ nonInteractive: true }} />
-        </Box>
-      </Provider>
+      <ScreenshotWrapper>
+        <Provider>
+          <Box p={5} style={{ height: 500 }}>
+            <Logger termProps={{ nonInteractive: true }} />
+          </Box>
+        </Provider>
+      </ScreenshotWrapper>
     )
   })
   .add('Persistent', () => {
     return (
-      <Provider>
-        <Box p={30}>
-          <PersistentTerm />
-        </Box>
-      </Provider>
+      <ScreenshotWrapper>
+        <Provider>
+          <Box p={5}>
+            <PersistentTerm />
+          </Box>
+        </Provider>
+      </ScreenshotWrapper>
     )
   })

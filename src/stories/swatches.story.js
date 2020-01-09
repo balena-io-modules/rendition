@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withScreenshot } from 'storybook-chrome-screenshot'
 import { Box, Flex, Heading, Provider, Txt } from '../../dist'
 import { withTheme } from 'styled-components'
 import { isLight } from '../utils'
@@ -88,42 +87,40 @@ const Swatch = withTheme(props => (
   </Flex>
 ))
 
-storiesOf('Next/Swatches', module)
-  .addDecorator(withScreenshot())
-  .add('All', () => {
-    return (
-      <Provider>
-        <Box as='section' m={15}>
-          <Box as='h2' mx={15}>
-            Primary
-          </Box>
-          <Flex flexWrap='wrap'>
-            <Swatch style='primary' />
-            <Swatch style='secondary' />
-            <Swatch style='tertiary' />
-            <Swatch style='quartenary' />
-          </Flex>
+storiesOf('Next/Swatches', module).add('All', () => {
+  return (
+    <Provider>
+      <Box as='section' m={15}>
+        <Box as='h2' mx={15}>
+          Primary
         </Box>
-        <Box as='section' m={15}>
-          <Box as='h2' mx={15}>
-            Secondary
-          </Box>
-          <Flex flexWrap='wrap'>
-            <Swatch border style='success' />
-            <Swatch border style='danger' />
-            <Swatch border style='warning' />
-            <Swatch border style='info' />
-          </Flex>
+        <Flex flexWrap='wrap'>
+          <Swatch style='primary' />
+          <Swatch style='secondary' />
+          <Swatch style='tertiary' />
+          <Swatch style='quartenary' />
+        </Flex>
+      </Box>
+      <Box as='section' m={15}>
+        <Box as='h2' mx={15}>
+          Secondary
         </Box>
-        <Box as='section' m={15}>
-          <Box as='h2' mx={15}>
-            Utility
-          </Box>
-          <Flex flexWrap='wrap'>
-            <Swatch border style='text' />
-            <Swatch border style='gray' />
-          </Flex>
+        <Flex flexWrap='wrap'>
+          <Swatch border style='success' />
+          <Swatch border style='danger' />
+          <Swatch border style='warning' />
+          <Swatch border style='info' />
+        </Flex>
+      </Box>
+      <Box as='section' m={15}>
+        <Box as='h2' mx={15}>
+          Utility
         </Box>
-      </Provider>
-    )
-  })
+        <Flex flexWrap='wrap'>
+          <Swatch border style='text' />
+          <Swatch border style='gray' />
+        </Flex>
+      </Box>
+    </Provider>
+  )
+})

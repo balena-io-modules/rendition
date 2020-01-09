@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { withScreenshot } from 'storybook-chrome-screenshot'
+import { withScreenshot } from 'storycap'
 import withReadme from 'storybook-readme/with-readme'
 import { Box, Button, Heading, Modal, Provider } from '../../'
 // TODO: Don't depend on other stories
@@ -328,7 +328,6 @@ storiesOf('Next/Modal', module)
 
 storiesOf('Next/Modal', module)
   .addDecorator(withReadme(Readme))
-  .addDecorator(withScreenshot())
   .add('Open Modal Demo', () => {
     return (
       <Provider>
