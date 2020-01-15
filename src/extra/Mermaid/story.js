@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
-import { Box, Provider } from '../../'
+import { Box } from '../../'
 import { Mermaid } from './'
 import Readme from './README.md'
 
@@ -17,10 +17,8 @@ storiesOf('Extra/Mermaid', module)
   .addDecorator(withReadme(Readme))
   .add('Standard', () => {
     return (
-      <Provider>
-        <Box m={3}>
-          <Mermaid value={source} />
-        </Box>
-      </Provider>
+      <Box m={3}>
+        <Mermaid value={source} />
+      </Box>
     )
   })

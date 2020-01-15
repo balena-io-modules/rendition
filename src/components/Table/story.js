@@ -3,7 +3,7 @@ import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import withReadme from 'storybook-readme/with-readme'
-import { Box, Input, Provider, Table } from '../../'
+import { Box, Input, Table } from '../../'
 import PokeDex from '../../stories/assets/pokedex'
 import Readme from './README.md'
 
@@ -91,170 +91,144 @@ storiesOf('Core/Table', module)
   .addDecorator(withReadme(Readme))
   .add('Standard', () => {
     return (
-      <Provider>
-        <Box m={3}>
-          <Table
-            columns={columns}
-            data={PokeDex}
-            onSort={action('sorting')}
-            sort={{ field: 'Name', reverse: true }}
-          />
-        </Box>
-      </Provider>
+      <Box m={3}>
+        <Table
+          columns={columns}
+          data={PokeDex}
+          onSort={action('sorting')}
+          sort={{ field: 'Name', reverse: true }}
+        />
+      </Box>
     )
   })
   .add('Checkboxes', () => {
     return (
-      <Provider>
-        <Box m={3}>
-          <Table
-            columns={columns}
-            data={PokeDex}
-            rowKey='pokedex_number'
-            onCheck={action('items-selected')}
-          />
-        </Box>
-      </Provider>
+      <Box m={3}>
+        <Table
+          columns={columns}
+          data={PokeDex}
+          rowKey='pokedex_number'
+          onCheck={action('items-selected')}
+        />
+      </Box>
     )
   })
   .add('Row Click', () => {
     return (
-      <Provider>
-        <Box m={3}>
-          <Table
-            columns={columns}
-            data={PokeDex}
-            rowKey='pokedex_number'
-            onRowClick={action('row-clicked')}
-          />
-        </Box>
-      </Provider>
+      <Box m={3}>
+        <Table
+          columns={columns}
+          data={PokeDex}
+          rowKey='pokedex_number'
+          onRowClick={action('row-clicked')}
+        />
+      </Box>
     )
   })
   .add('Row Prefix', () => {
     return (
-      <Provider>
-        <Box m={3}>
-          <Table
-            columns={columns}
-            data={PokeDex}
-            tbodyPrefix={
-              <tr>
-                <td colSpan={columns.length}>
-                  <p style={{ textAlign: 'center' }}>
-                    This row will always appear at the top of the table
-                  </p>
-                </td>
-              </tr>
-            }
-          />
-        </Box>
-      </Provider>
+      <Box m={3}>
+        <Table
+          columns={columns}
+          data={PokeDex}
+          tbodyPrefix={
+            <tr>
+              <td colSpan={columns.length}>
+                <p style={{ textAlign: 'center' }}>
+                  This row will always appear at the top of the table
+                </p>
+              </td>
+            </tr>
+          }
+        />
+      </Box>
     )
   })
   .add('Multiple Row Prefix', () => {
     return (
-      <Provider>
-        <Box m={3}>
-          <Table
-            columns={columns}
-            data={PokeDex}
-            tbodyPrefix={[
-              <tr key={1}>
-                <td colSpan={columns.length}>
-                  <p style={{ textAlign: 'center' }}>Row 1</p>
-                </td>
-              </tr>,
-              <tr key={2}>
-                <td colSpan={columns.length}>
-                  <p style={{ textAlign: 'center' }}>Row 2</p>
-                </td>
-              </tr>
-            ]}
-          />
-        </Box>
-      </Provider>
+      <Box m={3}>
+        <Table
+          columns={columns}
+          data={PokeDex}
+          tbodyPrefix={[
+            <tr key={1}>
+              <td colSpan={columns.length}>
+                <p style={{ textAlign: 'center' }}>Row 1</p>
+              </td>
+            </tr>,
+            <tr key={2}>
+              <td colSpan={columns.length}>
+                <p style={{ textAlign: 'center' }}>Row 2</p>
+              </td>
+            </tr>
+          ]}
+        />
+      </Box>
     )
   })
   .add('Anchor Rows', () => {
     return (
-      <Provider>
-        <Box m={3}>
-          <Table
-            columns={columns}
-            data={PokeDex}
-            getRowHref={row => `https://www.pokemon.com/uk/pokedex/${row.Name}`}
-            rowAnchorAttributes={{ target: '_blank' }}
-          />
-        </Box>
-      </Provider>
+      <Box m={3}>
+        <Table
+          columns={columns}
+          data={PokeDex}
+          getRowHref={row => `https://www.pokemon.com/uk/pokedex/${row.Name}`}
+          rowAnchorAttributes={{ target: '_blank' }}
+        />
+      </Box>
     )
   })
   .add('Anchor Rows with Checkboxes', () => {
     return (
-      <Provider>
-        <Box m={3}>
-          <Table
-            columns={columns}
-            data={PokeDex}
-            rowKey='pokedex_number'
-            onCheck={action('items-selected')}
-            getRowHref={row => `https://www.pokemon.com/uk/pokedex/${row.Name}`}
-            rowAnchorAttributes={{ target: '_blank' }}
-          />
-        </Box>
-      </Provider>
+      <Box m={3}>
+        <Table
+          columns={columns}
+          data={PokeDex}
+          rowKey='pokedex_number'
+          onCheck={action('items-selected')}
+          getRowHref={row => `https://www.pokemon.com/uk/pokedex/${row.Name}`}
+          rowAnchorAttributes={{ target: '_blank' }}
+        />
+      </Box>
     )
   })
   .add('Highlighted rows', () => {
     return (
-      <Provider>
-        <Box m={3}>
-          <Table
-            columns={columns}
-            data={PokeDex}
-            rowKey='pokedex_number'
-            highlightedRows={[2, 5]}
-          />
-        </Box>
-      </Provider>
+      <Box m={3}>
+        <Table
+          columns={columns}
+          data={PokeDex}
+          rowKey='pokedex_number'
+          highlightedRows={[2, 5]}
+        />
+      </Box>
     )
   })
   .add('Conditional classes', () => {
     return (
-      <Provider>
-        <Box m={3}>
-          <Table
-            columns={columns}
-            data={PokeDex}
-            rowKey='pokedex_number'
-            getRowClass={getRowClass}
-          />
-        </Box>
-      </Provider>
+      <Box m={3}>
+        <Table
+          columns={columns}
+          data={PokeDex}
+          rowKey='pokedex_number'
+          getRowClass={getRowClass}
+        />
+      </Box>
     )
   })
   .add('Updating data in a table', () => {
-    return (
-      <Provider>
-        <HOC />
-      </Provider>
-    )
+    return <HOC />
   })
   .add('Pager', () => {
     return (
-      <Provider>
-        <Provider>
-          <Box m={3}>
-            <Table
-              columns={columns}
-              data={PokeDex}
-              usePager
-              pagerPosition='both'
-              itemsPerPage={3}
-            />
-          </Box>
-        </Provider>
-      </Provider>
+      <Box m={3}>
+        <Table
+          columns={columns}
+          data={PokeDex}
+          usePager
+          pagerPosition='both'
+          itemsPerPage={3}
+        />
+      </Box>
     )
   })

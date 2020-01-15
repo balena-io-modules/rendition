@@ -1,7 +1,8 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { Box, Flex, Provider, Txt } from '../../../'
+import { withScreenshot } from 'storycap'
+import { Box, Flex, Txt } from '../../../'
 
 import { Async } from '../../'
 
@@ -77,12 +78,13 @@ class FormDemo extends React.Component {
   }
 }
 
-storiesOf('Beta/JellyForm', module).add('Standard', () => {
-  return (
-    <Provider>
+storiesOf('Beta/JellyForm', module)
+  // Add longer delay, as jellyform is loaded asynchronously
+  .addDecorator(withScreenshot({ delay: 1000 }))
+  .add('Standard', () => {
+    return (
       <Box p={3}>
         <FormDemo schema={schema} />
       </Box>
-    </Provider>
-  )
-})
+    )
+  })

@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import withReadme from 'storybook-readme/with-readme'
 import styled from 'styled-components'
-import { Box, Divider, Filters, Heading, Provider, SchemaSieve } from '../../'
+import { Box, Divider, Filters, Heading, SchemaSieve } from '../../'
 import PokeDex, { getNameFromSlug } from '../../stories/assets/pokedex'
 import Readme from './README.md'
 
@@ -212,20 +212,16 @@ storiesOf('Next/Filters', module)
     }
 
     return (
-      <Provider>
-        <Box m={3}>
-          <FiltersDemo extra={props} />
-        </Box>
-      </Provider>
+      <Box m={3}>
+        <FiltersDemo extra={props} />
+      </Box>
     )
   })
   .add('Disabled', () => {
     return (
-      <Provider>
-        <Box m={3}>
-          <FiltersDemo disabled />
-        </Box>
-      </Provider>
+      <Box m={3}>
+        <FiltersDemo disabled />
+      </Box>
     )
   })
   .add('Button props', () => {
@@ -240,20 +236,16 @@ storiesOf('Next/Filters', module)
     }
 
     return (
-      <Provider>
-        <Box m={3}>
-          <FiltersDemo extra={props} />
-        </Box>
-      </Provider>
+      <Box m={3}>
+        <FiltersDemo extra={props} />
+      </Box>
     )
   })
   .add('Dark', () => {
     return (
-      <Provider>
-        <Box bg='#343434' p={3}>
-          <FiltersDemo dark />
-        </Box>
-      </Provider>
+      <Box bg='#343434' p={3}>
+        <FiltersDemo dark />
+      </Box>
     )
   })
   .add('Render modes', () => {
@@ -290,46 +282,40 @@ storiesOf('Next/Filters', module)
     }
 
     return (
-      <Provider>
-        <Box p={3}>
-          <Heading.h3>
-            <code>all</code>
-          </Heading.h3>
-          <Filters schema={schema} renderMode='all' />
-          <Divider color='#eee' mt={40} mb={90} />
+      <Box p={3}>
+        <Heading.h3>
+          <code>all</code>
+        </Heading.h3>
+        <Filters schema={schema} renderMode='all' />
+        <Divider color='#eee' mt={40} mb={90} />
 
-          <Heading.h3>
-            <code>add</code>
-          </Heading.h3>
-          <Filters schema={schema} renderMode='add' />
-          <Divider color='#eee' mt={40} mb={90} />
+        <Heading.h3>
+          <code>add</code>
+        </Heading.h3>
+        <Filters schema={schema} renderMode='add' />
+        <Divider color='#eee' mt={40} mb={90} />
 
-          <Heading.h3>
-            <code>search</code>
-          </Heading.h3>
-          <Filters schema={schema} renderMode='search' />
-          <Divider color='#eee' mt={40} mb={90} />
+        <Heading.h3>
+          <code>search</code>
+        </Heading.h3>
+        <Filters schema={schema} renderMode='search' />
+        <Divider color='#eee' mt={40} mb={90} />
 
-          <Heading.h3>
-            <code>views</code>
-          </Heading.h3>
-          <Filters schema={schema} renderMode='views' />
-          <Divider color='#eee' mt={40} mb={90} />
+        <Heading.h3>
+          <code>views</code>
+        </Heading.h3>
+        <Filters schema={schema} renderMode='views' />
+        <Divider color='#eee' mt={40} mb={90} />
 
-          <Heading.h3>
-            <code>summary</code>
-          </Heading.h3>
-          <Filters
-            filters={[dummyFilter]}
-            schema={schema}
-            renderMode='summary'
-          />
-          <Divider color='#eee' mt={40} mb={90} />
+        <Heading.h3>
+          <code>summary</code>
+        </Heading.h3>
+        <Filters filters={[dummyFilter]} schema={schema} renderMode='summary' />
+        <Divider color='#eee' mt={40} mb={90} />
 
-          <Heading.h3>You can also use an array of modes</Heading.h3>
-          <Filters schema={schema} renderMode={['add', 'search']} />
-          <Divider color='#eee' mt={40} mb={90} />
-        </Box>
-      </Provider>
+        <Heading.h3>You can also use an array of modes</Heading.h3>
+        <Filters schema={schema} renderMode={['add', 'search']} />
+        <Divider color='#eee' mt={40} mb={90} />
+      </Box>
     )
   })

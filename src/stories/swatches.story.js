@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Box, Flex, Heading, Provider, Txt } from '../../dist'
+import { Box, Flex, Heading, Txt } from '../../dist'
 import { withTheme } from 'styled-components'
 import { isLight } from '../utils'
 
@@ -89,7 +89,7 @@ const Swatch = withTheme(props => (
 
 storiesOf('Next/Swatches', module).add('All', () => {
   return (
-    <Provider>
+    <React.Fragment>
       <Box as='section' m={15}>
         <Box as='h2' mx={15}>
           Primary
@@ -121,6 +121,6 @@ storiesOf('Next/Swatches', module).add('All', () => {
           <Swatch border style='gray' />
         </Flex>
       </Box>
-    </Provider>
+    </React.Fragment>
   )
 })

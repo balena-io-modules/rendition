@@ -3,20 +3,19 @@ import { storiesOf } from '@storybook/react'
 import { faMapSigns } from '@fortawesome/free-solid-svg-icons/faMapSigns'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import withReadme from 'storybook-readme/with-readme'
-import { Provider, Steps, Step } from '../../'
+import { Steps, Step } from '../../'
 import Readme from './README.md'
 
 storiesOf('Next/Steps', module)
   .addDecorator(withReadme(Readme))
   .add('Standard', () => {
     return (
-      <Provider>
+      <React.Fragment>
         <Steps m={3}>
           <Step status='completed'>These are</Step>
           <Step status='completed'>all completed</Step>
           <Step status='completed'>and not clickable</Step>
         </Steps>
-
         <Steps m={3}>
           <Step status='pending' onClick={() => null}>
             This one
@@ -31,7 +30,6 @@ storiesOf('Next/Steps', module)
             That's it (no icon)
           </Step>
         </Steps>
-
         <Steps
           m={3}
           titleIcon={<FontAwesomeIcon icon={faMapSigns} />}
@@ -48,6 +46,6 @@ storiesOf('Next/Steps', module)
             And finally this
           </Step>
         </Steps>
-      </Provider>
+      </React.Fragment>
     )
   })
