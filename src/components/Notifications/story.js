@@ -3,14 +3,7 @@ import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 import { action } from '@storybook/addon-actions'
 import { withScreenshot } from 'storycap'
-import {
-  NotificationsContainer,
-  notifications,
-  Box,
-  Button,
-  Provider,
-  Txt
-} from '../../'
+import { NotificationsContainer, notifications, Box, Button, Txt } from '../../'
 import Readme from './README.md'
 
 const buttonNotification = {
@@ -36,7 +29,7 @@ const NotificationsStory = () => {
   }, [])
 
   return (
-    <Provider>
+    <React.Fragment>
       <NotificationsContainer />
       <Box width={350} m={3}>
         <Button
@@ -53,7 +46,7 @@ const NotificationsStory = () => {
           Add button notification
         </Button>
       </Box>
-    </Provider>
+    </React.Fragment>
   )
 }
 

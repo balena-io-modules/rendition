@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 import * as React from 'react'
 import styled from 'styled-components'
-import { ArcSlider, Box, Provider } from '../../'
+import { ArcSlider, Box } from '../../'
 import Readme from './README.md'
 
 const Container = styled(Box).attrs({
@@ -37,48 +37,38 @@ storiesOf('Core/ArcSlider', module)
   .addDecorator(withReadme(Readme))
   .add('Standard', () => {
     return (
-      <Provider>
-        <Container>
-          <ArcSlider />
-        </Container>
-      </Provider>
+      <Container>
+        <ArcSlider />
+      </Container>
     )
   })
   .add('Fill color', () => {
     return (
-      <Provider>
-        <Container>
-          <ArcSlider fillColor='#ff0000' />
-        </Container>
-      </Provider>
+      <Container>
+        <ArcSlider fillColor='#ff0000' />
+      </Container>
     )
   })
   .add('Background color', () => {
     return (
-      <Provider>
-        <Container>
-          <ArcSlider background='#ff0000' />
-        </Container>
-      </Provider>
+      <Container>
+        <ArcSlider background='#ff0000' />
+      </Container>
     )
   })
   .add('Label', () => {
     return (
-      <Provider>
-        <Container>
-          <ArcSlider>
-            <h2>A label</h2>
-          </ArcSlider>
-        </Container>
-      </Provider>
+      <Container>
+        <ArcSlider>
+          <h2>A label</h2>
+        </ArcSlider>
+      </Container>
     )
   })
   .add('Change handler', () => {
     return (
-      <Provider>
-        <Container>
-          <HOC />
-        </Container>
-      </Provider>
+      <Container>
+        <HOC />
+      </Container>
     )
   })

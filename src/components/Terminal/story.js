@@ -2,7 +2,7 @@ import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 import { isScreenshot, withScreenshot } from 'storycap'
-import { Box, Provider, Terminal } from '../../'
+import { Box, Terminal } from '../../'
 import { output1 } from '../../stories/assets/tty-output'
 import { Repl } from '../../stories/assets/repl'
 import Readme from './README.md'
@@ -221,33 +221,27 @@ storiesOf('Core/Terminal', module)
   .add('Standard', () => {
     return (
       <ScreenshotWrapper>
-        <Provider>
-          <Box p={5} style={{ height: 500 }}>
-            <InteractiveTerm />
-          </Box>
-        </Provider>
+        <Box p={5} style={{ height: 500 }}>
+          <InteractiveTerm />
+        </Box>
       </ScreenshotWrapper>
     )
   })
   .add('Non interactive', () => {
     return (
       <ScreenshotWrapper>
-        <Provider>
-          <Box p={5} style={{ height: 500 }}>
-            <Logger termProps={{ nonInteractive: true }} />
-          </Box>
-        </Provider>
+        <Box p={5} style={{ height: 500 }}>
+          <Logger termProps={{ nonInteractive: true }} />
+        </Box>
       </ScreenshotWrapper>
     )
   })
   .add('Persistent', () => {
     return (
       <ScreenshotWrapper>
-        <Provider>
-          <Box p={5}>
-            <PersistentTerm />
-          </Box>
-        </Provider>
+        <Box p={5}>
+          <PersistentTerm />
+        </Box>
       </ScreenshotWrapper>
     )
   })

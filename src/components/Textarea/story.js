@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
-import { Box, Provider, Textarea } from '../../'
+import { Box, Textarea } from '../../'
 import Readme from './README.md'
 
 class TextareaHOC extends React.Component {
@@ -29,76 +29,62 @@ storiesOf('Next/Textarea', module)
   .addDecorator(withReadme(Readme))
   .add('Standard', () => {
     return (
-      <Provider>
-        <Box m={3}>
-          <Textarea placeholder='Placeholder text' />
-        </Box>
-      </Provider>
+      <Box m={3}>
+        <Textarea placeholder='Placeholder text' />
+      </Box>
     )
   })
   .add('Monospace', () => {
     return (
-      <Provider>
-        <Box m={3}>
-          <Textarea monospace placeholder='Placeholder text' />
-        </Box>
-      </Provider>
+      <Box m={3}>
+        <Textarea monospace placeholder='Placeholder text' />
+      </Box>
     )
   })
   .add('Disabled', () => {
     return (
-      <Provider>
-        <Box m={3}>
-          <Textarea disabled placeholder='Placeholder text' />
-        </Box>
-      </Provider>
+      <Box m={3}>
+        <Textarea disabled placeholder='Placeholder text' />
+      </Box>
     )
   })
   .add('Read only', () => {
     return (
-      <Provider>
-        <Box m={3}>
-          <Textarea
-            readOnly
-            placeholder='Placeholder text'
-            value='Read only value'
-          />
-        </Box>
-      </Provider>
+      <Box m={3}>
+        <Textarea
+          readOnly
+          placeholder='Placeholder text'
+          value='Read only value'
+        />
+      </Box>
     )
   })
   .add('AutoRows', () => {
     return (
-      <Provider>
-        <Box m={3}>
-          <TextareaHOC placeholder='This input will grow to match the text it contains' />
-        </Box>
-      </Provider>
+      <Box m={3}>
+        <TextareaHOC placeholder='This input will grow to match the text it contains' />
+      </Box>
     )
   })
   .add('MinRows', () => {
     const rows = 4
     return (
-      <Provider>
-        <Box m={3}>
-          <TextareaHOC
-            minRows={rows}
-            placeholder={`This input has a minimum size of ${rows} rows`}
-          />
-        </Box>
-      </Provider>
+      <Box m={3}>
+        <TextareaHOC
+          minRows={rows}
+          placeholder={`This input has a minimum size of ${rows} rows`}
+        />
+      </Box>
     )
   })
   .add('MaxRows', () => {
     const rows = 8
     return (
-      <Provider>
-        <Box m={3}>
-          <TextareaHOC
-            maxRows={8}
-            placeholder={`This input has a maxiumum size of ${rows} rows`}
-          />
-        </Box>
-      </Provider>
+      <Box m={3}>
+        <TextareaHOC
+          maxRows={8}
+          placeholder={`This input has a maxiumum size of ${rows} rows`}
+        />
+      </Box>
     )
   })

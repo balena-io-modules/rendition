@@ -3,6 +3,7 @@ import { configure, addDecorator } from '@storybook/react'
 import { withScreenshot } from 'storycap'
 import { createGlobalStyle } from 'styled-components'
 import theme from '../src/theme'
+import {Provider} from '../src/index'
 import 'circular-std'
 
 const GlobalStyle = createGlobalStyle([], {
@@ -22,7 +23,9 @@ function withGlobalStyles (storyFn) {
   return (
     <React.Fragment>
       <GlobalStyle />
-      {storyFn()}
+      <Provider>
+        {storyFn()}
+      </Provider>
     </React.Fragment>
   )
 }

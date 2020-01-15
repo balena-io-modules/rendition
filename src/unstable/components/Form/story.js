@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withScreenshot } from 'storycap'
 import withReadme from 'storybook-readme/with-readme'
-import { Box, Flex, Provider, Txt } from '../../../'
+import { Box, Flex, Txt } from '../../../'
 import { Form } from '../..'
 import { Markdown } from '../../../extra/Markdown'
 import { MermaidWidget } from '../../../extra/Form/mermaid'
@@ -168,25 +168,13 @@ class FormDemo extends React.Component {
 storiesOf('Beta/Form', module)
   .addDecorator(withReadme(Readme))
   .add('Simple', () => {
-    return (
-      <Provider>
-        <FormDemo schema={basicPokedexSchema} />
-      </Provider>
-    )
+    return <FormDemo schema={basicPokedexSchema} />
   })
   .add('Hidden submit button', () => {
-    return (
-      <Provider>
-        <FormDemo schema={basicPokedexSchema} hideSubmitButton />
-      </Provider>
-    )
+    return <FormDemo schema={basicPokedexSchema} hideSubmitButton />
   })
   .add('Custom submit button text', () => {
-    return (
-      <Provider>
-        <FormDemo schema={basicPokedexSchema} submitButtonText='Save' />
-      </Provider>
-    )
+    return <FormDemo schema={basicPokedexSchema} submitButtonText='Save' />
   })
   .add('UI schema', () => {
     const formData = {
@@ -194,52 +182,48 @@ storiesOf('Beta/Form', module)
     }
 
     return (
-      <Provider>
-        <FormDemo
-          formData={formData}
-          schema={basicPokedexSchema}
-          uiSchema={{
-            'ui:order': ['Name', 'caught', 'Description', 'Abilities', '*'],
-            Name: {
-              'ui:autocomplete': 'on'
-            },
-            poke_password: {
-              'ui:widget': 'password',
-              'ui:options': {
-                showPasswordStrengthMeter: true
-              }
-            },
-            Height: {
-              'ui:options': {
-                emphasized: true
-              }
-            },
-            environment: {
-              'ui:options': {
-                emphasized: true
-              }
-            },
-            Description: {
-              'ui:widget': 'textarea',
-              'ui:options': {
-                rows: 5
-              }
+      <FormDemo
+        formData={formData}
+        schema={basicPokedexSchema}
+        uiSchema={{
+          'ui:order': ['Name', 'caught', 'Description', 'Abilities', '*'],
+          Name: {
+            'ui:autocomplete': 'on'
+          },
+          poke_password: {
+            'ui:widget': 'password',
+            'ui:options': {
+              showPasswordStrengthMeter: true
             }
-          }}
-        />
-      </Provider>
+          },
+          Height: {
+            'ui:options': {
+              emphasized: true
+            }
+          },
+          environment: {
+            'ui:options': {
+              emphasized: true
+            }
+          },
+          Description: {
+            'ui:widget': 'textarea',
+            'ui:options': {
+              rows: 5
+            }
+          }
+        }}
+      />
     )
   })
   .add('Preset values', () => {
     return (
-      <Provider>
-        <FormDemo
-          schema={basicPokedexSchema}
-          formData={{
-            Name: 'Squirtle'
-          }}
-        />
-      </Provider>
+      <FormDemo
+        schema={basicPokedexSchema}
+        formData={{
+          Name: 'Squirtle'
+        }}
+      />
     )
   })
   .add('Warnings', () => {
@@ -249,11 +233,7 @@ storiesOf('Beta/Form', module)
       }
     }
 
-    return (
-      <Provider>
-        <FormDemo schema={basicPokedexSchema} uiSchema={uiSchema} />
-      </Provider>
-    )
+    return <FormDemo schema={basicPokedexSchema} uiSchema={uiSchema} />
   })
   .add('Help Text', () => {
     const uiSchema = {
@@ -262,11 +242,7 @@ storiesOf('Beta/Form', module)
       }
     }
 
-    return (
-      <Provider>
-        <FormDemo schema={basicPokedexSchema} uiSchema={uiSchema} />
-      </Provider>
-    )
+    return <FormDemo schema={basicPokedexSchema} uiSchema={uiSchema} />
   })
   .add('Group titles', () => {
     const schema = {
@@ -314,11 +290,7 @@ storiesOf('Beta/Form', module)
       }
     }
 
-    return (
-      <Provider>
-        <FormDemo schema={schema} />
-      </Provider>
-    )
+    return <FormDemo schema={schema} />
   })
   // There is no good way to wait for the captcha. If this proves to be flaky, find a better solution
   .addDecorator(withScreenshot({ delay: 2000 }))
@@ -341,13 +313,12 @@ storiesOf('Beta/Form', module)
       }
     }
     return (
-      <Provider>
+      <React.Fragment>
         <Box px={30} pt={30}>
           <Markdown>{extraWidgetsReadme}</Markdown>
         </Box>
-
         <FormDemo schema={extraSchema} />
-      </Provider>
+      </React.Fragment>
     )
   })
   .add('patternProperties', () => {
@@ -373,9 +344,5 @@ storiesOf('Beta/Form', module)
       }
     }
 
-    return (
-      <Provider>
-        <FormDemo schema={patternPropertiesSchema} formData={formData} />
-      </Provider>
-    )
+    return <FormDemo schema={patternPropertiesSchema} formData={formData} />
   })

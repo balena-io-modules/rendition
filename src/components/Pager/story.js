@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
-import { Box, Pager, Provider } from '../../'
+import { Box, Pager } from '../../'
 import Readme from './README.md'
 
 class PagerHOC extends React.Component {
@@ -33,9 +33,5 @@ class PagerHOC extends React.Component {
 storiesOf('Next/Pager', module)
   .addDecorator(withReadme(Readme))
   .add('Standard', () => {
-    return (
-      <Provider>
-        <PagerHOC />
-      </Provider>
-    )
+    return <PagerHOC />
   })

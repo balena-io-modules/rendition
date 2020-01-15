@@ -2,7 +2,7 @@ import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import withReadme from 'storybook-readme/with-readme'
-import { Link, List, Provider, Txt } from '../../'
+import { Link, List, Txt } from '../../'
 import Readme from './README.md'
 
 const StoryList = ({ ordered }) => {
@@ -25,16 +25,8 @@ const StoryList = ({ ordered }) => {
 storiesOf('Next/List', module)
   .addDecorator(withReadme(Readme))
   .add('Unordered List', () => {
-    return (
-      <Provider>
-        <StoryList />
-      </Provider>
-    )
+    return <StoryList />
   })
   .add('Ordered List', () => {
-    return (
-      <Provider>
-        <StoryList ordered />
-      </Provider>
-    )
+    return <StoryList ordered />
   })
