@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix dependency regression for storybook and remove unnecessary Providers
+      hash: 424240f3f1614d699da525613023faaf75c9f3ca
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 11.35.7
+  date: 2020-01-15T11:11:55.161Z
+- commits:
     - subject: Update several dependencies to resolve vulnerabilities
       hash: e0b15f927345d385a1751ac7bcf913c9681e5a99
       body: ''
