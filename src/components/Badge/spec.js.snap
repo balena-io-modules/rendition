@@ -13,24 +13,20 @@ exports[`Badge renders correctly 1`] = `
 }
 
 .c2 {
-  padding: 2px 5px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #8dc587;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 12px;
+  color: #36586E;
+  background-color: #B3D2E5;
 }
 
 .c3 {
-  border-radius: 3px;
+  font-family: CircularStd,Arial,sans-serif;
   display: inline-block;
-  min-width: 40px;
-  text-align: center;
-  font-weight: 800;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-letter-spacing: 0.5px;
-  -moz-letter-spacing: 0.5px;
-  -ms-letter-spacing: 0.5px;
-  letter-spacing: 0.5px;
+  border-radius: 1em;
+  line-height: 1;
 }
 
 .c1 {
@@ -51,10 +47,10 @@ exports[`Badge renders correctly 1`] = `
 <div
   className="c0 c1"
 >
-  <div
+  <span
     className="c2 c3 "
   >
     Badge
-  </div>
+  </span>
 </div>
 `;

@@ -82,7 +82,6 @@ export { Flex, FlexProps } from './components/Flex';
 export { useTheme } from './hooks/useTheme';
 export { default as Theme } from './theme';
 export { Theme as ThemeType } from './common-types';
-export { v3 } from './migration-types';
 
 export {
 	default as asRendition,
@@ -91,8 +90,7 @@ export {
 } from './asRendition';
 
 import * as SchemaSieve from './components/Filters/SchemaSieve';
-import * as migrations from './migrations';
-export { SchemaSieve, migrations };
+export { SchemaSieve };
 
 export {
 	ResponsiveStyle,

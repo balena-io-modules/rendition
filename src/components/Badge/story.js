@@ -4,73 +4,61 @@ import withReadme from 'storybook-readme/with-readme'
 import { Badge, Box } from '../../'
 import Readme from './README.md'
 
-storiesOf('Core/Badge', module)
+storiesOf('Next/Badge', module)
   .addDecorator(withReadme(Readme))
   .add('Standard', () => {
     return (
-      <Box m={3}>
-        <Badge mr={2}>Badge 1</Badge>
-        <Badge mr={2}>Badge 2</Badge>
-        <Badge>Badge 3</Badge>
-      </Box>
-    )
-  })
-  .add('Controlled', () => {
-    return (
-      <Box m={3}>
-        <Badge primary mr={2}>
-          Primary
-        </Badge>
-        <Badge secondary mr={2}>
-          Secondary
-        </Badge>
-        <Badge tertiary mr={2}>
-          Tertiary
-        </Badge>
-        <Badge quartenary mr={2}>
-          Quartenary
-        </Badge>
-        <Badge bg='purple' color='green'>
-          Custom
-        </Badge>
-      </Box>
-    )
-  })
-  .add('Small', () => {
-    return (
-      <Box m={3}>
-        <Badge small primary mr={2}>
-          Primary
-        </Badge>
-        <Badge small secondary mr={2}>
-          Secondary
-        </Badge>
-        <Badge small tertiary mr={2}>
-          Tertiary
-        </Badge>
-        <Badge small quartenary mr={2}>
-          Quartenary
-        </Badge>
-        <Badge small>Default</Badge>
-      </Box>
-    )
-  })
-  .add('Xsmall', () => {
-    return (
-      <Box m={3}>
-        <Badge xsmall primary mr={2}>
-          Primary
-        </Badge>
-        <Badge xsmall secondary mr={2}>
-          Secondary
-        </Badge>
-        <Badge xsmall tertiary mr={2}>
-          Tertiary
-        </Badge>
-        <Badge xsmall quartenary mr={2}>
-          Quartenary
-        </Badge>
-        <Badge xsmall>Default</Badge>
-      </Box>
+      <React.Fragment>
+        <Box m={3}>
+          <Badge shade={0} mr={2}>
+            Badge 0
+          </Badge>
+          <Badge shade={1} mr={2}>
+            Badge 1
+          </Badge>
+          <Badge shade={2} mr={2}>
+            Badge 2
+          </Badge>
+          <Badge shade={3} mr={2}>
+            Badge 3
+          </Badge>
+        </Box>
+        <Box m={3}>
+          <Badge shade={4} mr={2}>
+            Badge 4
+          </Badge>
+          <Badge shade={5} mr={2}>
+            Badge 5
+          </Badge>
+          <Badge shade={6} mr={2}>
+            Badge 6
+          </Badge>
+          <Badge shade={7} mr={2}>
+            Badge 7
+          </Badge>
+        </Box>
+        <Box m={3}>
+          <Badge shade={8} mr={2}>
+            Badge 8
+          </Badge>
+          <Badge shade={9} mr={2}>
+            Badge 9
+          </Badge>
+          <Badge shade={10} mr={2}>
+            Badge 10
+          </Badge>
+          <Badge shade={11} mr={2}>
+            Badge 11
+          </Badge>
+        </Box>
+        <Box m={3}>
+          <Badge shade={12} mr={2}>
+            Badge 12
+          </Badge>
+          <Badge shade={13} mr={2}>
+            Badge 13
+          </Badge>
+        </Box>
+      </React.Fragment>
     )
   })
