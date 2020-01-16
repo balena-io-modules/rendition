@@ -1,4 +1,32 @@
 - commits:
+    - subject: Update badge to match the new styleguide
+      hash: 4cfd3e80d5f6c68139a8548f3c34ab270728af23
+      body: |
+        Previously, badges would autogenerate the background
+        color based on the content, but that gives us very little
+        control over their appearance. For those cases, a new component
+        called "highlighted name" should be used.
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+    - subject: Remove filter migrations
+      hash: 947561378bc72a131dbedcc0f540aefe865cee8d
+      body: |
+        It has been over a year since we have applied the migration
+        scripts for the filters, which should have migrated all
+        existing filters by now.
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 12.0.0
+  date: 2020-01-16T13:26:14.745Z
+- commits:
     - subject: minor improvements and refactoring for the HighlightedName component
       hash: 39956d94ab8a7ff35ab72b4b948003715fec3fae
       body: ''
