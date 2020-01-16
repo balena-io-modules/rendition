@@ -26,6 +26,10 @@ export interface Theme {
 	radius: number;
 }
 
+export interface ThemedDefaultProps extends DefaultProps {
+	theme: Theme;
+}
+
 export interface StyledSystemProps
 	extends SpaceProps,
 		FontSizeProps,

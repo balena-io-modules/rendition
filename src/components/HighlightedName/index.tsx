@@ -46,7 +46,7 @@ const HighlightedName = ({
 
 export interface InternalHighlightedNameProps extends TxtProps, Coloring {
 	children: string;
-	className: string;
+	className?: string;
 	color?: string;
 	bg?: string;
 }

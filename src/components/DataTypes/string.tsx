@@ -1,7 +1,7 @@
 import { JSONSchema6 } from 'json-schema';
 import assign from 'lodash/assign';
 import * as React from 'react';
-import * as utils from '../../utils';
+import { randomString, regexEscape } from '../../utils';
 import { DataTypeEditProps } from '../Filters';
 import Input, { InputProps } from '../Input';
 import Textarea, { TextareaProps } from '../Textarea';
@@ -118,7 +118,7 @@ export const createFilter = (
 ): JSONSchema6 => {
 	const { title } = schema;
 	const base: StringFilter = {
-		$id: utils.randomString(),
+		$id: randomString(),
 		title: operator,
 		description: getJsonDescription(
 			title || field,
@@ -146,7 +146,7 @@ export const createFilter = (
 				[field]: {
 					type: 'string',
 					description: value,
-					pattern: utils.regexEscape(value),
+					pattern: regexEscape(value),
 				},
 			},
 			required: [field],
@@ -162,7 +162,7 @@ export const createFilter = (
 							type: 'string',
 							description: value,
 							not: {
-								pattern: utils.regexEscape(value),
+								pattern: regexEscape(value),
 							},
 						},
 					},

@@ -7,7 +7,7 @@ import isString from 'lodash/isString';
 import mapValues from 'lodash/mapValues';
 import pick from 'lodash/pick';
 import * as React from 'react';
-import * as utils from '../../utils';
+import { regexEscape } from '../../utils';
 import { DataTypeEditProps } from '../Filters';
 import { Flex } from '../Flex';
 import Input from '../Input';
@@ -275,7 +275,7 @@ export const createFilter = (
 						properties: mapValues(value, v => ({
 							type: 'string',
 							description: v,
-							pattern: utils.regexEscape(v),
+							pattern: regexEscape(v),
 						})),
 					},
 				},
@@ -294,7 +294,7 @@ export const createFilter = (
 							properties: mapValues(value, v => ({
 								type: 'string',
 								description: v,
-								pattern: utils.regexEscape(v),
+								pattern: regexEscape(v),
 							})),
 						},
 					},

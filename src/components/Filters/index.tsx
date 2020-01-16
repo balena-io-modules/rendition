@@ -14,7 +14,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { Button, ButtonProps } from '../../';
 import { DefaultProps } from '../../common-types';
-import * as utils from '../../utils';
+import { randomString } from '../../utils';
 import { Box } from '../Box';
 import { getDataModel } from '../DataTypes';
 import { DropDownButtonProps } from '../DropDownButton';
@@ -300,7 +300,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 
 	saveView(name: string, scope: string | null) {
 		const view: FiltersView = {
-			id: utils.randomString(),
+			id: randomString(),
 			name,
 			scope,
 			filters: cloneDeep(this.state.filters),

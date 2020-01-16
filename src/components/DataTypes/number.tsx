@@ -1,7 +1,7 @@
 import { JSONSchema6 } from 'json-schema';
 import assign from 'lodash/assign';
 import * as React from 'react';
-import * as utils from '../../utils';
+import { randomString } from '../../utils';
 import { DataTypeEditProps } from '../Filters';
 import Input, { InputProps } from '../Input';
 import { getJsonDescription } from './utils';
@@ -78,7 +78,7 @@ export const createFilter = (
 ): NumberFilter => {
 	const { title } = schema;
 	const base: NumberFilter = {
-		$id: utils.randomString(),
+		$id: randomString(),
 		title: operator,
 		description: getJsonDescription(
 			title || field,
