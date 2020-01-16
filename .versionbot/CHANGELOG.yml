@@ -1,4 +1,23 @@
 - commits:
+    - subject: minor improvements and refactoring for the HighlightedName component
+      hash: 39956d94ab8a7ff35ab72b4b948003715fec3fae
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+    - subject: 'feat(HighlightedName): Add component'
+      hash: 3205a5f8ce49cf1a0c19c1762a34e03e92d9864e
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Banana
+  version: 11.36.0
+  date: 2020-01-16T12:23:45.334Z
+- commits:
     - subject: Fix dependency regression for storybook and remove unnecessary Providers
       hash: 424240f3f1614d699da525613023faaf75c9f3ca
       body: ''
