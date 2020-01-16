@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HighlightedName renders correctly 1`] = `
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  padding: 8px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #87c59b;
+}
+
+.c3 {
+  font-family: CircularStd,Arial,sans-serif;
+  display: inline-block;
+  border-radius: 2px;
+  line-height: 1;
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+}
+
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+<div
+  className="c0 c1"
+>
+  <span
+    className="c2 c3 "
+  >
+    HighlightedName
+  </span>
+</div>
+`;
