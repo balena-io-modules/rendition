@@ -13,9 +13,10 @@ exports[`HighlightedName renders correctly 1`] = `
 }
 
 .c2 {
-  padding: 6px;
+  padding: 8px;
   font-size: 12px;
-  background-color: #D6013A;
+  color: #fff;
+  background-color: #87c59b;
 }
 
 .c3 {
@@ -23,7 +24,6 @@ exports[`HighlightedName renders correctly 1`] = `
   display: inline-block;
   border-radius: 2px;
   line-height: 1;
-  color: white;
 }
 
 .c1 {

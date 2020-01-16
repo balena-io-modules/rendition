@@ -46,7 +46,7 @@
     "prettify-js": "prettier --config .prettierrc-js --write \"src/**/*.js\" \"test/**/*.js\"",
     "prettify-ts": "prettier --config .prettierrc-ts --write \"src/**/*.ts\" \"src/**/*.tsx\" \"typings.d.ts\"",
     "prettify": "npm run prettify-js && npm run eslint-fix && npm run prettify-ts && npm run tslint-fix",
-    "ci:screenshot": "storycap http://localhost:6006 --serverTimeout 600000 --captureTimeout 10000 --disableCssAnimation --serverCmd \"npm run start\"",
+    "ci:screenshot": "storycap http://localhost:6006 --serverTimeout 100000 --captureTimeout 10000 --disableCssAnimation --serverCmd \"npm run start\"",
     "deploy": "npm run build:storybook && gh-pages -d .out"
   },
   "devDependencies": {

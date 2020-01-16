@@ -1,10 +1,12 @@
 import Color from 'color';
+import ColorHash from 'color-hash';
 import { JSONSchema6 } from 'json-schema';
 import cloneDeep from 'lodash/cloneDeep';
 import find from 'lodash/find';
 import forEach from 'lodash/forEach';
 import get from 'lodash/get';
 import isObject from 'lodash/isObject';
+import memoize from 'lodash/memoize';
 import { DefaultProps, Theme } from '../common-types';
 
 const matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;
@@ -12,6 +14,11 @@ const matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;
 interface ThemedDefaultProps extends DefaultProps {
 	theme: Theme;
 }
+
+const colorHash = new ColorHash();
+export const generateColorFromString = memoize((text: string): string => {
+	return colorHash.hex(text.replace(/\s/g, ''));
+});
 
 export const isLight = (color?: string) => {
 	return Color(color).luminosity() > 0.65;
