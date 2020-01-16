@@ -5,7 +5,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { DefaultProps, RenditionSystemProps } from '../../common-types';
-import { px, stopEvent } from '../../utils';
+import { px } from '../../utils';
 import { Box } from '../Box';
 import Txt, { TxtProps } from '../Txt';
 
@@ -68,7 +68,10 @@ const Base = ({
 			{code && <code title={normalizedCopy}>{contentToRender}</code>}
 
 			<span
-				onClick={e => stopEvent(e)}
+				onClick={e => {
+					e.stopPropagation();
+					e.preventDefault();
+				}}
 				className="text-with-copy__copy_wrapper"
 			>
 				<Box

@@ -16,7 +16,7 @@ import reduce from 'lodash/reduce';
 import startsWith from 'lodash/startsWith';
 import trimStart from 'lodash/trimStart';
 import { FilterSignature } from '.';
-import * as utils from '../../utils';
+import { randomString, regexEscape } from '../../utils';
 import { getDataModel } from '../DataTypes';
 
 const ajv = new Ajv();
@@ -66,7 +66,7 @@ export const createFullTextSearchFilter = (
 	// A schema that matches applies the pattern to each schema field with a type
 	// of 'string'
 	const filter = {
-		$id: utils.randomString(),
+		$id: randomString(),
 		title: FULL_TEXT_SLUG,
 		anyOf: [
 			{
@@ -76,7 +76,7 @@ export const createFullTextSearchFilter = (
 						[key]: {
 							type: 'string',
 							regexp: {
-								pattern: utils.regexEscape(term),
+								pattern: regexEscape(term),
 								flags: 'i',
 							},
 						},
@@ -133,7 +133,7 @@ export const createFilter = (
 	});
 
 	return {
-		$id: utils.randomString(),
+		$id: randomString(),
 		anyOf,
 	};
 };

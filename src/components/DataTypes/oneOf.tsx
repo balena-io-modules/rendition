@@ -1,7 +1,7 @@
 import { JSONSchema6 } from 'json-schema';
 import assign from 'lodash/assign';
 import * as React from 'react';
-import * as utils from '../../utils';
+import { randomString } from '../../utils';
 import { DataTypeEditProps } from '../Filters';
 import Select, { SelectProps } from '../Select';
 import { getJsonDescription } from './utils';
@@ -81,7 +81,7 @@ export const createFilter = (
 ): OneOfFilter => {
 	const { title } = schema;
 	const base: OneOfFilter = {
-		$id: utils.randomString(),
+		$id: randomString(),
 		title: operator,
 		description: getJsonDescription(
 			title || field,

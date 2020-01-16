@@ -60,7 +60,7 @@ const Badge = ({ children, className, shade }: ThemedBadgeProps) => {
 
 export interface InternalBadgeProps extends Coloring {
 	children: string;
-	className: string;
+	className?: string;
 	shade?: number;
 }
 

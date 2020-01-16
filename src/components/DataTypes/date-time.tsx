@@ -1,7 +1,7 @@
 import { JSONSchema6 } from 'json-schema';
 import assign from 'lodash/assign';
 import * as React from 'react';
-import * as utils from '../../utils';
+import { randomString } from '../../utils';
 import { DataTypeEditProps } from '../Filters';
 import Input, { InputProps } from '../Input';
 import { getDefaultDate, normalizeDateTime } from './date-time-helpers';
@@ -79,7 +79,7 @@ export const createFilter = (
 ): DateTimeFilter => {
 	const { title } = schema;
 	const base: DateTimeFilter = {
-		$id: utils.randomString(),
+		$id: randomString(),
 		title: operator,
 		description: getJsonDescription(
 			title || field,

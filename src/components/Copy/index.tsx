@@ -4,7 +4,7 @@ import copyToClipboard from 'copy-to-clipboard';
 import * as React from 'react';
 import styled from 'styled-components';
 import { RenditionSystemProps } from '../../common-types';
-import { px, stopEvent } from '../../utils';
+import { px } from '../../utils';
 import { Box } from '../Box';
 import { Flex, FlexProps } from '../Flex';
 
@@ -50,7 +50,8 @@ export default ({
 				mx={2}
 				tooltip={{ text: 'Copied!', trigger: 'click' }}
 				onClick={e => {
-					stopEvent(e);
+					e.stopPropagation();
+					e.preventDefault();
 					copyToClipboard(normalizedText);
 					if (onClick) {
 						onClick(normalizedText);

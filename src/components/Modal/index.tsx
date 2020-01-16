@@ -3,7 +3,6 @@ import assign from 'lodash/assign';
 import * as React from 'react';
 import styled, { createGlobalStyle, withTheme } from 'styled-components';
 import { DefaultProps, ResponsiveStyle, Theme } from '../../common-types';
-import { stopPropagation } from '../../utils';
 import { px } from '../../utils';
 import { Box } from '../Box';
 import Button, { ButtonProps } from '../Button';
@@ -84,6 +83,8 @@ class Modal extends React.Component<ThemedModalProps, any> {
 		}
 	};
 
+	stopPropagation = (e: Event | React.MouseEvent<any>) => e.stopPropagation();
+
 	popModal = () => {
 		if (Modal.mountedCount !== this.ownIndex) {
 			return;
@@ -126,7 +127,7 @@ class Modal extends React.Component<ThemedModalProps, any> {
 				<ModalSizer
 					p={[px(theme.space[3]), '40px 50px 30px']}
 					width={width || DEFAULT_MODAL_WIDTH}
-					onClick={stopPropagation}
+					onClick={this.stopPropagation}
 					style={props.style}
 					id={props.id}
 					className={props.className}

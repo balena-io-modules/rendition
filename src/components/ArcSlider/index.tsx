@@ -1,10 +1,24 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { constrainNumber, darken, getAngleBetweenPoints } from '../../utils';
+import { darken } from '../../utils';
 import { Box, BoxProps } from '../Box';
 import { Flex } from '../Flex';
 
 const ANGLERANGE = 135;
+
+type Point = { x: number; y: number };
+
+const getAngleBetweenPoints = (p1: Point, p2: Point) => {
+	return (Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180) / Math.PI;
+};
+
+const constrainNumber = (
+	value: number,
+	lower: number = 0,
+	upper: number = 100,
+) => {
+	return Math.min(Math.max(value, lower), upper);
+};
 
 const StyledSVG = styled.svg`
 	display: block;
