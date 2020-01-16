@@ -1,4 +1,16 @@
 - commits:
+    - subject: Refactor utils file and remove unnecessary functions
+      hash: af35872cbb71944dc26b91ee58ea0f72b111b7b8
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 12.0.1
+  date: 2020-01-16T15:55:44.756Z
+- commits:
     - subject: Update badge to match the new styleguide
       hash: 4cfd3e80d5f6c68139a8548f3c34ab270728af23
       body: |
