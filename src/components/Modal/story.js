@@ -250,7 +250,7 @@ storiesOf('Next/Modal', module)
       </Modal>
     )
   })
-  .add('Custom Button Properties', () => {
+  .add('Custom Properties', () => {
     return (
       <Modal
         width={['auto', 500, 1000]}
@@ -258,6 +258,7 @@ storiesOf('Next/Modal', module)
         cancel={cancelAction}
         done={doneAction}
         action='Delete'
+        position='top'
         cancelButtonProps={{
           children: 'Abort',
           width: 150,

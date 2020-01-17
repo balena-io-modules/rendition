@@ -122,6 +122,7 @@ class Modal extends React.Component<ThemedModalProps, any> {
 				responsive={false}
 				margin="small"
 				animate={false}
+				position={props.position ?? 'center'}
 			>
 				<GlobalStyle />
 				<ModalSizer
@@ -172,6 +173,7 @@ export interface ModalProps extends DefaultProps {
 	titleElement?: string | JSX.Element;
 	titleDetails?: string | JSX.Element;
 	action?: string | JSX.Element;
+	position?: 'center' | 'top';
 	cancel?: () => any;
 	done: () => any;
 	primaryButtonProps?: ButtonProps;

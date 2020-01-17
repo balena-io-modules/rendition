@@ -14,6 +14,7 @@ are rendered inside the modal.
 | `titleElement`    | <code>string &#124; JSX.Element</code> | - | - | A string or JSX element to display at the top of the modal |
 | `titleDetails`    | <code>string &#124; JSX.Element</code> | - | - | A string or JSX element to display underneath the modal's `title`, only displayed if the `titleElement` property is not used and a `title` property is provided |
 | `action`    | <code>string &#124; JSX.Element</code> | - | - | A string or JSX element to display in the primary modal button, defaults to 'OK' |
+| `position`    | <code>center &#124; top</code> | center | - | Specify whether the modal should be centered or top-aligned |
 | `cancel`    | `() => any` | - | - | A function that is called if the modal is dismissed |
 | `done`    | `() => any` | - | ✓ | A function that is called if the primary modal button is clicked |
 | `primaryButtonProps` | `object` | - | - | Properties that are passed to the primary button, these are the same props used for the [`Button`](#button) component |
