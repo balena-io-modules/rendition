@@ -2,7 +2,7 @@ import assign from 'lodash/assign';
 import { withProps } from 'recompose';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
-import { DefaultProps } from '../../common-types';
+import { Flex, FlexProps } from '../Flex';
 
 const setDefaultProps = withProps((props: BannerProps) => {
 	// set defaults
@@ -11,6 +11,9 @@ const setDefaultProps = withProps((props: BannerProps) => {
 		{
 			p: [3, 4],
 			minHeight: `80vh`,
+			flexDirection: `column`,
+			alignItems: `center`,
+			justifyContent: `center`,
 		},
 		props,
 	);
@@ -18,20 +21,14 @@ const setDefaultProps = withProps((props: BannerProps) => {
 
 const setBgImage = (bgImage?: string) => (bgImage ? `url(${bgImage})` : 'none');
 
-const Base = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	min-height: ${(props: any) => props.minHeight};
+const Base = styled(Flex)`
 	background-size: cover;
 	background-position: center;
 	background-image: ${(props: any) => setBgImage(props.backgroundImage)};
 `;
 
-export interface BannerProps extends DefaultProps {
+export interface BannerProps extends FlexProps {
 	backgroundImage?: string;
-	minHeight?: string;
 }
 
 export default asRendition<

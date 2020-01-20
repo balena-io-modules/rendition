@@ -5,12 +5,6 @@ import assign from 'lodash/assign';
 import * as React from 'react';
 import { compose, withProps } from 'recompose';
 import styled from 'styled-components';
-import {
-	display,
-	DisplayProps,
-	maxHeight,
-	MaxHeightProps,
-} from 'styled-system';
 import { DefaultProps } from '../../common-types';
 import { Box, BoxProps } from '../Box';
 import Container from '../Container';
@@ -18,19 +12,15 @@ import { Flex, FlexProps } from '../Flex';
 
 const BrandBox = styled(Box)`
 	display: flex;
-	height: auto;
-	min-width: 150px;
 	align-self: center;
 `;
 
-const IconBox = styled(Box)<BoxProps & DisplayProps>`
-	${display} align-self: center;
+const IconBox = styled(Box)<BoxProps>`
+	align-self: center;
 	cursor: pointer;
 `;
 
-const MenuBox = styled(Flex)<FlexProps & MaxHeightProps & DisplayProps>`
-	${display}
-	${maxHeight};
+const MenuBox = styled(Flex)<FlexProps>`
 	text-align: center;
 	transition: max-height 0.4s ease-in-out;
 	align-self: center;
@@ -67,7 +57,9 @@ class Navbar extends React.Component<NavbarProps, NavbarState> {
 				<Container>
 					<Flex flexDirection={['column', 'row']}>
 						<Flex>
-							<BrandBox p={2}>{brand}</BrandBox>
+							<BrandBox minWidth="150px" height="auto" p={2}>
+								{brand}
+							</BrandBox>
 							{children && (
 								<IconBox
 									onClick={() => this.toggle()}

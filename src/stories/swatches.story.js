@@ -73,15 +73,7 @@ const S = ({ style, border, theme }) => {
 }
 
 const Swatch = withTheme(props => (
-  <Flex
-    style={{
-      minWidth: 120,
-      maxWidth: 160
-    }}
-    m={15}
-    flexDirection='column'
-    flex={1}
-    >
+  <Flex minWidth={120} maxWidth={160} m={15} flexDirection='column' flex={1}>
     <Heading.h5>{props.style}</Heading.h5>
     <S {...props} />
   </Flex>

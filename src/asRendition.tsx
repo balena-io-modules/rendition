@@ -4,7 +4,18 @@ import { arrayOf, number, oneOfType, string } from 'prop-types';
 import * as React from 'react';
 import { compose, getDisplayName } from 'recompose';
 import styled, { withTheme } from 'styled-components';
-import { color, fontSize, space, width } from 'styled-system';
+import {
+	color,
+	display,
+	fontSize,
+	height,
+	maxHeight,
+	maxWidth,
+	minHeight,
+	minWidth,
+	space,
+	width,
+} from 'styled-system';
 import { StyledSystemProps } from './common-types';
 import { Tooltips } from './tooltips';
 
@@ -14,6 +25,12 @@ const prop = oneOfType([number, string, arrayOf(oneOfType([number, string]))]);
 
 const propTypes = {
 	width: prop,
+	minWidth: prop,
+	maxWidth: prop,
+	height: prop,
+	minHeight: prop,
+	maxHeight: prop,
+	display: prop,
 	fontSize: prop,
 	color: prop,
 	bg: prop,
@@ -51,7 +68,13 @@ const filterStyledSystemProps = (passthroughProps: string[]) => (
 export const withStyledSystem = (child: React.ComponentType) => {
 	const Base = styled(child)<StyledSystemProps>`
 		${space}
-		${width}
+    ${width}
+    ${minWidth}
+    ${maxWidth}
+    ${height}
+    ${minHeight}
+    ${maxHeight}
+    ${display}
 		${fontSize}
 		${color}
 	`;

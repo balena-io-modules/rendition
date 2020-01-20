@@ -12,7 +12,6 @@ import Heading from '../Heading';
 
 const Wrapper = styled(DismissableContainer)<WrapperProps>`
 	& {
-		min-height: ${props => props.minHeight || 'auto'};
 		padding: ${props => (props.small ? '24px' : '32px 44px')};
 	}
 `;
@@ -53,7 +52,6 @@ const Card = ({ title, cta, rows, children, ...props }: InternalCardProps) => {
 };
 
 interface WrapperProps extends DefaultProps {
-	minHeight?: string;
 	small?: boolean;
 }
 

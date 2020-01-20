@@ -72,7 +72,13 @@ All components support [styled-system][styled-system] attributes, allowing you t
 | Name          | Type              | Description                                  |
 | --------------|-------------------|--------------------------------------------- |
 |	width         | `ResponsiveStyle` | sets the width
+|	minWidth      | `ResponsiveStyle` | sets the min-width
+|	maxWidth      | `ResponsiveStyle` | sets the max-width
+|	height        | `ResponsiveStyle` | sets the height
+|	minHeight     | `ResponsiveStyle` | sets the min-height
+|	maxHeight     | `ResponsiveStyle` | sets the max-height
 |	fontSize      | `ResponsiveStyle` | sets the font size
+|	display       | `ResponsiveStyle` | sets the `display` css property
 |	color         | `ResponsiveStyle` | sets the `color` css property
 |	bg            | `ResponsiveStyle` | sets the `background` css property
 |	m             | `ResponsiveStyle` | sets the `margin` css property

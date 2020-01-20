@@ -68,7 +68,7 @@ class FormDemo extends React.Component {
             {...this.props}
           />
         </Box>
-        <Box flex='1' style={{ maxWidth: '50%' }} p={30}>
+        <Box flex='1' maxWidth='50%' p={30}>
           <Txt monospace>
             <pre>{JSON.stringify(this.state.formData, null, 4)}</pre>
           </Txt>

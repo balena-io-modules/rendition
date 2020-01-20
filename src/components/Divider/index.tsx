@@ -68,4 +68,4 @@ export default asRendition<
 	React.ForwardRefExoticComponent<
 		DividerProps & React.RefAttributes<HTMLHRElement>
 	>
->(Divider, [], ['color']);
+>(Divider, [], ['color', 'height']);

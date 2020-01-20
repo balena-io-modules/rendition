@@ -39,7 +39,11 @@ storiesOf('Next/DropDownButton', module)
           <div>Item</div>
           <div>Item</div>
         </DropDownButton>
-        <DropDownButton mx={2} maxHeight={120} label={<div>Max Height</div>}>
+        <DropDownButton
+          mx={2}
+          listMaxHeight={120}
+          label={<div>Max Height</div>}
+        >
           <div>Item</div>
           <div>Item</div>
           <div>Item</div>
