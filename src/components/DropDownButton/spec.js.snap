@@ -184,6 +184,11 @@ exports[`DropDownButton renders correctly 1`] = `
 >
   <div
     className="c2 c3 "
+    style={
+      Object {
+        "background": "none",
+      }
+    }
   >
     <span>
       <button
@@ -427,10 +432,16 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   padding: 4px 16px;
   border-top: 0;
   border-radius: 3px;
+  background: white;
 }
 
 .c12:hover:enabled {
   background: #f4f4f4;
+}
+
+.c12:hover {
+  background: #f4f4f4;
+  cursor: pointer;
 }
 
 .c1 {
@@ -453,6 +464,11 @@ exports[`Opened DropDownButton renders correctly 1`] = `
 >
   <div
     className="c2 c3 "
+    style={
+      Object {
+        "background": "none",
+      }
+    }
   >
     <span>
       <button
