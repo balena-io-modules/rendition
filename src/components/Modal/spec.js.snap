@@ -175,6 +175,7 @@ exports[`Modal renders correctly 1`] = `
 .c7 {
   padding: 16px;
   width: 700px;
+  max-width: 100%;
 }
 
 .c9 {
@@ -197,7 +198,6 @@ exports[`Modal renders correctly 1`] = `
 }
 
 .c8 {
-  max-width: 100%;
   overflow-y: auto;
 }
 

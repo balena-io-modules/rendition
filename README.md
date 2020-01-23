@@ -274,7 +274,7 @@ are rendered inside a dropdown list.
 #### Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| ------ | ------ | --------- | ---------- | ------------- |
+| ------------- | ------ | --------- | ---------- | ------------- |
 | `primary`     | `boolean` | -         | -          | If true, use the `primary` theme color               |
 | `secondary`   | `boolean` | -         | -          | If true, use the `secondary` theme color             |
 | `tertiary`    | `boolean` | -         | -          | If true, use the `tertiary` theme color              |
@@ -289,8 +289,9 @@ are rendered inside a dropdown list.
 | `label`      | `JSX.Element` | -         | -          | Optionally provide a JSX element that will be displayed inside the main button |
 | `border`      | `boolean` | -         | -          | If true, place a border between each item in the dropdown |
 | `joined`      | `boolean` | -         | -          | If true, render the component as a single button instead of two |
-| `noListFormat`      | `boolean` | -         | -          | If true, render
-children as a single JSX element instead of iterating over each of them |
+| `noListFormat`      | `boolean` | -         | -          | If true, render children as a single JSX element instead of iterating over each of them |
+| `alignRight`      | `boolean` | -         | -          | If true, put the dropdown list on the right  |
+| `listMaxHeight`      | `string \| number` | -         | -          | If setted, it defines the maximum height of the dropdown list |
 
 
 ### Filters
@@ -1095,7 +1096,13 @@ All components support [styled-system][styled-system] attributes, allowing you t
 | Name          | Type              | Description                                  |
 | --------------|-------------------|--------------------------------------------- |
 |	width         | `ResponsiveStyle` | sets the width
+|	minWidth      | `ResponsiveStyle` | sets the min-width
+|	maxWidth      | `ResponsiveStyle` | sets the max-width
+|	height        | `ResponsiveStyle` | sets the height
+|	minHeight     | `ResponsiveStyle` | sets the min-height
+|	maxHeight     | `ResponsiveStyle` | sets the max-height
 |	fontSize      | `ResponsiveStyle` | sets the font size
+|	display       | `ResponsiveStyle` | sets the `display` css property
 |	color         | `ResponsiveStyle` | sets the `color` css property
 |	bg            | `ResponsiveStyle` | sets the `background` css property
 |	m             | `ResponsiveStyle` | sets the `margin` css property

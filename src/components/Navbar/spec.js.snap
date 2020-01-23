@@ -21,18 +21,26 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
   background-color: #9f9f9f;
 }
 
+.c4 {
+  max-width: 1184px;
+}
+
 .c8 {
   padding: 8px;
+  min-width: 150px;
+  height: auto;
 }
 
 .c10 {
   margin-left: auto;
   padding: 8px;
+  display: block;
 }
 
 .c12 {
   margin-left: 0;
   width: 100%;
+  max-height: 0vh;
 }
 
 .c14 {
@@ -93,10 +101,6 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
   color: white;
 }
 
-.c4 {
-  max-width: 1184px;
-}
-
 .c5 {
   margin-left: auto;
   margin-right: auto;
@@ -109,15 +113,12 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: auto;
-  min-width: 150px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
 .c11 {
-  display: block;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -129,7 +130,6 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  max-height: 0vh;
   text-align: center;
   -webkit-transition: max-height 0.4s ease-in-out;
   transition: max-height 0.4s ease-in-out;
@@ -151,6 +151,12 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
 }
 
 @media screen and (min-width:576px) {
+  .c10 {
+    display: none;
+  }
+}
+
+@media screen and (min-width:576px) {
   .c12 {
     margin-left: auto;
   }
@@ -159,6 +165,12 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
 @media screen and (min-width:576px) {
   .c12 {
     width: auto;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c12 {
+    max-height: none;
   }
 }
 
@@ -182,18 +194,6 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
   }
 }
 
-@media screen and (min-width:576px) {
-  .c11 {
-    display: none;
-  }
-}
-
-@media screen and (min-width:576px) {
-  .c13 {
-    max-height: none;
-  }
-}
-
 <div
   className="c0 c1"
 >
@@ -201,7 +201,7 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
     className="c2 c3"
   >
     <div
-      className="c4 c5"
+      className="c2 c4 c5"
     >
       <div
         className="c2 c6"
@@ -214,12 +214,6 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
           />
           <div
             className="c2 c10 c11"
-            display={
-              Array [
-                "block",
-                "none",
-              ]
-            }
             onClick={[Function]}
           >
             <svg
@@ -288,18 +282,26 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
   background-color: #9f9f9f;
 }
 
+.c4 {
+  max-width: 1184px;
+}
+
 .c8 {
   padding: 8px;
+  min-width: 150px;
+  height: auto;
 }
 
 .c10 {
   margin-left: auto;
   padding: 8px;
+  display: block;
 }
 
 .c12 {
   margin-left: 0;
   width: 100%;
+  max-height: 0vh;
 }
 
 .c14 {
@@ -360,10 +362,6 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
   color: white;
 }
 
-.c4 {
-  max-width: 1184px;
-}
-
 .c5 {
   margin-left: auto;
   margin-right: auto;
@@ -376,15 +374,12 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: auto;
-  min-width: 150px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
 .c11 {
-  display: block;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -396,7 +391,6 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  max-height: 0vh;
   text-align: center;
   -webkit-transition: max-height 0.4s ease-in-out;
   transition: max-height 0.4s ease-in-out;
@@ -418,6 +412,12 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
 }
 
 @media screen and (min-width:576px) {
+  .c10 {
+    display: none;
+  }
+}
+
+@media screen and (min-width:576px) {
   .c12 {
     margin-left: auto;
   }
@@ -426,6 +426,12 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
 @media screen and (min-width:576px) {
   .c12 {
     width: auto;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .c12 {
+    max-height: none;
   }
 }
 
@@ -449,18 +455,6 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
   }
 }
 
-@media screen and (min-width:576px) {
-  .c11 {
-    display: none;
-  }
-}
-
-@media screen and (min-width:576px) {
-  .c13 {
-    max-height: none;
-  }
-}
-
 <div
   className="c0 c1"
 >
@@ -468,7 +462,7 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
     className="c2 c3"
   >
     <div
-      className="c4 c5"
+      className="c2 c4 c5"
     >
       <div
         className="c2 c6"
@@ -481,12 +475,6 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
           />
           <div
             className="c2 c10 c11"
-            display={
-              Array [
-                "block",
-                "none",
-              ]
-            }
             onClick={[Function]}
           >
             <svg
@@ -579,13 +567,20 @@ exports[`Navbar renders correctly with no children prop 1`] = `
   background-color: #9f9f9f;
 }
 
+.c4 {
+  max-width: 1184px;
+}
+
 .c8 {
   padding: 8px;
+  min-width: 150px;
+  height: auto;
 }
 
 .c10 {
   margin-left: 0;
   width: 100%;
+  max-height: 0vh;
 }
 
 .c6 {
@@ -620,10 +615,6 @@ exports[`Navbar renders correctly with no children prop 1`] = `
   font-family: CircularStd,Arial,sans-serif;
 }
 
-.c4 {
-  max-width: 1184px;
-}
-
 .c5 {
   margin-left: auto;
   margin-right: auto;
@@ -636,8 +627,6 @@ exports[`Navbar renders correctly with no children prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: auto;
-  min-width: 150px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -648,7 +637,6 @@ exports[`Navbar renders correctly with no children prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  max-height: 0vh;
   text-align: center;
   -webkit-transition: max-height 0.4s ease-in-out;
   transition: max-height 0.4s ease-in-out;
@@ -676,16 +664,16 @@ exports[`Navbar renders correctly with no children prop 1`] = `
 }
 
 @media screen and (min-width:576px) {
-  .c6 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
+  .c10 {
+    max-height: none;
   }
 }
 
 @media screen and (min-width:576px) {
-  .c11 {
-    max-height: none;
+  .c6 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
 }
 
@@ -696,7 +684,7 @@ exports[`Navbar renders correctly with no children prop 1`] = `
     className="c2 c3"
   >
     <div
-      className="c4 c5"
+      className="c2 c4 c5"
     >
       <div
         className="c2 c6"

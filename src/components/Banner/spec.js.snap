@@ -13,6 +13,10 @@ exports[`Banner renders correctly 1`] = `
 }
 
 .c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -28,14 +32,14 @@ exports[`Banner renders correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  min-height: 80vh;
   background-size: cover;
   background-position: center;
   background-image: none;
 }
 
-.c3 {
+.c4 {
   padding: 16px;
+  min-height: 80vh;
   color: white;
 }
 
@@ -55,7 +59,7 @@ exports[`Banner renders correctly 1`] = `
 }
 
 @media screen and (min-width:576px) {
-  .c3 {
+  .c4 {
     padding: 38px;
   }
 }
@@ -64,7 +68,7 @@ exports[`Banner renders correctly 1`] = `
   className="c0 c1"
 >
   <div
-    className="c2 c3"
+    className="c2 c3 c4"
   >
     <h1>
       balena

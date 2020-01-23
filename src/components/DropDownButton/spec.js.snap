@@ -364,6 +364,10 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   box-sizing: border-box;
 }
 
+.c10 {
+  min-width: 0px;
+}
+
 .c9 {
   position: fixed;
   top: auto;
@@ -393,10 +397,9 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   width: calc(100% - 44px);
 }
 
-.c10 {
+.c11 {
   background: white;
   position: absolute;
-  min-width: 0px;
   box-shadow: 1px 1px 5px#f4f4f4;
   border-radius: 3px;
   border: 1px solid #c6c8c9;
@@ -405,7 +408,6 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   left: 0;
   right: auto;
   white-space: nowrap;
-  max-height: auto;
   overflow-y: auto;
 }
 
@@ -421,13 +423,13 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   height: translateY(1px);
 }
 
-.c11 {
+.c12 {
   padding: 4px 16px;
   border-top: 0;
   border-radius: 3px;
 }
 
-.c11:hover:enabled {
+.c12:hover:enabled {
   background: #f4f4f4;
 }
 
@@ -499,32 +501,32 @@ exports[`Opened DropDownButton renders correctly 1`] = `
       onClick={[Function]}
     />
     <div
-      className="c10"
+      className="c2 c10 c11"
       onClick={[Function]}
     >
       <div
-        className="c11"
+        className="c12"
       >
         <div>
           Item
         </div>
       </div>
       <div
-        className="c11"
+        className="c12"
       >
         <div>
           Item
         </div>
       </div>
       <div
-        className="c11"
+        className="c12"
       >
         <div>
           Item
         </div>
       </div>
       <div
-        className="c11"
+        className="c12"
       >
         <div>
           Item

@@ -37,7 +37,6 @@ exports[`Search renders correctly 1`] = `
 }
 
 .c4 {
-  min-height: auto;
   padding: 32px 44px;
 }
 

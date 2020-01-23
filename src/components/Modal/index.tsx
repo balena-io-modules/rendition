@@ -22,7 +22,6 @@ const GlobalStyle = createGlobalStyle`
 const DEFAULT_MODAL_WIDTH = 700;
 
 const ModalSizer = styled(Box)`
-	max-width: 100%;
 	overflow-y: auto;
 `;
 
@@ -127,6 +126,7 @@ class Modal extends React.Component<ThemedModalProps, any> {
 				<ModalSizer
 					p={[px(theme.space[3]), '40px 50px 30px']}
 					width={width || DEFAULT_MODAL_WIDTH}
+					maxWidth="100%"
 					onClick={this.stopPropagation}
 					style={props.style}
 					id={props.id}

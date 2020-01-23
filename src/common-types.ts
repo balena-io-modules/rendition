@@ -1,6 +1,12 @@
 import {
 	ColorProps,
+	DisplayProps,
 	FontSizeProps,
+	HeightProps,
+	MaxHeightProps,
+	MaxWidthProps,
+	MinHeightProps,
+	MinWidthProps,
 	SpaceProps,
 	WidthProps,
 } from 'styled-system';
@@ -34,7 +40,13 @@ export interface StyledSystemProps
 	extends SpaceProps,
 		FontSizeProps,
 		ColorProps,
-		WidthProps {}
+		WidthProps,
+		MinWidthProps,
+		MaxWidthProps,
+		HeightProps,
+		MinHeightProps,
+		MaxHeightProps,
+		DisplayProps {}
 
 export type ResponsiveStyle = string | number | Array<string | number>;
 

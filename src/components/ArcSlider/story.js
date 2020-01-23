@@ -1,15 +1,8 @@
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 import * as React from 'react'
-import styled from 'styled-components'
 import { ArcSlider, Box } from '../../'
 import Readme from './README.md'
-
-const Container = styled(Box).attrs({
-  m: 3
-})`
-  max-width: 450px;
-`
 
 class HOC extends React.Component {
   constructor (props) {
@@ -37,38 +30,38 @@ storiesOf('Core/ArcSlider', module)
   .addDecorator(withReadme(Readme))
   .add('Standard', () => {
     return (
-      <Container>
+      <Box maxWidth={450} m={3}>
         <ArcSlider />
-      </Container>
+      </Box>
     )
   })
   .add('Fill color', () => {
     return (
-      <Container>
+      <Box maxWidth={450} m={3}>
         <ArcSlider fillColor='#ff0000' />
-      </Container>
+      </Box>
     )
   })
   .add('Background color', () => {
     return (
-      <Container>
+      <Box maxWidth={450} m={3}>
         <ArcSlider background='#ff0000' />
-      </Container>
+      </Box>
     )
   })
   .add('Label', () => {
     return (
-      <Container>
+      <Box maxWidth={450} m={3}>
         <ArcSlider>
           <h2>A label</h2>
         </ArcSlider>
-      </Container>
+      </Box>
     )
   })
   .add('Change handler', () => {
     return (
-      <Container>
+      <Box maxWidth={450} m={3}>
         <HOC />
-      </Container>
+      </Box>
     )
   })

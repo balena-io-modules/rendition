@@ -35,14 +35,11 @@ const ButtonBase = styled(Button)`
 	width: calc(100% - ${px(TOGGLE_BUTTON_WIDTH)});
 `;
 
-const MenuBase = styled.div<{
-	minWidth: string;
+const MenuBase = styled(Box)<{
 	alignRight?: boolean;
-	maxHeight: string | number;
 }>`
 	background: white;
 	position: absolute;
-	min-width: ${props => props.minWidth};
 	box-shadow: ${props => '1px 1px 5px' + props.theme.colors.gray.light};
 	border-radius: ${props => px(props.theme.radius)};
 	border: ${props => '1px solid ' + props.theme.colors.gray.main};
@@ -51,7 +48,6 @@ const MenuBase = styled.div<{
 	left: ${props => (props.alignRight ? 'auto' : 0)};
 	right: ${props => (!props.alignRight ? 'auto' : 0)};
 	white-space: nowrap;
-	max-height: ${props => props.maxHeight || 'auto'};
 	overflow-y: auto;
 `;
 
@@ -238,7 +234,7 @@ class DropDownButton extends React.Component<
 						alignRight={alignRight}
 						onClick={this.toggle}
 						minWidth={`${this.state.minWidth}px`}
-						maxHeight={px(this.props.maxHeight)}
+						maxHeight={px(this.props.listMaxHeight)}
 					>
 						{React.Children.map(children, (child, i) => {
 							if (noListFormat) {
@@ -269,7 +265,7 @@ export interface InternalDropDownButtonProps extends ButtonProps {
 	joined?: boolean;
 	alignRight?: boolean;
 	noListFormat?: boolean;
-	maxHeight?: string | number;
+	listMaxHeight?: string | number;
 }
 
 export type DropDownButtonProps = InternalDropDownButtonProps &

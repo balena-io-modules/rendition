@@ -3,19 +3,14 @@ import last from 'lodash/last';
 import * as React from 'react';
 import { withProps } from 'recompose';
 import styled from 'styled-components';
-import {
-	maxWidth,
-	MaxWidthProps,
-	textAlign,
-	TextAlignProps,
-} from 'styled-system';
+import { textAlign, TextAlignProps } from 'styled-system';
 import asRendition from '../../asRendition';
 import { DefaultProps, RenditionSystemProps, Theme } from '../../common-types';
 import { px } from '../../utils';
+import { Box } from '../Box';
 
-const ContainerBase = styled.div<ThemedContainerProps>`
+const ContainerBase = styled(Box)<ThemedContainerProps>`
 	${textAlign}
-	${maxWidth}
 `;
 
 const Container = (props: ThemedContainerProps) => {
@@ -40,10 +35,7 @@ const setDefaultProps = withProps((props: InternalContainerProps) => {
 	);
 });
 
-export interface InternalContainerProps
-	extends DefaultProps,
-		MaxWidthProps,
-		TextAlignProps {}
+export interface InternalContainerProps extends DefaultProps, TextAlignProps {}
 export interface ThemedContainerProps extends InternalContainerProps {
 	theme: Theme;
 }

@@ -8,7 +8,7 @@ are rendered inside a dropdown list.
 ## Props
 
 | Name          | Type      | Default   | Required   | Description                                          |
-| ------ | ------ | --------- | ---------- | ------------- |
+| ------------- | ------ | --------- | ---------- | ------------- |
 | `primary`     | `boolean` | -         | -          | If true, use the `primary` theme color               |
 | `secondary`   | `boolean` | -         | -          | If true, use the `secondary` theme color             |
 | `tertiary`    | `boolean` | -         | -          | If true, use the `tertiary` theme color              |
@@ -23,6 +23,7 @@ are rendered inside a dropdown list.
 | `label`      | `JSX.Element` | -         | -          | Optionally provide a JSX element that will be displayed inside the main button |
 | `border`      | `boolean` | -         | -          | If true, place a border between each item in the dropdown |
 | `joined`      | `boolean` | -         | -          | If true, render the component as a single button instead of two |
-| `noListFormat`      | `boolean` | -         | -          | If true, render
-children as a single JSX element instead of iterating over each of them |
+| `noListFormat`      | `boolean` | -         | -          | If true, render children as a single JSX element instead of iterating over each of them |
+| `alignRight`      | `boolean` | -         | -          | If true, put the dropdown list on the right  |
+| `listMaxHeight`      | `string \| number` | -         | -          | If setted, it defines the maximum height of the dropdown list |
 
