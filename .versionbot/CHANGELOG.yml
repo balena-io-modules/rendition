@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'Styled system: Add styled system props'
+      hash: 88cb7bcf8ac6d1f757fb9c9983897f578f256a2a
+      body: >
+        Add styled system props such as max/min width/height, display, update
+        some components and documentation
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 13.0.0
+  date: 2020-01-22T17:59:56.039Z
+- commits:
     - subject: Refactor utils file and remove unnecessary functions
       hash: af35872cbb71944dc26b91ee58ea0f72b111b7b8
       body: ''
