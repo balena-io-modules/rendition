@@ -310,3 +310,39 @@ storiesOf('Next/DropDownButton', module)
       </Box>
     )
   })
+  .add('Custom Background', () => {
+    return (
+      <Box m={3}>
+        <DropDownButton bg={'papayawhip'} mx={2} label={<div>DropDown</div>}>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+        </DropDownButton>
+        <DropDownButton bg={'pink'} mx={2} label={<div>DropDown</div>}>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+        </DropDownButton>
+        <DropDownButton bg={'teal'} mx={2} label={<div>DropDown</div>}>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+        </DropDownButton>
+        <DropDownButton bg={'palegreen'} mx={2} label={<div>DropDown</div>}>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+        </DropDownButton>
+        <DropDownButton bg={'rebeccapurple'} mx={2} label={<div>DropDown</div>}>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+          <div>Item</div>
+        </DropDownButton>
+      </Box>
+    )
+  })

@@ -1,6 +1,7 @@
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons/faChevronDown';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons/faChevronUp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import omit from 'lodash/omit';
 import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
@@ -11,7 +12,6 @@ import Button, { ButtonProps } from '../Button';
 import Divider from '../Divider';
 import Fixed from '../Fixed';
 import { Flex } from '../Flex';
-
 const TOGGLE_BUTTON_X_PADDING = 16;
 const CHEVRON_ICON_WIDTH = 12;
 const TOGGLE_BUTTON_WIDTH = 2 * TOGGLE_BUTTON_X_PADDING + CHEVRON_ICON_WIDTH;
@@ -203,7 +203,8 @@ class DropDownButton extends React.Component<
 		return (
 			<Wrapper
 				className={className}
-				{...props}
+				style={{ background: 'none' }}
+				{...omit(props, 'bg')}
 				ref={node => (this.dropdownNode = node)}
 			>
 				{joined ? (
