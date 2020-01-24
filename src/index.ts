@@ -36,6 +36,7 @@ export {
 export { default as Provider } from './components/Provider';
 export { default as Search, SearchProps } from './components/Search';
 export { default as Select, SelectProps } from './components/Select';
+export { default as Spinner, SpinnerProps } from './components/Spinner';
 export { default as Steps, Step, StepsProps } from './components/Steps';
 export {
 	default as RadioButton,
