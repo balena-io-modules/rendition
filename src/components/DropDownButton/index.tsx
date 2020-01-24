@@ -68,13 +68,15 @@ const Item = styled.div<{ border: boolean }>`
 	border-top: ${props =>
 		props.border ? `1px solid ${props.theme.colors.gray.main}` : '0'};
 	border-radius: ${props => px(props.theme.radius)};
+	background: white;
 
 	&:hover:enabled {
 		background: ${props => props.theme.colors.gray.light};
 	}
 
 	&:hover {
-		background: red;
+		background: ${props => props.theme.colors.gray.light};
+		cursor: pointer;
 	}
 `;
 
