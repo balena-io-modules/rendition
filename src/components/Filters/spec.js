@@ -28,6 +28,21 @@ const schema = {
     Name: {
       title: 'Pokemon Name',
       type: 'string'
+    },
+    Tag: {
+      type: 'object',
+      properties: {
+        tag_name: {
+          title: 'Name',
+          description: 'key',
+          type: 'string'
+        },
+        tag_value: {
+          description: 'value',
+          title: 'Value',
+          type: 'string'
+        }
+      }
     }
   }
 }
@@ -37,6 +52,22 @@ const filter = SchemaSieve.createFilter(schema, [
     field: 'Name',
     operator: 'is',
     value: 'Squirtle'
+  }
+])
+
+const tagIsFilter = SchemaSieve.createFilter(schema, [
+  {
+    field: 'Tag',
+    operator: 'is',
+    value: { tag_name: 'rarity', tag_value: '10' }
+  }
+])
+
+const tagIsNotFilter = SchemaSieve.createFilter(schema, [
+  {
+    field: 'Tag',
+    operator: 'is_not',
+    value: { tag_name: 'rarity', tag_value: '10' }
   }
 ])
 
@@ -132,6 +163,34 @@ describe('Filters component', () => {
 
       expect(component.find(FiltersSummary)).toHaveLength(0)
       component.unmount()
+    })
+
+    it('should show the correct label when filtering using "is" operator for both key and value properties of an object', () => {
+      const component = mount(
+        <Provider>
+          <Filters schema={schema} filters={[tagIsFilter]} />
+        </Provider>
+      )
+      expect(
+        component
+          .find('button')
+          .at(4)
+          .text()
+      ).toBe('Tag is rarity : 10')
+    })
+
+    it('should show the correct label when filtering using "is_not" operator for both key and value properties of an object', () => {
+      const component = mount(
+        <Provider>
+          <Filters schema={schema} filters={[tagIsNotFilter]} />
+        </Provider>
+      )
+      expect(
+        component
+          .find('button')
+          .at(4)
+          .text()
+      ).toBe('Tag is not rarity : 10')
     })
   })
 

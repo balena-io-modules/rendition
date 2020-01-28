@@ -34,7 +34,6 @@ describe('SchemaSieve', () => {
           ])
 
           const result = sieve.filter(filter, collection)
-
           expectMatchesKeys(result, expected)
         })
       })
@@ -351,6 +350,22 @@ describe('SchemaSieve', () => {
               tag_value: '161718'
             }
           ]
+        },
+        'Entry 7': {
+          Tag: [
+            {
+              tag_name: 'Aa',
+              tag_value: '1234'
+            }
+          ]
+        },
+        'Entry 8': {
+          Tag: [
+            {
+              tag_name: 'Aaa',
+              tag_value: '123'
+            }
+          ]
         }
       }
 
@@ -369,7 +384,15 @@ describe('SchemaSieve', () => {
             tag_name: 'Aa',
             tag_value: '123'
           },
-          expected: ['Entry 2', 'Entry 3', 'Entry 4', 'Entry 5', 'Entry 6']
+          expected: [
+            'Entry 2',
+            'Entry 3',
+            'Entry 4',
+            'Entry 5',
+            'Entry 6',
+            'Entry 7',
+            'Entry 8'
+          ]
         },
         {
           operator: 'key_is',
@@ -390,7 +413,14 @@ describe('SchemaSieve', () => {
           value: {
             tag_name: 'b'
           },
-          expected: ['Entry 1', 'Entry 4', 'Entry 5', 'Entry 6']
+          expected: [
+            'Entry 1',
+            'Entry 4',
+            'Entry 5',
+            'Entry 6',
+            'Entry 7',
+            'Entry 8'
+          ]
         },
         {
           operator: 'key_matches_re',
@@ -404,21 +434,28 @@ describe('SchemaSieve', () => {
           value: {
             tag_name: 'b'
           },
-          expected: ['Entry 1', 'Entry 4', 'Entry 5', 'Entry 6']
+          expected: [
+            'Entry 1',
+            'Entry 4',
+            'Entry 5',
+            'Entry 6',
+            'Entry 7',
+            'Entry 8'
+          ]
         },
         {
           operator: 'value_is',
           value: {
             tag_value: '123'
           },
-          expected: ['Entry 1']
+          expected: ['Entry 1', 'Entry 8']
         },
         {
           operator: 'value_contains',
           value: {
             tag_value: '23'
           },
-          expected: ['Entry 1']
+          expected: ['Entry 1', 'Entry 7', 'Entry 8']
         },
         {
           operator: 'value_not_contains',

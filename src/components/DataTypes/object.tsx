@@ -64,9 +64,9 @@ export const operators = {
 
 type OperatorSlug = keyof typeof operators;
 
-const keyOperators: OperatorSlug[] = [
-	'is',
-	'is_not',
+const commonOperators: OperatorSlug[] = ['is', 'is_not'];
+
+const keySpecificOperators: OperatorSlug[] = [
 	'key_is',
 	'key_contains',
 	'key_not_contains',
@@ -74,14 +74,22 @@ const keyOperators: OperatorSlug[] = [
 	'key_not_matches_re',
 ];
 
-const valueOperators: OperatorSlug[] = [
-	'is',
-	'is_not',
+const keyOperators: OperatorSlug[] = [
+	...commonOperators,
+	...keySpecificOperators,
+];
+
+const valueSpecificOperators: OperatorSlug[] = [
 	'value_is',
 	'value_contains',
 	'value_not_contains',
 	'value_matches_re',
 	'value_not_matches_re',
+];
+
+const valueOperators: OperatorSlug[] = [
+	...commonOperators,
+	...valueSpecificOperators,
 ];
 
 interface SubSchema {
@@ -193,12 +201,13 @@ function getValueForOperation(
 	schema: JSONSchema6,
 	value: string | object,
 ) {
-	if (keyOperators.includes(operator)) {
+	if (keySpecificOperators.includes(operator)) {
 		const schemaKey = findKey(schema.properties!, { description: 'key' })!;
-		value = pick(value, schemaKey);
-	} else if (valueOperators.includes(operator)) {
+		return pick(value, schemaKey);
+	}
+	if (valueSpecificOperators.includes(operator)) {
 		const schemaValue = findKey(schema.properties!, { description: 'value' })!;
-		value = pick(value, schemaValue);
+		return pick(value, schemaValue);
 	}
 	return value;
 }
