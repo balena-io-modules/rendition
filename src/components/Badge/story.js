@@ -83,6 +83,12 @@ storiesOf('Next/Badge', module)
           <Badge shade={20} mr={2}>
             Badge 20
           </Badge>
+          <Badge shade={21} mr={2}>
+            Badge 21
+          </Badge>
+          <Badge shade={22} mr={2}>
+            Badge 22
+          </Badge>
         </Box>
       </React.Fragment>
     )

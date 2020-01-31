@@ -16,7 +16,7 @@ const shades = [
 	'#C5E8E6',
 	'#D6D3FA',
 	'#C3C7CA',
-	'#FFDA93',
+	'#FFD684',
 	'#E1EEE5',
 	'#DBE0E3',
 	'#FFEC62',
@@ -28,6 +28,8 @@ const shades = [
 	'#E0FEB4',
 	'#FDE8E7',
 	'#CAFECD',
+	'#D7E46C',
+	'#F7D8BA',
 ];
 
 const getColors = (shade: string) => {
