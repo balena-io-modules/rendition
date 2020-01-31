@@ -5,21 +5,29 @@ import asRendition from '../../asRendition';
 import { Coloring, RenditionSystemProps, Theme } from '../../common-types';
 import Txt from '../Txt';
 
+// All of the shades are checked so background to text contrast ratio is at least 4:1.
 const shades = [
-	'#B3D2E5',
-	'#BAECC2',
-	'#FDC7EB',
-	'#E5C7EA',
-	'#BCE6F5',
-	'#FCB9B6',
-	'#B6E3DF',
+	'#C9DEEE',
+	'#CAE1AC',
+	'#FDC9EC',
+	'#F1CDE3',
+	'#D7E4FE',
+	'#FFCFCC',
+	'#C5E8E6',
 	'#D6D3FA',
 	'#C3C7CA',
-	'#FBDBB2',
-	'#E1E3B9',
+	'#FFDA93',
+	'#E1EEE5',
 	'#DBE0E3',
-	'#ffef62',
-	'#fbe6f4',
+	'#FFEC62',
+	'#FBE6F4',
+	'#FFECAE',
+	'#F1CDFF',
+	'#C3EFFF',
+	'#F3E8FD',
+	'#E0FEB4',
+	'#FDE8E7',
+	'#CAFECD',
 ];
 
 const getColors = (shade: string) => {
