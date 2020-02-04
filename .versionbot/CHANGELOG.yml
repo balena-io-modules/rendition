@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'Update: docs'
+      hash: 154702150a24168c1273ad21e3f148dacf51751e
+      body: |
+        update node_modules installation step
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: Andrea Rosci
+  version: 13.0.1
+  date: 2020-02-04T15:04:25.019Z
+- commits:
     - subject: 'Styled system: Add styled system props'
       hash: 88cb7bcf8ac6d1f757fb9c9983897f578f256a2a
       body: >
