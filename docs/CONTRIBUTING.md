@@ -14,7 +14,7 @@ cd rendition
 ### Installing npm dependencies
 
 ```sh
-npm ci
+npm install
 ```
 
 ### Installing docker
