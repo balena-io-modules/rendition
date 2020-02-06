@@ -3,6 +3,7 @@ import ReactNotification, { store } from 'react-notifications-component';
 import styled from 'styled-components';
 import { animations } from '../../animations';
 import { DismissableContainer } from '../../internal/DismissableContainer';
+import { styles } from './styles';
 
 export interface NotificationOptions {
 	content: React.ReactNode;
@@ -76,21 +77,12 @@ const NotificationContainer = ({
 export const NotificationsContainer = styled(ReactNotification)`
 	/* This overrides the react-notification library's default container shadow */
 	.notification-item {
-		display: flex;
-		position: relative;
-		border-radius: 3px;
-		margin-bottom: 15px;
-		cursor: pointer;
 		box-shadow: none;
 	}
 
-	width: 325px;
-	right: 20px;
-	top: 20px;
-	position: absolute;
-	pointer-events: all;
-
 	${animations}
+
+	${styles}
 `;
 
 export const notifications = {
