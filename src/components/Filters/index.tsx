@@ -90,7 +90,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		this.state.edit.push(this.getCleanEditModel());
 	}
 
-	componentDidUpdate(prevProps: FiltersProps) {
+	public componentDidUpdate(prevProps: FiltersProps) {
 		const newState: any = {};
 
 		// If the schema prop updates, also update the internal 'flat' schema
@@ -115,14 +115,14 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		}
 	}
 
-	flattenViews(views: FiltersView[]) {
+	public flattenViews(views: FiltersView[]) {
 		return views.map(({ filters, ...view }) => ({
 			...view,
 			filters: filters.map(filter => SchemaSieve.flattenSchema(filter)),
 		}));
 	}
 
-	emitViewsUpdate() {
+	public emitViewsUpdate() {
 		if (!this.props.onViewsUpdate) {
 			return;
 		}
@@ -135,7 +135,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		);
 	}
 
-	getCleanEditModel(field?: string | null) {
+	public getCleanEditModel(field?: string | null) {
 		const schema = this.state.schema;
 		if (!field) {
 			field = Object.keys(schema.properties!).shift()!;
@@ -175,12 +175,12 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		};
 	}
 
-	getOperators(field: string) {
+	public getOperators(field: string) {
 		const schema = this.state.schema;
 		return SchemaSieve.getOperators(schema, field);
 	}
 
-	setEditField(field: string, index: number) {
+	public setEditField(field: string, index: number) {
 		const currentEdit = this.state.edit.slice();
 		currentEdit.splice(index, 1, this.getCleanEditModel(field));
 		this.setState({
@@ -188,7 +188,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		});
 	}
 
-	setEditOperator(operator: string, index: number) {
+	public setEditOperator(operator: string, index: number) {
 		const currentEdit = this.state.edit.slice();
 		const item = currentEdit[index];
 		currentEdit.splice(index, 1, { ...item, operator });
@@ -197,7 +197,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		});
 	}
 
-	setEditValue(value: string, index: number) {
+	public setEditValue(value: string, index: number) {
 		const currentEdit = this.state.edit.slice();
 		const item = currentEdit[index];
 		currentEdit.splice(index, 1, { ...item, value });
@@ -206,7 +206,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		});
 	}
 
-	emitFilterUpdate() {
+	public emitFilterUpdate() {
 		if (!this.props.onFiltersUpdate) {
 			return;
 		}
@@ -216,7 +216,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		);
 	}
 
-	addFilter() {
+	public addFilter() {
 		const $id = this.state.editingFilter;
 		const { schema } = this.state;
 		const filter = SchemaSieve.createFilter(schema, this.state.edit);
@@ -243,7 +243,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		);
 	}
 
-	editFilter(filter: JSONSchema6) {
+	public editFilter(filter: JSONSchema6) {
 		const { schema } = this.state;
 
 		const signatures = SchemaSieve.decodeFilter(schema, filter);
@@ -255,7 +255,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		});
 	}
 
-	removeFilter({ $id, title }: JSONSchema6) {
+	public removeFilter({ $id, title }: JSONSchema6) {
 		this.setState(
 			prevState => {
 				const newState = {
@@ -273,24 +273,24 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		);
 	}
 
-	setFilters(filters: JSONSchema6[]) {
+	public setFilters(filters: JSONSchema6[]) {
 		this.setState({ filters }, () => this.emitFilterUpdate());
 	}
 
-	clearAllFilters = () => {
+	public clearAllFilters = () => {
 		this.setFilters([]);
 		this.setState({
 			searchString: '',
 		});
 	};
 
-	addCompound() {
+	public addCompound() {
 		this.setState(prevState => ({
 			edit: prevState.edit.concat(this.getCleanEditModel()),
 		}));
 	}
 
-	removeCompound(index: number) {
+	public removeCompound(index: number) {
 		const edit = this.state.edit.slice();
 		edit.splice(index, 1);
 		this.setState({
@@ -298,7 +298,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		});
 	}
 
-	saveView(name: string, scope: string | null) {
+	public saveView(name: string, scope: string | null) {
 		const view: FiltersView = {
 			id: randomString(),
 			name,
@@ -315,7 +315,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		);
 	}
 
-	deleteView({ id }: FiltersView) {
+	public deleteView({ id }: FiltersView) {
 		this.setState(
 			prevState => ({
 				views: reject(prevState.views, { id }),
@@ -325,7 +325,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		);
 	}
 
-	setSimpleSearch(term: string) {
+	public setSimpleSearch(term: string) {
 		this.setState(
 			prevState => {
 				const newFilters = term
@@ -345,7 +345,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		);
 	}
 
-	shouldRenderComponent(mode: FilterRenderMode): boolean {
+	public shouldRenderComponent(mode: FilterRenderMode): boolean {
 		// If a render mode is not specified, render all components
 		if (!this.props.renderMode) {
 			return true;
@@ -360,7 +360,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		return includes(allowedModes, mode);
 	}
 
-	render() {
+	public render() {
 		const { filters } = this.state;
 
 		return (

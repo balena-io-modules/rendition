@@ -1,33 +1,6 @@
 {
-  "extends": [
-    "tslint:recommended",
-    "tslint-config-prettier"
-  ],
+  "extends": "./node_modules/resin-lint/config/tslint-prettier.json",
   "rules": {
-    "jsdoc-format": true,
-    "object-literal-sort-keys": false,
-    "only-arrow-functions": [false],
-    "quotemark": [true, "single", "avoid-escape", "jsx-double"],
-    "max-classes-per-file": [false],
-    "max-line-length": [180],
-    "member-access": false,
-    "member-ordering": [false],
-    "no-shadowed-variable": false,
-    "no-var-requires": true,
-    "arrow-parens": false,
-    "no-angle-bracket-type-assertion": false,
-    "no-console": [false],
-    "no-empty-interface": false,
-    "no-string-literal": false,
-    "import-blacklist": [true, "lodash", "@fortawesome/free-solid-svg-icons", "@fortawesome/free-regular-svg-icons"],
-    "interface-name": [false],
-    "interface-over-type-literal": false,
-    "variable-name": [
-      true,
-      "ban-keywords",
-      "check-format",
-      "allow-leading-underscore",
-      "allow-pascal-case"
-    ]
+    "no-shadowed-variable": false
   }
 }

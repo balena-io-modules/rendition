@@ -26,7 +26,7 @@ class FilterSummary extends React.Component<
 		};
 	}
 
-	save = (event?: React.FormEvent<HTMLFormElement>) => {
+	public save = (event?: React.FormEvent<HTMLFormElement>) => {
 		if (event) {
 			event.preventDefault();
 		}
@@ -46,12 +46,12 @@ class FilterSummary extends React.Component<
 		});
 	};
 
-	handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+	public handleChange(e: React.ChangeEvent<HTMLInputElement>) {
 		const name = e.target.value;
 		this.setState({ name });
 	}
 
-	render() {
+	public render() {
 		const { scopes } = this.props;
 		return (
 			<Box p={3} mt={3} width="100%" bg="quartenary.light">

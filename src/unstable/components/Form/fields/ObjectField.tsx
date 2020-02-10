@@ -104,7 +104,7 @@ function DefaultObjectFieldTemplate(props: ObjectFieldProps) {
 }
 
 class ObjectField extends React.Component<ObjectFieldProps> {
-	static defaultProps = {
+	public static defaultProps = {
 		uiSchema: {},
 		formData: {},
 		errorSchema: {},
@@ -114,14 +114,17 @@ class ObjectField extends React.Component<ObjectFieldProps> {
 		readonly: false,
 	};
 
-	isRequired(name: string) {
+	public isRequired(name: string) {
 		const schema = this.props.schema;
 		return (
 			Array.isArray(schema.required) && schema.required.indexOf(name) !== -1
 		);
 	}
 
-	onPropertyChange = (name: string, addedByAdditionalProperties = false) => {
+	public onPropertyChange = (
+		name: string,
+		addedByAdditionalProperties = false,
+	) => {
 		return (value: string, errorSchema: FormValidation) => {
 			if (!value && addedByAdditionalProperties) {
 				// Don't set value = undefined for fields added by
@@ -145,7 +148,7 @@ class ObjectField extends React.Component<ObjectFieldProps> {
 		};
 	};
 
-	onDropPropertyClick = (key: string) => {
+	public onDropPropertyClick = (key: string) => {
 		return (event: React.MouseEvent) => {
 			event.preventDefault();
 			const { onChange, formData } = this.props;
@@ -155,7 +158,7 @@ class ObjectField extends React.Component<ObjectFieldProps> {
 		};
 	};
 
-	getAvailableKey = (preferredKey: string, formData: any) => {
+	public getAvailableKey = (preferredKey: string, formData: any) => {
 		let index = 0;
 		let newKey = preferredKey;
 		while (formData.hasOwnProperty(newKey)) {
@@ -164,7 +167,7 @@ class ObjectField extends React.Component<ObjectFieldProps> {
 		return newKey;
 	};
 
-	onKeyChange = (oldValue: string) => {
+	public onKeyChange = (oldValue: string) => {
 		return (value: string, errorSchema: FormValidation) => {
 			if (oldValue === value) {
 				return;
@@ -189,7 +192,7 @@ class ObjectField extends React.Component<ObjectFieldProps> {
 		};
 	};
 
-	getDefaultValue(type: string) {
+	public getDefaultValue(type: string) {
 		switch (type) {
 			case 'string':
 				return 'New Value';
@@ -209,7 +212,7 @@ class ObjectField extends React.Component<ObjectFieldProps> {
 		}
 	}
 
-	handleAddClick = (schema: JSONSchema6) => () => {
+	public handleAddClick = (schema: JSONSchema6) => () => {
 		// @ts-ignore
 		const type = schema.additionalProperties.type;
 		const newFormData = { ...this.props.formData };
@@ -219,7 +222,7 @@ class ObjectField extends React.Component<ObjectFieldProps> {
 		this.props.onChange(newFormData);
 	};
 
-	render() {
+	public render() {
 		const {
 			uiSchema,
 			formData,

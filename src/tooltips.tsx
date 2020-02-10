@@ -156,7 +156,7 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 
 	// Create an observer that will hide the tooltip if the target element is
 	// removed from the DOM
-	observe(target: HTMLElement) {
+	public observe(target: HTMLElement) {
 		// If an observer exists, disconnect it
 		if (this.observer) {
 			this.observer.disconnect();
@@ -167,7 +167,11 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 		});
 	}
 
-	show(e: Event, tooltipText: string, options: TooltipShowOptions = {}): void {
+	public show(
+		e: Event,
+		tooltipText: string,
+		options: TooltipShowOptions = {},
+	): void {
 		let top = 0;
 		let left = 0;
 
@@ -237,7 +241,7 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 		});
 	}
 
-	hide(): void {
+	public hide(): void {
 		// If an observer exists, disconnect it
 		if (this.observer) {
 			this.observer.disconnect();
@@ -253,7 +257,7 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 		});
 	}
 
-	render() {
+	public render() {
 		const { placement, containerStyle, innerStyle, arrowStyle } = this.state;
 		const Arrow = getArrowElement(placement);
 		const tooltipStyle: React.CSSProperties = merge(
@@ -290,7 +294,7 @@ export class Tooltips {
 	// Creates a tiny React app for containing the tooltips and appends it to the
 	// bottom of the <body>. This allows us to overlay tooltips without affecting
 	// document flow or worrying about z-index etc
-	initialiseElements() {
+	public initialiseElements() {
 		if (this.initialised || !document || !document.body) {
 			return;
 		}
@@ -339,7 +343,7 @@ export class Tooltips {
 		this.initialised = true;
 	}
 
-	bindProps(props: any) {
+	public bindProps(props: any) {
 		if (props.tooltip) {
 			const options: TooltipShowOptions = {};
 			let trigger = 'hover';
@@ -402,13 +406,17 @@ export class Tooltips {
 		return props;
 	}
 
-	show(e: Event, tooltipText: string, options?: TooltipShowOptions): void {
+	public show(
+		e: Event,
+		tooltipText: string,
+		options?: TooltipShowOptions,
+	): void {
 		this.initialiseElements();
 
 		this.component.show(e, tooltipText, options);
 	}
 
-	hide(): void {
+	public hide(): void {
 		this.initialiseElements();
 
 		this.component.hide();

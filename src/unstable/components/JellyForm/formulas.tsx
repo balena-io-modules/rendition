@@ -80,17 +80,14 @@ const replaceArrayWithFormulaContent = (
 const getFormulaKeys = (obj: any, prefix: string = '') => {
 	const keys = Object.keys(obj);
 	prefix = prefix ? prefix + '.' : '';
-	return keys.reduce(
-		(result, key) => {
-			if (isPlainObject(obj[key])) {
-				result = result.concat(getFormulaKeys(obj[key], prefix + key));
-			} else if (key === '$$formula') {
-				result.push(prefix + key);
-			}
-			return result;
-		},
-		[] as string[],
-	);
+	return keys.reduce((result, key) => {
+		if (isPlainObject(obj[key])) {
+			result = result.concat(getFormulaKeys(obj[key], prefix + key));
+		} else if (key === '$$formula') {
+			result.push(prefix + key);
+		}
+		return result;
+	}, [] as string[]);
 };
 
 export { defaultValueForSchema, runFormulas };

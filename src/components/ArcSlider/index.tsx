@@ -6,7 +6,10 @@ import { Flex } from '../Flex';
 
 const ANGLERANGE = 135;
 
-type Point = { x: number; y: number };
+interface Point {
+	x: number;
+	y: number;
+}
 
 const getAngleBetweenPoints = (p1: Point, p2: Point) => {
 	return (Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180) / Math.PI;
@@ -92,7 +95,7 @@ class ArcSlider extends React.Component<ArcSliderProps, ArcSliderState> {
 		};
 	}
 
-	componentDidMount() {
+	public componentDidMount() {
 		document.addEventListener('mousemove', this.handleMouseMove);
 		document.addEventListener('touchmove', this.handleMouseMove);
 		document.addEventListener('mouseup', this.handleMouseUp);
@@ -100,7 +103,7 @@ class ArcSlider extends React.Component<ArcSliderProps, ArcSliderState> {
 		document.addEventListener('touchcancel', this.handleMouseUp);
 	}
 
-	componentWillUnmount() {
+	public componentWillUnmount() {
 		document.removeEventListener('mousemove', this.handleMouseMove);
 		document.removeEventListener('touchmove', this.handleMouseMove);
 		document.removeEventListener('mouseup', this.handleMouseUp);
@@ -108,16 +111,16 @@ class ArcSlider extends React.Component<ArcSliderProps, ArcSliderState> {
 		document.removeEventListener('touchcancel', this.handleMouseUp);
 	}
 
-	handleMouseUp = () => {
+	public handleMouseUp = () => {
 		this.setState({ isDragging: false });
 	};
 
-	handleMouseDown = (e: any) => {
+	public handleMouseDown = (e: any) => {
 		e.preventDefault();
 		this.setState({ isDragging: true });
 	};
 
-	handleMouseMove = (e: any) => {
+	public handleMouseMove = (e: any) => {
 		if (this.state.isDragging && this.$slider) {
 			const { left, top, width, height } = this.$slider.getBoundingClientRect();
 
@@ -164,7 +167,7 @@ class ArcSlider extends React.Component<ArcSliderProps, ArcSliderState> {
 		}
 	};
 
-	render() {
+	public render() {
 		const { innerValue } = this.state;
 
 		// If there is no value prop, use the innerValue so that the slider can

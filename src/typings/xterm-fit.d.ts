@@ -4,6 +4,6 @@ declare module 'xterm/dist/addons/fit/fit' {
 
 	export function proposeGeometry(
 		term: Xterm.Terminal,
-	): null | ({ cols: number; rows: number });
+	): null | { cols: number; rows: number };
 	export function fit(term: Xterm.Terminal): void;
 }

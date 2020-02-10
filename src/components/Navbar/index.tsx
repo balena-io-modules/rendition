@@ -44,13 +44,13 @@ class Navbar extends React.Component<NavbarProps, NavbarState> {
 		};
 	}
 
-	toggle() {
+	public toggle() {
 		this.setState({
 			open: !this.state.open,
 		});
 	}
 
-	render() {
+	public render() {
 		const { brand, children, ...props }: NavbarProps = this.props;
 		return (
 			<Box {...props}>

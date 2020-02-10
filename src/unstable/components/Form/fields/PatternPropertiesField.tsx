@@ -64,7 +64,7 @@ export default class PatternPropertiesField extends React.Component<
 	// As the order of keys in `formData` cannot be relied on, an array of keys is
 	// preserved, which is updated when a value changes. This means that as key
 	// values are updated they will remain in the same position in the UI
-	handleKeyChange = (key: string) => {
+	public handleKeyChange = (key: string) => {
 		return ({ target: { value } }: ChangeTargetHandlerParams) => {
 			const { keys } = this.state;
 			const index = keys.indexOf(key);
@@ -80,7 +80,7 @@ export default class PatternPropertiesField extends React.Component<
 		};
 	};
 
-	render() {
+	public render() {
 		const { formData, schema } = this.props;
 		if (!schema.patternProperties) {
 			return null;

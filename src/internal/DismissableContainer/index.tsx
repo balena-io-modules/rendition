@@ -60,41 +60,43 @@ interface ThemedDismissableContainerProps extends DismissableContainerProps {
 	theme: Theme;
 }
 
-export const DismissableContainer = withTheme(React.forwardRef(
-	(
-		{
-			children,
-			onDismiss,
-			baselineHeight,
-			solid,
-			theme,
-			...restProps
-		}: ThemedDismissableContainerProps,
-		ref,
-	) => {
-		// Set the default to what it would be for the base text.
-		const baseline = baselineHeight || theme.fontSizes[1] * theme.lineHeight;
+export const DismissableContainer = withTheme(
+	React.forwardRef(
+		(
+			{
+				children,
+				onDismiss,
+				baselineHeight,
+				solid,
+				theme,
+				...restProps
+			}: ThemedDismissableContainerProps,
+			ref,
+		) => {
+			// Set the default to what it would be for the base text.
+			const baseline = baselineHeight || theme.fontSizes[1] * theme.lineHeight;
 
-		return (
-			<Wrapper
-				solid={solid}
-				hasDismissButton={Boolean(onDismiss)}
-				ref={ref as any}
-				{...restProps}
-			>
-				{children}
-				{onDismiss && (
-					<DismissButton
-						baselineHeight={baseline}
-						color={solid ? 'white' : undefined}
-						primary={!solid}
-						plain
-						onClick={onDismiss}
-					>
-						<FontAwesomeIcon icon={faTimes} />
-					</DismissButton>
-				)}
-			</Wrapper>
-		);
-	},
-) as any);
+			return (
+				<Wrapper
+					solid={solid}
+					hasDismissButton={Boolean(onDismiss)}
+					ref={ref as any}
+					{...restProps}
+				>
+					{children}
+					{onDismiss && (
+						<DismissButton
+							baselineHeight={baseline}
+							color={solid ? 'white' : undefined}
+							primary={!solid}
+							plain
+							onClick={onDismiss}
+						>
+							<FontAwesomeIcon icon={faTimes} />
+						</DismissButton>
+					)}
+				</Wrapper>
+			);
+		},
+	) as any,
+);

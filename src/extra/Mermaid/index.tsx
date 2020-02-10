@@ -43,13 +43,13 @@ export class Mermaid extends React.Component<MermaidProps, {}> {
 		}
 	}
 
-	componentDidUpdate(prevProps: MermaidProps) {
+	public componentDidUpdate(prevProps: MermaidProps) {
 		if (prevProps.value !== this.props.value) {
 			this.renderSVG();
 		}
 	}
 
-	render() {
+	public render() {
 		const { value, ...props } = this.props;
 		return (
 			<Box {...props}>

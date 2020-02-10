@@ -4,8 +4,8 @@ declare module 'color-hash' {
 	}
 
 	class ColorHash {
-		hex(text: string): string;
-		rgb(text: string): [number, number, number];
+		public hex(text: string): string;
+		public rgb(text: string): [number, number, number];
 	}
 
 	export = ColorHash;

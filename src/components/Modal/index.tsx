@@ -38,15 +38,15 @@ const ModalButton = (props: ButtonProps) => {
 };
 
 class Modal extends React.Component<ThemedModalProps, any> {
-	static mountedCount = 0;
+	public static mountedCount = 0;
 
-	ownIndex = 0;
+	public ownIndex = 0;
 
 	constructor(props: ThemedModalProps) {
 		super(props);
 	}
 
-	componentDidMount() {
+	public componentDidMount() {
 		if (!Modal.mountedCount) {
 			document.body.classList.add(bodyNoOverflowClass);
 		}
@@ -56,7 +56,7 @@ class Modal extends React.Component<ThemedModalProps, any> {
 		this.ownIndex = Modal.mountedCount;
 	}
 
-	componentWillUnmount() {
+	public componentWillUnmount() {
 		Modal.mountedCount--;
 		if (!Modal.mountedCount) {
 			document.body.classList.remove(bodyNoOverflowClass);
@@ -65,7 +65,7 @@ class Modal extends React.Component<ThemedModalProps, any> {
 		window.document.removeEventListener('keydown', this.handleKeyDown);
 	}
 
-	handleKeyDown = (e: KeyboardEvent) => {
+	public handleKeyDown = (e: KeyboardEvent) => {
 		// Only trigger on top-most modal if there are multiple nested modals.
 		if (Modal.mountedCount !== this.ownIndex) {
 			return;
@@ -82,9 +82,10 @@ class Modal extends React.Component<ThemedModalProps, any> {
 		}
 	};
 
-	stopPropagation = (e: Event | React.MouseEvent<any>) => e.stopPropagation();
+	public stopPropagation = (e: Event | React.MouseEvent<any>) =>
+		e.stopPropagation();
 
-	popModal = () => {
+	public popModal = () => {
 		if (Modal.mountedCount !== this.ownIndex) {
 			return;
 		}
@@ -92,7 +93,7 @@ class Modal extends React.Component<ThemedModalProps, any> {
 		(this.props.cancel || this.props.done)();
 	};
 
-	render() {
+	public render() {
 		const { width, theme, ...props } = this.props;
 
 		const cancelButtonProps = assign(
