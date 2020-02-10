@@ -48,7 +48,7 @@ class JellyForm extends React.Component<JellyFormProps, JellyFormState> {
 		};
 	}
 
-	componentDidUpdate(prevProps: JellyFormProps) {
+	public componentDidUpdate(prevProps: JellyFormProps) {
 		if (!isEqual(this.props.value, prevProps.value)) {
 			this.setState({
 				value: runFormulas(this.state.schema, this.props.value),
@@ -71,7 +71,7 @@ class JellyForm extends React.Component<JellyFormProps, JellyFormState> {
 		}
 	}
 
-	onChange = (changeData: any) => {
+	public onChange = (changeData: any) => {
 		const { formData } = changeData;
 		const schema = this.state.schema as JSONSchema6;
 		const data = cloneDeep(formData);
@@ -90,7 +90,7 @@ class JellyForm extends React.Component<JellyFormProps, JellyFormState> {
 		}
 	};
 
-	render() {
+	public render() {
 		const { value, schema, uiSchema } = this.state;
 
 		const options: Partial<BaseFormProps> = omit(this.props, [

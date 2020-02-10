@@ -4,7 +4,7 @@ import { MarkdownEditor } from '../MarkdownEditor';
 type FormWidgetProps = any;
 
 export class MarkdownWidget extends React.Component<FormWidgetProps, {}> {
-	render() {
+	public render() {
 		const { value, onChange } = this.props;
 
 		return <MarkdownEditor value={value} onChange={onChange} />;

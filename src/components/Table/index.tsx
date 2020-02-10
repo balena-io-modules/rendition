@@ -163,7 +163,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		};
 	}
 
-	componentDidUpdate(prevProps: TableProps<T>) {
+	public componentDidUpdate(prevProps: TableProps<T>) {
 		if (this.props.sort && !isEqual(prevProps.sort, this.props.sort)) {
 			this.setState({
 				sort: this.props.sort,
@@ -177,7 +177,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		}
 	}
 
-	isChecked(item: T) {
+	public isChecked(item: T) {
 		const rowKey = this.props.rowKey;
 		if (!rowKey) {
 			return false;
@@ -187,7 +187,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		return some(this.state.checkedItems, { [rowKey]: identifier });
 	}
 
-	isHighlighted(item: T) {
+	public isHighlighted(item: T) {
 		if (
 			!this.props.highlightedRows ||
 			this.props.highlightedRows.length === 0
@@ -204,7 +204,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		return includes(this.props.highlightedRows, identifier);
 	}
 
-	isDisabled(item: T) {
+	public isDisabled(item: T) {
 		if (!this.props.disabledRows || this.props.disabledRows.length === 0) {
 			return false;
 		}
@@ -218,7 +218,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		return includes(this.props.disabledRows, identifier);
 	}
 
-	isEachRowChecked(checkedItems: T[]): boolean {
+	public isEachRowChecked(checkedItems: T[]): boolean {
 		const rowKey = this.props.rowKey;
 		if (!rowKey) {
 			return false;
@@ -229,7 +229,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		return every(this.props.data, x => includes(selectedKeys, x[rowKey]));
 	}
 
-	sortData(data: T[]): T[] {
+	public sortData(data: T[]): T[] {
 		const { sort } = this.state;
 		if (!sort || sort.field === null) {
 			return data;
@@ -261,7 +261,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		return collection;
 	}
 
-	setRowSelection = (selectedRows: T[]): void => {
+	public setRowSelection = (selectedRows: T[]): void => {
 		const { rowKey, data } = this.props;
 
 		if (!rowKey) {
@@ -288,7 +288,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		this.setState({ allChecked, checkedItems });
 	};
 
-	toggleAllChecked = () => {
+	public toggleAllChecked = () => {
 		const { data } = this.props;
 
 		const allChecked = !this.state.allChecked;
@@ -303,7 +303,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		this.setState({ allChecked, checkedItems });
 	};
 
-	toggleChecked = (e: React.ChangeEvent<HTMLInputElement>) => {
+	public toggleChecked = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const rowKey = this.props.rowKey;
 		const { key } = e.currentTarget.dataset;
 		if (!rowKey || !key) {
@@ -335,7 +335,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		});
 	};
 
-	toggleSort = (e: React.MouseEvent<HTMLButtonElement>) => {
+	public toggleSort = (e: React.MouseEvent<HTMLButtonElement>) => {
 		const { field } = e.currentTarget.dataset;
 		const { sort } = this.state;
 		if (!field) {
@@ -358,7 +358,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		}
 	};
 
-	getElementFromKey(key: string) {
+	public getElementFromKey(key: string) {
 		const { data, rowKey } = this.props;
 		if (!data) {
 			return;
@@ -373,7 +373,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		return data[Number(key)];
 	}
 
-	onRowClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+	public onRowClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
 		if (!this.props.onRowClick) {
 			return;
 		}
@@ -396,19 +396,19 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		}
 	};
 
-	resetPager = () => {
+	public resetPager = () => {
 		this.setState({ page: 0 });
 	};
 
-	incrementPage = () => {
+	public incrementPage = () => {
 		this.setState({ page: this.state.page + 1 });
 	};
 
-	decrementPage = () => {
+	public decrementPage = () => {
 		this.setState({ page: this.state.page - 1 });
 	};
 
-	render() {
+	public render() {
 		const {
 			columns,
 			data,

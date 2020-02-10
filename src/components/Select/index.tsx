@@ -14,10 +14,9 @@ type AdjustedGrommetSelectProps = Omit<
 	'onChange' | 'children'
 >;
 
-const StyledGrommetSelect = styled(GrommetSelect as React.ComponentClass<
-	AdjustedGrommetSelectProps,
-	any
->)<InternalSelectProps<any>>`
+const StyledGrommetSelect = styled(
+	GrommetSelect as React.ComponentClass<AdjustedGrommetSelectProps, any>,
+)<InternalSelectProps<any>>`
 	font-family: ${props => props.theme.font};
 	font-size: ${props => px(props.theme.fontSizes[1])};
 	font-weight: normal;

@@ -13,9 +13,9 @@ export interface FormButtonProps extends ButtonProps {
 	type?: 'submit' | 'reset' | 'button';
 }
 
-export type AnyObject = {
+export interface AnyObject {
 	[index: string]: any;
-};
+}
 
 /**
  * Properties passed to custom Form widgets

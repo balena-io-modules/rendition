@@ -55,7 +55,7 @@ export interface TableRowProps<T> {
 }
 
 export class TableRow<T> extends React.PureComponent<TableRowProps<T>, {}> {
-	render() {
+	public render() {
 		const {
 			attributes,
 			checkboxAttributes,

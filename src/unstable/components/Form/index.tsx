@@ -87,7 +87,7 @@ interface FormState {
 export default class FormHOC extends React.Component<FormProps, FormState> {
 	private formRef = React.createRef<Form<any>>();
 
-	static getDerivedStateFromProps(props: FormProps, state: FormState) {
+	public static getDerivedStateFromProps(props: FormProps, state: FormState) {
 		if (!state) {
 			return { schema: parseSchema(props.schema), value: props.value };
 		}
@@ -99,11 +99,11 @@ export default class FormHOC extends React.Component<FormProps, FormState> {
 		}
 	}
 
-	static registerWidget(name: string, value: any) {
+	public static registerWidget(name: string, value: any) {
 		widgets[name] = value;
 	}
 
-	componentDidUpdate(prevProps: FormProps) {
+	public componentDidUpdate(prevProps: FormProps) {
 		if (!isEqual(this.props.schema, prevProps.schema)) {
 			this.setState({
 				schema: parseSchema(this.props.schema),
@@ -111,7 +111,7 @@ export default class FormHOC extends React.Component<FormProps, FormState> {
 		}
 	}
 
-	change = (data: IChangeEvent) => {
+	public change = (data: IChangeEvent) => {
 		this.setState({ value: data.formData });
 
 		if (this.props.onFormChange) {
@@ -119,13 +119,13 @@ export default class FormHOC extends React.Component<FormProps, FormState> {
 		}
 	};
 
-	submit = () => {
+	public submit = () => {
 		if (this.formRef.current) {
 			this.formRef.current.submit();
 		}
 	};
 
-	render() {
+	public render() {
 		const {
 			hideSubmitButton,
 			submitButtonText,

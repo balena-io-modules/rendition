@@ -21,7 +21,9 @@ describe('SchemaSieve', () => {
         }
       }
 
-      const nestedCollection = mapValues(collection, value => ({ data: value }))
+      const nestedCollection = mapValues(collection, value => ({
+        data: value
+      }))
 
       tests.forEach(({ operator, value, expected }) => {
         it(`should correctly test values using the "${operator}" operator with a value of "${value}"`, function () {

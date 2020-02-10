@@ -41,7 +41,7 @@ const TtyInner = styled.div`
 `;
 
 class Terminal extends React.Component<ThemedTerminalProps, {}> {
-	readonly tty: Xterm;
+	public readonly tty: Xterm;
 	// Used as the element to mount XTERM into
 	private mountElement: HTMLDivElement | null;
 	private termConfig: ITerminalOptions;
@@ -74,7 +74,7 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 		this.resize = this.resize.bind(this);
 	}
 
-	componentDidMount() {
+	public componentDidMount() {
 		this.open();
 
 		if (this.props.ttyInstance) {
@@ -105,7 +105,7 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 		}, 100);
 	}
 
-	componentWillUnmount() {
+	public componentWillUnmount() {
 		window.removeEventListener('resize', this.resize);
 
 		// Don't destroy tty on unmount if this Terminal is persistent
@@ -115,34 +115,34 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 	}
 
 	// Explicitly calling '.destroy()' will always work, even with the 'persistent' property
-	destroy() {
+	public destroy() {
 		window.removeEventListener('resize', this.resize);
 
 		this.tty.destroy();
 	}
 
-	open() {
+	public open() {
 		this.tty.open(this.mountElement!);
 		this.tty.focus();
 	}
 
-	resize() {
+	public resize() {
 		fitTerm(this.tty);
 	}
 
-	clear() {
+	public clear() {
 		this.tty.clear();
 	}
 
-	writeln(line: string) {
+	public writeln(line: string) {
 		this.tty.writeln(line);
 	}
 
-	write(text: string) {
+	public write(text: string) {
 		this.tty.write(text);
 	}
 
-	render() {
+	public render() {
 		return (
 			<TtyContainer color={this.props.color}>
 				<TtyInner ref={el => (this.mountElement = el)} />

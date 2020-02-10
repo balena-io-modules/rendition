@@ -84,13 +84,13 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 		};
 	}
 
-	loadView(view: FiltersView) {
+	public loadView(view: FiltersView) {
 		const filters = cloneDeep(view.filters);
 		this.props.setFilters(filters);
 		this.setState({ showViewsMenu: false });
 	}
 
-	render() {
+	public render() {
 		const { views, renderMode, hasMultipleScopes } = this.props;
 		const hasViews = views.length > 0;
 		const groupedViews = groupBy(views, item => item.scope || 'Unscoped');

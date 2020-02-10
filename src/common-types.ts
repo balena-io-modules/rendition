@@ -145,7 +145,9 @@ export interface WithSemilight {
 
 export type ColorShade = keyof ThemeColorSet;
 
-export type Shading = { shade?: ColorShade };
+export interface Shading {
+	shade?: ColorShade;
+}
 
 export interface Sizing {
 	emphasized?: boolean;

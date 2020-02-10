@@ -15,32 +15,32 @@ export interface CaptchaWidgetProps {
 }
 
 export class CaptchaWidget extends React.Component<CaptchaWidgetProps> {
-	recaptchaRef: React.RefObject<any>;
+	public recaptchaRef: React.RefObject<any>;
 
 	constructor(props: CaptchaWidgetProps) {
 		super(props);
 		this.recaptchaRef = React.createRef();
 	}
 
-	componentDidMount() {
+	public componentDidMount() {
 		// @ts-ignore If there is no recaptcha key, just set a dummy value so forms that require it will be filled-in.
 		if (!window.RECAPTCHA_V2_API_KEY) {
 			this.props.onChange('dummy');
 		}
 	}
 
-	componentDidUpdate(prevProps: CaptchaWidgetProps) {
+	public componentDidUpdate(prevProps: CaptchaWidgetProps) {
 		// Reset the captcha component if the form was submitted, since a captcha value can only be used once (and it will error if used again). The caller is obliged to empty the captcha value on submit
 		if (prevProps.value !== this.props.value && !Boolean(this.props.value)) {
 			this.recaptchaRef.current.reset();
 		}
 	}
 
-	componentDidCatch(error: Error) {
+	public componentDidCatch(error: Error) {
 		console.error(error, 'The reCaptcha api key is invalid.');
 	}
 
-	onChange = () => {
+	public onChange = () => {
 		const recaptchaValue = this.recaptchaRef.current.getValue();
 		this.props.onChange(recaptchaValue);
 	};
