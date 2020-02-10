@@ -1,4 +1,25 @@
 - commits:
+    - subject: Add new shades for badge and adjust some existing ones
+      hash: 6f9f5d443de06fb5531b8e7cb20f553407eb4977
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+    - subject: Add new shades for badge and adjust some existing ones
+      hash: c19de970e22c3600c572571e8f6eccc420dd7e33
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 13.1.0
+  date: 2020-02-10T14:03:14.847Z
+- commits:
     - subject: Use resin-lint 3.x for auto-fixing and most of the linting rules
       hash: c0d7683af2011efb795f2bc31d26ead533139735
       body: ''
