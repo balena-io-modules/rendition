@@ -1,4 +1,14 @@
 - commits:
+    - subject: Allow undefined to be returned from render functions
+      hash: ee7032fc91a84f36207114a66ae5b70ba0882b01
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 13.0.3
+  date: 2020-02-10T12:44:25.407Z
+- commits:
     - subject: Switch xterm.js to dynamic char atlas for performance
       hash: 673bf08401b52dd4d63f6334f7714f5c2485111c
       body: ''
