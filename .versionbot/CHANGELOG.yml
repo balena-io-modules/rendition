@@ -1,4 +1,23 @@
 - commits:
+    - subject: Switch xterm.js to dynamic char atlas for performance
+      hash: 673bf08401b52dd4d63f6334f7714f5c2485111c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+    - subject: Fix filter using is/is_not operators for objects
+      hash: 3ceacfd1966ea6dc8e68483b116fca464d2a43ea
+      body: ''
+      footer:
+        Change-type: Patch
+        change-type: Patch
+        Signed-off-by: Amit Solanki <amit@balena.io>
+        signed-off-by: Amit Solanki <amit@balena.io>
+      author: Amit Solanki
+  version: 13.0.2
+  date: 2020-02-10T11:39:05.383Z
+- commits:
     - subject: 'Update: docs'
       hash: 154702150a24168c1273ad21e3f148dacf51751e
       body: |
