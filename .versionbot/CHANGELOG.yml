@@ -1,4 +1,14 @@
 - commits:
+    - subject: Use resin-lint 3.x for auto-fixing and most of the linting rules
+      hash: c0d7683af2011efb795f2bc31d26ead533139735
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 13.0.4
+  date: 2020-02-10T13:05:44.910Z
+- commits:
     - subject: Allow undefined to be returned from render functions
       hash: ee7032fc91a84f36207114a66ae5b70ba0882b01
       body: ''
