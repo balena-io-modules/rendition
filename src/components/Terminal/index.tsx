@@ -59,6 +59,7 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 				background: '#343434',
 				cursor: props.nonInteractive ? '#343434' : undefined,
 			},
+			experimentalCharAtlas: 'dynamic',
 		});
 
 		// Allow an existing tty instance to be rebound to this react element
