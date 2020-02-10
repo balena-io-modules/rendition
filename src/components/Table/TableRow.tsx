@@ -31,7 +31,10 @@ export interface TableColumn<T> {
 	field: keyof T;
 	icon?: string;
 	label?: string | JSX.Element;
-	render?: (value: any, row: T) => string | number | JSX.Element | null;
+	render?: (
+		value: any,
+		row: T,
+	) => string | number | JSX.Element | null | undefined;
 	sortable?: boolean | TableSortFunction<T>;
 }
 
