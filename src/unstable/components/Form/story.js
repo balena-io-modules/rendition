@@ -346,3 +346,98 @@ storiesOf('Beta/Form', module)
 
     return <FormDemo schema={patternPropertiesSchema} formData={formData} />
   })
+  .add('Array of objects with dependants', () => {
+    const enumValues = ['First', 'Second', 'Third']
+    const schema = {
+      type: 'object',
+      properties: {
+        application_config_variable: {
+          title: 'Application configuration variables',
+          type: 'array',
+          items: {
+            type: 'object',
+            properties: {
+              name: {
+                title: 'Name',
+                enum: enumValues
+              }
+            },
+            dependencies: {
+              name: {
+                oneOf: enumValues.map(name => {
+                  return {
+                    description: 'Enter some value',
+                    properties: {
+                      name: {
+                        enum: [name]
+                      },
+                      value: {
+                        title: 'Value',
+                        enum: ['false', 'true'],
+                        default: 'true',
+                        description: undefined
+                      }
+                    }
+                  }
+                })
+              }
+            }
+          }
+        },
+
+        application_environment_variable: {
+          type: 'array',
+          title: 'Application environment variables',
+          items: {
+            type: 'object',
+            properties: {
+              name: {
+                title: 'Name',
+                type: 'string'
+              },
+              value: {
+                title: 'Value',
+                type: 'string'
+              }
+            }
+          }
+        }
+      }
+    }
+
+    const formData = {
+      application_config_variable: [{}],
+      application_environment_variable: [{}]
+    }
+
+    return (
+      <FormDemo
+        schema={schema}
+        uiSchema={{
+          application_config_variable: {
+            'ui:options': {
+              orderable: false
+            },
+            items: {
+              'ui:options': {
+                responsive: true,
+                flex: ['2 2 200px', '1 1 100px']
+              }
+            }
+          },
+          application_environment_variable: {
+            'ui:options': {
+              orderable: false
+            },
+            items: {
+              'ui:options': {
+                responsive: true,
+                flex: ['2 2 200px', '1 1 100px']
+              }
+            }
+          }
+        }}
+        formData={formData}
+      />
+    )
+  })

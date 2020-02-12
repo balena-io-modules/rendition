@@ -1042,6 +1042,23 @@ root level of your application.
 This component is experimental and still under development, if you would like to
 use it, it can be imported using `import { Form } from 'rendition/dist/unstable'`.
 
+#### Custom uiSchema properties
+
+Some templates and widgets support additional uiSchema options, defined using `ui:options` object in the `uiSchema` definition. Those are:
+
+##### PasswordWidget
+
+| Name          | Type      | Default   | Required   | Description                                          |
+| ------ | ------ | --------- | ---------- | ------------- |
+| `showPasswordStrengthMeter`    | `boolean` | false | - | A boolean denoting whether a password strenth meter will be shown. `zxcvbn` should be loaded beforehand and set to the window object as `window.zxcvbn` |
+
+##### ObjectField
+
+| Name          | Type      | Default   | Required   | Description                                          |
+| ------ | ------ | --------- | ---------- | ------------- |
+| `responsive`    | `boolean` | false | - | A boolean denoting whether the object fields should be wrapped in a row-directed flex container and wrap once their size is larger than the minimum|
+| `flex`    | `Array<number | string>` | - | - | Works together with `responsive`. It passes the `flex` value to the same-indexed field in the object. This allows you to have more control over the layout of the fields |
+
 
 #### Captcha
 

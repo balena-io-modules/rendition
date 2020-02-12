@@ -1,11 +1,10 @@
+import { faTrashAlt } from '@fortawesome/free-regular-svg-icons/faTrashAlt';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons/faArrowDown';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons/faArrowUp';
 import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus';
-import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import { ArrayFieldTemplateProps } from 'react-jsonschema-form';
-import styled from 'styled-components';
 import { Box, Button, Flex } from '../../../../';
 import { WarningField } from '../WarningField';
 
@@ -47,12 +46,9 @@ const ArrayFieldDescription = ({
 	return <DescriptionField id={id} description={description} />;
 };
 
-const ActionButton = styled(Button)`
-	color: ${({ theme }) => theme.colors.text.light};
-`;
-
 export default (props: ArrayFieldTemplateProps) => {
 	const warning = props.uiSchema['ui:warning'];
+	const orderable = props.uiSchema['ui:options']?.orderable ?? true;
 
 	return (
 		<div className={props.uiSchema.classNames}>
@@ -78,64 +74,64 @@ export default (props: ArrayFieldTemplateProps) => {
 					<div className="rendition-form__array-item" key={element.index}>
 						<Flex alignItems="flex-start">
 							<Box flex="1">{element.children}</Box>
+							<Box>
+								{orderable && props.items.length > 1 && (
+									<Button
+										type="button"
+										className="rendition-form-array-item__move-up"
+										py={1}
+										px={2}
+										primary
+										plain
+										disabled={
+											element.disabled || element.readonly || !element.hasMoveUp
+										}
+										onClick={element.onReorderClick(
+											element.index,
+											element.index - 1,
+										)}
+									>
+										<FontAwesomeIcon icon={faArrowUp} />
+									</Button>
+								)}
 
-							{props.items.length > 1 && (
-								<ActionButton
-									type="button"
-									className="rendition-form-array-item__move-up"
-									mb="6px"
-									px={1}
-									mt={1}
-									ml={1}
-									plain
-									disabled={
-										element.disabled || element.readonly || !element.hasMoveUp
-									}
-									onClick={element.onReorderClick(
-										element.index,
-										element.index - 1,
-									)}
-								>
-									<FontAwesomeIcon icon={faArrowUp} />
-								</ActionButton>
-							)}
+								{orderable && props.items.length > 1 && (
+									<Button
+										type="button"
+										className="rendition-form-array-item__move-down"
+										py={1}
+										px={2}
+										plain
+										primary
+										disabled={
+											element.disabled ||
+											element.readonly ||
+											!element.hasMoveDown
+										}
+										onClick={element.onReorderClick(
+											element.index,
+											element.index + 1,
+										)}
+									>
+										<FontAwesomeIcon icon={faArrowDown} />
+									</Button>
+								)}
 
-							{props.items.length > 1 && (
-								<ActionButton
-									type="button"
-									className="rendition-form-array-item__move-down"
-									mb="6px"
-									px={1}
-									mt={1}
-									ml={1}
-									plain
-									disabled={
-										element.disabled || element.readonly || !element.hasMoveDown
-									}
-									onClick={element.onReorderClick(
-										element.index,
-										element.index + 1,
-									)}
-								>
-									<FontAwesomeIcon icon={faArrowDown} />
-								</ActionButton>
-							)}
-
-							{element.hasRemove && (
-								<ActionButton
-									type="button"
-									className="rendition-form-array-item__remove-item"
-									plain
-									mb="6px"
-									mt={1}
-									px={1}
-									ml={1}
-									disabled={element.disabled || element.readonly}
-									onClick={element.onDropIndexClick(element.index)}
-								>
-									<FontAwesomeIcon icon={faTimes} />
-								</ActionButton>
-							)}
+								{element.hasRemove && (
+									<Button
+										type="button"
+										className="rendition-form-array-item__remove-item"
+										plain
+										primary
+										py={1}
+										px={2}
+										disabled={element.disabled || element.readonly}
+										onClick={element.onDropIndexClick(element.index)}
+									>
+										<FontAwesomeIcon icon={faTrashAlt} />
+									</Button>
+								)}
+							</Box>
 						</Flex>
 					</div>
 				);
@@ -143,6 +139,7 @@ export default (props: ArrayFieldTemplateProps) => {
 
 			{props.canAdd && (
 				<Button
+					mt={3}
 					type="button"
 					className="rendition-form-array-item__add-item"
 					icon={<FontAwesomeIcon icon={faPlus} />}
