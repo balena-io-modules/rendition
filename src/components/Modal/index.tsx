@@ -75,6 +75,10 @@ class Modal extends React.Component<ThemedModalProps, any> {
 			e.preventDefault();
 			e.stopPropagation();
 
+			if (this.props.primaryButtonProps?.disabled) {
+				return;
+			}
+
 			// Enter key
 			if (e.which === 13) {
 				this.props.done();

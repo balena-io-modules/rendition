@@ -116,4 +116,30 @@ describe('Keyboard submitting nested modals', () => {
     expect(firstModalSpy.notCalled).toBeTruthy()
     expect(secondModalSpy.calledOnce).toBeTruthy()
   })
+
+  it('should not call any callback of either modal on Enter key press when the primary button is disabled', () => {
+    const firstModalSpy = sinon.spy()
+    const secondModalSpy = sinon.spy()
+
+    mount(
+      <Provider>
+        <Modal done={firstModalSpy}>
+          <Modal primaryButtonProps={{ disabled: true }} done={secondModalSpy}>
+            Test
+          </Modal>
+        </Modal>
+      </Provider>
+    )
+
+    // Enter key
+    eventListenersMap.keydown.forEach(fn =>
+      fn({
+        preventDefault: () => null,
+        stopPropagation: () => null,
+        which: ENTER_KEY
+      })
+    )
+    expect(firstModalSpy.notCalled).toBeTruthy()
+    expect(secondModalSpy.notCalled).toBeTruthy()
+  })
 })
