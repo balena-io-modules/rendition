@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'fix: modal enter key check'
+      hash: 5b6c7120f0f00e6a6f406da0ea737053d31f0845
+      body: |
+        add check on enter key when primary button is disabled
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 13.2.0
+  date: 2020-02-12T15:20:05.464Z
+- commits:
     - subject: Add new shades for badge and adjust some existing ones
       hash: 6f9f5d443de06fb5531b8e7cb20f553407eb4977
       body: ''
