@@ -428,7 +428,7 @@ example `<Heading.h1>`, `<Heading.h2>`, `<Heading.h3>` etc.
 
 ### HighlightedName
 
-By default the background color of a `HighlightedName` component is generated
+By default, the background color of a `HighlightedName` component is generated
 automatically from its `children` (which must be a string), though this can be overridden.
 
 [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/HighlightedName/story.js)
