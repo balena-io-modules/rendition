@@ -17,9 +17,7 @@ import {
 	width,
 } from 'styled-system';
 import { StyledSystemProps } from './common-types';
-import { Tooltips } from './tooltips';
-
-const tooltip = new Tooltips();
+import { Tooltip } from './tooltips';
 
 const prop = oneOfType([number, string, arrayOf(oneOfType([number, string]))]);
 
@@ -93,9 +91,8 @@ export const withStyledSystem = (child: React.ComponentType) => {
 export const withTooltip = (Base: React.ComponentType) => {
 	return React.forwardRef(({ ...props }: any, ref: any) => {
 		if (props.tooltip) {
-			props = tooltip.bindProps(props);
+			return <Tooltip tooltipReference={Base} {...props} ref={ref} />;
 		}
-		delete props.tooltip;
 		return <Base {...props} ref={ref} />;
 	});
 };

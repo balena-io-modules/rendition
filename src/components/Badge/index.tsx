@@ -46,7 +46,12 @@ const BaseBadge = styled(Txt.span)`
 	line-height: 1;
 `;
 
-const Badge = ({ children, className, shade }: ThemedBadgeProps) => {
+const Badge = ({
+	children,
+	className,
+	shade,
+	...otherProps
+}: ThemedBadgeProps) => {
 	if (typeof children !== 'string') {
 		throw new Error(
 			`The child element of the Badge component must be a string, received: ${typeof children}`,
@@ -61,6 +66,7 @@ const Badge = ({ children, className, shade }: ThemedBadgeProps) => {
 			py={1}
 			px="12px"
 			fontSize={0}
+			{...otherProps}
 			{...getColors(shadeHex)}
 		>
 			{children}

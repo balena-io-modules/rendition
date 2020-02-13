@@ -1,0 +1,1500 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip renders correctly on alert 1`] = `
+.c8 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+
+.c6 {
+  pointer-events: none;
+  display: block;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: 1.42857143;
+  padding: 5px;
+  position: absolute;
+  max-width: 300px;
+  text-align: left;
+  text-align: start;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  visibility: hidden;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  z-index: 10000;
+  color: white;
+}
+
+.c7 {
+  background: black;
+  border-radius: 4px;
+  padding: 3px 8px;
+  text-align: center;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c4 {
+  box-sizing: border-box;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 16px;
+  padding-right: 16px;
+  box-shadow: 0 0 10px 0 rgba(221,225,240,0.15);
+  border-radius: 10px;
+  border: 1px solid #DDE1f0;
+  background-color: white;
+  color: inherit;
+}
+
+.c5 {
+  font-size: 14px;
+  color: #2A506F;
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+}
+
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    aria-describedby="tooltip-id"
+    className="c2 c3 "
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    
+    <div
+      className="c4 "
+    >
+      
+      <span
+        className="c5"
+      >
+        Children
+      </span>
+    </div>
+  </div>
+  <div
+    className="c6"
+    hidden={true}
+    id="tooltip-id"
+    role="tooltip"
+    style={
+      Object {
+        "left": 0,
+        "top": 0,
+        "visibility": "hidden",
+      }
+    }
+  >
+    <div
+      className="c7"
+    />
+    <div
+      className="c8"
+    />
+  </div>
+</div>
+`;
+
+exports[`Tooltip renders correctly on badge 1`] = `
+.c6 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+
+.c4 {
+  pointer-events: none;
+  display: block;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: 1.42857143;
+  padding: 5px;
+  position: absolute;
+  max-width: 300px;
+  text-align: left;
+  text-align: start;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  visibility: hidden;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  z-index: 10000;
+  color: white;
+}
+
+.c5 {
+  background: black;
+  border-radius: 4px;
+  padding: 3px 8px;
+  text-align: center;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 12px;
+  color: #385C78;
+  background-color: #C9DEEE;
+}
+
+.c3 {
+  font-family: CircularStd,Arial,sans-serif;
+  display: inline-block;
+  border-radius: 1em;
+  line-height: 1;
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+}
+
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+<div
+  className="c0 c1"
+>
+  <span
+    aria-describedby="tooltip-id"
+    className="c2 c3 "
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    Children
+  </span>
+  <div
+    className="c4"
+    hidden={true}
+    id="tooltip-id"
+    role="tooltip"
+    style={
+      Object {
+        "left": 0,
+        "top": 0,
+        "visibility": "hidden",
+      }
+    }
+  >
+    <div
+      className="c5"
+    />
+    <div
+      className="c6"
+    />
+  </div>
+</div>
+`;
+
+exports[`Tooltip renders correctly on box 1`] = `
+.c5 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+
+.c3 {
+  pointer-events: none;
+  display: block;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: 1.42857143;
+  padding: 5px;
+  position: absolute;
+  max-width: 300px;
+  text-align: left;
+  text-align: start;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  visibility: hidden;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  z-index: 10000;
+  color: white;
+}
+
+.c4 {
+  background: black;
+  border-radius: 4px;
+  padding: 3px 8px;
+  text-align: center;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+}
+
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    aria-describedby="tooltip-id"
+    className="c2 "
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    Children
+  </div>
+  <div
+    className="c3"
+    hidden={true}
+    id="tooltip-id"
+    role="tooltip"
+    style={
+      Object {
+        "left": 0,
+        "top": 0,
+        "visibility": "hidden",
+      }
+    }
+  >
+    <div
+      className="c4"
+    />
+    <div
+      className="c5"
+    />
+  </div>
+</div>
+`;
+
+exports[`Tooltip renders correctly on button 1`] = `
+.c6 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+
+.c4 {
+  pointer-events: none;
+  display: block;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: 1.42857143;
+  padding: 5px;
+  position: absolute;
+  max-width: 300px;
+  text-align: left;
+  text-align: start;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  visibility: hidden;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  z-index: 10000;
+  color: white;
+}
+
+.c5 {
+  background: black;
+  border-radius: 4px;
+  padding: 3px 8px;
+  text-align: center;
+}
+
+.c2 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  border: 1px solid #2A506F;
+  border-radius: 20px;
+  color: #444444;
+  padding: 4px 30px;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-transition-property: color, background-color, border-color, box-shadow;
+  transition-property: color, background-color, border-color, box-shadow;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+.c2:hover {
+  box-shadow: 0px 0px 0px 2px #2A506F;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c3 {
+  font-family: CircularStd,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  height: 38px;
+  white-space: nowrap;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c3 svg {
+  color: inherit !important;
+  font-size: 0.925em;
+}
+
+.c3:disabled {
+  cursor: not-allowed;
+}
+
+.c3 {
+  color: #2A506F;
+  border-color: #2A506F;
+}
+
+.c3 svg {
+  color: #527699 !important;
+}
+
+.c3:hover:enabled,
+.c3:focus:enabled,
+.c3:active:enabled {
+  box-shadow: none;
+  background: #2A506F;
+  border-color: #2A506F;
+  color: white;
+  opacity: undefined;
+}
+
+.c3:hover:enabled svg,
+.c3:focus:enabled svg,
+.c3:active:enabled svg {
+  color: white !important;
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+}
+
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+<div
+  className="c0 c1"
+>
+  <button
+    aria-describedby="tooltip-id"
+    className="c2 c3 "
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    Children
+  </button>
+  <div
+    className="c4"
+    hidden={true}
+    id="tooltip-id"
+    role="tooltip"
+    style={
+      Object {
+        "left": 0,
+        "top": 0,
+        "visibility": "hidden",
+      }
+    }
+  >
+    <div
+      className="c5"
+    />
+    <div
+      className="c6"
+    />
+  </div>
+</div>
+`;
+
+exports[`Tooltip renders correctly on dropdown button 1`] = `
+.c11 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+
+.c9 {
+  pointer-events: none;
+  display: block;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: 1.42857143;
+  padding: 5px;
+  position: absolute;
+  max-width: 300px;
+  text-align: left;
+  text-align: start;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  visibility: hidden;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  z-index: 10000;
+  color: white;
+}
+
+.c10 {
+  background: black;
+  border-radius: 4px;
+  padding: 3px 8px;
+  text-align: center;
+}
+
+.c4 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  border: 1px solid #2A506F;
+  border-radius: 20px;
+  color: #444444;
+  padding: 4px 30px;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-transition-property: color, background-color, border-color, box-shadow;
+  transition-property: color, background-color, border-color, box-shadow;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+.c4:hover {
+  box-shadow: 0px 0px 0px 2px #2A506F;
+}
+
+.c7 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  border: 1px solid #2A506F;
+  border-radius: 20px;
+  color: #444444;
+  padding: 4px 30px;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-transition-property: color, background-color, border-color, box-shadow;
+  transition-property: color, background-color, border-color, box-shadow;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  line-height: 0;
+  padding: 12px;
+}
+
+.c7:hover {
+  box-shadow: 0px 0px 0px 2px #2A506F;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c5 {
+  font-family: CircularStd,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  height: 38px;
+  white-space: nowrap;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c5 svg {
+  color: inherit !important;
+  font-size: 0.925em;
+}
+
+.c5:disabled {
+  cursor: not-allowed;
+}
+
+.c5 {
+  color: #2A506F;
+  border-color: #2A506F;
+}
+
+.c5 svg {
+  color: #527699 !important;
+}
+
+.c5:hover:enabled,
+.c5:focus:enabled,
+.c5:active:enabled {
+  box-shadow: none;
+  background: #2A506F;
+  border-color: #2A506F;
+  color: white;
+  opacity: undefined;
+}
+
+.c5:hover:enabled svg,
+.c5:focus:enabled svg,
+.c5:active:enabled svg {
+  color: white !important;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c8 {
+  min-width: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 0;
+  margin: 0;
+  vertical-align: top;
+  padding: 0 16px;
+  width: 44px;
+}
+
+.c6 {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 0;
+  margin: 0;
+  width: calc(100% - 44px);
+}
+
+.c3 {
+  display: inline-block;
+  border-radius: 3px;
+  vertical-align: top;
+  position: relative;
+}
+
+.c3 svg {
+  width: 12px;
+  height: translateY(1px);
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+}
+
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    aria-describedby="tooltip-id"
+    className="c2 c3 "
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <span>
+      <button
+        aria-describedby="tooltip-id"
+        className="c4 c5 c6"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        type="button"
+      />
+      <button
+        aria-describedby="tooltip-id"
+        className="c7 c5 c8"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-chevron-down fa-w-14 "
+          data-icon="chevron-down"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </button>
+    </span>
+  </div>
+  <div
+    className="c9"
+    hidden={true}
+    id="tooltip-id"
+    role="tooltip"
+    style={
+      Object {
+        "left": 0,
+        "top": 0,
+        "visibility": "hidden",
+      }
+    }
+  >
+    <div
+      className="c10"
+    />
+    <div
+      className="c11"
+    />
+  </div>
+</div>
+`;
+
+exports[`Tooltip renders correctly on fixed 1`] = `
+.c5 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+
+.c3 {
+  pointer-events: none;
+  display: block;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: 1.42857143;
+  padding: 5px;
+  position: absolute;
+  max-width: 300px;
+  text-align: left;
+  text-align: start;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  visibility: hidden;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  z-index: 10000;
+  color: white;
+}
+
+.c4 {
+  background: black;
+  border-radius: 4px;
+  padding: 3px 8px;
+  text-align: center;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  position: fixed;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: 0;
+  background: none;
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+}
+
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    aria-describedby="tooltip-id"
+    className="c2 "
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    Children
+  </div>
+  <div
+    className="c3"
+    hidden={true}
+    id="tooltip-id"
+    role="tooltip"
+    style={
+      Object {
+        "left": 0,
+        "top": 0,
+        "visibility": "hidden",
+      }
+    }
+  >
+    <div
+      className="c4"
+    />
+    <div
+      className="c5"
+    />
+  </div>
+</div>
+`;
+
+exports[`Tooltip renders correctly on flex 1`] = `
+.c6 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+
+.c4 {
+  pointer-events: none;
+  display: block;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: 1.42857143;
+  padding: 5px;
+  position: absolute;
+  max-width: 300px;
+  text-align: left;
+  text-align: start;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  visibility: hidden;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  z-index: 10000;
+  color: white;
+}
+
+.c5 {
+  background: black;
+  border-radius: 4px;
+  padding: 3px 8px;
+  text-align: center;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+}
+
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    aria-describedby="tooltip-id"
+    className="c2 c3"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    Children
+  </div>
+  <div
+    className="c4"
+    hidden={true}
+    id="tooltip-id"
+    role="tooltip"
+    style={
+      Object {
+        "left": 0,
+        "top": 0,
+        "visibility": "hidden",
+      }
+    }
+  >
+    <div
+      className="c5"
+    />
+    <div
+      className="c6"
+    />
+  </div>
+</div>
+`;
+
+exports[`Tooltip renders correctly on heading 1`] = `
+.c5 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+
+.c3 {
+  pointer-events: none;
+  display: block;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: 1.42857143;
+  padding: 5px;
+  position: absolute;
+  max-width: 300px;
+  text-align: left;
+  text-align: start;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  visibility: hidden;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  z-index: 10000;
+  color: white;
+}
+
+.c4 {
+  background: black;
+  border-radius: 4px;
+  padding: 3px 8px;
+  text-align: center;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+}
+
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+<div
+  className="c0 c1"
+>
+  <h2
+    aria-describedby="tooltip-id"
+    className="c2"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    Children
+  </h2>
+  <div
+    className="c3"
+    hidden={true}
+    id="tooltip-id"
+    role="tooltip"
+    style={
+      Object {
+        "left": 0,
+        "top": 0,
+        "visibility": "hidden",
+      }
+    }
+  >
+    <div
+      className="c4"
+    />
+    <div
+      className="c5"
+    />
+  </div>
+</div>
+`;
+
+exports[`Tooltip renders correctly on link 1`] = `
+.c6 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+
+.c4 {
+  pointer-events: none;
+  display: block;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: 1.42857143;
+  padding: 5px;
+  position: absolute;
+  max-width: 300px;
+  text-align: left;
+  text-align: start;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  visibility: hidden;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  z-index: 10000;
+  color: white;
+}
+
+.c5 {
+  background: black;
+  border-radius: 4px;
+  padding: 3px 8px;
+  text-align: center;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+}
+
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c2:active,
+.c2:hover {
+  color: hsl(196.29999999999995,100%,37.5%);
+}
+
+.c3 {
+  color: #00AEEF;
+}
+
+<div
+  className="c0 c1"
+>
+  <a
+    aria-describedby="tooltip-id"
+    className="c2 c3"
+    color="primary.main"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    Children
+  </a>
+  <div
+    className="c4"
+    hidden={true}
+    id="tooltip-id"
+    role="tooltip"
+    style={
+      Object {
+        "left": 0,
+        "top": 0,
+        "visibility": "hidden",
+      }
+    }
+  >
+    <div
+      className="c5"
+    />
+    <div
+      className="c6"
+    />
+  </div>
+</div>
+`;
+
+exports[`Tooltip renders correctly on txt 1`] = `
+.c4 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+
+.c2 {
+  pointer-events: none;
+  display: block;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: 1.42857143;
+  padding: 5px;
+  position: absolute;
+  max-width: 300px;
+  text-align: left;
+  text-align: start;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  visibility: hidden;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  z-index: 10000;
+  color: white;
+}
+
+.c3 {
+  background: black;
+  border-radius: 4px;
+  padding: 3px 8px;
+  text-align: center;
+}
+
+.c0 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c1 {
+  font-family: 'Nunito',Arial,sans-serif;
+  font-size: 14px;
+}
+
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6,
+.c1 button {
+  font-family: CircularStd,Arial,sans-serif;
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    aria-describedby="tooltip-id"
+    className=""
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    Children
+  </div>
+  <div
+    className="c2"
+    hidden={true}
+    id="tooltip-id"
+    role="tooltip"
+    style={
+      Object {
+        "left": 0,
+        "top": 0,
+        "visibility": "hidden",
+      }
+    }
+  >
+    <div
+      className="c3"
+    />
+    <div
+      className="c4"
+    />
+  </div>
+</div>
+`;

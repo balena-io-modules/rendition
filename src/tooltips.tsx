@@ -3,7 +3,7 @@ import merge from 'lodash/merge';
 import noop from 'lodash/noop';
 import pick from 'lodash/pick';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as shortid from 'shortid';
 import styled from 'styled-components';
 import { TooltipPlacement } from './common-types';
 
@@ -12,25 +12,6 @@ const TARGET_OFFSET = 3;
 
 // The time in ms to show a tooltip after being triggered by a click event
 const CLICK_TIMEOUT = 1000;
-
-const createOnRemoveObserver = (
-	element: Node,
-	onDetachCallback: () => void,
-) => {
-	const observer = new MutationObserver(() => {
-		if (!document.contains(element)) {
-			observer.disconnect();
-			onDetachCallback();
-		}
-	});
-
-	observer.observe(document, {
-		childList: true,
-		subtree: true,
-	});
-
-	return observer;
-};
 
 const arrowStyle = `
 	position: absolute;
@@ -86,6 +67,7 @@ const getArrowElement = (placement?: TooltipPlacement) => {
 };
 
 const TooltipElement = styled.div`
+	pointer-events: none;
 	display: block;
 	font-size: 12px;
 	font-style: normal;
@@ -117,67 +99,80 @@ const TooltipElementInner = styled.div`
 	text-align: center;
 `;
 
-interface TooltipShowOptions {
-	placement?: TooltipPlacement;
-	containerStyle?: React.CSSProperties;
-	innerStyle?: React.CSSProperties;
-	arrowStyle?: React.CSSProperties;
+function changeInnerText(el: HTMLElement, value: string) {
+	el.innerText = value;
 }
 
-interface TooltipComponentState {
-	placement?: TooltipPlacement;
-	show: boolean;
+interface State {
+	displayTooltip: boolean;
 	coordinates: {
 		top: number;
 		left: number;
 	};
-	containerStyle?: React.CSSProperties;
-	innerStyle?: React.CSSProperties;
-	arrowStyle?: React.CSSProperties;
 }
 
-class TooltipComponent extends React.Component<{}, TooltipComponentState> {
-	private tooltipElement: HTMLDivElement;
-	private tooltipElementInner: HTMLDivElement | null;
-	private observer: MutationObserver | undefined;
-
-	constructor(props: {}) {
-		super(props);
-
-		this.state = {
-			show: false,
-			placement: 'top',
+type Action =
+	| {
+			type: 'show-tooltip';
 			coordinates: {
-				top: 0,
-				left: 0,
-			},
-		};
-	}
+				top: number;
+				left: number;
+			};
+	  }
+	| { type: 'hide-tooltip' };
 
-	// Create an observer that will hide the tooltip if the target element is
-	// removed from the DOM
-	public observe(target: HTMLElement) {
-		// If an observer exists, disconnect it
-		if (this.observer) {
-			this.observer.disconnect();
+const initialState: State = {
+	displayTooltip: false,
+	coordinates: { top: 0, left: 0 },
+};
+
+const reducer = (state: State, action: Action) => {
+	switch (action.type) {
+		case 'show-tooltip':
+			return { displayTooltip: true, coordinates: action.coordinates };
+		case 'hide-tooltip':
+			return initialState;
+		default:
+			return state;
+	}
+};
+
+export const Tooltip = React.forwardRef((props: any, ref: any) => {
+	const [state, dispatch] = React.useReducer(reducer, initialState);
+	const tooltipRef = React.useRef<HTMLDivElement>(null);
+	const tooltipInnerRef = React.useRef<HTMLDivElement>(null);
+	const hideTimeout = React.useRef<number>();
+	const hideOnMouseOut = React.useRef<Element | null>(null);
+	const uniqueId = React.useRef(shortid.generate());
+
+	let placement: TooltipPlacement | undefined;
+	let containerStyle: React.CSSProperties | undefined;
+	let innerStyle: React.CSSProperties | undefined;
+	let arrowStyle: React.CSSProperties | undefined;
+	let trigger = 'hover';
+	let tooltipText: string;
+
+	const { tooltipReference: TooltipReference, tooltip, ...restProps } = props;
+
+	if (isString(tooltip)) {
+		tooltipText = tooltip;
+	} else {
+		tooltipText = tooltip.text;
+		placement = tooltip.placement;
+		containerStyle = tooltip.containerStyle;
+		innerStyle = tooltip.innerStyle;
+		arrowStyle = tooltip.arrowStyle;
+
+		if (tooltip.trigger) {
+			trigger = tooltip.trigger;
 		}
-
-		this.observer = createOnRemoveObserver(target, () => {
-			this.hide();
-		});
 	}
 
-	public show(
-		e: Event,
-		tooltipText: string,
-		options: TooltipShowOptions = {},
-	): void {
+	const show = (e: Event): void => {
 		let top = 0;
 		let left = 0;
 
 		const target = e.target as HTMLElement;
-
-		this.observe(target);
 
 		const boundingClientRect = target.getBoundingClientRect();
 
@@ -193,129 +188,58 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 		boundingRect.top += window.scrollY;
 		boundingRect.left += window.scrollX;
 
-		const { placement, containerStyle, innerStyle, arrowStyle } = options;
-
 		// Set the contents of the tooltip using `ìnnerText` and adjust the styles
 		// now, so that the height can be properly calculated
-		if (this.tooltipElementInner) {
-			this.tooltipElementInner.innerText = tooltipText;
+		if (tooltipInnerRef.current !== null) {
+			changeInnerText(tooltipInnerRef.current, tooltipText);
 		}
 
-		if (!placement || placement === 'top') {
-			top = boundingRect.top - this.tooltipElement.clientHeight - TARGET_OFFSET;
+		if ((!placement || placement === 'top') && tooltipRef.current) {
+			top = boundingRect.top - tooltipRef.current.clientHeight - TARGET_OFFSET;
 			left =
 				boundingRect.left +
 				boundingRect.width / 2 -
-				this.tooltipElement.clientWidth / 2;
+				tooltipRef.current.clientWidth / 2;
 		}
-		if (placement === 'right') {
+		if (placement === 'right' && tooltipRef.current) {
 			top =
 				boundingRect.top +
 				boundingRect.height / 2 -
-				this.tooltipElement.clientHeight / 2;
+				tooltipRef.current.clientHeight / 2;
 			left = boundingRect.left + boundingRect.width + TARGET_OFFSET;
 		}
-		if (placement === 'bottom') {
+		if (placement === 'bottom' && tooltipRef.current) {
 			top = boundingRect.top + boundingRect.height + TARGET_OFFSET;
 			left =
 				boundingRect.left +
 				boundingRect.width / 2 -
-				this.tooltipElement.clientWidth / 2;
+				tooltipRef.current.clientWidth / 2;
 		}
-		if (placement === 'left') {
+		if (placement === 'left' && tooltipRef.current) {
 			top =
 				boundingRect.top +
 				boundingRect.height / 2 -
-				this.tooltipElement.clientHeight / 2;
-			left =
-				boundingRect.left - this.tooltipElement.clientWidth - TARGET_OFFSET;
+				tooltipRef.current.clientHeight / 2;
+			left = boundingRect.left - tooltipRef.current.clientWidth - TARGET_OFFSET;
 		}
 
-		this.setState({
+		dispatch({
+			type: 'show-tooltip',
 			coordinates: { top, left },
-			show: true,
-			placement,
-			containerStyle,
-			innerStyle,
-			arrowStyle,
 		});
-	}
+	};
 
-	public hide(): void {
-		// If an observer exists, disconnect it
-		if (this.observer) {
-			this.observer.disconnect();
-			this.observer = undefined;
-		}
+	const hide = (): void => {
+		dispatch({ type: 'hide-tooltip' });
+	};
 
-		this.setState({
-			show: false,
-			coordinates: {
-				top: 0,
-				left: 0,
-			},
-		});
-	}
-
-	public render() {
-		const { placement, containerStyle, innerStyle, arrowStyle } = this.state;
-		const Arrow = getArrowElement(placement);
-		const tooltipStyle: React.CSSProperties = merge(
-			{
-				top: this.state.coordinates.top,
-				left: this.state.coordinates.left,
-				visibility: this.state.show ? 'visible' : 'hidden',
-			},
-			containerStyle,
-		);
-
-		return (
-			<TooltipElement
-				style={tooltipStyle}
-				ref={(el: any) => (this.tooltipElement = el)}
-			>
-				<TooltipElementInner
-					ref={el => (this.tooltipElementInner = el)}
-					style={innerStyle}
-				/>
-
-				<Arrow style={arrowStyle} />
-			</TooltipElement>
-		);
-	}
-}
-
-export class Tooltips {
-	private hideTimeout: number;
-	private initialised: boolean = false;
-	private component: TooltipComponent;
-	private hideOnMouseOut: Element | null = null;
-
-	// Creates a tiny React app for containing the tooltips and appends it to the
-	// bottom of the <body>. This allows us to overlay tooltips without affecting
-	// document flow or worrying about z-index etc
-	public initialiseElements() {
-		if (this.initialised || !document || !document.body) {
-			return;
-		}
-
-		const tooltipRoot = document.createElement('div');
-		tooltipRoot.id = 'rendition-tooltip-root';
-
-		document.body.appendChild(tooltipRoot);
-
-		// This is a special case for handling disabled elements. When a tooltip is
-		// shown on a tooltip element, the flag is activated and the next time this
-		// event listener is called the tooltip is hidden. This happens because
-		// a mouseover event will be triggered when the cursor leaves a disabled
-		// element.
-		// See: https://github.com/facebook/react/issues/4251#issuecomment-334266778
-		document.addEventListener('mouseover', e => {
+	const mouseOverEventListener = React.useCallback(
+		(e: MouseEvent) => {
 			const target = e.target as Element;
 			if (
-				!this.hideOnMouseOut ||
+				!hideOnMouseOut.current ||
 				// needed to work on Firefox
-				this.hideOnMouseOut === target
+				hideOnMouseOut.current === target
 			) {
 				return;
 			}
@@ -323,102 +247,93 @@ export class Tooltips {
 			// if the event comes from one of the child elements
 			// then do not hide the tooltip
 			if (
-				this.hideOnMouseOut.firstElementChild &&
-				this.hideOnMouseOut.contains &&
-				this.hideOnMouseOut.contains(target)
+				hideOnMouseOut.current.firstElementChild &&
+				hideOnMouseOut.current.contains &&
+				hideOnMouseOut.current.contains(target)
 			) {
 				return;
 			}
 
-			this.hide();
-			this.hideOnMouseOut = null;
-		});
+			hide();
+			hideOnMouseOut.current = null;
+		},
+		[hideOnMouseOut.current],
+	);
 
-		// TODO: In future versions, the render function will return void, reference here: https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/react-dom/index.d.ts
-		this.component = (ReactDOM.render(
-			<TooltipComponent />,
-			tooltipRoot,
-		) as unknown) as TooltipComponent;
+	React.useEffect(() => {
+		document.addEventListener('mouseover', mouseOverEventListener);
+		return () => {
+			document.removeEventListener('mouseover', mouseOverEventListener);
+		};
+	}, [mouseOverEventListener]);
 
-		this.initialised = true;
-	}
+	const { displayTooltip, coordinates } = state;
 
-	public bindProps(props: any) {
-		if (props.tooltip) {
-			const options: TooltipShowOptions = {};
-			let trigger = 'hover';
-			let tooltipText: string;
-			if (isString(props.tooltip)) {
-				tooltipText = props.tooltip;
-			} else {
-				tooltipText = props.tooltip.text;
-				options.placement = props.tooltip.placement;
-				options.containerStyle = props.tooltip.containerStyle;
-				options.innerStyle = props.tooltip.innerStyle;
-				options.arrowStyle = props.tooltip.arrowStyle;
+	const Arrow = getArrowElement(placement);
 
-				if (props.tooltip.trigger) {
-					trigger = props.tooltip.trigger;
+	if (tooltipText) {
+		if (trigger === 'click') {
+			const oldFn = restProps.onClick || noop;
+
+			const hideFn = () => {
+				clearTimeout(hideTimeout.current);
+
+				hideTimeout.current = window.setTimeout(() => hide(), CLICK_TIMEOUT);
+			};
+
+			restProps.onClick = (e: Event) => {
+				show(e);
+				hideFn();
+				oldFn(e);
+			};
+		} else {
+			const oldMEFn = restProps.onMouseEnter || noop;
+
+			restProps.onMouseEnter = (e: Event) => {
+				show(e);
+				oldMEFn(e);
+
+				if ((e.target as any).disabled) {
+					hideOnMouseOut.current = e.target as Element;
 				}
-			}
-			if (tooltipText) {
-				const showFn = (e: Event) => this.show(e, tooltipText, options);
+			};
 
-				if (trigger === 'click') {
-					const oldFn = props.onClick || noop;
+			const oldMLFn = restProps.onMouseLeave || noop;
 
-					const hideFn = () => {
-						clearTimeout(this.hideTimeout);
-
-						this.hideTimeout = window.setTimeout(
-							() => this.hide(),
-							CLICK_TIMEOUT,
-						);
-					};
-
-					props.onClick = (e: Event) => {
-						showFn(e);
-						hideFn();
-						oldFn(e);
-					};
-				} else {
-					const oldMEFn = props.onMouseEnter || noop;
-
-					props.onMouseEnter = (e: Event) => {
-						showFn(e);
-						oldMEFn(e);
-
-						if ((e.target as any).disabled) {
-							this.hideOnMouseOut = e.target as Element;
-						}
-					};
-
-					const oldMLFn = props.onMouseLeave || noop;
-
-					props.onMouseLeave = (e: Event) => {
-						this.hide();
-						oldMLFn(e);
-					};
-				}
-			}
+			restProps.onMouseLeave = (e: Event) => {
+				hide();
+				oldMLFn(e);
+			};
 		}
-
-		return props;
 	}
 
-	public show(
-		e: Event,
-		tooltipText: string,
-		options?: TooltipShowOptions,
-	): void {
-		this.initialiseElements();
+	const ariaDescribedBy = restProps['aria-describedby'] || uniqueId.current;
+	restProps['aria-describedby'] = ariaDescribedBy;
 
-		this.component.show(e, tooltipText, options);
-	}
+	const tooltipStyle: React.CSSProperties = merge(
+		{
+			top: coordinates.top,
+			left: coordinates.left,
+			visibility: displayTooltip ? 'visible' : 'hidden',
+		},
+		containerStyle,
+	);
 
-	public hide(): void {
-		this.initialiseElements();
-
-		this.component.hide();
-	}
-}
+	return (
+		<>
+			<TooltipReference ref={ref} {...restProps} />
+			<TooltipElement
+				role="tooltip"
+				id={ariaDescribedBy}
+				hidden={!displayTooltip}
+				style={tooltipStyle}
+				ref={tooltipRef}
+			>
+				<TooltipElementInner ref={tooltipInnerRef} style={innerStyle}>
+					{props.tooltipText}
+				</TooltipElementInner>
+				<Arrow style={arrowStyle} />
+			</TooltipElement>
+		</>
+	);
+});
