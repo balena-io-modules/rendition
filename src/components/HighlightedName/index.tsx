@@ -35,7 +35,7 @@ const HighlightedName = ({
 			{...props}
 			className={className}
 			p={2}
-			fontSize={0}
+			fontSize={1}
 			color={color || isLight(bgColor) ? theme.colors.text.main : '#fff'}
 			bg={bgColor}
 		>
