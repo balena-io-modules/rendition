@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update background and text shades for badges
+      hash: 43a4553456f72288953aa8c20745f87b58f3aeb7
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 13.2.2
+  date: 2020-02-14T17:28:44.969Z
+- commits:
     - subject: Increase font size for HighlightedName component
       hash: b914d5f3ceba17d0ffa672943a7b8a2d16af5c55
       body: |
