@@ -20,6 +20,28 @@ const shadeCustomColor = (color: string, shade: 'main' | 'light' | 'dark') => {
 	return darken(color);
 };
 
+// Returns a color that is legible if put on the passed background.
+export const getLegibleTextColor = memoize((bg: string, contrast = 4.5) => {
+	const bgColor = new Color(bg);
+	const findWithContrast = (darken: number): string => {
+		// Darkening goes from 0 to 1. This makes sure the recursive function terminates.
+		if (darken >= 1) {
+			return bgColor.darken(1).hex();
+		}
+
+		const textColor = bgColor.darken(darken);
+		if (textColor.contrast(bgColor) >= contrast) {
+			return textColor.hex();
+		}
+
+		// We can do divide-and-conquer strategy here, but this is simpler and still guaranteed to finish in < 20 iterations.
+		return findWithContrast(darken + 0.05);
+	};
+
+	// It is pointless to start with 0, so we start with some trivially larger value
+	return findWithContrast(0.1);
+});
+
 export const generateColorFromString = memoize((text: string): string => {
 	return colorHash.hex(text.replace(/\s/g, ''));
 });

@@ -1,25 +1,25 @@
-import Color from 'color';
 import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { Coloring, RenditionSystemProps, Theme } from '../../common-types';
+import { getLegibleTextColor } from '../../utils';
 import Txt from '../Txt';
 
 // All of the shades are checked so background to text contrast ratio is at least 4:1.
 const shades = [
-	'#C9DEEE',
-	'#CAE1AC',
-	'#FDC9EC',
+	'#C7FFFF',
+	'#BAECC2',
+	'#FFD4F1',
 	'#F1CDE3',
 	'#D7E4FE',
-	'#FFCFCC',
-	'#C5E8E6',
+	'#FFD5D2',
+	'#CAE1AC',
 	'#D6D3FA',
 	'#C3C7CA',
-	'#FFD684',
+	'#FFDA93',
 	'#E1EEE5',
 	'#DBE0E3',
-	'#FFEC62',
+	'#FEEC63',
 	'#FBE6F4',
 	'#FFECAE',
 	'#F1CDFF',
@@ -31,13 +31,6 @@ const shades = [
 	'#D7E46C',
 	'#F7D8BA',
 ];
-
-const getColors = (shade: string) => {
-	const base = new Color(shade);
-	// The values are derived by trial and error, making sure each pre-defined shades has background to text color ratio of at least 4:1.
-	const text = base.darken(0.6).desaturate(0.3);
-	return { bg: base.hex(), color: text.hex() };
-};
 
 const BaseBadge = styled(Txt.span)`
 	font-family: ${props => props.theme.titleFont};
@@ -61,7 +54,8 @@ const Badge = ({ children, className, shade }: ThemedBadgeProps) => {
 			py={1}
 			px="12px"
 			fontSize={0}
-			{...getColors(shadeHex)}
+			bg={shadeHex}
+			color={getLegibleTextColor(shadeHex)}
 		>
 			{children}
 		</BaseBadge>
