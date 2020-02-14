@@ -1,4 +1,17 @@
 - commits:
+    - subject: Increase font size for HighlightedName component
+      hash: b914d5f3ceba17d0ffa672943a7b8a2d16af5c55
+      body: |
+        Updates the HighlightedName to match the updated design.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 13.2.1
+  date: 2020-02-14T10:56:16.528Z
+- commits:
     - subject: 'fix: modal enter key check'
       hash: 5b6c7120f0f00e6a6f406da0ea737053d31f0845
       body: |
