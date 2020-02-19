@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix Tooltip display for badges
+      hash: 0c288998a3f2450b3180b2ffe0a0277a6b6c3bb0
+      body: ''
+      footer:
+        Change-type: Patch
+        change-type: Patch
+        Signed-off-by: Amit Solanki <amit@balena.io>
+        signed-off-by: Amit Solanki <amit@balena.io>
+      author: Amit Solanki
+  version: 13.2.3
+  date: 2020-02-17T10:43:25.056Z
+- commits:
     - subject: Update background and text shades for badges
       hash: 43a4553456f72288953aa8c20745f87b58f3aeb7
       body: ''
