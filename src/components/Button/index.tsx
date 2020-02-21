@@ -1,5 +1,6 @@
 import { Button, ButtonProps as GrommetButtonProps } from 'grommet';
 import * as React from 'react';
+import { Button as RButton } from 'reakit/Button';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import {
@@ -253,7 +254,8 @@ const Base = (props: ThemedButtonProps) => {
 	// default behaviour when providing an icon attribute and no label
 	// see: https://github.com/grommet/grommet/issues/3030
 	return (
-		<StyledButton
+		<RButton
+			as={StyledButton}
 			primary={basePrimary}
 			color={baseColor}
 			active={active && (underline || plain)}
