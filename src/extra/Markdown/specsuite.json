@@ -307,137 +307,137 @@
   {
     "name": "xss: 36",
     "source": "ABC<div style=\"x\\x3Aexpression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 37",
     "source": "ABC<div style=\"x:expression\\x5C(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 38",
     "source": "ABC<div style=\"x:expression\\x00(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 39",
     "source": "ABC<div style=\"x:exp\\x00ression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 40",
     "source": "ABC<div style=\"x:exp\\x5Cression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 41",
     "source": "ABC<div style=\"x:\\x0Aexpression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 42",
     "source": "ABC<div style=\"x:\\x09expression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 43",
     "source": "ABC<div style=\"x:\\xE3\\x80\\x80expression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 44",
     "source": "ABC<div style=\"x:\\xE2\\x80\\x84expression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 45",
     "source": "ABC<div style=\"x:\\xC2\\xA0expression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 46",
     "source": "ABC<div style=\"x:\\xE2\\x80\\x80expression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 47",
     "source": "ABC<div style=\"x:\\xE2\\x80\\x8Aexpression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 48",
     "source": "ABC<div style=\"x:\\x0Dexpression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 49",
     "source": "ABC<div style=\"x:\\x0Cexpression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 50",
     "source": "ABC<div style=\"x:\\xE2\\x80\\x87expression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 51",
     "source": "ABC<div style=\"x:\\xEF\\xBB\\xBFexpression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 52",
     "source": "ABC<div style=\"x:\\x20expression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 53",
     "source": "ABC<div style=\"x:\\xE2\\x80\\x88expression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 54",
     "source": "ABC<div style=\"x:\\x00expression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 55",
     "source": "ABC<div style=\"x:\\xE2\\x80\\x8Bexpression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 56",
     "source": "ABC<div style=\"x:\\xE2\\x80\\x86expression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 57",
     "source": "ABC<div style=\"x:\\xE2\\x80\\x85expression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 58",
     "source": "ABC<div style=\"x:\\xE2\\x80\\x82expression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 59",
     "source": "ABC<div style=\"x:\\x0Bexpression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 60",
     "source": "ABC<div style=\"x:\\xE2\\x80\\x81expression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 61",
     "source": "ABC<div style=\"x:\\xE2\\x80\\x83expression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 62",
     "source": "ABC<div style=\"x:\\xE2\\x80\\x89expression(javascript:alert(1)\">DEF",
-    "expected": "<p>ABC</p><div>DEF</div><p></p>"
+    "expected": "<p>ABC</p><div>DEF<p></p>\n</div>"
   },
   {
     "name": "xss: 63",
