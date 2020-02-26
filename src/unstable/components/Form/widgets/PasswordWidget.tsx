@@ -3,8 +3,13 @@ import styled from 'styled-components';
 import { px } from '../../../../utils';
 import { FormWidgetProps } from '../../../unstable-typings';
 
+interface StrengthStyle {
+	width: string | number;
+	backgroundColor?: string;
+}
+
 const STRENGTH_TITLES = ['Very weak', 'Weak', 'Good', 'Strong', 'Very strong'];
-const STRENGTH_STYLES = [
+const STRENGTH_STYLES: StrengthStyle[] = [
 	{ width: 0 },
 	{ width: '25%', backgroundColor: 'orange' },
 	{ width: '50%', backgroundColor: 'yellow' },
@@ -39,7 +44,8 @@ export interface PasswordStrengthProps {
 }
 
 const PasswordStrength = ({ password }: PasswordStrengthProps) => {
-	const [strengthScore, setStrengthScore] = React.useState();
+	const [strengthTitle, setStrengthTitle] = React.useState<string>();
+	const [strengthStyle, setStrengthStyle] = React.useState<StrengthStyle>();
 
 	React.useEffect(() => {
 		// @ts-ignore If you wish to show a stength meter, you need to load and set `zxcvbn` to a window variable by yourself.
@@ -48,25 +54,24 @@ const PasswordStrength = ({ password }: PasswordStrengthProps) => {
 		if (zxcvbn && password) {
 			try {
 				const { score } = zxcvbn(password);
-				setStrengthScore(score);
+				setStrengthTitle(STRENGTH_TITLES[score]);
+				setStrengthStyle(STRENGTH_STYLES[score]);
 			} catch {
 				// Ignore any errors, as we only want to show the strength meter if it is available.
 			}
 		}
 	}, [password]);
 
-	if (!password || strengthScore === undefined) {
+	if (!password || !strengthTitle || !strengthStyle) {
 		return null;
 	}
 
 	return (
 		<PasswordStrengthContainer>
 			<PasswordStrengthText>
-				Password strength: <em>{STRENGTH_TITLES[strengthScore]}</em>
+				Password strength: <em>{strengthTitle}</em>
 			</PasswordStrengthText>
-			<PasswordStrengthMeter
-				style={STRENGTH_STYLES[strengthScore]}
-			></PasswordStrengthMeter>
+			<PasswordStrengthMeter style={strengthStyle}></PasswordStrengthMeter>
 		</PasswordStrengthContainer>
 	);
 };
