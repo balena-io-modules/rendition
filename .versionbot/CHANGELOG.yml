@@ -1,4 +1,50 @@
 - commits:
+    - subject: Allow inlining objects in Form
+      hash: e18e0fc3e69c3f4d2640e07e8bf4d4cda4a056ab
+      body: |
+        Often we want to have control over how the fields are laid out,
+        but we still want to have a serializable schema. There is still
+        some formatting issue with the array buttons, but that will be
+        done in a separate PR
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+    - subject: 'fix: in a diffrent way'
+      hash: 914a56d1db3695b6748241638dee10d6392d6f4c
+      body: |
+        change previous fix code
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+    - subject: 'fix: markdown test'
+      hash: eab4b38a270ea034d84cfa3021daec1c14bba0ba
+      body: |
+        fix markdown test suit
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+    - subject: 'fix: build and bump typescript version'
+      hash: a65d1f37efb3f13149fb503fb1821feed8a65a72
+      body: |
+        fix build null index error and bump typescript version
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 13.3.0
+  date: 2020-02-27T15:51:34.874Z
+- commits:
     - subject: Fix Tooltip display for badges
       hash: 0c288998a3f2450b3180b2ffe0a0277a6b6c3bb0
       body: ''
