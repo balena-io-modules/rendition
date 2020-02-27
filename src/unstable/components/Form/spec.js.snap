@@ -5,11 +5,22 @@ exports[`Form component should match the stored snapshot 1`] = `
   box-sizing: border-box;
 }
 
+.c6 {
+  box-sizing: border-box;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
 .c4 {
   margin-bottom: 8px;
 }
 
-.c10 {
+.c7 {
+  margin-right: 8px;
+}
+
+.c13 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
@@ -38,11 +49,11 @@ exports[`Form component should match the stored snapshot 1`] = `
   transition-timing-function: ease-in-out;
 }
 
-.c10:hover {
+.c13:hover {
   box-shadow: 0px 0px 0px 2px #00AEEF;
 }
 
-.c7 {
+.c10 {
   box-sizing: border-box;
   font-size: inherit;
   font-family: inherit;
@@ -59,28 +70,28 @@ exports[`Form component should match the stored snapshot 1`] = `
   width: 100%;
 }
 
-.c7::-webkit-search-decoration {
+.c10::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-.c7::-webkit-input-placeholder {
+.c10::-webkit-input-placeholder {
   color: #abb9c5;
 }
 
-.c7::-moz-placeholder {
+.c10::-moz-placeholder {
   color: #abb9c5;
 }
 
-.c7:-ms-input-placeholder {
+.c10:-ms-input-placeholder {
   color: #abb9c5;
 }
 
-.c7::-moz-focus-inner {
+.c10::-moz-focus-inner {
   border: none;
   outline: none;
 }
 
-.c6 {
+.c9 {
   position: relative;
   width: 100%;
 }
@@ -96,7 +107,7 @@ exports[`Form component should match the stored snapshot 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c11 {
+.c14 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -116,22 +127,22 @@ exports[`Form component should match the stored snapshot 1`] = `
   justify-content: center;
 }
 
-.c11 svg {
+.c14 svg {
   color: inherit !important;
   font-size: 0.925em;
 }
 
-.c11:disabled {
+.c14:disabled {
   cursor: not-allowed;
 }
 
-.c11 {
+.c14 {
   color: white;
 }
 
-.c11:hover:enabled,
-.c11:focus:enabled,
-.c11:active:enabled {
+.c14:hover:enabled,
+.c14:focus:enabled,
+.c14:active:enabled {
   box-shadow: none;
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
@@ -139,13 +150,26 @@ exports[`Form component should match the stored snapshot 1`] = `
   opacity: undefined;
 }
 
-.c11:hover:enabled svg,
-.c11:focus:enabled svg,
-.c11:active:enabled svg {
+.c14:hover:enabled svg,
+.c14:focus:enabled svg,
+.c14:active:enabled svg {
   color: white !important;
 }
 
-.c8 {
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c11 {
   height: 38px;
   padding: 10px;
   padding-left: 20px;
@@ -153,11 +177,11 @@ exports[`Form component should match the stored snapshot 1`] = `
   cursor: auto;
 }
 
-.c8:focus {
+.c11:focus {
   border-color: #527699;
 }
 
-.c9 {
+.c12 {
   width: 100%;
 }
 
@@ -176,7 +200,7 @@ exports[`Form component should match the stored snapshot 1`] = `
   font-family: CircularStd,Arial,sans-serif;
 }
 
-.c5 {
+.c8 {
   display: inline-block;
   font-size: 12px;
   margin-bottom: 4px;
@@ -218,39 +242,47 @@ exports[`Form component should match the stored snapshot 1`] = `
       >
         <section>
           <div
-            className="c2 c4 form-group field field-string rendition-form__field--root_Name"
+            className="c2 c5"
           >
-            <label
-              className="c5 control-label"
-              htmlFor="root_Name"
-            >
-              Pokemon Name
-            </label>
             <div
-              className="c6"
+              className="c6 c7"
             >
-              <input
-                autoFocus={false}
-                className="c7 c8 c9"
-                disabled={false}
-                id="root_Name"
-                label="Pokemon Name"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                placeholder=""
-                readOnly={false}
-                required={false}
-                type="text"
-                value="Bulbasaur"
-              />
+              <div
+                className="c2 c4 form-group field field-string rendition-form__field--root_Name"
+              >
+                <label
+                  className="c8 control-label"
+                  htmlFor="root_Name"
+                >
+                  Pokemon Name
+                </label>
+                <div
+                  className="c9"
+                >
+                  <input
+                    autoFocus={false}
+                    className="c10 c11 c12"
+                    disabled={false}
+                    id="root_Name"
+                    label="Pokemon Name"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder=""
+                    readOnly={false}
+                    required={false}
+                    type="text"
+                    value="Bulbasaur"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </div>
       <button
-        className="c10 c11 "
+        className="c13 c14 "
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}

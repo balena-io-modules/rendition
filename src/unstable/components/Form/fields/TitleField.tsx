@@ -5,11 +5,10 @@ import { DefaultProps, Theme } from '../../../../common-types';
 import { px } from '../../../../utils';
 
 export const LegendElement = styled.legend`
-	font-size: ${props => px(props.theme.fontSizes[3])};
+	font-size: ${props => px(props.theme.fontSizes[2])};
 	color: #252629;
 	margin-top: 16px;
 	margin-bottom: 8px;
-	border-bottom: 1px solid ${props => px(props.theme.colors.gray.light)};
 	width: 100%;
 `;
 

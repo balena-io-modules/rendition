@@ -1,11 +1,10 @@
-import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
+import { faTrashAlt } from '@fortawesome/free-regular-svg-icons/faTrashAlt';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { JSONSchema6 } from 'json-schema';
 import map from 'lodash/map';
 import reduce from 'lodash/reduce';
 import * as React from 'react';
 import { FormValidation } from 'react-jsonschema-form';
-import styled from 'styled-components';
 import { Button, Input } from '../../../..';
 
 interface PatternPropertiesFieldProps {
@@ -34,10 +33,6 @@ interface ChangeTargetHandlerParams {
 		value: string;
 	};
 }
-
-const ActionButton = styled(Button)`
-	color: ${({ theme }) => theme.colors.text.light};
-`;
 
 const handleChange = (
 	func: (value: string, errorSchema?: FormValidation) => void,
@@ -155,18 +150,16 @@ export default class PatternPropertiesField extends React.Component<
 									/>
 
 									{!isLast && (
-										<ActionButton
-											type="button"
+										<Button
 											className="rendition-form-pattern-properties__remove-field"
 											plain
-											mb={2}
-											mt={1}
-											px={1}
-											ml={1}
+											primary
+											py={1}
+											px={2}
 											onClick={this.props.onDropPropertyClick(item.key)}
 										>
-											<FontAwesomeIcon icon={faTimes} />
-										</ActionButton>
+											<FontAwesomeIcon icon={faTrashAlt} />
+										</Button>
 									)}
 								</td>
 							</tr>

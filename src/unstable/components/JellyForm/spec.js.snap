@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`JellyForm component should match the stored snapshot 1`] = `
-.c11 {
+.c14 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
@@ -30,11 +30,11 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   transition-timing-function: ease-in-out;
 }
 
-.c11:hover {
+.c14:hover {
   box-shadow: 0px 0px 0px 2px #00AEEF;
 }
 
-.c8 {
+.c11 {
   box-sizing: border-box;
   font-size: inherit;
   font-family: inherit;
@@ -51,28 +51,28 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   width: 100%;
 }
 
-.c8::-webkit-search-decoration {
+.c11::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-.c8::-webkit-input-placeholder {
+.c11::-webkit-input-placeholder {
   color: #abb9c5;
 }
 
-.c8::-moz-placeholder {
+.c11::-moz-placeholder {
   color: #abb9c5;
 }
 
-.c8:-ms-input-placeholder {
+.c11:-ms-input-placeholder {
   color: #abb9c5;
 }
 
-.c8::-moz-focus-inner {
+.c11::-moz-focus-inner {
   border: none;
   outline: none;
 }
 
-.c7 {
+.c10 {
   position: relative;
   width: 100%;
 }
@@ -88,7 +88,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c12 {
+.c15 {
   font-family: CircularStd,Arial,sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -108,22 +108,22 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   justify-content: center;
 }
 
-.c12 svg {
+.c15 svg {
   color: inherit !important;
   font-size: 0.925em;
 }
 
-.c12:disabled {
+.c15:disabled {
   cursor: not-allowed;
 }
 
-.c12 {
+.c15 {
   color: white;
 }
 
-.c12:hover:enabled,
-.c12:focus:enabled,
-.c12:active:enabled {
+.c15:hover:enabled,
+.c15:focus:enabled,
+.c15:active:enabled {
   box-shadow: none;
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
@@ -131,9 +131,9 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   opacity: undefined;
 }
 
-.c12:hover:enabled svg,
-.c12:focus:enabled svg,
-.c12:active:enabled svg {
+.c15:hover:enabled svg,
+.c15:focus:enabled svg,
+.c15:active:enabled svg {
   color: white !important;
 }
 
@@ -141,11 +141,35 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   box-sizing: border-box;
 }
 
+.c7 {
+  box-sizing: border-box;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
 .c4 {
   margin-bottom: 8px;
 }
 
-.c9 {
+.c8 {
+  margin-right: 8px;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c12 {
   height: 38px;
   padding: 10px;
   padding-left: 20px;
@@ -153,11 +177,11 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   cursor: auto;
 }
 
-.c9:focus {
+.c12:focus {
   border-color: #527699;
 }
 
-.c10 {
+.c13 {
   width: 100%;
 }
 
@@ -177,15 +201,14 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
 }
 
 .c5 {
-  font-size: 20px;
+  font-size: 16px;
   color: #252629;
   margin-top: 16px;
   margin-bottom: 8px;
-  border-bottom: 1px solid #f4f4f4;
   width: 100%;
 }
 
-.c6 {
+.c9 {
   display: inline-block;
   font-size: 12px;
   margin-bottom: 4px;
@@ -233,44 +256,52 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
             Pokèmon
           </legend>
           <div
-            className="c2 c4 form-group field field-string rendition-form__field--root_Name"
+            className="c2 c6"
           >
-            <label
-              className="c6 control-label"
-              htmlFor="root_Name"
-            >
-              Name
-              <span
-                className="required"
-              >
-                *
-              </span>
-            </label>
             <div
-              className="c7"
+              className="c7 c8"
             >
-              <input
-                autoFocus={false}
-                className="c8 c9 c10"
-                disabled={false}
-                id="root_Name"
-                label="Name"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                placeholder=""
-                readOnly={false}
-                required={true}
-                type="text"
-                value="Bulbasaur"
-              />
+              <div
+                className="c2 c4 form-group field field-string rendition-form__field--root_Name"
+              >
+                <label
+                  className="c9 control-label"
+                  htmlFor="root_Name"
+                >
+                  Name
+                  <span
+                    className="required"
+                  >
+                    *
+                  </span>
+                </label>
+                <div
+                  className="c10"
+                >
+                  <input
+                    autoFocus={false}
+                    className="c11 c12 c13"
+                    disabled={false}
+                    id="root_Name"
+                    label="Name"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder=""
+                    readOnly={false}
+                    required={true}
+                    type="text"
+                    value="Bulbasaur"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </div>
       <button
-        className="c11 c12 "
+        className="c14 c15 "
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}
