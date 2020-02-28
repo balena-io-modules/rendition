@@ -13,3 +13,9 @@ tsifyFileContent(
   './src/extra/MarkdownEditor/defaultStyle.ts',
   str => '\n' + prettier.format(stripCssComments(str), { parser: 'css', useTabs: true })
 )
+
+tsifyFileContent(
+  './node_modules/react-notifications-component/dist/theme.css',
+  './src/components/Notifications/defaultStyle.ts',
+  str => '\n' + prettier.format(stripCssComments(str), { parser: 'css', useTabs: true })
+)
