@@ -54,6 +54,7 @@ export interface DismissableContainerProps extends FlexProps {
 	// This is passed so that we can vertically center the dismiss button with the first line of the content, regardless of the height of the content.
 	baselineHeight?: number;
 	solid?: boolean;
+	a11yTitle?: string;
 }
 
 interface ThemedDismissableContainerProps extends DismissableContainerProps {
@@ -69,6 +70,7 @@ export const DismissableContainer = withTheme(
 				baselineHeight,
 				solid,
 				theme,
+				a11yTitle,
 				...restProps
 			}: ThemedDismissableContainerProps,
 			ref,
@@ -86,6 +88,8 @@ export const DismissableContainer = withTheme(
 					{children}
 					{onDismiss && (
 						<DismissButton
+							title={a11yTitle || 'Dismiss'}
+							a11yTitle={a11yTitle || 'Dismiss'}
 							baselineHeight={baseline}
 							color={solid ? 'white' : undefined}
 							primary={!solid}

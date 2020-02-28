@@ -80,6 +80,7 @@ const Alert = (props: ThemedAlertProps) => {
 			solid={emphasized}
 			color={color}
 			onDismiss={onDismiss}
+			a11yTitle="Dismiss Alert"
 			{...restProps}
 		>
 			{icon && (

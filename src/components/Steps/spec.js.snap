@@ -463,12 +463,14 @@ exports[`Steps component should match the stored snapshot 1`] = `
       </div>
     </div>
     <button
+      aria-label="Dismiss"
       className="c19 c20 c21"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
       onMouseOut={[Function]}
       onMouseOver={[Function]}
+      title="Dismiss"
       type="button"
     >
       <svg
