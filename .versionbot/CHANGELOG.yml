@@ -1,4 +1,27 @@
 - commits:
+    - subject: Import react-notifications-component theme with styled-components
+      hash: 5f7248410eba5c89ef8311587c7910beeab200e1
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lorenzo Alberto Maria Ambrosi <lorenzothunder.ambrosi@gmail.com>
+        signed-off-by: Lorenzo Alberto Maria Ambrosi <lorenzothunder.ambrosi@gmail.com>
+      author: Lorenzo Alberto Maria Ambrosi
+    - subject: Replace animate.css with keyframes and classes
+      hash: 01bed339a5654f7c9efcca897a1d323f70d4656c
+      body: ''
+      footer:
+        Fixes: '#1054'
+        fixes: '#1054'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lorenzo Alberto Maria Ambrosi <lorenzothunder.ambrosi@gmail.com>
+        signed-off-by: Lorenzo Alberto Maria Ambrosi <lorenzothunder.ambrosi@gmail.com>
+      author: Lorenzo Alberto Maria Ambrosi
+  version: 13.3.1
+  date: 2020-02-28T10:23:24.719Z
+- commits:
     - subject: Allow inlining objects in Form
       hash: e18e0fc3e69c3f4d2640e07e8bf4d4cda4a056ab
       body: |
