@@ -192,6 +192,26 @@ describe('Filters component', () => {
           .text()
       ).toBe('Tag is not rarity : 10')
     })
+
+    it('should remove buttons labels if compact property is set to true', () => {
+      const component = mount(
+        <Provider>
+          <Filters compact={[true, true, true, true]} schema={schema} />
+        </Provider>
+      )
+      expect(
+        component
+          .find('button')
+          .at(0)
+          .text()
+      ).toBe('')
+      expect(
+        component
+          .find('button')
+          .at(1)
+          .text()
+      ).toBe('')
+    })
   })
 
   describe('save views modal', () => {

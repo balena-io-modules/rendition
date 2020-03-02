@@ -11,7 +11,6 @@ export { default as Divider, DividerProps } from './components/Divider';
 export {
 	default as Filters,
 	FiltersProps,
-	FilterInputProps,
 	ViewScope,
 	FiltersView,
 	FilterSignature,

@@ -241,6 +241,16 @@ storiesOf('Next/Filters', module)
       </Box>
     )
   })
+  .add('Compact', () => {
+    const props = {
+      compact: [true]
+    }
+    return (
+      <Box m={3}>
+        <FiltersDemo extra={props} />
+      </Box>
+    )
+  })
   .add('Dark', () => {
     return (
       <Box bg='#343434' p={3}>

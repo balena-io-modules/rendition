@@ -327,3 +327,45 @@ export const unflattenSchema = (
 
 	return unflattenedSchema;
 };
+
+export const getCleanEditModel = (
+	schema: JSONSchema6,
+	field?: string | null,
+) => {
+	if (!field) {
+		field = Object.keys(schema.properties!).shift()!;
+	}
+
+	const fieldOperators = getOperators(schema, field);
+	if (!fieldOperators.length) {
+		return {
+			field,
+			operator: '',
+			value: '',
+		};
+	}
+
+	const operator = fieldOperators.shift()!.slug;
+
+	let value: any = '';
+	const subschema = schema.properties![field];
+	if (typeof subschema !== 'boolean') {
+		if (subschema.enum) {
+			value = subschema.enum[0] || '';
+		}
+
+		if (subschema.oneOf) {
+			value = (subschema.oneOf[0] as JSONSchema6).const || '';
+		}
+
+		if (subschema.type === 'boolean') {
+			value = true;
+		}
+	}
+
+	return {
+		field,
+		operator,
+		value,
+	};
+};
