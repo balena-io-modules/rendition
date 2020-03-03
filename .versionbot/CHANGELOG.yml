@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'add: useBreakpoint hook to provider'
+      hash: 1dc837e38ad06e55e3add5a866a766234be3e43c
+      body: |
+        add useBreakpoint hook to provider context
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 13.3.2
+  date: 2020-03-03T10:55:55.484Z
+- commits:
     - subject: Import react-notifications-component theme with styled-components
       hash: 5f7248410eba5c89ef8311587c7910beeab200e1
       body: ''
