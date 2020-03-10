@@ -4,7 +4,7 @@ import {
 } from 'grommet';
 import * as React from 'react';
 import styled from 'styled-components';
-import { DefaultProps, Omit, RenditionSystemProps } from '../../common-types';
+import { DefaultProps, RenditionSystemProps } from '../../common-types';
 
 import asRendition from '../../asRendition';
 
@@ -64,7 +64,7 @@ const Checkbox = ({ className, ...otherProps }: InternalCheckboxProps) => {
 
 export interface InternalCheckboxProps
 	extends DefaultProps,
-		Omit<GrommetCheckBoxProps, 'onChange'> {
+		GrommetCheckBoxProps {
 	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 

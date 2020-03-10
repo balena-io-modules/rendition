@@ -73,7 +73,7 @@ exports[`Steps component should match the stored snapshot 1`] = `
   background: none;
   border-color: none;
   color: #009dd7;
-  opacity: undefined;
+  opacity: initial;
 }
 
 .c20:hover:enabled svg,
@@ -464,7 +464,7 @@ exports[`Steps component should match the stored snapshot 1`] = `
     </div>
     <button
       aria-label="Dismiss"
-      className="c19 c20 c21"
+      className="c19 sc-AxheI c20 c21"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}

@@ -87,7 +87,7 @@ exports[`Button renders correctly 1`] = `
   background: #2A506F;
   border-color: #2A506F;
   color: white;
-  opacity: undefined;
+  opacity: initial;
 }
 
 .c3:hover:enabled svg,
@@ -115,7 +115,7 @@ exports[`Button renders correctly 1`] = `
   className="c0 c1"
 >
   <button
-    className="c2 c3 "
+    className="c2 sc-AxheI c3 "
     onBlur={[Function]}
     onFocus={[Function]}
     onMouseOut={[Function]}
@@ -214,7 +214,7 @@ exports[`Styled Anchor Button renders correctly 1`] = `
   background: #2A506F;
   border-color: #2A506F;
   color: white;
-  opacity: undefined;
+  opacity: initial;
 }
 
 .c3:hover:enabled svg,
@@ -246,7 +246,7 @@ exports[`Styled Anchor Button renders correctly 1`] = `
   className="c0 c1"
 >
   <a
-    className="c2 c3 c4"
+    className="c2 sc-AxheI c3 c4"
     href="#"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -345,7 +345,7 @@ exports[`Styled Button renders correctly 1`] = `
   background: #2A506F;
   border-color: #2A506F;
   color: white;
-  opacity: undefined;
+  opacity: initial;
 }
 
 .c3:hover:enabled svg,
@@ -377,7 +377,7 @@ exports[`Styled Button renders correctly 1`] = `
   className="c0 c1"
 >
   <button
-    className="c2 c3 c4"
+    className="c2 sc-AxheI c3 c4"
     onBlur={[Function]}
     onFocus={[Function]}
     onMouseOut={[Function]}

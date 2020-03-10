@@ -159,7 +159,7 @@ exports[`Modal renders correctly 1`] = `
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
   color: white;
-  opacity: undefined;
+  opacity: initial;
 }
 
 .c12:hover:enabled svg,
@@ -254,7 +254,7 @@ exports[`Modal renders correctly 1`] = `
             className="c6 c9 c10"
           >
             <button
-              className="c11 c12 "
+              className="c11 sc-AxheI c12 "
               onBlur={[Function]}
               onFocus={[Function]}
               onMouseOut={[Function]}

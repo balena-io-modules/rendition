@@ -17,7 +17,7 @@ export const getHoverStyle = (props: any) => `
 `;
 
 export const getBaseStyle = (props: any) => `
-	& > label > span { 
+	& > label > span {
 		font-family: ${props.theme.font};
 	}
 
@@ -52,7 +52,7 @@ const RadioButton = ({
 
 // Make name optional, and override onChange to not be of `any` type.
 interface InternalRadioButtonProps
-	extends Omit<GrommetRadioButtonProps, 'onChange' | 'name'>,
+	extends Omit<GrommetRadioButtonProps, 'name'>,
 		DefaultProps {
 	name?: string;
 	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;

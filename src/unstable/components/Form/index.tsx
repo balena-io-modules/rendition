@@ -59,7 +59,7 @@ const FormWrapper = styled(Box)`
 		border: 0;
 	}
 
-	// Style the error list, since it can't be templated
+	/* Style the error list, since it can't be templated */
 	.panel-danger,
 	.error-detail {
 		font-size: ${props => utils.px(get(props, 'theme.fontSizes[1]', 14))};

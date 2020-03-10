@@ -1,4 +1,5 @@
 import get from 'lodash/get';
+import { css } from 'styled-components';
 import { Theme, ThemedDefaultProps } from '~/common-types';
 
 export const normal = (props: ThemedDefaultProps) =>
@@ -9,9 +10,15 @@ export const bold = (props: ThemedDefaultProps) =>
 export const px = (n: any) => (typeof n === 'number' ? n + 'px' : n);
 
 export const monospace = (props: { monospace?: boolean; theme: Theme }) =>
-	props.monospace ? `font-family: ${props.theme.monospace}` : null;
+	props.monospace
+		? css`
+				font-family: ${props.theme.monospace};
+		  `
+		: null;
 
 export const emphasized = (props: { emphasized?: boolean; theme: Theme }) =>
-	`height: ${px(
-		props.emphasized ? props.theme.space[5] : props.theme.space[4],
-	)}`;
+	css`
+		height: ${px(
+			props.emphasized ? props.theme.space[5] : props.theme.space[4],
+		)};
+	`;

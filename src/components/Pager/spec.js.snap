@@ -119,7 +119,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
   background: #DDE1f0;
   border-color: #DDE1f0;
   color: #2A506F;
-  opacity: undefined;
+  opacity: initial;
 }
 
 .c8:hover:enabled svg,
@@ -229,7 +229,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
         className="c2 c6"
       >
         <button
-          className="c7 c8 rendition-pager__btn--prev"
+          className="c7 sc-AxheI c8 rendition-pager__btn--prev"
           disabled={true}
           onBlur={[Function]}
           onClick={[Function]}
@@ -257,7 +257,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
           </svg>
         </button>
         <button
-          className="c9 c8 rendition-pager__btn--next"
+          className="c9 sc-AxheI c8 rendition-pager__btn--next"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}

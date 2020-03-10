@@ -120,7 +120,7 @@ exports[`DropDownButton renders correctly 1`] = `
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
   color: white;
-  opacity: undefined;
+  opacity: initial;
 }
 
 .c5:hover:enabled svg,
@@ -187,7 +187,7 @@ exports[`DropDownButton renders correctly 1`] = `
   >
     <span>
       <button
-        className="c4 c5 c6"
+        className="c4 sc-AxheI c5 c6"
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}
@@ -199,7 +199,7 @@ exports[`DropDownButton renders correctly 1`] = `
         </div>
       </button>
       <button
-        className="c7 c5 c8"
+        className="c7 sc-AxheI c5 c8"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -351,7 +351,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
   color: white;
-  opacity: undefined;
+  opacity: initial;
 }
 
 .c5:hover:enabled svg,
@@ -456,7 +456,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   >
     <span>
       <button
-        className="c4 c5 c6"
+        className="c4 sc-AxheI c5 c6"
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}
@@ -468,7 +468,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
         </div>
       </button>
       <button
-        className="c7 c5 c8"
+        className="c7 sc-AxheI c5 c8"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}

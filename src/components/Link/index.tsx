@@ -9,7 +9,7 @@ import { DefaultProps, RenditionSystemProps } from '../../common-types';
 import { darken, monospace } from '../../utils';
 import { align, bold, caps } from '../Txt';
 
-let Base = styled.a<InternalLinkProps>`
+const Base = styled.a<InternalLinkProps>`
   ${align}
   ${monospace};
   ${caps}
@@ -31,15 +31,13 @@ let Base = styled.a<InternalLinkProps>`
 `;
 
 const Link = ({ is, blank, children, ...props }: InternalLinkProps) => {
-	if (is) {
-		Base = Base.withComponent(is as any);
-	}
 	if (props.disabled) {
 		props = omit(props, 'href');
 	}
 	return (
 		<Base
 			{...props}
+			as={is}
 			rel={blank ? 'noopener' : undefined}
 			target={blank ? '_blank' : undefined}
 		>
@@ -67,7 +65,7 @@ export interface InternalLinkProps extends DefaultProps {
 	rel?: string;
 	target?: string;
 	type?: string;
-	is?: string;
+	is?: React.ElementType;
 	decor?: string;
 	color?: string;
 }

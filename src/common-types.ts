@@ -62,7 +62,7 @@ export interface DefaultProps extends React.DOMAttributes<HTMLElement> {
 	className?: string;
 	contentEditable?: boolean;
 	contextMenu?: string;
-	dir?: string;
+	dir?: 'rtl';
 	draggable?: boolean;
 	hidden?: boolean;
 	id?: string;
