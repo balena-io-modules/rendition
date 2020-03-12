@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add a spinner component
+      hash: 3ab96680b86a6e3d03c06c7ea320ab79d7f090c8
+      body: ''
+      footer:
+        Connects-to: '#1048'
+        connects-to: '#1048'
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 13.4.0
+  date: 2020-03-11T16:52:46.864Z
+- commits:
     - subject: aria-label on alert close button
       hash: 1cd34bea5a7665b01649f24da635fb3cb69c30d0
       body: ''
