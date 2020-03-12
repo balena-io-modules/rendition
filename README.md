@@ -75,6 +75,7 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [RadioButtonGroup](#radiobuttongroup)
 - [Search](#search)
 - [Select](#select)
+- [Spinner](#spinner)
 - [Steps](#steps)
 - [Table](#table)
 - [Tabs](#tabs)
@@ -664,6 +665,18 @@ You can refer to the [grommet select page](https://v2.grommet.io/select) for all
 
 
 
+### Spinner
+
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Spinner/story.js)
+
+#### Props
+
+| Name          | Type      | Default   | Required   | Description                                          |
+| ------ | ------ | --------- | ---------- | ------------- |
+| `children`     | `React.ReactNode` |         | -          | If the spinner has children, it will show an opaque overlay over the children when it is spinning |
+| `show`         | `boolean`         | true    | -          | If passed, it will control whether the spinner is shown or not |
+| `emphasized`   | `boolean`         | false   | -          | If true, it will render a large spinner |
+| `label`        | `string`          |         | -          | A label that will be rendered next to the spinner. Renders on right-hand side for standard spinner, and below spinner for emphasized |
 ### Steps
 
 A visual guide showing a number of steps to be performed by the user. The `Steps` component takes one or more `Step` components as children.

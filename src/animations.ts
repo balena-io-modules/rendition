@@ -20,6 +20,11 @@ const fadeOut = keyframes`
 	}
 `;
 
+export const rotate360 = keyframes`
+  0% {transform: rotate(0deg)}
+  100% {transform: rotate(360deg)}
+`;
+
 export const animations = css`
 	.fadeIn {
 		animation: ${fadeIn};
