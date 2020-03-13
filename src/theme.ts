@@ -38,26 +38,26 @@ const colors = {
 	danger: {
 		main: danger,
 		semilight: '#ffa1a1',
-		light: '#ffebeb',
-		dark: '#dc2823',
+		light: '#feebeb',
+		dark: '#eb0800',
 	},
 	warning: {
 		main: warning,
 		semilight: '#fdd190',
-		light: '#fff5e6',
-		dark: '#ee8d00',
+		light: '#fef3e5',
+		dark: '#ad6800',
 	},
 	success: {
 		main: success,
 		semilight: '#8ce09a',
-		light: '#f0fdf2',
-		dark: '#16a52d',
+		light: '#e8f8ea',
+		dark: '#138b27',
 	},
 	info: {
 		main: info,
 		semilight: '#90cbee',
-		light: '#e9f4fb',
-		dark: '#1078b4',
+		light: '#e8f5fc',
+		dark: '#107dbc',
 	},
 
 	text: {
