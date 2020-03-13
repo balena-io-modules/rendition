@@ -9,7 +9,6 @@ exports[`Filters component should match the stored snapshot 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -23,7 +22,6 @@ exports[`Filters component should match the stored snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 0px;
 }
 
 .c10 {
@@ -147,7 +145,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
   color: white;
-  opacity: undefined;
+  opacity: initial;
 }
 
 .c7:hover:enabled svg,
@@ -201,7 +199,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   background: #DDE1f0;
   border-color: #DDE1f0;
   color: #2A506F;
-  opacity: undefined;
+  opacity: initial;
 }
 
 .c16:hover:enabled svg,
@@ -351,18 +349,6 @@ exports[`Filters component should match the stored snapshot 1`] = `
   font-family: CircularStd,Arial,sans-serif;
 }
 
-@media only screen and (max-width:768px) {
-  .c9 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c9 {
-    padding: 0px;
-  }
-}
-
 <div
   className="c0 c1"
 >
@@ -373,7 +359,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
       className="c2 c5"
     >
       <button
-        className="c6 c7 c8"
+        className="c6 sc-AxheI c7 c8"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -450,7 +436,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
           className="c2 c13 c14"
         >
           <button
-            className="c15 c16 c17"
+            className="c15 sc-AxheI c16 c17"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}

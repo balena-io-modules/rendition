@@ -87,7 +87,7 @@ exports[`ButtonGroup renders correctly 1`] = `
   background: #2A506F;
   border-color: #2A506F;
   color: white;
-  opacity: undefined;
+  opacity: initial;
 }
 
 .c5:hover:enabled svg,
@@ -148,10 +148,10 @@ exports[`ButtonGroup renders correctly 1`] = `
   className="c0 c1"
 >
   <div
-    className="c2 c3"
+    className="c2 sc-fzokOt c3"
   >
     <button
-      className="c4 c5 "
+      className="c4 sc-AxheI c5 "
       onBlur={[Function]}
       onFocus={[Function]}
       onMouseOut={[Function]}
@@ -161,7 +161,7 @@ exports[`ButtonGroup renders correctly 1`] = `
       First
     </button>
     <button
-      className="c4 c5 "
+      className="c4 sc-AxheI c5 "
       onBlur={[Function]}
       onFocus={[Function]}
       onMouseOut={[Function]}
@@ -171,7 +171,7 @@ exports[`ButtonGroup renders correctly 1`] = `
       Second
     </button>
     <button
-      className="c4 c5 "
+      className="c4 sc-AxheI c5 "
       onBlur={[Function]}
       onFocus={[Function]}
       onMouseOut={[Function]}

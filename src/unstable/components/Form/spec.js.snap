@@ -147,7 +147,7 @@ exports[`Form component should match the stored snapshot 1`] = `
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
   color: white;
-  opacity: undefined;
+  opacity: initial;
 }
 
 .c14:hover:enabled svg,
@@ -259,6 +259,7 @@ exports[`Form component should match the stored snapshot 1`] = `
                 <div
                   className="c9"
                 >
+                  
                   <input
                     autoFocus={false}
                     className="c10 c11 c12"
@@ -282,7 +283,7 @@ exports[`Form component should match the stored snapshot 1`] = `
         </section>
       </div>
       <button
-        className="c13 c14 "
+        className="c13 sc-AxmLO c14 "
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}

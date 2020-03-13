@@ -1,22 +1,37 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { style } from 'styled-system';
 import asRendition from '../../asRendition';
 import { DefaultProps, RenditionSystemProps, Theme } from '../../common-types';
 import { monospace } from '../../utils';
 
 export const whitespace = (props: ThemedTxtProps) =>
-	props.whitespace ? `white-space: ${props.whitespace}` : null;
+	props.whitespace
+		? css`
+				white-space: ${props.whitespace};
+		  `
+		: null;
 
 export const caps = (props: ThemedTxtProps) =>
-	props.caps ? `text-transform: uppercase, letterSpacing: 0.2em` : null;
+	props.caps
+		? css`
+				text-transform: uppercase;
+				letter-spacing: 0.2em;
+		  `
+		: null;
 
 export const italic = (props: ThemedTxtProps) =>
-	props.italic ? `font-style: italic` : null;
+	props.italic
+		? css`
+				font-style: italic;
+		  `
+		: null;
 
 export const bold = (props: ThemedTxtProps) =>
 	props.bold
-		? `font-weight: ${props.theme.weights[props.theme.weights.length - 1]}`
+		? css`
+				font-weight: ${props.theme.weights[props.theme.weights.length - 1]};
+		  `
 		: null;
 
 export const align = style({

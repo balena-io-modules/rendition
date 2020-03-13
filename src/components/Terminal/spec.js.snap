@@ -37,7 +37,7 @@ exports[`Terminal renders correctly 1`] = `
 }
 
 .c3 .xterm {
-  font-feature-settings: "liga" 0;
+  font-feature-settings: 'liga' 0;
   position: relative;
   -webkit-user-select: none;
   -moz-user-select: none;

@@ -204,7 +204,7 @@ class DropDownButton extends React.Component<
 			<Wrapper
 				className={className}
 				{...props}
-				ref={node => (this.dropdownNode = node)}
+				ref={(node: any) => (this.dropdownNode = node)}
 			>
 				{joined ? (
 					<Toggle

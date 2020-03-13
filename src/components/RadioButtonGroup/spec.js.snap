@@ -9,37 +9,14 @@ exports[`RadioButtonGroup renders correctly 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  outline: none;
-  max-width: 100%;
-  margin: 0px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 0px;
-}
-
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -53,10 +30,9 @@ exports[`RadioButtonGroup renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px;
 }
 
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -64,7 +40,6 @@ exports[`RadioButtonGroup renders correctly 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -81,11 +56,10 @@ exports[`RadioButtonGroup renders correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 0px;
   border-radius: 100%;
 }
 
-.c12 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -93,7 +67,6 @@ exports[`RadioButtonGroup renders correctly 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -110,15 +83,93 @@ exports[`RadioButtonGroup renders correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 0px;
   border-radius: 100%;
 }
 
-.c9 {
+.c8 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   height: 12px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  opacity: 0.5;
+  cursor: default;
+}
+
+.c4:hover input:not([disabled]) + div,
+.c4:hover input:not([disabled]) + span {
+  border-color: #527699;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.c9:hover input:not([disabled]) + div,
+.c9:hover input:not([disabled]) + span {
+  border-color: #527699;
+}
+
+.c6 {
+  opacity: 0;
+  -moz-appearance: none;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+.c10 {
+  opacity: 0;
+  -moz-appearance: none;
+  width: 0;
+  height: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.c12 {
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  fill: #FFFFFF;
 }
 
 .c0 {
@@ -130,57 +181,6 @@ exports[`RadioButtonGroup renders correctly 1`] = `
   -ms-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-
-.c5 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  opacity: 0.5;
-  cursor: default;
-}
-
-.c5:hover input:not([disabled]) + div,
-.c5:hover input:not([disabled]) + span {
-  border-color: #527699;
-}
-
-.c10 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: pointer;
-}
-
-.c10:hover input:not([disabled]) + div,
-.c10:hover input:not([disabled]) + span {
-  border-color: #527699;
-}
-
-.c7 {
-  opacity: 0;
-  -moz-appearance: none;
-  width: 0;
-  height: 0;
-  margin: 0;
-}
-
-.c11 {
-  opacity: 0;
-  -moz-appearance: none;
-  width: 0;
-  height: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-.c13 {
-  box-sizing: border-box;
-  width: 12px;
-  height: 12px;
-  fill: #FFFFFF;
 }
 
 .c1 {
@@ -218,79 +218,25 @@ exports[`RadioButtonGroup renders correctly 1`] = `
 }
 
 @media only screen and (max-width:768px) {
-  .c2 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c2 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c4 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c4 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c6 {
+  .c5 {
     margin-right: 10px;
   }
 }
 
 @media only screen and (max-width:768px) {
-  .c6 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c8 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c8 {
+  .c7 {
     border: solid 1px #DDE1f0;
   }
 }
 
 @media only screen and (max-width:768px) {
-  .c8 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c12 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c12 {
+  .c11 {
     border: solid 1px #7D4CDB;
   }
 }
 
 @media only screen and (max-width:768px) {
-  .c12 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c9 {
+  .c8 {
     height: 6px;
   }
 }
@@ -300,28 +246,30 @@ exports[`RadioButtonGroup renders correctly 1`] = `
 >
   <div
     className="c2 c3 "
-    value="selected"
   >
     <label
-      className="c4 c5"
+      className="c4"
       disabled={true}
       onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
-        className="c6 "
+        className="c5 "
       >
         <input
           checked={false}
-          className="c7"
+          className="c6"
           disabled={true}
           name="radio button group"
           onBlur={[Function]}
+          onChange={[Function]}
           onFocus={[Function]}
           type="radio"
           value="disabled"
         />
         <div
-          className="c8 "
+          className="c7 "
         />
       </div>
       <span>
@@ -329,28 +277,31 @@ exports[`RadioButtonGroup renders correctly 1`] = `
       </span>
     </label>
     <div
-      className="c9"
+      className="c8"
     />
     <label
-      className="c4 c10"
+      className="c9"
       disabled={false}
       onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
-        className="c6 "
+        className="c5 "
       >
         <input
           checked={false}
-          className="c11"
+          className="c10"
           disabled={false}
           name="radio button group"
           onBlur={[Function]}
+          onChange={[Function]}
           onFocus={[Function]}
           type="radio"
           value="enabled"
         />
         <div
-          className="c8 "
+          className="c7 "
         />
       </div>
       <span>
@@ -358,31 +309,34 @@ exports[`RadioButtonGroup renders correctly 1`] = `
       </span>
     </label>
     <div
-      className="c9"
+      className="c8"
     />
     <label
-      className="c4 c10"
+      className="c9"
       disabled={false}
       onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
-        className="c6 "
+        className="c5 "
       >
         <input
           checked={true}
-          className="c11"
+          className="c10"
           disabled={false}
           name="radio button group"
           onBlur={[Function]}
+          onChange={[Function]}
           onFocus={[Function]}
           type="radio"
           value="selected"
         />
         <div
-          className="c12 "
+          className="c11 "
         >
           <svg
-            className="c13"
+            className="c12"
             preserveAspectRatio="xMidYMid meet"
             viewBox="0 0 24 24"
           >

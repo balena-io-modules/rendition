@@ -74,7 +74,7 @@ exports[`Ordered list renders correctly 1`] = `
   className="c0 c1"
 >
   <ol
-    className="c2 "
+    className="sc-pReKu c2 "
   >
     <li>
       <span>
@@ -159,7 +159,7 @@ exports[`Unordered list renders correctly 1`] = `
   className="c0 c1"
 >
   <ul
-    className="c2 "
+    className="sc-pReKu c2 "
   >
     <li>
       <span>

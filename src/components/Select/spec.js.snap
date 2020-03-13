@@ -43,7 +43,6 @@ exports[`Select component should match the stored snapshot 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin: 0px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -57,7 +56,6 @@ exports[`Select component should match the stored snapshot 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 0px;
 }
 
 .c6 {
@@ -67,7 +65,6 @@ exports[`Select component should match the stored snapshot 1`] = `
   display: flex;
   box-sizing: border-box;
   outline: none;
-  margin: 0px;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
@@ -79,7 +76,6 @@ exports[`Select component should match the stored snapshot 1`] = `
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  padding: 0px;
 }
 
 .c11 {
@@ -100,7 +96,6 @@ exports[`Select component should match the stored snapshot 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  padding: 0px;
 }
 
 .c3 {
@@ -215,39 +210,9 @@ exports[`Select component should match the stored snapshot 1`] = `
 }
 
 @media only screen and (max-width:768px) {
-  .c5 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c5 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c6 {
-    margin: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c6 {
-    padding: 0px;
-  }
-}
-
-@media only screen and (max-width:768px) {
   .c11 {
     margin-left: 6px;
     margin-right: 6px;
-  }
-}
-
-@media only screen and (max-width:768px) {
-  .c11 {
-    padding: 0px;
   }
 }
 
@@ -288,6 +253,7 @@ exports[`Select component should match the stored snapshot 1`] = `
               readOnly={true}
               tabIndex="-1"
               type="text"
+              value=""
             />
           </div>
         </div>

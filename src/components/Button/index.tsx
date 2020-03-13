@@ -1,11 +1,10 @@
 import { Button, ButtonProps as GrommetButtonProps } from 'grommet';
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import asRendition from '../../asRendition';
 import {
 	Coloring,
 	DefaultProps,
-	Omit,
 	RenditionSystemProps,
 	ResponsiveStyle,
 	Sizing,
@@ -18,7 +17,7 @@ const getHoverEffectOverride = (
 	color: string,
 	opacity?: string,
 ) => {
-	return `
+	return css`
 		&:hover:enabled,
 		&:focus:enabled,
 		&:active:enabled {
@@ -30,7 +29,7 @@ const getHoverEffectOverride = (
 			background: ${bg};
 			border-color: ${bg};
 			color: ${color};
-			opacity: ${opacity};
+			opacity: ${opacity ?? 'initial'};
 		}
 	`;
 };
@@ -145,7 +144,7 @@ const Plain = styled(ButtonBase)<{ hoverColor?: string; color?: string }>`
 	}
 `;
 
-const underlineButtonActiveStyles = (props: ThemedButtonProps) => `
+const underlineButtonActiveStyles = (props: ThemedButtonProps) => css`
 	& {
 		color: ${props.color || props.theme.colors.text.main};
 		background: none;
@@ -273,11 +272,9 @@ interface ButtonBaseProps extends Coloring, Sizing {
 	light?: boolean;
 }
 
-// Grommet has its own declaration for the 'onClick' attribute, so the default
-// one is omitted as Grommet takes precedence here
 export interface InternalButtonProps
 	extends ButtonBaseProps,
-		Omit<DefaultProps, 'onClick'>,
+		DefaultProps,
 		GrommetButtonProps {
 	type?: 'submit' | 'reset' | 'button';
 	label?: string | JSX.Element;

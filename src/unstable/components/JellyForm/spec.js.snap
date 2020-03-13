@@ -128,7 +128,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
   color: white;
-  opacity: undefined;
+  opacity: initial;
 }
 
 .c15:hover:enabled svg,
@@ -278,6 +278,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
                 <div
                   className="c10"
                 >
+                  
                   <input
                     autoFocus={false}
                     className="c11 c12 c13"
@@ -301,7 +302,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
         </section>
       </div>
       <button
-        className="c14 c15 "
+        className="c14 sc-AxheI c15 "
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}

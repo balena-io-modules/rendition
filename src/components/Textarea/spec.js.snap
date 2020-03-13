@@ -84,6 +84,7 @@ exports[`Textarea component should match the stored snapshot 1`] = `
   <textarea
     className="c2 c3 "
     onBlur={[Function]}
+    onChange={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
   />
