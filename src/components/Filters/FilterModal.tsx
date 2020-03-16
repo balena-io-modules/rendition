@@ -14,7 +14,7 @@ import Txt from '../Txt';
 import * as SchemaSieve from './SchemaSieve';
 
 export interface FilterModalProps {
-	addFilter: (newEdit: EditModel[]) => void;
+	addFilter: (filters: EditModel[]) => void;
 	onClose: () => void;
 	schema: JSONSchema6;
 	edit: EditModel[];
@@ -40,8 +40,9 @@ const FilterInput = (props: FilterInputProps) => {
 		return null;
 	}
 
-	const Edit = model.Edit as React.SFC<any>;
-
+	const Edit = model.Edit as React.FC<any>;
+	// TODO: change this logic as it will not work in future versions
+	// WARNING: Cannot update a component from inside the function body of a different component
 	return (
 		<Edit
 			schema={props.schema}
@@ -70,44 +71,45 @@ export const FilterModal = ({
 	schema,
 	edit,
 }: FilterModalProps) => {
-	console.log('render');
-	const [newEdit, setNewEdit] = useState(edit);
+	const [filters, setFilters] = useState(edit);
 
 	const setEditField = (field: string, index: number) => {
-		const currentEdit = [...newEdit];
-		currentEdit.splice(index, 1, SchemaSieve.getCleanEditModel(schema, field));
-		setNewEdit(currentEdit);
+		const currentEdit = filters.map((filter, i) =>
+			i === index ? SchemaSieve.getCleanEditModel(schema, field) : filter,
+		);
+		setFilters(currentEdit);
 	};
 
 	const setEditOperator = (operator: string, index: number) => {
-		const currentEdit = [...newEdit];
-		const item = currentEdit[index];
-		currentEdit.splice(index, 1, { ...item, operator });
-		setNewEdit(currentEdit);
+		const currentEdit = filters.map((filter, i) =>
+			i === index ? { ...filter, operator } : filter,
+		);
+		setFilters(currentEdit);
 	};
 
 	const setEditValue = (value: string, index: number) => {
-		const currentEdit = [...newEdit];
-		const item = currentEdit[index];
-		currentEdit.splice(index, 1, { ...item, value });
-		setNewEdit(currentEdit);
+		const currentEdit = filters.map((filter, i) =>
+			i === index ? { ...filter, value } : filter,
+		);
+		setFilters(currentEdit);
 	};
 
 	const removeCompound = (index: number) => {
-		const currentEdit = [...newEdit];
-		currentEdit.splice(index, 1);
-		setNewEdit(currentEdit);
+		const currentEdit = filters.reduce(
+			(acc, cur, i) => (i === index ? acc : [...acc, cur]),
+			[],
+		);
+		setFilters(currentEdit);
 	};
 	return (
 		<Modal
 			title="Filter by"
 			cancel={onClose}
-			done={() => addFilter(newEdit)}
+			done={() => addFilter(filters)}
 			action="Save"
 		>
-			{map(newEdit, ({ field, operator, value }, index) => {
+			{filters.map(({ field, operator, value }, index) => {
 				const operators = SchemaSieve.getOperators(schema, field);
-
 				return (
 					<RelativeBox key={index}>
 						{index > 0 && <Txt my={2}>OR</Txt>}
@@ -147,10 +149,9 @@ export const FilterModal = ({
 										labelKey="label"
 										// TODO: Remove this logic and pass the primitive value when this is fixed: https://github.com/grommet/grommet/issues/3154
 										value={operators.find(x => x.slug === operator)}
-										onChange={({ option }) => {
-											console.log('lallero');
-											return setEditOperator(option.slug, index);
-										}}
+										onChange={({ option }) =>
+											setEditOperator(option.slug, index)
+										}
 									/>
 								</Box>
 							)}
@@ -182,7 +183,7 @@ export const FilterModal = ({
 				primary
 				underline
 				onClick={() =>
-					setNewEdit(newEdit.concat(SchemaSieve.getCleanEditModel(schema)))
+					setFilters(filters.concat(SchemaSieve.getCleanEditModel(schema)))
 				}
 			>
 				Add alternative

@@ -242,12 +242,9 @@ storiesOf('Next/Filters', module)
     )
   })
   .add('Compact', () => {
-    const props = {
-      compact: [true]
-    }
     return (
       <Box m={3}>
-        <FiltersDemo extra={props} />
+        <FiltersDemo compact={[true]} />
       </Box>
     )
   })

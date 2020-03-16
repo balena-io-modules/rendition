@@ -90,7 +90,7 @@ const Toggle = ({
 	handler: React.MouseEventHandler<HTMLElement>;
 }) => {
 	if (joined) {
-		if (label) {
+		if (label || props.icon) {
 			return (
 				<JoinedButton {...props} onClick={handler}>
 					<Flex justifyContent="space-between" alignItems="center">

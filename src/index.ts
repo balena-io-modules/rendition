@@ -18,7 +18,6 @@ export {
 	DataTypeModel,
 	DataTypeEditProps,
 	EditModel,
-	FiltersState,
 } from './components/Filters';
 export { default as Fixed, FixedProps } from './components/Fixed';
 export {

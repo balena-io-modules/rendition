@@ -95,7 +95,7 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 			views,
 			renderMode,
 			hasMultipleScopes,
-			shouldShowLabel,
+			shouldHideLabel,
 		} = this.props;
 		const hasViews = views.length > 0;
 		const groupedViews = groupBy(views, item => item.scope || 'Unscoped');
@@ -118,7 +118,7 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 					alignRight={!soloRender}
 					noListFormat
 					icon={<FontAwesomeIcon icon={faChartPie} />}
-					label={shouldShowLabel ? undefined : 'Views'}
+					label={shouldHideLabel ? undefined : 'Views'}
 					{...this.props.buttonProps}
 				>
 					<Box py={1}>
@@ -181,7 +181,7 @@ export interface ViewsMenuProps {
 	setFilters: (filters: JSONSchema6[]) => void;
 	deleteView: (view: FiltersView) => any;
 	renderMode?: FilterRenderMode | FilterRenderMode[];
-	shouldShowLabel: boolean;
+	shouldHideLabel: boolean;
 }
 
 interface ViewsMenuState {
