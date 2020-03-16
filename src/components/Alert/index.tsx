@@ -1,5 +1,5 @@
+import { faBan } from '@fortawesome/free-solid-svg-icons/faBan';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons/faCheckCircle';
-import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons/faExclamationCircle';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons/faExclamationTriangle';
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons/faLightbulb';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -44,7 +44,7 @@ const getIcon = (props: InternalAlertProps) => {
 		return;
 	}
 	return props.danger
-		? faExclamationCircle
+		? faBan
 		: props.warning
 		? faExclamationTriangle
 		: props.success
@@ -58,18 +58,21 @@ const Alert = (props: ThemedAlertProps) => {
 	const { emphasized, plaintext, prefix, onDismiss, ...restProps } = props;
 	const icon = getIcon(props);
 	const title = plaintext ? null : getTitle(props);
-	const color = getColor(props, 'color', 'main');
+	const mainColor = getColor(props, 'color', 'main');
+	const darkColor = getColor(props, 'color', 'dark');
 	const lineHeight = props.theme.fontSizes[1] * props.theme.lineHeight;
 
 	if (plaintext) {
 		return (
-			<Flex color={color} {...restProps}>
+			<Flex {...restProps}>
 				{icon && (
-					<Txt fontSize={1} mb="auto" mr={2}>
+					<Txt color={mainColor} fontSize={1} mb="auto" mr={2}>
 						<FontAwesomeIcon icon={icon} />
 					</Txt>
 				)}
-				<Txt.span fontSize={1}>{props.children}</Txt.span>
+				<Txt.span color={darkColor} fontSize={1}>
+					{props.children}
+				</Txt.span>
 			</Flex>
 		);
 	}
@@ -78,27 +81,23 @@ const Alert = (props: ThemedAlertProps) => {
 		<DismissableContainer
 			baselineHeight={lineHeight}
 			solid={emphasized}
-			color={color}
+			color={mainColor}
 			onDismiss={onDismiss}
 			a11yTitle="Dismiss Alert"
 			{...restProps}
 		>
 			{icon && (
-				<Txt fontSize={1} mb="auto" mr={3}>
+				<Txt color={mainColor} fontSize={1} mb="auto" mr={3}>
 					<FontAwesomeIcon icon={icon} />
 				</Txt>
 			)}
-			<Box flex={1}>
+			<Box color={darkColor} flex={1}>
 				{title && (
 					<Txt.span fontSize={1} bold mr={2}>
 						{title}
 					</Txt.span>
 				)}
-				<Txt.span
-					fontSize={1}
-					bold={emphasized}
-					color={emphasized ? 'white' : 'text.main'}
-				>
+				<Txt.span fontSize={1} color={emphasized ? darkColor : 'text.main'}>
 					{props.children}
 				</Txt.span>
 			</Box>

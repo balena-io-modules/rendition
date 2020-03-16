@@ -24,8 +24,9 @@ const Wrapper = styled(Flex)<{ solid?: boolean; hasDismissButton: boolean }>`
 				? getColor(props, 'bg', 'main')
 				: props.theme.colors.quartenary.main};
 	background-color: ${props =>
-		props.solid ? getColor(props, 'bg', 'main') : 'white'};
-	color: ${props => (props.solid ? 'white' : props.color || 'inherit')};
+		props.solid ? getColor(props, 'bg', 'light') : 'white'};
+	color: ${props =>
+		props.solid ? getColor(props, 'bg', 'dark') : props.color || 'inherit'};
 `;
 
 const DismissButton = styled(Button)<{
@@ -91,7 +92,11 @@ export const DismissableContainer = withTheme(
 							title={a11yTitle || 'Dismiss'}
 							a11yTitle={a11yTitle || 'Dismiss'}
 							baselineHeight={baseline}
-							color={solid ? 'white' : undefined}
+							color={
+								solid
+									? getColor({ theme, ...restProps }, 'bg', 'dark')
+									: undefined
+							}
 							primary={!solid}
 							plain
 							onClick={onDismiss}
