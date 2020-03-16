@@ -396,16 +396,24 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		}
 	};
 
+	public setPage = (change: any) => {
+		if (this.props.onPageChange) {
+			this.props.onPageChange(change);
+		}
+
+		this.setState({ page: change });
+	};
+
 	public resetPager = () => {
-		this.setState({ page: 0 });
+		this.setPage(0);
 	};
 
 	public incrementPage = () => {
-		this.setState({ page: this.state.page + 1 });
+		this.setPage(this.state.page + 1);
 	};
 
 	public decrementPage = () => {
-		this.setState({ page: this.state.page - 1 });
+		this.setPage(this.state.page - 1);
 	};
 
 	public render() {
@@ -571,6 +579,7 @@ export interface TableProps<T> {
 	onCheck?: (checkedItems: T[]) => void;
 	onRowClick?: (row: T, event: React.MouseEvent<HTMLAnchorElement>) => void;
 	onSort?: (sort: TableSortOptions<T>) => void;
+	onPageChange?: (page: number) => void;
 	sort?: TableSortOptions<T>;
 	rowAnchorAttributes?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
 	rowCheckboxAttributes?: CheckboxProps;

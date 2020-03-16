@@ -757,6 +757,7 @@ cause a re-render of the component and will not be reflected on the table.
 | `onCheck`    | `(checkedItems: T[]) => string` | - | - | If provided, each row will begin with a checkbox. This function is called with every checked row every time a checkbox is toggled on or off. This property requires that you have provided a `rowKey` property |
 | `onRowClick`    | `(row: T, event: Event) => void` | - | - | A function that is called when a row is clicked. This property requires that you have provided a `rowKey` property |
 | `onSort`    | `(sort: TableSortOptions<T>) => void` | - | - | A function that is called when a column is sorted |
+| `onPageChange`    | `(page: number) => void` | - | - | A function that is called when the page is incremented, decremented and reset |
 | `sort`    | `TableSortOptions<T>` | - | - | sort options to be used both as a default sort, and on subsequent renders if the passed sort changes |
 | `rowAnchorAttributes`    | `object` | - | - | Attributes to pass to the anchor element used in a row |
 | `rowCheckboxAttributes`    | `object` | - | - | Attributes to pass to the checkbox element used in a row |

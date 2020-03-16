@@ -89,6 +89,20 @@ class HOC extends React.Component {
 
 storiesOf('Core/Table', module)
   .addDecorator(withReadme(Readme))
+  .add('Pager callback', () => {
+    return (
+      <Box m={3}>
+        <Table
+          columns={columns}
+          data={PokeDex}
+          usePager
+          pagerPosition='both'
+          itemsPerPage={3}
+          onPageChange={e => console.log('update!', e)}
+        />
+      </Box>
+    )
+  })
   .add('Standard', () => {
     return (
       <Box m={3}>
