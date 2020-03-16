@@ -1,4 +1,26 @@
 - commits:
+    - subject: Lock Grommet version to 2.11.1.
+      hash: c85f61e44b21e3b7ba23f3389d7dc0b7b1e55e84
+      body: |
+        v2.11.2 breaks typescript build.
+      footer:
+        Change-type: Minor
+        change-type: Minor
+        Signed-off-by: Amit Solanki <amit@balena.io>
+        signed-off-by: Amit Solanki <amit@balena.io>
+      author: Amit Solanki
+    - subject: 'Update Alert design, improving accessibility'
+      hash: 0b9a40225504134957e239109407b6625967e21c
+      body: ''
+      footer:
+        Change-type: Patch
+        change-type: Patch
+        Signed-off-by: Amit Solanki <amit@balena.io>
+        signed-off-by: Amit Solanki <amit@balena.io>
+      author: Amit Solanki
+  version: 14.1.0
+  date: 2020-03-16T14:12:25.254Z
+- commits:
     - subject: 'Update Grommet, Styled components and supporting libs'
       hash: 502c4620c7d2e38f0a15c5741c9e5a6ca0cbf954
       body: ''
