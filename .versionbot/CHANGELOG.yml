@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add onPageChange callback to table component
+      hash: 6c89cb4686fa3f33192033efa5e34829fbb21db8
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stef Kors <stef@balena.io>
+        signed-off-by: Stef Kors <stef@balena.io>
+      author: StefKors
+  version: 14.2.0
+  date: 2020-03-16T18:09:55.199Z
+- commits:
     - subject: Lock Grommet version to 2.11.1.
       hash: c85f61e44b21e3b7ba23f3389d7dc0b7b1e55e84
       body: |
