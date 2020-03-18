@@ -59,7 +59,7 @@ const Wrapper = styled(Box)`
 
 	svg {
 		width: ${px(CHEVRON_ICON_WIDTH)};
-		height: translateY(1px);
+		transform: translateY(1px);
 	}
 `;
 

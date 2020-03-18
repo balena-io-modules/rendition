@@ -161,7 +161,9 @@ exports[`DropDownButton renders correctly 1`] = `
 
 .c3 svg {
   width: 12px;
-  height: translateY(1px);
+  -webkit-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
 }
 
 .c1 {
@@ -420,7 +422,9 @@ exports[`Opened DropDownButton renders correctly 1`] = `
 
 .c3 svg {
   width: 12px;
-  height: translateY(1px);
+  -webkit-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
 }
 
 .c12 {
