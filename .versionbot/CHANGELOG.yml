@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix Dropdown Chevron Icon Alignment
+      hash: 05fdc421bc720f7732517bdee990a06eeaed553d
+      body: ''
+      footer:
+        Change-type: Patch
+        change-type: Patch
+        Signed-off-by: Amit Solanki <amit@balena.io>
+        signed-off-by: Amit Solanki <amit@balena.io>
+      author: Amit Solanki
+  version: 14.2.1
+  date: 2020-03-18T14:15:11.690Z
+- commits:
     - subject: Add onPageChange callback to table component
       hash: 6c89cb4686fa3f33192033efa5e34829fbb21db8
       body: ''
