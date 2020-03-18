@@ -312,7 +312,9 @@ exports[`Filters component should match the stored snapshot 1`] = `
 
 .c13 svg {
   width: 12px;
-  height: translateY(1px);
+  -webkit-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
 }
 
 .c17 {
