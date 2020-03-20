@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'Provider: Fix the theme prop typings'
+      hash: 8557031a2533107cecf44b64678fcc1a4ff69d24
+      body: |
+        Since we do `merge`, we do not require
+        all theme props to be provided.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 14.2.2
+  date: 2020-03-20T13:36:41.559Z
+- commits:
     - subject: Fix Dropdown Chevron Icon Alignment
       hash: 05fdc421bc720f7732517bdee990a06eeaed553d
       body: ''
