@@ -32,7 +32,7 @@ const Provider = ({ theme, ...props }: ThemedProvider) => {
 };
 
 export interface ThemedProvider extends DefaultProps {
-	theme?: Theme;
+	theme?: Partial<Theme>;
 }
 
 export default Provider;
