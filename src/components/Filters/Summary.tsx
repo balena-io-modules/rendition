@@ -54,7 +54,7 @@ class FilterSummary extends React.Component<
 	public render() {
 		const { scopes } = this.props;
 		return (
-			<Box p={3} mt={3} width="100%" bg="quartenary.light">
+			<Box p={3} width="100%" bg="quartenary.light">
 				{this.state.showForm && (
 					<Modal
 						title="Save current view"
