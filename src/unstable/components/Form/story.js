@@ -62,7 +62,8 @@ const basicPokedexSchema = {
   properties: {
     Name: {
       type: 'string',
-      minLength: 5
+      minLength: 5,
+      examples: ['Pikachu', 'Snorlax', 'Charmander', 'Bulbasaur']
     },
     Height: {
       type: 'number'

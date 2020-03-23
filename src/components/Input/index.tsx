@@ -61,6 +61,7 @@ export interface InternalInputProps
 	valid?: boolean;
 	emphasized?: boolean;
 	monospace?: boolean;
+	list?: string;
 }
 
 export type InputProps = InternalInputProps & RenditionSystemProps;
