@@ -1,4 +1,16 @@
 - commits:
+    - subject: Support schema.examples in Form
+      hash: 5f34d4c2b70e4a698a148e032959f32c717f9e52
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 14.3.0
+  date: 2020-03-24T09:12:11.402Z
+- commits:
     - subject: 'Provider: Fix the theme prop typings'
       hash: 8557031a2533107cecf44b64678fcc1a4ff69d24
       body: |
