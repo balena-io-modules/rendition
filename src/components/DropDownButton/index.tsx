@@ -197,18 +197,21 @@ class DropDownButton extends React.Component<
 			noListFormat,
 			outline,
 			className,
+			onClick,
 			...props
 		} = this.props;
 
 		return (
 			<Wrapper
 				className={className}
+				onClick={joined ? onClick : undefined}
 				{...props}
 				ref={(node: any) => (this.dropdownNode = node)}
 			>
 				{joined ? (
 					<Toggle
 						{...props}
+						onClick={onClick}
 						outline={outline}
 						joined={joined}
 						label={label}
@@ -217,7 +220,7 @@ class DropDownButton extends React.Component<
 					/>
 				) : (
 					<span>
-						<ButtonBase {...props} outline={outline}>
+						<ButtonBase {...props} onClick={onClick} outline={outline}>
 							{label}
 						</ButtonBase>
 						<Toggle
