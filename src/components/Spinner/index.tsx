@@ -95,7 +95,7 @@ const Spinner = ({
 interface InternalSpinnerProps extends DefaultProps {
 	show?: boolean;
 	emphasized?: boolean;
-	label?: string;
+	label?: string | React.ReactNode;
 }
 
 export type SpinnerProps = InternalSpinnerProps & RenditionSystemProps;

@@ -25,6 +25,17 @@ storiesOf('Next/Spinner', module)
             <Spinner label='Loading...' m={3} />
           </Box>
           <Box m={3}>
+            <Txt>Custom label component</Txt>
+            <Spinner
+              label={
+                <Txt color='text.main'>
+                  Building image <Button plain>12345</Button>...
+                </Txt>
+              }
+              m={3}
+            />
+          </Box>
+          <Box m={3}>
             <Txt>Emphasized with label</Txt>
             <Spinner label='Loading...' emphasized m={3} />
           </Box>
