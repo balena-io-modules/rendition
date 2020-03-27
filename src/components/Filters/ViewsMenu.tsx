@@ -104,7 +104,6 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 		return (
 			<Wrapper>
 				<DropDownButton
-					ml={soloRender ? 0 : 30}
 					disabled={this.props.disabled}
 					quartenary={!this.props.dark}
 					light={this.props.dark}

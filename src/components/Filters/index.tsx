@@ -58,8 +58,17 @@ const DeleteButton = styled(Button)`
 	right: -35px;
 `;
 
-const SearchWrapper = styled.div`
-	flex-basis: 500px;
+const SearchWrapper = styled(Box)<{ breakpoint?: number }>`
+	flex: 1 0 100%;
+	order: -1;
+
+	@media (min-width: ${({ breakpoint = 0 }) => breakpoint}px) {
+		display: flex;
+		flex: 1;
+		max-width: 500px;
+		justify-contnet: center;
+		order: 0;
+	}
 `;
 
 const FilterWrapper = styled(Box)`
@@ -365,24 +374,33 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 
 		return (
 			<FilterWrapper mb={3}>
-				<Flex justifyContent="space-between">
-					{this.shouldRenderComponent('add') && (
-						<Button
-							mr={30}
-							disabled={this.props.disabled}
-							primary
-							icon={<FontAwesomeIcon icon={faFilter} />}
-							onClick={() =>
-								this.setState({ showModal: true, editingFilter: null })
-							}
-							{...this.props.addFilterButtonProps}
-						>
-							Add filter
-						</Button>
+				<Flex justifyContent="space-between" flexWrap="wrap" mx={-16}>
+					{(!!this.props.extraLeftSideButtons ||
+						this.shouldRenderComponent('add')) && (
+						<Flex mx={16} mb={3}>
+							{this.props.extraLeftSideButtons}
+							{this.shouldRenderComponent('add') && (
+								<Button
+									disabled={this.props.disabled}
+									primary
+									icon={<FontAwesomeIcon icon={faFilter} />}
+									onClick={() =>
+										this.setState({ showModal: true, editingFilter: null })
+									}
+									{...this.props.addFilterButtonProps}
+								>
+									Add filter
+								</Button>
+							)}
+						</Flex>
 					)}
 
 					{this.shouldRenderComponent('search') && (
-						<SearchWrapper>
+						<SearchWrapper
+							breakpoint={this.props.responsiveBreakpoint}
+							mx={16}
+							mb={3}
+						>
 							<Search
 								dark={this.props.dark}
 								disabled={this.props.disabled}
@@ -394,20 +412,26 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 						</SearchWrapper>
 					)}
 
-					{this.shouldRenderComponent('views') && (
-						<ViewsMenu
-							dark={this.props.dark}
-							buttonProps={this.props.viewsMenuButtonProps}
-							disabled={this.props.disabled}
-							views={this.state.views || []}
-							schema={this.props.schema}
-							hasMultipleScopes={
-								this.props.viewScopes && this.props.viewScopes.length > 1
-							}
-							setFilters={filters => this.setFilters(filters)}
-							deleteView={view => this.deleteView(view)}
-							renderMode={this.props.renderMode}
-						/>
+					{(!!this.props.extraRightSideButtons ||
+						this.shouldRenderComponent('views')) && (
+						<Flex mx={16} mb={3}>
+							{this.shouldRenderComponent('views') && (
+								<ViewsMenu
+									dark={this.props.dark}
+									buttonProps={this.props.viewsMenuButtonProps}
+									disabled={this.props.disabled}
+									views={this.state.views || []}
+									schema={this.props.schema}
+									hasMultipleScopes={
+										this.props.viewScopes && this.props.viewScopes.length > 1
+									}
+									setFilters={filters => this.setFilters(filters)}
+									deleteView={view => this.deleteView(view)}
+									renderMode={this.props.renderMode}
+								/>
+							)}
+							{this.props.extraRightSideButtons}
+						</Flex>
 					)}
 				</Flex>
 
@@ -607,6 +631,9 @@ export interface FiltersProps extends DefaultProps {
 	schema: JSONSchema6;
 	addFilterButtonProps?: ButtonProps;
 	viewsMenuButtonProps?: DropDownButtonProps;
+	extraLeftSideButtons?: React.ReactNode;
+	extraRightSideButtons?: React.ReactNode;
+	responsiveBreakpoint?: number;
 	renderMode?: FilterRenderMode | FilterRenderMode[];
 	dark?: boolean;
 }
