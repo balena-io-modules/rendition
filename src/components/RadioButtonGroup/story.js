@@ -8,18 +8,20 @@ import Readme from './README.md'
 storiesOf('Next/RadioButtonGroup', module)
   .addDecorator(withReadme(Readme))
   .add('Standard', () => {
+    const [selected, setSelected] = React.useState('plain 1')
     return (
       <Flex m={3} flexDirection='row'>
         <RadioButtonGroup
           m={3}
           options={['plain 1', 'plain 2']}
-          onChange={action('case-1')}
+          value={selected}
+          onChange={e => setSelected(e.target.value)}
         />
         <RadioButtonGroup
           m={3}
           options={['plain 1', 'plain 2']}
-          value='plain 1'
-          onChange={action('case-1')}
+          value={selected}
+          onChange={e => setSelected(e.target.value)}
         />
         <RadioButtonGroup
           m={3}
