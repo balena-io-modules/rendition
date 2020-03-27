@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix radio button not displayed correctly
+      hash: a2a80d4fc773fe538caf7f2ff5c91f9dd78022f2
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 14.3.2
+  date: 2020-03-27T12:20:14.803Z
+- commits:
     - subject: Remove onClick event on DropDownButton toggle button
       hash: 6ada11a0dc730890efa883afd47bc1f24051b259
       body: ''
