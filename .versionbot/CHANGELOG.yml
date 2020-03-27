@@ -1,4 +1,18 @@
 - commits:
+    - subject: Remove onClick event on DropDownButton toggle button
+      hash: 6ada11a0dc730890efa883afd47bc1f24051b259
+      body: ''
+      footer:
+        Closes: '#684'
+        closes: '#684'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lorenzo Alberto Maria Ambrosi <lorenzothunder.ambrosi@gmail.com>
+        signed-off-by: Lorenzo Alberto Maria Ambrosi <lorenzothunder.ambrosi@gmail.com>
+      author: Lorenzo Alberto Maria Ambrosi
+  version: 14.3.1
+  date: 2020-03-26T16:21:40.408Z
+- commits:
     - subject: Support schema.examples in Form
       hash: 5f34d4c2b70e4a698a148e032959f32c717f9e52
       body: ''
