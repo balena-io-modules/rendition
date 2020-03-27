@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update the spinner typings to accept a custom label component
+      hash: aae46e5c6b99373c7313a59f8675c1999d1f1efc
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 14.3.3
+  date: 2020-03-27T13:54:58.090Z
+- commits:
     - subject: Fix radio button not displayed correctly
       hash: a2a80d4fc773fe538caf7f2ff5c91f9dd78022f2
       body: ''
