@@ -117,16 +117,16 @@ exports[`RadioButton renders correctly 1`] = `
   font-family: 'Nunito',Arial,sans-serif;
 }
 
-.c2 label input[checked] + div {
-  border-color: #00AEEF;
-  background: #00AEEF;
-}
-
 .c2 label[disabled] {
   opacity: 0.4;
 }
 
-.c2 label:hover input[checked] + div {
+.c2 label input + div {
+  border-color: #00AEEF;
+  background: #00AEEF;
+}
+
+.c2 label:hover input + div {
   border-color: #009dd7;
   background: #009dd7;
 }
@@ -147,6 +147,7 @@ exports[`RadioButton renders correctly 1`] = `
   className="c0 c1"
 >
   <div
+    checked={true}
     className="c2 "
   >
     <label

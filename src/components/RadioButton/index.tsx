@@ -8,22 +8,31 @@ import { DefaultProps, Omit, RenditionSystemProps } from '../../common-types';
 
 import asRendition from '../../asRendition';
 
+// We can rely on input[checked] to apply the styling, but Grommet broke it so we have to pass checked as a prop. Revert once this is fixed in grommet.
 // Override styles to match our styleguide
-export const getHoverStyle = (props: any) => `
-	& label:hover input[checked] + div {
+export const getHoverStyle = (props: any) =>
+	props.checked
+		? `
+	& label:hover input + div {
 		border-color: ${props.theme.colors.primary.dark};
 		background: ${props.theme.colors.primary.dark};
 	},
-`;
+`
+		: '';
+
+export const getCheckedStyle = (props: any) =>
+	props.checked
+		? `
+	& label input + div {
+		border-color: ${props.theme.colors.primary.main};
+		background: ${props.theme.colors.primary.main};
+	}
+`
+		: '';
 
 export const getBaseStyle = (props: any) => `
 	& > label > span {
 		font-family: ${props.theme.font};
-	}
-
-	& label input[checked] + div {
-		border-color: ${props.theme.colors.primary.main};
-		background: ${props.theme.colors.primary.main};
 	}
 
 	& label[disabled] {
@@ -31,8 +40,9 @@ export const getBaseStyle = (props: any) => `
 	}
 `;
 
-const RadioButtonWrapper = styled.div`
+const RadioButtonWrapper = styled.div<{ checked: boolean }>`
 	${getBaseStyle}
+	${getCheckedStyle}
 	${getHoverStyle}
 `;
 
@@ -41,7 +51,7 @@ const RadioButton = ({
 	...otherProps
 }: InternalRadioButtonProps) => {
 	return (
-		<RadioButtonWrapper className={className}>
+		<RadioButtonWrapper checked={!!otherProps.checked} className={className}>
 			<GrommetRadioButton
 				{...otherProps}
 				name={otherProps.name || 'radio button'}

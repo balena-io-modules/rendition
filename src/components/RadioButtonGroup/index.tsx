@@ -7,15 +7,32 @@ import styled from 'styled-components';
 import { DefaultProps, Omit, RenditionSystemProps } from '../../common-types';
 
 import asRendition from '../../asRendition';
-import { getBaseStyle, getHoverStyle } from '../RadioButton';
+import { getBaseStyle } from '../RadioButton';
 
-const Base = styled(GrommetRadioButtonGroup)`
-	${getHoverStyle}
+const Base = styled(GrommetRadioButtonGroup)<{
+	value: string | object | undefined;
+}>`
 	${getBaseStyle}
+
+	& label:hover input[value="${(props: any) => props.value}"] + div {
+		border-color: ${props => props.theme.colors.primary.dark};
+		background: ${props => props.theme.colors.primary.dark};
+	};
+
+	& label input[value="${(props: any) => props.value}"] + div {
+		border-color: ${props => props.theme.colors.primary.main};
+		background: ${props => props.theme.colors.primary.main};
+	}
 `;
 
 const RadioButtonGroup = (props: InternalRadioButtonGroupProps) => {
-	return <Base {...props} name={props.name || 'radio button group'} />;
+	return (
+		<Base
+			{...props}
+			value={props.value ?? props.defaultValue}
+			name={props.name || 'radio button group'}
+		/>
+	);
 };
 
 // Make name optional, and override onChange to not be of `any` type.
