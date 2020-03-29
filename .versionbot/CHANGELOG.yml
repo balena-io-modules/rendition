@@ -1,4 +1,27 @@
 - commits:
+    - subject: 'Add: Compact prop on filters'
+      hash: 7fef97b1b6ecbc8e908980c5dbb2efd946ef1b15
+      body: |
+        compact prop allow to remove labels on filters
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+    - subject: 'Refactor: Filters component'
+      hash: 2569ffc54c7988d00709f4c07193ebebe78ccfac
+      body: |
+        split and refactor filters components to make it more readable
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 14.4.0
+  date: 2020-03-29T16:06:05.307Z
+- commits:
     - subject: Update the spinner typings to accept a custom label component
       hash: aae46e5c6b99373c7313a59f8675c1999d1f1efc
       body: ''
