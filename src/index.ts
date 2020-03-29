@@ -11,7 +11,6 @@ export { default as Divider, DividerProps } from './components/Divider';
 export {
 	default as Filters,
 	FiltersProps,
-	FilterInputProps,
 	ViewScope,
 	FiltersView,
 	FilterSignature,
@@ -19,7 +18,6 @@ export {
 	DataTypeModel,
 	DataTypeEditProps,
 	EditModel,
-	FiltersState,
 } from './components/Filters';
 export { default as Fixed, FixedProps } from './components/Fixed';
 export {

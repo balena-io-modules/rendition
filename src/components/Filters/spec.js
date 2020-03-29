@@ -192,6 +192,26 @@ describe('Filters component', () => {
           .text()
       ).toBe('Tag is not rarity : 10')
     })
+
+    it('should remove buttons labels if compact property is set to true', () => {
+      const component = mount(
+        <Provider>
+          <Filters compact={[true, true, true, true]} schema={schema} />
+        </Provider>
+      )
+      expect(
+        component
+          .find('button')
+          .at(0)
+          .text()
+      ).toBe('')
+      expect(
+        component
+          .find('button')
+          .at(1)
+          .text()
+      ).toBe('')
+    })
   })
 
   describe('save views modal', () => {
@@ -443,22 +463,25 @@ describe('Filters component', () => {
         </Provider>
       )
 
-      const filters = component.find(Filters).instance()
-
       expect(component.find(Search)).toHaveLength(1)
-      expect(filters.state.searchString).toEqual('')
+      expect(component.find(Search).prop('value')).toEqual('')
 
       component
         .find('input')
         .simulate('change', { target: { value: 'Squirtle' } })
-      expect(filters.state.searchString).toEqual('Squirtle')
+      const searchValue = component
+        .find(FiltersSummary)
+        .find('button')
+        .at(2)
+        .text()
+      expect(searchValue).toContain('Squirtle')
 
       component
         .find(FiltersSummary)
         .find('button')
         .at(3)
         .simulate('click')
-      expect(filters.state.searchString).toEqual('')
+      expect(component.find(FiltersSummary)).toHaveLength(0)
 
       component.unmount()
     })
@@ -475,14 +498,17 @@ describe('Filters component', () => {
         </Provider>
       )
 
-      const filters = component.find(Filters).instance()
-
       expect(component.find(FiltersSummary)).toHaveLength(1)
 
       component
         .find('input')
         .simulate('change', { target: { value: 'Squirtle' } })
-      expect(filters.state.searchString).toEqual('Squirtle')
+      const searchValue = component
+        .find(FiltersSummary)
+        .find('button')
+        .at(4)
+        .text()
+      expect(searchValue).toContain('Squirtle')
 
       component
         .find(FiltersSummary)
@@ -490,7 +516,8 @@ describe('Filters component', () => {
         .at(0)
         .simulate('click')
       expect(component.find(FiltersSummary)).toHaveLength(0)
-      expect(filters.state.searchString).toEqual('')
+      const inputValue = component.find('input').prop('value')
+      expect(inputValue).toEqual('')
 
       component.unmount()
     })

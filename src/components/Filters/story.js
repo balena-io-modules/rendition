@@ -241,6 +241,13 @@ storiesOf('Next/Filters', module)
       </Box>
     )
   })
+  .add('Compact', () => {
+    return (
+      <Box m={3}>
+        <FiltersDemo compact={[true]} />
+      </Box>
+    )
+  })
   .add('Dark', () => {
     return (
       <Box bg='#343434' p={3}>
