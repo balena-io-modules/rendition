@@ -13,7 +13,7 @@ const CircleLoader = styled.div<Pick<InternalSpinnerProps, 'emphasized'>>`
 	width: ${props => px(props.emphasized ? 40 : 20)};
 	height: ${props => px(props.emphasized ? 40 : 20)};
 	border: ${props => px(props.emphasized ? 6 : 4)} solid;
-	color: ${props => props.theme.colors.quartenary.main};
+	color: ${props => props.theme.colors.tertiary.main};
 	border-radius: 100%;
 	border-bottom-color: transparent;
 	display: inline-block;
@@ -50,6 +50,7 @@ const SpinnerBase = ({
 			flexDirection={emphasized ? 'column' : 'row'}
 			justifyContent="center"
 			alignItems="center"
+			width="fit-content"
 			{...otherProps}
 		>
 			<CircleLoader emphasized={emphasized} />
