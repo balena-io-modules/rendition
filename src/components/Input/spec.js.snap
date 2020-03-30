@@ -96,7 +96,6 @@ exports[`Input renders correctly 1`] = `
       onFocus={[Function]}
       onKeyDown={[Function]}
       placeholder="Placeholder Text"
-      value=""
     />
   </div>
 </div>
