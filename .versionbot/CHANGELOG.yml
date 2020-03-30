@@ -1,4 +1,16 @@
 - commits:
+    - subject: Bump grommet to 2.11.3
+      hash: 8d20df93173d90b42165daf8f33c847293c45734
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 14.4.1
+  date: 2020-03-30T12:06:18.193Z
+- commits:
     - subject: 'Add: Compact prop on filters'
       hash: 7fef97b1b6ecbc8e908980c5dbb2efd946ef1b15
       body: |
