@@ -1,4 +1,16 @@
 - commits:
+    - subject: Make spinner use tertiary color
+      hash: 407e7bcc4f268d2b8cd15ede02611dd12ac9563f
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 14.4.2
+  date: 2020-03-30T15:31:00.927Z
+- commits:
     - subject: Bump grommet to 2.11.3
       hash: 8d20df93173d90b42165daf8f33c847293c45734
       body: ''
