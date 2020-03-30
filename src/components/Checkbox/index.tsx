@@ -21,9 +21,15 @@ export const getHoverStyle = (props: any) => `
 	& label:hover input:not([disabled]) + div {
 		border-color: ${props.theme.colors.tertiary.main}!important;
 	}
-	& label:hover input[checked]:not([disabled]) + div {
-		border-color: ${props.theme.colors.primary.dark}!important;
-		background: ${props.theme.colors.primary.dark};
+	${
+		props.isChecked
+			? `
+		& label:hover input:not([disabled]) + div {
+			border-color: ${props.theme.colors.primary.dark} !important;
+			background: ${props.theme.colors.primary.dark};
+		}
+		`
+			: ''
 	}
 `;
 
@@ -37,26 +43,33 @@ const getBaseStyle = (props: any) => `
 	& > label > span {
 		font-family: ${props.theme.font};
 	}
-	& label input[checked] + div {
-		border-color: ${props.theme.colors.primary.main};
-		background: ${props.theme.colors.primary.main};
-		> svg {
-			stroke: #fff;
+	${
+		props.isChecked
+			? `
+		& label input + div {
+			border-color: ${props.theme.colors.primary.main};
+			background: ${props.theme.colors.primary.main};
+			> svg {
+				stroke: #fff;
+			}
 		}
+		`
+			: ''
 	}
+	
 	& label[disabled] {
 		opacity: 0.4
 	}
 `;
 
-const CheckboxWrapper = styled.div`
+const CheckboxWrapper = styled.div<{ isChecked?: boolean }>`
 	${getBaseStyle}
 	${getHoverStyle}
 `;
 
 const Checkbox = ({ className, ...otherProps }: InternalCheckboxProps) => {
 	return (
-		<CheckboxWrapper className={className}>
+		<CheckboxWrapper isChecked={otherProps.checked} className={className}>
 			<GrommetCheckbox {...otherProps} />
 		</CheckboxWrapper>
 	);

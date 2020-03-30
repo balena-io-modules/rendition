@@ -126,12 +126,12 @@ exports[`Checkbox renders correctly 1`] = `
   font-family: 'Nunito',Arial,sans-serif;
 }
 
-.c2 label input[checked] + div {
+.c2 label input + div {
   border-color: #00AEEF;
   background: #00AEEF;
 }
 
-.c2 label input[checked] + div > svg {
+.c2 label input + div > svg {
   stroke: #fff;
 }
 
@@ -148,8 +148,8 @@ exports[`Checkbox renders correctly 1`] = `
   border-color: #527699!important;
 }
 
-.c2 label:hover input[checked]:not([disabled]) + div {
-  border-color: #009dd7!important;
+.c2 label:hover input:not([disabled]) + div {
+  border-color: #009dd7 !important;
   background: #009dd7;
 }
 

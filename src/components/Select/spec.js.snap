@@ -246,14 +246,12 @@ exports[`Select component should match the stored snapshot 1`] = `
               autoComplete="off"
               className="c8 c9 c10"
               onBlur={[Function]}
-              onChange={[Function]}
               onClick={[Function]}
               onFocus={[Function]}
               onKeyDown={[Function]}
               readOnly={true}
               tabIndex="-1"
               type="text"
-              value=""
             />
           </div>
         </div>

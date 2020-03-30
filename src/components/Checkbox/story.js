@@ -8,16 +8,23 @@ import Readme from './README.md'
 storiesOf('Next/Checkbox', module)
   .addDecorator(withReadme(Readme))
   .add('Standard', () => {
+    const [checked, setChecked] = React.useState(false)
     return (
       <Box m={3}>
         <label>
           <Heading.h6>Default</Heading.h6>
           <Flex mb={3}>
             <Box p={2}>
-              <Checkbox onChange={action('action-1')} />
+              <Checkbox
+                checked={checked}
+                onChange={e => setChecked(e.target.checked)}
+              />
             </Box>
             <Box p={2} bg='gray.main'>
-              <Checkbox onChange={action('action-1')} />
+              <Checkbox
+                checked={checked}
+                onChange={e => setChecked(e.target.checked)}
+              />
             </Box>
           </Flex>
         </label>
