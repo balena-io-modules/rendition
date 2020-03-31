@@ -91,7 +91,7 @@ const Filters = ({
 			onFiltersUpdate(
 				filtersState.map(filter => SchemaSieve.unflattenSchema(filter)),
 			),
-		[filtersState],
+		[filtersState, searchString],
 	);
 
 	React.useEffect(() => onViewsUpdate && onViewsUpdate(viewsState), [
