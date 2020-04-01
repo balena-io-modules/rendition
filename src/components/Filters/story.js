@@ -244,7 +244,7 @@ storiesOf('Next/Filters', module)
   .add('Compact', () => {
     return (
       <Box m={3}>
-        <FiltersDemo compact={[true]} />
+        <FiltersDemo extra={{ compact: [true] }} />
       </Box>
     )
   })
