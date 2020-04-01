@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'fix: filters search bar'
+      hash: 32f8a049ace2359ae97ba27463140eebdee7f19b
+      body: |
+        fix regression on filters search bar update
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 14.4.3
+  date: 2020-04-01T09:04:41.993Z
+- commits:
     - subject: Make spinner use tertiary color
       hash: 407e7bcc4f268d2b8cd15ede02611dd12ac9563f
       body: ''
