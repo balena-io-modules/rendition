@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'refactor: schema sieve service function'
+      hash: 85deffa9910a8e753fb54cc184b59be37b8f22e4
+      body: |
+        refactor upsertFullTextSearch function to be a pure function
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 14.4.4
+  date: 2020-04-01T10:23:16.420Z
+- commits:
     - subject: 'fix: filters search bar'
       hash: 32f8a049ace2359ae97ba27463140eebdee7f19b
       body: |
