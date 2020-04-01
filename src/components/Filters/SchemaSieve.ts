@@ -100,12 +100,11 @@ export const upsertFullTextSearch = (
 	const existingSearchIndex = findIndex(filters, { title: FULL_TEXT_SLUG });
 
 	if (existingSearchIndex > -1) {
-		filters.splice(existingSearchIndex, 1, searchFilter);
-	} else {
-		filters.push(searchFilter as JSONSchema6);
+		return filters.map((filter, i) =>
+			existingSearchIndex === i ? searchFilter : filter,
+		);
 	}
-
-	return filters;
+	return [...filters, searchFilter as JSONSchema6];
 };
 
 // Removes a full text search filter from an array of filters
