@@ -65,88 +65,114 @@ const Filters = ({
 	compact,
 }: FiltersProps) => {
 	const flatSchema = SchemaSieve.flattenSchema(schema);
+	console.log(schema, flatSchema, 'qui');
 	const flatViews = flattenViews(views || []);
 	const flatFilters = (filters || []).map(filter =>
 		SchemaSieve.flattenSchema(filter),
 	);
 	const shouldHideLabel = useBreakpoint(compact || [false]);
 
-	const [showModal, setshowModal] = React.useState<boolean>(false);
-	const [searchString, setSearchString] = React.useState<string>('');
-	const [editingFilter, setEditingFilter] = React.useState<string | null>();
-	const [filtersState, setFiltersState] = React.useState<JSONSchema6[]>(
-		flatFilters,
-	);
-	const [viewsState, setViewsState] = React.useState<FiltersView[]>(flatViews);
-	const [schemaState, setschemaState] = React.useState<JSONSchema6>(flatSchema);
-	const [edit, setEdit] = React.useState<EditModel[]>([
-		SchemaSieve.getCleanEditModel(flatSchema),
-	]);
-
+	const [filtersState, setFiltersState] = React.useState<FiltersState>({
+		showModal: false,
+		searchString: '',
+		editingFilter: null,
+		filters: flatFilters,
+		views: flatViews,
+		schema: flatSchema,
+		edit: [SchemaSieve.getCleanEditModel(flatSchema)],
+		shouldParentUpdate: false,
+	});
 	// unfortunately we have to keep all these useEffects in order
 	// to synchronize the state of this component with that of the parent
-	React.useEffect(
-		() =>
-			onFiltersUpdate &&
+	React.useEffect(() => {
+		if (filtersState.shouldParentUpdate && onFiltersUpdate) {
 			onFiltersUpdate(
-				filtersState.map(filter => SchemaSieve.unflattenSchema(filter)),
-			),
-		[filtersState],
-	);
+				filtersState.filters.map(filter => SchemaSieve.unflattenSchema(filter)),
+			);
+		}
+	}, [filtersState.filters]);
 
-	React.useEffect(() => onViewsUpdate && onViewsUpdate(viewsState), [
-		viewsState,
+	React.useEffect(() => onViewsUpdate && onViewsUpdate(filtersState.views), [
+		filtersState.views,
 	]);
 
 	React.useEffect(() => {
 		if (!isEqual(filtersState, flatFilters)) {
-			setFiltersState(flatFilters);
+			setFiltersState(prevState => ({
+				...prevState,
+				filters: flatFilters,
+				shouldParentUpdate: false,
+			}));
 		}
 	}, [filters]);
 
 	React.useEffect(() => {
-		if (!isEqual(viewsState, flatViews)) {
-			setViewsState(flatViews);
+		if (!isEqual(filtersState.views, flatViews)) {
+			setFiltersState(prevState => ({
+				...prevState,
+				views: flatViews,
+				shouldParentUpdate: false,
+			}));
 		}
 	}, [views]);
 
 	React.useEffect(() => {
-		if (!isEqual(schemaState, flatSchema)) {
-			setschemaState(flatSchema);
+		if (!isEqual(filtersState.schema, flatSchema)) {
+			setFiltersState(prevState => ({
+				...prevState,
+				schema: flatSchema,
+				shouldParentUpdate: false,
+			}));
 		}
 	}, [schema]);
 
 	const addFilter = (edit: EditModel[]) => {
 		const newFilter = SchemaSieve.createFilter(schema, edit);
-		const currentFilters: JSONSchema6[] = !!editingFilter
-			? filtersState.map(filter =>
-					filter.$id === editingFilter ? newFilter : filter,
+		const currentFilters: JSONSchema6[] = !!filtersState.editingFilter
+			? filtersState.filters.map(filter =>
+					filter.$id === filtersState.editingFilter ? newFilter : filter,
 			  )
-			: [...filtersState, newFilter];
-
-		setFiltersState(currentFilters);
-		setEdit([SchemaSieve.getCleanEditModel(schemaState)]);
-		setshowModal(false);
-		setEditingFilter(null);
+			: [...filtersState.filters, newFilter];
+		setFiltersState(prevState => ({
+			...prevState,
+			filters: currentFilters,
+			edit: [SchemaSieve.getCleanEditModel(filtersState.schema)],
+			showModal: false,
+			shouldParentUpdate: true,
+			editingFilter: null,
+		}));
 	};
 
 	const editFilter = (filter: JSONSchema6) => {
-		const signatures = SchemaSieve.decodeFilter(schemaState, filter);
-		setEdit(signatures as EditModel[]);
-		setEditingFilter(filter.$id);
-		setshowModal(true);
+		console.log(filter, schema, filtersState.schema);
+		const signatures = SchemaSieve.decodeFilter(schema, filter);
+		console.log(signatures);
+		setFiltersState(prevState => ({
+			...prevState,
+			edit: signatures as EditModel[],
+			showModal: true,
+			shouldParentUpdate: false,
+			editingFilter: filter.$id as string,
+		}));
 	};
 
 	const removeFilter = ({ $id, title }: JSONSchema6) => {
-		if (title === SchemaSieve.FULL_TEXT_SLUG) {
-			setSearchString('');
-		}
-		setFiltersState(reject(filtersState, { $id }));
+		setFiltersState(prevState => ({
+			...prevState,
+			searchString:
+				title === SchemaSieve.FULL_TEXT_SLUG ? '' : prevState.searchString,
+			filters: reject(prevState.filters, { $id }) as JSONSchema6[],
+			shouldParentUpdate: true,
+		}));
 	};
 
 	const clearAllFilters = () => {
-		setFiltersState([]);
-		setSearchString('');
+		setFiltersState(prevState => ({
+			...prevState,
+			searchString: '',
+			filters: [],
+			shouldParentUpdate: true,
+		}));
 	};
 
 	const saveView = (name: string, scope: string | null) => {
@@ -154,22 +180,38 @@ const Filters = ({
 			id: randomString(),
 			name,
 			scope,
-			filters: filtersState,
+			filters: filtersState.filters,
 		};
-		setViewsState(prevViews => [...prevViews, view]);
+		setFiltersState(prevState => ({
+			...prevState,
+			views: [...prevState.views, view],
+			shouldParentUpdate: true,
+		}));
 	};
 
 	const deleteView = ({ id }: FiltersView) => {
-		setViewsState(reject(viewsState, { id }));
+		setFiltersState(prevState => ({
+			...prevState,
+			views: reject(prevState.views, { id }),
+			shouldParentUpdate: true,
+		}));
 	};
 
 	const setSimpleSearch = (term: string) => {
 		const newFilters = term
-			? SchemaSieve.upsertFullTextSearch(schemaState, filtersState, term)
-			: SchemaSieve.removeFullTextSearch(filtersState);
+			? SchemaSieve.upsertFullTextSearch(
+					filtersState.schema,
+					filtersState.filters,
+					term,
+			  )
+			: SchemaSieve.removeFullTextSearch(filtersState.filters);
 
-		setSearchString(term);
-		setFiltersState(newFilters);
+		setFiltersState(prevState => ({
+			...prevState,
+			filters: newFilters,
+			searchString: term,
+			shouldParentUpdate: true,
+		}));
 	};
 	return (
 		<FilterWrapper mb={3}>
@@ -181,8 +223,12 @@ const Filters = ({
 						primary
 						icon={<FontAwesomeIcon icon={faFilter} />}
 						onClick={() => {
-							setshowModal(true);
-							setEditingFilter(null);
+							setFiltersState(prevState => ({
+								...prevState,
+								editingFilter: null,
+								showModal: true,
+								shouldParentUpdate: false,
+							}));
 						}}
 						{...addFilterButtonProps}
 						label={shouldHideLabel ? undefined : 'Add filter'}
@@ -194,7 +240,7 @@ const Filters = ({
 						<Search
 							dark={dark}
 							disabled={disabled}
-							value={searchString}
+							value={filtersState.searchString}
 							onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
 								setSimpleSearch(e.target.value)
 							}
@@ -207,10 +253,16 @@ const Filters = ({
 						dark={dark}
 						buttonProps={viewsMenuButtonProps}
 						disabled={disabled}
-						views={viewsState || flatViews}
+						views={filtersState.views || flatViews}
 						schema={schema}
 						hasMultipleScopes={viewScopes && viewScopes.length > 1}
-						setFilters={filters => setFiltersState(filters)}
+						setFilters={filters =>
+							setFiltersState(prevState => ({
+								...prevState,
+								filters,
+								shouldParentUpdate: true,
+							}))
+						}
 						deleteView={view => deleteView(view)}
 						renderMode={renderMode}
 						shouldHideLabel={shouldHideLabel}
@@ -218,17 +270,19 @@ const Filters = ({
 				)}
 			</Flex>
 
-			{showModal && (
+			{filtersState.showModal && (
 				<FilterModal
 					addFilter={edit => addFilter(edit)}
-					onClose={() => setshowModal(false)}
-					schema={schemaState}
-					edit={edit}
+					onClose={() =>
+						setFiltersState(prevState => ({ ...prevState, showModal: false }))
+					}
+					schema={filtersState.schema}
+					edit={filtersState.edit}
 				/>
 			)}
 
 			{shouldRenderComponent('summary', renderMode) &&
-				!!filtersState.length &&
+				!!filtersState.filters.length &&
 				!disabled && (
 					<Summary
 						scopes={viewScopes}
@@ -236,14 +290,25 @@ const Filters = ({
 						delete={(filter: JSONSchema6) => removeFilter(filter)}
 						saveView={(name, scope) => saveView(name, scope)}
 						clearAllFilters={clearAllFilters}
-						filters={filtersState}
-						views={viewsState}
-						schema={schemaState}
+						filters={filtersState.filters}
+						views={filtersState.views}
+						schema={filtersState.schema}
 					/>
 				)}
 		</FilterWrapper>
 	);
 };
+
+export interface FiltersState {
+	showModal: boolean;
+	searchString: string;
+	editingFilter: string | null;
+	filters: JSONSchema6[];
+	views: FiltersView[];
+	schema: JSONSchema6;
+	edit: EditModel[];
+	shouldParentUpdate: boolean;
+}
 
 export interface EditModel {
 	field: string;
