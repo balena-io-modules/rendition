@@ -11,7 +11,6 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { Button, ButtonProps } from '../../';
 import { DefaultProps } from '../../common-types';
-import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { randomString } from '../../utils';
 import { Box } from '../Box';
 import { DropDownButtonProps } from '../DropDownButton';
@@ -29,17 +28,6 @@ const SearchWrapper = styled.div`
 const FilterWrapper = styled(Box)`
 	position: relative;
 `;
-
-const UseBreakpointHook = ({
-	compact,
-	children,
-}: {
-	compact: boolean[];
-	children: any;
-}) => {
-	const shouldHide = useBreakpoint(compact);
-	return children(shouldHide);
-};
 
 class Filters extends React.Component<FiltersProps, FiltersState> {
 	constructor(props: FiltersProps) {
@@ -294,21 +282,18 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 			<FilterWrapper mb={3}>
 				<Flex justifyContent="space-between">
 					{this.shouldRenderComponent('add') && (
-						<UseBreakpointHook compact={this.props.compact || [false]}>
-							{(shouldHide: boolean) => (
-								<Button
-									mr={30}
-									disabled={this.props.disabled}
-									primary
-									icon={<FontAwesomeIcon icon={faFilter} />}
-									onClick={() =>
-										this.setState({ showModal: true, editingFilter: null })
-									}
-									{...this.props.addFilterButtonProps}
-									label={shouldHide ? undefined : 'Add filter'}
-								></Button>
-							)}
-						</UseBreakpointHook>
+						<Button
+							mr={30}
+							disabled={this.props.disabled}
+							primary
+							icon={<FontAwesomeIcon icon={faFilter} />}
+							onClick={() =>
+								this.setState({ showModal: true, editingFilter: null })
+							}
+							label="Add filter"
+							compact={this.props.compact}
+							{...this.props.addFilterButtonProps}
+						></Button>
 					)}
 
 					{this.shouldRenderComponent('search') && (
@@ -325,24 +310,20 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 					)}
 
 					{this.shouldRenderComponent('views') && (
-						<UseBreakpointHook compact={this.props.compact || [false]}>
-							{(shouldHide: boolean) => (
-								<ViewsMenu
-									dark={this.props.dark}
-									buttonProps={this.props.viewsMenuButtonProps}
-									disabled={this.props.disabled}
-									views={this.state.views || []}
-									schema={this.props.schema}
-									hasMultipleScopes={
-										this.props.viewScopes && this.props.viewScopes.length > 1
-									}
-									setFilters={filters => this.setFilters(filters)}
-									deleteView={view => this.deleteView(view)}
-									renderMode={this.props.renderMode}
-									shouldHideLabel={shouldHide}
-								/>
-							)}
-						</UseBreakpointHook>
+						<ViewsMenu
+							dark={this.props.dark}
+							buttonProps={this.props.viewsMenuButtonProps}
+							disabled={this.props.disabled}
+							views={this.state.views || []}
+							schema={this.props.schema}
+							hasMultipleScopes={
+								this.props.viewScopes && this.props.viewScopes.length > 1
+							}
+							setFilters={filters => this.setFilters(filters)}
+							deleteView={view => this.deleteView(view)}
+							renderMode={this.props.renderMode}
+							compact={this.props.compact}
+						/>
 					)}
 					{this.state.showModal && (
 						<FilterModal

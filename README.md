@@ -195,7 +195,7 @@ The basic building block of a rendition application.
 | `plain`       | `boolean` | -         | -          | If true, render the button without padding, background or border |
 | `underline`   | `boolean` | -         | -          | Similar to the `plaintext` prop, but displays a line underneath the button text |
 | `icon`        | `JSX.Element` | -         | -          | Optionally provide a JSX element that will be rendered before the text inside the button |
-
+| `compact`        | `boolean[]` | [false]   | -          | Optionally renders the label according to the value inside the array for each breakpoint |
 
 ### ButtonGroup
 
@@ -293,7 +293,7 @@ are rendered inside a dropdown list.
 | `noListFormat`      | `boolean` | -         | -          | If true, render children as a single JSX element instead of iterating over each of them |
 | `alignRight`      | `boolean` | -         | -          | If true, put the dropdown list on the right  |
 | `listMaxHeight`      | `string \| number` | -         | -          | If setted, it defines the maximum height of the dropdown list |
-
+| `compact`        | `boolean[]` | [false]    | -          | Optionally renders the label according to the value inside the array for each breakpoint |
 
 ### Filters
 
