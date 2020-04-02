@@ -411,7 +411,7 @@ export default css`
 		border-bottom-right-radius: 4px;
 		padding: 10px;
 		font: inherit;
-		z-index: 1;
+		z-index: 0;
 		word-wrap: break-word;
 	}
 	.CodeMirror-scroll {
@@ -425,7 +425,7 @@ export default css`
 		right: 0;
 		bottom: 0;
 		height: auto;
-		z-index: 9;
+		z-index: 8;
 		border-right: none !important;
 		border-bottom-right-radius: 0 !important;
 	}
@@ -467,9 +467,6 @@ export default css`
 	.editor-toolbar.fullscreen {
 		width: 100%;
 		height: 50px;
-		overflow-x: auto;
-		overflow-y: hidden;
-		white-space: nowrap;
 		padding-top: 10px;
 		padding-bottom: 10px;
 		box-sizing: border-box;
@@ -484,38 +481,22 @@ export default css`
 	.editor-toolbar.fullscreen::before {
 		width: 20px;
 		height: 50px;
-		background: -moz-linear-gradient(
-			left,
-			rgba(255, 255, 255, 1) 0,
-			rgba(255, 255, 255, 0) 100%
-		);
+		background: -moz-linear-gradient(left, #fff 0, rgba(255, 255, 255, 0) 100%);
 		background: -webkit-gradient(
 			linear,
 			left top,
 			right top,
-			color-stop(0, rgba(255, 255, 255, 1)),
+			color-stop(0, #fff),
 			color-stop(100%, rgba(255, 255, 255, 0))
 		);
 		background: -webkit-linear-gradient(
 			left,
-			rgba(255, 255, 255, 1) 0,
+			#fff 0,
 			rgba(255, 255, 255, 0) 100%
 		);
-		background: -o-linear-gradient(
-			left,
-			rgba(255, 255, 255, 1) 0,
-			rgba(255, 255, 255, 0) 100%
-		);
-		background: -ms-linear-gradient(
-			left,
-			rgba(255, 255, 255, 1) 0,
-			rgba(255, 255, 255, 0) 100%
-		);
-		background: linear-gradient(
-			to right,
-			rgba(255, 255, 255, 1) 0,
-			rgba(255, 255, 255, 0) 100%
-		);
+		background: -o-linear-gradient(left, #fff 0, rgba(255, 255, 255, 0) 100%);
+		background: -ms-linear-gradient(left, #fff 0, rgba(255, 255, 255, 0) 100%);
+		background: linear-gradient(to right, #fff 0, rgba(255, 255, 255, 0) 100%);
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -525,56 +506,43 @@ export default css`
 	.editor-toolbar.fullscreen::after {
 		width: 20px;
 		height: 50px;
-		background: -moz-linear-gradient(
-			left,
-			rgba(255, 255, 255, 0) 0,
-			rgba(255, 255, 255, 1) 100%
-		);
+		background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0, #fff 100%);
 		background: -webkit-gradient(
 			linear,
 			left top,
 			right top,
 			color-stop(0, rgba(255, 255, 255, 0)),
-			color-stop(100%, rgba(255, 255, 255, 1))
+			color-stop(100%, #fff)
 		);
 		background: -webkit-linear-gradient(
 			left,
 			rgba(255, 255, 255, 0) 0,
-			rgba(255, 255, 255, 1) 100%
+			#fff 100%
 		);
-		background: -o-linear-gradient(
-			left,
-			rgba(255, 255, 255, 0) 0,
-			rgba(255, 255, 255, 1) 100%
-		);
-		background: -ms-linear-gradient(
-			left,
-			rgba(255, 255, 255, 0) 0,
-			rgba(255, 255, 255, 1) 100%
-		);
-		background: linear-gradient(
-			to right,
-			rgba(255, 255, 255, 0) 0,
-			rgba(255, 255, 255, 1) 100%
-		);
+		background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0, #fff 100%);
+		background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0, #fff 100%);
+		background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, #fff 100%);
 		position: fixed;
 		top: 0;
 		right: 0;
 		margin: 0;
 		padding: 0;
 	}
+	.editor-toolbar .easymde-dropdown,
 	.editor-toolbar button {
 		background: 0 0;
 		display: inline-block;
 		text-align: center;
 		text-decoration: none !important;
-		width: 30px;
 		height: 30px;
 		margin: 0;
 		padding: 0;
 		border: 1px solid transparent;
 		border-radius: 3px;
 		cursor: pointer;
+	}
+	.editor-toolbar button {
+		width: 30px;
 	}
 	.editor-toolbar button.active,
 	.editor-toolbar button:hover {
@@ -725,6 +693,40 @@ export default css`
 	.cm-s-easymde .cm-quote {
 		color: #7f8c8d;
 		font-style: italic;
+	}
+	.editor-toolbar .easymde-dropdown {
+		position: relative;
+		background: linear-gradient(
+			to bottom right,
+			#fff 0,
+			#fff 84%,
+			#333 50%,
+			#333 100%
+		);
+		border-radius: 0;
+		border: 1px solid #fff;
+	}
+	.editor-toolbar .easymde-dropdown:hover {
+		background: linear-gradient(
+			to bottom right,
+			#fff 0,
+			#fff 84%,
+			#333 50%,
+			#333 100%
+		);
+	}
+	.easymde-dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+		padding: 8px;
+		z-index: 2;
+		top: 30px;
+	}
+	.easymde-dropdown:active .easymde-dropdown-content,
+	.easymde-dropdown:focus .easymde-dropdown-content {
+		display: block;
 	}
 	.CodeMirror
 		.cm-spell-error:not(.cm-url):not(.cm-comment):not(.cm-tag):not(.cm-word) {
