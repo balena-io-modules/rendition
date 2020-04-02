@@ -1,4 +1,25 @@
 - commits:
+    - subject: 'MarkdownEditor: Update tsifyied styles of easymde to v2.10.0'
+      hash: 2da2943eaee652d747d06c98048bbc60c000e1b3
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+    - subject: 'Select: Update snap based on new Grommet'
+      hash: bab6061679ab40befa386ccdef78c36443d3b8a3
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 14.5.0
+  date: 2020-04-02T15:28:15.044Z
+- commits:
     - subject: 'refactor: schema sieve service function'
       hash: 85deffa9910a8e753fb54cc184b59be37b8f22e4
       body: |
