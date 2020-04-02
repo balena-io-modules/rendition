@@ -5,6 +5,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { RenditionSystemProps } from '../../common-types';
+import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { px } from '../../utils';
 import { Box } from '../Box';
 import Button, { ButtonProps } from '../Button';
@@ -84,17 +85,19 @@ const Toggle = ({
 	handler,
 	label,
 	joined,
+	compact,
 	...props
 }: InternalDropDownButtonProps & {
 	open: boolean;
 	handler: React.MouseEventHandler<HTMLElement>;
 }) => {
+	const shouldCompact = useBreakpoint(compact || [false]);
 	if (joined) {
 		if (label || props.icon) {
 			return (
 				<JoinedButton {...props} onClick={handler}>
 					<Flex justifyContent="space-between" alignItems="center">
-						<Box mr={2}>{label}</Box>
+						{!shouldCompact && <Box mr={2}>{label}</Box>}
 						{open ? (
 							<FontAwesomeIcon icon={faChevronUp} />
 						) : (

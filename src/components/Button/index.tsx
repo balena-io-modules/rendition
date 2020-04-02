@@ -10,6 +10,7 @@ import {
 	Sizing,
 	Theme,
 } from '../../common-types';
+import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { getColor, getColoringType, isLight, px } from '../../utils';
 
 const getHoverEffectOverride = (
@@ -223,8 +224,13 @@ const Base = (props: ThemedButtonProps) => {
 		plain,
 		active,
 		light,
+		compact,
 		...restProps
 	} = props;
+
+	// Add a method to hide the button label. Here we can just pass an array of
+	// boolean to decide on each breakpoint whether to show the label or not
+	const shouldCompact = useBreakpoint(compact || [false]);
 
 	// The 'primary' and 'color' props map to semantically different properties in
 	// grommet, so mapping is performed here to keep the styling cleaner.
@@ -259,7 +265,7 @@ const Base = (props: ThemedButtonProps) => {
 			gap={px(props.theme.space[2])}
 			{...restProps}
 			plain={!!plain || !!underline}
-			label={label || children}
+			label={shouldCompact ? undefined : label || children}
 		/>
 	);
 };
@@ -270,6 +276,7 @@ interface ButtonBaseProps extends Coloring, Sizing {
 	outline?: boolean;
 	underline?: boolean;
 	light?: boolean;
+	compact?: boolean[];
 }
 
 export interface InternalButtonProps
