@@ -1,4 +1,27 @@
 - commits:
+    - subject: 'add: compact prop on Button and Dropdown'
+      hash: 4f55a7748f0ee2bc6458da90d3aaf57b05978478
+      body: |
+        compact property on Buttons and Dropdown components to hide label
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+    - subject: 'revert: previous filters refactor'
+      hash: 716f3f08e1267ade712db53ffa7ae0a1644b10bc
+      body: |
+        revert previous filters refactor because of a regression on search bar
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 14.6.0
+  date: 2020-04-02T15:46:57.177Z
+- commits:
     - subject: 'MarkdownEditor: Update tsifyied styles of easymde to v2.10.0'
       hash: 2da2943eaee652d747d06c98048bbc60c000e1b3
       body: ''
