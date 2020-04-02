@@ -9,7 +9,11 @@ import { getColor, opaque, px } from '../../utils';
 
 const ICON_SIZE = 14;
 
-const Wrapper = styled(Flex)<{ solid?: boolean; hasDismissButton: boolean }>`
+const Wrapper = styled(Flex)<{
+	bordered?: boolean;
+	solid?: boolean;
+	hasDismissButton: boolean;
+}>`
 	position: relative;
 	margin: 0;
 	padding: ${props => px(props.theme.space[3])};
@@ -20,9 +24,11 @@ const Wrapper = styled(Flex)<{ solid?: boolean; hasDismissButton: boolean }>`
 	border-radius: 10px;
 	border: 1px solid
 		${props =>
-			props.solid
-				? getColor(props, 'bg', 'main')
-				: props.theme.colors.quartenary.main};
+			props.bordered
+				? props.solid
+					? getColor(props, 'bg', 'main')
+					: props.theme.colors.quartenary.main
+				: 'transparent'};
 	background-color: ${props =>
 		props.solid ? getColor(props, 'bg', 'light') : 'white'};
 	color: ${props =>
@@ -56,6 +62,7 @@ export interface DismissableContainerProps extends FlexProps {
 	baselineHeight?: number;
 	solid?: boolean;
 	a11yTitle?: string;
+	bordered?: boolean;
 }
 
 interface ThemedDismissableContainerProps extends DismissableContainerProps {
@@ -72,6 +79,7 @@ export const DismissableContainer = withTheme(
 				solid,
 				theme,
 				a11yTitle,
+				bordered,
 				...restProps
 			}: ThemedDismissableContainerProps,
 			ref,
@@ -82,6 +90,7 @@ export const DismissableContainer = withTheme(
 			return (
 				<Wrapper
 					solid={solid}
+					bordered={bordered}
 					hasDismissButton={Boolean(onDismiss)}
 					ref={ref as any}
 					{...restProps}
@@ -109,3 +118,7 @@ export const DismissableContainer = withTheme(
 		},
 	) as any,
 );
+
+DismissableContainer.defaultProps = {
+	bordered: true,
+};

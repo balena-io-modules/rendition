@@ -3,8 +3,61 @@ import { storiesOf } from '@storybook/react'
 import { faMapSigns } from '@fortawesome/free-solid-svg-icons/faMapSigns'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import withReadme from 'storybook-readme/with-readme'
-import { Steps, Step } from '../../'
+import { Checkbox, Flex, Steps, Step } from '../../'
 import Readme from './README.md'
+
+const stepLabels = [
+  'Do this',
+  'then this',
+  'and then this',
+  'and finally this!'
+]
+
+const getStep = (index, isComplete, setActiveStepIndex) => {
+  return (
+    <Step
+      key={index}
+      status={isComplete[index] ? 'completed' : 'pending'}
+      onClick={() => setActiveStepIndex(index)}
+      >
+      {stepLabels[index]}
+    </Step>
+  )
+}
+
+const OrderedStepsWrapper = props => {
+  const [activeStepIndex, setActiveStepIndex] = React.useState(1)
+  const [isComplete, setIsComplete] = React.useState([true, true, false, false])
+  const toggleIsComplete = () => {
+    const newIsComplete = [...isComplete]
+    newIsComplete.splice(activeStepIndex, 1, !isComplete[activeStepIndex])
+    setIsComplete(newIsComplete)
+  }
+
+  return (
+    <React.Fragment>
+      <Steps
+        ordered
+        activeStepIndex={activeStepIndex}
+        alignItems='center'
+        justifyContent='center'
+        m={3}
+        {...props}
+      >
+        {stepLabels.map((_, index) =>
+          getStep(index, isComplete, setActiveStepIndex)
+        )}
+      </Steps>
+      <Flex mb={4} justifyContent='center' alignItems='center'>
+        <Checkbox
+          label={`Step ${activeStepIndex + 1} is complete`}
+          onChange={toggleIsComplete}
+          checked={isComplete[activeStepIndex]}
+        />
+      </Flex>
+    </React.Fragment>
+  )
+}
 
 storiesOf('Next/Steps', module)
   .addDecorator(withReadme(Readme))
@@ -46,6 +99,25 @@ storiesOf('Next/Steps', module)
             And finally this
           </Step>
         </Steps>
+        <Steps m={3} bordered={false}>
+          <Step status='pending' onClick={() => null}>
+            Do this
+          </Step>
+          <Step status='completed' onClick={() => null}>
+            And then this
+          </Step>
+          <Step status='pending' onClick={() => null}>
+            And finally this
+          </Step>
+        </Steps>
+      </React.Fragment>
+    )
+  })
+  .add('Ordered', () => {
+    return (
+      <React.Fragment>
+        <OrderedStepsWrapper bordered={false} />
+        <OrderedStepsWrapper titleText='With title' onClose={() => null} />
       </React.Fragment>
     )
   })
