@@ -301,4 +301,9 @@ export default {
 			knob: {},
 		},
 	},
+	accordion: {
+		border: {
+			side: 'bottom',
+		},
+	},
 };

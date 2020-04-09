@@ -52,6 +52,7 @@ export {
 	TableSortOptions,
 	TableProps,
 } from './components/Table';
+export { default as Accordion, AccordionProps } from './components/Accordion';
 export { default as Terminal, TerminalProps } from './components/Terminal';
 export {
 	default as TextWithCopy,
