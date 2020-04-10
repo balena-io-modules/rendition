@@ -10,27 +10,11 @@ import {
 	SpaceProps,
 	WidthProps,
 } from 'styled-system';
+import { Theme } from './theme';
 
 export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
-export interface Theme {
-	breakpoints: number[];
-	space: number[];
-	fontSizes: number[];
-	weights: number[];
-	font: string;
-	monospace: string;
-	lineHeight: number;
-	colors: {
-		[key: string]: {
-			main: string;
-			light?: string;
-			dark?: string;
-			semilight?: string;
-		};
-	};
-	radius: number;
-}
+export { Theme } from './theme';
 
 export interface ThemedDefaultProps extends DefaultProps {
 	theme: Theme;
