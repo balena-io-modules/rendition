@@ -1,4 +1,18 @@
 - commits:
+    - subject: Implement Accordion component
+      hash: 7af9108f9741d1de15b856176714e6c1fa4a5c19
+      body: ''
+      footer:
+        Connects-to: '#151'
+        connects-to: '#151'
+        Change-type: Minor
+        change-type: Minor
+        Signed-off-by: Amit Solanki <amit@balena.io>
+        signed-off-by: Amit Solanki <amit@balena.io>
+      author: Amit Solanki
+  version: 14.7.0
+  date: 2020-04-11T11:36:15.913Z
+- commits:
     - subject: 'add: compact prop on Button and Dropdown'
       hash: 4f55a7748f0ee2bc6458da90d3aaf57b05978478
       body: |
