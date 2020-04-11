@@ -75,6 +75,8 @@ export interface FormWidgetProps {
 	formContext: any;
 
 	type?: string;
+
+	rawErrors: string[];
 }
 
 export interface RenditionUiSchema extends UiSchema {
