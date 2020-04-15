@@ -1,4 +1,20 @@
 - commits:
+    - subject: Make the theme object the source of the exported Theme interface
+      hash: 6e0b09a6b5b6479176ea0b34134e72cb407d231f
+      body: |
+        This properly exposes the props that were missing
+        from the currently exported interface, so that we can
+        override all the theme settings. Moreover we will no
+        longer need to maintain a separate Theme interface.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 14.8.0
+  date: 2020-04-15T14:23:00.369Z
+- commits:
     - subject: Implement Accordion component
       hash: 7af9108f9741d1de15b856176714e6c1fa4a5c19
       body: ''
