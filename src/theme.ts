@@ -1,4 +1,5 @@
 import { px } from 'styled-system';
+import { Omit } from './common-types';
 
 const primary = '#00AEEF';
 const secondary = '#2A506F';
@@ -9,6 +10,13 @@ const danger = '#FF423D';
 const warning = '#FCA321';
 const success = '#1AC135';
 const info = '#1496E1';
+
+interface ColorVariants {
+	main: string;
+	light?: string;
+	dark?: string;
+	semilight?: string;
+}
 
 const colors = {
 	primary: {
@@ -117,7 +125,7 @@ export const titleFont = `CircularStd, Arial, sans-serif`;
 export const monospace = `'Ubuntu Mono', 'Courier New', monospace`;
 export const lineHeight = 1.5;
 
-export default {
+const theme = {
 	breakpoints,
 	space,
 	fontSizes,
@@ -307,3 +315,9 @@ export default {
 		},
 	},
 };
+
+export default theme;
+
+export interface Theme extends Omit<typeof theme, 'colors'> {
+	colors: Record<string, ColorVariants>;
+}
