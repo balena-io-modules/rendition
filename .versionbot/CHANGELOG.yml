@@ -1,4 +1,16 @@
 - commits:
+    - subject: Apply text color from theme globally
+      hash: a970944cac2989c6528f72c6c81ed41700c17f1b
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 14.9.0
+  date: 2020-04-17T14:12:32.038Z
+- commits:
     - subject: Make the theme object the source of the exported Theme interface
       hash: 6e0b09a6b5b6479176ea0b34134e72cb407d231f
       body: |
