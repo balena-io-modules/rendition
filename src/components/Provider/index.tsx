@@ -10,6 +10,7 @@ import { BreakpointProvider } from './BreakpointProvider';
 const Base = styled(Grommet)`
 	font-family: ${props => props.theme.font};
 	font-size: ${props => px(props.theme.fontSizes[1])};
+	color: ${props => px(props.theme.colors.text.main)};
 
 	h1,
 	h2,

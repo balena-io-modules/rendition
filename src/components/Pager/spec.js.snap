@@ -190,6 +190,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
 .c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
+  color: #2A506F;
 }
 
 .c1 h1,
