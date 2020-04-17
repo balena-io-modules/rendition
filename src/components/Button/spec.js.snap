@@ -99,6 +99,7 @@ exports[`Button renders correctly 1`] = `
 .c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
+  color: #2A506F;
 }
 
 .c1 h1,
@@ -230,6 +231,7 @@ exports[`Styled Anchor Button renders correctly 1`] = `
 .c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
+  color: #2A506F;
 }
 
 .c1 h1,
@@ -361,6 +363,7 @@ exports[`Styled Button renders correctly 1`] = `
 .c1 {
   font-family: 'Nunito',Arial,sans-serif;
   font-size: 14px;
+  color: #2A506F;
 }
 
 .c1 h1,
