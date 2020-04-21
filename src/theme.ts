@@ -192,13 +192,13 @@ const theme = {
 			`,
 		},
 		input: {
-			weight: 400,
+			weight: 400 as string | number,
 		},
 	},
 	button: {
 		height: '38px',
 		font: {
-			weight: 500,
+			weight: 500 as string | number,
 		},
 		border: {
 			width: '1px',
