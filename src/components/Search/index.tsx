@@ -65,8 +65,8 @@ export interface InternalSearchProps extends DefaultProps {
 	dark?: boolean;
 	disabled?: boolean;
 	placeholder?: string;
-	value: string;
-	onChange: (value: any) => void;
+	value?: string;
+	onChange?: (value: any) => void;
 }
 
 export type SearchProps = InternalSearchProps & RenditionSystemProps;
