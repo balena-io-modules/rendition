@@ -1,4 +1,18 @@
 - commits:
+    - subject: Make value and onChange optional for Search to allow uncontrolled
+      hash: 99415fb36351293fbe686a8bea8f44fc89c9b46d
+      body: |
+        If integrating with Algolia for example, the input is controlled by
+        the Algolia script and the input should remain uncontrolled
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 14.9.1
+  date: 2020-04-21T11:13:40.750Z
+- commits:
     - subject: Apply text color from theme globally
       hash: a970944cac2989c6528f72c6c81ed41700c17f1b
       body: ''
