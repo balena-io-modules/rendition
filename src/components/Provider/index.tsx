@@ -1,4 +1,5 @@
 import { Grommet } from 'grommet';
+import { PartialDeep } from 'lodash/index';
 import merge from 'lodash/merge';
 import * as React from 'react';
 import styled from 'styled-components';
@@ -33,7 +34,7 @@ const Provider = ({ theme, ...props }: ThemedProvider) => {
 };
 
 export interface ThemedProvider extends DefaultProps {
-	theme?: Partial<Theme>;
+	theme?: PartialDeep<Theme>;
 }
 
 export default Provider;
