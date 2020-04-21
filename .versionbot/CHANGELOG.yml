@@ -1,4 +1,27 @@
 - commits:
+    - subject: 'Theme: Allow setting string values to the input & button weight'
+      hash: f4d7005fb68887baded0fbc70a04798293e0c12a
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+    - subject: 'Provider: Type the theme property as deep partial'
+      hash: 6c598f0ec97bdf005d95f606b8d3a12ada9257f5
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        See: 'https://github.com/balena-io/balena-ui/pull/3636'
+        see: 'https://github.com/balena-io/balena-ui/pull/3636'
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 14.9.2
+  date: 2020-04-21T14:19:20.890Z
+- commits:
     - subject: Make value and onChange optional for Search to allow uncontrolled
       hash: 99415fb36351293fbe686a8bea8f44fc89c9b46d
       body: |
