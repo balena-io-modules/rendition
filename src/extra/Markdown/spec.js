@@ -4,7 +4,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import { Provider } from '../../../dist'
 import { Markdown } from '../../../dist/extra/Markdown'
-import suite from './specsuite.json'
+import suite from './specsuite'
 
 describe.only('Markdown component', () => {
   it('should match the stored snapshot', () => {
@@ -21,7 +21,9 @@ describe.only('Markdown component', () => {
     it(testCase.name, () => {
       const wrapper = mount(
         <Provider>
-          <Markdown>{testCase.source}</Markdown>
+          <Markdown sanitizerOptions={testCase.sanitizerOptions}>
+            {testCase.source}
+          </Markdown>
         </Provider>
       )
 

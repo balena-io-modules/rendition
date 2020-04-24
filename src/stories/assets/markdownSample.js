@@ -1,5 +1,15 @@
 import image from './GitHub-Mark-120px-plus.png'
 
+export const customizationSamples = [
+  {
+    markdown:
+      "<h1>A title</h1><img src='https://via.placeholder.com/150'><p>A paragraph</p>",
+    sanitizerOptions: {
+      allowedTags: ['p']
+    }
+  }
+]
+
 export default `
 # Markdown
 A simple component for rendering *GitHub flavored markdown*.

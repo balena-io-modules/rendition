@@ -10,6 +10,13 @@ You can load this component using:
 import { Markdown } from 'rendition/dist/extra/Markdown';
 ```
 
+If you need to customize the conversion of markdown to HTML you can supply the `sanitizerOptions` prop. In this case, use the defaults as a starting point for your options:
+
+```
+import { Markdown, defaultSanitizerOptions } from 'rendition/dist/extra/Markdown';
+```
+
+
 [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/extra/Markdown/story.js)
 
 ## Props
@@ -17,6 +24,7 @@ import { Markdown } from 'rendition/dist/extra/Markdown';
 | Name   | Type   | Default   | Required   | Description   |
 | ------ | ------ | --------- | ---------- | ------------- |
 | `children`  | `string` | - | ✓ | The markdown source that should be rendered |
+| `sanitizerOptions` | [`sanitizeHtml.IOptions`](https://github.com/apostrophecms/sanitize-html#how-to-use) | (See `extra/utils/defaultSanitizerOptions`) | - | Specifies the options used when sanitizing the generated HTML. |
 
 Any other properties supplied are spread to the root element ([`Txt`](#txt)).
 
