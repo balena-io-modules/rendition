@@ -1,72 +1,147 @@
-import { faCheckCircle } from '@fortawesome/free-solid-svg-icons/faCheckCircle';
+import { faCheck } from '@fortawesome/free-solid-svg-icons/faCheck';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import findIndex from 'lodash/findIndex';
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import asRendition from '../../asRendition';
 import { DefaultProps, RenditionSystemProps, Theme } from '../../common-types';
+import Arrow from '../../internal/Arrow';
 import { DismissableContainer } from '../../internal/DismissableContainer';
 import { px } from '../../utils';
 import { Flex } from '../Flex';
 import Heading from '../Heading';
 import Link from '../Link';
 import Txt from '../Txt';
-import { Arrow } from './Arrow';
 
 export interface InternalStepsProps extends DefaultProps {
+	bordered?: boolean;
+	ordered?: boolean;
+	activeStepIndex?: number;
 	titleText?: string;
 	titleIcon?: React.ReactNode;
 	onClose?: () => void;
 }
 
+interface ThemedInternalStepsProps extends InternalStepsProps {
+	theme: Theme;
+}
+
+type statusOptions = 'none' | 'pending' | 'completed';
+
 export interface StepProps {
 	children: string;
-	status: 'none' | 'pending' | 'completed';
+	status: statusOptions;
 	onClick?: () => void;
 }
 
-const getStatusColor = (theme: Theme, status: StepProps['status']) => {
-	switch (status) {
-		case 'pending':
-			return theme.colors.tertiary.semilight;
-		case 'completed':
-			return theme.colors.success.main;
+interface InternalStepProps extends StepProps {
+	index: number;
+	active?: boolean;
+	ordered?: boolean;
+}
+
+const getIconBg = (
+	theme: Theme,
+	ordered: boolean,
+	status: statusOptions,
+	active: boolean,
+) => {
+	let bgColor = ordered ? '#fff' : theme.colors.tertiary.semilight;
+	const completed = status === 'completed';
+	if (active) {
+		bgColor = theme.colors.primary.main;
+	} else if (completed) {
+		bgColor = theme.colors.success.main;
 	}
+	const size = px(theme.fontSizes[4]);
+	return css`
+		border-radius: 50%;
+		border: ${completed || active || !ordered
+			? 'none'
+			: `solid 1px ${theme.colors.tertiary.semilight}`};
+		color: ${!ordered || completed || active
+			? '#fff'
+			: theme.colors.tertiary.semilight};
+		background-color: ${bgColor};
+		height: ${size};
+		width: ${size};
+	`;
 };
 
-const StatusIconPlaceholder = styled.span<{ status: StepProps['status'] }>`
-	font-size: ${props => px(props.theme.fontSizes[4])};
-	line-height: ${props => px(props.theme.fontSizes[4])};
-	color: ${props => getStatusColor(props.theme, props.status)};
+const StepIconBg = styled(Flex)<{
+	ordered: boolean;
+	status: statusOptions;
+	active: boolean;
+}>`
+	${props => getIconBg(props.theme, props.ordered, props.status, props.active)};
 `;
 
-const HeaderContainer = styled(Flex)`
-	min-height: ${props => px(props.theme.fontSizes[5])};
-`;
+interface StepIconProps {
+	ordered: boolean;
+	index: number;
+	active: boolean;
+	status: statusOptions;
+}
 
-export const Step = ({ status, children, onClick }: StepProps) => {
+const StepIcon = ({ ordered, status, active, index }: StepIconProps) => {
+	if (status === 'none') {
+		return null;
+	}
+	return (
+		<StepIconBg
+			mr={2}
+			alignItems="center"
+			justifyContent="center"
+			ordered={ordered}
+			status={status}
+			active={active}
+		>
+			{!ordered || (status === 'completed' && !active) ? (
+				<FontAwesomeIcon icon={faCheck} />
+			) : (
+				<Txt>{index + 1}</Txt>
+			)}
+		</StepIconBg>
+	);
+};
+
+export const Step = ({
+	ordered,
+	active,
+	index,
+	status,
+	children,
+	onClick,
+}: InternalStepProps) => {
 	if (typeof children !== 'string') {
 		throw new Error('The child of a Step has to be a string.');
 	}
 
 	return (
 		<Flex flexDirection="row" justifyContent="center" alignItems="center">
-			{status !== 'none' && (
-				<StatusIconPlaceholder status={status}>
-					<FontAwesomeIcon icon={faCheckCircle} />
-				</StatusIconPlaceholder>
-			)}
+			<StepIcon
+				ordered={Boolean(ordered)}
+				status={status}
+				active={Boolean(active)}
+				index={index}
+			/>
 			{onClick ? (
-				<Link ml={status === 'none' ? 0 : 2} onClick={onClick}>
-					{children}
-				</Link>
+				<Link onClick={onClick}>{children}</Link>
 			) : (
-				<Txt ml={2}>{children}</Txt>
+				<Txt bold={active} color={active ? undefined : 'tertiary.light'}>
+					{children}
+				</Txt>
 			)}
 		</Flex>
 	);
 };
 
-const FramelessSteps = ({ children, ...otherProps }: any) => {
+const FramelessSteps = ({
+	ordered,
+	activeStepIndex,
+	children,
+	...otherProps
+}: any) => {
 	return (
 		<Flex
 			mx="auto"
@@ -82,12 +157,38 @@ const FramelessSteps = ({ children, ...otherProps }: any) => {
 					);
 				}
 
+				const firstPendingStepIndex = findIndex(children, {
+					props: { status: 'pending' },
+				});
+				const enableNextStep =
+					!ordered ||
+					firstPendingStepIndex === -1 ||
+					firstPendingStepIndex > index;
+				const allPrevStepsComplete =
+					firstPendingStepIndex === -1 || firstPendingStepIndex >= index;
+
+				// A step should be clickable if:
+				// - steps are not orderable OR
+				// - it's located before the active step OR
+				// - it's not the current step AND all previous steps are complete
+				const onClick =
+					!ordered ||
+					index < activeStepIndex ||
+					(index !== activeStepIndex && allPrevStepsComplete)
+						? step.props.onClick
+						: undefined;
+
 				return (
 					<Flex flexDirection="row" alignItems="center">
-						{step}
+						{React.cloneElement(step, {
+							ordered,
+							index,
+							onClick,
+							active: activeStepIndex === index,
+						})}
 						{index < children.length - 1 && (
 							<Flex justifyContent="center" alignItems="center" mx={3}>
-								<Arrow />
+								<Arrow disabled={!enableNextStep} />
 							</Flex>
 						)}
 					</Flex>
@@ -99,9 +200,31 @@ const FramelessSteps = ({ children, ...otherProps }: any) => {
 
 const Steps = React.forwardRef(
 	(
-		{ className, children, titleText, titleIcon, onClose }: InternalStepsProps,
+		{
+			theme,
+			className,
+			children,
+			ordered,
+			bordered,
+			activeStepIndex,
+			titleText,
+			titleIcon,
+			onClose,
+		}: ThemedInternalStepsProps,
 		ref,
 	) => {
+		if (ordered) {
+			if (typeof activeStepIndex !== 'number') {
+				throw new Error(
+					'You must specify the activeStepIndex for ordered Steps',
+				);
+			} else {
+				const stepCount = React.Children.count(children);
+				if (activeStepIndex < 0 || activeStepIndex >= stepCount) {
+					throw new Error('activeStepIndex is out of range');
+				}
+			}
+		}
 		return (
 			<DismissableContainer
 				p={3}
@@ -112,10 +235,12 @@ const Steps = React.forwardRef(
 				alignItems="center"
 				onDismiss={onClose}
 				baselineHeight={34}
+				bordered={bordered}
 				ref={ref as any}
 			>
 				{(titleText || titleIcon) && (
-					<HeaderContainer
+					<Flex
+						minHeight={theme.fontSizes[5]}
 						justifyContent="center"
 						alignItems="center"
 						ml={2}
@@ -129,13 +254,23 @@ const Steps = React.forwardRef(
 						{titleText && (
 							<Heading.h6 color="tertiary.main">{titleText}</Heading.h6>
 						)}
-					</HeaderContainer>
+					</Flex>
 				)}
-				<FramelessSteps>{children}</FramelessSteps>
+				<FramelessSteps
+					ordered={Boolean(ordered)}
+					activeStepIndex={activeStepIndex}
+				>
+					{children}
+				</FramelessSteps>
 			</DismissableContainer>
 		);
 	},
 );
+
+Steps.defaultProps = {
+	bordered: true,
+	ordered: false,
+};
 
 export type StepsProps = InternalStepsProps & RenditionSystemProps;
 
