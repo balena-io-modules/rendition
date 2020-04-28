@@ -1,10 +1,14 @@
 import * as React from 'react';
+import sanitizeHtml from 'sanitize-html';
 import styled from 'styled-components';
 import Txt, { TxtProps } from '../../components/Txt';
 import { parseMarkdown } from '../utils';
 
+export { defaultSanitizerOptions } from '../utils';
+
 type MarkdownProps = TxtProps & {
 	children: string;
+	sanitizerOptions?: sanitizeHtml.IOptions;
 };
 
 /*
@@ -709,11 +713,17 @@ export const GitHubMarkdown = styled(Txt)`
 	}
 `;
 
-export const Markdown = ({ children, ...props }: MarkdownProps) => {
+export const Markdown = ({
+	children,
+	sanitizerOptions,
+	...props
+}: MarkdownProps) => {
 	return (
 		<GitHubMarkdown
 			{...props}
-			dangerouslySetInnerHTML={{ __html: parseMarkdown(children) }}
+			dangerouslySetInnerHTML={{
+				__html: parseMarkdown(children, sanitizerOptions),
+			}}
 		/>
 	);
 };

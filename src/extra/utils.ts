@@ -19,7 +19,7 @@ const markedOptions = {
 	renderer,
 };
 
-const sanitizerOptions = {
+export const defaultSanitizerOptions = {
 	allowedTags: sanitizeHtml.defaults.allowedTags.concat([
 		'article',
 		'aside',
@@ -52,7 +52,10 @@ const sanitizerOptions = {
 	},
 };
 
-export const parseMarkdown = (text: string = '') => {
+export const parseMarkdown = (
+	text: string = '',
+	sanitizerOptions: sanitizeHtml.IOptions = defaultSanitizerOptions,
+) => {
 	const html = marked(text, markedOptions);
 	const clean = sanitizeHtml(html, sanitizerOptions as any);
 	return clean;
