@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'feat: Add sanitizer options to Markdown component'
+      hash: eed37c74b4ccdebdcb5e5edebe9b51aecb675302
+      body: |
+        Markdown component has a new (optional) prop: sanitizerOptions.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 14.11.0
+  date: 2020-04-28T07:30:09.646Z
+- commits:
     - subject: 'feat: Add support for ordered "Steps"'
       hash: a1c5bae0995915ce07497aa574fa1efe0dfe85de
       body: ''
