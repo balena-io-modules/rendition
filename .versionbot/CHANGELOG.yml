@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'feat: Add support for ordered "Steps"'
+      hash: a1c5bae0995915ce07497aa574fa1efe0dfe85de
+      body: ''
+      footer:
+        Connects-to: '#1077'
+        connects-to: '#1077'
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 14.10.0
+  date: 2020-04-28T01:00:30.315Z
+- commits:
     - subject: 'Theme: Allow setting string values to the input & button weight'
       hash: f4d7005fb68887baded0fbc70a04798293e0c12a
       body: ''
