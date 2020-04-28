@@ -52,6 +52,7 @@ export {
 	TableSortOptions,
 	TableProps,
 } from './components/Table';
+export { default as TableWithCustomColumns } from './components/TableWithCustomColumns/TableWithCustomColumns';
 export { default as Terminal, TerminalProps } from './components/Terminal';
 export {
 	default as TextWithCopy,
