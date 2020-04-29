@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'fix: overflow bottom padding'
+      hash: b00504e701d0c33fe34f09232ac97b48e8b09536
+      body: |
+        fix modal overflow bottom padding
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 14.11.1
+  date: 2020-04-29T11:17:40.570Z
+- commits:
     - subject: 'feat: Add sanitizer options to Markdown component'
       hash: eed37c74b4ccdebdcb5e5edebe9b51aecb675302
       body: |
