@@ -129,7 +129,6 @@ class Modal extends React.Component<ThemedModalProps, any> {
 			>
 				<GlobalStyle />
 				<ModalSizer
-					p={[px(theme.space[3]), '40px 50px 30px']}
 					width={width || DEFAULT_MODAL_WIDTH}
 					maxWidth="100%"
 					onClick={this.stopPropagation}
@@ -137,34 +136,37 @@ class Modal extends React.Component<ThemedModalProps, any> {
 					id={props.id}
 					className={props.className}
 				>
-					{props.titleElement ? (
-						<Heading.h3 mb={50}>{props.titleElement}</Heading.h3>
-					) : (
-						!!props.title && (
-							<Heading.h3 mb={50}>
-								{props.title}
-								{!!props.titleDetails && (
-									<HeadingDescription color="text.light" fontSize={2}>
-										{props.titleDetails}
-									</HeadingDescription>
-								)}
-							</Heading.h3>
-						)
-					)}
-					{props.children}
-					<Flex mt={50} alignItems="center" justifyContent="flex-end">
-						{props.cancel && (
-							<ModalButton {...cancelButtonProps} onClick={props.cancel}>
-								{(cancelButtonProps && cancelButtonProps.children) || 'Cancel'}
+					<Box p={[px(theme.space[3]), '40px 50px 30px']}>
+						{props.titleElement ? (
+							<Heading.h3 mb={50}>{props.titleElement}</Heading.h3>
+						) : (
+							!!props.title && (
+								<Heading.h3 mb={50}>
+									{props.title}
+									{!!props.titleDetails && (
+										<HeadingDescription color="text.light" fontSize={2}>
+											{props.titleDetails}
+										</HeadingDescription>
+									)}
+								</Heading.h3>
+							)
+						)}
+						{props.children}
+						<Flex mt={50} alignItems="center" justifyContent="flex-end">
+							{props.cancel && (
+								<ModalButton {...cancelButtonProps} onClick={props.cancel}>
+									{(cancelButtonProps && cancelButtonProps.children) ||
+										'Cancel'}
+								</ModalButton>
+							)}
+							{props.secondaryButtonProps && (
+								<ModalButton {...secondaryButtonProps} />
+							)}
+							<ModalButton {...primaryButtonProps} onClick={props.done}>
+								{props.action || 'OK'}
 							</ModalButton>
-						)}
-						{props.secondaryButtonProps && (
-							<ModalButton {...secondaryButtonProps} />
-						)}
-						<ModalButton {...primaryButtonProps} onClick={props.done}>
-							{props.action || 'OK'}
-						</ModalButton>
-					</Flex>
+						</Flex>
+					</Box>
 				</ModalSizer>
 			</Layer>
 		);
