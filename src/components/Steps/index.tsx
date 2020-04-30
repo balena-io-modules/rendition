@@ -105,7 +105,7 @@ const StepIcon = ({ ordered, status, active, index }: StepIconProps) => {
 	);
 };
 
-export const Step = ({
+const StepBase = ({
 	ordered,
 	active,
 	index,
@@ -135,6 +135,8 @@ export const Step = ({
 		</Flex>
 	);
 };
+
+export const Step = StepBase as React.FunctionComponent<StepProps>;
 
 const FramelessSteps = ({
 	ordered,
