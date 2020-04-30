@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'fix: internal nullable prop'
+      hash: f79463b6634d175b4a6e2c056a2a0da4dacedfb4
+      body: |
+        set index as a nullable internal prop on Step component
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 14.11.2
+  date: 2020-04-30T16:21:00.782Z
+- commits:
     - subject: 'fix: overflow bottom padding'
       hash: b00504e701d0c33fe34f09232ac97b48e8b09536
       body: |
