@@ -1,4 +1,56 @@
 - commits:
+    - subject: Switch to optional chaining instead of lodash/get where possible
+      hash: 20558ecf81827b0c8acc032a5bad0736dea3ad1a
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+    - subject: Switch to native object type checking
+      hash: 83bf19538326a8cfe2c8c118b6686b8d2a0de24f
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+    - subject: Switch to native boolean type checking
+      hash: a7b1f011cdef1c5ee554beb7b8e6b434ad0596b6
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+    - subject: Switch to native function type checking
+      hash: c6160cfdfd6b3283b3a3b413fede8bc3f1a4b841
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+    - subject: Switch to native array type checking
+      hash: 2c72eef5cf8a199447acd0b9fe0a212886f6ea7c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+    - subject: Switch to native string type check
+      hash: e5a607d88f372f27df75a2b42f662dc7970e1e33
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+    - subject: Switch to native Object.assign
+      hash: b67f54b12278bff1425c4d47cc9fd94abf4d84f2
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 14.11.3
+  date: 2020-05-07T16:28:33.104Z
+- commits:
     - subject: 'fix: internal nullable prop'
       hash: f79463b6634d175b4a6e2c056a2a0da4dacedfb4
       body: |
