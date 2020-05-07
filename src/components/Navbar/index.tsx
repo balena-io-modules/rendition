@@ -1,7 +1,6 @@
 import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import assign from 'lodash/assign';
 import * as React from 'react';
 import { compose, withProps } from 'recompose';
 import styled from 'styled-components';
@@ -108,7 +107,7 @@ class Navbar extends React.Component<NavbarProps, NavbarState> {
 }
 
 const setDefaultProps = withProps((props: NavbarProps) => {
-	return assign(
+	return Object.assign(
 		{
 			color: 'white',
 			bg: 'gray.dark',

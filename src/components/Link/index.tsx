@@ -1,4 +1,3 @@
-import assign from 'lodash/assign';
 import get from 'lodash/get';
 import omit from 'lodash/omit';
 import * as React from 'react';
@@ -47,7 +46,7 @@ const Link = ({ is, blank, children, ...props }: InternalLinkProps) => {
 };
 
 const setDefaultProps = withProps((props: InternalLinkProps) => {
-	return assign(
+	return Object.assign(
 		{
 			color: `primary.main`,
 		},

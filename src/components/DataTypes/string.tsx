@@ -1,5 +1,4 @@
 import { JSONSchema6 } from 'json-schema';
-import assign from 'lodash/assign';
 import * as React from 'react';
 import { randomString, regexEscape } from '../../utils';
 import { DataTypeEditProps } from '../Filters';
@@ -129,7 +128,7 @@ export const createFilter = (
 	};
 
 	if (operator === 'is') {
-		return assign(base, {
+		return Object.assign(base, {
 			properties: {
 				[field]: {
 					title,
@@ -141,7 +140,7 @@ export const createFilter = (
 	}
 
 	if (operator === 'contains') {
-		return assign(base, {
+		return Object.assign(base, {
 			properties: {
 				[field]: {
 					type: 'string',
@@ -154,7 +153,7 @@ export const createFilter = (
 	}
 
 	if (operator === 'not_contains') {
-		return assign(base, {
+		return Object.assign(base, {
 			anyOf: [
 				{
 					properties: {
@@ -179,7 +178,7 @@ export const createFilter = (
 	}
 
 	if (operator === 'matches_re') {
-		return assign(base, {
+		return Object.assign(base, {
 			properties: {
 				[field]: {
 					type: 'string',
@@ -191,7 +190,7 @@ export const createFilter = (
 	}
 
 	if (operator === 'not_matches_re') {
-		return assign(base, {
+		return Object.assign(base, {
 			anyOf: [
 				{
 					properties: {

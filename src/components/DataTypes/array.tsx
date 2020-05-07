@@ -1,5 +1,4 @@
 import { JSONSchema6 } from 'json-schema';
-import assign from 'lodash/assign';
 import * as React from 'react';
 import { randomString } from '../../utils';
 import { DataTypeEditProps } from '../Filters';
@@ -118,7 +117,7 @@ export const createFilter = (
 	};
 
 	if (operator === 'contains') {
-		return assign(base, {
+		return Object.assign(base, {
 			properties: {
 				[field]: {
 					type: 'array',
@@ -132,7 +131,7 @@ export const createFilter = (
 	}
 
 	if (operator === 'not_contains') {
-		return assign(base, {
+		return Object.assign(base, {
 			anyOf: [
 				{
 					properties: {

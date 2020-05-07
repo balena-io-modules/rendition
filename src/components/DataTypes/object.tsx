@@ -1,5 +1,4 @@
 import { JSONSchema6 } from 'json-schema';
-import assign from 'lodash/assign';
 import find from 'lodash/find';
 import findKey from 'lodash/findKey';
 import includes from 'lodash/includes';
@@ -233,7 +232,7 @@ export const createFilter = (
 	};
 
 	if (operator === 'is') {
-		return assign(base, {
+		return Object.assign(base, {
 			properties: {
 				[field]: {
 					contains: {
@@ -247,7 +246,7 @@ export const createFilter = (
 	}
 
 	if (operator === 'is_not') {
-		return assign(base, {
+		return Object.assign(base, {
 			properties: {
 				[field]: {
 					not: {
@@ -262,7 +261,7 @@ export const createFilter = (
 	}
 
 	if (operator === 'key_is' || operator === 'value_is') {
-		return assign(base, {
+		return Object.assign(base, {
 			properties: {
 				[field]: {
 					contains: {
@@ -276,7 +275,7 @@ export const createFilter = (
 	}
 
 	if (operator === 'key_contains' || operator === 'value_contains') {
-		return assign(base, {
+		return Object.assign(base, {
 			properties: {
 				[field]: {
 					contains: {
@@ -294,7 +293,7 @@ export const createFilter = (
 	}
 
 	if (operator === 'key_not_contains' || operator === 'value_not_contains') {
-		return assign(base, {
+		return Object.assign(base, {
 			properties: {
 				[field]: {
 					not: {
@@ -313,7 +312,7 @@ export const createFilter = (
 	}
 
 	if (operator === 'key_matches_re' || operator === 'value_matches_re') {
-		return assign(base, {
+		return Object.assign(base, {
 			properties: {
 				[field]: {
 					contains: {
@@ -333,7 +332,7 @@ export const createFilter = (
 		operator === 'key_not_matches_re' ||
 		operator === 'value_not_matches_re'
 	) {
-		return assign(base, {
+		return Object.assign(base, {
 			properties: {
 				[field]: {
 					not: {
@@ -388,7 +387,7 @@ export const Edit = (props: DataTypeEditProps) => {
 					placeholder={keyLabel}
 					onChange={(e: React.FormEvent<HTMLInputElement>) =>
 						onUpdate(
-							assign(value, {
+							Object.assign(value, {
 								[schemaKey]: e.currentTarget.value,
 							}),
 						)
@@ -402,7 +401,7 @@ export const Edit = (props: DataTypeEditProps) => {
 					placeholder={valueLabel}
 					onChange={(e: React.FormEvent<HTMLInputElement>) =>
 						onUpdate(
-							assign(value, {
+							Object.assign(value, {
 								[schemaValue]: e.currentTarget.value,
 							}),
 						)

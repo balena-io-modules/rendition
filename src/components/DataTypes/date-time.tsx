@@ -1,5 +1,4 @@
 import { JSONSchema6 } from 'json-schema';
-import assign from 'lodash/assign';
 import * as React from 'react';
 import { randomString } from '../../utils';
 import { DataTypeEditProps } from '../Filters';
@@ -92,7 +91,7 @@ export const createFilter = (
 	const normalizedValue = normalizeDateTime(value);
 
 	if (operator === 'is') {
-		return assign(base, {
+		return Object.assign(base, {
 			properties: {
 				[field]: {
 					type: 'string',
@@ -105,7 +104,7 @@ export const createFilter = (
 	}
 
 	if (operator === 'is_before') {
-		return assign(base, {
+		return Object.assign(base, {
 			properties: {
 				[field]: {
 					type: 'string',
@@ -118,7 +117,7 @@ export const createFilter = (
 	}
 
 	if (operator === 'is_after') {
-		return assign(base, {
+		return Object.assign(base, {
 			properties: {
 				[field]: {
 					type: 'string',

@@ -1,4 +1,3 @@
-import assign from 'lodash/assign';
 import * as React from 'react';
 import { withProps } from 'recompose';
 import styled from 'styled-components';
@@ -17,7 +16,7 @@ const Heading = styled.h3<InternalHeadingProps>`
 
 Heading.displayName = 'Heading';
 const setDefaultProps = withProps((props: FlexProps) => {
-	return assign(
+	return Object.assign(
 		{
 			fontSize: 4,
 			m: 0,

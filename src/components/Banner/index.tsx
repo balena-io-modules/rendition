@@ -1,4 +1,3 @@
-import assign from 'lodash/assign';
 import { withProps } from 'recompose';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
@@ -7,7 +6,7 @@ import { Flex, FlexProps } from '../Flex';
 const setDefaultProps = withProps((props: BannerProps) => {
 	// set defaults
 	// always allow override with provided props
-	return assign(
+	return Object.assign(
 		{
 			p: [3, 4],
 			minHeight: `80vh`,

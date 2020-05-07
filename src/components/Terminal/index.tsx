@@ -1,4 +1,3 @@
-import assign from 'lodash/assign';
 import cloneDeep from 'lodash/cloneDeep';
 import * as React from 'react';
 import styled from 'styled-components';
@@ -49,7 +48,7 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 	constructor(props: ThemedTerminalProps) {
 		super(props);
 
-		this.termConfig = assign({}, props.config, {
+		this.termConfig = Object.assign({}, props.config, {
 			cols: 80,
 			cursorBlink: false,
 			rows: 24,

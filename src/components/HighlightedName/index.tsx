@@ -1,4 +1,3 @@
-import assign from 'lodash/assign';
 import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
@@ -27,7 +26,7 @@ const HighlightedName = ({
 	}
 
 	const bgColor =
-		getColor(assign(props, { theme }), 'bg', 'main') ||
+		getColor(Object.assign(props, { theme }), 'bg', 'main') ||
 		generateColorFromString(children);
 
 	return (
