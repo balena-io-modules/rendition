@@ -93,7 +93,7 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 	public render() {
 		const { views, renderMode, hasMultipleScopes, compact } = this.props;
 		const hasViews = views.length > 0;
-		const groupedViews = groupBy(views, item => item.scope || 'Unscoped');
+		const groupedViews = groupBy(views, (item) => item.scope || 'Unscoped');
 
 		let soloRender = false;
 		if (renderMode) {
@@ -132,7 +132,7 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 										</Txt>
 									)}
 									<UnstyledList>
-										{views.map(view => (
+										{views.map((view) => (
 											<ViewListItem key={view.name}>
 												<ViewListItemLabel
 													m={0}
@@ -149,7 +149,7 @@ class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
 													<FontAwesomeIcon icon={faTrash} />
 												</button>
 												<Preview>
-													{view.filters.map(filter => (
+													{view.filters.map((filter) => (
 														<Box mb={10} key={filter.$id}>
 															<FilterDescription filter={filter} />
 														</Box>

@@ -19,7 +19,7 @@ const Accordion = (props: ThemedAccordionProps) => {
 	return (
 		<GrommetAccordion
 			activeIndex={openPanels}
-			onActive={opens => setOpenPanels(opens)}
+			onActive={(opens) => setOpenPanels(opens)}
 		>
 			{items.map((item, index) => (
 				<GrommetAccordionPanel

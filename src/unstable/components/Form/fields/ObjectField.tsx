@@ -91,7 +91,7 @@ function DefaultObjectFieldTemplate(props: ObjectFieldProps) {
 					description={props.description}
 				/>
 			)}
-			{props.properties.map(prop => prop.content)}
+			{props.properties.map((prop) => prop.content)}
 			{canExpand() && (
 				<AddButton
 					className="object-property-expand"
@@ -175,7 +175,7 @@ class ObjectField extends React.Component<ObjectFieldProps> {
 			value = this.getAvailableKey(value, this.props.formData);
 			const newFormData = { ...this.props.formData };
 			const newKeys = { [oldValue]: value };
-			const keyValues = Object.keys(newFormData).map(key => {
+			const keyValues = Object.keys(newFormData).map((key) => {
 				const newKey = newKeys[key] || key;
 				return { [newKey]: newFormData[key] };
 			});
@@ -265,7 +265,7 @@ class ObjectField extends React.Component<ObjectFieldProps> {
 			description,
 			TitleField,
 			DescriptionField,
-			properties: orderedProperties.map(name => {
+			properties: orderedProperties.map((name) => {
 				const addedByAdditionalProperties = schema.properties[
 					name
 				].hasOwnProperty(ADDITIONAL_PROPERTY_FLAG);

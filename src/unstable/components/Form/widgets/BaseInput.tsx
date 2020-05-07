@@ -7,7 +7,7 @@ const filterSuggestions = (text: string | null, suggestions?: string[]) => {
 		return suggestions;
 	}
 
-	return suggestions.filter(suggestion => suggestion.includes(text));
+	return suggestions.filter((suggestion) => suggestion.includes(text));
 };
 
 const BaseInput = (props: FormWidgetProps) => {
@@ -59,7 +59,7 @@ const BaseInput = (props: FormWidgetProps) => {
 					onFocus &&
 					((event: any) => onFocus(inputProps.id, event.target.value))
 				}
-				onSelect={e => props.onChange(e.suggestion)}
+				onSelect={(e) => props.onChange(e.suggestion)}
 				suggestions={suggestions}
 				list={hasExamples ? 'dummy-datalist' : undefined}
 			/>

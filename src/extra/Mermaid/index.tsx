@@ -53,7 +53,7 @@ export class Mermaid extends React.Component<MermaidProps, {}> {
 		const { value, ...props } = this.props;
 		return (
 			<Box {...props}>
-				<div ref={element => (this.renderArea = element)} />
+				<div ref={(element) => (this.renderArea = element)} />
 			</Box>
 		);
 	}

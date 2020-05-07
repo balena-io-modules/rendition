@@ -7,7 +7,7 @@ import { getJsonDescription } from './utils';
 
 const getCaption = (value: any, schema: JSONSchema6) => {
 	const item = schema.oneOf!.find(
-		item => item && (item as JSONSchema6).const === value,
+		(item) => item && (item as JSONSchema6).const === value,
 	);
 	return item ? (item as JSONSchema6).title : '';
 };

@@ -87,7 +87,7 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 		setTimeout(() => {
 			// If this is a non-interactive terminal, rebind <ctrl+c> to copy command
 			if (this.props.nonInteractive && document.execCommand) {
-				this.tty.attachCustomKeyEventHandler(e => {
+				this.tty.attachCustomKeyEventHandler((e) => {
 					// Ctrl + C
 					if (e.ctrlKey && e.keyCode === 67) {
 						document.execCommand('copy');
@@ -144,7 +144,7 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 	public render() {
 		return (
 			<TtyContainer color={this.props.color}>
-				<TtyInner ref={el => (this.mountElement = el)} />
+				<TtyInner ref={(el) => (this.mountElement = el)} />
 			</TtyContainer>
 		);
 	}

@@ -21,8 +21,8 @@ const StyledGrommetTextArea = styled(GrommetTextArea)`
 	${monospace};
 
 	padding: 14px 20px;
-	color: ${props => props.theme.colors.text.main};
-	cursor: ${props => (props.disabled ? 'not-allowed' : 'auto')};
+	color: ${(props) => props.theme.colors.text.main};
+	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'auto')};
 	border-color: ${getBorderColor};
 
 	resize: vertical;
@@ -30,7 +30,7 @@ const StyledGrommetTextArea = styled(GrommetTextArea)`
 	width: 100%;
 
 	&:focus {
-		border-color: ${props => props.theme.colors.tertiary.main};
+		border-color: ${(props) => props.theme.colors.tertiary.main};
 	}
 `;
 

@@ -28,11 +28,11 @@ function TextareaWidget(props: FormWidgetProps) {
 			readOnly={readonly}
 			autoFocus={autofocus}
 			rows={options.rows}
-			onBlur={onBlur && (event => onBlur(id, event.target.value))}
-			onFocus={onFocus && (event => onFocus(id, event.target.value))}
+			onBlur={onBlur && ((event) => onBlur(id, event.target.value))}
+			onFocus={onFocus && ((event) => onFocus(id, event.target.value))}
 			onChange={
 				onChange &&
-				(event =>
+				((event) =>
 					onChange(
 						event.target.value === '' ? options.emptyValue : event.target.value,
 					))

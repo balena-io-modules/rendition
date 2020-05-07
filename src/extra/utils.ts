@@ -3,7 +3,7 @@ import sanitizeHtml from 'sanitize-html';
 
 const renderer = new marked.Renderer();
 
-renderer.link = function(_href, _title, _text) {
+renderer.link = function (_href, _title, _text) {
 	const link = marked.Renderer.prototype.link.apply(this, arguments);
 	return link.replace('<a', '<a target="_blank" rel="noopener noreferrer"');
 };

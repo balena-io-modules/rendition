@@ -10,10 +10,10 @@ import Txt from '../Txt';
 
 const CircleLoader = styled.div<Pick<InternalSpinnerProps, 'emphasized'>>`
 	background: transparent !important;
-	width: ${props => px(props.emphasized ? 40 : 20)};
-	height: ${props => px(props.emphasized ? 40 : 20)};
-	border: ${props => px(props.emphasized ? 6 : 4)} solid;
-	color: ${props => props.theme.colors.tertiary.main};
+	width: ${(props) => px(props.emphasized ? 40 : 20)};
+	height: ${(props) => px(props.emphasized ? 40 : 20)};
+	border: ${(props) => px(props.emphasized ? 6 : 4)} solid;
+	color: ${(props) => props.theme.colors.tertiary.main};
 	border-radius: 100%;
 	border-bottom-color: transparent;
 	display: inline-block;
@@ -35,7 +35,7 @@ const SpinnerContainer = styled(Flex)`
 `;
 
 const ChildrenContainer = styled.div<Pick<InternalSpinnerProps, 'show'>>`
-	opacity: ${props => (props.show ? 0.4 : 1)};
+	opacity: ${(props) => (props.show ? 0.4 : 1)};
 	transition: opacity 250ms;
 	z-index: 3;
 `;

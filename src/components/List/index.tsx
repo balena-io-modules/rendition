@@ -32,13 +32,13 @@ const OrderedList = styled(ListBase).attrs({ as: 'ol' })`
 	counter-reset: ordered-list-counter;
 
 	& > li {
-		margin: ${props => props.theme.space[3]}px 0;
+		margin: ${(props) => props.theme.space[3]}px 0;
 		counter-increment: ordered-list-counter;
 
 		:before {
 			content: counter(ordered-list-counter);
-			margin-right: ${props => props.theme.space[2]}px;
-			background: ${props => props.theme.colors.info.main};
+			margin-right: ${(props) => props.theme.space[2]}px;
+			background: ${(props) => props.theme.colors.info.main};
 			height: ${ORDERED_LIST_SIZE}em;
 			width: ${ORDERED_LIST_SIZE}em;
 			min-width: ${ORDERED_LIST_SIZE}em;
@@ -51,15 +51,15 @@ const OrderedList = styled(ListBase).attrs({ as: 'ol' })`
 
 const UnorderedList = styled(ListBase)`
 	& > li {
-		margin: ${props => props.theme.space[1]}px 0;
+		margin: ${(props) => props.theme.space[1]}px 0;
 
 		:before {
 			content: '\\2022'; /* Unicode for a bullet character */
-			margin-right: ${props => props.theme.space[2]}px;
+			margin-right: ${(props) => props.theme.space[2]}px;
 			transform: translateY(
 				-1px
 			); /* The bullet character is misplaced (by design it seems) by 1px, but it looks better if it is centered */
-			color: ${props => props.theme.colors.tertiary.main};
+			color: ${(props) => props.theme.colors.tertiary.main};
 		}
 	}
 `;
@@ -68,7 +68,7 @@ const List = ({ children, className, ordered }: InternalListProps) => {
 	const ListType = ordered ? OrderedList : UnorderedList;
 	return (
 		<ListType className={className}>
-			{React.Children.map(children, child => {
+			{React.Children.map(children, (child) => {
 				return <li>{child}</li>;
 			})}
 		</ListType>

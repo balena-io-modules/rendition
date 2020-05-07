@@ -137,22 +137,22 @@ export const decodeFilter = (
 	if (operator === 'is') {
 		value = mapValues(
 			filter.properties[field].contains!.properties,
-			v => v.const!,
+			(v) => v.const!,
 		);
 	} else if (operator === 'is_not') {
 		value = mapValues(
 			filter.properties[field].not!.contains.properties,
-			v => v.const!,
+			(v) => v.const!,
 		);
 	} else if (operator === 'key_is' || operator === 'value_is') {
 		value = mapValues(
 			filter.properties[field].contains!.properties,
-			v => v.const!,
+			(v) => v.const!,
 		);
 	} else if (operator === 'key_contains' || operator === 'value_contains') {
 		value = mapValues(
 			filter.properties[field].contains!.properties,
-			v => v.description!,
+			(v) => v.description!,
 		);
 	} else if (
 		operator === 'key_not_contains' ||
@@ -160,12 +160,12 @@ export const decodeFilter = (
 	) {
 		value = mapValues(
 			filter.properties[field].not!.contains.properties,
-			v => v.description!,
+			(v) => v.description!,
 		);
 	} else if (operator === 'key_matches_re' || operator === 'value_matches_re') {
 		value = mapValues(
 			filter.properties[field].contains!.properties,
-			v => v.pattern!,
+			(v) => v.pattern!,
 		);
 	} else if (
 		operator === 'key_not_matches_re' ||
@@ -173,7 +173,7 @@ export const decodeFilter = (
 	) {
 		value = mapValues(
 			filter.properties[field].not!.contains.properties,
-			v => v.pattern!,
+			(v) => v.pattern!,
 		);
 	} else {
 		return null;
@@ -236,7 +236,7 @@ export const createFilter = (
 				[field]: {
 					contains: {
 						title,
-						properties: mapValues(value, v => ({ const: v })),
+						properties: mapValues(value, (v) => ({ const: v })),
 					},
 				},
 			},
@@ -251,7 +251,7 @@ export const createFilter = (
 					not: {
 						contains: {
 							title,
-							properties: mapValues(value, v => ({ const: v })),
+							properties: mapValues(value, (v) => ({ const: v })),
 						},
 					},
 				},
@@ -265,7 +265,7 @@ export const createFilter = (
 				[field]: {
 					contains: {
 						title,
-						properties: mapValues(value, v => ({ const: v })),
+						properties: mapValues(value, (v) => ({ const: v })),
 					},
 				},
 			},
@@ -279,7 +279,7 @@ export const createFilter = (
 				[field]: {
 					contains: {
 						title,
-						properties: mapValues(value, v => ({
+						properties: mapValues(value, (v) => ({
 							type: 'string',
 							description: v,
 							pattern: regexEscape(v),
@@ -298,7 +298,7 @@ export const createFilter = (
 					not: {
 						contains: {
 							title,
-							properties: mapValues(value, v => ({
+							properties: mapValues(value, (v) => ({
 								type: 'string',
 								description: v,
 								pattern: regexEscape(v),
@@ -316,7 +316,7 @@ export const createFilter = (
 				[field]: {
 					contains: {
 						title,
-						properties: mapValues(value, v => ({
+						properties: mapValues(value, (v) => ({
 							type: 'string',
 							pattern: v,
 						})),
@@ -337,7 +337,7 @@ export const createFilter = (
 					not: {
 						contains: {
 							title,
-							properties: mapValues(value, v => ({
+							properties: mapValues(value, (v) => ({
 								type: 'string',
 								pattern: v,
 							})),

@@ -36,7 +36,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 
 		const flatSchema = SchemaSieve.flattenSchema(schema);
 		const flatViews = this.flattenViews(views);
-		const flatFilters = filters.map(filter =>
+		const flatFilters = filters.map((filter) =>
 			SchemaSieve.flattenSchema(filter),
 		);
 
@@ -63,7 +63,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 
 		if (!isEqual(prevProps.filters, this.props.filters)) {
 			const filters = this.props.filters || [];
-			newState.filters = filters.map(filter =>
+			newState.filters = filters.map((filter) =>
 				SchemaSieve.flattenSchema(filter),
 			);
 		}
@@ -81,7 +81,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 	public flattenViews(views: FiltersView[]) {
 		return views.map(({ filters, ...view }) => ({
 			...view,
-			filters: filters.map(filter => SchemaSieve.flattenSchema(filter)),
+			filters: filters.map((filter) => SchemaSieve.flattenSchema(filter)),
 		}));
 	}
 
@@ -93,7 +93,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		this.props.onViewsUpdate(
 			this.state.views.map(({ filters, ...view }) => ({
 				...view,
-				filters: filters.map(filter => SchemaSieve.unflattenSchema(filter)),
+				filters: filters.map((filter) => SchemaSieve.unflattenSchema(filter)),
 			})),
 		);
 	}
@@ -149,14 +149,14 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		}
 
 		this.props.onFiltersUpdate(
-			this.state.filters.map(filter => SchemaSieve.unflattenSchema(filter)),
+			this.state.filters.map((filter) => SchemaSieve.unflattenSchema(filter)),
 		);
 	}
 
 	public addFilter(edit: EditModel[]) {
 		const newFilter = SchemaSieve.createFilter(this.props.schema, edit);
 		const currentFilters: JSONSchema6[] = !!this.state.editingFilter
-			? this.state.filters.map(filter =>
+			? this.state.filters.map((filter) =>
 					filter.$id === this.state.editingFilter ? newFilter : filter,
 			  )
 			: [...this.state.filters, newFilter];
@@ -186,7 +186,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 
 	public removeFilter({ $id, title }: JSONSchema6) {
 		this.setState(
-			prevState => {
+			(prevState) => {
 				const newState = {
 					...prevState,
 					filters: reject(prevState.filters, { $id }),
@@ -222,7 +222,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		};
 
 		this.setState(
-			prevState => ({
+			(prevState) => ({
 				views: prevState.views.concat(view),
 			}),
 			() =>
@@ -232,7 +232,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 
 	public deleteView({ id }: FiltersView) {
 		this.setState(
-			prevState => ({
+			(prevState) => ({
 				views: reject(prevState.views, { id }),
 			}),
 			() =>
@@ -242,7 +242,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 
 	public setSimpleSearch(term: string) {
 		this.setState(
-			prevState => {
+			(prevState) => {
 				const newFilters = term
 					? SchemaSieve.upsertFullTextSearch(
 							this.state.schema,
@@ -319,15 +319,15 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 							hasMultipleScopes={
 								this.props.viewScopes && this.props.viewScopes.length > 1
 							}
-							setFilters={filters => this.setFilters(filters)}
-							deleteView={view => this.deleteView(view)}
+							setFilters={(filters) => this.setFilters(filters)}
+							deleteView={(view) => this.deleteView(view)}
 							renderMode={this.props.renderMode}
 							compact={this.props.compact}
 						/>
 					)}
 					{this.state.showModal && (
 						<FilterModal
-							addFilter={edit => this.addFilter(edit)}
+							addFilter={(edit) => this.addFilter(edit)}
 							onClose={() => this.setState({ showModal: false })}
 							schema={this.state.schema}
 							edit={this.state.edit}

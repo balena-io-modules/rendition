@@ -73,7 +73,8 @@ const StepIconBg = styled(Flex)<{
 	status: statusOptions;
 	active: boolean;
 }>`
-	${props => getIconBg(props.theme, props.ordered, props.status, props.active)};
+	${(props) =>
+		getIconBg(props.theme, props.ordered, props.status, props.active)};
 `;
 
 interface StepIconProps {

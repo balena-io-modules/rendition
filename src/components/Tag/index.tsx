@@ -9,18 +9,18 @@ import { Flex } from '../Flex';
 import Txt from '../Txt';
 
 const Container = styled(Flex)`
-	background-color: ${props => props.theme.colors.info.light};
-	border: 1px solid ${props => props.theme.colors.info.main};
+	background-color: ${(props) => props.theme.colors.info.light};
+	border: 1px solid ${(props) => props.theme.colors.info.main};
 	border-radius: 2px;
 	line-height: 1.5;
 `;
 
 const TagText = styled(Txt)`
-	font-family: ${props => props.theme.titleFont};
+	font-family: ${(props) => props.theme.titleFont};
 `;
 
 const DeleteButton = styled(Button)`
-	color: ${props => props.theme.colors.tertiary.semilight};
+	color: ${(props) => props.theme.colors.tertiary.semilight};
 `;
 
 const TagBase = ({
@@ -44,12 +44,9 @@ const TagBase = ({
 				return (
 					<React.Fragment key={index}>
 						{index > 0 && (
-							<Txt
-								whitespace="pre"
-								color="info.main"
-								fontSize={0}
-								italic
-							>{`  ${tagEntry.prefix || ','}  `}</Txt>
+							<Txt whitespace="pre" color="info.main" fontSize={0} italic>{`  ${
+								tagEntry.prefix || ','
+							}  `}</Txt>
 						)}
 
 						{!tagEntry.value && !tagEntry.name && (

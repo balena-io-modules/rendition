@@ -23,15 +23,15 @@ const StyledGrommetInput = styled(GrommetTextInput)<{
 }>`
 	${monospace};
 	${emphasized};
-	padding: ${props => (props.emphasized ? '14px' : '10px')};
+	padding: ${(props) => (props.emphasized ? '14px' : '10px')};
 	padding-left: 20px;
 
-	color: ${props => props.theme.colors.text.main};
-	cursor: ${props => (props.disabled ? 'not-allowed' : 'auto')};
+	color: ${(props) => props.theme.colors.text.main};
+	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'auto')};
 	border-color: ${getBorderColor};
 
 	&:focus {
-		border-color: ${props => props.theme.colors.tertiary.main};
+		border-color: ${(props) => props.theme.colors.tertiary.main};
 	}
 `;
 

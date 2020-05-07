@@ -69,7 +69,7 @@ export default (props: ArrayFieldTemplateProps) => {
 				}
 			/>
 
-			{props.items.map(element => {
+			{props.items.map((element) => {
 				return (
 					<div className="rendition-form__array-item" key={element.index}>
 						<Flex alignItems="flex-start">

@@ -17,13 +17,13 @@ type AdjustedGrommetSelectProps = Omit<
 const StyledGrommetSelect = styled(
 	GrommetSelect as React.ComponentClass<AdjustedGrommetSelectProps, any>,
 )<InternalSelectProps<any>>`
-	font-family: ${props => props.theme.font};
-	font-size: ${props => px(props.theme.fontSizes[1])};
+	font-family: ${(props) => props.theme.font};
+	font-size: ${(props) => px(props.theme.fontSizes[1])};
 	font-weight: normal;
 	/* The wrapping button component has borders of 1px, and changing it's height messes up the drop alignment, so we subtract the border width on the input */
-	height: ${props =>
+	height: ${(props) =>
 		px((props.emphasized ? props.theme.space[5] : props.theme.space[4]) - 2)};
-	padding: ${props => (props.emphasized ? '14px' : '10px')};
+	padding: ${(props) => (props.emphasized ? '14px' : '10px')};
 	padding-left: 20px;
 `;
 

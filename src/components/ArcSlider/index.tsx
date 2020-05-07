@@ -187,7 +187,7 @@ class ArcSlider extends React.Component<ArcSliderProps, ArcSliderState> {
 					style={{
 						cursor: this.state.isDragging ? 'grabbing' : 'grab',
 					}}
-					ref={elem => (this.$slider = elem)}
+					ref={(elem) => (this.$slider = elem)}
 					viewBox="0 0 600 600"
 					onMouseDown={this.handleMouseDown}
 					onTouchStart={this.handleMouseDown}

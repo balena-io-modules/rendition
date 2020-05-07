@@ -9,15 +9,15 @@ import { px } from '../../utils';
 const Wrapper = styled.div`
 	position: relative;
 	width: 100%;
-	border-bottom: 1px solid ${props => props.theme.colors.quartenary.main};
+	border-bottom: 1px solid ${(props) => props.theme.colors.quartenary.main};
 	padding-left: 24px;
 	padding-top: 4px;
 
 	.search-icon {
-		color: ${props => props.theme.colors.tertiary.semilight};
+		color: ${(props) => props.theme.colors.tertiary.semilight};
 		position: absolute;
 		top: 50%;
-		left: ${props => px(props.theme.space[2])};
+		left: ${(props) => px(props.theme.space[2])};
 		transform: translateY(-50%);
 	}
 	input {
@@ -33,7 +33,7 @@ const Wrapper = styled.div`
 			box-shadow: none;
 		}
 		::placeholder {
-			color: ${props => props.theme.colors.tertiary.semilight};
+			color: ${(props) => props.theme.colors.tertiary.semilight};
 			font-weight: 300;
 		}
 	}
