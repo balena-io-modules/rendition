@@ -8,7 +8,6 @@ import every from 'lodash/every';
 import findIndex from 'lodash/findIndex';
 import findKey from 'lodash/findKey';
 import includes from 'lodash/includes';
-import isBoolean from 'lodash/isBoolean';
 import map from 'lodash/map';
 import pickBy from 'lodash/pickBy';
 import reduce from 'lodash/reduce';
@@ -203,7 +202,7 @@ const flattenAccumulator = (
 	return reduce(
 		schema.properties,
 		(result, value, key) => {
-			if (isBoolean(value)) {
+			if (typeof value === 'boolean') {
 				return accumulator;
 			}
 
