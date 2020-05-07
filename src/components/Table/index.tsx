@@ -4,7 +4,6 @@ import every from 'lodash/every';
 import filter from 'lodash/filter';
 import find from 'lodash/find';
 import includes from 'lodash/includes';
-import isArray from 'lodash/isArray';
 import isEqual from 'lodash/isEqual';
 import isFunction from 'lodash/isFunction';
 import isPlainObject from 'lodash/isPlainObject';
@@ -522,7 +521,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 								const classNamesList = isFunction(getRowClass)
 									? getRowClass(row)
 									: [];
-								const className = isArray(classNamesList)
+								const className = Array.isArray(classNamesList)
 									? classNamesList.join(' ')
 									: '';
 								return (
