@@ -1,6 +1,4 @@
-import assign from 'lodash/assign';
 import find from 'lodash/find';
-import get from 'lodash/get';
 import * as React from 'react';
 import { withProps } from 'recompose';
 import styled from 'styled-components';
@@ -65,11 +63,11 @@ const getType = withProps((props: ThemedProgressBarProps) => {
 		find(Object.keys(props.theme.colors), k => k === b),
 	);
 
-	return assign({}, props, { type });
+	return Object.assign({}, props, { type });
 });
 
 const setTypeProps = withProps(({ type, theme, background, color }) => {
-	const themeBackground = get(theme.colors[type || 'primary'], 'main');
+	const themeBackground = theme.colors[type || 'primary']?.main;
 
 	return {
 		color: color || '#fff',

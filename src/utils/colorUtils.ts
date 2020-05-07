@@ -2,7 +2,6 @@ import Color from 'color';
 import ColorHash from 'color-hash';
 import find from 'lodash/find';
 import get from 'lodash/get';
-import isObject from 'lodash/isObject';
 import memoize from 'lodash/memoize';
 import { Theme } from '../common-types';
 
@@ -88,7 +87,7 @@ export const getColor = (
 	const type = getColoringType(props);
 	if (type) {
 		const color = get(props.theme, `colors.${type}`) as Theme['colors']['key'];
-		if (isObject(color)) {
+		if (color != null && typeof color === 'object') {
 			return color[shade];
 		} else {
 			// We checked that this is not an object color, so we can ignore the typescript error

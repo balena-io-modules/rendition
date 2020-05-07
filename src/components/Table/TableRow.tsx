@@ -1,5 +1,4 @@
 import get from 'lodash/get';
-import isFunction from 'lodash/isFunction';
 import map from 'lodash/map';
 import * as React from 'react';
 import styled from 'styled-components';
@@ -87,9 +86,10 @@ export class TableRow<T> extends React.PureComponent<TableRowProps<T>, {}> {
 					</CheckboxWrapper>
 				)}
 				{map(columns, column => {
-					const cellAttributes = isFunction(column.cellAttributes)
-						? column.cellAttributes(data, get(data, column.field))
-						: column.cellAttributes || {};
+					const cellAttributes =
+						typeof column.cellAttributes === 'function'
+							? column.cellAttributes(data, get(data, column.field))
+							: column.cellAttributes || {};
 					return (
 						<a
 							{...attributes}

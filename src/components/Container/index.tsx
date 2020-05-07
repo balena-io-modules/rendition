@@ -1,4 +1,3 @@
-import assign from 'lodash/assign';
 import last from 'lodash/last';
 import * as React from 'react';
 import { withProps } from 'recompose';
@@ -25,7 +24,7 @@ Container.displayName = 'Container';
 Container.defaultProps = {} as any;
 
 const setDefaultProps = withProps((props: InternalContainerProps) => {
-	return assign(
+	return Object.assign(
 		{
 			px: 3,
 			ml: 'auto',

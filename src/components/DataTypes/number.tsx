@@ -1,5 +1,4 @@
 import { JSONSchema6 } from 'json-schema';
-import assign from 'lodash/assign';
 import * as React from 'react';
 import { randomString } from '../../utils';
 import { DataTypeEditProps } from '../Filters';
@@ -90,7 +89,7 @@ export const createFilter = (
 	};
 
 	if (operator === 'is') {
-		return assign(base, {
+		return Object.assign(base, {
 			properties: {
 				[field]: {
 					type: 'number',
@@ -102,7 +101,7 @@ export const createFilter = (
 	}
 
 	if (operator === 'is_more_than') {
-		return assign(base, {
+		return Object.assign(base, {
 			properties: {
 				[field]: {
 					type: 'number',
@@ -114,7 +113,7 @@ export const createFilter = (
 	}
 
 	if (operator === 'is_less_than') {
-		return assign(base, {
+		return Object.assign(base, {
 			properties: {
 				[field]: {
 					type: 'number',

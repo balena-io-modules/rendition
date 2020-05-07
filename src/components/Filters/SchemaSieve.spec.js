@@ -1,5 +1,4 @@
 /* globals expect, describe, it */
-import isArray from 'lodash/isArray'
 import mapValues from 'lodash/mapValues'
 const Ajv = require('ajv')
 const ajvKeywords = require('ajv-keywords')
@@ -915,7 +914,7 @@ describe('SchemaSieve', () => {
         ])
 
         const result = sieve.filter(filter, collection)
-        expect(isArray(result)).toBe(true)
+        expect(Array.isArray(result)).toBe(true)
       })
 
       it('should return the correct values', function () {

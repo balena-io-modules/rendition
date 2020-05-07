@@ -8,8 +8,6 @@ import every from 'lodash/every';
 import findIndex from 'lodash/findIndex';
 import findKey from 'lodash/findKey';
 import includes from 'lodash/includes';
-import isArray from 'lodash/isArray';
-import isBoolean from 'lodash/isBoolean';
 import map from 'lodash/map';
 import pickBy from 'lodash/pickBy';
 import reduce from 'lodash/reduce';
@@ -33,11 +31,11 @@ export const filter = (
 	// Remove all schemas that may have been compiled already
 	ajv.removeSchema(/^.*$/);
 
-	const validators = isArray(filters)
+	const validators = Array.isArray(filters)
 		? filters.map(s => ajv.compile(s))
 		: [ajv.compile(filters)];
 
-	if (isArray(collection)) {
+	if (Array.isArray(collection)) {
 		return collection.filter(m => every(validators, v => v(m)));
 	}
 
@@ -53,7 +51,7 @@ export const createFullTextSearchFilter = (
 		(carry, item: JSONSchema6, key) => {
 			if (
 				item.type === 'string' ||
-				(isArray(item.type) && includes(item.type, 'string'))
+				(Array.isArray(item.type) && includes(item.type, 'string'))
 			) {
 				carry.push(key);
 			}
@@ -195,7 +193,7 @@ const flattenAccumulator = (
 		}
 	}
 
-	if (schema.anyOf && isArray(schema.anyOf)) {
+	if (schema.anyOf && Array.isArray(schema.anyOf)) {
 		accumulator.anyOf = schema.anyOf.map(subSchema =>
 			flattenAccumulator(subSchema as JSONSchema6, delimiter, parentKey),
 		);
@@ -204,7 +202,7 @@ const flattenAccumulator = (
 	return reduce(
 		schema.properties,
 		(result, value, key) => {
-			if (isBoolean(value)) {
+			if (typeof value === 'boolean') {
 				return accumulator;
 			}
 
