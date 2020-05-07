@@ -1,5 +1,4 @@
 import find from 'lodash/find';
-import get from 'lodash/get';
 import * as React from 'react';
 import { withProps } from 'recompose';
 import styled from 'styled-components';
@@ -68,7 +67,7 @@ const getType = withProps((props: ThemedProgressBarProps) => {
 });
 
 const setTypeProps = withProps(({ type, theme, background, color }) => {
-	const themeBackground = get(theme.colors[type || 'primary'], 'main');
+	const themeBackground = theme.colors[type || 'primary']?.main;
 
 	return {
 		color: color || '#fff',
