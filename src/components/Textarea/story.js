@@ -19,7 +19,7 @@ class TextareaHOC extends React.Component {
         {...this.props}
         autoRows
         value={this.state.value}
-        onChange={e => this.setState({ value: e.target.value })}
+        onChange={(e) => this.setState({ value: e.target.value })}
       />
     )
   }

@@ -4,7 +4,7 @@ import { Box, Flex, Heading, Txt } from '../../dist'
 import { withTheme } from 'styled-components'
 import { isLight } from '../utils'
 
-const getColor = color => (isLight(color) ? '#3c3e42' : '#fff')
+const getColor = (color) => (isLight(color) ? '#3c3e42' : '#fff')
 
 const S = ({ style, border, theme }) => {
   const { main, light, dark, semilight } = theme.colors[style]
@@ -72,7 +72,7 @@ const S = ({ style, border, theme }) => {
   )
 }
 
-const Swatch = withTheme(props => (
+const Swatch = withTheme((props) => (
   <Flex minWidth={120} maxWidth={160} m={15} flexDirection='column' flex={1}>
     <Heading.h5>{props.style}</Heading.h5>
     <S {...props} />

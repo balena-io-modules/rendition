@@ -140,7 +140,7 @@ class FormDemo extends React.Component {
       this.setState({ formData })
     }
 
-    this.submit = data => {
+    this.submit = (data) => {
       action('Form.onSubmit')(data)
     }
   }
@@ -365,7 +365,7 @@ storiesOf('Beta/Form', module)
             },
             dependencies: {
               name: {
-                oneOf: enumValues.map(name => {
+                oneOf: enumValues.map((name) => {
                   return {
                     description: 'Enter some value',
                     properties: {

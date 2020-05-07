@@ -90,11 +90,11 @@ const schema = {
       type: 'number'
     },
     Category: {
-      enum: uniq(PokeDex.map(p => p.Category))
+      enum: uniq(PokeDex.map((p) => p.Category))
     },
     nationality: {
       title: 'Nationality',
-      oneOf: uniq(PokeDex.map(p => p.nationality)).map(slug => ({
+      oneOf: uniq(PokeDex.map((p) => p.nationality)).map((slug) => ({
         title: getNameFromSlug(slug),
         const: slug
       }))
@@ -127,8 +127,8 @@ class FiltersDemo extends React.Component {
       <div>
         <Filters
           disabled={this.props.disabled}
-          onFiltersUpdate={filters => this.setFilters(filters)}
-          onViewsUpdate={views => this.setViews(views)}
+          onFiltersUpdate={(filters) => this.setFilters(filters)}
+          onViewsUpdate={(views) => this.setViews(views)}
           schema={schema}
           dark={this.props.dark}
           {...this.props.extra}

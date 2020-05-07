@@ -47,16 +47,10 @@ describe('Select component', () => {
       )
 
       // Open the select drop
-      component
-        .find('button')
-        .at(0)
-        .simulate('click')
+      component.find('button').at(0).simulate('click')
 
       // Choose the second option
-      component
-        .find('button')
-        .at(2)
-        .simulate('click')
+      component.find('button').at(2).simulate('click')
 
       expect(spy.callCount).toEqual(1)
       expect(spy.firstCall.args[0].option).toEqual(value)

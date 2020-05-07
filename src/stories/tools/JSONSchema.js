@@ -75,7 +75,7 @@ class Validator extends React.Component {
             <Textarea
               monospace
               rows='10'
-              onChange={e => this.changeSchema(e.target.value)}
+              onChange={(e) => this.changeSchema(e.target.value)}
               value={this.state.schema}
             />
           </Box>
@@ -84,7 +84,7 @@ class Validator extends React.Component {
             <Textarea
               monospace
               rows='10'
-              onChange={e => this.changeData(e.target.value)}
+              onChange={(e) => this.changeData(e.target.value)}
               value={this.state.data}
             />
           </Box>

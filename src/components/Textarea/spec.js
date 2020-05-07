@@ -43,7 +43,7 @@ describe('Textarea component', () => {
     it('should resize the textarea to match the content', () => {
       const component = mount(
         React.createElement(
-          props => (
+          (props) => (
             <Provider>
               <Textarea {...props} />
             </Provider>

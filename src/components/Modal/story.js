@@ -35,7 +35,7 @@ class ModalDemo extends React.Component {
               cancelAction()
               this.setState({ show: false })
             }}
-            done={x => {
+            done={(x) => {
               doneAction(x)
               this.setState({ show: false })
             }}
@@ -77,7 +77,7 @@ class NestedModalDemo extends React.Component {
               cancelAction()
               this.setState({ show1: false })
             }}
-            done={x => {
+            done={(x) => {
               doneAction(x)
               this.setState({ show2: true })
             }}
@@ -90,7 +90,7 @@ class NestedModalDemo extends React.Component {
                   cancelAction()
                   this.setState({ show2: false })
                 }}
-                done={x => {
+                done={(x) => {
                   doneAction(x)
                   this.setState({ show2: false })
                 }}

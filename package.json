@@ -45,7 +45,7 @@
     "lint": "npm run eslint && npm run tslint",
     "precommit": "lint-staged",
     "prepack": "npm run build",
-    "prettify-js": "prettier --config .prettierrc-js --write \"src/**/*.js\" \"test/**/*.js\"",
+    "prettify-js": "prettier --config .prettierrc-js --write \"src/**/*.js\"",
     "prettify": "npm run prettify-js && npm run eslint-fix && npm run tslint-fix",
     "ci:screenshot": "storycap http://localhost:6006 --serverTimeout 100000 --captureTimeout 10000 --disableCssAnimation --serverCmd \"npm run start\"",
     "deploy": "npm run build:storybook && gh-pages -d .out"
@@ -89,7 +89,7 @@
     "jsdom": "^11.6.2",
     "lint-staged": "^4.1.1",
     "match-media-mock": "^0.1.1",
-    "prettier": "^1.15.3",
+    "prettier": "^2.0.5",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-test-renderer": "^16.8.5",

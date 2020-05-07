@@ -20,7 +20,7 @@ describe('SchemaSieve', () => {
         }
       }
 
-      const nestedCollection = mapValues(collection, value => ({
+      const nestedCollection = mapValues(collection, (value) => ({
         data: value
       }))
 
@@ -858,7 +858,7 @@ describe('SchemaSieve', () => {
           }
         }
 
-        const nestedCollection = mapValues(collection, value => ({
+        const nestedCollection = mapValues(collection, (value) => ({
           data: value
         }))
 
@@ -1144,7 +1144,7 @@ describe('SchemaSieve', () => {
     }
 
     // Run test for each operator for each type declared in the schema
-    Object.keys(schema.properties).forEach(type => {
+    Object.keys(schema.properties).forEach((type) => {
       const operators = sieve.getOperators(schema, type)
 
       operators.forEach(({ slug }) => {
@@ -1194,7 +1194,7 @@ describe('SchemaSieve', () => {
     }
 
     // Run test for each operator for each type declared in the schema
-    Object.keys(schema.properties).forEach(type => {
+    Object.keys(schema.properties).forEach((type) => {
       const operators = sieve.getOperators(schema, type)
 
       operators.forEach(({ slug }) => {
@@ -1271,11 +1271,13 @@ describe('SchemaSieve', () => {
     }
 
     // Run test for each type declared in the schema
-    Object.keys(schema.properties).forEach(type => {
+    Object.keys(schema.properties).forEach((type) => {
       it(`should return an array of operators for the '${type}' type`, () =>
         sieve
           .getOperators(schema, type)
-          .forEach(operator => expectMatchesKeys(operator, ['slug', 'label'])))
+          .forEach((operator) =>
+            expectMatchesKeys(operator, ['slug', 'label'])
+          ))
     })
   })
 

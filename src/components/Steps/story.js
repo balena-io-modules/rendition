@@ -25,7 +25,7 @@ const getStep = (index, isComplete, setActiveStepIndex) => {
   )
 }
 
-const OrderedStepsWrapper = props => {
+const OrderedStepsWrapper = (props) => {
   const [activeStepIndex, setActiveStepIndex] = React.useState(1)
   const [isComplete, setIsComplete] = React.useState([true, true, false, false])
   const toggleIsComplete = () => {

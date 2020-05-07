@@ -12,7 +12,7 @@ class HOC extends React.Component {
       value: 0.6
     }
 
-    this.handleChange = value => {
+    this.handleChange = (value) => {
       this.setState({ value })
     }
   }

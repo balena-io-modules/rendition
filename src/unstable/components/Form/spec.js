@@ -208,7 +208,7 @@ describe('Form component', () => {
 
       const component = mount(
         React.createElement(
-          props => (
+          (props) => (
             <Provider>
               <Form {...props} />
             </Provider>
@@ -248,10 +248,7 @@ describe('Form component', () => {
         </Provider>
       )
 
-      component
-        .find('button')
-        .first()
-        .simulate('click')
+      component.find('button').first().simulate('click')
       expect(
         component
           .find('button[role="menuitem"]')
@@ -278,10 +275,7 @@ describe('Form component', () => {
         </Provider>
       )
 
-      component
-        .find('button')
-        .first()
-        .simulate('click')
+      component.find('button').first().simulate('click')
       component
         .find('button[role="menuitem"]')
         .first()
@@ -458,12 +452,9 @@ describe('Form component', () => {
 
       expect(warnings.length).toEqual(1)
 
-      expect(
-        warnings
-          .first()
-          .text()
-          .trim()
-      ).toEqual(uiSchema.Name['ui:warning'])
+      expect(warnings.first().text().trim()).toEqual(
+        uiSchema.Name['ui:warning']
+      )
 
       component.unmount()
     })
@@ -557,12 +548,12 @@ describe('Form component', () => {
       )
 
       const expectedClassNames = Object.keys(multiFieldSchema.properties).map(
-        key => {
+        (key) => {
           return `rendition-form__field--root_${key}`
         }
       )
 
-      expectedClassNames.forEach(className => {
+      expectedClassNames.forEach((className) => {
         expect(component.find(`.${className}`).hostNodes()).toHaveLength(1)
       })
 

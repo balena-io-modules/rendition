@@ -24,13 +24,13 @@ test('Opened DropDownButton renders correctly', () => {
     <Provider>
       <DropDownButton
         primary
-        ref={ref => {
+        ref={(ref) => {
           componentInstance = ref
         }}
         label={<div>DropDown</div>}
       >
         <div>Item</div>
-        {[...Array(3).keys()].map(index => (
+        {[...Array(3).keys()].map((index) => (
           <div key={index}>Item</div>
         ))}
       </DropDownButton>

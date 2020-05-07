@@ -202,7 +202,7 @@ describe('JellyForm component', () => {
       const value = { Name: 'Squirtle' }
       const component = mount(
         React.createElement(
-          props => (
+          (props) => (
             <Provider>
               <JellyForm {...props} />
             </Provider>
@@ -406,12 +406,9 @@ describe('JellyForm component', () => {
 
       expect(warnings.length).toEqual(1)
 
-      expect(
-        warnings
-          .first()
-          .text()
-          .trim()
-      ).toEqual(uiSchema.Name['ui:warning'])
+      expect(warnings.first().text().trim()).toEqual(
+        uiSchema.Name['ui:warning']
+      )
 
       component.unmount()
     })
@@ -441,12 +438,12 @@ describe('JellyForm component', () => {
 
       const expectedClassNames = multiFieldSchema
         .match(/- \w+:/g)
-        .map(result => {
+        .map((result) => {
           const key = result.replace(/(-\s|:)/g, '')
           return `rendition-form__field--root_${key}`
         })
 
-      expectedClassNames.forEach(className => {
+      expectedClassNames.forEach((className) => {
         expect(component.find(`.${className}`).hostNodes()).toHaveLength(1)
       })
 

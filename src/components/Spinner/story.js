@@ -43,7 +43,7 @@ storiesOf('Next/Spinner', module)
 
         <Txt>With Children</Txt>
 
-        <Button my={3} onClick={() => setShowSpinner(x => !x)}>
+        <Button my={3} onClick={() => setShowSpinner((x) => !x)}>
           Toggle spinner
         </Button>
         <Spinner mb={3} show={false}>
