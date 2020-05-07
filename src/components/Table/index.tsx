@@ -5,7 +5,6 @@ import filter from 'lodash/filter';
 import find from 'lodash/find';
 import includes from 'lodash/includes';
 import isEqual from 'lodash/isEqual';
-import isFunction from 'lodash/isFunction';
 import isPlainObject from 'lodash/isPlainObject';
 import map from 'lodash/map';
 import reject from 'lodash/reject';
@@ -242,7 +241,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 
 		let collection;
 
-		if (isFunction(column.sortable)) {
+		if (typeof column.sortable === 'function') {
 			collection = data.slice().sort(column.sortable);
 		} else {
 			collection = sortBy<T>(data.slice(), item => {
@@ -518,9 +517,8 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 								const isDisabled = this.isDisabled(row);
 								const key = rowKey ? (row[rowKey] as any) : i;
 								const href = !!getRowHref ? getRowHref(row) : undefined;
-								const classNamesList = isFunction(getRowClass)
-									? getRowClass(row)
-									: [];
+								const classNamesList =
+									typeof getRowClass === 'function' ? getRowClass(row) : [];
 								const className = Array.isArray(classNamesList)
 									? classNamesList.join(' ')
 									: '';
