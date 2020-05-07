@@ -2,7 +2,6 @@ import { JSONSchema6 } from 'json-schema';
 import find from 'lodash/find';
 import findKey from 'lodash/findKey';
 import includes from 'lodash/includes';
-import isString from 'lodash/isString';
 import mapValues from 'lodash/mapValues';
 import pick from 'lodash/pick';
 import * as React from 'react';
@@ -364,7 +363,7 @@ export const Edit = (props: DataTypeEditProps) => {
 		(schema.properties![schemaValue] as JSONSchema6).title || 'Value';
 
 	// Convert strings to objects
-	if (isString(value)) {
+	if (typeof value === 'string') {
 		const p: { [k: string]: string } = {};
 		if (includes(valueOperators, operator)) {
 			p[schemaValue] = value;

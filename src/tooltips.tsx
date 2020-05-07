@@ -1,4 +1,3 @@
-import isString from 'lodash/isString';
 import merge from 'lodash/merge';
 import noop from 'lodash/noop';
 import pick from 'lodash/pick';
@@ -348,7 +347,7 @@ export class Tooltips {
 			const options: TooltipShowOptions = {};
 			let trigger = 'hover';
 			let tooltipText: string;
-			if (isString(props.tooltip)) {
+			if (typeof props.tooltip === 'string') {
 				tooltipText = props.tooltip;
 			} else {
 				tooltipText = props.tooltip.text;
