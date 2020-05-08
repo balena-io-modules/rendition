@@ -9,6 +9,7 @@ export { defaultSanitizerOptions } from '../utils';
 type MarkdownProps = TxtProps & {
 	children: string;
 	sanitizerOptions?: sanitizeHtml.IOptions;
+	renderer?: () => void;
 };
 
 /*
@@ -716,13 +717,14 @@ export const GitHubMarkdown = styled(Txt)`
 export const Markdown = ({
 	children,
 	sanitizerOptions,
+	renderer,
 	...props
 }: MarkdownProps) => {
 	return (
 		<GitHubMarkdown
 			{...props}
 			dangerouslySetInnerHTML={{
-				__html: parseMarkdown(children, sanitizerOptions),
+				__html: parseMarkdown(renderer, children, sanitizerOptions),
 			}}
 		/>
 	);

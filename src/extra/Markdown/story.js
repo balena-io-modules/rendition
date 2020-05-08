@@ -45,7 +45,7 @@ storiesOf('Extra/Markdown', module)
       </Box>
     )
   })
-  .add('Customized', () => {
+  .add('Custom Sanitizer', () => {
     const cellAttributes = { style: { verticalAlign: 'top' } }
 
     const columns = [
@@ -56,6 +56,24 @@ storiesOf('Extra/Markdown', module)
     return (
       <Box m={3}>
         <Table sortable={false} columns={columns} data={generateTableData()} />
+      </Box>
+    )
+  })
+  .add('Custom Renderer', () => {
+    const customRenderer = (marked, renderer) => {
+      renderer.link = function (_href, _title, _text) {
+        const link = marked.Renderer.prototype.link.apply(this, arguments)
+        return link.replace(/google/g, 'rewrittenLink')
+      }
+
+      return renderer
+    }
+
+    return (
+      <Box m={3}>
+        <Markdown renderer={customRenderer}>
+          {'[https://www.google.com/](https://www.google.com/)'}
+        </Markdown>
       </Box>
     )
   })
