@@ -17,7 +17,7 @@ describe.only('Markdown component', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  suite.forEach(testCase => {
+  suite.forEach((testCase) => {
     it(testCase.name, () => {
       const wrapper = mount(
         <Provider>
@@ -28,12 +28,7 @@ describe.only('Markdown component', () => {
       )
 
       // Unwrap the provider and markdown wrapper to get the HTML inside
-      const result = wrapper
-        .childAt(0)
-        .render()
-        .children()
-        .html()
-        .trim()
+      const result = wrapper.childAt(0).render().children().html().trim()
 
       expect(result).toEqual(testCase.expected)
     })

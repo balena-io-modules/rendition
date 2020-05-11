@@ -15,13 +15,13 @@ const Base = styled(GrommetRadioButtonGroup)<{
 	${getBaseStyle}
 
 	& label:hover input[value="${(props: any) => props.value}"] + div {
-		border-color: ${props => props.theme.colors.primary.dark};
-		background: ${props => props.theme.colors.primary.dark};
+		border-color: ${(props) => props.theme.colors.primary.dark};
+		background: ${(props) => props.theme.colors.primary.dark};
 	};
 
 	& label input[value="${(props: any) => props.value}"] + div {
-		border-color: ${props => props.theme.colors.primary.main};
-		background: ${props => props.theme.colors.primary.main};
+		border-color: ${(props) => props.theme.colors.primary.main};
+		background: ${(props) => props.theme.colors.primary.main};
 	}
 `;
 

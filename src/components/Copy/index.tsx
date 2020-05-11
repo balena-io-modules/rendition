@@ -12,14 +12,14 @@ const ClipboardContainer = styled(Box)`
 	cursor: pointer;
 	/* We want the clipboard icon slightly smaller, but it should be the same height as normal text so it lines up nicely */
 	font-size: 0.875em;
-	line-height: ${props => px(props.theme.lineHeight * props.theme.font[1])};
+	line-height: ${(props) => px(props.theme.lineHeight * props.theme.font[1])};
 `;
 
 const CopyContainer = styled(Flex)<{
 	show: InternalCopyProps['show'];
 }>`
 	${ClipboardContainer} {
-		display: ${props => (props.show === 'always' ? 'inline' : 'none')};
+		display: ${(props) => (props.show === 'always' ? 'inline' : 'none')};
 	}
 
 	&:hover {
@@ -49,7 +49,7 @@ export default ({
 			<ClipboardContainer
 				mx={2}
 				tooltip={{ text: 'Copied!', trigger: 'click' }}
-				onClick={e => {
+				onClick={(e) => {
 					e.stopPropagation();
 					e.preventDefault();
 					copyToClipboard(normalizedText);

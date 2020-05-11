@@ -33,7 +33,7 @@ const shades = [
 ];
 
 const BaseBadge = styled(Txt.span)`
-	font-family: ${props => props.theme.titleFont};
+	font-family: ${(props) => props.theme.titleFont};
 	display: inline-block;
 	border-radius: 1em;
 	line-height: 1;

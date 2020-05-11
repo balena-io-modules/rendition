@@ -47,7 +47,7 @@ class Logger extends React.Component {
 
   render () {
     return (
-      <Terminal ref={term => (this.term = term)} {...this.props.termProps} />
+      <Terminal ref={(term) => (this.term = term)} {...this.props.termProps} />
     )
   }
 }
@@ -66,7 +66,7 @@ class InteractiveTerm extends Terminal {
       this.tty.setOption('bellStyle', 'visual')
     }, 2000)
     if (!this.props.ttyInstance) {
-      this.tty._repl = new Repl(line => {
+      this.tty._repl = new Repl((line) => {
         if (this.tty) {
           this.writeln(line)
           this.tty.prompt()
@@ -145,32 +145,32 @@ class PersistentTerm extends React.Component {
   }
 
   setTerm (name) {
-    this.setState({ selectedTerm: this.items.find(x => x.name === name) })
+    this.setState({ selectedTerm: this.items.find((x) => x.name === name) })
   }
 
   setActiveTty (tty) {
     const selectedTerm = this.items.find(
-      x => x.name === this.state.selectedTerm.name
+      (x) => x.name === this.state.selectedTerm.name
     )
     selectedTerm.term = tty
   }
 
   render () {
     const activeTerm = this.items.find(
-      x => x.name === this.state.selectedTerm.name
+      (x) => x.name === this.state.selectedTerm.name
     )
     return (
       <Box>
         <select
           value={this.state.selectedTerm.name}
-          onChange={e => this.setTerm(e.target.value)}
+          onChange={(e) => this.setTerm(e.target.value)}
         >
-          {this.items.map(x => (
+          {this.items.map((x) => (
             <option key={x.name}>{x.name}</option>
           ))}
         </select>
         <Box style={{ height: 500 }}>
-          {this.items.map(t => {
+          {this.items.map((t) => {
             if (t.name !== activeTerm.name) {
               return null
             }
@@ -179,7 +179,7 @@ class PersistentTerm extends React.Component {
                 key={t.name}
                 persistent
                 ttyInstance={activeTerm.term && activeTerm.term.tty}
-                ref={term => this.setActiveTty(term)}
+                ref={(term) => this.setActiveTty(term)}
               />
             )
           })}

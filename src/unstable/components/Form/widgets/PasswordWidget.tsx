@@ -13,11 +13,11 @@ const STRENGTH_STYLES = [
 ];
 
 const PasswordStrengthContainer = styled.div`
-	padding-bottom: ${props => px(props.theme.space[1])};
+	padding-bottom: ${(props) => px(props.theme.space[1])};
 	position: relative;
-	margin-top: ${props => px(props.theme.space[2])};
-	margin-bottom: ${props => px(props.theme.space[3])};
-	font-size: ${props => px(props.theme.fontSizes[0])};
+	margin-top: ${(props) => px(props.theme.space[2])};
+	margin-bottom: ${(props) => px(props.theme.space[3])};
+	font-size: ${(props) => px(props.theme.fontSizes[0])};
 `;
 
 const PasswordStrengthMeter = styled.div`
@@ -31,7 +31,7 @@ const PasswordStrengthMeter = styled.div`
 
 const PasswordStrengthText = styled.p`
 	margin: 0;
-	margin-bottom: ${props => px(props.theme.space[2])};
+	margin-bottom: ${(props) => px(props.theme.space[2])};
 `;
 
 export interface PasswordStrengthProps {

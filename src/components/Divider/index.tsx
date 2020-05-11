@@ -8,14 +8,15 @@ import Txt from '../Txt';
 
 const Base = styled.hr<InternalDividerProps>`
 	border: 0 none;
-	border-top: ${props =>
+	border-top: ${(props) =>
 		/*
 		TODO: The 2 * height here is for backwards compatibility reasons.
 		The reason was to fix sub-pixed border rendering in FF.
 		Consider dropping it in one of the next major releases.
 		*/
-		`${px(2 * (props.height || 0.5))} ${props.type || 'solid'} ${props.color ||
-			props.theme.colors.quartenary.main}}`};
+		`${px(2 * (props.height || 0.5))} ${props.type || 'solid'} ${
+			props.color || props.theme.colors.quartenary.main
+		}}`};
 	width: 100%;
 	height: 0;
 `;

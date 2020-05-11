@@ -74,7 +74,7 @@ describe('DataTypes', () => {
 
     it('formats the date correctly', () => {
       // Format expected timestamps to account for timezone changes
-      const tzFormat = stamp => {
+      const tzFormat = (stamp) => {
         return new Date(stamp).toISOString().replace(/\.000/, '')
       }
       expect(normalizeDateTime('2017-01-01T08:49:26Z')).toEqual(

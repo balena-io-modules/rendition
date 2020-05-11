@@ -129,7 +129,7 @@ describe('Filters component', () => {
     it('should render a summary of filters that are added as props after the component mounts', () => {
       const component = mount(
         React.createElement(
-          props => (
+          (props) => (
             <Provider>
               <Filters {...props} />
             </Provider>
@@ -149,7 +149,7 @@ describe('Filters component', () => {
     it('should not render a summary of filters if they are removed after the component mounts', () => {
       const component = mount(
         React.createElement(
-          props => (
+          (props) => (
             <Provider>
               <Filters {...props} />
             </Provider>
@@ -171,12 +171,7 @@ describe('Filters component', () => {
           <Filters schema={schema} filters={[tagIsFilter]} />
         </Provider>
       )
-      expect(
-        component
-          .find('button')
-          .at(4)
-          .text()
-      ).toBe('Tag is rarity : 10')
+      expect(component.find('button').at(4).text()).toBe('Tag is rarity : 10')
     })
 
     it('should show the correct label when filtering using "is_not" operator for both key and value properties of an object', () => {
@@ -185,12 +180,9 @@ describe('Filters component', () => {
           <Filters schema={schema} filters={[tagIsNotFilter]} />
         </Provider>
       )
-      expect(
-        component
-          .find('button')
-          .at(4)
-          .text()
-      ).toBe('Tag is not rarity : 10')
+      expect(component.find('button').at(4).text()).toBe(
+        'Tag is not rarity : 10'
+      )
     })
 
     it('should remove buttons labels if compact property is set to true', () => {
@@ -199,18 +191,8 @@ describe('Filters component', () => {
           <Filters compact={[true, true, true, true]} schema={schema} />
         </Provider>
       )
-      expect(
-        component
-          .find('button')
-          .at(0)
-          .text()
-      ).toBe('')
-      expect(
-        component
-          .find('button')
-          .at(1)
-          .text()
-      ).toBe('')
+      expect(component.find('button').at(0).text()).toBe('')
+      expect(component.find('button').at(1).text()).toBe('')
     })
   })
 
@@ -237,16 +219,10 @@ describe('Filters component', () => {
       )
 
       // Looking for 'Save view' button
-      withOneViewScope
-        .find('button')
-        .at(3)
-        .simulate('click')
+      withOneViewScope.find('button').at(3).simulate('click')
       expect(withOneViewScope.find(Select)).toHaveLength(0)
 
-      withNoViewScopes
-        .find('button')
-        .at(3)
-        .simulate('click')
+      withNoViewScopes.find('button').at(3).simulate('click')
       expect(withNoViewScopes.find(Select)).toHaveLength(0)
 
       withOneViewScope.unmount()
@@ -261,10 +237,7 @@ describe('Filters component', () => {
       )
 
       // Looking for 'Save view' button
-      component
-        .find('button')
-        .at(3)
-        .simulate('click')
+      component.find('button').at(3).simulate('click')
       expect(component.find(Select)).toHaveLength(1)
 
       component.unmount()
@@ -279,10 +252,7 @@ describe('Filters component', () => {
         </Provider>
       )
 
-      component
-        .find('button')
-        .at(1)
-        .simulate('click')
+      component.find('button').at(1).simulate('click')
       expect(component.find(ViewListItem)).toHaveLength(0)
       component.unmount()
     })
@@ -294,10 +264,7 @@ describe('Filters component', () => {
         </Provider>
       )
 
-      component
-        .find('button')
-        .at(1)
-        .simulate('click')
+      component.find('button').at(1).simulate('click')
       expect(component.find(ViewListItem)).toHaveLength(1)
       component.unmount()
     })
@@ -309,10 +276,7 @@ describe('Filters component', () => {
         </Provider>
       )
 
-      component
-        .find('button')
-        .at(1)
-        .simulate('click')
+      component.find('button').at(1).simulate('click')
       expect(component.find("[children='foo']")).toHaveLength(0)
       expect(component.find("[children='null']")).toHaveLength(0)
 
@@ -330,10 +294,7 @@ describe('Filters component', () => {
         </Provider>
       )
 
-      component
-        .find('button')
-        .at(1)
-        .simulate('click')
+      component.find('button').at(1).simulate('click')
       expect(component.find("[children='foo']")).toHaveLength(0)
 
       component.unmount()
@@ -350,17 +311,9 @@ describe('Filters component', () => {
         </Provider>
       )
 
-      component
-        .find('button')
-        .at(1)
-        .simulate('click')
+      component.find('button').at(1).simulate('click')
 
-      expect(
-        component
-          .find(Txt)
-          .at(0)
-          .text()
-      ).toEqual('foo')
+      expect(component.find(Txt).at(0).text()).toEqual('foo')
       expect(component.find("[children='bar']")).toHaveLength(0)
 
       component.unmount()
@@ -377,17 +330,9 @@ describe('Filters component', () => {
         </Provider>
       )
 
-      component
-        .find('button')
-        .at(1)
-        .simulate('click')
+      component.find('button').at(1).simulate('click')
 
-      expect(
-        component
-          .find(Txt)
-          .at(0)
-          .text()
-      ).toEqual('Unscoped')
+      expect(component.find(Txt).at(0).text()).toEqual('Unscoped')
       expect(component.find("[children='foo']")).toHaveLength(0)
       expect(component.find("[children='bar']")).toHaveLength(0)
 
@@ -397,7 +342,7 @@ describe('Filters component', () => {
     it('should render a list of views that are added as props after the component mounts', () => {
       const component = mount(
         React.createElement(
-          props => (
+          (props) => (
             <Provider>
               <Filters {...props} />
             </Provider>
@@ -408,10 +353,7 @@ describe('Filters component', () => {
 
       component.setProps({ views: [view] })
       component.update()
-      component
-        .find('button')
-        .at(1)
-        .simulate('click')
+      component.find('button').at(1).simulate('click')
       expect(component.find(ViewListItem)).toHaveLength(1)
       component.unmount()
     })
@@ -419,7 +361,7 @@ describe('Filters component', () => {
     it('should not render a list of views if they are removed after the component mounts', () => {
       const component = mount(
         React.createElement(
-          props => (
+          (props) => (
             <Provider>
               <Filters {...props} />
             </Provider>
@@ -430,10 +372,7 @@ describe('Filters component', () => {
 
       component.setProps({ views: null })
       component.update()
-      component
-        .find('button')
-        .at(1)
-        .simulate('click')
+      component.find('button').at(1).simulate('click')
       expect(component.find(ViewListItem)).toHaveLength(0)
       component.unmount()
     })
@@ -476,11 +415,7 @@ describe('Filters component', () => {
         .text()
       expect(searchValue).toContain('Squirtle')
 
-      component
-        .find(FiltersSummary)
-        .find('button')
-        .at(3)
-        .simulate('click')
+      component.find(FiltersSummary).find('button').at(3).simulate('click')
       expect(component.find(FiltersSummary)).toHaveLength(0)
 
       component.unmount()
@@ -510,11 +445,7 @@ describe('Filters component', () => {
         .text()
       expect(searchValue).toContain('Squirtle')
 
-      component
-        .find(FiltersSummary)
-        .find('button')
-        .at(0)
-        .simulate('click')
+      component.find(FiltersSummary).find('button').at(0).simulate('click')
       expect(component.find(FiltersSummary)).toHaveLength(0)
       const inputValue = component.find('input').prop('value')
       expect(inputValue).toEqual('')

@@ -148,7 +148,7 @@ export const FilterModal = ({
 										valueKey="slug"
 										labelKey="label"
 										// TODO: Remove this logic and pass the primitive value when this is fixed: https://github.com/grommet/grommet/issues/3154
-										value={operators.find(x => x.slug === operator)}
+										value={operators.find((x) => x.slug === operator)}
 										onChange={({ option }) =>
 											setEditOperator(option.slug, index)
 										}

@@ -42,27 +42,28 @@ const BaseTable = styled.div<BaseTableProps>`
 	display: table;
 	width: 100%;
 	border-spacing: 0;
-	border-bottom: 1px solid ${props => props.theme.colors.quartenary.main};
+	border-bottom: 1px solid ${(props) => props.theme.colors.quartenary.main};
 
 	> [data-display='table-head'] {
 		display: table-header-group;
-		background-color: ${props => props.theme.colors.quartenary.light};
+		background-color: ${(props) => props.theme.colors.quartenary.light};
 
 		> [data-display='table-row'] {
 			display: table-row;
 
 			> [data-display='table-cell'] {
 				display: table-cell;
-				border-bottom: 1px solid ${props => props.theme.colors.quartenary.main};
+				border-bottom: 1px solid
+					${(props) => props.theme.colors.quartenary.main};
 				text-align: left;
 				vertical-align: middle;
 				padding: 10px 20px;
-				font-size: ${props => px(props.theme.fontSizes[1])};
+				font-size: ${(props) => px(props.theme.fontSizes[1])};
 			}
 
 			> [data-display='table-cell']:first-child {
-				padding-left: ${props => (props.hasCheckbox ? '20px' : '40px')};
-				${props => (props.hasCheckbox ? 'width: 60px' : '')};
+				padding-left: ${(props) => (props.hasCheckbox ? '20px' : '40px')};
+				${(props) => (props.hasCheckbox ? 'width: 60px' : '')};
 			}
 
 			> [data-display='table-cell']:last-child {
@@ -77,8 +78,8 @@ const BaseTable = styled.div<BaseTableProps>`
 		> [data-display='table-row'] {
 			display: table-row;
 			text-decoration: none;
-			color: ${props => props.theme.colors.secondary.main};
-			font-size: ${props => px(props.theme.fontSizes[1])};
+			color: ${(props) => props.theme.colors.secondary.main};
+			font-size: ${(props) => px(props.theme.fontSizes[1])};
 
 			> [data-display='table-cell'] {
 				display: table-cell;
@@ -90,8 +91,8 @@ const BaseTable = styled.div<BaseTableProps>`
 			}
 
 			> [data-display='table-cell']:first-child {
-				padding-left: ${props => (props.hasCheckbox ? '20px' : '40px')};
-				${props => (props.hasCheckbox ? 'width: 60px' : '')};
+				padding-left: ${(props) => (props.hasCheckbox ? '20px' : '40px')};
+				${(props) => (props.hasCheckbox ? 'width: 60px' : '')};
 			}
 
 			> [data-display='table-cell']:last-child {
@@ -99,17 +100,17 @@ const BaseTable = styled.div<BaseTableProps>`
 			}
 
 			> a[data-display='table-cell'] {
-				cursor: ${props =>
+				cursor: ${(props) =>
 					props.hasRowClick || props.hasGetRowRef ? 'pointer' : 'auto'};
 			}
 
 			&:nth-of-type(even) {
-				background-color: ${props => props.theme.colors.quartenary.light};
+				background-color: ${(props) => props.theme.colors.quartenary.light};
 			}
 
 			&:hover {
 				text-decoration: none;
-				${props =>
+				${(props) =>
 					props.hasRowClick || props.hasGetRowRef || props.hasCheckbox
 						? highlightStyle
 						: ''};
@@ -117,7 +118,7 @@ const BaseTable = styled.div<BaseTableProps>`
 
 			&[data-highlight='true'] {
 				${highlightStyle} > [data-display="table-cell"]:first-child {
-					box-shadow: inset 3px 0px 0 ${props => props.theme.colors.info.main};
+					box-shadow: inset 3px 0px 0 ${(props) => props.theme.colors.info.main};
 				}
 			}
 		}
@@ -224,7 +225,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 
 		const selectedKeys = map(checkedItems, rowKey);
 
-		return every(this.props.data, x => includes(selectedKeys, x[rowKey]));
+		return every(this.props.data, (x) => includes(selectedKeys, x[rowKey]));
 	}
 
 	public sortData(data: T[]): T[] {
@@ -244,7 +245,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		if (typeof column.sortable === 'function') {
 			collection = data.slice().sort(column.sortable);
 		} else {
-			collection = sortBy<T>(data.slice(), item => {
+			collection = sortBy<T>(data.slice(), (item) => {
 				const sortableValue = item[sort.field as keyof T];
 				return isPlainObject(sortableValue)
 					? (sortableValue as any).value
@@ -277,7 +278,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		let allChecked = false;
 
 		if (data) {
-			checkedItems = filter(this.props.data, x =>
+			checkedItems = filter(this.props.data, (x) =>
 				includes(selectedRowsIds, x[rowKey]),
 			);
 			allChecked = data.length > 0 && checkedItems.length === data.length;
@@ -291,7 +292,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 
 		const allChecked = !this.state.allChecked;
 		const checkedItems = allChecked
-			? (data || []).slice().filter(r => !this.isDisabled(r))
+			? (data || []).slice().filter((r) => !this.isDisabled(r))
 			: [];
 
 		if (this.props.onCheck) {
@@ -365,7 +366,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		if (rowKey) {
 			// Normalize the key value to a string for comparison, because data
 			// attributes on elements are always strings
-			return find(data, element => `${element[rowKey]}` === key);
+			return find(data, (element) => `${element[rowKey]}` === key);
 		}
 
 		return data[Number(key)];
@@ -477,7 +478,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 										/>
 									</CheckboxWrapper>
 								)}
-								{map(columns, item => {
+								{map(columns, (item) => {
 									if (item.sortable) {
 										return (
 											<div data-display="table-cell" key={item.field as string}>

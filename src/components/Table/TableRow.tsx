@@ -85,7 +85,7 @@ export class TableRow<T> extends React.PureComponent<TableRowProps<T>, {}> {
 						/>
 					</CheckboxWrapper>
 				)}
-				{map(columns, column => {
+				{map(columns, (column) => {
 					const cellAttributes =
 						typeof column.cellAttributes === 'function'
 							? column.cellAttributes(data, get(data, column.field))

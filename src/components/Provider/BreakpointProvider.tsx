@@ -20,7 +20,7 @@ export const BreakpointProvider: React.FC<BreakpointProviderProps> = ({
 		const handleResize = () => {
 			const clientWidth = window.innerWidth;
 			const breakpointIndex = breakpoints.findIndex(
-				breakpoint => clientWidth < breakpoint,
+				(breakpoint) => clientWidth < breakpoint,
 			);
 			const currentBreakpoint =
 				breakpointIndex >= 0 ? breakpointIndex : breakpoints.length - 1;

@@ -33,7 +33,7 @@ const defaultValueForSchema = (schema: JSONSchema6) => {
 
 const replaceDataWithFormulaContent = (schema: JSONSchema6, data: any) => {
 	// Find all the keypaths that use formulas
-	const keys = getFormulaKeys(schema).map(path => {
+	const keys = getFormulaKeys(schema).map((path) => {
 		return {
 			formula: get(schema, path),
 			path: path.replace(/properties\./g, ''),
@@ -44,7 +44,7 @@ const replaceDataWithFormulaContent = (schema: JSONSchema6, data: any) => {
 	// This is done because the formula may reference other fields in the data
 	// object, and they all need to be present when running the object through
 	// temen.
-	keys.forEach(formula => {
+	keys.forEach((formula) => {
 		const fullPath = formula.path;
 		const formulaText = formula.formula;
 

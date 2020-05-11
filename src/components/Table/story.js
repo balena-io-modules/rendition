@@ -7,9 +7,9 @@ import { Box, Input, Table } from '../../'
 import PokeDex from '../../stories/assets/pokedex'
 import Readme from './README.md'
 
-const prefixNum = num => (num.toString().length === 1 ? `0${num}` : num)
+const prefixNum = (num) => (num.toString().length === 1 ? `0${num}` : num)
 
-const getRowClass = pokemon => {
+const getRowClass = (pokemon) => {
   const classNames = ['pokemon']
 
   if (pokemon.caught) {
@@ -31,7 +31,7 @@ const columns = [
     field: 'pokedex_number',
     label: 'National Pokedex Number',
     sortable: true,
-    render: value => <code>{value}</code>
+    render: (value) => <code>{value}</code>
   },
   {
     field: 'Category',
@@ -41,7 +41,7 @@ const columns = [
     field: 'first_seen',
     label: 'First Seen',
     sortable: true,
-    render: value => {
+    render: (value) => {
       if (value == null) {
         return null
       }
@@ -98,7 +98,7 @@ storiesOf('Core/Table', module)
           usePager
           pagerPosition='both'
           itemsPerPage={3}
-          onPageChange={e => console.log('update!', e)}
+          onPageChange={(e) => console.log('update!', e)}
         />
       </Box>
     )
@@ -186,7 +186,7 @@ storiesOf('Core/Table', module)
         <Table
           columns={columns}
           data={PokeDex}
-          getRowHref={row => `https://www.pokemon.com/uk/pokedex/${row.Name}`}
+          getRowHref={(row) => `https://www.pokemon.com/uk/pokedex/${row.Name}`}
           rowAnchorAttributes={{ target: '_blank' }}
         />
       </Box>
@@ -200,7 +200,7 @@ storiesOf('Core/Table', module)
           data={PokeDex}
           rowKey='pokedex_number'
           onCheck={action('items-selected')}
-          getRowHref={row => `https://www.pokemon.com/uk/pokedex/${row.Name}`}
+          getRowHref={(row) => `https://www.pokemon.com/uk/pokedex/${row.Name}`}
           rowAnchorAttributes={{ target: '_blank' }}
         />
       </Box>

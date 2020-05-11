@@ -11,12 +11,12 @@ import Txt, { TxtProps } from '../Txt';
 
 const Wrapper = styled(Txt.span)<InternalTextWithCopyProps>`
 	display: inline-block;
-	white-space: ${props => (props.code ? 'initial' : 'nowrap')};
+	white-space: ${(props) => (props.code ? 'initial' : 'nowrap')};
 
 	.text-with-copy__content {
 		white-space: normal;
 		word-wrap: break-word;
-		margin-right: ${props => px(props.theme.space[1])};
+		margin-right: ${(props) => px(props.theme.space[1])};
 	}
 
 	& > .text-with-copy__copy_wrapper {
@@ -25,12 +25,12 @@ const Wrapper = styled(Txt.span)<InternalTextWithCopyProps>`
 
 	.text-with-copy__copy {
 		cursor: pointer;
-		visibility: ${props =>
+		visibility: ${(props) =>
 			props.showCopyButton === 'always' ? 'visible' : 'hidden'};
 	}
 
 	code {
-		font-family: ${props => props.theme.monospace};
+		font-family: ${(props) => props.theme.monospace};
 		padding: 2px 4px;
 		font-size: 90%;
 		color: #c7254e;
@@ -39,7 +39,7 @@ const Wrapper = styled(Txt.span)<InternalTextWithCopyProps>`
 		white-space: normal;
 		word-wrap: break-word;
 		font-size: 1em;
-		margin-right: ${props => px(props.theme.space[1])};
+		margin-right: ${(props) => px(props.theme.space[1])};
 		display: inline-block;
 	}
 
@@ -68,7 +68,7 @@ const Base = ({
 			{code && <code title={normalizedCopy}>{contentToRender}</code>}
 
 			<span
-				onClick={e => {
+				onClick={(e) => {
 					e.stopPropagation();
 					e.preventDefault();
 				}}

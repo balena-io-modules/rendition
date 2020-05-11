@@ -10,12 +10,12 @@ import {
 
 const Base = styled.div<FixedBaseProps>`
 	position: fixed;
-	top: ${props => defaultTo(props.top, 'auto')};
-	right: ${props => defaultTo(props.right, 'auto')};
-	bottom: ${props => defaultTo(props.bottom, 'auto')};
-	left: ${props => defaultTo(props.left, 'auto')};
-	z-index: ${props => defaultTo(props.z, 0)};
-	background: ${props => defaultTo(props.bg, 'none')};
+	top: ${(props) => defaultTo(props.top, 'auto')};
+	right: ${(props) => defaultTo(props.right, 'auto')};
+	bottom: ${(props) => defaultTo(props.bottom, 'auto')};
+	left: ${(props) => defaultTo(props.left, 'auto')};
+	z-index: ${(props) => defaultTo(props.z, 0)};
+	background: ${(props) => defaultTo(props.bg, 'none')};
 `;
 
 const dimensions = withProps((props: FixedProps) => {

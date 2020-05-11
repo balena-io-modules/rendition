@@ -17,7 +17,7 @@ export class Repl {
     document.body.appendChild(this.iframe)
 
     this.iframe.contentWindow.REPL_LOG_CAPTURE = (...args) => {
-      args.forEach(arg => this.state.history.push(arg))
+      args.forEach((arg) => this.state.history.push(arg))
     }
   }
 

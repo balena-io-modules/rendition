@@ -14,14 +14,14 @@ const Base = styled.a<InternalLinkProps>`
   ${caps}
   ${bold}
 
-  text-decoration: ${props => props.decor || 'none'};
-  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
-  opacity: ${props => (props.disabled ? 0.65 : 1)};
+  text-decoration: ${(props) => props.decor || 'none'};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+  opacity: ${(props) => (props.disabled ? 0.65 : 1)};
   display: inline-block;
 
   &:active,
   &:hover {
-    color: ${props =>
+    color: ${(props) =>
 			!props.disabled &&
 			(darken(
 				get(props.theme.colors, props.color as any) || props.color,

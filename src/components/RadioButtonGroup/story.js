@@ -15,13 +15,13 @@ storiesOf('Next/RadioButtonGroup', module)
           m={3}
           options={['plain 1', 'plain 2']}
           value={selected}
-          onChange={e => setSelected(e.target.value)}
+          onChange={(e) => setSelected(e.target.value)}
         />
         <RadioButtonGroup
           m={3}
           options={['plain 1', 'plain 2']}
           value={selected}
-          onChange={e => setSelected(e.target.value)}
+          onChange={(e) => setSelected(e.target.value)}
         />
         <RadioButtonGroup
           m={3}

@@ -61,15 +61,15 @@ const FormWrapper = styled(Box)`
 	/* Style the error list, since it can't be templated */
 	.panel-danger,
 	.error-detail {
-		font-size: ${props => utils.px(props?.theme?.fontSizes?.[1] ?? 14)};
-		margin-top: ${props => utils.px(props?.theme?.space?.[1] ?? 4)};
-		margin-bottom: ${props => utils.px(props?.theme?.space?.[1] ?? 4)};
+		font-size: ${(props) => utils.px(props?.theme?.fontSizes?.[1] ?? 14)};
+		margin-top: ${(props) => utils.px(props?.theme?.space?.[1] ?? 4)};
+		margin-bottom: ${(props) => utils.px(props?.theme?.space?.[1] ?? 4)};
 		list-style-type: none;
 		padding-left: 0;
 	}
 
 	.text-danger {
-		color: ${props => props?.theme?.colors?.danger?.main ?? '#a94442'};
+		color: ${(props) => props?.theme?.colors?.danger?.main ?? '#a94442'};
 	}
 `;
 

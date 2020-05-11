@@ -56,7 +56,7 @@ export const stripSchemaFormats = (
 			delete schema.format;
 		}
 		if (schema.properties) {
-			forEach(schema.properties, subSchema => {
+			forEach(schema.properties, (subSchema) => {
 				_strip(subSchema as JSONSchema6);
 			});
 		}
@@ -111,7 +111,7 @@ export const disallowAdditionalProperties = (schema: JSONSchema6) => {
 			schema.additionalProperties = false;
 		}
 		if (schema.properties) {
-			forEach(schema.properties, subSchema => {
+			forEach(schema.properties, (subSchema) => {
 				disallow(subSchema as JSONSchema6);
 			});
 		}

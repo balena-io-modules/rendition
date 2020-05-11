@@ -32,14 +32,14 @@ export const filter = (
 	ajv.removeSchema(/^.*$/);
 
 	const validators = Array.isArray(filters)
-		? filters.map(s => ajv.compile(s))
+		? filters.map((s) => ajv.compile(s))
 		: [ajv.compile(filters)];
 
 	if (Array.isArray(collection)) {
-		return collection.filter(m => every(validators, v => v(m)));
+		return collection.filter((m) => every(validators, (v) => v(m)));
 	}
 
-	return pickBy(collection, m => every(validators, v => v(m)));
+	return pickBy(collection, (m) => every(validators, (v) => v(m)));
 };
 
 export const createFullTextSearchFilter = (
@@ -69,7 +69,7 @@ export const createFullTextSearchFilter = (
 		anyOf: [
 			{
 				description: `Any field contains ${term}`,
-				anyOf: stringKeys.map(key => ({
+				anyOf: stringKeys.map((key) => ({
 					properties: {
 						[key]: {
 							type: 'string',
@@ -107,7 +107,7 @@ export const upsertFullTextSearch = (
 
 // Removes a full text search filter from an array of filters
 export const removeFullTextSearch = (filters: JSONSchema6[]) =>
-	filters.filter(f => f.title !== FULL_TEXT_SLUG);
+	filters.filter((f) => f.title !== FULL_TEXT_SLUG);
 
 export const createFilter = (
 	schema: JSONSchema6,
@@ -160,7 +160,7 @@ export const decodeFilter = (schema: JSONSchema6, filter: JSONSchema6) => {
 		return (model.decodeFilter as (f: JSONSchema6) => FilterSignature)(f);
 	});
 
-	return signatures.filter(s => s !== null);
+	return signatures.filter((s) => s !== null);
 };
 
 export const getOperators = (schema: JSONSchema6, field: string) => {
@@ -194,7 +194,7 @@ const flattenAccumulator = (
 	}
 
 	if (schema.anyOf && Array.isArray(schema.anyOf)) {
-		accumulator.anyOf = schema.anyOf.map(subSchema =>
+		accumulator.anyOf = schema.anyOf.map((subSchema) =>
 			flattenAccumulator(subSchema as JSONSchema6, delimiter, parentKey),
 		);
 	}
@@ -293,7 +293,7 @@ export const unflattenSchema = (
 
 	// If the schema uses `anyOf` then use recursion to populate the array
 	if (unflattenedSchema.anyOf) {
-		unflattenedSchema.anyOf = unflattenedSchema.anyOf.map(subSchema =>
+		unflattenedSchema.anyOf = unflattenedSchema.anyOf.map((subSchema) =>
 			unflattenSchema(subSchema as JSONSchema6, delimiter),
 		);
 	}
@@ -305,7 +305,7 @@ export const unflattenSchema = (
 		// Reset the `required` array so it can be repopulated
 		unflattenedSchema.required = [];
 
-		requiredFields.forEach(requiredField => {
+		requiredFields.forEach((requiredField) => {
 			const fields = trimStart(requiredField, delimiter).split(delimiter);
 
 			let head = unflattenedSchema;

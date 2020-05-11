@@ -40,12 +40,12 @@
     "jest:watch": "jest --maxWorkers=4 --watch",
     "eslint": "eslint src .storybook",
     "eslint-fix": "eslint src .storybook --fix",
-    "tslint": "resin-lint --typescript src",
-    "tslint-fix": "resin-lint --typescript --fix src",
+    "tslint": "balena-lint --typescript src",
+    "tslint-fix": "balena-lint --typescript --fix src",
     "lint": "npm run eslint && npm run tslint",
     "precommit": "lint-staged",
     "prepack": "npm run build",
-    "prettify-js": "prettier --config .prettierrc-js --write \"src/**/*.js\" \"test/**/*.js\"",
+    "prettify-js": "prettier --config .prettierrc-js --write \"src/**/*.js\"",
     "prettify": "npm run prettify-js && npm run eslint-fix && npm run tslint-fix",
     "ci:screenshot": "storycap http://localhost:6006 --serverTimeout 100000 --captureTimeout 10000 --disableCssAnimation --serverCmd \"npm run start\"",
     "deploy": "npm run build:storybook && gh-pages -d .out"
@@ -58,6 +58,7 @@
     "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/plugin-transform-react-jsx": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
+    "@balena/lint": "^5.0.4",
     "@storybook/addon-actions": "^5.2.8",
     "@storybook/react": "^5.2.8",
     "@types/jest": "^24.0.25",
@@ -88,12 +89,11 @@
     "jsdom": "^11.6.2",
     "lint-staged": "^4.1.1",
     "match-media-mock": "^0.1.1",
-    "prettier": "^1.15.3",
+    "prettier": "^2.0.5",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-test-renderer": "^16.8.5",
     "reg-cli": "^0.13.0-beta.1",
-    "resin-lint": "^3.2.4",
     "rimraf": "^2.6.2",
     "sinon": "^4.5.0",
     "storybook-readme": "5.0.3",
@@ -159,7 +159,7 @@
       "git add"
     ],
     "*.{ts,tsx}": [
-      "resin-lint --typescript --fix",
+      "balena-lint --typescript --fix",
       "git add"
     ]
   },

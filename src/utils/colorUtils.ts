@@ -52,15 +52,9 @@ export const isLight = (color?: string) => {
 export const opaque = (color: string, opacity: number) =>
 	new Color([...Color(color).array(), opacity]).string();
 
-export const lighten = (color: string) =>
-	Color(color)
-		.fade(0.3)
-		.string();
+export const lighten = (color: string) => Color(color).fade(0.3).string();
 
-export const darken = (color: string) =>
-	Color(color)
-		.darken(0.2)
-		.string();
+export const darken = (color: string) => Color(color).darken(0.2).string();
 
 export const getColoringType = (props: {
 	theme: Theme;
@@ -70,7 +64,7 @@ export const getColoringType = (props: {
 	const type = find<string>(
 		Object.keys(props),
 		(b: any) =>
-			!!props[b] && !!find(Object.keys(props.theme.colors), k => k === b),
+			!!props[b] && !!find(Object.keys(props.theme.colors), (k) => k === b),
 	);
 	return type;
 };

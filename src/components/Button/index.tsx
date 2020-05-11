@@ -41,10 +41,10 @@ https://www.styled-components.com/docs/advanced#issues-with-specificity
 */
 const ButtonBase = styled(Button)`
 	& {
-		font-family: ${props => props.theme.titleFont};
-		font-weight: ${props => props.theme.button.font.weight};
-		font-size: ${props => px(props.theme.fontSizes[1])};
-		height: ${props => props.theme.button.height};
+		font-family: ${(props) => props.theme.titleFont};
+		font-weight: ${(props) => props.theme.button.font.weight};
+		font-size: ${(props) => px(props.theme.fontSizes[1])};
+		height: ${(props) => props.theme.button.height};
 		white-space: nowrap;
 		svg {
 			color: inherit !important;
@@ -63,11 +63,11 @@ const ButtonBase = styled(Button)`
 
 const ColouredButton = styled(ButtonBase)`
 	& {
-		color: ${props =>
+		color: ${(props) =>
 			isLight(getColor(props, 'color', 'main'))
 				? props.theme.colors.text.main
 				: 'white'};
-		${props => {
+		${(props) => {
 			const color = getColor(props, 'color', 'dark');
 			return getHoverEffectOverride(
 				color,
@@ -79,12 +79,12 @@ const ColouredButton = styled(ButtonBase)`
 
 const Outline = styled(ButtonBase)<{ color?: string }>`
 	& {
-		color: ${props => props.theme.colors.text.main};
-		border-color: ${props => props.color || props.theme.colors.text.main};
+		color: ${(props) => props.theme.colors.text.main};
+		border-color: ${(props) => props.color || props.theme.colors.text.main};
 		svg {
-			color: ${props => props.theme.colors.tertiary.main} !important;
+			color: ${(props) => props.theme.colors.tertiary.main} !important;
 		}
-		${props =>
+		${(props) =>
 			getHoverEffectOverride(
 				props.color || props.theme.colors.text.main,
 				isLight(props.color) ? props.theme.colors.text.main : 'white',
@@ -94,11 +94,11 @@ const Outline = styled(ButtonBase)<{ color?: string }>`
 
 const Light = styled(ButtonBase)`
 	& {
-		color: ${props => props.theme.colors.text.main};
-		border-color: ${props => props.theme.colors.text.main};
+		color: ${(props) => props.theme.colors.text.main};
+		border-color: ${(props) => props.theme.colors.text.main};
 		background: white;
 		border: none;
-		${props =>
+		${(props) =>
 			getHoverEffectOverride(
 				'white',
 				props.theme.colors.secondary.main,
@@ -117,7 +117,7 @@ const LightOutline = styled(Light)`
 		color: white;
 		border: 1px solid white;
 		background: transparent;
-		${props =>
+		${(props) =>
 			getHoverEffectOverride(
 				'white',
 				props.theme.colors.secondary.main,
@@ -133,11 +133,11 @@ const LightOutline = styled(Light)`
 
 const Plain = styled(ButtonBase)<{ hoverColor?: string; color?: string }>`
 	& {
-		color: ${props => props.color || props.theme.colors.text.main};
+		color: ${(props) => props.color || props.theme.colors.text.main};
 		height: auto;
-		font-weight: ${props => props.theme.button.font.weight};
+		font-weight: ${(props) => props.theme.button.font.weight};
 		border-radius: 0;
-		${props =>
+		${(props) =>
 			getHoverEffectOverride(
 				'none',
 				props.hoverColor || props.theme.colors.text.light,
@@ -155,7 +155,7 @@ const underlineButtonActiveStyles = (props: ThemedButtonProps) => css`
 
 const Underline = styled(Plain)<{ active?: boolean; color?: string }>`
 	& {
-		${props => (props.active ? underlineButtonActiveStyles(props) : '')}
+		${(props) => (props.active ? underlineButtonActiveStyles(props) : '')}
 		border-bottom: 1px solid;
 		background: none;
 		&:hover:enabled,

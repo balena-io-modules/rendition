@@ -16,10 +16,10 @@ const transition = 'width linear 250ms';
 
 const Bar = styled.div<{ bg?: string; emphasized?: boolean }>`
 	position: relative;
-	height: ${props =>
+	height: ${(props) =>
 		px(props.emphasized ? props.theme.space[5] : props.theme.space[4])};
 	overflow: hidden;
-	background: ${props => props.bg || props.theme.colors.primary.main};
+	background: ${(props) => props.bg || props.theme.colors.primary.main};
 	transition: ${transition};
 	text-align: center;
 `;
@@ -47,20 +47,20 @@ const Content = styled.div`
 
 const Sleeve = styled.div<{ emphasized?: boolean }>`
 	position: relative;
-	border-radius: ${props => px(props.theme.radius)};
-	height: ${props =>
+	border-radius: ${(props) => px(props.theme.radius)};
+	height: ${(props) =>
 		px(props.emphasized ? props.theme.space[4] : props.theme.space[3])};
-	line-height: ${props =>
+	line-height: ${(props) =>
 		px(props.emphasized ? props.theme.space[4] : props.theme.space[3])};
-	background: ${props => props.theme.colors.quartenary.main};
-	font-size: ${props => (props.emphasized ? 1 : 0.6)}em;
+	background: ${(props) => props.theme.colors.quartenary.main};
+	font-size: ${(props) => (props.emphasized ? 1 : 0.6)}em;
 	overflow: hidden;
 `;
 
 const getType = withProps((props: ThemedProgressBarProps) => {
 	// get primary, tertiary, secondary and set as props.type
-	const type = find(Object.keys(props), b =>
-		find(Object.keys(props.theme.colors), k => k === b),
+	const type = find(Object.keys(props), (b) =>
+		find(Object.keys(props.theme.colors), (k) => k === b),
 	);
 
 	return Object.assign({}, props, { type });

@@ -18,7 +18,7 @@ describe('Modal', () => {
     // here.
     // see: https://github.com/facebook/react/issues/11565
     originalPortal = ReactDOM.createPortal
-    ReactDOM.createPortal = node => node
+    ReactDOM.createPortal = (node) => node
   })
 
   afterAll(() => {
@@ -52,7 +52,7 @@ describe('Keyboard closing modals', () => {
     // Escape key
     component
       .find('div[onKeyDown]')
-      .forEach(node => node.simulate('keydown', { which: ESCAPE_KEY }))
+      .forEach((node) => node.simulate('keydown', { which: ESCAPE_KEY }))
     expect(firstModalSpy.notCalled).toBeTruthy()
     expect(secondModalSpy.calledOnce).toBeTruthy()
   })
@@ -69,7 +69,7 @@ describe('Keyboard closing modals', () => {
     // Escape key
     component
       .find('div[onKeyDown]')
-      .forEach(node => node.simulate('keydown', { which: ESCAPE_KEY }))
+      .forEach((node) => node.simulate('keydown', { which: ESCAPE_KEY }))
     expect(modalSpy.calledOnce).toBeTruthy()
   })
 })
@@ -106,7 +106,7 @@ describe('Keyboard submitting nested modals', () => {
     )
 
     // Enter key
-    eventListenersMap.keydown.forEach(fn =>
+    eventListenersMap.keydown.forEach((fn) =>
       fn({
         preventDefault: () => null,
         stopPropagation: () => null,
@@ -132,7 +132,7 @@ describe('Keyboard submitting nested modals', () => {
     )
 
     // Enter key
-    eventListenersMap.keydown.forEach(fn =>
+    eventListenersMap.keydown.forEach((fn) =>
       fn({
         preventDefault: () => null,
         stopPropagation: () => null,

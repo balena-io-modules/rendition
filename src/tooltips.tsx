@@ -274,7 +274,7 @@ class TooltipComponent extends React.Component<{}, TooltipComponentState> {
 				ref={(el: any) => (this.tooltipElement = el)}
 			>
 				<TooltipElementInner
-					ref={el => (this.tooltipElementInner = el)}
+					ref={(el) => (this.tooltipElementInner = el)}
 					style={innerStyle}
 				/>
 
@@ -309,7 +309,7 @@ export class Tooltips {
 		// a mouseover event will be triggered when the cursor leaves a disabled
 		// element.
 		// See: https://github.com/facebook/react/issues/4251#issuecomment-334266778
-		document.addEventListener('mouseover', e => {
+		document.addEventListener('mouseover', (e) => {
 			const target = e.target as Element;
 			if (
 				!this.hideOnMouseOut ||

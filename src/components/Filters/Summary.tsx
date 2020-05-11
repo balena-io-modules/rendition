@@ -73,7 +73,7 @@ class FilterSummary extends React.Component<
 										valueKey="slug"
 										labelKey="name"
 										// TODO: Remove this logic and pass the primitive value when this is fixed: https://github.com/grommet/grommet/issues/3154
-										value={scopes.find(x => x.slug === this.state.scope)}
+										value={scopes.find((x) => x.slug === this.state.scope)}
 										onChange={({ option }) =>
 											this.setState({
 												scope: option.slug,

@@ -52,7 +52,7 @@ class FormDemo extends React.Component {
       this.setState({ formData })
     }
 
-    this.submit = data => {
+    this.submit = (data) => {
       action('Form.onSubmit')(data)
     }
   }

@@ -1,9 +1,9 @@
 import capitalize from 'lodash/capitalize'
 
-export const getNameFromSlug = slug => {
+export const getNameFromSlug = (slug) => {
   return slug
     .split('_')
-    .map(x => capitalize(x))
+    .map((x) => capitalize(x))
     .join(' ')
 }
 

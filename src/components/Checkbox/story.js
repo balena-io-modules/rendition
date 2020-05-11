@@ -17,13 +17,13 @@ storiesOf('Next/Checkbox', module)
             <Box p={2}>
               <Checkbox
                 checked={checked}
-                onChange={e => setChecked(e.target.checked)}
+                onChange={(e) => setChecked(e.target.checked)}
               />
             </Box>
             <Box p={2} bg='gray.main'>
               <Checkbox
                 checked={checked}
-                onChange={e => setChecked(e.target.checked)}
+                onChange={(e) => setChecked(e.target.checked)}
               />
             </Box>
           </Flex>

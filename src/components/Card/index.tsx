@@ -12,7 +12,7 @@ import Heading from '../Heading';
 
 const Wrapper = styled(DismissableContainer)<WrapperProps>`
 	& {
-		padding: ${props => (props.small ? '24px' : '32px 44px')};
+		padding: ${(props) => (props.small ? '24px' : '32px 44px')};
 	}
 `;
 

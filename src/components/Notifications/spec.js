@@ -30,10 +30,7 @@ describe('Notifications component', () => {
       <NotificationsComponent content={'A notification'} />
     )
 
-    component
-      .find('button')
-      .first()
-      .simulate('click')
+    component.find('button').first().simulate('click')
 
     expect(component.find('.notification-item').text()).toBe('A notification')
   })
@@ -48,21 +45,12 @@ describe('Notifications component', () => {
       />
     )
 
-    component
-      .find('button')
-      .first()
-      .simulate('click')
+    component.find('button').first().simulate('click')
 
-    component
-      .find('button')
-      .at(2)
-      .simulate('click')
+    component.find('button').at(2).simulate('click')
 
     // The notifications depend on the `transitionend` event for it to be removed from the dom, but we mock the css import for the animations, so it will never happen.
-    component
-      .find('.notification-item')
-      .first()
-      .simulate('transitionend')
+    component.find('.notification-item').first().simulate('transitionend')
 
     expect(component.find('.notification-item')).toHaveLength(0)
   })
@@ -72,10 +60,7 @@ describe('Notifications component', () => {
       <NotificationsComponent content={'A notification'} />
     )
 
-    component
-      .find('button')
-      .first()
-      .simulate('click')
+    component.find('button').first().simulate('click')
 
     component
       .find('.notification-item')
@@ -83,10 +68,7 @@ describe('Notifications component', () => {
       .first()
       .simulate('click')
 
-    component
-      .find('.notification-item')
-      .first()
-      .simulate('transitionend')
+    component.find('.notification-item').first().simulate('transitionend')
 
     expect(component.find('.notification-item')).toHaveLength(0)
   })
@@ -100,10 +82,7 @@ describe('Notifications component', () => {
       />
     )
 
-    component
-      .find('button')
-      .first()
-      .simulate('click')
+    component.find('button').first().simulate('click')
 
     component
       .find('.notification-item')
@@ -122,21 +101,12 @@ describe('Notifications component', () => {
     )
     const clock = sinon.useFakeTimers()
 
-    component
-      .find('button')
-      .first()
-      .simulate('click')
+    component.find('button').first().simulate('click')
 
     // On the first transitionend (on entry), it creates the timer, and on the second one (on exit), it removes the element from the DOM.
-    component
-      .find('.notification-item')
-      .first()
-      .simulate('transitionend')
+    component.find('.notification-item').first().simulate('transitionend')
     clock.tick(200)
-    component
-      .find('.notification-item')
-      .first()
-      .simulate('transitionend')
+    component.find('.notification-item').first().simulate('transitionend')
 
     expect(component.find('.notification-item')).toHaveLength(0)
 

@@ -41,20 +41,20 @@ const MenuBase = styled(Box)<{
 }>`
 	background: white;
 	position: absolute;
-	box-shadow: ${props => '1px 1px 5px' + props.theme.colors.gray.light};
-	border-radius: ${props => px(props.theme.radius)};
-	border: ${props => '1px solid ' + props.theme.colors.gray.main};
+	box-shadow: ${(props) => '1px 1px 5px' + props.theme.colors.gray.light};
+	border-radius: ${(props) => px(props.theme.radius)};
+	border: ${(props) => '1px solid ' + props.theme.colors.gray.main};
 	z-index: 1;
 	margin-top: 2px;
-	left: ${props => (props.alignRight ? 'auto' : 0)};
-	right: ${props => (!props.alignRight ? 'auto' : 0)};
+	left: ${(props) => (props.alignRight ? 'auto' : 0)};
+	right: ${(props) => (!props.alignRight ? 'auto' : 0)};
 	white-space: nowrap;
 	overflow-y: auto;
 `;
 
 const Wrapper = styled(Box)`
 	display: inline-block;
-	border-radius: ${props => px(props.theme.radius)};
+	border-radius: ${(props) => px(props.theme.radius)};
 	vertical-align: top;
 	position: relative;
 
@@ -66,12 +66,12 @@ const Wrapper = styled(Box)`
 
 const Item = styled.div<{ border: boolean }>`
 	padding: 4px 16px;
-	border-top: ${props =>
+	border-top: ${(props) =>
 		props.border ? `1px solid ${props.theme.colors.gray.main}` : '0'};
-	border-radius: ${props => px(props.theme.radius)};
+	border-radius: ${(props) => px(props.theme.radius)};
 
 	&:hover:enabled {
-		background: ${props => props.theme.colors.gray.light};
+		background: ${(props) => props.theme.colors.gray.light};
 	}
 `;
 

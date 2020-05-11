@@ -1,7 +1,7 @@
 import without from 'lodash/without'
 import { defaultSanitizerOptions } from './index'
 
-const customSanitizerOptions = options =>
+const customSanitizerOptions = (options) =>
   Object.assign({}, defaultSanitizerOptions, options)
 
 export default [
@@ -1448,7 +1448,8 @@ export default [
   {
     name: 'xss: 230',
     source: '<IMG SRC="javascript:alert(\'XSS\')"',
-    expected: '<p>&lt;IMG SRC=&quot;javascript:alert(&apos;XSS&apos;)&quot;</p>'
+    expected:
+      '<p>&lt;IMG SRC=&quot;javascript:alert(&apos;XSS&apos;)&quot;</p>'
   },
   {
     name: 'xss: 231',
