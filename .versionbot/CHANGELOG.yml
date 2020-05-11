@@ -1,4 +1,21 @@
 - commits:
+    - subject: Update to prettier 2.x to match balena-lint
+      hash: 03cc36741172299bc833c744368431b076ee6a38
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+    - subject: Update to balena-lint 5.x
+      hash: 5e9a66eed96e8c1f3f743fde4f845f7a6587a622
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 14.11.5
+  date: 2020-05-11T13:56:31.502Z
+- commits:
     - subject: 'CI: Remove nodejs version restriction now the minimum is 8'
       hash: 313a592290d710915685faa2b4cc3a36e4d370c4
       body: ''
