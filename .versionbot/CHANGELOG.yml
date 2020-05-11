@@ -1,4 +1,14 @@
 - commits:
+    - subject: 'CI: Remove nodejs version restriction now the minimum is 8'
+      hash: 313a592290d710915685faa2b4cc3a36e4d370c4
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 14.11.4
+  date: 2020-05-11T09:37:57.665Z
+- commits:
     - subject: Switch to optional chaining instead of lodash/get where possible
       hash: 20558ecf81827b0c8acc032a5bad0736dea3ad1a
       body: ''
