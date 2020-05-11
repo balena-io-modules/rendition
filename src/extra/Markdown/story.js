@@ -1,4 +1,5 @@
 import * as React from 'react'
+import marked from 'marked'
 import { storiesOf } from '@storybook/react'
 import defaults from 'lodash/defaults'
 import cloneDeep from 'lodash/cloneDeep'
@@ -6,7 +7,7 @@ import withReadme from 'storybook-readme/with-readme'
 import source, {
   customizationSamples
 } from '../../stories/assets/markdownSample'
-import { Box, Card, Table } from '../../'
+import { Box, Card, Table, Txt } from '../../'
 import { Markdown, defaultSanitizerOptions } from './index'
 import Readme from './README.md'
 
@@ -60,7 +61,7 @@ storiesOf('Extra/Markdown', module)
     )
   })
   .add('Custom Renderer', () => {
-    const customRenderer = (marked, renderer) => {
+    const customRenderer = renderer => {
       renderer.link = function (_href, _title, _text) {
         const link = marked.Renderer.prototype.link.apply(this, arguments)
         return link.replace(/google/g, 'rewrittenLink')
@@ -69,11 +70,13 @@ storiesOf('Extra/Markdown', module)
       return renderer
     }
 
+    const markdown = '[https://www.google.com/](https://www.google.com/)'
     return (
       <Box m={3}>
-        <Markdown renderer={customRenderer}>
-          {'[https://www.google.com/](https://www.google.com/)'}
-        </Markdown>
+        <Txt mb={2}>
+          Original markdown: <Txt.span monospace>{markdown}</Txt.span>
+        </Txt>
+        <Markdown customizeRenderer={customRenderer}>{markdown}</Markdown>
       </Box>
     )
   })

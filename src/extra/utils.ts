@@ -1,19 +1,15 @@
 import marked from 'marked';
 import sanitizeHtml from 'sanitize-html';
+import identity from 'lodash/identity';
 
-const defaultRenderer = (marked: any, renderer: any) => {
-	renderer.link = function(_href: any, _title: any, _text: any) {
-		const link = marked.Renderer.prototype.link.apply(this, arguments);
-		return link.replace('<a', '<a target="_blank" rel="noopener noreferrer"');
-	};
+const defaultRenderer = new marked.Renderer();
 
-	return renderer;
+defaultRenderer.link = function(_href, _title, _text) {
+	const link = marked.Renderer.prototype.link.apply(this, arguments);
+	return link.replace('<a', '<a target="_blank" rel="noopener noreferrer"');
 };
 
-const markedOptions = (marked: any, customRenderer: any = defaultRenderer) => {
-	const markedRenderer = new marked.Renderer();
-	const renderer = customRenderer(marked, markedRenderer);
-
+const markedOptions = (renderer: marked.Renderer) => {
 	return {
 		// Enable github flavored markdown
 		gfm: true,
@@ -60,11 +56,13 @@ export const defaultSanitizerOptions = {
 };
 
 export const parseMarkdown = (
-	renderer?: () => void,
 	text: string = '',
 	sanitizerOptions: sanitizeHtml.IOptions = defaultSanitizerOptions,
+	customizeRenderer: (
+		defaultRenderer: marked.Renderer,
+	) => marked.Renderer = identity,
 ) => {
-	const html = marked(text, markedOptions(marked, renderer));
+	const html = marked(text, markedOptions(customizeRenderer(defaultRenderer)));
 	const clean = sanitizeHtml(html, sanitizerOptions as any);
 	return clean;
 };

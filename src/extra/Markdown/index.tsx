@@ -1,3 +1,4 @@
+import marked from 'marked';
 import * as React from 'react';
 import sanitizeHtml from 'sanitize-html';
 import styled from 'styled-components';
@@ -9,7 +10,7 @@ export { defaultSanitizerOptions } from '../utils';
 type MarkdownProps = TxtProps & {
 	children: string;
 	sanitizerOptions?: sanitizeHtml.IOptions;
-	renderer?: () => void;
+	customizeRenderer?: (baseRenderer: marked.Renderer) => marked.Renderer;
 };
 
 /*
@@ -717,14 +718,14 @@ export const GitHubMarkdown = styled(Txt)`
 export const Markdown = ({
 	children,
 	sanitizerOptions,
-	renderer,
+	customizeRenderer,
 	...props
 }: MarkdownProps) => {
 	return (
 		<GitHubMarkdown
 			{...props}
 			dangerouslySetInnerHTML={{
-				__html: parseMarkdown(renderer, children, sanitizerOptions),
+				__html: parseMarkdown(children, sanitizerOptions, customizeRenderer),
 			}}
 		/>
 	);
