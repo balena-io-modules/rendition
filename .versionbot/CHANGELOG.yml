@@ -1,4 +1,43 @@
 - commits:
+    - subject: Fix-up typescript etc
+      hash: 162f68acea412b0846f073c4eeebc5b793b1849c
+      body: >
+        Changes made:
+
+        - tighter Typescript typings for props/arguments
+
+        - renamed prop to `customizeRenderer` to hint that its a function that
+        adapts a renderer
+
+        - removed the `marked` argument from the `customizeRenderer` function.
+        Although this means the caller will have to import `marked` separately,
+        it simplifies the interface we're 'exposing' via the `Markdown`
+        component. It just feels wrong to pass the whole marked library as an
+        argument of that function!
+
+        - Added the original markdown to the story view so you can more clearly
+        see the effect of the custom renderer
+
+        - refactored utils code so we recreate the default renderer each time
+        `parseMarkdown` is called
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: Add custom renderer for marked
+      hash: 9b320d7a6e14ba0f4ec95e4fc7ab9ed7a26fec63
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stef Kors <stef@balena.io>
+        signed-off-by: Stef Kors <stef@balena.io>
+      author: StefKors
+  version: 14.11.3
+  date: 2020-05-11T01:41:10.899Z
+- commits:
     - subject: 'fix: internal nullable prop'
       hash: f79463b6634d175b4a6e2c056a2a0da4dacedfb4
       body: |
