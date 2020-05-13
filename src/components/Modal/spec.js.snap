@@ -233,6 +233,11 @@ exports[`Modal renders correctly 1`] = `
       />
       <div
         className="c4"
+        style={
+          Object {
+            "marginTop": undefined,
+          }
+        }
       >
         <a
           aria-hidden="true"

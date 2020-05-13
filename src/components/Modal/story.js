@@ -8,6 +8,7 @@ import { Box, Button, Heading, Modal } from '../../'
 import { Progressor } from '../ProgressBar/story'
 import PokeDex from '../../stories/assets/pokedex'
 import Readme from './README.md'
+import theme from '../../theme'
 
 const cancelAction = action('Modal.cancel')
 const secondaryAction = action('Modal.secondary')
@@ -348,4 +349,28 @@ storiesOf('Next/Modal', module)
   })
   .add('Nested Modals', () => {
     return <NestedModalDemo />
+  })
+  .add('With Top Margin', () => {
+    return (
+      <Modal
+        title='Modal title'
+        cancel={cancelAction}
+        done={doneAction}
+        position='top'
+        theme={{
+          ...theme,
+          header: {
+            height: '2em'
+          }
+        }}
+        >
+        <p>Lorem ipsum dolor sit amet</p>
+        <a
+          href='https://balena-io-modules.github.io/rendition/'
+          target='_blank'
+        >
+          Rendition
+        </a>
+      </Modal>
+    )
   })
