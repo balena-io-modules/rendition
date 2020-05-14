@@ -88,6 +88,7 @@ export { Txt, TxtProps } from './components/Txt';
 export { Textarea, TextareaProps } from './components/Textarea';
 export { Img, ImgProps } from './components/Img';
 export { Heading } from './components/Heading';
+export { Header } from "./components/Header";
 export {
 	NotificationsContainer,
 	notifications,

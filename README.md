@@ -99,8 +99,8 @@ All components support [styled-system][styled-system] attributes, allowing you t
 ## Extra components
 
 Some components in the [storybook](https://balena-io-modules.github.io/rendition)
-are grouped separately under the `Extra` label. These components are not loaded by default 
-as they rely on other large packages that you may not want to include in your 
+are grouped separately under the `Extra` label. These components are not loaded by default
+as they rely on other large packages that you may not want to include in your
 application.
 If you would like to use them they can be loaded using by prefixing the
 component name with `rendition/dist/extra/`. For example to load the `Markdown`
