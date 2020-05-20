@@ -145,7 +145,10 @@ const Plain = styled(ButtonBase)<{ hoverColor?: string; color?: string }>`
 	}
 `;
 
-const underlineButtonActiveStyles = (props: ThemedButtonProps) => css`
+const underlineButtonActiveStyles = (props: {
+	theme: Theme;
+	color?: string;
+}) => css`
 	& {
 		color: ${props.color || props.theme.colors.text.main};
 		background: none;
@@ -281,10 +284,9 @@ interface ButtonBaseProps extends Coloring, Sizing {
 
 export interface InternalButtonProps
 	extends ButtonBaseProps,
-		DefaultProps,
+		Omit<DefaultProps, 'dir'>,
 		GrommetButtonProps {
 	type?: 'submit' | 'reset' | 'button';
-	label?: string | JSX.Element;
 }
 
 export type ButtonProps = InternalButtonProps & RenditionSystemProps;

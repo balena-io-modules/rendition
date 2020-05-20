@@ -7,4 +7,6 @@ const TabsBase = ({ ...props }: TabsProps) => {
 	return <GrommetTabs justify="start" {...props} />;
 };
 
-export const Tabs = asRendition(TabsBase) as React.FunctionComponent<TabsProps>;
+export const Tabs = (asRendition(
+	TabsBase,
+) as unknown) as React.FunctionComponent<TabsProps>;

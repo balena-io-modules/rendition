@@ -101,7 +101,7 @@ export const withTooltip = (Base: React.ComponentType) => {
 };
 
 export default function asRendition<T>(
-	component: React.ComponentType,
+	component: React.ComponentType | React.ForwardRefExoticComponent<T>,
 	additionalEnhancers: Array<
 		(Base: React.ComponentType) => React.ComponentType
 	> = [],
