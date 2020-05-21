@@ -8,7 +8,9 @@ import asRendition from '../../asRendition';
 import { DefaultProps, Omit, RenditionSystemProps } from '../../common-types';
 import { emphasized, monospace } from '../../utils';
 
-const getBorderColor = (props: InternalInputProps & { theme: any }) => {
+const getBorderColor = (
+	props: Omit<InternalInputProps, 'dir'> & { theme: any },
+) => {
 	if (props.invalid) {
 		return props.theme.colors.danger.main;
 	}
@@ -40,17 +42,14 @@ const Input = React.forwardRef(({ ...otherProps }: InternalInputProps, ref) => {
 	return <StyledGrommetInput {...otherProps} ref={ref} />;
 });
 
-// TODO: Fix all typings in grommet
 export interface InternalInputProps
-	extends Omit<GrommetTextInputProps, 'placeholder'>,
-		Omit<DefaultProps, 'onSelect'>,
-		React.RefAttributes<HTMLInputElement> {
+	extends GrommetTextInputProps,
+		Omit<DefaultProps, 'onSelect'> {
 	onChange?: React.ChangeEventHandler<HTMLInputElement>;
 
-	placeholder?: string;
 	type?: string;
 	autoFocus?: boolean;
-	autoComplete?: 'off' | 'on';
+	autoComplete?: string | boolean;
 	readOnly?: boolean;
 	disabled?: boolean;
 	pattern?: string;

@@ -10,7 +10,7 @@ import asRendition from '../../asRendition';
 import { getBaseStyle } from '../RadioButton';
 
 const Base = styled(GrommetRadioButtonGroup)<{
-	value: string | object | undefined;
+	value: any;
 }>`
 	${getBaseStyle}
 

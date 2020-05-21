@@ -17,7 +17,7 @@
     "README.md"
   ],
   "engines": {
-    "node": ">=8.0.0",
+    "node": ">=10.13.0",
     "npm": ">=5.7.0"
   },
   "scripts": {
@@ -129,7 +129,7 @@
     "color": "^3.1.2",
     "color-hash": "^1.0.3",
     "copy-to-clipboard": "^3.0.8",
-    "grommet": "^2.11.3",
+    "grommet": "^2.13.0",
     "jellyschema": "^0.11.9",
     "lodash": "^4.17.11",
     "marked": "^0.8.0",

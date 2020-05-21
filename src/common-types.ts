@@ -38,21 +38,21 @@ export type ResponsiveStyle = string | number | Array<string | number>;
 export interface DefaultProps extends React.DOMAttributes<HTMLElement> {
 	// React-specific Attributes
 	defaultChecked?: boolean;
-	defaultValue?: string | string[];
+	defaultValue?: string | number | string[];
 	suppressContentEditableWarning?: boolean;
 
 	// Standard HTML Attributes
 	accessKey?: string;
 	className?: string;
-	contentEditable?: boolean;
+	contentEditable?: boolean | 'inherit' | 'true' | 'false';
 	contextMenu?: string;
 	dir?: 'rtl';
-	draggable?: boolean;
+	draggable?: boolean | 'true' | 'false';
 	hidden?: boolean;
 	id?: string;
 	lang?: string;
 	slot?: string;
-	spellCheck?: boolean;
+	spellCheck?: boolean | 'true' | 'false';
 	style?: React.CSSProperties;
 	tabIndex?: number;
 	title?: string;
