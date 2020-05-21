@@ -17,7 +17,7 @@
     "README.md"
   ],
   "engines": {
-    "node": ">=8.0.0",
+    "node": ">=10.13.0",
     "npm": ">=5.7.0"
   },
   "scripts": {
