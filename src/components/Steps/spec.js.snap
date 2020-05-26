@@ -452,14 +452,14 @@ exports[`Steps component should match the stored snapshot 1`] = `
   box-shadow: none;
   background: none;
   border-color: none;
-  color: #009dd7;
+  color: hsl(196.29999999999995,100%,37.5%);
   opacity: initial;
 }
 
 .c20:hover:enabled svg,
 .c20:focus:enabled svg,
 .c20:active:enabled svg {
-  color: #009dd7 !important;
+  color: hsl(196.29999999999995,100%,37.5%) !important;
 }
 
 .c2 {

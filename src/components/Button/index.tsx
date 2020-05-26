@@ -77,17 +77,20 @@ const ColouredButton = styled(ButtonBase)`
 	}
 `;
 
-const Outline = styled(ButtonBase)<{ color?: string }>`
+const Outline = styled(ButtonBase)`
 	& {
 		color: ${(props) => props.theme.colors.text.main};
-		border-color: ${(props) => props.color || props.theme.colors.text.main};
+		border-color: ${(props) =>
+			getColor(props, 'color', 'main') || props.theme.colors.text.main};
 		svg {
 			color: ${(props) => props.theme.colors.tertiary.main} !important;
 		}
 		${(props) =>
 			getHoverEffectOverride(
 				props.color || props.theme.colors.text.main,
-				isLight(props.color) ? props.theme.colors.text.main : 'white',
+				isLight(getColor(props, 'color', 'main'))
+					? props.theme.colors.text.main
+					: 'white',
 			)};
 	}
 `;
@@ -131,26 +134,24 @@ const LightOutline = styled(Light)`
 	}
 `;
 
-const Plain = styled(ButtonBase)<{ hoverColor?: string; color?: string }>`
+const Plain = styled(ButtonBase)`
 	& {
-		color: ${(props) => props.color || props.theme.colors.text.main};
+		color: ${(props) =>
+			getColor(props, 'color', 'main') || props.theme.colors.text.main};
 		height: auto;
 		font-weight: ${(props) => props.theme.button.font.weight};
 		border-radius: 0;
 		${(props) =>
 			getHoverEffectOverride(
 				'none',
-				props.hoverColor || props.theme.colors.text.light,
+				getColor(props, 'color', 'dark') || props.theme.colors.text.light,
 			)};
 	}
 `;
 
-const underlineButtonActiveStyles = (props: {
-	theme: Theme;
-	color?: string;
-}) => css`
+const underlineButtonActiveStyles = (props: { theme: Theme }) => css`
 	& {
-		color: ${props.color || props.theme.colors.text.main};
+		color: ${getColor(props, 'color', 'main') || props.theme.colors.text.main};
 		background: none;
 		box-shadow: 0px -1px 0 0px inset;
 	}
@@ -170,47 +171,23 @@ const Underline = styled(Plain)<{ active?: boolean; color?: string }>`
 `;
 
 const getStyledButton = (
-	{
-		outline,
-		underline,
-		plain,
-		active,
-		light,
-		...originalProps
-	}: ThemedButtonProps,
+	{ outline, underline, plain, active, light }: ThemedButtonProps,
 	isPrimary: boolean,
 ) => {
 	if (plain) {
-		return (props: GrommetButtonProps) => (
-			<Plain
-				{...props}
-				color={getColor(originalProps, 'color', 'main')}
-				hoverColor={getColor(originalProps, 'color', 'dark')}
-			/>
-		);
+		return Plain;
 	}
-
 	if (light) {
 		if (outline) {
 			return LightOutline;
 		}
 		return Light;
 	}
-
 	if (underline) {
-		return (props: GrommetButtonProps) => (
-			<Underline
-				{...props}
-				plain={true}
-				color={getColor(originalProps, 'color', 'main')}
-			/>
-		);
+		return Underline;
 	}
-
 	if ((outline && !active) || !isPrimary) {
-		return (props: GrommetButtonProps) => (
-			<Outline {...props} color={getColor(originalProps, 'color', 'main')} />
-		);
+		return Outline;
 	}
 
 	return ColouredButton;
