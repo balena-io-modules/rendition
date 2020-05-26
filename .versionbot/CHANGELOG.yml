@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update react-simplemde-editor to 4.1.1
+      hash: 9d7c4d9003c2324d384701e8018bc65339f48c48
+      body: >
+        This PR updates React-simplemde-editor to 4.1.1. It is part in a string
+        of updates to fix a z-index issue in [easy markdown
+        editor](https://github.com/Ionaru/easy-markdown-editor/pull/175)
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stef Kors <stef@balena.io>
+        signed-off-by: Stef Kors <stef@balena.io>
+      author: StefKors
+  version: 14.11.7
+  date: 2020-05-21T13:13:34.747Z
+- commits:
     - subject: Bump node engine to support grommet@2.13.0
       hash: f5b8c2edae5c87b8f971393a56840acbf2febb90
       body: ''
