@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add syntax-highlighting in Markdown component
+      hash: 7d4147e50a06cf8225152c6cd691a734c0708a40
+      body: >
+        The highlighting is provided by highlight.js. Currently we just use the
+        default highlight.js stylesheet/theme.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 14.12.0
+  date: 2020-05-27T09:59:03.948Z
+- commits:
     - subject: Update react-simplemde-editor to 4.1.1
       hash: 9d7c4d9003c2324d384701e8018bc65339f48c48
       body: >
