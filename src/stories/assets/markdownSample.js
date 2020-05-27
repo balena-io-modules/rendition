@@ -70,6 +70,14 @@ I think you should use an
 ## Code blocks
 
 \`\`\`
+// This is plaintext
+const foo = () => {
+  return 'bar'
+}
+\`\`\`
+
+\`\`\`javascript
+// This is javascript
 const foo = () => {
   return 'bar'
 }
