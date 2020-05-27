@@ -1,10 +1,19 @@
 import * as React from 'react';
+import marked from 'marked';
+import highlightJS from 'highlight.js';
+import 'highlight.js/styles/default.css';
 import sanitizeHtml from 'sanitize-html';
 import styled from 'styled-components';
 import Txt, { TxtProps } from '../../components/Txt';
 import { parseMarkdown } from '../utils';
 
 export { defaultSanitizerOptions } from '../utils';
+
+marked.setOptions({
+	highlight(code, lang) {
+		return highlightJS.highlight(lang || 'plaintext', code).value;
+	},
+});
 
 type MarkdownProps = TxtProps & {
 	children: string;

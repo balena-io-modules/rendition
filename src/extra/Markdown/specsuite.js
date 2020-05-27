@@ -108,6 +108,11 @@ export default [
       '<pre><code>const foo = () =&gt; {\n  return &apos;bar&apos;\n}</code></pre>'
   },
   {
+    name: 'should render markdown code blocks with language specified',
+    source: "```javascript\nconst foo = () => {\n  return 'bar'\n}\n```",
+    expected: `<pre><code><span class="hljs-keyword">const</span> foo = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {\n  <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;bar&apos;</span>\n}</code></pre>`
+  },
+  {
     name: 'should render markdown task lists',
     source: '- [x] task 1\n- [x] task 2\n- [ ] task 3',
     expected:
