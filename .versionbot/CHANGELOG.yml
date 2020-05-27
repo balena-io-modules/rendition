@@ -1,4 +1,18 @@
 - commits:
+    - subject: >-
+        Memoize the button component and prevent creating a new component on
+        rerender
+      hash: 65c64134c843af885d55dc9fa4e75960063fb515
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 14.13.0
+  date: 2020-05-27T14:30:44.745Z
+- commits:
     - subject: Add syntax-highlighting in Markdown component
       hash: 7d4147e50a06cf8225152c6cd691a734c0708a40
       body: >
