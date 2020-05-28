@@ -125,6 +125,10 @@ export const titleFont = `CircularStd, Arial, sans-serif`;
 export const monospace = `'Ubuntu Mono', 'Courier New', monospace`;
 export const lineHeight = 1.5;
 
+export const header = {
+	height: '0',
+};
+
 const theme = {
 	breakpoints,
 	space,
@@ -136,6 +140,7 @@ const theme = {
 	lineHeight,
 	colors,
 	radius,
+	header,
 	global: {
 		font: {
 			family: font,
@@ -319,5 +324,8 @@ const theme = {
 export default theme;
 
 export interface Theme extends Omit<typeof theme, 'colors'> {
+	header: {
+		height: string;
+	};
 	colors: Record<string, ColorVariants>;
 }

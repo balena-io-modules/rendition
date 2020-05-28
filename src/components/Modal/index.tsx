@@ -123,8 +123,12 @@ class Modal extends React.Component<ThemedModalProps, any> {
 				onEsc={this.popModal}
 				onClickOutside={this.popModal}
 				responsive={false}
+				position={props.position || 'center'}
 				margin="small"
 				animate={false}
+				style={{
+					marginTop: props.position === 'top' ? theme.header.height : undefined,
+				}}
 			>
 				<GlobalStyle />
 				<ModalSizer
@@ -175,6 +179,7 @@ class Modal extends React.Component<ThemedModalProps, any> {
 export interface ModalProps extends DefaultProps {
 	title?: string;
 	width?: ResponsiveStyle;
+	position?: 'center' | 'top';
 	titleElement?: string | JSX.Element;
 	titleDetails?: string | JSX.Element;
 	action?: string | JSX.Element;
