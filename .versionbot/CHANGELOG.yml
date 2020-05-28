@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add header height in Theme for Modal component
+      hash: 82772efd68e53286581467c2da459fd8a35f6010
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lorenzo Alberto Maria Ambrosi <lorenzothunder.ambrosi@gmail.com>
+        signed-off-by: Lorenzo Alberto Maria Ambrosi <lorenzothunder.ambrosi@gmail.com>
+      author: Lorenzo Alberto Maria Ambrosi
+  version: 14.13.1
+  date: 2020-05-28T18:43:58.616Z
+- commits:
     - subject: >-
         Memoize the button component and prevent creating a new component on
         rerender
