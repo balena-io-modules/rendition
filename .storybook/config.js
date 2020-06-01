@@ -4,7 +4,7 @@ import { withScreenshot } from 'storycap'
 import { createGlobalStyle } from 'styled-components'
 import theme from '../src/theme'
 import {Provider} from '../src/index'
-import 'circular-std'
+import "@css-pkg/circular-std";
 
 const GlobalStyle = createGlobalStyle([], {
   '*': {
