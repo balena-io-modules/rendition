@@ -19,6 +19,7 @@ export const DescriptionField = ({
 			id={id}
 			className="rendition-form-description"
 			color={Theme.colors.text.light}
+			fontSize={1}
 		>
 			{description}
 		</Markdown>

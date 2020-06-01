@@ -22,7 +22,7 @@ const Card = ({ title, cta, rows, children, ...props }: InternalCardProps) => {
 	const Header = hasHeader && (
 		<React.Fragment>
 			<Flex justifyContent="space-between" alignItems="center">
-				<Heading.h5 fontSize={2}>{title}</Heading.h5>
+				<Heading.h5 fontSize={4}>{title}</Heading.h5>
 				{cta}
 			</Flex>
 			<Divider my={2} />
@@ -32,13 +32,13 @@ const Card = ({ title, cta, rows, children, ...props }: InternalCardProps) => {
 	const Rows =
 		rows &&
 		map(rows, (row, index: number) => (
-			<Box key={index}>
+			<Box key={index} fontSize={2}>
 				{index > 0 && <Divider />}
 				{row}
 			</Box>
 		));
 
-	const Body = children && <Box>{children}</Box>;
+	const Body = children && <Box fontSize={2}>{children}</Box>;
 
 	return (
 		<Wrapper {...props}>

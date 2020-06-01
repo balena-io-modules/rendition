@@ -17,7 +17,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
   border-radius: 20px;
   color: #444444;
   padding: 4px 30px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   opacity: 0.4;
   cursor: default;
@@ -47,7 +47,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
   border-radius: 20px;
   color: #444444;
   padding: 4px 30px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   -webkit-transition-property: color,background-color,border-color,box-shadow;
   transition-property: color,background-color,border-color,box-shadow;
@@ -64,8 +64,8 @@ exports[`Pager component should match the stored snapshot 1`] = `
 }
 
 .c0 {
-  font-family: 'Nunito',Arial,sans-serif;
-  font-size: 14px;
+  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-size: 16px;
   line-height: 1.5;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
@@ -75,9 +75,8 @@ exports[`Pager component should match the stored snapshot 1`] = `
 }
 
 .c8 {
-  font-family: CircularStd,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: 600;
+  font-size: 13px;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
@@ -188,19 +187,9 @@ exports[`Pager component should match the stored snapshot 1`] = `
 }
 
 .c1 {
-  font-family: 'Nunito',Arial,sans-serif;
-  font-size: 14px;
+  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-size: 16px;
   color: #2A506F;
-}
-
-.c1 h1,
-.c1 h2,
-.c1 h3,
-.c1 h4,
-.c1 h5,
-.c1 h6,
-.c1 button {
-  font-family: CircularStd,Arial,sans-serif;
 }
 
 <div

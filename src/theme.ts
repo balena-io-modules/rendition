@@ -115,13 +115,12 @@ export const space = [
 	128,
 ];
 
-export const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 72, 96];
-export const weights = [400, 700];
+export const fontSizes = [10, 12, 14, 16, 18, 24, 34, 58, 72];
+export const weights = [400, 600];
 
 export const radius = 3;
 
-export const font = `'Nunito', Arial, sans-serif`;
-export const titleFont = `CircularStd, Arial, sans-serif`;
+export const font = `'Source Sans Pro', Arial, sans-serif`;
 export const monospace = `'Ubuntu Mono', 'Courier New', monospace`;
 export const lineHeight = 1.5;
 
@@ -135,7 +134,6 @@ const theme = {
 	fontSizes,
 	weights,
 	font,
-	titleFont,
 	monospace,
 	lineHeight,
 	colors,
@@ -144,7 +142,7 @@ const theme = {
 	global: {
 		font: {
 			family: font,
-			size: px(fontSizes[1]),
+			size: px(fontSizes[3]),
 			height: lineHeight,
 		},
 		control: {
@@ -203,7 +201,8 @@ const theme = {
 	button: {
 		height: '38px',
 		font: {
-			weight: 500 as string | number,
+			weight: 600 as string | number,
+			size: px(13),
 		},
 		border: {
 			width: '1px',
@@ -212,6 +211,11 @@ const theme = {
 		},
 		padding: {
 			horizontal: '30px',
+		},
+	},
+	navBar: {
+		font: {
+			size: px(13),
 		},
 	},
 	radioButton: {
@@ -257,7 +261,7 @@ const theme = {
 	},
 	text: {
 		medium: {
-			size: px(fontSizes[1]),
+			size: px(fontSizes[3]),
 			height: lineHeight,
 		},
 	},

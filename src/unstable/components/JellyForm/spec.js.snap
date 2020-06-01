@@ -17,7 +17,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   border-radius: 20px;
   color: #444444;
   padding: 4px 30px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   background: #00AEEF;
   color: #444444;
@@ -78,8 +78,8 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
 }
 
 .c0 {
-  font-family: 'Nunito',Arial,sans-serif;
-  font-size: 14px;
+  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-size: 16px;
   line-height: 1.5;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
@@ -89,9 +89,8 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
 }
 
 .c15 {
-  font-family: CircularStd,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: 600;
+  font-size: 13px;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
@@ -186,23 +185,13 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
 }
 
 .c1 {
-  font-family: 'Nunito',Arial,sans-serif;
-  font-size: 14px;
+  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-size: 16px;
   color: #2A506F;
 }
 
-.c1 h1,
-.c1 h2,
-.c1 h3,
-.c1 h4,
-.c1 h5,
-.c1 h6,
-.c1 button {
-  font-family: CircularStd,Arial,sans-serif;
-}
-
 .c5 {
-  font-size: 16px;
+  font-size: 14px;
   color: #252629;
   margin-top: 16px;
   margin-bottom: 8px;
@@ -211,7 +200,7 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
 
 .c9 {
   display: inline-block;
-  font-size: 12px;
+  font-size: 10px;
   margin-bottom: 4px;
   color: #2A506F;
 }
@@ -222,9 +211,17 @@ exports[`JellyForm component should match the stored snapshot 1`] = `
   border: 0;
 }
 
+.c3 label {
+  font-size: 12px;
+}
+
+.c3 input {
+  font-size: 14px;
+}
+
 .c3 .panel-danger,
 .c3 .error-detail {
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 4px;
   margin-bottom: 4px;
   list-style-type: none;

@@ -15,10 +15,6 @@ const Container = styled(Flex)`
 	line-height: 1.5;
 `;
 
-const TagText = styled(Txt)`
-	font-family: ${(props) => props.theme.titleFont};
-`;
-
 const DeleteButton = styled(Button)`
 	color: ${(props) => props.theme.colors.tertiary.semilight};
 `;
@@ -44,27 +40,27 @@ const TagBase = ({
 				return (
 					<React.Fragment key={index}>
 						{index > 0 && (
-							<Txt whitespace="pre" color="info.main" fontSize={0} italic>{`  ${
+							<Txt whitespace="pre" color="info.main" fontSize={1} italic>{`  ${
 								tagEntry.prefix || ','
 							}  `}</Txt>
 						)}
 
 						{!tagEntry.value && !tagEntry.name && (
-							<TagText italic color="info.main" fontSize={0}>
+							<Txt italic color="info.main" fontSize={1}>
 								no value
-							</TagText>
+							</Txt>
 						)}
 
 						{tagEntry.name && (
-							<TagText whitespace="pre" color="info.main" fontSize={0}>
+							<Txt whitespace="pre" color="info.main" fontSize={1}>
 								{`${tagEntry.name}${tagEntry.value ? nameValueSeparator : ''}`}
-							</TagText>
+							</Txt>
 						)}
 
 						{tagEntry.value && (
-							<TagText bold color="info.main" fontSize={0}>
+							<Txt bold color="info.main" fontSize={1}>
 								{tagEntry.value}
-							</TagText>
+							</Txt>
 						)}
 					</React.Fragment>
 				);
@@ -82,7 +78,7 @@ const TagBase = ({
 				tagContent
 			)}
 			{onClose && (
-				<DeleteButton plain p={1} pl={2} pr={3} fontSize={0} onClick={onClose}>
+				<DeleteButton plain p={1} pl={2} pr={3} fontSize={1} onClick={onClose}>
 					<FontAwesomeIcon icon={faTimes} />
 				</DeleteButton>
 			)}

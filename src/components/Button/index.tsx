@@ -41,9 +41,8 @@ https://www.styled-components.com/docs/advanced#issues-with-specificity
 */
 const ButtonBase = styled(Button)`
 	& {
-		font-family: ${(props) => props.theme.titleFont};
 		font-weight: ${(props) => props.theme.button.font.weight};
-		font-size: ${(props) => px(props.theme.fontSizes[1])};
+		font-size: ${(props) => props.theme.button.font.size};
 		height: ${(props) => props.theme.button.height};
 		white-space: nowrap;
 		svg {

@@ -5,6 +5,7 @@ import {
 import * as React from 'react';
 import styled from 'styled-components';
 import { DefaultProps, RenditionSystemProps } from '../../common-types';
+import { px } from '../../utils';
 
 import asRendition from '../../asRendition';
 
@@ -42,6 +43,7 @@ const getBaseStyle = (props: any) => `
 	}
 	& > label > span {
 		font-family: ${props.theme.font};
+		font-size: ${px(props.theme.fontSizes[2])};
 	}
 	${
 		props.isChecked
@@ -56,7 +58,7 @@ const getBaseStyle = (props: any) => `
 		`
 			: ''
 	}
-	
+
 	& label[disabled] {
 		opacity: 0.4
 	}

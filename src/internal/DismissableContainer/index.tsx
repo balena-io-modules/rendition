@@ -85,7 +85,7 @@ export const DismissableContainer = withTheme(
 			ref,
 		) => {
 			// Set the default to what it would be for the base text.
-			const baseline = baselineHeight || theme.fontSizes[1] * theme.lineHeight;
+			const baseline = baselineHeight || theme.fontSizes[3] * theme.lineHeight;
 
 			return (
 				<Wrapper

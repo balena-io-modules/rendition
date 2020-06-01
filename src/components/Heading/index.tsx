@@ -12,6 +12,7 @@ const Heading = styled.h3<InternalHeadingProps>`
 	${monospace};
 	${caps}
 	${bold}
+	font-weight: ${(props) => props.theme.weights[0]};
 `;
 
 Heading.displayName = 'Heading';
@@ -56,37 +57,37 @@ const Base = Factory() as React.FunctionComponent<HeadingProps> & {
 
 Base.h1 = Factory('h1');
 Base.h1.defaultProps = {
-	fontSize: 6,
+	fontSize: 7,
 	m: 0,
 };
 
 Base.h2 = Factory('h2');
 Base.h2.defaultProps = {
-	fontSize: 5,
+	fontSize: 6,
 	m: 0,
 };
 
 Base.h3 = Factory('h3');
 Base.h3.defaultProps = {
-	fontSize: 4,
+	fontSize: 5,
 	m: 0,
 };
 
 Base.h4 = Factory('h4');
 Base.h4.defaultProps = {
-	fontSize: 3,
+	fontSize: 4,
 	m: 0,
 };
 
 Base.h5 = Factory('h5');
 Base.h5.defaultProps = {
-	fontSize: 2,
+	fontSize: 3,
 	m: 0,
 };
 
 Base.h6 = Factory('h6');
 Base.h6.defaultProps = {
-	fontSize: 1,
+	fontSize: 2,
 	m: 0,
 };
 
