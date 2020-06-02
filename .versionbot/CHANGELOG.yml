@@ -1,4 +1,25 @@
 - commits:
+    - subject: Move to dcircular font package to @css-pkg/circular-std
+      hash: b9cb34abae4e691e89a08d70dc47b88de6ac2400
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stef Kors <stef@balena.io>
+        signed-off-by: Stef Kors <stef@balena.io>
+      author: StefKors
+    - subject: Add header height in Theme for Modal component
+      hash: 82772efd68e53286581467c2da459fd8a35f6010
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lorenzo Alberto Maria Ambrosi <lorenzothunder.ambrosi@gmail.com>
+        signed-off-by: Lorenzo Alberto Maria Ambrosi <lorenzothunder.ambrosi@gmail.com>
+      author: Lorenzo Alberto Maria Ambrosi
+  version: 14.13.1
+  date: 2020-06-02T15:48:39.290Z
+- commits:
     - subject: >-
         Memoize the button component and prevent creating a new component on
         rerender
