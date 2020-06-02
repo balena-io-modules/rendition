@@ -154,7 +154,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 	}
 
 	public addFilter(edit: EditModel[]) {
-		const newFilter = SchemaSieve.createFilter(this.props.schema, edit);
+		const newFilter = SchemaSieve.createFilter(this.state.schema, edit);
 		const currentFilters: JSONSchema6[] = !!this.state.editingFilter
 			? this.state.filters.map((filter) =>
 					filter.$id === this.state.editingFilter ? newFilter : filter,
