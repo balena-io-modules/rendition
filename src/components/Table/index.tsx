@@ -58,7 +58,7 @@ const BaseTable = styled.div<BaseTableProps>`
 				text-align: left;
 				vertical-align: middle;
 				padding: 10px 20px;
-				font-size: ${(props) => px(props.theme.fontSizes[3])};
+				font-size: ${(props) => px(props.theme.fontSizes[2])};
 			}
 
 			> [data-display='table-cell']:first-child {
@@ -79,7 +79,7 @@ const BaseTable = styled.div<BaseTableProps>`
 			display: table-row;
 			text-decoration: none;
 			color: ${(props) => props.theme.colors.secondary.main};
-			font-size: ${(props) => px(props.theme.fontSizes[3])};
+			font-size: ${(props) => px(props.theme.fontSizes[2])};
 
 			> [data-display='table-cell'] {
 				display: table-cell;

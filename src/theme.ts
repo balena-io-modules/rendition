@@ -142,7 +142,7 @@ const theme = {
 	global: {
 		font: {
 			family: font,
-			size: px(fontSizes[3]),
+			size: px(fontSizes[2]),
 			height: lineHeight,
 		},
 		control: {
@@ -261,7 +261,7 @@ const theme = {
 	},
 	text: {
 		medium: {
-			size: px(fontSizes[3]),
+			size: px(fontSizes[2]),
 			height: lineHeight,
 		},
 	},

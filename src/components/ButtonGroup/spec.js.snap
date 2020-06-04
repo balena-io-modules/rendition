@@ -17,7 +17,7 @@ exports[`ButtonGroup renders correctly 1`] = `
   border-radius: 20px;
   color: #444444;
   padding: 4px 30px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   -webkit-transition-property: color,background-color,border-color,box-shadow;
   transition-property: color,background-color,border-color,box-shadow;
@@ -33,7 +33,7 @@ exports[`ButtonGroup renders correctly 1`] = `
 
 .c0 {
   font-family: 'Source Sans Pro',Arial,sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
@@ -130,7 +130,7 @@ exports[`ButtonGroup renders correctly 1`] = `
 
 .c1 {
   font-family: 'Source Sans Pro',Arial,sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #2A506F;
 }
 

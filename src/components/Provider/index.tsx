@@ -11,7 +11,7 @@ import { Helmet } from 'react-helmet';
 
 const Base = styled(Grommet)`
 	font-family: ${(props) => props.theme.font};
-	font-size: ${(props) => px(props.theme.fontSizes[3])};
+	font-size: ${(props) => px(props.theme.fontSizes[2])};
 	color: ${(props) => px(props.theme.colors.text.main)};
 `;
 

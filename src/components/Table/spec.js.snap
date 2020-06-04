@@ -3,7 +3,7 @@
 exports[`Table component should match the stored snapshot 1`] = `
 .c0 {
   font-family: 'Source Sans Pro',Arial,sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
@@ -14,7 +14,7 @@ exports[`Table component should match the stored snapshot 1`] = `
 
 .c1 {
   font-family: 'Source Sans Pro',Arial,sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #2A506F;
 }
 
@@ -45,7 +45,7 @@ exports[`Table component should match the stored snapshot 1`] = `
   text-align: left;
   vertical-align: middle;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .c3 > [data-display='table-head'] > [data-display='table-row'] > [data-display='table-cell']:first-child {
@@ -65,7 +65,7 @@ exports[`Table component should match the stored snapshot 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #2A506F;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .c3 > [data-display='table-body'] > [data-display='table-row'] > [data-display='table-cell'] {

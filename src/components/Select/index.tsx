@@ -18,7 +18,7 @@ const StyledGrommetSelect = styled(
 	GrommetSelect as React.ComponentClass<AdjustedGrommetSelectProps, any>,
 )<InternalSelectProps<any>>`
 	font-family: ${(props) => props.theme.font};
-	font-size: ${(props) => px(props.theme.fontSizes[3])};
+	font-size: ${(props) => px(props.theme.fontSizes[2])};
 	font-weight: normal;
 	/* The wrapping button component has borders of 1px, and changing it's height messes up the drop alignment, so we subtract the border width on the input */
 	height: ${(props) =>
