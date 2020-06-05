@@ -2,7 +2,7 @@
 
 exports[`Steps component should match the stored snapshot (ordered) 1`] = `
 .c0 {
-  font-family: 'Nunito',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Arial,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -25,13 +25,28 @@ exports[`Steps component should match the stored snapshot (ordered) 1`] = `
   margin-right: auto;
 }
 
-.c10 {
-  margin-right: 8px;
+.c9 {
+  font-size: 14px;
 }
 
-.c14 {
+.c11 {
+  margin-right: 8px;
+  color: #1AC135;
+}
+
+.c15 {
   margin-left: 16px;
   margin-right: 16px;
+}
+
+.c17 {
+  margin-right: 8px;
+  color: #00AEEF;
+}
+
+.c20 {
+  margin-right: 8px;
+  color: #bbc8d6;
 }
 
 .c7 {
@@ -65,7 +80,7 @@ exports[`Steps component should match the stored snapshot (ordered) 1`] = `
   align-items: center;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -83,7 +98,7 @@ exports[`Steps component should match the stored snapshot (ordered) 1`] = `
   justify-content: center;
 }
 
-.c15 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -128,27 +143,17 @@ exports[`Steps component should match the stored snapshot (ordered) 1`] = `
   color: inherit;
 }
 
-.c17 {
-  font-weight: 700;
+.c19 {
+  font-weight: 600;
 }
 
 .c1 {
-  font-family: 'Nunito',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Arial,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
 
-.c1 h1,
-.c1 h2,
-.c1 h3,
-.c1 h4,
-.c1 h5,
-.c1 h6,
-.c1 button {
-  font-family: CircularStd,Arial,sans-serif;
-}
-
-.c12 {
+.c13 {
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
@@ -156,16 +161,16 @@ exports[`Steps component should match the stored snapshot (ordered) 1`] = `
   display: inline-block;
 }
 
-.c12:active,
-.c12:hover {
+.c13:active,
+.c13:hover {
   color: hsl(196.29999999999995,100%,37.5%);
 }
 
-.c13 {
+.c14 {
   color: #00AEEF;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -178,36 +183,13 @@ exports[`Steps component should match the stored snapshot (ordered) 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  border-radius: 50%;
-  border: none;
-  color: #fff;
-  background-color: #1AC135;
-  height: 24px;
-  width: 24px;
-}
-
-.c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: none;
-  color: #fff;
-  background-color: #00AEEF;
-  height: 24px;
-  width: 24px;
+  font-size: 24px;
 }
 
 .c18 {
+  font-size: 16px;
+  height: 24px;
+  width: 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -220,12 +202,15 @@ exports[`Steps component should match the stored snapshot (ordered) 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  border-radius: 50%;
-  border: solid 1px #bbc8d6;
-  color: #bbc8d6;
-  background-color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+
+.c21 {
+  font-size: 16px;
   height: 24px;
   width: 24px;
+  border: 1px solid;
+  border-radius: 50%;
 }
 
 .c5 {
@@ -245,15 +230,15 @@ exports[`Steps component should match the stored snapshot (ordered) 1`] = `
         className="c2 c8"
       >
         <div
-          className="c2 c9"
+          className="c2 c9 c10"
         >
           <div
-            className="c2 c10 c11"
+            className="c2 c11 c12"
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-check fa-w-16 "
-              data-icon="check"
+              className="svg-inline--fa fa-check-circle fa-w-16 "
+              data-icon="check-circle"
               data-prefix="fas"
               focusable="false"
               role="img"
@@ -262,14 +247,14 @@ exports[`Steps component should match the stored snapshot (ordered) 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+                d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
                 fill="currentColor"
                 style={Object {}}
               />
             </svg>
           </div>
           <a
-            className="c12 c13"
+            className="c13 c14"
             color="primary.main"
             onClick={[Function]}
           >
@@ -277,7 +262,7 @@ exports[`Steps component should match the stored snapshot (ordered) 1`] = `
           </a>
         </div>
         <div
-          className="c2 c14 c15"
+          className="c2 c15 c16"
         >
           <svg
             height="9"
@@ -307,25 +292,42 @@ exports[`Steps component should match the stored snapshot (ordered) 1`] = `
         className="c2 c8"
       >
         <div
-          className="c2 c9"
+          className="c2 c9 c10"
         >
           <div
-            className="c2 c10 c16"
+            className="c2 c17 c12 fa-layers"
           >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-circle fa-w-16 "
+              data-icon="circle"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
             <div
-              className=""
+              className="c18 fa-layers-text fa-inverse"
             >
               2
             </div>
           </div>
           <div
-            className="c17 "
+            className="c19 "
           >
             And then this
           </div>
         </div>
         <div
-          className="c2 c14 c15"
+          className="c2 c15 c16"
         >
           <svg
             height="9"
@@ -355,19 +357,22 @@ exports[`Steps component should match the stored snapshot (ordered) 1`] = `
         className="c2 c8"
       >
         <div
-          className="c2 c9"
+          className="c2 c9 c10"
         >
           <div
-            className="c2 c10 c18"
+            className="c2 c20 c12 fa-layers"
           >
             <div
-              className=""
+              className="c2 c21"
+            />
+            <div
+              className="c18 fa-layers-text"
             >
               3
             </div>
           </div>
           <a
-            className="c12 c13"
+            className="c13 c14"
             color="primary.main"
             onClick={[Function]}
           >
@@ -381,7 +386,7 @@ exports[`Steps component should match the stored snapshot (ordered) 1`] = `
 `;
 
 exports[`Steps component should match the stored snapshot 1`] = `
-.c19 {
+.c21 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
@@ -400,7 +405,7 @@ exports[`Steps component should match the stored snapshot 1`] = `
 }
 
 .c0 {
-  font-family: 'Nunito',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Arial,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -410,10 +415,9 @@ exports[`Steps component should match the stored snapshot 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c20 {
-  font-family: CircularStd,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 14px;
+.c22 {
+  font-weight: 600;
+  font-size: 13px;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
@@ -430,25 +434,25 @@ exports[`Steps component should match the stored snapshot 1`] = `
   justify-content: center;
 }
 
-.c20 svg {
+.c22 svg {
   color: inherit !important;
   font-size: 0.925em;
 }
 
-.c20:disabled {
+.c22:disabled {
   cursor: not-allowed;
 }
 
-.c20 {
+.c22 {
   color: #00AEEF;
   height: auto;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 0;
 }
 
-.c20:hover:enabled,
-.c20:focus:enabled,
-.c20:active:enabled {
+.c22:hover:enabled,
+.c22:focus:enabled,
+.c22:active:enabled {
   box-shadow: none;
   background: none;
   border-color: none;
@@ -456,9 +460,9 @@ exports[`Steps component should match the stored snapshot 1`] = `
   opacity: initial;
 }
 
-.c20:hover:enabled svg,
-.c20:focus:enabled svg,
-.c20:active:enabled svg {
+.c22:hover:enabled svg,
+.c22:focus:enabled svg,
+.c22:active:enabled svg {
   color: hsl(196.29999999999995,100%,37.5%) !important;
 }
 
@@ -473,21 +477,31 @@ exports[`Steps component should match the stored snapshot 1`] = `
 .c6 {
   margin-left: 8px;
   margin-right: 38px;
-  min-height: 32px;
+  min-height: 24px;
 }
 
-.c9 {
+.c10 {
   margin-left: auto;
   margin-right: auto;
 }
 
 .c13 {
-  margin-right: 8px;
+  font-size: 14px;
 }
 
-.c17 {
+.c15 {
+  margin-right: 8px;
+  color: #bbc8d6;
+}
+
+.c19 {
   margin-left: 16px;
   margin-right: 16px;
+}
+
+.c20 {
+  margin-right: 8px;
+  color: #1AC135;
 }
 
 .c7 {
@@ -505,7 +519,7 @@ exports[`Steps component should match the stored snapshot 1`] = `
   justify-content: center;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -522,7 +536,7 @@ exports[`Steps component should match the stored snapshot 1`] = `
   align-items: center;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -536,7 +550,7 @@ exports[`Steps component should match the stored snapshot 1`] = `
   align-items: center;
 }
 
-.c12 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -584,7 +598,7 @@ exports[`Steps component should match the stored snapshot 1`] = `
   color: inherit;
 }
 
-.c21 {
+.c23 {
   position: absolute;
   font-size: 14px;
   padding: 8px;
@@ -592,34 +606,28 @@ exports[`Steps component should match the stored snapshot 1`] = `
   right: 8px;
 }
 
-.c21 svg {
+.c23 svg {
   height: 14px;
   width: 14px;
 }
 
 .c8 {
+  font-weight: 400;
+}
+
+.c9 {
   margin: 0;
   font-size: 14px;
   color: #527699;
 }
 
 .c1 {
-  font-family: 'Nunito',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Arial,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
 
-.c1 h1,
-.c1 h2,
-.c1 h3,
-.c1 h4,
-.c1 h5,
-.c1 h6,
-.c1 button {
-  font-family: CircularStd,Arial,sans-serif;
-}
-
-.c15 {
+.c17 {
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
@@ -627,16 +635,16 @@ exports[`Steps component should match the stored snapshot 1`] = `
   display: inline-block;
 }
 
-.c15:active,
-.c15:hover {
+.c17:active,
+.c17:hover {
   color: hsl(196.29999999999995,100%,37.5%);
 }
 
-.c16 {
+.c18 {
   color: #00AEEF;
 }
 
-.c14 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -649,33 +657,7 @@ exports[`Steps component should match the stored snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  border-radius: 50%;
-  border: none;
-  color: #fff;
-  background-color: #bbc8d6;
-  height: 24px;
-  width: 24px;
-}
-
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: none;
-  color: #fff;
-  background-color: #1AC135;
-  height: 24px;
-  width: 24px;
+  font-size: 24px;
 }
 
 .c5 {
@@ -692,27 +674,27 @@ exports[`Steps component should match the stored snapshot 1`] = `
       className="c2 c6 c7"
     >
       <h6
-        className="c8"
+        className="c8 c9"
       >
         Beginners Guide
       </h6>
     </div>
     <div
-      className="c2 c9 c10"
+      className="c2 c10 c11"
     >
       <div
-        className="c2 c11"
+        className="c2 c12"
       >
         <div
-          className="c2 c12"
+          className="c2 c13 c14"
         >
           <div
-            className="c2 c13 c14"
+            className="c2 c15 c16"
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-check fa-w-16 "
-              data-icon="check"
+              className="svg-inline--fa fa-check-circle fa-w-16 "
+              data-icon="check-circle"
               data-prefix="fas"
               focusable="false"
               role="img"
@@ -721,14 +703,14 @@ exports[`Steps component should match the stored snapshot 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+                d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
                 fill="currentColor"
                 style={Object {}}
               />
             </svg>
           </div>
           <a
-            className="c15 c16"
+            className="c17 c18"
             color="primary.main"
             onClick={[Function]}
           >
@@ -736,7 +718,7 @@ exports[`Steps component should match the stored snapshot 1`] = `
           </a>
         </div>
         <div
-          className="c2 c17 c7"
+          className="c2 c19 c7"
         >
           <svg
             height="9"
@@ -763,18 +745,18 @@ exports[`Steps component should match the stored snapshot 1`] = `
         </div>
       </div>
       <div
-        className="c2 c11"
+        className="c2 c12"
       >
         <div
-          className="c2 c12"
+          className="c2 c13 c14"
         >
           <div
-            className="c2 c13 c18"
+            className="c2 c20 c16"
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-check fa-w-16 "
-              data-icon="check"
+              className="svg-inline--fa fa-check-circle fa-w-16 "
+              data-icon="check-circle"
               data-prefix="fas"
               focusable="false"
               role="img"
@@ -783,14 +765,14 @@ exports[`Steps component should match the stored snapshot 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+                d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
                 fill="currentColor"
                 style={Object {}}
               />
             </svg>
           </div>
           <a
-            className="c15 c16"
+            className="c17 c18"
             color="primary.main"
             onClick={[Function]}
           >
@@ -798,7 +780,7 @@ exports[`Steps component should match the stored snapshot 1`] = `
           </a>
         </div>
         <div
-          className="c2 c17 c7"
+          className="c2 c19 c7"
         >
           <svg
             height="9"
@@ -825,18 +807,18 @@ exports[`Steps component should match the stored snapshot 1`] = `
         </div>
       </div>
       <div
-        className="c2 c11"
+        className="c2 c12"
       >
         <div
-          className="c2 c12"
+          className="c2 c13 c14"
         >
           <div
-            className="c2 c13 c14"
+            className="c2 c15 c16"
           >
             <svg
               aria-hidden="true"
-              className="svg-inline--fa fa-check fa-w-16 "
-              data-icon="check"
+              className="svg-inline--fa fa-check-circle fa-w-16 "
+              data-icon="check-circle"
               data-prefix="fas"
               focusable="false"
               role="img"
@@ -845,14 +827,14 @@ exports[`Steps component should match the stored snapshot 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+                d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
                 fill="currentColor"
                 style={Object {}}
               />
             </svg>
           </div>
           <a
-            className="c15 c16"
+            className="c17 c18"
             color="primary.main"
             onClick={[Function]}
           >
@@ -863,7 +845,7 @@ exports[`Steps component should match the stored snapshot 1`] = `
     </div>
     <button
       aria-label="Dismiss"
-      className="c19 sc-AxheI c20 c21"
+      className="c21 sc-AxheI c22 c23"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}

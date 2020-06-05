@@ -1,17 +1,19 @@
-import { faCheck } from '@fortawesome/free-solid-svg-icons/faCheck';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons/faCheckCircle';
+import { faCircle } from '@fortawesome/free-solid-svg-icons/faCircle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import findIndex from 'lodash/findIndex';
 import * as React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { DefaultProps, RenditionSystemProps, Theme } from '../../common-types';
 import Arrow from '../../internal/Arrow';
 import { DismissableContainer } from '../../internal/DismissableContainer';
-import { px } from '../../utils';
 import { Flex } from '../Flex';
 import Heading from '../Heading';
 import Link from '../Link';
 import Txt from '../Txt';
+import { Box } from '../Box';
+import { px } from '../../utils';
 
 export interface InternalStepsProps extends DefaultProps {
 	bordered?: boolean;
@@ -40,43 +42,6 @@ interface InternalStepProps extends StepProps {
 	ordered?: boolean;
 }
 
-const getIconBg = (
-	theme: Theme,
-	ordered: boolean,
-	status: statusOptions,
-	active: boolean,
-) => {
-	let bgColor = ordered ? '#fff' : theme.colors.tertiary.semilight;
-	const completed = status === 'completed';
-	if (active) {
-		bgColor = theme.colors.primary.main;
-	} else if (completed) {
-		bgColor = theme.colors.success.main;
-	}
-	const size = px(theme.fontSizes[4]);
-	return css`
-		border-radius: 50%;
-		border: ${completed || active || !ordered
-			? 'none'
-			: `solid 1px ${theme.colors.tertiary.semilight}`};
-		color: ${!ordered || completed || active
-			? '#fff'
-			: theme.colors.tertiary.semilight};
-		background-color: ${bgColor};
-		height: ${size};
-		width: ${size};
-	`;
-};
-
-const StepIconBg = styled(Flex)<{
-	ordered: boolean;
-	status: statusOptions;
-	active: boolean;
-}>`
-	${(props) =>
-		getIconBg(props.theme, props.ordered, props.status, props.active)};
-`;
-
 interface StepIconProps {
 	ordered: boolean;
 	index: number;
@@ -84,25 +49,71 @@ interface StepIconProps {
 	status: statusOptions;
 }
 
+const StepIconWrapper = styled(Flex)`
+	align-items: center;
+	justify-content: center;
+	font-size: ${(props) => px(props.theme.fontSizes[5])};
+`;
+
+const StepIconLabel = styled(Txt)`
+	font-size: ${(props) => px(props.theme.fontSizes[3])};
+	height: ${(props) => px(props.theme.fontSizes[5])};
+	width: ${(props) => px(props.theme.fontSizes[5])};
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-variant-numeric: tabular-nums;
+`;
+
+const OutlineCircle = styled(Box)`
+	font-size: ${(props) => px(props.theme.fontSizes[3])};
+	height: ${(props) => px(props.theme.fontSizes[5])};
+	width: ${(props) => px(props.theme.fontSizes[5])};
+	border: 1px solid;
+	border-radius: 50%;
+`;
+
 const StepIcon = ({ ordered, status, active, index }: StepIconProps) => {
 	if (status === 'none') {
 		return null;
 	}
+
+	if (status === 'completed' && !active) {
+		return (
+			<StepIconWrapper mr={2} color="success.main">
+				<FontAwesomeIcon icon={faCheckCircle} />
+			</StepIconWrapper>
+		);
+	}
+
+	if (ordered && active) {
+		return (
+			<StepIconWrapper mr={2} className={'fa-layers'} color="primary.main">
+				<FontAwesomeIcon icon={faCircle} />
+				<StepIconLabel className="fa-layers-text fa-inverse">
+					{index + 1}
+				</StepIconLabel>
+			</StepIconWrapper>
+		);
+	}
+
+	if (ordered && !active) {
+		return (
+			<StepIconWrapper
+				mr={2}
+				className={'fa-layers'}
+				color="tertiary.semilight"
+			>
+				<OutlineCircle />
+				<StepIconLabel className="fa-layers-text">{index + 1}</StepIconLabel>
+			</StepIconWrapper>
+		);
+	}
+
 	return (
-		<StepIconBg
-			mr={2}
-			alignItems="center"
-			justifyContent="center"
-			ordered={ordered}
-			status={status}
-			active={active}
-		>
-			{!ordered || (status === 'completed' && !active) ? (
-				<FontAwesomeIcon icon={faCheck} />
-			) : (
-				<Txt>{index + 1}</Txt>
-			)}
-		</StepIconBg>
+		<StepIconWrapper mr={2} color="tertiary.semilight">
+			<FontAwesomeIcon icon={faCheckCircle} />
+		</StepIconWrapper>
 	);
 };
 
@@ -119,7 +130,12 @@ const StepBase = ({
 	}
 
 	return (
-		<Flex flexDirection="row" justifyContent="center" alignItems="center">
+		<Flex
+			flexDirection="row"
+			justifyContent="center"
+			alignItems="center"
+			fontSize={2}
+		>
 			<StepIcon
 				ordered={Boolean(ordered)}
 				status={status}

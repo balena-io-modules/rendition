@@ -12,7 +12,8 @@ const ClipboardContainer = styled(Box)`
 	cursor: pointer;
 	/* We want the clipboard icon slightly smaller, but it should be the same height as normal text so it lines up nicely */
 	font-size: 0.875em;
-	line-height: ${(props) => px(props.theme.lineHeight * props.theme.font[1])};
+	line-height: ${(props) =>
+		px(props.theme.lineHeight * props.theme.fontSizes[2])};
 `;
 
 const CopyContainer = styled(Flex)<{

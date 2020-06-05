@@ -6,7 +6,6 @@ import { generateColorFromString, getColor, isLight } from '../../utils';
 import Txt, { TxtProps } from '../Txt';
 
 const BaseHighlightedName = styled(Txt.span)`
-	font-family: ${(props) => props.theme.titleFont};
 	display: inline-block;
 	border-radius: 2px;
 	line-height: 1;

@@ -29,12 +29,14 @@ const Wrapper = styled.div`
 		font-size: inherit;
 		padding: 4px;
 		height: auto;
+		font-family: ${(props) => props.theme.font};
+
 		&:hover {
 			box-shadow: none;
 		}
 		::placeholder {
 			color: ${(props) => props.theme.colors.tertiary.semilight};
-			font-weight: 300;
+			font-family: ${(props) => props.theme.font};
 		}
 	}
 `;

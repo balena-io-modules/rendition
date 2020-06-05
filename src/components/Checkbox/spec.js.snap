@@ -107,7 +107,7 @@ exports[`Checkbox renders correctly 1`] = `
 }
 
 .c0 {
-  font-family: 'Nunito',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Arial,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -123,7 +123,8 @@ exports[`Checkbox renders correctly 1`] = `
 }
 
 .c2 > label > span {
-  font-family: 'Nunito',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-size: 14px;
 }
 
 .c2 label input + div {
@@ -154,19 +155,9 @@ exports[`Checkbox renders correctly 1`] = `
 }
 
 .c1 {
-  font-family: 'Nunito',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Arial,sans-serif;
   font-size: 14px;
   color: #2A506F;
-}
-
-.c1 h1,
-.c1 h2,
-.c1 h3,
-.c1 h4,
-.c1 h5,
-.c1 h6,
-.c1 button {
-  font-family: CircularStd,Arial,sans-serif;
 }
 
 @media only screen and (max-width:768px) {

@@ -58,6 +58,14 @@ const FormWrapper = styled(Box)`
 		border: 0;
 	}
 
+	label {
+		font-size: ${(props) => utils.px(props?.theme?.fontSizes[1])};
+	}
+
+	input {
+		font-size: ${(props) => utils.px(props?.theme?.fontSizes[2])};
+	}
+
 	/* Style the error list, since it can't be templated */
 	.panel-danger,
 	.error-detail {

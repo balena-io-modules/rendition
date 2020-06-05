@@ -33,7 +33,6 @@ const shades = [
 ];
 
 const BaseBadge = styled(Txt.span)`
-	font-family: ${(props) => props.theme.titleFont};
 	display: inline-block;
 	border-radius: 1em;
 	line-height: 1;
@@ -58,7 +57,7 @@ const Badge = ({
 			className={className}
 			py={1}
 			px="12px"
-			fontSize={0}
+			fontSize={1}
 			bg={shadeHex}
 			{...otherProps}
 			color={getLegibleTextColor(shadeHex)}

@@ -22,6 +22,17 @@ storiesOf('Next/Alert', module)
         <Alert my={2} info onDismiss={action('case-4')}>
           This is a general balena announcement
         </Alert>
+        <Alert my={2} info onDismiss={action('case-4')}>
+          This is an a multi line text: Lorem ipsum dolor sit amet, consetetur
+          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+          dolore magna aliquyam erat, sed diam voluptua. This is an a multi line
+          text: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+          diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+          erat, sed diam voluptua. This is an a multi line text: Lorem ipsum
+          dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+          tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+          voluptua.
+        </Alert>
       </Box>
     )
   })
@@ -39,6 +50,17 @@ storiesOf('Next/Alert', module)
         </Alert>
         <Alert my={2} emphasized info onDismiss={action('case-4')}>
           This is a general balena announcement
+        </Alert>
+        <Alert my={2} emphasized info onDismiss={action('case-4')}>
+          This is an a multi line text: Lorem ipsum dolor sit amet, consetetur
+          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+          dolore magna aliquyam erat, sed diam voluptua. This is an a multi line
+          text: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+          diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+          erat, sed diam voluptua. This is an a multi line text: Lorem ipsum
+          dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+          tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+          voluptua.
         </Alert>
       </Box>
     )

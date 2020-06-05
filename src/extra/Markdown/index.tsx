@@ -288,32 +288,32 @@ export const GitHubMarkdown = styled(Txt)`
 
 	h1 {
 		font-size: 32px;
-		font-weight: 600;
+		font-weight: 400;
 	}
 
 	h2 {
 		font-size: 24px;
-		font-weight: 600;
+		font-weight: 400;
 	}
 
 	h3 {
 		font-size: 20px;
-		font-weight: 600;
+		font-weight: 400;
 	}
 
 	h4 {
 		font-size: 16px;
-		font-weight: 600;
+		font-weight: 400;
 	}
 
 	h5 {
 		font-size: 14px;
-		font-weight: 600;
+		font-weight: 400;
 	}
 
 	h6 {
 		font-size: 12px;
-		font-weight: 600;
+		font-weight: 400;
 	}
 
 	p {
@@ -350,7 +350,8 @@ export const GitHubMarkdown = styled(Txt)`
 
 	code {
 		font-family: ${(props) => props.theme.monospace};
-		font-size: 1em;
+		font-size: 1rem;
+		line-height: 1.2;
 	}
 
 	pre {
