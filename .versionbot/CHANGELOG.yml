@@ -1,4 +1,16 @@
 - commits:
+    - subject: Don't show pagination for Table when not needed
+      hash: 873e5e69f603cec670f006a9af37c765708c1e90
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 15.1.0
+  date: 2020-06-15T14:02:51.047Z
+- commits:
     - subject: fixup font sizes
       hash: 307a54087c62ca303dd1dc3cc87866f80c9f21b2
       body: ''
