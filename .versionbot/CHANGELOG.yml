@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add optional createFullTextSearchFilter prop to Filters component
+      hash: ae3b30781ce0a192558c230158c936f073548662
+      body: >
+        This prop allows the creation of a full text search filter to be
+        delegated to the parent component.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 15.1.0
+  date: 2020-06-15T10:07:39.404Z
+- commits:
     - subject: fixup font sizes
       hash: 307a54087c62ca303dd1dc3cc87866f80c9f21b2
       body: ''
