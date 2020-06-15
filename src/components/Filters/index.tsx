@@ -243,17 +243,29 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 	public setSimpleSearch(term: string) {
 		this.setState(
 			(prevState) => {
-				const newFilters = term
-					? SchemaSieve.upsertFullTextSearch(
-							this.state.schema,
-							prevState.filters,
-							term,
-					  )
-					: SchemaSieve.removeFullTextSearch(prevState.filters);
+				const { createFullTextSearchFilter } = this.props;
 
+				if (term) {
+					const searchFilter = createFullTextSearchFilter
+						? createFullTextSearchFilter(
+								SchemaSieve.FULL_TEXT_SLUG,
+								this.state.schema,
+								term,
+						  )
+						: SchemaSieve.createFullTextSearchFilter(this.state.schema, term);
+					const filters = SchemaSieve.upsertFilter(
+						searchFilter,
+						{ title: SchemaSieve.FULL_TEXT_SLUG },
+						prevState.filters,
+					);
+					return {
+						searchString: term,
+						filters,
+					};
+				}
 				return {
 					searchString: term,
-					filters: newFilters,
+					filters: SchemaSieve.removeFullTextSearch(prevState.filters),
 				};
 			},
 			() => this.emitFilterUpdate(),
@@ -435,6 +447,11 @@ export interface FiltersProps extends DefaultProps {
 	renderMode?: FilterRenderMode | FilterRenderMode[];
 	dark?: boolean;
 	compact?: boolean[];
+	createFullTextSearchFilter?: (
+		filterTitle: string,
+		schema: JSONSchema6,
+		term?: string,
+	) => JSONSchema6;
 }
 
 export default Filters;

@@ -401,6 +401,8 @@ A view has the following properties:
 | `renderMode` | <code>string &#124; string[]</code> | - | - | Controls which parts of the `Filters` interface are displayed. One of `all`, `add`, `search`, `views`, `summary`, or an array containing any of these values |
 | `dark`    | `boolean` | -         | -          | If true, Set the `Filters` component against a dark background |
 | `compact`    | `boolean[]` | -         | -          | Accept a boolean for each rendition breakpoint. If true remove `Filters` labels  |
+| `createFullTextSearchFilter` | `(filterTitle: string, schema: JSONSchema6, term?: string) => JSONSchema6` | - | - | Optional callback method to create a full text search filter for the given schema and search term |
+
 ### Fixed
 
 Displays an element with a [`fixed`](https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed) position.

@@ -2,6 +2,7 @@ import Ajv from 'ajv';
 import ajvKeywords from 'ajv-keywords';
 import metaSchema6 from 'ajv/lib/refs/json-schema-draft-06.json';
 import { JSONSchema6 } from 'json-schema';
+import { ListIterateeCustom } from 'lodash';
 import cloneDeep from 'lodash/cloneDeep';
 import defaults from 'lodash/defaults';
 import every from 'lodash/every';
@@ -88,21 +89,20 @@ export const createFullTextSearchFilter = (
 	return filter as JSONSchema6;
 };
 
-// Update or insert a full text search filter into an array of filters
-export const upsertFullTextSearch = (
-	schema: JSONSchema6,
+// Update or insert a filter into an array of filters
+export const upsertFilter = (
+	filter: JSONSchema6,
+	predicate: ListIterateeCustom<JSONSchema6, boolean>,
 	filters: JSONSchema6[] = [],
-	term: string,
 ) => {
-	const searchFilter = createFullTextSearchFilter(schema, term);
-	const existingSearchIndex = findIndex(filters, { title: FULL_TEXT_SLUG });
+	const existingFilterIndex = findIndex(filters, predicate);
 
-	if (existingSearchIndex > -1) {
-		return filters.map((filter, i) =>
-			existingSearchIndex === i ? searchFilter : filter,
+	if (existingFilterIndex > -1) {
+		return filters.map((existingFilter, i) =>
+			existingFilterIndex === i ? filter : existingFilter,
 		);
 	}
-	return [...filters, searchFilter as JSONSchema6];
+	return [...filters, filter as JSONSchema6];
 };
 
 // Removes a full text search filter from an array of filters

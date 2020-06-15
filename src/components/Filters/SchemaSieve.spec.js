@@ -1054,56 +1054,49 @@ describe('SchemaSieve', () => {
     })
   })
 
-  describe('.upsertFullTextSearch()', () => {
-    const collection = [
-      {
-        test: 'abcde',
-        description: 'maecenas convallis aliquet arcu sed faucibus'
-      },
-      {
-        test: 'fghij',
-        description: 'lorem ipsum dolor sit amet'
-      }
-    ]
-
-    it('should create and append a new filter if a search filter does not already exist', () => {
-      const schema = {
-        type: 'object',
-        properties: {
-          test: { type: 'string' },
-          description: { type: 'string' }
+  describe('.upsertFilter()', () => {
+    it('should append a new filter if a matching filter does not already exist', () => {
+      const existingFilters = [
+        {
+          $id: 'test1',
+          title: 'Filter A'
         }
+      ]
+      const filter = {
+        $id: 'test2',
+        title: 'Filter B'
       }
 
-      const term = 'lorem'
+      const filters = sieve.upsertFilter(
+        filter,
+        { title: filter.title },
+        existingFilters
+      )
 
-      const filters = sieve.upsertFullTextSearch(schema, [], term)
-
-      expect(filters).toHaveLength(1)
-      expect(sieve.filter(filters, collection)).toHaveLength(1)
-      expect(sieve.filter(filters, collection)).toEqual([collection[1]])
-
-      expect(filters).toHaveLength(1)
+      expect(filters).toHaveLength(2)
+      expect(filters[1].title).toBe(filter.title)
     })
 
-    it('should modify an existing search filter', () => {
-      const schema = {
-        type: 'object',
-        properties: {
-          test: { type: 'string' },
-          description: { type: 'string' }
+    it('should modify an existing filter if found', () => {
+      const existingFilters = [
+        {
+          $id: 'test1',
+          title: 'Filter A'
         }
+      ]
+      const filter = {
+        ...existingFilters[0],
+        anyOf: []
       }
 
-      const existingFilters = [sieve.createFullTextSearchFilter(schema, 'test')]
-
-      const term = 'lorem'
-
-      const filters = sieve.upsertFullTextSearch(schema, existingFilters, term)
+      const filters = sieve.upsertFilter(
+        filter,
+        { title: filter.title },
+        existingFilters
+      )
 
       expect(filters).toHaveLength(1)
-      expect(sieve.filter(filters, collection)).toHaveLength(1)
-      expect(sieve.filter(filters, collection)).toEqual([collection[1]])
+      expect(filters[0]).toEqual(filter)
     })
   })
 

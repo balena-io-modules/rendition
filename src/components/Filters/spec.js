@@ -453,4 +453,89 @@ describe('Filters component', () => {
       component.unmount()
     })
   })
+
+  describe('createFullTextSearchFilter property', () => {
+    it('should use the SchemaSieve implementation if not set', () => {
+      const searchTerm = 'test'
+      const component = mount(
+        <Provider>
+          <Filters schema={schema} filters={[]} />
+        </Provider>
+      )
+      const filtersComponent = component.find(Filters)
+
+      filtersComponent.instance().setSimpleSearch(searchTerm)
+
+      const filters = filtersComponent.state().filters
+      expect(filters.length).toBe(1)
+      expect(filters[0].title).toBe(SchemaSieve.FULL_TEXT_SLUG)
+      expect(filters[0].anyOf).toEqual([
+        {
+          description: `Any field contains ${searchTerm}`,
+          anyOf: [
+            {
+              properties: {
+                Name: {
+                  type: 'string',
+                  regexp: {
+                    pattern: searchTerm,
+                    flags: 'i'
+                  }
+                }
+              },
+              required: ['Name']
+            }
+          ]
+        }
+      ])
+    })
+
+    it('should use the provided implementation if set', () => {
+      const searchTerm = 'test'
+      const createFullTextSearchFilter = (title, _, term) => {
+        return {
+          title,
+          anyOf: [
+            {
+              description: `Custom full text search for ${term}`,
+              anyOf: [
+                {
+                  properties: {
+                    Name: {
+                      type: 'string',
+                      fullTextSearch: true
+                    }
+                  },
+                  required: ['Name']
+                }
+              ]
+            }
+          ]
+        }
+      }
+
+      const expectedFilter = createFullTextSearchFilter(
+        SchemaSieve.FULL_TEXT_SLUG,
+        SchemaSieve.flattenSchema(schema),
+        searchTerm
+      )
+
+      const component = mount(
+        <Provider>
+          <Filters
+            schema={schema}
+            filters={[]}
+            createFullTextSearchFilter={createFullTextSearchFilter}
+          />
+        </Provider>
+      )
+      const filtersComponent = component.find(Filters)
+
+      filtersComponent.instance().setSimpleSearch(searchTerm)
+
+      const filters = filtersComponent.state().filters
+      expect(filters.length).toBe(1)
+      expect(filters[0]).toEqual(expectedFilter)
+    })
+  })
 })
