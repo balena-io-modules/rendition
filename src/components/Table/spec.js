@@ -894,11 +894,26 @@ describe('Table component', () => {
     it('should display a pager', () => {
       const component = mount(
         <Provider>
-          <Table columns={[{ field: 'Name' }]} data={PokeDex} usePager />
+          <Table
+            columns={[{ field: 'Name' }]}
+            itemsPerPage={2}
+            data={PokeDex}
+            usePager
+          />
         </Provider>
       )
 
       expect(component.find(Pager)).toHaveLength(1)
+    })
+
+    it("shouldn't display a pager if there are less items than what is shown per page", () => {
+      const component = mount(
+        <Provider>
+          <Table columns={[{ field: 'Name' }]} data={PokeDex} usePager />
+        </Provider>
+      )
+
+      expect(component.find(Pager)).toHaveLength(0)
     })
 
     it("shouldn't display a pager if there are no items", () => {

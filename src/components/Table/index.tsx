@@ -422,8 +422,8 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 			columns,
 			data,
 			usePager,
-			itemsPerPage,
-			pagerPosition,
+			itemsPerPage = 50,
+			pagerPosition = 'top',
 			rowAnchorAttributes,
 			rowKey,
 			onCheck,
@@ -437,25 +437,22 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		const items = data || [];
 		const totalItems = items.length;
 
-		const _itemsPerpage = itemsPerPage || 50;
-		const _pagerPosition = pagerPosition || 'top';
-
-		const lowerBound = usePager ? page * _itemsPerpage : 0;
+		const lowerBound = usePager ? page * itemsPerPage : 0;
 		const upperBound = usePager
-			? Math.min((page + 1) * _itemsPerpage, totalItems)
+			? Math.min((page + 1) * itemsPerPage, totalItems)
 			: totalItems;
 
 		const sortedData = this.sortData(items).slice(lowerBound, upperBound);
 
-		const shouldShowPaper = !!usePager && totalItems > 0;
+		const shouldShowPaper = !!usePager && totalItems > itemsPerPage;
 
 		return (
 			<>
 				{shouldShowPaper &&
-					(_pagerPosition === 'top' || _pagerPosition === 'both') && (
+					(pagerPosition === 'top' || pagerPosition === 'both') && (
 						<Pager
 							totalItems={totalItems}
-							itemsPerPage={_itemsPerpage}
+							itemsPerPage={itemsPerPage}
 							page={page}
 							nextPage={this.incrementPage}
 							prevPage={this.decrementPage}
@@ -555,10 +552,10 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 				</BaseTableWrapper>
 
 				{shouldShowPaper &&
-					(_pagerPosition === 'bottom' || _pagerPosition === 'both') && (
+					(pagerPosition === 'bottom' || pagerPosition === 'both') && (
 						<Pager
 							totalItems={totalItems}
-							itemsPerPage={_itemsPerpage}
+							itemsPerPage={itemsPerPage}
 							page={page}
 							nextPage={this.incrementPage}
 							prevPage={this.decrementPage}
