@@ -28,6 +28,7 @@ export interface TableColumn<T> {
 		| React.AnchorHTMLAttributes<HTMLAnchorElement>
 		| ((value: any, row: T) => React.AnchorHTMLAttributes<HTMLAnchorElement>);
 	field: keyof T;
+	key?: string;
 	icon?: string;
 	label?: string | JSX.Element;
 	render?: (
