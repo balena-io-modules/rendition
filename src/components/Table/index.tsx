@@ -481,7 +481,10 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 								{map(columns, (item) => {
 									if (item.sortable) {
 										return (
-											<div data-display="table-cell" key={item.field as string}>
+											<div
+												data-display="table-cell"
+												key={item.key || (item.field as string)}
+											>
 												<HeaderButton
 													data-field={item.field}
 													plain
@@ -503,7 +506,10 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 										);
 									}
 									return (
-										<div data-display="table-cell" key={item.field as string}>
+										<div
+											data-display="table-cell"
+											key={item.key || (item.field as string)}
+										>
 											{item.label || item.field}
 										</div>
 									);
