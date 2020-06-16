@@ -7,7 +7,6 @@ exports[`Input renders correctly 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  outline: none;
   background: transparent;
   color: inherit;
   padding: 11px;
