@@ -18,7 +18,6 @@ exports[`Textarea component should match the stored snapshot 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  outline: none;
   background: transparent;
   color: inherit;
   padding: 11px;

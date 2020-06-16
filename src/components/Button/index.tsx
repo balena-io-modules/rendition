@@ -170,7 +170,19 @@ const Underline = styled(Plain)<{ active?: boolean; color?: string }>`
 `;
 
 const getStyledButton = (
-	{ outline, underline, plain, active, light }: ThemedButtonProps,
+	{
+		outline,
+		underline,
+		plain,
+		active,
+		light,
+	}: {
+		outline?: boolean;
+		underline?: boolean;
+		plain?: boolean;
+		active?: boolean;
+		light?: boolean;
+	},
 	isPrimary: boolean,
 ) => {
 	if (plain) {
@@ -223,7 +235,6 @@ const Base = (props: ThemedButtonProps) => {
 	let baseColor = props.bg || getColor(props, 'bg', 'main');
 
 	// Set default to 'secondary'
-	const secondary = baseColor ? false : true;
 	baseColor = baseColor || props.theme.colors.secondary.main;
 
 	// If the button is active, invert the background and text colors
@@ -231,10 +242,13 @@ const Base = (props: ThemedButtonProps) => {
 		basePrimary = !basePrimary;
 	}
 
-	const StyledButton = getStyledButton({ secondary, ...props }, basePrimary);
+	const StyledButton = getStyledButton(
+		{ underline, plain, active, light },
+		basePrimary,
+	);
 
 	// Note that the 'plain' property is case to a Boolean to simplify Grommets
-	// default behaviour when providing an icon attribute and no label
+	// default behavior when providing an icon attribute and no label
 	// see: https://github.com/grommet/grommet/issues/3030
 	return (
 		<StyledButton
