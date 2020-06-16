@@ -349,7 +349,6 @@ export const GitHubMarkdown = styled(Txt)`
 	}
 
 	code {
-		font-family: ${(props) => props.theme.monospace};
 		font-size: 1rem;
 		line-height: 1.2;
 	}
@@ -358,7 +357,6 @@ export const GitHubMarkdown = styled(Txt)`
 		margin-top: 0;
 		margin-bottom: 0;
 		font-size: 1em;
-		font-family: ${(props) => props.theme.monospace};
 	}
 
 	.octicon {
@@ -688,7 +686,6 @@ export const GitHubMarkdown = styled(Txt)`
 		display: inline-block;
 		padding: 3px 5px;
 		font-size: 11px;
-		font-family: ${(props) => props.theme.monospace};
 		line-height: 10px;
 		color: #444d56;
 		vertical-align: middle;
