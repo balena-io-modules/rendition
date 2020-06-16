@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix Markdown CSS
+      hash: c1ec52cd313cd4deca05a6074b16cd8fa09ee333
+      body: |
+        Remove duplicate font-family rules which resulted in invalid CSS.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 15.1.2
+  date: 2020-06-16T16:44:54.298Z
+- commits:
     - subject: Can specify custom Table column keys
       hash: 9ff0bf69c613e3ec3d8de67d8b96686c2881b786
       body: ''
