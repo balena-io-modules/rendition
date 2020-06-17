@@ -38,7 +38,7 @@ export type ResponsiveStyle = string | number | Array<string | number>;
 export interface DefaultProps extends React.DOMAttributes<HTMLElement> {
 	// React-specific Attributes
 	defaultChecked?: boolean;
-	defaultValue?: string | number | string[];
+	defaultValue?: string | number | ReadonlyArray<string>;
 	suppressContentEditableWarning?: boolean;
 
 	// Standard HTML Attributes
