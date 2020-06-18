@@ -15,16 +15,24 @@ const Base = styled(Grommet)`
 	color: ${(props) => px(props.theme.colors.text.main)};
 `;
 
-const Provider = ({ theme, ...props }: ThemedProvider) => {
+const defaultFontLink =
+	'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&family=Ubuntu+Mono:wght@400;700&display=fallback';
+
+const Provider = ({
+	theme,
+	fontLinks = [defaultFontLink],
+	...props
+}: ThemedProvider) => {
 	const providerTheme = merge(defaultTheme, theme);
 	return (
 		<BreakpointProvider breakpoints={providerTheme.breakpoints}>
-			<Helmet>
-				<link
-					href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&family=Ubuntu+Mono:wght@400;700&display=fallback"
-					rel="stylesheet"
-				/>
-			</Helmet>
+			{fontLinks.length > 0 && (
+				<Helmet>
+					{fontLinks.map((link) => (
+						<link href={link} rel="stylesheet" />
+					))}
+				</Helmet>
+			)}
 			<Base theme={providerTheme} {...props} />
 		</BreakpointProvider>
 	);
@@ -32,6 +40,7 @@ const Provider = ({ theme, ...props }: ThemedProvider) => {
 
 export interface ThemedProvider extends DefaultProps {
 	theme?: PartialDeep<Theme>;
+	fontLinks?: string[];
 }
 
 export default Provider;
