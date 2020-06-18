@@ -71,6 +71,7 @@ export {
 	default as DropDownButton,
 	DropDownButtonProps,
 } from './components/DropDownButton';
+export { default as Map, MapProps } from './components/Map';
 export { default as Navbar, NavbarProps } from './components/Navbar';
 export { default as Link, LinkProps } from './components/Link';
 export { default as List, ListProps } from './components/List';
