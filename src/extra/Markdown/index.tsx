@@ -11,7 +11,14 @@ export { defaultSanitizerOptions } from '../utils';
 
 marked.setOptions({
 	highlight(code, lang) {
-		return highlightJS.highlight(lang || 'plaintext', code).value;
+		let result;
+		try {
+			result = highlightJS.highlight(lang || 'plaintext', code);
+		} catch (e) {
+			result = highlightJS.highlightAuto(code);
+		}
+
+		return result.value;
 	},
 });
 
