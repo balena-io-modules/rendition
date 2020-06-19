@@ -1,4 +1,16 @@
 - commits:
+    - subject: Don't load SSP and Ubuntu mono if custom font is provided
+      hash: a814186726d8029e23855a1933b10e5d2533d9b2
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 15.2.1
+  date: 2020-06-19T14:14:09.724Z
+- commits:
     - subject: 'Markdown: Fix syntax highlighter for unknown lang'
       hash: 95f656d17195968361755b84f6fbb2b27f31c820
       body: ''
