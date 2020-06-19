@@ -1,4 +1,25 @@
 - commits:
+    - subject: 'Markdown: Fix syntax highlighter for unknown lang'
+      hash: 95f656d17195968361755b84f6fbb2b27f31c820
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kakhaber
+    - subject: Add a Map component
+      hash: 34da1975ad1c9d75ef6705881da7c0b6c8114142
+      body: ''
+      footer:
+        Connects-to: '#12'
+        connects-to: '#12'
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 15.2.0
+  date: 2020-06-19T11:20:53.988Z
+- commits:
     - subject: 'fix: object filters'
       hash: 40132904e421ae9be089674231ac184fa50ac366
       body: |
