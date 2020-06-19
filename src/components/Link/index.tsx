@@ -5,8 +5,10 @@ import { withProps } from 'recompose';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { DefaultProps, RenditionSystemProps } from '../../common-types';
-import { darken, monospace } from '../../utils';
+import { darken, monospace, isExternalUrl, toRelativeUrl } from '../../utils';
+import path from 'path';
 import { align, bold, caps } from '../Txt';
+import { withRouter } from 'react-router-dom';
 
 const Base = styled.a<InternalLinkProps>`
   ${align}
@@ -28,6 +30,71 @@ const Base = styled.a<InternalLinkProps>`
 			) as any)};
   }
 `;
+
+export class RouterLink extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.navigate = this.navigate.bind(this);
+	}
+
+	makeUrl() {
+		const { append, location, to } = this.props;
+
+		if (to) {
+			return toRelativeUrl(to);
+		}
+
+		if (append) {
+			return path.join(location.pathname, append);
+		}
+
+		return null;
+	}
+
+	navigate(event) {
+		const { blank, to } = this.props;
+
+		// If control or meta keys are pressed use default browser behaviour
+		if (event.ctrlKey || event.metaKey) {
+			return true;
+		}
+
+		// If the link is external use default browser behaviour
+		if (blank || isExternalUrl(to)) {
+			return true;
+		}
+
+		event.preventDefault();
+		const { history } = this.props;
+
+		const url = this.makeUrl();
+
+		history.push(url);
+		return false;
+	}
+
+	render() {
+		const props = omit(this.props, [
+			'match',
+			'location',
+			'history',
+			'to',
+			'append',
+		]);
+
+		const url = this.makeUrl();
+
+		return (
+			<Link
+				{...props}
+				href={url}
+				// We should only navigate when `url` is defined
+				onClick={url ? this.navigate : props.onClick}
+			/>
+		);
+	}
+}
 
 const Link = ({ is, blank, children, ...props }: InternalLinkProps) => {
 	if (props.disabled) {
@@ -71,8 +138,8 @@ export interface InternalLinkProps extends DefaultProps {
 
 export type LinkProps = InternalLinkProps & RenditionSystemProps;
 
-export default asRendition<React.FunctionComponent<LinkProps>>(
-	Link,
+export default asRendition<React.Component<LinkProps>>(
+	withRouter(RouterLink),
 	[setDefaultProps],
 	['color'],
 );

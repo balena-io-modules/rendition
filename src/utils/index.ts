@@ -1,6 +1,7 @@
 export * from './colorUtils';
 export * from './schemaUtils';
 export * from './styledUtils';
+export * from './urlUtils';
 
 const matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;
 
