@@ -107,7 +107,7 @@ exports[`Form component should match the stored snapshot 1`] = `
 
 .c14 {
   font-weight: 600;
-  font-size: 13px;
+  font-size: 14px;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
@@ -190,7 +190,7 @@ exports[`Form component should match the stored snapshot 1`] = `
 
 .c8 {
   display: inline-block;
-  font-size: 10px;
+  font-size: 12px;
   margin-bottom: 4px;
   color: #2A506F;
 }
