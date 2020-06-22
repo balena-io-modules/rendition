@@ -14,7 +14,7 @@ exports[`HighlightedName renders correctly 1`] = `
 
 .c2 {
   padding: 8px;
-  font-size: 12px;
+  font-size: 14px;
   color: #fff;
   background-color: #87c59b;
 }

@@ -80,7 +80,7 @@ exports[`DropDownButton renders correctly 1`] = `
 
 .c5 {
   font-weight: 600;
-  font-size: 13px;
+  font-size: 14px;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
@@ -301,7 +301,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
 
 .c5 {
   font-weight: 600;
-  font-size: 13px;
+  font-size: 14px;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;

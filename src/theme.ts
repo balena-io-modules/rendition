@@ -205,7 +205,7 @@ const theme = {
 		height: '38px',
 		font: {
 			weight: 600 as string | number,
-			size: px(13),
+			size: px(fontSizes[2]),
 		},
 		border: {
 			width: '1px',
@@ -218,7 +218,7 @@ const theme = {
 	},
 	navBar: {
 		font: {
-			size: px(13),
+			size: px(fontSizes[2]),
 		},
 	},
 	radioButton: {

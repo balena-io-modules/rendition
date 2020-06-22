@@ -417,7 +417,7 @@ exports[`Steps component should match the stored snapshot 1`] = `
 
 .c22 {
   font-weight: 600;
-  font-size: 13px;
+  font-size: 14px;
   height: 38px;
   white-space: nowrap;
   display: -webkit-inline-box;
