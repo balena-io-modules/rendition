@@ -1,4 +1,16 @@
 - commits:
+    - subject: Style fixes after changing to SSP as the main font
+      hash: b5dd1d8abece144201850bd9a4c33a60e2486a48
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 15.2.2
+  date: 2020-06-22T10:32:39.274Z
+- commits:
     - subject: Don't load SSP and Ubuntu mono if custom font is provided
       hash: a814186726d8029e23855a1933b10e5d2533d9b2
       body: ''
