@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix loading fonts when nothing is passed to theme
+      hash: f18156a48eacb22cc315eaef429761dfee49a14c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 15.2.3
+  date: 2020-06-23T11:37:29.242Z
+- commits:
     - subject: Style fixes after changing to SSP as the main font
       hash: b5dd1d8abece144201850bd9a4c33a60e2486a48
       body: ''
