@@ -20,7 +20,7 @@ const Provider = ({ theme, ...props }: ThemedProvider) => {
 	const providerTheme = merge(defaultTheme, theme);
 	return (
 		<BreakpointProvider breakpoints={providerTheme.breakpoints}>
-			{!isDefaultFont && (
+			{isDefaultFont && (
 				<Helmet>
 					<link
 						href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&family=Ubuntu+Mono:wght@400;700&display=fallback"
