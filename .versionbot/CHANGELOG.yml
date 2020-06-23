@@ -1,4 +1,14 @@
 - commits:
+    - subject: Generate ts declaration files for esm5 build
+      hash: f3edeab46874f13624c9e99fbf520de963887f9c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Alexis Svinartchouk
+  version: 15.2.4
+  date: 2020-06-23T16:27:18.583Z
+- commits:
     - subject: Fix loading fonts when nothing is passed to theme
       hash: f18156a48eacb22cc315eaef429761dfee49a14c
       body: ''
