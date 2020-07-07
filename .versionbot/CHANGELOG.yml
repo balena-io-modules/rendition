@@ -1,4 +1,14 @@
 - commits:
+    - subject: Update typescript/tslib
+      hash: 2ff6ade31ab55ca380cf46e7345b5a22fafc6519
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Pagan Gazzard
+  version: 15.4.0
+  date: 2020-07-07T13:20:58.513Z
+- commits:
     - subject: Update typography style based on design guide
       hash: 36e5655e7e5c47a250e42fb4ec39a1920eccda62
       body: ''
