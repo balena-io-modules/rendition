@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update typography style based on design guide
+      hash: 36e5655e7e5c47a250e42fb4ec39a1920eccda62
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 15.3.0
+  date: 2020-07-07T10:12:58.664Z
+- commits:
     - subject: Generate ts declaration files for esm5 build
       hash: f3edeab46874f13624c9e99fbf520de963887f9c
       body: ''
