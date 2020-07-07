@@ -4,7 +4,7 @@ import withReadme from 'storybook-readme/with-readme'
 import { Box, Flex } from '../..'
 import Readme from './README.md'
 
-storiesOf('Core/Flex', module)
+storiesOf('Next/Flex', module)
   .addDecorator(withReadme(Readme))
   .add('Standard', () => {
     return (

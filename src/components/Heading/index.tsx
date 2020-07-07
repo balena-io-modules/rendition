@@ -8,11 +8,11 @@ import { FlexProps } from '../Flex';
 import { align, bold, caps } from '../Txt';
 
 const Heading = styled.h3<InternalHeadingProps>`
+	font-weight: normal;
 	${align}
 	${monospace};
 	${caps}
 	${bold}
-	font-weight: ${(props) => props.theme.weights[0]};
 `;
 
 Heading.displayName = 'Heading';
@@ -21,6 +21,7 @@ const setDefaultProps = withProps((props: FlexProps) => {
 		{
 			fontSize: 4,
 			m: 0,
+			bold: false,
 		},
 		props,
 	);
@@ -77,18 +78,21 @@ Base.h4 = Factory('h4');
 Base.h4.defaultProps = {
 	fontSize: 4,
 	m: 0,
+	bold: true,
 };
 
 Base.h5 = Factory('h5');
 Base.h5.defaultProps = {
 	fontSize: 3,
 	m: 0,
+	bold: true,
 };
 
 Base.h6 = Factory('h6');
 Base.h6.defaultProps = {
 	fontSize: 2,
 	m: 0,
+	bold: true,
 };
 
 export default Base;

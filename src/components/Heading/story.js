@@ -4,7 +4,7 @@ import withReadme from 'storybook-readme/with-readme'
 import { Box, Heading } from '../../'
 import Readme from './README.md'
 
-storiesOf('Core/Heading', module)
+storiesOf('Next/Heading', module)
   .addDecorator(withReadme(Readme))
   .add('Standard', () => {
     return (
@@ -14,7 +14,6 @@ storiesOf('Core/Heading', module)
         <Heading.h3>Heading h3</Heading.h3>
         <Heading.h4>Heading h4</Heading.h4>
         <Heading.h5>Heading h5</Heading.h5>
-        <Heading.h6>Heading h6</Heading.h6>
       </Box>
     )
   })

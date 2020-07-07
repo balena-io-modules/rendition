@@ -4,7 +4,7 @@ import withReadme from 'storybook-readme/with-readme'
 import { Box, Txt } from '../..'
 import Readme from './README.md'
 
-storiesOf('Core/Txt', module)
+storiesOf('Next/Txt', module)
   .addDecorator(withReadme(Readme))
   .add('Standard', () => {
     return (

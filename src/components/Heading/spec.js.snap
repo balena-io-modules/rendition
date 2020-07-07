@@ -13,7 +13,7 @@ exports[`Heading renders correctly 1`] = `
 }
 
 .c2 {
-  font-weight: 400;
+  font-weight: normal;
 }
 
 .c3 {
