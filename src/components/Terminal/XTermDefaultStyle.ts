@@ -21,17 +21,21 @@ export default css`
 		position: absolute;
 		top: 0;
 
-		z-index: 10;
+		z-index: 5;
 	}
 
 	.xterm .xterm-helper-textarea {
+		padding: 0;
+		border: 0;
+		margin: 0;
+
 		position: absolute;
 		opacity: 0;
 		left: -9999em;
 		top: 0;
 		width: 0;
 		height: 0;
-		z-index: -10;
+		z-index: -5;
 
 		white-space: nowrap;
 		overflow: hidden;
@@ -108,7 +112,7 @@ export default css`
 		top: 0;
 		bottom: 0;
 		right: 0;
-		z-index: 100;
+		z-index: 10;
 		color: transparent;
 	}
 

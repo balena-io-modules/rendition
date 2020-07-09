@@ -2,17 +2,15 @@ import cloneDeep from 'lodash/cloneDeep';
 import * as React from 'react';
 import styled from 'styled-components';
 import { ITerminalOptions, Terminal as Xterm } from 'xterm';
-import { fit as fitTerm } from 'xterm/lib/addons/fit/fit';
+import { FitAddon } from 'xterm-addon-fit';
 import { Theme as ThemeType } from '../../common-types';
 // TODO: Remove explicit import and use withTheme. There are some issues with the resulting typings when using withTheme, therefore the current workaround.
 import theme from '../../theme';
-import { Box } from '../Box';
 import defaultXtermStyle from './XTermDefaultStyle';
+import { Flex } from '../Flex';
 
-const TtyContainer = styled(Box)`
+const TtyContainer = styled(Flex)`
 	position: relative;
-	height: 100%;
-
 	${defaultXtermStyle}
 
 	.xterm-viewport::-webkit-scrollbar-track {
@@ -31,7 +29,7 @@ const TtyContainer = styled(Box)`
 	}
 `;
 
-const TtyInner = styled.div`
+const TtyInner = styled(Flex)`
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -44,23 +42,20 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 	// Used as the element to mount XTERM into
 	private mountElement: HTMLDivElement | null;
 	private termConfig: ITerminalOptions;
+	// Addons
+	private fitAddon: FitAddon;
 
 	constructor(props: ThemedTerminalProps) {
 		super(props);
-
 		this.termConfig = Object.assign({}, props.config, {
-			cols: 80,
 			cursorBlink: false,
-			rows: 24,
 			fontFamily: props.theme ? props.theme.monospace : theme.monospace,
 			lineHeight: 1.4,
 			theme: {
 				background: '#343434',
 				cursor: props.nonInteractive ? '#343434' : undefined,
 			},
-			experimentalCharAtlas: 'dynamic',
 		});
-
 		// Allow an existing tty instance to be rebound to this react element
 		if (this.props.ttyInstance) {
 			this.tty = this.props.ttyInstance;
@@ -68,23 +63,14 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 			// Xterm mutates the options object passed into it, so we have to clone it
 			// here
 			this.tty = new Xterm(cloneDeep(this.termConfig));
+			this.fitAddon = new FitAddon();
+			this.tty.loadAddon(this.fitAddon);
 		}
-
-		this.resize = this.resize.bind(this);
 	}
 
 	public componentDidMount() {
-		this.open();
-
-		if (this.props.ttyInstance) {
-			// Xterm nullifies the 'theme' option after opening, so we have to set it
-			// again after a new renderer is created
-			// see: https://github.com/xtermjs/xterm.js/issues/1323
-			this.tty.setOption('theme', this.termConfig.theme);
-		}
-
-		// Wait before writing to the xterm instance, so that the term can be sized to the screen correctly
 		setTimeout(() => {
+			this.open();
 			// If this is a non-interactive terminal, rebind <ctrl+c> to copy command
 			if (this.props.nonInteractive && document.execCommand) {
 				this.tty.attachCustomKeyEventHandler((e) => {
@@ -97,27 +83,23 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 					return true;
 				});
 			}
-
-			window.addEventListener('resize', this.resize);
-
+			window.addEventListener('resize', this.resize.bind(this));
 			this.resize();
-		}, 100);
+		});
 	}
 
 	public componentWillUnmount() {
 		window.removeEventListener('resize', this.resize);
-
 		// Don't destroy tty on unmount if this Terminal is persistent
 		if (!this.props.persistent) {
-			this.tty.destroy();
+			this.destroy();
 		}
 	}
 
-	// Explicitly calling '.destroy()' will always work, even with the 'persistent' property
+	// Explicitly calling '.dispose()' will always work, even with the 'persistent' property
 	public destroy() {
 		window.removeEventListener('resize', this.resize);
-
-		this.tty.destroy();
+		this.tty.dispose();
 	}
 
 	public open() {
@@ -126,7 +108,7 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 	}
 
 	public resize() {
-		fitTerm(this.tty);
+		this.fitAddon.fit();
 	}
 
 	public clear() {
@@ -143,8 +125,12 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 
 	public render() {
 		return (
-			<TtyContainer color={this.props.color}>
-				<TtyInner ref={(el) => (this.mountElement = el)} />
+			<TtyContainer flex="1" height="100%" color={this.props.color}>
+				<TtyInner
+					flex="1"
+					flexDirection="column"
+					ref={(el) => (this.mountElement = el)}
+				/>
 			</TtyContainer>
 		);
 	}

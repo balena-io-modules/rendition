@@ -14,6 +14,13 @@ exports[`Terminal renders correctly 1`] = `
 
 .c2 {
   box-sizing: border-box;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c3 {
+  height: 100%;
 }
 
 .c1 {
@@ -22,12 +29,15 @@ exports[`Terminal renders correctly 1`] = `
   color: #2A506F;
 }
 
-.c3 {
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
-  height: 100%;
 }
 
-.c3 .xterm {
+.c4 .xterm {
   font-feature-settings: 'liga' 0;
   position: relative;
   -webkit-user-select: none;
@@ -38,31 +48,34 @@ exports[`Terminal renders correctly 1`] = `
   -webkit-user-select: none;
 }
 
-.c3 .xterm.focus,
-.c3 .xterm:focus {
+.c4 .xterm.focus,
+.c4 .xterm:focus {
   outline: none;
 }
 
-.c3 .xterm .xterm-helpers {
+.c4 .xterm .xterm-helpers {
   position: absolute;
   top: 0;
-  z-index: 10;
+  z-index: 5;
 }
 
-.c3 .xterm .xterm-helper-textarea {
+.c4 .xterm .xterm-helper-textarea {
+  padding: 0;
+  border: 0;
+  margin: 0;
   position: absolute;
   opacity: 0;
   left: -9999em;
   top: 0;
   width: 0;
   height: 0;
-  z-index: -10;
+  z-index: -5;
   white-space: nowrap;
   overflow: hidden;
   resize: none;
 }
 
-.c3 .xterm .composition-view {
+.c4 .xterm .composition-view {
   background: #000;
   color: #fff;
   display: none;
@@ -71,11 +84,11 @@ exports[`Terminal renders correctly 1`] = `
   z-index: 1;
 }
 
-.c3 .xterm .composition-view.active {
+.c4 .xterm .composition-view.active {
   display: block;
 }
 
-.c3 .xterm .xterm-viewport {
+.c4 .xterm .xterm-viewport {
   background-color: #000;
   overflow-y: scroll;
   cursor: default;
@@ -86,21 +99,21 @@ exports[`Terminal renders correctly 1`] = `
   bottom: 0;
 }
 
-.c3 .xterm .xterm-screen {
+.c4 .xterm .xterm-screen {
   position: relative;
 }
 
-.c3 .xterm .xterm-screen canvas {
+.c4 .xterm .xterm-screen canvas {
   position: absolute;
   left: 0;
   top: 0;
 }
 
-.c3 .xterm .xterm-scroll-area {
+.c4 .xterm .xterm-scroll-area {
   visibility: hidden;
 }
 
-.c3 .xterm-char-measure-element {
+.c4 .xterm-char-measure-element {
   display: inline-block;
   visibility: hidden;
   position: absolute;
@@ -109,34 +122,34 @@ exports[`Terminal renders correctly 1`] = `
   line-height: normal;
 }
 
-.c3 .xterm {
+.c4 .xterm {
   cursor: text;
 }
 
-.c3 .xterm.enable-mouse-events {
+.c4 .xterm.enable-mouse-events {
   cursor: default;
 }
 
-.c3 .xterm.xterm-cursor-pointer {
+.c4 .xterm.xterm-cursor-pointer {
   cursor: pointer;
 }
 
-.c3 .xterm.column-select.focus {
+.c4 .xterm.column-select.focus {
   cursor: crosshair;
 }
 
-.c3 .xterm .xterm-accessibility,
-.c3 .xterm .xterm-message {
+.c4 .xterm .xterm-accessibility,
+.c4 .xterm .xterm-message {
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
   right: 0;
-  z-index: 100;
+  z-index: 10;
   color: transparent;
 }
 
-.c3 .xterm .live-region {
+.c4 .xterm .live-region {
   position: absolute;
   left: -9999px;
   width: 1px;
@@ -144,31 +157,38 @@ exports[`Terminal renders correctly 1`] = `
   overflow: hidden;
 }
 
-.c3 .xterm-dim {
+.c4 .xterm-dim {
   opacity: 0.5;
 }
 
-.c3 .xterm-underline {
+.c4 .xterm-underline {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c3 .xterm-viewport::-webkit-scrollbar-track {
+.c4 .xterm-viewport::-webkit-scrollbar-track {
   background-color: transparent;
   border-bottom-right-radius: 0;
 }
 
-.c3 .xterm-viewport::-webkit-scrollbar {
+.c4 .xterm-viewport::-webkit-scrollbar {
   width: 10px;
   background-color: transparent;
   border-radius: 0;
 }
 
-.c3 .xterm-viewport::-webkit-scrollbar-thumb {
+.c4 .xterm-viewport::-webkit-scrollbar-thumb {
   background-color: #e9e9e9;
 }
 
-.c4 {
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   position: absolute;
   top: 0;
   left: 0;
@@ -180,10 +200,10 @@ exports[`Terminal renders correctly 1`] = `
   className="c0 c1"
 >
   <div
-    className="c2 c3"
+    className="c2 c3 sc-fzokOt c4"
   >
     <div
-      className="c4"
+      className="c2 sc-fzokOt c5"
     />
   </div>
 </div>
