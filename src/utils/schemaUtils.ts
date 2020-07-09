@@ -1,4 +1,4 @@
-import { JSONSchema6 } from 'json-schema';
+import { JSONSchema7 as JSONSchema } from 'json-schema';
 import cloneDeep from 'lodash/cloneDeep';
 import forEach from 'lodash/forEach';
 
@@ -46,22 +46,22 @@ import forEach from 'lodash/forEach';
  * }
  */
 export const stripSchemaFormats = (
-	schema: JSONSchema6,
+	schema: JSONSchema,
 	whitelist: string[] = [],
 ) => {
 	const newSchema = cloneDeep(schema);
 
-	const _strip = (schema: JSONSchema6) => {
+	const _strip = (schema: JSONSchema) => {
 		if (schema.format && whitelist.indexOf(schema.format) === -1) {
 			delete schema.format;
 		}
 		if (schema.properties) {
 			forEach(schema.properties, (subSchema) => {
-				_strip(subSchema as JSONSchema6);
+				_strip(subSchema as JSONSchema);
 			});
 		}
 		if (schema.items) {
-			_strip(schema.items as JSONSchema6);
+			_strip(schema.items as JSONSchema);
 		}
 	};
 
@@ -103,16 +103,16 @@ export const stripSchemaFormats = (
  * 		}
  * }
  */
-export const disallowAdditionalProperties = (schema: JSONSchema6) => {
+export const disallowAdditionalProperties = (schema: JSONSchema) => {
 	const newSchema = cloneDeep(schema);
 
-	const disallow = (schema: JSONSchema6) => {
+	const disallow = (schema: JSONSchema) => {
 		if (schema.additionalProperties) {
 			schema.additionalProperties = false;
 		}
 		if (schema.properties) {
 			forEach(schema.properties, (subSchema) => {
-				disallow(subSchema as JSONSchema6);
+				disallow(subSchema as JSONSchema);
 			});
 		}
 	};

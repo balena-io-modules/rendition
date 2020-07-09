@@ -1,9 +1,6 @@
 module.exports = ({config}) => {
   config.module.rules = config.module.rules.filter(x => !(x.query && x.query.name.includes('static/media')))
 
-  config.resolve.alias['jellyschema'] = 'jellyschema/jellyschema'
-  config.resolve.alias['balena-temen'] = 'balena-temen/balena_temen'
-
   config.resolve.extensions.push('.ts')
   config.resolve.extensions.push('.tsx')
   config.resolve.extensions.push('.wasm')

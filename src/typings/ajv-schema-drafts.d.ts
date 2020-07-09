@@ -1,4 +1,4 @@
-declare module 'ajv/lib/refs/json-schema-draft-06.json' {
+declare module 'ajv/lib/refs/json-schema-draft-07.json' {
 	const schema: object;
 	export = schema;
 }

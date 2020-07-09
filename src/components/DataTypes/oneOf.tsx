@@ -1,29 +1,29 @@
-import { JSONSchema6 } from 'json-schema';
+import { JSONSchema7 as JSONSchema } from 'json-schema';
 import * as React from 'react';
 import { randomString } from '../../utils';
 import { DataTypeEditProps } from '../Filters';
 import Select, { SelectProps } from '../Select';
 import { getJsonDescription } from './utils';
 
-const getCaption = (value: any, schema: JSONSchema6) => {
+const getCaption = (value: any, schema: JSONSchema) => {
 	const item = schema.oneOf!.find(
-		(item) => item && (item as JSONSchema6).const === value,
+		(item) => item && (item as JSONSchema).const === value,
 	);
-	return item ? (item as JSONSchema6).title : '';
+	return item ? (item as JSONSchema).title : '';
 };
 
 export const operators = {
 	is: {
-		getLabel: (_s: JSONSchema6) => 'is',
+		getLabel: (_s: JSONSchema) => 'is',
 	},
 	is_not: {
-		getLabel: (_s: JSONSchema6) => 'is not',
+		getLabel: (_s: JSONSchema) => 'is not',
 	},
 };
 
 type OperatorSlug = keyof typeof operators;
 
-interface OneOfFilter extends JSONSchema6 {
+interface OneOfFilter extends JSONSchema {
 	title: OperatorSlug;
 	properties?: {
 		[k: string]: {
@@ -76,7 +76,7 @@ export const createFilter = (
 	field: string,
 	operator: OperatorSlug,
 	value: any,
-	schema: JSONSchema6,
+	schema: JSONSchema,
 ): OneOfFilter => {
 	const { title } = schema;
 	const base: OneOfFilter = {

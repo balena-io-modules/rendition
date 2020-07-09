@@ -1,4 +1,4 @@
-import { JSONSchema6 } from 'json-schema';
+import { JSONSchema7 as JSONSchema } from 'json-schema';
 import * as React from 'react';
 import { randomString } from '../../utils';
 import { DataTypeEditProps } from '../Filters';
@@ -8,19 +8,19 @@ import { getJsonDescription } from './utils';
 
 export const operators = {
 	is: {
-		getLabel: (_s: JSONSchema6) => 'is',
+		getLabel: (_s: JSONSchema) => 'is',
 	},
 	is_before: {
-		getLabel: (_s: JSONSchema6) => 'is before',
+		getLabel: (_s: JSONSchema) => 'is before',
 	},
 	is_after: {
-		getLabel: (_s: JSONSchema6) => 'is after',
+		getLabel: (_s: JSONSchema) => 'is after',
 	},
 };
 
 type OperatorSlug = keyof typeof operators;
 
-interface DateTimeFilter extends JSONSchema6 {
+interface DateTimeFilter extends JSONSchema {
 	title: OperatorSlug;
 	properties?: {
 		[k: string]: {
@@ -74,7 +74,7 @@ export const createFilter = (
 	field: string,
 	operator: OperatorSlug,
 	value: any,
-	schema: JSONSchema6,
+	schema: JSONSchema,
 ): DateTimeFilter => {
 	const { title } = schema;
 	const base: DateTimeFilter = {

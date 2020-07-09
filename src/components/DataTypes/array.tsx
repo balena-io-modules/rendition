@@ -1,4 +1,4 @@
-import { JSONSchema6 } from 'json-schema';
+import { JSONSchema7 as JSONSchema } from 'json-schema';
 import * as React from 'react';
 import { randomString } from '../../utils';
 import { DataTypeEditProps } from '../Filters';
@@ -8,16 +8,16 @@ import { getJsonDescription } from './utils';
 
 export const operators = {
 	contains: {
-		getLabel: (_s: JSONSchema6) => 'contains',
+		getLabel: (_s: JSONSchema) => 'contains',
 	},
 	not_contains: {
-		getLabel: (_s: JSONSchema6) => 'does not contain',
+		getLabel: (_s: JSONSchema) => 'does not contain',
 	},
 };
 
 type OperatorSlug = keyof typeof operators;
 
-interface StringFilter extends JSONSchema6 {
+interface StringFilter extends JSONSchema {
 	title: OperatorSlug;
 	properties?: {
 		[k: string]: {
@@ -102,8 +102,8 @@ export const createFilter = (
 	field: string,
 	operator: OperatorSlug,
 	value: any,
-	schema: JSONSchema6,
-): JSONSchema6 => {
+	schema: JSONSchema,
+): JSONSchema => {
 	const { title } = schema;
 	const base: StringFilter = {
 		$id: randomString(),

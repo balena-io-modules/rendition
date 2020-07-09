@@ -1,6 +1,6 @@
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { JSONSchema6 } from 'json-schema';
+import { JSONSchema7 as JSONSchema } from 'json-schema';
 import map from 'lodash/map';
 import React, { useState } from 'react';
 import styled from 'styled-components';
@@ -16,12 +16,12 @@ import * as SchemaSieve from './SchemaSieve';
 export interface FilterModalProps {
 	addFilter: (filters: EditModel[]) => void;
 	onClose: () => void;
-	schema: JSONSchema6;
+	schema: JSONSchema;
 	edit: EditModel[];
 }
 
 export interface FilterInputProps {
-	schema: JSONSchema6;
+	schema: JSONSchema;
 	value: any;
 	operator: string;
 	onUpdate: (value: any) => void;
@@ -116,7 +116,7 @@ export const FilterModal = ({
 						<Flex>
 							<Box flex={1}>
 								<Select<{ field: string; title: string }>
-									options={map(schema.properties, (s: JSONSchema6, field) => ({
+									options={map(schema.properties, (s: JSONSchema, field) => ({
 										field,
 										title: s.title || field,
 									}))}
@@ -128,7 +128,7 @@ export const FilterModal = ({
 											? {
 													field,
 													title:
-														(schema.properties[field] as JSONSchema6).title ||
+														(schema.properties[field] as JSONSchema).title ||
 														field,
 											  }
 											: { field }
@@ -159,7 +159,7 @@ export const FilterModal = ({
 								<FilterInput
 									operator={operator}
 									value={value}
-									schema={schema.properties![field] as JSONSchema6}
+									schema={schema.properties![field] as JSONSchema}
 									onUpdate={(v: any) => setEditValue(v, index)}
 								/>
 							</Box>

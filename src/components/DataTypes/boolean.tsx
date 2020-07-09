@@ -1,4 +1,4 @@
-import { JSONSchema6 } from 'json-schema';
+import { JSONSchema7 as JSONSchema } from 'json-schema';
 import * as React from 'react';
 import { randomString } from '../../utils';
 import { DataTypeEditProps, FilterSignature } from '../Filters';
@@ -7,13 +7,13 @@ import { getJsonDescription } from './utils';
 
 export const operators = {
 	is: {
-		getLabel: (_s: JSONSchema6) => 'is',
+		getLabel: (_s: JSONSchema) => 'is',
 	},
 };
 
 type OperatorSlug = keyof typeof operators;
 
-interface BooleanFilter extends JSONSchema6 {
+interface BooleanFilter extends JSONSchema {
 	title: OperatorSlug;
 	properties?: {
 		[k: string]: { const: boolean };
@@ -51,7 +51,7 @@ export const createFilter = (
 	field: string,
 	operator: OperatorSlug,
 	value: any,
-	schema: JSONSchema6,
+	schema: JSONSchema,
 ): BooleanFilter => {
 	const { title } = schema;
 	const base: BooleanFilter = {

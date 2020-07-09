@@ -1,6 +1,6 @@
 import { faChartPie } from '@fortawesome/free-solid-svg-icons/faChartPie';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { JSONSchema6 } from 'json-schema';
+import { JSONSchema7 as JSONSchema } from 'json-schema';
 import * as React from 'react';
 import { FiltersView, ViewScope } from '.';
 import { Box } from '../Box';
@@ -131,14 +131,14 @@ class FilterSummary extends React.Component<
 }
 
 export interface FilterSummaryProps {
-	edit: (rule: JSONSchema6) => void;
-	delete: (rule: JSONSchema6) => void;
+	edit: (rule: JSONSchema) => void;
+	delete: (rule: JSONSchema) => void;
 	saveView: (name: string, scope: string | null) => void;
 	clearAllFilters: () => void;
-	filters: JSONSchema6[];
+	filters: JSONSchema[];
 	views: FiltersView[];
 	scopes?: ViewScope[];
-	schema: JSONSchema6;
+	schema: JSONSchema;
 }
 
 export interface FilterSummaryState {

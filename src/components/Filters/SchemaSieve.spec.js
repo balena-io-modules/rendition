@@ -2,7 +2,6 @@
 import mapValues from 'lodash/mapValues'
 const Ajv = require('ajv')
 const ajvKeywords = require('ajv-keywords')
-const metaSchema6 = require('ajv/lib/refs/json-schema-draft-06.json')
 
 import { SchemaSieve as sieve } from '../../../dist'
 
@@ -1019,7 +1018,6 @@ describe('SchemaSieve', () => {
   describe('.createFullTextSearchFilter()', () => {
     const ajv = new Ajv()
     ajvKeywords(ajv, ['regexp', 'formatMaximum', 'formatMinimum'])
-    ajv.addMetaSchema(metaSchema6)
 
     it('should create a valid JSON schema', () => {
       const schema = {
