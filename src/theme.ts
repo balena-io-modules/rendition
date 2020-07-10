@@ -155,11 +155,8 @@ const theme = {
 			},
 		},
 		colors: {
-			focus: undefined,
+			focus: colors.primary.main,
 			placeholder: colors.secondary.semilight,
-		},
-		focus: {
-			outline: { color: colors.primary.main, size: '2px' },
 		},
 		selected: {
 			background: colors.primary.main,
