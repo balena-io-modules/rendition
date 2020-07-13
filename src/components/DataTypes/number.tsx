@@ -1,4 +1,4 @@
-import { JSONSchema6 } from 'json-schema';
+import { JSONSchema7 as JSONSchema } from 'json-schema';
 import * as React from 'react';
 import { randomString } from '../../utils';
 import { DataTypeEditProps } from '../Filters';
@@ -7,19 +7,19 @@ import { getJsonDescription } from './utils';
 
 export const operators = {
 	is: {
-		getLabel: (_s: JSONSchema6) => 'is',
+		getLabel: (_s: JSONSchema) => 'is',
 	},
 	is_more_than: {
-		getLabel: (_s: JSONSchema6) => 'is more than',
+		getLabel: (_s: JSONSchema) => 'is more than',
 	},
 	is_less_than: {
-		getLabel: (_s: JSONSchema6) => 'is less than',
+		getLabel: (_s: JSONSchema) => 'is less than',
 	},
 };
 
 type OperatorSlug = keyof typeof operators;
 
-interface NumberFilter extends JSONSchema6 {
+interface NumberFilter extends JSONSchema {
 	title: OperatorSlug;
 	properties?: {
 		[k: string]: {
@@ -73,7 +73,7 @@ export const createFilter = (
 	field: string,
 	operator: OperatorSlug,
 	value: any,
-	schema: JSONSchema6,
+	schema: JSONSchema,
 ): NumberFilter => {
 	const { title } = schema;
 	const base: NumberFilter = {

@@ -5,11 +5,9 @@ import { Box, Flex, Provider, Txt, Textarea } from '../../'
 
 const Ajv = require('ajv')
 const ajvKeywords = require('ajv-keywords')
-const metaSchema6 = require('ajv/lib/refs/json-schema-draft-06.json')
 
 const ajv = new Ajv()
 ajvKeywords(ajv)
-ajv.addMetaSchema(metaSchema6)
 
 window.ajv = ajv
 
@@ -110,7 +108,7 @@ class Validator extends React.Component {
   }
 }
 
-storiesOf('Tools/JSON Schema Validator', module).add('Draft 6', () => {
+storiesOf('Tools/JSON Schema Validator', module).add('Draft 7', () => {
   return (
     <Provider>
       <Validator />

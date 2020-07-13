@@ -1,4 +1,4 @@
-import { JSONSchema6 } from 'json-schema';
+import { JSONSchema7 as JSONSchema } from 'json-schema';
 import * as arrayType from './array';
 import * as booleanType from './boolean';
 import * as dateTimeType from './date-time';
@@ -8,7 +8,7 @@ import * as objectType from './object';
 import * as oneOfType from './oneOf';
 import * as stringType from './string';
 
-export const getDataModel = (schema?: JSONSchema6) => {
+export const getDataModel = (schema?: JSONSchema) => {
 	if (!schema) {
 		return null;
 	}

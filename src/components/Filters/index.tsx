@@ -1,6 +1,6 @@
 import { faFilter } from '@fortawesome/free-solid-svg-icons/faFilter';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { JSONSchema6 } from 'json-schema';
+import { JSONSchema7 as JSONSchema } from 'json-schema';
 import castArray from 'lodash/castArray';
 import cloneDeep from 'lodash/cloneDeep';
 import includes from 'lodash/includes';
@@ -123,7 +123,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 			}
 
 			if (subschema.oneOf) {
-				value = (subschema.oneOf[0] as JSONSchema6).const || '';
+				value = (subschema.oneOf[0] as JSONSchema).const || '';
 			}
 
 			if (subschema.type === 'boolean') {
@@ -155,7 +155,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 
 	public addFilter(edit: EditModel[]) {
 		const newFilter = SchemaSieve.createFilter(this.state.schema, edit);
-		const currentFilters: JSONSchema6[] = !!this.state.editingFilter
+		const currentFilters: JSONSchema[] = !!this.state.editingFilter
 			? this.state.filters.map((filter) =>
 					filter.$id === this.state.editingFilter ? newFilter : filter,
 			  )
@@ -172,7 +172,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		);
 	}
 
-	public editFilter(filter: JSONSchema6) {
+	public editFilter(filter: JSONSchema) {
 		const { schema } = this.state;
 
 		const signatures = SchemaSieve.decodeFilter(schema, filter);
@@ -184,7 +184,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		});
 	}
 
-	public removeFilter({ $id, title }: JSONSchema6) {
+	public removeFilter({ $id, title }: JSONSchema) {
 		this.setState(
 			(prevState) => {
 				const newState = {
@@ -202,7 +202,7 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 		);
 	}
 
-	public setFilters(filters: JSONSchema6[]) {
+	public setFilters(filters: JSONSchema[]) {
 		this.setState({ filters }, () => this.emitFilterUpdate());
 	}
 
@@ -340,8 +340,8 @@ class Filters extends React.Component<FiltersProps, FiltersState> {
 					!this.props.disabled && (
 						<Summary
 							scopes={this.props.viewScopes}
-							edit={(filter: JSONSchema6) => this.editFilter(filter)}
-							delete={(filter: JSONSchema6) => this.removeFilter(filter)}
+							edit={(filter: JSONSchema) => this.editFilter(filter)}
+							delete={(filter: JSONSchema) => this.removeFilter(filter)}
 							saveView={(name, scope) => this.saveView(name, scope)}
 							clearAllFilters={this.clearAllFilters}
 							filters={filters}
@@ -361,7 +361,7 @@ export interface EditModel {
 }
 
 export interface FilterInputProps {
-	schema: JSONSchema6;
+	schema: JSONSchema;
 	value: any;
 	operator: string;
 	onUpdate: (value: any) => void;
@@ -377,7 +377,7 @@ export interface FiltersView {
 	id: string;
 	name: string;
 	scope?: string | null;
-	filters: JSONSchema6[];
+	filters: JSONSchema[];
 }
 
 export interface FilterSignature {
@@ -391,21 +391,21 @@ export type FilterRenderMode = 'all' | 'add' | 'search' | 'views' | 'summary';
 export interface DataTypeModel {
 	operators: {
 		[key: string]: {
-			getLabel: (schema: JSONSchema6) => string;
+			getLabel: (schema: JSONSchema) => string;
 		};
 	};
-	decodeFilter(filter: JSONSchema6): null | FilterSignature;
+	decodeFilter(filter: JSONSchema): null | FilterSignature;
 	createFilter(
 		field: string,
 		operator: string,
 		value: any,
-		schema: JSONSchema6,
-	): JSONSchema6;
+		schema: JSONSchema,
+	): JSONSchema;
 	Edit(props: DataTypeEditProps): JSX.Element;
 }
 
 export interface DataTypeEditProps {
-	schema: JSONSchema6;
+	schema: JSONSchema;
 	value?: any;
 	onUpdate: (value: string | number | boolean) => void;
 	operator: string;
@@ -417,19 +417,19 @@ export interface FiltersState {
 	edit: EditModel[];
 	editingFilter: string | null;
 	searchString: string;
-	filters: JSONSchema6[];
+	filters: JSONSchema[];
 	views: FiltersView[];
-	schema: JSONSchema6;
+	schema: JSONSchema;
 }
 
 export interface FiltersProps extends DefaultProps {
 	disabled?: boolean;
-	filters?: JSONSchema6[];
+	filters?: JSONSchema[];
 	views?: FiltersView[];
 	viewScopes?: ViewScope[];
-	onFiltersUpdate?: (filters: JSONSchema6[]) => void;
+	onFiltersUpdate?: (filters: JSONSchema[]) => void;
 	onViewsUpdate?: (views: FiltersView[]) => void;
-	schema: JSONSchema6;
+	schema: JSONSchema;
 	addFilterButtonProps?: ButtonProps;
 	viewsMenuButtonProps?: DropDownButtonProps;
 	renderMode?: FilterRenderMode | FilterRenderMode[];

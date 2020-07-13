@@ -1,4 +1,4 @@
-import { JSONSchema6 } from 'json-schema';
+import { JSONSchema7 as JSONSchema } from 'json-schema';
 import * as React from 'react';
 import { randomString } from '../../utils';
 import { DataTypeEditProps } from '../Filters';
@@ -7,16 +7,16 @@ import { getJsonDescription } from './utils';
 
 export const operators = {
 	is: {
-		getLabel: (_s: JSONSchema6) => 'is',
+		getLabel: (_s: JSONSchema) => 'is',
 	},
 	is_not: {
-		getLabel: (_s: JSONSchema6) => 'is not',
+		getLabel: (_s: JSONSchema) => 'is not',
 	},
 };
 
 type OperatorSlug = keyof typeof operators;
 
-interface EnumFilter extends JSONSchema6 {
+interface EnumFilter extends JSONSchema {
 	title: OperatorSlug;
 	properties?: {
 		[k: string]: {
@@ -68,7 +68,7 @@ export const createFilter = (
 	field: string,
 	operator: OperatorSlug,
 	value: any,
-	schema: JSONSchema6,
+	schema: JSONSchema,
 ): EnumFilter => {
 	const { title } = schema;
 	const base: EnumFilter = {

@@ -1,10 +1,10 @@
-import { JSONSchema6 } from 'json-schema';
+import { JSONSchema7 as JSONSchema } from 'json-schema';
 import * as React from 'react';
 import { Omit } from '../../common-types';
 import { Tag, TagProps } from '../Tag';
 
 // If the description is JSON-formatted, parse the tag fields and return them, otherwise return the entire thing as the tag value.
-const parseFilter = (filter: JSONSchema6 | null | undefined) => {
+const parseFilter = (filter: JSONSchema | null | undefined) => {
 	if (!filter) {
 		return {};
 	}
@@ -18,7 +18,7 @@ const parseFilter = (filter: JSONSchema6 | null | undefined) => {
 
 const FilterDescription = ({ filter, ...props }: FilterDescriptionProps) => {
 	const tagProps = filter.anyOf
-		? filter.anyOf.map((filterFragment: JSONSchema6, i) => {
+		? filter.anyOf.map((filterFragment: JSONSchema, i) => {
 				const parsedFilter = parseFilter(filterFragment);
 				if (i > 0) {
 					parsedFilter.prefix = 'or';
@@ -32,7 +32,7 @@ const FilterDescription = ({ filter, ...props }: FilterDescriptionProps) => {
 };
 
 export interface FilterDescriptionProps extends Omit<TagProps, 'value'> {
-	filter: JSONSchema6;
+	filter: JSONSchema;
 }
 
 export default FilterDescription;

@@ -12,12 +12,6 @@ exports[`Markdown component should match the stored snapshot 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 .c2 {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -715,6 +709,12 @@ exports[`Markdown component should match the stored snapshot 1`] = `
 
 .c2 hr {
   border-bottom-color: #eee;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
 }
 
 <div

@@ -1,7 +1,7 @@
 import { faChartPie } from '@fortawesome/free-solid-svg-icons/faChartPie';
 import { faTrash } from '@fortawesome/free-solid-svg-icons/faTrash';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { JSONSchema6 } from 'json-schema';
+import { JSONSchema7 as JSONSchema } from 'json-schema';
 import cloneDeep from 'lodash/cloneDeep';
 import groupBy from 'lodash/groupBy';
 import map from 'lodash/map';
@@ -172,9 +172,9 @@ export interface ViewsMenuProps {
 	disabled?: boolean;
 	dark?: boolean;
 	views: FiltersView[];
-	schema: JSONSchema6;
+	schema: JSONSchema;
 	hasMultipleScopes?: boolean;
-	setFilters: (filters: JSONSchema6[]) => void;
+	setFilters: (filters: JSONSchema[]) => void;
 	deleteView: (view: FiltersView) => any;
 	renderMode?: FilterRenderMode | FilterRenderMode[];
 	compact?: boolean[];

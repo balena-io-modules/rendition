@@ -1,4 +1,4 @@
-import { JSONSchema6 } from 'json-schema';
+import { JSONSchema7 as JSONSchema } from 'json-schema';
 import find from 'lodash/find';
 import findKey from 'lodash/findKey';
 import includes from 'lodash/includes';
@@ -11,52 +11,52 @@ import { Flex } from '../Flex';
 import Input from '../Input';
 import { getJsonDescription } from './utils';
 
-const getKeyLabel = (schema: JSONSchema6) => {
-	const s = find(schema.properties!, { description: 'key' })! as JSONSchema6;
+const getKeyLabel = (schema: JSONSchema) => {
+	const s = find(schema.properties!, { description: 'key' })! as JSONSchema;
 	return s && s.title ? s.title : 'key';
 };
 
-const getValueLabel = (schema: JSONSchema6) => {
-	const s = find(schema.properties!, { description: 'value' })! as JSONSchema6;
+const getValueLabel = (schema: JSONSchema) => {
+	const s = find(schema.properties!, { description: 'value' })! as JSONSchema;
 	return s && s.title ? s.title : 'value';
 };
 
 export const operators = {
 	is: {
-		getLabel: (_s: JSONSchema6) => 'is',
+		getLabel: (_s: JSONSchema) => 'is',
 	},
 	is_not: {
-		getLabel: (_s: JSONSchema6) => 'is not',
+		getLabel: (_s: JSONSchema) => 'is not',
 	},
 	key_is: {
-		getLabel: (s: JSONSchema6) => `${getKeyLabel(s)} is`,
+		getLabel: (s: JSONSchema) => `${getKeyLabel(s)} is`,
 	},
 	key_contains: {
-		getLabel: (s: JSONSchema6) => `${getKeyLabel(s)} contains`,
+		getLabel: (s: JSONSchema) => `${getKeyLabel(s)} contains`,
 	},
 	key_not_contains: {
-		getLabel: (s: JSONSchema6) => `${getKeyLabel(s)} does not contain`,
+		getLabel: (s: JSONSchema) => `${getKeyLabel(s)} does not contain`,
 	},
 	key_matches_re: {
-		getLabel: (s: JSONSchema6) => `${getKeyLabel(s)} matches RegEx`,
+		getLabel: (s: JSONSchema) => `${getKeyLabel(s)} matches RegEx`,
 	},
 	key_not_matches_re: {
-		getLabel: (s: JSONSchema6) => `${getKeyLabel(s)} does not match RegEx`,
+		getLabel: (s: JSONSchema) => `${getKeyLabel(s)} does not match RegEx`,
 	},
 	value_is: {
-		getLabel: (s: JSONSchema6) => `${getValueLabel(s)} is`,
+		getLabel: (s: JSONSchema) => `${getValueLabel(s)} is`,
 	},
 	value_contains: {
-		getLabel: (s: JSONSchema6) => `${getValueLabel(s)} contains`,
+		getLabel: (s: JSONSchema) => `${getValueLabel(s)} contains`,
 	},
 	value_not_contains: {
-		getLabel: (s: JSONSchema6) => `${getValueLabel(s)} does not contain`,
+		getLabel: (s: JSONSchema) => `${getValueLabel(s)} does not contain`,
 	},
 	value_matches_re: {
-		getLabel: (s: JSONSchema6) => `${getValueLabel(s)} matches RegEx`,
+		getLabel: (s: JSONSchema) => `${getValueLabel(s)} matches RegEx`,
 	},
 	value_not_matches_re: {
-		getLabel: (s: JSONSchema6) => `${getValueLabel(s)} does not match RegEx`,
+		getLabel: (s: JSONSchema) => `${getValueLabel(s)} does not match RegEx`,
 	},
 };
 
@@ -101,7 +101,7 @@ interface SubSchema {
 	};
 }
 
-interface ObjectFilter extends JSONSchema6 {
+interface ObjectFilter extends JSONSchema {
 	title: OperatorSlug;
 	properties?: {
 		[k: string]: {
@@ -186,7 +186,7 @@ export const decodeFilter = (
 	};
 };
 
-const format = (schema: JSONSchema6, object: { [k: string]: string }) => {
+const format = (schema: JSONSchema, object: { [k: string]: string }) => {
 	const keyField = findKey(schema.properties!, { description: 'key' })!;
 	const valueField = findKey(schema.properties!, { description: 'value' })!;
 	const key = object[keyField];
@@ -196,7 +196,7 @@ const format = (schema: JSONSchema6, object: { [k: string]: string }) => {
 
 function getValueForOperation(
 	operator: OperatorSlug,
-	schema: JSONSchema6,
+	schema: JSONSchema,
 	value: string | object,
 ) {
 	if (keySpecificOperators.includes(operator)) {
@@ -214,8 +214,8 @@ export const createFilter = (
 	field: string,
 	operator: OperatorSlug,
 	value: any,
-	schema: JSONSchema6,
-): JSONSchema6 => {
+	schema: JSONSchema,
+): JSONSchema => {
 	const { title } = schema;
 
 	value = getValueForOperation(operator, schema, value);
@@ -357,10 +357,9 @@ export const Edit = (props: DataTypeEditProps) => {
 
 	const schemaKey = findKey(schema.properties!, { description: 'key' })!;
 	const schemaValue = findKey(schema.properties!, { description: 'value' })!;
-	const keyLabel =
-		(schema.properties![schemaKey] as JSONSchema6).title || 'Key';
+	const keyLabel = (schema.properties![schemaKey] as JSONSchema).title || 'Key';
 	const valueLabel =
-		(schema.properties![schemaValue] as JSONSchema6).title || 'Value';
+		(schema.properties![schemaValue] as JSONSchema).title || 'Value';
 
 	// Convert strings to objects
 	if (typeof value === 'string') {
