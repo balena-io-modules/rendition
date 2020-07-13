@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix component outline to follow borders
+      hash: af827d8c1e50cb51f002ce3d79a813c5cfb4fff7
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 15.4.2
+  date: 2020-07-13T09:02:38.998Z
+- commits:
     - subject: Fix Input ref typings
       hash: 6ee392c67d961b62592f3b63f0cf0d1c47342435
       body: ''
