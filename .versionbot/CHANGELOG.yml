@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix Input ref typings
+      hash: 6ee392c67d961b62592f3b63f0cf0d1c47342435
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 15.4.1
+  date: 2020-07-13T08:30:39.685Z
+- commits:
     - subject: Update typescript/tslib
       hash: 2ff6ade31ab55ca380cf46e7345b5a22fafc6519
       body: ''
