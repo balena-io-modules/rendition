@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update RJSF to the latest version and use JSON schema draft 7
+      hash: cd56f240853dccbd7d1a56db3e4dbb6efe2d84d5
+      body: >
+        Breaking changes in this PR:
+
+        Remove Jellyform as it wasn't used anywhere
+
+        Move Form from beta to the components folder
+
+        Remove the unstable folder (you now need to import the form from
+        'rendition')
+
+        Use JSON schema 7. This has no user-facing breaking changes, but the
+        typings
+
+        changed for the Form and Filters.
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 16.0.0
+  date: 2020-07-13T11:33:26.623Z
+- commits:
     - subject: Fix component outline to follow borders
       hash: af827d8c1e50cb51f002ce3d79a813c5cfb4fff7
       body: ''
