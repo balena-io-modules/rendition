@@ -46,7 +46,6 @@ export interface InternalInputProps
 	extends GrommetTextInputProps,
 		Omit<DefaultProps, 'onSelect'> {
 	onChange?: React.ChangeEventHandler<HTMLInputElement>;
-
 	type?: string;
 	autoFocus?: boolean;
 	autoComplete?: string | boolean;
@@ -63,5 +62,6 @@ export interface InternalInputProps
 	list?: string;
 }
 
-export type InputProps = InternalInputProps & RenditionSystemProps;
+export type InputProps = InternalInputProps &
+	RenditionSystemProps & { ref?: React.Ref<HTMLInputElement | null> };
 export default asRendition<React.FunctionComponent<InputProps>>(Input);
