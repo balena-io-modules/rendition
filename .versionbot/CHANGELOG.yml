@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'Update: xterm-js to v4.8.1'
+      hash: 7766335e80e64d6b26298918c18655d44cd3b0ca
+      body: |
+        update xterm version from v3.14.5 to v4.8.1
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 16.1.0
+  date: 2020-07-14T08:08:54.468Z
+- commits:
     - subject: Update RJSF to the latest version and use JSON schema draft 7
       hash: cd56f240853dccbd7d1a56db3e4dbb6efe2d84d5
       body: >
