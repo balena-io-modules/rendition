@@ -1,4 +1,14 @@
 - commits:
+    - subject: Import components from their files
+      hash: 39fa9245ee6e42d7e46237218d725ddd41d8e67c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Alexis Svinartchouk
+  version: 16.1.1
+  date: 2020-07-14T11:27:09.589Z
+- commits:
     - subject: 'Update: xterm-js to v4.8.1'
       hash: 7766335e80e64d6b26298918c18655d44cd3b0ca
       body: |
