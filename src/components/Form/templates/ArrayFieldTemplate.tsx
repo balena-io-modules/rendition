@@ -5,7 +5,9 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import { ArrayFieldTemplateProps } from '@rjsf/core';
-import { Box, Button, Flex } from '../../..';
+import { Flex } from '../../Flex';
+import { Box } from '../../Box';
+import Button from '../../Button';
 import { WarningField } from '../WarningField';
 
 interface ArrayFieldTitleProps {

@@ -4,7 +4,7 @@ import { JSONSchema7 as JSONSchema } from 'json-schema';
 import map from 'lodash/map';
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Button } from '../../';
+import Button from '../Button';
 import { Box } from '../Box';
 import { getDataModel } from '../DataTypes';
 import { Flex } from '../Flex';

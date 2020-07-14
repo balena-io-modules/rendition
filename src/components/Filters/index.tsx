@@ -9,7 +9,7 @@ import isEqual from 'lodash/isEqual';
 import reject from 'lodash/reject';
 import * as React from 'react';
 import styled from 'styled-components';
-import { Button, ButtonProps } from '../../';
+import Button, { ButtonProps } from '../Button';
 import { DefaultProps } from '../../common-types';
 import { randomString } from '../../utils';
 import { Box } from '../Box';
