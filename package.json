@@ -148,7 +148,8 @@
     "styled-system": "^4.1.0",
     "tslib": "^2.0.0",
     "uuid": "^3.2.1",
-    "xterm": "^3.14.5"
+    "xterm": "^4.8.1",
+    "xterm-addon-fit": "^0.4.0"
   },
   "lint-staged": {
     "{package.json, package-lock.json}": [

@@ -10,7 +10,7 @@ const postProcessor = (str, parser) =>
   })
 
 tsifyFileContent(
-  './node_modules/xterm/dist/xterm.css',
+  './node_modules/xterm/css/xterm.css',
   './src/components/Terminal/XTermDefaultStyle.ts',
   postProcessor
 )

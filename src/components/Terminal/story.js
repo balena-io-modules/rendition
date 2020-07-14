@@ -85,20 +85,23 @@ class InteractiveTerm extends Terminal {
       )
       this.tty.prompt()
 
-      this.tty.on('key', (key, ev) => {
+      this.tty.onKey(({ key, domEvent }) => {
         const printable =
-          !ev.altKey && !ev.altGraphKey && !ev.ctrlKey && !ev.metaKey
+          !domEvent.altKey &&
+          !domEvent.altGraphKey &&
+          !domEvent.ctrlKey &&
+          !domEvent.metaKey
         // Ignore arrow keys
-        if (ev.code === 'ArrowUp' || ev.code === 'ArrowDown') {
+        if (domEvent.code === 'ArrowUp' || domEvent.code === 'ArrowDown') {
           return
         }
 
-        if (ev.keyCode === 13) {
+        if (domEvent.keyCode === 13) {
           this.write('\r\n')
           this.tty._repl.process(this.input)
           this.input = ''
-        } else if (ev.keyCode === 8) {
-          if (this.tty.buffer.x > 2) {
+        } else if (domEvent.keyCode === 8) {
+          if (this.tty.buffer.active.cursorX > 2) {
             this.tty.write('\b \b')
             this.input = this.input.slice(0, -1)
           }
