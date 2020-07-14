@@ -6,7 +6,6 @@ import defaults from 'lodash/defaults';
 import every from 'lodash/every';
 import findIndex from 'lodash/findIndex';
 import findKey from 'lodash/findKey';
-import includes from 'lodash/includes';
 import map from 'lodash/map';
 import pickBy from 'lodash/pickBy';
 import reduce from 'lodash/reduce';
@@ -32,7 +31,6 @@ export const filter = (
 	const validators = Array.isArray(filters)
 		? filters.map((s) => ajv.compile(s))
 		: [ajv.compile(filters)];
-
 	if (Array.isArray(collection)) {
 		return collection.filter((m) => every(validators, (v) => v(m)));
 	}
@@ -44,21 +42,23 @@ export const createFullTextSearchFilter = (
 	schema: JSONSchema,
 	term: string,
 ) => {
-	const stringKeys = reduce(
-		schema.properties,
-		(carry, item: JSONSchema, key) => {
-			if (
-				item.type === 'string' ||
-				(Array.isArray(item.type) && includes(item.type, 'string'))
-			) {
-				carry.push(key);
+	const items = Object.entries(schema.properties as JSONSchema).reduce(
+		(itemsAccumulator, entry) => {
+			const [key, item] = entry;
+			const typeArray = Array.isArray(item.type) ? item.type : [item.type];
+			if (typeArray.includes('string') || typeArray.includes('number')) {
+				itemsAccumulator.push({
+					key,
+					type: typeArray.includes('number') ? 'number' : 'string',
+				});
 			}
-
-			return carry;
+			return itemsAccumulator;
 		},
-		[] as string[],
+		[] as Array<{ key: string; type: string }>,
 	);
-
+	const filteredItems = isNaN(Number(term))
+		? items.filter((i) => i.type !== 'number')
+		: items;
 	// A schema that matches applies the pattern to each schema field with a type
 	// of 'string'
 	const filter = {
@@ -67,17 +67,19 @@ export const createFullTextSearchFilter = (
 		anyOf: [
 			{
 				description: `Any field contains ${term}`,
-				anyOf: stringKeys.map((key) => ({
+				anyOf: filteredItems.map((item) => ({
 					properties: {
-						[key]: {
-							type: 'string',
+						[item.key]: {
+							type: item.type,
 							regexp: {
 								pattern: regexEscape(term),
 								flags: 'i',
 							},
+							maximum: Number(term),
+							minimum: Number(term),
 						},
 					},
-					required: [key],
+					required: [item.key],
 				})),
 			},
 		],

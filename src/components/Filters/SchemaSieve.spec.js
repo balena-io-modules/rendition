@@ -1023,16 +1023,28 @@ describe('SchemaSieve', () => {
       const schema = {
         type: 'object',
         properties: {
-          text: { type: 'string' }
+          text: { type: 'string' },
+          number: { type: 'number' }
         }
       }
 
       const filter = sieve.createFullTextSearchFilter(schema, 'test')
-
       expect(ajv.compile(filter)).not.toThrow()
     })
 
-    it('should work when "type" is an array', () => {
+    it('should create a valid JSON schema with number type', () => {
+      const schema = {
+        type: 'object',
+        properties: {
+          number: { type: 'number' }
+        }
+      }
+
+      const filter = sieve.createFullTextSearchFilter(schema, '5')
+      expect(ajv.compile(filter)).not.toThrow()
+    })
+
+    it('should work when "type" is string or an array of strings', () => {
       const schema = {
         type: 'object',
         properties: {
@@ -1047,8 +1059,36 @@ describe('SchemaSieve', () => {
       }
 
       const filter = sieve.createFullTextSearchFilter(schema, 'test')
-
       expect(ajv.validate(filter, value)).toBe(true)
+    })
+
+    it('should work when "type" is number or an array of numbers', () => {
+      const schema = {
+        type: 'object',
+        properties: {
+          foo: { type: ['number', 'null'] },
+          bar: { type: 'number' },
+          foobar: { type: 'string' }
+        }
+      }
+
+      const value = [{ baz: 55 }, { bar: 8 }, { foobar: 'test-8' }]
+
+      const filter = sieve.createFullTextSearchFilter(schema, '8')
+      expect(sieve.filter(filter, value)).toHaveLength(2)
+    })
+
+    it('should work when "type" is number or an array of numbers', () => {
+      const schema = {
+        type: 'object',
+        properties: {
+          foo: { type: ['number', 'null'] },
+          bar: { type: 'number' }
+        }
+      }
+
+      const filter = sieve.createFullTextSearchFilter(schema, '9')
+      expect(ajv.validate(filter, [55, 9])).toBe(true)
     })
   })
 
