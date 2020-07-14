@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { ObjectFieldTemplateProps } from '@rjsf/core';
-import { Box, Flex } from '../../..';
+import { Flex } from '../../Flex';
+import { Box } from '../../Box';
 
 const ObjectFieldTemplate = (props: ObjectFieldTemplateProps) => {
 	const { TitleField, DescriptionField } = props;

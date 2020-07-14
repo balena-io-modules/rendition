@@ -14,7 +14,7 @@ import sortBy from 'lodash/sortBy';
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { Button } from '../../';
+import Button from '../Button';
 
 // TODO: Remove explicit import and depend on provider instead.
 import theme from '../../theme';

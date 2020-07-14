@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Select } from '../../..';
+import Select from '../../Select';
 import { FormWidgetProps } from '../';
 
 const SelectWidget = (props: FormWidgetProps) => {
