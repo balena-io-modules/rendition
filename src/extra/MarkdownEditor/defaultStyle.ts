@@ -207,16 +207,16 @@ export default css`
 	}
 	.CodeMirror-scroll {
 		overflow: scroll !important;
-		margin-bottom: -30px;
-		margin-right: -30px;
-		padding-bottom: 30px;
+		margin-bottom: -50px;
+		margin-right: -50px;
+		padding-bottom: 50px;
 		height: 100%;
 		outline: 0;
 		position: relative;
 	}
 	.CodeMirror-sizer {
 		position: relative;
-		border-right: 30px solid transparent;
+		border-right: 50px solid transparent;
 	}
 	.CodeMirror-gutter-filler,
 	.CodeMirror-hscrollbar,
@@ -258,7 +258,7 @@ export default css`
 		height: 100%;
 		display: inline-block;
 		vertical-align: top;
-		margin-bottom: -30px;
+		margin-bottom: -50px;
 	}
 	.CodeMirror-gutter-wrapper {
 		position: absolute;
@@ -403,6 +403,14 @@ export default css`
 	span.CodeMirror-selectedtext {
 		background: 0 0;
 	}
+	.EasyMDEContainer {
+		display: block;
+	}
+	.EasyMDEContainer.sided--no-fullscreen {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 	.CodeMirror {
 		box-sizing: border-box;
 		height: auto;
@@ -431,6 +439,12 @@ export default css`
 	}
 	.CodeMirror-sided {
 		width: 50% !important;
+	}
+	.CodeMirror-sided.sided--no-fullscreen {
+		border-right: none !important;
+		border-bottom-right-radius: 0;
+		position: relative;
+		flex: 1 1 auto;
 	}
 	.CodeMirror-placeholder {
 		opacity: 0.5;
@@ -528,6 +542,9 @@ export default css`
 		margin: 0;
 		padding: 0;
 	}
+	.editor-toolbar.sided--no-fullscreen {
+		width: 100%;
+	}
 	.editor-toolbar .easymde-dropdown,
 	.editor-toolbar button {
 		background: 0 0;
@@ -595,6 +612,9 @@ export default css`
 		color: #959694;
 		text-align: right;
 	}
+	.editor-statusbar.sided--no-fullscreen {
+		width: 100%;
+	}
 	.editor-statusbar span {
 		display: inline-block;
 		min-width: 4em;
@@ -635,6 +655,11 @@ export default css`
 	}
 	.editor-preview-active-side {
 		display: block;
+	}
+	.editor-preview-active-side.sided--no-fullscreen {
+		flex: 1 1 auto;
+		height: auto;
+		position: static;
 	}
 	.editor-preview-active {
 		display: block;

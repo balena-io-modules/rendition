@@ -8,6 +8,9 @@ import { Theme as ThemeType } from '../../common-types';
 import theme from '../../theme';
 import defaultXtermStyle from './XTermDefaultStyle';
 import { Flex } from '../Flex';
+// TODO: this can be replaced with types as soon as https://gist.github.com/strothj/708afcf4f01dd04de8f49c92e88093c3
+// or similar will be published as an NPM package
+import { ResizeObserver } from 'resize-observer';
 
 const TtyContainer = styled(Flex)`
 	position: relative;
@@ -38,12 +41,10 @@ const TtyInner = styled(Flex)`
 `;
 
 class Terminal extends React.Component<ThemedTerminalProps, {}> {
-	public readonly tty: Xterm;
+	public readonly tty: Xterm & { fitAddon: FitAddon };
 	// Used as the element to mount XTERM into
 	private mountElement: HTMLDivElement | null;
 	private termConfig: ITerminalOptions;
-	// Addons
-	private fitAddon: FitAddon;
 
 	constructor(props: ThemedTerminalProps) {
 		super(props);
@@ -62,9 +63,12 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 		} else {
 			// Xterm mutates the options object passed into it, so we have to clone it
 			// here
-			this.tty = new Xterm(cloneDeep(this.termConfig));
-			this.fitAddon = new FitAddon();
-			this.tty.loadAddon(this.fitAddon);
+			this.tty = Object.assign(new Xterm(cloneDeep(this.termConfig)), {
+				fitAddon: new FitAddon(),
+			}) as Xterm & {
+				fitAddon: FitAddon;
+			};
+			this.tty.loadAddon(this.tty.fitAddon);
 		}
 	}
 
@@ -83,13 +87,17 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 					return true;
 				});
 			}
-			window.addEventListener('resize', this.resize.bind(this));
 			this.resize();
+			if (typeof ResizeObserver === 'function') {
+				const resizeObserver = new ResizeObserver(() => {
+					this.resize();
+				});
+				resizeObserver.observe(this.mountElement!);
+			}
 		});
 	}
 
 	public componentWillUnmount() {
-		window.removeEventListener('resize', this.resize);
 		// Don't destroy tty on unmount if this Terminal is persistent
 		if (!this.props.persistent) {
 			this.destroy();
@@ -98,7 +106,6 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 
 	// Explicitly calling '.dispose()' will always work, even with the 'persistent' property
 	public destroy() {
-		window.removeEventListener('resize', this.resize);
 		this.tty.dispose();
 	}
 
@@ -108,7 +115,19 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 	}
 
 	public resize() {
-		this.fitAddon.fit();
+		const mountElementHasHeight =
+			this.mountElement &&
+			parseInt(
+				window.getComputedStyle(this.mountElement).getPropertyValue('height'),
+				10,
+			);
+		if (!!mountElementHasHeight) {
+			try {
+				this.tty.fitAddon.fit();
+			} catch (err) {
+				console.log(err);
+			}
+		}
 	}
 
 	public clear() {
@@ -137,7 +156,7 @@ class Terminal extends React.Component<ThemedTerminalProps, {}> {
 }
 
 export interface TerminalProps {
-	ttyInstance?: Xterm | null;
+	ttyInstance?: (Xterm & { fitAddon: FitAddon }) | null;
 	// Prevents tty instance from being destroyed when terminal unmounts
 	persistent?: boolean;
 	nonInteractive?: boolean;
