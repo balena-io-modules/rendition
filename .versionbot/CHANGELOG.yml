@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix how dismiss button is calculated for steps and alerts
+      hash: 2b93e1219cb433d07bf1ce807adb7fce4c161467
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 16.1.2
+  date: 2020-07-16T10:49:56.720Z
+- commits:
     - subject: Import components from their files
       hash: 39fa9245ee6e42d7e46237218d725ddd41d8e67c
       body: ''
