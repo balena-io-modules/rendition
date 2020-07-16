@@ -246,14 +246,13 @@ const Steps = React.forwardRef(
 		}
 		return (
 			<DismissableContainer
-				p={3}
 				className={className}
 				flexDirection="row"
 				justifyContent="space-between"
 				flexWrap="wrap"
 				alignItems="center"
 				onDismiss={onClose}
-				baselineHeight={34}
+				baselineHeight={theme.fontSizes[3] * theme.lineHeight}
 				bordered={bordered}
 				ref={ref as any}
 			>

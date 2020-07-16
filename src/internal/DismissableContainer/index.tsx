@@ -47,13 +47,9 @@ const DismissButton = styled(Button)<{
 	font-size: ${px(ICON_SIZE)};
 	padding: ${(props) =>
 		px(props.theme.space[2])}; /* give more clickable surface area */
-	top: ${(props) =>
-		px(
-			props.theme.space[3] -
-				props.theme.space[2] +
-				(props.baselineHeight - ICON_SIZE) / 2,
-		)};
+	top: ${(props) => px(props.theme.space[3] + props.baselineHeight / 2)};
 	right: ${(props) => px(props.theme.space[3] - props.theme.space[2])};
+	transform: translate(0, -50%);
 `;
 
 export interface DismissableContainerProps extends FlexProps {
