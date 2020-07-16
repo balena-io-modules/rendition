@@ -68,16 +68,8 @@
   } catch (e) {
     // eslint-disable-next-line no-console
     console.warn('unable to connect to top frame for connecting dev tools');
-  }</script><link href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu+Mono:400,700" rel="stylesheet" onload="this.setAttribute('loaded', 'loaded')"><script>function fontLoading() {
-  const loaded = () => !!document.querySelector('link[loaded="loaded"]');
-  if (loaded()) return Promise.resolve();
-  return new Promise((resolve, reject) => {
-    const id = setInterval(() => {
-      if (!loaded()) return;
-      clearInterval(id);
-      resolve();
-    }, 50);
-  });
+  }</script><script>async function fontLoading() {
+  return await document.fonts.ready
 }
 
 // hack to hide page viewport resolution on page (for screenshot purposes)
@@ -89,4 +81,4 @@ const $style = window.top.document.createElement('style');
   window.top.document.body.appendChild($style);</script><style>#root[hidden],
       #docs-root[hidden] {
         display: none !important;
-      }</style></head><body><div class="sb-nopreview sb-wrapper"><div class="sb-nopreview_main"><h1 class="sb-nopreview_heading sb-heading">No Preview</h1><p>Sorry, but you either have no stories or none are selected somehow.</p><ul><li>Please check the Storybook config.</li><li>Try reloading the page.</li></ul><p>If the problem persists, check the browser console, or the terminal you've run Storybook from.</p></div></div><div class="sb-errordisplay sb-wrapper"><pre id="error-message" class="sb-heading"></pre><pre class="sb-errordisplay_code"><code id="error-stack"></code></pre></div><div id="root"></div><div id="docs-root"></div><script src="runtime~main.702110bdff418fb91286.bundle.js"></script><script src="vendors~main.702110bdff418fb91286.bundle.js"></script><script src="main.702110bdff418fb91286.bundle.js"></script></body></html>
+      }</style></head><body><div class="sb-nopreview sb-wrapper"><div class="sb-nopreview_main"><h1 class="sb-nopreview_heading sb-heading">No Preview</h1><p>Sorry, but you either have no stories or none are selected somehow.</p><ul><li>Please check the Storybook config.</li><li>Try reloading the page.</li></ul><p>If the problem persists, check the browser console, or the terminal you've run Storybook from.</p></div></div><div class="sb-errordisplay sb-wrapper"><pre id="error-message" class="sb-heading"></pre><pre class="sb-errordisplay_code"><code id="error-stack"></code></pre></div><div id="root"></div><div id="docs-root"></div><script src="runtime~main.47c0ce82777d737e80b3.bundle.js"></script><script src="vendors~main.47c0ce82777d737e80b3.bundle.js"></script><script src="main.47c0ce82777d737e80b3.bundle.js"></script></body></html>
