@@ -752,6 +752,7 @@ You can refer to the [grommet select page](https://v2.grommet.io/select) for all
 | Name          | Type      | Default   | Required   | Description                                          |
 | ------ | ------ | --------- | ---------- | ------------- |
 | `emphasized`  | `boolean` | -         | -          | If true, use a larger size                           |
+| `invalid`     | `boolean` | -         | -          | If true, adds red borders around the select          |
 
 
 
