@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'Add: container obesrver to resize the terminal'
+      hash: ceac7350655423e0088d0075681a82541c43d736
+      body: |
+        add observer to resize terminal on container resize event
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 16.1.3
+  date: 2020-07-17T11:58:29.378Z
+- commits:
     - subject: Fix how dismiss button is calculated for steps and alerts
       hash: 2b93e1219cb433d07bf1ce807adb7fce4c161467
       body: ''
