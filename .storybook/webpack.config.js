@@ -1,3 +1,5 @@
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
+
 module.exports = ({config}) => {
   config.module.rules = config.module.rules.filter(x => !(x.query && x.query.name.includes('static/media')))
 
@@ -31,5 +33,10 @@ module.exports = ({config}) => {
     }
   )
 
+  config.plugins.push(
+    new MonacoWebpackPlugin({
+      languages: ['json']
+    })
+  )
   return config
 }

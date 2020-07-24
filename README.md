@@ -89,6 +89,7 @@ For an interactive demo of all components, see https://balena-io-modules.github.
 - [Textarea](#textarea)
 - [Tooltips](#tooltips)
 - [Txt](#txt)
+- [JsonSchemaRenderer](#jsonschemarenderer)
 - [Markdown](#markdown)
 - [MarkdownEditor](#markdowneditor)
 - [Mermaid](#mermaid)
@@ -1088,6 +1089,20 @@ tag can be used with `<Txt.p>`.
 | `align`  | `string` | - | - | Align text inside the component, one of 'left', 'right', 'center', 'justify', 'justify-all', 'start', 'end', 'match-parent', 'inherit', 'initial', 'unset' |
 | `whitespace`  | `string` | - | - | Equivalent to the CSS `white-space` property, one of 'normal', 'nowrap', 'pre', 'pre-line', 'pre-wrap', 'initial', 'inherit' |
 
+
+### JsonSchemaRenderer
+
+A component used to render JSON data based on a schema and a UI schema. 
+
+[View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/JsonSchemaRenderer/story.js)
+
+#### Props
+
+| Name       | Type     | Default | Required | Description   |
+| -----------|----------|---------|----------|-------------- |
+| `value`    | `*`      | -       | -        | The data that should be rendered |
+| `schema`   | `object` | -       | ✓        | A json schema describing the shape of the data you would like to render |
+| `uiSchema` | `object` | -       | -        | A configuration object used to change the styling and layout of the rendered data.| 
 
 ### Markdown
 
