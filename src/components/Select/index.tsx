@@ -4,10 +4,10 @@ import {
 } from 'grommet';
 import * as React from 'react';
 import styled from 'styled-components';
-
 import asRendition from '../../asRendition';
 import { DefaultProps, Omit, RenditionSystemProps } from '../../common-types';
 import { px } from '../../utils';
+import { Theme } from '~/theme';
 
 type AdjustedGrommetSelectProps = Omit<
 	GrommetSelectProps,
@@ -28,9 +28,11 @@ const StyledGrommetSelect = styled(
 `;
 
 // Set button to occupy parent's width, and a default width.
-const Container = styled.div`
+const Container = styled.div<ContainerProps>`
 	& > button {
 		width: 100%;
+		border-color: ${({ invalid, theme }: ContainerProps) =>
+			invalid ? theme?.colors?.danger.main : ''};
 	}
 `;
 
@@ -45,11 +47,12 @@ function Select<T>({
 	margin,
 	className,
 	dropProps,
+	invalid,
 	...otherProps
 }: InternalSelectProps<T>) {
 	return (
 		// Rendition system props should be applied to the wrapper, otherwise it is applied to the input tag of the Select component.
-		<Container className={className}>
+		<Container invalid={invalid} className={className}>
 			<StyledGrommetSelect
 				{...otherProps}
 				dropProps={{ ...dropProps, elevation: 'none' }}
@@ -59,10 +62,16 @@ function Select<T>({
 	);
 }
 
+interface ContainerProps {
+	theme: Theme;
+	invalid?: boolean;
+}
+
 interface InternalSelectProps<T>
 	extends AdjustedGrommetSelectProps,
 		Omit<DefaultProps, 'onChange'> {
 	emphasized?: boolean;
+	invalid?: boolean;
 	onChange: (data: {
 		option: T;
 		selected: number;

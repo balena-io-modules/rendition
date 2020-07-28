@@ -63,6 +63,13 @@ storiesOf('Next/Select', module)
           options={['Disabled', 'Option 2', 'Option 3']}
           value='Disabled'
         />
+
+        <Select
+          m={3}
+          invalid
+          options={['Invalid', 'Option 2', 'Option 3']}
+          value='Invalid'
+        />
       </Flex>
     )
   })
