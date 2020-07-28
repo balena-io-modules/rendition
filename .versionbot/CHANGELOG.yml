@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'Add: invalid select prop'
+      hash: 78b216a3a45097450bff261fa0b60d82764f8957
+      body: |
+        add invalid select prop
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 16.1.5
+  date: 2020-07-28T09:02:13.642Z
+- commits:
     - subject: 'Fix: duplicate ajv-keywords.d.ts'
       hash: e7df8a9c026295eb5aacec8d21845569daf42862
       body: |
