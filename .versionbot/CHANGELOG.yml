@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'Fix: duplicate ajv-keywords.d.ts'
+      hash: e7df8a9c026295eb5aacec8d21845569daf42862
+      body: |
+        fix build by removing duplicate ajv-keyword.d.ts
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 16.1.4
+  date: 2020-07-27T16:29:16.917Z
+- commits:
     - subject: 'Add: container obesrver to resize the terminal'
       hash: ceac7350655423e0088d0075681a82541c43d736
       body: |
