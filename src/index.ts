@@ -85,6 +85,7 @@ export { default as List, ListProps } from './components/List';
 export { Tab, TabProps, Tabs, TabsProps } from './components/Tabs';
 export { Tag, TagProps } from './components/Tag';
 
+export { Avatar, AvatarProps } from './components/Avatar';
 export { Box, BoxProps } from './components/Box';
 export { Flex, FlexProps } from './components/Flex';
 export { useTheme } from './hooks/useTheme';
