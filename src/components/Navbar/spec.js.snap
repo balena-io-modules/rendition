@@ -69,12 +69,6 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
   display: flex;
 }
 
-.c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 .c16 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -90,6 +84,12 @@ exports[`Navbar renders correctly with a single children prop 1`] = `
 
 .c17 {
   color: white;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
 }
 
 .c5 {
@@ -321,12 +321,6 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
   display: flex;
 }
 
-.c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 .c16 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -342,6 +336,12 @@ exports[`Navbar renders correctly with more than one children prop 1`] = `
 
 .c17 {
   color: white;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
 }
 
 .c5 {

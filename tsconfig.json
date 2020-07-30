@@ -2,6 +2,7 @@
   "compilerOptions": {
     "types": [],
     "module": "commonjs",
+    "resolveJsonModule": true,
     "target": "es5",
     "outDir": "dist",
     "rootDir": "./src",

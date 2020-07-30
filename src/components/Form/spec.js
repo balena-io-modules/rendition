@@ -479,9 +479,7 @@ describe('Form component', () => {
 
       const description = component.find('.rendition-form-description').first()
 
-      expect(description.html()).toMatch(
-        '<p>Lorem ipsum <em>dolor</em> sit amet</p>'
-      )
+      expect(description.html()).toMatchSnapshot()
 
       component.unmount()
     })
@@ -511,9 +509,7 @@ describe('Form component', () => {
 
       const description = component.find('.rendition-form-help').first()
 
-      expect(description.html()).toMatch(
-        '<p>Lorem ipsum <em>dolor</em> sit amet</p>'
-      )
+      expect(description.html()).toMatchSnapshot()
 
       component.unmount()
     })

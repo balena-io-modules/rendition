@@ -12,12 +12,6 @@ exports[`Link component Should match the stored snapshot 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 .c2 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -33,6 +27,12 @@ exports[`Link component Should match the stored snapshot 1`] = `
 
 .c3 {
   color: #00AEEF;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
 }
 
 <div
