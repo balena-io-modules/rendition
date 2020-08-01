@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'Add: Avatar component'
+      hash: 5882fe02b250fd996033e54a77b484e0ccb21d5f
+      body: |
+        Add Avatar component
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 16.2.0
+  date: 2020-07-31T17:39:59.385Z
+- commits:
     - subject: 'Add: invalid select prop'
       hash: 78b216a3a45097450bff261fa0b60d82764f8957
       body: |
