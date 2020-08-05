@@ -38,5 +38,6 @@ module.exports = ({config}) => {
       languages: ['json']
     })
   )
+
   return config
 }
