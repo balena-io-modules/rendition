@@ -10,7 +10,7 @@ import { UiOptions } from './ui-options';
 export interface WidgetProps {
 	value: DefinedValue;
 	schema: JSONSchema;
-	uiSchema: UiSchema;
+	uiSchema?: UiSchema;
 }
 
 export interface Widget {

@@ -6,7 +6,6 @@ import without from 'lodash/without';
 import uniq from 'lodash/uniq';
 import castArray from 'lodash/castArray';
 import keys from 'lodash/keys';
-import cloneDeep from 'lodash/cloneDeep';
 import widgets from '../widgets';
 import { getWidget, getType, JsonSchemaRendererProps } from '../index';
 import { WidgetWrapperUiOptions, getObjectPropertyNames } from '../widgets';
@@ -21,7 +20,7 @@ type UiSchemaMetaSchema = {
 	};
 };
 
-const baseMetaSchema: UiSchemaMetaSchema = {
+const getBaseMetaSchema = (): UiSchemaMetaSchema => ({
 	title: 'JsonSchemaRenderer UI Schema',
 	type: ['object', 'null'],
 	properties: {
@@ -38,77 +37,80 @@ const baseMetaSchema: UiSchemaMetaSchema = {
 			type: 'object',
 		},
 	},
-};
+});
 
-export const generateUiSchemaMetaSchema = ({
-	value,
-	uiSchema,
-	schema,
-}: Pick<
+type MetaSchemaArgs = Pick<
 	JsonSchemaRendererProps,
 	'value' | 'schema' | 'uiSchema'
->): UiSchemaMetaSchema => {
-	// The value may be overridden in the UI Schema
-	const processedValue = get(uiSchema, 'ui:value', value);
-	const type = getType(processedValue);
-	const metaSchema = cloneDeep(baseMetaSchema);
+>;
 
-	if (type === 'object') {
-		metaSchema.properties['ui:order'] = {
-			type: ['array'],
-			items: {
-				type: 'string',
-				enum: keys(schema.properties).concat(['*']),
-			},
-		};
+// Create the UI schema meta schema for the array items
+const generateArrayMetaSchema = (
+	metaSchema: UiSchemaMetaSchema,
+	{ value, schema, uiSchema }: MetaSchemaArgs,
+) => {
+	const arrayValue = value as Value[];
+	const itemsUiSchema = get(uiSchema, 'items', {});
+	const itemsSchema = get(schema, 'items', {});
+	metaSchema.properties.items = generateUiSchemaMetaSchema({
+		value: first(arrayValue),
+		schema: typeof itemsSchema === 'boolean' ? {} : itemsSchema,
+		uiSchema: itemsUiSchema,
+	});
+};
 
-		const propertyNames = getObjectPropertyNames({
-			value: value || '',
-			schema,
-			uiSchema: uiSchema || {},
-		});
-		// Recursively build up the UI schema meta schema for each property of the object
-		forEach(propertyNames, (propertyName) => {
-			const subSchema = get(
-				schema,
-				['properties', propertyName],
-				{},
-			) as JSONSchema;
-			const subUiSchema = get(uiSchema, propertyName, {}) as UiSchema;
-			metaSchema.properties[propertyName] = generateUiSchemaMetaSchema({
-				value: get(processedValue, propertyName),
-				schema: typeof subSchema === 'boolean' ? {} : subSchema,
-				uiSchema: subUiSchema,
-			});
-		});
-	} else if (type === 'array') {
-		const arrayValue = processedValue as Value[];
-		// Create the UI schema meta schema for the array items
-		const itemsUiSchema = get(uiSchema, 'items', {});
-		const itemsSchema = get(schema, 'items', {});
-		metaSchema.properties.items = generateUiSchemaMetaSchema({
-			value: first(arrayValue),
-			schema: typeof itemsSchema === 'boolean' ? {} : itemsSchema,
-			uiSchema: itemsUiSchema,
-		});
-	}
-
-	// Populate the valid widget types for the specified data type
-	if (type) {
-		const widgetKeys: string[] = [];
-		castArray(type).reduce((acc, t) => {
-			acc.push(...keys(widgets[t]));
-			return acc;
-		}, widgetKeys);
-		metaSchema.properties['ui:widget'] = {
+const generateObjectMetaSchema = (
+	metaSchema: UiSchemaMetaSchema,
+	{ value, schema, uiSchema }: MetaSchemaArgs,
+) => {
+	metaSchema.properties['ui:order'] = {
+		type: ['array'],
+		items: {
 			type: 'string',
-			enum: without(uniq(widgetKeys), 'default'),
-		};
-	}
+			enum: keys(schema.properties).concat(['*']),
+		},
+	};
 
-	// Populate the options for the widget that will be used
-	// (or the default widget for that data type if no widget is specified)
-	const widget = getWidget(processedValue, get(uiSchema, 'ui:widget'));
+	const propertyNames = getObjectPropertyNames({
+		value: value || '',
+		schema,
+		uiSchema: uiSchema || {},
+	});
+	// Recursively build up the UI schema meta schema for each property of the object
+	forEach(propertyNames, (propertyName) => {
+		const subSchema = get(
+			schema,
+			['properties', propertyName],
+			{},
+		) as JSONSchema;
+		const subUiSchema = get(uiSchema, propertyName, {}) as UiSchema;
+		metaSchema.properties[propertyName] = generateUiSchemaMetaSchema({
+			value: get(value, propertyName),
+			schema: typeof subSchema === 'boolean' ? {} : subSchema,
+			uiSchema: subUiSchema,
+		});
+	});
+};
+
+const setWidgetOptions = (metaSchema: UiSchemaMetaSchema, type: string) => {
+	const widgetKeys: string[] = [];
+	castArray(type).reduce((acc, t) => {
+		acc.push(...keys(widgets[t]));
+		return acc;
+	}, widgetKeys);
+	metaSchema.properties['ui:widget'] = {
+		type: 'string',
+		enum: without(uniq(widgetKeys), 'default'),
+	};
+};
+
+// Populate the options for the widget that will be used
+// (or the default widget for that data type if no widget is specified)
+const setUiOptions = (
+	metaSchema: UiSchemaMetaSchema,
+	{ value, uiSchema }: MetaSchemaArgs,
+) => {
+	const widget = getWidget(value, get(uiSchema, 'ui:widget'));
 	metaSchema.properties['ui:options'] = {
 		type: 'object',
 		properties: {
@@ -116,6 +118,34 @@ export const generateUiSchemaMetaSchema = ({
 			...widget.uiOptions,
 		},
 	};
+};
+
+export const generateUiSchemaMetaSchema = ({
+	value: unprocessedValue,
+	uiSchema,
+	schema,
+}: MetaSchemaArgs): UiSchemaMetaSchema => {
+	const metaSchema = getBaseMetaSchema();
+	const input = {
+		// The value may be overridden in the UI Schema
+		value: get(uiSchema, 'ui:value', unprocessedValue),
+		schema,
+		uiSchema,
+	};
+	const type = getType(input.value);
+
+	if (type === 'object') {
+		generateObjectMetaSchema(metaSchema, input);
+	} else if (type === 'array') {
+		generateArrayMetaSchema(metaSchema, input);
+	}
+
+	// Populate the valid widget types for the specified data type
+	if (type) {
+		setWidgetOptions(metaSchema, type);
+	}
+
+	setUiOptions(metaSchema, input);
 
 	return metaSchema;
 };

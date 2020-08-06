@@ -3,43 +3,22 @@ import forEach from 'lodash/forEach';
 import keys from 'lodash/keys';
 import pick from 'lodash/pick';
 import get from 'lodash/get';
-import isEqual from 'lodash/isEqual';
 import isArray from 'lodash/isArray';
 import jsone from 'json-e';
 import ajv from 'ajv';
 import asRendition from '../../asRendition';
-import {
-	DefaultProps,
-	RenditionSystemProps,
-	Theme,
-	Tooltip,
-} from '../../common-types';
+import { DefaultProps, RenditionSystemProps, Theme } from '../../common-types';
 import { Flex } from '../../components/Flex';
 import Alert from '../../components/Alert';
+import ErrorBoundary from '../../internal/ErrorBoundary';
 import widgets, { WidgetWrapperUiOptions, WidgetMeta } from './widgets';
 import { Value, JSONSchema, UiSchema, Format } from './types';
-
-interface WrapperProp extends Tooltip {
-	children: React.ReactNode;
-}
-
-const Wrapper = ({ tooltip, children, ...props }: WrapperProp) => (
-	<Flex
-		tooltip={tooltip}
-		minWidth={0}
-		minHeight={0}
-		alignItems="flex-start"
-		mb={1}
-		flexDirection="column"
-		{...props}
-	>
-		{children}
-	</Flex>
-);
 
 export const getValue = (value?: Value, uiSchema?: UiSchema) => {
 	return get(uiSchema, 'ui:value', value);
 };
+
+const widgetWrapperUiOptionKeys = keys(WidgetWrapperUiOptions);
 
 export const getType = (value?: Value) => {
 	if (value === undefined) {
@@ -51,150 +30,115 @@ export const getType = (value?: Value) => {
 	return isArray(value) ? 'array' : typeof value;
 };
 
-export const getWidget = (value?: Value, uiSchemaWidget?: string) => {
+export const getWidget = (
+	value?: Value,
+	uiSchemaWidget?: UiSchema['ui:widget'],
+) => {
+	if (uiSchemaWidget && typeof uiSchemaWidget !== 'string') {
+		return uiSchemaWidget;
+	}
 	const typeWidgets = get(widgets, getType(value), widgets.default);
 	return get(typeWidgets, uiSchemaWidget || 'default', widgets.default.default);
 };
 
-const processValue = ({
-	value,
-	uiSchema,
-}: Pick<InternalJsonSchemaRendererProps, 'value' | 'uiSchema'>) => {
-	return getValue(value, uiSchema);
+type Validation = {
+	validator: ajv.Ajv;
+	validate: ajv.ValidateFunction;
 };
 
-class JsonSchemaRenderer extends React.PureComponent<
-	ThemedJsonSchemaRendererProps,
-	JsonSchemaRendererState
-> {
-	validator: ajv.Ajv;
-	validateFn: ajv.ValidateFunction;
+const buildValidation = (
+	schema?: JSONSchema,
+	extraFormats?: Format[],
+): Validation => {
+	const validator = new ajv();
+	forEach(extraFormats, ({ name, format }) => {
+		validator.addFormat(name, format);
+	});
+	return {
+		validator,
+		validate: validator.compile(schema || {}),
+	};
+};
 
-	constructor(props: ThemedJsonSchemaRendererProps) {
-		super(props);
-		this.state = {
-			error: null,
-			validationErrors: null,
-		};
-		this.validator = new ajv();
+export const JsonSchemaRenderer = ({
+	value,
+	schema,
+	uiSchema,
+	extraFormats,
+	validate,
+	nested,
+	...props
+}: ThemedJsonSchemaRendererProps) => {
+	const [validation, setValidation] = React.useState<Validation>(
+		buildValidation(schema, extraFormats),
+	);
+	const [validationErrors, setValidationErrors] = React.useState<
+		ajv.ErrorObject[] | null | undefined
+	>(null);
 
-		forEach(props.extraFormats, ({ name, format }) => {
-			this.validator.addFormat(name, format);
-		});
+	React.useEffect(() => {
+		if (!validate || nested) {
+			return;
+		}
+		setValidation(buildValidation(schema, extraFormats));
+	}, [validate, nested, extraFormats, schema]);
+
+	React.useEffect(() => {
+		if (!validate || nested) {
+			return;
+		}
+		validation.validate(value);
+		setValidationErrors(validation.validate.errors);
+	}, [validate, nested, validation, value]);
+
+	// Setting the UI Schema explicitly to null (as opposed to it being
+	// undefined) indicates you don't want to render anything.
+	if (uiSchema === null) {
+		return null;
 	}
 
-	componentDidMount() {
-		if (this.props.validate && !this.props.nested) {
-			this.validate(true);
-		}
+	const processedUiSchema = jsone(uiSchema || {}, { source: value });
+	const processedValue = getValue(value, processedUiSchema);
+
+	if (processedValue === undefined || processedValue === null) {
+		return null;
 	}
 
-	componentDidUpdate(prevProps: ThemedJsonSchemaRendererProps) {
-		if (this.props.validate) {
-			const schemaChanged = !isEqual(prevProps.schema, this.props.schema);
-			if (
-				!this.props.nested &&
-				(!isEqual(prevProps.value, this.props.value) || schemaChanged)
-			) {
-				this.validate(schemaChanged);
-			}
-		}
-	}
+	const wrapperProps = pick(
+		get(processedUiSchema, 'ui:options', {}),
+		...widgetWrapperUiOptionKeys,
+	);
+	const Widget = getWidget(processedValue, processedUiSchema['ui:widget']);
 
-	componentDidCatch(error: any) {
-		this.setState({ error });
-	}
-
-	validate(compile: boolean = false) {
-		try {
-			if (compile) {
-				this.validateFn = this.validator.compile(this.props.schema);
-			}
-			const isValid = this.validateFn(this.props.value);
-			if (!isValid) {
-				console.error(
-					`JsonSchemaRenderer: Validation errors:\n${this.validator.errorsText(
-						this.validateFn.errors,
-					)}`,
-				);
-				this.setState({
-					validationErrors: this.validateFn.errors,
-				});
-			} else {
-				this.setState({
-					validationErrors: null,
-				});
-			}
-		} catch (error) {
-			this.setState({
-				error,
-			});
-		}
-	}
-
-	render() {
-		const { value, schema, uiSchema = {}, ...props } = this.props;
-		const { error, validationErrors } = this.state;
-
-		const wrapperProps = pick(
-			get(uiSchema, 'ui:options', {}),
-			...keys(WidgetWrapperUiOptions),
-		);
-
-		if (error) {
-			return (
-				<Wrapper {...props} {...wrapperProps}>
-					<Alert
-						my={2}
-						plaintext
-						danger
-						tooltip={get(error, 'message', error.toString())}
-					>
-						Error processing JSON data
-					</Alert>
-				</Wrapper>
-			);
-		}
-
-		if (uiSchema === null) {
-			return null;
-		}
-		const processedUiSchema = jsone(uiSchema, { source: value });
-		const processedValue = processValue({
-			value,
-			uiSchema: processedUiSchema,
-		});
-		if (processedValue === undefined || processedValue === null) {
-			return null;
-		}
-		const Widget = getWidget(processedValue, processedUiSchema['ui:widget']);
-		return (
-			<Wrapper {...props} {...wrapperProps}>
-				{validationErrors && (
-					<Alert
-						my={2}
-						plaintext
-						danger
-						tooltip={this.validator.errorsText(validationErrors)}
-					>
-						Invalid data/schema
-					</Alert>
-				)}
-				<WidgetMeta schema={schema} uiSchema={uiSchema} />
-				<Widget
-					value={processedValue}
-					schema={schema}
-					uiSchema={processedUiSchema}
-				/>
-			</Wrapper>
-		);
-	}
-}
-
-interface JsonSchemaRendererState {
-	error: Error | null;
-	validationErrors: ajv.ErrorObject[] | null | undefined;
-}
+	return (
+		<Flex
+			minWidth={0}
+			minHeight={0}
+			alignItems="flex-start"
+			mb={1}
+			flexDirection="column"
+			{...props}
+			{...wrapperProps}
+		>
+			{validationErrors && (
+				<Alert
+					my={2}
+					plaintext
+					danger
+					tooltip={validation.validator.errorsText(validationErrors)}
+				>
+					Invalid data/schema
+				</Alert>
+			)}
+			<WidgetMeta schema={schema} uiSchema={processedUiSchema} />
+			<Widget
+				value={processedValue}
+				schema={schema}
+				uiSchema={processedUiSchema}
+			/>
+		</Flex>
+	);
+};
 
 interface ThemedJsonSchemaRendererProps
 	extends InternalJsonSchemaRendererProps {
@@ -213,6 +157,14 @@ interface InternalJsonSchemaRendererProps extends DefaultProps {
 export type JsonSchemaRendererProps = InternalJsonSchemaRendererProps &
 	RenditionSystemProps;
 
-export default asRendition<React.FunctionComponent<JsonSchemaRendererProps>>(
-	JsonSchemaRenderer,
-);
+export const RenditionJsonSchemaRenderer = asRendition<
+	React.FunctionComponent<JsonSchemaRendererProps>
+>(JsonSchemaRenderer);
+
+export default function (props: JsonSchemaRendererProps) {
+	return (
+		<ErrorBoundary>
+			<RenditionJsonSchemaRenderer {...props} />
+		</ErrorBoundary>
+	);
+}

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import map from 'lodash/map';
 import { Widget, WidgetProps, getArrayItems } from './widget-util';
-import JsonSchemaRenderer from '../index';
+import { RenditionJsonSchemaRenderer } from '../index';
 import { JsonTypes } from '../types';
 import { UiOption } from './ui-options';
 
@@ -10,7 +10,7 @@ const ArrayWidget: Widget = ({ value, schema, uiSchema }: WidgetProps) => {
 	return (
 		<React.Fragment>
 			{map(items, (item: WidgetProps, index: number) => {
-				return <JsonSchemaRenderer key={index} nested {...item} />;
+				return <RenditionJsonSchemaRenderer key={index} nested {...item} />;
 			})}
 		</React.Fragment>
 	);

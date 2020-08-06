@@ -15,7 +15,7 @@ const SingleLineTxt = styled(Txt)`
 	max-width: 100%;
 `;
 
-const getArrayValue = (value: Value[], uiSchema: UiSchema): string => {
+const getArrayValue = (value: Value[], uiSchema?: UiSchema): string => {
 	// Trim array if the 'truncate' option was provided,
 	// then comma-join the items into a single string.
 	const maxItems = get(uiSchema, ['ui:options', 'truncate'], value.length);

@@ -1,4 +1,5 @@
 import { FormatValidator, FormatDefinition } from 'ajv';
+import { UiSchema as rjsfUiSchema } from '@rjsf/core';
 export { JSONSchema7 as JSONSchema } from 'json-schema';
 
 export const JsonTypes = {
@@ -20,13 +21,11 @@ export type DefinedValue =
 
 export type Value = DefinedValue | null;
 
-export interface UiSchema {
-	title?: string;
-	description?: string;
+export interface UiSchema
+	extends Pick<rjsfUiSchema, 'ui:options' | 'ui:order'> {
 	'ui:widget'?: string;
 	'ui:title'?: string;
 	'ui:description'?: string;
-	'ui:options'?: Value;
 	'ui:value'?: Value;
 }
 
