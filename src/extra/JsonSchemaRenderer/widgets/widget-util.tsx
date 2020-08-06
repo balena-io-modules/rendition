@@ -1,5 +1,9 @@
 import * as React from 'react';
-import { difference, isArray, keys, get, pick } from 'lodash';
+import difference from 'lodash/difference';
+import isArray from 'lodash/isArray';
+import keys from 'lodash/keys';
+import get from 'lodash/get';
+import pick from 'lodash/pick';
 import { DefinedValue, JSONSchema, UiSchema } from '../types';
 import { UiOptions } from './ui-options';
 

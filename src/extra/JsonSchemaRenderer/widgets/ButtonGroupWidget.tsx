@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { isArray, get, map } from 'lodash';
+import isArray from 'lodash/isArray';
+import get from 'lodash/get';
+import map from 'lodash/map';
 import Button from '../../../components/Button';
 import ButtonGroup from '../../../components/ButtonGroup';
 import { Widget, WidgetProps } from './widget-util';

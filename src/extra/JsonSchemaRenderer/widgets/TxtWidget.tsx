@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { get, invokeMap, isArray } from 'lodash';
+import get from 'lodash/get';
+import invokeMap from 'lodash/invokeMap';
+import isArray from 'lodash/isArray';
 import styled from 'styled-components';
 import Txt from '../../../components/Txt';
 import { JsonTypes, Value, UiSchema } from '../types';

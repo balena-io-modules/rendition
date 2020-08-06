@@ -1,5 +1,8 @@
 import * as React from 'react';
-import { keys, get, escapeRegExp, filter } from 'lodash';
+import keys from 'lodash/keys';
+import get from 'lodash/get';
+import escapeRegExp from 'lodash/escapeRegExp';
+import filter from 'lodash/filter';
 import JsonSchema7Schema from 'ajv/lib/refs/json-schema-draft-07.json';
 import jsone from 'json-e';
 import styled from 'styled-components';

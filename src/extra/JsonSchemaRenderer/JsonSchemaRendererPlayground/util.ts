@@ -1,14 +1,12 @@
 import { UiSchema, JSONSchema } from '../types';
-import {
-	first,
-	forEach,
-	get,
-	without,
-	uniq,
-	castArray,
-	keys,
-	cloneDeep,
-} from 'lodash';
+import first from 'lodash/first';
+import forEach from 'lodash/forEach';
+import get from 'lodash/get';
+import without from 'lodash/without';
+import uniq from 'lodash/uniq';
+import castArray from 'lodash/castArray';
+import keys from 'lodash/keys';
+import cloneDeep from 'lodash/cloneDeep';
 import widgets from '../widgets';
 import { getWidget, getType, JsonSchemaRendererProps } from '../index';
 import { WidgetWrapperUiOptions, getObjectPropertyNames } from '../widgets';

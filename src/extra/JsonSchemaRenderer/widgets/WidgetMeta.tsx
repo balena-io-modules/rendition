@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { get } from 'lodash';
+import get from 'lodash/get';
 import { Box } from '../../../components/Box';
 import Txt from '../../../components/Txt';
 import { WidgetProps } from './widget-util';

@@ -1,5 +1,10 @@
 import * as React from 'react';
-import { forEach, keys, pick, get, isEqual, isArray } from 'lodash';
+import forEach from 'lodash/forEach';
+import keys from 'lodash/keys';
+import pick from 'lodash/pick';
+import get from 'lodash/get';
+import isEqual from 'lodash/isEqual';
+import isArray from 'lodash/isArray';
 import jsone from 'json-e';
 import ajv from 'ajv';
 import asRendition from '../../asRendition';

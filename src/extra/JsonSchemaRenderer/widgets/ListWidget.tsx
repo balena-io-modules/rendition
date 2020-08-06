@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { map } from 'lodash';
+import map from 'lodash/map';
 import List from '../../../components/List';
 import { Widget, WidgetProps, getArrayItems } from './widget-util';
 import JsonSchemaRenderer from '../index';

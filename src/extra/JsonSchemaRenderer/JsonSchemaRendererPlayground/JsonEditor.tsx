@@ -1,7 +1,10 @@
 import * as React from 'react';
 import * as monacoEditor from 'monaco-editor/esm/vs/editor/editor.api';
 import MonacoEditor, { MonacoEditorProps } from 'react-monaco-editor';
-import { isEqual, get, cloneDeep, findIndex } from 'lodash';
+import isEqual from 'lodash/isEqual';
+import get from 'lodash/get';
+import cloneDeep from 'lodash/cloneDeep';
+import findIndex from 'lodash/findIndex';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons/faExclamationCircle';

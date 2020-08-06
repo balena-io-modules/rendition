@@ -1,4 +1,4 @@
-import { values } from 'lodash';
+import values from 'lodash/values';
 import ArrayWidget from './ArrayWidget';
 import BadgeWidget from './BadgeWidget';
 import ButtonGroupWidget from './ButtonGroupWidget';
