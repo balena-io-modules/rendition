@@ -1,6 +1,7 @@
 import map from 'lodash/map';
 import * as React from 'react';
 import styled from 'styled-components';
+import { FlexProps } from 'styled-system';
 import { DefaultProps, RenditionSystemProps } from '../../common-types';
 
 import asRendition from '../../asRendition';
@@ -51,7 +52,7 @@ const Card = ({ title, cta, rows, children, ...props }: InternalCardProps) => {
 	);
 };
 
-interface WrapperProps extends DefaultProps {
+interface WrapperProps extends DefaultProps, FlexProps {
 	small?: boolean;
 }
 
