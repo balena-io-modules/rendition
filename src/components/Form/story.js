@@ -293,7 +293,7 @@ storiesOf('Next/Form', module)
     return <FormDemo schema={schema} />
   })
   // There is no good way to wait for the captcha. If this proves to be flaky, find a better solution
-  .addDecorator(withScreenshot({ delay: 2000 }))
+  .addDecorator(withScreenshot({ delay: 5000 }))
   .add('Extra widgets', () => {
     const extraSchema = {
       type: 'object',

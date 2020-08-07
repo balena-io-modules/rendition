@@ -8,4 +8,4 @@ COPY . ./
 
 RUN npm test
 RUN npm run test:visual
-RUN npm run build:storybook
+RUN NODE_OPTIONS="--max-old-space-size=8192" npm run build:storybook
