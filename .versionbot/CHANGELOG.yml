@@ -1,4 +1,72 @@
 - commits:
+    - subject: Improvements to JsonSchemaRenderer component
+      hash: ade2229eb9097e1119f6ad67910c8f6e4d3fec81
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: Add ErrorBoundary internal component
+      hash: 9285abc9f63c1cc11e5d32b1ec2709be5a24989f
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: Add flex props to Card component
+      hash: 36182d19ca962ae978e629b3704d2376317b127d
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: Refactor lodash imports
+      hash: c0f529da0fca8f98a07ad54751b7937c1bb56709
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: Increase available memory when building storybook.
+      hash: 349b5c94889cc52c8e547fa3a33868c65ee5695e
+      body: |
+        Attempting to fix the out-of-memory error at build-time.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: Update Form screenshot test
+      hash: 6c7740910aaf11772c44954ab04154c1743b1100
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: 'feat: Add JsonSchemaRenderer component'
+      hash: a62ef7a1d3167cf62e257fc4abbbce8105eddccc
+      body: |
+        Used to render arbitrary JSON data using a UI schema.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 16.3.0
+  date: 2020-08-07T09:55:03.464Z
+- commits:
     - subject: 'Add: Avatar component'
       hash: 5882fe02b250fd996033e54a77b484e0ccb21d5f
       body: |
