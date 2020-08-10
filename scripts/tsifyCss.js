@@ -26,3 +26,9 @@ tsifyFileContent(
   './src/components/Notifications/defaultStyle.ts',
   postProcessor
 )
+
+tsifyFileContent(
+  './node_modules/highlight.js/styles/default.css',
+  './src/extra/Markdown/defaultStyle.ts',
+  postProcessor
+)

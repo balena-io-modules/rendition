@@ -19,6 +19,85 @@ exports[`Markdown component should match the stored snapshot 1`] = `
   word-wrap: break-word;
 }
 
+.c2 .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #f0f0f0;
+}
+
+.c2 .hljs,
+.c2 .hljs-subst {
+  color: #444;
+}
+
+.c2 .hljs-comment {
+  color: #888888;
+}
+
+.c2 .hljs-keyword,
+.c2 .hljs-attribute,
+.c2 .hljs-selector-tag,
+.c2 .hljs-meta-keyword,
+.c2 .hljs-doctag,
+.c2 .hljs-name {
+  font-weight: bold;
+}
+
+.c2 .hljs-type,
+.c2 .hljs-string,
+.c2 .hljs-number,
+.c2 .hljs-selector-id,
+.c2 .hljs-selector-class,
+.c2 .hljs-quote,
+.c2 .hljs-template-tag,
+.c2 .hljs-deletion {
+  color: #880000;
+}
+
+.c2 .hljs-title,
+.c2 .hljs-section {
+  color: #880000;
+  font-weight: bold;
+}
+
+.c2 .hljs-regexp,
+.c2 .hljs-symbol,
+.c2 .hljs-variable,
+.c2 .hljs-template-variable,
+.c2 .hljs-link,
+.c2 .hljs-selector-attr,
+.c2 .hljs-selector-pseudo {
+  color: #bc6060;
+}
+
+.c2 .hljs-literal {
+  color: #78a960;
+}
+
+.c2 .hljs-built_in,
+.c2 .hljs-bullet,
+.c2 .hljs-code,
+.c2 .hljs-addition {
+  color: #397300;
+}
+
+.c2 .hljs-meta {
+  color: #1f7199;
+}
+
+.c2 .hljs-meta-string {
+  color: #4d99bf;
+}
+
+.c2 .hljs-emphasis {
+  font-style: italic;
+}
+
+.c2 .hljs-strong {
+  font-weight: bold;
+}
+
 .c2 .pl-c {
   color: #6a737d;
 }

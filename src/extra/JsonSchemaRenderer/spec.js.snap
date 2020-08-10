@@ -394,6 +394,85 @@ exports[`JsonSchemaRenderer component A Markdown widget 1`] = `
   word-wrap: break-word;
 }
 
+.c5 .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #f0f0f0;
+}
+
+.c5 .hljs,
+.c5 .hljs-subst {
+  color: #444;
+}
+
+.c5 .hljs-comment {
+  color: #888888;
+}
+
+.c5 .hljs-keyword,
+.c5 .hljs-attribute,
+.c5 .hljs-selector-tag,
+.c5 .hljs-meta-keyword,
+.c5 .hljs-doctag,
+.c5 .hljs-name {
+  font-weight: bold;
+}
+
+.c5 .hljs-type,
+.c5 .hljs-string,
+.c5 .hljs-number,
+.c5 .hljs-selector-id,
+.c5 .hljs-selector-class,
+.c5 .hljs-quote,
+.c5 .hljs-template-tag,
+.c5 .hljs-deletion {
+  color: #880000;
+}
+
+.c5 .hljs-title,
+.c5 .hljs-section {
+  color: #880000;
+  font-weight: bold;
+}
+
+.c5 .hljs-regexp,
+.c5 .hljs-symbol,
+.c5 .hljs-variable,
+.c5 .hljs-template-variable,
+.c5 .hljs-link,
+.c5 .hljs-selector-attr,
+.c5 .hljs-selector-pseudo {
+  color: #bc6060;
+}
+
+.c5 .hljs-literal {
+  color: #78a960;
+}
+
+.c5 .hljs-built_in,
+.c5 .hljs-bullet,
+.c5 .hljs-code,
+.c5 .hljs-addition {
+  color: #397300;
+}
+
+.c5 .hljs-meta {
+  color: #1f7199;
+}
+
+.c5 .hljs-meta-string {
+  color: #4d99bf;
+}
+
+.c5 .hljs-emphasis {
+  font-style: italic;
+}
+
+.c5 .hljs-strong {
+  font-weight: bold;
+}
+
 .c5 .pl-c {
   color: #6a737d;
 }
