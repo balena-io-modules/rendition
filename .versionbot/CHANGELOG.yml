@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'Add: number match on text search'
+      hash: 99fbc9f65106febb4d6b2a1100e8e9196fa3229d
+      body: >
+        add the possibility to filter also fields with type number from the
+        search bar
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 16.3.2
+  date: 2020-08-11T12:58:31.380Z
+- commits:
     - subject: Import highlightjs styling from a local ts file
       hash: 26dc1da4f278a249b27eec0acfafa3f727b2ec73
       body: |
