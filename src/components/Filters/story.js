@@ -78,7 +78,7 @@ const schema = {
       type: 'object',
       properties: {
         Height: {
-          type: 'number'
+          type: ['number', null]
         },
         Weight: {
           type: 'number'
