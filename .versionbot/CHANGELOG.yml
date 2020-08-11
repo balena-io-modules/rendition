@@ -1,4 +1,21 @@
 - commits:
+    - subject: Import highlightjs styling from a local ts file
+      hash: 26dc1da4f278a249b27eec0acfafa3f727b2ec73
+      body: |
+        Nextjs is not very happy when you import CSS files from other
+        node_modules, and it is something we've avoided in other components
+        but this one slipped in it seems.
+      footer:
+        Connects-to: '#1164'
+        connects-to: '#1164'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 16.3.1
+  date: 2020-08-10T10:41:30.122Z
+- commits:
     - subject: Improvements to JsonSchemaRenderer component
       hash: ade2229eb9097e1119f6ad67910c8f6e4d3fec81
       body: ''
