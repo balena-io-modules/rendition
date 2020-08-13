@@ -21,6 +21,12 @@ ajvKeywords(ajv, ['regexp', 'formatMaximum', 'formatMinimum']);
 export const FULL_TEXT_SLUG = 'full_text_search';
 const DEFAULT_DELIMITER = '___';
 
+interface FullTextFilterItem {
+	key: string;
+	type: string;
+	numberProperties: { maximum: number; minimum: number } | null;
+}
+
 export const filter = (
 	filters: JSONSchema | JSONSchema[],
 	collection: any[],
@@ -50,15 +56,23 @@ export const createFullTextSearchFilter = (
 				itemsAccumulator.push({
 					key,
 					type: typeArray.includes('number') ? 'number' : 'string',
+					numberProperties:
+						typeArray.includes('number') && !isNaN(Number(term))
+							? {
+									maximum: Number(term),
+									minimum: Number(term),
+							  }
+							: null,
 				});
 			}
 			return itemsAccumulator;
 		},
-		[] as Array<{ key: string; type: string }>,
+		[] as FullTextFilterItem[],
 	);
 	const filteredItems = isNaN(Number(term))
 		? items.filter((i) => i.type !== 'number')
 		: items;
+
 	// A schema that matches applies the pattern to each schema field with a type
 	// of 'string'
 	const filter = {
@@ -75,8 +89,7 @@ export const createFullTextSearchFilter = (
 								pattern: regexEscape(term),
 								flags: 'i',
 							},
-							maximum: Number(term),
-							minimum: Number(term),
+							...item.numberProperties,
 						},
 					},
 					required: [item.key],
