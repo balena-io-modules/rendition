@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'feat: Add support for positioning notifications'
+      hash: ec88ad6b10e2c46e8710bed41bc8b3f4de1a79e2
+      body: >
+        This is basically a pass-through prop to the underlying
+        react-notifications-component.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 16.4.0
+  date: 2020-08-13T09:06:48.284Z
+- commits:
     - subject: 'Add: number match on text search'
       hash: 99fbc9f65106febb4d6b2a1100e8e9196fa3229d
       body: >
