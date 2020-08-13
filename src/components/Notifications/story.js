@@ -3,7 +3,14 @@ import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 import { action } from '@storybook/addon-actions'
 import { withScreenshot } from 'storycap'
-import { NotificationsContainer, notifications, Box, Button, Txt } from '../../'
+import {
+  NotificationsContainer,
+  notifications,
+  Box,
+  Flex,
+  Button,
+  Txt
+} from '../../'
 import Readme from './README.md'
 
 const buttonNotification = {
@@ -19,6 +26,24 @@ const buttonNotification = {
     </Box>
   )
 }
+
+const containerNotification = (container) => ({
+  container,
+  duration: 0,
+  content: container
+})
+
+const ContainerButton = ({ container }) => (
+  <Button
+    m={2}
+    width={150}
+    onClick={() =>
+      notifications.addNotification(containerNotification(container))
+    }
+    >
+    {container}
+  </Button>
+)
 
 const textNotification = 'This is a notification'
 
@@ -50,6 +75,41 @@ const NotificationsStory = () => {
   )
 }
 
+const NotificationPositionStory = () => {
+  React.useEffect(() => {
+    notifications.addNotification(containerNotification('top-left'))
+    notifications.addNotification(containerNotification('top-center'))
+    notifications.addNotification(containerNotification('top-right'))
+    notifications.addNotification(containerNotification('center'))
+    notifications.addNotification(containerNotification('bottom-left'))
+    notifications.addNotification(containerNotification('bottom-center'))
+    notifications.addNotification(containerNotification('bottom-right'))
+  }, [])
+  return (
+    <React.Fragment>
+      <NotificationsContainer />
+      <Flex
+        pt={6}
+        flexDirection='column'
+        alignItems='center'
+        justifyContent='center'
+      >
+        <Flex>
+          <ContainerButton container='top-left' />
+          <ContainerButton container='top-center' />
+          <ContainerButton container='top-right' />
+        </Flex>
+        <ContainerButton container='center' />
+        <Flex>
+          <ContainerButton container='bottom-left' />
+          <ContainerButton container='bottom-center' />
+          <ContainerButton container='bottom-right' />
+        </Flex>
+      </Flex>
+    </React.Fragment>
+  )
+}
+
 storiesOf('Next/Notifications', module)
   .addDecorator(withReadme(Readme))
   // Wait until the startup notifications are added.
@@ -57,4 +117,7 @@ storiesOf('Next/Notifications', module)
   .add('Standard', () => {
     // You cannot run hooks inside this function, so we define a separate React component.
     return <NotificationsStory />
+  })
+  .add('Position', () => {
+    return <NotificationPositionStory />
   })

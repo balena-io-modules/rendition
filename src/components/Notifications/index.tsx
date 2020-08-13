@@ -5,16 +5,26 @@ import { animations } from '../../animations';
 import { DismissableContainer } from '../../internal/DismissableContainer';
 import styles from './defaultStyle';
 
+type CONTAINER =
+	| 'top-left'
+	| 'top-right'
+	| 'top-center'
+	| 'bottom-left'
+	| 'bottom-right'
+	| 'bottom-center';
+
 export interface NotificationOptions {
 	content: React.ReactNode;
 	onDismiss?: () => void;
 	id?: string | number;
 	duration?: number;
 	baselineHeight?: number;
+	container?: CONTAINER;
 }
 
 const NOTIFICATION_WIDTH = 300;
 const DEFAULT_NOTIFICATION_DURATION = 6000;
+const DEFAULT_NOTIFICATION_CONTAINER: CONTAINER = 'top-right';
 
 const FullWidthContainer = styled(DismissableContainer)`
 	width: 100%;
@@ -36,6 +46,7 @@ const getTransformedOptions = (
 	const defaultOptions = {
 		id: generateNotificationId(),
 		duration: DEFAULT_NOTIFICATION_DURATION,
+		container: DEFAULT_NOTIFICATION_CONTAINER,
 	};
 
 	if (typeof options === 'string' || React.isValidElement(options)) {
@@ -93,7 +104,7 @@ export const notifications = {
 		const transformedOptions = getTransformedOptions(options);
 
 		store.addNotification({
-			container: 'top-right',
+			container: transformedOptions.container,
 			animationIn: ['animated', 'fadeIn', 'faster'],
 			animationOut: ['animated', 'fadeOut', 'faster'],
 			slidingEnter: enterExitAnimation,
