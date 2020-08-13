@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'fix: number search bar filtering'
+      hash: 406d09a44262e316e4b9eb0532bebc80e689e2af
+      body: |
+        remove number properties from filters if term is not a number
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 16.4.1
+  date: 2020-08-13T11:59:23.372Z
+- commits:
     - subject: 'feat: Add support for positioning notifications'
       hash: ec88ad6b10e2c46e8710bed41bc8b3f4de1a79e2
       body: >
