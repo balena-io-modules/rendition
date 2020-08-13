@@ -112,4 +112,22 @@ describe('Notifications component', () => {
 
     clock.restore()
   })
+
+  it('displays notifications in the expected position', () => {
+    const container = 'bottom-right'
+    const component = mount(
+      <NotificationsComponent
+        content={{
+          container,
+          content: 'A notification'
+        }}
+      />
+    )
+
+    component.find('button').first().simulate('click')
+
+    expect(component.find(`.notification-container-${container}`).text()).toBe(
+      'A notification'
+    )
+  })
 })
