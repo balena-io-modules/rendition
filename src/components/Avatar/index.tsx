@@ -4,6 +4,9 @@ import {
 	Avatar as GrommetAvatar,
 	AvatarProps as GrommetAvatarProps,
 } from 'grommet';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons/faUserCircle';
+import { Txt } from '../../';
 
 export interface AvatarProps
 	extends DefaultProps,
@@ -31,18 +34,23 @@ export const Avatar = ({
 		<>
 			{src && (
 				<GrommetAvatar
-					size={emphasized ? 'large' : 'medium'}
+					size={emphasized ? '36px' : '24px'}
 					src={src}
 					{...otherProps}
 				></GrommetAvatar>
 			)}
 			{initials && !src && (
-				<GrommetAvatar size={emphasized ? 'large' : 'medium'} {...otherProps}>
-					{initials}
+				<GrommetAvatar size={emphasized ? '36px' : '24px'} {...otherProps}>
+					<Txt>{initials}</Txt>
 				</GrommetAvatar>
 			)}
 			{!initials && !src && (
-				<GrommetAvatar size={emphasized ? 'large' : 'medium'} {...otherProps} />
+				<GrommetAvatar size={emphasized ? '36px' : '24px'} {...otherProps}>
+					<FontAwesomeIcon
+						size={emphasized ? '3x' : '2x'}
+						icon={faUserCircle}
+					/>
+				</GrommetAvatar>
 			)}
 		</>
 	);
