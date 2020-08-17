@@ -21,7 +21,7 @@ The `addNotification` function can take either a valid React node component, or 
 | ------ | ------ | --------- | ---------- | ------------- |
 | `content`  | `React.ReactNode`  | -         | ✓          | The content you wish to display in the notification        |
 | `duration`| `number`  | 6000         | -          | The duration this notification will be shown for in `ms`. `0` means it will never close automatically |
-| `container` | `string` | `top-right` | - | The position of the notifications in the parent container |
+| `container` | `string` | `top-right` | - | The position of the notifications in the parent container.<br>One of `'top-left'	| 'top-right'	| 'top-center' | 'bottom-left' | 'bottom-right' | 'bottom-center'` |
+| `type`      | `string`  |  -        | -          | Optionally used to specify the _intent_ of the notification.<br>One of `'danger' | 'warning' | 'success' | 'info'`. |
 | `id`        | `number`  | (random)         | -          | A custom id for the notification                      |
-| `baselineHeight`        | `number`  |  Normal text line height        | -          | The base height of the content, used to align the dismiss button correctly |
 | `onDismiss`        | `() => void`  |         | -          | A callback function that is triggered when the "dismiss" button is clicked |

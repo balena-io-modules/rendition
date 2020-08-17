@@ -14,38 +14,36 @@ import {
 import Readme from './README.md'
 
 const buttonNotification = {
-  baselineHeight: 38,
   onDismiss: action('Closed notification'),
   content: (
     <Box>
+      <Txt mb={2}>Some text for the user to read</Txt>
       <Button>This is a button</Button>
-      <Txt mt={2}>
-        The dismiss button is alligned with the first component using the
-        baseline prop
-      </Txt>
     </Box>
   )
 }
 
-const containerNotification = (container) => ({
+const textNotification = 'This is a notification'
+
+const getContainerNotification = (container) => ({
   container,
-  duration: 0,
   content: container
 })
 
-const ContainerButton = ({ container }) => (
+const getTypeNotification = (type) => ({
+  type,
+  content: type
+})
+
+const NotificationButton = ({ buttonText, notification }) => (
   <Button
     m={2}
-    width={150}
-    onClick={() =>
-      notifications.addNotification(containerNotification(container))
-    }
+    minWidth={150}
+    onClick={() => notifications.addNotification(notification)}
     >
-    {container}
+    {buttonText || notification.content}
   </Button>
 )
-
-const textNotification = 'This is a notification'
 
 const NotificationsStory = () => {
   React.useEffect(() => {
@@ -54,36 +52,49 @@ const NotificationsStory = () => {
   }, [])
 
   return (
-    <React.Fragment>
+    <Flex flexDirection='column' p={3} alignItems='flex-start'>
       <NotificationsContainer />
-      <Box width={350} m={3}>
-        <Button
-          m={2}
-          onClick={() => notifications.addNotification(textNotification)}
-        >
-          Add text notification
-        </Button>
+      <NotificationButton
+        buttonText='Add text notification'
+        notification={textNotification}
+      />
+      <NotificationButton
+        buttonText='Add button notification'
+        notification={buttonNotification}
+      />
+    </Flex>
+  )
+}
 
-        <Button
-          m={2}
-          onClick={() => notifications.addNotification(buttonNotification)}
-        >
-          Add button notification
-        </Button>
-      </Box>
-    </React.Fragment>
+const NotificationTypeStory = () => {
+  const typeNotifications = ['danger', 'success', 'warning', 'info'].map(
+    getTypeNotification
+  )
+  React.useEffect(() => {
+    typeNotifications.forEach(notifications.addNotification)
+  }, [])
+  return (
+    <Flex flexDirection='column' p={3} alignItems='flex-start'>
+      <NotificationsContainer />
+      {typeNotifications.map((typeNotification) => (
+        <NotificationButton notification={typeNotification} />
+      ))}
+    </Flex>
   )
 }
 
 const NotificationPositionStory = () => {
+  const containerNotifications = [
+    'top-left',
+    'top-center',
+    'top-right',
+    'center',
+    'bottom-left',
+    'bottom-center',
+    'bottom-right'
+  ].map(getContainerNotification)
   React.useEffect(() => {
-    notifications.addNotification(containerNotification('top-left'))
-    notifications.addNotification(containerNotification('top-center'))
-    notifications.addNotification(containerNotification('top-right'))
-    notifications.addNotification(containerNotification('center'))
-    notifications.addNotification(containerNotification('bottom-left'))
-    notifications.addNotification(containerNotification('bottom-center'))
-    notifications.addNotification(containerNotification('bottom-right'))
+    containerNotifications.forEach(notifications.addNotification)
   }, [])
   return (
     <React.Fragment>
@@ -95,15 +106,15 @@ const NotificationPositionStory = () => {
         justifyContent='center'
       >
         <Flex>
-          <ContainerButton container='top-left' />
-          <ContainerButton container='top-center' />
-          <ContainerButton container='top-right' />
+          <NotificationButton notification={containerNotifications[0]} />
+          <NotificationButton notification={containerNotifications[1]} />
+          <NotificationButton notification={containerNotifications[2]} />
         </Flex>
-        <ContainerButton container='center' />
+        <NotificationButton notification={containerNotifications[3]} />
         <Flex>
-          <ContainerButton container='bottom-left' />
-          <ContainerButton container='bottom-center' />
-          <ContainerButton container='bottom-right' />
+          <NotificationButton notification={containerNotifications[4]} />
+          <NotificationButton notification={containerNotifications[5]} />
+          <NotificationButton notification={containerNotifications[6]} />
         </Flex>
       </Flex>
     </React.Fragment>
@@ -117,6 +128,9 @@ storiesOf('Next/Notifications', module)
   .add('Standard', () => {
     // You cannot run hooks inside this function, so we define a separate React component.
     return <NotificationsStory />
+  })
+  .add('Type', () => {
+    return <NotificationTypeStory />
   })
   .add('Position', () => {
     return <NotificationPositionStory />

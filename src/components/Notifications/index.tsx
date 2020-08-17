@@ -2,7 +2,7 @@ import * as React from 'react';
 import ReactNotification, { store } from 'react-notifications-component';
 import styled from 'styled-components';
 import { animations } from '../../animations';
-import { DismissableContainer } from '../../internal/DismissableContainer';
+import Alert from '../Alert';
 import styles from './defaultStyle';
 
 type CONTAINER =
@@ -13,20 +13,22 @@ type CONTAINER =
 	| 'bottom-right'
 	| 'bottom-center';
 
+type NOTIFICATION_TYPE = 'danger' | 'warning' | 'success' | 'info';
+
 export interface NotificationOptions {
 	content: React.ReactNode;
 	onDismiss?: () => void;
 	id?: string | number;
 	duration?: number;
-	baselineHeight?: number;
 	container?: CONTAINER;
+	type?: NOTIFICATION_TYPE;
 }
 
 const NOTIFICATION_WIDTH = 300;
 const DEFAULT_NOTIFICATION_DURATION = 6000;
 const DEFAULT_NOTIFICATION_CONTAINER: CONTAINER = 'top-right';
 
-const FullWidthContainer = styled(DismissableContainer)`
+const FullWidthContainer = styled(Alert)`
 	width: 100%;
 `;
 
@@ -62,15 +64,26 @@ const getTransformedOptions = (
 	}
 };
 
+type NotificationContainerProps = {
+	children: React.ReactNode;
+	type?: NotificationOptions['type'];
+	onDismiss: NotificationOptions['onDismiss'];
+	id: NotificationOptions['id'];
+};
+
 const NotificationContainer = ({
 	children,
-	baselineHeight,
+	type,
 	onDismiss,
 	id,
-}: any) => {
+}: NotificationContainerProps) => {
 	return (
 		<FullWidthContainer
-			baselineHeight={baselineHeight}
+			emphasized={Boolean(type)}
+			success={type === 'success'}
+			danger={type === 'danger'}
+			warning={type === 'warning'}
+			info={type === 'info'}
 			onDismiss={() => {
 				if (onDismiss) {
 					onDismiss();
@@ -125,7 +138,7 @@ export const notifications = {
 			id: transformedOptions.id,
 			content: (
 				<NotificationContainer
-					baselineHeight={transformedOptions.baselineHeight}
+					type={transformedOptions.type}
 					onDismiss={transformedOptions.onDismiss}
 					id={transformedOptions.id}
 				>
