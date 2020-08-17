@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'feat: Modify notifications API'
+      hash: 3365903a4530748916a86e4ed5e1430643ecc28d
+      body: |
+        BREAKING CHANGE: Remove baselineHeight from notifications API
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 17.0.0
+  date: 2020-08-17T01:00:58.649Z
+- commits:
     - subject: 'fix: number search bar filtering'
       hash: 406d09a44262e316e4b9eb0532bebc80e689e2af
       body: |
