@@ -60,7 +60,12 @@ exports[`Avatar component Avatar renders correctly 1`] = `
       data-prefix="fas"
       focusable="false"
       role="img"
-      style={Object {}}
+      style={
+        Object {
+          "background": "white",
+          "color": "#b7bed3",
+        }
+      }
       viewBox="0 0 496 512"
       xmlns="http://www.w3.org/2000/svg"
     >

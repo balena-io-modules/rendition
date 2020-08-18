@@ -60,6 +60,10 @@ const AvatarBase = ({
 					{...otherProps}
 				>
 					<FontAwesomeIcon
+						style={{
+							color: theme.colors.quartenary.dark,
+							background: 'white',
+						}}
 						size={emphasized ? '3x' : '2x'}
 						icon={faUserCircle}
 					/>
