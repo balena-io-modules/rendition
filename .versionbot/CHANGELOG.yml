@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'Avatar: add fallback icon'
+      hash: d55a6eb7377db62fc023b5d754a111be42842ce5
+      body: |
+        add fallback icon when no props are passed to the avatar component
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 17.0.1
+  date: 2020-08-18T12:15:52.460Z
+- commits:
     - subject: 'feat: Modify notifications API'
       hash: 3365903a4530748916a86e4ed5e1430643ecc28d
       body: |
