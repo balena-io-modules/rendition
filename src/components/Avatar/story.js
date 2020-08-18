@@ -52,11 +52,7 @@ storiesOf('Next/Avatar', module)
           width='250px'
           px={2}
         >
-          <Avatar
-            style={{ backgroundColor: 'gray' }}
-            firstName='test'
-            lastName='user'
-          />
+          <Avatar firstName='test' lastName='user' />
           <span>Firstname and LastName : test user</span>
         </Flex>
         <Flex
@@ -66,11 +62,7 @@ storiesOf('Next/Avatar', module)
           width='250px'
           px={2}
         >
-          <Avatar
-            emphasized
-            style={{ backgroundColor: 'gray' }}
-            firstName='test'
-          />
+          <Avatar emphasized firstName='test' />
           <span>Emphasized firstname only : test</span>
         </Flex>
         <Flex
@@ -80,7 +72,7 @@ storiesOf('Next/Avatar', module)
           width='250px'
           px={2}
         >
-          <Avatar style={{ backgroundColor: 'gray' }} lastName='user' />
+          <Avatar lastName='user' />
           <span>lastName only : user</span>
         </Flex>
       </Flex>

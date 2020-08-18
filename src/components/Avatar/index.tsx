@@ -7,10 +7,14 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons/faUserCircle';
 import { Txt } from '../../';
+import { withTheme } from 'styled-components';
+import { Theme } from '../../common-types';
+import { px } from 'styled-system';
 
 export interface AvatarProps
 	extends DefaultProps,
 		Omit<GrommetAvatarProps, 'size'> {
+	theme: Theme;
 	firstName?: string;
 	lastName?: string;
 	emphasized?: boolean;
@@ -21,7 +25,8 @@ const getInitials = (firstName?: string, lastName?: string) =>
 		lastName?.charAt(0).toUpperCase() || ''
 	}`;
 
-export const Avatar = ({
+const AvatarBase = ({
+	theme,
 	src,
 	firstName,
 	lastName,
@@ -29,24 +34,36 @@ export const Avatar = ({
 	...otherProps
 }: AvatarProps) => {
 	const initials = getInitials(firstName, lastName);
-
 	return (
 		<>
 			{src && (
 				<GrommetAvatar
-					size={emphasized ? '36px' : '24px'}
+					size={emphasized ? px(theme.fontSizes[6]) : px(theme.fontSizes[5])}
 					src={src}
+					background={theme.colors.quartenary.dark}
 					{...otherProps}
 				></GrommetAvatar>
 			)}
 			{initials && !src && (
-				<GrommetAvatar size={emphasized ? '36px' : '24px'} {...otherProps}>
-					<Txt>{initials}</Txt>
+				<GrommetAvatar
+					background={theme.colors.quartenary.dark}
+					size={emphasized ? px(theme.fontSizes[6]) : px(theme.fontSizes[5])}
+					{...otherProps}
+				>
+					<Txt color={'white'}>{initials}</Txt>
 				</GrommetAvatar>
 			)}
 			{!initials && !src && (
-				<GrommetAvatar size={emphasized ? '36px' : '24px'} {...otherProps}>
+				<GrommetAvatar
+					background={theme.colors.quartenary.dark}
+					size={emphasized ? px(theme.fontSizes[6]) : px(theme.fontSizes[5])}
+					{...otherProps}
+				>
 					<FontAwesomeIcon
+						style={{
+							color: theme.colors.quartenary.dark,
+							background: 'white',
+						}}
 						size={emphasized ? '3x' : '2x'}
 						icon={faUserCircle}
 					/>
@@ -55,3 +72,5 @@ export const Avatar = ({
 		</>
 	);
 };
+
+export const Avatar = withTheme(AvatarBase);

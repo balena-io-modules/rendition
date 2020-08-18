@@ -12,6 +12,8 @@ exports[`Avatar component Avatar renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #b7bed3;
+  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
@@ -58,7 +60,12 @@ exports[`Avatar component Avatar renders correctly 1`] = `
       data-prefix="fas"
       focusable="false"
       role="img"
-      style={Object {}}
+      style={
+        Object {
+          "background": "white",
+          "color": "#b7bed3",
+        }
+      }
       viewBox="0 0 496 512"
       xmlns="http://www.w3.org/2000/svg"
     >
