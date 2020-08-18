@@ -1,4 +1,42 @@
 - commits:
+    - subject: 'Avatar: adapt fallback icon colors'
+      hash: 00bcefb78c201e5b982689d148c11352d540c556
+      body: |
+        adapt fallback icon colors to avatar background color
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+    - subject: 'Avatar: add default background and use fontSizes'
+      hash: 0b47b44c8c05cd246c440cd7d106f44b1e2d8374
+      body: |
+        add default background color, add background prop to overwrite the
+        default value and use fontSizes from theme
+      footer:
+        See: >-
+          https://github.com/balena-io-modules/rendition/pull/1169#pullrequestreview-469217211
+        see: >-
+          https://github.com/balena-io-modules/rendition/pull/1169#pullrequestreview-469217211
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+    - subject: 'Avatar: add fallback icon'
+      hash: d55a6eb7377db62fc023b5d754a111be42842ce5
+      body: |
+        add fallback icon when no props are passed to the avatar component
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 17.0.1
+  date: 2020-08-18T17:12:32.957Z
+- commits:
     - subject: 'feat: Modify notifications API'
       hash: 3365903a4530748916a86e4ed5e1430643ecc28d
       body: |
