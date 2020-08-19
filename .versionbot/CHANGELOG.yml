@@ -1,4 +1,16 @@
 - commits:
+    - subject: Allow disabling the whole Form component
+      hash: 2586646f643e7fee2bfc1f170cc9db600d995574
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 18.1.0
+  date: 2020-08-19T12:12:04.234Z
+- commits:
     - subject: Use remark+rehype for md parsing
       hash: 9927d79e384f22208dd21ef5f2f72d4affd0417c
       body: >
