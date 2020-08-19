@@ -119,7 +119,10 @@ export interface FormWidgetProps extends WidgetProps {
 
 export interface BaseFormProps
 	extends BoxProps,
-		Pick<JsonSchemaFormProps<any>, 'validate' | 'noValidate' | 'liveValidate'> {
+		Pick<
+			JsonSchemaFormProps<any>,
+			'validate' | 'noValidate' | 'liveValidate' | 'disabled'
+		> {
 	submitButtonText?: string | JSX.Element;
 	hideSubmitButton?: boolean;
 	submitButtonProps?: ButtonProps;
@@ -187,6 +190,7 @@ export default class FormHOC extends React.Component<FormProps, FormState> {
 			value,
 			onFormChange,
 			onFormSubmit,
+			disabled,
 			...props
 		} = this.props;
 
@@ -199,6 +203,7 @@ export default class FormHOC extends React.Component<FormProps, FormState> {
 			<FormWrapper {...props}>
 				<Form
 					ref={this.formRef}
+					disabled={disabled}
 					liveValidate={liveValidate}
 					noValidate={noValidate}
 					validate={validate}

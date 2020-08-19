@@ -22,6 +22,7 @@
   },
   "scripts": {
     "tsify-css": "node ./scripts/tsifyCss.js",
+    "dev": "npm run build && npm run start",
     "start": "start-storybook -p 6006",
     "build:cjs": "rimraf dist && tsc",
     "build:esm5": "rimraf dist_esm5 && tsc -p ./tsconfig.esm5.json",

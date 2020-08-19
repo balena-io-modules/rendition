@@ -124,7 +124,7 @@ const NotificationPositionStory = () => {
 storiesOf('Next/Notifications', module)
   .addDecorator(withReadme(Readme))
   // Wait until the startup notifications are added.
-  .addDecorator(withScreenshot({ delay: 1000 }))
+  .addDecorator(withScreenshot({ delay: 1500 }))
   .add('Standard', () => {
     // You cannot run hooks inside this function, so we define a separate React component.
     return <NotificationsStory />

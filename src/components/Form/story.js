@@ -173,6 +173,9 @@ storiesOf('Next/Form', module)
   .add('Hidden submit button', () => {
     return <FormDemo schema={basicPokedexSchema} hideSubmitButton />
   })
+  .add('Disabled form', () => {
+    return <FormDemo disabled schema={basicPokedexSchema} />
+  })
   .add('Custom submit button text', () => {
     return <FormDemo schema={basicPokedexSchema} submitButtonText='Save' />
   })
