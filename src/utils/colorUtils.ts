@@ -54,7 +54,10 @@ export const opaque = (color: string, opacity: number) =>
 
 export const lighten = (color: string) => Color(color).fade(0.3).string();
 
-export const darken = (color: string) => Color(color).darken(0.2).string();
+export const darken = (color: string, amount?: number) =>
+	Color(color)
+		.darken(amount || 0.2)
+		.string();
 
 export const getColoringType = (props: {
 	theme: Theme;

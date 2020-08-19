@@ -5,6 +5,7 @@ import { Markdown } from '../../../extra/Markdown';
 import Theme from '../../../theme';
 import { LabelElement } from '../LabelElement';
 import { WarningField } from '../WarningField';
+import Txt from '../../Txt';
 
 const REQUIRED_FIELD_SYMBOL = '*';
 
@@ -79,6 +80,9 @@ const FieldTemplate = (props: FieldTemplateProps) => {
 					mt={1}
 					className="rendition-form-help"
 					color={Theme.colors.text.light}
+					componentOverrides={{
+						p: (props: any) => <Txt.p {...props} margin={0} />,
+					}}
 				>
 					{rawHelp}
 				</Markdown>

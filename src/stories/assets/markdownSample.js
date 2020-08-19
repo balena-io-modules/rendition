@@ -5,7 +5,22 @@ export const customizationSamples = [
     markdown:
       "<h1>A title</h1><img src='https://via.placeholder.com/150'><p>A paragraph</p>",
     sanitizerOptions: {
-      allowedTags: ['p']
+      tagNames: ['p']
+    }
+  },
+  {
+    markdown:
+      "<h1>A title</h1><img src='https://via.placeholder.com/150'><p>A paragraph</p>",
+    sanitizerOptions: {
+      tagNames: ['img'],
+      attributes: { '*': ['src'] }
+    }
+  },
+  {
+    markdown:
+      "<h1>A title</h1><img src='https://via.placeholder.com/150'><p>A paragraph</p>",
+    sanitizerOptions: {
+      tagNames: ['h1']
     }
   }
 ]
@@ -54,6 +69,7 @@ _You **can** combine them_
 ## Links
 
 http://github.com - automatic!
+
 [GitHub](http://github.com)
 
 ## Blockquotes
@@ -111,4 +127,8 @@ Any word wrapped with two tildes (like \`~~this~~\`) will appear crossed out.
 <br>
 <em>A link:</em>
 <a target="_blank" href="http://github.com/">http://github.com/</a>
+
+## Keyboard keys
+
+<kbd>cmd</kbd> + <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>a</kbd>
 `

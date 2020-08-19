@@ -2,7 +2,7 @@
 
 A simple component for rendering [GitHub flavored markdown](https://github.github.com/gfm/). This component
 sanitizes input.
-This component is not loaded by default as it relies on a markdown parsing package 
+This component is not loaded by default as it relies on a markdown parsing package
 that you may not want to include in your application.
 You can load this component using:
 
@@ -16,15 +16,25 @@ If you need to customize the conversion of markdown to HTML you can supply the `
 import { Markdown, defaultSanitizerOptions } from 'rendition/dist/extra/Markdown';
 ```
 
+Generated html inherits styles from rendition components. i.e an anchor will be
+rendered as a `Link` component.
+
+Html inside the markdown is sanitized and stripped of any inline js and css. so
+they will always be rendered.
+
+Components can be overridden by using `componentOverrides` prop.
 
 [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/extra/Markdown/story.js)
 
 ## Props
 
-| Name   | Type   | Default   | Required   | Description   |
-| ------ | ------ | --------- | ---------- | ------------- |
-| `children`  | `string` | - | ✓ | The markdown source that should be rendered |
-| `sanitizerOptions` | [`sanitizeHtml.IOptions`](https://github.com/apostrophecms/sanitize-html#how-to-use) | (See `extra/utils/defaultSanitizerOptions`) | - | Specifies the options used when sanitizing the generated HTML. |
+| Name                   | Type                                                                 | Default | Required | Description                                                                                                   |
+| ---------------------- | -------------------------------------------------------------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------- |
+| `children`             | `string`                                                             | -       | ✓        | The markdown source that should be rendered                                                                   |
+| `sanitizerOptions`     | [`Object`](https://github.com/syntax-tree/hast-util-sanitize#schema) |         | -        | Specifies the options used when sanitizing the generated HTML. Passing `null` would disable the sanitization. |
+| `componentOverrides`   | `Object`                                                             | -       | -        | Object specifying component Overrides. ex. `{ p: Txt.p }`                                                     |
+| `disableRawHtml`       | `boolean`                                                            | false   | -        | when disabled it does not renders raw html in markdown                                                        |
+| `disableCodeHighlight` | `boolean`                                                            | false   | -        | when disabled code blocks will not highlight syntax                                                           |
 
 Any other properties supplied are spread to the root element ([`Txt`](#txt)).
 

@@ -143,12 +143,6 @@ exports[`Steps component should match the stored snapshot (ordered) 1`] = `
   font-weight: 600;
 }
 
-.c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 .c12 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -164,6 +158,12 @@ exports[`Steps component should match the stored snapshot (ordered) 1`] = `
 
 .c13 {
   color: #00AEEF;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
 }
 
 .c11 {
@@ -617,12 +617,6 @@ exports[`Steps component should match the stored snapshot 1`] = `
   color: #527699;
 }
 
-.c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 .c16 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -638,6 +632,12 @@ exports[`Steps component should match the stored snapshot 1`] = `
 
 .c17 {
   color: #00AEEF;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
 }
 
 .c15 {
