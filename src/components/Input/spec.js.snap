@@ -49,7 +49,7 @@ exports[`Input renders correctly 1`] = `
 }
 
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -72,7 +72,7 @@ exports[`Input renders correctly 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }

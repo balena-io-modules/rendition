@@ -120,7 +120,7 @@ export const weights = [400, 600];
 
 export const radius = 3;
 
-export const font = `'Source Sans Pro', Arial, sans-serif`;
+export const font = `'Source Sans Pro', Helvetica, sans-serif`;
 export const monospace = `'Ubuntu Mono', 'Courier New', monospace`;
 export const lineHeight = 1.5;
 

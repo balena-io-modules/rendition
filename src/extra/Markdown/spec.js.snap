@@ -13,7 +13,7 @@ exports[`Markdown component should drop the content of textarea elements tag 1`]
 
 exports[`Markdown component should match the stored snapshot 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -138,7 +138,7 @@ exports[`Markdown component should match the stored snapshot 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -162,7 +162,7 @@ exports[`Markdown component should match the stored snapshot 1`] = `
 
 exports[`Markdown component should not highlight code when disabled 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -296,7 +296,7 @@ exports[`Markdown component should not highlight code when disabled 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -344,7 +344,7 @@ const foo = () =&gt; {
 
 exports[`Markdown component should not render raw html when disabled 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -478,7 +478,7 @@ exports[`Markdown component should not render raw html when disabled 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -541,7 +541,7 @@ exports[`Markdown component should not render raw html when disabled 1`] = `
 
 exports[`Markdown component should not sanitize html when disabled 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -666,7 +666,7 @@ exports[`Markdown component should not sanitize html when disabled 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }

@@ -2,7 +2,7 @@
 
 exports[`JsonSchemaRenderer component A Heading widget 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -46,7 +46,7 @@ exports[`JsonSchemaRenderer component A Heading widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -68,7 +68,7 @@ exports[`JsonSchemaRenderer component A Heading widget 1`] = `
 
 exports[`JsonSchemaRenderer component A HighlightedName widget 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -121,7 +121,7 @@ exports[`JsonSchemaRenderer component A HighlightedName widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -143,7 +143,7 @@ exports[`JsonSchemaRenderer component A HighlightedName widget 1`] = `
 
 exports[`JsonSchemaRenderer component A Link widget 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -195,7 +195,7 @@ exports[`JsonSchemaRenderer component A Link widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -221,7 +221,7 @@ exports[`JsonSchemaRenderer component A Link widget 1`] = `
 
 exports[`JsonSchemaRenderer component A List widget 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -256,7 +256,7 @@ exports[`JsonSchemaRenderer component A List widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -353,7 +353,7 @@ exports[`JsonSchemaRenderer component A List widget 1`] = `
 
 exports[`JsonSchemaRenderer component A Markdown widget 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -516,7 +516,7 @@ exports[`JsonSchemaRenderer component A Markdown widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -551,7 +551,7 @@ exports[`JsonSchemaRenderer component A Markdown widget 1`] = `
 
 exports[`JsonSchemaRenderer component A Tag widget 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -624,7 +624,7 @@ exports[`JsonSchemaRenderer component A Tag widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -659,7 +659,7 @@ exports[`JsonSchemaRenderer component A Tag widget 1`] = `
 
 exports[`JsonSchemaRenderer component A badge widget 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -710,7 +710,7 @@ exports[`JsonSchemaRenderer component A badge widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -836,7 +836,7 @@ exports[`JsonSchemaRenderer component A boolean 1`] = `
 }
 
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -889,7 +889,7 @@ exports[`JsonSchemaRenderer component A boolean 1`] = `
 }
 
 .c8 > label > span {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
 }
 
@@ -921,7 +921,7 @@ exports[`JsonSchemaRenderer component A boolean 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -1058,7 +1058,7 @@ exports[`JsonSchemaRenderer component A button group widget 1`] = `
 }
 
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -1170,7 +1170,7 @@ exports[`JsonSchemaRenderer component A button group widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -1276,7 +1276,7 @@ exports[`JsonSchemaRenderer component A button widget 1`] = `
 }
 
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -1359,7 +1359,7 @@ exports[`JsonSchemaRenderer component A button widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -1494,7 +1494,7 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
 }
 
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -1610,7 +1610,7 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -1674,7 +1674,7 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
 
 exports[`JsonSchemaRenderer component A hidden field 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -1709,7 +1709,7 @@ exports[`JsonSchemaRenderer component A hidden field 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -1735,7 +1735,7 @@ exports[`JsonSchemaRenderer component A hidden field 1`] = `
 
 exports[`JsonSchemaRenderer component A hidden title 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -1770,7 +1770,7 @@ exports[`JsonSchemaRenderer component A hidden title 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -1792,7 +1792,7 @@ exports[`JsonSchemaRenderer component A hidden title 1`] = `
 
 exports[`JsonSchemaRenderer component A null object 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -1803,7 +1803,7 @@ exports[`JsonSchemaRenderer component A null object 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -1815,7 +1815,7 @@ exports[`JsonSchemaRenderer component A null object 1`] = `
 
 exports[`JsonSchemaRenderer component A number 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -1863,7 +1863,7 @@ exports[`JsonSchemaRenderer component A number 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -1899,7 +1899,7 @@ exports[`JsonSchemaRenderer component A number 1`] = `
 
 exports[`JsonSchemaRenderer component A string 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -1952,7 +1952,7 @@ exports[`JsonSchemaRenderer component A string 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -1988,7 +1988,7 @@ exports[`JsonSchemaRenderer component A string 1`] = `
 
 exports[`JsonSchemaRenderer component A string-interpolated value 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -2031,7 +2031,7 @@ exports[`JsonSchemaRenderer component A string-interpolated value 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2062,7 +2062,7 @@ exports[`JsonSchemaRenderer component A string-interpolated value 1`] = `
 
 exports[`JsonSchemaRenderer component A truncated array of strings field 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -2097,7 +2097,7 @@ exports[`JsonSchemaRenderer component A truncated array of strings field 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2159,7 +2159,7 @@ exports[`JsonSchemaRenderer component A truncated array of strings field 1`] = `
 
 exports[`JsonSchemaRenderer component A truncated string 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -2194,7 +2194,7 @@ exports[`JsonSchemaRenderer component A truncated string 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2223,7 +2223,7 @@ exports[`JsonSchemaRenderer component A truncated string 1`] = `
 
 exports[`JsonSchemaRenderer component An Img widget 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -2258,7 +2258,7 @@ exports[`JsonSchemaRenderer component An Img widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2288,7 +2288,7 @@ exports[`JsonSchemaRenderer component An Img widget 1`] = `
 
 exports[`JsonSchemaRenderer component An array of strings field 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -2339,7 +2339,7 @@ exports[`JsonSchemaRenderer component An array of strings field 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2486,7 +2486,7 @@ exports[`JsonSchemaRenderer component An evaluated value 1`] = `
 }
 
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -2534,7 +2534,7 @@ exports[`JsonSchemaRenderer component An evaluated value 1`] = `
 }
 
 .c7 > label > span {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
 }
 
@@ -2566,7 +2566,7 @@ exports[`JsonSchemaRenderer component An evaluated value 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2637,7 +2637,7 @@ exports[`JsonSchemaRenderer component An evaluated value 1`] = `
 
 exports[`JsonSchemaRenderer component An integer 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -2685,7 +2685,7 @@ exports[`JsonSchemaRenderer component An integer 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2721,7 +2721,7 @@ exports[`JsonSchemaRenderer component An integer 1`] = `
 
 exports[`JsonSchemaRenderer component An invalid value 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -2791,7 +2791,7 @@ exports[`JsonSchemaRenderer component An invalid value 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2958,7 +2958,7 @@ exports[`JsonSchemaRenderer component An object with various properties 1`] = `
 }
 
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -3011,7 +3011,7 @@ exports[`JsonSchemaRenderer component An object with various properties 1`] = `
 }
 
 .c8 > label > span {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
 }
 
@@ -3029,7 +3029,7 @@ exports[`JsonSchemaRenderer component An object with various properties 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -3160,7 +3160,7 @@ exports[`JsonSchemaRenderer component An object with various properties 1`] = `
 
 exports[`JsonSchemaRenderer component Re-ordered fields 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -3195,7 +3195,7 @@ exports[`JsonSchemaRenderer component Re-ordered fields 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
