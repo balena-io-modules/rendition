@@ -65,6 +65,26 @@ exports[`Filters component should match the stored snapshot 1`] = `
   box-shadow: 0px 0px 0px 2px #00AEEF;
 }
 
+.c6:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c6:focus > circle,
+.c6:focus > ellipse,
+.c6:focus > line,
+.c6:focus > path,
+.c6:focus > polygon,
+.c6:focus > polyline,
+.c6:focus > rect {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c6:focus::-moz-focus-inner {
+  border: 0;
+}
+
 .c15 {
   display: inline-block;
   box-sizing: border-box;
@@ -92,6 +112,26 @@ exports[`Filters component should match the stored snapshot 1`] = `
 
 .c15:hover {
   box-shadow: 0px 0px 0px 2px #DDE1f0;
+}
+
+.c15:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c15:focus > circle,
+.c15:focus > ellipse,
+.c15:focus > line,
+.c15:focus > path,
+.c15:focus > polygon,
+.c15:focus > polyline,
+.c15:focus > rect {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c15:focus::-moz-focus-inner {
+  border: 0;
 }
 
 .c0 {
@@ -351,7 +391,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
       className="c2 c5"
     >
       <button
-        className="c6 sc-AxheI c7 c8"
+        className="c6 c7 c8"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -428,7 +468,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
           className="c2 c13 c14"
         >
           <button
-            className="c15 sc-AxheI c16 c17"
+            className="c15 c16 c17"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}

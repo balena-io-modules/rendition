@@ -173,7 +173,9 @@ exports[`RadioButton renders correctly 1`] = `
           </svg>
         </div>
       </div>
-      <span>
+      <span
+        className=""
+      >
         Radio Button
       </span>
     </label>

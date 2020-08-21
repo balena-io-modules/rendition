@@ -35,6 +35,26 @@ exports[`Form component should match the stored snapshot 1`] = `
   box-shadow: 0px 0px 0px 2px #00AEEF;
 }
 
+.c13:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c13:focus > circle,
+.c13:focus > ellipse,
+.c13:focus > line,
+.c13:focus > path,
+.c13:focus > polygon,
+.c13:focus > polyline,
+.c13:focus > rect {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c13:focus::-moz-focus-inner {
+  border: 0;
+}
+
 .c10 {
   box-sizing: border-box;
   font-size: inherit;
@@ -43,16 +63,12 @@ exports[`Form component should match the stored snapshot 1`] = `
   -webkit-appearance: none;
   background: transparent;
   color: inherit;
+  width: 100%;
   padding: 11px;
   font-weight: 400;
   margin: 0;
   border: 1px solid #DDE1f0;
   border-radius: 4px;
-  width: 100%;
-}
-
-.c10::-webkit-search-decoration {
-  -webkit-appearance: none;
 }
 
 .c10::-webkit-input-placeholder {
@@ -67,9 +83,18 @@ exports[`Form component should match the stored snapshot 1`] = `
   color: #abb9c5;
 }
 
+.c10::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
 .c10::-moz-focus-inner {
   border: none;
   outline: none;
+}
+
+.c10:-moz-placeholder,
+.c10::-moz-placeholder {
+  opacity: 1;
 }
 
 .c9 {
@@ -281,7 +306,7 @@ exports[`Form component should match the stored snapshot 1`] = `
         </section>
       </div>
       <button
-        className="c13 sc-AxheI c14 "
+        className="c13 c14 "
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}

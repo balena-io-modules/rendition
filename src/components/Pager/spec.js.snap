@@ -30,6 +30,26 @@ exports[`Pager component should match the stored snapshot 1`] = `
   padding: 12px;
 }
 
+.c7:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c7:focus > circle,
+.c7:focus > ellipse,
+.c7:focus > line,
+.c7:focus > path,
+.c7:focus > polygon,
+.c7:focus > polyline,
+.c7:focus > rect {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c7:focus::-moz-focus-inner {
+  border: 0;
+}
+
 .c9 {
   display: inline-block;
   box-sizing: border-box;
@@ -59,6 +79,26 @@ exports[`Pager component should match the stored snapshot 1`] = `
 
 .c9:hover {
   box-shadow: 0px 0px 0px 2px #DDE1f0;
+}
+
+.c9:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c9:focus > circle,
+.c9:focus > ellipse,
+.c9:focus > line,
+.c9:focus > path,
+.c9:focus > polygon,
+.c9:focus > polyline,
+.c9:focus > rect {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c9:focus::-moz-focus-inner {
+  border: 0;
 }
 
 .c0 {
@@ -217,7 +257,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
         className="c2 c6"
       >
         <button
-          className="c7 sc-AxheI c8 rendition-pager__btn--prev"
+          className="c7 c8 rendition-pager__btn--prev"
           disabled={true}
           onBlur={[Function]}
           onClick={[Function]}
@@ -245,7 +285,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
           </svg>
         </button>
         <button
-          className="c9 sc-AxheI c8 rendition-pager__btn--next"
+          className="c9 c8 rendition-pager__btn--next"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
