@@ -1,4 +1,16 @@
 - commits:
+    - subject: Set the fallback font to Helvetica
+      hash: 19de53cfac53d165bffa3509b3dc11e4345abafc
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 18.3.0
+  date: 2020-08-21T10:29:03.973Z
+- commits:
     - subject: Add show password button to password input
       hash: 024374ec10d4a51784b0ceacd306df684426152c
       body: ''
