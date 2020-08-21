@@ -135,7 +135,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
 }
 
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -315,7 +315,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   font-size: inherit;
   padding: 4px;
   height: auto;
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
 }
 
 .c12 input:hover {
@@ -324,22 +324,22 @@ exports[`Filters component should match the stored snapshot 1`] = `
 
 .c12 input::-webkit-input-placeholder {
   color: #bbc8d6;
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
 }
 
 .c12 input::-moz-placeholder {
   color: #bbc8d6;
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
 }
 
 .c12 input:-ms-input-placeholder {
   color: #bbc8d6;
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
 }
 
 .c12 input::placeholder {
   color: #bbc8d6;
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
 }
 
 .c13 {
@@ -376,7 +376,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }

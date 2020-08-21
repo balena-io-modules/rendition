@@ -2,7 +2,7 @@
 
 exports[`Search renders correctly 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -39,7 +39,7 @@ exports[`Search renders correctly 1`] = `
   font-size: inherit;
   padding: 4px;
   height: auto;
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
 }
 
 .c2 input:hover {
@@ -48,26 +48,26 @@ exports[`Search renders correctly 1`] = `
 
 .c2 input::-webkit-input-placeholder {
   color: #bbc8d6;
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
 }
 
 .c2 input::-moz-placeholder {
   color: #bbc8d6;
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
 }
 
 .c2 input:-ms-input-placeholder {
   color: #bbc8d6;
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
 }
 
 .c2 input::placeholder {
   color: #bbc8d6;
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
