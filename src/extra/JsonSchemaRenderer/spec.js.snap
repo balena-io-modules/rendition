@@ -1813,6 +1813,84 @@ exports[`JsonSchemaRenderer component A hidden title 1`] = `
 </div>
 `;
 
+exports[`JsonSchemaRenderer component A materialized field 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c5 {
+  margin-right: 8px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c6 {
+  font-weight: 600;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Arial,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2 c3 c4 "
+  >
+    <div
+      className="c2 c3 c4 "
+    >
+      <div
+        className="c2 c5"
+      >
+        <div
+          className="c6 "
+        >
+          Name
+        </div>
+      </div>
+      <div
+        className=""
+      >
+        John Smith
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`JsonSchemaRenderer component A null object 1`] = `
 .c0 {
   font-family: 'Source Sans Pro',Helvetica,sans-serif;

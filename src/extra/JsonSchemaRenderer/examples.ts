@@ -264,6 +264,32 @@ const jsonDataExamples = {
 			},
 		},
 	},
+	'A materialized field': {
+		value: {
+			firstName: 'John',
+			lastName: 'Smith',
+		},
+		schema: {
+			type: 'object',
+			properties: {
+				firstName: {
+					type: 'string',
+				},
+				lastName: {
+					type: 'string',
+				},
+			},
+		},
+		uiSchema: {
+			firstName: null,
+			lastName: null,
+			'ui:field:fullName': {
+				'ui:title': 'Name',
+				'ui:widget': 'Txt',
+				'ui:value': '${root.firstName} ${root.lastName}',
+			},
+		},
+	},
 	'A badge widget': {
 		value: 'closed',
 		schema: {

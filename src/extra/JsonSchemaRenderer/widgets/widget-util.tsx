@@ -3,6 +3,7 @@ import jsone from 'json-e';
 import difference from 'lodash/difference';
 import isArray from 'lodash/isArray';
 import keys from 'lodash/keys';
+import concat from 'lodash/concat';
 import get from 'lodash/get';
 import pick from 'lodash/pick';
 import { DefinedValue, JSONSchema, UiSchema, Format, Value } from '../types';
@@ -95,6 +96,14 @@ export const getArrayItems = ({
 	return items;
 };
 
+// 'Materialized' properties are properties defined in the UI Schema but not in the value or schema.
+// The property name must begin with 'ui:field:' (e.g. 'ui:field:myMaterializedProperty').
+const getMaterializedPropertyNames = (uiSchema: WidgetProps['uiSchema']) => {
+	return keys(uiSchema).filter((uiSchemaKey) =>
+		uiSchemaKey.startsWith('ui:field:'),
+	);
+};
+
 export function getObjectPropertyNames({
 	value,
 	schema,
@@ -105,11 +114,16 @@ export function getObjectPropertyNames({
 			`Cannot get object property names from a value of type '${typeof value}'`,
 		);
 	}
+	const uiSchemaPropertyNames = getMaterializedPropertyNames(uiSchema);
 	const schemaPropertyNames =
 		get(uiSchema, ['ui:order'], keys(get(schema, 'properties'))) || [];
 	const nonSchemaPropertyNames = difference(
 		keys(value) || [],
 		schemaPropertyNames,
 	);
-	return schemaPropertyNames.concat(nonSchemaPropertyNames);
+	return concat(
+		uiSchemaPropertyNames,
+		schemaPropertyNames,
+		nonSchemaPropertyNames,
+	);
 }
