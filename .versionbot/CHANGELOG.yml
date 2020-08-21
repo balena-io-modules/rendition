@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'test: Updated snapshots caused by npm dependency  updates'
+      hash: fc3298ff555b2aaa8088e572c921833c5f9b5b91
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 18.1.1
+  date: 2020-08-21T07:46:38.611Z
+- commits:
     - subject: Allow disabling the whole Form component
       hash: 2586646f643e7fee2bfc1f170cc9db600d995574
       body: ''
