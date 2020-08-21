@@ -1,7 +1,11 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { faEye } from '@fortawesome/free-regular-svg-icons/faEye';
+import { faEyeSlash } from '@fortawesome/free-regular-svg-icons/faEyeSlash';
 import { px } from '../../../utils';
 import { FormWidgetProps } from '../';
+import Button from '../../Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const STRENGTH_TITLES = ['Very weak', 'Weak', 'Good', 'Strong', 'Very strong'];
 const STRENGTH_STYLES = [
@@ -18,6 +22,13 @@ const PasswordStrengthContainer = styled.div`
 	margin-top: ${(props) => px(props.theme.space[2])};
 	margin-bottom: ${(props) => px(props.theme.space[3])};
 	font-size: ${(props) => px(props.theme.fontSizes[0])};
+`;
+
+const ShowPasswordButton = styled(Button)`
+	position: absolute;
+	right: ${(props) => px(props.theme.space[2])};
+	top: 50%;
+	transform: translate(0, -50%);
 `;
 
 const PasswordStrengthMeter = styled.div`
@@ -75,10 +86,28 @@ const PasswordStrength = ({ password }: PasswordStrengthProps) => {
 
 const PasswordWidget = (props: FormWidgetProps) => {
 	const { BaseInput } = props.registry.widgets;
+	const [showPassword, setShowPassword] = React.useState(false);
 
 	return (
 		<>
-			<BaseInput type="password" {...(props as any)} />
+			<div style={{ position: 'relative' }}>
+				<BaseInput
+					pr={4}
+					type={showPassword ? 'text' : 'password'}
+					{...(props as any)}
+				/>
+				<ShowPasswordButton
+					p={2}
+					plain
+					icon={
+						<FontAwesomeIcon
+							fixedWidth
+							icon={showPassword ? faEye : faEyeSlash}
+						/>
+					}
+					onClick={() => setShowPassword((x) => !x)}
+				/>
+			</div>
 			{props.options.showPasswordStrengthMeter && (
 				<PasswordStrength password={props.value} />
 			)}
