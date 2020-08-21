@@ -30,6 +30,26 @@ exports[`ButtonGroup renders correctly 1`] = `
   box-shadow: 0px 0px 0px 2px #2A506F;
 }
 
+.c4:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c4:focus > circle,
+.c4:focus > ellipse,
+.c4:focus > line,
+.c4:focus > path,
+.c4:focus > polygon,
+.c4:focus > polyline,
+.c4:focus > rect {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c4:focus::-moz-focus-inner {
+  border: 0;
+}
+
 .c0 {
   font-family: 'Source Sans Pro',Arial,sans-serif;
   font-size: 14px;
@@ -137,10 +157,10 @@ exports[`ButtonGroup renders correctly 1`] = `
   className="c0 c1"
 >
   <div
-    className="c2 sc-fzokOt c3"
+    className="c2 c3"
   >
     <button
-      className="c4 sc-AxheI c5 "
+      className="c4 c5 "
       onBlur={[Function]}
       onFocus={[Function]}
       onMouseOut={[Function]}
@@ -150,7 +170,7 @@ exports[`ButtonGroup renders correctly 1`] = `
       First
     </button>
     <button
-      className="c4 sc-AxheI c5 "
+      className="c4 c5 "
       onBlur={[Function]}
       onFocus={[Function]}
       onMouseOut={[Function]}
@@ -160,7 +180,7 @@ exports[`ButtonGroup renders correctly 1`] = `
       Second
     </button>
     <button
-      className="c4 sc-AxheI c5 "
+      className="c4 c5 "
       onBlur={[Function]}
       onFocus={[Function]}
       onMouseOut={[Function]}

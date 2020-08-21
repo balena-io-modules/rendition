@@ -20,16 +20,12 @@ exports[`Textarea component should match the stored snapshot 1`] = `
   -webkit-appearance: none;
   background: transparent;
   color: inherit;
+  width: 100%;
   padding: 11px;
   font-weight: 400;
   margin: 0;
   border: 1px solid #DDE1f0;
   border-radius: 4px;
-  width: 100%;
-}
-
-.c2::-webkit-search-decoration {
-  -webkit-appearance: none;
 }
 
 .c2::-webkit-input-placeholder {
@@ -44,9 +40,18 @@ exports[`Textarea component should match the stored snapshot 1`] = `
   color: #abb9c5;
 }
 
+.c2::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
 .c2::-moz-focus-inner {
   border: none;
   outline: none;
+}
+
+.c2:-moz-placeholder,
+.c2::-moz-placeholder {
+  opacity: 1;
 }
 
 .c3 {

@@ -33,6 +33,26 @@ exports[`Modal renders correctly 1`] = `
   box-shadow: 0px 0px 0px 2px #00AEEF;
 }
 
+.c12:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c12:focus > circle,
+.c12:focus > ellipse,
+.c12:focus > line,
+.c12:focus > path,
+.c12:focus > polygon,
+.c12:focus > polyline,
+.c12:focus > rect {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c12:focus::-moz-focus-inner {
+  border: 0;
+}
+
 .c0 {
   font-family: 'Source Sans Pro',Arial,sans-serif;
   font-size: 14px;
@@ -244,7 +264,7 @@ exports[`Modal renders correctly 1`] = `
               className="c6 c10 c11"
             >
               <button
-                className="c12 sc-AxheI c13 "
+                className="c12 c13 "
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onMouseOut={[Function]}

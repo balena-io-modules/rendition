@@ -200,10 +200,10 @@ exports[`Terminal renders correctly 1`] = `
   className="c0 c1"
 >
   <div
-    className="c2 c3 sc-fzokOt c4"
+    className="c2 c3 c4"
   >
     <div
-      className="c2 sc-fzokOt c5"
+      className="c2 c5"
     />
   </div>
 </div>

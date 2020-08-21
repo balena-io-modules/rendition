@@ -65,7 +65,7 @@ exports[`Ordered list renders correctly 1`] = `
   className="c0 c1"
 >
   <ol
-    className="sc-pJUVA c2 "
+    className="c2 "
   >
     <li>
       <span>
@@ -141,7 +141,7 @@ exports[`Unordered list renders correctly 1`] = `
   className="c0 c1"
 >
   <ul
-    className="sc-pJUVA c2 "
+    className="c2 "
   >
     <li>
       <span>

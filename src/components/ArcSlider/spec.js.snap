@@ -140,7 +140,7 @@ exports[`ArcSlider component should match the stored snapshot 1`] = `
       />
     </svg>
     <div
-      className="c2 sc-fzokOt c5"
+      className="c2 c5"
     />
   </div>
 </div>

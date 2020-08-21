@@ -400,6 +400,26 @@ exports[`Steps component should match the stored snapshot 1`] = `
   text-align: inherit;
 }
 
+.c20:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c20:focus > circle,
+.c20:focus > ellipse,
+.c20:focus > line,
+.c20:focus > path,
+.c20:focus > polygon,
+.c20:focus > polyline,
+.c20:focus > rect {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c20:focus::-moz-focus-inner {
+  border: 0;
+}
+
 .c0 {
   font-family: 'Source Sans Pro',Arial,sans-serif;
   font-size: 14px;
@@ -841,7 +861,7 @@ exports[`Steps component should match the stored snapshot 1`] = `
     </div>
     <button
       aria-label="Dismiss"
-      className="c20 sc-AxheI c21 c22"
+      className="c20 c21 c22"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}

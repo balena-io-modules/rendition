@@ -264,7 +264,9 @@ exports[`RadioButtonGroup renders correctly 1`] = `
           className="c7 "
         />
       </div>
-      <span>
+      <span
+        className=""
+      >
         disabled
       </span>
     </label>
@@ -296,7 +298,9 @@ exports[`RadioButtonGroup renders correctly 1`] = `
           className="c7 "
         />
       </div>
-      <span>
+      <span
+        className=""
+      >
         enabled
       </span>
     </label>
@@ -340,7 +344,9 @@ exports[`RadioButtonGroup renders correctly 1`] = `
           </svg>
         </div>
       </div>
-      <span>
+      <span
+        className=""
+      >
         selected
       </span>
     </label>

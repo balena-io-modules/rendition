@@ -59,7 +59,7 @@ exports[`Banner renders correctly 1`] = `
   className="c0 c1"
 >
   <div
-    className="c2 sc-fzokOt c3 c4"
+    className="c2 c3 c4"
   >
     <h1>
       balena
