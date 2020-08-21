@@ -5,7 +5,6 @@ import escapeRegExp from 'lodash/escapeRegExp';
 import filter from 'lodash/filter';
 import memoize from 'lodash/memoize';
 import JsonSchema7Schema from 'ajv/lib/refs/json-schema-draft-07.json';
-import jsone from 'json-e';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUndo } from '@fortawesome/free-solid-svg-icons/faUndo';
@@ -23,6 +22,7 @@ import Button from '../../../components/Button';
 import Heading from '../../../components/Heading';
 import JsonSchemaRenderer, { JsonSchemaRendererProps } from '../index';
 import { Format, Value, JSONSchema, UiSchema } from '../types';
+import { CONTEXT_FUNCTIONS } from '../examples';
 import JsonEditor from './JsonEditor';
 import { generateUiSchemaMetaSchema } from './util';
 
@@ -147,11 +147,14 @@ const JsonSchemaRendererPlayground = ({
 
 	React.useEffect(() => {
 		try {
-			const processedUiSchema = jsone(uiSchema, { source: value });
 			const newMetaSchema = generateUiSchemaMetaSchema({
 				value,
 				schema,
-				uiSchema: processedUiSchema,
+				uiSchema,
+				extraContext: {
+					...CONTEXT_FUNCTIONS,
+					root: value,
+				},
 			});
 			setUiSchemaMetaSchema(newMetaSchema);
 			setJsonProps({ value, schema, uiSchema });
@@ -227,6 +230,10 @@ const JsonSchemaRendererPlayground = ({
 						validate
 						backgroundColor="#fff"
 						extraFormats={EXTRA_FORMATS}
+						extraContext={{
+							...CONTEXT_FUNCTIONS,
+							root: jsonProps.value,
+						}}
 					/>
 				</ResultCard>
 			</Flex>

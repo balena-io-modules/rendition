@@ -4,7 +4,6 @@ import keys from 'lodash/keys';
 import pick from 'lodash/pick';
 import get from 'lodash/get';
 import isArray from 'lodash/isArray';
-import jsone from 'json-e';
 import ajv from 'ajv';
 import asRendition from '../../asRendition';
 import { DefaultProps, RenditionSystemProps, Theme } from '../../common-types';
@@ -12,6 +11,7 @@ import { Flex } from '../../components/Flex';
 import Alert from '../../components/Alert';
 import ErrorBoundary from '../../internal/ErrorBoundary';
 import widgets, { WidgetWrapperUiOptions, WidgetMeta } from './widgets';
+import { transformUiSchema } from './widgets/widget-util';
 import { Value, JSONSchema, UiSchema, Format } from './types';
 
 export const getValue = (value?: Value, uiSchema?: UiSchema) => {
@@ -65,6 +65,7 @@ export const JsonSchemaRenderer = ({
 	schema,
 	uiSchema,
 	extraFormats,
+	extraContext,
 	validate,
 	nested,
 	...props
@@ -97,7 +98,11 @@ export const JsonSchemaRenderer = ({
 		return null;
 	}
 
-	const processedUiSchema = jsone(uiSchema || {}, { source: value });
+	const processedUiSchema = transformUiSchema({
+		value,
+		uiSchema,
+		extraContext,
+	});
 	const processedValue = getValue(value, processedUiSchema);
 
 	if (processedValue === undefined || processedValue === null) {
@@ -132,6 +137,7 @@ export const JsonSchemaRenderer = ({
 			)}
 			<WidgetMeta schema={schema} uiSchema={processedUiSchema} />
 			<Widget
+				extraContext={extraContext}
 				value={processedValue}
 				schema={schema}
 				uiSchema={processedUiSchema}
@@ -152,6 +158,7 @@ interface InternalJsonSchemaRendererProps extends DefaultProps {
 	schema: JSONSchema;
 	uiSchema?: UiSchema;
 	extraFormats?: Format[];
+	extraContext?: object;
 }
 
 export type JsonSchemaRendererProps = InternalJsonSchemaRendererProps &

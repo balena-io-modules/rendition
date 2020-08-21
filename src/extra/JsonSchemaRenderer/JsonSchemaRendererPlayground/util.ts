@@ -1,5 +1,8 @@
+import jsone from 'json-e';
 import { UiSchema, JSONSchema } from '../types';
 import first from 'lodash/first';
+import merge from 'lodash/merge';
+import pickBy from 'lodash/pickBy';
 import forEach from 'lodash/forEach';
 import get from 'lodash/get';
 import without from 'lodash/without';
@@ -41,13 +44,13 @@ const getBaseMetaSchema = (): UiSchemaMetaSchema => ({
 
 type MetaSchemaArgs = Pick<
 	JsonSchemaRendererProps,
-	'value' | 'schema' | 'uiSchema'
+	'value' | 'schema' | 'uiSchema' | 'extraContext'
 >;
 
 // Create the UI schema meta schema for the array items
 const generateArrayMetaSchema = (
 	metaSchema: UiSchemaMetaSchema,
-	{ value, schema, uiSchema }: MetaSchemaArgs,
+	{ value, schema, uiSchema, extraContext }: MetaSchemaArgs,
 ) => {
 	const arrayValue = value as Value[];
 	const itemsUiSchema = get(uiSchema, 'items', {});
@@ -56,12 +59,13 @@ const generateArrayMetaSchema = (
 		value: first(arrayValue),
 		schema: typeof itemsSchema === 'boolean' ? {} : itemsSchema,
 		uiSchema: itemsUiSchema,
+		extraContext,
 	});
 };
 
 const generateObjectMetaSchema = (
 	metaSchema: UiSchemaMetaSchema,
-	{ value, schema, uiSchema }: MetaSchemaArgs,
+	{ value, schema, uiSchema, extraContext }: MetaSchemaArgs,
 ) => {
 	metaSchema.properties['ui:order'] = {
 		type: ['array'],
@@ -88,6 +92,7 @@ const generateObjectMetaSchema = (
 			value: get(value, propertyName),
 			schema: typeof subSchema === 'boolean' ? {} : subSchema,
 			uiSchema: subUiSchema,
+			extraContext,
 		});
 	});
 };
@@ -120,17 +125,38 @@ const setUiOptions = (
 	};
 };
 
+const evalulateTopLevelUiProps = ({
+	value,
+	uiSchema,
+	extraContext,
+}: Pick<MetaSchemaArgs, 'value' | 'uiSchema' | 'extraContext'>) => {
+	// Only run the top-level 'ui:' props through the jsone evaluator
+	const trimmedUiSchema = pickBy(uiSchema, (_, k) => k.startsWith('ui:'));
+	const processedUiSchema = jsone(trimmedUiSchema, {
+		source: value,
+		...extraContext,
+	});
+	return merge({}, uiSchema, processedUiSchema);
+};
+
 export const generateUiSchemaMetaSchema = ({
 	value: unprocessedValue,
 	uiSchema,
 	schema,
+	extraContext,
 }: MetaSchemaArgs): UiSchemaMetaSchema => {
 	const metaSchema = getBaseMetaSchema();
+	const processedUiSchema = evalulateTopLevelUiProps({
+		value: unprocessedValue,
+		uiSchema,
+		extraContext,
+	});
 	const input = {
 		// The value may be overridden in the UI Schema
-		value: get(uiSchema, 'ui:value', unprocessedValue),
+		value: get(processedUiSchema, 'ui:value', unprocessedValue),
 		schema,
-		uiSchema,
+		uiSchema: processedUiSchema,
+		extraContext,
 	};
 	const type = getType(input.value);
 
