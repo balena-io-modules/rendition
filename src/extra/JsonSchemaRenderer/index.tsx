@@ -38,7 +38,7 @@ export const getWidget = (
 		return uiSchemaWidget;
 	}
 	const typeWidgets = get(widgets, getType(value), widgets.default);
-	return get(typeWidgets, uiSchemaWidget || 'default', widgets.default.default);
+	return get(typeWidgets, uiSchemaWidget || 'default', typeWidgets.default);
 };
 
 type Validation = {
@@ -71,8 +71,8 @@ export const JsonSchemaRenderer = ({
 	nested,
 	...props
 }: ThemedJsonSchemaRendererProps) => {
-	const [validation, setValidation] = React.useState<Validation>(
-		buildValidation(schema, extraFormats),
+	const [validation, setValidation] = React.useState<Validation | null>(
+		validate && !nested ? buildValidation(schema, extraFormats) : null,
 	);
 	const [validationErrors, setValidationErrors] = React.useState<
 		ajv.ErrorObject[] | null | undefined
@@ -80,6 +80,7 @@ export const JsonSchemaRenderer = ({
 
 	React.useEffect(() => {
 		if (!validate || nested) {
+			setValidationErrors(null);
 			return;
 		}
 		setValidation(buildValidation(schema, extraFormats));
@@ -89,8 +90,13 @@ export const JsonSchemaRenderer = ({
 		if (!validate || nested) {
 			return;
 		}
-		validation.validate(value);
-		setValidationErrors(validation.validate.errors);
+		let v = validation;
+		if (!v) {
+			v = buildValidation(schema, extraFormats);
+			setValidation(v);
+		}
+		v.validate(value);
+		setValidationErrors(v.validate.errors);
 	}, [validate, nested, validation, value]);
 
 	// Setting the UI Schema explicitly to null (as opposed to it being
@@ -131,7 +137,7 @@ export const JsonSchemaRenderer = ({
 					my={2}
 					plaintext
 					danger
-					tooltip={validation.validator.errorsText(validationErrors)}
+					tooltip={validation?.validator.errorsText(validationErrors)}
 				>
 					Invalid data/schema
 				</Alert>

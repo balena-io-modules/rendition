@@ -20,6 +20,7 @@ import Card from '../../../components/Card';
 import Select from '../../../components/Select';
 import Button from '../../../components/Button';
 import Heading from '../../../components/Heading';
+import Checkbox from '../../../components/Checkbox';
 import JsonSchemaRenderer, { JsonSchemaRendererProps } from '../index';
 import { Format, Value, JSONSchema, UiSchema } from '../types';
 import { CONTEXT_FUNCTIONS } from '../examples';
@@ -70,6 +71,7 @@ const JsonSchemaRendererPlayground = ({
 	examples,
 	...props
 }: ThemedJsonSchemaRendererPlaygroundProps) => {
+	const [validate, setValidate] = React.useState<boolean>(true);
 	const [selectedExample, setSelectedExample] = React.useState<string>('');
 	const [searchTermRegExp, setSearchTermRegExp] = React.useState<RegExp>(
 		defaultRegExp,
@@ -222,12 +224,23 @@ const JsonSchemaRendererPlayground = ({
 				</EditCard>
 			</Flex>
 			<Flex flex="1 1 50%" minWidth={0} flexDirection="column" pl={2}>
-				<ResultCard flex={1} {...commonCardProps} title="Result">
+				<ResultCard
+					flex={1}
+					{...commonCardProps}
+					title="Result"
+					cta={
+						<Checkbox
+							checked={validate}
+							label="Validate"
+							onChange={(e) => setValidate(e.target.checked)}
+						/>
+					}
+				>
 					<JsonSchemaRenderer
 						{...jsonProps}
 						p={2}
 						pb={1}
-						validate
+						validate={validate}
 						backgroundColor="#fff"
 						extraFormats={EXTRA_FORMATS}
 						extraContext={{
