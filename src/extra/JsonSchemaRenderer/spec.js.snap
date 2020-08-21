@@ -1717,6 +1717,10 @@ exports[`JsonSchemaRenderer component A hidden field 1`] = `
   min-height: 0;
 }
 
+.c5 {
+  margin-right: 8px;
+}
+
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1729,6 +1733,10 @@ exports[`JsonSchemaRenderer component A hidden field 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+}
+
+.c6 {
+  font-weight: 600;
 }
 
 .c1 {
@@ -1746,6 +1754,15 @@ exports[`JsonSchemaRenderer component A hidden field 1`] = `
     <div
       className="c2 c3 c4 "
     >
+      <div
+        className="c2 c5"
+      >
+        <div
+          className="c6 "
+        >
+          shown
+        </div>
+      </div>
       <div
         className=""
       >
@@ -2953,6 +2970,15 @@ exports[`JsonSchemaRenderer component An invalid value 1`] = `
       className="c2 c3 c4 "
     >
       <div
+        className="c2 c9"
+      >
+        <div
+          className="c10 "
+        >
+          eh
+        </div>
+      </div>
+      <div
         className=""
       >
         what
@@ -3281,6 +3307,10 @@ exports[`JsonSchemaRenderer component Re-ordered fields 1`] = `
   min-height: 0;
 }
 
+.c5 {
+  margin-right: 8px;
+}
+
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3293,6 +3323,10 @@ exports[`JsonSchemaRenderer component Re-ordered fields 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
+}
+
+.c6 {
+  font-weight: 600;
 }
 
 .c1 {
@@ -3311,6 +3345,15 @@ exports[`JsonSchemaRenderer component Re-ordered fields 1`] = `
       className="c2 c3 c4 "
     >
       <div
+        className="c2 c5"
+      >
+        <div
+          className="c6 "
+        >
+          fieldB
+        </div>
+      </div>
+      <div
         className=""
       >
         field B value
@@ -3320,6 +3363,15 @@ exports[`JsonSchemaRenderer component Re-ordered fields 1`] = `
       className="c2 c3 c4 "
     >
       <div
+        className="c2 c5"
+      >
+        <div
+          className="c6 "
+        >
+          fieldC
+        </div>
+      </div>
+      <div
         className=""
       >
         field C value
@@ -3328,6 +3380,15 @@ exports[`JsonSchemaRenderer component Re-ordered fields 1`] = `
     <div
       className="c2 c3 c4 "
     >
+      <div
+        className="c2 c5"
+      >
+        <div
+          className="c6 "
+        >
+          fieldA
+        </div>
+      </div>
       <div
         className=""
       >

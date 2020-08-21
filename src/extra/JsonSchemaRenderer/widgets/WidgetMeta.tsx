@@ -4,12 +4,19 @@ import { Box } from '../../../components/Box';
 import Txt from '../../../components/Txt';
 import { WidgetProps } from './widget-util';
 
+type WidgetMetaProps = {
+	valueKey?: string;
+	schema: WidgetProps['schema'];
+	uiSchema: WidgetProps['uiSchema'];
+};
+
 // Renders the title and description for a widget (if set)
 export default function WidgetMeta({
+	valueKey,
 	schema = {},
 	uiSchema = {},
-}: Pick<WidgetProps, 'schema' | 'uiSchema'>) {
-	const title = get(uiSchema, 'ui:title', schema.title);
+}: WidgetMetaProps) {
+	const title = get(uiSchema, 'ui:title', schema.title || valueKey);
 	const description = get(uiSchema, 'ui:description', schema.description);
 	if (!title && !description) {
 		return null;

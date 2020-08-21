@@ -64,6 +64,7 @@ export const JsonSchemaRenderer = ({
 	value,
 	schema,
 	uiSchema,
+	valueKey,
 	extraFormats,
 	extraContext,
 	validate,
@@ -135,7 +136,11 @@ export const JsonSchemaRenderer = ({
 					Invalid data/schema
 				</Alert>
 			)}
-			<WidgetMeta schema={schema} uiSchema={processedUiSchema} />
+			<WidgetMeta
+				schema={schema}
+				uiSchema={processedUiSchema}
+				valueKey={valueKey}
+			/>
 			<Widget
 				extraContext={extraContext}
 				value={processedValue}
@@ -154,6 +159,7 @@ interface ThemedJsonSchemaRendererProps
 interface InternalJsonSchemaRendererProps extends DefaultProps {
 	nested?: boolean;
 	validate?: boolean;
+	valueKey?: string;
 	value?: Value;
 	schema: JSONSchema;
 	uiSchema?: UiSchema;

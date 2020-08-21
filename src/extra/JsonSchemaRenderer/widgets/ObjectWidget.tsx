@@ -24,6 +24,7 @@ const ObjectWidget: Widget = ({
 					<RenditionJsonSchemaRenderer
 						key={key}
 						nested
+						valueKey={key}
 						{...subProps}
 						{...rest}
 					/>
