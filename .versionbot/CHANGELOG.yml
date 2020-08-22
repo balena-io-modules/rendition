@@ -1,4 +1,54 @@
 - commits:
+    - subject: 'fix: Improve validation logic in JsonSchemaRenderer'
+      hash: b2b25552932c0881899d80a90448ceebbd5661c7
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: 'fix: Fallback to value key for title in JsonSchemaRenderer'
+      hash: 55d89dbf639b9b7e1a847a1f943c284673d1b89b
+      body: >
+        If no title is specified in the UI schema or the schema, fallback to
+        using the value's key.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: 'feat: Add support for materialized UI properties in JsonSchemaRenderer'
+      hash: a6fadda11ba89a190e68002bf1dfd06b60910c13
+      body: >
+        You can now specify additional 'fields' in the UI schema, evaluating
+        their value from other fields in the value.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: 'feat: Add support for passing extra context to JsonSchemaRenderer'
+      hash: c06e4bcf5d0a39eac5ce55c712129b06986fea42
+      body: >
+        This extraContext prop is used when evaluating UI schema using json-e.
+
+
+        Additionally, json-e is now run (recursively) just on the UI schema for
+        primitive values. This means we can now use json-e to evaluate the
+        values of array items in the UI schema (see the 'A List Widget'
+        example).
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 18.4.0
+  date: 2020-08-22T01:41:12.514Z
+- commits:
     - subject: Set the fallback font to Helvetica
       hash: 19de53cfac53d165bffa3509b3dc11e4345abafc
       body: ''
