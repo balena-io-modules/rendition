@@ -4,7 +4,6 @@ import keys from 'lodash/keys';
 import pick from 'lodash/pick';
 import get from 'lodash/get';
 import isArray from 'lodash/isArray';
-import jsone from 'json-e';
 import ajv from 'ajv';
 import asRendition from '../../asRendition';
 import { DefaultProps, RenditionSystemProps, Theme } from '../../common-types';
@@ -12,6 +11,7 @@ import { Flex } from '../../components/Flex';
 import Alert from '../../components/Alert';
 import ErrorBoundary from '../../internal/ErrorBoundary';
 import widgets, { WidgetWrapperUiOptions, WidgetMeta } from './widgets';
+import { transformUiSchema } from './widgets/widget-util';
 import { Value, JSONSchema, UiSchema, Format } from './types';
 
 export const getValue = (value?: Value, uiSchema?: UiSchema) => {
@@ -38,7 +38,7 @@ export const getWidget = (
 		return uiSchemaWidget;
 	}
 	const typeWidgets = get(widgets, getType(value), widgets.default);
-	return get(typeWidgets, uiSchemaWidget || 'default', widgets.default.default);
+	return get(typeWidgets, uiSchemaWidget || 'default', typeWidgets.default);
 };
 
 type Validation = {
@@ -64,13 +64,15 @@ export const JsonSchemaRenderer = ({
 	value,
 	schema,
 	uiSchema,
+	valueKey,
 	extraFormats,
+	extraContext,
 	validate,
 	nested,
 	...props
 }: ThemedJsonSchemaRendererProps) => {
-	const [validation, setValidation] = React.useState<Validation>(
-		buildValidation(schema, extraFormats),
+	const [validation, setValidation] = React.useState<Validation | null>(
+		validate && !nested ? buildValidation(schema, extraFormats) : null,
 	);
 	const [validationErrors, setValidationErrors] = React.useState<
 		ajv.ErrorObject[] | null | undefined
@@ -78,6 +80,7 @@ export const JsonSchemaRenderer = ({
 
 	React.useEffect(() => {
 		if (!validate || nested) {
+			setValidationErrors(null);
 			return;
 		}
 		setValidation(buildValidation(schema, extraFormats));
@@ -87,8 +90,13 @@ export const JsonSchemaRenderer = ({
 		if (!validate || nested) {
 			return;
 		}
-		validation.validate(value);
-		setValidationErrors(validation.validate.errors);
+		let v = validation;
+		if (!v) {
+			v = buildValidation(schema, extraFormats);
+			setValidation(v);
+		}
+		v.validate(value);
+		setValidationErrors(v.validate.errors);
 	}, [validate, nested, validation, value]);
 
 	// Setting the UI Schema explicitly to null (as opposed to it being
@@ -97,7 +105,11 @@ export const JsonSchemaRenderer = ({
 		return null;
 	}
 
-	const processedUiSchema = jsone(uiSchema || {}, { source: value });
+	const processedUiSchema = transformUiSchema({
+		value,
+		uiSchema,
+		extraContext,
+	});
 	const processedValue = getValue(value, processedUiSchema);
 
 	if (processedValue === undefined || processedValue === null) {
@@ -125,13 +137,18 @@ export const JsonSchemaRenderer = ({
 					my={2}
 					plaintext
 					danger
-					tooltip={validation.validator.errorsText(validationErrors)}
+					tooltip={validation?.validator.errorsText(validationErrors)}
 				>
 					Invalid data/schema
 				</Alert>
 			)}
-			<WidgetMeta schema={schema} uiSchema={processedUiSchema} />
+			<WidgetMeta
+				schema={schema}
+				uiSchema={processedUiSchema}
+				valueKey={valueKey}
+			/>
 			<Widget
+				extraContext={extraContext}
 				value={processedValue}
 				schema={schema}
 				uiSchema={processedUiSchema}
@@ -148,10 +165,12 @@ interface ThemedJsonSchemaRendererProps
 interface InternalJsonSchemaRendererProps extends DefaultProps {
 	nested?: boolean;
 	validate?: boolean;
+	valueKey?: string;
 	value?: Value;
 	schema: JSONSchema;
 	uiSchema?: UiSchema;
 	extraFormats?: Format[];
+	extraContext?: object;
 }
 
 export type JsonSchemaRendererProps = InternalJsonSchemaRendererProps &

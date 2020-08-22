@@ -1,16 +1,20 @@
 import * as React from 'react';
+import jsone from 'json-e';
 import difference from 'lodash/difference';
 import isArray from 'lodash/isArray';
 import keys from 'lodash/keys';
+import concat from 'lodash/concat';
 import get from 'lodash/get';
 import pick from 'lodash/pick';
-import { DefinedValue, JSONSchema, UiSchema } from '../types';
+import { DefinedValue, JSONSchema, UiSchema, Format, Value } from '../types';
 import { UiOptions } from './ui-options';
 
 export interface WidgetProps {
 	value: DefinedValue;
 	schema: JSONSchema;
 	uiSchema?: UiSchema;
+	extraFormats?: Format[];
+	extraContext?: object;
 }
 
 export interface Widget {
@@ -38,20 +42,47 @@ export function withOptionProps(uiOptions: UiOptions) {
 	};
 }
 
+// Runs the UI schema through json-e if the value is
+// not an object or an array.
+export const transformUiSchema = ({
+	value,
+	uiSchema,
+	extraContext,
+}: {
+	value?: Value;
+	uiSchema: WidgetProps['uiSchema'];
+	extraContext: WidgetProps['extraContext'];
+}) => {
+	return typeof value !== 'object' && !isArray(value)
+		? jsone(uiSchema || {}, { source: value, ...extraContext })
+		: uiSchema || {};
+};
+
 export const getArrayItems = ({
 	value,
 	schema,
 	uiSchema,
+	extraContext,
 }: WidgetProps): WidgetProps[] => {
 	if (!isArray(value)) {
 		throw new Error(`Value must be an array (not '${typeof value}')`);
 	}
 	const maxItems = get(uiSchema, ['ui:options', 'truncate'], value.length);
-	const items = value.slice(0, maxItems).map((item) => ({
-		value: item,
-		schema: get(schema, 'items', {}) as JSONSchema,
-		uiSchema: get(uiSchema, 'items', {}) as UiSchema,
-	}));
+	const items = value.slice(0, maxItems).map((item) => {
+		const itemSchema = get(schema, 'items', {}) as JSONSchema;
+		const itemUiSchema = get(uiSchema, 'items', {}) as UiSchema;
+		const processedUiSchema = transformUiSchema({
+			value: item,
+			uiSchema: itemUiSchema,
+			extraContext,
+		});
+		return {
+			value: item,
+			schema: itemSchema,
+			uiSchema: processedUiSchema,
+			extraContext,
+		};
+	});
 	if (maxItems < value.length) {
 		items.push({
 			value: `+ ${value.length - maxItems} more`,
@@ -59,9 +90,18 @@ export const getArrayItems = ({
 				type: 'string',
 			},
 			uiSchema: {},
+			extraContext,
 		});
 	}
 	return items;
+};
+
+// 'Materialized' properties are properties defined in the UI Schema but not in the value or schema.
+// The property name must begin with 'ui:field:' (e.g. 'ui:field:myMaterializedProperty').
+const getMaterializedPropertyNames = (uiSchema: WidgetProps['uiSchema']) => {
+	return keys(uiSchema).filter((uiSchemaKey) =>
+		uiSchemaKey.startsWith('ui:field:'),
+	);
 };
 
 export function getObjectPropertyNames({
@@ -74,11 +114,16 @@ export function getObjectPropertyNames({
 			`Cannot get object property names from a value of type '${typeof value}'`,
 		);
 	}
+	const uiSchemaPropertyNames = getMaterializedPropertyNames(uiSchema);
 	const schemaPropertyNames =
 		get(uiSchema, ['ui:order'], keys(get(schema, 'properties'))) || [];
 	const nonSchemaPropertyNames = difference(
 		keys(value) || [],
 		schemaPropertyNames,
 	);
-	return schemaPropertyNames.concat(nonSchemaPropertyNames);
+	return concat(
+		uiSchemaPropertyNames,
+		schemaPropertyNames,
+		nonSchemaPropertyNames,
+	);
 }

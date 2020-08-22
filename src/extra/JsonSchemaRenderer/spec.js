@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer'
 import forEach from 'lodash/forEach'
 import { Provider } from '../../../dist'
 import JsonSchemaRenderer from '../../../dist/extra/JsonSchemaRenderer'
-import examples from './examples'
+import examples, { CONTEXT_FUNCTIONS } from './examples'
 
 const EXTRA_FORMATS = [
   {
@@ -22,6 +22,10 @@ describe.only('JsonSchemaRenderer component', () => {
             validate
             {...example}
             extraFormats={EXTRA_FORMATS}
+            extraContext={{
+              ...CONTEXT_FUNCTIONS,
+              root: example.value
+            }}
           />
         </Provider>
       )

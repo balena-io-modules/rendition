@@ -5,7 +5,6 @@ import escapeRegExp from 'lodash/escapeRegExp';
 import filter from 'lodash/filter';
 import memoize from 'lodash/memoize';
 import JsonSchema7Schema from 'ajv/lib/refs/json-schema-draft-07.json';
-import jsone from 'json-e';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUndo } from '@fortawesome/free-solid-svg-icons/faUndo';
@@ -21,8 +20,10 @@ import Card from '../../../components/Card';
 import Select from '../../../components/Select';
 import Button from '../../../components/Button';
 import Heading from '../../../components/Heading';
+import Checkbox from '../../../components/Checkbox';
 import JsonSchemaRenderer, { JsonSchemaRendererProps } from '../index';
 import { Format, Value, JSONSchema, UiSchema } from '../types';
+import { CONTEXT_FUNCTIONS } from '../examples';
 import JsonEditor from './JsonEditor';
 import { generateUiSchemaMetaSchema } from './util';
 
@@ -70,6 +71,7 @@ const JsonSchemaRendererPlayground = ({
 	examples,
 	...props
 }: ThemedJsonSchemaRendererPlaygroundProps) => {
+	const [validate, setValidate] = React.useState<boolean>(true);
 	const [selectedExample, setSelectedExample] = React.useState<string>('');
 	const [searchTermRegExp, setSearchTermRegExp] = React.useState<RegExp>(
 		defaultRegExp,
@@ -147,11 +149,14 @@ const JsonSchemaRendererPlayground = ({
 
 	React.useEffect(() => {
 		try {
-			const processedUiSchema = jsone(uiSchema, { source: value });
 			const newMetaSchema = generateUiSchemaMetaSchema({
 				value,
 				schema,
-				uiSchema: processedUiSchema,
+				uiSchema,
+				extraContext: {
+					...CONTEXT_FUNCTIONS,
+					root: value,
+				},
 			});
 			setUiSchemaMetaSchema(newMetaSchema);
 			setJsonProps({ value, schema, uiSchema });
@@ -219,14 +224,29 @@ const JsonSchemaRendererPlayground = ({
 				</EditCard>
 			</Flex>
 			<Flex flex="1 1 50%" minWidth={0} flexDirection="column" pl={2}>
-				<ResultCard flex={1} {...commonCardProps} title="Result">
+				<ResultCard
+					flex={1}
+					{...commonCardProps}
+					title="Result"
+					cta={
+						<Checkbox
+							checked={validate}
+							label="Validate"
+							onChange={(e) => setValidate(e.target.checked)}
+						/>
+					}
+				>
 					<JsonSchemaRenderer
 						{...jsonProps}
 						p={2}
 						pb={1}
-						validate
+						validate={validate}
 						backgroundColor="#fff"
 						extraFormats={EXTRA_FORMATS}
+						extraContext={{
+							...CONTEXT_FUNCTIONS,
+							root: jsonProps.value,
+						}}
 					/>
 				</ResultCard>
 			</Flex>

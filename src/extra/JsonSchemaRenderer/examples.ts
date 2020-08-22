@@ -1,4 +1,11 @@
 /* eslint-disable no-template-curly-in-string */
+
+export const CONTEXT_FUNCTIONS = {
+	fns: {
+		prependHello: (input: string) => `Hello ${input}`,
+	},
+};
+
 const jsonDataExamples = {
 	'A string': {
 		value: 'A string value',
@@ -246,6 +253,43 @@ const jsonDataExamples = {
 			},
 		},
 	},
+	'Using context functions': {
+		value: 'Jellyfish',
+		schema: {
+			type: 'string',
+		},
+		uiSchema: {
+			'ui:value': {
+				$eval: 'fns.prependHello(source)',
+			},
+		},
+	},
+	'A materialized field': {
+		value: {
+			firstName: 'John',
+			lastName: 'Smith',
+		},
+		schema: {
+			type: 'object',
+			properties: {
+				firstName: {
+					type: 'string',
+				},
+				lastName: {
+					type: 'string',
+				},
+			},
+		},
+		uiSchema: {
+			firstName: null,
+			lastName: null,
+			'ui:field:fullName': {
+				'ui:title': 'Name',
+				'ui:widget': 'Txt',
+				'ui:value': '${root.firstName} ${root.lastName}',
+			},
+		},
+	},
 	'A badge widget': {
 		value: 'closed',
 		schema: {
@@ -414,7 +458,7 @@ const jsonDataExamples = {
 		},
 	},
 	'A List widget': {
-		value: ['item 1', 'item 2', 'item 3'],
+		value: ['user', 'org', 'issue'],
 		schema: {
 			type: 'array',
 			items: {
@@ -425,6 +469,12 @@ const jsonDataExamples = {
 			'ui:widget': 'List',
 			'ui:options': {
 				ordered: true,
+			},
+			items: {
+				'ui:widget': 'Link',
+				'ui:options': {
+					href: 'https://jel.ly.fish/${source}',
+				},
 			},
 		},
 	},

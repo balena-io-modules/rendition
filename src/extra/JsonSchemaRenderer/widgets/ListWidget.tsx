@@ -15,13 +15,22 @@ const ListWidget: Widget = ({
 	schema,
 	uiSchema,
 	truncate,
+	extraFormats,
+	extraContext,
 	...props
 }: ListWidgetProps) => {
-	const items = getArrayItems({ value, schema, uiSchema });
+	const items = getArrayItems({ value, schema, uiSchema, extraContext });
 	return (
 		<List {...props}>
 			{map(items, (item: WidgetProps, index: number) => {
-				return <RenditionJsonSchemaRenderer key={index} nested {...item} />;
+				return (
+					<RenditionJsonSchemaRenderer
+						key={index}
+						nested
+						{...item}
+						extraFormats={extraFormats}
+					/>
+				);
 			})}
 		</List>
 	);

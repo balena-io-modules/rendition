@@ -5,7 +5,12 @@ import { Widget, WidgetProps, getObjectPropertyNames } from './widget-util';
 import { JsonTypes } from '../types';
 import { RenditionJsonSchemaRenderer } from '../index';
 
-const ObjectWidget: Widget = ({ value, schema, uiSchema }: WidgetProps) => {
+const ObjectWidget: Widget = ({
+	value,
+	schema,
+	uiSchema,
+	...rest
+}: WidgetProps) => {
 	const propertyNames = getObjectPropertyNames({ value, schema, uiSchema });
 	return (
 		<React.Fragment>
@@ -15,7 +20,15 @@ const ObjectWidget: Widget = ({ value, schema, uiSchema }: WidgetProps) => {
 					schema: get(schema, ['properties', key]),
 					uiSchema: get(uiSchema, key),
 				};
-				return <RenditionJsonSchemaRenderer key={key} nested {...subProps} />;
+				return (
+					<RenditionJsonSchemaRenderer
+						key={key}
+						nested
+						valueKey={key}
+						{...subProps}
+						{...rest}
+					/>
+				);
 			})}
 		</React.Fragment>
 	);
