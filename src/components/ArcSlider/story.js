@@ -1,5 +1,6 @@
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
+import { withScreenshot } from 'storycap'
 import * as React from 'react'
 import { ArcSlider, Box } from '../../'
 import Readme from './README.md'
@@ -28,6 +29,7 @@ class HOC extends React.Component {
 
 storiesOf('Core/ArcSlider', module)
   .addDecorator(withReadme(Readme))
+  .addDecorator(withScreenshot({ delay: 1500 }))
   .add('Standard', () => {
     return (
       <Box maxWidth={450} m={3}>
