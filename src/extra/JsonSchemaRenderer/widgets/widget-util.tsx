@@ -1,5 +1,7 @@
 import * as React from 'react';
 import jsone from 'json-e';
+import merge from 'lodash/merge';
+import pickBy from 'lodash/pickBy';
 import difference from 'lodash/difference';
 import isArray from 'lodash/isArray';
 import keys from 'lodash/keys';
@@ -53,9 +55,17 @@ export const transformUiSchema = ({
 	uiSchema: WidgetProps['uiSchema'];
 	extraContext: WidgetProps['extraContext'];
 }) => {
-	return typeof value !== 'object' && !isArray(value)
-		? jsone(uiSchema || {}, { source: value, ...extraContext })
-		: uiSchema || {};
+	const context = { source: value, ...extraContext };
+	if (typeof value === 'object') {
+		// For objects/arrays just transform the 'ui:' properties.
+		// Sub-properties will be transformed recursively.
+		const trimmedUiSchema = pickBy(uiSchema || {}, (_, k) =>
+			k.startsWith('ui:'),
+		);
+		const processedUiSchema = jsone(trimmedUiSchema, context);
+		return merge({}, uiSchema, processedUiSchema);
+	}
+	return jsone(uiSchema || {}, context);
 };
 
 export const getArrayItems = ({

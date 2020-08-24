@@ -1,8 +1,5 @@
-import jsone from 'json-e';
 import { UiSchema, JSONSchema } from '../types';
 import first from 'lodash/first';
-import merge from 'lodash/merge';
-import pickBy from 'lodash/pickBy';
 import forEach from 'lodash/forEach';
 import get from 'lodash/get';
 import without from 'lodash/without';
@@ -12,6 +9,7 @@ import keys from 'lodash/keys';
 import widgets from '../widgets';
 import { getWidget, getType, JsonSchemaRendererProps } from '../index';
 import { WidgetWrapperUiOptions, getObjectPropertyNames } from '../widgets';
+import { transformUiSchema } from '../widgets/widget-util';
 import { Value } from '../types';
 
 type UiSchemaMetaSchema = {
@@ -104,8 +102,15 @@ const setWidgetOptions = (metaSchema: UiSchemaMetaSchema, type: string) => {
 		return acc;
 	}, widgetKeys);
 	metaSchema.properties['ui:widget'] = {
-		type: 'string',
-		enum: without(uniq(widgetKeys), 'default'),
+		oneof: [
+			{
+				type: 'string',
+				enum: without(uniq(widgetKeys), 'default'),
+			},
+			{
+				type: 'object',
+			},
+		],
 	};
 };
 
@@ -125,20 +130,6 @@ const setUiOptions = (
 	};
 };
 
-const evalulateTopLevelUiProps = ({
-	value,
-	uiSchema,
-	extraContext,
-}: Pick<MetaSchemaArgs, 'value' | 'uiSchema' | 'extraContext'>) => {
-	// Only run the top-level 'ui:' props through the jsone evaluator
-	const trimmedUiSchema = pickBy(uiSchema, (_, k) => k.startsWith('ui:'));
-	const processedUiSchema = jsone(trimmedUiSchema, {
-		source: value,
-		...extraContext,
-	});
-	return merge({}, uiSchema, processedUiSchema);
-};
-
 export const generateUiSchemaMetaSchema = ({
 	value: unprocessedValue,
 	uiSchema,
@@ -146,7 +137,7 @@ export const generateUiSchemaMetaSchema = ({
 	extraContext,
 }: MetaSchemaArgs): UiSchemaMetaSchema => {
 	const metaSchema = getBaseMetaSchema();
-	const processedUiSchema = evalulateTopLevelUiProps({
+	const processedUiSchema = transformUiSchema({
 		value: unprocessedValue,
 		uiSchema,
 		extraContext,
