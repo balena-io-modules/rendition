@@ -1,4 +1,35 @@
 - commits:
+    - subject: 'fix: Notifications screenshot test'
+      hash: c07bb030060eabcfc341ef64cf4a0ae6b079ced2
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: 'fix: ArcSlider screenshot tests'
+      hash: cfda0b22eed934e9a41407e9f55a50bba8168744
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: Use json-e recursively for objects and arrays
+      hash: 6ca4774509f2c9f7f66c97055f945f775efea891
+      body: |
+        Transform just the UI-schema specific properties.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 18.4.1
+  date: 2020-08-24T08:36:52.519Z
+- commits:
     - subject: 'fix: Improve validation logic in JsonSchemaRenderer'
       hash: b2b25552932c0881899d80a90448ceebbd5661c7
       body: ''
