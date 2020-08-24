@@ -32,6 +32,7 @@ const getContainerNotification = (container) => ({
 
 const getTypeNotification = (type) => ({
   type,
+  duration: 0,
   content: type
 })
 
