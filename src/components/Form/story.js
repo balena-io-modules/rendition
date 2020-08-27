@@ -173,6 +173,14 @@ storiesOf('Next/Form', module)
   .add('Hidden submit button', () => {
     return <FormDemo schema={basicPokedexSchema} hideSubmitButton />
   })
+  .add('Secondary form button', () => {
+    return (
+      <FormDemo
+        schema={basicPokedexSchema}
+        secondaryButtonProps={{ children: 'Skip' }}
+      />
+    )
+  })
   .add('Disabled form', () => {
     return <FormDemo disabled schema={basicPokedexSchema} />
   })
@@ -343,7 +351,7 @@ storiesOf('Next/Form', module)
 
     const formData = {
       dynamicObject: {
-        '123': 'foo'
+        123: 'foo'
       }
     }
 

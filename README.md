@@ -501,6 +501,7 @@ Register a widget that will be used to render fields of the specified format.
 | `submitButtonText` | <code>string &#124; JSX.Element</code> | - | - | A string or JSX element to replace the text in the form submit button |
 | `hideSubmitButton` | `boolean` | - | - | If true, do not display the form submit button |
 | `submitButtonProps` | `object` | - | - | Properties that are passed to the submit button, these are the same props used for the [`Button`](#button) component |
+| `secondaryButtonProps` | `object` | - | - | If passed, it will show a secondary button, these are the same props used for the [`Button`](#button) component |
 | `value` | `*` | - | - | The data that should be displayed in the form |
 | `onFormChange` | `(result: object) => void` | - | - | A function that is called when form data changes |
 | `onFormSubmit` | `(result: object) => void` | - | - | A function that is called when the form is submitted |
