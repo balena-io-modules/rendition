@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Form component description keyword should support markdown 1`] = `"<div id=\\"root_foo__description\\" class=\\"sc-fzoyAV cFKUiM sc-fzoLag jAOLUb sc-fznNTe FaeWF rendition-form-description\\"><div><p class=\\"sc-fzoyAV cFKUiM sc-fzpjYC gJiVIn\\">Lorem ipsum <em>dolor</em> sit amet</p></div></div>"`;
+exports[`Form component description keyword should support markdown 1`] = `"<div id=\\"root_foo__description\\" class=\\"sc-fzoyAV cFKUiM sc-fzoLag rChob sc-fznNTe FaeWF rendition-form-description\\"><div><p class=\\"sc-fzoyAV cFKUiM sc-fzpjYC eVPHNj\\">Lorem ipsum <em>dolor</em> sit amet</p></div></div>"`;
 
 exports[`Form component should match the stored snapshot 1`] = `
 .c13 {
@@ -320,4 +320,4 @@ exports[`Form component should match the stored snapshot 1`] = `
 </div>
 `;
 
-exports[`Form component ui:help keyword should support markdown 1`] = `"<div class=\\"sc-fzoyAV cFKUiM sc-fzoLag jGGATy sc-fznNTe FaeWF rendition-form-help\\"><div><p class=\\"sc-fzoyAV cFKUiM sc-fzpjYC iXdTek\\">Lorem ipsum <em>dolor</em> sit amet</p></div></div>"`;
+exports[`Form component ui:help keyword should support markdown 1`] = `"<div class=\\"sc-fzoyAV cFKUiM sc-fzoLag glbFxG sc-fznNTe FaeWF rendition-form-help\\"><div><p class=\\"sc-fzoyAV cFKUiM sc-fzpjYC bgRoVE\\">Lorem ipsum <em>dolor</em> sit amet</p></div></div>"`;

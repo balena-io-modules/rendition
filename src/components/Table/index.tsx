@@ -242,8 +242,10 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 
 		let collection;
 
-		if (typeof column.sortable === 'function') {
-			collection = data.slice().sort(column.sortable);
+		const columnAny = column || ({} as any);
+
+		if ('sortable' in columnAny && typeof columnAny.sortable === 'function') {
+			collection = data.slice().sort(columnAny.sortable);
 		} else {
 			collection = sortBy<T>(data.slice(), (item) => {
 				const sortableValue = item[sort.field as keyof T];
