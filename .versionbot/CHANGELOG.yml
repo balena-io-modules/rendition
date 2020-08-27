@@ -1,4 +1,35 @@
 - commits:
+    - subject: 'fix: Temporarily remove flaky screenshot tests'
+      hash: 231e079546c301c60e1d23f9689f2c36912c50ef
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: Ignore missing languages in markdown code blocks
+      hash: c719cd98b1dddad94a2d758de610a13598b4d7ac
+      body: |
+        This avoids an error being thrown if the language is not recognised.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: 'fix: Patch fixes triggered by dependency updates'
+      hash: 8cf16a7a28f13c2ce6c2d76f5c9d4964982ba2fa
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 18.5.0
+  date: 2020-08-27T10:39:19.297Z
+- commits:
     - subject: 'fix: Notifications screenshot test'
       hash: c07bb030060eabcfc341ef64cf4a0ae6b079ced2
       body: ''
