@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'fix: Patch fixes triggered by dependency updates'
+      hash: 8cf16a7a28f13c2ce6c2d76f5c9d4964982ba2fa
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 18.4.2
+  date: 2020-08-27T08:15:45.253Z
+- commits:
     - subject: 'fix: Notifications screenshot test'
       hash: c07bb030060eabcfc341ef64cf4a0ae6b079ced2
       body: ''
