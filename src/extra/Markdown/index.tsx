@@ -149,7 +149,7 @@ export const getProcessor = (
 		.use(remarkRehype, { allowDangerousHtml: !disableRawHtml });
 
 	if (!disableCodeHighlight) {
-		processor = processor.use(prism);
+		processor = processor.use(prism, { ignoreMissing: true });
 	}
 
 	if (!disableRawHtml) {
