@@ -17,9 +17,9 @@ const Base = styled(GrommetRadioButtonGroup)<{
 	& label:hover input[value="${(props: any) => props.value}"] + div {
 		border-color: ${(props) => props.theme.colors.primary.dark};
 		background: ${(props) => props.theme.colors.primary.dark};
-	};
+	}
 
-	& label input[value="${(props: any) => props.value}"] + div {
+	& label input[value='${(props: any) => props.value}'] + div {
 		border-color: ${(props) => props.theme.colors.primary.main};
 		background: ${(props) => props.theme.colors.primary.main};
 	}

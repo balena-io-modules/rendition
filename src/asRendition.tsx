@@ -54,9 +54,9 @@ const propTypes = {
 const styledSystemProps = Object.keys(propTypes);
 
 const filterStyledSystemProps = (passthroughProps: string[]) => (
-	Base: React.ComponentType,
+	Base: React.ComponentType<{ ref: any }>,
 ) => {
-	return React.forwardRef((props: any, ref: any) => {
+	return React.forwardRef((props: any, ref) => {
 		const nextProps = omit(
 			props,
 			difference(styledSystemProps, passthroughProps),
@@ -68,7 +68,7 @@ const filterStyledSystemProps = (passthroughProps: string[]) => (
 export const withStyledSystem = (child: React.ComponentType) => {
 	const Base = styled(child)<StyledSystemProps>`
 		${space}
-    ${width}
+		${width}
     ${minWidth}
     ${maxWidth}
     ${height}

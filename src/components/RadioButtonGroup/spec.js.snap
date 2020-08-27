@@ -204,7 +204,7 @@ exports[`RadioButtonGroup renders correctly 1`] = `
   background: #009dd7;
 }
 
-.c3 label input[value="selected"] + div {
+.c3 label input[value='selected'] + div {
   border-color: #00AEEF;
   background: #00AEEF;
 }

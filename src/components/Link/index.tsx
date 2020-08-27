@@ -9,24 +9,24 @@ import { darken, monospace } from '../../utils';
 import { align, bold, caps } from '../Txt';
 
 const Base = styled.a<InternalLinkProps>`
-  ${align}
-  ${monospace};
-  ${caps}
-  ${bold}
+	${align}
+	${monospace};
+	${caps}
+	${bold}
 
   text-decoration: ${(props) => props.decor || 'none'};
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
-  opacity: ${(props) => (props.disabled ? 0.65 : 1)};
-  display: inline-block;
+	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+	opacity: ${(props) => (props.disabled ? 0.65 : 1)};
+	display: inline-block;
 
-  &:active,
-  &:hover {
-    color: ${(props) =>
+	&:active,
+	&:hover {
+		color: ${(props) =>
 			!props.disabled &&
 			(darken(
 				get(props.theme.colors, props.color as any) || props.color,
 			) as any)};
-  }
+	}
 `;
 
 const Link = ({ is, blank, children, ...props }: InternalLinkProps) => {
