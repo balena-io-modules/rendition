@@ -29,7 +29,7 @@ class HOC extends React.Component {
 
 storiesOf('Core/ArcSlider', module)
   .addDecorator(withReadme(Readme))
-  .addDecorator(withScreenshot({ delay: 2000 }))
+  .addDecorator(withScreenshot({ skip: true }))
   .add('Standard', () => {
     return (
       <Box maxWidth={450} m={3}>
