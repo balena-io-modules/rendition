@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add optional secondary button to Form
+      hash: 3168446322c2de3a8c4edf9e28dd8b84729c541b
+      body: |
+        This is useful for cases when we want to allow the
+        user to skip filling out a form, for example.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 18.6.0
+  date: 2020-08-28T06:41:30.011Z
+- commits:
     - subject: 'fix: Temporarily remove flaky screenshot tests'
       hash: 231e079546c301c60e1d23f9689f2c36912c50ef
       body: ''
