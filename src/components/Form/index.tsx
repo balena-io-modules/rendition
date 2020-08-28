@@ -126,6 +126,7 @@ export interface BaseFormProps
 	submitButtonText?: string | JSX.Element;
 	hideSubmitButton?: boolean;
 	submitButtonProps?: ButtonProps;
+	secondaryButtonProps?: ButtonProps;
 	value?: number | string | boolean | { [index: string]: any } | any[] | null;
 	onFormChange?: (result: IChangeEvent) => void;
 	onFormSubmit?: (result: any) => void;
@@ -182,6 +183,7 @@ export default class FormHOC extends React.Component<FormProps, FormState> {
 			hideSubmitButton,
 			submitButtonText,
 			submitButtonProps,
+			secondaryButtonProps,
 			uiSchema,
 			validate,
 			liveValidate,
@@ -225,6 +227,9 @@ export default class FormHOC extends React.Component<FormProps, FormState> {
 						<Button primary {...submitButtonProps} type="submit">
 							{submitButtonText || 'Submit'}
 						</Button>
+					)}
+					{!!secondaryButtonProps && (
+						<Button outline secondary ml={3} {...secondaryButtonProps} />
 					)}
 				</Form>
 			</FormWrapper>
