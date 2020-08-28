@@ -55,7 +55,8 @@ export const transformUiSchema = ({
 	uiSchema: WidgetProps['uiSchema'];
 	extraContext: WidgetProps['extraContext'];
 }) => {
-	const context = { source: value, ...extraContext };
+	// Ensure source is not null/undefined as jsone might call toString() on it
+	const context = { source: value ?? '', ...extraContext };
 	if (typeof value === 'object') {
 		// For objects/arrays just transform the 'ui:' properties.
 		// Sub-properties will be transformed recursively.
