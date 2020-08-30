@@ -116,11 +116,16 @@ const setWidgetOptions = (metaSchema: UiSchemaMetaSchema, type: string) => {
 
 // Populate the options for the widget that will be used
 // (or the default widget for that data type if no widget is specified)
-const setUiOptions = (
-	metaSchema: UiSchemaMetaSchema,
-	{ value, uiSchema }: MetaSchemaArgs,
-) => {
-	const widget = getWidget(value, get(uiSchema, 'ui:widget'));
+const setUiOptions = ({
+	metaSchema,
+	format,
+	input: { value, uiSchema },
+}: {
+	metaSchema: UiSchemaMetaSchema;
+	format?: string;
+	input: MetaSchemaArgs;
+}) => {
+	const widget = getWidget(value, format, get(uiSchema, 'ui:widget'));
 	metaSchema.properties['ui:options'] = {
 		type: 'object',
 		properties: {
@@ -162,7 +167,7 @@ export const generateUiSchemaMetaSchema = ({
 		setWidgetOptions(metaSchema, type);
 	}
 
-	setUiOptions(metaSchema, input);
+	setUiOptions({ metaSchema, format: schema.format, input });
 
 	return metaSchema;
 };

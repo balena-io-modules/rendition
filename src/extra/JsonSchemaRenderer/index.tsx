@@ -10,7 +10,11 @@ import { DefaultProps, RenditionSystemProps, Theme } from '../../common-types';
 import { Flex } from '../../components/Flex';
 import Alert from '../../components/Alert';
 import ErrorBoundary from '../../internal/ErrorBoundary';
-import widgets, { WidgetWrapperUiOptions, WidgetMeta } from './widgets';
+import widgets, {
+	WidgetWrapperUiOptions,
+	WidgetMeta,
+	formatWidgetMap,
+} from './widgets';
 import { transformUiSchema } from './widgets/widget-util';
 import { Value, JSONSchema, UiSchema, Format } from './types';
 
@@ -32,10 +36,14 @@ export const getType = (value?: Value) => {
 
 export const getWidget = (
 	value?: Value,
+	format?: string,
 	uiSchemaWidget?: UiSchema['ui:widget'],
 ) => {
 	if (uiSchemaWidget && typeof uiSchemaWidget !== 'string') {
 		return uiSchemaWidget;
+	}
+	if (!uiSchemaWidget && format && formatWidgetMap[format]) {
+		return formatWidgetMap[format];
 	}
 	const typeWidgets = get(widgets, getType(value), widgets.default);
 	return get(typeWidgets, uiSchemaWidget || 'default', typeWidgets.default);
@@ -120,7 +128,11 @@ export const JsonSchemaRenderer = ({
 		get(processedUiSchema, 'ui:options', {}),
 		...widgetWrapperUiOptionKeys,
 	);
-	const Widget = getWidget(processedValue, processedUiSchema['ui:widget']);
+	const Widget = getWidget(
+		processedValue,
+		get(schema, 'format'),
+		processedUiSchema['ui:widget'],
+	);
 
 	return (
 		<Flex

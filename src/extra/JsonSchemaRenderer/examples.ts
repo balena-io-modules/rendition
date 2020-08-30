@@ -71,7 +71,7 @@ const jsonDataExamples = {
 		},
 	},
 	'An array of strings field': {
-		value: ['item 1', 'item 2', 'item 3'],
+		value: ['first item', 'second item', 'third item'],
 		schema: {
 			type: 'array',
 			items: {
@@ -447,16 +447,6 @@ const jsonDataExamples = {
 			},
 		},
 	},
-	'A Markdown widget': {
-		value: '# Something Important\n## Something less important',
-		schema: {
-			type: 'string',
-			format: 'markdown',
-		},
-		uiSchema: {
-			'ui:widget': 'Markdown',
-		},
-	},
 	'A List widget': {
 		value: ['user', 'org', 'issue'],
 		schema: {
@@ -477,6 +467,55 @@ const jsonDataExamples = {
 				},
 			},
 		},
+	},
+	'A markdown field': {
+		value: '# Something Important\n## Something less important',
+		schema: {
+			type: 'string',
+			format: 'markdown',
+		},
+		uiSchema: {},
+	},
+	'A mermaid field': {
+		value:
+			'sequenceDiagram\n\nUser->>Dashboard: Navigate to a single account\nDashboard->>API: Request data for single account\nAPI->>Dashboard: Respond with account data\nUser->>Dashboard: Click the "Contacts" tab\nUser->>Dashboard: Click the "Add contact" button\nUser->>Dashboard: Fill out the card creation form\nNote left of User: preserve card name<br> for assertion\nUser->>Dashboard: Submit the card creation form\nDashboard->>API: Create card action request\nAPI->Worker: Process action request\nAPI->>Dashboard: Respond with action results\nDashboard->>API: Create link action request\nAPI->Worker: Process action request\n\nAPI->>Dashboard: Respond with action results\nnote over Dashboard: Display success <br>notification\nnote left of User: assert that account<br> has linked card of<br> name',
+		schema: {
+			type: 'string',
+			format: 'mermaid',
+		},
+		uiSchema: {
+			'ui:options': {
+				flex: 1,
+			},
+		},
+	},
+	'An email field': {
+		value: 'user@balena.io',
+		schema: {
+			type: 'string',
+			format: 'email',
+		},
+		uiSchema: {},
+	},
+	'A date time field': {
+		value: '2020-08-28T18:23:56.474Z',
+		schema: {
+			type: 'string',
+			format: 'date-time',
+		},
+		uiSchema: {
+			'ui:options': {
+				dtFormat: 'MMM Do, YYYY HH:mm',
+			},
+		},
+	},
+	'A uri field': {
+		value: 'https://google.com',
+		schema: {
+			type: 'string',
+			format: 'uri',
+		},
+		uiSchema: {},
 	},
 };
 
