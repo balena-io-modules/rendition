@@ -1,8 +1,10 @@
 import * as React from 'react';
+import get from 'lodash/get';
 import HighlightedName from '../../../components/HighlightedName';
 import { UiOption } from './ui-options';
 import { Widget, WidgetProps } from './widget-util';
 import { JsonTypes } from '../types';
+import { generateColorFromString, isLight } from '../../../utils/colorUtils';
 
 const HighlightedNameWidget: Widget = ({
 	value,
@@ -10,7 +12,13 @@ const HighlightedNameWidget: Widget = ({
 	uiSchema,
 	...props
 }: WidgetProps) => {
-	return <HighlightedName {...props}>{value.toString()}</HighlightedName>;
+	const bg = get(props, 'bg', generateColorFromString(value.toString()));
+	const color = get(props, 'color', isLight(bg) ? '#000' : '#FFF');
+	return (
+		<HighlightedName {...props} bg={bg} color={color}>
+			{value.toString()}
+		</HighlightedName>
+	);
 };
 
 HighlightedNameWidget.uiOptions = {
