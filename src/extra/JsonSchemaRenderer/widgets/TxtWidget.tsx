@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import Txt from '../../../components/Txt';
 import { JsonTypes, Value, UiSchema } from '../types';
 import { UiOption } from './ui-options';
-import { Widget, WidgetProps } from './widget-util';
+import { Widget, WidgetProps, formatTimestamp } from './widget-util';
 
 const SingleLineTxt = styled(Txt)`
 	white-space: nowrap;
@@ -26,15 +26,20 @@ const getArrayValue = (value: Value[], uiSchema?: UiSchema): string => {
 	return arrayString;
 };
 
+const DATE_TIME_FORMATS = ['date-time', 'date', 'time'];
+
 const TxtWidget: Widget = ({
 	value,
 	schema,
 	uiSchema,
 	...props
 }: WidgetProps) => {
-	const displayValue = isArray(value)
+	let displayValue = isArray(value)
 		? getArrayValue(value, uiSchema)
 		: value?.toString();
+	if (DATE_TIME_FORMATS.includes(schema?.format ?? '')) {
+		displayValue = formatTimestamp(displayValue, uiSchema);
+	}
 	const Component = get(uiSchema, ['ui:options', 'truncate'])
 		? SingleLineTxt
 		: Txt;
@@ -42,6 +47,7 @@ const TxtWidget: Widget = ({
 };
 
 TxtWidget.uiOptions = {
+	dtFormat: UiOption.string,
 	bold: UiOption.boolean,
 	italic: UiOption.boolean,
 	monospace: UiOption.boolean,

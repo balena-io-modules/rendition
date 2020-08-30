@@ -1,4 +1,5 @@
 import * as React from 'react';
+import moment from 'moment';
 import jsone from 'json-e';
 import merge from 'lodash/merge';
 import pickBy from 'lodash/pickBy';
@@ -23,6 +24,22 @@ export interface Widget {
 	(props: WidgetProps): JSX.Element | null;
 	uiOptions?: UiOptions;
 	supportedTypes?: string[];
+}
+
+export const stringToNumber = function (text: string, max: number) {
+	let hash = 0;
+	for (let index = 0; index < text.length; index++) {
+		// eslint-disable-next-line no-bitwise
+		hash = text.charCodeAt(index) + ((hash << 5) - hash);
+	}
+
+	// eslint-disable-next-line no-bitwise
+	return (hash >> (text.length * 8)) & max;
+};
+
+export function formatTimestamp(timestamp: string, uiSchema: UiSchema = {}) {
+	const uiFormat = get(uiSchema, ['ui:options', 'dtFormat']);
+	return uiFormat ? moment(timestamp).format(uiFormat) : timestamp;
 }
 
 // This HOC function wraps a Widget component and converts
