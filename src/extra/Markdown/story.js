@@ -4,7 +4,8 @@ import defaults from 'lodash/defaults'
 import cloneDeep from 'lodash/cloneDeep'
 import withReadme from 'storybook-readme/with-readme'
 import source, {
-  customizationSamples
+  customizationSamples,
+  decoratorSample
 } from '../../stories/assets/markdownSample'
 import { Box, Card, Table } from '../../'
 import { Markdown, defaultSanitizerOptions } from './index'
@@ -56,6 +57,29 @@ storiesOf('Extra/Markdown', module)
     return (
       <Box m={3}>
         <Table sortable={false} columns={columns} data={generateTableData()} />
+      </Box>
+    )
+  })
+  .add('Decorators', () => {
+    const decorators = [
+      {
+        match: new RegExp(
+          `(\\s|^)((@{1,2}|#|!{1,2})[a-z\\d-_\\/]+(\\.[a-z\\d-_\\/]+)*)(\\s|$)`,
+          'gmi'
+        ),
+        captureGroupIndex: 2,
+        component: 'span',
+        properties: {
+          style: {
+            color: 'green'
+          }
+        }
+      }
+    ]
+
+    return (
+      <Box m={3}>
+        <Markdown decorators={decorators}>{decoratorSample}</Markdown>
       </Box>
     )
   })

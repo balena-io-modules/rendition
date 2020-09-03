@@ -25,6 +25,11 @@ export const customizationSamples = [
   }
 ]
 
+export const decoratorSample = `
+@good foo @bad@bad [@good](https://github.com) bar@bad baz qux. @good\n
+@good
+`
+
 export default `
 # Markdown
 A simple component for rendering *GitHub flavored markdown*.

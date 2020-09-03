@@ -15,6 +15,7 @@ import gh from 'hast-util-sanitize/lib/github.json';
 import { Theme } from '../../common-types';
 import 'prismjs/themes/prism.css';
 import { darken, lighten } from '../../utils';
+import { Decorator, decoratorPlugin } from './plugins/decorator';
 export { gh as defaultSanitizerOptions };
 
 const MarkdownWrapper = styled(Txt)`
@@ -143,6 +144,7 @@ export const getProcessor = (
 	sanitizerOptions?: any,
 	disableRawHtml?: boolean,
 	disableCodeHighlight?: boolean,
+	decorators?: Decorator[] | undefined,
 ) => {
 	let processor = unified()
 		.use(remarkParse, { gfm: true })
@@ -169,7 +171,7 @@ export const getProcessor = (
 		);
 	}
 
-	return processor.use(rehypeReact, {
+	processor.use(rehypeReact, {
 		createElement: React.createElement,
 		components: {
 			p: (props: any) => <Txt.p {...props} />,
@@ -184,6 +186,10 @@ export const getProcessor = (
 			...componentOverrides,
 		},
 	});
+
+	return processor.use(decoratorPlugin, {
+		decorators,
+	});
 };
 
 type MarkdownProps = TxtProps & {
@@ -193,6 +199,7 @@ type MarkdownProps = TxtProps & {
 	sanitizerOptions?: any; // https://github.com/syntax-tree/hast-util-sanitize#schema
 	disableRawHtml?: boolean;
 	disableCodeHighlight?: boolean;
+	decorators?: Decorator[];
 };
 
 export const MarkdownBase = ({
@@ -201,20 +208,27 @@ export const MarkdownBase = ({
 	sanitizerOptions,
 	disableRawHtml,
 	disableCodeHighlight,
-	...props
+	decorators,
+	...rest
 }: MarkdownProps) => {
-	return (
-		<MarkdownWrapper {...props}>
-			{
-				(getProcessor(
-					componentOverrides,
-					sanitizerOptions,
-					disableRawHtml,
-					disableCodeHighlight,
-				).processSync(children) as any).result // type any because vFile types doesn't contains result, even though it should.
-			}
-		</MarkdownWrapper>
-	);
+	const content = React.useMemo(() => {
+		return (getProcessor(
+			componentOverrides,
+			sanitizerOptions,
+			disableRawHtml,
+			disableCodeHighlight,
+			decorators,
+		).processSync(children) as any).result; // type any because vFile types doesn't contains result, even though it should.
+	}, [
+		componentOverrides,
+		sanitizerOptions,
+		disableRawHtml,
+		disableCodeHighlight,
+		decorators,
+		children,
+	]);
+
+	return <MarkdownWrapper {...rest}>{content}</MarkdownWrapper>;
 };
 
 export const Markdown = withTheme(MarkdownBase);
