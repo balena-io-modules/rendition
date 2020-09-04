@@ -1,4 +1,14 @@
 - commits:
+    - subject: 'Markdown: Add decorator support'
+      hash: 8b1c8ba38567d15ff0ae4a683b235df4226bdcf4
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Kakhaber
+  version: 18.7.0
+  date: 2020-09-03T22:46:22.914Z
+- commits:
     - subject: Add optional secondary button to Form
       hash: 3168446322c2de3a8c4edf9e28dd8b84729c541b
       body: |
