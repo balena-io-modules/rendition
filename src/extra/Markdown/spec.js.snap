@@ -7,6 +7,215 @@ exports[`Markdown component Custom sanitizer options: allowedTags can be overrid
 <p class=\\"sc-fzoyAV cFKUiM sc-fzpjYC eVPHNj\\">Some text</p>"
 `;
 
+exports[`Markdown component should decorate the text matching the condition 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c3 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c3:active,
+.c3:hover {
+  color: hsl(196.29999999999995,100%,37.5%);
+}
+
+.c4 {
+  color: #00AEEF;
+}
+
+.c2 * {
+  box-sizing: border-box;
+}
+
+.c2 code {
+  background-color: #f4f4f4;
+  padding: 0.2em 0px;
+  margin: 0px;
+  border-radius: 3px;
+  line-height: 1.2;
+}
+
+.c2 pre {
+  background-color: #f4f4f4;
+}
+
+.c2 pre > code {
+  background: none;
+}
+
+.c2 code,
+.c2 kbd,
+.c2 pre {
+  font-family: 'Ubuntu Mono','Courier New',monospace;
+}
+
+.c2 kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #2A506F;
+  vertical-align: middle;
+  background-color: rgba(244,244,244,0.7);
+  border: solid 1px #c6c8c9;
+  border-bottom-color: hsl(200,2.7%,70.4%);
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 hsl(200,2.7%,70.4%);
+}
+
+.c2 dl {
+  padding: 0;
+}
+
+.c2 dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.c2 dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.c2 td,
+.c2 th {
+  padding: 0;
+}
+
+.c2 table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.c2 table th {
+  font-weight: 600;
+}
+
+.c2 table th,
+.c2 table td {
+  padding: 6px 13px;
+  border: 1px solid #c6c8c9;
+}
+
+.c2 table tr {
+  background-color: #fff;
+  border-top: 1px solid #f4f4f4;
+}
+
+.c2 table tr:nth-child(2n) {
+  background-color: #f4f4f4;
+}
+
+.c2 blockquote {
+  margin: 0;
+}
+
+.c2 blockquote,
+.c2 dl,
+.c2 table {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.c2 blockquote {
+  padding: 0 1em;
+  color: #2A506F;
+  border-left: 0.25em solid #c6c8c9;
+}
+
+.c2 blockquote > :first-child {
+  margin-top: 0;
+}
+
+.c2 blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2"
+  >
+    <div>
+      <p
+        className=""
+      >
+        <span>
+          
+          <span
+            style={
+              Object {
+                "color": "green",
+              }
+            }
+          >
+            @good
+          </span>
+           foo @bad@bad 
+        </span>
+        <a
+          className="c3 c4"
+          color="primary.main"
+          href="https://github.com"
+        >
+          <span>
+            
+            <span
+              style={
+                Object {
+                  "color": "green",
+                }
+              }
+            >
+              @good
+            </span>
+          </span>
+        </a>
+        <span>
+           bar@bad baz qux. 
+          <span
+            style={
+              Object {
+                "color": "green",
+              }
+            }
+          >
+            @good
+          </span>
+           @good
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Markdown component should drop the content of style elements tag 1`] = `".foo { color: blue; }"`;
 
 exports[`Markdown component should drop the content of textarea elements tag 1`] = `"<p class=\\"sc-fzoyAV cFKUiM sc-fzpjYC eVPHNj\\">foobar</p>"`;
@@ -765,10 +974,12 @@ exports[`Markdown component should render markdown task lists 1`] = `
 exports[`Markdown component should render markdown unordered lists 1`] = `
 "<ul>
 <li>Item 1</li>
-<li>Item 2<ul>
+<li>Item 2
+<ul>
 <li>Item 2a</li>
 <li>Item 2b</li>
-</ul></li>
+</ul>
+</li>
 </ul>"
 `;
 

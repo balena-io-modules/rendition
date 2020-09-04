@@ -1145,6 +1145,7 @@ Components can be overridden by using `componentOverrides` prop.
 | `children`             | `string`                                                             | -       | ✓        | The markdown source that should be rendered                                                                   |
 | `sanitizerOptions`     | [`Object`](https://github.com/syntax-tree/hast-util-sanitize#schema) |         | -        | Specifies the options used when sanitizing the generated HTML. Passing `null` would disable the sanitization. |
 | `componentOverrides`   | `Object`                                                             | -       | -        | Object specifying component Overrides. ex. `{ p: Txt.p }`                                                     |
+| `decorators`           | `Object`                                                             | -       | -        | Decorate part of the text if it matches some condition                                                        |
 | `disableRawHtml`       | `boolean`                                                            | false   | -        | when disabled it does not renders raw html in markdown                                                        |
 | `disableCodeHighlight` | `boolean`                                                            | false   | -        | when disabled code blocks will not highlight syntax                                                           |
 

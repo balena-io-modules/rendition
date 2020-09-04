@@ -85,6 +85,35 @@ describe('Markdown component', () => {
     expect(tree).toMatchSnapshot()
   })
 
+  it('should decorate the text matching the condition', () => {
+    const decorators = [
+      {
+        match: new RegExp(
+          '(\\s|^)((@{1,2}|#|!{1,2})[a-z\\d-_\\/]+(\\.[a-z\\d-_\\/]+)*)(\\s|$)',
+          'gmi'
+        ),
+        captureGroupIndex: 2,
+        component: 'span',
+        properties: {
+          style: {
+            color: 'green'
+          }
+        }
+      }
+    ]
+
+    const component = renderer.create(
+      <Provider>
+        <Markdown decorators={decorators}>
+          @good foo @bad@bad [@good](https://github.com) bar@bad baz qux. @good
+          @good
+        </Markdown>
+      </Provider>
+    )
+    let tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
   suite.forEach((testCase) => {
     it(testCase.name, () => {
       const wrapper = mount(
