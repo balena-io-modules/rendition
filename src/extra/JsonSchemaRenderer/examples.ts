@@ -505,7 +505,7 @@ const jsonDataExamples = {
 		},
 		uiSchema: {
 			'ui:options': {
-				dtFormat: 'MMM Do, YYYY HH:mm',
+				dtFormat: 'MMM do, yyyy HH:mm',
 			},
 		},
 	},
