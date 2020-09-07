@@ -1,7 +1,6 @@
 {
   "extends": "./node_modules/@balena/lint/config/tslint-prettier.json",
   "rules": {
-    "no-shadowed-variable": false,
-    "no-bitwise": false
+    "no-shadowed-variable": false
   }
 }
