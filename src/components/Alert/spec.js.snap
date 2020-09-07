@@ -16,7 +16,7 @@ exports[`Alert renders correctly 1`] = `
   box-sizing: border-box;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -28,6 +28,9 @@ exports[`Alert renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.c4 {
   position: relative;
   margin: 0;
   padding: 16px;
@@ -39,7 +42,7 @@ exports[`Alert renders correctly 1`] = `
   color: inherit;
 }
 
-.c5 {
+.c6 {
   color: #2A506F;
 }
 
@@ -53,15 +56,15 @@ exports[`Alert renders correctly 1`] = `
   className="c0 c1"
 >
   <div
-    className="c2 c3 "
+    className="c2 c3 c4 "
   >
     
     <div
-      className="c4 "
+      className="c5 "
     >
       
       <span
-        className="c5"
+        className="c6"
       >
         An alert
       </span>

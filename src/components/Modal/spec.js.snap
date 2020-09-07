@@ -156,13 +156,13 @@ exports[`Modal renders correctly 1`] = `
   cursor: not-allowed;
 }
 
-.c13 {
+.c14 {
   color: white;
 }
 
-.c13:hover:enabled,
-.c13:focus:enabled,
-.c13:active:enabled {
+.c14:hover:enabled,
+.c14:focus:enabled,
+.c14:active:enabled {
   box-shadow: none;
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
@@ -170,9 +170,9 @@ exports[`Modal renders correctly 1`] = `
   opacity: initial;
 }
 
-.c13:hover:enabled svg,
-.c13:focus:enabled svg,
-.c13:active:enabled svg {
+.c14:hover:enabled svg,
+.c14:focus:enabled svg,
+.c14:active:enabled svg {
   color: white !important;
 }
 
@@ -264,7 +264,7 @@ exports[`Modal renders correctly 1`] = `
               className="c6 c10 c11"
             >
               <button
-                className="c12 c13 "
+                className="c12 c13 c14 "
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onMouseOut={[Function]}

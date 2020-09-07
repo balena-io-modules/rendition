@@ -174,7 +174,7 @@ exports[`RadioButton renders correctly 1`] = `
         </div>
       </div>
       <span
-        className=""
+        className="StyledRadioButton__StyledRadioButtonLabel-g1f6ld-2"
       >
         Radio Button
       </span>

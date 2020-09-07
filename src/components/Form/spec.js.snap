@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Form component description keyword should support markdown 1`] = `"<div id=\\"root_foo__description\\" class=\\"sc-fzoyAV cFKUiM sc-fzoLag rChob sc-fznNTe FaeWF rendition-form-description\\"><div><p class=\\"sc-fzoyAV cFKUiM sc-fzpjYC eVPHNj\\">Lorem ipsum <em>dolor</em> sit amet</p></div></div>"`;
+exports[`Form component description keyword should support markdown 1`] = `"<div id=\\"root_foo__description\\" class=\\"sc-fFSRdu eIqcBa sc-bkbjAj jdNlJb sc-fuIRbl fcYPkR rendition-form-description\\"><div><p class=\\"sc-fFSRdu eIqcBa sc-dIvqjp gDTIuo\\">Lorem ipsum <em>dolor</em> sit amet</p></div></div>"`;
 
 exports[`Form component should match the stored snapshot 1`] = `
 .c13 {
@@ -141,13 +141,13 @@ exports[`Form component should match the stored snapshot 1`] = `
   cursor: not-allowed;
 }
 
-.c14 {
+.c15 {
   color: white;
 }
 
-.c14:hover:enabled,
-.c14:focus:enabled,
-.c14:active:enabled {
+.c15:hover:enabled,
+.c15:focus:enabled,
+.c15:active:enabled {
   box-shadow: none;
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
@@ -155,9 +155,9 @@ exports[`Form component should match the stored snapshot 1`] = `
   opacity: initial;
 }
 
-.c14:hover:enabled svg,
-.c14:focus:enabled svg,
-.c14:active:enabled svg {
+.c15:hover:enabled svg,
+.c15:focus:enabled svg,
+.c15:active:enabled svg {
   color: white !important;
 }
 
@@ -306,7 +306,7 @@ exports[`Form component should match the stored snapshot 1`] = `
         </section>
       </div>
       <button
-        className="c13 c14 "
+        className="c13 c14 c15 "
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}
@@ -320,4 +320,4 @@ exports[`Form component should match the stored snapshot 1`] = `
 </div>
 `;
 
-exports[`Form component ui:help keyword should support markdown 1`] = `"<div class=\\"sc-fzoyAV cFKUiM sc-fzoLag glbFxG sc-fznNTe FaeWF rendition-form-help\\"><div><p class=\\"sc-fzoyAV cFKUiM sc-fzpjYC bgRoVE\\">Lorem ipsum <em>dolor</em> sit amet</p></div></div>"`;
+exports[`Form component ui:help keyword should support markdown 1`] = `"<div class=\\"sc-fFSRdu eIqcBa sc-bkbjAj kApBnK sc-fuIRbl fcYPkR rendition-form-help\\"><div><p class=\\"sc-fFSRdu eIqcBa sc-dIvqjp cPPbGH\\">Lorem ipsum <em>dolor</em> sit amet</p></div></div>"`;

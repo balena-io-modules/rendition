@@ -16,16 +16,6 @@ exports[`ArcSlider component should match the stored snapshot 1`] = `
   box-sizing: border-box;
 }
 
-.c4 {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.c3 {
-  position: relative;
-}
-
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -38,6 +28,19 @@ exports[`ArcSlider component should match the stored snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.c4 {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.c3 {
+  position: relative;
+}
+
+.c6 {
   position: absolute;
   top: 0;
   right: 0;
@@ -140,7 +143,7 @@ exports[`ArcSlider component should match the stored snapshot 1`] = `
       />
     </svg>
     <div
-      className="c2 c5"
+      className="c2 c5 c6"
     />
   </div>
 </div>

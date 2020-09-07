@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ButtonGroup renders correctly 1`] = `
-.c4 {
+.c5 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
@@ -26,27 +26,27 @@ exports[`ButtonGroup renders correctly 1`] = `
   transition-timing-function: ease-in-out;
 }
 
-.c4:hover {
+.c5:hover {
   box-shadow: 0px 0px 0px 2px #2A506F;
 }
 
-.c4:focus {
+.c5:focus {
   outline: none;
   box-shadow: 0 0 2px 2px #00AEEF;
 }
 
-.c4:focus > circle,
-.c4:focus > ellipse,
-.c4:focus > line,
-.c4:focus > path,
-.c4:focus > polygon,
-.c4:focus > polyline,
-.c4:focus > rect {
+.c5:focus > circle,
+.c5:focus > ellipse,
+.c5:focus > line,
+.c5:focus > path,
+.c5:focus > polygon,
+.c5:focus > polyline,
+.c5:focus > rect {
   outline: none;
   box-shadow: 0 0 2px 2px #00AEEF;
 }
 
-.c4:focus::-moz-focus-inner {
+.c5:focus::-moz-focus-inner {
   border: 0;
 }
 
@@ -61,7 +61,7 @@ exports[`ButtonGroup renders correctly 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c5 {
+.c6 {
   font-weight: 600;
   font-size: 14px;
   height: 38px;
@@ -80,27 +80,27 @@ exports[`ButtonGroup renders correctly 1`] = `
   justify-content: center;
 }
 
-.c5 svg {
+.c6 svg {
   color: inherit !important;
   font-size: 0.925em;
 }
 
-.c5:disabled {
+.c6:disabled {
   cursor: not-allowed;
 }
 
-.c5 {
+.c7 {
   color: #2A506F;
   border-color: #2A506F;
 }
 
-.c5 svg {
+.c7 svg {
   color: #527699 !important;
 }
 
-.c5:hover:enabled,
-.c5:focus:enabled,
-.c5:active:enabled {
+.c7:hover:enabled,
+.c7:focus:enabled,
+.c7:active:enabled {
   box-shadow: none;
   background: #2A506F;
   border-color: #2A506F;
@@ -108,9 +108,9 @@ exports[`ButtonGroup renders correctly 1`] = `
   opacity: initial;
 }
 
-.c5:hover:enabled svg,
-.c5:focus:enabled svg,
-.c5:active:enabled svg {
+.c7:hover:enabled svg,
+.c7:focus:enabled svg,
+.c7:active:enabled svg {
   color: white !important;
 }
 
@@ -125,25 +125,25 @@ exports[`ButtonGroup renders correctly 1`] = `
   display: flex;
 }
 
-.c3 > *:first-child {
+.c4 > *:first-child {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.c3 > *:last-child {
+.c4 > *:last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.c3 > *:not(:last-child) {
+.c4 > *:not(:last-child) {
   border-right: 0;
 }
 
-.c3 > *:not(:last-child):not(:first-child) {
+.c4 > *:not(:last-child):not(:first-child) {
   border-radius: 0;
 }
 
-.c3 > *:hover {
+.c4 > *:hover {
   z-index: 1;
 }
 
@@ -157,10 +157,10 @@ exports[`ButtonGroup renders correctly 1`] = `
   className="c0 c1"
 >
   <div
-    className="c2 c3"
+    className="c2 c3 c4"
   >
     <button
-      className="c4 c5 "
+      className="c5 c6 c7 "
       onBlur={[Function]}
       onFocus={[Function]}
       onMouseOut={[Function]}
@@ -170,7 +170,7 @@ exports[`ButtonGroup renders correctly 1`] = `
       First
     </button>
     <button
-      className="c4 c5 "
+      className="c5 c6 c7 "
       onBlur={[Function]}
       onFocus={[Function]}
       onMouseOut={[Function]}
@@ -180,7 +180,7 @@ exports[`ButtonGroup renders correctly 1`] = `
       Second
     </button>
     <button
-      className="c4 c5 "
+      className="c5 c6 c7 "
       onBlur={[Function]}
       onFocus={[Function]}
       onMouseOut={[Function]}

@@ -22,7 +22,6 @@ exports[`Ordered list renders correctly 1`] = `
   padding: 0;
   margin: 0;
   list-style: none;
-  counter-reset: ordered-list-counter;
 }
 
 .c2 > li {
@@ -44,12 +43,16 @@ exports[`Ordered list renders correctly 1`] = `
   text-align: center;
 }
 
-.c2 > li {
+.c3 {
+  counter-reset: ordered-list-counter;
+}
+
+.c3 > li {
   margin: 16px 0;
   counter-increment: ordered-list-counter;
 }
 
-.c2 > li:before {
+.c3 > li:before {
   content: counter(ordered-list-counter);
   margin-right: 8px;
   background: #1496E1;
@@ -65,7 +68,7 @@ exports[`Ordered list renders correctly 1`] = `
   className="c0 c1"
 >
   <ol
-    className="c2 "
+    className="c2 c3 "
   >
     <li>
       <span>
@@ -124,11 +127,11 @@ exports[`Unordered list renders correctly 1`] = `
   text-align: center;
 }
 
-.c2 > li {
+.c3 > li {
   margin: 4px 0;
 }
 
-.c2 > li:before {
+.c3 > li:before {
   content: '\\2022';
   margin-right: 8px;
   -webkit-transform: translateY( -1px );
@@ -141,7 +144,7 @@ exports[`Unordered list renders correctly 1`] = `
   className="c0 c1"
 >
   <ul
-    className="c2 "
+    className="c2 c3 "
   >
     <li>
       <span>

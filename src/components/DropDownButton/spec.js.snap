@@ -53,7 +53,7 @@ exports[`DropDownButton renders correctly 1`] = `
   border: 0;
 }
 
-.c7 {
+.c8 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
@@ -83,27 +83,27 @@ exports[`DropDownButton renders correctly 1`] = `
   padding: 12px;
 }
 
-.c7:hover {
+.c8:hover {
   box-shadow: 0px 0px 0px 2px #00AEEF;
 }
 
-.c7:focus {
+.c8:focus {
   outline: none;
   box-shadow: 0 0 2px 2px #00AEEF;
 }
 
-.c7:focus > circle,
-.c7:focus > ellipse,
-.c7:focus > line,
-.c7:focus > path,
-.c7:focus > polygon,
-.c7:focus > polyline,
-.c7:focus > rect {
+.c8:focus > circle,
+.c8:focus > ellipse,
+.c8:focus > line,
+.c8:focus > path,
+.c8:focus > polygon,
+.c8:focus > polyline,
+.c8:focus > rect {
   outline: none;
   box-shadow: 0 0 2px 2px #00AEEF;
 }
 
-.c7:focus::-moz-focus-inner {
+.c8:focus::-moz-focus-inner {
   border: 0;
 }
 
@@ -146,13 +146,13 @@ exports[`DropDownButton renders correctly 1`] = `
   cursor: not-allowed;
 }
 
-.c5 {
+.c6 {
   color: white;
 }
 
-.c5:hover:enabled,
-.c5:focus:enabled,
-.c5:active:enabled {
+.c6:hover:enabled,
+.c6:focus:enabled,
+.c6:active:enabled {
   box-shadow: none;
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
@@ -160,9 +160,9 @@ exports[`DropDownButton renders correctly 1`] = `
   opacity: initial;
 }
 
-.c5:hover:enabled svg,
-.c5:focus:enabled svg,
-.c5:active:enabled svg {
+.c6:hover:enabled svg,
+.c6:focus:enabled svg,
+.c6:active:enabled svg {
   color: white !important;
 }
 
@@ -170,7 +170,7 @@ exports[`DropDownButton renders correctly 1`] = `
   box-sizing: border-box;
 }
 
-.c8 {
+.c9 {
   min-width: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -181,7 +181,7 @@ exports[`DropDownButton renders correctly 1`] = `
   width: 44px;
 }
 
-.c6 {
+.c7 {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-right: 0;
@@ -217,7 +217,7 @@ exports[`DropDownButton renders correctly 1`] = `
   >
     <span>
       <button
-        className="c4 c5 c6"
+        className="c4 c5 c6 c7"
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}
@@ -229,7 +229,7 @@ exports[`DropDownButton renders correctly 1`] = `
         </div>
       </button>
       <button
-        className="c7 c5 c8"
+        className="c8 c5 c6 c9"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -314,7 +314,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   border: 0;
 }
 
-.c7 {
+.c8 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
@@ -344,27 +344,27 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   padding: 12px;
 }
 
-.c7:hover {
+.c8:hover {
   box-shadow: 0px 0px 0px 2px #00AEEF;
 }
 
-.c7:focus {
+.c8:focus {
   outline: none;
   box-shadow: 0 0 2px 2px #00AEEF;
 }
 
-.c7:focus > circle,
-.c7:focus > ellipse,
-.c7:focus > line,
-.c7:focus > path,
-.c7:focus > polygon,
-.c7:focus > polyline,
-.c7:focus > rect {
+.c8:focus > circle,
+.c8:focus > ellipse,
+.c8:focus > line,
+.c8:focus > path,
+.c8:focus > polygon,
+.c8:focus > polyline,
+.c8:focus > rect {
   outline: none;
   box-shadow: 0 0 2px 2px #00AEEF;
 }
 
-.c7:focus::-moz-focus-inner {
+.c8:focus::-moz-focus-inner {
   border: 0;
 }
 
@@ -407,13 +407,13 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   cursor: not-allowed;
 }
 
-.c5 {
+.c6 {
   color: white;
 }
 
-.c5:hover:enabled,
-.c5:focus:enabled,
-.c5:active:enabled {
+.c6:hover:enabled,
+.c6:focus:enabled,
+.c6:active:enabled {
   box-shadow: none;
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
@@ -421,9 +421,9 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   opacity: initial;
 }
 
-.c5:hover:enabled svg,
-.c5:focus:enabled svg,
-.c5:active:enabled svg {
+.c6:hover:enabled svg,
+.c6:focus:enabled svg,
+.c6:active:enabled svg {
   color: white !important;
 }
 
@@ -431,11 +431,11 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   box-sizing: border-box;
 }
 
-.c10 {
+.c11 {
   min-width: 0px;
 }
 
-.c9 {
+.c10 {
   position: fixed;
   top: auto;
   right: auto;
@@ -445,7 +445,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   background: none;
 }
 
-.c8 {
+.c9 {
   min-width: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -456,7 +456,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   width: 44px;
 }
 
-.c6 {
+.c7 {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-right: 0;
@@ -464,7 +464,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   width: calc(100% - 44px);
 }
 
-.c11 {
+.c12 {
   background: white;
   position: absolute;
   box-shadow: 1px 1px 5px#f4f4f4;
@@ -492,13 +492,13 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   transform: translateY(1px);
 }
 
-.c12 {
+.c13 {
   padding: 4px 16px;
   border-top: 0;
   border-radius: 3px;
 }
 
-.c12:hover:enabled {
+.c13:hover:enabled {
   background: #f4f4f4;
 }
 
@@ -516,7 +516,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   >
     <span>
       <button
-        className="c4 c5 c6"
+        className="c4 c5 c6 c7"
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}
@@ -528,7 +528,7 @@ exports[`Opened DropDownButton renders correctly 1`] = `
         </div>
       </button>
       <button
-        className="c7 c5 c8"
+        className="c8 c5 c6 c9"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -557,36 +557,36 @@ exports[`Opened DropDownButton renders correctly 1`] = `
       </button>
     </span>
     <div
-      className="c9 "
+      className="c10 "
       onClick={[Function]}
     />
     <div
-      className="c2 c10 c11"
+      className="c2 c11 c12"
       onClick={[Function]}
     >
       <div
-        className="c12"
+        className="c13"
       >
         <div>
           Item
         </div>
       </div>
       <div
-        className="c12"
+        className="c13"
       >
         <div>
           Item
         </div>
       </div>
       <div
-        className="c12"
+        className="c13"
       >
         <div>
           Item
         </div>
       </div>
       <div
-        className="c12"
+        className="c13"
       >
         <div>
           Item

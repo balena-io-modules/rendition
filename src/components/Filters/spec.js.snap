@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Filters component should match the stored snapshot 1`] = `
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -23,7 +23,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   justify-content: center;
 }
 
-.c10 {
+.c11 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -85,7 +85,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   border: 0;
 }
 
-.c15 {
+.c16 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
@@ -110,27 +110,27 @@ exports[`Filters component should match the stored snapshot 1`] = `
   transition-timing-function: ease-in-out;
 }
 
-.c15:hover {
+.c16:hover {
   box-shadow: 0px 0px 0px 2px #DDE1f0;
 }
 
-.c15:focus {
+.c16:focus {
   outline: none;
   box-shadow: 0 0 2px 2px #00AEEF;
 }
 
-.c15:focus > circle,
-.c15:focus > ellipse,
-.c15:focus > line,
-.c15:focus > path,
-.c15:focus > polygon,
-.c15:focus > polyline,
-.c15:focus > rect {
+.c16:focus > circle,
+.c16:focus > ellipse,
+.c16:focus > line,
+.c16:focus > path,
+.c16:focus > polygon,
+.c16:focus > polyline,
+.c16:focus > rect {
   outline: none;
   box-shadow: 0 0 2px 2px #00AEEF;
 }
 
-.c15:focus::-moz-focus-inner {
+.c16:focus::-moz-focus-inner {
   border: 0;
 }
 
@@ -173,13 +173,13 @@ exports[`Filters component should match the stored snapshot 1`] = `
   cursor: not-allowed;
 }
 
-.c7 {
+.c8 {
   color: white;
 }
 
-.c7:hover:enabled,
-.c7:focus:enabled,
-.c7:active:enabled {
+.c8:hover:enabled,
+.c8:focus:enabled,
+.c8:active:enabled {
   box-shadow: none;
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
@@ -187,52 +187,24 @@ exports[`Filters component should match the stored snapshot 1`] = `
   opacity: initial;
 }
 
-.c7:hover:enabled svg,
-.c7:focus:enabled svg,
-.c7:active:enabled svg {
+.c8:hover:enabled svg,
+.c8:focus:enabled svg,
+.c8:active:enabled svg {
   color: white !important;
 }
 
-.c16 {
-  font-weight: 600;
-  font-size: 14px;
-  height: 38px;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c16 svg {
-  color: inherit !important;
-  font-size: 0.925em;
-}
-
-.c16:disabled {
-  cursor: not-allowed;
-}
-
-.c16 {
+.c17 {
   color: #2A506F;
   border-color: #DDE1f0;
 }
 
-.c16 svg {
+.c17 svg {
   color: #527699 !important;
 }
 
-.c16:hover:enabled,
-.c16:focus:enabled,
-.c16:active:enabled {
+.c17:hover:enabled,
+.c17:focus:enabled,
+.c17:active:enabled {
   box-shadow: none;
   background: #DDE1f0;
   border-color: #DDE1f0;
@@ -240,13 +212,13 @@ exports[`Filters component should match the stored snapshot 1`] = `
   opacity: initial;
 }
 
-.c16:hover:enabled svg,
-.c16:focus:enabled svg,
-.c16:active:enabled svg {
+.c17:hover:enabled svg,
+.c17:focus:enabled svg,
+.c17:active:enabled svg {
   color: #2A506F !important;
 }
 
-.c8 {
+.c9 {
   margin-right: 30px;
 }
 
@@ -258,7 +230,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   margin-bottom: 16px;
 }
 
-.c19 {
+.c20 {
   margin-right: 8px;
 }
 
@@ -273,7 +245,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   justify-content: space-between;
 }
 
-.c18 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -288,7 +260,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   justify-content: space-between;
 }
 
-.c12 {
+.c13 {
   position: relative;
   width: 100%;
   border-bottom: 1px solid #DDE1f0;
@@ -296,7 +268,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   padding-top: 4px;
 }
 
-.c12 .search-icon {
+.c13 .search-icon {
   color: #bbc8d6;
   position: absolute;
   top: 50%;
@@ -306,7 +278,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
   transform: translateY(-50%);
 }
 
-.c12 input {
+.c13 input {
   outline: none;
   background: transparent;
   box-shadow: none;
@@ -318,54 +290,54 @@ exports[`Filters component should match the stored snapshot 1`] = `
   font-family: 'Source Sans Pro',Helvetica,sans-serif;
 }
 
-.c12 input:hover {
+.c13 input:hover {
   box-shadow: none;
 }
 
-.c12 input::-webkit-input-placeholder {
+.c13 input::-webkit-input-placeholder {
   color: #bbc8d6;
   font-family: 'Source Sans Pro',Helvetica,sans-serif;
 }
 
-.c12 input::-moz-placeholder {
+.c13 input::-moz-placeholder {
   color: #bbc8d6;
   font-family: 'Source Sans Pro',Helvetica,sans-serif;
 }
 
-.c12 input:-ms-input-placeholder {
+.c13 input:-ms-input-placeholder {
   color: #bbc8d6;
   font-family: 'Source Sans Pro',Helvetica,sans-serif;
 }
 
-.c12 input::placeholder {
+.c13 input::placeholder {
   color: #bbc8d6;
   font-family: 'Source Sans Pro',Helvetica,sans-serif;
 }
 
-.c13 {
+.c14 {
   display: inline-block;
   border-radius: 3px;
   vertical-align: top;
   position: relative;
 }
 
-.c13 svg {
+.c14 svg {
   width: 12px;
   -webkit-transform: translateY(1px);
   -ms-transform: translateY(1px);
   transform: translateY(1px);
 }
 
-.c17 {
+.c18 {
   margin: 0;
   width: 100%;
 }
 
-.c14 {
+.c15 {
   margin-left: 30px;
 }
 
-.c11 {
+.c12 {
   -webkit-flex-basis: 500px;
   -ms-flex-preferred-size: 500px;
   flex-basis: 500px;
@@ -391,7 +363,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
       className="c2 c5"
     >
       <button
-        className="c6 c7 c8"
+        className="c6 c7 c8 c9"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -400,7 +372,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
         type="button"
       >
         <div
-          className="c9"
+          className="c10"
         >
           <svg
             aria-hidden="true"
@@ -421,16 +393,16 @@ exports[`Filters component should match the stored snapshot 1`] = `
             />
           </svg>
           <div
-            className="c10"
+            className="c11"
           />
           Add filter
         </div>
       </button>
       <div
-        className="c11"
+        className="c12"
       >
         <div
-          className="c12 "
+          className="c13 "
         >
           <input
             onChange={[Function]}
@@ -465,10 +437,10 @@ exports[`Filters component should match the stored snapshot 1`] = `
         className=""
       >
         <div
-          className="c2 c13 c14"
+          className="c2 c14 c15"
         >
           <button
-            className="c15 c16 c17"
+            className="c16 c7 c17 c18"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -477,7 +449,7 @@ exports[`Filters component should match the stored snapshot 1`] = `
             type="button"
           >
             <div
-              className="c9"
+              className="c10"
             >
               <svg
                 aria-hidden="true"
@@ -497,13 +469,13 @@ exports[`Filters component should match the stored snapshot 1`] = `
                 />
               </svg>
               <div
-                className="c10"
+                className="c11"
               />
               <div
-                className="c2 c18"
+                className="c2 c19"
               >
                 <div
-                  className="c2 c19"
+                  className="c2 c20"
                 >
                   Views
                 </div>

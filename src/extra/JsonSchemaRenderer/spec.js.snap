@@ -255,7 +255,7 @@ exports[`JsonSchemaRenderer component A List widget 1`] = `
   align-items: flex-start;
 }
 
-.c6 {
+.c7 {
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
@@ -263,12 +263,12 @@ exports[`JsonSchemaRenderer component A List widget 1`] = `
   display: inline-block;
 }
 
-.c6:active,
-.c6:hover {
+.c7:active,
+.c7:hover {
   color: hsl(196.29999999999995,100%,37.5%);
 }
 
-.c7 {
+.c8 {
   color: #00AEEF;
 }
 
@@ -282,7 +282,6 @@ exports[`JsonSchemaRenderer component A List widget 1`] = `
   padding: 0;
   margin: 0;
   list-style: none;
-  counter-reset: ordered-list-counter;
 }
 
 .c5 > li {
@@ -304,12 +303,16 @@ exports[`JsonSchemaRenderer component A List widget 1`] = `
   text-align: center;
 }
 
-.c5 > li {
+.c6 {
+  counter-reset: ordered-list-counter;
+}
+
+.c6 > li {
   margin: 16px 0;
   counter-increment: ordered-list-counter;
 }
 
-.c5 > li:before {
+.c6 > li:before {
   content: counter(ordered-list-counter);
   margin-right: 8px;
   background: #1496E1;
@@ -328,14 +331,14 @@ exports[`JsonSchemaRenderer component A List widget 1`] = `
     className="c2 c3 c4 "
   >
     <ol
-      className="c5 "
+      className="c5 c6 "
     >
       <li>
         <div
           className="c2 c3 c4 "
         >
           <a
-            className="c6 c7"
+            className="c7 c8"
             color="primary.main"
             href="https://jel.ly.fish/user"
           >
@@ -348,7 +351,7 @@ exports[`JsonSchemaRenderer component A List widget 1`] = `
           className="c2 c3 c4 "
         >
           <a
-            className="c6 c7"
+            className="c7 c8"
             color="primary.main"
             href="https://jel.ly.fish/org"
           >
@@ -361,7 +364,7 @@ exports[`JsonSchemaRenderer component A List widget 1`] = `
           className="c2 c3 c4 "
         >
           <a
-            className="c6 c7"
+            className="c7 c8"
             color="primary.main"
             href="https://jel.ly.fish/issue"
           >
@@ -438,10 +441,6 @@ exports[`JsonSchemaRenderer component A Tag widget 1`] = `
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   background-color: #e8f5fc;
   border: 1px solid #1496E1;
   border-radius: 2px;
@@ -464,7 +463,7 @@ exports[`JsonSchemaRenderer component A Tag widget 1`] = `
       className="c2 c5 "
     >
       <div
-        className="c2 c6 c7"
+        className="c2 c6 c5 c7"
       >
         <div
           className="c8 c9"
@@ -640,7 +639,7 @@ exports[`JsonSchemaRenderer component A boolean 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A button group widget 1`] = `
-.c6 {
+.c7 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
@@ -668,27 +667,27 @@ exports[`JsonSchemaRenderer component A button group widget 1`] = `
   transition-timing-function: ease-in-out;
 }
 
-.c6:hover {
+.c7:hover {
   box-shadow: 0px 0px 0px 2px #00AEEF;
 }
 
-.c6:focus {
+.c7:focus {
   outline: none;
   box-shadow: 0 0 2px 2px #00AEEF;
 }
 
-.c6:focus > circle,
-.c6:focus > ellipse,
-.c6:focus > line,
-.c6:focus > path,
-.c6:focus > polygon,
-.c6:focus > polyline,
-.c6:focus > rect {
+.c7:focus > circle,
+.c7:focus > ellipse,
+.c7:focus > line,
+.c7:focus > path,
+.c7:focus > polygon,
+.c7:focus > polyline,
+.c7:focus > rect {
   outline: none;
   box-shadow: 0 0 2px 2px #00AEEF;
 }
 
-.c6:focus::-moz-focus-inner {
+.c7:focus::-moz-focus-inner {
   border: 0;
 }
 
@@ -703,7 +702,7 @@ exports[`JsonSchemaRenderer component A button group widget 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c7 {
+.c8 {
   font-weight: 600;
   font-size: 14px;
   height: 38px;
@@ -722,22 +721,22 @@ exports[`JsonSchemaRenderer component A button group widget 1`] = `
   justify-content: center;
 }
 
-.c7 svg {
+.c8 svg {
   color: inherit !important;
   font-size: 0.925em;
 }
 
-.c7:disabled {
+.c8:disabled {
   cursor: not-allowed;
 }
 
-.c7 {
+.c9 {
   color: white;
 }
 
-.c7:hover:enabled,
-.c7:focus:enabled,
-.c7:active:enabled {
+.c9:hover:enabled,
+.c9:focus:enabled,
+.c9:active:enabled {
   box-shadow: none;
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
@@ -745,9 +744,9 @@ exports[`JsonSchemaRenderer component A button group widget 1`] = `
   opacity: initial;
 }
 
-.c7:hover:enabled svg,
-.c7:focus:enabled svg,
-.c7:active:enabled svg {
+.c9:hover:enabled svg,
+.c9:focus:enabled svg,
+.c9:active:enabled svg {
   color: white !important;
 }
 
@@ -782,25 +781,25 @@ exports[`JsonSchemaRenderer component A button group widget 1`] = `
   display: flex;
 }
 
-.c5 > *:first-child {
+.c6 > *:first-child {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.c5 > *:last-child {
+.c6 > *:last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.c5 > *:not(:last-child) {
+.c6 > *:not(:last-child) {
   border-right: 0;
 }
 
-.c5 > *:not(:last-child):not(:first-child) {
+.c6 > *:not(:last-child):not(:first-child) {
   border-radius: 0;
 }
 
-.c5 > *:hover {
+.c6 > *:hover {
   z-index: 1;
 }
 
@@ -817,10 +816,10 @@ exports[`JsonSchemaRenderer component A button group widget 1`] = `
     className="c2 c3 c4 "
   >
     <div
-      className="c2 c5"
+      className="c2 c5 c6"
     >
       <button
-        className="c6 c7 "
+        className="c7 c8 c9 "
         disabled={false}
         onBlur={[Function]}
         onFocus={[Function]}
@@ -831,7 +830,7 @@ exports[`JsonSchemaRenderer component A button group widget 1`] = `
         item 1
       </button>
       <button
-        className="c6 c7 "
+        className="c7 c8 c9 "
         disabled={false}
         onBlur={[Function]}
         onFocus={[Function]}
@@ -842,7 +841,7 @@ exports[`JsonSchemaRenderer component A button group widget 1`] = `
         item 2
       </button>
       <button
-        className="c6 c7 "
+        className="c7 c8 c9 "
         disabled={false}
         onBlur={[Function]}
         onFocus={[Function]}
@@ -949,13 +948,13 @@ exports[`JsonSchemaRenderer component A button widget 1`] = `
   cursor: not-allowed;
 }
 
-.c6 {
+.c7 {
   color: white;
 }
 
-.c6:hover:enabled,
-.c6:focus:enabled,
-.c6:active:enabled {
+.c7:hover:enabled,
+.c7:focus:enabled,
+.c7:active:enabled {
   box-shadow: none;
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
@@ -963,9 +962,9 @@ exports[`JsonSchemaRenderer component A button widget 1`] = `
   opacity: initial;
 }
 
-.c6:hover:enabled svg,
-.c6:focus:enabled svg,
-.c6:active:enabled svg {
+.c7:hover:enabled svg,
+.c7:focus:enabled svg,
+.c7:active:enabled svg {
   color: white !important;
 }
 
@@ -1006,7 +1005,7 @@ exports[`JsonSchemaRenderer component A button widget 1`] = `
     className="c2 c3 c4 "
   >
     <a
-      className="c5 c6 "
+      className="c5 c6 c7 "
       disabled={false}
       href="http://jel.ly.fish/issue"
       onBlur={[Function]}
@@ -1074,7 +1073,7 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
   border: 0;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
@@ -1104,27 +1103,27 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
   padding: 12px;
 }
 
-.c9:hover {
+.c10:hover {
   box-shadow: 0px 0px 0px 2px #00AEEF;
 }
 
-.c9:focus {
+.c10:focus {
   outline: none;
   box-shadow: 0 0 2px 2px #00AEEF;
 }
 
-.c9:focus > circle,
-.c9:focus > ellipse,
-.c9:focus > line,
-.c9:focus > path,
-.c9:focus > polygon,
-.c9:focus > polyline,
-.c9:focus > rect {
+.c10:focus > circle,
+.c10:focus > ellipse,
+.c10:focus > line,
+.c10:focus > path,
+.c10:focus > polygon,
+.c10:focus > polyline,
+.c10:focus > rect {
   outline: none;
   box-shadow: 0 0 2px 2px #00AEEF;
 }
 
-.c9:focus::-moz-focus-inner {
+.c10:focus::-moz-focus-inner {
   border: 0;
 }
 
@@ -1167,13 +1166,13 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
   cursor: not-allowed;
 }
 
-.c7 {
+.c8 {
   color: white;
 }
 
-.c7:hover:enabled,
-.c7:focus:enabled,
-.c7:active:enabled {
+.c8:hover:enabled,
+.c8:focus:enabled,
+.c8:active:enabled {
   box-shadow: none;
   background: hsl(196.29999999999995,100%,37.5%);
   border-color: hsl(196.29999999999995,100%,37.5%);
@@ -1181,9 +1180,9 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
   opacity: initial;
 }
 
-.c7:hover:enabled svg,
-.c7:focus:enabled svg,
-.c7:active:enabled svg {
+.c8:hover:enabled svg,
+.c8:focus:enabled svg,
+.c8:active:enabled svg {
   color: white !important;
 }
 
@@ -1211,7 +1210,7 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
   align-items: flex-start;
 }
 
-.c10 {
+.c11 {
   min-width: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -1222,7 +1221,7 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
   width: 44px;
 }
 
-.c8 {
+.c9 {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-right: 0;
@@ -1262,7 +1261,7 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
     >
       <span>
         <button
-          className="c6 c7 c8"
+          className="c6 c7 c8 c9"
           disabled={false}
           onBlur={[Function]}
           onFocus={[Function]}
@@ -1273,7 +1272,7 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
           Actions
         </button>
         <button
-          className="c9 c7 c10"
+          className="c10 c7 c8 c11"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
