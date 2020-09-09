@@ -1,5 +1,4 @@
 import React from 'react';
-import isEqual from 'lodash/isEqual';
 import { Flex } from '../../components/Flex';
 import Alert from '../../components/Alert';
 
@@ -33,7 +32,7 @@ export default class ErrorBoundary extends React.Component<
 	}
 
 	componentDidUpdate(prevProps: any) {
-		if (!isEqual(prevProps, this.props)) {
+		if (this.state.error && prevProps !== this.props) {
 			this.setState({ error: null });
 		}
 	}

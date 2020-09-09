@@ -1,8 +1,9 @@
 import * as React from 'react';
 import get from 'lodash/get';
 import Badge from '../../../components/Badge';
+import { hashCode } from '../../../utils';
 import { UiOption } from './ui-options';
-import { Widget, WidgetProps, stringToNumber } from './widget-util';
+import { Widget, WidgetProps } from './widget-util';
 import { JsonTypes } from '../types';
 
 const BadgeWidget: Widget = ({
@@ -11,7 +12,7 @@ const BadgeWidget: Widget = ({
 	uiSchema,
 	...props
 }: WidgetProps) => {
-	const shade = get(props, 'shade', stringToNumber(value.toString(), 23));
+	const shade = get(props, 'shade', hashCode(value.toString(), 23));
 	return (
 		<Badge {...props} shade={shade}>
 			{value.toString()}

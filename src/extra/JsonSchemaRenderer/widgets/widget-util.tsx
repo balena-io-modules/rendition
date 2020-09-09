@@ -26,17 +26,6 @@ export interface Widget {
 	supportedTypes?: string[];
 }
 
-export const stringToNumber = function (text: string, max: number) {
-	let hash = 0;
-	for (let index = 0; index < text.length; index++) {
-		// tslint:disable-next-line no-bitwise
-		hash = text.charCodeAt(index) + ((hash << 5) - hash);
-	}
-
-	// tslint:disable-next-line no-bitwise
-	return (hash >> (text.length * 8)) & max;
-};
-
 export function formatTimestamp(timestamp: string, uiSchema: UiSchema = {}) {
 	const uiFormat = get(uiSchema, ['ui:options', 'dtFormat']);
 	return uiFormat ? format(new Date(timestamp), uiFormat) : timestamp;
