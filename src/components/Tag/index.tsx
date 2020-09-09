@@ -30,6 +30,10 @@ const TagBase = ({
 }: InternalTagProps) => {
 	const tagArray = multiple || [{ name, operator, value }];
 
+	if (!tagArray.length) {
+		return null;
+	}
+
 	const tagContent = (
 		<Container py={1} px={2}>
 			{tagArray.map((tagEntry, index) => {
@@ -96,8 +100,8 @@ export interface InternalTagProps {
 		operator?: string;
 		prefix?: string;
 	}>;
-	onClose?: () => void;
-	onClick?: () => void;
+	onClose?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
+	onClick?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 	className?: string;
 }
 
