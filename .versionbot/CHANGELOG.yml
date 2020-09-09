@@ -1,4 +1,90 @@
 - commits:
+    - subject: JsonSchemaRenderer internal fixes
+      hash: ee7a12cd0e3d8eab6f79d78f5d63658dda330090
+      body: >
+        Renamed `stringToNumber` to `hashCode` and moved it to `utils/index`
+
+        `ErrorBoundary` now just does a shallow compare of props to see if it
+        should reset the error state.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: Use date-fns rather than momentjs
+      hash: 85112b8e509438d25339368f55c12f1bd63c61db
+      body: |
+        date-fns is more lightweight.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: 'test: Update JsonSchemaRenderer snapshots'
+      hash: 9093770c5d4fedf1666344e23df211d12641b2f2
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: 'feat: Minor JsonSchemaRenderer improvements'
+      hash: 768b4835910e4eed2c0bc00195c3b50f40bfeded
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: 'feat: Add support for date-formatting in JsonSchemaRenderer Txt widgets'
+      hash: 5cecf3a2f9190515c8063069c3ccd6649997e179
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: 'fix: Reset error boundary if props change'
+      hash: 66c9f729592c011ef59d1529a73470cabf36c4a4
+      body: >
+        Previously, the error boundary was stuck in the error state until it was
+        unmounted and remounted.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: 'feat: Auto-pick widget based on format field in schema'
+      hash: 30b111ad8de170fa843ce02214d27841d0cff263
+      body: >
+        If the format is mermaid or markdown or email or uri we automatically
+        pick the widget if the UI schema doesn't explicitly specify a widget to
+        use.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: 'fix: Handle UI schema transformations better'
+      hash: a8ec57c36a1280f1d5d9c9f47fef3ef42e91ad5f
+      body: |
+        Handle the situation where value is null or undefined.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 18.8.0
+  date: 2020-09-09T03:49:00.062Z
+- commits:
     - subject: 'Markdown: Add decorator support'
       hash: 8b1c8ba38567d15ff0ae4a683b235df4226bdcf4
       body: ''
