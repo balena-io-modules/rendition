@@ -11,6 +11,7 @@ import ImgWidget from './ImgWidget';
 import LinkWidget from './LinkWidget';
 import ListWidget from './ListWidget';
 import MarkdownWidget from './MarkdownWidget';
+import MermaidWidget from './MermaidWidget';
 import ObjectWidget from './ObjectWidget';
 import TagWidget from './TagWidget';
 import TxtWidget from './TxtWidget';
@@ -50,6 +51,7 @@ const allWidgets: WidgetLookup = {};
 	LinkWidget,
 	ListWidget,
 	MarkdownWidget,
+	MermaidWidget,
 	ObjectWidget,
 	TagWidget,
 	TxtWidget,
@@ -72,10 +74,19 @@ widgets.string.default = allWidgets.Txt;
 widgets.null.default = allWidgets.Txt;
 widgets.integer.default = allWidgets.Txt;
 widgets.number.default = allWidgets.Txt;
-widgets.boolean.default = allWidgets.Checkbox;
+widgets.boolean.default = allWidgets.Txt;
 widgets.array.default = allWidgets.Array;
 widgets.default = {
 	default: allWidgets.Txt,
+};
+
+export const formatWidgetMap: {
+	[key: string]: Widget;
+} = {
+	markdown: allWidgets.Markdown,
+	mermaid: allWidgets.Mermaid,
+	email: allWidgets.Link,
+	uri: allWidgets.Link,
 };
 
 export default widgets;

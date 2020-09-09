@@ -1,4 +1,5 @@
 import * as React from 'react';
+import format from 'date-fns/format';
 import jsone from 'json-e';
 import merge from 'lodash/merge';
 import pickBy from 'lodash/pickBy';
@@ -23,6 +24,11 @@ export interface Widget {
 	(props: WidgetProps): JSX.Element | null;
 	uiOptions?: UiOptions;
 	supportedTypes?: string[];
+}
+
+export function formatTimestamp(timestamp: string, uiSchema: UiSchema = {}) {
+	const uiFormat = get(uiSchema, ['ui:options', 'dtFormat']);
+	return uiFormat ? format(new Date(timestamp), uiFormat) : timestamp;
 }
 
 // This HOC function wraps a Widget component and converts
@@ -55,7 +61,8 @@ export const transformUiSchema = ({
 	uiSchema: WidgetProps['uiSchema'];
 	extraContext: WidgetProps['extraContext'];
 }) => {
-	const context = { source: value, ...extraContext };
+	// Ensure source is not null/undefined as jsone might call toString() on it
+	const context = { source: value ?? '', ...extraContext };
 	if (typeof value === 'object') {
 		// For objects/arrays just transform the 'ui:' properties.
 		// Sub-properties will be transformed recursively.

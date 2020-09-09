@@ -31,6 +31,12 @@ export default class ErrorBoundary extends React.Component<
 		return { error };
 	}
 
+	componentDidUpdate(prevProps: any) {
+		if (this.state.error && prevProps !== this.props) {
+			this.setState({ error: null });
+		}
+	}
+
 	render() {
 		if (this.state.error) {
 			return this.props.getErrorDisplay ? (

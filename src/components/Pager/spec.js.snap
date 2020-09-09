@@ -50,7 +50,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
   border: 0;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
@@ -77,27 +77,27 @@ exports[`Pager component should match the stored snapshot 1`] = `
   padding: 12px;
 }
 
-.c9:hover {
+.c10:hover {
   box-shadow: 0px 0px 0px 2px #DDE1f0;
 }
 
-.c9:focus {
+.c10:focus {
   outline: none;
   box-shadow: 0 0 2px 2px #00AEEF;
 }
 
-.c9:focus > circle,
-.c9:focus > ellipse,
-.c9:focus > line,
-.c9:focus > path,
-.c9:focus > polygon,
-.c9:focus > polyline,
-.c9:focus > rect {
+.c10:focus > circle,
+.c10:focus > ellipse,
+.c10:focus > line,
+.c10:focus > path,
+.c10:focus > polygon,
+.c10:focus > polyline,
+.c10:focus > rect {
   outline: none;
   box-shadow: 0 0 2px 2px #00AEEF;
 }
 
-.c9:focus::-moz-focus-inner {
+.c10:focus::-moz-focus-inner {
   border: 0;
 }
 
@@ -140,18 +140,18 @@ exports[`Pager component should match the stored snapshot 1`] = `
   cursor: not-allowed;
 }
 
-.c8 {
+.c9 {
   color: #2A506F;
   border-color: #DDE1f0;
 }
 
-.c8 svg {
+.c9 svg {
   color: #527699 !important;
 }
 
-.c8:hover:enabled,
-.c8:focus:enabled,
-.c8:active:enabled {
+.c9:hover:enabled,
+.c9:focus:enabled,
+.c9:active:enabled {
   box-shadow: none;
   background: #DDE1f0;
   border-color: #DDE1f0;
@@ -159,9 +159,9 @@ exports[`Pager component should match the stored snapshot 1`] = `
   opacity: initial;
 }
 
-.c8:hover:enabled svg,
-.c8:focus:enabled svg,
-.c8:active:enabled svg {
+.c9:hover:enabled svg,
+.c9:focus:enabled svg,
+.c9:active:enabled svg {
   color: #2A506F !important;
 }
 
@@ -193,13 +193,6 @@ exports[`Pager component should match the stored snapshot 1`] = `
 
 .c4 {
   margin-right: 8px;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .c6 > *:first-child {
@@ -254,10 +247,10 @@ exports[`Pager component should match the stored snapshot 1`] = `
       className="c2 c5"
     >
       <div
-        className="c2 c6"
+        className="c2 c5 c6"
       >
         <button
-          className="c7 c8 rendition-pager__btn--prev"
+          className="c7 c8 c9 rendition-pager__btn--prev"
           disabled={true}
           onBlur={[Function]}
           onClick={[Function]}
@@ -285,7 +278,7 @@ exports[`Pager component should match the stored snapshot 1`] = `
           </svg>
         </button>
         <button
-          className="c9 c8 rendition-pager__btn--next"
+          className="c10 c8 c9 rendition-pager__btn--next"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}

@@ -51,7 +51,7 @@ exports[`Avatar component Avatar renders correctly 1`] = `
 >
   
   <div
-    className="c2 "
+    className="c2 StyledAvatar-sc-1suyamb-1"
   >
     <svg
       aria-hidden="true"

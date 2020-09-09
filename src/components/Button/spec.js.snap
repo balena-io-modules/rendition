@@ -89,18 +89,18 @@ exports[`Button renders correctly 1`] = `
   cursor: not-allowed;
 }
 
-.c3 {
+.c4 {
   color: #2A506F;
   border-color: #2A506F;
 }
 
-.c3 svg {
+.c4 svg {
   color: #527699 !important;
 }
 
-.c3:hover:enabled,
-.c3:focus:enabled,
-.c3:active:enabled {
+.c4:hover:enabled,
+.c4:focus:enabled,
+.c4:active:enabled {
   box-shadow: none;
   background: #2A506F;
   border-color: #2A506F;
@@ -108,9 +108,9 @@ exports[`Button renders correctly 1`] = `
   opacity: initial;
 }
 
-.c3:hover:enabled svg,
-.c3:focus:enabled svg,
-.c3:active:enabled svg {
+.c4:hover:enabled svg,
+.c4:focus:enabled svg,
+.c4:active:enabled svg {
   color: white !important;
 }
 
@@ -124,7 +124,7 @@ exports[`Button renders correctly 1`] = `
   className="c0 c1"
 >
   <button
-    className="c2 c3 "
+    className="c2 c3 c4 "
     onBlur={[Function]}
     onFocus={[Function]}
     onMouseOut={[Function]}
@@ -225,18 +225,18 @@ exports[`Styled Anchor Button renders correctly 1`] = `
   cursor: not-allowed;
 }
 
-.c3 {
+.c4 {
   color: #2A506F;
   border-color: #2A506F;
 }
 
-.c3 svg {
+.c4 svg {
   color: #527699 !important;
 }
 
-.c3:hover:enabled,
-.c3:focus:enabled,
-.c3:active:enabled {
+.c4:hover:enabled,
+.c4:focus:enabled,
+.c4:active:enabled {
   box-shadow: none;
   background: #2A506F;
   border-color: #2A506F;
@@ -244,13 +244,13 @@ exports[`Styled Anchor Button renders correctly 1`] = `
   opacity: initial;
 }
 
-.c3:hover:enabled svg,
-.c3:focus:enabled svg,
-.c3:active:enabled svg {
+.c4:hover:enabled svg,
+.c4:focus:enabled svg,
+.c4:active:enabled svg {
   color: white !important;
 }
 
-.c4 {
+.c5 {
   margin: 8px;
 }
 
@@ -264,7 +264,7 @@ exports[`Styled Anchor Button renders correctly 1`] = `
   className="c0 c1"
 >
   <a
-    className="c2 c3 c4"
+    className="c2 c3 c4 c5"
     href="#"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -365,18 +365,18 @@ exports[`Styled Button renders correctly 1`] = `
   cursor: not-allowed;
 }
 
-.c3 {
+.c4 {
   color: #2A506F;
   border-color: #2A506F;
 }
 
-.c3 svg {
+.c4 svg {
   color: #527699 !important;
 }
 
-.c3:hover:enabled,
-.c3:focus:enabled,
-.c3:active:enabled {
+.c4:hover:enabled,
+.c4:focus:enabled,
+.c4:active:enabled {
   box-shadow: none;
   background: #2A506F;
   border-color: #2A506F;
@@ -384,13 +384,13 @@ exports[`Styled Button renders correctly 1`] = `
   opacity: initial;
 }
 
-.c3:hover:enabled svg,
-.c3:focus:enabled svg,
-.c3:active:enabled svg {
+.c4:hover:enabled svg,
+.c4:focus:enabled svg,
+.c4:active:enabled svg {
   color: white !important;
 }
 
-.c4 {
+.c5 {
   margin: 8px;
 }
 
@@ -404,7 +404,7 @@ exports[`Styled Button renders correctly 1`] = `
   className="c0 c1"
 >
   <button
-    className="c2 c3 c4"
+    className="c2 c3 c4 c5"
     onBlur={[Function]}
     onFocus={[Function]}
     onMouseOut={[Function]}

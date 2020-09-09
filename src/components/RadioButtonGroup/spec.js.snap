@@ -265,7 +265,7 @@ exports[`RadioButtonGroup renders correctly 1`] = `
         />
       </div>
       <span
-        className=""
+        className="StyledRadioButton__StyledRadioButtonLabel-g1f6ld-2"
       >
         disabled
       </span>
@@ -299,7 +299,7 @@ exports[`RadioButtonGroup renders correctly 1`] = `
         />
       </div>
       <span
-        className=""
+        className="StyledRadioButton__StyledRadioButtonLabel-g1f6ld-2"
       >
         enabled
       </span>
@@ -345,7 +345,7 @@ exports[`RadioButtonGroup renders correctly 1`] = `
         </div>
       </div>
       <span
-        className=""
+        className="StyledRadioButton__StyledRadioButtonLabel-g1f6ld-2"
       >
         selected
       </span>

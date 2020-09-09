@@ -32,6 +32,22 @@ const EXTRA_FORMATS: Format[] = [
 		name: 'markdown',
 		format: '.*',
 	},
+	{
+		name: 'mermaid',
+		format: '.*',
+	},
+	{
+		name: 'uri',
+		format: '.*',
+	},
+	{
+		name: 'email',
+		format: '.*',
+	},
+	{
+		name: 'data-url',
+		format: '.*',
+	},
 ];
 
 const SlimCard = styled(Card)`

@@ -32,12 +32,15 @@ exports[`Banner renders correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.c4 {
   background-size: cover;
   background-position: center;
   background-image: none;
 }
 
-.c4 {
+.c5 {
   padding: 16px;
   min-height: 80vh;
   color: white;
@@ -50,7 +53,7 @@ exports[`Banner renders correctly 1`] = `
 }
 
 @media screen and (min-width:576px) {
-  .c4 {
+  .c5 {
     padding: 38px;
   }
 }
@@ -59,7 +62,7 @@ exports[`Banner renders correctly 1`] = `
   className="c0 c1"
 >
   <div
-    className="c2 c3 c4"
+    className="c2 c3 c4 c5"
   >
     <h1>
       balena
