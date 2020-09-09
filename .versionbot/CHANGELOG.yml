@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix tag not shown correctly when multiple array is empty
+      hash: 1a15b94b01b914163fc24d185c14cbfc1147b318
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 18.8.1
+  date: 2020-09-09T17:37:52.673Z
+- commits:
     - subject: JsonSchemaRenderer internal fixes
       hash: ee7a12cd0e3d8eab6f79d78f5d63658dda330090
       body: >
