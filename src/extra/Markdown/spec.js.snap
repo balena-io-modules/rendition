@@ -53,7 +53,9 @@ exports[`Markdown component should decorate the text matching the condition 1`] 
 }
 
 .c2 pre > code {
+  display: block;
   background: none;
+  overflow-y: auto;
 }
 
 .c2 code,
@@ -249,7 +251,9 @@ exports[`Markdown component should match the stored snapshot 1`] = `
 }
 
 .c2 pre > code {
+  display: block;
   background: none;
+  overflow-y: auto;
 }
 
 .c2 code,
@@ -407,7 +411,9 @@ exports[`Markdown component should not highlight code when disabled 1`] = `
 }
 
 .c2 pre > code {
+  display: block;
   background: none;
+  overflow-y: auto;
 }
 
 .c2 code,
@@ -589,7 +595,9 @@ exports[`Markdown component should not render raw html when disabled 1`] = `
 }
 
 .c2 pre > code {
+  display: block;
   background: none;
+  overflow-y: auto;
 }
 
 .c2 code,
@@ -777,7 +785,9 @@ exports[`Markdown component should not sanitize html when disabled 1`] = `
 }
 
 .c2 pre > code {
+  display: block;
   background: none;
+  overflow-y: auto;
 }
 
 .c2 code,

@@ -36,7 +36,9 @@ const MarkdownWrapper = styled(Txt)`
 	}
 
 	& pre > code {
+		display: block;
 		background: none;
+		overflow-y: auto;
 	}
 
 	& code,

@@ -91,7 +91,7 @@ I think you should use an
 ## Code blocks
 
 \`\`\`
-// This is plaintext
+// This is plaintext with a very long line that won't wrap but should cause a horizontal scrollbar to appear so that the code block doesn't overflow it's container and make a mockery of your website. It really needs to be a very long line to ensure it forces the scrollbar to appear on the React Storybook display, especially on large monitor resolutions which can display a super-wide code block!
 const foo = () => {
   return 'bar'
 }

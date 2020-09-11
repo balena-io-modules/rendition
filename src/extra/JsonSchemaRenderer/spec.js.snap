@@ -1508,7 +1508,9 @@ exports[`JsonSchemaRenderer component A markdown field 1`] = `
 }
 
 .c5 pre > code {
+  display: block;
   background: none;
+  overflow-y: auto;
 }
 
 .c5 code,
