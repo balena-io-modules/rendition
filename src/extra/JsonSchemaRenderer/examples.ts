@@ -70,6 +70,18 @@ const jsonDataExamples = {
 			'ui:widget': 'Txt',
 		},
 	},
+	'A default value': {
+		value: null,
+		schema: {
+			type: ['string', 'null'],
+			default: 'The default value',
+			title: 'Field title',
+			description: 'Field description',
+		},
+		uiSchema: {
+			'ui:widget': 'Txt',
+		},
+	},
 	'An array of strings field': {
 		value: ['first item', 'second item', 'third item'],
 		schema: {

@@ -18,8 +18,16 @@ import widgets, {
 import { transformUiSchema } from './widgets/widget-util';
 import { Value, JSONSchema, UiSchema, Format } from './types';
 
-export const getValue = (value?: Value, uiSchema?: UiSchema) => {
-	return get(uiSchema, 'ui:value', value);
+export const getValue = (
+	value?: Value,
+	schema?: JSONSchema,
+	uiSchema?: UiSchema,
+) => {
+	const calculatedValue = get(uiSchema, 'ui:value', value);
+	// Fall back to schema's default value if value is undefined
+	return calculatedValue !== undefined
+		? calculatedValue
+		: get(schema, 'default');
 };
 
 const widgetWrapperUiOptionKeys = keys(WidgetWrapperUiOptions);
@@ -118,7 +126,7 @@ export const JsonSchemaRenderer = ({
 		uiSchema,
 		extraContext,
 	});
-	const processedValue = getValue(value, processedUiSchema);
+	const processedValue = getValue(value, schema, processedUiSchema);
 
 	if (processedValue === undefined || processedValue === null) {
 		return null;
