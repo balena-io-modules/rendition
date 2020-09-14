@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'fix: Fall back to schema default for value in JsonSchemaRenderer'
+      hash: 7136036cf121ff9b454dabe089d2b1212db4f4d5
+      body: >
+        If the UI schema doesn't define a value and the data value isn't defined
+        either we fall back to the 'default' value defined in the schema (if it
+        is defined).
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 18.8.3
+  date: 2020-09-14T06:36:34.098Z
+- commits:
     - subject: 'fix: ensure Markdown code blocks don''t overflow their container'
       hash: 9b8ed3edd8f6979f14553753ccd567694738d0bf
       body: >
