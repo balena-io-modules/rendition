@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'fix: ensure Markdown code blocks don''t overflow their container'
+      hash: 9b8ed3edd8f6979f14553753ccd567694738d0bf
+      body: >
+        Note - the screenshot of the Markdown story doesn't show the horizontal
+        scrollbar - but it is there!
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 18.8.2
+  date: 2020-09-14T04:03:12.935Z
+- commits:
     - subject: Fix tag not shown correctly when multiple array is empty
       hash: 1a15b94b01b914163fc24d185c14cbfc1147b318
       body: ''
