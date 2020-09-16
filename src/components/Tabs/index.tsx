@@ -6,9 +6,11 @@ import {
 	TabsProps,
 } from 'grommet';
 export { TabProps, TabsProps } from 'grommet';
-import * as React from 'react';
+import React, { useState } from 'react';
 import asRendition from '../../asRendition';
 import { Flex } from '../Flex';
+import Button from '../Button';
+import clamp from 'lodash/clamp';
 
 interface InnerTabProps extends TabProps {
 	compact?: boolean;
@@ -23,6 +25,7 @@ interface InnerTabsProps extends TabsProps {
 const ScrollWrapper = styled(GrommetTabs)<{
 	compact?: boolean;
 }>`
+	position: relative;
 	${(props) => {
 		if (props.compact) {
 			return `
@@ -61,42 +64,60 @@ const TabTitle = styled(GrommetTab)<{
 	}}
 `;
 
-export const Tab = ({
-	compact,
-	title,
-	index,
-	length,
-	...props
-}: InnerTabProps) => {
-	console.log(index, length);
+const ButtonWrapper = styled(Button)<{
+	compact?: boolean;
+}>``;
 
+export const Tab = ({ compact, title, ...props }: InnerTabProps) => {
 	return (
 		<Flex>
-			{index === 0 && <button>left</button>}
 			<TabTitle compact={compact} title={title} {...props}>
 				{title}
 			</TabTitle>
-			{index + 1 === length && <button>right</button>}
 		</Flex>
 	);
 };
 
 const TabsBase = ({ children, ...props }: InnerTabsProps) => {
 	const mapLength = React.Children.count(children);
+	const zeroIndexMapLength = mapLength - 1;
+
+	const [tabIndex, setTabIndex] = useState(0);
+
+	const incrementTabIndex = () => {
+		const newIndex = clamp(tabIndex + 1, 0, zeroIndexMapLength);
+		setTabIndex(newIndex);
+	};
+
+	const decrementTabIndex = () => {
+		const newIndex = clamp(tabIndex - 1, 0, zeroIndexMapLength);
+		setTabIndex(newIndex);
+	};
 
 	return (
-		<ScrollWrapper justify="start" {...props}>
-			{React.Children.map(
-				children,
-				(tab: React.ReactElement<InnerTabProps>, index: number) => {
-					return React.cloneElement(tab, {
-						compact: props.compact,
-						index,
-						length: mapLength,
-					});
-				},
-			)}
-		</ScrollWrapper>
+		<Flex>
+			<Button m={2} plain primary onClick={decrementTabIndex}>
+				left
+			</Button>
+			<ScrollWrapper
+				activeIndex={tabIndex}
+				onActive={setTabIndex}
+				justify="start"
+				{...props}
+			>
+				{React.Children.map(
+					children,
+					(tab: React.ReactElement<InnerTabProps>) => {
+						return React.cloneElement(tab, {
+							compact: props.compact,
+						});
+					},
+				)}
+			</ScrollWrapper>
+			<ButtonWrapper m={2} plain primary onClick={incrementTabIndex}>
+				right
+			</ButtonWrapper>
+		</Flex>
 	);
 };
 

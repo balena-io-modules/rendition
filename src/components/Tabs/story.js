@@ -40,6 +40,15 @@ storiesOf('Next/Tabs', module)
     return (
       <Box maxWidth={400}>
         <Tabs p={3} compact>
+          <Tab title='Tab 1'>
+            <Txt mt={3}>Here is tab #1</Txt>
+          </Tab>
+          <Tab title='Tab 2'>
+            <Txt mt={3}>Here is tab #2</Txt>
+          </Tab>
+          <Tab title='Tab 3'>
+            <Txt mt={3}>Here is tab #3</Txt>
+          </Tab>
           <Tab title='This is a very long tab name'>
             <Txt mt={3}>Here is tab #1</Txt>
           </Tab>
