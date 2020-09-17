@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'Modules: add sanitize-html as a dependency'
+      hash: 870c2c49d9af18815d3c37c51a4682a6b13e3540
+      body: |
+        add missing sanitize-html in dependencies
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 18.8.5
+  date: 2020-09-17T11:40:22.364Z
+- commits:
     - subject: 'fix: Use widget''s display name to reference the widget'
       hash: e2d47457c529b089cc2918536d3207398eddb13f
       body: |
