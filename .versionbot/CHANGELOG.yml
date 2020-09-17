@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'fix: Use widget''s display name to reference the widget'
+      hash: e2d47457c529b089cc2918536d3207398eddb13f
+      body: |
+        Otherwise obfuscation causes problems in production code!
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 18.8.4
+  date: 2020-09-17T02:34:22.575Z
+- commits:
     - subject: 'fix: Fall back to schema default for value in JsonSchemaRenderer'
       hash: 7136036cf121ff9b454dabe089d2b1212db4f4d5
       body: >
