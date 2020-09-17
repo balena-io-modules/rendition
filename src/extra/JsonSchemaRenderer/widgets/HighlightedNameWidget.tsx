@@ -21,6 +21,8 @@ const HighlightedNameWidget: Widget = ({
 	);
 };
 
+HighlightedNameWidget.displayName = 'HighlightedName';
+
 HighlightedNameWidget.uiOptions = {
 	bg: UiOption.string,
 	color: UiOption.string,

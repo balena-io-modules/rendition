@@ -13,6 +13,8 @@ const TagWidget: Widget = ({
 	return <Tag {...props} value={value.toString()} />;
 };
 
+TagWidget.displayName = 'Tag';
+
 TagWidget.uiOptions = {
 	operator: UiOption.boolean,
 	name: UiOption.string,

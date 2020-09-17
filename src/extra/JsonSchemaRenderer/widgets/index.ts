@@ -56,37 +56,36 @@ const allWidgets: WidgetLookup = {};
 	TagWidget,
 	TxtWidget,
 ].reduce((acc, widget) => {
-	const widgetName = widget.name.replace(/Widget$/, '');
 	const wrappedWidget = widget.uiOptions
 		? withOptionProps(widget.uiOptions)(widget)
 		: widget;
-	acc[widgetName] = wrappedWidget;
+	acc[widget.displayName] = wrappedWidget;
 	if (widget.supportedTypes) {
 		widget.supportedTypes.forEach((jsonType) => {
-			widgets[jsonType][widgetName] = wrappedWidget;
+			widgets[jsonType][widget.displayName] = wrappedWidget;
 		});
 	}
 	return acc;
 }, allWidgets);
 
-widgets.object.default = allWidgets.Object;
-widgets.string.default = allWidgets.Txt;
-widgets.null.default = allWidgets.Txt;
-widgets.integer.default = allWidgets.Txt;
-widgets.number.default = allWidgets.Txt;
-widgets.boolean.default = allWidgets.Txt;
-widgets.array.default = allWidgets.Array;
+widgets.object.default = allWidgets[ObjectWidget.displayName];
+widgets.string.default = allWidgets[TxtWidget.displayName];
+widgets.null.default = allWidgets[TxtWidget.displayName];
+widgets.integer.default = allWidgets[TxtWidget.displayName];
+widgets.number.default = allWidgets[TxtWidget.displayName];
+widgets.boolean.default = allWidgets[TxtWidget.displayName];
+widgets.array.default = allWidgets[ArrayWidget.displayName];
 widgets.default = {
-	default: allWidgets.Txt,
+	default: allWidgets[TxtWidget.displayName],
 };
 
 export const formatWidgetMap: {
 	[key: string]: Widget;
 } = {
-	markdown: allWidgets.Markdown,
-	mermaid: allWidgets.Mermaid,
-	email: allWidgets.Link,
-	uri: allWidgets.Link,
+	markdown: allWidgets[MarkdownWidget.displayName],
+	mermaid: allWidgets[MermaidWidget.displayName],
+	email: allWidgets[LinkWidget.displayName],
+	uri: allWidgets[LinkWidget.displayName],
 };
 
 export default widgets;

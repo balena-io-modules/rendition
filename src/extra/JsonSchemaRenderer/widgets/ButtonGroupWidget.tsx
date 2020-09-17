@@ -40,6 +40,8 @@ const ButtonGroupWidget: Widget = ({
 	);
 };
 
+ButtonGroupWidget.displayName = 'ButtonGroup';
+
 ButtonGroupWidget.uiOptions = ButtonWidget.uiOptions;
 
 ButtonGroupWidget.supportedTypes = [JsonTypes.array];

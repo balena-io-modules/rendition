@@ -33,6 +33,8 @@ const ArrayWidget: Widget = ({
 	);
 };
 
+ArrayWidget.displayName = 'Array';
+
 ArrayWidget.uiOptions = {
 	orientation: {
 		...UiOption.string,

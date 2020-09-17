@@ -38,6 +38,8 @@ const DropDownButtonWidget: Widget = ({
 	);
 };
 
+DropDownButtonWidget.displayName = 'DropDownButton';
+
 DropDownButtonWidget.uiOptions = {
 	...ButtonWidget.uiOptions,
 	label: UiOption.string,

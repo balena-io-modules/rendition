@@ -36,6 +36,8 @@ const ListWidget: Widget = ({
 	);
 };
 
+ListWidget.displayName = 'List';
+
 ListWidget.uiOptions = {
 	truncate: UiOption.integer,
 	ordered: UiOption.boolean,

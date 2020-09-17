@@ -13,6 +13,8 @@ const ButtonWidget: Widget = ({
 	return <Button {...props}>{value.toString()}</Button>;
 };
 
+ButtonWidget.displayName = 'Button';
+
 ButtonWidget.uiOptions = {
 	href: UiOption.string,
 	target: {

@@ -20,6 +20,8 @@ const HeadingWidget: Widget = ({
 	return <HeadingComponent {...props}>{value.toString()}</HeadingComponent>;
 };
 
+HeadingWidget.displayName = 'Heading';
+
 HeadingWidget.uiOptions = {
 	size: {
 		...UiOption.number,

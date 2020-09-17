@@ -24,6 +24,7 @@ export interface Widget {
 	(props: WidgetProps): JSX.Element | null;
 	uiOptions?: UiOptions;
 	supportedTypes?: string[];
+	displayName: string;
 }
 
 export function formatTimestamp(timestamp: string, uiSchema: UiSchema = {}) {
@@ -44,6 +45,7 @@ export function withOptionProps(uiOptions: UiOptions) {
 			return <Component {...props} {...extraProps} />;
 		};
 
+		wrapped.displayName = Component.displayName;
 		wrapped.uiOptions = Component.uiOptions;
 		wrapped.supportedTypes = Component.supportedTypes;
 		return wrapped;

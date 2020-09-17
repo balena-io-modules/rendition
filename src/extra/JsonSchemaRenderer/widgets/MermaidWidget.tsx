@@ -12,6 +12,8 @@ const MermaidWidget: Widget = ({
 	return <Mermaid width="100%" {...props} value={value.toString()} />;
 };
 
+MermaidWidget.displayName = 'Mermaid';
+
 MermaidWidget.uiOptions = {};
 
 MermaidWidget.supportedTypes = [JsonTypes.string];
