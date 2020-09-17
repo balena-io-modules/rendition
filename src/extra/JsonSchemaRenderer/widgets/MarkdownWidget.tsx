@@ -12,6 +12,8 @@ const MarkdownWidget: Widget = ({
 	return <Markdown {...props}>{value.toString()}</Markdown>;
 };
 
+MarkdownWidget.displayName = 'Markdown';
+
 MarkdownWidget.supportedTypes = [JsonTypes.string];
 
 export default MarkdownWidget;

@@ -34,6 +34,8 @@ const ObjectWidget: Widget = ({
 	);
 };
 
+ObjectWidget.displayName = 'Object';
+
 ObjectWidget.supportedTypes = [JsonTypes.object];
 
 export default ObjectWidget;

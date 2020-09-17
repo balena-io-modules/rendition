@@ -20,6 +20,8 @@ const BadgeWidget: Widget = ({
 	);
 };
 
+BadgeWidget.displayName = 'Badge';
+
 BadgeWidget.uiOptions = {
 	shade: UiOption.number,
 };

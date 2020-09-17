@@ -22,6 +22,8 @@ const LinkWidget: Widget = ({
 	);
 };
 
+LinkWidget.displayName = 'Link';
+
 LinkWidget.uiOptions = {
 	blank: UiOption.boolean,
 	download: UiOption.string,

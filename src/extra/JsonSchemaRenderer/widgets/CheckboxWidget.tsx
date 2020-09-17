@@ -14,6 +14,8 @@ const CheckboxWidget: Widget = ({
 	return <Checkbox {...props} checked={Boolean(value)} onChange={noop} />;
 };
 
+CheckboxWidget.displayName = 'Checkbox';
+
 CheckboxWidget.uiOptions = {
 	label: UiOption.string,
 	reverse: UiOption.boolean,

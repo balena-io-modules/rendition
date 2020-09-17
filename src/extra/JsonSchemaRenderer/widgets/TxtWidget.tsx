@@ -46,6 +46,8 @@ const TxtWidget: Widget = ({
 	return <Component {...props}>{displayValue || ''}</Component>;
 };
 
+TxtWidget.displayName = 'Txt';
+
 TxtWidget.uiOptions = {
 	dtFormat: UiOption.string,
 	bold: UiOption.boolean,

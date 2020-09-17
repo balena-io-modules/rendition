@@ -33,6 +33,8 @@ ImgWidget.uiOptions = {
 	srcset: UiOption.string,
 };
 
+ImgWidget.displayName = 'Img';
+
 ImgWidget.supportedTypes = [JsonTypes.string];
 
 export default ImgWidget;
