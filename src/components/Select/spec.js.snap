@@ -189,6 +189,7 @@ exports[`Select component should match the stored snapshot 1`] = `
   font-weight: normal;
   height: 36px;
   padding: 10px;
+  padding-right: 0px;
   padding-left: 20px;
 }
 
