@@ -141,10 +141,10 @@ class Modal extends React.Component<ThemedModalProps, any> {
 				>
 					<Box p={[px(theme.space[3]), '40px 50px 30px']}>
 						{props.titleElement ? (
-							<Heading.h3 mb={50}>{props.titleElement}</Heading.h3>
+							<Heading.h3 mb={4}>{props.titleElement}</Heading.h3>
 						) : (
 							!!props.title && (
-								<Heading.h3 mb={50}>
+								<Heading.h3 mb={4}>
 									{props.title}
 									{!!props.titleDetails && (
 										<HeadingDescription color="text.light" fontSize={2}>
@@ -155,7 +155,7 @@ class Modal extends React.Component<ThemedModalProps, any> {
 							)
 						)}
 						{props.children}
-						<Flex mt={50} alignItems="center" justifyContent="flex-end">
+						<Flex mt={5} alignItems="center" justifyContent="flex-end">
 							{props.cancel && (
 								<ModalButton {...cancelButtonProps} onClick={props.cancel}>
 									{(cancelButtonProps && cancelButtonProps.children) ||

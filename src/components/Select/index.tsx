@@ -24,6 +24,7 @@ const StyledGrommetSelect = styled(
 	height: ${(props) =>
 		px((props.emphasized ? props.theme.space[5] : props.theme.space[4]) - 2)};
 	padding: ${(props) => (props.emphasized ? '14px' : '10px')};
+	padding-right: 0px;
 	padding-left: 20px;
 `;
 
