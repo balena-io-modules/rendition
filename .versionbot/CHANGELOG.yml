@@ -1,4 +1,16 @@
 - commits:
+    - subject: Improve spacing for Modal and Select components
+      hash: f3ad2a497a5a2f752f73288a97c55b6ec50f70ae
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 18.9.0
+  date: 2020-09-18T10:47:16.710Z
+- commits:
     - subject: 'fix: Use widget''s display name to reference the widget'
       hash: e2d47457c529b089cc2918536d3207398eddb13f
       body: |
