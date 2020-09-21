@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add compact variation to tabs
+      hash: 0e8752c266e901546092abb5742eb603b6481b5b
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stef Kors <stef@balena.io>
+        signed-off-by: Stef Kors <stef@balena.io>
+      author: StefKors
+  version: 18.9.1
+  date: 2020-09-21T01:05:59.053Z
+- commits:
     - subject: Improve spacing for Modal and Select components
       hash: f3ad2a497a5a2f752f73288a97c55b6ec50f70ae
       body: ''
