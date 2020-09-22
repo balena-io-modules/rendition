@@ -1,4 +1,14 @@
 - commits:
+    - subject: 'Markdown: Ignore decorators inside a code block'
+      hash: 429354f355743bfc1e59deed7229656f5fac4685
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kakhaber
+  version: 18.9.2
+  date: 2020-09-22T14:00:37.857Z
+- commits:
     - subject: Add compact variation to tabs
       hash: 0e8752c266e901546092abb5742eb603b6481b5b
       body: ''
