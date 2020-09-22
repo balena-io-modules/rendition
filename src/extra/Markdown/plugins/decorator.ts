@@ -1,5 +1,6 @@
 import unified from 'unified';
-import visit from 'unist-util-visit';
+import type { Node } from 'unist';
+import visitParents from 'unist-util-visit-parents';
 import exec from 'regexp-match-indices';
 
 const splitTextIntoNodes = (text: string, decorator: Decorator) => {
@@ -67,11 +68,16 @@ const splitTextIntoNodes = (text: string, decorator: Decorator) => {
 	return nodes;
 };
 
+const isCodeBlock = (node: Node) => {
+	return node.tagName === 'code';
+};
+
 export interface Decorator {
 	match: RegExp;
 	captureGroupIndex?: number;
 	component: string;
 	properties?: any;
+	ignoreCodeBlock?: boolean;
 }
 
 interface DecoratorPluginOptions {
@@ -85,7 +91,7 @@ export const decoratorPlugin: unified.Plugin<[DecoratorPluginOptions]> = (
 		return;
 	}
 
-	const visitor: visit.Visitor<any> = (node) => {
+	const visitor: visitParents.Visitor<any> = (node, parents) => {
 		const decorator = options.decorators!.find((entry) => {
 			return node.type === 'text' && entry.match.test(node.value);
 		});
@@ -94,14 +100,18 @@ export const decoratorPlugin: unified.Plugin<[DecoratorPluginOptions]> = (
 			return;
 		}
 
+		if (decorator.ignoreCodeBlock !== false && parents.some(isCodeBlock)) {
+			return visitParents.SKIP;
+		}
+
 		node.type = 'element';
 		node.tagName = 'span';
 		node.children = splitTextIntoNodes(node.value, decorator);
 
-		return visit.SKIP;
+		return visitParents.SKIP;
 	};
 
 	return (tree) => {
-		visit(tree, visitor);
+		visitParents(tree, visitor, true);
 	};
 };

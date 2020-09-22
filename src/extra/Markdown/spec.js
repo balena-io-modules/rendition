@@ -105,8 +105,8 @@ describe('Markdown component', () => {
     const component = renderer.create(
       <Provider>
         <Markdown decorators={decorators}>
-          @good foo @bad@bad [@good](https://github.com) bar@bad baz qux. @good
-          @good
+          @good foo @bad@bad [@good](https://github.com) bar@bad baz qux. `Is
+          @bad inside code` @good @good
         </Markdown>
       </Provider>
     )

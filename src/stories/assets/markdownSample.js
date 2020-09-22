@@ -26,7 +26,7 @@ export const customizationSamples = [
 ]
 
 export const decoratorSample = `
-@good foo @bad@bad [@good](https://github.com) bar@bad baz qux. @good\n
+@good foo @bad@bad [@good](https://github.com) bar@bad baz qux. \`Is @bad inside code\` @good\n
 @good
 `
 
