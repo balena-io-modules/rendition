@@ -199,8 +199,12 @@ exports[`Markdown component should decorate the text matching the condition 1`] 
             </span>
           </span>
         </a>
+         bar@bad baz qux. 
+        <code>
+          Is @bad inside code
+        </code>
         <span>
-           bar@bad baz qux. 
+           
           <span
             style={
               Object {
