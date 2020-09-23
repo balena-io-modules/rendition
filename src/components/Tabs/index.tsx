@@ -27,12 +27,15 @@ const ScrollWrapper = styled(GrommetTabs)<{
 	${(props) => {
 		if (props.compact) {
 			return `
-			& > div {
+				width: 100%;
+
+				& > div {
 					scroll-snap-type: x mandatory;
 					overflow-x: scroll;
 					display: flex;
 					flex-wrap: nowrap;
 				}
+
 				div[role=tabpanel] {
 					overflow-x: auto;
 				}
