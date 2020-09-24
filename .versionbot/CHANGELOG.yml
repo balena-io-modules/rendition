@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'feat: Add ColorWidget for JsonSchemaRenderer'
+      hash: 2dae3252b6f0b767d186a4b813a0a1ff4f06543d
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 18.10.0
+  date: 2020-09-24T07:59:52.695Z
+- commits:
     - subject: 'Markdown: Ignore decorators inside a code block'
       hash: 429354f355743bfc1e59deed7229656f5fac4685
       body: ''
