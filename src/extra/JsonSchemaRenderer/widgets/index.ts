@@ -4,6 +4,7 @@ import BadgeWidget from './BadgeWidget';
 import ButtonGroupWidget from './ButtonGroupWidget';
 import ButtonWidget from './ButtonWidget';
 import CheckboxWidget from './CheckboxWidget';
+import ColorWidget from './ColorWidget';
 import DropDownButtonWidget from './DropDownButtonWidget';
 import HeadingWidget from './HeadingWidget';
 import HighlightedNameWidget from './HighlightedNameWidget';
@@ -44,6 +45,7 @@ const allWidgets: WidgetLookup = {};
 	ButtonGroupWidget,
 	ButtonWidget,
 	CheckboxWidget,
+	ColorWidget,
 	DropDownButtonWidget,
 	HeadingWidget,
 	HighlightedNameWidget,
@@ -86,6 +88,7 @@ export const formatWidgetMap: {
 	mermaid: allWidgets[MermaidWidget.displayName],
 	email: allWidgets[LinkWidget.displayName],
 	uri: allWidgets[LinkWidget.displayName],
+	color: allWidgets[ColorWidget.displayName],
 };
 
 export default widgets;

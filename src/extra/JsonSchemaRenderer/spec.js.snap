@@ -1020,6 +1020,97 @@ exports[`JsonSchemaRenderer component A button widget 1`] = `
 </div>
 `;
 
+exports[`JsonSchemaRenderer component A color widget 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c5 {
+  width: 100px;
+  height: 60px;
+  color: #FFF;
+  background-color: #ff0000;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2 c3 c4 "
+  >
+    <div
+      className="c2 c5 c6"
+    >
+      <div
+        className=""
+      >
+        Danger
+      </div>
+      <div
+        className=""
+      >
+        #ff0000
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`JsonSchemaRenderer component A default value 1`] = `
 .c0 {
   font-family: 'Source Sans Pro',Helvetica,sans-serif;

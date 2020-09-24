@@ -9,14 +9,7 @@ import omit from 'lodash/omit'
 import forEach from 'lodash/forEach'
 import { Provider } from '../../../dist'
 import JsonSchemaRenderer from '../../../dist/extra/JsonSchemaRenderer'
-import allExamples, { CONTEXT_FUNCTIONS } from './examples'
-
-const EXTRA_FORMATS = [
-  {
-    name: 'markdown',
-    format: '.*'
-  }
-]
+import allExamples, { CONTEXT_FUNCTIONS, EXTRA_FORMATS } from './examples'
 
 describe.only('JsonSchemaRenderer component', () => {
   const examples = omit(allExamples, 'A mermaid field', 'A date time field')
