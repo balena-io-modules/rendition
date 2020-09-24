@@ -1,3 +1,5 @@
+import { Format } from './types';
+
 /* eslint-disable no-template-curly-in-string */
 
 export const CONTEXT_FUNCTIONS = {
@@ -5,6 +7,33 @@ export const CONTEXT_FUNCTIONS = {
 		prependHello: (input: string) => `Hello ${input}`,
 	},
 };
+
+export const EXTRA_FORMATS: Format[] = [
+	{
+		name: 'markdown',
+		format: '.*',
+	},
+	{
+		name: 'mermaid',
+		format: '.*',
+	},
+	{
+		name: 'color',
+		format: '.*',
+	},
+	{
+		name: 'uri',
+		format: '.*',
+	},
+	{
+		name: 'email',
+		format: '.*',
+	},
+	{
+		name: 'data-url',
+		format: '.*',
+	},
+];
 
 const jsonDataExamples = {
 	'A string': {
@@ -364,6 +393,21 @@ const jsonDataExamples = {
 				outline: false,
 				plain: false,
 				underline: false,
+			},
+		},
+	},
+	'A color widget': {
+		value: '#ff0000',
+		schema: {
+			type: 'string',
+			format: 'color',
+		},
+		uiSchema: {
+			'ui:options': {
+				label: 'Danger',
+				hideValueDisplay: false,
+				width: 100,
+				height: 60,
 			},
 		},
 	},

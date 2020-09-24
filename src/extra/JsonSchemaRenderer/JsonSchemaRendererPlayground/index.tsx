@@ -22,33 +22,10 @@ import Button from '../../../components/Button';
 import Heading from '../../../components/Heading';
 import Checkbox from '../../../components/Checkbox';
 import JsonSchemaRenderer, { JsonSchemaRendererProps } from '../index';
-import { Format, Value, JSONSchema, UiSchema } from '../types';
-import { CONTEXT_FUNCTIONS } from '../examples';
+import { Value, JSONSchema, UiSchema } from '../types';
+import { CONTEXT_FUNCTIONS, EXTRA_FORMATS } from '../examples';
 import JsonEditor from './JsonEditor';
 import { generateUiSchemaMetaSchema } from './util';
-
-const EXTRA_FORMATS: Format[] = [
-	{
-		name: 'markdown',
-		format: '.*',
-	},
-	{
-		name: 'mermaid',
-		format: '.*',
-	},
-	{
-		name: 'uri',
-		format: '.*',
-	},
-	{
-		name: 'email',
-		format: '.*',
-	},
-	{
-		name: 'data-url',
-		format: '.*',
-	},
-];
 
 const SlimCard = styled(Card)`
 	& > div {
