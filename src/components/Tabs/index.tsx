@@ -8,7 +8,6 @@ import {
 export { TabProps, TabsProps } from 'grommet';
 import React from 'react';
 import asRendition from '../../asRendition';
-import { Flex } from '../Flex';
 
 interface InnerTabProps extends TabProps {
 	compact?: boolean;
@@ -24,15 +23,27 @@ const ScrollWrapper = styled(GrommetTabs)<{
 	compact?: boolean;
 }>`
 	position: relative;
+	display: flex;
+	align-items: stretch;
+	height: 100%;
+
+	div[role='tabpanel'] {
+		display: flex;
+		flex: 1;
+	}
+
 	${(props) => {
 		if (props.compact) {
 			return `
-			& > div {
+				width: 100%;
+
+				& > div {
 					scroll-snap-type: x mandatory;
 					overflow-x: scroll;
 					display: flex;
 					flex-wrap: nowrap;
 				}
+
 				div[role=tabpanel] {
 					overflow-x: auto;
 				}
@@ -64,18 +75,16 @@ export const Tab = ({ compact, title, ...props }: InnerTabProps) => {
 
 const TabsBase = ({ children, compact = false, ...props }: InnerTabsProps) => {
 	return (
-		<Flex>
-			<ScrollWrapper justify="start" compact={compact} {...props}>
-				{React.Children.map(
-					children,
-					(tab: React.ReactElement<InnerTabProps>) => {
-						return React.cloneElement(tab, {
-							compact,
-						});
-					},
-				)}
-			</ScrollWrapper>
-		</Flex>
+		<ScrollWrapper justify="start" compact={compact} {...props}>
+			{React.Children.map(
+				children,
+				(tab: React.ReactElement<InnerTabProps>) => {
+					return React.cloneElement(tab, {
+						compact,
+					});
+				},
+			)}
+		</ScrollWrapper>
 	);
 };
 
