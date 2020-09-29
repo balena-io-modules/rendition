@@ -1,4 +1,25 @@
 - commits:
+    - subject: Set tabpanel height so it stretches to full height
+      hash: fcb9b89b405958d458c6190172ee01fe39373f74
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stef Kors <stef@balena.io>
+        signed-off-by: Stef Kors <stef@balena.io>
+      author: StefKors
+    - subject: Specify tabs width to fix layout problems
+      hash: dbc2e59fdbc985918e1262cdc07a9ace9b2a8ec5
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stef Kors <stef@balena.io>
+        signed-off-by: Stef Kors <stef@balena.io>
+      author: StefKors
+  version: 18.10.1
+  date: 2020-09-29T14:54:23.494Z
+- commits:
     - subject: 'feat: Add ColorWidget for JsonSchemaRenderer'
       hash: 2dae3252b6f0b767d186a4b813a0a1ff4f06543d
       body: ''
