@@ -10,25 +10,25 @@ const postProcessor = (str, parser) =>
   })
 
 tsifyFileContent(
-  './node_modules/xterm/css/xterm.css',
+  require.resolve('xterm/css/xterm.css'),
   './src/components/Terminal/XTermDefaultStyle.ts',
   postProcessor
 )
 
 tsifyFileContent(
-  './node_modules/easymde/dist/easymde.min.css',
+  require.resolve('easymde/dist/easymde.min.css'),
   './src/extra/MarkdownEditor/defaultStyle.ts',
   postProcessor
 )
 
 tsifyFileContent(
-  './node_modules/react-notifications-component/dist/theme.css',
+  require.resolve('react-notifications-component/dist/theme.css'),
   './src/components/Notifications/defaultStyle.ts',
   postProcessor
 )
 
 tsifyFileContent(
-  './node_modules/highlight.js/styles/default.css',
+  require.resolve('highlight.js/styles/default.css'),
   './src/extra/Markdown/defaultStyle.ts',
   postProcessor
 )

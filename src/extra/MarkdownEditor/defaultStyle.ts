@@ -225,6 +225,7 @@ export default css`
 		position: absolute;
 		z-index: 6;
 		display: none;
+		outline: 0;
 	}
 	.CodeMirror-vscrollbar {
 		right: 0;
@@ -752,6 +753,18 @@ export default css`
 	.easymde-dropdown:active .easymde-dropdown-content,
 	.easymde-dropdown:focus .easymde-dropdown-content {
 		display: block;
+	}
+	span[data-img-src]::before {
+		content: '';
+		background-image: var(--bg-image);
+		display: block;
+		max-height: 100%;
+		max-width: 100%;
+		background-size: contain;
+		height: 0;
+		padding-top: var(--height);
+		width: var(--width);
+		background-repeat: no-repeat;
 	}
 	.CodeMirror
 		.cm-spell-error:not(.cm-url):not(.cm-comment):not(.cm-tag):not(.cm-word) {
