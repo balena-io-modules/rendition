@@ -1,4 +1,14 @@
 - commits:
+    - subject: Resolve module path not relying on node_moules dir
+      hash: c5c9105d771a785655cda171c6692617b0d84716
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kakhaber
+  version: 18.10.2
+  date: 2020-09-30T12:22:03.631Z
+- commits:
     - subject: Set tabpanel height so it stretches to full height
       hash: fcb9b89b405958d458c6190172ee01fe39373f74
       body: ''
