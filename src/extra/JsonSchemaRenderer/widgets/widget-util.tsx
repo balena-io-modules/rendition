@@ -82,6 +82,7 @@ export const getArrayItems = ({
 	schema,
 	uiSchema,
 	extraContext,
+	extraFormats,
 }: WidgetProps): WidgetProps[] => {
 	if (!isArray(value)) {
 		throw new Error(`Value must be an array (not '${typeof value}')`);
@@ -100,6 +101,7 @@ export const getArrayItems = ({
 			schema: itemSchema,
 			uiSchema: processedUiSchema,
 			extraContext,
+			extraFormats,
 		};
 	});
 	if (maxItems < value.length) {
@@ -110,6 +112,7 @@ export const getArrayItems = ({
 			},
 			uiSchema: {},
 			extraContext,
+			extraFormats,
 		});
 	}
 	return items;

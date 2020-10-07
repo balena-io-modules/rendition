@@ -19,7 +19,13 @@ const ListWidget: Widget = ({
 	extraContext,
 	...props
 }: ListWidgetProps) => {
-	const items = getArrayItems({ value, schema, uiSchema, extraContext });
+	const items = getArrayItems({
+		value,
+		schema,
+		uiSchema,
+		extraContext,
+		extraFormats,
+	});
 	return (
 		<List {...props}>
 			{map(items, (item: WidgetProps, index: number) => {

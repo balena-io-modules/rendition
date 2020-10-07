@@ -12,9 +12,16 @@ const ArrayWidget: Widget = ({
 	schema,
 	uiSchema,
 	extraContext,
+	extraFormats,
 	...rest
 }: WidgetProps) => {
-	const items = getArrayItems({ value, schema, uiSchema, extraContext });
+	const items = getArrayItems({
+		value,
+		schema,
+		uiSchema,
+		extraContext,
+		extraFormats,
+	});
 	return (
 		<Flex
 			flexDirection={

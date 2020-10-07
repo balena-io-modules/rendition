@@ -1,5 +1,6 @@
 import { FormatValidator, FormatDefinition } from 'ajv';
 import { UiSchema as rjsfUiSchema } from '@rjsf/core';
+import { Widget } from './widgets/widget-util';
 export { JSONSchema7 as JSONSchema } from 'json-schema';
 
 export const JsonTypes = {
@@ -32,4 +33,5 @@ export interface UiSchema
 export interface Format {
 	name: string;
 	format: FormatValidator | FormatDefinition;
+	widget?: Widget;
 }
