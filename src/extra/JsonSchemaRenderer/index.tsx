@@ -46,10 +46,19 @@ export const getWidget = (
 	value?: Value,
 	format?: string,
 	uiSchemaWidget?: UiSchema['ui:widget'],
+	extraFormats?: Format[],
 ) => {
 	if (uiSchemaWidget && typeof uiSchemaWidget !== 'string') {
 		return uiSchemaWidget;
 	}
+
+	const extraFormat = extraFormats?.find(
+		(extraFormat) => extraFormat.name === format,
+	);
+	if (!uiSchemaWidget && extraFormat?.widget) {
+		return extraFormat.widget;
+	}
+
 	if (!uiSchemaWidget && format && formatWidgetMap[format]) {
 		return formatWidgetMap[format];
 	}
@@ -140,6 +149,7 @@ export const JsonSchemaRenderer = ({
 		processedValue,
 		get(schema, 'format'),
 		processedUiSchema['ui:widget'],
+		extraFormats,
 	);
 
 	return (
@@ -169,6 +179,7 @@ export const JsonSchemaRenderer = ({
 			/>
 			<Widget
 				extraContext={extraContext}
+				extraFormats={extraFormats}
 				value={processedValue}
 				schema={schema}
 				uiSchema={processedUiSchema}

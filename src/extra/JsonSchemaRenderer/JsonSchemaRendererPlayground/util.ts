@@ -42,13 +42,13 @@ const getBaseMetaSchema = (): UiSchemaMetaSchema => ({
 
 type MetaSchemaArgs = Pick<
 	JsonSchemaRendererProps,
-	'value' | 'schema' | 'uiSchema' | 'extraContext'
+	'value' | 'schema' | 'uiSchema' | 'extraContext' | 'extraFormats'
 >;
 
 // Create the UI schema meta schema for the array items
 const generateArrayMetaSchema = (
 	metaSchema: UiSchemaMetaSchema,
-	{ value, schema, uiSchema, extraContext }: MetaSchemaArgs,
+	{ value, schema, uiSchema, extraContext, extraFormats }: MetaSchemaArgs,
 ) => {
 	const arrayValue = value as Value[];
 	const itemsUiSchema = get(uiSchema, 'items', {});
@@ -58,12 +58,13 @@ const generateArrayMetaSchema = (
 		schema: typeof itemsSchema === 'boolean' ? {} : itemsSchema,
 		uiSchema: itemsUiSchema,
 		extraContext,
+		extraFormats,
 	});
 };
 
 const generateObjectMetaSchema = (
 	metaSchema: UiSchemaMetaSchema,
-	{ value, schema, uiSchema, extraContext }: MetaSchemaArgs,
+	{ value, schema, uiSchema, extraContext, extraFormats }: MetaSchemaArgs,
 ) => {
 	metaSchema.properties['ui:order'] = {
 		type: ['array'],
@@ -91,6 +92,7 @@ const generateObjectMetaSchema = (
 			schema: typeof subSchema === 'boolean' ? {} : subSchema,
 			uiSchema: subUiSchema,
 			extraContext,
+			extraFormats,
 		});
 	});
 };
@@ -140,6 +142,7 @@ export const generateUiSchemaMetaSchema = ({
 	uiSchema,
 	schema,
 	extraContext,
+	extraFormats,
 }: MetaSchemaArgs): UiSchemaMetaSchema => {
 	const metaSchema = getBaseMetaSchema();
 	const processedUiSchema = transformUiSchema({
@@ -153,6 +156,7 @@ export const generateUiSchemaMetaSchema = ({
 		schema,
 		uiSchema: processedUiSchema,
 		extraContext,
+		extraFormats,
 	};
 	const type = getType(input.value);
 
