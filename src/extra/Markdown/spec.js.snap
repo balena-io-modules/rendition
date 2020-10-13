@@ -935,7 +935,7 @@ exports[`Markdown component should render markdown code blocks 1`] = `
 
 exports[`Markdown component should render markdown code blocks with language specified 1`] = `
 "<pre class=\\"language-javascript\\"><code class=\\"language-javascript\\"><span class=\\"token keyword\\">const</span> <span class=\\"token function-variable function\\">foo</span> <span class=\\"token operator\\">=</span> <span class=\\"token punctuation\\">(</span><span class=\\"token punctuation\\">)</span> <span class=\\"token arrow operator\\">=&gt;</span> <span class=\\"token punctuation\\">{</span>
-  <span class=\\"token keyword\\">return</span> <span class=\\"token string\\">&apos;bar&apos;</span>
+  <span class=\\"token keyword control-flow\\">return</span> <span class=\\"token string\\">&apos;bar&apos;</span>
 <span class=\\"token punctuation\\">}</span>
 </code></pre>"
 `;

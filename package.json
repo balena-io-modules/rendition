@@ -100,6 +100,7 @@
     "reg-cli": "^0.13.0-beta.1",
     "rimraf": "^2.6.2",
     "sinon": "^4.5.0",
+    "storybook-dark-mode": "^1.0.3",
     "storybook-readme": "5.0.3",
     "storycap": "2.3.2",
     "strip-css-comments": "^3.0.0",
