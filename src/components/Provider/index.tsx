@@ -1,5 +1,5 @@
 import { Grommet } from 'grommet';
-import { PartialObject } from 'lodash/index';
+import { PartialObject, cloneDeep } from 'lodash/index';
 import merge from 'lodash/merge';
 import * as React from 'react';
 import styled from 'styled-components';
@@ -17,7 +17,8 @@ const Base = styled(Grommet)`
 
 const Provider = ({ theme, ...props }: ThemedProvider) => {
 	const isDefaultFont = !theme?.font;
-	const providerTheme = merge(defaultTheme, theme);
+	const providerTheme = merge(cloneDeep(defaultTheme), theme);
+
 	return (
 		<BreakpointProvider breakpoints={providerTheme.breakpoints}>
 			{isDefaultFont && (
