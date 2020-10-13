@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add dark mode to storybook
+      hash: 65d5286aede38f84fa0d8adc3742e1623b0cbe27
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 18.11.1
+  date: 2020-10-13T11:43:42.886Z
+- commits:
     - subject: Allow passing widget to extraFormats field
       hash: 60e96f61f74ac1dea4cf49da5a6bfc3026545d93
       body: ''
