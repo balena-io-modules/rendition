@@ -1,4 +1,16 @@
 - commits:
+    - subject: Added more documentation for JsonSchemaRenderer
+      hash: a395f48d2d5726e37e2d7d8175bf3280bf92f047
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 18.11.3
+  date: 2020-10-14T09:03:42.699Z
+- commits:
     - subject: >-
         fix: UI schema for JsonSchemaRenderer DropDownButton and ButtonGroup
         widgets
