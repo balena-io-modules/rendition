@@ -3,19 +3,19 @@ import isArray from 'lodash/isArray';
 import get from 'lodash/get';
 import map from 'lodash/map';
 import DropDownButton from '../../../components/DropDownButton';
-import { Widget, WidgetProps } from './widget-util';
-import ButtonWidget from './ButtonWidget';
+import { Widget, WidgetProps, getArrayItems } from './widget-util';
 import { JsonTypes } from '../types';
 import { UiOption } from './ui-options';
+import { RenditionJsonSchemaRenderer } from '../index';
 
 const validItemTypes = ['string', 'integer', 'number'];
 
-// TODO: how to define UI Schema for items of an array?
-// (e.g. so the href prop for each item in the array can be uniquely set)
 const DropDownButtonWidget: Widget = ({
 	value,
 	schema,
 	uiSchema,
+	extraContext,
+	extraFormats,
 	...props
 }: WidgetProps) => {
 	if (!isArray(value)) {
@@ -29,10 +29,15 @@ const DropDownButtonWidget: Widget = ({
 			`DropDownButtonWidget cannot be used to render an array of items of type ${itemType}`,
 		);
 	}
+	const items = getArrayItems({ value, schema, uiSchema, extraContext });
 	return (
 		<DropDownButton {...props}>
-			{map(value, (item) => (
-				<div key={item}>{item.toString()}</div>
+			{map(items, (item: WidgetProps, index: number) => (
+				<RenditionJsonSchemaRenderer
+					key={index}
+					{...item}
+					extraFormats={extraFormats}
+				/>
 			))}
 		</DropDownButton>
 	);
@@ -41,8 +46,22 @@ const DropDownButtonWidget: Widget = ({
 DropDownButtonWidget.displayName = 'DropDownButton';
 
 DropDownButtonWidget.uiOptions = {
-	...ButtonWidget.uiOptions,
 	label: UiOption.string,
+	disabled: UiOption.boolean,
+	primary: UiOption.boolean,
+	secondary: UiOption.boolean,
+	tertiary: UiOption.boolean,
+	quarternary: UiOption.boolean,
+	danger: UiOption.boolean,
+	warning: UiOption.boolean,
+	success: UiOption.boolean,
+	info: UiOption.boolean,
+	emphasized: UiOption.boolean,
+	square: UiOption.boolean,
+	border: UiOption.boolean,
+	joined: UiOption.boolean,
+	alignRight: UiOption.boolean,
+	listMaxHeight: UiOption.space,
 };
 
 DropDownButtonWidget.supportedTypes = [JsonTypes.array];

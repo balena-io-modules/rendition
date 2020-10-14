@@ -15,8 +15,8 @@ const ImgWidget: Widget = ({
 
 ImgWidget.uiOptions = {
 	alt: UiOption.string,
-	height: UiOption.integer,
-	width: UiOption.integer,
+	height: UiOption.space,
+	width: UiOption.space,
 	crossorigin: {
 		...UiOption.string,
 		enum: ['anonymous', 'use-credentials'],
