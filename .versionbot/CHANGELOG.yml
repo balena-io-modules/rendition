@@ -1,4 +1,19 @@
 - commits:
+    - subject: >-
+        fix: UI schema for JsonSchemaRenderer DropDownButton and ButtonGroup
+        widgets
+      hash: 05300580e1e1ad0ca725f1eff5b81e76281e4e42
+      body: |
+        UI Schema for items can now be set on these widgets.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 18.11.2
+  date: 2020-10-14T07:29:43.506Z
+- commits:
     - subject: Add dark mode to storybook
       hash: 65d5286aede38f84fa0d8adc3742e1623b0cbe27
       body: ''
