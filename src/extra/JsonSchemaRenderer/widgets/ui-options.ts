@@ -6,7 +6,7 @@ export type UiOptions = {
 
 // styled-system props can be passed as arrays, with each item
 // representing the value at a particular breakpoint.
-const responsive = (schema: JSONSchema): JSONSchema => {
+export const responsive = (schema: JSONSchema): JSONSchema => {
 	return {
 		anyOf: [
 			{

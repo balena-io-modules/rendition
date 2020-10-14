@@ -379,20 +379,10 @@ const jsonDataExamples = {
 		},
 		uiSchema: {
 			'ui:widget': 'ButtonGroup',
-			'ui:options': {
-				disabled: false,
-				primary: true,
-				secondary: false,
-				tertiary: false,
-				quarternary: false,
-				danger: false,
-				warning: false,
-				success: false,
-				info: false,
-				light: false,
-				outline: false,
-				plain: false,
-				underline: false,
+			items: {
+				'ui:options': {
+					href: 'https://jel.ly.fish/${source}',
+				},
 			},
 		},
 	},
@@ -412,7 +402,7 @@ const jsonDataExamples = {
 		},
 	},
 	'A drop-down button widget': {
-		value: ['Action 1', 'Action 2', 'Action 3'],
+		value: ['link1', 'link2', 'link3'],
 		schema: {
 			type: 'array',
 			items: {
@@ -422,9 +412,9 @@ const jsonDataExamples = {
 		uiSchema: {
 			'ui:widget': 'DropDownButton',
 			'ui:options': {
-				label: 'Actions',
+				label: 'Links',
 				disabled: false,
-				primary: true,
+				primary: false,
 				secondary: false,
 				tertiary: false,
 				quarternary: false,
@@ -432,10 +422,18 @@ const jsonDataExamples = {
 				warning: false,
 				success: false,
 				info: false,
-				light: false,
-				outline: false,
-				plain: false,
-				underline: false,
+				emphasized: false,
+				square: false,
+				border: false,
+				joined: true,
+				alignRight: true,
+				listMaxHeight: '300px',
+			},
+			items: {
+				'ui:widget': 'Link',
+				'ui:options': {
+					href: 'https://jel.ly.fish/${source}',
+				},
 			},
 		},
 	},

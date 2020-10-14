@@ -2,20 +2,28 @@ import * as React from 'react';
 import isArray from 'lodash/isArray';
 import get from 'lodash/get';
 import map from 'lodash/map';
-import Button from '../../../components/Button';
 import ButtonGroup from '../../../components/ButtonGroup';
-import { Widget, WidgetProps } from './widget-util';
+import {
+	Widget,
+	WidgetProps,
+	getArrayItems,
+	withOptionProps,
+} from './widget-util';
 import { JsonTypes } from '../types';
 import ButtonWidget from './ButtonWidget';
 
 const validItemTypes = ['string', 'integer', 'number'];
 
-// TODO: how to define UI Schema for items of an array?
-// (e.g. so the href prop for each item in the array can be uniquely set)
+const WrappedButtonWidget = ButtonWidget.uiOptions
+	? withOptionProps(ButtonWidget.uiOptions)(ButtonWidget)
+	: ButtonWidget;
+
 const ButtonGroupWidget: Widget = ({
 	value,
 	schema,
 	uiSchema,
+	extraContext,
+	extraFormats,
 	...props
 }: WidgetProps) => {
 	if (!isArray(value)) {
@@ -29,12 +37,15 @@ const ButtonGroupWidget: Widget = ({
 			`ButtonGroupWidget cannot be used to render an array of items of type ${itemType}`,
 		);
 	}
+	const items = getArrayItems({ value, schema, uiSchema, extraContext });
 	return (
-		<ButtonGroup>
-			{map(value, (item) => (
-				<Button key={item} {...props}>
-					{item.toString()}
-				</Button>
+		<ButtonGroup {...props}>
+			{map(items, (item: WidgetProps, index: number) => (
+				<WrappedButtonWidget
+					key={index}
+					{...item}
+					extraFormats={extraFormats}
+				/>
 			))}
 		</ButtonGroup>
 	);
@@ -42,7 +53,7 @@ const ButtonGroupWidget: Widget = ({
 
 ButtonGroupWidget.displayName = 'ButtonGroup';
 
-ButtonGroupWidget.uiOptions = ButtonWidget.uiOptions;
+ButtonGroupWidget.uiOptions = {};
 
 ButtonGroupWidget.supportedTypes = [JsonTypes.array];
 

@@ -650,15 +650,12 @@ exports[`JsonSchemaRenderer component A button group widget 1`] = `
   background: transparent;
   overflow: visible;
   text-transform: none;
-  border: 1px solid #00AEEF;
+  border: 1px solid #2A506F;
   border-radius: 20px;
   color: #444444;
   padding: 4px 30px;
   font-size: 14px;
   line-height: 1.5;
-  background-color: #00AEEF;
-  color: #444444;
-  border-radius: 20px;
   -webkit-transition-property: color,background-color,border-color,box-shadow;
   transition-property: color,background-color,border-color,box-shadow;
   -webkit-transition-duration: 0.1s;
@@ -668,7 +665,7 @@ exports[`JsonSchemaRenderer component A button group widget 1`] = `
 }
 
 .c7:hover {
-  box-shadow: 0px 0px 0px 2px #00AEEF;
+  box-shadow: 0px 0px 0px 2px #2A506F;
 }
 
 .c7:focus {
@@ -731,15 +728,20 @@ exports[`JsonSchemaRenderer component A button group widget 1`] = `
 }
 
 .c9 {
-  color: white;
+  color: #2A506F;
+  border-color: #2A506F;
+}
+
+.c9 svg {
+  color: #527699 !important;
 }
 
 .c9:hover:enabled,
 .c9:focus:enabled,
 .c9:active:enabled {
   box-shadow: none;
-  background: hsl(196.29999999999995,100%,37.5%);
-  border-color: hsl(196.29999999999995,100%,37.5%);
+  background: #2A506F;
+  border-color: #2A506F;
   color: white;
   opacity: initial;
 }
@@ -818,39 +820,36 @@ exports[`JsonSchemaRenderer component A button group widget 1`] = `
     <div
       className="c2 c5 c6"
     >
-      <button
+      <a
         className="c7 c8 c9 "
-        disabled={false}
+        href="https://jel.ly.fish/item 1"
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}
         onMouseOver={[Function]}
-        type="button"
       >
         item 1
-      </button>
-      <button
+      </a>
+      <a
         className="c7 c8 c9 "
-        disabled={false}
+        href="https://jel.ly.fish/item 2"
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}
         onMouseOver={[Function]}
-        type="button"
       >
         item 2
-      </button>
-      <button
+      </a>
+      <a
         className="c7 c8 c9 "
-        disabled={false}
+        href="https://jel.ly.fish/item 3"
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseOut={[Function]}
         onMouseOver={[Function]}
-        type="button"
       >
         item 3
-      </button>
+      </a>
     </div>
   </div>
 </div>
@@ -1146,15 +1145,12 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
   background: transparent;
   overflow: visible;
   text-transform: none;
-  border: 1px solid #00AEEF;
+  border: 1px solid #2A506F;
   border-radius: 20px;
   color: #444444;
   padding: 4px 30px;
   font-size: 14px;
   line-height: 1.5;
-  background-color: #00AEEF;
-  color: #444444;
-  border-radius: 20px;
   -webkit-transition-property: color,background-color,border-color,box-shadow;
   transition-property: color,background-color,border-color,box-shadow;
   -webkit-transition-duration: 0.1s;
@@ -1164,7 +1160,7 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
 }
 
 .c6:hover {
-  box-shadow: 0px 0px 0px 2px #00AEEF;
+  box-shadow: 0px 0px 0px 2px #2A506F;
 }
 
 .c6:focus {
@@ -1184,60 +1180,6 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
 }
 
 .c6:focus::-moz-focus-inner {
-  border: 0;
-}
-
-.c10 {
-  display: inline-block;
-  box-sizing: border-box;
-  cursor: pointer;
-  font: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  background: transparent;
-  overflow: visible;
-  text-transform: none;
-  border: 1px solid #00AEEF;
-  border-radius: 20px;
-  color: #444444;
-  padding: 4px 30px;
-  font-size: 14px;
-  line-height: 1.5;
-  background-color: #00AEEF;
-  color: #444444;
-  border-radius: 20px;
-  -webkit-transition-property: color,background-color,border-color,box-shadow;
-  transition-property: color,background-color,border-color,box-shadow;
-  -webkit-transition-duration: 0.1s;
-  transition-duration: 0.1s;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  line-height: 0;
-  padding: 12px;
-}
-
-.c10:hover {
-  box-shadow: 0px 0px 0px 2px #00AEEF;
-}
-
-.c10:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #00AEEF;
-}
-
-.c10:focus > circle,
-.c10:focus > ellipse,
-.c10:focus > line,
-.c10:focus > path,
-.c10:focus > polygon,
-.c10:focus > polyline,
-.c10:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #00AEEF;
-}
-
-.c10:focus::-moz-focus-inner {
   border: 0;
 }
 
@@ -1281,15 +1223,20 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
 }
 
 .c8 {
-  color: white;
+  color: #2A506F;
+  border-color: #2A506F;
+}
+
+.c8 svg {
+  color: #527699 !important;
 }
 
 .c8:hover:enabled,
 .c8:focus:enabled,
 .c8:active:enabled {
   box-shadow: none;
-  background: hsl(196.29999999999995,100%,37.5%);
-  border-color: hsl(196.29999999999995,100%,37.5%);
+  background: #2A506F;
+  border-color: #2A506F;
   color: white;
   opacity: initial;
 }
@@ -1310,6 +1257,10 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
   min-height: 0;
 }
 
+.c11 {
+  margin-right: 8px;
+}
+
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1324,23 +1275,19 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
   align-items: flex-start;
 }
 
-.c11 {
-  min-width: 0;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-left: 0;
-  margin: 0;
-  vertical-align: top;
-  padding: 0 16px;
-  width: 44px;
-}
-
-.c9 {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-right: 0;
-  margin: 0;
-  width: calc(100% - 44px);
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .c5 {
@@ -1355,6 +1302,11 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
   -webkit-transform: translateY(1px);
   -ms-transform: translateY(1px);
   transform: translateY(1px);
+}
+
+.c9 {
+  margin: 0;
+  width: 100%;
 }
 
 .c1 {
@@ -1373,32 +1325,27 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
       className="c2 c5 "
       disabled={false}
     >
-      <span>
-        <button
-          className="c6 c7 c8 c9"
-          disabled={false}
-          onBlur={[Function]}
-          onFocus={[Function]}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          type="button"
+      <button
+        className="c6 c7 c8 c9"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        type="button"
+      >
+        <div
+          className="c2 c10"
         >
-          Actions
-        </button>
-        <button
-          className="c10 c7 c8 c11"
-          disabled={false}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          type="button"
-        >
+          <div
+            className="c2 c11"
+          >
+            Links
+          </div>
           <svg
             aria-hidden="true"
             className="svg-inline--fa fa-chevron-down fa-w-14 "
-            color="#444444"
             data-icon="chevron-down"
             data-prefix="fas"
             focusable="false"
@@ -1413,8 +1360,8 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
               style={Object {}}
             />
           </svg>
-        </button>
-      </span>
+        </div>
+      </button>
     </div>
   </div>
 </div>
