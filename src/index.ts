@@ -27,6 +27,7 @@ export {
 	FormWidgetProps,
 	RenditionUiSchema,
 } from './components/Form';
+export { DataGrid, DataGridProps } from './components/DataGrid';
 export {
 	default as HighlightedName,
 	HighlightedNameProps,
