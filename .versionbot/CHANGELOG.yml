@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add a Grid component
+      hash: 0fa5c24b4251379afe9085863781c0e2280bfcad
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 18.12.0
+  date: 2020-10-19T09:32:52.590Z
+- commits:
     - subject: Added more documentation for JsonSchemaRenderer
       hash: a395f48d2d5726e37e2d7d8175bf3280bf92f047
       body: ''
