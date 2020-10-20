@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix Tabs typings
+      hash: e4f7a9345e39d1bc109f3a297d5adf30d5b5b842
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 18.12.1
+  date: 2020-10-20T10:15:52.527Z
+- commits:
     - subject: Add a Grid component
       hash: 0fa5c24b4251379afe9085863781c0e2280bfcad
       body: ''
