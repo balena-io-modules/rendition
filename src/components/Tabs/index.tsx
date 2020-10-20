@@ -11,8 +11,9 @@ import asRendition from '../../asRendition';
 
 interface InnerTabProps extends TabProps {
 	compact?: boolean;
-	index: number;
+	index?: number;
 	length?: number;
+	children?: React.ReactNode;
 }
 
 interface InnerTabsProps extends TabsProps {
