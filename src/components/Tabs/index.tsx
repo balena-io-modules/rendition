@@ -1,22 +1,18 @@
 import styled from 'styled-components';
 import {
-	TabProps,
+	TabProps as GrommetTabProps,
 	Tab as GrommetTab,
 	Tabs as GrommetTabs,
-	TabsProps,
+	TabsProps as GrommetTabsProps,
 } from 'grommet';
-export { TabProps, TabsProps } from 'grommet';
 import React from 'react';
 import asRendition from '../../asRendition';
 
-interface InnerTabProps extends TabProps {
-	compact?: boolean;
-	index?: number;
-	length?: number;
+export interface TabProps extends GrommetTabProps {
 	children?: React.ReactNode;
 }
 
-interface InnerTabsProps extends TabsProps {
+export interface TabsProps extends GrommetTabsProps {
 	compact?: boolean;
 }
 
@@ -48,43 +44,24 @@ const ScrollWrapper = styled(GrommetTabs)<{
 				div[role=tabpanel] {
 					overflow-x: auto;
 				}
+				
+				div > button[role=tab] > div {
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					scroll-snap-align: center;
+				}
 			`;
 		}
 	}}
 `;
 
-const TabTitle = styled(GrommetTab)<{
-	compact?: boolean;
-}>`
-	${(props) => {
-		if (props.compact) {
-			return `
-			& > div {
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
-				scroll-snap-align: center;
-			}
-			`;
-		}
-	}}
-`;
+export const Tab = (props: TabProps) => <GrommetTab {...props} />;
 
-export const Tab = ({ compact, title, ...props }: InnerTabProps) => {
-	return <TabTitle compact={compact} title={title} {...props} />;
-};
-
-const TabsBase = ({ children, compact = false, ...props }: InnerTabsProps) => {
+const TabsBase = ({ children, compact = false, ...props }: TabsProps) => {
 	return (
 		<ScrollWrapper justify="start" compact={compact} {...props}>
-			{React.Children.map(
-				children,
-				(tab: React.ReactElement<InnerTabProps>) => {
-					return React.cloneElement(tab, {
-						compact,
-					});
-				},
-			)}
+			{children}
 		</ScrollWrapper>
 	);
 };
