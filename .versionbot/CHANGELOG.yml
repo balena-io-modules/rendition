@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'Tabs: changed interfaces and props'
+      hash: 0998a41d0c8806a9ed3087425b77c28955ef84ad
+      body: |
+        remove unused props and export extended interfaces
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 18.12.2
+  date: 2020-10-21T15:40:32.918Z
+- commits:
     - subject: Fix Tabs typings
       hash: e4f7a9345e39d1bc109f3a297d5adf30d5b5b842
       body: ''
