@@ -21,3 +21,4 @@
 | `underline`   | `boolean` | -         | -          | Similar to the `plaintext` prop, but displays a line underneath the button text |
 | `icon`        | `JSX.Element` | -         | -          | Optionally provide a JSX element that will be rendered before the text inside the button |
 | `compact`        | `boolean[]` | [false]   | -          | Optionally renders the label according to the value inside the array for each breakpoint |
+| `confirmation`        | `string | ConfirmProps` | -   | -          | Optionally asks for confirmation before `onClick` is called |

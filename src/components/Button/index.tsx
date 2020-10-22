@@ -11,7 +11,14 @@ import {
 	Theme,
 } from '../../common-types';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
-import { getColor, getColoringType, isLight, px } from '../../utils';
+import { withConfirm, ConfirmOptions } from '../../internal/Confirm';
+import {
+	getColor,
+	getColoringType,
+	isLight,
+	px,
+	withConditional,
+} from '../../utils';
 
 const getHoverEffectOverride = (
 	bg: string | undefined,
@@ -204,7 +211,7 @@ const getStyledButton = (
 	return ColouredButton;
 };
 
-const Base = (props: ThemedButtonProps) => {
+const Base = React.forwardRef((props: ThemedButtonProps, ref: any) => {
 	const {
 		outline,
 		underline,
@@ -252,6 +259,7 @@ const Base = (props: ThemedButtonProps) => {
 	// see: https://github.com/grommet/grommet/issues/3030
 	return (
 		<StyledButton
+			ref={ref}
 			primary={basePrimary}
 			color={baseColor}
 			active={active && (underline || plain)}
@@ -261,7 +269,7 @@ const Base = (props: ThemedButtonProps) => {
 			label={shouldCompact ? undefined : label || children}
 		/>
 	);
-};
+});
 
 interface ButtonBaseProps extends Coloring, Sizing {
 	width?: ResponsiveStyle;
@@ -277,6 +285,7 @@ export interface InternalButtonProps
 		Omit<DefaultProps, 'dir'>,
 		GrommetButtonProps {
 	type?: 'submit' | 'reset' | 'button';
+	confirmation?: ConfirmOptions | string;
 }
 
 export type ButtonProps = InternalButtonProps & RenditionSystemProps;
@@ -285,8 +294,12 @@ export interface ThemedButtonProps extends ButtonProps {
 	theme: Theme;
 }
 
-export default asRendition<ButtonProps>(
-	Base,
-	[],
-	['width', 'color', 'bg'],
-) as React.FunctionComponent<ButtonProps>;
+export default withConditional<ButtonProps>(withConfirm, (props) => {
+	return 'confirmation' in props;
+})(
+	asRendition<ButtonProps>(
+		Base,
+		[],
+		['width', 'color', 'bg'],
+	) as React.ForwardRefExoticComponent<ButtonProps>,
+);
