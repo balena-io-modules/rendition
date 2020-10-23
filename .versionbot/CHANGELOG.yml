@@ -1,4 +1,14 @@
 - commits:
+    - subject: 'Button: Add confirmation property'
+      hash: a62081a1a0fcc90a499190dffaed05adccfd0543
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Kakhaber
+  version: 18.13.0
+  date: 2020-10-22T11:42:22.579Z
+- commits:
     - subject: 'Tabs: changed interfaces and props'
       hash: 0998a41d0c8806a9ed3087425b77c28955ef84ad
       body: |
