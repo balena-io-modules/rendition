@@ -1,3 +1,4 @@
+import * as React from 'react';
 export * from './colorUtils';
 export * from './schemaUtils';
 export * from './styledUtils';
@@ -27,3 +28,17 @@ export const randomString = (length = 16) => {
 
 export const regexEscape = (str: string) =>
 	str.replace(matchOperatorsRe, '\\$&');
+
+export const withConditional = <TProps extends {}>(
+	hoc: (Base: React.ForwardRefExoticComponent<TProps>) => any,
+	fn: (props: TProps) => boolean,
+) => {
+	return (Base: React.ForwardRefExoticComponent<TProps>) => {
+		const Wrapped = hoc(Base);
+
+		return React.forwardRef<any, TProps>((props, ref) => {
+			const Component = fn(props) ? Wrapped : Base;
+			return React.createElement(Component, { ...props, ref });
+		});
+	};
+};

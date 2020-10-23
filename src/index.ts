@@ -83,6 +83,11 @@ export { default as Map, MapProps } from './components/Map';
 export { default as Navbar, NavbarProps } from './components/Navbar';
 export { default as Link, LinkProps } from './components/Link';
 export { default as List, ListProps } from './components/List';
+export {
+	default as Popover,
+	PopoverProps,
+	PopoverOptions,
+} from './components/Popover';
 export { Tab, TabProps, Tabs, TabsProps } from './components/Tabs';
 export { Tag, TagProps } from './components/Tag';
 
