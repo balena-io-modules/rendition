@@ -11,13 +11,56 @@ import {
 	Theme,
 } from '../../common-types';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
-import { getColor, getColoringType, isLight, px } from '../../utils';
+import {
+	getColor,
+	getColoringType,
+	getLegibleTextColor,
+	px,
+} from '../../utils';
 
-const getHoverEffectOverride = (
-	bg: string | undefined,
-	color: string,
-	opacity?: string,
-) => {
+// const getHoverEffectOverride = (
+// 	bg: string | undefined,
+// 	color: string,
+// 	opacity?: string,
+// ) => {
+// 	return css`
+// 		&:hover:enabled,
+// 		&:focus:enabled,
+// 		&:active:enabled {
+// 			svg {
+// 				color: ${color} !important;
+// 			}
+
+// 			box-shadow: none;
+// 			background: ${bg};
+// 			border-color: ${bg};
+// 			color: ${color};
+// 			opacity: ${opacity ?? 'initial'};
+// 		}
+// 	`;
+// };
+
+const getMain = (props: any, opacity: number | string = 'initial') => {
+	const bg = getColor(props, 'color', 'main');
+	const color = props.theme.colors.text.main;
+	console.log('getColor', color);
+
+	return css`
+		svg {
+			color: ${color} !important;
+		}
+
+		box-shadow: none;
+		background: ${bg};
+		border-color: ${bg};
+		color: ${color};
+		opacity: ${opacity};
+	`;
+};
+
+const getHover = (props: any, opacity: number | string = 'initial') => {
+	const bg = getColor(props, 'color', 'emphasized');
+	const color = getLegibleTextColor(bg, 2.1);
 	return css`
 		&:hover:enabled,
 		&:focus:enabled,
@@ -30,7 +73,7 @@ const getHoverEffectOverride = (
 			background: ${bg};
 			border-color: ${bg};
 			color: ${color};
-			opacity: ${opacity ?? 'initial'};
+			opacity: ${opacity};
 		}
 	`;
 };
@@ -62,17 +105,8 @@ const ButtonBase = styled(Button)`
 
 const ColouredButton = styled(ButtonBase)`
 	& {
-		color: ${(props) =>
-			isLight(getColor(props, 'color', 'main'))
-				? props.theme.colors.text.main
-				: 'white'};
-		${(props) => {
-			const color = getColor(props, 'color', 'dark');
-			return getHoverEffectOverride(
-				color,
-				isLight(color) ? props.theme.colors.text.main : 'white',
-			);
-		}};
+		${(props) => getMain(props)};
+		${(props) => getHover(props)};
 	}
 `;
 
@@ -82,15 +116,9 @@ const Outline = styled(ButtonBase)`
 		border-color: ${(props) =>
 			getColor(props, 'color', 'main') || props.theme.colors.text.main};
 		svg {
-			color: ${(props) => props.theme.colors.tertiary.main} !important;
+			color: ${(props) => props.theme.colors.text.main} !important;
 		}
-		${(props) =>
-			getHoverEffectOverride(
-				props.color || props.theme.colors.text.main,
-				isLight(getColor(props, 'color', 'main'))
-					? props.theme.colors.text.main
-					: 'white',
-			)};
+		${(props) => getHover(props)};
 	}
 `;
 
@@ -100,12 +128,7 @@ const Light = styled(ButtonBase)`
 		border-color: ${(props) => props.theme.colors.text.main};
 		background: white;
 		border: none;
-		${(props) =>
-			getHoverEffectOverride(
-				'white',
-				props.theme.colors.secondary.main,
-				'0.9',
-			)};
+		${(props) => getHover(props, 0.9)};
 
 		&:disabled {
 			opacity: 1;
@@ -113,18 +136,20 @@ const Light = styled(ButtonBase)`
 		}
 	}
 `;
+
+// ${(props) =>
+// 	getHoverEffectOverride(
+// 		'white',
+// 		props.theme.colors.secondary.main,
+// 		'0.9',
+// 	)};
 
 const LightOutline = styled(Light)`
 	& {
 		color: white;
 		border: 1px solid white;
 		background: transparent;
-		${(props) =>
-			getHoverEffectOverride(
-				'white',
-				props.theme.colors.secondary.main,
-				'0.9',
-			)};
+		${(props) => getHover(props, 0.9)};
 
 		&:disabled {
 			opacity: 1;
@@ -132,6 +157,13 @@ const LightOutline = styled(Light)`
 		}
 	}
 `;
+
+// ${(props) =>
+// 	getHoverEffectOverride(
+// 		'white',
+// 		props.theme.colors.secondary.main,
+// 		'0.9',
+// 	)};
 
 const Plain = styled(ButtonBase)`
 	& {
@@ -140,13 +172,14 @@ const Plain = styled(ButtonBase)`
 		height: auto;
 		font-weight: ${(props) => props.theme.button.font.weight};
 		border-radius: 0;
-		${(props) =>
-			getHoverEffectOverride(
-				'none',
-				getColor(props, 'color', 'dark') || props.theme.colors.text.light,
-			)};
+		${(props) => getHover(props)};
 	}
 `;
+// ${(props) =>
+// 	getHoverEffectOverride(
+// 		'none',
+// 		getColor(props, 'color', 'dark') || props.theme.colors.text.light,
+// 	)};
 
 const underlineButtonActiveStyles = (props: { theme: Theme }) => css`
 	& {
@@ -235,7 +268,7 @@ const Base = (props: ThemedButtonProps) => {
 	let baseColor = props.bg || getColor(props, 'bg', 'main');
 
 	// Set default to 'secondary'
-	baseColor = baseColor || props.theme.colors.secondary.main;
+	baseColor = baseColor || props.theme.colors.text.main;
 
 	// If the button is active, invert the background and text colors
 	if (active) {

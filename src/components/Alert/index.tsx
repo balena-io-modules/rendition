@@ -59,7 +59,7 @@ const Alert = (props: ThemedAlertProps) => {
 	const icon = getIcon(props);
 	const title = plaintext ? null : getTitle(props);
 	const mainColor = getColor(props, 'color', 'main');
-	const darkColor = getColor(props, 'color', 'dark');
+	const darkColor = getColor(props, 'color', 'emphasized');
 	const lineHeight = props.theme.fontSizes[2] * props.theme.lineHeight;
 
 	if (plaintext) {

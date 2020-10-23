@@ -3,7 +3,7 @@ import { configure, addDecorator } from '@storybook/react'
 import { useDarkMode } from 'storybook-dark-mode'
 import { withScreenshot } from 'storycap'
 import { createGlobalStyle } from 'styled-components'
-import theme from '../src/theme'
+import theme, { colorsDark, colorsLight, generateTheme } from '../src/theme'
 import { Provider } from '../src/index'
 
 const GlobalStyle = createGlobalStyle([], {
@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle([], {
   body: {
     lineHeight: 1.5,
     margin: 0,
+    // theme here is always the default theme
     fontFamily: theme.font,
     webkitFontSmoothing: 'antialiased'
   }
@@ -20,25 +21,13 @@ const GlobalStyle = createGlobalStyle([], {
 
 const ThemeProvider = ({ children }) => {
   const isDark = useDarkMode()
+  const colors = isDark ? colorsDark : colorsLight
+  const theme = generateTheme(colors)
 
   return (
     <React.Fragment>
       <GlobalStyle />
-      <Provider
-        theme={
-          isDark
-            ? {
-                colors: {
-                  text: {
-                    main: 'white',
-                    light: 'white',
-                    dark: 'gray'
-                  }
-                }
-              }
-            : {}
-        }
-      >
+      <Provider theme={theme} >
         {children}
       </Provider>
     </React.Fragment>

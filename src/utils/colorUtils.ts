@@ -2,12 +2,16 @@ import Color from 'color';
 import ColorHash from 'color-hash';
 import find from 'lodash/find';
 import get from 'lodash/get';
+import forEach from 'lodash/forEach';
 import memoize from 'lodash/memoize';
 import { Theme } from '../common-types';
 
 const colorHash = new ColorHash();
 
-const shadeCustomColor = (color: string, shade: 'main' | 'light' | 'dark') => {
+const shadeCustomColor = (
+	color: string,
+	shade: 'main' | 'light' | 'dark' | 'emphasized' | 'de_emphasized',
+) => {
 	if (shade === 'main') {
 		return color;
 	}
@@ -17,6 +21,54 @@ const shadeCustomColor = (color: string, shade: 'main' | 'light' | 'dark') => {
 	}
 
 	return darken(color);
+};
+
+const parseColor = (value: any, mix = value) => {
+	const emphasized = Color(value).darken(0.4).mix(Color(mix), 0.1).hex();
+	const main = Color(value).hex();
+	let de_emphasized = Color(value)
+		.mix(Color(mix), 0.3)
+		.lighten(0.4)
+		.desaturate(0.6)
+		.hex();
+
+	if (Color(main).contrast(Color(de_emphasized)) <= 1) {
+		de_emphasized = Color(value)
+			.mix(Color(mix), 0.3)
+			.darken(0.1)
+			.desaturate(0.6)
+			.hex();
+	}
+
+	return {
+		emphasized,
+		main,
+		de_emphasized,
+	};
+};
+
+export const generateColors = (base: {
+	background: string;
+	text: string;
+	primary: string;
+	secondary: string;
+	danger: string;
+	warning: string;
+	success: string;
+	info: string;
+}) => {
+	// States: hover, focus, disabled
+	// Variation: emphasized, de-emphasized
+	const theme: any = {};
+
+	forEach(base, (value, key) => {
+		if (key === 'background') {
+			return (theme[key] = parseColor(value, base.primary));
+		}
+		return (theme[key] = parseColor(value));
+	});
+
+	return theme;
 };
 
 // Returns a color that is legible if put on the passed background.
@@ -75,7 +127,7 @@ export const getColoringType = (props: {
 export const getColor = (
 	props: { theme: Theme; [key: string]: any },
 	key: string,
-	shade: 'main' | 'light' | 'dark',
+	shade: 'main' | 'emphasized' | 'de_emphasized',
 ) => {
 	if (get(props, key)) {
 		return shadeCustomColor(get(props, key), shade);
@@ -91,4 +143,6 @@ export const getColor = (
 			return shadeCustomColor(color, shade);
 		}
 	}
+
+	return 'red'; // default return value
 };
