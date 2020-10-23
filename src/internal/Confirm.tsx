@@ -71,12 +71,11 @@ export function withConfirm<T extends {}>(
 			> | null>(null);
 
 			const handleOk = React.useCallback(() => {
-				setClickEvent(null);
-
 				if (onClick) {
 					onClick(clickEvent!);
 				}
-			}, [onClick]);
+				setClickEvent(null);
+			}, [onClick, clickEvent]);
 
 			const handleCancel = React.useCallback(() => {
 				setClickEvent(null);
