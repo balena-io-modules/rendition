@@ -69,6 +69,7 @@ test('onClick is called after confirmation', () => {
   // Press OK
   component.find('button[children="OK"]').simulate('click')
 
-  // onClick should not be called
+  // onClick should be called with an event
   expect(handleClick.callCount).toEqual(1)
+  expect(handleClick.lastCall.args[0]).toHaveProperty('target')
 })
