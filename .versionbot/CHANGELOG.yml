@@ -1,4 +1,14 @@
 - commits:
+    - subject: 'Button: Preserve event during confirmation'
+      hash: 5023d8deccb5362c6fdd0f3df97b89556bc9a4d7
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kakhaber
+  version: 18.13.1
+  date: 2020-10-23T10:51:22.648Z
+- commits:
     - subject: 'Button: Add confirmation property'
       hash: a62081a1a0fcc90a499190dffaed05adccfd0543
       body: ''
