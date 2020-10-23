@@ -1,48 +1,15 @@
 - commits:
-    - subject: 'Button: Preserve event during confirmation'
-      hash: 5023d8deccb5362c6fdd0f3df97b89556bc9a4d7
+    - subject: Save notes
+      hash: 086ea50734e1819909c41044869b16d9f6847422
       body: ''
       footer:
         Change-type: patch
         change-type: patch
-      author: Kakhaber
-  version: 18.13.1
-  date: 2020-10-23T10:51:22.648Z
-- commits:
-    - subject: 'Button: Add confirmation property'
-      hash: a62081a1a0fcc90a499190dffaed05adccfd0543
-      body: ''
-      footer:
-        Change-type: minor
-        change-type: minor
-      author: Kakhaber
-  version: 18.13.0
-  date: 2020-10-22T11:42:22.579Z
-- commits:
-    - subject: 'Tabs: changed interfaces and props'
-      hash: 0998a41d0c8806a9ed3087425b77c28955ef84ad
-      body: |
-        remove unused props and export extended interfaces
-      footer:
-        Change-type: patch
-        change-type: patch
-        Signed-off-by: Andrea Rosci <andrear@balena.io>
-        signed-off-by: Andrea Rosci <andrear@balena.io>
-      author: JSReds
-  version: 18.12.2
-  date: 2020-10-21T15:40:32.918Z
-- commits:
-    - subject: Fix Tabs typings
-      hash: e4f7a9345e39d1bc109f3a297d5adf30d5b5b842
-      body: ''
-      footer:
-        Change-type: patch
-        change-type: patch
-        Signed-off-by: Stevche Radevski <stevche@balena.io>
-        signed-off-by: Stevche Radevski <stevche@balena.io>
-      author: Stevche Radevski
+        Signed-off-by: Stef Kors <stef@balena.io>
+        signed-off-by: Stef Kors <stef@balena.io>
+      author: StefKors
   version: 18.12.1
-  date: 2020-10-20T10:15:52.527Z
+  date: 2020-10-23T16:37:40.797Z
 - commits:
     - subject: Add a Grid component
       hash: 0fa5c24b4251379afe9085863781c0e2280bfcad
