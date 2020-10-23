@@ -6,19 +6,27 @@ import Readme from './README.md'
 
 storiesOf('Next/Popover', module)
   .addDecorator(withReadme(Readme))
-  .add('Standard', () => {
-    const [target, setTarget] = React.useState(null)
+  .add(
+    'Standard',
+    () => {
+      const [target, setTarget] = React.useState(null)
 
-    return (
-      <Box m={3}>
-        {target && (
-          <Popover target={target} placement='right'>
-            <Txt align='center' px={1}>
-              Popover content
-            </Txt>
-          </Popover>
-        )}
-        <span ref={setTarget}>Popover target</span>
-      </Box>
-    )
-  })
+      return (
+        <Box m={3}>
+          {target && (
+            <Popover target={target} placement='right'>
+              <Txt align='center' px={1}>
+                Popover content
+              </Txt>
+            </Popover>
+          )}
+          <span ref={setTarget}>Popover target</span>
+        </Box>
+      )
+    },
+    {
+      screenshot: {
+        skip: true
+      }
+    }
+  )

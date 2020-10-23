@@ -283,19 +283,27 @@ storiesOf('Next/Button', module)
       </React.Fragment>
     )
   })
-  .add('Confirmation', () => {
-    return (
-      <Box m={3}>
-        <Button
-          danger
-          confirmation={{
-            placement: 'bottom',
-            text: 'Are you sure?'
-          }}
-          onClick={() => window.alert('confirmed')}
-        >
-          Dangerous action
-        </Button>
-      </Box>
-    )
-  })
+  .add(
+    'Confirmation',
+    () => {
+      return (
+        <Box m={3}>
+          <Button
+            danger
+            confirmation={{
+              placement: 'bottom',
+              text: 'Are you sure?'
+            }}
+            onClick={() => window.alert('confirmed')}
+          >
+            Dangerous action
+          </Button>
+        </Box>
+      )
+    },
+    {
+      screenshot: {
+        skip: true
+      }
+    }
+  )
