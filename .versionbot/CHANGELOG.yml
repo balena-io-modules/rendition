@@ -1,4 +1,16 @@
 - commits:
+    - subject: Save notes
+      hash: 086ea50734e1819909c41044869b16d9f6847422
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stef Kors <stef@balena.io>
+        signed-off-by: Stef Kors <stef@balena.io>
+      author: StefKors
+  version: 18.12.1
+  date: 2020-10-26T13:54:42.606Z
+- commits:
     - subject: Add a Grid component
       hash: 0fa5c24b4251379afe9085863781c0e2280bfcad
       body: ''
