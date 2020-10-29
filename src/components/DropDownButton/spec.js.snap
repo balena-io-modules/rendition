@@ -118,6 +118,10 @@ exports[`DropDownButton renders correctly 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
+.c2 {
+  box-sizing: border-box;
+}
+
 .c5 {
   font-weight: 600;
   font-size: 14px;
@@ -164,10 +168,6 @@ exports[`DropDownButton renders correctly 1`] = `
 .c6:focus:enabled svg,
 .c6:active:enabled svg {
   color: white !important;
-}
-
-.c2 {
-  box-sizing: border-box;
 }
 
 .c9 {
@@ -379,6 +379,14 @@ exports[`Opened DropDownButton renders correctly 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
+.c2 {
+  box-sizing: border-box;
+}
+
+.c11 {
+  min-width: 0px;
+}
+
 .c5 {
   font-weight: 600;
   font-size: 14px;
@@ -425,14 +433,6 @@ exports[`Opened DropDownButton renders correctly 1`] = `
 .c6:focus:enabled svg,
 .c6:active:enabled svg {
   color: white !important;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c11 {
-  min-width: 0px;
 }
 
 .c10 {

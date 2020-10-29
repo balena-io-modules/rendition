@@ -145,6 +145,18 @@ exports[`Filters component should match the stored snapshot 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 16px;
+}
+
+.c20 {
+  margin-right: 8px;
+}
+
 .c7 {
   font-weight: 600;
   font-size: 14px;
@@ -220,18 +232,6 @@ exports[`Filters component should match the stored snapshot 1`] = `
 
 .c9 {
   margin-right: 30px;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 16px;
-}
-
-.c20 {
-  margin-right: 8px;
 }
 
 .c5 {
