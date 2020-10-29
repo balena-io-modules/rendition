@@ -61,6 +61,10 @@ exports[`ButtonGroup renders correctly 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
+.c2 {
+  box-sizing: border-box;
+}
+
 .c6 {
   font-weight: 600;
   font-size: 14px;
@@ -112,10 +116,6 @@ exports[`ButtonGroup renders correctly 1`] = `
 .c7:focus:enabled svg,
 .c7:active:enabled svg {
   color: white !important;
-}
-
-.c2 {
-  box-sizing: border-box;
 }
 
 .c3 {

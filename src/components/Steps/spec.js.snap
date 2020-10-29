@@ -437,6 +437,40 @@ exports[`Steps component should match the stored snapshot 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
+.c2 {
+  box-sizing: border-box;
+}
+
+.c6 {
+  margin-left: 8px;
+  margin-right: 38px;
+  min-height: 24px;
+}
+
+.c10 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c13 {
+  font-size: 14px;
+}
+
+.c15 {
+  margin-right: 8px;
+  color: #bbc8d6;
+}
+
+.c20 {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.c21 {
+  margin-right: 8px;
+  color: #1AC135;
+}
+
 .c23 {
   font-weight: 600;
   font-size: 14px;
@@ -486,40 +520,6 @@ exports[`Steps component should match the stored snapshot 1`] = `
 .c24:focus:enabled svg,
 .c24:active:enabled svg {
   color: hsl(196.29999999999995,100%,37.5%) !important;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c6 {
-  margin-left: 8px;
-  margin-right: 38px;
-  min-height: 24px;
-}
-
-.c10 {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.c13 {
-  font-size: 14px;
-}
-
-.c15 {
-  margin-right: 8px;
-  color: #bbc8d6;
-}
-
-.c20 {
-  margin-left: 16px;
-  margin-right: 16px;
-}
-
-.c21 {
-  margin-right: 8px;
-  color: #1AC135;
 }
 
 .c3 {

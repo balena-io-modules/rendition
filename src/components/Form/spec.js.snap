@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Form component description keyword should support markdown 1`] = `"<div id=\\"root_foo__description\\" class=\\"sc-fFSRdu eIqcBa sc-bkbjAj jdNlJb sc-fuIRbl gFSOjd rendition-form-description\\"><div><p class=\\"sc-fFSRdu eIqcBa sc-dIvqjp gDTIuo\\">Lorem ipsum <em>dolor</em> sit amet</p></div></div>"`;
+exports[`Form component description keyword should support markdown 1`] = `"<div id=\\"root_foo__description\\" class=\\"sc-fKgIGh gAGA-DC sc-bCwgka jYLzkK sc-dFRpvv deHNzT rendition-form-description\\"><div><p class=\\"sc-fKgIGh gAGA-DC sc-cxNIbT hWnfAS\\">Lorem ipsum <em>dolor</em> sit amet</p></div></div>"`;
 
 exports[`Form component should match the stored snapshot 1`] = `
 .c13 {
@@ -113,6 +113,25 @@ exports[`Form component should match the stored snapshot 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
+.c2 {
+  box-sizing: border-box;
+}
+
+.c6 {
+  box-sizing: border-box;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c4 {
+  margin-bottom: 8px;
+}
+
+.c7 {
+  margin-right: 8px;
+}
+
 .c14 {
   font-weight: 600;
   font-size: 14px;
@@ -159,25 +178,6 @@ exports[`Form component should match the stored snapshot 1`] = `
 .c15:focus:enabled svg,
 .c15:active:enabled svg {
   color: white !important;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c6 {
-  box-sizing: border-box;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c4 {
-  margin-bottom: 8px;
-}
-
-.c7 {
-  margin-right: 8px;
 }
 
 .c5 {
@@ -320,4 +320,4 @@ exports[`Form component should match the stored snapshot 1`] = `
 </div>
 `;
 
-exports[`Form component ui:help keyword should support markdown 1`] = `"<div class=\\"sc-fFSRdu eIqcBa sc-bkbjAj kApBnK sc-fuIRbl gFSOjd rendition-form-help\\"><div><p class=\\"sc-fFSRdu eIqcBa sc-dIvqjp cPPbGH\\">Lorem ipsum <em>dolor</em> sit amet</p></div></div>"`;
+exports[`Form component ui:help keyword should support markdown 1`] = `"<div class=\\"sc-fKgIGh gAGA-DC sc-bCwgka fznsoX sc-dFRpvv deHNzT rendition-form-help\\"><div><p class=\\"sc-fKgIGh gAGA-DC sc-cxNIbT cbarZF\\">Lorem ipsum <em>dolor</em> sit amet</p></div></div>"`;

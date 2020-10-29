@@ -112,6 +112,10 @@ exports[`Pager component should match the stored snapshot 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
+.c2 {
+  box-sizing: border-box;
+}
+
 .c8 {
   font-weight: 600;
   font-size: 14px;
@@ -163,10 +167,6 @@ exports[`Pager component should match the stored snapshot 1`] = `
 .c9:focus:enabled svg,
 .c9:active:enabled svg {
   color: #2A506F !important;
-}
-
-.c2 {
-  box-sizing: border-box;
 }
 
 .c3 {

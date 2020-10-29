@@ -699,6 +699,16 @@ exports[`JsonSchemaRenderer component A button group widget 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
 .c8 {
   font-weight: 600;
   font-size: 14px;
@@ -750,16 +760,6 @@ exports[`JsonSchemaRenderer component A button group widget 1`] = `
 .c9:focus:enabled svg,
 .c9:active:enabled svg {
   color: white !important;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
 }
 
 .c4 {
@@ -919,6 +919,16 @@ exports[`JsonSchemaRenderer component A button widget 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
 .c6 {
   font-weight: 600;
   font-size: 14px;
@@ -965,16 +975,6 @@ exports[`JsonSchemaRenderer component A button widget 1`] = `
 .c7:focus:enabled svg,
 .c7:active:enabled svg {
   color: white !important;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
 }
 
 .c4 {
@@ -1194,6 +1194,20 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c11 {
+  margin-right: 8px;
+}
+
 .c7 {
   font-weight: 600;
   font-size: 14px;
@@ -1245,20 +1259,6 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
 .c8:focus:enabled svg,
 .c8:active:enabled svg {
   color: white !important;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c11 {
-  margin-right: 8px;
 }
 
 .c4 {

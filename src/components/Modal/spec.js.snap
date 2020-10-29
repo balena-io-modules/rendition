@@ -128,6 +128,23 @@ exports[`Modal renders correctly 1`] = `
   position: absolute;
 }
 
+.c6 {
+  box-sizing: border-box;
+}
+
+.c7 {
+  width: 700px;
+  max-width: 100%;
+}
+
+.c9 {
+  padding: 16px;
+}
+
+.c10 {
+  margin-top: 48px;
+}
+
 .c13 {
   font-weight: 600;
   font-size: 14px;
@@ -174,23 +191,6 @@ exports[`Modal renders correctly 1`] = `
 .c14:focus:enabled svg,
 .c14:active:enabled svg {
   color: white !important;
-}
-
-.c6 {
-  box-sizing: border-box;
-}
-
-.c7 {
-  width: 700px;
-  max-width: 100%;
-}
-
-.c9 {
-  padding: 16px;
-}
-
-.c10 {
-  margin-top: 48px;
 }
 
 .c11 {
