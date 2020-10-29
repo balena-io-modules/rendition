@@ -1,4 +1,27 @@
 - commits:
+    - subject: Updated snapshots
+      hash: 3d7af8fdbd6b260f60800afac8e8bd2592a4427b
+      body: |
+        Just changed with dependency updates.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: 'Fix: Confirm only depends on the files it needs'
+      hash: 2041a8d3926c129ac511bbeeb3b268c5cb7f2a87
+      body: |
+        Avoid calling import from '..'.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 18.13.2
+  date: 2020-10-29T04:42:42.687Z
+- commits:
     - subject: 'Button: Preserve event during confirmation'
       hash: 5023d8deccb5362c6fdd0f3df97b89556bc9a4d7
       body: ''
