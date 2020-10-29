@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { Box, Button, Popover, PopoverProps, PopoverOptions } from '..';
+import { Box } from '../components/Box';
+import Button from '../components/Button';
+import Popover, { PopoverProps, PopoverOptions } from '../components/Popover';
 
 export interface ConfirmOptions extends PopoverOptions {
 	text: React.ClassicElement<any> | string;
