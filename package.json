@@ -49,7 +49,8 @@
     "prettify-js": "prettier --config .prettierrc-js --write \"src/**/*.js\"",
     "prettify": "npm run prettify-js && npm run eslint-fix && npm run tslint-fix",
     "ci:screenshot": "storycap http://localhost:6006 --serverTimeout 100000 --captureTimeout 10000 --disableCssAnimation --serverCmd \"npm run start\"",
-    "deploy": "npm run build:storybook && gh-pages -d .out"
+    "deploy": "npm run build:storybook && gh-pages -d .out",
+    "generate-stories": "npx ts-node@^8.0.0 ./scripts/storyGenerator.ts"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
@@ -65,6 +66,7 @@
     "@types/googlemaps": "^3.39.7",
     "@types/highlightjs": "^9.12.0",
     "@types/jest": "^24.0.25",
+    "@types/node": "^13.13.29",
     "@types/react": "^16.8.8",
     "@types/react-dom": "^16.8.3",
     "@types/react-google-recaptcha": "^1.1.0",
@@ -123,7 +125,6 @@
     "@types/color": "^3.0.0",
     "@types/json-schema": "^7.0.5",
     "@types/lodash": "^4.14.77",
-    "@types/node": "^13.13.4",
     "@types/prop-types": "^15.7.0",
     "@types/react-helmet": "^6.0.0",
     "@types/recompose": "^0.26.2",

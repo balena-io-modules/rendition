@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "types": [],
     "module": "commonjs",
     "resolveJsonModule": true,
     "target": "es5",
@@ -11,7 +10,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "preserveConstEnums": true,
-    "removeComments": true,
+    "removeComments": false,
     "sourceMap": false,
     "strictNullChecks": true,
     "moduleResolution": "node",
