@@ -1,4 +1,25 @@
 - commits:
+    - subject: Update screenshots
+      hash: 2004c1a3a32a60b2bab87354b6b1e2aa6a9eedb6
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stef Kors <stef@balena.io>
+        signed-off-by: Stef Kors <stef@balena.io>
+      author: StefKors
+    - subject: Add jsonSchema avatar widget
+      hash: d43034d8337fc4596808c62603e81feff060262a
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stef Kors <stef@balena.io>
+        signed-off-by: Stef Kors <stef@balena.io>
+      author: StefKors
+  version: 18.14.0
+  date: 2020-11-06T11:49:52.380Z
+- commits:
     - subject: Updated snapshots
       hash: 3d7af8fdbd6b260f60800afac8e8bd2592a4427b
       body: |
