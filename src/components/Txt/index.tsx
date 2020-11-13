@@ -82,12 +82,19 @@ export type Align =
 	| 'initial'
 	| 'unset';
 
+/** Displays a text block. A `<span>` tag can be used with `<Txt.span>` and a `<p>` tag can be used with `<Txt.p>`. */
 export interface InternalTxtProps extends DefaultProps {
+	/** If true, render text in a monospace font */
 	monospace?: boolean;
+	/** If true, render text in a bold font */
 	bold?: boolean;
+	/** If true, render text in an italic font style */
 	italic?: boolean;
+	/** If true, render text in uppercase */
 	caps?: boolean;
+	/** Equivalent to the CSS `white-space` property, one of 'normal', 'nowrap', 'pre', 'pre-line', 'pre-wrap', 'initial', 'inherit' */
 	whitespace?: Whitespace;
+	/** Align text inside the component, one of 'left', 'right', 'center', 'justify', 'justify-all', 'start', 'end', 'match-parent', 'inherit', 'initial', 'unset' */
 	align?: Align;
 }
 
