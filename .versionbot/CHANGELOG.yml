@@ -1,4 +1,16 @@
 - commits:
+    - subject: Allow passing checked items as a prop to Table
+      hash: 44cce5d3c79496aaee8932476d322e88948ef3f2
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 18.14.0
+  date: 2020-11-16T15:33:38.827Z
+- commits:
     - subject: Fix accidental complete lodash import
       hash: aa847649d01f2e5438783fadfbe1bc3f2bb7d5dc
       body: ''
