@@ -901,6 +901,7 @@ cause a re-render of the component and will not be reflected on the table.
 | ------------- | --------- | --------- | ---------- | ---------------------------------------------------- |
 | `columns`    | `object[]` | - | ✓ | An array of column objects, as described above |
 | `data`    | `T[]` | - | ✓ | An array of objects that will be displayed in the table |
+| `checkedItems`    | `T[]` | - | - | An array of objects that controls which rows are selected |
 | `getRowHref`    | `(row: T) => string` | - | - | If provided, each row in the table will be a clickable link, this function is used to create the link href |
 | `onCheck`    | `(checkedItems: T[]) => string` | - | - | If provided, each row will begin with a checkbox. This function is called with every checked row every time a checkbox is toggled on or off. This property requires that you have provided a `rowKey` property |
 | `onRowClick`    | `(row: T, event: Event) => void` | - | - | A function that is called when a row is clicked. This property requires that you have provided a `rowKey` property |

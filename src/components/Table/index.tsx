@@ -155,10 +155,9 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		};
 
 		this.state = {
-			allChecked: false,
 			sort: sortState,
-			checkedItems: [],
 			page: 0,
+			...this.getSelectedRows(props.checkedItems),
 		};
 	}
 
@@ -167,6 +166,13 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 			this.setState({
 				sort: this.props.sort,
 			});
+		}
+
+		if (
+			this.props.checkedItems &&
+			prevProps.checkedItems !== this.props.checkedItems
+		) {
+			this.setRowSelection(this.props.checkedItems);
 		}
 
 		const totalItems = this.props.data?.length ?? 0;
@@ -262,16 +268,11 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		return collection;
 	}
 
-	public setRowSelection = (selectedRows: T[]): void => {
+	private getSelectedRows = (selectedRows: T[] | undefined) => {
 		const { rowKey, data } = this.props;
 
-		if (!rowKey) {
-			return;
-		}
-
-		if (selectedRows.length === 0) {
-			this.setState({ allChecked: false, checkedItems: [] });
-			return;
+		if (!rowKey || selectedRows?.length === 0) {
+			return { checkedItems: [], allChecked: false };
 		}
 
 		const selectedRowsIds = map(selectedRows, rowKey);
@@ -286,7 +287,11 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 			allChecked = data.length > 0 && checkedItems.length === data.length;
 		}
 
-		this.setState({ allChecked, checkedItems });
+		return { checkedItems, allChecked };
+	};
+
+	public setRowSelection = (selectedRows: T[]): void => {
+		this.setState(this.getSelectedRows(selectedRows));
 	};
 
 	public toggleAllChecked = () => {
@@ -437,12 +442,12 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		const items = data || [];
 		const totalItems = items.length;
 
-		const _itemsPerpage = itemsPerPage || 50;
+		const _itemsPerPage = itemsPerPage || 50;
 		const _pagerPosition = pagerPosition || 'top';
 
-		const lowerBound = usePager ? page * _itemsPerpage : 0;
+		const lowerBound = usePager ? page * _itemsPerPage : 0;
 		const upperBound = usePager
-			? Math.min((page + 1) * _itemsPerpage, totalItems)
+			? Math.min((page + 1) * _itemsPerPage, totalItems)
 			: totalItems;
 
 		const sortedData = this.sortData(items).slice(lowerBound, upperBound);
@@ -455,7 +460,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 					(_pagerPosition === 'top' || _pagerPosition === 'both') && (
 						<Pager
 							totalItems={totalItems}
-							itemsPerPage={_itemsPerpage}
+							itemsPerPage={_itemsPerPage}
 							page={page}
 							nextPage={this.incrementPage}
 							prevPage={this.decrementPage}
@@ -558,7 +563,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 					(_pagerPosition === 'bottom' || _pagerPosition === 'both') && (
 						<Pager
 							totalItems={totalItems}
-							itemsPerPage={_itemsPerpage}
+							itemsPerPage={_itemsPerPage}
 							page={page}
 							nextPage={this.incrementPage}
 							prevPage={this.decrementPage}
@@ -578,6 +583,7 @@ export interface TableSortOptions<T> {
 export interface TableProps<T> {
 	columns: Array<TableColumn<T>>;
 	data?: T[] | null;
+	checkedItems?: T[];
 	getRowHref?: (row: T) => string;
 	// Only usable if a rowKey property is also provided.
 	// If an onCheck property is provided , then checkboxes will be renders,
