@@ -121,6 +121,7 @@ storiesOf('Core/Table', module)
         <Table
           columns={columns}
           data={PokeDex}
+          checkedItems={PokeDex.slice(0, 3)}
           rowKey='pokedex_number'
           onCheck={action('items-selected')}
         />

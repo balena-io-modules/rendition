@@ -978,6 +978,25 @@ describe('getRowClass property', () => {
   })
 })
 
+describe('control selected rows', () => {
+  it('should select the first two rows', () => {
+    const component = mount(
+      <Provider>
+        <Table
+          rowKey='pokedex_number'
+          columns={columns}
+          data={PokeDex}
+          checkedItems={PokeDex.slice(0, 2)}
+        />
+      </Provider>
+    )
+
+    const table = component.find(Table).instance()
+    expect(table.state.checkedItems.length).toEqual(2)
+    expect(table.state.allChecked).toEqual(false)
+  })
+})
+
 describe('manually select rows', () => {
   it('should select the first two rows', () => {
     const component = mount(
