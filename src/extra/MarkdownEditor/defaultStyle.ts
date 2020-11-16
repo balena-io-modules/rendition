@@ -412,7 +412,7 @@ export default css`
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
-	.CodeMirror {
+	.EasyMDEContainer .CodeMirror {
 		box-sizing: border-box;
 		height: auto;
 		border: 1px solid #ddd;
@@ -423,10 +423,10 @@ export default css`
 		z-index: 0;
 		word-wrap: break-word;
 	}
-	.CodeMirror-scroll {
+	.EasyMDEContainer .CodeMirror-scroll {
 		cursor: text;
 	}
-	.CodeMirror-fullscreen {
+	.EasyMDEContainer .CodeMirror-fullscreen {
 		background: #fff;
 		position: fixed !important;
 		top: 50px;
@@ -438,19 +438,19 @@ export default css`
 		border-right: none !important;
 		border-bottom-right-radius: 0 !important;
 	}
-	.CodeMirror-sided {
+	.EasyMDEContainer .CodeMirror-sided {
 		width: 50% !important;
 	}
-	.CodeMirror-sided.sided--no-fullscreen {
+	.EasyMDEContainer .CodeMirror-sided.sided--no-fullscreen {
 		border-right: none !important;
 		border-bottom-right-radius: 0;
 		position: relative;
 		flex: 1 1 auto;
 	}
-	.CodeMirror-placeholder {
+	.EasyMDEContainer .CodeMirror-placeholder {
 		opacity: 0.5;
 	}
-	.CodeMirror-focused .CodeMirror-selected {
+	.EasyMDEContainer .CodeMirror-focused .CodeMirror-selected {
 		background: #d9d9d9;
 	}
 	.editor-toolbar {
