@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix accidental complete lodash import
+      hash: aa847649d01f2e5438783fadfbe1bc3f2bb7d5dc
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 18.13.4
+  date: 2020-11-16T15:14:57.857Z
+- commits:
     - subject: 'Form: Remove the flaky Captcha sceenshot test'
       hash: db3a59e3d983ea357ab4108766a7caae2eefa6bc
       body: ''
