@@ -1,4 +1,28 @@
 - commits:
+    - subject: 'Form: Remove the flaky Captcha sceenshot test'
+      hash: db3a59e3d983ea357ab4108766a7caae2eefa6bc
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+    - subject: Update react-simplemde-editor & snapshots for upstream versions
+      hash: dabea5385a83bb2e9b2cfb094b2816eaad0058de
+      body: |
+        Depending on the lockfile consumers might need to
+        bump the nested easymde dependency to v2.13.0
+        manually.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 18.13.3
+  date: 2020-11-16T14:48:42.606Z
+- commits:
     - subject: Updated snapshots
       hash: 3d7af8fdbd6b260f60800afac8e8bd2592a4427b
       body: |
