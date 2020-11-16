@@ -100,16 +100,13 @@ class Modal extends React.Component<ThemedModalProps, any> {
 	public render() {
 		const { width, theme, ...props } = this.props;
 
-		const cancelButtonProps = Object.assign(
-			{ ml: 20 },
-			props.cancelButtonProps,
-		);
+		const cancelButtonProps = Object.assign({ ml: 3 }, props.cancelButtonProps);
 
 		const secondaryButtonProps = Object.assign(
 			{
 				primary: true,
 				outline: true,
-				ml: 20,
+				ml: 3,
 			},
 			props.secondaryButtonProps,
 		);
@@ -121,7 +118,7 @@ class Modal extends React.Component<ThemedModalProps, any> {
 		const primaryButtonProps = merge(
 			{
 				primary: true,
-				ml: 20,
+				ml: 3,
 				...(shouldChangePrimaryButtonOrder && {
 					style: { order: -1 },
 				}),
