@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'Modal: Change the button margins to use the predefined spacing palette'
+      hash: 3ef02437937d763b768ccaa36c02581951cc6776
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 18.15.1
+  date: 2020-11-16T22:36:37.110Z
+- commits:
     - subject: 'Modal: Move the cancel button first for dangerous & warning actions'
       hash: 6fa693329ba9bc8adb4baebfc6d63414a2b05f2d
       body: ''
