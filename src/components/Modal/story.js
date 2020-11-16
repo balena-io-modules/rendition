@@ -255,10 +255,10 @@ storiesOf('Next/Modal', module)
     return (
       <Modal
         width={['auto', 500, 1000]}
-        title='Are you sure?'
+        title='Modal title'
         cancel={cancelAction}
         done={doneAction}
-        action='Delete'
+        action='Start'
         cancelButtonProps={{
           children: 'Abort',
           width: 150,
@@ -268,9 +268,53 @@ storiesOf('Next/Modal', module)
         }}
         primaryButtonProps={{
           width: 150,
-          danger: true,
+          info: true,
           primary: false,
           disabled: true
+        }}
+        >
+        <p>Lorem ipsum dolor sit amet</p>
+        <a
+          href='https://balena-io-modules.github.io/rendition/'
+          target='_blank'
+        >
+          Rendition
+        </a>
+      </Modal>
+    )
+  })
+  .add('Dangerous primary action', () => {
+    return (
+      <Modal
+        title='Are you sure?'
+        cancel={cancelAction}
+        done={doneAction}
+        action='Delete'
+        primaryButtonProps={{
+          danger: true,
+          primary: false
+        }}
+        >
+        <p>Lorem ipsum dolor sit amet</p>
+        <a
+          href='https://balena-io-modules.github.io/rendition/'
+          target='_blank'
+        >
+          Rendition
+        </a>
+      </Modal>
+    )
+  })
+  .add('Warning primary action', () => {
+    return (
+      <Modal
+        title='Are you sure?'
+        cancel={cancelAction}
+        done={doneAction}
+        action='Stop!'
+        primaryButtonProps={{
+          warning: true,
+          primary: false
         }}
         >
         <p>Lorem ipsum dolor sit amet</p>

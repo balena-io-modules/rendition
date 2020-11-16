@@ -193,6 +193,10 @@ exports[`Modal renders correctly 1`] = `
   color: white !important;
 }
 
+.c15 {
+  margin-left: 20px;
+}
+
 .c11 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -264,7 +268,7 @@ exports[`Modal renders correctly 1`] = `
               className="c6 c10 c11"
             >
               <button
-                className="c12 c13 c14 "
+                className="c12 c13 c14 c15"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onMouseOut={[Function]}
