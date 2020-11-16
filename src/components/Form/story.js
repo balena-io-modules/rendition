@@ -316,10 +316,6 @@ storiesOf('Next/Form', module)
         Markdown: {
           type: 'string',
           format: 'markdown'
-        },
-        Captcha: {
-          type: 'string',
-          format: 'captcha'
         }
       }
     }
