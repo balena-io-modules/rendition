@@ -1,4 +1,5 @@
 import { Layer } from 'grommet';
+import merge from 'lodash/merge';
 import * as React from 'react';
 import styled, { createGlobalStyle, withTheme } from 'styled-components';
 import { DefaultProps, ResponsiveStyle, Theme } from '../../common-types';
@@ -100,7 +101,7 @@ class Modal extends React.Component<ThemedModalProps, any> {
 		const { width, theme, ...props } = this.props;
 
 		const cancelButtonProps = Object.assign(
-			{ style: { marginRight: 20 } },
+			{ ml: 20 },
 			props.cancelButtonProps,
 		);
 
@@ -108,13 +109,23 @@ class Modal extends React.Component<ThemedModalProps, any> {
 			{
 				primary: true,
 				outline: true,
-				style: { marginRight: 20 },
+				ml: 20,
 			},
 			props.secondaryButtonProps,
 		);
 
-		const primaryButtonProps = Object.assign(
-			{ primary: true },
+		const shouldChangePrimaryButtonOrder =
+			(props.primaryButtonProps?.danger ??
+				props.primaryButtonProps?.warning) === true;
+
+		const primaryButtonProps = merge(
+			{
+				primary: true,
+				ml: 20,
+				...(shouldChangePrimaryButtonOrder && {
+					style: { order: -1 },
+				}),
+			},
 			props.primaryButtonProps,
 		);
 
