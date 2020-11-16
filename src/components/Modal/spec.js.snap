@@ -194,7 +194,7 @@ exports[`Modal renders correctly 1`] = `
 }
 
 .c15 {
-  margin-left: 20px;
+  margin-left: 16px;
 }
 
 .c11 {
