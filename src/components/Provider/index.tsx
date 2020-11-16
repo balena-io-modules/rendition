@@ -1,5 +1,5 @@
 import { Grommet } from 'grommet';
-import { PartialObject, cloneDeep } from 'lodash/index';
+import cloneDeep from 'lodash/cloneDeep';
 import merge from 'lodash/merge';
 import * as React from 'react';
 import styled from 'styled-components';
@@ -35,7 +35,7 @@ const Provider = ({ theme, ...props }: ThemedProvider) => {
 };
 
 export interface ThemedProvider extends DefaultProps {
-	theme?: PartialObject<Theme>;
+	theme?: Partial<Theme>;
 }
 
 export default Provider;
