@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'Modal: Move the cancel button first for dangerous & warning actions'
+      hash: 6fa693329ba9bc8adb4baebfc6d63414a2b05f2d
+      body: ''
+      footer:
+        Resolves: '#1210'
+        resolves: '#1210'
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 18.15.0
+  date: 2020-11-16T16:15:52.504Z
+- commits:
     - subject: Allow passing checked items as a prop to Table
       hash: 44cce5d3c79496aaee8932476d322e88948ef3f2
       body: ''
