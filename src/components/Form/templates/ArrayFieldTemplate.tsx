@@ -7,7 +7,7 @@ import * as React from 'react';
 import { ArrayFieldTemplateProps } from '@rjsf/core';
 import { Flex } from '../../Flex';
 import { Box } from '../../Box';
-import Button from '../../Button';
+import { Button } from '../../Button';
 import { WarningField } from '../WarningField';
 
 interface ArrayFieldTitleProps {

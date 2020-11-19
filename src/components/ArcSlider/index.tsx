@@ -81,7 +81,7 @@ interface ArcSliderState {
 	innerValue: number;
 }
 
-class ArcSlider extends React.Component<ArcSliderProps, ArcSliderState> {
+class BaseArcSlider extends React.Component<ArcSliderProps, ArcSliderState> {
 	private $slider: SVGSVGElement | null = null;
 
 	constructor(props: any) {
@@ -259,10 +259,20 @@ class ArcSlider extends React.Component<ArcSliderProps, ArcSliderState> {
 }
 
 export interface ArcSliderProps extends BoxProps {
+	/** A function that is called when the slider value changes, this will always be a value between 0 and 1 */
 	onValueChange?: (value: number) => void;
+	/** A number between 0 and 1 that represents the progress */
 	value?: number;
+	/** A CSS color string to use for the color of the "filled" part of the arc */
 	fillColor?: string;
+	/** A CSS color string to use for the color of the arc track */
 	background?: string;
 }
 
-export default ArcSlider;
+/**
+ * A slider input that is displayed as an arc. This component will scale in size to fit it's container.
+ * A label can be added by placing a child element inside this component.
+ *
+ *  [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/ArcSlider/ArcSlider.stories.tsx)
+ */
+export const ArcSlider = BaseArcSlider;

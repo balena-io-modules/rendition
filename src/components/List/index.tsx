@@ -64,7 +64,7 @@ const UnorderedList = styled(ListBase)`
 	}
 `;
 
-const List = ({ children, className, ordered }: InternalListProps) => {
+const BaseList = ({ children, className, ordered }: InternalListProps) => {
 	const ListType = ordered ? OrderedList : UnorderedList;
 	return (
 		<ListType className={className}>
@@ -76,10 +76,14 @@ const List = ({ children, className, ordered }: InternalListProps) => {
 };
 
 interface InternalListProps {
+	/** Each child represents a list item */
 	children: React.ReactNode;
 	className?: string;
+	/** If true, render an ordered (numbered) list, otherwise render a bullet list */
 	ordered?: boolean;
 }
 
 export type ListProps = InternalListProps & RenditionSystemProps;
-export default asRendition<React.FunctionComponent<ListProps>>(List);
+
+/** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/List/List.stories.tsx) */
+export const List = asRendition<React.FunctionComponent<ListProps>>(BaseList);

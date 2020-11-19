@@ -11,9 +11,9 @@ import { RenditionSystemProps, Theme } from '../../common-types';
 import { getColor } from '../../utils';
 import { Box } from '../Box';
 import { Flex } from '../Flex';
-import Txt from '../Txt';
+import { Txt } from '../Txt';
 
-const Accordion = (props: ThemedAccordionProps) => {
+const BaseAccordion = (props: ThemedAccordionProps) => {
 	const [openPanels, setOpenPanels] = React.useState<number[]>([]);
 	const { items } = props;
 	return (
@@ -23,6 +23,7 @@ const Accordion = (props: ThemedAccordionProps) => {
 		>
 			{items.map((item, index) => (
 				<GrommetAccordionPanel
+					key={index}
 					header={
 						<Flex alignItems="center" justifyContent="space-between">
 							<Flex px={16}>
@@ -54,11 +55,13 @@ interface ThemedAccordionProps extends InternalAccordionProps {
 
 interface InternalAccordionProps {
 	children?: React.ComponentType;
+	/** Renders label as title and panel as body of accordion */
 	items: [{ label: string | React.ReactNode; panel: string | React.ReactNode }];
 }
 
 export type AccordionProps = InternalAccordionProps & RenditionSystemProps;
-export default asRendition<React.FunctionComponent<AccordionProps>>(
-	Accordion,
-	[],
+
+/** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Accordion/Accordion.stories.tsx) */
+export const Accordion = asRendition<React.FunctionComponent<AccordionProps>>(
+	BaseAccordion,
 );

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "types": [],
+    "types": ["jest"],
     "module": "commonjs",
     "resolveJsonModule": true,
     "target": "es5",
@@ -16,6 +16,7 @@
     "strictNullChecks": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
+    "allowJs": true,
     "esModuleInterop": true,
     "baseUrl": ".",
     "keyofStringsOnly": true,
@@ -34,8 +35,10 @@
       ]
     }
   },
+  "include": [
+    "src"
+  ],
   "exclude": [
-    "dist",
-    "dist_esm5"
+    ".*spec.tsx?"
   ]
 }

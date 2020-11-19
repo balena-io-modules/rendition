@@ -9,13 +9,12 @@ import isEqual from 'lodash/isEqual';
 import reject from 'lodash/reject';
 import * as React from 'react';
 import styled from 'styled-components';
-import Button, { ButtonProps } from '../Button';
-import { DefaultProps } from '../../common-types';
+import { Button, ButtonProps } from '../Button';
 import { randomString } from '../../utils';
 import { Box } from '../Box';
 import { DropDownButtonProps } from '../DropDownButton';
 import { Flex } from '../Flex';
-import Search from '../Search';
+import { Search } from '../Search';
 import { FilterModal } from './FilterModal';
 import * as SchemaSieve from './SchemaSieve';
 import Summary from './Summary';
@@ -29,7 +28,7 @@ const FilterWrapper = styled(Box)`
 	position: relative;
 `;
 
-class Filters extends React.Component<FiltersProps, FiltersState> {
+class BaseFilters extends React.Component<FiltersProps, FiltersState> {
 	constructor(props: FiltersProps) {
 		super(props);
 		const { filters = [], schema, views = [] } = this.props;
@@ -422,19 +421,109 @@ export interface FiltersState {
 	schema: JSONSchema;
 }
 
-export interface FiltersProps extends DefaultProps {
+export interface FiltersProps extends React.HTMLAttributes<HTMLElement> {
+	/** If true, disable the entire `Filters` interface */
 	disabled?: boolean;
+	/** An array of json schemas to be displayed as the currently selected filters, typically used when loading when loading filters from storage */
 	filters?: JSONSchema[];
+	/** An array of views, as described above, typically used when loading when loading views from storage */
 	views?: FiltersView[];
+	/** An array of view scopes, as described above */
 	viewScopes?: ViewScope[];
+	/** A function that is called when filters are updated */
 	onFiltersUpdate?: (filters: JSONSchema[]) => void;
+	/** A function that is called when views are updated */
 	onViewsUpdate?: (views: FiltersView[]) => void;
+	/** A json schema describing the shape of the objects you want to filter */
 	schema: JSONSchema;
+	/** Properties that are passed to the "Add filter" button, these are the same props used for the [`Button`](#button) component */
 	addFilterButtonProps?: ButtonProps;
+	/** Properties that are passed to the "Views" button, these are the same props used for the [DropDownButton](#dropdownbutton) component */
 	viewsMenuButtonProps?: DropDownButtonProps;
+	/** Controls which parts of the Filters interface are displayed. One of `all`, `add`, `search`, `views`, `summary`, or an array containing any of these values */
 	renderMode?: FilterRenderMode | FilterRenderMode[];
+	/** If true, Set the `Filters` component against a dark background */
 	dark?: boolean;
+	/** Accept a boolean for each rendition breakpoint. If true remove `Filters` labels */
 	compact?: boolean[];
 }
 
-export default Filters;
+/**
+ * A component that can be used for generating filters in the form of [json schema](http://json-schema.org/) objects and saving sets of filters as "views".
+ * The filters created by this component can be used to filter a collection of
+ * objects using the `SchemaSieve` object.
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Filters/story.js)
+ *
+ * ## Schema
+ *
+ * The `Filters` component requires a `schema` property which should be a json
+ * schema that defines the shape of the objects you want to filter. For example if
+ * you want to filter on a collection that looks like this:
+ *
+ * ```
+ * [
+ *   {
+ *     name: 'Bulbasaur',
+ *     caught: true,
+ *   },
+ *   {
+ *     name: 'Pikachu',
+ *     caught: true,
+ *   },
+ *   {
+ *     name: 'Dratini',
+ *     caught: false,
+ *   }
+ * ]
+ * ```
+ *
+ * You would define a schema that looks like this:
+ *
+ * ```
+ * {
+ *   type: 'object',
+ *   properties: {
+ *     name: {
+ *       title: 'Name',
+ *       type: 'string'
+ *     },
+ *     caught: {
+ *       title: 'Has been caught',
+ *       type: 'boolean'
+ *     }
+ *   }
+ * }
+ * ```
+ *
+ * If you provide a `title` property, it will be used to label the field when
+ * filtering, otherwise the field name will be used.
+ *
+ * ### Views
+ *
+ * Views represent a set of filters, along with an id and a name. This is a useful
+ * feature for storing a set filters and loading it again at a later point.
+ * A view can optionally have a `scope` property, which will correspond to the
+ * `slug` of a view scope, if you have provided one in the `Filters` property
+ * `viewScopes` property. Scopes allow you to easily add an extra layer of
+ * granularity/grouping to views that are generated. If you provide view scopes,
+ * the user can select a scope when creating a new view.
+ *
+ * A view scope has the following properties:
+ *
+ * | Name          | Type      | Description                                          |
+ * | ------------- | --------- | ---------------------------------------------------- |
+ * | slug            | `string`  | A unique identifier for the scope                  |
+ * | name          | `string`  | A descriptive name for the scope                     |
+ * | label       | `string`  | An optional label to use for this scope when creating a view  |
+ *
+ * A view has the following properties:
+ *
+ * | Name          | Type      | Description                                          |
+ * | ------------- | --------- | ---------------------------------------------------- |
+ * | id            | `string`  | A unique identifier for the view                     |
+ * | name          | `string`  | A descriptive name for the view                      |
+ * | filters       | `string`  | An array of json schemas                             |
+ * | scope       | <code>string &#124; null</code>  | The slug of a view scope, or `null` if now scopes are provided |
+ */
+export const Filters = BaseFilters;

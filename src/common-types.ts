@@ -10,15 +10,10 @@ import {
 	SpaceProps,
 	WidthProps,
 } from 'styled-system';
-import { Theme } from './theme';
 
 export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
 export { Theme } from './theme';
-
-export interface ThemedDefaultProps extends DefaultProps {
-	theme: Theme;
-}
 
 export interface StyledSystemProps
 	extends SpaceProps,
@@ -33,30 +28,6 @@ export interface StyledSystemProps
 		DisplayProps {}
 
 export type ResponsiveStyle = string | number | Array<string | number>;
-
-// Cherry pick the react attributes that don't conflict with styled-system
-export interface DefaultProps extends React.DOMAttributes<HTMLElement> {
-	// React-specific Attributes
-	defaultChecked?: boolean;
-	defaultValue?: string | number | ReadonlyArray<string>;
-	suppressContentEditableWarning?: boolean;
-
-	// Standard HTML Attributes
-	accessKey?: string;
-	className?: string;
-	contentEditable?: boolean | 'inherit' | 'true' | 'false';
-	contextMenu?: string;
-	dir?: 'rtl';
-	draggable?: boolean | 'true' | 'false';
-	hidden?: boolean;
-	id?: string;
-	lang?: string;
-	slot?: string;
-	spellCheck?: boolean | 'true' | 'false';
-	style?: React.CSSProperties;
-	tabIndex?: number;
-	title?: string;
-}
 
 export type PineDataType =
 	| 'Boolean'
@@ -107,13 +78,21 @@ export interface FilterViewScope {
 }
 
 export interface Coloring {
+	/** If true, use the `primary` theme color. [View colors source code definition](https://github.com/balena-io-modules/rendition/blob/master/src/theme.ts#L21) */
 	primary?: boolean;
+	/** If true, use the `secondary` theme color. [View colors source code definition](https://github.com/balena-io-modules/rendition/blob/master/src/theme.ts#L21) */
 	secondary?: boolean;
+	/** If true, use the `tertiary` theme color. [View colors source code definition](https://github.com/balena-io-modules/rendition/blob/master/src/theme.ts#L21) */
 	tertiary?: boolean;
+	/** If true, use the `quartenary` theme color. [View colors source code definition](https://github.com/balena-io-modules/rendition/blob/master/src/theme.ts#L21) */
 	quartenary?: boolean;
+	/** If true, use the `danger` theme color. [View colors source code definition](https://github.com/balena-io-modules/rendition/blob/master/src/theme.ts#L21) */
 	danger?: boolean;
+	/** If true, use the `warning` theme color. [View colors source code definition](https://github.com/balena-io-modules/rendition/blob/master/src/theme.ts#L21) */
 	warning?: boolean;
+	/** If true, use the `success` theme color. [View colors source code definition](https://github.com/balena-io-modules/rendition/blob/master/src/theme.ts#L21) */
 	success?: boolean;
+	/** If true, use the `info` theme color. [View colors source code definition](https://github.com/balena-io-modules/rendition/blob/master/src/theme.ts#L21) */
 	info?: boolean;
 }
 
@@ -134,10 +113,11 @@ export interface Shading {
 }
 
 export interface Sizing {
+	/** If true, increase element size */
 	emphasized?: boolean;
 }
 
-export type RenditionSystemProps = Tooltip & StyledSystemProps;
+export type RenditionSystemProps = StyledSystemProps & Tooltip;
 
 export type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left';
 

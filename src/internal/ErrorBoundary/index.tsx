@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flex } from '../../components/Flex';
-import Alert from '../../components/Alert';
+import { Alert } from '../../components/Alert';
 
 interface ErrorBoundaryState {
 	error: any;

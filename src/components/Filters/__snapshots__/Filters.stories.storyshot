@@ -1,0 +1,4715 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/Filters Button Props 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ fGRNFR sc-bXDlPE gMJJJq"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr jkLErl"
+        >
+          <button
+            class="StyledButton-sc-323bzc-0 fGJlAh sc-bqyKva sc-kstrdz gjQfnS FUwNf sc-dIUggk cUtYTu"
+            type="button"
+            width="200"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 iQEJEP"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-filter fa-w-16 "
+                color="#444444"
+                data-icon="filter"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"
+                  fill="currentColor"
+                />
+              </svg>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 fAbILH"
+              />
+              Add filter
+            </div>
+          </button>
+          <div
+            class="sc-gsxnyZ TTDEs"
+          >
+            <div
+              class="sc-gTgzIj cpnJWH sc-laRPJI jBqfDV"
+            >
+              <input
+                placeholder="Search entries..."
+                value=""
+              />
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-search fa-w-16 search-icon"
+                data-icon="search"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="sc-dacFzL"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-bTvRPi iIpDHo sc-dtwoBo eHObsD"
+            >
+              <button
+                class="StyledButton-sc-323bzc-0 jwdmhD sc-bqyKva sc-hBEYos gjQfnS Kqhdo sc-dIUggk YDvpG sc-hOqqkJ kAcspI"
+                type="button"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 iQEJEP"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-chart-pie fa-w-17 "
+                    data-icon="chart-pie"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 544 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M527.79 288H290.5l158.03 158.03c6.04 6.04 15.98 6.53 22.19.68 38.7-36.46 65.32-85.61 73.13-140.86 1.34-9.46-6.51-17.85-16.06-17.85zm-15.83-64.8C503.72 103.74 408.26 8.28 288.8.04 279.68-.59 272 7.1 272 16.24V240h223.77c9.14 0 16.82-7.68 16.19-16.8zM224 288V50.71c0-9.55-8.39-17.4-17.84-16.06C86.99 51.49-4.1 155.6.14 280.37 4.5 408.51 114.83 513.59 243.03 511.98c50.4-.63 96.97-16.87 135.26-44.03 7.9-5.6 8.42-17.23 1.57-24.08L224 288z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 fAbILH"
+                  />
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kUtBaJ"
+                  >
+                    <div
+                      class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+                    >
+                      Views
+                    </div>
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-chevron-down fa-w-14 "
+                      data-icon="chevron-down"
+                      data-prefix="fas"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 448 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>
+          Bulbasaur
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                1
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Seed
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Chinese
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.7
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                6.9
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Overgrow
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                yes
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Ivysaur
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                2
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Seed
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Chinese
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                1
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                13
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Overgrow
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          There is a bud on this Pokemon's back. To support its weight, Ivysaur's legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it's a sign that the bud will bloom into a large flower soon.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Venusaur
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                3
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Seed
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Italian
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                2
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                100
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Overgrow
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          There is a large flower on Venusaur's back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower's aroma soothes the emotions of people.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Charmander
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                4
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Lizard
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                French
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.6
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                8.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Blaze
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokemon becomes enraged, the flame burns fiercely.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Charmeleon
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Flame
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Greek
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                1.1
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                19
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Blaze
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td>
+                Sun, 01 Jan 2012 14:43:02 GMT
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Charmeleon mercilessly destroys its foes using its sharp claws. If it encounters a strong foe, it turns aggressive. In this excited state, the flame at the tip of its tail flares with a bluish white color.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Charizard
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                6
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Flame
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                South African
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                1.7
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                90.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Blaze
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td>
+                Wed, 17 Apr 2013 14:43:02 GMT
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td>
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+                  >
+                    <div
+                      class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+                    >
+                      10
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+                  >
+                    <div
+                      class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+                    >
+                      Kanto
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Squirtle
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                7
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Tiny Turtle
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Georgian
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                9
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Torrent
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td>
+                Fri, 03 Nov 2017 08:49:26 GMT
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td>
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+                  >
+                    <div
+                      class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+                    >
+                      5
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+                  >
+                    <div
+                      class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+                    >
+                      Johto
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokemon to swim at high speeds.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Wartortle
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                8
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Turtle
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Polish
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                1
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                22.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Torrent
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokemon's toughness as a battler.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Blastoise
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                9
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Shellfish
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                New Zealand
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                1.6
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                85.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Torrent
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Blastoise has water spouts that protrude from its shell. The water spouts are very accurate. They can shoot bullets of water with enough accuracy to strike empty cans from a distance of over 160 feet.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Caterpie
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                10
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Worm
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Croatian
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.3
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                2.9
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Shield Dust
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                yes
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Caterpie has a voracious appetite. It can devour leaves bigger than its body right before your eyes. From its antenna, this Pokémon releases a terrifically strong odor.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Staryu
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                120
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Star Shape
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                English
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.8
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                34.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Natural Cure, Illuminate
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                yes
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Staryu's center section has an organ called the core that shines bright red. If you go to a beach toward the end of summer, the glowing cores of these Pokémon look like the stars in the sky.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Filters Compact 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ fGRNFR sc-bXDlPE gMJJJq"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr jkLErl"
+        >
+          <button
+            class="StyledButton-sc-323bzc-0 gZnGrv sc-bqyKva sc-kstrdz gjQfnS FUwNf sc-dIUggk fhRrH"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-filter fa-w-16 "
+              color="#444444"
+              data-icon="filter"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+          <div
+            class="sc-gsxnyZ TTDEs"
+          >
+            <div
+              class="sc-gTgzIj cpnJWH sc-laRPJI jBqfDV"
+            >
+              <input
+                placeholder="Search entries..."
+                value=""
+              />
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-search fa-w-16 search-icon"
+                data-icon="search"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="sc-dacFzL"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-bTvRPi iIpDHo sc-dtwoBo cyzEdS"
+            >
+              <button
+                class="StyledButton-sc-323bzc-0 jwdmhD sc-bqyKva sc-hBEYos gjQfnS Kqhdo sc-dIUggk YDvpG sc-hOqqkJ kAcspI"
+                type="button"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 iQEJEP"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-chart-pie fa-w-17 "
+                    data-icon="chart-pie"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 544 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M527.79 288H290.5l158.03 158.03c6.04 6.04 15.98 6.53 22.19.68 38.7-36.46 65.32-85.61 73.13-140.86 1.34-9.46-6.51-17.85-16.06-17.85zm-15.83-64.8C503.72 103.74 408.26 8.28 288.8.04 279.68-.59 272 7.1 272 16.24V240h223.77c9.14 0 16.82-7.68 16.19-16.8zM224 288V50.71c0-9.55-8.39-17.4-17.84-16.06C86.99 51.49-4.1 155.6.14 280.37 4.5 408.51 114.83 513.59 243.03 511.98c50.4-.63 96.97-16.87 135.26-44.03 7.9-5.6 8.42-17.23 1.57-24.08L224 288z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 fAbILH"
+                  />
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kUtBaJ"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-chevron-down fa-w-14 "
+                      data-icon="chevron-down"
+                      data-prefix="fas"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 448 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>
+          Bulbasaur
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                1
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Seed
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Chinese
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.7
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                6.9
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Overgrow
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                yes
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Ivysaur
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                2
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Seed
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Chinese
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                1
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                13
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Overgrow
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          There is a bud on this Pokemon's back. To support its weight, Ivysaur's legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it's a sign that the bud will bloom into a large flower soon.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Venusaur
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                3
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Seed
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Italian
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                2
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                100
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Overgrow
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          There is a large flower on Venusaur's back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower's aroma soothes the emotions of people.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Charmander
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                4
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Lizard
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                French
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.6
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                8.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Blaze
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokemon becomes enraged, the flame burns fiercely.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Charmeleon
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Flame
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Greek
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                1.1
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                19
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Blaze
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td>
+                Sun, 01 Jan 2012 14:43:02 GMT
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Charmeleon mercilessly destroys its foes using its sharp claws. If it encounters a strong foe, it turns aggressive. In this excited state, the flame at the tip of its tail flares with a bluish white color.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Charizard
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                6
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Flame
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                South African
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                1.7
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                90.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Blaze
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td>
+                Wed, 17 Apr 2013 14:43:02 GMT
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td>
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+                  >
+                    <div
+                      class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+                    >
+                      10
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+                  >
+                    <div
+                      class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+                    >
+                      Kanto
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Squirtle
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                7
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Tiny Turtle
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Georgian
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                9
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Torrent
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td>
+                Fri, 03 Nov 2017 08:49:26 GMT
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td>
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+                  >
+                    <div
+                      class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+                    >
+                      5
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+                  >
+                    <div
+                      class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+                    >
+                      Johto
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokemon to swim at high speeds.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Wartortle
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                8
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Turtle
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Polish
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                1
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                22.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Torrent
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokemon's toughness as a battler.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Blastoise
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                9
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Shellfish
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                New Zealand
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                1.6
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                85.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Torrent
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Blastoise has water spouts that protrude from its shell. The water spouts are very accurate. They can shoot bullets of water with enough accuracy to strike empty cans from a distance of over 160 feet.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Caterpie
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                10
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Worm
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Croatian
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.3
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                2.9
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Shield Dust
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                yes
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Caterpie has a voracious appetite. It can devour leaves bigger than its body right before your eyes. From its antenna, this Pokémon releases a terrifically strong odor.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Staryu
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                120
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Star Shape
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                English
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.8
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                34.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Natural Cure, Illuminate
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                yes
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Staryu's center section has an organ called the core that shines bright red. If you go to a beach toward the end of summer, the glowing cores of these Pokémon look like the stars in the sky.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Filters Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ fGRNFR sc-bXDlPE gMJJJq"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr jkLErl"
+        >
+          <button
+            class="StyledButton-sc-323bzc-0 fGJlAh sc-bqyKva sc-kstrdz gjQfnS FUwNf sc-dIUggk fhRrH"
+            type="button"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 iQEJEP"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-filter fa-w-16 "
+                color="#444444"
+                data-icon="filter"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"
+                  fill="currentColor"
+                />
+              </svg>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 fAbILH"
+              />
+              Add filter
+            </div>
+          </button>
+          <div
+            class="sc-gsxnyZ TTDEs"
+          >
+            <div
+              class="sc-gTgzIj cpnJWH sc-laRPJI jBqfDV"
+            >
+              <input
+                placeholder="Search entries..."
+                value=""
+              />
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-search fa-w-16 search-icon"
+                data-icon="search"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="sc-dacFzL"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-bTvRPi iIpDHo sc-dtwoBo cyzEdS"
+            >
+              <button
+                class="StyledButton-sc-323bzc-0 jwdmhD sc-bqyKva sc-hBEYos gjQfnS Kqhdo sc-dIUggk YDvpG sc-hOqqkJ kAcspI"
+                type="button"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 iQEJEP"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-chart-pie fa-w-17 "
+                    data-icon="chart-pie"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 544 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M527.79 288H290.5l158.03 158.03c6.04 6.04 15.98 6.53 22.19.68 38.7-36.46 65.32-85.61 73.13-140.86 1.34-9.46-6.51-17.85-16.06-17.85zm-15.83-64.8C503.72 103.74 408.26 8.28 288.8.04 279.68-.59 272 7.1 272 16.24V240h223.77c9.14 0 16.82-7.68 16.19-16.8zM224 288V50.71c0-9.55-8.39-17.4-17.84-16.06C86.99 51.49-4.1 155.6.14 280.37 4.5 408.51 114.83 513.59 243.03 511.98c50.4-.63 96.97-16.87 135.26-44.03 7.9-5.6 8.42-17.23 1.57-24.08L224 288z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 fAbILH"
+                  />
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kUtBaJ"
+                  >
+                    <div
+                      class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+                    >
+                      Views
+                    </div>
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-chevron-down fa-w-14 "
+                      data-icon="chevron-down"
+                      data-prefix="fas"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 448 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>
+          Bulbasaur
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                1
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Seed
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Chinese
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.7
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                6.9
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Overgrow
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                yes
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Ivysaur
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                2
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Seed
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Chinese
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                1
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                13
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Overgrow
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          There is a bud on this Pokemon's back. To support its weight, Ivysaur's legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it's a sign that the bud will bloom into a large flower soon.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Venusaur
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                3
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Seed
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Italian
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                2
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                100
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Overgrow
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          There is a large flower on Venusaur's back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower's aroma soothes the emotions of people.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Charmander
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                4
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Lizard
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                French
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.6
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                8.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Blaze
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokemon becomes enraged, the flame burns fiercely.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Charmeleon
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Flame
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Greek
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                1.1
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                19
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Blaze
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td>
+                Sun, 01 Jan 2012 14:43:02 GMT
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Charmeleon mercilessly destroys its foes using its sharp claws. If it encounters a strong foe, it turns aggressive. In this excited state, the flame at the tip of its tail flares with a bluish white color.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Charizard
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                6
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Flame
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                South African
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                1.7
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                90.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Blaze
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td>
+                Wed, 17 Apr 2013 14:43:02 GMT
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td>
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+                  >
+                    <div
+                      class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+                    >
+                      10
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+                  >
+                    <div
+                      class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+                    >
+                      Kanto
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Squirtle
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                7
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Tiny Turtle
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Georgian
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                9
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Torrent
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td>
+                Fri, 03 Nov 2017 08:49:26 GMT
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td>
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+                  >
+                    <div
+                      class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+                    >
+                      5
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+                  >
+                    <div
+                      class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+                    >
+                      Johto
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokemon to swim at high speeds.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Wartortle
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                8
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Turtle
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Polish
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                1
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                22.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Torrent
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokemon's toughness as a battler.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Blastoise
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                9
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Shellfish
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                New Zealand
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                1.6
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                85.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Torrent
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Blastoise has water spouts that protrude from its shell. The water spouts are very accurate. They can shoot bullets of water with enough accuracy to strike empty cans from a distance of over 160 feet.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Caterpie
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                10
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Worm
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Croatian
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.3
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                2.9
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Shield Dust
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                yes
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Caterpie has a voracious appetite. It can devour leaves bigger than its body right before your eyes. From its antenna, this Pokémon releases a terrifically strong odor.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Staryu
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                120
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Star Shape
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                English
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.8
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                34.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Natural Cure, Illuminate
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                yes
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Staryu's center section has an organ called the core that shines bright red. If you go to a beach toward the end of summer, the glowing cores of these Pokémon look like the stars in the sky.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Filters Disabled 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ fGRNFR sc-bXDlPE gMJJJq"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr jkLErl"
+        >
+          <button
+            class="StyledButton-sc-323bzc-0 drHUza sc-bqyKva sc-kstrdz gjQfnS FUwNf sc-dIUggk fhRrH"
+            disabled=""
+            type="button"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 iQEJEP"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-filter fa-w-16 "
+                color="#444444"
+                data-icon="filter"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"
+                  fill="currentColor"
+                />
+              </svg>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 fAbILH"
+              />
+              Add filter
+            </div>
+          </button>
+          <div
+            class="sc-gsxnyZ TTDEs"
+          >
+            <div
+              class="sc-gTgzIj cpnJWH sc-laRPJI jBqfDV"
+            >
+              <input
+                disabled=""
+                placeholder="Search entries..."
+                value=""
+              />
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-search fa-w-16 search-icon"
+                data-icon="search"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="sc-dacFzL"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-bTvRPi iIpDHo sc-dtwoBo cyzEdS"
+              disabled=""
+            >
+              <button
+                class="StyledButton-sc-323bzc-0 egqEJR sc-bqyKva sc-hBEYos gjQfnS Kqhdo sc-dIUggk YDvpG sc-hOqqkJ kAcspI"
+                disabled=""
+                type="button"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 iQEJEP"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-chart-pie fa-w-17 "
+                    data-icon="chart-pie"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 544 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M527.79 288H290.5l158.03 158.03c6.04 6.04 15.98 6.53 22.19.68 38.7-36.46 65.32-85.61 73.13-140.86 1.34-9.46-6.51-17.85-16.06-17.85zm-15.83-64.8C503.72 103.74 408.26 8.28 288.8.04 279.68-.59 272 7.1 272 16.24V240h223.77c9.14 0 16.82-7.68 16.19-16.8zM224 288V50.71c0-9.55-8.39-17.4-17.84-16.06C86.99 51.49-4.1 155.6.14 280.37 4.5 408.51 114.83 513.59 243.03 511.98c50.4-.63 96.97-16.87 135.26-44.03 7.9-5.6 8.42-17.23 1.57-24.08L224 288z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 fAbILH"
+                  />
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kUtBaJ"
+                  >
+                    <div
+                      class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+                    >
+                      Views
+                    </div>
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-chevron-down fa-w-14 "
+                      data-icon="chevron-down"
+                      data-prefix="fas"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 448 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>
+          Bulbasaur
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                1
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Seed
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Chinese
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.7
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                6.9
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Overgrow
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                yes
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Ivysaur
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                2
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Seed
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Chinese
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                1
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                13
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Overgrow
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          There is a bud on this Pokemon's back. To support its weight, Ivysaur's legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it's a sign that the bud will bloom into a large flower soon.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Venusaur
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                3
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Seed
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Italian
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                2
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                100
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Overgrow
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          There is a large flower on Venusaur's back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower's aroma soothes the emotions of people.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Charmander
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                4
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Lizard
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                French
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.6
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                8.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Blaze
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokemon becomes enraged, the flame burns fiercely.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Charmeleon
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Flame
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Greek
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                1.1
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                19
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Blaze
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td>
+                Sun, 01 Jan 2012 14:43:02 GMT
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Charmeleon mercilessly destroys its foes using its sharp claws. If it encounters a strong foe, it turns aggressive. In this excited state, the flame at the tip of its tail flares with a bluish white color.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Charizard
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                6
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Flame
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                South African
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                1.7
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                90.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Blaze
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td>
+                Wed, 17 Apr 2013 14:43:02 GMT
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td>
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+                  >
+                    <div
+                      class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+                    >
+                      10
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+                  >
+                    <div
+                      class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+                    >
+                      Kanto
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Squirtle
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                7
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Tiny Turtle
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Georgian
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                9
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Torrent
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td>
+                Fri, 03 Nov 2017 08:49:26 GMT
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td>
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+                  >
+                    <div
+                      class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+                    >
+                      5
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+                  >
+                    <div
+                      class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+                    >
+                      Johto
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokemon to swim at high speeds.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Wartortle
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                8
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Turtle
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Polish
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                1
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                22.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Torrent
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokemon's toughness as a battler.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Blastoise
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                9
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Shellfish
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                New Zealand
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                1.6
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                85.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Torrent
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Blastoise has water spouts that protrude from its shell. The water spouts are very accurate. They can shoot bullets of water with enough accuracy to strike empty cans from a distance of over 160 feet.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Caterpie
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                10
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Worm
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Croatian
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.3
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                2.9
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Shield Dust
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                yes
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Caterpie has a voracious appetite. It can devour leaves bigger than its body right before your eyes. From its antenna, this Pokémon releases a terrifically strong odor.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Staryu
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                120
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Star Shape
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                English
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.8
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                34.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Natural Cure, Illuminate
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td />
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                yes
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td />
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Staryu's center section has an organ called the core that shines bright red. If you go to a beach toward the end of summer, the glowing cores of these Pokémon look like the stars in the sky.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Filters Render Modes 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ fGRNFR sc-bXDlPE gMJJJq"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr jkLErl"
+        >
+          <button
+            class="StyledButton-sc-323bzc-0 fGJlAh sc-bqyKva sc-kstrdz gjQfnS FUwNf sc-dIUggk fhRrH"
+            type="button"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 iQEJEP"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-filter fa-w-16 "
+                color="#444444"
+                data-icon="filter"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"
+                  fill="currentColor"
+                />
+              </svg>
+              <div
+                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 fAbILH"
+              />
+              Add filter
+            </div>
+          </button>
+          <div
+            class="sc-dacFzL"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-bTvRPi iIpDHo sc-dtwoBo cyzEdS"
+            >
+              <button
+                class="StyledButton-sc-323bzc-0 jwdmhD sc-bqyKva sc-hBEYos gjQfnS Kqhdo sc-dIUggk YDvpG sc-hOqqkJ kAcspI"
+                type="button"
+              >
+                <div
+                  class="StyledBox-sc-13pk1d4-0 iQEJEP"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-chart-pie fa-w-17 "
+                    data-icon="chart-pie"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 544 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M527.79 288H290.5l158.03 158.03c6.04 6.04 15.98 6.53 22.19.68 38.7-36.46 65.32-85.61 73.13-140.86 1.34-9.46-6.51-17.85-16.06-17.85zm-15.83-64.8C503.72 103.74 408.26 8.28 288.8.04 279.68-.59 272 7.1 272 16.24V240h223.77c9.14 0 16.82-7.68 16.19-16.8zM224 288V50.71c0-9.55-8.39-17.4-17.84-16.06C86.99 51.49-4.1 155.6.14 280.37 4.5 408.51 114.83 513.59 243.03 511.98c50.4-.63 96.97-16.87 135.26-44.03 7.9-5.6 8.42-17.23 1.57-24.08L224 288z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <div
+                    class="StyledBox__StyledBoxGap-sc-13pk1d4-1 fAbILH"
+                  />
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kUtBaJ"
+                  >
+                    <div
+                      class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+                    >
+                      Views
+                    </div>
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-chevron-down fa-w-14 "
+                      data-icon="chevron-down"
+                      data-prefix="fas"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 448 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dkEqoy"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ bBwSze sc-hHftDr jkLErl"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV"
+            >
+              <div
+                class="sc-fKFyDc dToKui sc-bBXqnf zWvFq"
+              >
+                <span
+                  class="sc-fKFyDc ipClrT sc-iwyYcG bsaCCL"
+                >
+                  Filters
+                </span>
+                 (
+                1
+                )
+              </div>
+              <button
+                class="StyledButton-sc-323bzc-0 fVClA-D sc-bqyKva sc-bkzZxe gjQfnS dvvpJt sc-dIUggk YDvpG"
+                type="button"
+              >
+                Clear all
+              </button>
+            </div>
+            <button
+              class="StyledButton-sc-323bzc-0 fVClA-D sc-bqyKva sc-bkzZxe gjQfnS dvvpJt sc-dIUggk YDvpG"
+              type="button"
+            >
+              <div
+                class="StyledBox-sc-13pk1d4-0 iQEJEP"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-chart-pie fa-w-17 "
+                  data-icon="chart-pie"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 544 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M527.79 288H290.5l158.03 158.03c6.04 6.04 15.98 6.53 22.19.68 38.7-36.46 65.32-85.61 73.13-140.86 1.34-9.46-6.51-17.85-16.06-17.85zm-15.83-64.8C503.72 103.74 408.26 8.28 288.8.04 279.68-.59 272 7.1 272 16.24V240h223.77c9.14 0 16.82-7.68 16.19-16.8zM224 288V50.71c0-9.55-8.39-17.4-17.84-16.06C86.99 51.49-4.1 155.6.14 280.37 4.5 408.51 114.83 513.59 243.03 511.98c50.4-.63 96.97-16.87 135.26-44.03 7.9-5.6 8.42-17.23 1.57-24.08L224 288z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <div
+                  class="StyledBox__StyledBoxGap-sc-13pk1d4-1 fAbILH"
+                />
+                Save as view
+              </div>
+            </button>
+          </div>
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr fZtgtW"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc iQqlDx"
+            >
+              <button
+                class="StyledButton-sc-323bzc-0 jajFOe sc-bqyKva sc-bkzZxe gjQfnS hgJIgM sc-dIUggk YDvpG"
+                type="button"
+              >
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+                >
+                  <div
+                    class="sc-fKFyDc kIYkoy sc-bBXqnf iHGIIw"
+                  >
+                    Pokemon Name is 
+                  </div>
+                  <div
+                    class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+                  >
+                    Squirtle
+                  </div>
+                  <div
+                    class="sc-fKFyDc fDrOZM sc-bBXqnf iHGIIw"
+                  >
+                      or  
+                  </div>
+                  <div
+                    class="sc-fKFyDc kIYkoy sc-bBXqnf iHGIIw"
+                  >
+                    Pokemon Name is 
+                  </div>
+                  <div
+                    class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+                  >
+                    Pikachu
+                  </div>
+                </div>
+              </button>
+              <button
+                class="StyledButton-sc-323bzc-0 jajFOe sc-bqyKva sc-bkzZxe gjQfnS hgJIgM sc-dIUggk fBWcUT sc-dwfUOf gpFjMJ"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-times fa-w-11 "
+                  data-icon="times"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 352 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>
+          Squirtle
+        </h2>
+        <table
+          class="sc-tkKAw ehLrGq"
+        >
+          <tbody>
+            <tr>
+              <td>
+                National PokeDex Number
+              </td>
+              <td>
+                7
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Category
+              </td>
+              <td>
+                Tiny Turtle
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Nationality
+              </td>
+              <td>
+                Georgian
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                0.5
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight
+              </td>
+              <td>
+                9
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Abilities
+              </td>
+              <td>
+                Torrent
+              </td>
+            </tr>
+            <tr>
+              <td>
+                First Seen
+              </td>
+              <td>
+                Fri, 03 Nov 2017 08:49:26 GMT
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Caught
+              </td>
+              <td>
+                no
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tags
+              </td>
+              <td>
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+                  >
+                    <div
+                      class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+                    >
+                      5
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+                  >
+                    <div
+                      class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+                    >
+                      Johto
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokemon to swim at high speeds.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

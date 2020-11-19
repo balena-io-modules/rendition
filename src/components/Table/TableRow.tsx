@@ -2,7 +2,7 @@ import get from 'lodash/get';
 import map from 'lodash/map';
 import * as React from 'react';
 import styled from 'styled-components';
-import Checkbox, { CheckboxProps } from '../Checkbox';
+import { Checkbox, CheckboxProps } from '../Checkbox';
 
 /*
  * Get the value specified by the `field` value

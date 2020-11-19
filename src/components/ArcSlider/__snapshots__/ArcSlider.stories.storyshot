@@ -1,0 +1,381 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/ArcSlider Custom Background 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      style="width: 400px; height: 400px;"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-giIncl goebzz"
+      >
+        <svg
+          class="sc-iJuUWI bcnAiH"
+          style="cursor: grab;"
+          viewBox="0 0 600 600"
+        >
+          <defs>
+            <lineargradient
+              id="rendition-arc-slider-gradient"
+              x1="0%"
+              x2="100%"
+              y1="0%"
+              y2="0%"
+            >
+              <stop
+                offset="0%"
+                stop-color="hsl(46.30000000000001, 100%, 39.8%)"
+              />
+              <stop
+                offset="100%"
+                stop-color="#FEC400"
+              />
+            </lineargradient>
+            <filter
+              height="130%"
+              id="rendition-arc-slider-dropshadow"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <fegaussianblur
+                in="SourceAlpha"
+                stdDeviation="1.25"
+              />
+              <feoffset
+                dx="0"
+                dy="0"
+                result="offsetblur"
+              />
+              <femerge>
+                <femergenode />
+                <femergenode
+                  in="SourceGraphic"
+                />
+              </femerge>
+            </filter>
+          </defs>
+          <path
+            d="M 441.4213562373095 441.4213562373095 A 200 200 0 1 0 158.57864376269046 441.4213562373095"
+            fill="none"
+            stroke="#ff0000"
+            stroke-linecap="round"
+            stroke-width="20.5"
+          />
+          <path
+            d="M 158.57864376269046 441.4213562373095 A 200 200 0 0 0 158.57864376269046 441.4213562373095"
+            fill="none"
+            stroke="url(#rendition-arc-slider-gradient)"
+            stroke-linecap="round"
+            stroke-width="22"
+          />
+          <circle
+            cx="300"
+            cy="100"
+            fill="white"
+            filter="url(#rendition-arc-slider-dropshadow)"
+            r="20"
+            transform="rotate(-135, 300, 300)"
+          />
+          <circle
+            cx="300"
+            cy="100"
+            fill="#FEC400"
+            r="14"
+            transform="rotate(-135, 300, 300)"
+          />
+        </svg>
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-ezrdKe jaRprB cKjTfb"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/ArcSlider Custom Fill 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      style="width: 400px; height: 400px;"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-giIncl goebzz"
+      >
+        <svg
+          class="sc-iJuUWI bcnAiH"
+          style="cursor: grab;"
+          viewBox="0 0 600 600"
+        >
+          <defs>
+            <lineargradient
+              id="rendition-arc-slider-gradient"
+              x1="0%"
+              x2="100%"
+              y1="0%"
+              y2="0%"
+            >
+              <stop
+                offset="0%"
+                stop-color="hsl(0, 100%, 40%)"
+              />
+              <stop
+                offset="100%"
+                stop-color="#ff0000"
+              />
+            </lineargradient>
+            <filter
+              height="130%"
+              id="rendition-arc-slider-dropshadow"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <fegaussianblur
+                in="SourceAlpha"
+                stdDeviation="1.25"
+              />
+              <feoffset
+                dx="0"
+                dy="0"
+                result="offsetblur"
+              />
+              <femerge>
+                <femergenode />
+                <femergenode
+                  in="SourceGraphic"
+                />
+              </femerge>
+            </filter>
+          </defs>
+          <path
+            d="M 441.4213562373095 441.4213562373095 A 200 200 0 1 0 158.57864376269046 441.4213562373095"
+            fill="none"
+            stroke="#707274"
+            stroke-linecap="round"
+            stroke-width="20.5"
+          />
+          <path
+            d="M 158.57864376269046 441.4213562373095 A 200 200 0 0 0 158.57864376269046 441.4213562373095"
+            fill="none"
+            stroke="url(#rendition-arc-slider-gradient)"
+            stroke-linecap="round"
+            stroke-width="22"
+          />
+          <circle
+            cx="300"
+            cy="100"
+            fill="white"
+            filter="url(#rendition-arc-slider-dropshadow)"
+            r="20"
+            transform="rotate(-135, 300, 300)"
+          />
+          <circle
+            cx="300"
+            cy="100"
+            fill="#ff0000"
+            r="14"
+            transform="rotate(-135, 300, 300)"
+          />
+        </svg>
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-ezrdKe jaRprB cKjTfb"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/ArcSlider Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      style="width: 400px; height: 400px;"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-giIncl goebzz"
+      >
+        <svg
+          class="sc-iJuUWI bcnAiH"
+          style="cursor: grab;"
+          viewBox="0 0 600 600"
+        >
+          <defs>
+            <lineargradient
+              id="rendition-arc-slider-gradient"
+              x1="0%"
+              x2="100%"
+              y1="0%"
+              y2="0%"
+            >
+              <stop
+                offset="0%"
+                stop-color="hsl(46.30000000000001, 100%, 39.8%)"
+              />
+              <stop
+                offset="100%"
+                stop-color="#FEC400"
+              />
+            </lineargradient>
+            <filter
+              height="130%"
+              id="rendition-arc-slider-dropshadow"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <fegaussianblur
+                in="SourceAlpha"
+                stdDeviation="1.25"
+              />
+              <feoffset
+                dx="0"
+                dy="0"
+                result="offsetblur"
+              />
+              <femerge>
+                <femergenode />
+                <femergenode
+                  in="SourceGraphic"
+                />
+              </femerge>
+            </filter>
+          </defs>
+          <path
+            d="M 441.4213562373095 441.4213562373095 A 200 200 0 1 0 158.57864376269046 441.4213562373095"
+            fill="none"
+            stroke="#707274"
+            stroke-linecap="round"
+            stroke-width="20.5"
+          />
+          <path
+            d="M 158.57864376269046 441.4213562373095 A 200 200 0 0 0 158.57864376269046 441.4213562373095"
+            fill="none"
+            stroke="url(#rendition-arc-slider-gradient)"
+            stroke-linecap="round"
+            stroke-width="22"
+          />
+          <circle
+            cx="300"
+            cy="100"
+            fill="white"
+            filter="url(#rendition-arc-slider-dropshadow)"
+            r="20"
+            transform="rotate(-135, 300, 300)"
+          />
+          <circle
+            cx="300"
+            cy="100"
+            fill="#FEC400"
+            r="14"
+            transform="rotate(-135, 300, 300)"
+          />
+        </svg>
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-ezrdKe jaRprB cKjTfb"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/ArcSlider With Label 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      style="width: 400px; height: 400px;"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-giIncl goebzz"
+      >
+        <svg
+          class="sc-iJuUWI bcnAiH"
+          style="cursor: grab;"
+          viewBox="0 0 600 600"
+        >
+          <defs>
+            <lineargradient
+              id="rendition-arc-slider-gradient"
+              x1="0%"
+              x2="100%"
+              y1="0%"
+              y2="0%"
+            >
+              <stop
+                offset="0%"
+                stop-color="hsl(46.30000000000001, 100%, 39.8%)"
+              />
+              <stop
+                offset="100%"
+                stop-color="#FEC400"
+              />
+            </lineargradient>
+            <filter
+              height="130%"
+              id="rendition-arc-slider-dropshadow"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <fegaussianblur
+                in="SourceAlpha"
+                stdDeviation="1.25"
+              />
+              <feoffset
+                dx="0"
+                dy="0"
+                result="offsetblur"
+              />
+              <femerge>
+                <femergenode />
+                <femergenode
+                  in="SourceGraphic"
+                />
+              </femerge>
+            </filter>
+          </defs>
+          <path
+            d="M 441.4213562373095 441.4213562373095 A 200 200 0 1 0 158.57864376269046 441.4213562373095"
+            fill="none"
+            stroke="#707274"
+            stroke-linecap="round"
+            stroke-width="20.5"
+          />
+          <path
+            d="M 158.57864376269046 441.4213562373095 A 200 200 0 0 0 158.57864376269046 441.4213562373095"
+            fill="none"
+            stroke="url(#rendition-arc-slider-gradient)"
+            stroke-linecap="round"
+            stroke-width="22"
+          />
+          <circle
+            cx="300"
+            cy="100"
+            fill="white"
+            filter="url(#rendition-arc-slider-dropshadow)"
+            r="20"
+            transform="rotate(-135, 300, 300)"
+          />
+          <circle
+            cx="300"
+            cy="100"
+            fill="#FEC400"
+            r="14"
+            transform="rotate(-135, 300, 300)"
+          />
+        </svg>
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-ezrdKe jaRprB cKjTfb"
+        >
+          <h2>
+            A label
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

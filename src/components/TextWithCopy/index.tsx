@@ -4,10 +4,10 @@ import copyToClipboard from 'copy-to-clipboard';
 import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
-import { DefaultProps, RenditionSystemProps } from '../../common-types';
+import { RenditionSystemProps } from '../../common-types';
 import { px } from '../../utils';
 import { Box } from '../Box';
-import Txt, { TxtProps } from '../Txt';
+import { Txt, TxtProps } from '../Txt';
 
 const Wrapper = styled(Txt.span)<InternalTextWithCopyProps>`
 	display: inline-block;
@@ -48,7 +48,7 @@ const Wrapper = styled(Txt.span)<InternalTextWithCopyProps>`
 	}
 `;
 
-const Base = ({
+const BaseTextWithCopy = ({
 	copy,
 	code,
 	text,
@@ -86,8 +86,12 @@ const Base = ({
 	);
 };
 
-export interface InternalTextWithCopyProps extends DefaultProps, TxtProps {
+export interface InternalTextWithCopyProps
+	extends Omit<React.HTMLAttributes<HTMLElement>, 'color'>,
+		TxtProps {
+	/** The value that should be copied to the clipboard */
 	copy: string;
+	/** Optionally show the copy button on hover or always show the button */
 	showCopyButton?: 'hover' | 'always';
 	code?: boolean;
 	text?: string;
@@ -96,4 +100,11 @@ export interface InternalTextWithCopyProps extends DefaultProps, TxtProps {
 export type TextWithCopyProps = InternalTextWithCopyProps &
 	RenditionSystemProps;
 
-export default asRendition<React.FunctionComponent<TextWithCopyProps>>(Base);
+/**
+ * Displays text that can be copied to the clipboard.
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/TextWithCopy/TextWithCopy.stories.tsx)
+ */
+export const TextWithCopy = asRendition<
+	React.FunctionComponent<TextWithCopyProps>
+>(BaseTextWithCopy);

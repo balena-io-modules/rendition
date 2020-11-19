@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/DataGrid Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-tYoTV iakQWw"
+    >
+      <div
+        class="sc-biBrSq bQSLKu"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-bBrOnJ gdZqkT sc-cOajty kgwdcT"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+            >
+              <div
+                class="sc-fKFyDc kNlpHR sc-bBXqnf cLiasT"
+              >
+                1
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-biBrSq bQSLKu"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-bBrOnJ gdZqkT sc-cOajty kgwdcT"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+            >
+              <div
+                class="sc-fKFyDc kNlpHR sc-bBXqnf cLiasT"
+              >
+                2
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-biBrSq bQSLKu"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-bBrOnJ gdZqkT sc-cOajty kgwdcT"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+            >
+              <div
+                class="sc-fKFyDc kNlpHR sc-bBXqnf cLiasT"
+              >
+                3
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-biBrSq bQSLKu"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-bBrOnJ gdZqkT sc-cOajty kgwdcT"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+            >
+              <div
+                class="sc-fKFyDc kNlpHR sc-bBXqnf cLiasT"
+              >
+                4
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-biBrSq bQSLKu"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-bBrOnJ gdZqkT sc-cOajty kgwdcT"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+            >
+              <div
+                class="sc-fKFyDc kNlpHR sc-bBXqnf cLiasT"
+              >
+                5
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-biBrSq bQSLKu"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-bBrOnJ gdZqkT sc-cOajty kgwdcT"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+            >
+              <div
+                class="sc-fKFyDc kNlpHR sc-bBXqnf cLiasT"
+              >
+                6
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

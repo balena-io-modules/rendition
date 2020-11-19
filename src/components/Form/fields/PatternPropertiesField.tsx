@@ -5,8 +5,8 @@ import map from 'lodash/map';
 import reduce from 'lodash/reduce';
 import * as React from 'react';
 import { FormValidation } from '@rjsf/core';
-import Button from '../../Button';
-import Input from '../../Input';
+import { Button } from '../../Button';
+import { Input } from '../../Input';
 
 interface PatternPropertiesFieldProps {
 	onKeyChange: (

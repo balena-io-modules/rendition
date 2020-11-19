@@ -1,12 +1,12 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { DefaultProps, RenditionSystemProps } from '../../common-types';
+import { RenditionSystemProps } from '../../common-types';
 
 import { rotate360 } from '../../animations';
 import asRendition from '../../asRendition';
 import { px } from '../../utils';
 import { Flex } from '../Flex';
-import Txt from '../Txt';
+import { Txt } from '../Txt';
 
 const CircleLoader = styled.div<Pick<InternalSpinnerProps, 'emphasized'>>`
 	background: transparent !important;
@@ -40,7 +40,7 @@ const ChildrenContainer = styled.div<Pick<InternalSpinnerProps, 'show'>>`
 	z-index: 3;
 `;
 
-const SpinnerBase = ({
+const Base = ({
 	label,
 	emphasized,
 	...otherProps
@@ -63,7 +63,7 @@ const SpinnerBase = ({
 	);
 };
 
-const Spinner = ({
+const BaseSpinner = ({
 	show = true,
 	emphasized,
 	label,
@@ -75,16 +75,14 @@ const Spinner = ({
 			return null;
 		}
 
-		return (
-			<SpinnerBase label={label} emphasized={emphasized} {...otherProps} />
-		);
+		return <Base label={label} emphasized={emphasized} {...otherProps} />;
 	}
 
 	return (
 		<Container {...otherProps}>
 			{show && (
 				<SpinnerContainer justifyContent="center" alignItems="center">
-					<SpinnerBase label={label} emphasized={emphasized} />
+					<Base label={label} emphasized={emphasized} />
 				</SpinnerContainer>
 			)}
 
@@ -93,11 +91,18 @@ const Spinner = ({
 	);
 };
 
-interface InternalSpinnerProps extends DefaultProps {
+interface InternalSpinnerProps extends React.HTMLAttributes<HTMLElement> {
+	/** If passed, it will control whether the spinner is shown or not */
 	show?: boolean;
+	/** If true, it will render a large spinner */
 	emphasized?: boolean;
+	/** A label that will be rendered next to the spinner. Renders on right-hand side for standard spinner, and below spinner for emphasized */
 	label?: string | React.ReactNode;
 }
 
 export type SpinnerProps = InternalSpinnerProps & RenditionSystemProps;
-export default asRendition<React.FunctionComponent<SpinnerProps>>(Spinner);
+
+/** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Spinner/Spinner.stories.tsx) */
+export const Spinner = asRendition<React.FunctionComponent<SpinnerProps>>(
+	BaseSpinner,
+);

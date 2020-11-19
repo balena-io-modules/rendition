@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/Flex Column Direction 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr iIBJBt"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ kVavkb"
+        style="height: 200px; width: 200px;"
+      />
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ fbFrZO"
+        style="height: 200px; width: 200px;"
+      />
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ cIkyr"
+        style="height: 200px; width: 200px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Flex Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ kVavkb"
+        style="height: 200px; width: 200px;"
+      />
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ fbFrZO"
+        style="height: 200px; width: 200px;"
+      />
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ cIkyr"
+        style="height: 200px; width: 200px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Flex Flex On Children 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr fZtgtW"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ kVavkb"
+        style="height: 200px; width: 200px;"
+      />
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ kVavkb"
+        style="height: 200px; width: 200px;"
+      />
+      <div
+        class="sc-gKsewC dWcnb sc-iBPRYJ kVavkb"
+        style="height: 200px; width: 200px;"
+      />
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ fbFrZO"
+        style="height: 200px; width: 200px;"
+      />
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ cIkyr"
+        style="height: 200px; width: 200px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Flex Justified 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr jkLErl"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ kVavkb"
+        style="height: 200px; width: 200px;"
+      />
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ fbFrZO"
+        style="height: 200px; width: 200px;"
+      />
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ cIkyr"
+        style="height: 200px; width: 200px;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Flex Wrap 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr fZtgtW"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ kVavkb"
+        style="height: 200px; width: 200px;"
+      />
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ kVavkb"
+        style="height: 200px; width: 200px;"
+      />
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ fbFrZO"
+        style="height: 200px; width: 200px;"
+      />
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ cIkyr"
+        style="height: 200px; width: 200px;"
+      />
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ kVavkb"
+        style="height: 200px; width: 200px;"
+      />
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ fbFrZO"
+        style="height: 200px; width: 200px;"
+      />
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ cIkyr"
+        style="height: 200px; width: 200px;"
+      />
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ kVavkb"
+        style="height: 200px; width: 200px;"
+      />
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ fbFrZO"
+        style="height: 200px; width: 200px;"
+      />
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ cIkyr"
+        style="height: 200px; width: 200px;"
+      />
+    </div>
+  </div>
+</div>
+`;

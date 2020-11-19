@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Textarea from '../../Textarea';
+import { Textarea } from '../../Textarea';
 import { FormWidgetProps } from '../';
 
 function TextareaWidget(props: FormWidgetProps) {

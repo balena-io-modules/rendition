@@ -1,10 +1,12 @@
-import { Button, ButtonProps as GrommetButtonProps } from 'grommet';
+import {
+	Button as GrommetButton,
+	ButtonProps as GrommetButtonProps,
+} from 'grommet';
 import * as React from 'react';
 import styled, { css } from 'styled-components';
 import asRendition from '../../asRendition';
 import {
 	Coloring,
-	DefaultProps,
 	RenditionSystemProps,
 	ResponsiveStyle,
 	Sizing,
@@ -46,7 +48,7 @@ const getHoverEffectOverride = (
 the rendition styles override the Grommet global ones.
 https://www.styled-components.com/docs/advanced#issues-with-specificity
 */
-const ButtonBase = styled(Button)`
+const ButtonBase = styled(GrommetButton)`
 	& {
 		font-weight: ${(props) => props.theme.button.font.weight};
 		font-size: ${(props) => props.theme.button.font.size};
@@ -211,7 +213,7 @@ const getStyledButton = (
 	return ColouredButton;
 };
 
-const Base = React.forwardRef((props: ThemedButtonProps, ref: any) => {
+const BaseButton = React.forwardRef((props: ThemedButtonProps, ref: any) => {
 	const {
 		outline,
 		underline,
@@ -274,15 +276,19 @@ const Base = React.forwardRef((props: ThemedButtonProps, ref: any) => {
 interface ButtonBaseProps extends Coloring, Sizing {
 	width?: ResponsiveStyle;
 	bg?: string;
+	/** If true, the button will have a transparent background, and the border and text color will match */
 	outline?: boolean;
+	/** Similar to the plaintext prop, but displays a line underneath the button text */
 	underline?: boolean;
+	/** If true, use white background and default text color */
 	light?: boolean;
+	/** Optionally renders the label according to the value inside the array for each breakpoint */
 	compact?: boolean[];
 }
 
 export interface InternalButtonProps
 	extends ButtonBaseProps,
-		Omit<DefaultProps, 'dir'>,
+		Omit<React.HTMLAttributes<HTMLElement>, 'dir' | 'color'>,
 		GrommetButtonProps {
 	type?: 'submit' | 'reset' | 'button';
 	confirmation?: ConfirmOptions | string;
@@ -293,12 +299,12 @@ export type ButtonProps = InternalButtonProps & RenditionSystemProps;
 export interface ThemedButtonProps extends ButtonProps {
 	theme: Theme;
 }
-
-export default withConditional<ButtonProps>(withConfirm, (props) => {
+/** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Button/Button.stories.tsx) */
+export const Button = withConditional<ButtonProps>(withConfirm, (props) => {
 	return 'confirmation' in props;
 })(
 	asRendition<ButtonProps>(
-		Base,
+		BaseButton,
 		[],
 		['width', 'color', 'bg'],
 	) as React.ForwardRefExoticComponent<ButtonProps>,

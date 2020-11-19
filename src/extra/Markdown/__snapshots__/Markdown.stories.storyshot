@@ -1,0 +1,982 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Extra/Markdown Customized 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gkdzZj KdskZ"
+    >
+      <div
+        class="sc-flMoUE jQzWAN"
+      >
+        <div
+          data-display="table-head"
+        >
+          <div
+            data-display="table-row"
+          >
+            <div
+              data-display="table-cell"
+            >
+              Specific Sanitizer Options
+            </div>
+            <div
+              data-display="table-cell"
+            >
+              Original
+            </div>
+            <div
+              data-display="table-cell"
+            >
+              Customized
+            </div>
+          </div>
+        </div>
+        <div
+          data-display="table-body"
+        >
+          <div
+            class=""
+            data-display="table-row"
+            data-highlight="false"
+          >
+            <a
+              data-display="table-cell"
+              data-key="0"
+              style="vertical-align: top;"
+            >
+              <pre>
+                {
+  "tagNames": [
+    "p"
+  ]
+}
+              </pre>
+            </a>
+            <a
+              data-display="table-cell"
+              data-key="0"
+              style="vertical-align: top;"
+            >
+              <div
+                class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-bBrOnJ fizSPM sc-cOajty kgwdcT"
+              >
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+                  >
+                    <div
+                      class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-dFJsGO cwIjin"
+                    >
+                      <div>
+                        <h1
+                          class="sc-jcVebW fraIRR sc-iUuytg gQgcGC"
+                        >
+                          A title
+                        </h1>
+                        <img
+                          src="https://via.placeholder.com/150"
+                        />
+                        <p
+                          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+                        >
+                          A paragraph
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a
+              data-display="table-cell"
+              data-key="0"
+              style="vertical-align: top;"
+            >
+              <div
+                class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-bBrOnJ fizSPM sc-cOajty kgwdcT"
+              >
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+                  >
+                    <div
+                      class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-dFJsGO cwIjin"
+                    >
+                      <div>
+                        A title
+                        <p
+                          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+                        >
+                          A paragraph
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class=""
+            data-display="table-row"
+            data-highlight="false"
+          >
+            <a
+              data-display="table-cell"
+              data-key="1"
+              style="vertical-align: top;"
+            >
+              <pre>
+                {
+  "tagNames": [
+    "img"
+  ],
+  "attributes": {
+    "*": [
+      "src"
+    ]
+  }
+}
+              </pre>
+            </a>
+            <a
+              data-display="table-cell"
+              data-key="1"
+              style="vertical-align: top;"
+            >
+              <div
+                class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-bBrOnJ fizSPM sc-cOajty kgwdcT"
+              >
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+                  >
+                    <div
+                      class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-dFJsGO cwIjin"
+                    >
+                      <div>
+                        <h1
+                          class="sc-jcVebW fraIRR sc-iUuytg gQgcGC"
+                        >
+                          A title
+                        </h1>
+                        <img
+                          src="https://via.placeholder.com/150"
+                        />
+                        <p
+                          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+                        >
+                          A paragraph
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a
+              data-display="table-cell"
+              data-key="1"
+              style="vertical-align: top;"
+            >
+              <div
+                class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-bBrOnJ fizSPM sc-cOajty kgwdcT"
+              >
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+                  >
+                    <div
+                      class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-dFJsGO cwIjin"
+                    >
+                      <div>
+                        A title
+                        <img
+                          src="https://via.placeholder.com/150"
+                        />
+                        A paragraph
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class=""
+            data-display="table-row"
+            data-highlight="false"
+          >
+            <a
+              data-display="table-cell"
+              data-key="2"
+              style="vertical-align: top;"
+            >
+              <pre>
+                {
+  "tagNames": [
+    "h1"
+  ]
+}
+              </pre>
+            </a>
+            <a
+              data-display="table-cell"
+              data-key="2"
+              style="vertical-align: top;"
+            >
+              <div
+                class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-bBrOnJ fizSPM sc-cOajty kgwdcT"
+              >
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+                  >
+                    <div
+                      class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-dFJsGO cwIjin"
+                    >
+                      <div>
+                        <h1
+                          class="sc-jcVebW fraIRR sc-iUuytg gQgcGC"
+                        >
+                          A title
+                        </h1>
+                        <img
+                          src="https://via.placeholder.com/150"
+                        />
+                        <p
+                          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+                        >
+                          A paragraph
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a
+              data-display="table-cell"
+              data-key="2"
+              style="vertical-align: top;"
+            >
+              <div
+                class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-bBrOnJ fizSPM sc-cOajty kgwdcT"
+              >
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI"
+                >
+                  <div
+                    class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+                  >
+                    <div
+                      class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-dFJsGO cwIjin"
+                    >
+                      <div>
+                        <h1
+                          class="sc-jcVebW fraIRR sc-iUuytg gQgcGC"
+                        >
+                          A title
+                        </h1>
+                        A paragraph
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Extra/Markdown Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-dFJsGO cwIjin"
+    >
+      <div>
+        <h1
+          class="sc-jcVebW fraIRR sc-iUuytg gQgcGC"
+        >
+          Markdown
+        </h1>
+        
+
+        <p
+          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+        >
+          A simple component for rendering 
+          <em>
+            GitHub flavored markdown
+          </em>
+          .
+        </p>
+        
+
+        <h2
+          class="sc-jcVebW fraIRR sc-iBaPrD iFoFUX"
+        >
+          Headers
+        </h2>
+        
+
+        <h1
+          class="sc-jcVebW fraIRR sc-iUuytg gQgcGC"
+        >
+          This is an 
+          <code>
+            &lt;h1&gt;
+          </code>
+           tag
+        </h1>
+        
+
+        <h2
+          class="sc-jcVebW fraIRR sc-iBaPrD iFoFUX"
+        >
+          This is an 
+          <code>
+            &lt;h2&gt;
+          </code>
+           tag
+        </h2>
+        
+
+        <h6
+          class="sc-jcVebW jPGlzQ sc-dOSReg hkvgvB"
+        >
+          This is an 
+          <code>
+            &lt;h6&gt;
+          </code>
+           tag
+        </h6>
+        
+
+        <h2
+          class="sc-jcVebW fraIRR sc-iBaPrD iFoFUX"
+        >
+          Emphasis
+        </h2>
+        
+
+        <p
+          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+        >
+          <em>
+            This text will be italic
+          </em>
+          
+
+          <em>
+            This will also be italic
+          </em>
+        </p>
+        
+
+        <p
+          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+        >
+          <strong>
+            This text will be bold
+          </strong>
+          
+
+          <strong>
+            This will also be bold
+          </strong>
+        </p>
+        
+
+        <p
+          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+        >
+          <em>
+            You 
+            <strong>
+              can
+            </strong>
+             combine them
+          </em>
+        </p>
+        
+
+        <h2
+          class="sc-jcVebW fraIRR sc-iBaPrD iFoFUX"
+        >
+          Lists
+        </h2>
+        
+
+        <h3
+          class="sc-jcVebW fraIRR sc-eggNIi jTuFyV"
+        >
+          Unordered
+        </h3>
+        
+
+        <ul>
+          
+
+          <li>
+            Item 1
+          </li>
+          
+
+          <li>
+            Item 2
+
+            <ul>
+              
+
+              <li>
+                Item 2a
+              </li>
+              
+
+              <li>
+                Item 2b
+              </li>
+              
+
+            </ul>
+            
+
+          </li>
+          
+
+        </ul>
+        
+
+        <h3
+          class="sc-jcVebW fraIRR sc-eggNIi jTuFyV"
+        >
+          Ordered
+        </h3>
+        
+
+        <ol>
+          
+
+          <li>
+            Item 1
+          </li>
+          
+
+          <li>
+            Item 2
+          </li>
+          
+
+          <li>
+            Item 3
+
+            <ol>
+              
+
+              <li>
+                Item 3a
+              </li>
+              
+
+              <li>
+                Item 3b
+              </li>
+              
+
+            </ol>
+            
+
+          </li>
+          
+
+        </ol>
+        
+
+        <h2
+          class="sc-jcVebW fraIRR sc-iBaPrD iFoFUX"
+        >
+          Images
+        </h2>
+        
+
+        <p
+          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+        >
+          <img
+            alt="Example Image"
+            src=""
+          />
+        </p>
+        
+
+        <h2
+          class="sc-jcVebW fraIRR sc-iBaPrD iFoFUX"
+        >
+          Links
+        </h2>
+        
+
+        <p
+          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+        >
+          <a
+            class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+            color="primary.main"
+            href="http://github.com"
+          >
+            http://github.com
+          </a>
+           - automatic!
+        </p>
+        
+
+        <p
+          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+        >
+          <a
+            class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+            color="primary.main"
+            href="http://github.com"
+          >
+            GitHub
+          </a>
+        </p>
+        
+
+        <h2
+          class="sc-jcVebW fraIRR sc-iBaPrD iFoFUX"
+        >
+          Blockquotes
+        </h2>
+        
+
+        <p
+          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+        >
+          As Ash Ketchum said:
+        </p>
+        
+
+        <blockquote>
+          
+
+          <p
+            class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+          >
+            Do you always need a reason to help somebody?
+          </p>
+          
+
+        </blockquote>
+        
+
+        <h2
+          class="sc-jcVebW fraIRR sc-iBaPrD iFoFUX"
+        >
+          Inline code
+        </h2>
+        
+
+        <p
+          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+        >
+          I think you should use an
+
+          <code>
+            &lt;addr&gt;
+          </code>
+           element here instead.
+        </p>
+        
+
+        <h2
+          class="sc-jcVebW fraIRR sc-iBaPrD iFoFUX"
+        >
+          Code blocks
+        </h2>
+        
+
+        <pre>
+          <code>
+            // This is plaintext with a very long line that won't wrap but should cause a horizontal scrollbar to appear so that the code block doesn't overflow it's container and make a mockery of your website. It really needs to be a very long line to ensure it forces the scrollbar to appear on the React Storybook display, especially on large monitor resolutions which can display a super-wide code block!
+const foo = () =&gt; {
+  return 'bar'
+}
+
+          </code>
+        </pre>
+        
+
+        <pre
+          class="language-javascript"
+        >
+          <code
+            class="language-javascript"
+          >
+            <span
+              class="token comment"
+            >
+              // This is javascript
+            </span>
+            
+
+            <span
+              class="token keyword"
+            >
+              const
+            </span>
+             
+            <span
+              class="token function-variable function"
+            >
+              foo
+            </span>
+             
+            <span
+              class="token operator"
+            >
+              =
+            </span>
+             
+            <span
+              class="token punctuation"
+            >
+              (
+            </span>
+            <span
+              class="token punctuation"
+            >
+              )
+            </span>
+             
+            <span
+              class="token arrow operator"
+            >
+              =&gt;
+            </span>
+             
+            <span
+              class="token punctuation"
+            >
+              {
+            </span>
+            
+  
+            <span
+              class="token keyword control-flow"
+            >
+              return
+            </span>
+             
+            <span
+              class="token string"
+            >
+              'bar'
+            </span>
+            
+
+            <span
+              class="token punctuation"
+            >
+              }
+            </span>
+            
+
+          </code>
+        </pre>
+        
+
+        <h2
+          class="sc-jcVebW fraIRR sc-iBaPrD iFoFUX"
+        >
+          Task Lists
+        </h2>
+        
+
+        <ul
+          class="contains-task-list"
+        >
+          
+
+          <li
+            class="task-list-item"
+          >
+            <input
+              checked=""
+              disabled=""
+              type="checkbox"
+            />
+             list syntax required (any unordered or ordered list supported)
+          </li>
+          
+
+          <li
+            class="task-list-item"
+          >
+            <input
+              checked=""
+              disabled=""
+              type="checkbox"
+            />
+             this is a complete item
+          </li>
+          
+
+          <li
+            class="task-list-item"
+          >
+            <input
+              disabled=""
+              type="checkbox"
+            />
+             this is an incomplete item
+          </li>
+          
+
+        </ul>
+        
+
+        <h2
+          class="sc-jcVebW fraIRR sc-iBaPrD iFoFUX"
+        >
+          Tables
+        </h2>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <table>
+          <thead>
+            <tr>
+              <th>
+                First Header
+              </th>
+              <th>
+                Second Header
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Content from cell 1
+              </td>
+              <td>
+                Content from cell 2
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Content in the first column
+              </td>
+              <td>
+                Content in the second column
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+
+        <h2
+          class="sc-jcVebW fraIRR sc-iBaPrD iFoFUX"
+        >
+          Strikethrough
+        </h2>
+        
+
+        <p
+          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+        >
+          <del>
+            Crossed out
+          </del>
+        </p>
+        
+
+        <p
+          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+        >
+          Any word wrapped with two tildes (like 
+          <code>
+            ~~this~~
+          </code>
+          ) will appear crossed out.
+        </p>
+        
+
+        <h2
+          class="sc-jcVebW fraIRR sc-iBaPrD iFoFUX"
+        >
+          Inline HTML
+        </h2>
+        
+
+        <p
+          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+        >
+          <strong>
+            An image:
+          </strong>
+          
+
+          <br />
+          
+
+          <img
+            src=""
+          />
+          
+
+          <br />
+          
+
+          <em>
+            A link:
+          </em>
+          
+
+          <a
+            class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+            color="primary.main"
+            href="http://github.com/"
+          >
+            http://github.com/
+          </a>
+        </p>
+        
+
+        <h2
+          class="sc-jcVebW fraIRR sc-iBaPrD iFoFUX"
+        >
+          Keyboard keys
+        </h2>
+        
+
+        <p
+          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+        >
+          <kbd>
+            cmd
+          </kbd>
+           + 
+          <kbd>
+            alt
+          </kbd>
+           + 
+          <kbd>
+            shift
+          </kbd>
+           + 
+          <kbd>
+            a
+          </kbd>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Extra/Markdown With Decorators 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-dFJsGO cwIjin"
+    >
+      <div>
+        <p
+          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+        >
+          <span>
+            
+            <span
+              style="color: green;"
+            >
+              @good
+            </span>
+             foo @bad@bad 
+          </span>
+          <a
+            class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+            color="primary.main"
+            href="https://github.com"
+          >
+            <span>
+              
+              <span
+                style="color: green;"
+              >
+                @good
+              </span>
+            </span>
+          </a>
+           bar@bad baz qux. 
+          <code>
+            Is @bad inside code
+          </code>
+          <span>
+             
+            <span
+              style="color: green;"
+            >
+              @good
+            </span>
+          </span>
+        </p>
+        
+
+        <p
+          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+        >
+          <span>
+            
+            <span
+              style="color: green;"
+            >
+              @good
+            </span>
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

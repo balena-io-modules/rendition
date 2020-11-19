@@ -1,0 +1,215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/Tag Clickable 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+    >
+      <button
+        class="StyledButton-sc-323bzc-0 jajFOe sc-bqyKva sc-bkzZxe gjQfnS hgJIgM sc-dIUggk YDvpG"
+        type="button"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+        >
+          <div
+            class="sc-fKFyDc kIYkoy sc-bBXqnf iHGIIw"
+          >
+            Tag: 
+          </div>
+          <div
+            class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+          >
+            Value
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Tag Closable 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+      >
+        <div
+          class="sc-fKFyDc kIYkoy sc-bBXqnf iHGIIw"
+        >
+          Tag: 
+        </div>
+        <div
+          class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+        >
+          Value
+        </div>
+      </div>
+      <button
+        class="StyledButton-sc-323bzc-0 jajFOe sc-bqyKva sc-bkzZxe gjQfnS hgJIgM sc-dIUggk fBWcUT sc-dwfUOf gpFjMJ"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="svg-inline--fa fa-times fa-w-11 "
+          data-icon="times"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          viewBox="0 0 352 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Tag Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+      >
+        <div
+          class="sc-fKFyDc kIYkoy sc-bBXqnf iHGIIw"
+        >
+          Tag: 
+        </div>
+        <div
+          class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+        >
+          Value
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Tag Empty 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+      >
+        <div
+          class="sc-fKFyDc eWuelo sc-bBXqnf iHGIIw"
+        >
+          no value
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Tag Multiple Values 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+      >
+        <div
+          class="sc-fKFyDc kIYkoy sc-bBXqnf iHGIIw"
+        >
+          Tag1 contains 
+        </div>
+        <div
+          class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+        >
+          value1
+        </div>
+        <div
+          class="sc-fKFyDc fDrOZM sc-bBXqnf iHGIIw"
+        >
+            or  
+        </div>
+        <div
+          class="sc-fKFyDc kIYkoy sc-bBXqnf iHGIIw"
+        >
+          Tag2 contains 
+        </div>
+        <div
+          class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+        >
+          value2
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Tag Only Name 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+      >
+        <div
+          class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+        >
+          Name
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Tag Only Value 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+      >
+        <div
+          class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+        >
+          Value
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

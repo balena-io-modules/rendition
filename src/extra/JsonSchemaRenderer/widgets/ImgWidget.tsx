@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Img from '../../../components/Img';
+import { Img } from '../../../components/Img';
 import { UiOption } from './ui-options';
 import { Widget, WidgetProps } from './widget-util';
 import { JsonTypes } from '../types';

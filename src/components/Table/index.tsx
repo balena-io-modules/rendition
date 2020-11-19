@@ -14,13 +14,13 @@ import sortBy from 'lodash/sortBy';
 import * as React from 'react';
 import styled from 'styled-components';
 
-import Button from '../Button';
+import { Button } from '../Button';
 
 // TODO: Remove explicit import and depend on provider instead.
 import theme from '../../theme';
 import { px } from '../../utils';
-import Checkbox, { CheckboxProps } from '../Checkbox';
-import Pager from '../Pager';
+import { Checkbox, CheckboxProps } from '../Checkbox';
+import { Pager } from '../Pager';
 import { CheckboxWrapper, TableColumn, TableRow } from './TableRow';
 
 const highlightStyle = `
@@ -38,7 +38,7 @@ interface BaseTableProps {
 	hasGetRowRef: boolean;
 }
 
-const BaseTable = styled.div<BaseTableProps>`
+const Base = styled.div<BaseTableProps>`
 	display: table;
 	width: 100%;
 	border-spacing: 0;
@@ -139,7 +139,56 @@ interface TableState<T> {
 	page: number;
 }
 
-class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
+/**
+ * A component used to generate a styled table.
+ *
+ * ## Columns
+ *
+ * The `columns` property defines what columns the table should display, how they
+ * are rendered and whether or not the column is sortable.
+ *
+ * The `columns` property should be an array of objects with the following properties:
+ *
+ * | Name          | Type      | Required | Description                                          |
+ * | ------------- | --------- | -------- | ---------------------------------------------------- |
+ * | field         | `keyof T`  | ✓ | The name of the field this column should render, this should correspond to a key on the objects passed to the `data` property of the `Table` component |
+ * | key | `string` | - | Custom key for React to use instead of the field name above |
+ * | cellAttributes | <code>object &#124; (value: any, row: T) => object</code> | - | Attributes that are passed to each cell in this column. This can also be a function, which will be called with the value of the `field` provided and the row data (`T`) |
+ * | label | <code>string &#124; JSX.Element</code> | - | A string or JSX element that will be used to display the name of the column. If this property is not provided, the `field` property will be used instead |
+ * | render | <code>(value: any, row: T) => string &#124; number &#124; number &#124; JSX.Element &#124; null</code> | - | Use a custom render function to display the value in each column cell. This function will be called with the value of the `field` provided and the row data (`T`) |
+ * | sortable | <code>boolean &#124; (a: T, b: T) => number</code> | - | If true, the column will be sortable using an alphanumeric sort, alternatively a function can be provided allowing finer grained control over sorting |
+ *
+ * ## Notes
+ *
+ * For performance reasons table rows are only re-rendered if the row properties
+ * have changed. For this reason, rows **will not** re-render if their properties
+ * are mutated: you should clone the item instead, for example:
+ *
+ * ```js
+ * update (index) {
+ *   const newData = this.state.data
+ *   const element = newData[index]
+ *   newData[index] = Object.assign({}, element, { active: !element.active })
+ *   this.setState({ data: newData })
+ * }
+ * ```
+ *
+ * See the **Updating data in a table** story for an example of how this can be
+ * done using a high order component.
+ *
+ * Additionally, because of this rendering behaviour the `render()` functions in
+ * the `Table` component's `columns` property should only use values provided to
+ * the render function.
+ * When `render()` functions are provided, they must act like pure functions with
+ * respect to their props. They should only rely on their arguments to generate
+ * their output and not use any context variables. If you are using a context
+ * variable in your `render()` function, then changes to that variable will not
+ * cause a re-render of the component and will not be reflected on the table.
+ *
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Table/Table.stories.tsx)
+ */
+export class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 	constructor(props: TableProps<T>) {
 		super(props);
 
@@ -469,7 +518,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 					)}
 
 				<BaseTableWrapper>
-					<BaseTable
+					<Base
 						{...props}
 						hasRowClick={!!onRowClick}
 						hasGetRowRef={!!getRowHref}
@@ -556,7 +605,7 @@ class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 								);
 							})}
 						</div>
-					</BaseTable>
+					</Base>
 				</BaseTableWrapper>
 
 				{shouldShowPaper &&
@@ -581,38 +630,44 @@ export interface TableSortOptions<T> {
 }
 
 export interface TableProps<T> {
+	/** An array of column objects, as described above */
 	columns: Array<TableColumn<T>>;
+	/** An array of objects that will be displayed in the table */
 	data?: T[] | null;
+	/** If provided, it will make the checked rows a controlled aspect of the table */
 	checkedItems?: T[];
+	/** If provided, each row in the table will be a clickable link, this function is used to create the link href */
 	getRowHref?: (row: T) => string;
-	// Only usable if a rowKey property is also provided.
-	// If an onCheck property is provided , then checkboxes will be renders,
-	// allowing rows to be selected.
+	/** If provided, each row will begin with a checkbox. This function is called with every checked row every time a checkbox is toggled on or off. This property requires that you have provided a `rowKey` property */
 	onCheck?: (checkedItems: T[]) => void;
+	/** A function that is called when a row is clicked. This property requires that you have provided a `rowKey` property */
 	onRowClick?: (row: T, event: React.MouseEvent<HTMLAnchorElement>) => void;
+	/** A function that is called when a column is sorted */
 	onSort?: (sort: TableSortOptions<T>) => void;
+	/** A function that is called when the page is incremented, decremented and reset */
 	onPageChange?: (page: number) => void;
+	/** sort options to be used both as a default sort, and on subsequent renders if the passed sort changes */
 	sort?: TableSortOptions<T>;
+	/** Attributes to pass to the anchor element used in a row */
 	rowAnchorAttributes?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
+	/** Attributes to pass to the checkbox element used in a row */
 	rowCheckboxAttributes?: CheckboxProps;
-	// Optionally provide a key that should be used as a unique identifier for each row
+	/** A field on a row that contains a unique identifier, can help speed up render performance and is required for the onCheck property */
 	rowKey?: keyof T;
+	/** JSX element(s) to display at the top of the table body */
 	tbodyPrefix?: JSX.Element | JSX.Element[];
-	// Highlights a row. This property requires that you have provided a
-	// `rowKey` property: the row with a `rowKey` property that matches this
-	// value is highlighted.
+	/** Highlights one or more rows. This property requires that you have provided a rowKey property: the row with a `rowKey` property that matches one of these values is highlighted. */
 	highlightedRows?: any;
+	/** Disable one or more rows. This property requires that you have provided a rowKey property: the row with a `rowKey` property that matches one of these values is disabled. */
 	disabledRows?: Array<T[keyof T]>;
+	/** If provided each row will have classes based on some conditions. Should return a className string */
 	getRowClass?: (row: T) => string[];
-	// If true, a pager will be used when displaying items.
+	/** If true, a pager will be used when displaying items. */
 	usePager?: boolean;
-	// The number of items to be shown per page. Only used if `usePager` is true. Defaults to `50`.
+	/** The number of items to be shown per page. Only used if `usePager` is true. Defaults to 50. */
 	itemsPerPage?: number;
-	// Sets whether the pager is displayed at the top of the table, the bottom of the table or
-	// in both positions. Only used if `usePager` is true. Defaults to `top`.
+	/** Sets whether the pager is displayed at the top of the table, the bottom of the table or in both positions. Only used if `usePager` is true. Defaults to `top`. */
 	pagerPosition?: 'top' | 'bottom' | 'both';
 }
 
 export { TableColumn, TableRow };
-
-export default Table;

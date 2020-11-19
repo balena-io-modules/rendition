@@ -7,16 +7,18 @@ import * as React from 'react';
 import asRendition from '../../asRendition';
 import {
 	Coloring,
-	DefaultProps,
 	RenditionSystemProps,
 	Sizing,
 	Theme,
 } from '../../common-types';
-import { DismissableContainer } from '../../internal/DismissableContainer';
+import {
+	DismissableContainer,
+	DismissableContainerProps,
+} from '../../internal/DismissableContainer';
 import { getColor } from '../../utils';
 import { Box } from '../Box';
 import { Flex } from '../Flex';
-import Txt from '../Txt';
+import { Txt } from '../Txt';
 
 const getTitle = (props: AlertProps) => {
 	if (props.prefix === false) {
@@ -54,7 +56,7 @@ const getIcon = (props: InternalAlertProps) => {
 		: '';
 };
 
-const Alert = (props: ThemedAlertProps) => {
+const BaseAlert = (props: ThemedAlertProps) => {
 	const { emphasized, plaintext, prefix, onDismiss, ...restProps } = props;
 	const icon = getIcon(props);
 	const title = plaintext ? null : getTitle(props);
@@ -107,16 +109,25 @@ interface ThemedAlertProps extends InternalAlertProps {
 	theme: Theme;
 }
 
-interface InternalAlertProps extends DefaultProps, Coloring, Sizing {
+interface InternalAlertProps
+	extends Omit<DismissableContainerProps, 'prefix'>,
+		Coloring,
+		Sizing {
+	/** If true, the alert will be rendered without a border or a background */
 	plaintext?: boolean;
+	// CHECK: actually using grommet description
 	bg?: string;
+	/** Set a prefix on the alert message, if this prop is set to false, the default prefix will not be shown */
 	prefix?: JSX.Element | string | false;
+	/** A function that is called when dismissing an alert */
 	onDismiss?: () => void;
 }
 
 export type AlertProps = InternalAlertProps & RenditionSystemProps;
-export default asRendition<React.FunctionComponent<AlertProps>>(
-	Alert,
+
+/** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Alert/Alert.stories.tsx) */
+export const Alert = asRendition<React.FunctionComponent<AlertProps>>(
+	BaseAlert,
 	[],
 	['bg'],
 );

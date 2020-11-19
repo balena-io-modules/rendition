@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/Map Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      style="height: 600px;"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ eRfhOV"
+      >
+        <div />
+        <div>
+          Loading...
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,292 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/Tabs Compact 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="StyledBox-sc-13pk1d4-0 dYebPD StyledTabs-a4fwxl-2 jQLYpX sc-iWFSnp jSmGJQ sc-jLiVlK jjSmb"
+      role="tablist"
+    >
+      <div
+        class="StyledBox-sc-13pk1d4-0 dByFSU StyledTabs__StyledTabsHeader-a4fwxl-0 gwFYfs"
+      >
+        <button
+          aria-expanded="true"
+          aria-selected="true"
+          class="StyledButton-sc-323bzc-0 cVSyty"
+          role="tab"
+          type="button"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 jELtUt StyledTab-sc-1nnwnsb-0 clUpab"
+          >
+            <span
+              class="StyledText-sc-1sadyjn-0 ioTTOa"
+            >
+              Tab 1
+            </span>
+          </div>
+        </button>
+        <button
+          aria-expanded="false"
+          aria-selected="false"
+          class="StyledButton-sc-323bzc-0 cVSyty"
+          role="tab"
+          type="button"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 enMbdp StyledTab-sc-1nnwnsb-0 clUpab"
+          >
+            <span
+              class="StyledText-sc-1sadyjn-0 cIZnmr"
+            >
+              Tab 2
+            </span>
+          </div>
+        </button>
+        <button
+          aria-expanded="false"
+          aria-selected="false"
+          class="StyledButton-sc-323bzc-0 cVSyty"
+          role="tab"
+          type="button"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 enMbdp StyledTab-sc-1nnwnsb-0 clUpab"
+          >
+            <span
+              class="StyledText-sc-1sadyjn-0 cIZnmr"
+            >
+              Tab 3
+            </span>
+          </div>
+        </button>
+        <button
+          aria-expanded="false"
+          aria-selected="false"
+          class="StyledButton-sc-323bzc-0 cVSyty"
+          role="tab"
+          type="button"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 enMbdp StyledTab-sc-1nnwnsb-0 clUpab"
+          >
+            <span
+              class="StyledText-sc-1sadyjn-0 cIZnmr"
+            >
+              This is a very long tab name
+            </span>
+          </div>
+        </button>
+        <button
+          aria-expanded="false"
+          aria-selected="false"
+          class="StyledButton-sc-323bzc-0 cVSyty"
+          role="tab"
+          type="button"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 enMbdp StyledTab-sc-1nnwnsb-0 clUpab"
+          >
+            <span
+              class="StyledText-sc-1sadyjn-0 cIZnmr"
+            >
+              This is another very long tab name
+            </span>
+          </div>
+        </button>
+        <button
+          aria-expanded="false"
+          aria-selected="false"
+          class="StyledButton-sc-323bzc-0 cVSyty"
+          role="tab"
+          type="button"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 enMbdp StyledTab-sc-1nnwnsb-0 clUpab"
+          >
+            <span
+              class="StyledText-sc-1sadyjn-0 cIZnmr"
+            >
+              And this is a third very long tab name testing
+            </span>
+          </div>
+        </button>
+      </div>
+      <div
+        aria-label="Tab 1 Tab Contents"
+        class="StyledTabs__StyledTabPanel-a4fwxl-1 ixxRXT"
+        role="tabpanel"
+      >
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf iOjUUG"
+        >
+          Here is tab #1
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Tabs Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="StyledBox-sc-13pk1d4-0 dYebPD StyledTabs-a4fwxl-2 jQLYpX sc-iWFSnp hsQyeR sc-jLiVlK jjSmb"
+      role="tablist"
+    >
+      <div
+        class="StyledBox-sc-13pk1d4-0 dByFSU StyledTabs__StyledTabsHeader-a4fwxl-0 gwFYfs"
+      >
+        <button
+          aria-expanded="true"
+          aria-selected="true"
+          class="StyledButton-sc-323bzc-0 cVSyty"
+          role="tab"
+          type="button"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 jELtUt StyledTab-sc-1nnwnsb-0 clUpab"
+          >
+            <span
+              class="StyledText-sc-1sadyjn-0 ioTTOa"
+            >
+              Tab 1
+            </span>
+          </div>
+        </button>
+        <button
+          aria-expanded="false"
+          aria-selected="false"
+          class="StyledButton-sc-323bzc-0 cVSyty"
+          role="tab"
+          type="button"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 enMbdp StyledTab-sc-1nnwnsb-0 clUpab"
+          >
+            <span
+              class="StyledText-sc-1sadyjn-0 cIZnmr"
+            >
+              Tab 2
+            </span>
+          </div>
+        </button>
+        <button
+          aria-expanded="false"
+          aria-selected="false"
+          class="StyledButton-sc-323bzc-0 cVSyty"
+          role="tab"
+          type="button"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 enMbdp StyledTab-sc-1nnwnsb-0 clUpab"
+          >
+            <span
+              class="StyledText-sc-1sadyjn-0 cIZnmr"
+            >
+              Tab 3
+            </span>
+          </div>
+        </button>
+      </div>
+      <div
+        aria-label="Tab 1 Tab Contents"
+        class="StyledTabs__StyledTabPanel-a4fwxl-1 ixxRXT"
+        role="tabpanel"
+      >
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf iOjUUG"
+        >
+          Here is tab #1
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Tabs With Long Titles 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="StyledBox-sc-13pk1d4-0 dYebPD StyledTabs-a4fwxl-2 jQLYpX sc-iWFSnp hsQyeR sc-jLiVlK jjSmb"
+      role="tablist"
+    >
+      <div
+        class="StyledBox-sc-13pk1d4-0 dByFSU StyledTabs__StyledTabsHeader-a4fwxl-0 gwFYfs"
+      >
+        <button
+          aria-expanded="true"
+          aria-selected="true"
+          class="StyledButton-sc-323bzc-0 cVSyty"
+          role="tab"
+          type="button"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 jELtUt StyledTab-sc-1nnwnsb-0 clUpab"
+          >
+            <span
+              class="StyledText-sc-1sadyjn-0 ioTTOa"
+            >
+              This is a very long tab name
+            </span>
+          </div>
+        </button>
+        <button
+          aria-expanded="false"
+          aria-selected="false"
+          class="StyledButton-sc-323bzc-0 cVSyty"
+          role="tab"
+          type="button"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 enMbdp StyledTab-sc-1nnwnsb-0 clUpab"
+          >
+            <span
+              class="StyledText-sc-1sadyjn-0 cIZnmr"
+            >
+              This is another very long tab name
+            </span>
+          </div>
+        </button>
+        <button
+          aria-expanded="false"
+          aria-selected="false"
+          class="StyledButton-sc-323bzc-0 cVSyty"
+          role="tab"
+          type="button"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 enMbdp StyledTab-sc-1nnwnsb-0 clUpab"
+          >
+            <span
+              class="StyledText-sc-1sadyjn-0 cIZnmr"
+            >
+              And this is a third very long tab name
+            </span>
+          </div>
+        </button>
+      </div>
+      <div
+        aria-label="This is a very long tab name Tab Contents"
+        class="StyledTabs__StyledTabPanel-a4fwxl-1 ixxRXT"
+        role="tabpanel"
+      >
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf iOjUUG"
+        >
+          Here is tab #1
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

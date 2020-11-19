@@ -4,7 +4,7 @@ import {
 } from 'grommet';
 import * as React from 'react';
 import styled from 'styled-components';
-import { DefaultProps, Omit, RenditionSystemProps } from '../../common-types';
+import { Omit, RenditionSystemProps } from '../../common-types';
 
 import asRendition from '../../asRendition';
 
@@ -46,7 +46,7 @@ const RadioButtonWrapper = styled.div<{ checked: boolean }>`
 	${getHoverStyle}
 `;
 
-const RadioButton = ({
+const BaseRadioButton = ({
 	className,
 	...otherProps
 }: InternalRadioButtonProps) => {
@@ -63,12 +63,16 @@ const RadioButton = ({
 // Make name optional, and override onChange to not be of `any` type.
 interface InternalRadioButtonProps
 	extends Omit<GrommetRadioButtonProps, 'name'>,
-		DefaultProps {
+		React.HTMLAttributes<HTMLElement> {
+	/** The DOM name attribute value to use for the underlying <input/> element. */
 	name?: string;
+	/** Function called when the value of the radio button changes */
 	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export type RadioButtonProps = InternalRadioButtonProps & RenditionSystemProps;
-export default asRendition<React.FunctionComponent<RadioButtonProps>>(
-	RadioButton,
-);
+
+/** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/RadioButton/RadioButton.stories.tsx) */
+export const RadioButton = asRendition<
+	React.FunctionComponent<RadioButtonProps>
+>(BaseRadioButton);

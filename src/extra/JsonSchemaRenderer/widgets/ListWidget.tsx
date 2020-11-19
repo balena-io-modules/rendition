@@ -1,6 +1,6 @@
 import * as React from 'react';
 import map from 'lodash/map';
-import List from '../../../components/List';
+import { List } from '../../../components/List';
 import { Widget, WidgetProps, getArrayItems } from './widget-util';
 import { RenditionJsonSchemaRenderer } from '../index';
 import { JsonTypes } from '../types';

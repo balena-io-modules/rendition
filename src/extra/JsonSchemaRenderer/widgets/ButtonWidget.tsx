@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Button from '../../../components/Button';
+import { Button } from '../../../components/Button';
 import { UiOption } from './ui-options';
 import { Widget, WidgetProps } from './widget-util';
 import { JsonTypes } from '../types';

@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/Spinner Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ewcxWD sc-hHftDr fYuNSV sc-ljRboo hCnidD"
+    >
+      <div
+        class="sc-Fyfyc dcTeeO"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Spinner Emphasized 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ewcxWD sc-hHftDr cMsQud sc-ljRboo hCnidD"
+    >
+      <div
+        class="sc-Fyfyc hsHGwc"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Spinner With Children 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-jXktwP ddVdHn sc-ljRboo hCnidD"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-eFubAy kFVJVF gsUOly"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ ewcxWD sc-hHftDr fYuNSV"
+        >
+          <div
+            class="sc-Fyfyc dcTeeO"
+          />
+          <div
+            class="sc-fKFyDc dToKui sc-bBXqnf kCTWx"
+          >
+            Spinning...
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-fmlJLJ ewNydS"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ bgxczn"
+          style="background-color: rgb(248, 249, 253);"
+        >
+          Spinning, the wrapped children are made opaque
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Spinner With Component Label 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ewcxWD sc-hHftDr fYuNSV sc-ljRboo hCnidD"
+    >
+      <div
+        class="sc-Fyfyc dcTeeO"
+      />
+      <div
+        class="sc-fKFyDc dToKui sc-bBXqnf kCTWx"
+      >
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf gUmJJR"
+        >
+          Building image 
+          <button
+            class="StyledButton-sc-323bzc-0 jajFOe sc-bqyKva sc-bkzZxe gjQfnS hgJIgM sc-dIUggk YDvpG"
+            type="button"
+          >
+            12345
+          </button>
+          ...
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Spinner With Label 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ewcxWD sc-hHftDr fYuNSV sc-ljRboo hCnidD"
+    >
+      <div
+        class="sc-Fyfyc dcTeeO"
+      />
+      <div
+        class="sc-fKFyDc dToKui sc-bBXqnf kCTWx"
+      >
+        Spinning...
+      </div>
+    </div>
+  </div>
+</div>
+`;

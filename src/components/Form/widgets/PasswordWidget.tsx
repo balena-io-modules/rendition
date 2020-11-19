@@ -4,7 +4,7 @@ import { faEye } from '@fortawesome/free-regular-svg-icons/faEye';
 import { faEyeSlash } from '@fortawesome/free-regular-svg-icons/faEyeSlash';
 import { px } from '../../../utils';
 import { FormWidgetProps } from '../';
-import Button from '../../Button';
+import { Button } from '../../Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const STRENGTH_TITLES = ['Very weak', 'Weak', 'Good', 'Strong', 'Very strong'];

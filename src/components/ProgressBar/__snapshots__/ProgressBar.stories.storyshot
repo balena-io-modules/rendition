@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/ProgressBar Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-jGVbCA fNiEtx sc-bQdQlF etDNuA"
+      color="#fff"
+    >
+      <div
+        class="sc-xyEjG iUqnsJ"
+      >
+        10
+        %
+      </div>
+      <div
+        class="sc-kYrkKh hUZNpb"
+        style="width: 10%;"
+      >
+        <div
+          class="sc-dWdcrH jUYHsK"
+          style="width: 1000%;"
+        >
+          10
+          %
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/ProgressBar Different Color 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-jGVbCA fNiEtx sc-bQdQlF etDNuA"
+      color="#fff"
+      type="danger"
+    >
+      <div
+        class="sc-xyEjG iUqnsJ"
+      >
+        10
+        %
+      </div>
+      <div
+        class="sc-kYrkKh dXAPzh"
+        style="width: 10%;"
+      >
+        <div
+          class="sc-dWdcrH jUYHsK"
+          style="width: 1000%;"
+        >
+          10
+          %
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/ProgressBar Emphasized 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-jGVbCA kenyBU sc-bQdQlF etDNuA"
+      color="#fff"
+    >
+      <div
+        class="sc-xyEjG iUqnsJ"
+      >
+        10
+        %
+      </div>
+      <div
+        class="sc-kYrkKh hUZNpb"
+        style="width: 10%;"
+      >
+        <div
+          class="sc-dWdcrH jUYHsK"
+          style="width: 1000%;"
+        >
+          10
+          %
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

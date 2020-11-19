@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/Navbar Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ csJJEL"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ QCGZt sc-cKZHah laTkLd sc-iIEYCM hCNsVr"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr hgkEZm"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ jjhpBS sc-gsBrbv EYpAg"
+            >
+              <a
+                class="sc-eGCarw fNeKsH sc-ctaXAZ juDWEP"
+                color="white"
+                href="/"
+              >
+                <img
+                  class="sc-jtHMlw eHuZyk"
+                  src=""
+                  style="height: 20px;"
+                />
+              </a>
+            </div>
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ kYPycb sc-aKZfe dLiTdv"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-bars fa-w-14 "
+                data-icon="bars"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iHZzfI sc-hHftDr sc-kmASHI cLDXoV kOJQD"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ VwhUL sc-hHftDr hgkEZm"
+            >
+              <div
+                class="sc-gKsewC cgpPfo sc-iBPRYJ doqgsf"
+              >
+                <a
+                  class="sc-eGCarw fNeKsH sc-ctaXAZ juDWEP"
+                  color="white"
+                  href="/docs/"
+                >
+                  Docs
+                </a>
+              </div>
+              <div
+                class="sc-gKsewC cgpPfo sc-iBPRYJ doqgsf"
+              >
+                <a
+                  class="sc-eGCarw fNeKsH sc-ctaXAZ juDWEP"
+                  color="white"
+                  href="/changelog/"
+                >
+                  changelog
+                </a>
+              </div>
+              <div
+                class="sc-gKsewC cgpPfo sc-iBPRYJ doqgsf"
+              >
+                <a
+                  class="sc-eGCarw fNeKsH sc-ctaXAZ juDWEP"
+                  color="white"
+                  href="/gitter/"
+                >
+                  gitter
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

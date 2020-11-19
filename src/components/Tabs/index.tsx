@@ -9,10 +9,12 @@ import React from 'react';
 import asRendition from '../../asRendition';
 
 export interface TabProps extends GrommetTabProps {
+	/** Any content that is internally wrapped in a `Tab`component */
 	children?: React.ReactNode;
 }
 
 export interface TabsProps extends GrommetTabsProps {
+	/** If true, render tabs on a single line. (for mobile use) */
 	compact?: boolean;
 }
 
@@ -66,6 +68,11 @@ const TabsBase = ({ children, compact = false, ...props }: TabsProps) => {
 	);
 };
 
+/**
+ * A component used to render tabbed children components.
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Tabs/Tabs.stories.tsx)
+ */
 export const Tabs = (asRendition(
 	TabsBase,
 ) as unknown) as React.FunctionComponent<TabsProps>;

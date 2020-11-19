@@ -4,9 +4,9 @@ import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { RenditionSystemProps } from '../../common-types';
-import Button from '../Button';
+import { Button } from '../Button';
 import { Flex } from '../Flex';
-import Txt from '../Txt';
+import { Txt } from '../Txt';
 
 const Container = styled(Flex)`
 	background-color: ${(props) => props.theme.colors.info.light};
@@ -19,7 +19,7 @@ const DeleteButton = styled(Button)`
 	color: ${(props) => props.theme.colors.tertiary.semilight};
 `;
 
-const TagBase = ({
+const BaseTag = ({
 	name,
 	operator,
 	value,
@@ -91,22 +91,33 @@ const TagBase = ({
 };
 
 export interface InternalTagProps {
+	/** The value part of the tag */
 	value?: string;
+	/** The name part of the tag, if not provided, only the value will be shown */
 	name?: string;
+	/** The operator that goes between the name and value of the tag */
 	operator?: string;
+	/** An array of name-value pairs, with an optional delimiter to be used between the previous and current tag entry */
 	multiple?: Array<{
 		value?: string;
 		name?: string;
 		operator?: string;
 		prefix?: string;
 	}>;
+	/** Callback method, that if passed, a "close" button will be added to the right-hand side of the tag */
 	onClose?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
+	/** Callback method, that if passed, the tag will become clickable */
 	onClick?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 	className?: string;
 }
 
 export type TagProps = InternalTagProps & RenditionSystemProps;
 
+/**
+ * Represents a name-value pair with an optional operator between.
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Tag/Tag.stories.tsx)
+ */
 export const Tag = asRendition<React.FunctionComponent<TagProps>>(
-	TagBase as any,
+	BaseTag as any,
 );

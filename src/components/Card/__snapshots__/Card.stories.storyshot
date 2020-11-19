@@ -1,0 +1,231 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/Card Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      style="width: 400px; height: 400px;"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-bBrOnJ gdZqkT sc-cOajty kgwdcT"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+  scelerisque euismod risus at gravida. Pellentesque a nunc semper,
+  ultrices lacus nec, mattis mauris
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Card Small 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      style="width: 400px; height: 400px;"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-bBrOnJ fizSPM sc-cOajty kgwdcT"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+  scelerisque euismod risus at gravida. Pellentesque a nunc semper,
+  ultrices lacus nec, mattis mauris
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Card With Header 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      style="width: 400px; height: 400px;"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-bBrOnJ gdZqkT sc-cOajty kgwdcT"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kUtBaJ"
+          >
+            <h5
+              class="sc-jcVebW jPGlzQ sc-jNMdTA geKpYl"
+            >
+              Card with Button
+            </h5>
+            <button
+              class="StyledButton-sc-323bzc-0 fVClA-D sc-bqyKva sc-bkzZxe gjQfnS dvvpJt sc-dIUggk YDvpG"
+              type="button"
+            >
+              Update
+            </button>
+          </div>
+          <hr
+            class="sc-gWHgXt PLIsv sc-citwmv bAwyHf"
+          />
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+  scelerisque euismod risus at gravida. Pellentesque a nunc semper,
+  ultrices lacus nec, mattis mauris
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Card With Rows 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      style="width: 400px; height: 400px;"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-bBrOnJ gdZqkT sc-cOajty kgwdcT"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kUtBaJ"
+          >
+            <h5
+              class="sc-jcVebW jPGlzQ sc-jNMdTA geKpYl"
+            >
+              Card with Button
+            </h5>
+            <a
+              class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+              color="primary.main"
+              href="https://balena.io"
+            >
+              Link
+            </a>
+          </div>
+          <hr
+            class="sc-gWHgXt PLIsv sc-citwmv bAwyHf"
+          />
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+          >
+            <div>
+              Lorem Ipsum dolor si amet
+            </div>
+          </div>
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+          >
+            <hr
+              class="sc-gWHgXt PLIsv sc-citwmv liYinz"
+            />
+            <a
+              class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+              color="primary.main"
+              href="www.balena.io"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+          >
+            <hr
+              class="sc-gWHgXt PLIsv sc-citwmv liYinz"
+            />
+            <span
+              class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL sc-kUbhmq iIBqut text-with-copy"
+              title="This value has been copied to your clipboard!"
+            >
+              <span
+                class="text-with-copy__content"
+              >
+                Row with Copy component
+              </span>
+              <span
+                class="text-with-copy__copy_wrapper"
+              >
+                <div
+                  class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP text-with-copy__copy"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-copy fa-w-14 "
+                    data-icon="copy"
+                    data-prefix="far"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 448 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM266 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 0 1-6 6zm128-96H182a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 0 1-6 6zm6-256h-64V48h9.632c1.591 0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 0 1 1.757 4.243V112z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </span>
+            </span>
+          </div>
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+          >
+            <hr
+              class="sc-gWHgXt PLIsv sc-citwmv liYinz"
+            />
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr jkLErl"
+            >
+              <div>
+                Row with
+              </div>
+              <div>
+                Flex
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+          >
+            <hr
+              class="sc-gWHgXt PLIsv sc-citwmv liYinz"
+            />
+            <div>
+              Lorem Ipsum dolor si amet
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

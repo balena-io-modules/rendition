@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/Banner Primary 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-iktFzd cMsQud cVEMrB sc-jJEJSO iMnCEV"
+    >
+      <h1>
+        balena
+      </h1>
+      <p>
+        Balena brings the benefits of Linux containers to the IoT. Develop iteratively, deploy safely, and manage at scale.
+      </p>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/DropDownButton Bordered List 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-bTvRPi iIpDHo sc-dtwoBo iBRXbM"
+    >
+      <span>
+        <button
+          class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk YDvpG sc-hlTvYk iaMgEP"
+          type="button"
+        >
+          Dropdown
+        </button>
+        <button
+          class="StyledButton-sc-323bzc-0 gMxQVt sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk YDvpG sc-jONnTn bnExuh"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-chevron-down fa-w-14 "
+            data-icon="chevron-down"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/DropDownButton Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-bTvRPi iIpDHo sc-dtwoBo iBRXbM"
+    >
+      <span>
+        <button
+          class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk YDvpG sc-hlTvYk iaMgEP"
+          type="button"
+        >
+          Dropdown
+        </button>
+        <button
+          class="StyledButton-sc-323bzc-0 gMxQVt sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk YDvpG sc-jONnTn bnExuh"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-chevron-down fa-w-14 "
+            data-icon="chevron-down"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/DropDownButton Icon Only 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-bTvRPi iIpDHo sc-dtwoBo iBRXbM"
+    >
+      <button
+        class="StyledButton-sc-323bzc-0 gZnGrv sc-bqyKva sc-kstrdz gjQfnS FUwNf sc-dIUggk YDvpG sc-hOqqkJ kAcspI"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="svg-inline--fa fa-chevron-down fa-w-14 "
+          color="#444444"
+          data-icon="chevron-down"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/DropDownButton Joined 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-bTvRPi iIpDHo sc-dtwoBo iBRXbM"
+    >
+      <button
+        class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk YDvpG sc-hOqqkJ kAcspI"
+        type="button"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kUtBaJ"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+          >
+            Dropdown
+          </div>
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-chevron-down fa-w-14 "
+            data-icon="chevron-down"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/DropDownButton No List Formatting 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-bTvRPi iIpDHo sc-dtwoBo iBRXbM"
+    >
+      <span>
+        <button
+          class="StyledButton-sc-323bzc-0 fGJlAh sc-bqyKva sc-kstrdz gjQfnS FUwNf sc-dIUggk YDvpG sc-hlTvYk iaMgEP"
+          type="button"
+        />
+        <button
+          class="StyledButton-sc-323bzc-0 gZnGrv sc-bqyKva sc-kstrdz gjQfnS FUwNf sc-dIUggk YDvpG sc-jONnTn bnExuh"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-chevron-down fa-w-14 "
+            color="#444444"
+            data-icon="chevron-down"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/DropDownButton With Primary Button 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-bTvRPi iIpDHo sc-dtwoBo iBRXbM"
+    >
+      <button
+        class="StyledButton-sc-323bzc-0 fGJlAh sc-bqyKva sc-kstrdz gjQfnS FUwNf sc-dIUggk YDvpG sc-hOqqkJ kAcspI"
+        type="button"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kUtBaJ"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+          >
+            Dropdown
+          </div>
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-chevron-down fa-w-14 "
+            data-icon="chevron-down"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;

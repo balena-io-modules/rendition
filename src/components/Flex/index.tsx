@@ -18,6 +18,11 @@ export interface FlexProps
 		AlignItemsProps,
 		JustifyContentProps {}
 
+/**
+ * Displays an element using [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox).
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Flex/Flex.stories.tsx)
+ */
 export const Flex = styled(Box)<FlexProps>`
 	display: flex;
 	${flexWrap};

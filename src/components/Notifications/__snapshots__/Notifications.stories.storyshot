@@ -1,0 +1,922 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/Notifications Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ htdDiA sc-hHftDr jpCUGc"
+    >
+      <div
+        class="react-notification-root sc-kiYtDG eIVtvW"
+      >
+        <div
+          class="notification-container-top-left"
+        />
+        <div
+          class="notification-container-top-right"
+        >
+          <div
+            class="notification-parent"
+            style="height: 0px; width: 300px; transition: 200ms height linear 0ms;"
+          >
+            <div
+              class="notification-item n-child"
+            >
+              <div
+                class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV jCybnR sc-lmoMRL cGXAYQ sc-eltcbb grjoPg"
+              >
+                
+                <div
+                  class="sc-gKsewC dWcnb sc-iBPRYJ dWRxlP"
+                >
+                  
+                  <span
+                    class="sc-fKFyDc dToKui sc-iwyYcG bUoHum"
+                  >
+                    This is a notification
+                  </span>
+                </div>
+                <button
+                  aria-label="Dismiss Alert"
+                  class="StyledButton-sc-323bzc-0 fVClA-D sc-bqyKva sc-bkzZxe gjQfnS dvvpJt sc-dIUggk YDvpG sc-kfzAmx kBAnWo"
+                  title="Dismiss Alert"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-times fa-w-11 "
+                    data-icon="times"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 352 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="notification-parent"
+            style="height: 0px; width: 300px; transition: 200ms height linear 0ms;"
+          >
+            <div
+              class="notification-item n-child"
+            >
+              <div
+                class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV jCybnR sc-lmoMRL cGXAYQ sc-eltcbb grjoPg"
+              >
+                
+                <div
+                  class="sc-gKsewC dWcnb sc-iBPRYJ dWRxlP"
+                >
+                  
+                  <span
+                    class="sc-fKFyDc dToKui sc-iwyYcG bUoHum"
+                  >
+                    <div
+                      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP"
+                    >
+                      <div
+                        class="sc-fKFyDc dToKui sc-bBXqnf hABGiJ"
+                      >
+                        Some text for the user to read
+                      </div>
+                      <button
+                        class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk YDvpG"
+                        type="button"
+                      >
+                        This is a button
+                      </button>
+                    </div>
+                  </span>
+                </div>
+                <button
+                  aria-label="Dismiss Alert"
+                  class="StyledButton-sc-323bzc-0 fVClA-D sc-bqyKva sc-bkzZxe gjQfnS dvvpJt sc-dIUggk YDvpG sc-kfzAmx kBAnWo"
+                  title="Dismiss Alert"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-times fa-w-11 "
+                    data-icon="times"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 352 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="notification-container-bottom-left"
+        />
+        <div
+          class="notification-container-bottom-right"
+        />
+        <div
+          class="notification-container-top-center"
+        />
+        <div
+          class="notification-container-center"
+        >
+          <div
+            class="center-inner"
+          />
+        </div>
+        <div
+          class="notification-container-bottom-center"
+        />
+      </div>
+      <button
+        class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk kGJSNd"
+        type="button"
+      >
+        Add text notification
+      </button>
+      <button
+        class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk kGJSNd"
+        type="button"
+      >
+        Add button notification
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Notifications Positioning 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="react-notification-root sc-kiYtDG eIVtvW"
+    >
+      <div
+        class="notification-container-top-left"
+      >
+        <div
+          class="notification-parent"
+          style="height: 0px; width: 300px; transition: 10ms height;"
+        >
+          <div
+            class="notification-item n-child"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV jCybnR sc-lmoMRL cGXAYQ sc-eltcbb grjoPg"
+            >
+              
+              <div
+                class="sc-gKsewC dWcnb sc-iBPRYJ dWRxlP"
+              >
+                
+                <span
+                  class="sc-fKFyDc dToKui sc-iwyYcG bUoHum"
+                >
+                  top-left
+                </span>
+              </div>
+              <button
+                aria-label="Dismiss Alert"
+                class="StyledButton-sc-323bzc-0 fVClA-D sc-bqyKva sc-bkzZxe gjQfnS dvvpJt sc-dIUggk YDvpG sc-kfzAmx kBAnWo"
+                title="Dismiss Alert"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-times fa-w-11 "
+                  data-icon="times"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 352 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="notification-container-top-right"
+      >
+        <div
+          class="notification-parent"
+          style="height: 0px; width: 300px; transition: 10ms height;"
+        >
+          <div
+            class="notification-item n-child"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV jCybnR sc-lmoMRL cGXAYQ sc-eltcbb grjoPg"
+            >
+              
+              <div
+                class="sc-gKsewC dWcnb sc-iBPRYJ dWRxlP"
+              >
+                
+                <span
+                  class="sc-fKFyDc dToKui sc-iwyYcG bUoHum"
+                >
+                  top-right
+                </span>
+              </div>
+              <button
+                aria-label="Dismiss Alert"
+                class="StyledButton-sc-323bzc-0 fVClA-D sc-bqyKva sc-bkzZxe gjQfnS dvvpJt sc-dIUggk YDvpG sc-kfzAmx kBAnWo"
+                title="Dismiss Alert"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-times fa-w-11 "
+                  data-icon="times"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 352 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="notification-container-bottom-left"
+      >
+        <div
+          class="notification-parent"
+          style="height: 0px; width: 300px; transition: 10ms height;"
+        >
+          <div
+            class="notification-item n-child"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV jCybnR sc-lmoMRL cGXAYQ sc-eltcbb grjoPg"
+            >
+              
+              <div
+                class="sc-gKsewC dWcnb sc-iBPRYJ dWRxlP"
+              >
+                
+                <span
+                  class="sc-fKFyDc dToKui sc-iwyYcG bUoHum"
+                >
+                  bottom-left
+                </span>
+              </div>
+              <button
+                aria-label="Dismiss Alert"
+                class="StyledButton-sc-323bzc-0 fVClA-D sc-bqyKva sc-bkzZxe gjQfnS dvvpJt sc-dIUggk YDvpG sc-kfzAmx kBAnWo"
+                title="Dismiss Alert"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-times fa-w-11 "
+                  data-icon="times"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 352 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="notification-container-bottom-right"
+      >
+        <div
+          class="notification-parent"
+          style="height: 0px; width: 300px; transition: 10ms height;"
+        >
+          <div
+            class="notification-item n-child"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV jCybnR sc-lmoMRL cGXAYQ sc-eltcbb grjoPg"
+            >
+              
+              <div
+                class="sc-gKsewC dWcnb sc-iBPRYJ dWRxlP"
+              >
+                
+                <span
+                  class="sc-fKFyDc dToKui sc-iwyYcG bUoHum"
+                >
+                  bottom-right
+                </span>
+              </div>
+              <button
+                aria-label="Dismiss Alert"
+                class="StyledButton-sc-323bzc-0 fVClA-D sc-bqyKva sc-bkzZxe gjQfnS dvvpJt sc-dIUggk YDvpG sc-kfzAmx kBAnWo"
+                title="Dismiss Alert"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-times fa-w-11 "
+                  data-icon="times"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 352 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="notification-container-top-center"
+      >
+        <div
+          class="notification-parent"
+          style="height: 0px; width: 300px; transition: 10ms height;"
+        >
+          <div
+            class="notification-item n-child"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV jCybnR sc-lmoMRL cGXAYQ sc-eltcbb grjoPg"
+            >
+              
+              <div
+                class="sc-gKsewC dWcnb sc-iBPRYJ dWRxlP"
+              >
+                
+                <span
+                  class="sc-fKFyDc dToKui sc-iwyYcG bUoHum"
+                >
+                  top-center
+                </span>
+              </div>
+              <button
+                aria-label="Dismiss Alert"
+                class="StyledButton-sc-323bzc-0 fVClA-D sc-bqyKva sc-bkzZxe gjQfnS dvvpJt sc-dIUggk YDvpG sc-kfzAmx kBAnWo"
+                title="Dismiss Alert"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-times fa-w-11 "
+                  data-icon="times"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 352 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="notification-container-center"
+      >
+        <div
+          class="center-inner"
+        >
+          <div
+            class="notification-parent"
+            style="height: 0px; width: 300px; transition: 10ms height;"
+          >
+            <div
+              class="notification-item n-child"
+            >
+              <div
+                class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV jCybnR sc-lmoMRL cGXAYQ sc-eltcbb grjoPg"
+              >
+                
+                <div
+                  class="sc-gKsewC dWcnb sc-iBPRYJ dWRxlP"
+                >
+                  
+                  <span
+                    class="sc-fKFyDc dToKui sc-iwyYcG bUoHum"
+                  >
+                    center
+                  </span>
+                </div>
+                <button
+                  aria-label="Dismiss Alert"
+                  class="StyledButton-sc-323bzc-0 fVClA-D sc-bqyKva sc-bkzZxe gjQfnS dvvpJt sc-dIUggk YDvpG sc-kfzAmx kBAnWo"
+                  title="Dismiss Alert"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-times fa-w-11 "
+                    data-icon="times"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 352 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="notification-container-bottom-center"
+      >
+        <div
+          class="notification-parent"
+          style="height: 0px; width: 300px; transition: 10ms height;"
+        >
+          <div
+            class="notification-item n-child"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV jCybnR sc-lmoMRL cGXAYQ sc-eltcbb grjoPg"
+            >
+              
+              <div
+                class="sc-gKsewC dWcnb sc-iBPRYJ dWRxlP"
+              >
+                
+                <span
+                  class="sc-fKFyDc dToKui sc-iwyYcG bUoHum"
+                >
+                  bottom-center
+                </span>
+              </div>
+              <button
+                aria-label="Dismiss Alert"
+                class="StyledButton-sc-323bzc-0 fVClA-D sc-bqyKva sc-bkzZxe gjQfnS dvvpJt sc-dIUggk YDvpG sc-kfzAmx kBAnWo"
+                title="Dismiss Alert"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-times fa-w-11 "
+                  data-icon="times"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 352 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ kUQHaG sc-hHftDr cMsQud"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV"
+      >
+        <button
+          class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk kGJSNd"
+          type="button"
+        >
+          top-left
+        </button>
+        <button
+          class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk kGJSNd"
+          type="button"
+        >
+          top-center
+        </button>
+        <button
+          class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk kGJSNd"
+          type="button"
+        >
+          top-right
+        </button>
+      </div>
+      <button
+        class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk kGJSNd"
+        type="button"
+      >
+        center
+      </button>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV"
+      >
+        <button
+          class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk kGJSNd"
+          type="button"
+        >
+          bottom-left
+        </button>
+        <button
+          class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk kGJSNd"
+          type="button"
+        >
+          bottom-center
+        </button>
+        <button
+          class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk kGJSNd"
+          type="button"
+        >
+          bottom-right
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Notifications Types 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ htdDiA sc-hHftDr jpCUGc"
+    >
+      <div
+        class="react-notification-root sc-kiYtDG eIVtvW"
+      >
+        <div
+          class="notification-container-top-left"
+        />
+        <div
+          class="notification-container-top-right"
+        >
+          <div
+            class="notification-parent"
+            style="height: 0px; width: 300px; transition: 200ms height linear 0ms;"
+          >
+            <div
+              class="notification-item n-child"
+            >
+              <div
+                class="sc-gKsewC cgpPfo sc-iBPRYJ dQsSLq sc-hHftDr sc-dmlrTW cLDXoV RAjJT sc-lmoMRL cGXAYQ sc-eltcbb grjoPg"
+              >
+                <div
+                  class="sc-fKFyDc dToKui sc-bBXqnf XVwEh"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-lightbulb fa-w-11 "
+                    data-icon="lightbulb"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 352 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M96.06 454.35c.01 6.29 1.87 12.45 5.36 17.69l17.09 25.69a31.99 31.99 0 0 0 26.64 14.28h61.71a31.99 31.99 0 0 0 26.64-14.28l17.09-25.69a31.989 31.989 0 0 0 5.36-17.69l.04-38.35H96.01l.05 38.35zM0 176c0 44.37 16.45 84.85 43.56 115.78 16.52 18.85 42.36 58.23 52.21 91.45.04.26.07.52.11.78h160.24c.04-.26.07-.51.11-.78 9.85-33.22 35.69-72.6 52.21-91.45C335.55 260.85 352 220.37 352 176 352 78.61 272.91-.3 175.45 0 73.44.31 0 82.97 0 176zm176-80c-44.11 0-80 35.89-80 80 0 8.84-7.16 16-16 16s-16-7.16-16-16c0-61.76 50.24-112 112-112 8.84 0 16 7.16 16 16s-7.16 16-16 16z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="sc-gKsewC dWcnb sc-iBPRYJ fLUuUH"
+                >
+                  <span
+                    class="sc-fKFyDc ipClrT sc-iwyYcG hQqijh"
+                  >
+                    Note!
+                  </span>
+                  <span
+                    class="sc-fKFyDc dToKui sc-iwyYcG cRxeiz"
+                  >
+                    info
+                  </span>
+                </div>
+                <button
+                  aria-label="Dismiss Alert"
+                  class="StyledButton-sc-323bzc-0 jajFOe sc-bqyKva sc-bkzZxe gjQfnS hgJIgM sc-dIUggk cAapIy sc-kfzAmx kBAnWo"
+                  title="Dismiss Alert"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-times fa-w-11 "
+                    data-icon="times"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 352 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="notification-parent"
+            style="height: 0px; width: 300px; transition: 200ms height linear 0ms;"
+          >
+            <div
+              class="notification-item n-child"
+            >
+              <div
+                class="sc-gKsewC cgpPfo sc-iBPRYJ fiWzOU sc-hHftDr sc-dmlrTW cLDXoV dcrGdQ sc-lmoMRL cGXAYQ sc-eltcbb grjoPg"
+              >
+                <div
+                  class="sc-fKFyDc dToKui sc-bBXqnf hsApDH"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-exclamation-triangle fa-w-18 "
+                    data-icon="exclamation-triangle"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 576 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="sc-gKsewC dWcnb sc-iBPRYJ gaVVgz"
+                >
+                  <span
+                    class="sc-fKFyDc ipClrT sc-iwyYcG hQqijh"
+                  >
+                    Warning!
+                  </span>
+                  <span
+                    class="sc-fKFyDc dToKui sc-iwyYcG dgyEur"
+                  >
+                    warning
+                  </span>
+                </div>
+                <button
+                  aria-label="Dismiss Alert"
+                  class="StyledButton-sc-323bzc-0 jajFOe sc-bqyKva sc-bkzZxe gjQfnS hgJIgM sc-dIUggk OTsfK sc-kfzAmx kBAnWo"
+                  title="Dismiss Alert"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-times fa-w-11 "
+                    data-icon="times"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 352 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="notification-parent"
+            style="height: 0px; width: 300px; transition: 200ms height linear 0ms;"
+          >
+            <div
+              class="notification-item n-child"
+            >
+              <div
+                class="sc-gKsewC cgpPfo sc-iBPRYJ ipiHMM sc-hHftDr sc-dmlrTW cLDXoV fNGbub sc-lmoMRL cGXAYQ sc-eltcbb grjoPg"
+              >
+                <div
+                  class="sc-fKFyDc dToKui sc-bBXqnf ebpqPX"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-check-circle fa-w-16 "
+                    data-icon="check-circle"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 512 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="sc-gKsewC dWcnb sc-iBPRYJ jyModB"
+                >
+                  <span
+                    class="sc-fKFyDc ipClrT sc-iwyYcG hQqijh"
+                  >
+                    Success!
+                  </span>
+                  <span
+                    class="sc-fKFyDc dToKui sc-iwyYcG gEoXrt"
+                  >
+                    success
+                  </span>
+                </div>
+                <button
+                  aria-label="Dismiss Alert"
+                  class="StyledButton-sc-323bzc-0 jajFOe sc-bqyKva sc-bkzZxe gjQfnS hgJIgM sc-dIUggk iVyegM sc-kfzAmx kBAnWo"
+                  title="Dismiss Alert"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-times fa-w-11 "
+                    data-icon="times"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 352 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="notification-parent"
+            style="height: 0px; width: 300px; transition: 200ms height linear 0ms;"
+          >
+            <div
+              class="notification-item n-child"
+            >
+              <div
+                class="sc-gKsewC cgpPfo sc-iBPRYJ cEHZTN sc-hHftDr sc-dmlrTW cLDXoV jwBGWI sc-lmoMRL cGXAYQ sc-eltcbb grjoPg"
+              >
+                <div
+                  class="sc-fKFyDc dToKui sc-bBXqnf ifPkvS"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-ban fa-w-16 "
+                    data-icon="ban"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 512 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M256 8C119.034 8 8 119.033 8 256s111.034 248 248 248 248-111.034 248-248S392.967 8 256 8zm130.108 117.892c65.448 65.448 70 165.481 20.677 235.637L150.47 105.216c70.204-49.356 170.226-44.735 235.638 20.676zM125.892 386.108c-65.448-65.448-70-165.481-20.677-235.637L361.53 406.784c-70.203 49.356-170.226 44.736-235.638-20.676z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="sc-gKsewC dWcnb sc-iBPRYJ cQdBWv"
+                >
+                  <span
+                    class="sc-fKFyDc ipClrT sc-iwyYcG hQqijh"
+                  >
+                    Danger!
+                  </span>
+                  <span
+                    class="sc-fKFyDc dToKui sc-iwyYcG llbUJj"
+                  >
+                    danger
+                  </span>
+                </div>
+                <button
+                  aria-label="Dismiss Alert"
+                  class="StyledButton-sc-323bzc-0 jajFOe sc-bqyKva sc-bkzZxe gjQfnS hgJIgM sc-dIUggk dqxAqS sc-kfzAmx kBAnWo"
+                  title="Dismiss Alert"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-times fa-w-11 "
+                    data-icon="times"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 352 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="notification-container-bottom-left"
+        />
+        <div
+          class="notification-container-bottom-right"
+        />
+        <div
+          class="notification-container-top-center"
+        />
+        <div
+          class="notification-container-center"
+        >
+          <div
+            class="center-inner"
+          />
+        </div>
+        <div
+          class="notification-container-bottom-center"
+        />
+      </div>
+      <button
+        class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk kGJSNd"
+        type="button"
+      >
+        danger
+      </button>
+      <button
+        class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk kGJSNd"
+        type="button"
+      >
+        success
+      </button>
+      <button
+        class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk kGJSNd"
+        type="button"
+      >
+        warning
+      </button>
+      <button
+        class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk kGJSNd"
+        type="button"
+      >
+        info
+      </button>
+    </div>
+  </div>
+</div>
+`;

@@ -1,7 +1,14 @@
 import styled from 'styled-components';
-import { Flex } from '../Flex';
+import { Flex, FlexProps } from '../Flex';
 
-export default styled(Flex)`
+export type ButtonGroupProps = FlexProps;
+
+/**
+ * Wrapper for buttons to make them stick together.
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/ButtonGroup/ButtonGroup.stories.tsx)
+ */
+export const ButtonGroup = styled(Flex)`
 	> * {
 		&:first-child {
 			border-top-right-radius: 0;

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import get from 'lodash/get';
-import Badge from '../../../components/Badge';
+import { Badge } from '../../../components/Badge';
 import { hashCode } from '../../../utils';
 import { UiOption } from './ui-options';
 import { Widget, WidgetProps } from './widget-util';

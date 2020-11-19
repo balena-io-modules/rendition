@@ -17,13 +17,6 @@ cd rendition
 npm install
 ```
 
-### Installing docker
-
-[Docker][Docker] is required to run [visual regresion tests](#visual-testing)
-and to generate new screenshots. See the [docker installation
-documentation][Docker install] for information on how to install Docker in your
-environment.
-
 ### Running the storybook
 
 The interactive storybook can be launched by running:
@@ -71,36 +64,6 @@ other text editing default. We encourage you to install the relevant plugin in
 your text editor of choice to avoid having to fix any issues during the review
 process.
 
-
-### Visual testing
-
-You can run a screenshot test using the command:
-
-```
-npm run test:local-visual
-```
-
-A report will be generated and saved to `visual-testing-report.html`.
-
-If you have made changes to a component that will affect the way it
-looks in a story, screenshots should be generated using the command:
-
-```
-npm run generate-screenshots
-``` 
-
-This command will spawn a docker container, generate screenshots
-and copy them back to your local file system.
-
-Visual testing relies on a consistent execution environment, ensuring that
-control inputs and fonts are always rendered the same way. To ensure this
-happens both screenshot generation and testing steps are run inside a docker
-container. 
-
-Screenshots of each story are stored in the `__screenshots__` directory. When
-the test suite runs, new screenshots are created and compared against the
-existing ones in the `__screenshots__` directory. Any differences will cause the
-tests to fail, as it indicates an unexpected visual change to a component.
 
 Updating documentation
 ----------------------
@@ -153,5 +116,3 @@ Don't hesitate to get in touch if you have any questions or need any help!
 
 [COMMIT-GUIDELINES]: COMMIT-GUIDELINES.md
 [EditorConfig]: http://editorconfig.org
-[Docker]: https://www.docker.com/
-[Docker install]: https://docs.docker.com/install/

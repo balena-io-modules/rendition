@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/RadioButton Checked 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-hjWSAi kiIJpZ sc-gVgnHT bwEVF"
+    >
+      <label
+        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 kpowLU"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 bCQoHO StyledRadioButton-g1f6ld-5 imYubY"
+        >
+          <input
+            checked=""
+            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hIKMbD"
+            name="radio button"
+            type="radio"
+          />
+          <div
+            class="StyledBox-sc-13pk1d4-0 gdySah StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 kGVpuu"
+          >
+            <svg
+              class="StyledRadioButton__StyledRadioButtonIcon-g1f6ld-3 jLTrkN"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="6"
+              />
+            </svg>
+          </div>
+        </div>
+        <span
+          class="StyledRadioButton__StyledRadioButtonLabel-g1f6ld-2"
+        >
+          Radio button
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/RadioButton Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-hjWSAi fZHCrR sc-gVgnHT bwEVF"
+    >
+      <label
+        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 kpowLU"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 bCQoHO StyledRadioButton-g1f6ld-5 imYubY"
+        >
+          <input
+            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hIKMbD"
+            name="radio button"
+            type="radio"
+          />
+          <div
+            class="StyledBox-sc-13pk1d4-0 eqKQex StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 kGVpuu"
+          />
+        </div>
+        <span
+          class="StyledRadioButton__StyledRadioButtonLabel-g1f6ld-2"
+        >
+          Radio button
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/RadioButton Disabled 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-hjWSAi fZHCrR sc-gVgnHT bwEVF"
+    >
+      <label
+        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 gmkESR"
+        disabled=""
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 bCQoHO StyledRadioButton-g1f6ld-5 imYubY"
+        >
+          <input
+            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 NlSSr"
+            disabled=""
+            name="radio button"
+            type="radio"
+          />
+          <div
+            class="StyledBox-sc-13pk1d4-0 eqKQex StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 kGVpuu"
+          />
+        </div>
+        <span
+          class="StyledRadioButton__StyledRadioButtonLabel-g1f6ld-2"
+        >
+          Radio button
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+`;

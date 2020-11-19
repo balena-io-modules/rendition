@@ -1,0 +1,671 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/Steps Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW fLUTfi gKJALV sc-cbDGPM jfOLHm"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ cILJJc sc-hHftDr bRrPDa"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr jkUzuV"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI sc-hHftDr fYuNSV"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dzgPqC sc-hHftDr sc-jmhFOf cLDXoV fwlXvy"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-check-circle fa-w-16 "
+                data-icon="check-circle"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <div
+              class="sc-fKFyDc dToKui sc-bBXqnf lijGUI"
+            >
+              These are
+            </div>
+          </div>
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ calkOo sc-hHftDr kFVJVF"
+          >
+            <svg
+              height="9"
+              viewBox="0 0 29.4 9"
+              width="29.4"
+              x="0"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                transform="translate(1.000000, 4.000000)"
+              >
+                <path
+                  d="M20-4c0.1,0,0.2,0,0.2,0.1l0,0l7.9,4c0.3,0.1,0.4,0.5,0.2,0.7c-0.1,0.1-0.1,0.2-0.2,0.2l0,0
+			l-8,3.9c-0.3,0.1-0.6,0-0.7-0.2c0-0.1-0.1-0.2-0.1-0.2l0,0l0-3.5l-3.9,0C15.2,1,15,0.8,15,0.5l0-0.1C15,0.2,15.2,0,15.5,0l0,0
+			l3.9,0l0-3.5C19.4-3.7,19.6-4,20-4L20-4z M7.5-0.1l4,0c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5l0,0l-4,0C7.2,0.9,7,0.7,7,0.4
+			C7,0.1,7.2-0.1,7.5-0.1L7.5-0.1z M-0.5-0.2l4,0C3.8-0.1,4,0.1,4,0.4S3.8,0.9,3.5,0.9l0,0l-4,0C-0.8,0.8-1,0.6-1,0.3
+			C-1,0-0.8-0.2-0.5-0.2L-0.5-0.2z"
+                  fill="#5b82a7"
+                  fill-rule="nonzero"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr jkUzuV"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI sc-hHftDr fYuNSV"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dzgPqC sc-hHftDr sc-jmhFOf cLDXoV fwlXvy"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-check-circle fa-w-16 "
+                data-icon="check-circle"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <div
+              class="sc-fKFyDc dToKui sc-bBXqnf lijGUI"
+            >
+              all completed
+            </div>
+          </div>
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ calkOo sc-hHftDr kFVJVF"
+          >
+            <svg
+              height="9"
+              viewBox="0 0 29.4 9"
+              width="29.4"
+              x="0"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                transform="translate(1.000000, 4.000000)"
+              >
+                <path
+                  d="M20-4c0.1,0,0.2,0,0.2,0.1l0,0l7.9,4c0.3,0.1,0.4,0.5,0.2,0.7c-0.1,0.1-0.1,0.2-0.2,0.2l0,0
+			l-8,3.9c-0.3,0.1-0.6,0-0.7-0.2c0-0.1-0.1-0.2-0.1-0.2l0,0l0-3.5l-3.9,0C15.2,1,15,0.8,15,0.5l0-0.1C15,0.2,15.2,0,15.5,0l0,0
+			l3.9,0l0-3.5C19.4-3.7,19.6-4,20-4L20-4z M7.5-0.1l4,0c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5l0,0l-4,0C7.2,0.9,7,0.7,7,0.4
+			C7,0.1,7.2-0.1,7.5-0.1L7.5-0.1z M-0.5-0.2l4,0C3.8-0.1,4,0.1,4,0.4S3.8,0.9,3.5,0.9l0,0l-4,0C-0.8,0.8-1,0.6-1,0.3
+			C-1,0-0.8-0.2-0.5-0.2L-0.5-0.2z"
+                  fill="#5b82a7"
+                  fill-rule="nonzero"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr jkUzuV"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI sc-hHftDr fYuNSV"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dzgPqC sc-hHftDr sc-jmhFOf cLDXoV fwlXvy"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-check-circle fa-w-16 "
+                data-icon="check-circle"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <div
+              class="sc-fKFyDc dToKui sc-bBXqnf lijGUI"
+            >
+              and not clickable
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Steps Ordered 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW fLUTfi gKJALV sc-cbDGPM jfOLHm"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ cILJJc sc-hHftDr bRrPDa"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr jkUzuV"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI sc-hHftDr fYuNSV"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dzgPqC sc-hHftDr sc-jmhFOf cLDXoV fwlXvy"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-check-circle fa-w-16 "
+                data-icon="check-circle"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <div
+              class="sc-fKFyDc dToKui sc-bBXqnf lijGUI"
+            >
+              These are
+            </div>
+          </div>
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ calkOo sc-hHftDr kFVJVF"
+          >
+            <svg
+              height="9"
+              viewBox="0 0 29.4 9"
+              width="29.4"
+              x="0"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                transform="translate(1.000000, 4.000000)"
+              >
+                <path
+                  d="M20-4c0.1,0,0.2,0,0.2,0.1l0,0l7.9,4c0.3,0.1,0.4,0.5,0.2,0.7c-0.1,0.1-0.1,0.2-0.2,0.2l0,0
+			l-8,3.9c-0.3,0.1-0.6,0-0.7-0.2c0-0.1-0.1-0.2-0.1-0.2l0,0l0-3.5l-3.9,0C15.2,1,15,0.8,15,0.5l0-0.1C15,0.2,15.2,0,15.5,0l0,0
+			l3.9,0l0-3.5C19.4-3.7,19.6-4,20-4L20-4z M7.5-0.1l4,0c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5l0,0l-4,0C7.2,0.9,7,0.7,7,0.4
+			C7,0.1,7.2-0.1,7.5-0.1L7.5-0.1z M-0.5-0.2l4,0C3.8-0.1,4,0.1,4,0.4S3.8,0.9,3.5,0.9l0,0l-4,0C-0.8,0.8-1,0.6-1,0.3
+			C-1,0-0.8-0.2-0.5-0.2L-0.5-0.2z"
+                  fill="#5b82a7"
+                  fill-rule="nonzero"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr jkUzuV"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI sc-hHftDr fYuNSV"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ gCUzdd sc-hHftDr sc-jmhFOf cLDXoV fwlXvy fa-layers"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-circle fa-w-16 "
+                data-icon="circle"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                  fill="currentColor"
+                />
+              </svg>
+              <div
+                class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-dUrnRO vTCgF fa-layers-text fa-inverse"
+              >
+                2
+              </div>
+            </div>
+            <div
+              class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+            >
+              all completed
+            </div>
+          </div>
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ calkOo sc-hHftDr kFVJVF"
+          >
+            <svg
+              height="9"
+              viewBox="0 0 29.4 9"
+              width="29.4"
+              x="0"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                transform="translate(1.000000, 4.000000)"
+              >
+                <path
+                  d="M20-4c0.1,0,0.2,0,0.2,0.1l0,0l7.9,4c0.3,0.1,0.4,0.5,0.2,0.7c-0.1,0.1-0.1,0.2-0.2,0.2l0,0
+			l-8,3.9c-0.3,0.1-0.6,0-0.7-0.2c0-0.1-0.1-0.2-0.1-0.2l0,0l0-3.5l-3.9,0C15.2,1,15,0.8,15,0.5l0-0.1C15,0.2,15.2,0,15.5,0l0,0
+			l3.9,0l0-3.5C19.4-3.7,19.6-4,20-4L20-4z M7.5-0.1l4,0c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5l0,0l-4,0C7.2,0.9,7,0.7,7,0.4
+			C7,0.1,7.2-0.1,7.5-0.1L7.5-0.1z M-0.5-0.2l4,0C3.8-0.1,4,0.1,4,0.4S3.8,0.9,3.5,0.9l0,0l-4,0C-0.8,0.8-1,0.6-1,0.3
+			C-1,0-0.8-0.2-0.5-0.2L-0.5-0.2z"
+                  fill="#bbc8d6"
+                  fill-rule="nonzero"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr jkUzuV"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI sc-hHftDr fYuNSV"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dStBGr sc-hHftDr sc-jmhFOf cLDXoV fwlXvy fa-layers"
+            >
+              <div
+                class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-httYMd kHJtev"
+              />
+              <div
+                class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-dUrnRO vTCgF fa-layers-text"
+              >
+                3
+              </div>
+            </div>
+            <div
+              class="sc-fKFyDc dToKui sc-bBXqnf lijGUI"
+            >
+              and not clickable
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Steps With Custom Title 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW fLUTfi gKJALV sc-cbDGPM jfOLHm"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ jDRXQs sc-hHftDr kFVJVF"
+      >
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf bhypgL"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-map-signs fa-w-16 "
+            data-icon="map-signs"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M507.31 84.69L464 41.37c-6-6-14.14-9.37-22.63-9.37H288V16c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v16H56c-13.25 0-24 10.75-24 24v80c0 13.25 10.75 24 24 24h385.37c8.49 0 16.62-3.37 22.63-9.37l43.31-43.31c6.25-6.26 6.25-16.38 0-22.63zM224 496c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V384h-64v112zm232-272H288v-32h-64v32H70.63c-8.49 0-16.62 3.37-22.63 9.37L4.69 276.69c-6.25 6.25-6.25 16.38 0 22.63L48 342.63c6 6 14.14 9.37 22.63 9.37H456c13.25 0 24-10.75 24-24v-80c0-13.25-10.75-24-24-24z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+        <h6
+          class="sc-jcVebW jPGlzQ sc-dOSReg cTNgnc"
+        >
+          Beginners Guide
+        </h6>
+      </div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ cILJJc sc-hHftDr bRrPDa"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr jkUzuV"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI sc-hHftDr fYuNSV"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dzgPqC sc-hHftDr sc-jmhFOf cLDXoV fwlXvy"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-check-circle fa-w-16 "
+                data-icon="check-circle"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <div
+              class="sc-fKFyDc dToKui sc-bBXqnf lijGUI"
+            >
+              These are
+            </div>
+          </div>
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ calkOo sc-hHftDr kFVJVF"
+          >
+            <svg
+              height="9"
+              viewBox="0 0 29.4 9"
+              width="29.4"
+              x="0"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                transform="translate(1.000000, 4.000000)"
+              >
+                <path
+                  d="M20-4c0.1,0,0.2,0,0.2,0.1l0,0l7.9,4c0.3,0.1,0.4,0.5,0.2,0.7c-0.1,0.1-0.1,0.2-0.2,0.2l0,0
+			l-8,3.9c-0.3,0.1-0.6,0-0.7-0.2c0-0.1-0.1-0.2-0.1-0.2l0,0l0-3.5l-3.9,0C15.2,1,15,0.8,15,0.5l0-0.1C15,0.2,15.2,0,15.5,0l0,0
+			l3.9,0l0-3.5C19.4-3.7,19.6-4,20-4L20-4z M7.5-0.1l4,0c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5l0,0l-4,0C7.2,0.9,7,0.7,7,0.4
+			C7,0.1,7.2-0.1,7.5-0.1L7.5-0.1z M-0.5-0.2l4,0C3.8-0.1,4,0.1,4,0.4S3.8,0.9,3.5,0.9l0,0l-4,0C-0.8,0.8-1,0.6-1,0.3
+			C-1,0-0.8-0.2-0.5-0.2L-0.5-0.2z"
+                  fill="#5b82a7"
+                  fill-rule="nonzero"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr jkUzuV"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI sc-hHftDr fYuNSV"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dzgPqC sc-hHftDr sc-jmhFOf cLDXoV fwlXvy"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-check-circle fa-w-16 "
+                data-icon="check-circle"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <div
+              class="sc-fKFyDc dToKui sc-bBXqnf lijGUI"
+            >
+              all completed
+            </div>
+          </div>
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ calkOo sc-hHftDr kFVJVF"
+          >
+            <svg
+              height="9"
+              viewBox="0 0 29.4 9"
+              width="29.4"
+              x="0"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                transform="translate(1.000000, 4.000000)"
+              >
+                <path
+                  d="M20-4c0.1,0,0.2,0,0.2,0.1l0,0l7.9,4c0.3,0.1,0.4,0.5,0.2,0.7c-0.1,0.1-0.1,0.2-0.2,0.2l0,0
+			l-8,3.9c-0.3,0.1-0.6,0-0.7-0.2c0-0.1-0.1-0.2-0.1-0.2l0,0l0-3.5l-3.9,0C15.2,1,15,0.8,15,0.5l0-0.1C15,0.2,15.2,0,15.5,0l0,0
+			l3.9,0l0-3.5C19.4-3.7,19.6-4,20-4L20-4z M7.5-0.1l4,0c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5l0,0l-4,0C7.2,0.9,7,0.7,7,0.4
+			C7,0.1,7.2-0.1,7.5-0.1L7.5-0.1z M-0.5-0.2l4,0C3.8-0.1,4,0.1,4,0.4S3.8,0.9,3.5,0.9l0,0l-4,0C-0.8,0.8-1,0.6-1,0.3
+			C-1,0-0.8-0.2-0.5-0.2L-0.5-0.2z"
+                  fill="#5b82a7"
+                  fill-rule="nonzero"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr jkUzuV"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI sc-hHftDr fYuNSV"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dzgPqC sc-hHftDr sc-jmhFOf cLDXoV fwlXvy"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-check-circle fa-w-16 "
+                data-icon="check-circle"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <div
+              class="sc-fKFyDc dToKui sc-bBXqnf lijGUI"
+            >
+              and not clickable
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Steps Without Borders 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW fLUTfi jifnFy sc-cbDGPM jfOLHm"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ cILJJc sc-hHftDr bRrPDa"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr jkUzuV"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI sc-hHftDr fYuNSV"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dzgPqC sc-hHftDr sc-jmhFOf cLDXoV fwlXvy"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-check-circle fa-w-16 "
+                data-icon="check-circle"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <a
+              class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+              color="primary.main"
+            >
+              Doesn't have
+            </a>
+          </div>
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ calkOo sc-hHftDr kFVJVF"
+          >
+            <svg
+              height="9"
+              viewBox="0 0 29.4 9"
+              width="29.4"
+              x="0"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                transform="translate(1.000000, 4.000000)"
+              >
+                <path
+                  d="M20-4c0.1,0,0.2,0,0.2,0.1l0,0l7.9,4c0.3,0.1,0.4,0.5,0.2,0.7c-0.1,0.1-0.1,0.2-0.2,0.2l0,0
+			l-8,3.9c-0.3,0.1-0.6,0-0.7-0.2c0-0.1-0.1-0.2-0.1-0.2l0,0l0-3.5l-3.9,0C15.2,1,15,0.8,15,0.5l0-0.1C15,0.2,15.2,0,15.5,0l0,0
+			l3.9,0l0-3.5C19.4-3.7,19.6-4,20-4L20-4z M7.5-0.1l4,0c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5l0,0l-4,0C7.2,0.9,7,0.7,7,0.4
+			C7,0.1,7.2-0.1,7.5-0.1L7.5-0.1z M-0.5-0.2l4,0C3.8-0.1,4,0.1,4,0.4S3.8,0.9,3.5,0.9l0,0l-4,0C-0.8,0.8-1,0.6-1,0.3
+			C-1,0-0.8-0.2-0.5-0.2L-0.5-0.2z"
+                  fill="#5b82a7"
+                  fill-rule="nonzero"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr jkUzuV"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI sc-hHftDr fYuNSV"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dStBGr sc-hHftDr sc-jmhFOf cLDXoV fwlXvy"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-check-circle fa-w-16 "
+                data-icon="check-circle"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <a
+              class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+              color="primary.main"
+            >
+              Title or dismiss button
+            </a>
+          </div>
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ calkOo sc-hHftDr kFVJVF"
+          >
+            <svg
+              height="9"
+              viewBox="0 0 29.4 9"
+              width="29.4"
+              x="0"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                transform="translate(1.000000, 4.000000)"
+              >
+                <path
+                  d="M20-4c0.1,0,0.2,0,0.2,0.1l0,0l7.9,4c0.3,0.1,0.4,0.5,0.2,0.7c-0.1,0.1-0.1,0.2-0.2,0.2l0,0
+			l-8,3.9c-0.3,0.1-0.6,0-0.7-0.2c0-0.1-0.1-0.2-0.1-0.2l0,0l0-3.5l-3.9,0C15.2,1,15,0.8,15,0.5l0-0.1C15,0.2,15.2,0,15.5,0l0,0
+			l3.9,0l0-3.5C19.4-3.7,19.6-4,20-4L20-4z M7.5-0.1l4,0c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5l0,0l-4,0C7.2,0.9,7,0.7,7,0.4
+			C7,0.1,7.2-0.1,7.5-0.1L7.5-0.1z M-0.5-0.2l4,0C3.8-0.1,4,0.1,4,0.4S3.8,0.9,3.5,0.9l0,0l-4,0C-0.8,0.8-1,0.6-1,0.3
+			C-1,0-0.8-0.2-0.5-0.2L-0.5-0.2z"
+                  fill="#5b82a7"
+                  fill-rule="nonzero"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr jkUzuV"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI sc-hHftDr fYuNSV"
+          >
+            <a
+              class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+              color="primary.main"
+            >
+              That's it (no icon)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

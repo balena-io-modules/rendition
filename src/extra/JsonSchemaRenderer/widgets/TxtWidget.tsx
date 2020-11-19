@@ -3,7 +3,7 @@ import get from 'lodash/get';
 import invokeMap from 'lodash/invokeMap';
 import isArray from 'lodash/isArray';
 import styled from 'styled-components';
-import Txt from '../../../components/Txt';
+import { Txt } from '../../../components/Txt';
 import { JsonTypes, Value, UiSchema } from '../types';
 import { UiOption } from './ui-options';
 import { Widget, WidgetProps, formatTimestamp } from './widget-util';

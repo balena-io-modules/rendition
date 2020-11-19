@@ -4,12 +4,12 @@ import { JSONSchema7 as JSONSchema } from 'json-schema';
 import * as React from 'react';
 import { FiltersView, ViewScope } from '.';
 import { Box } from '../Box';
-import Button from '../Button';
+import { Button } from '../Button';
 import { Flex } from '../Flex';
-import Input from '../Input';
-import Modal from '../Modal';
-import Select from '../Select';
-import Txt from '../Txt';
+import { Input } from '../Input';
+import { Modal } from '../Modal';
+import { Select } from '../Select';
+import { Txt } from '../Txt';
 import FilterDescription from './FilterDescription';
 
 class FilterSummary extends React.Component<

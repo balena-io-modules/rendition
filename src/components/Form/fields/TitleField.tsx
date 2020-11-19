@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../../../asRendition';
-import { DefaultProps, Theme } from '../../../common-types';
+import { Theme } from '../../../common-types';
 import { px } from '../../../utils';
 
 export const LegendElement = styled.legend`
@@ -12,7 +12,7 @@ export const LegendElement = styled.legend`
 	width: 100%;
 `;
 
-export interface TitleFieldProps extends DefaultProps {
+export interface TitleFieldProps extends React.HTMLAttributes<HTMLElement> {
 	id: string;
 	required: boolean;
 	title?: string;

@@ -29,7 +29,7 @@ const ObjectFieldTemplate = (props: ObjectFieldTemplateProps) => {
 				flexWrap={responsive ? 'wrap' : 'nowrap'}
 			>
 				{props.properties.map((prop: any, index) => (
-					<Box mr={2} flex={flex[index] || 1}>
+					<Box key={index} mr={2} flex={flex[index] || 1}>
 						{prop.content}
 					</Box>
 				))}
