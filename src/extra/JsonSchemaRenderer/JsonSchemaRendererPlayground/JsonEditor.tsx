@@ -10,7 +10,7 @@ import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons/faExclama
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons/faCheckCircle';
 import { Flex } from '../../../components/Flex';
 import { Box } from '../../../components/Box';
-import Heading from '../../../components/Heading';
+import { Heading } from '../../../components/Heading';
 
 const EditorWrapper = styled(Flex)<{ isValid: boolean }>`
 	border: 1px solid
@@ -107,7 +107,7 @@ const JsonEditor = ({
 	}, [schema]);
 
 	return (
-		<Flex flex="1 1 0" flexDirection="column">
+		<Flex flex="1 1 100px" flexDirection="column">
 			<Flex justifyContent="space-between" alignItems="center">
 				{title && <Heading.h5>{title}</Heading.h5>}
 				<ValidationBox

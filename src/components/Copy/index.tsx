@@ -30,7 +30,7 @@ const CopyContainer = styled(Flex)<{
 	}
 `;
 
-export default ({
+const BaseCopy = ({
 	content,
 	show,
 	children,
@@ -65,11 +65,22 @@ export default ({
 	);
 };
 
-export interface InternalCopyProps extends Omit<FlexProps, 'onClick'> {
+interface InternalCopyProps extends Omit<FlexProps, 'onClick'> {
+	/** The value that should be copied to the clipboard */
 	content: string;
+	/** Optionally show the copy button on hover or always show the button */
 	show?: 'hover' | 'always';
+	/** onClick handler, useful if you wish to do other actions after content was copied */
 	onClick?: (content: string) => void;
+	/** The content next to which the clipboard button should be shown */
 	children?: React.ReactNode;
 }
 
 export type CopyProps = InternalCopyProps & RenditionSystemProps;
+
+/**
+ * Wrapper that adds a "copy to clipboard" button to any component and copies the passed content to the user's clipboard.
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Copy/Copy.stories.tsx)
+ */
+export const Copy = BaseCopy;

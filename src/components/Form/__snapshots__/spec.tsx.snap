@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form component description keyword should support markdown 1`] = `"<div id=\\"root_foo__description\\" class=\\"sc-fKFyDc dToKui sc-bBXqnf jWZcsF sc-dFJsGO cwIjin rendition-form-description\\"><div><p class=\\"sc-fKFyDc dToKui sc-cxFLnm kkkmRH\\">Lorem ipsum <em>dolor</em> sit amet</p></div></div>"`;
+
+exports[`Form component ui:help keyword should support markdown 1`] = `"<div class=\\"sc-fKFyDc dToKui sc-bBXqnf jhEXsA sc-dFJsGO cwIjin rendition-form-help\\"><div><p class=\\"sc-fKFyDc dToKui sc-cxFLnm eyKWrE\\">Lorem ipsum <em>dolor</em> sit amet</p></div></div>"`;

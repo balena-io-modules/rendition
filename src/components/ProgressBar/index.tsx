@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import {
 	Coloring,
-	DefaultProps,
 	RenditionSystemProps,
 	Sizing,
 	Theme,
@@ -94,11 +93,13 @@ const Base = ({
 };
 
 export interface InternalProgressBarProps
-	extends DefaultProps,
+	extends React.HTMLAttributes<HTMLElement>,
 		Coloring,
 		Sizing {
+	/** A value between 1 and 100 that represents the progress */
 	value: number;
 	color?: string;
+	/** A CSS color string to use for the progress bar */
 	background?: string;
 }
 
@@ -108,8 +109,11 @@ export interface ThemedProgressBarProps extends InternalProgressBarProps {
 
 export type ProgressBarProps = InternalProgressBarProps & RenditionSystemProps;
 
-export default asRendition<React.FunctionComponent<ProgressBarProps>>(
-	Base,
-	[getType, setTypeProps],
-	['color'],
-);
+/**
+ * Displays a progress bar using a value representing a percentage.
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/ProgressBar/ProgressBar.stories.tsx)
+ */
+export const ProgressBar = asRendition<
+	React.FunctionComponent<ProgressBarProps>
+>(Base, [getType, setTypeProps], ['color']);

@@ -28,7 +28,7 @@ tsifyFileContent(
 )
 
 tsifyFileContent(
-  require.resolve('highlight.js/styles/default.css'),
+  require.resolve('prismjs/themes/prism.css'),
   './src/extra/Markdown/defaultStyle.ts',
   postProcessor
 )

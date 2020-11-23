@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/Txt Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+    >
+      Standard
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Txt In Color 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-fKFyDc dToKui sc-bBXqnf kRESjy"
+    >
+      Colored text
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Txt Span Component 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <span
+      class="sc-fKFyDc kIYkoy sc-iwyYcG bsaCCL"
+    >
+      Space   is   preserved
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Txt Styled 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-fKFyDc iGtGWQ sc-bBXqnf kYwmpI"
+    >
+      Styled text
+    </div>
+  </div>
+</div>
+`;

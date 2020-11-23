@@ -2,7 +2,7 @@ import { JSONSchema7 as JSONSchema } from 'json-schema';
 import * as React from 'react';
 import { randomString } from '../../utils';
 import { DataTypeEditProps } from '../Filters';
-import Select, { SelectProps } from '../Select';
+import { Select, SelectProps } from '../Select';
 import { getJsonDescription } from './utils';
 
 export const operators = {

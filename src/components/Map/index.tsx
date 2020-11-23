@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-import { DefaultProps } from '../../common-types';
 import { Box } from '../Box';
 
 export interface UIMarker {
@@ -110,7 +109,7 @@ const getFieldFromMap = <T extends any>(
 	}
 };
 
-const Map = <T extends any>({
+const BaseMap = <T extends any>({
 	className,
 	data = [],
 	dataMap,
@@ -182,18 +181,25 @@ const Map = <T extends any>({
 };
 
 // Make name optional, and override onChange to not be of `any` type.
-export interface MapProps<T> extends DefaultProps {
+export interface MapProps<T> extends React.HTMLAttributes<HTMLElement> {
+	/** Google maps API key */
 	apiKey: string;
+	/** Passes the data that you wish to be used as a basis for rendering the map pins */
 	data: T[];
+	/** A mapping object between your data and location-specific fields (like latitude) */
 	dataMap: {
 		lat: keyof T | ((item: T) => number | undefined);
 		lng: keyof T | ((item: T) => number | undefined);
 		id: keyof T | ((item: T) => number | string | undefined);
 		title: keyof T | ((item: T) => string | undefined);
 	};
+	/** Function that returns an icon based on the data entry */
 	getIcon?: (item: T) => string | undefined;
+	/** Callback function when an item on the map was clicked */
 	onItemClick?: (item: T) => void;
+	/** Event triggered on map click that includes the clicked location's longitude and latitude */
 	mapClick?: (e: google.maps.MouseEvent) => void;
 }
 
-export default Map;
+/** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Map/Map.stories.tsx) */
+export const Map = BaseMap;

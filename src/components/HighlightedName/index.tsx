@@ -3,15 +3,15 @@ import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { Coloring, RenditionSystemProps, Theme } from '../../common-types';
 import { generateColorFromString, getColor, isLight } from '../../utils';
-import Txt, { TxtProps } from '../Txt';
+import { Txt, TxtProps } from '../Txt';
 
-const BaseHighlightedName = styled(Txt.span)`
+const Base = styled(Txt.span)`
 	display: inline-block;
 	border-radius: 2px;
 	line-height: 1;
 `;
 
-const HighlightedName = ({
+const BaseHighlightedName = ({
 	children,
 	className,
 	theme,
@@ -29,7 +29,7 @@ const HighlightedName = ({
 		generateColorFromString(children);
 
 	return (
-		<BaseHighlightedName
+		<Base
 			{...props}
 			className={className}
 			p={2}
@@ -38,11 +38,12 @@ const HighlightedName = ({
 			bg={bgColor}
 		>
 			{children}
-		</BaseHighlightedName>
+		</Base>
 	);
 };
 
 export interface InternalHighlightedNameProps extends TxtProps, Coloring {
+	/** The text to display inside the highlighted name */
 	children: string;
 	className?: string;
 	color?: string;
@@ -57,8 +58,11 @@ export interface ThemedHighlightedNameProps
 export type HighlightedNameProps = InternalHighlightedNameProps &
 	RenditionSystemProps;
 
-export default asRendition<React.FunctionComponent<HighlightedNameProps>>(
-	HighlightedName,
-	[],
-	['bg', 'color'],
-);
+/**
+ * By default, the background color of a HighlightedName component is generated automatically from its children (which must be a string), though this can be overridden.
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/HighlightedName/HighlightedName.stories.tsx)
+ */
+export const HighlightedName = asRendition<
+	React.FunctionComponent<HighlightedNameProps>
+>(BaseHighlightedName, [], ['bg', 'color']);

@@ -1,0 +1,304 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Extra/MarkdownEditor Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-dRPiIx eqsPMB"
+      id="simplemde-editor-2-wrapper"
+    >
+      <textarea
+        id="simplemde-editor-2"
+        style="display: none;"
+      />
+      <div
+        class="EasyMDEContainer"
+      >
+        <div
+          class="editor-toolbar"
+        >
+          <button
+            class="bold"
+            tabindex="-1"
+            title="Bold (Ctrl-B)"
+            type="button"
+          >
+            <i
+              class="fa fa-bold"
+            />
+          </button>
+          <button
+            class="italic"
+            tabindex="-1"
+            title="Italic (Ctrl-I)"
+            type="button"
+          >
+            <i
+              class="fa fa-italic"
+            />
+          </button>
+          <button
+            class="heading"
+            tabindex="-1"
+            title="Heading (Ctrl-H)"
+            type="button"
+          >
+            <i
+              class="fa fa-header fa-heading"
+            />
+          </button>
+          <i
+            class="separator"
+          >
+            |
+          </i>
+          <button
+            class="code"
+            tabindex="-1"
+            title="Code (Ctrl-Alt-C)"
+            type="button"
+          >
+            <i
+              class="fa fa-code"
+            />
+          </button>
+          <button
+            class="quote"
+            tabindex="-1"
+            title="Quote (Ctrl-')"
+            type="button"
+          >
+            <i
+              class="fa fa-quote-left"
+            />
+          </button>
+          <button
+            class="unordered-list"
+            tabindex="-1"
+            title="Generic List (Ctrl-L)"
+            type="button"
+          >
+            <i
+              class="fa fa-list-ul"
+            />
+          </button>
+          <button
+            class="ordered-list"
+            tabindex="-1"
+            title="Numbered List (Ctrl-Alt-L)"
+            type="button"
+          >
+            <i
+              class="fa fa-list-ol"
+            />
+          </button>
+          <i
+            class="separator"
+          >
+            |
+          </i>
+          <button
+            class="link"
+            tabindex="-1"
+            title="Create Link (Ctrl-K)"
+            type="button"
+          >
+            <i
+              class="fa fa-link"
+            />
+          </button>
+          <button
+            class="image"
+            tabindex="-1"
+            title="Insert Image (Ctrl-Alt-I)"
+            type="button"
+          >
+            <i
+              class="fa fa-image"
+            />
+          </button>
+          <button
+            class="table"
+            tabindex="-1"
+            title="Insert Table"
+            type="button"
+          >
+            <i
+              class="fa fa-table"
+            />
+          </button>
+          <i
+            class="separator"
+          >
+            |
+          </i>
+          <button
+            class="preview no-disable"
+            tabindex="-1"
+            title="Toggle Preview (Ctrl-P)"
+            type="button"
+          >
+            <i
+              class="fa fa-eye"
+            />
+          </button>
+          <button
+            class="side-by-side no-disable no-mobile"
+            tabindex="-1"
+            title="Toggle Side by Side (F9)"
+            type="button"
+          >
+            <i
+              class="fa fa-columns"
+            />
+          </button>
+          <button
+            class="fullscreen no-disable no-mobile"
+            tabindex="-1"
+            title="Toggle Fullscreen (F11)"
+            type="button"
+          >
+            <i
+              class="fa fa-arrows-alt"
+            />
+          </button>
+          <i
+            class="separator"
+          >
+            |
+          </i>
+          <button
+            class="guide no-disable"
+            tabindex="-1"
+            title="Markdown Guide"
+            type="button"
+          >
+            <i
+              class="fa fa-question-circle"
+            />
+          </button>
+        </div>
+        <div
+          class="CodeMirror cm-s-easymde CodeMirror-wrap"
+        >
+          <div
+            style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 0px;"
+          >
+            <textarea
+              autocapitalize="off"
+              autocorrect="off"
+              spellcheck="false"
+              style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"
+              tabindex="0"
+            />
+          </div>
+          <div
+            class="CodeMirror-vscrollbar"
+            cm-not-content="true"
+            style="display: block; bottom: 0px;"
+            tabindex="-1"
+          >
+            <div
+              style="min-width: 1px; height: 480px;"
+            />
+          </div>
+          <div
+            class="CodeMirror-hscrollbar"
+            cm-not-content="true"
+            tabindex="-1"
+          >
+            <div
+              style="height: 100%; min-height: 1px; width: 0px;"
+            />
+          </div>
+          <div
+            class="CodeMirror-scrollbar-filler"
+            cm-not-content="true"
+          />
+          <div
+            class="CodeMirror-gutter-filler"
+            cm-not-content="true"
+          />
+          <div
+            class="CodeMirror-scroll"
+            style="min-height: 300px;"
+            tabindex="-1"
+          >
+            <div
+              class="CodeMirror-sizer"
+              style="margin-left: 0px; padding-right: 0px; padding-bottom: 0px;"
+            >
+              <div
+                style="position: relative;"
+              >
+                <div
+                  class="CodeMirror-lines"
+                  role="presentation"
+                >
+                  <div
+                    role="presentation"
+                    style="position: relative; outline: none;"
+                  >
+                    <div
+                      class="CodeMirror-measure"
+                    >
+                      <span>
+                        <span>
+                          ​
+                        </span>
+                        x
+                      </span>
+                    </div>
+                    <div
+                      class="CodeMirror-measure"
+                    >
+                      <pre
+                        class="CodeMirror-line"
+                        role="presentation"
+                      >
+                        <span
+                          role="presentation"
+                          style="padding-right: .1px;"
+                        >
+                          <span
+                            cm-text=""
+                            style="display: inline-block; width: 1px; margin-right: -1px;"
+                          >
+                             
+                          </span>
+                        </span>
+                      </pre>
+                    </div>
+                    <div
+                      style="position: relative; z-index: 1;"
+                    />
+                    <div
+                      class="CodeMirror-cursors"
+                    />
+                    <div
+                      class="CodeMirror-code"
+                      role="presentation"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              style="position: absolute; height: 50px; width: 1px; border-bottom: 0px solid transparent;"
+            />
+            <div
+              class="CodeMirror-gutters"
+              style="display: none;"
+            />
+          </div>
+        </div>
+        <div
+          class="editor-preview-side editor-preview"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

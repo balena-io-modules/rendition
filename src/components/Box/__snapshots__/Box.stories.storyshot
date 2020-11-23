@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/Box Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP"
+    >
+      <div
+        class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+      >
+        I'm in a Box!
+      </div>
+    </div>
+  </div>
+</div>
+`;

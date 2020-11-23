@@ -8,9 +8,9 @@ import { RenditionSystemProps } from '../../common-types';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 import { px } from '../../utils';
 import { Box } from '../Box';
-import Button, { ButtonProps } from '../Button';
-import Divider from '../Divider';
-import Fixed from '../Fixed';
+import { Button, ButtonProps } from '../Button';
+import { Divider } from '../Divider';
+import { Fixed } from '../Fixed';
 import { Flex } from '../Flex';
 
 const TOGGLE_BUTTON_X_PADDING = 16;
@@ -141,7 +141,7 @@ interface DropDownButtonState {
 	minWidth: number;
 }
 
-class DropDownButton extends React.Component<
+class BaseDropDownButton extends React.Component<
 	InternalDropDownButtonProps,
 	DropDownButtonState
 > {
@@ -266,19 +266,30 @@ class DropDownButton extends React.Component<
 }
 
 export interface InternalDropDownButtonProps extends ButtonProps {
+	/** Optionally provide a JSX element that will be displayed inside the main button */
 	label?: string | JSX.Element;
+	/** If true, place a border between each item in the dropdown */
 	border?: boolean;
+	/** If true, render the component as a single button instead of two */
 	joined?: boolean;
+	/** If true, put the dropdown list on the right */
 	alignRight?: boolean;
+	/** If true, render children as a single JSX element instead of iterating over each of them */
 	noListFormat?: boolean;
+	/** If setted, it defines the maximum height of the dropdown list */
 	listMaxHeight?: string | number;
 }
 
 export type DropDownButtonProps = InternalDropDownButtonProps &
 	RenditionSystemProps;
 
-export default asRendition<
+/**
+ * Displays a button with an attached dropdown list, `children` of the component are rendered inside a dropdown list.
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/DropDownButton/DropDownButton.stories.tsx)
+ */
+export const DropDownButton = asRendition<
 	React.ForwardRefExoticComponent<
-		DropDownButtonProps & React.RefAttributes<DropDownButton>
+		DropDownButtonProps & React.RefAttributes<BaseDropDownButton>
 	>
->(DropDownButton, [], ['color', 'bg', 'backgroundColor']);
+>(BaseDropDownButton, [], ['color', 'bg', 'backgroundColor']);

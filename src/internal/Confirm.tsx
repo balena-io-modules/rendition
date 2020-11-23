@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box } from '../components/Box';
-import Button from '../components/Button';
-import Popover, { PopoverProps, PopoverOptions } from '../components/Popover';
+import { Button } from '../components/Button';
+import { Popover, PopoverProps, PopoverOptions } from '../components/Popover';
 
 export interface ConfirmOptions extends PopoverOptions {
 	text: React.ClassicElement<any> | string;
@@ -68,9 +68,10 @@ export function withConfirm<T extends {}>(
 	return React.forwardRef<T, ForwardedComponentProps<T>>(
 		({ onClick, confirmation, ...rest }, ref) => {
 			const targetRef = useForwardedRef(ref);
-			const [clickEvent, setClickEvent] = React.useState<React.SyntheticEvent<
-				T
-			> | null>(null);
+			const [
+				clickEvent,
+				setClickEvent,
+			] = React.useState<React.SyntheticEvent<T> | null>(null);
 
 			const handleOk = React.useCallback(() => {
 				if (onClick) {

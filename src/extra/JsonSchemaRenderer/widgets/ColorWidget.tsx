@@ -6,7 +6,7 @@
 
 import React from 'react';
 import { Flex } from '../../../components/Flex';
-import Txt from '../../../components/Txt';
+import { Txt } from '../../../components/Txt';
 import { JsonTypes } from '../types';
 import { UiOption } from './ui-options';
 import { Widget, WidgetProps } from './widget-util';

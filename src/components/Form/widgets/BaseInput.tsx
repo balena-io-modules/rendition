@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Input from '../../Input';
+import { Input } from '../../Input';
 import { FormWidgetProps } from '../';
 
 const filterSuggestions = (text: string | null, suggestions?: string[]) => {

@@ -4,7 +4,7 @@ import {
 } from 'grommet';
 import * as React from 'react';
 import styled from 'styled-components';
-import { DefaultProps, RenditionSystemProps } from '../../common-types';
+import { RenditionSystemProps } from '../../common-types';
 import { px } from '../../utils';
 
 import asRendition from '../../asRendition';
@@ -69,7 +69,7 @@ const CheckboxWrapper = styled.div<{ isChecked?: boolean }>`
 	${getHoverStyle}
 `;
 
-const Checkbox = ({ className, ...otherProps }: InternalCheckboxProps) => {
+const BaseCheckbox = ({ className, ...otherProps }: InternalCheckboxProps) => {
 	return (
 		<CheckboxWrapper isChecked={otherProps.checked} className={className}>
 			<GrommetCheckbox {...otherProps} />
@@ -78,11 +78,14 @@ const Checkbox = ({ className, ...otherProps }: InternalCheckboxProps) => {
 };
 
 export interface InternalCheckboxProps
-	extends DefaultProps,
+	extends React.HTMLAttributes<HTMLElement>,
 		GrommetCheckBoxProps {
 	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export type CheckboxProps = InternalCheckboxProps & RenditionSystemProps;
 
-export default asRendition<React.FunctionComponent<CheckboxProps>>(Checkbox);
+/** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Checkbox/Checkbox.stories.tsx) */
+export const Checkbox = asRendition<React.FunctionComponent<CheckboxProps>>(
+	BaseCheckbox,
+);

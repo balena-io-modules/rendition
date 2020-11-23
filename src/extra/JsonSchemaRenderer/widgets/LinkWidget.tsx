@@ -1,6 +1,6 @@
 import * as React from 'react';
 import get from 'lodash/get';
-import Link from '../../../components/Link';
+import { Link } from '../../../components/Link';
 import { UiOption } from './ui-options';
 import { Widget, WidgetProps } from './widget-util';
 import { JsonTypes } from '../types';

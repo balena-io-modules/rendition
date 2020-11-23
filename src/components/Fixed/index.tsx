@@ -2,11 +2,7 @@ import defaultTo from 'lodash/defaultTo';
 import { withProps } from 'recompose';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
-import {
-	DefaultProps,
-	RenditionSystemProps,
-	ResponsiveStyle,
-} from '../../common-types';
+import { RenditionSystemProps, ResponsiveStyle } from '../../common-types';
 
 const Base = styled.div<FixedBaseProps>`
 	position: fixed;
@@ -27,7 +23,7 @@ const dimensions = withProps((props: FixedProps) => {
 	};
 });
 
-interface FixedBaseProps extends DefaultProps {
+interface FixedBaseProps extends React.HTMLAttributes<HTMLElement> {
 	top?: ResponsiveStyle;
 	right?: ResponsiveStyle;
 	bottom?: ResponsiveStyle;
@@ -36,18 +32,28 @@ interface FixedBaseProps extends DefaultProps {
 	bg?: string;
 }
 
-export interface InternalFixedProps extends DefaultProps {
+export interface InternalFixedProps extends React.HTMLAttributes<HTMLElement> {
+	/** Sets the distance to the top of the containing block. If true, sets the value to zero */
 	top?: boolean | ResponsiveStyle;
+	/** Sets the distance to the right of the containing block. If true, sets the value to zero */
 	right?: boolean | ResponsiveStyle;
+	/** Sets the distance to the bottom of the containing block. If true, sets the value to zero */
 	bottom?: boolean | ResponsiveStyle;
+	/** Sets the distance to the left of the containing block. If true, sets the value to zero */
 	left?: boolean | ResponsiveStyle;
+	/** Sets the z-index of the component */
 	z?: ResponsiveStyle;
 	bg?: string;
 }
 
 export type FixedProps = InternalFixedProps & RenditionSystemProps;
 
-export default asRendition<
+/**
+ * Displays an element with a [fixed](https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed) position.
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Fixed/Fixed.stories.tsx)
+ */
+export const Fixed = asRendition<
 	React.ForwardRefExoticComponent<
 		FixedProps & React.RefAttributes<HTMLDivElement>
 	>

@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/Textarea Auto Rows 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <textarea
+      class="StyledTextArea-sc-17i3mwp-0 cICwEP sc-eJMQSu cfWEDV sc-nFpLZ jNUxxL"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Textarea Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <textarea
+      class="StyledTextArea-sc-17i3mwp-0 cICwEP sc-eJMQSu cfWEDV sc-nFpLZ jNUxxL"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Textarea Disabled 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <textarea
+      class="StyledTextArea-sc-17i3mwp-0 izGVYB sc-eJMQSu crWXjy sc-nFpLZ jNUxxL"
+      disabled=""
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Textarea Min Max Rows 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <textarea
+      class="StyledTextArea-sc-17i3mwp-0 cICwEP sc-eJMQSu cfWEDV sc-nFpLZ jNUxxL"
+      rows="4"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Textarea Monospace 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <textarea
+      class="StyledTextArea-sc-17i3mwp-0 cICwEP sc-eJMQSu crbfos sc-nFpLZ jNUxxL"
+      placeholder="Type something..."
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Textarea Read Only 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <textarea
+      class="StyledTextArea-sc-17i3mwp-0 cICwEP sc-eJMQSu cfWEDV sc-nFpLZ jNUxxL"
+      readonly=""
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Textarea With Placeholder 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <textarea
+      class="StyledTextArea-sc-17i3mwp-0 cICwEP sc-eJMQSu cfWEDV sc-nFpLZ jNUxxL"
+      placeholder="Type something..."
+    />
+  </div>
+</div>
+`;

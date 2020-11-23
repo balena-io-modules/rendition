@@ -5,7 +5,7 @@ import {
 import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
-import { DefaultProps, Omit, RenditionSystemProps } from '../../common-types';
+import { Omit, RenditionSystemProps } from '../../common-types';
 import { px } from '../../utils';
 import { Theme } from '~/theme';
 
@@ -41,7 +41,7 @@ const Container = styled.div<ContainerProps>`
 // Issue in grommet: https://github.com/grommet/grommet/issues/3156
 
 // TODO: Make the select borders darker when the Select is open. Opened an issue in grommet: https://github.com/grommet/grommet/issues/3157
-function Select<T>({
+function BaseSelect<T>({
 	size,
 	selected,
 	focusIndicator,
@@ -70,7 +70,10 @@ interface ContainerProps {
 
 interface InternalSelectProps<T>
 	extends AdjustedGrommetSelectProps,
-		Omit<DefaultProps, 'onChange'> {
+		Omit<
+			React.HTMLAttributes<HTMLElement>,
+			'onChange' | 'children' | 'placeholder' | 'color'
+		> {
 	emphasized?: boolean;
 	invalid?: boolean;
 	onChange: (data: {
@@ -95,6 +98,7 @@ export interface SelectProps<T>
 		>,
 		RenditionSystemProps {}
 
-export default asRendition<
+/** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Select/Select.stories.tsx) */
+export const Select = asRendition<
 	<T extends {}>(props: SelectProps<T>) => JSX.Element
->(Select);
+>(BaseSelect);

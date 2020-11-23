@@ -1,10 +1,10 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
-import { DefaultProps, RenditionSystemProps } from '../../common-types';
+import { RenditionSystemProps } from '../../common-types';
 import { px } from '../../utils';
 import { Flex } from '../Flex';
-import Txt from '../Txt';
+import { Txt } from '../Txt';
 
 const Base = styled.hr<InternalDividerProps>`
 	border: 0 none;
@@ -26,14 +26,19 @@ const FlexBase = styled(Base)`
 	margin: auto;
 `;
 
-export interface InternalDividerProps extends DefaultProps {
+export interface InternalDividerProps
+	extends React.HTMLAttributes<HTMLElement> {
+	/** The height of the divider */
 	height?: number;
+	/** The color of the divider */
 	color?: string;
+	/** Textual explanation to go in the middle of the divider */
 	children?: string;
+	/** The type of the divider */
 	type?: 'solid' | 'dashed';
 }
 
-const Divider = React.forwardRef(
+const BaseDivider = React.forwardRef(
 	({ children, className, ...otherProps }: InternalDividerProps, ref) => {
 		if (!children) {
 			return <Base className={className} {...otherProps} ref={ref as any} />;
@@ -65,8 +70,13 @@ const Divider = React.forwardRef(
 
 export type DividerProps = InternalDividerProps & RenditionSystemProps;
 
-export default asRendition<
+/**
+ * A styled horizontal rule.
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Divider/Divider.stories.tsx)
+ */
+export const Divider = asRendition<
 	React.ForwardRefExoticComponent<
 		DividerProps & React.RefAttributes<HTMLHRElement>
 	>
->(Divider, [], ['color', 'height']);
+>(BaseDivider, [], ['color', 'height']);

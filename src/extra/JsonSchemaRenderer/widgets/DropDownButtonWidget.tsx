@@ -2,7 +2,7 @@ import * as React from 'react';
 import isArray from 'lodash/isArray';
 import get from 'lodash/get';
 import map from 'lodash/map';
-import DropDownButton from '../../../components/DropDownButton';
+import { DropDownButton } from '../../../components/DropDownButton';
 import { Widget, WidgetProps, getArrayItems } from './widget-util';
 import { JsonTypes } from '../types';
 import { UiOption } from './ui-options';

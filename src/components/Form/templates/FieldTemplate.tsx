@@ -5,7 +5,7 @@ import { Markdown } from '../../../extra/Markdown';
 import Theme from '../../../theme';
 import { LabelElement } from '../LabelElement';
 import { WarningField } from '../WarningField';
-import Txt from '../../Txt';
+import { Txt } from '../../Txt';
 
 const REQUIRED_FIELD_SYMBOL = '*';
 

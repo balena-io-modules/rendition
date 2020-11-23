@@ -4,82 +4,140 @@
 import { css } from 'styled-components';
 
 export default css`
-	.hljs {
-		display: block;
-		overflow-x: auto;
-		padding: 0.5em;
-		background: #f0f0f0;
+	code[class*='language-'],
+	pre[class*='language-'] {
+		color: black;
+		background: none;
+		text-shadow: 0 1px white;
+		font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+		font-size: 1em;
+		text-align: left;
+		white-space: pre;
+		word-spacing: normal;
+		word-break: normal;
+		word-wrap: normal;
+		line-height: 1.5;
+
+		-moz-tab-size: 4;
+		-o-tab-size: 4;
+		tab-size: 4;
+
+		-webkit-hyphens: none;
+		-moz-hyphens: none;
+		-ms-hyphens: none;
+		hyphens: none;
 	}
 
-	.hljs,
-	.hljs-subst {
-		color: #444;
+	pre[class*='language-']::-moz-selection,
+	pre[class*='language-'] ::-moz-selection,
+	code[class*='language-']::-moz-selection,
+	code[class*='language-'] ::-moz-selection {
+		text-shadow: none;
+		background: #b3d4fc;
 	}
 
-	.hljs-comment {
-		color: #888888;
+	pre[class*='language-']::selection,
+	pre[class*='language-'] ::selection,
+	code[class*='language-']::selection,
+	code[class*='language-'] ::selection {
+		text-shadow: none;
+		background: #b3d4fc;
 	}
 
-	.hljs-keyword,
-	.hljs-attribute,
-	.hljs-selector-tag,
-	.hljs-meta-keyword,
-	.hljs-doctag,
-	.hljs-name {
+	@media print {
+		code[class*='language-'],
+		pre[class*='language-'] {
+			text-shadow: none;
+		}
+	}
+
+	pre[class*='language-'] {
+		padding: 1em;
+		margin: 0.5em 0;
+		overflow: auto;
+	}
+
+	:not(pre) > code[class*='language-'],
+	pre[class*='language-'] {
+		background: #f5f2f0;
+	}
+
+	:not(pre) > code[class*='language-'] {
+		padding: 0.1em;
+		border-radius: 0.3em;
+		white-space: normal;
+	}
+
+	.token.comment,
+	.token.prolog,
+	.token.doctype,
+	.token.cdata {
+		color: slategray;
+	}
+
+	.token.punctuation {
+		color: #999;
+	}
+
+	.token.namespace {
+		opacity: 0.7;
+	}
+
+	.token.property,
+	.token.tag,
+	.token.boolean,
+	.token.number,
+	.token.constant,
+	.token.symbol,
+	.token.deleted {
+		color: #905;
+	}
+
+	.token.selector,
+	.token.attr-name,
+	.token.string,
+	.token.char,
+	.token.builtin,
+	.token.inserted {
+		color: #690;
+	}
+
+	.token.operator,
+	.token.entity,
+	.token.url,
+	.language-css .token.string,
+	.style .token.string {
+		color: #9a6e3a;
+
+		background: hsla(0, 0%, 100%, 0.5);
+	}
+
+	.token.atrule,
+	.token.attr-value,
+	.token.keyword {
+		color: #07a;
+	}
+
+	.token.function,
+	.token.class-name {
+		color: #dd4a68;
+	}
+
+	.token.regex,
+	.token.important,
+	.token.variable {
+		color: #e90;
+	}
+
+	.token.important,
+	.token.bold {
 		font-weight: bold;
 	}
-
-	.hljs-type,
-	.hljs-string,
-	.hljs-number,
-	.hljs-selector-id,
-	.hljs-selector-class,
-	.hljs-quote,
-	.hljs-template-tag,
-	.hljs-deletion {
-		color: #880000;
-	}
-
-	.hljs-title,
-	.hljs-section {
-		color: #880000;
-		font-weight: bold;
-	}
-
-	.hljs-regexp,
-	.hljs-symbol,
-	.hljs-variable,
-	.hljs-template-variable,
-	.hljs-link,
-	.hljs-selector-attr,
-	.hljs-selector-pseudo {
-		color: #bc6060;
-	}
-
-	.hljs-literal {
-		color: #78a960;
-	}
-
-	.hljs-built_in,
-	.hljs-bullet,
-	.hljs-code,
-	.hljs-addition {
-		color: #397300;
-	}
-
-	.hljs-meta {
-		color: #1f7199;
-	}
-
-	.hljs-meta-string {
-		color: #4d99bf;
-	}
-
-	.hljs-emphasis {
+	.token.italic {
 		font-style: italic;
 	}
 
-	.hljs-strong {
-		font-weight: bold;
+	.token.entity {
+		cursor: help;
 	}
 `;

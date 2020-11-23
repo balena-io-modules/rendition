@@ -4,9 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import { compose, withProps } from 'recompose';
 import styled from 'styled-components';
-import { DefaultProps } from '../../common-types';
 import { Box, BoxProps } from '../Box';
-import Container from '../Container';
+import { Container } from '../Container';
 import { Flex, FlexProps } from '../Flex';
 
 const BrandBox = styled(Box)`
@@ -35,7 +34,7 @@ interface NavbarState {
 	open: boolean;
 }
 
-class Navbar extends React.Component<NavbarProps, NavbarState> {
+class BaseNavbar extends React.Component<NavbarProps, NavbarState> {
 	constructor(props: NavbarProps) {
 		super(props);
 		this.state = {
@@ -116,12 +115,18 @@ const setDefaultProps = withProps((props: NavbarProps) => {
 	);
 });
 
-export interface NavbarProps extends DefaultProps {
+export interface NavbarProps extends React.HTMLAttributes<HTMLElement> {
+	/** A JSX element used as the main branding in the navbar */
 	brand?: JSX.Element;
 }
 
-export default (compose(setDefaultProps)(
-	Navbar,
+/**
+ * A component used to render a navigation bar.
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Navbar/Navbar.stories.tsx)
+ */
+export const Navbar = (compose(setDefaultProps)(
+	BaseNavbar,
 ) as unknown) as React.ForwardRefExoticComponent<
-	NavbarProps & React.RefAttributes<Navbar>
+	NavbarProps & React.RefAttributes<BaseNavbar>
 >;

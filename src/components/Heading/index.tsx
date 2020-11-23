@@ -2,12 +2,12 @@ import * as React from 'react';
 import { withProps } from 'recompose';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
-import { DefaultProps, RenditionSystemProps } from '../../common-types';
+import { RenditionSystemProps } from '../../common-types';
 import { monospace } from '../../utils';
 import { FlexProps } from '../Flex';
 import { align, bold, caps } from '../Txt';
 
-const Heading = styled.h3<InternalHeadingProps>`
+const BaseHeading = styled.h3<InternalHeadingProps>`
 	font-weight: normal;
 	${align}
 	${monospace};
@@ -15,7 +15,7 @@ const Heading = styled.h3<InternalHeadingProps>`
 	${bold}
 `;
 
-Heading.displayName = 'Heading';
+BaseHeading.displayName = 'Heading';
 const setDefaultProps = withProps((props: FlexProps) => {
 	return Object.assign(
 		{
@@ -32,13 +32,13 @@ const Factory = (tag?: string) => {
 		(props: InternalHeadingProps) => {
 			// Styled components v4 typing for `as` is not properly typed yet, so it needs to be ignored. https://github.com/DefinitelyTyped/DefinitelyTyped/blob/03186dbc08372aa1ca9689147386523588be6efd/types/styled-components/index.d.ts#L186
 			// @ts-ignore
-			return <Heading as={tag} {...props} />;
+			return <BaseHeading as={tag} {...props} />;
 		},
 		[setDefaultProps],
 	);
 };
 
-interface InternalHeadingProps extends DefaultProps {
+interface InternalHeadingProps extends React.HTMLAttributes<HTMLElement> {
 	align?: string;
 	monospace?: boolean;
 	caps?: boolean;
@@ -95,4 +95,9 @@ Base.h6.defaultProps = {
 	bold: true,
 };
 
-export default Base;
+/**
+ * A component that displays a heading. By default an `<h3>` tag is used. The exact heading type can be specifed by appending the element name to the component, for example `<Heading.h1>`, `<Heading.h2>`, `<Heading.h3>` etc.
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Heading/Heading.stories.tsx)
+ */
+export const Heading = Base;

@@ -2,7 +2,7 @@ import * as React from 'react';
 import isArray from 'lodash/isArray';
 import get from 'lodash/get';
 import map from 'lodash/map';
-import ButtonGroup from '../../../components/ButtonGroup';
+import { ButtonGroup } from '../../../components/ButtonGroup';
 import {
 	Widget,
 	WidgetProps,

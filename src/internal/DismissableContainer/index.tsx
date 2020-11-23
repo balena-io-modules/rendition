@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import styled, { withTheme } from 'styled-components';
 import { Theme } from '../../common-types';
-import Button from '../../components/Button';
+import { Button } from '../../components/Button';
 import { Flex, FlexProps } from '../../components/Flex';
 import { getColor, opaque, px } from '../../utils';
 
@@ -54,10 +54,13 @@ const DismissButton = styled(Button)<{
 
 export interface DismissableContainerProps extends FlexProps {
 	onDismiss?: () => void;
-	// This is passed so that we can vertically center the dismiss button with the first line of the content, regardless of the height of the content.
+	/** Used to vertically center the dismiss button with the first line of the content, regardless of the height of the content. */
 	baselineHeight?: number;
+	/** If true, emphasize the container and the content */
 	solid?: boolean;
+	/** Custom label to be used by screen readers. When provided, an aria-label will be added to the element. */
 	a11yTitle?: string;
+	/** If true add borders to the container */
 	bordered?: boolean;
 }
 

@@ -2,7 +2,7 @@ import * as React from 'react';
 import get from 'lodash/get';
 import startCase from 'lodash/startCase';
 import { Box } from '../../../components/Box';
-import Txt from '../../../components/Txt';
+import { Txt } from '../../../components/Txt';
 import { WidgetProps } from './widget-util';
 
 type WidgetMetaProps = {

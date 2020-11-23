@@ -27,10 +27,12 @@ const Base = styled(Flex)`
 `;
 
 export interface BannerProps extends FlexProps {
+	/** The path to an image that should be displayed in the background */
 	backgroundImage?: string;
 }
 
-export default asRendition<
+/** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Banner/Banner.stories.tsx) */
+export const Banner = asRendition<
 	React.ForwardRefExoticComponent<
 		BannerProps & React.RefAttributes<HTMLDivElement>
 	>

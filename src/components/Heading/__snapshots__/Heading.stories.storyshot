@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/Heading Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <h3
+      class="sc-jcVebW fraIRR sc-bZSQDF jZIzQR"
+    >
+      Heading h3
+    </h3>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Heading H 1 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <h1
+      class="sc-jcVebW fraIRR sc-iUuytg gQgcGC"
+    >
+      Heading h1
+    </h1>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Heading H 2 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <h2
+      class="sc-jcVebW fraIRR sc-iBaPrD iFoFUX"
+    >
+      Heading h2
+    </h2>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Heading H 3 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <h3
+      class="sc-jcVebW fraIRR sc-eggNIi jTuFyV"
+    >
+      Heading h3
+    </h3>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Heading H 4 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <h4
+      class="sc-jcVebW jPGlzQ sc-cTkwdZ jLyhgM"
+    >
+      Heading h4
+    </h4>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Heading H 5 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <h5
+      class="sc-jcVebW jPGlzQ sc-jNMdTA exRdKT"
+    >
+      Heading h5
+    </h5>
+  </div>
+</div>
+`;

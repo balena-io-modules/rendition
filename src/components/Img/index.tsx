@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import { space, SpaceProps, width, WidthProps } from 'styled-system';
-import { DefaultProps } from '../../common-types';
 
-interface ImgProps extends DefaultProps, SpaceProps, WidthProps {}
+export interface ImgProps
+	extends React.HTMLAttributes<HTMLImageElement>,
+		SpaceProps,
+		WidthProps {}
 
-const Img = styled.img<ImgProps>`
+const BaseImg = styled.img<ImgProps>`
 	display: block;
 	max-width: 100%;
 	height: auto;
@@ -12,6 +14,11 @@ const Img = styled.img<ImgProps>`
 	${width};
 `;
 
-Img.displayName = 'Img';
+BaseImg.displayName = 'Img';
 
-export default Img;
+/**
+ * Displays an image.
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Img/Img.stories.tsx)
+ */
+export const Img = BaseImg;

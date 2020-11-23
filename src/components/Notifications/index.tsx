@@ -2,7 +2,7 @@ import * as React from 'react';
 import ReactNotification, { store } from 'react-notifications-component';
 import styled from 'styled-components';
 import { animations } from '../../animations';
-import Alert from '../Alert';
+import { Alert } from '../Alert';
 import styles from './defaultStyle';
 
 type CONTAINER =
@@ -16,11 +16,17 @@ type CONTAINER =
 type NOTIFICATION_TYPE = 'danger' | 'warning' | 'success' | 'info';
 
 export interface NotificationOptions {
+	/** The content you wish to display in the notification */
 	content: React.ReactNode;
+	/** A callback function that is triggered when the "dismiss" button is clicked */
 	onDismiss?: () => void;
+	/** A custom id for the notification */
 	id?: string | number;
+	/** The duration this notification will be shown for in ms. 0 means it will never close automatically */
 	duration?: number;
+	/** The position of the notifications in the parent container. One of `'top-left' */
 	container?: CONTAINER;
+	/** Optionally used to specify the intent of the notification. One of `'danger' */
 	type?: NOTIFICATION_TYPE;
 }
 
@@ -96,6 +102,20 @@ const NotificationContainer = ({
 	);
 };
 
+/**
+ * To use this component, you first need to add the `NotificationsContainer` component at the root of your React application.
+ * You can then programatically add or remove notifications using the `notifications` module. For example:
+ *
+ * ```
+ * import {notifications} from 'rendition';
+ *
+ * const notificationId = notifications.addNotification("Hi there");
+ * notifications.removeNotification(notificationId);
+ *
+ * ```
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Notifications/story.js)
+ */
 export const NotificationsContainer = styled(ReactNotification)`
 	${animations}
 	${styles}

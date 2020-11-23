@@ -4,7 +4,7 @@ import {
 } from 'grommet';
 import * as React from 'react';
 import styled from 'styled-components';
-import { DefaultProps, Omit, RenditionSystemProps } from '../../common-types';
+import { Omit, RenditionSystemProps } from '../../common-types';
 
 import asRendition from '../../asRendition';
 import { getBaseStyle } from '../RadioButton';
@@ -25,7 +25,7 @@ const Base = styled(GrommetRadioButtonGroup)<{
 	}
 `;
 
-const RadioButtonGroup = (props: InternalRadioButtonGroupProps) => {
+const BaseRadioButtonGroup = (props: InternalRadioButtonGroupProps) => {
 	return (
 		<Base
 			{...props}
@@ -38,13 +38,17 @@ const RadioButtonGroup = (props: InternalRadioButtonGroupProps) => {
 // Make name optional, and override onChange to not be of `any` type.
 interface InternalRadioButtonGroupProps
 	extends Omit<GrommetRadioButtonGroupProps, 'name'>,
-		DefaultProps {
+		React.HTMLAttributes<HTMLElement> {
+	/** The DOM name attribute value to use for the underlying <input/> elements. */
 	name?: string;
+	/** Function called when the value of the radio button changes */
 	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export type RadioButtonGroupProps = InternalRadioButtonGroupProps &
 	RenditionSystemProps;
-export default asRendition<React.FunctionComponent<RadioButtonGroupProps>>(
-	RadioButtonGroup,
-);
+
+/** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/RadioButtonGroup/RadioButtonGroup.stories.tsx) */
+export const RadioButtonGroup = asRendition<
+	React.FunctionComponent<RadioButtonGroupProps>
+>(BaseRadioButtonGroup);

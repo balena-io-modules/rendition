@@ -1,9 +1,9 @@
-import { Grommet } from 'grommet';
+import { Grommet, GrommetProps } from 'grommet';
 import cloneDeep from 'lodash/cloneDeep';
 import merge from 'lodash/merge';
 import * as React from 'react';
 import styled from 'styled-components';
-import { DefaultProps, Theme } from '../../common-types';
+import { Theme } from '../../common-types';
 import defaultTheme from '../../theme';
 import { px } from '../../utils';
 import { BreakpointProvider } from './BreakpointProvider';
@@ -15,7 +15,7 @@ const Base = styled(Grommet)`
 	color: ${(props) => px(props.theme.colors.text.main)};
 `;
 
-const Provider = ({ theme, ...props }: ThemedProvider) => {
+const BaseProvider = ({ theme, ...props }: ThemedProvider) => {
 	const isDefaultFont = !theme?.font;
 	const providerTheme = merge(cloneDeep(defaultTheme), theme);
 
@@ -34,8 +34,10 @@ const Provider = ({ theme, ...props }: ThemedProvider) => {
 	);
 };
 
-export interface ThemedProvider extends DefaultProps {
+export interface ThemedProvider
+	extends Omit<React.HTMLAttributes<HTMLElement>, 'dir'> {
 	theme?: Partial<Theme>;
+	dir?: GrommetProps['dir'];
 }
 
-export default Provider;
+export const Provider = BaseProvider;

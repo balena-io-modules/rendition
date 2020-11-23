@@ -9,8 +9,8 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { FilterRenderMode, FiltersView } from '.';
 import { Box } from '../Box';
-import DropDownButton, { DropDownButtonProps } from '../DropDownButton';
-import Txt from '../Txt';
+import { DropDownButton, DropDownButtonProps } from '../DropDownButton';
+import { Txt } from '../Txt';
 import FilterDescription from './FilterDescription';
 
 const Wrapper = styled.div``;

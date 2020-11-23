@@ -2,8 +2,8 @@ import { JSONSchema7 as JSONSchema } from 'json-schema';
 import * as React from 'react';
 import { randomString } from '../../utils';
 import { DataTypeEditProps } from '../Filters';
-import Input, { InputProps } from '../Input';
-import Textarea, { TextareaProps } from '../Textarea';
+import { Input, InputProps } from '../Input';
+import { Textarea, TextareaProps } from '../Textarea';
 import { getJsonDescription } from './utils';
 
 export const operators = {

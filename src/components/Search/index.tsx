@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
-import { DefaultProps, RenditionSystemProps } from '../../common-types';
+import { RenditionSystemProps } from '../../common-types';
 import { px } from '../../utils';
 
 const Wrapper = styled.div`
@@ -41,7 +41,7 @@ const Wrapper = styled.div`
 	}
 `;
 
-const Search = ({
+const BaseSearch = ({
 	className,
 	dark,
 	disabled,
@@ -63,14 +63,26 @@ const Search = ({
 	);
 };
 
-export interface InternalSearchProps extends DefaultProps {
+export interface InternalSearchProps extends React.HTMLAttributes<HTMLElement> {
+	/** If true, uses a light colorscheme for use on a dark background */
 	dark?: boolean;
+	/** If true, disable the input */
 	disabled?: boolean;
+	/** A placeholder to use in the input */
 	placeholder?: string;
+	/** The value of the input */
 	value?: string;
+	/** A function that is called when the input changes */
 	onChange?: (value: any) => void;
 }
 
 export type SearchProps = InternalSearchProps & RenditionSystemProps;
 
-export default asRendition<React.FunctionComponent<SearchProps>>(Search);
+/**
+ * Displays an input styled as a search bar.
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Search/Search.stories.tsx)
+ */
+export const Search = asRendition<React.FunctionComponent<SearchProps>>(
+	BaseSearch,
+);

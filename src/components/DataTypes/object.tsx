@@ -8,7 +8,7 @@ import * as React from 'react';
 import { regexEscape } from '../../utils';
 import { DataTypeEditProps } from '../Filters';
 import { Flex } from '../Flex';
-import Input from '../Input';
+import { Input } from '../Input';
 import { getJsonDescription } from './utils';
 
 const getKeyLabel = (schema: JSONSchema) => {

@@ -1,16 +1,16 @@
-export { default as Alert, AlertProps } from './components/Alert';
-export { default as ArcSlider, ArcSliderProps } from './components/ArcSlider';
-export { default as Async } from './components/Async';
-export { default as Badge, BadgeProps } from './components/Badge';
-export { default as Banner, BannerProps } from './components/Banner';
-export { default as Button, ButtonProps } from './components/Button';
-export { default as ButtonGroup } from './components/ButtonGroup';
-export { default as Card, CardProps } from './components/Card';
-export { default as Checkbox, CheckboxProps } from './components/Checkbox';
-export { default as Copy, CopyProps } from './components/Copy';
-export { default as Divider, DividerProps } from './components/Divider';
+export { Alert, AlertProps } from './components/Alert';
+export { ArcSlider, ArcSliderProps } from './components/ArcSlider';
+export { Async } from './components/Async';
+export { Badge, BadgeProps } from './components/Badge';
+export { Banner, BannerProps } from './components/Banner';
+export { Button, ButtonProps } from './components/Button';
+export { ButtonGroup } from './components/ButtonGroup';
+export { Card, CardProps } from './components/Card';
+export { Checkbox, CheckboxProps } from './components/Checkbox';
+export { Copy, CopyProps } from './components/Copy';
+export { Divider, DividerProps } from './components/Divider';
 export {
-	default as Filters,
+	Filters,
 	FiltersProps,
 	ViewScope,
 	FiltersView,
@@ -20,74 +20,61 @@ export {
 	DataTypeEditProps,
 	EditModel,
 } from './components/Filters';
-export { default as Fixed, FixedProps } from './components/Fixed';
+export { Fixed, FixedProps } from './components/Fixed';
 export {
-	default as Form,
+	Form,
 	FormProps,
 	FormWidgetProps,
 	RenditionUiSchema,
 } from './components/Form';
 export { DataGrid, DataGridProps } from './components/DataGrid';
 export {
-	default as HighlightedName,
+	HighlightedName,
 	HighlightedNameProps,
 } from './components/HighlightedName';
-export { default as Input, InputProps } from './components/Input';
-export { default as Modal, ModalProps } from './components/Modal';
-export { default as Pager, PagerProps } from './components/Pager';
+export { Input, InputProps } from './components/Input';
+export { Modal, ModalProps } from './components/Modal';
+export { Pager, PagerProps } from './components/Pager';
+export { ProgressBar, ProgressBarProps } from './components/ProgressBar';
+export { Provider } from './components/Provider';
+export { Search, SearchProps } from './components/Search';
+export { Select, SelectProps } from './components/Select';
+export { Spinner, SpinnerProps } from './components/Spinner';
+export { Steps, Step, StepsProps } from './components/Steps';
+export { RadioButton, RadioButtonProps } from './components/RadioButton';
 export {
-	default as ProgressBar,
-	ProgressBarProps,
-} from './components/ProgressBar';
-export { default as Provider } from './components/Provider';
-export { default as Search, SearchProps } from './components/Search';
-export { default as Select, SelectProps } from './components/Select';
-export { default as Spinner, SpinnerProps } from './components/Spinner';
-export { default as Steps, Step, StepsProps } from './components/Steps';
-export {
-	default as RadioButton,
-	RadioButtonProps,
-} from './components/RadioButton';
-export {
-	default as RadioButtonGroup,
+	RadioButtonGroup,
 	RadioButtonGroupProps,
 } from './components/RadioButtonGroup';
 
 export {
-	default as Table,
+	Table,
 	TableRow,
 	TableColumn,
 	TableSortOptions,
 	TableProps,
 } from './components/Table';
-export { default as Accordion, AccordionProps } from './components/Accordion';
-export { default as Terminal, TerminalProps } from './components/Terminal';
-export {
-	default as TextWithCopy,
-	TextWithCopyProps,
-} from './components/TextWithCopy';
-export { default as Txt, TxtProps } from './components/Txt';
-export { default as Textarea, TextareaProps } from './components/Textarea';
-export { default as Img } from './components/Img';
-export { default as Heading } from './components/Heading';
+export { Accordion, AccordionProps } from './components/Accordion';
+export { Terminal, TerminalProps } from './components/Terminal';
+export { TextWithCopy, TextWithCopyProps } from './components/TextWithCopy';
+export { Txt, TxtProps } from './components/Txt';
+export { Textarea, TextareaProps } from './components/Textarea';
+export { Img, ImgProps } from './components/Img';
+export { Heading } from './components/Heading';
 export {
 	NotificationsContainer,
 	notifications,
 } from './components/Notifications';
-export { default as Container } from './components/Container';
+export { Container } from './components/Container';
 export {
-	default as DropDownButton,
+	DropDownButton,
 	DropDownButtonProps,
 } from './components/DropDownButton';
-export { default as Map, MapProps } from './components/Map';
-export { default as Navbar, NavbarProps } from './components/Navbar';
-export { default as Link, LinkProps } from './components/Link';
-export { default as List, ListProps } from './components/List';
-export {
-	default as Popover,
-	PopoverProps,
-	PopoverOptions,
-} from './components/Popover';
+export { Map, MapProps } from './components/Map';
+export { Navbar, NavbarProps } from './components/Navbar';
+export { Link, LinkProps } from './components/Link';
+export { List, ListProps } from './components/List';
+export { Popover, PopoverProps, PopoverOptions } from './components/Popover';
 export { Tab, TabProps, Tabs, TabsProps } from './components/Tabs';
 export { Tag, TagProps } from './components/Tag';
 
@@ -110,7 +97,6 @@ export { SchemaSieve };
 export {
 	ResponsiveStyle,
 	StyledSystemProps,
-	DefaultProps,
 	PineDataType,
 	SchemaEntry,
 	Schema,

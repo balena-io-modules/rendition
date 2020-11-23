@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/Divider Dashed 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <hr
+      class="sc-gWHgXt jUzTVJ sc-citwmv liYinz"
+      type="dashed"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Divider Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <hr
+      class="sc-gWHgXt PLIsv sc-citwmv liYinz"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Divider With Custom Color 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <hr
+      class="sc-gWHgXt eFENim sc-citwmv cEMDUz"
+      color="#ccc"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Divider With Text Content 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI sc-hHftDr bxfdfp sc-citwmv liYinz"
+    >
+      <hr
+        class="sc-gWHgXt sc-cBNfnY jUzTVJ jLKwhq"
+        type="dashed"
+      />
+      <span
+        class="sc-fKFyDc dToKui sc-iwyYcG fZreIp"
+      >
+        some text
+      </span>
+      <hr
+        class="sc-gWHgXt sc-cBNfnY jUzTVJ jLKwhq"
+        type="dashed"
+      />
+    </div>
+  </div>
+</div>
+`;

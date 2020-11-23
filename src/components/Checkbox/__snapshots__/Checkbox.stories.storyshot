@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/Checkbox Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-AzgDb iHoFZh sc-khAkjo ehhgfF"
+    >
+      <label
+        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 hixiBW"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 kDZMxH StyledCheckBox-sc-1dbk5ju-6 hOFfoi"
+        >
+          <input
+            class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 gnmdLR"
+            type="checkbox"
+          />
+          <div
+            class="StyledBox-sc-13pk1d4-0 gFpUiV StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 kRWCTA"
+          />
+        </div>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Checkbox Disabled 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-AzgDb iHoFZh sc-khAkjo ehhgfF"
+    >
+      <label
+        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 jYUEID"
+        disabled=""
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 jbIyUK StyledCheckBox-sc-1dbk5ju-6 hOFfoi"
+          disabled=""
+        >
+          <input
+            class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 dpeunl"
+            disabled=""
+            type="checkbox"
+          />
+          <div
+            class="StyledBox-sc-13pk1d4-0 gFpUiV StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 kRWCTA"
+            disabled=""
+          />
+        </div>
+        <span>
+          Checkbox
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Checkbox Reversed Label 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-AzgDb iHoFZh sc-khAkjo ehhgfF"
+    >
+      <label
+        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 hixiBW"
+      >
+        <span>
+          Checkbox
+        </span>
+        <div
+          class="StyledBox-sc-13pk1d4-0 jUHgwK StyledCheckBox-sc-1dbk5ju-6 hOFfoi"
+        >
+          <input
+            class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 gnmdLR"
+            type="checkbox"
+          />
+          <div
+            class="StyledBox-sc-13pk1d4-0 gFpUiV StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 kRWCTA"
+          />
+        </div>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Checkbox Toggle 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-AzgDb iHoFZh sc-khAkjo ehhgfF"
+    >
+      <label
+        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 hixiBW"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 jbIyUK StyledCheckBox-sc-1dbk5ju-6 hOFfoi"
+        >
+          <input
+            class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 gnmdLR"
+            type="checkbox"
+          />
+          <span
+            class="StyledCheckBox__StyledCheckBoxToggle-sc-1dbk5ju-4 iSVBLj"
+          >
+            <span
+              class="StyledCheckBox__StyledCheckBoxKnob-sc-1dbk5ju-5 hAptcP"
+            />
+          </span>
+        </div>
+        <span>
+          Toggle
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Checkbox With Label 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-AzgDb iHoFZh sc-khAkjo ehhgfF"
+    >
+      <label
+        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 hixiBW"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 jbIyUK StyledCheckBox-sc-1dbk5ju-6 hOFfoi"
+        >
+          <input
+            class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 gnmdLR"
+            type="checkbox"
+          />
+          <div
+            class="StyledBox-sc-13pk1d4-0 gFpUiV StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 kRWCTA"
+          />
+        </div>
+        <span>
+          Checkbox
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+`;

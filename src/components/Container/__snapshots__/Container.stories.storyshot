@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/Container Centered Content 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ QCGZt sc-cKZHah fcLNoO sc-iIEYCM hCNsVr"
+    >
+      <h3
+        class="sc-jcVebW fraIRR sc-bZSQDF jZIzQR"
+      >
+        I am in a container
+      </h3>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Container Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ QCGZt sc-cKZHah laTkLd sc-iIEYCM hCNsVr"
+    >
+      <h3
+        class="sc-jcVebW fraIRR sc-bZSQDF jZIzQR"
+      >
+        I am in a container
+      </h3>
+    </div>
+  </div>
+</div>
+`;

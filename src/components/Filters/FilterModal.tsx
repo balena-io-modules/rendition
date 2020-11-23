@@ -4,13 +4,13 @@ import { JSONSchema7 as JSONSchema } from 'json-schema';
 import map from 'lodash/map';
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Button from '../Button';
+import { Button } from '../Button';
 import { Box } from '../Box';
 import { getDataModel } from '../DataTypes';
 import { Flex } from '../Flex';
-import Modal from '../Modal';
-import Select from '../Select';
-import Txt from '../Txt';
+import { Modal } from '../Modal';
+import { Select } from '../Select';
+import { Txt } from '../Txt';
 import * as SchemaSieve from './SchemaSieve';
 
 export interface FilterModalProps {

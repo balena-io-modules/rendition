@@ -2,13 +2,13 @@ import { Layer } from 'grommet';
 import merge from 'lodash/merge';
 import * as React from 'react';
 import styled, { createGlobalStyle, withTheme } from 'styled-components';
-import { DefaultProps, ResponsiveStyle, Theme } from '../../common-types';
+import { ResponsiveStyle, Theme } from '../../common-types';
 import { px } from '../../utils';
 import { Box } from '../Box';
-import Button, { ButtonProps } from '../Button';
+import { Button, ButtonProps } from '../Button';
 import { Flex } from '../Flex';
-import Heading from '../Heading';
-import Txt from '../Txt';
+import { Heading } from '../Heading';
+import { Txt } from '../Txt';
 
 const bodyNoOverflowClass = `rendition-modal-open`;
 
@@ -37,7 +37,7 @@ const ModalButton = (props: ButtonProps) => {
 	);
 };
 
-class Modal extends React.Component<ThemedModalProps, any> {
+class BaseModal extends React.Component<ThemedModalProps, any> {
 	public static mountedCount = 0;
 
 	public ownIndex = 0;
@@ -47,18 +47,18 @@ class Modal extends React.Component<ThemedModalProps, any> {
 	}
 
 	public componentDidMount() {
-		if (!Modal.mountedCount) {
+		if (!BaseModal.mountedCount) {
 			document.body.classList.add(bodyNoOverflowClass);
 		}
 
 		window.document.addEventListener('keydown', this.handleKeyDown);
-		Modal.mountedCount++;
-		this.ownIndex = Modal.mountedCount;
+		BaseModal.mountedCount++;
+		this.ownIndex = BaseModal.mountedCount;
 	}
 
 	public componentWillUnmount() {
-		Modal.mountedCount--;
-		if (!Modal.mountedCount) {
+		BaseModal.mountedCount--;
+		if (!BaseModal.mountedCount) {
 			document.body.classList.remove(bodyNoOverflowClass);
 		}
 
@@ -67,7 +67,7 @@ class Modal extends React.Component<ThemedModalProps, any> {
 
 	public handleKeyDown = (e: KeyboardEvent) => {
 		// Only trigger on top-most modal if there are multiple nested modals.
-		if (Modal.mountedCount !== this.ownIndex) {
+		if (BaseModal.mountedCount !== this.ownIndex) {
 			return;
 		}
 
@@ -90,7 +90,7 @@ class Modal extends React.Component<ThemedModalProps, any> {
 		e.stopPropagation();
 
 	public popModal = () => {
-		if (Modal.mountedCount !== this.ownIndex) {
+		if (BaseModal.mountedCount !== this.ownIndex) {
 			return;
 		}
 
@@ -184,17 +184,27 @@ class Modal extends React.Component<ThemedModalProps, any> {
 	}
 }
 
-export interface ModalProps extends DefaultProps {
+export interface ModalProps extends React.HTMLAttributes<HTMLElement> {
+	/** A title to display at the top of the Modal, only displayed if the `titleElement` property is not used */
 	title?: string;
 	width?: ResponsiveStyle;
+	/** Start the modal from the center (default) or top */
 	position?: 'center' | 'top';
+	/** A string or JSX element to display at the top of the modal */
 	titleElement?: string | JSX.Element;
+	/** A string or JSX element to display underneath the modal's `title`, only displayed if the `titleElement` property is not used and a `title` property is provided */
 	titleDetails?: string | JSX.Element;
+	/** A string or JSX element to display in the primary modal button, defaults to 'OK' */
 	action?: string | JSX.Element;
+	/** A function that is called if the modal is dismissed */
 	cancel?: () => any;
+	/** A function that is called if the primary modal button is clicked */
 	done: () => any;
+	/** Properties that are passed to the primary button, these are the same props used for the [`Button`](#button) component */
 	primaryButtonProps?: ButtonProps;
+	/** If provided, will cause a secondary button to appear on the modal. These properties that are passed to that button, these are the same props used for the [`Button`](#button) component */
 	secondaryButtonProps?: ButtonProps;
+	/** Properties that are passed to the cancel button, these are the same props used for the [`Button`](#button) component */
 	cancelButtonProps?: ButtonProps;
 }
 
@@ -202,4 +212,11 @@ export interface ThemedModalProps extends ModalProps {
 	theme: Theme;
 }
 
-export default withTheme(Modal);
+/**
+ * Displays a centrally position modal overlay. Children passed to this component are rendered inside the modal.
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Modal/Modal.stories.tsx)
+ */
+export const Modal = withTheme(
+	BaseModal,
+) as React.FunctionComponent<ModalProps>;

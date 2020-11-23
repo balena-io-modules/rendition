@@ -2,7 +2,7 @@ import { JSONSchema7 as JSONSchema } from 'json-schema';
 import isEqual from 'lodash/isEqual';
 import omit from 'lodash/omit';
 import * as React from 'react';
-import Form, {
+import RsjfForm, {
 	IChangeEvent,
 	FormProps as JsonSchemaFormProps,
 	UiSchema,
@@ -12,7 +12,7 @@ import Form, {
 } from '@rjsf/core';
 import styled from 'styled-components';
 import { Box, BoxProps } from '../Box';
-import Button, { ButtonProps } from '../Button';
+import { Button, ButtonProps } from '../Button';
 import * as utils from '../../utils';
 import { DescriptionField } from './fields/DescriptionField';
 import ObjectField from './fields/ObjectField';
@@ -123,22 +123,31 @@ export interface BaseFormProps
 			JsonSchemaFormProps<any>,
 			'validate' | 'noValidate' | 'liveValidate' | 'disabled'
 		> {
+	/** A string or JSX element to replace the text in the form submit button */
 	submitButtonText?: string | JSX.Element;
+	/** If true, do not display the form submit button */
 	hideSubmitButton?: boolean;
+	/** Properties that are passed to the submit button, these are the same props used for the [`Button`](#button) component */
 	submitButtonProps?: ButtonProps;
+	/** If passed, it will show a secondary button, these are the same props used for the [`Button`](#button) component */
 	secondaryButtonProps?: ButtonProps;
+	/** The data that should be displayed in the form */
 	value?: number | string | boolean | { [index: string]: any } | any[] | null;
+	/** A function that is called when form data changes */
 	onFormChange?: (result: IChangeEvent) => void;
+	/** A function that is called when the form is submitted */
 	onFormSubmit?: (result: any) => void;
+	/** A configuration object used to change the styling and layout of the form. See the [`react-jsonschema-form`](https://github.com/mozilla-services/react-jsonschema-form) docs for more details */
 	uiSchema?: RenditionUiSchema;
 }
 
 export interface FormProps extends BaseFormProps {
+	/** A json schema describing the shape of the data you would like to gather */
 	schema: JSONSchema;
 }
 
-export default class FormHOC extends React.Component<FormProps, FormState> {
-	private formRef = React.createRef<Form<any>>();
+class BaseForm extends React.Component<FormProps, FormState> {
+	private formRef = React.createRef<RsjfForm<any>>();
 
 	public static getDerivedStateFromProps(props: FormProps, state: FormState) {
 		if (!state) {
@@ -203,7 +212,7 @@ export default class FormHOC extends React.Component<FormProps, FormState> {
 
 		return (
 			<FormWrapper {...props}>
-				<Form
+				<RsjfForm
 					ref={this.formRef}
 					disabled={disabled}
 					liveValidate={liveValidate}
@@ -231,8 +240,55 @@ export default class FormHOC extends React.Component<FormProps, FormState> {
 					{!!secondaryButtonProps && (
 						<Button outline secondary ml={3} {...secondaryButtonProps} />
 					)}
-				</Form>
+				</RsjfForm>
 			</FormWrapper>
 		);
 	}
 }
+
+/**
+ * A component that can be used for generating a form from a [json schema](http://json-schema.org/) object.
+ * The standard json schema types are supported, as well as the `date-time` format.
+ *
+ * Under the hood, this component uses [`react-jsonschema-form`](https://github.com/mozilla-services/react-jsonschema-form) and support
+ * all [`uiSchema`](https://github.com/mozilla-services/react-jsonschema-form#the-uischema-object) options from that project.
+ *
+ * Additional formats are supported, but require supporting widgets to be loaded.
+ * For example if you would like to support the [mermaid](https://mermaidjs.github.io/) format, you'll need to
+ * import the widget using `import 'renditon/dist/extra/Form/mermaid'`.
+ *
+ * This import only needs to happen once, so it is recommended that its done at the
+ * root level of your application.
+ *
+ * ## Custom uiSchema properties
+ *
+ * Some templates and widgets support additional uiSchema options, defined using `ui:options` object in the `uiSchema` definition. Those are:
+ *
+ * ### PasswordWidget
+ *
+ * | Name          | Type      | Default   | Required   | Description                                          |
+ * | ------ | ------ | --------- | ---------- | ------------- |
+ * | `showPasswordStrengthMeter`    | `boolean` | false | - | A boolean denoting whether a password strenth meter will be shown. `zxcvbn` should be loaded beforehand and set to the window object as `window.zxcvbn` |
+ *
+ * ### ObjectField
+ *
+ * | Name          | Type      | Default   | Required   | Description                                          |
+ * | ------ | ------ | --------- | ---------- | ------------- |
+ * | `responsive`    | `boolean` | false | - | A boolean denoting whether the object fields should be wrapped in a row-directed flex container and wrap once their size is larger than the minimum|
+ * | `flex`    | `Array<number | string>` | - | - | Works together with `responsive`. It passes the `flex` value to the same-indexed field in the object. This allows you to have more control over the layout of the fields |
+ *
+ *
+ * ## Captcha
+ *
+ * If you wish to use a captcha (google recaptcha v2) in your form, you need to load the `captcha` widget using `import { CaptchaWidget } from 'renditon/dist/extra/Form/captcha'` and register it using `registerWidget`. [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Form/story.js).
+ *
+ * In order for the captcha to work, you also need to set a valid recaptcha API key to the `window.RECAPTCHA_V2_API_KEY` variable.
+ * A gotcha with the captcha widget is, upon submitting, you need to reset the captcha form value where you manage its state. Google only allows a captcha value (generated by clicking the captcha widget) to be verified only once against their API, after which it will be invalid so it needs to be reset.
+ *
+ * ## API
+ *
+ * ### `registerWidget(format, widget)`
+ *
+ * Register a widget that will be used to render fields of the specified format.
+ */
+export const Form = BaseForm;

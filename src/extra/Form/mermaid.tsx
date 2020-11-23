@@ -1,7 +1,7 @@
 import { Tab, Tabs } from 'grommet';
 import * as React from 'react';
-import Link from '../../components/Link';
-import Textarea from '../../components/Textarea';
+import { Link } from '../../components/Link';
+import { Textarea } from '../../components/Textarea';
 import Theme from '../../theme';
 import { Mermaid } from '../Mermaid';
 

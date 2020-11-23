@@ -46,15 +46,17 @@ const getDropAlign = (
 };
 
 export interface PopoverOptions {
+	/** Placement of the popover */
 	placement?: TooltipArrowProps['placement'];
 }
 
 export interface PopoverProps
 	extends React.PropsWithChildren<DropProps & PopoverOptions> {
+	/** Called when clicked outside a popover on esc key press */
 	onDismiss: () => any;
 }
 
-const Popover = ({
+const BasePopover = ({
 	placement,
 	target,
 	onDismiss,
@@ -82,8 +84,9 @@ const Popover = ({
 	);
 };
 
-Popover.defaultProps = {
+BasePopover.defaultProps = {
 	placement: 'top',
 };
 
-export default Popover;
+/** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Popover/Popover.stories.tsx) */
+export const Popover = BasePopover;

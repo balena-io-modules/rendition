@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withProps } from 'recompose';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
-import { DefaultProps, RenditionSystemProps } from '../../common-types';
+import { RenditionSystemProps } from '../../common-types';
 import { darken, monospace } from '../../utils';
 import { align, bold, caps } from '../Txt';
 
@@ -29,7 +29,7 @@ const Base = styled.a<InternalLinkProps>`
 	}
 `;
 
-const Link = ({ is, blank, children, ...props }: InternalLinkProps) => {
+const BaseLink = ({ is, blank, children, ...props }: InternalLinkProps) => {
 	if (props.disabled) {
 		props = omit(props, 'href');
 	}
@@ -54,8 +54,11 @@ const setDefaultProps = withProps((props: InternalLinkProps) => {
 	);
 });
 
-export interface InternalLinkProps extends DefaultProps {
+export interface InternalLinkProps
+	extends Omit<React.HTMLAttributes<HTMLElement>, 'is'> {
+	/** If true, open the link in a new tab */
 	blank?: boolean;
+	/** If true, disable the link */
 	disabled?: boolean;
 	download?: any;
 	href?: string;
@@ -71,8 +74,13 @@ export interface InternalLinkProps extends DefaultProps {
 
 export type LinkProps = InternalLinkProps & RenditionSystemProps;
 
-export default asRendition<React.FunctionComponent<LinkProps>>(
-	Link,
+/**
+ * Displays an anchor link.
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Link/Link.stories.tsx)
+ */
+export const Link = asRendition<React.FunctionComponent<LinkProps>>(
+	BaseLink,
 	[setDefaultProps],
 	['color'],
 );

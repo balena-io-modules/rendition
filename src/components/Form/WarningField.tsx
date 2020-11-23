@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Alert from '../Alert';
+import { Alert } from '../Alert';
 import { Markdown } from '../../extra/Markdown';
-import Txt from '../Txt';
+import { Txt } from '../Txt';
 
 export const WarningField = ({ warning }: { warning: string }) => {
 	return (

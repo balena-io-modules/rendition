@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Txt, { TxtProps } from '../../components/Txt';
-import Heading from '../../components/Heading';
-import Link from '../../components/Link';
+import { Txt, TxtProps } from '../../components/Txt';
+import { Heading } from '../../components/Heading';
+import { Link } from '../../components/Link';
 import unified from 'unified';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
@@ -9,16 +9,18 @@ import rehypeReact from 'rehype-react';
 import sanitize from 'rehype-sanitize';
 import raw from 'rehype-raw';
 import prism from '@mapbox/rehype-prism';
-import Divider from '../../components/Divider';
+import { Divider } from '../../components/Divider';
 import styled, { withTheme } from 'styled-components';
 import gh from 'hast-util-sanitize/lib/github.json';
 import { Theme } from '../../common-types';
-import 'prismjs/themes/prism.css';
+import defaultStyle from './defaultStyle';
 import { darken, lighten } from '../../utils';
 import { Decorator, decoratorPlugin } from './plugins/decorator';
 export { gh as defaultSanitizerOptions };
 
 const MarkdownWrapper = styled(Txt)`
+	${defaultStyle}
+
 	* {
 		box-sizing: border-box;
 	}
@@ -194,13 +196,19 @@ export const getProcessor = (
 	});
 };
 
-type MarkdownProps = TxtProps & {
+export type MarkdownProps = TxtProps & {
+	/** The markdown source that should be rendered */
 	children: string;
+	/** Object specifying component Overrides. ex. `{ p: Txt.p }` */
 	componentOverrides?: components;
 	theme: Theme;
+	/** Specifies the options used when sanitizing the generated HTML. Passing `null` would disable the sanitization. */
 	sanitizerOptions?: any; // https://github.com/syntax-tree/hast-util-sanitize#schema
+	/** When disabled it does not renders raw html in markdown */
 	disableRawHtml?: boolean;
+	/** When disabled code blocks will not highlight syntax */
 	disableCodeHighlight?: boolean;
+	/** Decorate part of the text if it matches some condition */
 	decorators?: Decorator[];
 };
 
@@ -233,4 +241,31 @@ export const MarkdownBase = ({
 	return <MarkdownWrapper {...rest}>{content}</MarkdownWrapper>;
 };
 
+/**
+ * A simple component for rendering [GitHub flavored markdown](https://github.github.com/gfm/). This component
+ * sanitizes input.
+ * This component is not loaded by default as it relies on a markdown parsing package
+ * that you may not want to include in your application.
+ * You can load this component using:
+ *
+ * ```
+ * import { Markdown } from 'rendition/dist/extra/Markdown';
+ * ```
+ *
+ * If you need to customize the conversion of markdown to HTML you can supply the `sanitizerOptions` prop. In this case, use the defaults as a starting point for your options:
+ *
+ * ```
+ * import { Markdown, defaultSanitizerOptions } from 'rendition/dist/extra/Markdown';
+ * ```
+ *
+ * Generated html inherits styles from rendition components. i.e an anchor will be
+ * rendered as a `Link` component.
+ *
+ * Html inside the markdown is sanitized and stripped of any inline js and css. so
+ * they will always be rendered.
+ *
+ * Components can be overridden by using `componentOverrides` prop.
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/extra/Markdown/Markdown.stories.ts)
+ */
 export const Markdown = withTheme(MarkdownBase);

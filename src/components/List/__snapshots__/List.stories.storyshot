@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/List Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <ul
+      class="sc-cvJHqN sc-gIRixj gUqxEt hMAQFo sc-fybufo evTA-dY"
+    >
+      <li>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        >
+          You can put 
+          <a
+            class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+            color="primary.main"
+            href="#"
+          >
+            a link
+          </a>
+        </div>
+      </li>
+      <li>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        >
+          And also some 
+          <code>
+            code
+          </code>
+        </div>
+      </li>
+      <li>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        >
+          Multiline text
+          <div
+            class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          >
+            that breaks into multiple lines
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/List Ordered 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <ol
+      class="sc-cvJHqN sc-dkmKpi gUqxEt cTGfqz sc-fybufo evTA-dY"
+    >
+      <li>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        >
+          You can put 
+          <a
+            class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+            color="primary.main"
+            href="#"
+          >
+            a link
+          </a>
+        </div>
+      </li>
+      <li>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        >
+          And also some 
+          <code>
+            code
+          </code>
+        </div>
+      </li>
+      <li>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        >
+          Multiline text
+          <div
+            class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          >
+            that breaks into multiple lines
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</div>
+`;

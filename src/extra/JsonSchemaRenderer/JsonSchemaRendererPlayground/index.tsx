@@ -9,18 +9,14 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUndo } from '@fortawesome/free-solid-svg-icons/faUndo';
 import asRendition from '../../../asRendition';
-import {
-	DefaultProps,
-	RenditionSystemProps,
-	Theme,
-} from '../../../common-types';
+import { RenditionSystemProps, Theme } from '../../../common-types';
 import { Flex } from '../../../components/Flex';
 import { Box } from '../../../components/Box';
-import Card from '../../../components/Card';
-import Select from '../../../components/Select';
-import Button from '../../../components/Button';
-import Heading from '../../../components/Heading';
-import Checkbox from '../../../components/Checkbox';
+import { Card } from '../../../components/Card';
+import { Select } from '../../../components/Select';
+import { Button } from '../../../components/Button';
+import { Heading } from '../../../components/Heading';
+import { Checkbox } from '../../../components/Checkbox';
 import JsonSchemaRenderer, { JsonSchemaRendererProps } from '../index';
 import { Value, JSONSchema, UiSchema } from '../types';
 import { CONTEXT_FUNCTIONS, EXTRA_FORMATS } from '../examples';
@@ -247,7 +243,8 @@ const JsonSchemaRendererPlayground = ({
 	);
 };
 
-interface InternalJsonSchemaRendererPlaygroundProps extends DefaultProps {
+interface InternalJsonSchemaRendererPlaygroundProps
+	extends React.HTMLAttributes<HTMLElement> {
 	title?: string;
 	examples?: {
 		[key: string]: {
@@ -266,6 +263,7 @@ interface ThemedJsonSchemaRendererPlaygroundProps
 export type JsonSchemaRendererPlaygroundProps = InternalJsonSchemaRendererPlaygroundProps &
 	RenditionSystemProps;
 
+/** [View stories source](https://github.com/balena-io-modules/rendition/blob/master/src/components/JsonSchemaRenderer/JsonSchemaRenderer.stories.tsx) */
 export default asRendition<
 	React.FunctionComponent<JsonSchemaRendererPlaygroundProps>
 >(JsonSchemaRendererPlayground);

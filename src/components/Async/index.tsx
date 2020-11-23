@@ -3,7 +3,7 @@ import * as React from 'react';
 // Load given React component asynchronously, needed when implementing WASM
 // This component can be replaced with React.lazy once we upgrade to React v16.6
 // https://reactjs.org/blog/2018/10/23/react-v-16-6.html#reactlazy-code-splitting-with-suspense
-export default (importComponent: () => any) => {
+export const Async = (importComponent: () => any) => {
 	return class extends React.Component {
 		public displayName = importComponent;
 

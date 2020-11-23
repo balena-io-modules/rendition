@@ -1,8 +1,8 @@
 import { css } from 'styled-components';
-import { Theme, ThemedDefaultProps } from '~/common-types';
+import { Theme } from '~/common-types';
 
-export const normal = (props: ThemedDefaultProps) => props.theme?.weights?.[0];
-export const bold = (props: ThemedDefaultProps) => props.theme?.weights?.[1];
+export const normal = (props: { theme: Theme }) => props.theme?.weights?.[0];
+export const bold = (props: { theme: Theme }) => props.theme?.weights?.[1];
 
 export const px = (n: any) => (typeof n === 'number' ? n + 'px' : n);
 

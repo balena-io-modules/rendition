@@ -1,15 +1,14 @@
 import map from 'lodash/map';
 import * as React from 'react';
 import styled from 'styled-components';
-import { FlexProps } from 'styled-system';
-import { DefaultProps, RenditionSystemProps } from '../../common-types';
+import { RenditionSystemProps } from '../../common-types';
 
 import asRendition from '../../asRendition';
 import { DismissableContainer } from '../../internal/DismissableContainer';
 import { Box } from '../Box';
-import Divider from '../Divider';
-import { Flex } from '../Flex';
-import Heading from '../Heading';
+import { Divider } from '../Divider';
+import { Flex, FlexProps } from '../Flex';
+import { Heading } from '../Heading';
 
 const Wrapper = styled(DismissableContainer)<WrapperProps>`
 	& {
@@ -17,7 +16,13 @@ const Wrapper = styled(DismissableContainer)<WrapperProps>`
 	}
 `;
 
-const Card = ({ title, cta, rows, children, ...props }: InternalCardProps) => {
+const BaseCard = ({
+	title,
+	cta,
+	rows,
+	children,
+	...props
+}: InternalCardProps) => {
 	const hasHeader = title || cta;
 
 	const Header = hasHeader && (
@@ -52,17 +57,26 @@ const Card = ({ title, cta, rows, children, ...props }: InternalCardProps) => {
 	);
 };
 
-interface WrapperProps extends DefaultProps, FlexProps {
+interface WrapperProps extends FlexProps {
 	small?: boolean;
 }
 
 export interface InternalCardProps extends WrapperProps {
+	/** The title of the card */
 	title?: string;
+	/** React component added to the header */
 	cta?: JSX.Element;
+	/** Subsections separated by a horizontal separator */
 	rows?: JSX.Element[];
+	/** Any content that is internally wrapped in a Box */
 	children?: any;
 }
 
 export type CardProps = InternalCardProps & RenditionSystemProps;
 
-export default asRendition<React.FunctionComponent<CardProps>>(Card);
+/**
+ * Section containing content and actions on the same topic.
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Card/Card.stories.tsx)
+ */
+export const Card = asRendition<React.FunctionComponent<CardProps>>(BaseCard);

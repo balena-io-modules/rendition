@@ -1,0 +1,1081 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JsonSchemaRenderer component A Heading widget 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <h2
+        class="sc-jcVebW fraIRR sc-iBaPrD iFoFUX"
+      >
+        Something Important
+      </h2>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A HighlightedName widget 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <span
+        class="sc-fKFyDc dToKui sc-iwyYcG fGwSRz sc-eHfQar gsQmtQ sc-hzMMCg jiyxCm"
+      >
+        Jellyfish
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A Link widget 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <a
+        class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+        color="primary.main"
+        href="https://trello.com/b/lEIoUMKY"
+        rel="noopener"
+        target="_blank"
+      >
+        View trello board
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A List widget 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <ol
+        class="sc-cvJHqN sc-dkmKpi gUqxEt cTGfqz sc-fybufo evTA-dY"
+      >
+        <li>
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+          >
+            <a
+              class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+              color="primary.main"
+              href="https://jel.ly.fish/user"
+            >
+              user
+            </a>
+          </div>
+        </li>
+        <li>
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+          >
+            <a
+              class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+              color="primary.main"
+              href="https://jel.ly.fish/org"
+            >
+              org
+            </a>
+          </div>
+        </li>
+        <li>
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+          >
+            <a
+              class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+              color="primary.main"
+              href="https://jel.ly.fish/issue"
+            >
+              issue
+            </a>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A Tag widget 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+        >
+          <div
+            class="sc-fKFyDc kIYkoy sc-bBXqnf iHGIIw"
+          >
+            subscription: 
+          </div>
+          <div
+            class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+          >
+            premium
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A badge widget 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <span
+        class="sc-fKFyDc dToKui sc-iwyYcG bYrAgY sc-bYEvPH gpyJyS sc-kLgntA iGKgqu"
+      >
+        closed
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A boolean 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+      >
+        <div
+          class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+        >
+          Field Title
+        </div>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf eNkluL"
+        >
+          Field description
+        </div>
+      </div>
+      <div
+        class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+      >
+        true
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A button group widget 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-hiSbYr cLDXoV yhjCA"
+      >
+        <a
+          class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk YDvpG"
+          href="https://jel.ly.fish/item 1"
+        >
+          item 1
+        </a>
+        <a
+          class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk YDvpG"
+          href="https://jel.ly.fish/item 2"
+        >
+          item 2
+        </a>
+        <a
+          class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk YDvpG"
+          href="https://jel.ly.fish/item 3"
+        >
+          item 3
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A button widget 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <a
+        class="StyledButton-sc-323bzc-0 fGJlAh sc-bqyKva sc-kstrdz gjQfnS FUwNf sc-dIUggk YDvpG"
+        href="http://jel.ly.fish/issue"
+        target="_blank"
+      >
+        issue
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A color widget 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ gNQCeU sc-hHftDr cMsQud"
+      >
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        >
+          Danger
+        </div>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        >
+          #ff0000
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A default value 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  />
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-bTvRPi iIpDHo sc-dtwoBo iBRXbM"
+      >
+        <button
+          class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk YDvpG sc-hOqqkJ kAcspI"
+          type="button"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kUtBaJ"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+            >
+              Links
+            </div>
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-chevron-down fa-w-14 "
+              data-icon="chevron-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A hidden field 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        >
+          <div
+            class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+          >
+            Shown
+          </div>
+        </div>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        >
+          This should be shown
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A hidden title 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+      >
+        No title shown
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A markdown field 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-dFJsGO cwIjin"
+      >
+        <div>
+          <h1
+            class="sc-jcVebW fraIRR sc-iUuytg gQgcGC"
+          >
+            Something Important
+          </h1>
+          
+
+          <h2
+            class="sc-jcVebW fraIRR sc-iBaPrD iFoFUX"
+          >
+            Something less important
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A materialized field 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        >
+          <div
+            class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+          >
+            Name
+          </div>
+        </div>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        >
+          John Smith
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A null object 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  />
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A number 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+      >
+        <div
+          class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+        >
+          Field Title
+        </div>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf eNkluL"
+        >
+          Field description
+        </div>
+      </div>
+      <div
+        class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+      >
+        4.5
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A string 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+      >
+        <div
+          class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+        >
+          Field Title
+        </div>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf eNkluL"
+        >
+          Field description
+        </div>
+      </div>
+      <div
+        class="sc-fKFyDc PdGzp sc-bBXqnf kYwmpI"
+      >
+        A string value
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A string-interpolated value 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+      >
+        <div
+          class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+        >
+          Mentions
+        </div>
+      </div>
+      <div
+        class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+      >
+        4 mentions
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A truncated array of strings field 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr fAzoTG"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+        >
+          <div
+            class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          >
+            item 1
+          </div>
+        </div>
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+        >
+          <div
+            class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          >
+            item 2
+          </div>
+        </div>
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+        >
+          <div
+            class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          >
+            item 3
+          </div>
+        </div>
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+        >
+          <div
+            class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          >
+            item 4
+          </div>
+        </div>
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+        >
+          <div
+            class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          >
+            + 2 more
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A truncated string 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-tkKAw hbGYjv"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut facilisis urna. Suspendisse ullamcorper, velit ut auctor vulputate, nibh sem finibus ipsum, vel bibendum tellus nulla non nunc. In porta velit odio. Vivamus nibh dolor, bibendum vel velit sit amet, suscipit lobortis leo. Donec tempus justo non nisi pulvinar, vitae fringilla ligula aliquam. Proin efficitur tellus ac tincidunt iaculis. Duis mattis urna quis libero feugiat, nec pretium felis ornare.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component A uri field 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <a
+        class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+        color="primary.main"
+        href="https://google.com"
+      >
+        https://google.com
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component An Img widget 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <img
+        alt="Jellyfish"
+        class="sc-jtHMlw gliecF"
+        src="https://upload.wikimedia.org/wikipedia/commons/4/44/Jelly_cc11.jpg"
+        width="200"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component An array of strings field 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr fAzoTG"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+        >
+          <span
+            class="sc-fKFyDc dToKui sc-iwyYcG hHOrbl sc-bYEvPH gpyJyS sc-kLgntA iGKgqu"
+          >
+            first item
+          </span>
+        </div>
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+        >
+          <span
+            class="sc-fKFyDc dToKui sc-iwyYcG bYrAgY sc-bYEvPH gpyJyS sc-kLgntA iGKgqu"
+          >
+            second item
+          </span>
+        </div>
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+        >
+          <span
+            class="sc-fKFyDc dToKui sc-iwyYcG lhfjGE sc-bYEvPH gpyJyS sc-kLgntA iGKgqu"
+          >
+            third item
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component An email field 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <a
+        class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+        color="primary.main"
+        href="mailto:user@balena.io"
+      >
+        user@balena.io
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component An evaluated value 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+      >
+        <div
+          class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+        >
+          Multiple Owners
+        </div>
+      </div>
+      <div
+        class="sc-AzgDb kYRMKa sc-khAkjo ehhgfF"
+      >
+        <label
+          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 hixiBW"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 kDZMxH StyledCheckBox-sc-1dbk5ju-6 hOFfoi"
+          >
+            <input
+              checked=""
+              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 gnmdLR"
+              type="checkbox"
+            />
+            <div
+              class="StyledBox-sc-13pk1d4-0 cfMdld StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 kRWCTA"
+            >
+              <svg
+                class="StyledCheckBox__StyledCheckBoxIcon-sc-1dbk5ju-0 hGAXaj"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6,11.3 L10.3,16 L18,6.2"
+                  fill="none"
+                />
+              </svg>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component An integer 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+      >
+        <div
+          class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+        >
+          Field Title
+        </div>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf eNkluL"
+        >
+          Field description
+        </div>
+      </div>
+      <div
+        class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+      >
+        5000
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component An invalid value 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-lmoMRL bYAXxA"
+      >
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf ifPkvS"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-ban fa-w-16 "
+            data-icon="ban"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M256 8C119.034 8 8 119.033 8 256s111.034 248 248 248 248-111.034 248-248S392.967 8 256 8zm130.108 117.892c65.448 65.448 70 165.481 20.677 235.637L150.47 105.216c70.204-49.356 170.226-44.735 235.638 20.676zM125.892 386.108c-65.448-65.448-70-165.481-20.677-235.637L361.53 406.784c-70.203 49.356-170.226 44.736-235.638-20.676z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+        <span
+          class="sc-fKFyDc dToKui sc-iwyYcG llbUJj"
+        >
+          Invalid data/schema
+        </span>
+      </div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+      >
+        <div
+          class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+        >
+          Field Title
+        </div>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf eNkluL"
+        >
+          Field description
+        </div>
+      </div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        >
+          <div
+            class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+          >
+            Eh
+          </div>
+        </div>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        >
+          what
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component An object with various properties 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+      >
+        <div
+          class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+        >
+          Field Title
+        </div>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf eNkluL"
+        >
+          Field description
+        </div>
+      </div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        >
+          <div
+            class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+          >
+            A String Field
+          </div>
+        </div>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        >
+          The string value
+        </div>
+      </div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        >
+          <div
+            class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+          >
+            A Number Field
+          </div>
+        </div>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        >
+          12.345
+        </div>
+      </div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        >
+          <div
+            class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+          >
+            An Integer Field
+          </div>
+        </div>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        >
+          5000
+        </div>
+      </div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        >
+          <div
+            class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+          >
+            A Boolean Field
+          </div>
+        </div>
+        <div
+          class="sc-AzgDb iHoFZh sc-khAkjo ehhgfF"
+        >
+          <label
+            class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 hixiBW"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 kDZMxH StyledCheckBox-sc-1dbk5ju-6 hOFfoi"
+            >
+              <input
+                class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 gnmdLR"
+                type="checkbox"
+              />
+              <div
+                class="StyledBox-sc-13pk1d4-0 gFpUiV StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 kRWCTA"
+              />
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component Re-ordered fields 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        >
+          <div
+            class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+          >
+            Field B
+          </div>
+        </div>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        >
+          field B value
+        </div>
+      </div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        >
+          <div
+            class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+          >
+            Field C
+          </div>
+        </div>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        >
+          field C value
+        </div>
+      </div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        >
+          <div
+            class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+          >
+            Field A
+          </div>
+        </div>
+        <div
+          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        >
+          field A value
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`JsonSchemaRenderer component Using context functions 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+    >
+      <div
+        class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+      >
+        Hello Jellyfish
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -16,6 +16,24 @@ function copyProps(src, target) {
 
 global.window = window;
 global.document = window.document;
+
+// See https://github.com/jsdom/jsdom/issues/3002 why we need to mock this.
+global.document.createRange = () => {
+  const range = new Range();
+
+  range.getBoundingClientRect = jest.fn();
+
+  range.getClientRects = () => {
+    return {
+      item: () => null,
+      length: 0,
+      [Symbol.iterator]: jest.fn()
+    };
+  };
+
+  return range;
+}
+
 global.navigator = {
   userAgent: 'node.js',
 };

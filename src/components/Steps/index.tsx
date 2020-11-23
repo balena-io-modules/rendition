@@ -5,22 +5,28 @@ import findIndex from 'lodash/findIndex';
 import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
-import { DefaultProps, RenditionSystemProps, Theme } from '../../common-types';
+import { RenditionSystemProps, Theme } from '../../common-types';
 import Arrow from '../../internal/Arrow';
 import { DismissableContainer } from '../../internal/DismissableContainer';
 import { Flex } from '../Flex';
-import Heading from '../Heading';
-import Link from '../Link';
-import Txt from '../Txt';
+import { Heading } from '../Heading';
+import { Link } from '../Link';
+import { Txt } from '../Txt';
 import { Box } from '../Box';
 import { px } from '../../utils';
 
-export interface InternalStepsProps extends DefaultProps {
+export interface InternalStepsProps extends React.HTMLAttributes<HTMLElement> {
+	/** If true (default), the steps container will have a visible border */
 	bordered?: boolean;
+	/** If true, the steps will be treated as an ordered list. Instead of the check icon, pending ordered steps will be displayed with a grey step number and active ordered steps with a blue step number. */
 	ordered?: boolean;
+	/** If passed, specifies the step that is currently active. Only use with the `ordered` prop */
 	activeStepIndex?: number;
+	/** If passed, the steps will have a title at the beginning */
 	titleText?: string;
+	/** If passed, an icon will be shown next to the title text, or on its own if there is no title text passed */
 	titleIcon?: React.ReactNode;
+	/** Function that is called when a user clicks on the close button, if not passed, no close button will be rendered */
 	onClose?: () => void;
 }
 
@@ -31,8 +37,11 @@ interface ThemedInternalStepsProps extends InternalStepsProps {
 type statusOptions = 'none' | 'pending' | 'completed';
 
 export interface StepProps {
+	/** The text of the step */
 	children: string;
+	/** Indicate the status of the step */
 	status: statusOptions;
+	/** If passed, the step will be clickable. Note: If the steps are ordered, this callback should be used to update the activeStepIndex prop passed to the Steps component. */
 	onClick?: () => void;
 }
 
@@ -117,7 +126,7 @@ const StepIcon = ({ ordered, status, active, index }: StepIconProps) => {
 	);
 };
 
-const StepBase = ({
+const BaseStep = ({
 	ordered,
 	active,
 	index,
@@ -153,7 +162,7 @@ const StepBase = ({
 	);
 };
 
-export const Step = StepBase as React.FunctionComponent<StepProps>;
+export const Step = BaseStep as React.FunctionComponent<StepProps>;
 
 const FramelessSteps = ({
 	ordered,
@@ -198,7 +207,7 @@ const FramelessSteps = ({
 						: undefined;
 
 				return (
-					<Flex flexDirection="row" alignItems="center">
+					<Flex key={index} flexDirection="row" alignItems="center">
 						{React.cloneElement(step, {
 							ordered,
 							index,
@@ -217,7 +226,7 @@ const FramelessSteps = ({
 	);
 };
 
-const Steps = React.forwardRef(
+const BaseSteps = React.forwardRef(
 	(
 		{
 			theme,
@@ -285,15 +294,22 @@ const Steps = React.forwardRef(
 	},
 );
 
-Steps.defaultProps = {
+BaseSteps.defaultProps = {
 	bordered: true,
 	ordered: false,
 };
 
 export type StepsProps = InternalStepsProps & RenditionSystemProps;
 
-export default asRendition<
+/**
+ * A visual guide showing a number of steps to be performed by the user. The `Steps` component takes one or more `Step` components as children.
+ *
+ * If the `ordered` prop is `true`, the steps will be considered as an ordered (numbered) list. In this case, the `activeStepIndex` must be set and the `onClick` callback prop of the child `Step` components used to update the `activeStepIndex`.
+ *
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Steps/Steps.stories.tsx)
+ */
+export const Steps = asRendition<
 	React.ForwardRefExoticComponent<
 		StepsProps & React.RefAttributes<HTMLDivElement>
 	>
->(Steps);
+>(BaseSteps);
