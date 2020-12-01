@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update snapshots due to a Card change
+      hash: 23a2117b970e384122bfcf14afa1c4bacbfeb048
+      body: |
+        Update snapshots due to a Card component change
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 18.17.2
+  date: 2020-12-01T18:49:58.500Z
+- commits:
     - subject: 'Card: make body to be full height'
       hash: d1e1f31bfd65f65f7216180fcb7e9c131cbf77e5
       body: |
