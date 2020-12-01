@@ -6,7 +6,7 @@ exports[`Storyshots Core/Tabs Compact 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 dYebPD StyledTabs-a4fwxl-2 jQLYpX sc-iWFSnp jSmGJQ sc-jLiVlK jjSmb"
+      class="StyledBox-sc-13pk1d4-0 dYebPD StyledTabs-a4fwxl-2 jQLYpX sc-jLiVlK ldWkkf sc-bUrJUP bGURQn"
       role="tablist"
     >
       <div
@@ -137,7 +137,7 @@ exports[`Storyshots Core/Tabs Default 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 dYebPD StyledTabs-a4fwxl-2 jQLYpX sc-iWFSnp hsQyeR sc-jLiVlK jjSmb"
+      class="StyledBox-sc-13pk1d4-0 dYebPD StyledTabs-a4fwxl-2 jQLYpX sc-jLiVlK exIHQy sc-bUrJUP bGURQn"
       role="tablist"
     >
       <div
@@ -217,7 +217,7 @@ exports[`Storyshots Core/Tabs With Long Titles 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 dYebPD StyledTabs-a4fwxl-2 jQLYpX sc-iWFSnp hsQyeR sc-jLiVlK jjSmb"
+      class="StyledBox-sc-13pk1d4-0 dYebPD StyledTabs-a4fwxl-2 jQLYpX sc-jLiVlK exIHQy sc-bUrJUP bGURQn"
       role="tablist"
     >
       <div

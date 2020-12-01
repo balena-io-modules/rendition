@@ -37,6 +37,7 @@ export { Modal, ModalProps } from './components/Modal';
 export { Pager, PagerProps } from './components/Pager';
 export { ProgressBar, ProgressBarProps } from './components/ProgressBar';
 export { Provider } from './components/Provider';
+export { Rating, RatingProps } from './components/Rating';
 export { Search, SearchProps } from './components/Search';
 export { Select, SelectProps } from './components/Select';
 export { Spinner, SpinnerProps } from './components/Spinner';

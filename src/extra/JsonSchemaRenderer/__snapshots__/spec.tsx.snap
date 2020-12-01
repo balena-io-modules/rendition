@@ -1,15 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`JsonSchemaRenderer component A Heading widget 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c5 {
+  font-weight: normal;
+}
+
+.c6 {
+  margin: 0;
+  font-size: 34px;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <h2
-        class="sc-jcVebW fraIRR sc-iBaPrD iFoFUX"
+        class="c5 c6"
       >
         Something Important
       </h2>
@@ -19,15 +69,74 @@ exports[`JsonSchemaRenderer component A Heading widget 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A HighlightedName widget 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c5 {
+  padding: 8px;
+  font-size: 14px;
+  color: #2A506F;
+  background-color: #222;
+}
+
+.c6 {
+  display: inline-block;
+  border-radius: 2px;
+  line-height: 1;
+}
+
+.c7 {
+  color: white;
+  background-color: #222;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <span
-        class="sc-fKFyDc dToKui sc-iwyYcG fGwSRz sc-eHfQar gsQmtQ sc-hzMMCg jiyxCm"
+        class="c5 c6 c7"
       >
         Jellyfish
       </span>
@@ -37,15 +146,73 @@ exports[`JsonSchemaRenderer component A HighlightedName widget 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A Link widget 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c5 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c5:active,
+.c5:hover {
+  color: hsl(196.29999999999995,100%,37.5%);
+}
+
+.c6 {
+  color: #00AEEF;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <a
-        class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+        class="c5 c6"
         color="primary.main"
         href="https://trello.com/b/lEIoUMKY"
         rel="noopener"
@@ -59,22 +226,126 @@ exports[`JsonSchemaRenderer component A Link widget 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A List widget 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c7 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c7:active,
+.c7:hover {
+  color: hsl(196.29999999999995,100%,37.5%);
+}
+
+.c8 {
+  color: #00AEEF;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
+.c5 {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.c5 > li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c5 > li:first-child {
+  margin-top: 0;
+}
+
+.c5 > li:last-child {
+  margin-bottom: 0;
+}
+
+.c5 > li:before {
+  text-align: center;
+}
+
+.c6 {
+  counter-reset: ordered-list-counter;
+}
+
+.c6 > li {
+  margin: 16px 0;
+  counter-increment: ordered-list-counter;
+}
+
+.c6 > li:before {
+  content: counter(ordered-list-counter);
+  margin-right: 8px;
+  background: #1496E1;
+  height: 1.5em;
+  width: 1.5em;
+  min-width: 1.5em;
+  line-height: 1.5em;
+  color: white;
+  border-radius: 50%;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <ol
-        class="sc-cvJHqN sc-dkmKpi gUqxEt cTGfqz sc-fybufo evTA-dY"
+        class="c5 c6 "
       >
         <li>
           <div
-            class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+            class="c2 c3 c4 "
           >
             <a
-              class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+              class="c7 c8"
               color="primary.main"
               href="https://jel.ly.fish/user"
             >
@@ -84,10 +355,10 @@ exports[`JsonSchemaRenderer component A List widget 1`] = `
         </li>
         <li>
           <div
-            class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+            class="c2 c3 c4 "
           >
             <a
-              class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+              class="c7 c8"
               color="primary.main"
               href="https://jel.ly.fish/org"
             >
@@ -97,10 +368,10 @@ exports[`JsonSchemaRenderer component A List widget 1`] = `
         </li>
         <li>
           <div
-            class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+            class="c2 c3 c4 "
           >
             <a
-              class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+              class="c7 c8"
               color="primary.main"
               href="https://jel.ly.fish/issue"
             >
@@ -115,26 +386,101 @@ exports[`JsonSchemaRenderer component A List widget 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A Tag widget 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c6 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c8 {
+  white-space: pre;
+}
+
+.c10 {
+  font-weight: 600;
+}
+
+.c9 {
+  font-size: 12px;
+  color: #1496E1;
+}
+
+.c7 {
+  background-color: #e8f5fc;
+  border: 1px solid #1496E1;
+  border-radius: 2px;
+  line-height: 1.5;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-TmcTc kOJHRw"
+        class="c2 c5 "
       >
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-fWSCIC cLDXoV dBCyhH"
+          class="c2 c6 c5 c7"
         >
           <div
-            class="sc-fKFyDc kIYkoy sc-bBXqnf iHGIIw"
+            class="c8 c9"
           >
             subscription: 
           </div>
           <div
-            class="sc-fKFyDc ipClrT sc-bBXqnf iHGIIw"
+            class="c10 c9"
           >
             premium
           </div>
@@ -146,15 +492,72 @@ exports[`JsonSchemaRenderer component A Tag widget 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A badge widget 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c5 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 12px;
+  color: #0650E5;
+  background-color: #D7E4FE;
+}
+
+.c6 {
+  display: inline-block;
+  border-radius: 1em;
+  line-height: 1;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <span
-        class="sc-fKFyDc dToKui sc-iwyYcG bYrAgY sc-bYEvPH gpyJyS sc-kLgntA iGKgqu"
+        class="c5 c6 "
       >
         closed
       </span>
@@ -164,29 +567,83 @@ exports[`JsonSchemaRenderer component A badge widget 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A boolean 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c5 {
+  margin-right: 8px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c6 {
+  font-weight: 600;
+}
+
+.c7 {
+  font-size: 85%;
+  color: #527699;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        class="c2 c5"
       >
         <div
-          class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+          class="c6 "
         >
           Field Title
         </div>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf eNkluL"
+          class="c7"
         >
           Field description
         </div>
       </div>
       <div
-        class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        class=""
       >
         true
       </div>
@@ -196,30 +653,202 @@ exports[`JsonSchemaRenderer component A boolean 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A button group widget 1`] = `
+.c7 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  border: 1px solid #2A506F;
+  border-radius: 20px;
+  color: #444444;
+  padding: 4px 30px;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-transition-property: color,background-color,border-color,box-shadow;
+  transition-property: color,background-color,border-color,box-shadow;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+.c7:hover {
+  box-shadow: 0px 0px 0px 2px #2A506F;
+}
+
+.c7:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c7:focus > circle,
+.c7:focus > ellipse,
+.c7:focus > line,
+.c7:focus > path,
+.c7:focus > polygon,
+.c7:focus > polyline,
+.c7:focus > rect {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c7:focus::-moz-focus-inner {
+  border: 0;
+}
+
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c8 {
+  font-weight: 600;
+  font-size: 14px;
+  height: 38px;
+  white-space: nowrap;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c8 svg {
+  color: inherit !important;
+  font-size: 0.925em;
+}
+
+.c8:disabled {
+  cursor: not-allowed;
+}
+
+.c9 {
+  color: #2A506F;
+  border-color: #2A506F;
+}
+
+.c9 svg {
+  color: #527699 !important;
+}
+
+.c9:hover:enabled,
+.c9:focus:enabled,
+.c9:active:enabled {
+  box-shadow: none;
+  background: #2A506F;
+  border-color: #2A506F;
+  color: white;
+  opacity: initial;
+}
+
+.c9:hover:enabled svg,
+.c9:focus:enabled svg,
+.c9:active:enabled svg {
+  color: white !important;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c6 > *:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c6 > *:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c6 > *:not(:last-child) {
+  border-right: 0;
+}
+
+.c6 > *:not(:last-child):not(:first-child) {
+  border-radius: 0;
+}
+
+.c6 > *:hover {
+  z-index: 1;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-hiSbYr cLDXoV yhjCA"
+        class="c2 c5 c6"
       >
         <a
-          class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk YDvpG"
+          class="c7 c8 c9 "
           href="https://jel.ly.fish/item 1"
         >
           item 1
         </a>
         <a
-          class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk YDvpG"
+          class="c7 c8 c9 "
           href="https://jel.ly.fish/item 2"
         >
           item 2
         </a>
         <a
-          class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk YDvpG"
+          class="c7 c8 c9 "
           href="https://jel.ly.fish/item 3"
         >
           item 3
@@ -231,15 +860,156 @@ exports[`JsonSchemaRenderer component A button group widget 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A button widget 1`] = `
+.c5 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  border: 1px solid #00AEEF;
+  border-radius: 20px;
+  color: #444444;
+  padding: 4px 30px;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #00AEEF;
+  color: #444444;
+  border-radius: 20px;
+  -webkit-transition-property: color,background-color,border-color,box-shadow;
+  transition-property: color,background-color,border-color,box-shadow;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+.c5:hover {
+  box-shadow: 0px 0px 0px 2px #00AEEF;
+}
+
+.c5:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c5:focus > circle,
+.c5:focus > ellipse,
+.c5:focus > line,
+.c5:focus > path,
+.c5:focus > polygon,
+.c5:focus > polyline,
+.c5:focus > rect {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c5:focus::-moz-focus-inner {
+  border: 0;
+}
+
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c6 {
+  font-weight: 600;
+  font-size: 14px;
+  height: 38px;
+  white-space: nowrap;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c6 svg {
+  color: inherit !important;
+  font-size: 0.925em;
+}
+
+.c6:disabled {
+  cursor: not-allowed;
+}
+
+.c7 {
+  color: white;
+}
+
+.c7:hover:enabled,
+.c7:focus:enabled,
+.c7:active:enabled {
+  box-shadow: none;
+  background: hsl(196.29999999999995,100%,37.5%);
+  border-color: hsl(196.29999999999995,100%,37.5%);
+  color: white;
+  opacity: initial;
+}
+
+.c7:hover:enabled svg,
+.c7:focus:enabled svg,
+.c7:active:enabled svg {
+  color: white !important;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <a
-        class="StyledButton-sc-323bzc-0 fGJlAh sc-bqyKva sc-kstrdz gjQfnS FUwNf sc-dIUggk YDvpG"
+        class="c5 c6 c7 "
         href="http://jel.ly.fish/issue"
         target="_blank"
       >
@@ -251,23 +1021,89 @@ exports[`JsonSchemaRenderer component A button widget 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A color widget 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c5 {
+  width: 100px;
+  height: 60px;
+  color: #FFF;
+  background-color: #ff0000;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ gNQCeU sc-hHftDr cMsQud"
+        class="c2 c5 c6"
       >
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          class=""
         >
           Danger
         </div>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          class=""
         >
           #ff0000
         </div>
@@ -278,33 +1114,231 @@ exports[`JsonSchemaRenderer component A color widget 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A default value 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   />
 </div>
 `;
 
 exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
+.c6 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  border: 1px solid #2A506F;
+  border-radius: 20px;
+  color: #444444;
+  padding: 4px 30px;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-transition-property: color,background-color,border-color,box-shadow;
+  transition-property: color,background-color,border-color,box-shadow;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+.c6:hover {
+  box-shadow: 0px 0px 0px 2px #2A506F;
+}
+
+.c6:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c6:focus > circle,
+.c6:focus > ellipse,
+.c6:focus > line,
+.c6:focus > path,
+.c6:focus > polygon,
+.c6:focus > polyline,
+.c6:focus > rect {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c6:focus::-moz-focus-inner {
+  border: 0;
+}
+
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c11 {
+  margin-right: 8px;
+}
+
+.c7 {
+  font-weight: 600;
+  font-size: 14px;
+  height: 38px;
+  white-space: nowrap;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c7 svg {
+  color: inherit !important;
+  font-size: 0.925em;
+}
+
+.c7:disabled {
+  cursor: not-allowed;
+}
+
+.c8 {
+  color: #2A506F;
+  border-color: #2A506F;
+}
+
+.c8 svg {
+  color: #527699 !important;
+}
+
+.c8:hover:enabled,
+.c8:focus:enabled,
+.c8:active:enabled {
+  box-shadow: none;
+  background: #2A506F;
+  border-color: #2A506F;
+  color: white;
+  opacity: initial;
+}
+
+.c8:hover:enabled svg,
+.c8:focus:enabled svg,
+.c8:active:enabled svg {
+  color: white !important;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c5 {
+  display: inline-block;
+  border-radius: 3px;
+  vertical-align: top;
+  position: relative;
+}
+
+.c5 svg {
+  width: 12px;
+  -webkit-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
+}
+
+.c9 {
+  margin: 0;
+  width: 100%;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-bTvRPi iIpDHo sc-dtwoBo iBRXbM"
+        class="c2 c5 "
       >
         <button
-          class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk YDvpG sc-hOqqkJ kAcspI"
+          class="c6 c7 c8 c9"
           type="button"
         >
           <div
-            class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kUtBaJ"
+            class="c2 c10"
           >
             <div
-              class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+              class="c2 c11"
             >
               Links
             </div>
@@ -332,27 +1366,76 @@ exports[`JsonSchemaRenderer component A drop-down button widget 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A hidden field 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c5 {
+  margin-right: 8px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c6 {
+  font-weight: 600;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+        class="c2 c3 c4 "
       >
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+          class="c2 c5"
         >
           <div
-            class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+            class="c6 "
           >
             Shown
           </div>
         </div>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          class=""
         >
           This should be shown
         </div>
@@ -363,15 +1446,56 @@ exports[`JsonSchemaRenderer component A hidden field 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A hidden title 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        class=""
       >
         No title shown
       </div>
@@ -381,26 +1505,335 @@ exports[`JsonSchemaRenderer component A hidden title 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A markdown field 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c6 {
+  font-weight: normal;
+}
+
+.c7 {
+  margin: 0;
+  font-size: 58px;
+}
+
+.c8 {
+  margin: 0;
+  font-size: 34px;
+}
+
+.c5 code[class*='language-'],
+.c5 pre[class*='language-'] {
+  color: black;
+  background: none;
+  text-shadow: 0 1px white;
+  font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.c5 pre[class*='language-']::-moz-selection,
+.c5 pre[class*='language-'] ::-moz-selection,
+.c5 code[class*='language-']::-moz-selection,
+.c5 code[class*='language-'] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+.c5 pre[class*='language-']::selection,
+.c5 pre[class*='language-'] ::selection,
+.c5 code[class*='language-']::selection,
+.c5 code[class*='language-'] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+.c5 pre[class*='language-'] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+
+.c5:not(pre) > code[class*='language-'],
+.c5 pre[class*='language-'] {
+  background: #f5f2f0;
+}
+
+.c5:not(pre) > code[class*='language-'] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.c5 .token.comment,
+.c5 .token.prolog,
+.c5 .token.doctype,
+.c5 .token.cdata {
+  color: slategray;
+}
+
+.c5 .token.punctuation {
+  color: #999;
+}
+
+.c5 .token.namespace {
+  opacity: 0.7;
+}
+
+.c5 .token.property,
+.c5 .token.tag,
+.c5 .token.boolean,
+.c5 .token.number,
+.c5 .token.constant,
+.c5 .token.symbol,
+.c5 .token.deleted {
+  color: #905;
+}
+
+.c5 .token.selector,
+.c5 .token.attr-name,
+.c5 .token.string,
+.c5 .token.char,
+.c5 .token.builtin,
+.c5 .token.inserted {
+  color: #690;
+}
+
+.c5 .token.operator,
+.c5 .token.entity,
+.c5 .token.url,
+.c5 .language-css .token.string,
+.c5 .style .token.string {
+  color: #9a6e3a;
+  background: hsla(0,0%,100%,0.5);
+}
+
+.c5 .token.atrule,
+.c5 .token.attr-value,
+.c5 .token.keyword {
+  color: #07a;
+}
+
+.c5 .token.function,
+.c5 .token.class-name {
+  color: #dd4a68;
+}
+
+.c5 .token.regex,
+.c5 .token.important,
+.c5 .token.variable {
+  color: #e90;
+}
+
+.c5 .token.important,
+.c5 .token.bold {
+  font-weight: bold;
+}
+
+.c5 .token.italic {
+  font-style: italic;
+}
+
+.c5 .token.entity {
+  cursor: help;
+}
+
+.c5 * {
+  box-sizing: border-box;
+}
+
+.c5 code {
+  background-color: #f4f4f4;
+  padding: 0.2em 0px;
+  margin: 0px;
+  border-radius: 3px;
+  line-height: 1.2;
+}
+
+.c5 pre {
+  background-color: #f4f4f4;
+}
+
+.c5 pre > code {
+  display: block;
+  background: none;
+  overflow-y: auto;
+}
+
+.c5 code,
+.c5 kbd,
+.c5 pre {
+  font-family: 'Ubuntu Mono','Courier New',monospace;
+}
+
+.c5 kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #2A506F;
+  vertical-align: middle;
+  background-color: rgba(244,244,244,0.7);
+  border: solid 1px #c6c8c9;
+  border-bottom-color: hsl(200,2.7%,70.4%);
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 hsl(200,2.7%,70.4%);
+}
+
+.c5 dl {
+  padding: 0;
+}
+
+.c5 dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.c5 dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.c5 td,
+.c5 th {
+  padding: 0;
+}
+
+.c5 table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.c5 table th {
+  font-weight: 600;
+}
+
+.c5 table th,
+.c5 table td {
+  padding: 6px 13px;
+  border: 1px solid #c6c8c9;
+}
+
+.c5 table tr {
+  background-color: #fff;
+  border-top: 1px solid #f4f4f4;
+}
+
+.c5 table tr:nth-child(2n) {
+  background-color: #f4f4f4;
+}
+
+.c5 blockquote {
+  margin: 0;
+}
+
+.c5 blockquote,
+.c5 dl,
+.c5 table {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.c5 blockquote {
+  padding: 0 1em;
+  color: #2A506F;
+  border-left: 0.25em solid #c6c8c9;
+}
+
+.c5 blockquote > :first-child {
+  margin-top: 0;
+}
+
+.c5 blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
+@media print {
+  .c5 code[class*='language-'],
+  .c5 pre[class*='language-'] {
+    text-shadow: none;
+  }
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-dFJsGO cwIjin"
+        class="c5"
       >
         <div>
           <h1
-            class="sc-jcVebW fraIRR sc-iUuytg gQgcGC"
+            class="c6 c7"
           >
             Something Important
           </h1>
           
 
           <h2
-            class="sc-jcVebW fraIRR sc-iBaPrD iFoFUX"
+            class="c6 c8"
           >
             Something less important
           </h2>
@@ -412,27 +1845,76 @@ exports[`JsonSchemaRenderer component A markdown field 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A materialized field 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c5 {
+  margin-right: 8px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c6 {
+  font-weight: 600;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+        class="c2 c3 c4 "
       >
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+          class="c2 c5"
         >
           <div
-            class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+            class="c6 "
           >
             Name
           </div>
         </div>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          class=""
         >
           John Smith
         </div>
@@ -443,37 +1925,108 @@ exports[`JsonSchemaRenderer component A materialized field 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A null object 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   />
 </div>
 `;
 
 exports[`JsonSchemaRenderer component A number 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c5 {
+  margin-right: 8px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c6 {
+  font-weight: 600;
+}
+
+.c7 {
+  font-size: 85%;
+  color: #527699;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        class="c2 c5"
       >
         <div
-          class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+          class="c6 "
         >
           Field Title
         </div>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf eNkluL"
+          class="c7"
         >
           Field description
         </div>
       </div>
       <div
-        class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        class=""
       >
         4.5
       </div>
@@ -483,29 +2036,88 @@ exports[`JsonSchemaRenderer component A number 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A string 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c5 {
+  margin-right: 8px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c6 {
+  font-weight: 600;
+}
+
+.c8 {
+  text-align: left;
+  white-space: normal;
+}
+
+.c7 {
+  font-size: 85%;
+  color: #527699;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        class="c2 c5"
       >
         <div
-          class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+          class="c6 "
         >
           Field Title
         </div>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf eNkluL"
+          class="c7"
         >
           Field description
         </div>
       </div>
       <div
-        class="sc-fKFyDc PdGzp sc-bBXqnf kYwmpI"
+        class="c8 "
       >
         A string value
       </div>
@@ -515,24 +2127,73 @@ exports[`JsonSchemaRenderer component A string 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A string-interpolated value 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c5 {
+  margin-right: 8px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c6 {
+  font-weight: 600;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        class="c2 c5"
       >
         <div
-          class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+          class="c6 "
         >
           Mentions
         </div>
       </div>
       <div
-        class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        class=""
       >
         4 mentions
       </div>
@@ -542,57 +2203,111 @@ exports[`JsonSchemaRenderer component A string-interpolated value 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A truncated array of strings field 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr fAzoTG"
+        class="c2 c5"
       >
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+          class="c2 c3 c4 "
         >
           <div
-            class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+            class=""
           >
             item 1
           </div>
         </div>
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+          class="c2 c3 c4 "
         >
           <div
-            class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+            class=""
           >
             item 2
           </div>
         </div>
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+          class="c2 c3 c4 "
         >
           <div
-            class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+            class=""
           >
             item 3
           </div>
         </div>
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+          class="c2 c3 c4 "
         >
           <div
-            class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+            class=""
           >
             item 4
           </div>
         </div>
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+          class="c2 c3 c4 "
         >
           <div
-            class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+            class=""
           >
             + 2 more
           </div>
@@ -604,15 +2319,63 @@ exports[`JsonSchemaRenderer component A truncated array of strings field 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A truncated string 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
+.c5 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-tkKAw hbGYjv"
+        class="c5"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut facilisis urna. Suspendisse ullamcorper, velit ut auctor vulputate, nibh sem finibus ipsum, vel bibendum tellus nulla non nunc. In porta velit odio. Vivamus nibh dolor, bibendum vel velit sit amet, suscipit lobortis leo. Donec tempus justo non nisi pulvinar, vitae fringilla ligula aliquam. Proin efficitur tellus ac tincidunt iaculis. Duis mattis urna quis libero feugiat, nec pretium felis ornare.
       </div>
@@ -622,15 +2385,73 @@ exports[`JsonSchemaRenderer component A truncated string 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component A uri field 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c5 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c5:active,
+.c5:hover {
+  color: hsl(196.29999999999995,100%,37.5%);
+}
+
+.c6 {
+  color: #00AEEF;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <a
-        class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+        class="c5 c6"
         color="primary.main"
         href="https://google.com"
       >
@@ -642,16 +2463,64 @@ exports[`JsonSchemaRenderer component A uri field 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component An Img widget 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
+.c5 {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 200px;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <img
         alt="Jellyfish"
-        class="sc-jtHMlw gliecF"
+        class="c5"
         src="https://upload.wikimedia.org/wikipedia/commons/4/44/Jelly_cc11.jpg"
         width="200"
       />
@@ -661,39 +2530,129 @@ exports[`JsonSchemaRenderer component An Img widget 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component An array of strings field 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c6 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 12px;
+  color: #BA0C00;
+  background-color: #FFD5D2;
+}
+
+.c8 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 12px;
+  color: #0650E5;
+  background-color: #D7E4FE;
+}
+
+.c9 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 12px;
+  color: #3C2DE7;
+  background-color: #D6D3FA;
+}
+
+.c7 {
+  display: inline-block;
+  border-radius: 1em;
+  line-height: 1;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr fAzoTG"
+        class="c2 c5"
       >
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+          class="c2 c3 c4 "
         >
           <span
-            class="sc-fKFyDc dToKui sc-iwyYcG hHOrbl sc-bYEvPH gpyJyS sc-kLgntA iGKgqu"
+            class="c6 c7 "
           >
             first item
           </span>
         </div>
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+          class="c2 c3 c4 "
         >
           <span
-            class="sc-fKFyDc dToKui sc-iwyYcG bYrAgY sc-bYEvPH gpyJyS sc-kLgntA iGKgqu"
+            class="c8 c7 "
           >
             second item
           </span>
         </div>
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+          class="c2 c3 c4 "
         >
           <span
-            class="sc-fKFyDc dToKui sc-iwyYcG lhfjGE sc-bYEvPH gpyJyS sc-kLgntA iGKgqu"
+            class="c9 c7 "
           >
             third item
           </span>
@@ -705,15 +2664,73 @@ exports[`JsonSchemaRenderer component An array of strings field 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component An email field 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c5 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c5:active,
+.c5:hover {
+  color: hsl(196.29999999999995,100%,37.5%);
+}
+
+.c6 {
+  color: #00AEEF;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <a
-        class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
+        class="c5 c6"
         color="primary.main"
         href="mailto:user@balena.io"
       >
@@ -725,41 +2742,236 @@ exports[`JsonSchemaRenderer component An email field 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component An evaluated value 1`] = `
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  max-width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  max-width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px #00AEEF;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 20px;
+  width: 20px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.c13 {
+  box-sizing: border-box;
+  stroke-width: 2px;
+  stroke: #00AEEF;
+  width: 20px;
+  height: 20px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.c8:hover input:not([disabled]) + div,
+.c8:hover input:not([disabled]) + span {
+  border-color: #DDE1f0;
+}
+
+.c11 {
+  opacity: 0;
+  -moz-appearance: none;
+  width: 0;
+  height: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.c11:checked + span > span {
+  left: calc( 40px - 20px );
+  background: #00AEEF;
+}
+
+.c10 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c5 {
+  margin-right: 8px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c6 {
+  font-weight: 600;
+}
+
+.c7 > label > div > div,
+.c7 > label > div > span {
+  background-color: white;
+}
+
+.c7 > label > span {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+}
+
+.c7 label input + div {
+  border-color: #00AEEF;
+  background: #00AEEF;
+}
+
+.c7 label input + div > svg {
+  stroke: #fff;
+}
+
+.c7 label[disabled] {
+  opacity: 0.4;
+}
+
+.c7 label:hover input:not([disabled]) + span > span {
+  border-color: #009dd7;
+  background: #009dd7;
+}
+
+.c7 label:hover input:not([disabled]) + div {
+  border-color: #527699!important;
+}
+
+.c7 label:hover input:not([disabled]) + div {
+  border-color: #009dd7 !important;
+  background: #009dd7;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
+@media only screen and (max-width:768px) {
+  .c12 {
+    border: solid 1px #00AEEF;
+  }
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        class="c2 c5"
       >
         <div
-          class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+          class="c6 "
         >
           Multiple Owners
         </div>
       </div>
       <div
-        class="sc-AzgDb kYRMKa sc-khAkjo ehhgfF"
+        class="c7 "
       >
         <label
-          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 hixiBW"
+          class="c8"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 kDZMxH StyledCheckBox-sc-1dbk5ju-6 hOFfoi"
+            class="c9 c10"
           >
             <input
               checked=""
-              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 gnmdLR"
+              class="c11"
               type="checkbox"
             />
             <div
-              class="StyledBox-sc-13pk1d4-0 cfMdld StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 kRWCTA"
+              class="c12 "
             >
               <svg
-                class="StyledCheckBox__StyledCheckBoxIcon-sc-1dbk5ju-0 hGAXaj"
+                class="c13"
                 preserveAspectRatio="xMidYMid meet"
                 viewBox="0 0 24 24"
               >
@@ -778,29 +2990,83 @@ exports[`JsonSchemaRenderer component An evaluated value 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component An integer 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c5 {
+  margin-right: 8px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c6 {
+  font-weight: 600;
+}
+
+.c7 {
+  font-size: 85%;
+  color: #527699;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        class="c2 c5"
       >
         <div
-          class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+          class="c6 "
         >
           Field Title
         </div>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf eNkluL"
+          class="c7"
         >
           Field description
         </div>
       </div>
       <div
-        class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        class=""
       >
         5000
       </div>
@@ -810,18 +3076,94 @@ exports[`JsonSchemaRenderer component An integer 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component An invalid value 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c9 {
+  margin-right: 8px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c10 {
+  font-weight: 600;
+}
+
+.c11 {
+  font-size: 85%;
+  color: #527699;
+}
+
+.c7 {
+  margin-bottom: auto;
+  margin-right: 8px;
+  color: #FF423D;
+}
+
+.c8 {
+  color: #eb0800;
+}
+
+.c6 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-lmoMRL bYAXxA"
+        class="c2 c5 c6"
       >
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf ifPkvS"
+          class="c7"
         >
           <svg
             aria-hidden="true"
@@ -840,39 +3182,39 @@ exports[`JsonSchemaRenderer component An invalid value 1`] = `
           </svg>
         </div>
         <span
-          class="sc-fKFyDc dToKui sc-iwyYcG llbUJj"
+          class="c8"
         >
           Invalid data/schema
         </span>
       </div>
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        class="c2 c9"
       >
         <div
-          class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+          class="c10 "
         >
           Field Title
         </div>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf eNkluL"
+          class="c11"
         >
           Field description
         </div>
       </div>
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+        class="c2 c3 c4 "
       >
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+          class="c2 c9"
         >
           <div
-            class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+            class="c10 "
           >
             Eh
           </div>
         </div>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          class=""
         >
           what
         </div>
@@ -883,108 +3225,286 @@ exports[`JsonSchemaRenderer component An invalid value 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component An object with various properties 1`] = `
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  max-width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  max-width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px #DDE1f0;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 20px;
+  width: 20px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.c9:hover input:not([disabled]) + div,
+.c9:hover input:not([disabled]) + span {
+  border-color: #DDE1f0;
+}
+
+.c12 {
+  opacity: 0;
+  -moz-appearance: none;
+  width: 0;
+  height: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.c12:checked + span > span {
+  left: calc( 40px - 20px );
+  background: #00AEEF;
+}
+
+.c11 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c5 {
+  margin-right: 8px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c6 {
+  font-weight: 600;
+}
+
+.c7 {
+  font-size: 85%;
+  color: #527699;
+}
+
+.c8 > label > div > div,
+.c8 > label > div > span {
+  background-color: white;
+}
+
+.c8 > label > span {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+}
+
+.c8 label[disabled] {
+  opacity: 0.4;
+}
+
+.c8 label:hover input:not([disabled]) + span > span {
+  border-color: #009dd7;
+  background: #009dd7;
+}
+
+.c8 label:hover input:not([disabled]) + div {
+  border-color: #527699!important;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
+@media only screen and (max-width:768px) {
+  .c13 {
+    border: solid 1px #DDE1f0;
+  }
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        class="c2 c5"
       >
         <div
-          class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+          class="c6 "
         >
           Field Title
         </div>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf eNkluL"
+          class="c7"
         >
           Field description
         </div>
       </div>
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+        class="c2 c3 c4 "
       >
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+          class="c2 c5"
         >
           <div
-            class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+            class="c6 "
           >
             A String Field
           </div>
         </div>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          class=""
         >
           The string value
         </div>
       </div>
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+        class="c2 c3 c4 "
       >
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+          class="c2 c5"
         >
           <div
-            class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+            class="c6 "
           >
             A Number Field
           </div>
         </div>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          class=""
         >
           12.345
         </div>
       </div>
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+        class="c2 c3 c4 "
       >
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+          class="c2 c5"
         >
           <div
-            class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+            class="c6 "
           >
             An Integer Field
           </div>
         </div>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          class=""
         >
           5000
         </div>
       </div>
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+        class="c2 c3 c4 "
       >
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+          class="c2 c5"
         >
           <div
-            class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+            class="c6 "
           >
             A Boolean Field
           </div>
         </div>
         <div
-          class="sc-AzgDb iHoFZh sc-khAkjo ehhgfF"
+          class="c8 "
         >
           <label
-            class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 hixiBW"
+            class="c9"
           >
             <div
-              class="StyledBox-sc-13pk1d4-0 kDZMxH StyledCheckBox-sc-1dbk5ju-6 hOFfoi"
+              class="c10 c11"
             >
               <input
-                class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 gnmdLR"
+                class="c12"
                 type="checkbox"
               />
               <div
-                class="StyledBox-sc-13pk1d4-0 gFpUiV StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 kRWCTA"
+                class="c13 "
               />
             </div>
           </label>
@@ -996,63 +3516,112 @@ exports[`JsonSchemaRenderer component An object with various properties 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component Re-ordered fields 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c5 {
+  margin-right: 8px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c6 {
+  font-weight: 600;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+        class="c2 c3 c4 "
       >
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+          class="c2 c5"
         >
           <div
-            class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+            class="c6 "
           >
             Field B
           </div>
         </div>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          class=""
         >
           field B value
         </div>
       </div>
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+        class="c2 c3 c4 "
       >
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+          class="c2 c5"
         >
           <div
-            class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+            class="c6 "
           >
             Field C
           </div>
         </div>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          class=""
         >
           field C value
         </div>
       </div>
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+        class="c2 c3 c4 "
       >
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+          class="c2 c5"
         >
           <div
-            class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+            class="c6 "
           >
             Field A
           </div>
         </div>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          class=""
         >
           field A value
         </div>
@@ -1063,15 +3632,56 @@ exports[`JsonSchemaRenderer component Re-ordered fields 1`] = `
 `;
 
 exports[`JsonSchemaRenderer component Using context functions 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="c0 c1"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dRPiIx hhtBCr"
+      class="c2 c3 c4 "
     >
       <div
-        class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+        class=""
       >
         Hello Jellyfish
       </div>

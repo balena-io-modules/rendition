@@ -6,7 +6,7 @@ exports[`Storyshots Core/List Default 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
   >
     <ul
-      class="sc-cvJHqN sc-gIRixj gUqxEt hMAQFo sc-fybufo evTA-dY"
+      class="sc-dkmKpi sc-fybufo fEMROt dBgcIu sc-iWFSnp dyTeJE"
     >
       <li>
         <div
@@ -55,7 +55,7 @@ exports[`Storyshots Core/List Ordered 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
   >
     <ol
-      class="sc-cvJHqN sc-dkmKpi gUqxEt cTGfqz sc-fybufo evTA-dY"
+      class="sc-dkmKpi sc-gIRixj fEMROt gZEVcM sc-iWFSnp dyTeJE"
     >
       <li>
         <div

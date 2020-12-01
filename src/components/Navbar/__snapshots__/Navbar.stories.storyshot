@@ -9,7 +9,7 @@ exports[`Storyshots Core/Navbar Default 1`] = `
       class="sc-gKsewC cgpPfo sc-iBPRYJ csJJEL"
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ QCGZt sc-cKZHah laTkLd sc-iIEYCM hCNsVr"
+        class="sc-gKsewC cgpPfo sc-iBPRYJ QCGZt sc-iIEYCM XzXkU sc-gsBrbv MyaKV"
       >
         <div
           class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr hgkEZm"
@@ -18,7 +18,7 @@ exports[`Storyshots Core/Navbar Default 1`] = `
             class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV"
           >
             <div
-              class="sc-gKsewC cgpPfo sc-iBPRYJ jjhpBS sc-gsBrbv EYpAg"
+              class="sc-gKsewC cgpPfo sc-iBPRYJ jjhpBS sc-aKZfe fXOkrj"
             >
               <a
                 class="sc-eGCarw fNeKsH sc-ctaXAZ juDWEP"
@@ -26,14 +26,14 @@ exports[`Storyshots Core/Navbar Default 1`] = `
                 href="/"
               >
                 <img
-                  class="sc-jtHMlw eHuZyk"
+                  class="sc-eltcbb hfLDnW"
                   src=""
                   style="height: 20px;"
                 />
               </a>
             </div>
             <div
-              class="sc-gKsewC cgpPfo sc-iBPRYJ kYPycb sc-aKZfe dLiTdv"
+              class="sc-gKsewC cgpPfo sc-iBPRYJ kYPycb sc-kmASHI AJqdR"
             >
               <svg
                 aria-hidden="true"
@@ -53,7 +53,7 @@ exports[`Storyshots Core/Navbar Default 1`] = `
             </div>
           </div>
           <div
-            class="sc-gKsewC cgpPfo sc-iBPRYJ iHZzfI sc-hHftDr sc-kmASHI cLDXoV kOJQD"
+            class="sc-gKsewC cgpPfo sc-iBPRYJ iHZzfI sc-hHftDr sc-cvJHqN cLDXoV jBtudm"
           >
             <div
               class="sc-gKsewC cgpPfo sc-iBPRYJ VwhUL sc-hHftDr hgkEZm"

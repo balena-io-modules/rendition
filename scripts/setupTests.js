@@ -8,9 +8,10 @@ const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
 const { window } = jsdom;
 
 function copyProps(src, target) {
-  Object.defineProperties(target, {
-    ...Object.getOwnPropertyDescriptors(src),
-    ...Object.getOwnPropertyDescriptors(target),
+  Object.entries(Object.getOwnPropertyDescriptors(src)).forEach(([ key, descriptor ]) => {
+    if (!target.hasOwnProperty(key)) {
+      Object.defineProperty(target, key, descriptor);
+    }
   });
 }
 

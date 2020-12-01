@@ -7,7 +7,7 @@ exports[`Storyshots Core/Avatar Default 1`] = `
   >
     
     <div
-      class="StyledBox-sc-13pk1d4-0 fXtYff StyledAvatar-sc-1suyamb-1 sc-bUrJUP bGURQn"
+      class="StyledBox-sc-13pk1d4-0 fXtYff StyledAvatar-sc-1suyamb-1 sc-tkKAw gbboCD"
     >
       <svg
         aria-hidden="true"
@@ -36,7 +36,7 @@ exports[`Storyshots Core/Avatar Emphasized 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 dKvtcX StyledAvatar-sc-1suyamb-1 sc-bUrJUP bGURQn"
+      class="StyledBox-sc-13pk1d4-0 dKvtcX StyledAvatar-sc-1suyamb-1 sc-tkKAw gbboCD"
     >
       <div
         class="sc-fKFyDc dToKui sc-bBXqnf dtyrhz"
@@ -54,7 +54,7 @@ exports[`Storyshots Core/Avatar With First Name 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 fXtYff StyledAvatar-sc-1suyamb-1 sc-bUrJUP bGURQn"
+      class="StyledBox-sc-13pk1d4-0 fXtYff StyledAvatar-sc-1suyamb-1 sc-tkKAw gbboCD"
     >
       <div
         class="sc-fKFyDc dToKui sc-bBXqnf dtyrhz"
@@ -72,7 +72,7 @@ exports[`Storyshots Core/Avatar With Full Name 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 fXtYff StyledAvatar-sc-1suyamb-1 sc-bUrJUP bGURQn"
+      class="StyledBox-sc-13pk1d4-0 fXtYff StyledAvatar-sc-1suyamb-1 sc-tkKAw gbboCD"
     >
       <div
         class="sc-fKFyDc dToKui sc-bBXqnf dtyrhz"
@@ -90,7 +90,7 @@ exports[`Storyshots Core/Avatar With Image 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 fiIZgk StyledAvatar-sc-1suyamb-1 sc-bUrJUP bGURQn"
+      class="StyledBox-sc-13pk1d4-0 fiIZgk StyledAvatar-sc-1suyamb-1 sc-tkKAw gbboCD"
     />
     
   </div>
@@ -103,7 +103,7 @@ exports[`Storyshots Core/Avatar With Last Name 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 fXtYff StyledAvatar-sc-1suyamb-1 sc-bUrJUP bGURQn"
+      class="StyledBox-sc-13pk1d4-0 fXtYff StyledAvatar-sc-1suyamb-1 sc-tkKAw gbboCD"
     >
       <div
         class="sc-fKFyDc dToKui sc-bBXqnf dtyrhz"

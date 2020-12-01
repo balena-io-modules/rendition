@@ -323,6 +323,14 @@ const theme = {
 			side: 'bottom',
 		},
 	},
+	rating: {
+		star: {
+			color: {
+				full: colors.warning.main,
+				empty: colors.quartenary.main,
+			},
+		},
+	},
 };
 
 export default theme;
