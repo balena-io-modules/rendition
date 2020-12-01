@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'Card: make body to be full height'
+      hash: d1e1f31bfd65f65f7216180fcb7e9c131cbf77e5
+      body: |
+        make the body of the card to be full height
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 18.17.1
+  date: 2020-12-01T18:25:55.167Z
+- commits:
     - subject: Add star rating component
       hash: a97c2893a13486938a23654ffc71e16dca8bca88
       body: ''
