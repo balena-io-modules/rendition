@@ -15,7 +15,7 @@ exports[`Storyshots Core/Card Default 1`] = `
           class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI"
         >
           <div
-            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+            class="sc-gKsewC cgpPfo sc-iBPRYJ kKemJS"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
   scelerisque euismod risus at gravida. Pellentesque a nunc semper,
@@ -43,7 +43,7 @@ exports[`Storyshots Core/Card Small 1`] = `
           class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI"
         >
           <div
-            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+            class="sc-gKsewC cgpPfo sc-iBPRYJ kKemJS"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
   scelerisque euismod risus at gravida. Pellentesque a nunc semper,
@@ -89,7 +89,7 @@ exports[`Storyshots Core/Card With Header 1`] = `
             class="sc-gWHgXt PLIsv sc-citwmv bAwyHf"
           />
           <div
-            class="sc-gKsewC cgpPfo sc-iBPRYJ iTdmGI"
+            class="sc-gKsewC cgpPfo sc-iBPRYJ kKemJS"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
   scelerisque euismod risus at gravida. Pellentesque a nunc semper,
