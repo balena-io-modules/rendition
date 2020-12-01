@@ -1,4 +1,14 @@
 - commits:
+    - subject: Add star rating component
+      hash: a97c2893a13486938a23654ffc71e16dca8bca88
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Kakhaber
+  version: 18.17.0
+  date: 2020-12-01T13:48:34.412Z
+- commits:
     - subject: Completely revamp the development setup for rendition
       hash: ca8ec7c43cbf7c52c824257badaf3c7f497b21c9
       body: >
