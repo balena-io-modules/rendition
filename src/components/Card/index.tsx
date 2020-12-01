@@ -44,7 +44,11 @@ const BaseCard = ({
 			</Box>
 		));
 
-	const Body = children && <Box fontSize={2}>{children}</Box>;
+	const Body = children && (
+		<Box fontSize={2} height="100%">
+			{children}
+		</Box>
+	);
 
 	return (
 		<Wrapper {...props}>
