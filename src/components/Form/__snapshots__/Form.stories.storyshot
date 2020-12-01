@@ -48,7 +48,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                         
                         <input
                           autocomplete="off"
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Name"
                           label="Name"
                           list="dummy-datalist"
@@ -79,7 +79,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Height"
                           label="Height"
                           placeholder=""
@@ -106,7 +106,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Weight"
                           label="Weight"
                           placeholder=""
@@ -133,7 +133,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Description"
                           label="Description"
                           placeholder=""
@@ -160,7 +160,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Category"
                           label="Category"
                           placeholder=""
@@ -187,7 +187,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Abilities"
                           label="Abilities"
                           placeholder=""
@@ -214,7 +214,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_pokedex_number"
                           label="National Pokèdex Number"
                           placeholder=""
@@ -274,7 +274,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_first_seen"
                           label="First seen"
                           placeholder=""
@@ -313,7 +313,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_poke_password"
                           label="Poke Password"
                           placeholder=""
@@ -355,7 +355,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="StyledTextInput-sc-1x30a0s-0 eRNDsB Select__SelectTextInput-sc-17idtfo-0 bIurki sc-higXBA gDWSrd"
+                                  class="StyledTextInput-sc-1x30a0s-0 ccRbRh Select__SelectTextInput-sc-17idtfo-0 bIurki sc-higXBA gDWSrd"
                                   id="root_environment__input"
                                   readonly=""
                                   tabindex="-1"
@@ -518,7 +518,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                         
                         <input
                           autocomplete="off"
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Name"
                           label="Name"
                           list="dummy-datalist"
@@ -549,7 +549,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Height"
                           label="Height"
                           placeholder=""
@@ -576,7 +576,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Weight"
                           label="Weight"
                           placeholder=""
@@ -603,7 +603,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Description"
                           label="Description"
                           placeholder=""
@@ -630,7 +630,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Category"
                           label="Category"
                           placeholder=""
@@ -657,7 +657,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Abilities"
                           label="Abilities"
                           placeholder=""
@@ -684,7 +684,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_pokedex_number"
                           label="National Pokèdex Number"
                           placeholder=""
@@ -744,7 +744,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_first_seen"
                           label="First seen"
                           placeholder=""
@@ -783,7 +783,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_poke_password"
                           label="Poke Password"
                           placeholder=""
@@ -825,7 +825,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="StyledTextInput-sc-1x30a0s-0 eRNDsB Select__SelectTextInput-sc-17idtfo-0 bIurki sc-higXBA gDWSrd"
+                                  class="StyledTextInput-sc-1x30a0s-0 ccRbRh Select__SelectTextInput-sc-17idtfo-0 bIurki sc-higXBA gDWSrd"
                                   id="root_environment__input"
                                   readonly=""
                                   tabindex="-1"
@@ -988,7 +988,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                         
                         <input
                           autocomplete="off"
-                          class="StyledTextInput-sc-1x30a0s-0 jUIQqT sc-iNqMTl bYipSQ sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 gCxMXz sc-iNqMTl bYipSQ sc-jeGSBP gPfRGf"
                           disabled=""
                           id="root_Name"
                           label="Name"
@@ -1020,7 +1020,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 jUIQqT sc-iNqMTl bYipSQ sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 gCxMXz sc-iNqMTl bYipSQ sc-jeGSBP gPfRGf"
                           disabled=""
                           id="root_Height"
                           label="Height"
@@ -1048,7 +1048,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 jUIQqT sc-iNqMTl bYipSQ sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 gCxMXz sc-iNqMTl bYipSQ sc-jeGSBP gPfRGf"
                           disabled=""
                           id="root_Weight"
                           label="Weight"
@@ -1076,7 +1076,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 jUIQqT sc-iNqMTl bYipSQ sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 gCxMXz sc-iNqMTl bYipSQ sc-jeGSBP gPfRGf"
                           disabled=""
                           id="root_Description"
                           label="Description"
@@ -1104,7 +1104,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 jUIQqT sc-iNqMTl bYipSQ sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 gCxMXz sc-iNqMTl bYipSQ sc-jeGSBP gPfRGf"
                           disabled=""
                           id="root_Category"
                           label="Category"
@@ -1132,7 +1132,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 jUIQqT sc-iNqMTl bYipSQ sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 gCxMXz sc-iNqMTl bYipSQ sc-jeGSBP gPfRGf"
                           disabled=""
                           id="root_Abilities"
                           label="Abilities"
@@ -1160,7 +1160,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 jUIQqT sc-iNqMTl bYipSQ sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 gCxMXz sc-iNqMTl bYipSQ sc-jeGSBP gPfRGf"
                           disabled=""
                           id="root_pokedex_number"
                           label="National Pokèdex Number"
@@ -1222,7 +1222,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 jUIQqT sc-iNqMTl bYipSQ sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 gCxMXz sc-iNqMTl bYipSQ sc-jeGSBP gPfRGf"
                           disabled=""
                           id="root_first_seen"
                           label="First seen"
@@ -1262,7 +1262,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 jUIQqT sc-iNqMTl bYipSQ sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 gCxMXz sc-iNqMTl bYipSQ sc-jeGSBP gPfRGf"
                           disabled=""
                           id="root_poke_password"
                           label="Poke Password"
@@ -1306,7 +1306,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="StyledTextInput-sc-1x30a0s-0 eRNDsB Select__SelectTextInput-sc-17idtfo-0 cANsmG sc-higXBA gDWSrd"
+                                  class="StyledTextInput-sc-1x30a0s-0 ccRbRh Select__SelectTextInput-sc-17idtfo-0 cANsmG sc-higXBA gDWSrd"
                                   id="root_environment__input"
                                   readonly=""
                                   tabindex="-1"
@@ -1469,7 +1469,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                         
                         <input
                           autocomplete="off"
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Name"
                           label="Name"
                           list="dummy-datalist"
@@ -1500,7 +1500,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Height"
                           label="Height"
                           placeholder=""
@@ -1527,7 +1527,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Weight"
                           label="Weight"
                           placeholder=""
@@ -1554,7 +1554,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Description"
                           label="Description"
                           placeholder=""
@@ -1581,7 +1581,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Category"
                           label="Category"
                           placeholder=""
@@ -1608,7 +1608,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Abilities"
                           label="Abilities"
                           placeholder=""
@@ -1635,7 +1635,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_pokedex_number"
                           label="National Pokèdex Number"
                           placeholder=""
@@ -1695,7 +1695,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_first_seen"
                           label="First seen"
                           placeholder=""
@@ -1734,7 +1734,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_poke_password"
                           label="Poke Password"
                           placeholder=""
@@ -1776,7 +1776,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="StyledTextInput-sc-1x30a0s-0 eRNDsB Select__SelectTextInput-sc-17idtfo-0 bIurki sc-higXBA gDWSrd"
+                                  class="StyledTextInput-sc-1x30a0s-0 ccRbRh Select__SelectTextInput-sc-17idtfo-0 bIurki sc-higXBA gDWSrd"
                                   id="root_environment__input"
                                   readonly=""
                                   tabindex="-1"
@@ -1934,7 +1934,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                         
                         <input
                           autocomplete="off"
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Name"
                           label="Name"
                           list="dummy-datalist"
@@ -1965,7 +1965,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Height"
                           label="Height"
                           placeholder=""
@@ -1992,7 +1992,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Weight"
                           label="Weight"
                           placeholder=""
@@ -2019,7 +2019,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Description"
                           label="Description"
                           placeholder=""
@@ -2046,7 +2046,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Category"
                           label="Category"
                           placeholder=""
@@ -2073,7 +2073,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Abilities"
                           label="Abilities"
                           placeholder=""
@@ -2100,7 +2100,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_pokedex_number"
                           label="National Pokèdex Number"
                           placeholder=""
@@ -2160,7 +2160,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_first_seen"
                           label="First seen"
                           placeholder=""
@@ -2199,7 +2199,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_poke_password"
                           label="Poke Password"
                           placeholder=""
@@ -2241,7 +2241,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="StyledTextInput-sc-1x30a0s-0 eRNDsB Select__SelectTextInput-sc-17idtfo-0 bIurki sc-higXBA gDWSrd"
+                                  class="StyledTextInput-sc-1x30a0s-0 ccRbRh Select__SelectTextInput-sc-17idtfo-0 bIurki sc-higXBA gDWSrd"
                                   id="root_environment__input"
                                   readonly=""
                                   tabindex="-1"
@@ -3220,7 +3220,7 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                           role="tabpanel"
                         >
                           <textarea
-                            class="StyledTextArea-sc-17i3mwp-0 cICwEP sc-eJMQSu cfWEDV sc-nFpLZ jNUxxL"
+                            class="StyledTextArea-sc-17i3mwp-0 gFImaJ sc-eJMQSu cfWEDV sc-nFpLZ jNUxxL"
                             id="root_Mermaid"
                             label="Mermaid"
                             placeholder=""
@@ -3252,7 +3252,7 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                         Markdown
                       </label>
                       <div
-                        class="sc-dRPiIx eqsPMB"
+                        class="sc-hYZPRl dmWcYW"
                         id="simplemde-editor-1-wrapper"
                       >
                         <textarea
@@ -3543,7 +3543,7 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                         Captcha
                       </label>
                       <div
-                        class="sc-hYZPRl cwIsTJ"
+                        class="sc-cHjxUU kLfLcJ"
                       />
                     </div>
                   </div>
@@ -3623,7 +3623,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                         
                         <input
                           autocomplete="off"
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Name"
                           label="Name"
                           list="dummy-datalist"
@@ -3686,7 +3686,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                         Description
                       </label>
                       <textarea
-                        class="StyledTextArea-sc-17i3mwp-0 cICwEP sc-eJMQSu cfWEDV sc-nFpLZ jNUxxL form-control"
+                        class="StyledTextArea-sc-17i3mwp-0 gFImaJ sc-eJMQSu cfWEDV sc-nFpLZ jNUxxL form-control"
                         id="root_Description"
                         placeholder=""
                         rows="5"
@@ -3710,7 +3710,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Abilities"
                           label="Abilities"
                           placeholder=""
@@ -3737,7 +3737,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gZlZKg sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gZlZKg sc-jeGSBP gPfRGf"
                           id="root_Height"
                           label="Height"
                           placeholder=""
@@ -3764,7 +3764,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Weight"
                           label="Weight"
                           placeholder=""
@@ -3791,7 +3791,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Category"
                           label="Category"
                           placeholder=""
@@ -3818,7 +3818,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_pokedex_number"
                           label="National Pokèdex Number"
                           placeholder=""
@@ -3857,7 +3857,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_first_seen"
                           label="First seen"
                           placeholder=""
@@ -3899,7 +3899,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                         >
                           
                           <input
-                            class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP hZVWGl"
+                            class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP hZVWGl"
                             id="root_poke_password"
                             label="Poke Password"
                             placeholder=""
@@ -3962,7 +3962,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="StyledTextInput-sc-1x30a0s-0 eRNDsB Select__SelectTextInput-sc-17idtfo-0 bIurki sc-higXBA jRjDwm"
+                                  class="StyledTextInput-sc-1x30a0s-0 ccRbRh Select__SelectTextInput-sc-17idtfo-0 bIurki sc-higXBA jRjDwm"
                                   id="root_environment__input"
                                   readonly=""
                                   tabindex="-1"
@@ -4139,7 +4139,7 @@ exports[`Storyshots Core/Form With Pattern Properties 1`] = `
                                     >
                                       <input
                                         autocomplete="off"
-                                        class="StyledTextInput-sc-1x30a0s-0 jUIQqT sc-iNqMTl bYipSQ sc-jeGSBP bkWmPY rendition-form-pattern-properties__key-field"
+                                        class="StyledTextInput-sc-1x30a0s-0 gCxMXz sc-iNqMTl bYipSQ sc-jeGSBP bkWmPY rendition-form-pattern-properties__key-field"
                                         disabled=""
                                         pattern="^[0-9]+$"
                                         placeholder="Key"
@@ -4153,7 +4153,7 @@ exports[`Storyshots Core/Form With Pattern Properties 1`] = `
                                     >
                                       <input
                                         autocomplete="off"
-                                        class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP bkWmPY rendition-form-pattern-properties__value-field"
+                                        class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP bkWmPY rendition-form-pattern-properties__value-field"
                                         id="foo"
                                         placeholder="Rule"
                                         value=""
@@ -4261,7 +4261,7 @@ exports[`Storyshots Core/Form With Titles 1`] = `
                               >
                                 
                                 <input
-                                  class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                                  class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                                   id="root_vpn_endpoint"
                                   label="Endpoint"
                                   placeholder=""
@@ -4288,7 +4288,7 @@ exports[`Storyshots Core/Form With Titles 1`] = `
                               >
                                 
                                 <input
-                                  class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                                  class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                                   id="root_vpn_certificate"
                                   label="Certificate"
                                   placeholder=""
@@ -4345,7 +4345,7 @@ exports[`Storyshots Core/Form With Titles 1`] = `
                                       >
                                         
                                         <input
-                                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                                           id="root_wifiNetwork_wifi_ssid"
                                           label="Network SSID"
                                           placeholder=""
@@ -4386,7 +4386,7 @@ exports[`Storyshots Core/Form With Titles 1`] = `
                                       >
                                         
                                         <input
-                                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                                           id="root_wifiNetwork_wifiSecurity_psk"
                                           label="Network Passphrase"
                                           placeholder=""
@@ -4486,7 +4486,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                         
                         <input
                           autocomplete="off"
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Name"
                           label="Name"
                           list="dummy-datalist"
@@ -4534,7 +4534,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                         Description
                       </label>
                       <textarea
-                        class="StyledTextArea-sc-17i3mwp-0 cICwEP sc-eJMQSu cfWEDV sc-nFpLZ jNUxxL form-control"
+                        class="StyledTextArea-sc-17i3mwp-0 gFImaJ sc-eJMQSu cfWEDV sc-nFpLZ jNUxxL form-control"
                         id="root_Description"
                         placeholder=""
                         rows="5"
@@ -4558,7 +4558,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Abilities"
                           label="Abilities"
                           placeholder=""
@@ -4585,7 +4585,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gZlZKg sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gZlZKg sc-jeGSBP gPfRGf"
                           id="root_Height"
                           label="Height"
                           placeholder=""
@@ -4612,7 +4612,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Weight"
                           label="Weight"
                           placeholder=""
@@ -4639,7 +4639,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Category"
                           label="Category"
                           placeholder=""
@@ -4666,7 +4666,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_pokedex_number"
                           label="National Pokèdex Number"
                           placeholder=""
@@ -4705,7 +4705,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_first_seen"
                           label="First seen"
                           placeholder=""
@@ -4747,7 +4747,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                         >
                           
                           <input
-                            class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP hZVWGl"
+                            class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP hZVWGl"
                             id="root_poke_password"
                             label="Poke Password"
                             placeholder=""
@@ -4810,7 +4810,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="StyledTextInput-sc-1x30a0s-0 eRNDsB Select__SelectTextInput-sc-17idtfo-0 bIurki sc-higXBA jRjDwm"
+                                  class="StyledTextInput-sc-1x30a0s-0 ccRbRh Select__SelectTextInput-sc-17idtfo-0 bIurki sc-higXBA jRjDwm"
                                   id="root_environment__input"
                                   readonly=""
                                   tabindex="-1"
@@ -5015,7 +5015,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                         
                         <input
                           autocomplete="off"
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Name"
                           label="Name"
                           list="dummy-datalist"
@@ -5063,7 +5063,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                         Description
                       </label>
                       <textarea
-                        class="StyledTextArea-sc-17i3mwp-0 cICwEP sc-eJMQSu cfWEDV sc-nFpLZ jNUxxL form-control"
+                        class="StyledTextArea-sc-17i3mwp-0 gFImaJ sc-eJMQSu cfWEDV sc-nFpLZ jNUxxL form-control"
                         id="root_Description"
                         placeholder=""
                         rows="5"
@@ -5087,7 +5087,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Abilities"
                           label="Abilities"
                           placeholder=""
@@ -5114,7 +5114,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gZlZKg sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gZlZKg sc-jeGSBP gPfRGf"
                           id="root_Height"
                           label="Height"
                           placeholder=""
@@ -5141,7 +5141,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Weight"
                           label="Weight"
                           placeholder=""
@@ -5168,7 +5168,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_Category"
                           label="Category"
                           placeholder=""
@@ -5195,7 +5195,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_pokedex_number"
                           label="National Pokèdex Number"
                           placeholder=""
@@ -5234,7 +5234,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
+                          class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP gPfRGf"
                           id="root_first_seen"
                           label="First seen"
                           placeholder=""
@@ -5276,7 +5276,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                         >
                           
                           <input
-                            class="StyledTextInput-sc-1x30a0s-0 DrHkh sc-iNqMTl gBktVj sc-jeGSBP hZVWGl"
+                            class="StyledTextInput-sc-1x30a0s-0 cxIKgN sc-iNqMTl gBktVj sc-jeGSBP hZVWGl"
                             id="root_poke_password"
                             label="Poke Password"
                             placeholder=""
@@ -5339,7 +5339,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="StyledTextInput-sc-1x30a0s-0 eRNDsB Select__SelectTextInput-sc-17idtfo-0 bIurki sc-higXBA jRjDwm"
+                                  class="StyledTextInput-sc-1x30a0s-0 ccRbRh Select__SelectTextInput-sc-17idtfo-0 bIurki sc-higXBA jRjDwm"
                                   id="root_environment__input"
                                   readonly=""
                                   tabindex="-1"
