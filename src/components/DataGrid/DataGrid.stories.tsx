@@ -13,8 +13,8 @@ const Template = createTemplate<DataGridProps<number>>(DataGrid);
 
 export const Default = createStory<DataGridProps<number>>(Template, {
 	items: [1, 2, 3, 4, 5, 6],
-	itemMinWidth: '320px',
-	itemMaxWidth: '640px',
+	itemMinWidth: ['180px', '260px', '320px'],
+	itemMaxWidth: ['360px', '520px', '640px'],
 	getItemKey: (i: number) => i,
 	renderItem: (i: number) => (
 		<Card>

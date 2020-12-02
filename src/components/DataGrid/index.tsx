@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { px } from '../../utils';
+import { useBreakpoint } from '../../hooks/useBreakpoint';
 
 const Base = styled.div<MinMaxProps>`
 	display: grid;
@@ -12,7 +13,7 @@ const Base = styled.div<MinMaxProps>`
 
 const BaseItem = styled.div<MinMaxProps>`
 	min-width: ${(props) => props.itemMinWidth};
-	max-width: ${(props) => props.itemMaxWidth ?? '100%'};
+	max-width: ${(props) => props.itemMaxWidth};
 `;
 
 const BaseDataGrid = <T extends any>({
@@ -22,13 +23,16 @@ const BaseDataGrid = <T extends any>({
 	renderItem,
 	getItemKey,
 }: DataGridProps<T>) => {
+	const currentMinWidth = useBreakpoint(itemMinWidth);
+	const currentMaxWidth = useBreakpoint(itemMaxWidth ?? '100%');
+
 	return (
-		<Base itemMinWidth={itemMinWidth} itemMaxWidth={itemMaxWidth}>
+		<Base itemMinWidth={currentMinWidth} itemMaxWidth={currentMaxWidth}>
 			{items.map((item) => (
 				<BaseItem
 					key={getItemKey(item)}
-					itemMinWidth={itemMinWidth}
-					itemMaxWidth={itemMaxWidth}
+					itemMinWidth={currentMinWidth}
+					itemMaxWidth={currentMaxWidth}
 				>
 					{renderItem(item)}
 				</BaseItem>
@@ -45,9 +49,9 @@ export interface DataGridProps<T> {
 	/** A function that returns an item key for each item */
 	getItemKey: (item: T) => string | number;
 	/** The minimum width of each grid item */
-	itemMinWidth: number | string;
+	itemMinWidth: number | string | number[] | string[];
 	/** The maximum width of each grid item */
-	itemMaxWidth?: number | string;
+	itemMaxWidth?: number | string | number[] | string[];
 }
 
 type MinMaxProps = Pick<DataGridProps<any>, 'itemMinWidth' | 'itemMaxWidth'>;
