@@ -8,17 +8,19 @@ import { breakpoints } from '../theme';
 // Min values: 1; Max values: Theme breakpoints length
 // Passing less than the max values the array will automatically be filled with the last value passed.
 // E.g. tablet breakpoint: useBreakpoint(['mobile', 'tablet', 'landscape', 'desktop']) will return 'tablet'
-export const useBreakpoint = <T extends any>(values: T[]): T => {
-	if (values.length > breakpoints.length) {
+export const useBreakpoint = <T extends any>(value: T | T[]): T => {
+	const normalizedValue = Array.isArray(value) ? value : [value];
+
+	if (normalizedValue.length > breakpoints.length) {
 		throw new Error(
 			`There should be no more than ${breakpoints.length} value entries`,
 		);
 	}
 	const { currentBreakpoint } = React.useContext(BreakpointContext);
-	const missingValues = Array(breakpoints.length - values.length).fill(
-		values[values.length - 1],
+	const missingValues = Array(breakpoints.length - normalizedValue.length).fill(
+		normalizedValue[normalizedValue.length - 1],
 	);
-	const newValues = [...values, ...missingValues];
+	const newValues = [...normalizedValue, ...missingValues];
 
 	return newValues[currentBreakpoint];
 };
