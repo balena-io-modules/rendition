@@ -9,6 +9,7 @@ import { Box } from '../Box';
 import { Divider } from '../Divider';
 import { Flex, FlexProps } from '../Flex';
 import { Heading } from '../Heading';
+import { useBreakpoint } from '../../hooks/useBreakpoint';
 
 const Wrapper = styled(DismissableContainer)<WrapperProps>`
 	& {
@@ -21,9 +22,11 @@ const BaseCard = ({
 	cta,
 	rows,
 	children,
+	small,
 	...props
 }: InternalCardProps) => {
 	const hasHeader = title || cta;
+	const isSmall = useBreakpoint(small);
 
 	const Header = hasHeader && (
 		<React.Fragment>
@@ -51,7 +54,7 @@ const BaseCard = ({
 	);
 
 	return (
-		<Wrapper {...props}>
+		<Wrapper small={isSmall} {...props}>
 			<Box width="100%">
 				{Header}
 				{Rows}
@@ -62,7 +65,7 @@ const BaseCard = ({
 };
 
 interface WrapperProps extends FlexProps {
-	small?: boolean;
+	small?: boolean | boolean[];
 }
 
 export interface InternalCardProps extends WrapperProps {

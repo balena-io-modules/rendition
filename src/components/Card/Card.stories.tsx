@@ -44,7 +44,7 @@ export const Small = createStory<CardProps>(Template, {
 	children: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
   scelerisque euismod risus at gravida. Pellentesque a nunc semper,
   ultrices lacus nec, mattis mauris`,
-	small: true,
+	small: [true, false, true, true],
 });
 
 export const WithHeader = createStory<CardProps>(Template, {
