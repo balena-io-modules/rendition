@@ -1,4 +1,16 @@
 - commits:
+    - subject: Make card size responsive
+      hash: 9f2c3c9beba6876dd6de715e2832e738e5198df2
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 18.19.0
+  date: 2020-12-02T12:31:43.712Z
+- commits:
     - subject: Allow passing responsive values to datagrid width props
       hash: 4b115fbfca2fb2e421f1e57324527640f58f9a55
       body: ''
