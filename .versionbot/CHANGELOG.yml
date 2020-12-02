@@ -1,4 +1,16 @@
 - commits:
+    - subject: Allow passing responsive values to datagrid width props
+      hash: 4b115fbfca2fb2e421f1e57324527640f58f9a55
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 18.18.0
+  date: 2020-12-02T11:58:32.547Z
+- commits:
     - subject: Update snapshots due to a Card change
       hash: 23a2117b970e384122bfcf14afa1c4bacbfeb048
       body: |
