@@ -1,4 +1,5 @@
 import * as React from 'react';
+import breaks from 'remark-breaks';
 import { Txt, TxtProps } from '../../components/Txt';
 import { Heading } from '../../components/Heading';
 import { Link } from '../../components/Link';
@@ -152,6 +153,7 @@ export const getProcessor = (
 ) => {
 	let processor = unified()
 		.use(remarkParse, { gfm: true })
+		.use(breaks)
 		.use(remarkRehype, { allowDangerousHtml: !disableRawHtml });
 
 	if (!disableCodeHighlight) {
