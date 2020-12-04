@@ -1,4 +1,14 @@
 - commits:
+    - subject: 'Markdown: Fix line breaks'
+      hash: d384093c48d585fe3845c934a0cc9d33ee12ccce
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kakhaber
+  version: 18.19.1
+  date: 2020-12-04T13:23:14.046Z
+- commits:
     - subject: Make card size responsive
       hash: 9f2c3c9beba6876dd6de715e2832e738e5198df2
       body: ''
