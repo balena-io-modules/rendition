@@ -2129,15 +2129,20 @@ exports[`Markdown component should not render raw html when disabled 1`] = `
           class=""
         >
           An image:
+          <br />
           
 
+          <br />
           
 
+          <br />
           
 
+          <br />
           
 
           A link:
+          <br />
           
 
           http://github.com/
