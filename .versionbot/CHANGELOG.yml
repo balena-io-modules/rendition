@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add data-* field to form component
+      hash: 088aebff3f874582398e14f762535003fab59d9a
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+        signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+      author: Vipul Gupta (@vipulgupta2048)
+  version: 18.19.2
+  date: 2020-12-11T10:30:00.970Z
+- commits:
     - subject: 'Markdown: Fix line breaks'
       hash: d384093c48d585fe3845c934a0cc9d33ee12ccce
       body: ''
