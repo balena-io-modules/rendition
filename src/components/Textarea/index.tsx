@@ -55,7 +55,23 @@ const BaseTextearea = ({
 		rowsProp = minRows;
 	}
 
-	return <StyledGrommetTextArea rows={rowsProp} {...props} />;
+	const handleKeyUpDown = React.useCallback(
+		(e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+			if (e.key === 'Enter') {
+				e.stopPropagation();
+			}
+		},
+		[],
+	);
+
+	return (
+		<StyledGrommetTextArea
+			rows={rowsProp}
+			onKeyDown={handleKeyUpDown}
+			onKeyUp={handleKeyUpDown}
+			{...props}
+		/>
+	);
 };
 
 export interface InternalTextareaProps

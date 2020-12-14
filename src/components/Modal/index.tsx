@@ -51,7 +51,7 @@ class BaseModal extends React.Component<ThemedModalProps, any> {
 			document.body.classList.add(bodyNoOverflowClass);
 		}
 
-		window.document.addEventListener('keydown', this.handleKeyDown);
+		window.addEventListener('keydown', this.handleKeyDown);
 		BaseModal.mountedCount++;
 		this.ownIndex = BaseModal.mountedCount;
 	}
@@ -62,7 +62,7 @@ class BaseModal extends React.Component<ThemedModalProps, any> {
 			document.body.classList.remove(bodyNoOverflowClass);
 		}
 
-		window.document.removeEventListener('keydown', this.handleKeyDown);
+		window.removeEventListener('keydown', this.handleKeyDown);
 	}
 
 	public handleKeyDown = (e: KeyboardEvent) => {
