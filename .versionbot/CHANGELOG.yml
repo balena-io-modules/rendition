@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'feat: Add new StatsBar component'
+      hash: cacb2ccadeebc54fc977b7f835837f1de525dd8e
+      body: |
+        This will be used in both Jellyfish and the Balena Dashboard.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 18.20.0
+  date: 2020-12-14T11:58:50.734Z
+- commits:
     - subject: Update snapshots
       hash: 10a00f17eab6e9530ab3317d89fdc3ce9db81704
       body: |
