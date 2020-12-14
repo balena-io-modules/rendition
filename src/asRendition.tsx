@@ -92,11 +92,22 @@ export const withStyledSystem = (child: React.ComponentType) => {
 
 export const withTooltip = (Base: React.ComponentType) => {
 	return React.forwardRef(({ ...props }: any, ref: any) => {
-		if (props.tooltip) {
-			props = tooltip.bindProps(props);
+		if (!props.tooltip) {
+			return <Base {...props} ref={ref} />;
 		}
+		const tooltipProps = tooltip.bindProps(props);
 		delete props.tooltip;
-		return <Base {...props} ref={ref} />;
+		return props.disabled ? (
+			<span
+				onClick={tooltipProps.onClick}
+				onMouseEnter={tooltipProps.onMouseEnter}
+				onMouseLeave={tooltipProps.onMouseLeave}
+			>
+				<Base {...props} ref={ref} />
+			</span>
+		) : (
+			<Base {...tooltipProps} ref={ref} />
+		);
 	});
 };
 
