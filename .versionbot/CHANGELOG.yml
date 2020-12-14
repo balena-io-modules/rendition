@@ -1,4 +1,18 @@
 - commits:
+    - subject: Fix form not getting the Enter key event when nested in a modal
+      hash: f71831fda7b5238406a2ed5c025b64c25a188496
+      body: ''
+      footer:
+        Fixes: '#1223'
+        fixes: '#1223'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 18.20.1
+  date: 2020-12-14T12:43:04.270Z
+- commits:
     - subject: 'feat: Add new StatsBar component'
       hash: cacb2ccadeebc54fc977b7f835837f1de525dd8e
       body: |
