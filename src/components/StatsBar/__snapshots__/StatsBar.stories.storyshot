@@ -1,0 +1,469 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/StatsBar Cpu Temp 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC dWcnb sc-iBPRYJ gaVbIt sc-hHftDr iIBJBt"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ bBwSze sc-hHftDr gCwwSM"
+      >
+        <span
+          class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kwbnZN"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP"
+            >
+              <span
+                class="sc-fKFyDc dToKui sc-iwyYcG kOqgin"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-microchip fa-w-16 "
+                  data-icon="microchip"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M416 48v416c0 26.51-21.49 48-48 48H144c-26.51 0-48-21.49-48-48V48c0-26.51 21.49-48 48-48h224c26.51 0 48 21.49 48 48zm96 58v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42V88h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zM30 376h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span
+                class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+              >
+                Temperature
+              </span>
+            </div>
+            <span
+              class="sc-fKFyDc dToKui sc-iwyYcG jKWtCF"
+              style="line-height: 1;"
+            >
+              ​
+            </span>
+          </div>
+        </span>
+        <span
+          class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+        >
+          ~34C
+        </span>
+      </div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kKKRhN"
+      >
+        <div
+          class="sc-gKsewC dWcnb sc-iBPRYJ fzmzON"
+        >
+          <div
+            class="sc-jGVbCA fNiEtx sc-bQdQlF etDNuA"
+            color="#fff"
+            type="success"
+          >
+            <div
+              class="sc-xyEjG iUqnsJ"
+            />
+            <div
+              class="sc-kYrkKh IpAmU"
+              style="width: 34%;"
+            >
+              <div
+                class="sc-dWdcrH jUYHsK"
+                style="width: 294.11764705882354%;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/StatsBar Cpu Usage 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC dWcnb sc-iBPRYJ gaVbIt sc-hHftDr iIBJBt"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ bBwSze sc-hHftDr gCwwSM"
+      >
+        <span
+          class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kwbnZN"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP"
+            >
+              <span
+                class="sc-fKFyDc dToKui sc-iwyYcG kOqgin"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-microchip fa-w-16 "
+                  data-icon="microchip"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M416 48v416c0 26.51-21.49 48-48 48H144c-26.51 0-48-21.49-48-48V48c0-26.51 21.49-48 48-48h224c26.51 0 48 21.49 48 48zm96 58v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42V88h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zM30 376h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span
+                class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+              >
+                CPU
+              </span>
+            </div>
+            <span
+              class="sc-fKFyDc dToKui sc-iwyYcG jKWtCF"
+              style="line-height: 1;"
+            >
+              ​
+            </span>
+          </div>
+        </span>
+        <span
+          class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+        >
+          ~23%
+        </span>
+      </div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kKKRhN"
+      >
+        <div
+          class="sc-gKsewC dWcnb sc-iBPRYJ dlUrgp"
+        >
+          <div
+            class="sc-jGVbCA fNiEtx sc-bQdQlF etDNuA"
+            color="#fff"
+            type="success"
+          >
+            <div
+              class="sc-xyEjG iUqnsJ"
+            />
+            <div
+              class="sc-kYrkKh IpAmU"
+              style="width: 100%;"
+            >
+              <div
+                class="sc-dWdcrH jUYHsK"
+                style="width: 100%;"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-gKsewC dWcnb sc-iBPRYJ dlUrgp"
+        >
+          <div
+            class="sc-jGVbCA fNiEtx sc-bQdQlF etDNuA"
+            color="#fff"
+            type="success"
+          >
+            <div
+              class="sc-xyEjG iUqnsJ"
+            />
+            <div
+              class="sc-kYrkKh IpAmU"
+              style="width: 100%;"
+            >
+              <div
+                class="sc-dWdcrH jUYHsK"
+                style="width: 100%;"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-gKsewC dWcnb sc-iBPRYJ dlUrgp"
+        >
+          <div
+            class="sc-jGVbCA fNiEtx sc-bQdQlF etDNuA"
+            color="#fff"
+            type="success"
+          >
+            <div
+              class="sc-xyEjG iUqnsJ"
+            />
+            <div
+              class="sc-kYrkKh IpAmU"
+              style="width: 0%;"
+            >
+              <div
+                class="sc-dWdcrH jUYHsK"
+                style="width: 0%;"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-gKsewC dWcnb sc-iBPRYJ dlUrgp"
+        >
+          <div
+            class="sc-jGVbCA fNiEtx sc-bQdQlF etDNuA"
+            color="#fff"
+            type="success"
+          >
+            <div
+              class="sc-xyEjG iUqnsJ"
+            />
+            <div
+              class="sc-kYrkKh IpAmU"
+              style="width: 0%;"
+            >
+              <div
+                class="sc-dWdcrH jUYHsK"
+                style="width: 0%;"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-gKsewC dWcnb sc-iBPRYJ fzmzON"
+        >
+          <div
+            class="sc-jGVbCA fNiEtx sc-bQdQlF etDNuA"
+            color="#fff"
+            type="success"
+          >
+            <div
+              class="sc-xyEjG iUqnsJ"
+            />
+            <div
+              class="sc-kYrkKh IpAmU"
+              style="width: 0%;"
+            >
+              <div
+                class="sc-dWdcrH jUYHsK"
+                style="width: 0%;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/StatsBar Memory 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC dWcnb sc-iBPRYJ gaVbIt sc-hHftDr iIBJBt"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ bBwSze sc-hHftDr gCwwSM"
+      >
+        <span
+          class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kwbnZN"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP"
+            >
+              <span
+                class="sc-fKFyDc dToKui sc-iwyYcG kOqgin"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-memory fa-w-20 "
+                  data-icon="memory"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 640 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M640 130.94V96c0-17.67-14.33-32-32-32H32C14.33 64 0 78.33 0 96v34.94c18.6 6.61 32 24.19 32 45.06s-13.4 38.45-32 45.06V320h640v-98.94c-18.6-6.61-32-24.19-32-45.06s13.4-38.45 32-45.06zM224 256h-64V128h64v128zm128 0h-64V128h64v128zm128 0h-64V128h64v128zM0 448h64v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h64v-96H0v96z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span
+                class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+              >
+                Memory
+              </span>
+            </div>
+            <span
+              class="sc-fKFyDc dToKui sc-iwyYcG jKWtCF"
+              style="line-height: 1;"
+            >
+              ​
+            </span>
+          </div>
+        </span>
+        <span
+          class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+        >
+          <span
+            class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+          >
+            453 MB
+          </span>
+          /
+          <span
+            class="sc-fKFyDc dToKui sc-iwyYcG idZvUe"
+          >
+            1 GB
+          </span>
+        </span>
+      </div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kKKRhN"
+      >
+        <div
+          class="sc-gKsewC dWcnb sc-iBPRYJ fzmzON"
+        >
+          <div
+            class="sc-jGVbCA fNiEtx sc-bQdQlF etDNuA"
+            color="#fff"
+            type="success"
+          >
+            <div
+              class="sc-xyEjG iUqnsJ"
+            />
+            <div
+              class="sc-kYrkKh IpAmU"
+              style="width: 45.300000000000004%;"
+            >
+              <div
+                class="sc-dWdcrH jUYHsK"
+                style="width: 220.75055187637966%;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/StatsBar Storage 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+  >
+    <div
+      class="sc-gKsewC dWcnb sc-iBPRYJ gaVbIt sc-hHftDr iIBJBt"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ bBwSze sc-hHftDr gCwwSM"
+      >
+        <span
+          class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+        >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kwbnZN"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP"
+            >
+              <span
+                class="sc-fKFyDc dToKui sc-iwyYcG kOqgin"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-hdd fa-w-18 "
+                  data-icon="hdd"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 576 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M576 304v96c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48v-96c0-26.51 21.49-48 48-48h480c26.51 0 48 21.49 48 48zm-48-80a79.557 79.557 0 0 1 30.777 6.165L462.25 85.374A48.003 48.003 0 0 0 422.311 64H153.689a48 48 0 0 0-39.938 21.374L17.223 230.165A79.557 79.557 0 0 1 48 224h480zm-48 96c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zm-96 0c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span
+                class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+              >
+                Storage
+              </span>
+            </div>
+            <span
+              class="sc-fKFyDc dToKui sc-iwyYcG jKWtCF"
+              style="line-height: 1;"
+            >
+              Storage block device
+            </span>
+          </div>
+        </span>
+        <span
+          class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+        >
+          <span
+            class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+          >
+            623 MB
+          </span>
+          /
+          <span
+            class="sc-fKFyDc dToKui sc-iwyYcG idZvUe"
+          >
+            1 GB
+          </span>
+        </span>
+      </div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kKKRhN"
+      >
+        <div
+          class="sc-gKsewC dWcnb sc-iBPRYJ fzmzON"
+        >
+          <div
+            class="sc-jGVbCA fNiEtx sc-bQdQlF etDNuA"
+            color="#fff"
+            type="warning"
+          >
+            <div
+              class="sc-xyEjG iUqnsJ"
+            />
+            <div
+              class="sc-kYrkKh bBxwaU"
+              style="width: 62.3%;"
+            >
+              <div
+                class="sc-dWdcrH jUYHsK"
+                style="width: 160.51364365971108%;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -41,6 +41,14 @@ export { Rating, RatingProps } from './components/Rating';
 export { Search, SearchProps } from './components/Search';
 export { Select, SelectProps } from './components/Select';
 export { Spinner, SpinnerProps } from './components/Spinner';
+export {
+	StatsBar,
+	StatsBarProps,
+	StatsTitle,
+	StatsTitleProps,
+	ValueWithMaxTitle,
+	ValueWithMaxTitleProps,
+} from './components/StatsBar';
 export { Steps, Step, StepsProps } from './components/Steps';
 export { RadioButton, RadioButtonProps } from './components/RadioButton';
 export {
