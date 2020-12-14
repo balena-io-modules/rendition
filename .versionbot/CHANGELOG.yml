@@ -1,4 +1,27 @@
 - commits:
+    - subject: Update snapshots
+      hash: 10a00f17eab6e9530ab3317d89fdc3ce9db81704
+      body: |
+        No code changes!
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: Removed out-of-date documentation and template text
+      hash: 26fee960ebb60c08a577369871ab9c3676a911be
+      body: |
+        Docs are no longer generated using build:docs.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 18.19.2
+  date: 2020-12-14T06:01:47.206Z
+- commits:
     - subject: 'Markdown: Fix line breaks'
       hash: d384093c48d585fe3845c934a0cc9d33ee12ccce
       body: ''
