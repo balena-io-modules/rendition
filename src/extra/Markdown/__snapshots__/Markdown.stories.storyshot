@@ -386,6 +386,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           <em>
             This text will be italic
           </em>
+          <br />
           
 
           <em>
@@ -400,6 +401,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           <strong>
             This text will be bold
           </strong>
+          <br />
           
 
           <strong>
@@ -602,6 +604,8 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
         >
           I think you should use an
+          <br />
+          
 
           <code>
             &lt;addr&gt;
@@ -853,22 +857,27 @@ const foo = () =&gt; {
           <strong>
             An image:
           </strong>
+          <br />
           
 
+          <br />
           <br />
           
 
           <img
             src=""
           />
+          <br />
           
 
+          <br />
           <br />
           
 
           <em>
             A link:
           </em>
+          <br />
           
 
           <a
