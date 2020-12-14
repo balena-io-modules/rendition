@@ -64,21 +64,6 @@ other text editing default. We encourage you to install the relevant plugin in
 your text editor of choice to avoid having to fix any issues during the review
 process.
 
-
-Updating documentation
-----------------------
-
-All components have a corresponding markdown file that documents their API. The
-markdown files are found in `src/stories/README/`. The markdown files are
-displayed in the interactive storybook and also aggregated into the main README
-file. After making any changes to a component, make sure the corresponding
-markdown file is up to date and then update the README using the following
-command:
-
-```sh
-npm run build:docs
-```
-
 Commit Guidelines
 -----------------
 

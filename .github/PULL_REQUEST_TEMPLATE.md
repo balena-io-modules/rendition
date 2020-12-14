@@ -7,7 +7,6 @@ Change-type: major|minor|patch <!-- The change type of this PR -->
 ---
 ##### Contributor checklist
 <!-- For completed items, change [ ] to [x].  -->
-- [ ] I have rebuilt the README with `npm run build:docs`
 - [ ] I have regenerated screenshots for any affected components with `npm run generate-screenshots`
 - [ ] I have regenerated jest snapshots for any affected components with `npm run jest -- -u`
 
