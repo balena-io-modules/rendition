@@ -1,4 +1,16 @@
 - commits:
+    - subject: Turn keydown handler into an arrow function
+      hash: beecff9f95df2b687cad606cc08794ba9d32e78d
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 18.20.2
+  date: 2020-12-16T11:05:02.149Z
+- commits:
     - subject: Fix form not getting the Enter key event when nested in a modal
       hash: f71831fda7b5238406a2ed5c025b64c25a188496
       body: ''
