@@ -173,11 +173,11 @@ class BaseForm extends React.Component<FormProps, FormState> {
 		}
 	}
 
-	public handleKeyUpDown(e: React.KeyboardEvent<HTMLDivElement>) {
+	private handleKeyUpDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
 		if (e.key === 'Enter' && !this.props.hideSubmitButton) {
 			e.stopPropagation();
 		}
-	}
+	};
 
 	public change = (data: IChangeEvent) => {
 		this.setState({ value: data.formData });
