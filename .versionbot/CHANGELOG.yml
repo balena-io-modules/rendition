@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix disabled button tooltip
+      hash: a5b4eea9f92dcfeaf2c44e1331a7957550710838
+      body: |
+        fix tooltip on button disabled
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 18.20.3
+  date: 2020-12-17T08:52:50.520Z
+- commits:
     - subject: Turn keydown handler into an arrow function
       hash: beecff9f95df2b687cad606cc08794ba9d32e78d
       body: ''
