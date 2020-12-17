@@ -1,4 +1,14 @@
 - commits:
+    - subject: Upgrade rehype-raw to latest version
+      hash: 5ac27c15e45f4760f2a3c12c32dd262a4def39a8
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kakhaber
+  version: 18.20.4
+  date: 2020-12-17T13:37:04.104Z
+- commits:
     - subject: Fix disabled button tooltip
       hash: a5b4eea9f92dcfeaf2c44e1331a7957550710838
       body: |
