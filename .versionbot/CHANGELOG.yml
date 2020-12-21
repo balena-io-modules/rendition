@@ -1,4 +1,18 @@
 - commits:
+    - subject: Remove Arcslider component
+      hash: a48a9e0578aba2687b3298eaafa28a88d0f038d0
+      body: |
+        Unless you were using the ArcSlider component, there are no
+        other breaking changes.
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 19.0.0
+  date: 2020-12-21T11:55:13.330Z
+- commits:
     - subject: Upgrade rehype-raw to latest version
       hash: 5ac27c15e45f4760f2a3c12c32dd262a4def39a8
       body: ''
