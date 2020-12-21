@@ -3,7 +3,7 @@
 exports[`Storyshots Core/Accordion Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
   >
     <div
       class="StyledBox-sc-13pk1d4-0 dYebPD"
@@ -59,7 +59,13 @@ exports[`Storyshots Core/Accordion Default 1`] = `
           <div
             aria-hidden="true"
             class="StyledBox-sc-13pk1d4-0 dYebPD Collapsible__AnimatedBox-sc-15kniua-0 euNsBL"
-          />
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dcxFGD"
+            >
+              First Panel
+            </div>
+          </div>
         </div>
       </div>
       <div
@@ -112,7 +118,13 @@ exports[`Storyshots Core/Accordion Default 1`] = `
           <div
             aria-hidden="true"
             class="StyledBox-sc-13pk1d4-0 dYebPD Collapsible__AnimatedBox-sc-15kniua-0 euNsBL"
-          />
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dcxFGD"
+            >
+              Second Panel
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -3,10 +3,10 @@
 exports[`Storyshots Core/Divider Dashed 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
   >
     <hr
-      class="sc-gWHgXt jUzTVJ sc-citwmv liYinz"
+      class="sc-iktFzd cUYtuc sc-hiSbYr ioExYC"
       type="dashed"
     />
   </div>
@@ -16,10 +16,10 @@ exports[`Storyshots Core/Divider Dashed 1`] = `
 exports[`Storyshots Core/Divider Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
   >
     <hr
-      class="sc-gWHgXt PLIsv sc-citwmv liYinz"
+      class="sc-iktFzd cJCAjm sc-hiSbYr ioExYC"
     />
   </div>
 </div>
@@ -28,10 +28,10 @@ exports[`Storyshots Core/Divider Default 1`] = `
 exports[`Storyshots Core/Divider With Custom Color 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
   >
     <hr
-      class="sc-gWHgXt eFENim sc-citwmv cEMDUz"
+      class="sc-iktFzd cbtjSH sc-hiSbYr bmzuUW"
       color="#ccc"
     />
   </div>
@@ -41,13 +41,13 @@ exports[`Storyshots Core/Divider With Custom Color 1`] = `
 exports[`Storyshots Core/Divider With Text Content 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI sc-hHftDr bxfdfp sc-citwmv liYinz"
+      class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI sc-hHftDr bxfdfp sc-hiSbYr ioExYC"
     >
       <hr
-        class="sc-gWHgXt sc-cBNfnY jUzTVJ jLKwhq"
+        class="sc-iktFzd sc-jJEJSO cUYtuc dceFUj"
         type="dashed"
       />
       <span
@@ -56,7 +56,7 @@ exports[`Storyshots Core/Divider With Text Content 1`] = `
         some text
       </span>
       <hr
-        class="sc-gWHgXt sc-cBNfnY jUzTVJ jLKwhq"
+        class="sc-iktFzd sc-jJEJSO cUYtuc dceFUj"
         type="dashed"
       />
     </div>

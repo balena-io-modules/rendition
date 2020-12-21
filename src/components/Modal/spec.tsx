@@ -48,9 +48,9 @@ describe('Keyboard submitting nested modals', () => {
 	let originalAddEventListener: any;
 	const eventListenersMap: any = {};
 	beforeAll(() => {
-		// You cannot simulate events on the document object in enzyme, so we need to stub the `addEventListener` function.
-		originalAddEventListener = window.document.addEventListener;
-		window.document.addEventListener = (event: any, cb: any) => {
+		// You cannot simulate events on the window object in enzyme, so we need to stub the `addEventListener` function.
+		originalAddEventListener = window.addEventListener;
+		window.addEventListener = (event: any, cb: any) => {
 			if (!eventListenersMap[event]) {
 				eventListenersMap[event] = [];
 			}
@@ -60,7 +60,7 @@ describe('Keyboard submitting nested modals', () => {
 	});
 
 	afterAll(() => {
-		window.document.addEventListener = originalAddEventListener;
+		window.addEventListener = originalAddEventListener;
 	});
 
 	it('should call the callback of the top-most modal with done on Enter key press', () => {

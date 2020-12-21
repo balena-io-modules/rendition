@@ -3,10 +3,10 @@
 exports[`Storyshots Core/TextWithCopy Always Show 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
   >
     <span
-      class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL sc-dwcuIR bBRRev text-with-copy"
+      class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL sc-irlOZD iUVlhX text-with-copy"
     >
       <span
         class="text-with-copy__content"
@@ -44,10 +44,10 @@ exports[`Storyshots Core/TextWithCopy Always Show 1`] = `
 exports[`Storyshots Core/TextWithCopy Code 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
   >
     <span
-      class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL sc-dwcuIR SMbZL text-with-copy"
+      class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL sc-irlOZD gGDzwb text-with-copy"
       title="This value has been copied to your clipboard!"
     >
       <code
@@ -86,10 +86,10 @@ exports[`Storyshots Core/TextWithCopy Code 1`] = `
 exports[`Storyshots Core/TextWithCopy Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
   >
     <span
-      class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL sc-dwcuIR SMbZL text-with-copy"
+      class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL sc-irlOZD gGDzwb text-with-copy"
       title="This value has been copied to your clipboard!"
     >
       <span
