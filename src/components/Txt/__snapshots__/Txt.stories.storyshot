@@ -3,7 +3,7 @@
 exports[`Storyshots Core/Txt Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
   >
     <div
       class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
@@ -17,7 +17,7 @@ exports[`Storyshots Core/Txt Default 1`] = `
 exports[`Storyshots Core/Txt In Color 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
   >
     <div
       class="sc-fKFyDc dToKui sc-bBXqnf kRESjy"
@@ -31,7 +31,7 @@ exports[`Storyshots Core/Txt In Color 1`] = `
 exports[`Storyshots Core/Txt Span Component 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
   >
     <span
       class="sc-fKFyDc kIYkoy sc-iwyYcG bsaCCL"
@@ -45,7 +45,7 @@ exports[`Storyshots Core/Txt Span Component 1`] = `
 exports[`Storyshots Core/Txt Styled 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-fXoxut gqvpza"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
   >
     <div
       class="sc-fKFyDc iGtGWQ sc-bBXqnf kYwmpI"

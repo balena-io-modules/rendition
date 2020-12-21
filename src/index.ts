@@ -1,5 +1,4 @@
 export { Alert, AlertProps } from './components/Alert';
-export { ArcSlider, ArcSliderProps } from './components/ArcSlider';
 export { Async } from './components/Async';
 export { Badge, BadgeProps } from './components/Badge';
 export { Banner, BannerProps } from './components/Banner';
