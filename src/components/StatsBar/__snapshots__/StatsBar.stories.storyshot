@@ -12,7 +12,7 @@ exports[`Storyshots Core/StatsBar Cpu Temp 1`] = `
         class="sc-gKsewC cgpPfo sc-iBPRYJ bBwSze sc-hHftDr gCwwSM"
       >
         <span
-          class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+          class="sc-fKFyDc jHCVxA sc-iwyYcG bsaCCL"
         >
           <div
             class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kwbnZN"
@@ -21,7 +21,7 @@ exports[`Storyshots Core/StatsBar Cpu Temp 1`] = `
               class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP"
             >
               <span
-                class="sc-fKFyDc dToKui sc-iwyYcG kOqgin"
+                class="sc-fKFyDc jHCVxA sc-iwyYcG kOqgin"
               >
                 <svg
                   aria-hidden="true"
@@ -40,13 +40,13 @@ exports[`Storyshots Core/StatsBar Cpu Temp 1`] = `
                 </svg>
               </span>
               <span
-                class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+                class="sc-fKFyDc jHCVxA sc-iwyYcG bsaCCL"
               >
                 Temperature
               </span>
             </div>
             <span
-              class="sc-fKFyDc dToKui sc-iwyYcG jKWtCF"
+              class="sc-fKFyDc jHCVxA sc-iwyYcG jKWtCF"
               style="line-height: 1;"
             >
               ​
@@ -54,7 +54,7 @@ exports[`Storyshots Core/StatsBar Cpu Temp 1`] = `
           </div>
         </span>
         <span
-          class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+          class="sc-fKFyDc jHCVxA sc-iwyYcG bsaCCL"
         >
           ~34C
         </span>
@@ -102,7 +102,7 @@ exports[`Storyshots Core/StatsBar Cpu Usage 1`] = `
         class="sc-gKsewC cgpPfo sc-iBPRYJ bBwSze sc-hHftDr gCwwSM"
       >
         <span
-          class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+          class="sc-fKFyDc jHCVxA sc-iwyYcG bsaCCL"
         >
           <div
             class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kwbnZN"
@@ -111,7 +111,7 @@ exports[`Storyshots Core/StatsBar Cpu Usage 1`] = `
               class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP"
             >
               <span
-                class="sc-fKFyDc dToKui sc-iwyYcG kOqgin"
+                class="sc-fKFyDc jHCVxA sc-iwyYcG kOqgin"
               >
                 <svg
                   aria-hidden="true"
@@ -130,13 +130,13 @@ exports[`Storyshots Core/StatsBar Cpu Usage 1`] = `
                 </svg>
               </span>
               <span
-                class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+                class="sc-fKFyDc jHCVxA sc-iwyYcG bsaCCL"
               >
                 CPU
               </span>
             </div>
             <span
-              class="sc-fKFyDc dToKui sc-iwyYcG jKWtCF"
+              class="sc-fKFyDc jHCVxA sc-iwyYcG jKWtCF"
               style="line-height: 1;"
             >
               ​
@@ -144,7 +144,7 @@ exports[`Storyshots Core/StatsBar Cpu Usage 1`] = `
           </div>
         </span>
         <span
-          class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+          class="sc-fKFyDc jHCVxA sc-iwyYcG bsaCCL"
         >
           ~23%
         </span>
@@ -280,7 +280,7 @@ exports[`Storyshots Core/StatsBar Memory 1`] = `
         class="sc-gKsewC cgpPfo sc-iBPRYJ bBwSze sc-hHftDr gCwwSM"
       >
         <span
-          class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+          class="sc-fKFyDc jHCVxA sc-iwyYcG bsaCCL"
         >
           <div
             class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kwbnZN"
@@ -289,7 +289,7 @@ exports[`Storyshots Core/StatsBar Memory 1`] = `
               class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP"
             >
               <span
-                class="sc-fKFyDc dToKui sc-iwyYcG kOqgin"
+                class="sc-fKFyDc jHCVxA sc-iwyYcG kOqgin"
               >
                 <svg
                   aria-hidden="true"
@@ -308,13 +308,13 @@ exports[`Storyshots Core/StatsBar Memory 1`] = `
                 </svg>
               </span>
               <span
-                class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+                class="sc-fKFyDc jHCVxA sc-iwyYcG bsaCCL"
               >
                 Memory
               </span>
             </div>
             <span
-              class="sc-fKFyDc dToKui sc-iwyYcG jKWtCF"
+              class="sc-fKFyDc jHCVxA sc-iwyYcG jKWtCF"
               style="line-height: 1;"
             >
               ​
@@ -322,16 +322,16 @@ exports[`Storyshots Core/StatsBar Memory 1`] = `
           </div>
         </span>
         <span
-          class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+          class="sc-fKFyDc jHCVxA sc-iwyYcG bsaCCL"
         >
           <span
-            class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+            class="sc-fKFyDc jHCVxA sc-iwyYcG bsaCCL"
           >
             453 MB
           </span>
           /
           <span
-            class="sc-fKFyDc dToKui sc-iwyYcG idZvUe"
+            class="sc-fKFyDc jHCVxA sc-iwyYcG idZvUe"
           >
             1 GB
           </span>
@@ -380,7 +380,7 @@ exports[`Storyshots Core/StatsBar Storage 1`] = `
         class="sc-gKsewC cgpPfo sc-iBPRYJ bBwSze sc-hHftDr gCwwSM"
       >
         <span
-          class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+          class="sc-fKFyDc jHCVxA sc-iwyYcG bsaCCL"
         >
           <div
             class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr kwbnZN"
@@ -389,7 +389,7 @@ exports[`Storyshots Core/StatsBar Storage 1`] = `
               class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP"
             >
               <span
-                class="sc-fKFyDc dToKui sc-iwyYcG kOqgin"
+                class="sc-fKFyDc jHCVxA sc-iwyYcG kOqgin"
               >
                 <svg
                   aria-hidden="true"
@@ -408,13 +408,13 @@ exports[`Storyshots Core/StatsBar Storage 1`] = `
                 </svg>
               </span>
               <span
-                class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+                class="sc-fKFyDc jHCVxA sc-iwyYcG bsaCCL"
               >
                 Storage
               </span>
             </div>
             <span
-              class="sc-fKFyDc dToKui sc-iwyYcG jKWtCF"
+              class="sc-fKFyDc jHCVxA sc-iwyYcG jKWtCF"
               style="line-height: 1;"
             >
               Storage block device
@@ -422,16 +422,16 @@ exports[`Storyshots Core/StatsBar Storage 1`] = `
           </div>
         </span>
         <span
-          class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+          class="sc-fKFyDc jHCVxA sc-iwyYcG bsaCCL"
         >
           <span
-            class="sc-fKFyDc dToKui sc-iwyYcG bsaCCL"
+            class="sc-fKFyDc jHCVxA sc-iwyYcG bsaCCL"
           >
             623 MB
           </span>
           /
           <span
-            class="sc-fKFyDc dToKui sc-iwyYcG idZvUe"
+            class="sc-fKFyDc jHCVxA sc-iwyYcG idZvUe"
           >
             1 GB
           </span>

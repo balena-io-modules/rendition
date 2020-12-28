@@ -39,7 +39,7 @@ exports[`Storyshots Core/Avatar Emphasized 1`] = `
       class="StyledBox-sc-13pk1d4-0 dKvtcX StyledAvatar-sc-1suyamb-1 sc-iWFSnp dyTeJE"
     >
       <div
-        class="sc-fKFyDc dToKui sc-bBXqnf dtyrhz"
+        class="sc-fKFyDc jHCVxA sc-bBXqnf dtyrhz"
       >
         JD
       </div>
@@ -57,7 +57,7 @@ exports[`Storyshots Core/Avatar With First Name 1`] = `
       class="StyledBox-sc-13pk1d4-0 fXtYff StyledAvatar-sc-1suyamb-1 sc-iWFSnp dyTeJE"
     >
       <div
-        class="sc-fKFyDc dToKui sc-bBXqnf dtyrhz"
+        class="sc-fKFyDc jHCVxA sc-bBXqnf dtyrhz"
       >
         J
       </div>
@@ -75,7 +75,7 @@ exports[`Storyshots Core/Avatar With Full Name 1`] = `
       class="StyledBox-sc-13pk1d4-0 fXtYff StyledAvatar-sc-1suyamb-1 sc-iWFSnp dyTeJE"
     >
       <div
-        class="sc-fKFyDc dToKui sc-bBXqnf dtyrhz"
+        class="sc-fKFyDc jHCVxA sc-bBXqnf dtyrhz"
       >
         JD
       </div>
@@ -106,7 +106,7 @@ exports[`Storyshots Core/Avatar With Last Name 1`] = `
       class="StyledBox-sc-13pk1d4-0 fXtYff StyledAvatar-sc-1suyamb-1 sc-iWFSnp dyTeJE"
     >
       <div
-        class="sc-fKFyDc dToKui sc-bBXqnf dtyrhz"
+        class="sc-fKFyDc jHCVxA sc-bBXqnf dtyrhz"
       >
         D
       </div>

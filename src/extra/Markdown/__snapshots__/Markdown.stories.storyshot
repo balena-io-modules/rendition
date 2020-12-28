@@ -70,7 +70,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                     class="sc-gKsewC cgpPfo sc-iBPRYJ kKemJS"
                   >
                     <div
-                      class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-bXDlPE cyautT"
+                      class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI sc-bXDlPE cyautT"
                     >
                       <div>
                         <h1
@@ -82,7 +82,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                           src="https://via.placeholder.com/150"
                         />
                         <p
-                          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+                          class="sc-fKFyDc jHCVxA sc-cxFLnm kkkmRH"
                         >
                           A paragraph
                         </p>
@@ -107,12 +107,12 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                     class="sc-gKsewC cgpPfo sc-iBPRYJ kKemJS"
                   >
                     <div
-                      class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-bXDlPE cyautT"
+                      class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI sc-bXDlPE cyautT"
                     >
                       <div>
                         A title
                         <p
-                          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+                          class="sc-fKFyDc jHCVxA sc-cxFLnm kkkmRH"
                         >
                           A paragraph
                         </p>
@@ -161,7 +161,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                     class="sc-gKsewC cgpPfo sc-iBPRYJ kKemJS"
                   >
                     <div
-                      class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-bXDlPE cyautT"
+                      class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI sc-bXDlPE cyautT"
                     >
                       <div>
                         <h1
@@ -173,7 +173,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                           src="https://via.placeholder.com/150"
                         />
                         <p
-                          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+                          class="sc-fKFyDc jHCVxA sc-cxFLnm kkkmRH"
                         >
                           A paragraph
                         </p>
@@ -198,7 +198,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                     class="sc-gKsewC cgpPfo sc-iBPRYJ kKemJS"
                   >
                     <div
-                      class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-bXDlPE cyautT"
+                      class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI sc-bXDlPE cyautT"
                     >
                       <div>
                         A title
@@ -246,7 +246,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                     class="sc-gKsewC cgpPfo sc-iBPRYJ kKemJS"
                   >
                     <div
-                      class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-bXDlPE cyautT"
+                      class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI sc-bXDlPE cyautT"
                     >
                       <div>
                         <h1
@@ -258,7 +258,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                           src="https://via.placeholder.com/150"
                         />
                         <p
-                          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+                          class="sc-fKFyDc jHCVxA sc-cxFLnm kkkmRH"
                         >
                           A paragraph
                         </p>
@@ -283,7 +283,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                     class="sc-gKsewC cgpPfo sc-iBPRYJ kKemJS"
                   >
                     <div
-                      class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-bXDlPE cyautT"
+                      class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI sc-bXDlPE cyautT"
                     >
                       <div>
                         <h1
@@ -312,7 +312,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
   >
     <div
-      class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-bXDlPE cyautT"
+      class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI sc-bXDlPE cyautT"
     >
       <div>
         <h1
@@ -323,7 +323,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+          class="sc-fKFyDc jHCVxA sc-cxFLnm kkkmRH"
         >
           A simple component for rendering 
           <em>
@@ -381,7 +381,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+          class="sc-fKFyDc jHCVxA sc-cxFLnm kkkmRH"
         >
           <em>
             This text will be italic
@@ -396,7 +396,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+          class="sc-fKFyDc jHCVxA sc-cxFLnm kkkmRH"
         >
           <strong>
             This text will be bold
@@ -411,7 +411,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+          class="sc-fKFyDc jHCVxA sc-cxFLnm kkkmRH"
         >
           <em>
             You 
@@ -523,7 +523,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+          class="sc-fKFyDc jHCVxA sc-cxFLnm kkkmRH"
         >
           <img
             alt="Example Image"
@@ -540,7 +540,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+          class="sc-fKFyDc jHCVxA sc-cxFLnm kkkmRH"
         >
           <a
             class="sc-GTWni kMBmCU sc-gsxnyZ inhWwE"
@@ -554,7 +554,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+          class="sc-fKFyDc jHCVxA sc-cxFLnm kkkmRH"
         >
           <a
             class="sc-GTWni kMBmCU sc-gsxnyZ inhWwE"
@@ -574,7 +574,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+          class="sc-fKFyDc jHCVxA sc-cxFLnm kkkmRH"
         >
           As Ash Ketchum said:
         </p>
@@ -584,7 +584,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           
 
           <p
-            class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+            class="sc-fKFyDc jHCVxA sc-cxFLnm kkkmRH"
           >
             Do you always need a reason to help somebody?
           </p>
@@ -601,7 +601,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+          class="sc-fKFyDc jHCVxA sc-cxFLnm kkkmRH"
         >
           I think you should use an
           <br />
@@ -825,7 +825,7 @@ const foo = () =&gt; {
         
 
         <p
-          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+          class="sc-fKFyDc jHCVxA sc-cxFLnm kkkmRH"
         >
           <del>
             Crossed out
@@ -834,7 +834,7 @@ const foo = () =&gt; {
         
 
         <p
-          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+          class="sc-fKFyDc jHCVxA sc-cxFLnm kkkmRH"
         >
           Any word wrapped with two tildes (like 
           <code>
@@ -852,7 +852,7 @@ const foo = () =&gt; {
         
 
         <p
-          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+          class="sc-fKFyDc jHCVxA sc-cxFLnm kkkmRH"
         >
           <strong>
             An image:
@@ -898,7 +898,7 @@ const foo = () =&gt; {
         
 
         <p
-          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+          class="sc-fKFyDc jHCVxA sc-cxFLnm kkkmRH"
         >
           <kbd>
             cmd
@@ -928,11 +928,11 @@ exports[`Storyshots Extra/Markdown With Decorators 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
   >
     <div
-      class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-bXDlPE cyautT"
+      class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI sc-bXDlPE cyautT"
     >
       <div>
         <p
-          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+          class="sc-fKFyDc jHCVxA sc-cxFLnm kkkmRH"
         >
           <span>
             
@@ -973,7 +973,7 @@ exports[`Storyshots Extra/Markdown With Decorators 1`] = `
         
 
         <p
-          class="sc-fKFyDc dToKui sc-cxFLnm kkkmRH"
+          class="sc-fKFyDc jHCVxA sc-cxFLnm kkkmRH"
         >
           <span>
             

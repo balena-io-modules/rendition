@@ -50,7 +50,7 @@ exports[`Storyshots Core/Spinner With Children 1`] = `
             class="sc-bQdQlF krrxhB"
           />
           <div
-            class="sc-fKFyDc dToKui sc-bBXqnf kCTWx"
+            class="sc-fKFyDc jHCVxA sc-bBXqnf kCTWx"
           >
             Spinning...
           </div>
@@ -83,10 +83,10 @@ exports[`Storyshots Core/Spinner With Component Label 1`] = `
         class="sc-bQdQlF krrxhB"
       />
       <div
-        class="sc-fKFyDc dToKui sc-bBXqnf kCTWx"
+        class="sc-fKFyDc jHCVxA sc-bBXqnf kCTWx"
       >
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf gUmJJR"
+          class="sc-fKFyDc jHCVxA sc-bBXqnf gUmJJR"
         >
           Building image 
           <button
@@ -115,7 +115,7 @@ exports[`Storyshots Core/Spinner With Label 1`] = `
         class="sc-bQdQlF krrxhB"
       />
       <div
-        class="sc-fKFyDc dToKui sc-bBXqnf kCTWx"
+        class="sc-fKFyDc jHCVxA sc-bBXqnf kCTWx"
       >
         Spinning...
       </div>

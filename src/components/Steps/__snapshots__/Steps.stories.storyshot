@@ -37,7 +37,7 @@ exports[`Storyshots Core/Steps Default 1`] = `
               </svg>
             </div>
             <div
-              class="sc-fKFyDc dToKui sc-bBXqnf lijGUI"
+              class="sc-fKFyDc jHCVxA sc-bBXqnf lijGUI"
             >
               These are
             </div>
@@ -95,7 +95,7 @@ exports[`Storyshots Core/Steps Default 1`] = `
               </svg>
             </div>
             <div
-              class="sc-fKFyDc dToKui sc-bBXqnf lijGUI"
+              class="sc-fKFyDc jHCVxA sc-bBXqnf lijGUI"
             >
               all completed
             </div>
@@ -153,7 +153,7 @@ exports[`Storyshots Core/Steps Default 1`] = `
               </svg>
             </div>
             <div
-              class="sc-fKFyDc dToKui sc-bBXqnf lijGUI"
+              class="sc-fKFyDc jHCVxA sc-bBXqnf lijGUI"
             >
               and not clickable
             </div>
@@ -202,7 +202,7 @@ exports[`Storyshots Core/Steps Ordered 1`] = `
               </svg>
             </div>
             <div
-              class="sc-fKFyDc dToKui sc-bBXqnf lijGUI"
+              class="sc-fKFyDc jHCVxA sc-bBXqnf lijGUI"
             >
               These are
             </div>
@@ -259,13 +259,13 @@ exports[`Storyshots Core/Steps Ordered 1`] = `
                 />
               </svg>
               <div
-                class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-ljRboo gzWrMP fa-layers-text fa-inverse"
+                class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI sc-ljRboo gzWrMP fa-layers-text fa-inverse"
               >
                 2
               </div>
             </div>
             <div
-              class="sc-fKFyDc ipClrT sc-bBXqnf kYwmpI"
+              class="sc-fKFyDc euqOvB sc-bBXqnf kYwmpI"
             >
               all completed
             </div>
@@ -310,13 +310,13 @@ exports[`Storyshots Core/Steps Ordered 1`] = `
                 class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-jmhFOf gffKMv"
               />
               <div
-                class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI sc-ljRboo gzWrMP fa-layers-text"
+                class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI sc-ljRboo gzWrMP fa-layers-text"
               >
                 3
               </div>
             </div>
             <div
-              class="sc-fKFyDc dToKui sc-bBXqnf lijGUI"
+              class="sc-fKFyDc jHCVxA sc-bBXqnf lijGUI"
             >
               and not clickable
             </div>
@@ -340,7 +340,7 @@ exports[`Storyshots Core/Steps With Custom Title 1`] = `
         class="sc-gKsewC cgpPfo sc-iBPRYJ jDRXQs sc-hHftDr kFVJVF"
       >
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf bhypgL"
+          class="sc-fKFyDc jHCVxA sc-bBXqnf bhypgL"
         >
           <svg
             aria-hidden="true"
@@ -393,7 +393,7 @@ exports[`Storyshots Core/Steps With Custom Title 1`] = `
               </svg>
             </div>
             <div
-              class="sc-fKFyDc dToKui sc-bBXqnf lijGUI"
+              class="sc-fKFyDc jHCVxA sc-bBXqnf lijGUI"
             >
               These are
             </div>
@@ -451,7 +451,7 @@ exports[`Storyshots Core/Steps With Custom Title 1`] = `
               </svg>
             </div>
             <div
-              class="sc-fKFyDc dToKui sc-bBXqnf lijGUI"
+              class="sc-fKFyDc jHCVxA sc-bBXqnf lijGUI"
             >
               all completed
             </div>
@@ -509,7 +509,7 @@ exports[`Storyshots Core/Steps With Custom Title 1`] = `
               </svg>
             </div>
             <div
-              class="sc-fKFyDc dToKui sc-bBXqnf lijGUI"
+              class="sc-fKFyDc jHCVxA sc-bBXqnf lijGUI"
             >
               and not clickable
             </div>
