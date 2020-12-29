@@ -14,3 +14,8 @@ const Template = createTemplate<ImgProps>(Img);
 export const Default = createStory<ImgProps>(Template, {
 	src: logo,
 });
+
+export const WithFallback = createStory<ImgProps>(Template, {
+	src: 'imgthatfails',
+	fallback: 'https://picsum.photos/200/300',
+});
