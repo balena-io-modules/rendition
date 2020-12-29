@@ -88,6 +88,7 @@ export { Tag, TagProps } from './components/Tag';
 
 export { Avatar, AvatarProps } from './components/Avatar';
 export { Box, BoxProps } from './components/Box';
+export { Breadcrumbs, BreadcrumbsProps, Crumb } from './components/Breadcrumbs';
 export { Flex, FlexProps } from './components/Flex';
 export { useTheme } from './hooks/useTheme';
 export { default as Theme } from './theme';
