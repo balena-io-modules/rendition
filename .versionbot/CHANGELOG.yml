@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add Breadcrumbs component export
+      hash: fbe0da641ae76ed99185f5799f94653bbed52609
+      body: |
+        add breadcrumbs component export
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 19.3.2
+  date: 2020-12-29T17:27:09.528Z
+- commits:
     - subject: Fix max-width on breadcrumbs container
       hash: b7c4ab7bed3caa1c10130f50abb582fcf63d867e
       body: |
