@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add truncate property to Txt component
+      hash: 246d421a7748ec0a460278c95e519de4a6886c62
+      body: |
+        Add truncate property to Txt component to truncate the text when bigger
+        than the container
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 19.2.0
+  date: 2020-12-29T10:27:36.934Z
+- commits:
     - subject: Add fallback image source to Img component
       hash: 10fe82982514254d0f5c04704263584cf996889f
       body: ''
