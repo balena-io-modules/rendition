@@ -36,7 +36,7 @@ export interface BreadcrumbsProps {
 const BreadcrumbContent = React.memo(
 	({ icon, text }: Pick<Crumb, 'icon' | 'text'>) => {
 		return (
-			<Flex alignItems="center" justifyContent="center">
+			<Flex alignItems="center" width="100%">
 				{icon && <Flex mr={2}>{icon}</Flex>}
 				<Txt truncate>{text}</Txt>
 			</Flex>
@@ -47,7 +47,7 @@ const BreadcrumbContent = React.memo(
 export const Breadcrumbs = ({ crumbs, emphasized }: BreadcrumbsProps) => {
 	const theme = useTheme();
 	return (
-		<Flex flexDirection="column" flexWrap="wrap">
+		<Flex flexDirection="column" flexWrap="wrap" width="100%">
 			{crumbs.map((crumb, i) => {
 				const isLast = i === crumbs.length - 1;
 
@@ -58,22 +58,27 @@ export const Breadcrumbs = ({ crumbs, emphasized }: BreadcrumbsProps) => {
 							fontSize={2}
 							color={isLast ? 'white' : 'secondary.semilight'}
 							key={crumb.text}
+							width="100%"
 						>
-							<Flex flexDirection="column">
-								<Flex alignItems="center">
-									<Circle isLast={isLast} emphasized={emphasized} mr={2} />
-									{crumb.onClick ? (
-										<Link
-											style={{ display: 'inherit', color: 'inherit' }}
-											onClick={crumb.onClick}
-										>
+							<Flex flexDirection="column" width="100%">
+								<Flex alignItems="center" width="100%">
+									<Circle isLast={isLast} emphasized={emphasized} />
+									<Flex width={`calc(100% - ${theme.space[2]}px)`} pl={2}>
+										{crumb.onClick ? (
+											<Link
+												style={{ display: 'inherit', color: 'inherit' }}
+												onClick={crumb.onClick}
+												width="100%"
+											>
+												<BreadcrumbContent
+													text={crumb.text}
+													icon={crumb.icon}
+												/>
+											</Link>
+										) : (
 											<BreadcrumbContent text={crumb.text} icon={crumb.icon} />
-										</Link>
-									) : (
-										<Flex>
-											<BreadcrumbContent text={crumb.text} icon={crumb.icon} />
-										</Flex>
-									)}
+										)}
+									</Flex>
 								</Flex>
 								{!isLast && (
 									<Flex
