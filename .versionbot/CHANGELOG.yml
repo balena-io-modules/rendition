@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add Breadcrumbs component
+      hash: 41a7abb3724a6c8a0a839d4083ce36ceaeeb9d91
+      body: |
+        Add Breadcrumbs component and generate snapshots
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 19.3.0
+  date: 2020-12-29T12:12:16.944Z
+- commits:
     - subject: Add truncate property to Txt component
       hash: 246d421a7748ec0a460278c95e519de4a6886c62
       body: |
