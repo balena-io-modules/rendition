@@ -34,6 +34,14 @@ export const bold = (props: ThemedTxtProps) =>
 		  `
 		: null;
 
+export const truncate = (props: ThemedTxtProps) =>
+	props.truncate &&
+	css`
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	`;
+
 export const align = style({
 	key: 'text-align',
 	prop: 'align',
@@ -48,6 +56,8 @@ const BaseTxt = styled.div<TxtProps>`
 	${caps}
 	${bold}
 	${italic}
+
+	${truncate}
 `;
 
 const Factory = (tag?: string) => {
@@ -95,6 +105,8 @@ export interface InternalTxtProps extends React.HTMLAttributes<HTMLElement> {
 	whitespace?: Whitespace;
 	/** Align text inside the component, one of 'left', 'right', 'center', 'justify', 'justify-all', 'start', 'end', 'match-parent', 'inherit', 'initial', 'unset' */
 	align?: Align;
+	/** If true, replace the text not contained in the container with three dots */
+	truncate?: boolean;
 }
 
 export interface ThemedTxtProps extends InternalTxtProps {

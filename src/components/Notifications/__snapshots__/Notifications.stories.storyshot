@@ -33,7 +33,7 @@ exports[`Storyshots Core/Notifications Default 1`] = `
                 >
                   
                   <span
-                    class="sc-fKFyDc dToKui sc-iwyYcG bUoHum"
+                    class="sc-fKFyDc jHCVxA sc-iwyYcG bUoHum"
                   >
                     This is a notification
                   </span>
@@ -79,13 +79,13 @@ exports[`Storyshots Core/Notifications Default 1`] = `
                 >
                   
                   <span
-                    class="sc-fKFyDc dToKui sc-iwyYcG bUoHum"
+                    class="sc-fKFyDc jHCVxA sc-iwyYcG bUoHum"
                   >
                     <div
                       class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP"
                     >
                       <div
-                        class="sc-fKFyDc dToKui sc-bBXqnf hABGiJ"
+                        class="sc-fKFyDc jHCVxA sc-bBXqnf hABGiJ"
                       >
                         Some text for the user to read
                       </div>
@@ -188,7 +188,7 @@ exports[`Storyshots Core/Notifications Positioning 1`] = `
               >
                 
                 <span
-                  class="sc-fKFyDc dToKui sc-iwyYcG bUoHum"
+                  class="sc-fKFyDc jHCVxA sc-iwyYcG bUoHum"
                 >
                   top-left
                 </span>
@@ -238,7 +238,7 @@ exports[`Storyshots Core/Notifications Positioning 1`] = `
               >
                 
                 <span
-                  class="sc-fKFyDc dToKui sc-iwyYcG bUoHum"
+                  class="sc-fKFyDc jHCVxA sc-iwyYcG bUoHum"
                 >
                   top-right
                 </span>
@@ -288,7 +288,7 @@ exports[`Storyshots Core/Notifications Positioning 1`] = `
               >
                 
                 <span
-                  class="sc-fKFyDc dToKui sc-iwyYcG bUoHum"
+                  class="sc-fKFyDc jHCVxA sc-iwyYcG bUoHum"
                 >
                   bottom-left
                 </span>
@@ -338,7 +338,7 @@ exports[`Storyshots Core/Notifications Positioning 1`] = `
               >
                 
                 <span
-                  class="sc-fKFyDc dToKui sc-iwyYcG bUoHum"
+                  class="sc-fKFyDc jHCVxA sc-iwyYcG bUoHum"
                 >
                   bottom-right
                 </span>
@@ -388,7 +388,7 @@ exports[`Storyshots Core/Notifications Positioning 1`] = `
               >
                 
                 <span
-                  class="sc-fKFyDc dToKui sc-iwyYcG bUoHum"
+                  class="sc-fKFyDc jHCVxA sc-iwyYcG bUoHum"
                 >
                   top-center
                 </span>
@@ -441,7 +441,7 @@ exports[`Storyshots Core/Notifications Positioning 1`] = `
                 >
                   
                   <span
-                    class="sc-fKFyDc dToKui sc-iwyYcG bUoHum"
+                    class="sc-fKFyDc jHCVxA sc-iwyYcG bUoHum"
                   >
                     center
                   </span>
@@ -492,7 +492,7 @@ exports[`Storyshots Core/Notifications Positioning 1`] = `
               >
                 
                 <span
-                  class="sc-fKFyDc dToKui sc-iwyYcG bUoHum"
+                  class="sc-fKFyDc jHCVxA sc-iwyYcG bUoHum"
                 >
                   bottom-center
                 </span>
@@ -610,7 +610,7 @@ exports[`Storyshots Core/Notifications Types 1`] = `
                 class="sc-gKsewC cgpPfo sc-iBPRYJ dQsSLq sc-hHftDr sc-dmlrTW cLDXoV RAjJT sc-lmoMRL cGXAYQ sc-dwcuIR gpPHBo"
               >
                 <div
-                  class="sc-fKFyDc dToKui sc-bBXqnf XVwEh"
+                  class="sc-fKFyDc jHCVxA sc-bBXqnf XVwEh"
                 >
                   <svg
                     aria-hidden="true"
@@ -632,12 +632,12 @@ exports[`Storyshots Core/Notifications Types 1`] = `
                   class="sc-gKsewC dWcnb sc-iBPRYJ fLUuUH"
                 >
                   <span
-                    class="sc-fKFyDc ipClrT sc-iwyYcG hQqijh"
+                    class="sc-fKFyDc euqOvB sc-iwyYcG hQqijh"
                   >
                     Note!
                   </span>
                   <span
-                    class="sc-fKFyDc dToKui sc-iwyYcG cRxeiz"
+                    class="sc-fKFyDc jHCVxA sc-iwyYcG cRxeiz"
                   >
                     info
                   </span>
@@ -678,7 +678,7 @@ exports[`Storyshots Core/Notifications Types 1`] = `
                 class="sc-gKsewC cgpPfo sc-iBPRYJ fiWzOU sc-hHftDr sc-dmlrTW cLDXoV dcrGdQ sc-lmoMRL cGXAYQ sc-dwcuIR gpPHBo"
               >
                 <div
-                  class="sc-fKFyDc dToKui sc-bBXqnf hsApDH"
+                  class="sc-fKFyDc jHCVxA sc-bBXqnf hsApDH"
                 >
                   <svg
                     aria-hidden="true"
@@ -700,12 +700,12 @@ exports[`Storyshots Core/Notifications Types 1`] = `
                   class="sc-gKsewC dWcnb sc-iBPRYJ gaVVgz"
                 >
                   <span
-                    class="sc-fKFyDc ipClrT sc-iwyYcG hQqijh"
+                    class="sc-fKFyDc euqOvB sc-iwyYcG hQqijh"
                   >
                     Warning!
                   </span>
                   <span
-                    class="sc-fKFyDc dToKui sc-iwyYcG dgyEur"
+                    class="sc-fKFyDc jHCVxA sc-iwyYcG dgyEur"
                   >
                     warning
                   </span>
@@ -746,7 +746,7 @@ exports[`Storyshots Core/Notifications Types 1`] = `
                 class="sc-gKsewC cgpPfo sc-iBPRYJ ipiHMM sc-hHftDr sc-dmlrTW cLDXoV fNGbub sc-lmoMRL cGXAYQ sc-dwcuIR gpPHBo"
               >
                 <div
-                  class="sc-fKFyDc dToKui sc-bBXqnf ebpqPX"
+                  class="sc-fKFyDc jHCVxA sc-bBXqnf ebpqPX"
                 >
                   <svg
                     aria-hidden="true"
@@ -768,12 +768,12 @@ exports[`Storyshots Core/Notifications Types 1`] = `
                   class="sc-gKsewC dWcnb sc-iBPRYJ jyModB"
                 >
                   <span
-                    class="sc-fKFyDc ipClrT sc-iwyYcG hQqijh"
+                    class="sc-fKFyDc euqOvB sc-iwyYcG hQqijh"
                   >
                     Success!
                   </span>
                   <span
-                    class="sc-fKFyDc dToKui sc-iwyYcG gEoXrt"
+                    class="sc-fKFyDc jHCVxA sc-iwyYcG gEoXrt"
                   >
                     success
                   </span>
@@ -814,7 +814,7 @@ exports[`Storyshots Core/Notifications Types 1`] = `
                 class="sc-gKsewC cgpPfo sc-iBPRYJ cEHZTN sc-hHftDr sc-dmlrTW cLDXoV jwBGWI sc-lmoMRL cGXAYQ sc-dwcuIR gpPHBo"
               >
                 <div
-                  class="sc-fKFyDc dToKui sc-bBXqnf ifPkvS"
+                  class="sc-fKFyDc jHCVxA sc-bBXqnf ifPkvS"
                 >
                   <svg
                     aria-hidden="true"
@@ -836,12 +836,12 @@ exports[`Storyshots Core/Notifications Types 1`] = `
                   class="sc-gKsewC dWcnb sc-iBPRYJ cQdBWv"
                 >
                   <span
-                    class="sc-fKFyDc ipClrT sc-iwyYcG hQqijh"
+                    class="sc-fKFyDc euqOvB sc-iwyYcG hQqijh"
                   >
                     Danger!
                   </span>
                   <span
-                    class="sc-fKFyDc dToKui sc-iwyYcG llbUJj"
+                    class="sc-fKFyDc jHCVxA sc-iwyYcG llbUJj"
                   >
                     danger
                   </span>

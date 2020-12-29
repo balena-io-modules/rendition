@@ -10,7 +10,7 @@ exports[`Storyshots Core/List Default 1`] = `
     >
       <li>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI"
         >
           You can put 
           <a
@@ -24,7 +24,7 @@ exports[`Storyshots Core/List Default 1`] = `
       </li>
       <li>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI"
         >
           And also some 
           <code>
@@ -34,11 +34,11 @@ exports[`Storyshots Core/List Default 1`] = `
       </li>
       <li>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI"
         >
           Multiline text
           <div
-            class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+            class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI"
           >
             that breaks into multiple lines
           </div>
@@ -59,7 +59,7 @@ exports[`Storyshots Core/List Ordered 1`] = `
     >
       <li>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI"
         >
           You can put 
           <a
@@ -73,7 +73,7 @@ exports[`Storyshots Core/List Ordered 1`] = `
       </li>
       <li>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI"
         >
           And also some 
           <code>
@@ -83,11 +83,11 @@ exports[`Storyshots Core/List Ordered 1`] = `
       </li>
       <li>
         <div
-          class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+          class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI"
         >
           Multiline text
           <div
-            class="sc-fKFyDc dToKui sc-bBXqnf kYwmpI"
+            class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI"
           >
             that breaks into multiple lines
           </div>

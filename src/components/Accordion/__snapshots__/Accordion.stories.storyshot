@@ -26,7 +26,7 @@ exports[`Storyshots Core/Accordion Default 1`] = `
               class="sc-gKsewC cgpPfo sc-iBPRYJ GivMM sc-hHftDr cLDXoV"
             >
               <div
-                class="sc-fKFyDc ipClrT sc-bBXqnf cpINvR"
+                class="sc-fKFyDc euqOvB sc-bBXqnf cpINvR"
               >
                 Heading one
               </div>
@@ -59,13 +59,7 @@ exports[`Storyshots Core/Accordion Default 1`] = `
           <div
             aria-hidden="true"
             class="StyledBox-sc-13pk1d4-0 dYebPD Collapsible__AnimatedBox-sc-15kniua-0 euNsBL"
-          >
-            <div
-              class="sc-gKsewC cgpPfo sc-iBPRYJ dcxFGD"
-            >
-              First Panel
-            </div>
-          </div>
+          />
         </div>
       </div>
       <div
@@ -85,7 +79,7 @@ exports[`Storyshots Core/Accordion Default 1`] = `
               class="sc-gKsewC cgpPfo sc-iBPRYJ GivMM sc-hHftDr cLDXoV"
             >
               <div
-                class="sc-fKFyDc ipClrT sc-bBXqnf cpINvR"
+                class="sc-fKFyDc euqOvB sc-bBXqnf cpINvR"
               >
                 Second Heading
               </div>
@@ -118,13 +112,7 @@ exports[`Storyshots Core/Accordion Default 1`] = `
           <div
             aria-hidden="true"
             class="StyledBox-sc-13pk1d4-0 dYebPD Collapsible__AnimatedBox-sc-15kniua-0 euNsBL"
-          >
-            <div
-              class="sc-gKsewC cgpPfo sc-iBPRYJ dcxFGD"
-            >
-              Second Panel
-            </div>
-          </div>
+          />
         </div>
       </div>
     </div>
