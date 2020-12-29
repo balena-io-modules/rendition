@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add fallback image source to Img component
+      hash: 10fe82982514254d0f5c04704263584cf996889f
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 19.1.0
+  date: 2020-12-29T10:03:47.184Z
+- commits:
     - subject: Remove Arcslider component
       hash: a48a9e0578aba2687b3298eaafa28a88d0f038d0
       body: |
