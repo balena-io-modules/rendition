@@ -64,3 +64,54 @@ export const WithRows = createStory<CardProps>(Template, {
 	cta: <Link href="https://balena.io">Link</Link>,
 	rows,
 });
+
+export const WithActions = createStory<CardProps>(Template, {
+	minHeight: '400px',
+	title: 'Card with Actions',
+	cta: (
+		<Button plain primary onClick={() => window.alert('Action with Button')}>
+			Update
+		</Button>
+	),
+	children: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+  scelerisque euismod risus at gravida. Pellentesque a nunc semper,
+  ultrices lacus nec, mattis mauris `,
+	actions: [
+		{
+			label: 'Normal action',
+			primary: true,
+			onClick: () => window.alert('Normal action'),
+		},
+		{
+			label: 'Danger action',
+			danger: true,
+			onClick: () => window.alert('Danger action'),
+		},
+	],
+});
+
+export const WithoutDivider = createStory<CardProps>(Template, {
+	minHeight: '400px',
+	showDivider: false,
+	title: 'Card with Actions',
+	cta: (
+		<Button plain primary onClick={() => window.alert('Action with Button')}>
+			Update
+		</Button>
+	),
+	children: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+  scelerisque euismod risus at gravida. Pellentesque a nunc semper,
+  ultrices lacus nec, mattis mauris `,
+	actions: [
+		{
+			label: 'Normal action',
+			primary: true,
+			onClick: () => window.alert('Normal action'),
+		},
+		{
+			label: 'Danger action',
+			danger: true,
+			onClick: () => window.alert('Danger action'),
+		},
+	],
+});
