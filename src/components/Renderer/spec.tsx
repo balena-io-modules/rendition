@@ -4,21 +4,26 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import omit from 'lodash/omit';
 import forEach from 'lodash/forEach';
-import { Provider } from '../../';
-import JsonSchemaRenderer from '.';
+import { Provider } from '../..';
+import { Renderer } from '.';
 import allExamples, { CONTEXT_FUNCTIONS, EXTRA_FORMATS } from './examples';
 
-describe.only('JsonSchemaRenderer component', () => {
+describe.only('Renderer component', () => {
 	const examples = omit(allExamples, 'A mermaid field', 'A date time field');
 	forEach(examples, (example, label) => {
 		it(label, () => {
 			const { container } = render(
-				<Provider>
+				<Provider
+					widgets={{
+						renderer: {
+							formats: EXTRA_FORMATS,
+						},
+					}}
+				>
 					{/* @ts-ignore */}
-					<JsonSchemaRenderer
+					<Renderer
 						validate
 						{...example}
-						extraFormats={EXTRA_FORMATS}
 						extraContext={{
 							...CONTEXT_FUNCTIONS,
 							root: example.value,

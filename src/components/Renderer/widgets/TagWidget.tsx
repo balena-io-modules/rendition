@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Tag } from '../../../components/Tag';
+import { Tag } from '../../Tag';
 import { UiOption } from './ui-options';
 import { Widget, WidgetProps } from './widget-util';
 import { JsonTypes } from '../types';

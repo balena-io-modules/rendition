@@ -4,10 +4,9 @@ import forEach from 'lodash/forEach';
 import get from 'lodash/get';
 import without from 'lodash/without';
 import uniq from 'lodash/uniq';
-import castArray from 'lodash/castArray';
 import keys from 'lodash/keys';
-import widgets from '../widgets';
-import { getWidget, getType, JsonSchemaRendererProps } from '../index';
+import { defaultFormats } from '../widgets';
+import { getWidget, getType, RendererProps } from '../index';
 import { WidgetWrapperUiOptions, getObjectPropertyNames } from '../widgets';
 import { transformUiSchema } from '../widgets/widget-util';
 import { Value } from '../types';
@@ -22,7 +21,7 @@ type UiSchemaMetaSchema = {
 };
 
 const getBaseMetaSchema = (): UiSchemaMetaSchema => ({
-	title: 'JsonSchemaRenderer UI Schema',
+	title: 'Renderer UI Schema',
 	type: ['object', 'null'],
 	properties: {
 		'ui:title': {
@@ -41,7 +40,7 @@ const getBaseMetaSchema = (): UiSchemaMetaSchema => ({
 });
 
 type MetaSchemaArgs = Pick<
-	JsonSchemaRendererProps,
+	RendererProps,
 	'value' | 'schema' | 'uiSchema' | 'extraContext' | 'extraFormats'
 >;
 
@@ -98,11 +97,13 @@ const generateObjectMetaSchema = (
 };
 
 const setWidgetOptions = (metaSchema: UiSchemaMetaSchema, type: string) => {
-	const widgetKeys: string[] = [];
-	castArray(type).reduce((acc, t) => {
-		acc.push(...keys(widgets[t]));
-		return acc;
-	}, widgetKeys);
+	const widgetKeys: string[] = [
+		type,
+		...defaultFormats
+			.filter((x) => x.widget?.supportedTypes?.includes(type))
+			.map((x) => x.name),
+	];
+
 	metaSchema.properties['ui:widget'] = {
 		oneof: [
 			{

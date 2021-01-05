@@ -1,7 +1,10 @@
 import * as React from 'react';
-import { Mermaid } from '../../Mermaid';
-import { Widget, WidgetProps } from './widget-util';
-import { JsonTypes } from '../types';
+import { Mermaid } from '../Mermaid';
+import {
+	Widget,
+	WidgetProps,
+} from '../../components/Renderer/widgets/widget-util';
+import { JsonTypes } from '../../components/Renderer/types';
 
 const MermaidWidget: Widget = ({
 	value,

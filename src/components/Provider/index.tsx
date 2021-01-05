@@ -8,6 +8,10 @@ import defaultTheme from '../../theme';
 import { px } from '../../utils';
 import { BreakpointProvider } from './BreakpointProvider';
 import { Helmet } from 'react-helmet';
+import {
+	WidgetContext,
+	WidgetContextValue,
+} from '../../contexts/WidgetContext';
 
 const Base = styled(Grommet)`
 	font-family: ${(props) => props.theme.font};
@@ -15,27 +19,30 @@ const Base = styled(Grommet)`
 	color: ${(props) => px(props.theme.colors.text.main)};
 `;
 
-const BaseProvider = ({ theme, ...props }: ThemedProvider) => {
+const BaseProvider = ({ theme, widgets, ...props }: ThemedProvider) => {
 	const isDefaultFont = !theme?.font;
 	const providerTheme = merge(cloneDeep(defaultTheme), theme);
 
 	return (
 		<BreakpointProvider breakpoints={providerTheme.breakpoints}>
-			{isDefaultFont && (
-				<Helmet>
-					<link
-						href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&family=Ubuntu+Mono:wght@400;700&display=fallback"
-						rel="stylesheet"
-					/>
-				</Helmet>
-			)}
-			<Base theme={providerTheme} {...props} />
+			<WidgetContext.Provider value={widgets ?? {}}>
+				{isDefaultFont && (
+					<Helmet>
+						<link
+							href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&family=Ubuntu+Mono:wght@400;700&display=fallback"
+							rel="stylesheet"
+						/>
+					</Helmet>
+				)}
+				<Base theme={providerTheme} {...props} />
+			</WidgetContext.Provider>
 		</BreakpointProvider>
 	);
 };
 
 export interface ThemedProvider
 	extends Omit<React.HTMLAttributes<HTMLElement>, 'dir'> {
+	widgets?: WidgetContextValue;
 	theme?: Partial<Theme>;
 	dir?: GrommetProps['dir'];
 }

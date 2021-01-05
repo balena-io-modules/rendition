@@ -1,5 +1,6 @@
 import * as React from 'react';
 import forEach from 'lodash/forEach';
+import uniqBy from 'lodash/uniqBy';
 import keys from 'lodash/keys';
 import pick from 'lodash/pick';
 import get from 'lodash/get';
@@ -7,16 +8,17 @@ import isArray from 'lodash/isArray';
 import ajv from 'ajv';
 import asRendition from '../../asRendition';
 import { RenditionSystemProps, Theme } from '../../common-types';
-import { Flex } from '../../components/Flex';
-import { Alert } from '../../components/Alert';
-import ErrorBoundary from '../../internal/ErrorBoundary';
-import widgets, {
+import { Flex } from '../Flex';
+import { Alert } from '../Alert';
+import {
+	defaultFormats,
+	typeWidgets,
 	WidgetWrapperUiOptions,
 	WidgetMeta,
-	formatWidgetMap,
 } from './widgets';
 import { transformUiSchema } from './widgets/widget-util';
 import { Value, JSONSchema, UiSchema, Format } from './types';
+import { WidgetContext } from '../../contexts/WidgetContext';
 
 export const getValue = (
 	value?: Value,
@@ -48,22 +50,21 @@ export const getWidget = (
 	uiSchemaWidget?: UiSchema['ui:widget'],
 	extraFormats?: Format[],
 ) => {
-	if (uiSchemaWidget && typeof uiSchemaWidget !== 'string') {
-		return uiSchemaWidget;
-	}
+	const valueType = getType(value);
 
 	const extraFormat = extraFormats?.find(
-		(extraFormat) => extraFormat.name === format,
+		(extraFormat) =>
+			extraFormat.name === format || extraFormat.name === uiSchemaWidget,
 	);
-	if (!uiSchemaWidget && extraFormat?.widget) {
+
+	if (
+		extraFormat?.widget &&
+		extraFormat.widget.supportedTypes?.includes(valueType)
+	) {
 		return extraFormat.widget;
 	}
 
-	if (!uiSchemaWidget && format && formatWidgetMap[format]) {
-		return formatWidgetMap[format];
-	}
-	const typeWidgets = get(widgets, getType(value), widgets.default);
-	return get(typeWidgets, uiSchemaWidget || 'default', typeWidgets.default);
+	return typeWidgets[valueType] ?? typeWidgets.default;
 };
 
 type Validation = {
@@ -85,7 +86,7 @@ const buildValidation = (
 	};
 };
 
-export const JsonSchemaRenderer = ({
+const RendererBase = ({
 	value,
 	schema,
 	uiSchema,
@@ -95,9 +96,23 @@ export const JsonSchemaRenderer = ({
 	validate,
 	nested,
 	...props
-}: ThemedJsonSchemaRendererProps) => {
+}: ThemedRendererProps) => {
+	const { renderer } = React.useContext(WidgetContext);
+	const formats = React.useMemo(
+		() =>
+			uniqBy(
+				[
+					...(extraFormats ?? []),
+					...(renderer?.formats ?? []),
+					...defaultFormats,
+				],
+				(format) => format.name,
+			),
+		[renderer?.formats, extraFormats, defaultFormats],
+	);
+
 	const [validation, setValidation] = React.useState<Validation | null>(
-		validate && !nested ? buildValidation(schema, extraFormats) : null,
+		validate && !nested ? buildValidation(schema, formats) : null,
 	);
 	const [validationErrors, setValidationErrors] = React.useState<
 		ajv.ErrorObject[] | null | undefined
@@ -108,8 +123,8 @@ export const JsonSchemaRenderer = ({
 			setValidationErrors(null);
 			return;
 		}
-		setValidation(buildValidation(schema, extraFormats));
-	}, [validate, nested, extraFormats, schema]);
+		setValidation(buildValidation(schema, formats));
+	}, [validate, nested, formats, schema]);
 
 	React.useEffect(() => {
 		if (!validate || nested) {
@@ -117,7 +132,7 @@ export const JsonSchemaRenderer = ({
 		}
 		let v = validation;
 		if (!v) {
-			v = buildValidation(schema, extraFormats);
+			v = buildValidation(schema, formats);
 			setValidation(v);
 		}
 		v.validate(value);
@@ -149,7 +164,7 @@ export const JsonSchemaRenderer = ({
 		processedValue,
 		get(schema, 'format'),
 		processedUiSchema['ui:widget'],
-		extraFormats,
+		formats,
 	);
 
 	return (
@@ -179,7 +194,7 @@ export const JsonSchemaRenderer = ({
 			/>
 			<Widget
 				extraContext={extraContext}
-				extraFormats={extraFormats}
+				extraFormats={formats}
 				value={processedValue}
 				schema={schema}
 				uiSchema={processedUiSchema}
@@ -188,13 +203,11 @@ export const JsonSchemaRenderer = ({
 	);
 };
 
-interface ThemedJsonSchemaRendererProps
-	extends InternalJsonSchemaRendererProps {
+interface ThemedRendererProps extends InternalRendererProps {
 	theme: Theme;
 }
 
-interface InternalJsonSchemaRendererProps
-	extends React.HTMLAttributes<HTMLElement> {
+interface InternalRendererProps extends React.HTMLAttributes<HTMLElement> {
 	nested?: boolean;
 	/** If set, the `value` will be validated against the `schema` and any error will be displayed at the top of the rendered output. Useful for debugging. */
 	validate?: boolean;
@@ -211,17 +224,16 @@ interface InternalJsonSchemaRendererProps
 	extraContext?: object;
 }
 
-export type JsonSchemaRendererProps = InternalJsonSchemaRendererProps &
-	RenditionSystemProps;
+export type RendererProps = InternalRendererProps & RenditionSystemProps;
 
-export const RenditionJsonSchemaRenderer = asRendition<
-	React.FunctionComponent<JsonSchemaRendererProps>
->(JsonSchemaRenderer);
+const RenditionRendererBase = asRendition<
+	React.FunctionComponent<RendererProps>
+>(RendererBase);
 
 /**
  * A component used to render JSON data based on a schema and a UI schema.
  *
- * >To understand the interaction between the `value`, `schema` and `uiSchema` props (as well as the use of `extraFormats` and `extraContext`) it's worth looking through the examples in [examples.ts](./examples.ts) and having a play with the [JsonSchemaRenderer Playground](https://balena-io-modules.github.io/rendition/?path=/story/extra-jsonschemarenderer--playground) in the Rendition Storybook site.
+ * >To understand the interaction between the `value`, `schema` and `uiSchema` props (as well as the use of `extraFormats` and `extraContext`) it's worth looking through the examples in [examples.ts](./examples.ts) and having a play with the [Renderer Playground](https://balena-io-modules.github.io/rendition/?path=/story/extra-Renderer--playground) in the Rendition Storybook site.
  *
  * ## UI Schema fields
  *
@@ -264,13 +276,13 @@ export const RenditionJsonSchemaRenderer = asRendition<
  *
  * In this example a json-e transform is run for each item in the `links` array, allowing a unique value of `ui:options.href` to be set for each link in the array.
  *
- * # JsonSchemaRenderer Widgets
+ * # Renderer Widgets
  *
- * A [`JsonSchemaRenderer`](../README.md) widget is responsible for rendering an individual data value.
+ * A [`Renderer`](../README.md) widget is responsible for rendering an individual data value.
  *
  * ## Overview
  *
- * A number of `JsonSchemaRenderer` widgets are provided by Rendition.
+ * A number of `Renderer` widgets are provided by Rendition.
  *
  * * These widgets can be referenced by their string widget name
  * * Each widget is a simple wrapper around an underlying Rendition component
@@ -278,7 +290,7 @@ export const RenditionJsonSchemaRenderer = asRendition<
  *
  * | Widget Name       | Underlying component | Supported value types**  | UI Options |
  * |-------------------|-------------------------|--------------------------|:----------:|
- * | `Array`           | [JsonSchemaRenderer](../README.md)[]* | `array` | [ref](#array) |
+ * | `Array`           | [Renderer](../README.md)[]* | `array` | [ref](#array) |
  * | `Badge`           | [Badge](../../../components/Badge/README.md)| `string | integer | number | boolean` | [ref](#badge) |
  * | `ButtonGroup`     | [ButtonGroup](../../../components/ButtonGroup/README.md)|  `array` | [ref](#buttongroup) |
  * | `Button`          | [Button](../../../components/Button/README.md) | `string | integer | number | boolean` | [ref](#button) |
@@ -289,23 +301,24 @@ export const RenditionJsonSchemaRenderer = asRendition<
  * | `Img`             | [Img](../../../components/Img/README.md) | `string` | [ref](#img) |
  * | `Link`            | [Link](../../../components/Link/README.md) | `string` | [ref](#link) |
  * | `List`            | [List](../../../components/List/README.md) | `array` | [ref](#list) |
- * | `Markdown`        | [Markdown](../../Markdown/README.md) | `string` | [ref](#markdown) |
- * | `Mermaid`         | [Mermaid](../../Mermaid/README.md) | `string` | [ref](#mermaid) |
- * | `Object`          | [JsonSchemaRenderer](../README.md)* | `object` | [ref](#object) |
+ * | `Object`          | [Renderer](../README.md)* | `object` | [ref](#object) |
  * | `Tag`             | [Tag](../../../components/Tag/README.md) | `string | integer | number` | [ref](#tag) |
  * | `Txt`             | [Txt](../../../components/Txt/README.md) | `string | integer | number | boolean` | [ref](#txt) |
  *
- * \* _Recursive_ - when the value is iterable (e.g. the properties of an object or the items in an array) these widgets pass each iterated value to a `JsonSchemaRenderer` instance in a recursive manner.
+ *
+ * The widgets below are not loaded by default and you need to pass them as extra formats either to the Renderer, or to the Provider as a `widgets` prop.
+ *
+ * | Widget Name       | Underlying component | Supported value types**  | UI Options |
+ * | `Markdown`        | [Markdown](../../Markdown/README.md) | `string` | [ref](#markdown) |
+ * | `Mermaid`         | [Mermaid](../../Mermaid/README.md) | `string` | [ref](#mermaid) |
+ *
+ * \* _Recursive_ - when the value is iterable (e.g. the properties of an object or the items in an array) these widgets pass each iterated value to a `Renderer` instance in a recursive manner.
  *
  * \*\* Remember: as the rendered value can be set using the `ui:value` field of the UI schema (potentially using a [json-e](https://json-e.js.org/) transformation), the resolved data type does not necessarily correspond to the data type of the `value` prop.
  *
- * ### Example usage
+ * ### Renderer Playground
  *
- * A great way to see the interaction between a UI schema and these widgets is to look through the examples in [examples.ts](../examples.ts)
- *
- * ### JsonSchemaRenderer Playground
- *
- * To test out the various built-in widgets you can use the [JsonSchemaRenderer Playground](https://balena-io-modules.github.io/rendition/?path=/story/extra-jsonschemarenderer--playground) in the Rendition Storybook site.
+ * To test out the various built-in widgets you can use the [Renderer Playground](https://balena-io-modules.github.io/rendition/?path=/story/extra-Renderer--playground) in the Rendition Storybook site.
  *
  * ## Specifying a Widget
  *
@@ -324,17 +337,17 @@ export const RenditionJsonSchemaRenderer = asRendition<
  *
  * ### Custom Widgets
  *
- * If you want to provide your own widget, just set the `ui:widget` value to the widget component to use:
+ * If you want to provide your own widget, just pass `extraFormats` to the renderer, or provide them to the Provider as the `widgets` prop.
  *
  * ```javascript
  * const MyWidget = ({ value, schema, ...rest }) => (
  *   <div>{value}</div>
  * )
  *
- * const uiSchema = {
- *   // Important: use the actual component reference, not it's string name
- *   'ui:widget': MyWidget
- * }
+ * <Renderer
+ * extraFormats={[{name: 'MyWidget', format: '.*', widget: MyWidget}]}
+ * ...
+ * />
  * ```
  *
  * _Note: the props passed to your custom widget will be the [widget props](#widget-props)._
@@ -429,7 +442,7 @@ export const RenditionJsonSchemaRenderer = asRendition<
  *
  * ### UI Options by Widget
  *
- * The UI options for Rendition JsonSchemaRenderer widgets roughly correspond to the props that can be passed to the underlying Rendition component. If in doubt, consult the appropriate component's README for details of the prop in question.
+ * The UI options for Rendition Renderer widgets roughly correspond to the props that can be passed to the underlying Rendition component. If in doubt, consult the appropriate component's README for details of the prop in question.
  *
  * #### **Array**
  *
@@ -573,12 +586,8 @@ export const RenditionJsonSchemaRenderer = asRendition<
  * | `align`    | `['left' | 'right' | 'center' | 'justify' | 'justify-all' | 'start' | 'end' | 'match-parent' | 'inherit' | 'initial' | 'unset']` | Text alignment |
  * | `whitespace` | `['normal' | 'nowrap' | 'pre' | 'pre-line' | 'pre-wrap' | 'initial' | 'inherit']` | Specifies how whitespace is handled |
  *
- * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/JsonSchemaRenderer/JsonSchemaRenderer.stories.tsx)
+ * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Renderer/Renderer.stories.tsx)
  */
-export default function (props: JsonSchemaRendererProps) {
-	return (
-		<ErrorBoundary>
-			<RenditionJsonSchemaRenderer {...props} />
-		</ErrorBoundary>
-	);
-}
+export const Renderer = (props: RendererProps) => {
+	return <RenditionRendererBase {...props} />;
+};

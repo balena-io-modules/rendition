@@ -3,7 +3,7 @@ import get from 'lodash/get';
 import map from 'lodash/map';
 import { Widget, WidgetProps, getObjectPropertyNames } from './widget-util';
 import { JsonTypes } from '../types';
-import { RenditionJsonSchemaRenderer } from '../index';
+import { Renderer } from '../index';
 
 const ObjectWidget: Widget = ({
 	value,
@@ -21,13 +21,7 @@ const ObjectWidget: Widget = ({
 					uiSchema: get(uiSchema, key),
 				};
 				return (
-					<RenditionJsonSchemaRenderer
-						key={key}
-						nested
-						valueKey={key}
-						{...subProps}
-						{...rest}
-					/>
+					<Renderer key={key} nested valueKey={key} {...subProps} {...rest} />
 				);
 			})}
 		</React.Fragment>

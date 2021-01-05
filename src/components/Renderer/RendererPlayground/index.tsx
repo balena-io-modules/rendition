@@ -10,14 +10,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUndo } from '@fortawesome/free-solid-svg-icons/faUndo';
 import asRendition from '../../../asRendition';
 import { RenditionSystemProps, Theme } from '../../../common-types';
-import { Flex } from '../../../components/Flex';
-import { Box } from '../../../components/Box';
-import { Card } from '../../../components/Card';
-import { Select } from '../../../components/Select';
-import { Button } from '../../../components/Button';
-import { Heading } from '../../../components/Heading';
-import { Checkbox } from '../../../components/Checkbox';
-import JsonSchemaRenderer, { JsonSchemaRendererProps } from '../index';
+import { Flex } from '../../Flex';
+import { Box } from '../../Box';
+import { Card } from '../../Card';
+import { Select } from '../../Select';
+import { Button } from '../../Button';
+import { Heading } from '../../Heading';
+import { Checkbox } from '../../Checkbox';
+import { Renderer, RendererProps } from '../index';
 import { Value, JSONSchema, UiSchema } from '../types';
 import { CONTEXT_FUNCTIONS, EXTRA_FORMATS } from '../examples';
 import JsonEditor from './JsonEditor';
@@ -55,11 +55,11 @@ const commonCardProps = {
 	backgroundColor: 'quartenary.light',
 };
 
-const JsonSchemaRendererPlayground = ({
+const RendererPlaygroundBase = ({
 	title = 'JSON Playground',
 	examples,
 	...props
-}: ThemedJsonSchemaRendererPlaygroundProps) => {
+}: ThemedRendererPlaygroundProps) => {
 	const [validate, setValidate] = React.useState<boolean>(true);
 	const [selectedExample, setSelectedExample] = React.useState<string>('');
 	const [searchTermRegExp, setSearchTermRegExp] = React.useState<RegExp>(
@@ -92,7 +92,7 @@ const JsonSchemaRendererPlayground = ({
 		{},
 	);
 
-	const [jsonProps, setJsonProps] = React.useState<JsonSchemaRendererProps>(
+	const [jsonProps, setJsonProps] = React.useState<RendererProps>(
 		defaultJsonProps,
 	);
 
@@ -225,7 +225,7 @@ const JsonSchemaRendererPlayground = ({
 						/>
 					}
 				>
-					<JsonSchemaRenderer
+					<Renderer
 						{...jsonProps}
 						p={2}
 						pb={1}
@@ -243,7 +243,7 @@ const JsonSchemaRendererPlayground = ({
 	);
 };
 
-interface InternalJsonSchemaRendererPlaygroundProps
+interface InternalRendererPlaygroundProps
 	extends React.HTMLAttributes<HTMLElement> {
 	title?: string;
 	examples?: {
@@ -255,15 +255,15 @@ interface InternalJsonSchemaRendererPlaygroundProps
 	};
 }
 
-interface ThemedJsonSchemaRendererPlaygroundProps
-	extends InternalJsonSchemaRendererPlaygroundProps {
+interface ThemedRendererPlaygroundProps
+	extends InternalRendererPlaygroundProps {
 	theme: Theme;
 }
 
-export type JsonSchemaRendererPlaygroundProps = InternalJsonSchemaRendererPlaygroundProps &
+export type RendererPlaygroundProps = InternalRendererPlaygroundProps &
 	RenditionSystemProps;
 
-/** [View stories source](https://github.com/balena-io-modules/rendition/blob/master/src/components/JsonSchemaRenderer/JsonSchemaRenderer.stories.tsx) */
-export default asRendition<
-	React.FunctionComponent<JsonSchemaRendererPlaygroundProps>
->(JsonSchemaRendererPlayground);
+/** [View stories source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Renderer/Renderer.stories.tsx) */
+export const RendererPlayground = asRendition<
+	React.FunctionComponent<RendererPlaygroundProps>
+>(RendererPlaygroundBase);

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
 import { createTemplate, createStory } from '../../stories/utils';
-import JsonSchemaRendererPlayground from './JsonSchemaRendererPlayground';
+import { RendererPlayground } from './RendererPlayground';
 // TODO: Change to named export on the next major.
-import { JsonSchemaRenderer, JsonSchemaRendererProps } from '.';
+import { Renderer, RendererProps } from '.';
 import examples from './examples';
 import { createGlobalStyle } from 'styled-components';
 
@@ -24,27 +24,22 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export default {
-	title: 'Extra/JsonSchemaRenderer',
-	component: JsonSchemaRenderer,
+	title: 'Core/Renderer',
+	component: Renderer,
 } as Meta;
 
-const Template = createTemplate<JsonSchemaRendererProps>(JsonSchemaRenderer);
-const PlaygroundTemplate = createTemplate<JsonSchemaRendererProps>(
-	JsonSchemaRendererPlayground,
-);
+const Template = createTemplate<RendererProps>(Renderer);
+const PlaygroundTemplate = createTemplate<RendererProps>(RendererPlayground);
 
-export const Default = createStory<JsonSchemaRendererProps>(Template, {
+export const Default = createStory<RendererProps>(Template, {
 	...examples['An object with various properties'],
 });
 
-export const Playground = createStory<JsonSchemaRendererProps>(
-	PlaygroundTemplate,
-	{
-		examples,
-		flex: 1,
-		height: '100%',
-	},
-);
+export const Playground = createStory<RendererProps>(PlaygroundTemplate, {
+	examples,
+	flex: 1,
+	height: '100%',
+});
 
 Playground.decorators = [
 	(Story) => (

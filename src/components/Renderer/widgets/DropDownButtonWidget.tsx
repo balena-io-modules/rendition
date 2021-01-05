@@ -2,11 +2,11 @@ import * as React from 'react';
 import isArray from 'lodash/isArray';
 import get from 'lodash/get';
 import map from 'lodash/map';
-import { DropDownButton } from '../../../components/DropDownButton';
+import { DropDownButton } from '../../DropDownButton';
 import { Widget, WidgetProps, getArrayItems } from './widget-util';
 import { JsonTypes } from '../types';
 import { UiOption } from './ui-options';
-import { RenditionJsonSchemaRenderer } from '../index';
+import { Renderer } from '../index';
 
 const validItemTypes = ['string', 'integer', 'number'];
 
@@ -33,11 +33,7 @@ const DropDownButtonWidget: Widget = ({
 	return (
 		<DropDownButton {...props}>
 			{map(items, (item: WidgetProps, index: number) => (
-				<RenditionJsonSchemaRenderer
-					key={index}
-					{...item}
-					extraFormats={extraFormats}
-				/>
+				<Renderer key={index} {...item} extraFormats={extraFormats} />
 			))}
 		</DropDownButton>
 	);

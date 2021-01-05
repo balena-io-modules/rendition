@@ -1,3 +1,5 @@
+import MarkdownWidget from '../../extra/Renderer/MarkdownWidget';
+import MermaidWidget from '../../extra/Renderer/MermaidWidget';
 import { Format } from './types';
 
 /* eslint-disable no-template-curly-in-string */
@@ -12,26 +14,12 @@ export const EXTRA_FORMATS: Format[] = [
 	{
 		name: 'markdown',
 		format: '.*',
+		widget: MarkdownWidget,
 	},
 	{
 		name: 'mermaid',
 		format: '.*',
-	},
-	{
-		name: 'color',
-		format: '.*',
-	},
-	{
-		name: 'uri',
-		format: '.*',
-	},
-	{
-		name: 'email',
-		format: '.*',
-	},
-	{
-		name: 'data-url',
-		format: '.*',
+		widget: MermaidWidget,
 	},
 ];
 

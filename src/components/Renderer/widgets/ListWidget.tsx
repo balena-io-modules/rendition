@@ -1,8 +1,8 @@
 import * as React from 'react';
 import map from 'lodash/map';
-import { List } from '../../../components/List';
+import { List } from '../../List';
 import { Widget, WidgetProps, getArrayItems } from './widget-util';
-import { RenditionJsonSchemaRenderer } from '../index';
+import { Renderer } from '../index';
 import { JsonTypes } from '../types';
 import { UiOption } from './ui-options';
 
@@ -30,12 +30,7 @@ const ListWidget: Widget = ({
 		<List {...props}>
 			{map(items, (item: WidgetProps, index: number) => {
 				return (
-					<RenditionJsonSchemaRenderer
-						key={index}
-						nested
-						{...item}
-						extraFormats={extraFormats}
-					/>
+					<Renderer key={index} nested {...item} extraFormats={extraFormats} />
 				);
 			})}
 		</List>
