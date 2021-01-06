@@ -3,7 +3,9 @@ import * as React from "react";
 import { createGlobalStyle } from "styled-components";
 import theme from "../src/theme";
 import { Provider } from "../src/index";
-import { EXTRA_FORMATS } from "../src/components/Renderer/examples";
+
+import { EXTRA_FORMATS as EXTRA_FORMATS_FORM } from "../src/components/Form/examples";
+import { EXTRA_FORMATS as EXTRA_FORMATS_RENDERER } from "../src/components/Renderer/examples";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -32,7 +34,10 @@ const ThemeProvider = ({ children }) => {
       <Provider
         widgets={{
           renderer: {
-            formats: EXTRA_FORMATS,
+            formats: EXTRA_FORMATS_RENDERER,
+          },
+          form: {
+            formats: EXTRA_FORMATS_FORM,
           },
         }}
         theme={

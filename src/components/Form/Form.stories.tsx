@@ -3,15 +3,7 @@ import { Meta } from '@storybook/react';
 import { createTemplate, createStory } from '../../stories/utils';
 import { Box, Flex, Txt } from '../..';
 import { Markdown } from '../../extra/Markdown';
-import { MermaidWidget } from '../../extra/Form/mermaid';
-import { MarkdownWidget } from '../../extra/Form/markdown';
-import { CaptchaWidget } from '../../extra/Form/captcha';
 import { Form, FormProps } from '.';
-
-// Register the extra format widgets to the Form component
-Form.registerWidget('markdown', MarkdownWidget);
-Form.registerWidget('mermaid', MermaidWidget);
-Form.registerWidget('captcha', CaptchaWidget);
 
 // Any valid key would work in order to show the captcha in the story.
 // @ts-ignore
@@ -33,10 +25,6 @@ import { Form } from 'rendition'
 import { MermaidWidget } from 'rendition/dist/components/Form/mermaid'
 import { MarkdownWidget } from 'rendition/dist/components/Form/markdown'
 
-// Register the extra format widgets to the Form component
-Form.registerWidget('markdown', MarkdownWidget)
-Form.registerWidget('mermaid', MermaidWidget)
-
 const schema = {
   type: 'object',
   properties: {
@@ -52,7 +40,7 @@ const schema = {
 }
 
 const rootElement = document.getElementById('root')
-ReactDOM.render(<Form schema={schema} />, rootElement)
+ReactDOM.render(<Form schema={schema} extraFormats={[{name: 'markdown', format: '.*', widget: MarkdownWidget}, {name: 'mermaid', format: '.*', widget: MermaidWidget}]} />, rootElement)
 \`\`\`
 `;
 

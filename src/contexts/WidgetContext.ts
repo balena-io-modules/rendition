@@ -2,7 +2,9 @@ import * as React from 'react';
 import { Format } from '../components/Renderer/types';
 
 export interface WidgetContextValue {
-	form?: any;
+	form?: {
+		formats: Format[];
+	};
 	renderer?: {
 		formats: Format[];
 	};

@@ -1,5 +1,4 @@
 import { JSONSchema7 as JSONSchema } from 'json-schema';
-import isEqual from 'lodash/isEqual';
 import omit from 'lodash/omit';
 import * as React from 'react';
 import RsjfForm, {
@@ -24,6 +23,9 @@ import BaseInput from './widgets/BaseInput';
 import PasswordWidget from './widgets/PasswordWidget';
 import SelectWidget from './widgets/SelectWidget';
 import TextareaWidget from './widgets/TextareaWidget';
+import { Format } from '../Renderer/types';
+import { WidgetContext } from '../../contexts/WidgetContext';
+import { uniqBy } from 'lodash';
 
 const SUPPORTED_SCHEMA_FORMATS = [
 	'data-url',
@@ -40,7 +42,7 @@ const SUPPORTED_SCHEMA_FORMATS = [
 // schema before being passed as a prop
 const KEYWORD_BLACKLIST = ['$schema'];
 
-const widgets: {
+let widgets: {
 	[k: string]: any;
 } = {
 	BaseInput,
@@ -92,11 +94,6 @@ const parseSchema = (schema: JSONSchema) => {
 	return utils.stripSchemaFormats(schema, whitelist);
 };
 
-interface FormState {
-	value: any;
-	schema: JSONSchema;
-}
-
 export interface RenditionUiSchema extends UiSchema {
 	'ui:warning'?: string;
 }
@@ -117,7 +114,7 @@ export interface FormWidgetProps extends WidgetProps {
 	rawErrors: string[];
 }
 
-export interface BaseFormProps
+export interface FormProps
 	extends BoxProps,
 		Pick<
 			JsonSchemaFormProps<any>,
@@ -139,62 +136,21 @@ export interface BaseFormProps
 	onFormSubmit?: (result: any) => void;
 	/** A configuration object used to change the styling and layout of the form. See the [`react-jsonschema-form`](https://github.com/mozilla-services/react-jsonschema-form) docs for more details */
 	uiSchema?: RenditionUiSchema;
-}
-
-export interface FormProps extends BaseFormProps {
 	/** A json schema describing the shape of the data you would like to gather */
 	schema: JSONSchema;
+	/** A list of extra formats the form should support and be able to render */
+	extraFormats?: Format[];
 }
 
-class BaseForm extends React.Component<FormProps, FormState> {
-	private formRef = React.createRef<RsjfForm<any>>();
-
-	public static getDerivedStateFromProps(props: FormProps, state: FormState) {
-		if (!state) {
-			return { schema: parseSchema(props.schema), value: props.value };
-		}
-
-		if (!isEqual(state.value, props.value)) {
-			return {
-				value: props.value,
-			};
-		}
-	}
-
-	public static registerWidget(name: string, value: any) {
-		widgets[name] = value;
-	}
-
-	public componentDidUpdate(prevProps: FormProps) {
-		if (!isEqual(this.props.schema, prevProps.schema)) {
-			this.setState({
-				schema: parseSchema(this.props.schema),
-			});
-		}
-	}
-
-	private handleKeyUpDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
-		if (e.key === 'Enter' && !this.props.hideSubmitButton) {
-			e.stopPropagation();
-		}
-	};
-
-	public change = (data: IChangeEvent) => {
-		this.setState({ value: data.formData });
-
-		if (this.props.onFormChange) {
-			this.props.onFormChange(data);
-		}
-	};
-
-	public submit = () => {
-		if (this.formRef.current) {
-			this.formRef.current.submit();
-		}
-	};
-
-	public render() {
-		const {
+const BaseForm = React.forwardRef<RsjfForm<any>, FormProps>(
+	(
+		{
+			schema,
+			value,
+			disabled,
+			extraFormats,
+			onFormChange,
+			onFormSubmit,
 			hideSubmitButton,
 			submitButtonText,
 			submitButtonProps,
@@ -203,38 +159,83 @@ class BaseForm extends React.Component<FormProps, FormState> {
 			validate,
 			liveValidate,
 			noValidate,
-			schema,
-			value,
-			onFormChange,
-			onFormSubmit,
-			disabled,
 			...props
-		} = this.props;
+		}: FormProps,
+		ref,
+	) => {
+		const { form } = React.useContext(WidgetContext);
+		const contextFormats = form?.formats ?? [];
 
-		const localSchema = omit(
-			utils.disallowAdditionalProperties(this.state.schema),
-			KEYWORD_BLACKLIST,
+		const allWidgets = React.useMemo(() => {
+			return {
+				...widgets,
+				...uniqBy(
+					[...(extraFormats ?? []), ...contextFormats],
+					(format) => format.name,
+				).reduce((agg: { [k: string]: any }, format) => {
+					if (format.widget) {
+						agg[format.name] = format.widget;
+					}
+					return agg;
+				}, {}),
+			};
+		}, [widgets, extraFormats]);
+
+		// TODO: This is required for the extra widgets to be rendered, not sure why yet.. :/
+		widgets = allWidgets;
+
+		const calculatedSchema = React.useMemo(() => {
+			const parsedSchema = parseSchema(schema);
+			return omit(
+				utils.disallowAdditionalProperties(parsedSchema),
+				KEYWORD_BLACKLIST,
+			);
+		}, [schema]);
+		const [formState, setFormState] = React.useState(value);
+
+		React.useEffect(() => {
+			setFormState(value);
+		}, [value]);
+
+		const handleKeyUpDown = React.useCallback(
+			(e: React.KeyboardEvent<HTMLDivElement>) => {
+				if (e.key === 'Enter' && !hideSubmitButton) {
+					e.stopPropagation();
+				}
+			},
+			[hideSubmitButton],
+		);
+
+		const change = React.useCallback(
+			(data: IChangeEvent) => {
+				setFormState(data.formData);
+
+				if (onFormChange) {
+					onFormChange(data);
+				}
+			},
+			[onFormChange],
 		);
 
 		return (
 			<FormWrapper
 				{...props}
-				onKeyDown={this.handleKeyUpDown}
-				onKeyUp={this.handleKeyUpDown}
+				onKeyDown={handleKeyUpDown}
+				onKeyUp={handleKeyUpDown}
 			>
 				<RsjfForm
-					ref={this.formRef}
+					ref={ref}
 					disabled={disabled}
 					liveValidate={liveValidate}
 					noValidate={noValidate}
 					validate={validate}
 					showErrorList={false}
-					schema={localSchema}
-					formData={this.state.value}
-					onSubmit={this.props.onFormSubmit}
-					onChange={this.props.onFormChange}
+					schema={calculatedSchema}
+					formData={formState}
+					onSubmit={onFormSubmit}
+					onChange={change}
 					uiSchema={uiSchema}
-					widgets={widgets}
+					widgets={allWidgets}
 					fields={fields}
 					FieldTemplate={FieldTemplate}
 					ObjectFieldTemplate={ObjectFieldTemplate}
@@ -253,8 +254,8 @@ class BaseForm extends React.Component<FormProps, FormState> {
 				</RsjfForm>
 			</FormWrapper>
 		);
-	}
-}
+	},
+);
 
 /**
  * A component that can be used for generating a form from a [json schema](http://json-schema.org/) object.
@@ -290,15 +291,10 @@ class BaseForm extends React.Component<FormProps, FormState> {
  *
  * ## Captcha
  *
- * If you wish to use a captcha (google recaptcha v2) in your form, you need to load the `captcha` widget using `import { CaptchaWidget } from 'renditon/dist/extra/Form/captcha'` and register it using `registerWidget`. [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Form/story.js).
+ * If you wish to use a captcha (google recaptcha v2) in your form, you need to load the `captcha` widget using `import { CaptchaWidget } from 'renditon/dist/extra/Form/captcha'` and pass it to extraFormats, see: [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Form/story.js).
  *
  * In order for the captcha to work, you also need to set a valid recaptcha API key to the `window.RECAPTCHA_V2_API_KEY` variable.
  * A gotcha with the captcha widget is, upon submitting, you need to reset the captcha form value where you manage its state. Google only allows a captcha value (generated by clicking the captcha widget) to be verified only once against their API, after which it will be invalid so it needs to be reset.
  *
- * ## API
- *
- * ### `registerWidget(format, widget)`
- *
- * Register a widget that will be used to render fields of the specified format.
  */
 export const Form = BaseForm;
