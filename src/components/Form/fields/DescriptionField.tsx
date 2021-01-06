@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Markdown } from '../../../extra/Markdown';
+import { Renderer } from '../../../components/Renderer';
 import Theme from '../../../theme';
 
 export const DescriptionField = ({
@@ -14,14 +14,16 @@ export const DescriptionField = ({
 	}
 
 	return (
-		<Markdown
-			mb={1}
+		<Renderer
 			id={id}
 			className="rendition-form-description"
 			color={Theme.colors.text.light}
 			fontSize={1}
-		>
-			{description}
-		</Markdown>
+			value={description}
+			schema={{
+				type: 'string',
+				format: 'markdown',
+			}}
+		/>
 	);
 };

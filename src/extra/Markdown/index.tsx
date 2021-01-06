@@ -34,6 +34,10 @@ const MarkdownWrapper = styled(Txt)`
 		line-height: 1.2;
 	}
 
+	& p {
+		margin: 0;
+	}
+
 	& pre {
 		background-color: ${(props) => props.theme.colors.gray.light};
 	}
