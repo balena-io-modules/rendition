@@ -6,7 +6,7 @@ import {
 } from '../../components/Renderer/widgets/widget-util';
 import { JsonTypes } from '../../components/Renderer/types';
 
-const MermaidWidget: Widget = ({
+export const MermaidWidget: Widget = ({
 	value,
 	schema,
 	uiSchema,
@@ -20,5 +20,3 @@ MermaidWidget.displayName = 'Mermaid';
 MermaidWidget.uiOptions = {};
 
 MermaidWidget.supportedTypes = [JsonTypes.string];
-
-export default MermaidWidget;

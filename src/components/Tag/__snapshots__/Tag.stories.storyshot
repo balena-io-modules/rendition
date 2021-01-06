@@ -3,7 +3,7 @@
 exports[`Storyshots Core/Tag Clickable 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
   >
     <div
       class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-GqfZa cHWpcm"
@@ -35,7 +35,7 @@ exports[`Storyshots Core/Tag Clickable 1`] = `
 exports[`Storyshots Core/Tag Closable 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
   >
     <div
       class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-GqfZa cHWpcm"
@@ -82,7 +82,7 @@ exports[`Storyshots Core/Tag Closable 1`] = `
 exports[`Storyshots Core/Tag Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
   >
     <div
       class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-GqfZa cHWpcm"
@@ -109,7 +109,7 @@ exports[`Storyshots Core/Tag Default 1`] = `
 exports[`Storyshots Core/Tag Empty 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
   >
     <div
       class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-GqfZa cHWpcm"
@@ -131,7 +131,7 @@ exports[`Storyshots Core/Tag Empty 1`] = `
 exports[`Storyshots Core/Tag Multiple Values 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
   >
     <div
       class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-GqfZa cHWpcm"
@@ -173,7 +173,7 @@ exports[`Storyshots Core/Tag Multiple Values 1`] = `
 exports[`Storyshots Core/Tag Only Name 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
   >
     <div
       class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-GqfZa cHWpcm"
@@ -195,7 +195,7 @@ exports[`Storyshots Core/Tag Only Name 1`] = `
 exports[`Storyshots Core/Tag Only Value 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
   >
     <div
       class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-GqfZa cHWpcm"

@@ -6,7 +6,7 @@ import {
 } from '../../components/Renderer/widgets/widget-util';
 import { JsonTypes } from '../../components/Renderer/types';
 
-const MarkdownWidget: Widget = ({
+export const MarkdownWidget: Widget = ({
 	value,
 	schema,
 	uiSchema,
@@ -18,5 +18,3 @@ const MarkdownWidget: Widget = ({
 MarkdownWidget.displayName = 'Markdown';
 
 MarkdownWidget.supportedTypes = [JsonTypes.string];
-
-export default MarkdownWidget;

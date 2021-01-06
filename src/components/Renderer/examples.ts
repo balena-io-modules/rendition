@@ -1,5 +1,5 @@
-import MarkdownWidget from '../../extra/Renderer/MarkdownWidget';
-import MermaidWidget from '../../extra/Renderer/MermaidWidget';
+import { MarkdownWidget } from '../../extra/Renderer/MarkdownWidget';
+import { MermaidWidget } from '../../extra/Renderer/MermaidWidget';
 import { Format } from './types';
 
 /* eslint-disable no-template-curly-in-string */
