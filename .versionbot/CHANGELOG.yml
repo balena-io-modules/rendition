@@ -1,4 +1,79 @@
 - commits:
+    - subject: Update all the tests after the form and renderer changes
+      hash: 995e509389362bf19f206a9cc0de20dc31431554
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+    - subject: Change how extra widgets are registered on Form
+      hash: 55ebead53f75b0296244e31fceb95413f9efa71d
+      body: >
+        This is a breaking change and requires some action if you
+
+        are using extra widgets. You need to remove all `registerWidget`
+
+        calls and instead pass the extra widgets you want to use to either
+
+        the Form as `extraFormats` or set them on the Provider's `widgets` prop
+
+
+        Moreover, if you used a reference to call `change` and `submit`
+
+        you will only be able to call submit now by passing the ref directly to
+        the form
+
+        and change was completely removed.
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+    - subject: Use Renderer instead of Markdown for Form description fields
+      hash: 2a5aa535c48336a3c1471470887e7dc51e6544fd
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+    - subject: >-
+        Move JsonSchemaRenderer to core components and remove default
+        widgets/formats
+      hash: 384af28f04ec6e074f5e5e7a96ebd32106fcf740
+      body: >
+        This is a breaking change that will require an action. Firstly, if you
+        were
+
+        using JsonSchemaRenderer from `extra`, you now need to rename
+        JsonSchemaRenderer
+
+        to Renderer, and import it from 'rendition'. The next thing to do is
+        pass
+
+        all extra formats that you want the renderer to support that are not
+        default
+
+        (namely Markdown and Mermaid) to the Provider's `widgets` prop. Also,
+        the
+
+        error boundary as part of the renderer was removed and you need to add
+        that
+
+        by yourself if needed.
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 20.0.0
+  date: 2021-01-07T10:17:53.630Z
+- commits:
     - subject: Add Breadcrumbs component export
       hash: fbe0da641ae76ed99185f5799f94653bbed52609
       body: |
