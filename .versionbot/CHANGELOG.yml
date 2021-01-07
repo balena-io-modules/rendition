@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'Card: add actions, update props and restyle'
+      hash: ca1f17f0379a35a4f2dccfb96d2d22c91dd3ea21
+      body: |
+        Add card actions, divider props, remove rows props and refactor style
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 21.0.0
+  date: 2021-01-07T13:51:21.735Z
+- commits:
     - subject: Update all the tests after the form and renderer changes
       hash: 995e509389362bf19f206a9cc0de20dc31431554
       body: ''
