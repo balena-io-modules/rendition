@@ -3,7 +3,7 @@
 exports[`Storyshots Core/Divider Dashed 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
   >
     <hr
       class="sc-iktFzd cUYtuc sc-hiSbYr ioExYC"
@@ -16,7 +16,7 @@ exports[`Storyshots Core/Divider Dashed 1`] = `
 exports[`Storyshots Core/Divider Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
   >
     <hr
       class="sc-iktFzd cJCAjm sc-hiSbYr ioExYC"
@@ -28,7 +28,7 @@ exports[`Storyshots Core/Divider Default 1`] = `
 exports[`Storyshots Core/Divider With Custom Color 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
   >
     <hr
       class="sc-iktFzd cbtjSH sc-hiSbYr bmzuUW"
@@ -41,7 +41,7 @@ exports[`Storyshots Core/Divider With Custom Color 1`] = `
 exports[`Storyshots Core/Divider With Text Content 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
   >
     <div
       class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI sc-hHftDr bxfdfp sc-hiSbYr ioExYC"

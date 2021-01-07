@@ -1,11 +1,10 @@
 import * as React from 'react';
 import { UiSchema } from '@rjsf/core';
 import { Box } from '../../Box';
-import { Markdown } from '../../../extra/Markdown';
 import Theme from '../../../theme';
 import { LabelElement } from '../LabelElement';
 import { WarningField } from '../WarningField';
-import { Txt } from '../../Txt';
+import { Renderer } from '../../../components/Renderer';
 
 const REQUIRED_FIELD_SYMBOL = '*';
 
@@ -76,16 +75,18 @@ const FieldTemplate = (props: FieldTemplateProps) => {
 			{children}
 			{errors}
 			{rawHelp && (
-				<Markdown
+				<Renderer
+					id={id}
 					mt={1}
 					className="rendition-form-help"
 					color={Theme.colors.text.light}
-					componentOverrides={{
-						p: (props: any) => <Txt.p {...props} margin={0} />,
+					fontSize={1}
+					value={rawHelp}
+					schema={{
+						type: 'string',
+						format: 'markdown',
 					}}
-				>
-					{rawHelp}
-				</Markdown>
+				/>
 			)}
 		</Box>
 	);

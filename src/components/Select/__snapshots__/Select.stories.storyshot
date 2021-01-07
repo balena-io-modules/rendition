@@ -3,7 +3,7 @@
 exports[`Storyshots Core/Select Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
   >
     <div
       class="sc-eJMQSu icifty sc-nFpLZ jNUxxL"
@@ -24,7 +24,7 @@ exports[`Storyshots Core/Select Default 1`] = `
             >
               <input
                 autocomplete="off"
-                class="StyledTextInput-sc-1x30a0s-0 ccRbRh Select__SelectTextInput-sc-17idtfo-0 bIurki sc-jeGSBP kMEjWZ"
+                class="StyledTextInput-sc-1x30a0s-0 AKkVg Select__SelectTextInput-sc-17idtfo-0 bIurki sc-jeGSBP kMEjWZ"
                 readonly=""
                 tabindex="-1"
                 type="text"
@@ -59,7 +59,7 @@ exports[`Storyshots Core/Select Default 1`] = `
 exports[`Storyshots Core/Select Emphasized 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
   >
     <div
       class="sc-eJMQSu icifty sc-nFpLZ jNUxxL"
@@ -80,7 +80,7 @@ exports[`Storyshots Core/Select Emphasized 1`] = `
             >
               <input
                 autocomplete="off"
-                class="StyledTextInput-sc-1x30a0s-0 ccRbRh Select__SelectTextInput-sc-17idtfo-0 bIurki sc-jeGSBP iqwkEO"
+                class="StyledTextInput-sc-1x30a0s-0 AKkVg Select__SelectTextInput-sc-17idtfo-0 bIurki sc-jeGSBP iqwkEO"
                 readonly=""
                 tabindex="-1"
                 type="text"
@@ -115,7 +115,7 @@ exports[`Storyshots Core/Select Emphasized 1`] = `
 exports[`Storyshots Core/Select Invalid 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
   >
     <div
       class="sc-eJMQSu ekgIso sc-nFpLZ jNUxxL"
@@ -136,7 +136,7 @@ exports[`Storyshots Core/Select Invalid 1`] = `
             >
               <input
                 autocomplete="off"
-                class="StyledTextInput-sc-1x30a0s-0 ccRbRh Select__SelectTextInput-sc-17idtfo-0 bIurki sc-jeGSBP kMEjWZ"
+                class="StyledTextInput-sc-1x30a0s-0 AKkVg Select__SelectTextInput-sc-17idtfo-0 bIurki sc-jeGSBP kMEjWZ"
                 readonly=""
                 tabindex="-1"
                 type="text"
@@ -171,7 +171,7 @@ exports[`Storyshots Core/Select Invalid 1`] = `
 exports[`Storyshots Core/Select Object Options 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
   >
     <div
       class="sc-eJMQSu icifty sc-nFpLZ jNUxxL"
@@ -192,7 +192,7 @@ exports[`Storyshots Core/Select Object Options 1`] = `
             >
               <input
                 autocomplete="off"
-                class="StyledTextInput-sc-1x30a0s-0 ccRbRh Select__SelectTextInput-sc-17idtfo-0 bIurki sc-jeGSBP kMEjWZ"
+                class="StyledTextInput-sc-1x30a0s-0 AKkVg Select__SelectTextInput-sc-17idtfo-0 bIurki sc-jeGSBP kMEjWZ"
                 readonly=""
                 tabindex="-1"
                 type="text"
@@ -227,7 +227,7 @@ exports[`Storyshots Core/Select Object Options 1`] = `
 exports[`Storyshots Core/Select With Custom Option 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
   >
     <div
       class="sc-eJMQSu icifty sc-nFpLZ jNUxxL"
@@ -248,7 +248,7 @@ exports[`Storyshots Core/Select With Custom Option 1`] = `
             >
               <input
                 autocomplete="off"
-                class="StyledTextInput-sc-1x30a0s-0 ccRbRh Select__SelectTextInput-sc-17idtfo-0 bIurki sc-jeGSBP kMEjWZ"
+                class="StyledTextInput-sc-1x30a0s-0 AKkVg Select__SelectTextInput-sc-17idtfo-0 bIurki sc-jeGSBP kMEjWZ"
                 readonly=""
                 tabindex="-1"
                 type="text"
@@ -283,7 +283,7 @@ exports[`Storyshots Core/Select With Custom Option 1`] = `
 exports[`Storyshots Core/Select With Placeholder 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-dWdcrH ScrBw"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
   >
     <div
       class="sc-eJMQSu icifty sc-nFpLZ jNUxxL"
@@ -304,7 +304,7 @@ exports[`Storyshots Core/Select With Placeholder 1`] = `
             >
               <input
                 autocomplete="off"
-                class="StyledTextInput-sc-1x30a0s-0 ccRbRh Select__SelectTextInput-sc-17idtfo-0 bIurki sc-jeGSBP kMEjWZ"
+                class="StyledTextInput-sc-1x30a0s-0 AKkVg Select__SelectTextInput-sc-17idtfo-0 bIurki sc-jeGSBP kMEjWZ"
                 placeholder="Select one..."
                 readonly=""
                 tabindex="-1"

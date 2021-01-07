@@ -5,6 +5,7 @@ import sinon from 'sinon';
 import { JSONSchema7 } from 'json-schema';
 
 import { Alert, Form, Provider } from '../../';
+import { EXTRA_FORMATS } from './examples';
 
 const schema = {
 	type: 'object',
@@ -457,7 +458,7 @@ describe('Form component', () => {
 
 			const component = mount(
 				<Provider>
-					<Form schema={descriptionSchema} />
+					<Form schema={descriptionSchema} extraFormats={EXTRA_FORMATS} />
 				</Provider>,
 			);
 
@@ -474,6 +475,7 @@ describe('Form component', () => {
 			const component = mount(
 				<Provider>
 					<Form
+						extraFormats={EXTRA_FORMATS}
 						schema={{
 							type: 'object',
 							properties: {

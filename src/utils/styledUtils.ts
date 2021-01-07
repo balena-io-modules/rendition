@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import { Theme } from '~/common-types';
+import { Theme } from '../common-types';
 
 export const normal = (props: { theme: Theme }) => props.theme?.weights?.[0];
 export const bold = (props: { theme: Theme }) => props.theme?.weights?.[1];

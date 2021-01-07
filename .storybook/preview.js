@@ -1,44 +1,55 @@
-import * as React from 'react'
+import * as React from "react";
 // import { useDarkMode } from 'storybook-dark-mode'
-import { createGlobalStyle } from 'styled-components'
-import theme from '../src/theme'
-import { Provider } from '../src/index'
+import { createGlobalStyle } from "styled-components";
+import theme from "../src/theme";
+import { Provider } from "../src/index";
+
+import { EXTRA_FORMATS as EXTRA_FORMATS_FORM } from "../src/components/Form/examples";
+import { EXTRA_FORMATS as EXTRA_FORMATS_RENDERER } from "../src/components/Renderer/examples";
 
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
+  actions: { argTypesRegex: "^on[A-Z].*" },
   controls: { expanded: true },
-}
+};
 
 const GlobalStyle = createGlobalStyle([], {
-  '*': {
-    boxSizing: 'border-box'
+  "*": {
+    boxSizing: "border-box",
   },
   body: {
     lineHeight: 1.5,
     margin: 0,
     fontFamily: theme.font,
-    webkitFontSmoothing: 'antialiased'
-  }
-})
+    webkitFontSmoothing: "antialiased",
+  },
+});
 
 const ThemeProvider = ({ children }) => {
   // const isDark = useDarkMode()
-  const isDark = false
+  const isDark = false;
 
   return (
     <React.Fragment>
       <GlobalStyle />
       <Provider
+        widgets={{
+          renderer: {
+            formats: EXTRA_FORMATS_RENDERER,
+          },
+          form: {
+            formats: EXTRA_FORMATS_FORM,
+          },
+        }}
         theme={
           isDark
             ? {
                 colors: {
                   text: {
-                    main: 'white',
-                    light: 'white',
-                    dark: 'gray'
-                  }
-                }
+                    main: "white",
+                    light: "white",
+                    dark: "gray",
+                  },
+                },
               }
             : {}
         }
@@ -46,13 +57,13 @@ const ThemeProvider = ({ children }) => {
         {children}
       </Provider>
     </React.Fragment>
-  )
-}
+  );
+};
 
 export const decorators = [
   (Story) => (
     <ThemeProvider>
       <Story />
     </ThemeProvider>
-  )
-]
+  ),
+];

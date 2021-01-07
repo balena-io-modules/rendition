@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { Omit, RenditionSystemProps } from '../../common-types';
 import { px } from '../../utils';
-import { Theme } from '~/theme';
+import { Theme } from '../../theme';
 
 type AdjustedGrommetSelectProps = Omit<
 	GrommetSelectProps,

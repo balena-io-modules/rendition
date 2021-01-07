@@ -15,6 +15,8 @@ export interface CaptchaWidgetProps {
 }
 
 export class CaptchaWidget extends React.Component<CaptchaWidgetProps> {
+	public static displayName = 'Captcha';
+
 	public recaptchaRef: React.RefObject<any>;
 
 	constructor(props: CaptchaWidgetProps) {
