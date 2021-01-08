@@ -3,7 +3,7 @@
 exports[`Storyshots Core/Card Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-jXktwP kNOktQ"
   >
     <div
       style="width: 400px; height: 400px;"
@@ -31,7 +31,7 @@ exports[`Storyshots Core/Card Default 1`] = `
 exports[`Storyshots Core/Card Emphasized 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-jXktwP kNOktQ"
   >
     <div
       style="width: 400px; height: 400px;"
@@ -72,7 +72,7 @@ exports[`Storyshots Core/Card Emphasized 1`] = `
 exports[`Storyshots Core/Card Small 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-jXktwP kNOktQ"
   >
     <div
       style="width: 400px; height: 400px;"
@@ -100,7 +100,7 @@ exports[`Storyshots Core/Card Small 1`] = `
 exports[`Storyshots Core/Card With Action Header 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-jXktwP kNOktQ"
   >
     <div
       style="width: 400px; height: 400px;"
@@ -147,7 +147,7 @@ exports[`Storyshots Core/Card With Action Header 1`] = `
 exports[`Storyshots Core/Card With Actions 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-jXktwP kNOktQ"
   >
     <div
       style="width: 400px; height: 400px;"
@@ -218,7 +218,7 @@ exports[`Storyshots Core/Card With Actions 1`] = `
 exports[`Storyshots Core/Card With Header 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-jXktwP kNOktQ"
   >
     <div
       style="width: 400px; height: 400px;"

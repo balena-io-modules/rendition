@@ -3,7 +3,7 @@
 exports[`Storyshots Core/Heading Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-jXktwP kNOktQ"
   >
     <h3
       class="sc-iktFzd ePMNkU sc-jJEJSO kYibbK"
@@ -17,7 +17,7 @@ exports[`Storyshots Core/Heading Default 1`] = `
 exports[`Storyshots Core/Heading H 1 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-jXktwP kNOktQ"
   >
     <h1
       class="sc-iktFzd ePMNkU sc-hiSbYr hwRkKu"
@@ -31,7 +31,7 @@ exports[`Storyshots Core/Heading H 1 1`] = `
 exports[`Storyshots Core/Heading H 2 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-jXktwP kNOktQ"
   >
     <h2
       class="sc-iktFzd ePMNkU sc-gWHgXt goapnY"
@@ -45,7 +45,7 @@ exports[`Storyshots Core/Heading H 2 1`] = `
 exports[`Storyshots Core/Heading H 3 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-jXktwP kNOktQ"
   >
     <h3
       class="sc-iktFzd ePMNkU sc-cBNfnY hcRIY"
@@ -59,7 +59,7 @@ exports[`Storyshots Core/Heading H 3 1`] = `
 exports[`Storyshots Core/Heading H 4 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-jXktwP kNOktQ"
   >
     <h4
       class="sc-iktFzd bZzDXR sc-citwmv hsEgEr"
@@ -73,7 +73,7 @@ exports[`Storyshots Core/Heading H 4 1`] = `
 exports[`Storyshots Core/Heading H 5 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-jXktwP kNOktQ"
   >
     <h5
       class="sc-iktFzd bZzDXR sc-jcVebW huUMIs"
