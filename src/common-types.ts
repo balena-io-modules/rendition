@@ -133,3 +133,17 @@ export interface TooltipProps {
 export interface Tooltip {
 	tooltip?: string | TooltipProps;
 }
+
+export const orderedActionTypes: string[] = [
+	'none',
+	'primary',
+	'warning',
+	'danger',
+];
+export interface ActionButtonDefinition {
+	title: string;
+	onTriggerAction: (...args: any) => void;
+	type?: typeof orderedActionTypes[number];
+	disabled?: string | boolean;
+	hidden?: boolean;
+}
