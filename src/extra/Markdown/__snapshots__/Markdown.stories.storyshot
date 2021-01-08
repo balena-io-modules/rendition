@@ -74,7 +74,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                     >
                       <div>
                         <h1
-                          class="sc-gWHgXt eCVPSB sc-citwmv gCCLOD"
+                          class="sc-iktFzd ePMNkU sc-hiSbYr hwRkKu"
                         >
                           A title
                         </h1>
@@ -165,7 +165,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                     >
                       <div>
                         <h1
-                          class="sc-gWHgXt eCVPSB sc-citwmv gCCLOD"
+                          class="sc-iktFzd ePMNkU sc-hiSbYr hwRkKu"
                         >
                           A title
                         </h1>
@@ -250,7 +250,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                     >
                       <div>
                         <h1
-                          class="sc-gWHgXt eCVPSB sc-citwmv gCCLOD"
+                          class="sc-iktFzd ePMNkU sc-hiSbYr hwRkKu"
                         >
                           A title
                         </h1>
@@ -287,7 +287,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                     >
                       <div>
                         <h1
-                          class="sc-gWHgXt eCVPSB sc-citwmv gCCLOD"
+                          class="sc-iktFzd ePMNkU sc-hiSbYr hwRkKu"
                         >
                           A title
                         </h1>
@@ -316,7 +316,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
     >
       <div>
         <h1
-          class="sc-gWHgXt eCVPSB sc-citwmv gCCLOD"
+          class="sc-iktFzd ePMNkU sc-hiSbYr hwRkKu"
         >
           Markdown
         </h1>
@@ -334,14 +334,14 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h2
-          class="sc-gWHgXt eCVPSB sc-jcVebW fcdKNU"
+          class="sc-iktFzd ePMNkU sc-gWHgXt goapnY"
         >
           Headers
         </h2>
         
 
         <h1
-          class="sc-gWHgXt eCVPSB sc-citwmv gCCLOD"
+          class="sc-iktFzd ePMNkU sc-hiSbYr hwRkKu"
         >
           This is an 
           <code>
@@ -352,7 +352,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h2
-          class="sc-gWHgXt eCVPSB sc-jcVebW fcdKNU"
+          class="sc-iktFzd ePMNkU sc-gWHgXt goapnY"
         >
           This is an 
           <code>
@@ -363,7 +363,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h6
-          class="sc-gWHgXt vKAIQ sc-eggNIi iUGsQu"
+          class="sc-iktFzd bZzDXR sc-bZSQDF fvMmhJ"
         >
           This is an 
           <code>
@@ -374,7 +374,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h2
-          class="sc-gWHgXt eCVPSB sc-jcVebW fcdKNU"
+          class="sc-iktFzd ePMNkU sc-gWHgXt goapnY"
         >
           Emphasis
         </h2>
@@ -424,14 +424,14 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h2
-          class="sc-gWHgXt eCVPSB sc-jcVebW fcdKNU"
+          class="sc-iktFzd ePMNkU sc-gWHgXt goapnY"
         >
           Lists
         </h2>
         
 
         <h3
-          class="sc-gWHgXt eCVPSB sc-bZSQDF QBWsK"
+          class="sc-iktFzd ePMNkU sc-cBNfnY hcRIY"
         >
           Unordered
         </h3>
@@ -471,7 +471,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h3
-          class="sc-gWHgXt eCVPSB sc-bZSQDF QBWsK"
+          class="sc-iktFzd ePMNkU sc-cBNfnY hcRIY"
         >
           Ordered
         </h3>
@@ -516,7 +516,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h2
-          class="sc-gWHgXt eCVPSB sc-jcVebW fcdKNU"
+          class="sc-iktFzd ePMNkU sc-gWHgXt goapnY"
         >
           Images
         </h2>
@@ -533,7 +533,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h2
-          class="sc-gWHgXt eCVPSB sc-jcVebW fcdKNU"
+          class="sc-iktFzd ePMNkU sc-gWHgXt goapnY"
         >
           Links
         </h2>
@@ -567,7 +567,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h2
-          class="sc-gWHgXt eCVPSB sc-jcVebW fcdKNU"
+          class="sc-iktFzd ePMNkU sc-gWHgXt goapnY"
         >
           Blockquotes
         </h2>
@@ -594,7 +594,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h2
-          class="sc-gWHgXt eCVPSB sc-jcVebW fcdKNU"
+          class="sc-iktFzd ePMNkU sc-gWHgXt goapnY"
         >
           Inline code
         </h2>
@@ -615,7 +615,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h2
-          class="sc-gWHgXt eCVPSB sc-jcVebW fcdKNU"
+          class="sc-iktFzd ePMNkU sc-gWHgXt goapnY"
         >
           Code blocks
         </h2>
@@ -712,7 +712,7 @@ const foo = () =&gt; {
         
 
         <h2
-          class="sc-gWHgXt eCVPSB sc-jcVebW fcdKNU"
+          class="sc-iktFzd ePMNkU sc-gWHgXt goapnY"
         >
           Task Lists
         </h2>
@@ -762,7 +762,7 @@ const foo = () =&gt; {
         
 
         <h2
-          class="sc-gWHgXt eCVPSB sc-jcVebW fcdKNU"
+          class="sc-iktFzd ePMNkU sc-gWHgXt goapnY"
         >
           Tables
         </h2>
@@ -818,7 +818,7 @@ const foo = () =&gt; {
         
 
         <h2
-          class="sc-gWHgXt eCVPSB sc-jcVebW fcdKNU"
+          class="sc-iktFzd ePMNkU sc-gWHgXt goapnY"
         >
           Strikethrough
         </h2>
@@ -845,7 +845,7 @@ const foo = () =&gt; {
         
 
         <h2
-          class="sc-gWHgXt eCVPSB sc-jcVebW fcdKNU"
+          class="sc-iktFzd ePMNkU sc-gWHgXt goapnY"
         >
           Inline HTML
         </h2>
@@ -891,7 +891,7 @@ const foo = () =&gt; {
         
 
         <h2
-          class="sc-gWHgXt eCVPSB sc-jcVebW fcdKNU"
+          class="sc-iktFzd ePMNkU sc-gWHgXt goapnY"
         >
           Keyboard keys
         </h2>

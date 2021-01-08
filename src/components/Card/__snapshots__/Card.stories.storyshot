@@ -9,11 +9,52 @@ exports[`Storyshots Core/Card Default 1`] = `
       style="width: 400px; height: 400px;"
     >
       <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-cTkwdZ kyJVgU sc-jNMdTA eIbWGx"
+      >
+        <div
+          class="sc-gKsewC dWcnb sc-iBPRYJ dWRxlP sc-hHftDr iIBJBt"
+        >
+          <div
+            class="sc-gKsewC dWcnb sc-iBPRYJ iTdmGI sc-hHftDr iIBJBt"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+  scelerisque euismod risus at gravida. Pellentesque a nunc semper,
+  ultrices lacus nec, mattis mauris
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Card Emphasized 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+  >
+    <div
+      style="width: 400px; height: 400px;"
+    >
+      <div
         class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-cTkwdZ ceEQCj sc-jNMdTA eIbWGx"
       >
         <div
           class="sc-gKsewC dWcnb sc-iBPRYJ dWRxlP sc-hHftDr iIBJBt"
         >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ bBwSze sc-hHftDr cLDXoV"
+          >
+            <div
+              class="sc-gKsewC cFuckZ sc-iBPRYJ dWRxlP sc-hHftDr kUtBaJ"
+            >
+              <h3
+                class="sc-iktFzd ePMNkU sc-cBNfnY hcRIY"
+              >
+                Card with title
+              </h3>
+            </div>
+          </div>
           <div
             class="sc-gKsewC dWcnb sc-iBPRYJ iTdmGI sc-hHftDr iIBJBt"
           >
@@ -37,11 +78,58 @@ exports[`Storyshots Core/Card Small 1`] = `
       style="width: 400px; height: 400px;"
     >
       <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-cTkwdZ ceEQCj sc-jNMdTA eIbWGx"
+      >
+        <div
+          class="sc-gKsewC dWcnb sc-iBPRYJ dWRxlP sc-hHftDr iIBJBt"
+        >
+          <div
+            class="sc-gKsewC dWcnb sc-iBPRYJ iTdmGI sc-hHftDr iIBJBt"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+  scelerisque euismod risus at gravida. Pellentesque a nunc semper,
+  ultrices lacus nec, mattis mauris
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Card With Action Header 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+  >
+    <div
+      style="width: 400px; height: 400px;"
+    >
+      <div
         class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-cTkwdZ kyJVgU sc-jNMdTA eIbWGx"
       >
         <div
           class="sc-gKsewC dWcnb sc-iBPRYJ dWRxlP sc-hHftDr iIBJBt"
         >
+          <div
+            class="sc-gKsewC cgpPfo sc-iBPRYJ bBwSze sc-hHftDr cLDXoV"
+          >
+            <div
+              class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV"
+            >
+              <h3
+                class="sc-iktFzd ePMNkU sc-cBNfnY hcRIY"
+              >
+                Card With action title
+              </h3>
+              <button
+                class="StyledButton-sc-323bzc-0 fVClA-D sc-bqyKva sc-bkzZxe gjQfnS dvvpJt sc-dIUggk fiTZeL"
+                type="button"
+              >
+                Update
+              </button>
+            </div>
+          </div>
           <div
             class="sc-gKsewC dWcnb sc-iBPRYJ iTdmGI sc-hHftDr iIBJBt"
           >
@@ -65,29 +153,24 @@ exports[`Storyshots Core/Card With Actions 1`] = `
       style="width: 400px; height: 400px;"
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-cTkwdZ ceEQCj sc-jNMdTA jNzIec"
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-cTkwdZ kyJVgU sc-jNMdTA bKdSdq"
       >
         <div
           class="sc-gKsewC dWcnb sc-iBPRYJ dWRxlP sc-hHftDr iIBJBt"
         >
           <div
-            class="sc-gKsewC cFuckZ sc-iBPRYJ dWRxlP sc-hHftDr kUtBaJ"
+            class="sc-gKsewC cgpPfo sc-iBPRYJ bBwSze sc-hHftDr cLDXoV"
           >
-            <h3
-              class="sc-gWHgXt eCVPSB sc-bZSQDF QBWsK"
+            <div
+              class="sc-gKsewC cFuckZ sc-iBPRYJ dWRxlP sc-hHftDr kUtBaJ"
             >
-              Card with Actions
-            </h3>
-            <button
-              class="StyledButton-sc-323bzc-0 fVClA-D sc-bqyKva sc-bkzZxe gjQfnS dvvpJt sc-dIUggk YDvpG"
-              type="button"
-            >
-              Update
-            </button>
+              <h3
+                class="sc-iktFzd ePMNkU sc-cBNfnY hcRIY"
+              >
+                Card with Actions
+              </h3>
+            </div>
           </div>
-          <hr
-            class="sc-iktFzd cJCAjm sc-hiSbYr gLVHRe"
-          />
           <div
             class="sc-gKsewC dWcnb sc-iBPRYJ iTdmGI sc-hHftDr iIBJBt"
           >
@@ -96,20 +179,34 @@ exports[`Storyshots Core/Card With Actions 1`] = `
   ultrices lacus nec, mattis mauris 
           </div>
           <div
-            class="sc-gKsewC cFuckZ sc-iBPRYJ dWRxlP sc-hHftDr gjyXnv"
+            class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr iIBJBt"
           >
-            <button
-              class="StyledButton-sc-323bzc-0 fGJlAh sc-bqyKva sc-kstrdz gjQfnS FUwNf sc-dIUggk deFJvX"
-              type="button"
+            <hr
+              class="sc-iUuytg kDfphZ sc-eggNIi kPInZt"
+              type="dashed"
+            />
+            <div
+              class="sc-gKsewC cFuckZ sc-iBPRYJ dWRxlP sc-hHftDr fqfxeY"
             >
-              Normal action
-            </button>
-            <button
-              class="StyledButton-sc-323bzc-0 bxeVfd sc-bqyKva sc-kstrdz gjQfnS ekgxxv sc-dIUggk fiTZeL"
-              type="button"
-            >
-              Danger action
-            </button>
+              <button
+                class="StyledButton-sc-323bzc-0 fGJlAh sc-bqyKva sc-kstrdz gjQfnS FUwNf sc-dIUggk gvyQgi"
+                type="button"
+              >
+                Normal action
+              </button>
+              <button
+                class="StyledButton-sc-323bzc-0 ilOOUu sc-bqyKva sc-kstrdz gjQfnS cevvyb sc-dIUggk gvyQgi"
+                type="button"
+              >
+                Warning action
+              </button>
+              <button
+                class="StyledButton-sc-323bzc-0 bxeVfd sc-bqyKva sc-kstrdz gjQfnS ekgxxv sc-dIUggk gvyQgi"
+                type="button"
+              >
+                Danger action
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -127,138 +224,30 @@ exports[`Storyshots Core/Card With Header 1`] = `
       style="width: 400px; height: 400px;"
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-cTkwdZ ceEQCj sc-jNMdTA eIbWGx"
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-cTkwdZ kyJVgU sc-jNMdTA eIbWGx"
       >
         <div
           class="sc-gKsewC dWcnb sc-iBPRYJ dWRxlP sc-hHftDr iIBJBt"
         >
           <div
-            class="sc-gKsewC cFuckZ sc-iBPRYJ dWRxlP sc-hHftDr kUtBaJ"
+            class="sc-gKsewC cgpPfo sc-iBPRYJ bBwSze sc-hHftDr cLDXoV"
           >
-            <h3
-              class="sc-gWHgXt eCVPSB sc-bZSQDF QBWsK"
+            <div
+              class="sc-gKsewC cFuckZ sc-iBPRYJ dWRxlP sc-hHftDr kUtBaJ"
             >
-              Card with Button
-            </h3>
-            <button
-              class="StyledButton-sc-323bzc-0 fVClA-D sc-bqyKva sc-bkzZxe gjQfnS dvvpJt sc-dIUggk YDvpG"
-              type="button"
-            >
-              Update
-            </button>
+              <h3
+                class="sc-iktFzd ePMNkU sc-cBNfnY hcRIY"
+              >
+                Card with title
+              </h3>
+            </div>
           </div>
-          <hr
-            class="sc-iktFzd cJCAjm sc-hiSbYr gLVHRe"
-          />
           <div
             class="sc-gKsewC dWcnb sc-iBPRYJ iTdmGI sc-hHftDr iIBJBt"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
   scelerisque euismod risus at gravida. Pellentesque a nunc semper,
   ultrices lacus nec, mattis mauris
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Core/Card With Rows 1`] = `
-<div>
-  <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
-  >
-    <div
-      style="width: 400px; height: 400px;"
-    >
-      <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-cTkwdZ ceEQCj sc-jNMdTA eIbWGx"
-      >
-        <div
-          class="sc-gKsewC dWcnb sc-iBPRYJ dWRxlP sc-hHftDr iIBJBt"
-        >
-          <div
-            class="sc-gKsewC cFuckZ sc-iBPRYJ dWRxlP sc-hHftDr kUtBaJ"
-          >
-            <h3
-              class="sc-gWHgXt eCVPSB sc-bZSQDF QBWsK"
-            >
-              Card with Button
-            </h3>
-            <a
-              class="sc-eGCarw kBARfK sc-ctaXAZ bvFpzE"
-              color="primary.main"
-              href="https://balena.io"
-            >
-              Link
-            </a>
-          </div>
-          <hr
-            class="sc-iktFzd cJCAjm sc-hiSbYr gLVHRe"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Core/Card Without Divider 1`] = `
-<div>
-  <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
-  >
-    <div
-      style="width: 400px; height: 400px;"
-    >
-      <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dmlrTW cLDXoV gKJALV sc-cTkwdZ ceEQCj sc-jNMdTA jNzIec"
-      >
-        <div
-          class="sc-gKsewC dWcnb sc-iBPRYJ dWRxlP sc-hHftDr iIBJBt"
-        >
-          <div
-            class="sc-gKsewC cFuckZ sc-iBPRYJ dWRxlP sc-hHftDr kUtBaJ"
-          >
-            <h3
-              class="sc-gWHgXt eCVPSB sc-bZSQDF QBWsK"
-            >
-              Card with Actions
-            </h3>
-            <button
-              class="StyledButton-sc-323bzc-0 fVClA-D sc-bqyKva sc-bkzZxe gjQfnS dvvpJt sc-dIUggk YDvpG"
-              type="button"
-            >
-              Update
-            </button>
-          </div>
-          <hr
-            class="sc-iktFzd fsVFdB sc-hiSbYr fOJBek"
-            color="transparent"
-          />
-          <div
-            class="sc-gKsewC dWcnb sc-iBPRYJ iTdmGI sc-hHftDr iIBJBt"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-  scelerisque euismod risus at gravida. Pellentesque a nunc semper,
-  ultrices lacus nec, mattis mauris 
-          </div>
-          <div
-            class="sc-gKsewC cFuckZ sc-iBPRYJ dWRxlP sc-hHftDr gjyXnv"
-          >
-            <button
-              class="StyledButton-sc-323bzc-0 fGJlAh sc-bqyKva sc-kstrdz gjQfnS FUwNf sc-dIUggk deFJvX"
-              type="button"
-            >
-              Normal action
-            </button>
-            <button
-              class="StyledButton-sc-323bzc-0 bxeVfd sc-bqyKva sc-kstrdz gjQfnS ekgxxv sc-dIUggk fiTZeL"
-              type="button"
-            >
-              Danger action
-            </button>
           </div>
         </div>
       </div>
