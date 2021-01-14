@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'Form: Allow using the rjsf transformErrors property'
+      hash: 4299ab115b9ec2bad0a2d74ed3ca611a143f188b
+      body: |
+        Required so that we can give a more sensible error
+        for cases like maxLength errors on file uploads.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 20.1.0
+  date: 2021-01-14T15:56:43.197Z
+- commits:
     - subject: Update all the tests after the form and renderer changes
       hash: 995e509389362bf19f206a9cc0de20dc31431554
       body: ''
