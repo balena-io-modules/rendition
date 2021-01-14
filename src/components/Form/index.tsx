@@ -118,7 +118,11 @@ export interface FormProps
 	extends BoxProps,
 		Pick<
 			JsonSchemaFormProps<any>,
-			'validate' | 'noValidate' | 'liveValidate' | 'disabled'
+			| 'validate'
+			| 'noValidate'
+			| 'liveValidate'
+			| 'transformErrors'
+			| 'disabled'
 		> {
 	/** A string or JSX element to replace the text in the form submit button */
 	submitButtonText?: string | JSX.Element;
@@ -159,6 +163,7 @@ const BaseForm = React.forwardRef<RsjfForm<any>, FormProps>(
 			validate,
 			liveValidate,
 			noValidate,
+			transformErrors,
 			...props
 		}: FormProps,
 		ref,
@@ -229,6 +234,7 @@ const BaseForm = React.forwardRef<RsjfForm<any>, FormProps>(
 					liveValidate={liveValidate}
 					noValidate={noValidate}
 					validate={validate}
+					transformErrors={transformErrors}
 					showErrorList={false}
 					schema={calculatedSchema}
 					formData={formState}
