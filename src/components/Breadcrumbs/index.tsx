@@ -23,7 +23,7 @@ const Circle = styled(Flex)<{ isLast: boolean; emphasized?: boolean }>`
 export interface Crumb {
 	text: string;
 	icon?: React.ReactNode;
-	onClick?: () => void;
+	onClick?: (event: React.MouseEvent) => void;
 }
 
 export interface BreadcrumbsProps {
