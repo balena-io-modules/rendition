@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add event on breadcrumb click
+      hash: cb0cb7850b0a516ef63cce9c9fe54dbf7dbe531d
+      body: |
+        Add event argument on breadcrumb click
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.1.1
+  date: 2021-01-15T17:09:53.767Z
+- commits:
     - subject: 'Form: Allow using the rjsf transformErrors property'
       hash: 4299ab115b9ec2bad0a2d74ed3ca611a143f188b
       body: |
