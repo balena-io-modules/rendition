@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add href to bredcrumbs link for readability
+      hash: ad2e7eee7e178fa0f57a3830625a68b99df35100
+      body: |
+        Add href to breadcrumbs link for readability
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.2.0
+  date: 2021-01-15T19:18:53.098Z
+- commits:
     - subject: Add event on breadcrumb click
       hash: cb0cb7850b0a516ef63cce9c9fe54dbf7dbe531d
       body: |
