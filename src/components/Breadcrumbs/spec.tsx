@@ -8,10 +8,10 @@ describe('Breadcrumbs component', () => {
 	describe('crumbs property', () => {
 		it('should render the Breadcrumbs with four routes', () => {
 			const crumbs = [
-				{ text: 'route 1' },
-				{ text: 'route 2' },
-				{ text: 'route 3' },
-				{ text: 'route 4' },
+				{ text: 'route 1', href: '/route1' },
+				{ text: 'route 2', href: '/route2' },
+				{ text: 'route 3', href: '/route3' },
+				{ text: 'route 4', href: '/route4' },
 			];
 			const component = mount(
 				<Provider>
