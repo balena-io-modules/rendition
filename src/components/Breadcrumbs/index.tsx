@@ -22,6 +22,7 @@ const Circle = styled(Flex)<{ isLast: boolean; emphasized?: boolean }>`
 
 export interface Crumb {
 	text: string;
+	href?: string;
 	icon?: React.ReactNode;
 	onClick?: (event: React.MouseEvent) => void;
 }
@@ -69,6 +70,7 @@ export const Breadcrumbs = ({ crumbs, emphasized }: BreadcrumbsProps) => {
 												style={{ display: 'inherit', color: 'inherit' }}
 												onClick={crumb.onClick}
 												width="100%"
+												href={crumb.href}
 											>
 												<BreadcrumbContent
 													text={crumb.text}

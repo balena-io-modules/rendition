@@ -19,16 +19,28 @@ export default {
 const crumbs = [
 	{
 		text: 'route 1',
-		onClick: () => alert('click route 1'),
+		href: '/?path=/story/core-breadcrumbs--default',
+		onClick: (event: React.MouseEvent) => {
+			event.preventDefault();
+			alert('click route 1');
+		},
 	},
 	{
 		text: 'route 2',
-		onClick: () => alert('click route 2'),
+		href: '/?path=/story/core-breadcrumbs--default',
+		onClick: (event: React.MouseEvent) => {
+			event.preventDefault();
+			alert('click route 2');
+		},
 	},
 	{
 		text: 'route 3 with icon',
+		href: '/?path=/story/core-breadcrumbs--default',
 		icon: <FontAwesomeIcon icon={faRecycle} />,
-		onClick: () => alert('click route 3'),
+		onClick: (event: React.MouseEvent) => {
+			event.preventDefault();
+			alert('click route 3');
+		},
 	},
 ];
 
