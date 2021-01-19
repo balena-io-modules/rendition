@@ -1,4 +1,16 @@
 - commits:
+    - subject: Make table header slightly darker
+      hash: ff4c9e135b7bd4936b5793be5e22eef058f65161
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 20.2.1
+  date: 2021-01-19T18:15:52.974Z
+- commits:
     - subject: Add href to bredcrumbs link for readability
       hash: ad2e7eee7e178fa0f57a3830625a68b99df35100
       body: |
