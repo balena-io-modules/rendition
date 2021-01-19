@@ -9,7 +9,7 @@ exports[`Storyshots Core/Table Default 1`] = `
       class="sc-irlOZD IlvTR"
     >
       <div
-        class="sc-eWvPJL fbVfNP"
+        class="sc-eWvPJL hPkwYF"
       >
         <div
           data-display="table-head"
@@ -504,7 +504,7 @@ exports[`Storyshots Core/Table Sorted 1`] = `
       class="sc-irlOZD IlvTR"
     >
       <div
-        class="sc-eWvPJL fbVfNP"
+        class="sc-eWvPJL hPkwYF"
       >
         <div
           data-display="table-head"
@@ -999,7 +999,7 @@ exports[`Storyshots Core/Table With Anchor Rows 1`] = `
       class="sc-irlOZD IlvTR"
     >
       <div
-        class="sc-eWvPJL bZuYRt"
+        class="sc-eWvPJL hIjUqn"
       >
         <div
           data-display="table-head"
@@ -1582,7 +1582,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
       class="sc-irlOZD IlvTR"
     >
       <div
-        class="sc-eWvPJL btEmpV"
+        class="sc-eWvPJL fNcmAX"
       >
         <div
           data-display="table-head"
@@ -2412,7 +2412,7 @@ exports[`Storyshots Core/Table With Conditional Row Classes 1`] = `
       class="sc-irlOZD IlvTR"
     >
       <div
-        class="sc-eWvPJL fbVfNP"
+        class="sc-eWvPJL hPkwYF"
       >
         <div
           data-display="table-head"
@@ -2907,7 +2907,7 @@ exports[`Storyshots Core/Table With Highlighted Rows 1`] = `
       class="sc-irlOZD IlvTR"
     >
       <div
-        class="sc-eWvPJL fbVfNP"
+        class="sc-eWvPJL hPkwYF"
       >
         <div
           data-display="table-head"
@@ -3469,7 +3469,7 @@ exports[`Storyshots Core/Table With Pager 1`] = `
       class="sc-irlOZD IlvTR"
     >
       <div
-        class="sc-eWvPJL fbVfNP"
+        class="sc-eWvPJL hPkwYF"
       >
         <div
           data-display="table-head"
@@ -3767,7 +3767,7 @@ exports[`Storyshots Core/Table With Prefix 1`] = `
       class="sc-irlOZD IlvTR"
     >
       <div
-        class="sc-eWvPJL fbVfNP"
+        class="sc-eWvPJL hPkwYF"
       >
         <div
           data-display="table-head"
@@ -4284,7 +4284,7 @@ exports[`Storyshots Core/Table With Row Click 1`] = `
       class="sc-irlOZD IlvTR"
     >
       <div
-        class="sc-eWvPJL bZuYRt"
+        class="sc-eWvPJL hIjUqn"
       >
         <div
           data-display="table-head"

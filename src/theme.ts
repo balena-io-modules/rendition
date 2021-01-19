@@ -33,12 +33,13 @@ const colors = {
 	},
 	tertiary: {
 		main: tertiary,
-		light: '#5b82a7',
 		semilight: '#bbc8d6',
+		light: '#5b82a7',
 		dark: '#456482',
 	},
 	quartenary: {
 		main: quartenary,
+		semilight: '#f2f4fa',
 		light: '#f8f9fd',
 		dark: '#b7bed3',
 	},
