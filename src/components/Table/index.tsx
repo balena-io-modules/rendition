@@ -46,7 +46,7 @@ const Base = styled.div<BaseTableProps>`
 
 	> [data-display='table-head'] {
 		display: table-header-group;
-		background-color: ${(props) => props.theme.colors.quartenary.light};
+		background-color: ${(props) => props.theme.colors.quartenary.semilight};
 
 		> [data-display='table-row'] {
 			display: table-row;
