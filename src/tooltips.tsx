@@ -362,10 +362,14 @@ export class Tooltips {
 			}
 			if (tooltipText) {
 				const showFn = (e: Event) => this.show(e, tooltipText, options);
-
+				if (props.disabled) {
+					// when the target is disabled, we don't modify
+					// the original props and only attach the three
+					// handlers that the tooltip wrapper needs.
+					props = {};
+				}
 				if (trigger === 'click') {
 					const oldFn = props.onClick || noop;
-
 					const hideFn = () => {
 						clearTimeout(this.hideTimeout);
 
