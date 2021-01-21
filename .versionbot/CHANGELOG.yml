@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix firing disabled target events on tooltip wrapper
+      hash: 9627d7e3b5027e3ffb57c62a5be43e4abaa84122
+      body: |
+        Fix firing disabled target events on tooltip wrapper
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.2.2
+  date: 2021-01-21T18:53:52.606Z
+- commits:
     - subject: Make table header slightly darker
       hash: ff4c9e135b7bd4936b5793be5e22eef058f65161
       body: ''
