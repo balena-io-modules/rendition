@@ -6,6 +6,7 @@ import pickBy from 'lodash/pickBy';
 import difference from 'lodash/difference';
 import isArray from 'lodash/isArray';
 import keys from 'lodash/keys';
+import has from 'lodash/has';
 import concat from 'lodash/concat';
 import get from 'lodash/get';
 import pick from 'lodash/pick';
@@ -143,9 +144,12 @@ export function getObjectPropertyNames({
 		keys(value) || [],
 		schemaPropertyNames,
 	);
-	return concat(
+	const allObjectPropertyNames = concat(
 		uiSchemaPropertyNames,
 		schemaPropertyNames,
 		nonSchemaPropertyNames,
 	);
+	return get(uiSchema, 'ui:explicit', false)
+		? allObjectPropertyNames.filter((propName) => has(uiSchema, propName))
+		: allObjectPropertyNames;
 }

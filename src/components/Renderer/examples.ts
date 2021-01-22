@@ -207,6 +207,51 @@ const jsonDataExamples = {
 			},
 		},
 	},
+	'Explicitly specifying which fields to render': {
+		value: {
+			aString: 'The string value',
+			aNumber: 12.345,
+			anInteger: 5000,
+			aBoolean: false,
+			aNull: null,
+		},
+		schema: {
+			type: 'object',
+			title: 'Field title',
+			description: 'Field description',
+			properties: {
+				aString: {
+					type: 'string',
+					title: 'A String Field',
+				},
+				aNumber: {
+					type: 'number',
+					title: 'A Number Field',
+				},
+				anInteger: {
+					type: 'integer',
+					title: 'An Integer Field (will not be rendered)',
+				},
+				aBoolean: {
+					type: 'boolean',
+					title: 'A Boolean Field (will not be rendered)',
+				},
+				aNull: {
+					type: 'null',
+					title: 'A Null Field (will not be rendered)',
+				},
+			},
+		},
+		uiSchema: {
+			'ui:explicit': true,
+			aString: {
+				'ui:widget': 'Txt',
+			},
+			aNumber: {
+				'ui:widget': 'Txt',
+			},
+		},
+	},
 	'Re-ordered fields': {
 		value: {
 			fieldA: 'field A value',

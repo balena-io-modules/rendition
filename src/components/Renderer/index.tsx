@@ -391,6 +391,33 @@ const RenditionRendererBase = asRendition<
  * |	`extraFormats` | `Format[]`     | -        | An array of extra formats to include when validating the schema. See https://www.npmjs.com/package/ajv#formats for more details. |
  * |	`extraContext` | `object`       | -        | Extra context that is passed to [json-e](https://json-e.js.org/) when transforming the UI schema. This context can even contain functions that can be invoked by json-e when executing the transformation. |
  *
+ * ## Explicitly specify which fields to render
+ *
+ * The default behaviour of the `Renderer` component is to render all fields in the `value` object. If you would like
+ * to restrict the fields that are rendered to the ones you explicitly reference in the UI schema, just set the `ui:explicit`
+ * property in the UI schema. For example, given the following value and UI schema, the `Renderer` will display `name` and `data.email` but _not_ `data.name`:
+ *
+ * ```javascript
+ * const value = {
+ *   name: 'Joe Bloggs',
+ *   data: {
+ *     name: {
+ *       first: 'Joe',
+ *       last: 'Bloggs'
+ *     },
+ *     email: 'joe@bloggs.com'
+ *   }
+ * }
+ * const uiSchema = {
+ *   data: {
+ *     'ui:explicit': true,
+ *     email: {
+ *       'ui:widget': 'Link'
+ *     }
+ *   }
+ * }
+ * ```
+ *
  * ## UI Options
  *
  * In addition to the standard widget props, each Widget component defines additional props that it accepts as 'UI options'.

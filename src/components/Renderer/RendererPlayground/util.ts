@@ -36,6 +36,9 @@ const getBaseMetaSchema = (): UiSchemaMetaSchema => ({
 		'ui:options': {
 			type: 'object',
 		},
+		'ui:explicit': {
+			type: 'boolean',
+		},
 	},
 });
 
