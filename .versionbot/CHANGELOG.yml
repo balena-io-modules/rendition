@@ -1,4 +1,25 @@
 - commits:
+    - subject: Update snapshots
+      hash: a92937325c3e1dea37c085f3124dd1fda9d0106f
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: 'Renderer: add support for `ui:explicit`'
+      hash: 0148bbd735cd5ad8cd6a8445775d229b5803e000
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 20.3.0
+  date: 2021-01-22T03:53:57.711Z
+- commits:
     - subject: Fix firing disabled target events on tooltip wrapper
       hash: 9627d7e3b5027e3ffb57c62a5be43e4abaa84122
       body: |
