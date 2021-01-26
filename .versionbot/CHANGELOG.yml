@@ -1,4 +1,16 @@
 - commits:
+    - subject: Show tooltip when breadcrumb overflows
+      hash: 7baa5c5933e444a4949639234f875a29fc6aab4f
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+  version: 20.4.0
+  date: 2021-01-26T10:43:29.803Z
+- commits:
     - subject: Update snapshots
       hash: a92937325c3e1dea37c085f3124dd1fda9d0106f
       body: ''
