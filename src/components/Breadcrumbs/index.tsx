@@ -36,10 +36,30 @@ export interface BreadcrumbsProps {
 
 const BreadcrumbContent = React.memo(
 	({ icon, text }: Pick<Crumb, 'icon' | 'text'>) => {
+		const crumbRef = React.useRef<HTMLDivElement>(null);
+		const [shouldShowTooltip, setShouldShowTooltip] = React.useState(false);
+
+		// On initial load we check if the text overflows, and if it does we show a tooltip, and then show the text as truncated.
+		// Not the cleanest of solutions, but it works well.
+		React.useEffect(() => {
+			if (!crumbRef?.current) {
+				return;
+			}
+			setShouldShowTooltip(
+				crumbRef.current.scrollWidth > crumbRef.current.clientWidth,
+			);
+		}, []);
+
 		return (
-			<Flex alignItems="center" width="100%">
+			<Flex ref={crumbRef} alignItems="center" width="100%">
 				{icon && <Flex mr={2}>{icon}</Flex>}
-				<Txt truncate>{text}</Txt>
+				<Txt
+					tooltip={shouldShowTooltip ? text : undefined}
+					whitespace="nowrap"
+					truncate={shouldShowTooltip}
+				>
+					{text}
+				</Txt>
 			</Flex>
 		);
 	},
