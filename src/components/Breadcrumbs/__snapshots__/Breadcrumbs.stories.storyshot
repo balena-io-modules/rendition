@@ -33,7 +33,7 @@ exports[`Storyshots Core/Breadcrumbs Default 1`] = `
                   class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI sc-hHftDr cuSvIJ"
                 >
                   <div
-                    class="sc-fKFyDc cKoSkI sc-bBXqnf kYwmpI"
+                    class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI"
                   >
                     route 1
                   </div>
@@ -75,7 +75,7 @@ exports[`Storyshots Core/Breadcrumbs Default 1`] = `
                   class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI sc-hHftDr cuSvIJ"
                 >
                   <div
-                    class="sc-fKFyDc cKoSkI sc-bBXqnf kYwmpI"
+                    class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI"
                   >
                     route 2
                   </div>
@@ -136,7 +136,7 @@ exports[`Storyshots Core/Breadcrumbs Default 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="sc-fKFyDc cKoSkI sc-bBXqnf kYwmpI"
+                    class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI"
                   >
                     route 3 with icon
                   </div>
@@ -187,7 +187,7 @@ exports[`Storyshots Core/Breadcrumbs Wrapped 1`] = `
                     class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI sc-hHftDr cuSvIJ"
                   >
                     <div
-                      class="sc-fKFyDc cKoSkI sc-bBXqnf kYwmpI"
+                      class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI"
                     >
                       route 1
                     </div>
@@ -229,7 +229,7 @@ exports[`Storyshots Core/Breadcrumbs Wrapped 1`] = `
                     class="sc-gKsewC cgpPfo sc-iBPRYJ kCgyvI sc-hHftDr cuSvIJ"
                   >
                     <div
-                      class="sc-fKFyDc cKoSkI sc-bBXqnf kYwmpI"
+                      class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI"
                     >
                       route 2
                     </div>
@@ -290,7 +290,7 @@ exports[`Storyshots Core/Breadcrumbs Wrapped 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="sc-fKFyDc cKoSkI sc-bBXqnf kYwmpI"
+                      class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI"
                     >
                       route 3 with icon
                     </div>

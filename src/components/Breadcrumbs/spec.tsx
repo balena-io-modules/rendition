@@ -19,7 +19,7 @@ describe('Breadcrumbs component', () => {
 				</Provider>,
 			);
 			const crumbsContent = component.findWhere(
-				(node) => node.is(Txt) && !!node.prop('truncate'),
+				(node) => node.is(Txt) && typeof node.prop('children') === 'string',
 			);
 			expect(crumbsContent).toHaveLength(4);
 			crumbsContent.forEach((crumb, index) => {
