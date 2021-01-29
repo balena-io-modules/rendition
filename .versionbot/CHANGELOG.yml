@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'Form: Fix throwing when the schema has non-string array examples'
+      hash: aed1f38f4e5c88162435a87468c417acc2fde300
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 20.4.1
+  date: 2021-01-29T13:47:52.747Z
+- commits:
     - subject: Show tooltip when breadcrumb overflows
       hash: 7baa5c5933e444a4949639234f875a29fc6aab4f
       body: ''
