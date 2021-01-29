@@ -1,14 +1,25 @@
+import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import * as React from 'react';
 import { Input } from '../../Input';
 import { FormWidgetProps } from '../';
 
-const filterSuggestions = (text: string | null, suggestions?: string[]) => {
+const filterSuggestions = (
+	text: string | null,
+	suggestions: JSONSchema['examples'],
+) => {
 	if (!text || !suggestions) {
-		return suggestions;
+		return;
+	}
+	if (!Array.isArray(suggestions)) {
+		suggestions = [suggestions];
 	}
 
 	return suggestions.filter(
-		(suggestion) => suggestion.includes(text) && suggestion !== text,
+		(suggestion): suggestion is string =>
+			// TODO: Grommet atm only supports string suggestions and throws if numbers are passed.
+			typeof suggestion === 'string' &&
+			suggestion.includes(text) &&
+			suggestion !== text,
 	);
 };
 
@@ -33,7 +44,7 @@ const BaseInput = (props: FormWidgetProps) => {
 		return props.onChange(value === '' ? options.emptyValue : value);
 	};
 
-	const suggestions = filterSuggestions(value, schema.examples as string[]);
+	const suggestions = filterSuggestions(value, schema.examples);
 	const hasExamples = ((schema.examples as string[])?.length ?? 0) > 0;
 
 	return (
