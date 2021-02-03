@@ -2,15 +2,17 @@ import React from 'react';
 import { Meta } from '@storybook/react';
 import { createTemplate, createStory } from '../../stories/utils';
 import { DropDownButton, DropDownButtonProps } from '.';
+import { Divider } from '../Divider';
 
-const sampleChildren = (
-	<>
-		<div>Item</div>
-		<div>Item</div>
-		<div>Item</div>
-		<div>Item</div>
-	</>
-);
+// This need to be an array, otherwise it would create
+// a single DropDown item with all elements.
+const sampleChildren = [
+	<div>Item</div>,
+	<div>Item</div>,
+	<div>Item</div>,
+	<Divider />,
+	<div>Item</div>,
+];
 
 export default {
 	title: 'Core/DropDownButton',
