@@ -1,4 +1,22 @@
 - commits:
+    - subject: 'DropDownButton: Hide empty items'
+      hash: cd08600915568390ffd9fdf836c9418a68a989b4
+      body: |
+        React doesn't offer a way to detect and not render
+        such items at all any more. This is a convenient
+        improvement though since it allows better
+        encapsulation & more flexibility in cases that that
+        the items need to be auto-generated based from
+        a definition list (eg: for device actions).
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 20.6.0
+  date: 2021-02-04T12:23:04.024Z
+- commits:
     - subject: Fix monaco editor build error
       hash: 9c47b356957f2f3a57683541a057adc5635af813
       body: |
