@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix monaco editor build error
+      hash: 9c47b356957f2f3a57683541a057adc5635af813
+      body: |
+        Fix monaco edito build error, cannot find module onTypeRename
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.5.0
+  date: 2021-02-04T09:36:01.129Z
+- commits:
     - subject: 'DropDownButton: Fix the story example'
       hash: 04d120dc7549cd174fef0ce45439fb9d123bb0c8
       body: ''
