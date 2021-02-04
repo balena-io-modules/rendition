@@ -2,16 +2,41 @@ import React from 'react';
 import { Meta } from '@storybook/react';
 import { createTemplate, createStory } from '../../stories/utils';
 import { DropDownButton, DropDownButtonProps } from '.';
+import { Button, ButtonProps } from '../Button';
 import { Divider } from '../Divider';
+
+const NonZeroOrderedButton = (props: ButtonProps & { i: number }) => {
+	if (!props.i) {
+		return null;
+	}
+	return (
+		<Button plain>
+			{props.children ?? `Non-zero indexed item ${props.i}`}
+		</Button>
+	);
+};
+
+const OddIndexedButton = (props: ButtonProps & { i: number }) => {
+	if (props.i % 2 === 0) {
+		return null;
+	}
+	return (
+		<NonZeroOrderedButton i={props.i}>
+			Odd indexed item {props.i}
+		</NonZeroOrderedButton>
+	);
+};
 
 // This need to be an array, otherwise it would create
 // a single DropDown item with all elements.
 const sampleChildren = [
-	<div>Item</div>,
-	<div>Item</div>,
-	<div>Item</div>,
+	<Button plain>Item</Button>,
+	...[0, 1, 2, 3].map((i) => <NonZeroOrderedButton i={i} />),
+	<Button plain>Item</Button>,
 	<Divider />,
-	<div>Item</div>,
+	<Button plain>Item</Button>,
+	...[0, 1, 2, 3].map((i) => <OddIndexedButton i={i} />),
+	<Button plain>Item</Button>,
 ];
 
 export default {

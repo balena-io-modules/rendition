@@ -73,6 +73,10 @@ const Item = styled.div<{ border: boolean }>`
 	&:hover:enabled {
 		background: ${(props) => props.theme.colors.gray.light};
 	}
+
+	&:empty {
+		display: none;
+	}
 `;
 
 const JoinedButton = styled(Button)`
