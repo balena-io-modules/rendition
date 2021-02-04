@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'DropDownButton: Fix the story example'
+      hash: 04d120dc7549cd174fef0ce45439fb9d123bb0c8
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 20.4.2
+  date: 2021-02-03T18:44:52.800Z
+- commits:
     - subject: 'Form: Fix throwing when the schema has non-string array examples'
       hash: aed1f38f4e5c88162435a87468c417acc2fde300
       body: ''
