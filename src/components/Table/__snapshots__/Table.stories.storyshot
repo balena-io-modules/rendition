@@ -9,7 +9,7 @@ exports[`Storyshots Core/Table Default 1`] = `
       class="sc-iGctRS fBeMOH"
     >
       <div
-        class="sc-eWvPJL hPkwYF"
+        class="sc-irlOZD gYHbjV"
       >
         <div
           data-display="table-head"
@@ -504,11 +504,7 @@ exports[`Storyshots Core/Table Sorted 1`] = `
       class="sc-iGctRS fBeMOH"
     >
       <div
-<<<<<<< HEAD
-        class="sc-eWvPJL hPkwYF"
-=======
-        class="sc-irlOZD iSubxv"
->>>>>>> e49fe9af... Add modal changes generated snapshots
+        class="sc-irlOZD gYHbjV"
       >
         <div
           data-display="table-head"
@@ -1003,11 +999,7 @@ exports[`Storyshots Core/Table With Anchor Rows 1`] = `
       class="sc-iGctRS fBeMOH"
     >
       <div
-<<<<<<< HEAD
-        class="sc-eWvPJL hIjUqn"
-=======
-        class="sc-irlOZD kHGdBV"
->>>>>>> e49fe9af... Add modal changes generated snapshots
+        class="sc-irlOZD cPJeCP"
       >
         <div
           data-display="table-head"
@@ -1590,11 +1582,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
       class="sc-iGctRS fBeMOH"
     >
       <div
-<<<<<<< HEAD
-        class="sc-eWvPJL fNcmAX"
-=======
-        class="sc-irlOZD nXcGV"
->>>>>>> e49fe9af... Add modal changes generated snapshots
+        class="sc-irlOZD hPXltb"
       >
         <div
           data-display="table-head"
@@ -2424,11 +2412,7 @@ exports[`Storyshots Core/Table With Conditional Row Classes 1`] = `
       class="sc-iGctRS fBeMOH"
     >
       <div
-<<<<<<< HEAD
-        class="sc-eWvPJL hPkwYF"
-=======
-        class="sc-irlOZD iSubxv"
->>>>>>> e49fe9af... Add modal changes generated snapshots
+        class="sc-irlOZD gYHbjV"
       >
         <div
           data-display="table-head"
@@ -2923,11 +2907,7 @@ exports[`Storyshots Core/Table With Highlighted Rows 1`] = `
       class="sc-iGctRS fBeMOH"
     >
       <div
-<<<<<<< HEAD
-        class="sc-eWvPJL hPkwYF"
-=======
-        class="sc-irlOZD iSubxv"
->>>>>>> e49fe9af... Add modal changes generated snapshots
+        class="sc-irlOZD gYHbjV"
       >
         <div
           data-display="table-head"
@@ -3489,11 +3469,7 @@ exports[`Storyshots Core/Table With Pager 1`] = `
       class="sc-iGctRS fBeMOH"
     >
       <div
-<<<<<<< HEAD
-        class="sc-eWvPJL hPkwYF"
-=======
-        class="sc-irlOZD iSubxv"
->>>>>>> e49fe9af... Add modal changes generated snapshots
+        class="sc-irlOZD gYHbjV"
       >
         <div
           data-display="table-head"
@@ -3791,11 +3767,7 @@ exports[`Storyshots Core/Table With Prefix 1`] = `
       class="sc-iGctRS fBeMOH"
     >
       <div
-<<<<<<< HEAD
-        class="sc-eWvPJL hPkwYF"
-=======
-        class="sc-irlOZD iSubxv"
->>>>>>> e49fe9af... Add modal changes generated snapshots
+        class="sc-irlOZD gYHbjV"
       >
         <div
           data-display="table-head"
@@ -4312,11 +4284,7 @@ exports[`Storyshots Core/Table With Row Click 1`] = `
       class="sc-iGctRS fBeMOH"
     >
       <div
-<<<<<<< HEAD
-        class="sc-eWvPJL hIjUqn"
-=======
-        class="sc-irlOZD kHGdBV"
->>>>>>> e49fe9af... Add modal changes generated snapshots
+        class="sc-irlOZD cPJeCP"
       >
         <div
           data-display="table-head"
