@@ -19,20 +19,20 @@ const StyledTable = styled.table`
 const schema = {
 	type: 'object',
 	properties: {
-		Name: {
+		name: {
 			title: 'Pokemon Name',
-			type: ['string', 'null'],
-		},
-		Description: {
 			type: 'string',
 		},
-		Abilities: {
+		description: {
+			type: 'string',
+		},
+		abilities: {
 			type: 'array',
 			items: {
 				type: 'string',
 			},
 		},
-		Tag: {
+		tag: {
 			type: 'object',
 			properties: {
 				tag_name: {
@@ -71,7 +71,7 @@ const schema = {
 			title: 'National pokedex number',
 			type: 'number',
 		},
-		Category: {
+		category: {
 			enum: uniq(PokeDex.map((p) => p.Category)),
 		},
 		nationality: {

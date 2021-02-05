@@ -2,6 +2,7 @@ import { JSONSchema7 as JSONSchema } from 'json-schema';
 import * as React from 'react';
 import { randomString, regexEscape } from '../../utils';
 import { DataTypeEditProps } from '../Filters';
+import { FULL_TEXT_SLUG } from '../Filters/SchemaSieve';
 import { Input, InputProps } from '../Input';
 import { Textarea, TextareaProps } from '../Textarea';
 import { getJsonDescription } from './utils';
@@ -12,6 +13,9 @@ export const operators = {
 	},
 	contains: {
 		getLabel: (_s: JSONSchema) => 'contains',
+	},
+	full_text_search: {
+		getLabel: (_s: JSONSchema) => 'full text search',
 	},
 	not_contains: {
 		getLabel: (_s: JSONSchema) => 'does not contain',
@@ -46,6 +50,10 @@ interface StringFilter extends JSONSchema {
 				description?: string;
 				not?: {
 					pattern: string;
+				};
+				regexp?: {
+					pattern: string;
+					flags: string;
 				};
 			};
 		};
@@ -95,6 +103,12 @@ export const decodeFilter = (
 			value = filter.anyOf[0].properties![field].description!;
 		} else if (operator === 'not_matches_re') {
 			value = filter.anyOf[0].properties![field].not!.pattern;
+		} else if (operator === FULL_TEXT_SLUG) {
+			return {
+				field: 'any',
+				operator,
+				value: filter.anyOf[0].properties[keys[0]].regexp!.pattern!,
+			};
 		} else {
 			return null;
 		}

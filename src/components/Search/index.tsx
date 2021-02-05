@@ -41,27 +41,33 @@ const Wrapper = styled.div`
 	}
 `;
 
-const BaseSearch = ({
-	className,
-	dark,
-	disabled,
-	placeholder,
-	value,
-	onChange,
-}: InternalSearchProps) => {
-	return (
-		<Wrapper className={className}>
-			<input
-				style={{ color: dark ? '#fff' : undefined }}
-				disabled={disabled}
-				placeholder={placeholder || 'Search entries...'}
-				value={value}
-				onChange={onChange}
-			/>
-			<FontAwesomeIcon icon={faSearch} className="search-icon" />
-		</Wrapper>
-	);
-};
+const BaseSearch = React.forwardRef(
+	(
+		{
+			className,
+			dark,
+			disabled,
+			placeholder,
+			value,
+			onChange,
+		}: InternalSearchProps,
+		ref,
+	) => {
+		return (
+			<Wrapper className={className}>
+				<input
+					style={{ color: dark ? '#fff' : undefined }}
+					disabled={disabled}
+					placeholder={placeholder || 'Search entries...'}
+					value={value}
+					onChange={onChange}
+					ref={ref as any}
+				/>
+				<FontAwesomeIcon icon={faSearch} className="search-icon" />
+			</Wrapper>
+		);
+	},
+);
 
 export interface InternalSearchProps extends React.HTMLAttributes<HTMLElement> {
 	/** If true, uses a light colorscheme for use on a dark background */
@@ -83,6 +89,8 @@ export type SearchProps = InternalSearchProps & RenditionSystemProps;
  *
  * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Search/Search.stories.tsx)
  */
-export const Search = asRendition<React.FunctionComponent<SearchProps>>(
-	BaseSearch,
-);
+export const Search = asRendition<
+	React.ForwardRefExoticComponent<
+		SearchProps & React.RefAttributes<HTMLInputElement>
+	>
+>(BaseSearch);

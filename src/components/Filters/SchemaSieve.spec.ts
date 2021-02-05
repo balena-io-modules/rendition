@@ -3,6 +3,7 @@ import Ajv from 'ajv';
 import ajvKeywords from 'ajv-keywords';
 
 import { SchemaSieve as sieve } from '../../';
+import { FULL_TEXT_SLUG } from './SchemaSieve';
 
 const expectMatchesKeys = (data: any, keys: any) =>
 	expect(Object.keys(data).sort()).toEqual(keys.sort());
@@ -1279,7 +1280,14 @@ describe('SchemaSieve', () => {
 							value,
 						},
 					] as any;
-					const filter = sieve.createFilter(schema, signatures);
+
+					let filter;
+					if (slug === FULL_TEXT_SLUG) {
+						signatures[0].field = 'any';
+						filter = sieve.createFullTextSearchFilter(schema, value as string);
+					} else {
+						filter = sieve.createFilter(schema, signatures);
+					}
 
 					expect(sieve.decodeFilter(schema, filter)).toEqual(signatures);
 				});
