@@ -72,7 +72,7 @@ interface InternalSelectProps<T>
 	extends AdjustedGrommetSelectProps,
 		Omit<
 			React.HTMLAttributes<HTMLElement>,
-			'onChange' | 'children' | 'placeholder' | 'color'
+			'defaultValue' | 'onChange' | 'children' | 'placeholder' | 'color'
 		> {
 	emphasized?: boolean;
 	invalid?: boolean;
