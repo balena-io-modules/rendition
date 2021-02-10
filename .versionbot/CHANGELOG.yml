@@ -1,4 +1,19 @@
 - commits:
+    - subject: Fix select interface accoridng to grommet v2.16.3
+      hash: 2e7604a5a0551dbd31deb1c864ddd9a26d4c32d5
+      body: |
+        Fix select interface according to grommet release v2.16.3
+      footer:
+        See: 'https://github.com/grommet/grommet/releases/tag/v2.16.3'
+        see: 'https://github.com/grommet/grommet/releases/tag/v2.16.3'
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.7.0
+  date: 2021-02-10T12:46:59.711Z
+- commits:
     - subject: 'DropDownButton: Hide empty items'
       hash: cd08600915568390ffd9fdf836c9418a68a989b4
       body: |
