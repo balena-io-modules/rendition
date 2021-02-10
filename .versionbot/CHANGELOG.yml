@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix disabled tooltip container size
+      hash: afe989acfc5425c0e6771137c63fcbb383c151f0
+      body: |
+        fix disabled tooltip container size avoiding misalignments
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.7.1
+  date: 2021-02-10T15:46:20.927Z
+- commits:
     - subject: Fix select interface accoridng to grommet v2.16.3
       hash: 2e7604a5a0551dbd31deb1c864ddd9a26d4c32d5
       body: |
