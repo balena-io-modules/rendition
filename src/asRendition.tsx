@@ -99,6 +99,7 @@ export const withTooltip = (Base: React.ComponentType) => {
 		delete props.tooltip;
 		return props.disabled ? (
 			<span
+				style={{ display: 'contents' }}
 				onClick={tooltipProps.onClick}
 				onMouseEnter={tooltipProps.onMouseEnter}
 				onMouseLeave={tooltipProps.onMouseLeave}
