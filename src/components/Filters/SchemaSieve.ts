@@ -80,6 +80,7 @@ export const createFullTextSearchFilter = (
 		title: FULL_TEXT_SLUG,
 		anyOf: [
 			{
+				title: FULL_TEXT_SLUG,
 				description: `Any field contains ${term}`,
 				anyOf: filteredItems.map((item) => ({
 					properties: {

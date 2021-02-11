@@ -29,10 +29,11 @@ const FilterWrapper = styled(Box)`
 `;
 
 class BaseFilters extends React.Component<FiltersProps, FiltersState> {
+	private searchElementRef = React.createRef<HTMLInputElement>();
+
 	constructor(props: FiltersProps) {
 		super(props);
 		const { filters = [], schema, views = [] } = this.props;
-
 		const flatSchema = SchemaSieve.flattenSchema(schema);
 		const flatViews = this.flattenViews(views);
 		const flatFilters = filters.map((filter) =>
@@ -172,8 +173,12 @@ class BaseFilters extends React.Component<FiltersProps, FiltersState> {
 	}
 
 	public editFilter(filter: JSONSchema) {
-		const { schema } = this.state;
+		if (filter.title === SchemaSieve.FULL_TEXT_SLUG) {
+			this.searchElementRef.current?.focus();
+			return;
+		}
 
+		const { schema } = this.state;
 		const signatures = SchemaSieve.decodeFilter(schema, filter);
 
 		this.setState({
@@ -304,6 +309,7 @@ class BaseFilters extends React.Component<FiltersProps, FiltersState> {
 								onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
 									this.setSimpleSearch(e.target.value)
 								}
+								ref={this.searchElementRef}
 							/>
 						</SearchWrapper>
 					)}
