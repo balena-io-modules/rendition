@@ -1,4 +1,18 @@
 - commits:
+    - subject: Adapt decode and fix edit for searchText
+      hash: 0fa20ea8a0e9a56ed40eac9b3ade1c6a73bc4c71
+      body: >
+        Adapt decodeFilter to also decode searchText filter and fix searchText
+        filter edit
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.7.2
+  date: 2021-02-11T14:17:13.001Z
+- commits:
     - subject: Fix disabled tooltip container size
       hash: afe989acfc5425c0e6771137c63fcbb383c151f0
       body: |
