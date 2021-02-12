@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'SchemaSieve: fix handling of required fields'
+      hash: f34df37d8ea318f073fe7cbed415f467f51407e3
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 20.7.3
+  date: 2021-02-12T00:36:57.849Z
+- commits:
     - subject: Adapt decode and fix edit for searchText
       hash: 0fa20ea8a0e9a56ed40eac9b3ade1c6a73bc4c71
       body: >
