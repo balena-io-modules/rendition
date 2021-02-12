@@ -39,6 +39,30 @@ export const MultipleValues = createStory<TagProps>(Template, {
 	],
 });
 
+export const Overflow = createStory<TagProps>(Template, {
+	multiple: [
+		{ name: 'Tag1', operator: 'contains', value: 'value1' },
+		{
+			prefix: 'or',
+			name: 'Tag2',
+			operator: 'contains',
+			value: 'value2',
+		},
+		{
+			prefix: 'or',
+			name: 'Tag3',
+			operator: 'contains',
+			value: 'value3',
+		},
+		{
+			prefix: 'or',
+			name: 'Tag4',
+			operator: 'contains',
+			value: 'value4',
+		},
+	],
+});
+
 export const Clickable = createStory<TagProps>(Template, {
 	name: 'Tag',
 	value: 'Value',
