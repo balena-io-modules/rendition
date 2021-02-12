@@ -1471,6 +1471,59 @@ describe('SchemaSieve', () => {
 			});
 		});
 
+		it('should preserve the "required" keyword', () => {
+			const schema = {
+				type: 'object',
+				required: ['data'],
+				properties: {
+					data: {
+						type: 'object',
+						required: ['status', 'category', 'profile'],
+						properties: {
+							status: {
+								type: 'string',
+							},
+							category: {
+								type: 'string',
+							},
+							profile: {
+								type: 'object',
+								required: ['name'],
+								properties: {
+									name: {
+										type: 'string',
+									},
+								},
+							},
+						},
+					},
+				},
+			} as any;
+
+			expect(sieve.flattenSchema(schema)).toEqual({
+				type: 'object',
+				required: [
+					'___data___status',
+					'___data___category',
+					'___data___profile___name',
+				],
+				properties: {
+					___data___status: {
+						type: 'string',
+						title: 'status',
+					},
+					___data___category: {
+						type: 'string',
+						title: 'category',
+					},
+					___data___profile___name: {
+						type: 'string',
+						title: 'name',
+					},
+				},
+			});
+		});
+
 		it('should preserve titles when flattening', () => {
 			const schema = {
 				type: 'object',
@@ -1756,30 +1809,56 @@ describe('SchemaSieve', () => {
 		it('should preserve the "required" keyword', () => {
 			const flattenedSchema = {
 				type: 'object',
+				required: [
+					'___data___status',
+					'___data___category',
+					'___data___profile___name',
+				],
 				properties: {
-					___nestedString___string: {
-						title: 'A string field',
+					___data___status: {
 						type: 'string',
+						title: 'status',
+					},
+					___data___category: {
+						type: 'string',
+						title: 'category',
+					},
+					___data___profile___name: {
+						type: 'string',
+						title: 'name',
 					},
 				},
-				required: ['___nestedString___string'],
 			} as any;
 
 			expect(sieve.unflattenSchema(flattenedSchema)).toEqual({
 				type: 'object',
+				required: ['data'],
 				properties: {
-					nestedString: {
+					data: {
 						type: 'object',
+						required: ['status', 'category', 'profile'],
 						properties: {
-							string: {
-								title: 'A string field',
+							status: {
+								title: 'status',
 								type: 'string',
 							},
+							category: {
+								title: 'category',
+								type: 'string',
+							},
+							profile: {
+								type: 'object',
+								required: ['name'],
+								properties: {
+									name: {
+										title: 'name',
+										type: 'string',
+									},
+								},
+							},
 						},
-						required: ['string'],
 					},
 				},
-				required: ['nestedString'],
 			});
 		});
 

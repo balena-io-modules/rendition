@@ -6,11 +6,13 @@ import defaults from 'lodash/defaults';
 import every from 'lodash/every';
 import findIndex from 'lodash/findIndex';
 import findKey from 'lodash/findKey';
+import includes from 'lodash/includes';
 import map from 'lodash/map';
 import pickBy from 'lodash/pickBy';
 import reduce from 'lodash/reduce';
 import startsWith from 'lodash/startsWith';
 import trimStart from 'lodash/trimStart';
+import without from 'lodash/without';
 import { FilterSignature } from '.';
 import { randomString, regexEscape } from '../../utils';
 import { getDataModel } from '../DataTypes';
@@ -221,6 +223,22 @@ const flattenAccumulator = (
 			}
 
 			const newKey = parentKey + delimiter + key;
+
+			// Move any required fields into flattened items in the top-level required array
+			value.required?.forEach((requiredKey) => {
+				if (!result.required) {
+					result.required = [];
+				} else {
+					// Remove any unnecessary required items pointing at parent fields
+					result.required = without(
+						result.required,
+						key,
+						parentKey + delimiter + key,
+					);
+				}
+				result.required.push(newKey + delimiter + requiredKey);
+			});
+
 			// If the value is not an object type or
 			// If the value is a key value pair style object, it can be added to the
 			// accumulator
@@ -329,7 +347,9 @@ export const unflattenSchema = (
 					head.required = [];
 				}
 
-				head.required.push(field);
+				if (!includes(head.required, field)) {
+					head.required.push(field);
+				}
 
 				head = head.properties![field] as JSONSchema;
 			}
