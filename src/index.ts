@@ -87,7 +87,7 @@ export { Link, LinkProps } from './components/Link';
 export { List, ListProps } from './components/List';
 export { Popover, PopoverProps, PopoverOptions } from './components/Popover';
 export { Tab, TabProps, Tabs, TabsProps } from './components/Tabs';
-export { Tag, TagProps } from './components/Tag';
+export { Tag, TagProps, TagItem } from './components/Tag';
 
 export { Avatar, AvatarProps } from './components/Avatar';
 export { Box, BoxProps } from './components/Box';

@@ -213,3 +213,35 @@ exports[`Storyshots Core/Tag Only Value 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots Core/Tag Overflow 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-GqfZa cHWpcm"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-clsHhM cLDXoV bjaVYF"
+      >
+        <div
+          class="sc-fKFyDc dTkenA sc-bBXqnf iHGIIw"
+        >
+          Tag1 contains 
+        </div>
+        <div
+          class="sc-fKFyDc euqOvB sc-bBXqnf iHGIIw"
+        >
+          value1
+        </div>
+        <div
+          class="sc-fKFyDc dTkenA sc-bBXqnf iHGIIw"
+        >
+          ... and 3 more
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
