@@ -19,7 +19,7 @@ export default css`
 	}
 	.CodeMirror-gutter-filler,
 	.CodeMirror-scrollbar-filler {
-		background-color: #fff;
+		background-color: transparent;
 	}
 	.CodeMirror-gutters {
 		border-right: 1px solid #ddd;
@@ -460,24 +460,12 @@ export default css`
 		-ms-user-select: none;
 		-o-user-select: none;
 		user-select: none;
-		padding: 0 10px;
+		padding: 9px 10px;
 		border-top: 1px solid #bbb;
 		border-left: 1px solid #bbb;
 		border-right: 1px solid #bbb;
 		border-top-left-radius: 4px;
 		border-top-right-radius: 4px;
-	}
-	.editor-toolbar:after,
-	.editor-toolbar:before {
-		display: block;
-		content: ' ';
-		height: 1px;
-	}
-	.editor-toolbar:before {
-		margin-bottom: 8px;
-	}
-	.editor-toolbar:after {
-		margin-top: 8px;
 	}
 	.editor-toolbar.fullscreen {
 		width: 100%;
@@ -742,7 +730,8 @@ export default css`
 		);
 	}
 	.easymde-dropdown-content {
-		display: none;
+		display: block;
+		visibility: hidden;
 		position: absolute;
 		background-color: #f9f9f9;
 		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -752,9 +741,9 @@ export default css`
 	}
 	.easymde-dropdown:active .easymde-dropdown-content,
 	.easymde-dropdown:focus .easymde-dropdown-content {
-		display: block;
+		visibility: visible;
 	}
-	span[data-img-src]::before {
+	span[data-img-src]::after {
 		content: '';
 		background-image: var(--bg-image);
 		display: block;
