@@ -1,4 +1,28 @@
 - commits:
+    - subject: Update test snapshots
+      hash: 598c2e598c76460a539ca132b504cc9532e47f49
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: 'Tag: add support for limiting max items to display'
+      hash: 79c799e355d4793c308f4cc75ebc53ecab08bc46
+      body: |
+        If there are too many items (more than 3), only the
+        first item is displayed, suffixed with `... and # more`. All
+        items are then displayed in a tooltip for convenience.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 20.8.0
+  date: 2021-02-16T03:12:54.005Z
+- commits:
     - subject: 'SchemaSieve: fix handling of required fields'
       hash: f34df37d8ea318f073fe7cbed415f467f51407e3
       body: ''
