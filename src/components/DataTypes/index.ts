@@ -8,6 +8,9 @@ import * as objectType from './object';
 import * as oneOfType from './oneOf';
 import * as stringType from './string';
 
+const isDateTimeFormat = (format: string | undefined) =>
+	format?.endsWith('date-time');
+
 export const getDataModel = (schema?: JSONSchema) => {
 	if (!schema) {
 		return null;
@@ -25,7 +28,7 @@ export const getDataModel = (schema?: JSONSchema) => {
 		return arrayType;
 	}
 	if (type === 'string') {
-		if (format === 'date-time') {
+		if (isDateTimeFormat(format)) {
 			return dateTimeType;
 		}
 		return stringType;

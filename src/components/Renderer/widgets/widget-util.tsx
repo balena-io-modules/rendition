@@ -12,6 +12,7 @@ import get from 'lodash/get';
 import pick from 'lodash/pick';
 import { DefinedValue, JSONSchema, UiSchema, Format, Value } from '../types';
 import { UiOptions } from './ui-options';
+import { formatDistance } from 'date-fns';
 
 export interface WidgetProps {
 	value: DefinedValue;
@@ -28,10 +29,18 @@ export interface Widget {
 	displayName: string;
 }
 
+const DATE_FORMAT = 'MMM do yyyy';
+const TIME_FORMAT = 'h:mm a';
+
 export function formatTimestamp(timestamp: string, uiSchema: UiSchema = {}) {
-	const uiFormat = get(uiSchema, ['ui:options', 'dtFormat']);
-	return uiFormat ? format(new Date(timestamp), uiFormat) : timestamp;
+	const uiFormat =
+		get(uiSchema, ['ui:options', 'dtFormat']) ||
+		`${DATE_FORMAT}, ${TIME_FORMAT}`;
+	return format(new Date(timestamp), uiFormat);
 }
+
+export const timeSince = (timestamp: string, suffix = true) =>
+	formatDistance(new Date(timestamp), new Date(), { addSuffix: suffix });
 
 // This HOC function wraps a Widget component and converts
 // the widget's specified 'uiOptions' into props that are
