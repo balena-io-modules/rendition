@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add elapsed time widget and filter rule
+      hash: 7bf6f38f6c467db8bb311319f899e9687ae45903
+      body: |
+        add elapsed time widget and filter rule
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.9.0
+  date: 2021-02-17T15:48:36.343Z
+- commits:
     - subject: Update test snapshots
       hash: 598c2e598c76460a539ca132b504cc9532e47f49
       body: ''
