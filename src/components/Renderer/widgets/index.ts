@@ -15,6 +15,7 @@ import TagWidget from './TagWidget';
 import TxtWidget from './TxtWidget';
 import { Format } from '../types';
 import { Widget, withOptionProps } from './widget-util';
+import { ElapsedTimeWidget } from './ElapsedTimeWidget';
 export { WidgetWrapperUiOptions } from './ui-options';
 export { getObjectPropertyNames } from './widget-util';
 export { default as WidgetMeta } from './WidgetMeta';
@@ -38,6 +39,11 @@ export const defaultFormats: Format[] = [
 		name: 'email',
 		format: '.*',
 		widget: LinkWidget,
+	},
+	{
+		name: 'elapsed-date-time',
+		format: '.*',
+		widget: ElapsedTimeWidget,
 	},
 	...[
 		ArrayWidget,
