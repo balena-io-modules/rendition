@@ -1,4 +1,33 @@
 - commits:
+    - subject: Update snapshots
+      hash: e91f2a99f056ccfe1b2727b147bca36ea1f36d53
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: 'DropDownButton: add support for dropping ''up'''
+      hash: a7e89cdecc2faa2d9aa6c1094a8c8ec5383142d2
+      body: >
+        When the DropDownButton is located at the bottom of the screen, it can
+        be useful to specify that the DropDownButton's menu should open _above_
+        the button, rather than below (as is the default).
+
+
+        Obviously it would be even nicer to be able to specify that it should
+        automatically work out whether to open up or down - but adding this
+        `dropUp` prop is a good first step for now.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 20.10.0
+  date: 2021-02-22T07:20:10.455Z
+- commits:
     - subject: Add elapsed time widget and filter rule
       hash: 7bf6f38f6c467db8bb311319f899e9687ae45903
       body: |
