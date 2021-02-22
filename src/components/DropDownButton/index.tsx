@@ -38,6 +38,7 @@ const ButtonBase = styled(Button)`
 
 const MenuBase = styled(Box)<{
 	alignRight?: boolean;
+	dropUp?: boolean;
 }>`
 	background: white;
 	position: absolute;
@@ -45,7 +46,9 @@ const MenuBase = styled(Box)<{
 	border-radius: ${(props) => px(props.theme.radius)};
 	border: ${(props) => '1px solid ' + props.theme.colors.gray.main};
 	z-index: 1;
-	margin-top: 2px;
+	margin-top: ${(props) => (props.dropUp ? 0 : '2px')};
+	margin-bottom: ${(props) => (props.dropUp ? '2px' : 0)};
+	bottom: ${(props) => (props.dropUp ? props.theme.button.height : 'auto')};
 	left: ${(props) => (props.alignRight ? 'auto' : 0)};
 	right: ${(props) => (!props.alignRight ? 'auto' : 0)};
 	white-space: nowrap;
@@ -196,6 +199,7 @@ class BaseDropDownButton extends React.Component<
 
 	public render() {
 		const {
+			dropUp,
 			alignRight,
 			children,
 			label,
@@ -241,6 +245,7 @@ class BaseDropDownButton extends React.Component<
 				{this.state.open && <Fixed onClick={this.toggle} />}
 				{this.state.open && (
 					<MenuBase
+						dropUp={dropUp}
 						alignRight={alignRight}
 						onClick={this.toggle}
 						minWidth={`${this.state.minWidth}px`}
@@ -278,6 +283,8 @@ export interface InternalDropDownButtonProps extends ButtonProps {
 	joined?: boolean;
 	/** If true, put the dropdown list on the right */
 	alignRight?: boolean;
+	/** If true, the dropdown list will open up, rather than down */
+	dropUp?: boolean;
 	/** If true, render children as a single JSX element instead of iterating over each of them */
 	noListFormat?: boolean;
 	/** If setted, it defines the maximum height of the dropdown list */

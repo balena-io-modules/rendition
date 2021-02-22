@@ -3,6 +3,7 @@ import { Meta } from '@storybook/react';
 import { createTemplate, createStory } from '../../stories/utils';
 import { DropDownButton, DropDownButtonProps } from '.';
 import { Button, ButtonProps } from '../Button';
+import { Box } from '../Box';
 import { Divider } from '../Divider';
 
 const NonZeroOrderedButton = (props: ButtonProps & { i: number }) => {
@@ -44,6 +45,15 @@ export default {
 	component: DropDownButton,
 } as Meta;
 
+const OpenUpStory = (props: DropDownButtonProps) => {
+	return (
+		<Box mt="300px">
+			<DropDownButton {...props} />
+		</Box>
+	);
+};
+const OpenUpTemplate = createTemplate<DropDownButtonProps>(OpenUpStory);
+
 const Template = createTemplate<DropDownButtonProps>(DropDownButton);
 
 export const Default = createStory<DropDownButtonProps>(Template, {
@@ -79,5 +89,11 @@ export const IconOnly = createStory<DropDownButtonProps>(Template, {
 export const NoListFormatting = createStory<DropDownButtonProps>(Template, {
 	noListFormat: true,
 	primary: true,
+	children: sampleChildren,
+});
+
+export const DropUp = createStory<DropDownButtonProps>(OpenUpTemplate, {
+	label: 'Dropdown',
+	dropUp: true,
 	children: sampleChildren,
 });
