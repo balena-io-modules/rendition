@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'fix: handle empty timestamp string in formatTimestamp'
+      hash: 67e086f8a623e753da140ddb4b74151b206ff60e
+      body: >
+        Need to handle the case where the timestamp string is an empty string -
+        in which case we should just return an empty string.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 20.10.1
+  date: 2021-03-01T09:32:11.251Z
+- commits:
     - subject: Update snapshots
       hash: e91f2a99f056ccfe1b2727b147bca36ea1f36d53
       body: ''
