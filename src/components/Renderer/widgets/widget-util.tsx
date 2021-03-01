@@ -33,6 +33,9 @@ const DATE_FORMAT = 'MMM do yyyy';
 const TIME_FORMAT = 'h:mm a';
 
 export function formatTimestamp(timestamp: string, uiSchema: UiSchema = {}) {
+	if (!timestamp) {
+		return '';
+	}
 	const uiFormat =
 		get(uiSchema, ['ui:options', 'dtFormat']) ||
 		`${DATE_FORMAT}, ${TIME_FORMAT}`;
