@@ -1,5 +1,4 @@
 import get from 'lodash/get';
-import omit from 'lodash/omit';
 import * as React from 'react';
 import { withProps } from 'recompose';
 import styled from 'styled-components';
@@ -31,7 +30,8 @@ const Base = styled.a<InternalLinkProps>`
 
 const BaseLink = ({ is, blank, children, ...props }: InternalLinkProps) => {
 	if (props.disabled) {
-		props = omit(props, 'href');
+		const { href, ...restProps } = props;
+		props = restProps;
 	}
 	return (
 		<Base
