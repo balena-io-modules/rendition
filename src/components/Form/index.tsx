@@ -1,5 +1,6 @@
 import { JSONSchema7 as JSONSchema } from 'json-schema';
 import omit from 'lodash/omit';
+import uniqBy from 'lodash/uniqBy';
 import * as React from 'react';
 import RsjfForm, {
 	IChangeEvent,
@@ -25,7 +26,6 @@ import SelectWidget from './widgets/SelectWidget';
 import TextareaWidget from './widgets/TextareaWidget';
 import { Format } from '../Renderer/types';
 import { WidgetContext } from '../../contexts/WidgetContext';
-import { uniqBy } from 'lodash';
 
 const SUPPORTED_SCHEMA_FORMATS = [
 	'data-url',

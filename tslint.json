@@ -1,6 +1,12 @@
 {
   "extends": "./node_modules/@balena/lint/config/tslint-prettier.json",
   "rules": {
+    "import-blacklist": [
+      true,
+      "lodash",
+      "@fortawesome/free-solid-svg-icons",
+      "@fortawesome/free-regular-svg-icons"
+    ],
     "no-shadowed-variable": false
   }
 }
