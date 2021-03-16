@@ -1,4 +1,16 @@
 - commits:
+    - subject: Prohibit whole lodash and fontawesome icon pack imports
+      hash: 43137d7595495fc39d0a6d6c25444bd55489f87e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 20.10.2
+  date: 2021-03-16T17:45:44.638Z
+- commits:
     - subject: 'fix: handle empty timestamp string in formatTimestamp'
       hash: 67e086f8a623e753da140ddb4b74151b206ff60e
       body: >
