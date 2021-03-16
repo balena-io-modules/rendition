@@ -76,18 +76,21 @@ export const transformUiSchema = ({
 	uiSchema: WidgetProps['uiSchema'];
 	extraContext: WidgetProps['extraContext'];
 }) => {
+	if (uiSchema == null) {
+		// If the input schema is empty then the output also will be, so we can
+		// short-circuit here and avoid a lot of work
+		return {};
+	}
 	// Ensure source is not null/undefined as jsone might call toString() on it
 	const context = { source: value ?? '', ...extraContext };
 	if (typeof value === 'object') {
 		// For objects/arrays just transform the 'ui:' properties.
 		// Sub-properties will be transformed recursively.
-		const trimmedUiSchema = pickBy(uiSchema || {}, (_, k) =>
-			k.startsWith('ui:'),
-		);
+		const trimmedUiSchema = pickBy(uiSchema, (_, k) => k.startsWith('ui:'));
 		const processedUiSchema = jsone(trimmedUiSchema, context);
 		return merge({}, uiSchema, processedUiSchema);
 	}
-	return jsone(uiSchema || {}, context);
+	return jsone(uiSchema, context);
 };
 
 export const getArrayItems = ({
