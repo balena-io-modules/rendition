@@ -1,6 +1,5 @@
 import * as React from 'react';
 import map from 'lodash/map';
-import get from 'lodash/get';
 import { Flex } from '../../Flex';
 import { Widget, WidgetProps, getArrayItems } from './widget-util';
 import { Renderer } from '../index';
@@ -25,7 +24,7 @@ const ArrayWidget: Widget = ({
 	return (
 		<Flex
 			flexDirection={
-				get(uiSchema, ['ui:options', 'orientation']) === 'horizontal'
+				uiSchema?.['ui:options']?.['orientation'] === 'horizontal'
 					? 'row'
 					: 'column'
 			}

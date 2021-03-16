@@ -1,7 +1,6 @@
-import { UiSchema, JSONSchema } from '../types';
+import { UiSchema, JSONSchema, DefinedValue } from '../types';
 import first from 'lodash/first';
 import forEach from 'lodash/forEach';
-import get from 'lodash/get';
 import without from 'lodash/without';
 import uniq from 'lodash/uniq';
 import keys from 'lodash/keys';
@@ -53,8 +52,8 @@ const generateArrayMetaSchema = (
 	{ value, schema, uiSchema, extraContext, extraFormats }: MetaSchemaArgs,
 ) => {
 	const arrayValue = value as Value[];
-	const itemsUiSchema = get(uiSchema, 'items', {});
-	const itemsSchema = get(schema, 'items', {});
+	const itemsUiSchema = uiSchema?.items ?? {};
+	const itemsSchema = (schema.items as JSONSchema) ?? {};
 	metaSchema.properties.items = generateUiSchemaMetaSchema({
 		value: first(arrayValue),
 		schema: typeof itemsSchema === 'boolean' ? {} : itemsSchema,
@@ -83,14 +82,11 @@ const generateObjectMetaSchema = (
 	});
 	// Recursively build up the UI schema meta schema for each property of the object
 	forEach(propertyNames, (propertyName) => {
-		const subSchema = get(
-			schema,
-			['properties', propertyName],
-			{},
-		) as JSONSchema;
-		const subUiSchema = get(uiSchema, propertyName, {}) as UiSchema;
+		const subSchema = (schema.properties?.[propertyName] ?? {}) as JSONSchema;
+		const subUiSchema = (uiSchema?.[propertyName as keyof UiSchema] ??
+			{}) as UiSchema;
 		metaSchema.properties[propertyName] = generateUiSchemaMetaSchema({
-			value: get(value, propertyName),
+			value: (value as { [key: string]: any })?.[propertyName] as DefinedValue,
 			schema: typeof subSchema === 'boolean' ? {} : subSchema,
 			uiSchema: subUiSchema,
 			extraContext,
@@ -131,7 +127,7 @@ const setUiOptions = ({
 	format?: string;
 	input: MetaSchemaArgs;
 }) => {
-	const widget = getWidget(value, format, get(uiSchema, 'ui:widget'));
+	const widget = getWidget(value, format, uiSchema?.['ui:widget']);
 	metaSchema.properties['ui:options'] = {
 		type: 'object',
 		properties: {
@@ -156,7 +152,7 @@ export const generateUiSchemaMetaSchema = ({
 	});
 	const input = {
 		// The value may be overridden in the UI Schema
-		value: get(processedUiSchema, 'ui:value', unprocessedValue),
+		value: processedUiSchema['ui:value'] ?? unprocessedValue,
 		schema,
 		uiSchema: processedUiSchema,
 		extraContext,

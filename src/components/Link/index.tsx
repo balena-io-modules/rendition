@@ -1,4 +1,3 @@
-import get from 'lodash/get';
 import * as React from 'react';
 import { withProps } from 'recompose';
 import styled from 'styled-components';
@@ -22,9 +21,7 @@ const Base = styled.a<InternalLinkProps>`
 	&:hover {
 		color: ${(props) =>
 			!props.disabled &&
-			(darken(
-				get(props.theme.colors, props.color as any) || props.color,
-			) as any)};
+			darken(props.theme.colors[props.color!] || props.color)};
 	}
 `;
 

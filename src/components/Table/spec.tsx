@@ -1,6 +1,5 @@
 import { mount } from 'enzyme';
 import first from 'lodash/first';
-import get from 'lodash/get';
 import last from 'lodash/last';
 import map from 'lodash/map';
 import noop from 'lodash/noop';
@@ -327,7 +326,7 @@ describe('Table component', () => {
 
 			it('should allow a custom sorting function', () => {
 				const field = 'Name';
-				const biasName = get(last(PokeDex), field);
+				const biasName = last(PokeDex)?.[field];
 				const sorter = (a: any) => (a[field] === biasName ? -1 : 1);
 				const cols = [
 					{

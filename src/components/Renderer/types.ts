@@ -28,6 +28,8 @@ export interface UiSchema
 	'ui:title'?: string;
 	'ui:description'?: string;
 	'ui:value'?: Value;
+	'ui:explicit'?: boolean;
+	items?: UiSchema;
 }
 
 export interface Format {
