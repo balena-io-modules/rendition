@@ -1,4 +1,15 @@
 - commits:
+    - subject: Avoid running json-e on an empty schema
+      hash: 2da594ecba7d4dcf9a868d1dd0f8520a9419fdab
+      body: |
+        This can save significant time when displaying large lists
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 20.10.4
+  date: 2021-03-16T19:42:14.242Z
+- commits:
     - subject: Optimize `filterStyledSystemProps`
       hash: d0d1bb6ced0858c681569308661adc8c2db98969
       body: |
