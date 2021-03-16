@@ -1,5 +1,4 @@
 import * as React from 'react';
-import get from 'lodash/get';
 import { HighlightedName } from '../../HighlightedName';
 import { UiOption } from './ui-options';
 import { Widget, WidgetProps } from './widget-util';
@@ -11,9 +10,9 @@ const HighlightedNameWidget: Widget = ({
 	schema,
 	uiSchema,
 	...props
-}: WidgetProps) => {
-	const bg = get(props, 'bg', generateColorFromString(value.toString()));
-	const color = get(props, 'color', isLight(bg) ? '#000' : '#FFF');
+}: WidgetProps & { bg?: string; color?: string }) => {
+	const bg = props.bg ?? generateColorFromString(value.toString());
+	const color = props.color ?? (isLight(bg) ? '#000' : '#FFF');
 	return (
 		<HighlightedName {...props} bg={bg} color={color}>
 			{value.toString()}

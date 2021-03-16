@@ -1,12 +1,12 @@
 import * as React from 'react';
 import isArray from 'lodash/isArray';
-import get from 'lodash/get';
 import map from 'lodash/map';
 import { DropDownButton } from '../../DropDownButton';
 import { Widget, WidgetProps, getArrayItems } from './widget-util';
 import { JsonTypes } from '../types';
 import { UiOption } from './ui-options';
 import { Renderer } from '../index';
+import { JSONSchema7, JSONSchema7TypeName } from 'json-schema';
 
 const validItemTypes = ['string', 'integer', 'number'];
 
@@ -23,7 +23,8 @@ const DropDownButtonWidget: Widget = ({
 			`DropDownButtonWidget cannot be used to render a value of type '${typeof value}'`,
 		);
 	}
-	const itemType = get(schema, ['items', 'type'], 'undefined');
+	const itemType =
+		((schema.items as JSONSchema7)?.type as JSONSchema7TypeName) ?? 'undefined';
 	if (!validItemTypes.includes(itemType)) {
 		throw new Error(
 			`DropDownButtonWidget cannot be used to render an array of items of type ${itemType}`,

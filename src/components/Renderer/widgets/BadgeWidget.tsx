@@ -1,5 +1,4 @@
 import * as React from 'react';
-import get from 'lodash/get';
 import { Badge } from '../../Badge';
 import { hashCode } from '../../../utils';
 import { UiOption } from './ui-options';
@@ -11,8 +10,8 @@ const BadgeWidget: Widget = ({
 	schema,
 	uiSchema,
 	...props
-}: WidgetProps) => {
-	const shade = get(props, 'shade', hashCode(value.toString(), 23));
+}: WidgetProps & { shade?: number }) => {
+	const shade = props.shade ?? hashCode(value.toString(), 23);
 	return (
 		<Badge {...props} shade={shade}>
 			{value.toString()}

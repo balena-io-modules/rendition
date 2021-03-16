@@ -1,6 +1,5 @@
 import * as React from 'react';
 import keys from 'lodash/keys';
-import get from 'lodash/get';
 import escapeRegExp from 'lodash/escapeRegExp';
 import filter from 'lodash/filter';
 import memoize from 'lodash/memoize';
@@ -129,7 +128,7 @@ const RendererPlaygroundBase = ({
 	}, [uiSchemaStr]);
 
 	React.useEffect(() => {
-		const example = get(examples, selectedExample, defaultJsonProps);
+		const example = examples?.[selectedExample] ?? defaultJsonProps;
 		setValueStr(JSON.stringify(example.value, null, 2));
 		setSchemaStr(JSON.stringify(example.schema, null, 2));
 		setUiSchemaStr(JSON.stringify(example.uiSchema, null, 2));

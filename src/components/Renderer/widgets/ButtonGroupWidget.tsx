@@ -1,6 +1,5 @@
 import * as React from 'react';
 import isArray from 'lodash/isArray';
-import get from 'lodash/get';
 import map from 'lodash/map';
 import { ButtonGroup } from '../../ButtonGroup';
 import {
@@ -11,6 +10,7 @@ import {
 } from './widget-util';
 import { JsonTypes } from '../types';
 import ButtonWidget from './ButtonWidget';
+import { JSONSchema7, JSONSchema7TypeName } from 'json-schema';
 
 const validItemTypes = ['string', 'integer', 'number'];
 
@@ -31,7 +31,8 @@ const ButtonGroupWidget: Widget = ({
 			`ButtonGroupWidget cannot be used to render a value of type '${typeof value}'`,
 		);
 	}
-	const itemType = get(schema, ['items', 'type'], 'undefined');
+	const itemType =
+		((schema.items as JSONSchema7)?.type as JSONSchema7TypeName) ?? 'undefined';
 	if (!validItemTypes.includes(itemType)) {
 		throw new Error(
 			`ButtonGroupWidget cannot be used to render an array of items of type ${itemType}`,

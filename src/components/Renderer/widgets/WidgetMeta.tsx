@@ -1,5 +1,4 @@
 import * as React from 'react';
-import get from 'lodash/get';
 import startCase from 'lodash/startCase';
 import { Box } from '../../Box';
 import { Txt } from '../../Txt';
@@ -17,8 +16,11 @@ export default function WidgetMeta({
 	schema = {},
 	uiSchema = {},
 }: WidgetMetaProps) {
-	const title = get(uiSchema, 'ui:title', schema.title || valueKey);
-	const description = get(uiSchema, 'ui:description', schema.description);
+	const title =
+		uiSchema['ui:title'] !== undefined
+			? uiSchema['ui:title']
+			: schema.title || valueKey;
+	const description = uiSchema['ui:description'] ?? schema.description;
 	if (!title && !description) {
 		return null;
 	}
