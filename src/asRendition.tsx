@@ -1,5 +1,4 @@
 import difference from 'lodash/difference';
-import omit from 'lodash/omit';
 import { arrayOf, number, oneOfType, string } from 'prop-types';
 import * as React from 'react';
 import { compose, getDisplayName } from 'recompose';
@@ -56,11 +55,12 @@ const styledSystemProps = Object.keys(propTypes);
 const filterStyledSystemProps = (passthroughProps: string[]) => (
 	Base: React.ComponentType<{ ref: any }>,
 ) => {
-	return React.forwardRef((props: any, ref) => {
-		const nextProps = omit(
-			props,
-			difference(styledSystemProps, passthroughProps),
-		);
+	const omitProps = difference(styledSystemProps, passthroughProps);
+	return React.forwardRef((props: { [key: string]: any }, ref) => {
+		const nextProps = { ...props };
+		for (const k of omitProps) {
+			delete nextProps[k];
+		}
 		return <Base {...nextProps} ref={ref} />;
 	});
 };
