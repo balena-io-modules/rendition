@@ -1,4 +1,18 @@
 - commits:
+    - subject: Optimize `filterStyledSystemProps`
+      hash: d0d1bb6ced0858c681569308661adc8c2db98969
+      body: |
+        Using `omit` was calling a `toPath` on each element of the array on
+        every invocation, individually that is fine but when repeated for
+        potentially hundreds of elements it adds up to be fairly slow, this
+        change avoids that work as we do not need to handle complex paths
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 20.10.3
+  date: 2021-03-16T19:13:40.421Z
+- commits:
     - subject: Prohibit whole lodash and fontawesome icon pack imports
       hash: 43137d7595495fc39d0a6d6c25444bd55489f87e
       body: ''
