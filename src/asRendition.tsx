@@ -1,5 +1,5 @@
 import difference from 'lodash/difference';
-import omit from 'lodash/omit';
+import pickBy from 'lodash/pickBy';
 import { arrayOf, number, oneOfType, string } from 'prop-types';
 import * as React from 'react';
 import { compose, getDisplayName } from 'recompose';
@@ -56,10 +56,12 @@ const styledSystemProps = Object.keys(propTypes);
 const filterStyledSystemProps = (passthroughProps: string[]) => (
 	Base: React.ComponentType<{ ref: any }>,
 ) => {
+	const diff = new Set(difference(styledSystemProps, passthroughProps));
+	const shouldIncludeProp = (prop: string) => !diff.has(prop);
 	return React.forwardRef((props: any, ref) => {
-		const nextProps = omit(
+		const nextProps = pickBy(
 			props,
-			difference(styledSystemProps, passthroughProps),
+			shouldIncludeProp,
 		);
 		return <Base {...nextProps} ref={ref} />;
 	});
