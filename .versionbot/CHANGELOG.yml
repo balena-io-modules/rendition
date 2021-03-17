@@ -1,4 +1,18 @@
 - commits:
+    - subject: Stop using & prohibit lodash omit
+      hash: a253081df53ab6f8b1d090124fa05d743f85327c
+      body: |
+        Its complexity is O(M*N) and has caused performance
+        issues before, so better to avoid it.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 20.10.5
+  date: 2021-03-16T20:03:49.499Z
+- commits:
     - subject: Avoid running json-e on an empty schema
       hash: 2da594ecba7d4dcf9a868d1dd0f8520a9419fdab
       body: |
