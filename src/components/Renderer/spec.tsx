@@ -2,15 +2,18 @@ jest.mock('mermaid', () => 'Mermaid');
 
 import React from 'react';
 import { render } from '@testing-library/react';
-import omit from 'lodash/omit';
 import forEach from 'lodash/forEach';
 import { Provider } from '../..';
 import { Renderer } from '.';
 import allExamples, { CONTEXT_FUNCTIONS, EXTRA_FORMATS } from './examples';
 
 describe.only('Renderer component', () => {
-	const examples = omit(allExamples, 'A mermaid field', 'A date time field');
-	forEach(examples, (example, label) => {
+	const {
+		['A mermaid field']: _aMermaidField,
+		['A date time field']: _aDateTimeField,
+		...exampledToTest
+	} = allExamples;
+	forEach(exampledToTest, (example, label) => {
 		it(label, () => {
 			const { container } = render(
 				<Provider

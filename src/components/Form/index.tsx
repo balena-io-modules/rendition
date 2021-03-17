@@ -1,5 +1,4 @@
 import { JSONSchema7 as JSONSchema } from 'json-schema';
-import omit from 'lodash/omit';
 import uniqBy from 'lodash/uniqBy';
 import * as React from 'react';
 import RsjfForm, {
@@ -37,10 +36,6 @@ const SUPPORTED_SCHEMA_FORMATS = [
 	'ipv6',
 	'uri',
 ];
-
-// Some keywords cause errors in RJSF validation, so they are removed from the
-// schema before being passed as a prop
-const KEYWORD_BLACKLIST = ['$schema'];
 
 let widgets: {
 	[k: string]: any;
@@ -191,10 +186,13 @@ const BaseForm = React.forwardRef<RsjfForm<any>, FormProps>(
 
 		const calculatedSchema = React.useMemo(() => {
 			const parsedSchema = parseSchema(schema);
-			return omit(
-				utils.disallowAdditionalProperties(parsedSchema),
-				KEYWORD_BLACKLIST,
-			);
+			// Some keywords cause errors in RJSF validation, so they are removed from the
+			// schema before being passed as a prop.
+			const {
+				$schema,
+				...resultingSchema
+			} = utils.disallowAdditionalProperties(parsedSchema);
+			return resultingSchema;
 		}, [schema]);
 		const [formState, setFormState] = React.useState(value);
 

@@ -4,6 +4,7 @@
     "import-blacklist": [
       true,
       "lodash",
+      "lodash/omit",
       "@fortawesome/free-solid-svg-icons",
       "@fortawesome/free-regular-svg-icons"
     ],
