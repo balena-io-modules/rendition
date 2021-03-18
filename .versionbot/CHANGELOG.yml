@@ -1,4 +1,15 @@
 - commits:
+    - subject: Convert usage of lodash/get to native versions
+      hash: 18d99ec1d58f1b61a343735db6b077b884dbf4f6
+      body: |
+        This allows for better performance and type-checking
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 20.10.8
+  date: 2021-03-18T20:38:54.690Z
+- commits:
     - subject: Update dependencies
       hash: 8daf616937f55c4040f1dc069379102601fa1346
       body: ''
