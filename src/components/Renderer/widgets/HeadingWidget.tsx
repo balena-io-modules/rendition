@@ -1,5 +1,4 @@
 import * as React from 'react';
-import get from 'lodash/get';
 import { Heading } from '../../Heading';
 import { UiOption } from './ui-options';
 import { Widget, WidgetProps } from './widget-util';
@@ -16,7 +15,7 @@ const HeadingWidget: Widget = ({
 	size,
 	...props
 }: HeadingWidgetProps) => {
-	const HeadingComponent = get(Heading, `h${size}`, Heading.h3);
+	const HeadingComponent = Heading[`h${size}` as const] ?? Heading.h3;
 	return <HeadingComponent {...props}>{value.toString()}</HeadingComponent>;
 };
 

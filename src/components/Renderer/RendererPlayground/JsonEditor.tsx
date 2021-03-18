@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as monacoEditor from 'monaco-editor/esm/vs/editor/editor.api';
 import MonacoEditor, { MonacoEditorProps } from 'react-monaco-editor';
-import get from 'lodash/get';
 import cloneDeep from 'lodash/cloneDeep';
 import findIndex from 'lodash/findIndex';
 import styled from 'styled-components';
@@ -39,11 +38,8 @@ const defaultOptions: MonacoEditorProps['options'] = {
 };
 
 const monacoEditorSchemas = cloneDeep(
-	get(
-		monacoEditor,
-		['languages', 'json', 'jsonDefaults', 'diagnosticsOptions', 'schemas'],
+	monacoEditor?.languages?.json?.jsonDefaults?.diagnosticsOptions?.schemas ??
 		[],
-	),
 ) as any[];
 
 interface JsonEditorProps {

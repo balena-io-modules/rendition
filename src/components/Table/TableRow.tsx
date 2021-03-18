@@ -1,4 +1,3 @@
-import get from 'lodash/get';
 import map from 'lodash/map';
 import * as React from 'react';
 import styled from 'styled-components';
@@ -9,7 +8,7 @@ import { Checkbox, CheckboxProps } from '../Checkbox';
  * If a `render` function is available, use it to get the display value.
  */
 const renderField = <T extends {}>(row: T, column: TableColumn<T>): any => {
-	const value = get(row, column.field);
+	const value = row[column.field];
 	if (column.render) {
 		return column.render(value, row);
 	}
@@ -26,7 +25,10 @@ export type TableSortFunction<T> = (a: T, b: T) => number;
 export interface TableColumn<T> {
 	cellAttributes?:
 		| React.AnchorHTMLAttributes<HTMLAnchorElement>
-		| ((value: any, row: T) => React.AnchorHTMLAttributes<HTMLAnchorElement>);
+		| ((
+				row: T,
+				value: T[keyof T],
+		  ) => React.AnchorHTMLAttributes<HTMLAnchorElement>);
 	field: keyof T;
 	key?: string;
 	icon?: string;
@@ -89,7 +91,7 @@ export class TableRow<T> extends React.PureComponent<TableRowProps<T>, {}> {
 				{map(columns, (column) => {
 					const cellAttributes =
 						typeof column.cellAttributes === 'function'
-							? column.cellAttributes(data, get(data, column.field))
+							? column.cellAttributes(data, data[column.field])
 							: column.cellAttributes || {};
 					return (
 						<a

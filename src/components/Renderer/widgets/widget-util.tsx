@@ -8,7 +8,6 @@ import isArray from 'lodash/isArray';
 import keys from 'lodash/keys';
 import has from 'lodash/has';
 import concat from 'lodash/concat';
-import get from 'lodash/get';
 import pick from 'lodash/pick';
 import { DefinedValue, JSONSchema, UiSchema, Format, Value } from '../types';
 import { UiOptions } from './ui-options';
@@ -37,7 +36,7 @@ export function formatTimestamp(timestamp: string, uiSchema: UiSchema = {}) {
 		return '';
 	}
 	const uiFormat =
-		get(uiSchema, ['ui:options', 'dtFormat']) ||
+		(uiSchema['ui:options']?.dtFormat as string) ||
 		`${DATE_FORMAT}, ${TIME_FORMAT}`;
 	return format(new Date(timestamp), uiFormat);
 }
@@ -52,7 +51,7 @@ export function withOptionProps(uiOptions: UiOptions) {
 	return (Component: Widget) => {
 		const wrapped = (props: WidgetProps) => {
 			const extraProps = pick(
-				get(props.uiSchema, 'ui:options', {}),
+				props.uiSchema?.['ui:options'],
 				...keys(uiOptions),
 			);
 			return <Component {...props} {...extraProps} />;
@@ -103,10 +102,11 @@ export const getArrayItems = ({
 	if (!isArray(value)) {
 		throw new Error(`Value must be an array (not '${typeof value}')`);
 	}
-	const maxItems = get(uiSchema, ['ui:options', 'truncate'], value.length);
+	const maxItems =
+		(uiSchema?.['ui:options']?.truncate as number) ?? value.length;
 	const items = value.slice(0, maxItems).map((item) => {
-		const itemSchema = get(schema, 'items', {}) as JSONSchema;
-		const itemUiSchema = get(uiSchema, 'items', {}) as UiSchema;
+		const itemSchema = (schema.items ?? {}) as JSONSchema;
+		const itemUiSchema = (uiSchema?.items ?? {}) as UiSchema;
 		const processedUiSchema = transformUiSchema({
 			value: item,
 			uiSchema: itemUiSchema,
@@ -154,7 +154,7 @@ export function getObjectPropertyNames({
 	}
 	const uiSchemaPropertyNames = getMaterializedPropertyNames(uiSchema);
 	const schemaPropertyNames =
-		get(uiSchema, ['ui:order'], keys(get(schema, 'properties'))) || [];
+		(uiSchema?.['ui:order'] ?? keys(schema.properties)) || [];
 	const nonSchemaPropertyNames = difference(
 		keys(value) || [],
 		schemaPropertyNames,
@@ -164,7 +164,7 @@ export function getObjectPropertyNames({
 		schemaPropertyNames,
 		nonSchemaPropertyNames,
 	);
-	return get(uiSchema, 'ui:explicit', false)
+	return uiSchema?.['ui:explicit']
 		? allObjectPropertyNames.filter((propName) => has(uiSchema, propName))
 		: allObjectPropertyNames;
 }
