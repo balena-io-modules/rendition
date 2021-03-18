@@ -1,4 +1,23 @@
 - commits:
+    - subject: Optimize renderer base by preparsing the lodash paths
+      hash: 1d8a6fd649a6d307ebf8628e0e556aee74f0673f
+      body: |
+        This avoids having to parse them for every invocation which can add up
+        due to the sheer number of times the renderer can be called
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+    - subject: Convert lodash/get usage to native versions
+      hash: ebdf5551d63dc582bfb3015d421b3c02821632b7
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 20.10.6
+  date: 2021-03-18T11:14:29.537Z
+- commits:
     - subject: Stop using & prohibit lodash omit
       hash: a253081df53ab6f8b1d090124fa05d743f85327c
       body: |
