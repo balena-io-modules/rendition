@@ -1,5 +1,4 @@
 import * as React from 'react';
-import get from 'lodash/get';
 import invokeMap from 'lodash/invokeMap';
 import isArray from 'lodash/isArray';
 import styled from 'styled-components';
@@ -18,7 +17,8 @@ const SingleLineTxt = styled(Txt)`
 const getArrayValue = (value: Value[], uiSchema?: UiSchema): string => {
 	// Trim array if the 'truncate' option was provided,
 	// then comma-join the items into a single string.
-	const maxItems = get(uiSchema, ['ui:options', 'truncate'], value.length);
+	const maxItems =
+		(uiSchema?.['ui:options']?.truncate as number) ?? value.length;
 	let arrayString = invokeMap(value.slice(0, maxItems), 'toString').join(', ');
 	if (maxItems < value.length) {
 		arrayString += ` and ${value.length - maxItems} more...`;
@@ -40,9 +40,7 @@ const TxtWidget: Widget = ({
 	if (DATE_TIME_FORMATS.includes(schema?.format ?? '')) {
 		displayValue = formatTimestamp(displayValue, uiSchema);
 	}
-	const Component = get(uiSchema, ['ui:options', 'truncate'])
-		? SingleLineTxt
-		: Txt;
+	const Component = uiSchema?.['ui:options']?.truncate ? SingleLineTxt : Txt;
 	return <Component {...props}>{displayValue || ''}</Component>;
 };
 

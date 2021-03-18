@@ -1,5 +1,4 @@
 import * as React from 'react';
-import get from 'lodash/get';
 import { Link } from '../../Link';
 import { UiOption } from './ui-options';
 import { Widget, WidgetProps } from './widget-util';
@@ -10,9 +9,9 @@ const LinkWidget: Widget = ({
 	schema,
 	uiSchema,
 	...props
-}: WidgetProps) => {
-	let href = get(props, 'href', value.toString());
-	if (get(schema, 'format') === 'email') {
+}: WidgetProps & { href?: string; format?: string }) => {
+	let href = props.href ?? value.toString();
+	if (schema.format === 'email') {
 		href = `mailto:${href.replace(/^mailto:/, '')}`;
 	}
 	return (

@@ -1,8 +1,7 @@
 import * as React from 'react';
-import get from 'lodash/get';
 import map from 'lodash/map';
 import { Widget, WidgetProps, getObjectPropertyNames } from './widget-util';
-import { JsonTypes } from '../types';
+import { DefinedValue, JSONSchema, JsonTypes, UiSchema } from '../types';
 import { Renderer } from '../index';
 
 const ObjectWidget: Widget = ({
@@ -16,9 +15,9 @@ const ObjectWidget: Widget = ({
 		<React.Fragment>
 			{map(propertyNames, (key: string) => {
 				const subProps: WidgetProps = {
-					value: get(value, key),
-					schema: get(schema, ['properties', key]),
-					uiSchema: get(uiSchema, key),
+					value: (value as { [key: string]: any })?.[key] as DefinedValue,
+					schema: schema.properties?.[key] as JSONSchema,
+					uiSchema: uiSchema?.[key as keyof UiSchema] as UiSchema,
 				};
 				return (
 					<Renderer key={key} nested valueKey={key} {...subProps} {...rest} />
