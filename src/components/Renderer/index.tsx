@@ -3,7 +3,7 @@ import forEach from 'lodash/forEach';
 import uniqBy from 'lodash/uniqBy';
 import keys from 'lodash/keys';
 import pick from 'lodash/pick';
-import get from 'lodash/get';
+import toPath from 'lodash/toPath';
 import isArray from 'lodash/isArray';
 import ajv from 'ajv';
 import asRendition from '../../asRendition';
@@ -25,14 +25,17 @@ export const getValue = (
 	schema?: JSONSchema,
 	uiSchema?: UiSchema,
 ) => {
-	const calculatedValue = get(uiSchema, 'ui:value', value);
+	const calculatedValue = uiSchema?.['ui:value'];
 	// Fall back to schema's default value if value is undefined
 	return calculatedValue !== undefined
 		? calculatedValue
-		: get(schema, 'default');
+		: value !== undefined
+		? value
+		: schema?.default;
 };
 
-const widgetWrapperUiOptionKeys = keys(WidgetWrapperUiOptions);
+// Convert these to lodash paths once here to avoid having to do it for every single render
+const widgetWrapperUiOptionKeyPaths = keys(WidgetWrapperUiOptions).map(toPath);
 
 export const getType = (value?: Value) => {
 	if (value === undefined) {
@@ -157,12 +160,13 @@ const RendererBase = ({
 	}
 
 	const wrapperProps = pick(
-		get(processedUiSchema, 'ui:options', {}),
-		...widgetWrapperUiOptionKeys,
+		processedUiSchema['ui:options'] ?? {},
+		// @ts-expect-error we're passing pre-parsed paths which the lodash types do not support but lodash does
+		widgetWrapperUiOptionKeyPaths,
 	);
 	const Widget = getWidget(
 		processedValue,
-		get(schema, 'format'),
+		schema.format,
 		processedUiSchema['ui:widget'],
 		formats,
 	);
