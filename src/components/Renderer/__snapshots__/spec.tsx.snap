@@ -42,7 +42,7 @@ exports[`Renderer component A Heading widget 1`] = `
 
 .c6 {
   margin: 0;
-  font-size: 34px;
+  font-size: 24px;
 }
 
 .c1 {
@@ -58,11 +58,11 @@ exports[`Renderer component A Heading widget 1`] = `
     <div
       class="c2 c3 c4 "
     >
-      <h2
+      <h3
         class="c5 c6"
       >
         Something Important
-      </h2>
+      </h3>
     </div>
   </div>
 </div>
@@ -108,7 +108,7 @@ exports[`Renderer component A HighlightedName widget 1`] = `
   padding: 8px;
   font-size: 14px;
   color: #2A506F;
-  background-color: #222;
+  background-color: #86762d;
 }
 
 .c6 {
@@ -118,8 +118,8 @@ exports[`Renderer component A HighlightedName widget 1`] = `
 }
 
 .c7 {
-  color: white;
-  background-color: #222;
+  color: #FFF;
+  background-color: #86762d;
 }
 
 .c1 {
@@ -214,9 +214,7 @@ exports[`Renderer component A Link widget 1`] = `
       <a
         class="c5 c6"
         color="primary.main"
-        href="https://trello.com/b/lEIoUMKY"
-        rel="noopener"
-        target="_blank"
+        href="View trello board"
       >
         View trello board
       </a>
@@ -261,23 +259,6 @@ exports[`Renderer component A List widget 1`] = `
   align-items: flex-start;
 }
 
-.c7 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  opacity: 1;
-  display: inline-block;
-}
-
-.c7:active,
-.c7:hover {
-  color: hsl(196.29999999999995,100%,37.5%);
-}
-
-.c8 {
-  color: #00AEEF;
-}
-
 .c5 {
   padding: 0;
   margin: 0;
@@ -303,25 +284,17 @@ exports[`Renderer component A List widget 1`] = `
   text-align: center;
 }
 
-.c6 {
-  counter-reset: ordered-list-counter;
-}
-
 .c6 > li {
-  margin: 16px 0;
-  counter-increment: ordered-list-counter;
+  margin: 4px 0;
 }
 
 .c6 > li:before {
-  content: counter(ordered-list-counter);
+  content: '\\2022';
   margin-right: 8px;
-  background: #1496E1;
-  height: 1.5em;
-  width: 1.5em;
-  min-width: 1.5em;
-  line-height: 1.5em;
-  color: white;
-  border-radius: 50%;
+  -webkit-transform: translateY( -1px );
+  -ms-transform: translateY( -1px );
+  transform: translateY( -1px );
+  color: #527699;
 }
 
 .c1 {
@@ -337,49 +310,43 @@ exports[`Renderer component A List widget 1`] = `
     <div
       class="c2 c3 c4 "
     >
-      <ol
+      <ul
         class="c5 c6 "
       >
         <li>
           <div
             class="c2 c3 c4 "
           >
-            <a
-              class="c7 c8"
-              color="primary.main"
-              href="https://jel.ly.fish/user"
+            <div
+              class=""
             >
               user
-            </a>
+            </div>
           </div>
         </li>
         <li>
           <div
             class="c2 c3 c4 "
           >
-            <a
-              class="c7 c8"
-              color="primary.main"
-              href="https://jel.ly.fish/org"
+            <div
+              class=""
             >
               org
-            </a>
+            </div>
           </div>
         </li>
         <li>
           <div
             class="c2 c3 c4 "
           >
-            <a
-              class="c7 c8"
-              color="primary.main"
-              href="https://jel.ly.fish/issue"
+            <div
+              class=""
             >
               issue
-            </a>
+            </div>
           </div>
         </li>
-      </ol>
+      </ul>
     </div>
   </div>
 </div>
@@ -436,10 +403,6 @@ exports[`Renderer component A Tag widget 1`] = `
 }
 
 .c8 {
-  white-space: pre;
-}
-
-.c10 {
   font-weight: 600;
 }
 
@@ -476,11 +439,6 @@ exports[`Renderer component A Tag widget 1`] = `
         >
           <div
             class="c8 c9"
-          >
-            subscription: 
-          </div>
-          <div
-            class="c10 c9"
           >
             premium
           </div>
@@ -533,8 +491,8 @@ exports[`Renderer component A badge widget 1`] = `
   padding-left: 12px;
   padding-right: 12px;
   font-size: 12px;
-  color: #0650E5;
-  background-color: #D7E4FE;
+  color: #5B6312;
+  background-color: #D7E46C;
 }
 
 .c6 {
@@ -835,24 +793,24 @@ exports[`Renderer component A button group widget 1`] = `
       <div
         class="c2 c5 c6"
       >
-        <a
+        <button
           class="c7 c8 c9 "
-          href="https://jel.ly.fish/item 1"
+          type="button"
         >
           item 1
-        </a>
-        <a
+        </button>
+        <button
           class="c7 c8 c9 "
-          href="https://jel.ly.fish/item 2"
+          type="button"
         >
           item 2
-        </a>
-        <a
+        </button>
+        <button
           class="c7 c8 c9 "
-          href="https://jel.ly.fish/item 3"
+          type="button"
         >
           item 3
-        </a>
+        </button>
       </div>
     </div>
   </div>
@@ -871,15 +829,12 @@ exports[`Renderer component A button widget 1`] = `
   background: transparent;
   overflow: visible;
   text-transform: none;
-  border: 1px solid #00AEEF;
+  border: 1px solid #2A506F;
   border-radius: 20px;
   color: #444444;
   padding: 4px 30px;
   font-size: 14px;
   line-height: 1.5;
-  background-color: #00AEEF;
-  color: #444444;
-  border-radius: 20px;
   -webkit-transition-property: color,background-color,border-color,box-shadow;
   transition-property: color,background-color,border-color,box-shadow;
   -webkit-transition-duration: 0.1s;
@@ -889,7 +844,7 @@ exports[`Renderer component A button widget 1`] = `
 }
 
 .c5:hover {
-  box-shadow: 0px 0px 0px 2px #00AEEF;
+  box-shadow: 0px 0px 0px 2px #2A506F;
 }
 
 .c5:focus {
@@ -962,15 +917,20 @@ exports[`Renderer component A button widget 1`] = `
 }
 
 .c7 {
-  color: white;
+  color: #2A506F;
+  border-color: #2A506F;
+}
+
+.c7 svg {
+  color: #527699 !important;
 }
 
 .c7:hover:enabled,
 .c7:focus:enabled,
 .c7:active:enabled {
   box-shadow: none;
-  background: hsl(196.29999999999995,100%,37.5%);
-  border-color: hsl(196.29999999999995,100%,37.5%);
+  background: #2A506F;
+  border-color: #2A506F;
   color: white;
   opacity: initial;
 }
@@ -1008,13 +968,12 @@ exports[`Renderer component A button widget 1`] = `
     <div
       class="c2 c3 c4 "
     >
-      <a
+      <button
         class="c5 c6 c7 "
-        href="http://jel.ly.fish/issue"
-        target="_blank"
+        type="button"
       >
         issue
-      </a>
+      </button>
     </div>
   </div>
 </div>
@@ -1183,6 +1142,57 @@ exports[`Renderer component A drop-down button widget 1`] = `
   border: 0;
 }
 
+.c10 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  border: 1px solid #2A506F;
+  border-radius: 20px;
+  color: #444444;
+  padding: 4px 30px;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-transition-property: color,background-color,border-color,box-shadow;
+  transition-property: color,background-color,border-color,box-shadow;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  line-height: 0;
+  padding: 12px;
+}
+
+.c10:hover {
+  box-shadow: 0px 0px 0px 2px #2A506F;
+}
+
+.c10:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c10:focus > circle,
+.c10:focus > ellipse,
+.c10:focus > line,
+.c10:focus > path,
+.c10:focus > polygon,
+.c10:focus > polyline,
+.c10:focus > rect {
+  outline: none;
+  box-shadow: 0 0 2px 2px #00AEEF;
+}
+
+.c10:focus::-moz-focus-inner {
+  border: 0;
+}
+
 .c0 {
   font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
@@ -1202,10 +1212,6 @@ exports[`Renderer component A drop-down button widget 1`] = `
   margin-bottom: 4px;
   min-width: 0;
   min-height: 0;
-}
-
-.c11 {
-  margin-right: 8px;
 }
 
 .c7 {
@@ -1275,19 +1281,23 @@ exports[`Renderer component A drop-down button widget 1`] = `
   align-items: flex-start;
 }
 
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+.c11 {
+  min-width: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 0;
+  margin: 0;
+  vertical-align: top;
+  padding: 0 16px;
+  width: 44px;
+}
+
+.c9 {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 0;
+  margin: 0;
+  width: calc(100% - 44px);
 }
 
 .c5 {
@@ -1302,11 +1312,6 @@ exports[`Renderer component A drop-down button widget 1`] = `
   -webkit-transform: translateY(1px);
   -ms-transform: translateY(1px);
   transform: translateY(1px);
-}
-
-.c9 {
-  margin: 0;
-  width: 100%;
 }
 
 .c1 {
@@ -1325,18 +1330,15 @@ exports[`Renderer component A drop-down button widget 1`] = `
       <div
         class="c2 c5 "
       >
-        <button
-          class="c6 c7 c8 c9"
-          type="button"
-        >
-          <div
-            class="c2 c10"
+        <span>
+          <button
+            class="c6 c7 c8 c9"
+            type="button"
+          />
+          <button
+            class="c10 c7 c8 c11"
+            type="button"
           >
-            <div
-              class="c2 c11"
-            >
-              Links
-            </div>
             <svg
               aria-hidden="true"
               class="svg-inline--fa fa-chevron-down fa-w-14 "
@@ -1352,8 +1354,8 @@ exports[`Renderer component A drop-down button widget 1`] = `
                 fill="currentColor"
               />
             </svg>
-          </div>
-        </button>
+          </button>
+        </span>
       </div>
     </div>
   </div>
@@ -1417,6 +1419,24 @@ exports[`Renderer component A hidden field 1`] = `
     <div
       class="c2 c3 c4 "
     >
+      <div
+        class="c2 c3 c4 "
+      >
+        <div
+          class="c2 c5"
+        >
+          <div
+            class="c6 "
+          >
+            Hidden
+          </div>
+        </div>
+        <div
+          class=""
+        >
+          This should be hidden
+        </div>
+      </div>
       <div
         class="c2 c3 c4 "
       >
@@ -1909,13 +1929,31 @@ exports[`Renderer component A materialized field 1`] = `
           <div
             class="c6 "
           >
-            Name
+            First Name
           </div>
         </div>
         <div
           class=""
         >
-          John Smith
+          John
+        </div>
+      </div>
+      <div
+        class="c2 c3 c4 "
+      >
+        <div
+          class="c2 c5"
+        >
+          <div
+            class="c6 "
+          >
+            Last Name
+          </div>
+        </div>
+        <div
+          class=""
+        >
+          Smith
         </div>
       </div>
     </div>
@@ -2078,11 +2116,6 @@ exports[`Renderer component A string 1`] = `
   font-weight: 600;
 }
 
-.c8 {
-  text-align: left;
-  white-space: normal;
-}
-
 .c7 {
   font-size: 85%;
   color: #527699;
@@ -2116,7 +2149,7 @@ exports[`Renderer component A string 1`] = `
         </div>
       </div>
       <div
-        class="c8 "
+        class=""
       >
         A string value
       </div>
@@ -2308,7 +2341,16 @@ exports[`Renderer component A truncated array of strings field 1`] = `
           <div
             class=""
           >
-            + 2 more
+            item 5
+          </div>
+        </div>
+        <div
+          class="c2 c3 c4 "
+        >
+          <div
+            class=""
+          >
+            item 6
           </div>
         </div>
       </div>
@@ -2353,13 +2395,6 @@ exports[`Renderer component A truncated string 1`] = `
   align-items: flex-start;
 }
 
-.c5 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-}
-
 .c1 {
   font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
@@ -2374,7 +2409,7 @@ exports[`Renderer component A truncated string 1`] = `
       class="c2 c3 c4 "
     >
       <div
-        class="c5"
+        class=""
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut facilisis urna. Suspendisse ullamcorper, velit ut auctor vulputate, nibh sem finibus ipsum, vel bibendum tellus nulla non nunc. In porta velit odio. Vivamus nibh dolor, bibendum vel velit sit amet, suscipit lobortis leo. Donec tempus justo non nisi pulvinar, vitae fringilla ligula aliquam. Proin efficitur tellus ac tincidunt iaculis. Duis mattis urna quis libero feugiat, nec pretium felis ornare.
       </div>
@@ -2501,7 +2536,6 @@ exports[`Renderer component An Img widget 1`] = `
   display: block;
   max-width: 100%;
   height: auto;
-  width: 200px;
 }
 
 .c1 {
@@ -2518,10 +2552,8 @@ exports[`Renderer component An Img widget 1`] = `
       class="c2 c3 c4 "
     >
       <img
-        alt="Jellyfish"
         class="c5"
         src="https://upload.wikimedia.org/wikipedia/commons/4/44/Jelly_cc11.jpg"
-        width="200"
       />
     </div>
   </div>
@@ -2577,42 +2609,6 @@ exports[`Renderer component An array of strings field 1`] = `
   flex-direction: column;
 }
 
-.c6 {
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 12px;
-  padding-right: 12px;
-  font-size: 12px;
-  color: #BA0C00;
-  background-color: #FFD5D2;
-}
-
-.c8 {
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 12px;
-  padding-right: 12px;
-  font-size: 12px;
-  color: #0650E5;
-  background-color: #D7E4FE;
-}
-
-.c9 {
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 12px;
-  padding-right: 12px;
-  font-size: 12px;
-  color: #3C2DE7;
-  background-color: #D6D3FA;
-}
-
-.c7 {
-  display: inline-block;
-  border-radius: 1em;
-  line-height: 1;
-}
-
 .c1 {
   font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
@@ -2632,29 +2628,29 @@ exports[`Renderer component An array of strings field 1`] = `
         <div
           class="c2 c3 c4 "
         >
-          <span
-            class="c6 c7 "
+          <div
+            class=""
           >
             first item
-          </span>
+          </div>
         </div>
         <div
           class="c2 c3 c4 "
         >
-          <span
-            class="c8 c7 "
+          <div
+            class=""
           >
             second item
-          </span>
+          </div>
         </div>
         <div
           class="c2 c3 c4 "
         >
-          <span
-            class="c9 c7 "
+          <div
+            class=""
           >
             third item
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -3212,11 +3208,6 @@ exports[`Renderer component An invalid value 1`] = `
             Eh
           </div>
         </div>
-        <div
-          class=""
-        >
-          what
-        </div>
       </div>
     </div>
   </div>
@@ -3224,101 +3215,6 @@ exports[`Renderer component An invalid value 1`] = `
 `;
 
 exports[`Renderer component An object with various properties 1`] = `
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: solid 1px #DDE1f0;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 20px;
-  width: 20px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border-radius: 4px;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-}
-
-.c9:hover input:not([disabled]) + div,
-.c9:hover input:not([disabled]) + span {
-  border-color: #DDE1f0;
-}
-
-.c12 {
-  opacity: 0;
-  -moz-appearance: none;
-  width: 0;
-  height: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-.c12:checked + span > span {
-  left: calc( 40px - 20px );
-  background: #00AEEF;
-}
-
-.c11 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
 .c0 {
   font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
@@ -3367,39 +3263,10 @@ exports[`Renderer component An object with various properties 1`] = `
   color: #527699;
 }
 
-.c8 > label > div > div,
-.c8 > label > div > span {
-  background-color: white;
-}
-
-.c8 > label > span {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-}
-
-.c8 label[disabled] {
-  opacity: 0.4;
-}
-
-.c8 label:hover input:not([disabled]) + span > span {
-  border-color: #009dd7;
-  background: #009dd7;
-}
-
-.c8 label:hover input:not([disabled]) + div {
-  border-color: #527699!important;
-}
-
 .c1 {
   font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
-}
-
-@media only screen and (max-width:768px) {
-  .c13 {
-    border: solid 1px #DDE1f0;
-  }
 }
 
 <div>
@@ -3490,23 +3357,9 @@ exports[`Renderer component An object with various properties 1`] = `
           </div>
         </div>
         <div
-          class="c8 "
+          class=""
         >
-          <label
-            class="c9"
-          >
-            <div
-              class="c10 c11"
-            >
-              <input
-                class="c12"
-                type="checkbox"
-              />
-              <div
-                class="c13 "
-              />
-            </div>
-          </label>
+          false
         </div>
       </div>
     </div>
@@ -3626,6 +3479,42 @@ exports[`Renderer component Explicitly specifying which fields to render 1`] = `
           12.345
         </div>
       </div>
+      <div
+        class="c2 c3 c4 "
+      >
+        <div
+          class="c2 c5"
+        >
+          <div
+            class="c6 "
+          >
+            An Integer Field Will Not Be Rendered
+          </div>
+        </div>
+        <div
+          class=""
+        >
+          5000
+        </div>
+      </div>
+      <div
+        class="c2 c3 c4 "
+      >
+        <div
+          class="c2 c5"
+        >
+          <div
+            class="c6 "
+          >
+            A Boolean Field Will Not Be Rendered
+          </div>
+        </div>
+        <div
+          class=""
+        >
+          false
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -3697,6 +3586,24 @@ exports[`Renderer component Re-ordered fields 1`] = `
           <div
             class="c6 "
           >
+            Field A
+          </div>
+        </div>
+        <div
+          class=""
+        >
+          field A value
+        </div>
+      </div>
+      <div
+        class="c2 c3 c4 "
+      >
+        <div
+          class="c2 c5"
+        >
+          <div
+            class="c6 "
+          >
             Field B
           </div>
         </div>
@@ -3722,24 +3629,6 @@ exports[`Renderer component Re-ordered fields 1`] = `
           class=""
         >
           field C value
-        </div>
-      </div>
-      <div
-        class="c2 c3 c4 "
-      >
-        <div
-          class="c2 c5"
-        >
-          <div
-            class="c6 "
-          >
-            Field A
-          </div>
-        </div>
-        <div
-          class=""
-        >
-          field A value
         </div>
       </div>
     </div>

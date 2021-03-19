@@ -4,7 +4,6 @@ import uniqBy from 'lodash/uniqBy';
 import keys from 'lodash/keys';
 import pick from 'lodash/pick';
 import toPath from 'lodash/toPath';
-import isArray from 'lodash/isArray';
 import ajv from 'ajv';
 import asRendition from '../../asRendition';
 import { RenditionSystemProps, Theme } from '../../common-types';
@@ -34,9 +33,6 @@ export const getValue = (
 		: schema?.default;
 };
 
-// Convert these to lodash paths once here to avoid having to do it for every single render
-const widgetWrapperUiOptionKeyPaths = keys(WidgetWrapperUiOptions).map(toPath);
-
 export const getType = (value?: Value) => {
 	if (value === undefined) {
 		return 'default';
@@ -44,7 +40,7 @@ export const getType = (value?: Value) => {
 	if (value === null) {
 		return 'null';
 	}
-	return isArray(value) ? 'array' : typeof value;
+	return Array.isArray(value) ? 'array' : typeof value;
 };
 
 export const getWidget = (
@@ -69,6 +65,41 @@ export const getWidget = (
 
 	return typeWidgets[valueType] ?? typeWidgets.default;
 };
+
+export interface RendererWidgetProps {
+	value?: Value;
+	schema?: JSONSchema;
+	extraContext?: object | undefined;
+	uiSchema?: UiSchema;
+	uiSchemaWidget?: UiSchema['ui:widget'];
+	extraFormats?: Format[];
+}
+
+export const RendererWidget = ({
+	value,
+	schema,
+	extraFormats,
+	uiSchema,
+	...otherProps
+}: RendererWidgetProps) => {
+	const processedValue = getValue(value, schema, uiSchema);
+
+	if (processedValue == null) {
+		return null;
+	}
+
+	const Widget = getWidget(
+		processedValue,
+		schema?.format,
+		uiSchema?.['ui:widget'],
+		extraFormats,
+	);
+
+	return <Widget value={processedValue} schema={schema} {...otherProps} />;
+};
+
+// Convert these to lodash paths once here to avoid having to do it for every single render
+const widgetWrapperUiOptionKeyPaths = keys(WidgetWrapperUiOptions).map(toPath);
 
 type Validation = {
 	validator: ajv.Ajv;
@@ -153,7 +184,8 @@ const RendererBase = ({
 		uiSchema,
 		extraContext,
 	});
-	const processedValue = getValue(value, schema, processedUiSchema);
+
+	const processedValue = getValue(value, schema, uiSchema);
 
 	if (processedValue == null) {
 		return null;
@@ -163,12 +195,6 @@ const RendererBase = ({
 		processedUiSchema['ui:options'] ?? {},
 		// @ts-expect-error we're passing pre-parsed paths which the lodash types do not support but lodash does
 		widgetWrapperUiOptionKeyPaths,
-	);
-	const Widget = getWidget(
-		processedValue,
-		schema?.format,
-		processedUiSchema['ui:widget'],
-		formats,
 	);
 
 	return (
@@ -196,10 +222,10 @@ const RendererBase = ({
 				uiSchema={processedUiSchema}
 				valueKey={valueKey}
 			/>
-			<Widget
+			<RendererWidget
 				extraContext={extraContext}
 				extraFormats={formats}
-				value={processedValue}
+				value={value}
 				schema={schema}
 				uiSchema={processedUiSchema}
 			/>
