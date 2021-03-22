@@ -16,7 +16,7 @@ import { formatDistance } from 'date-fns';
 
 export interface WidgetProps {
 	value: DefinedValue;
-	schema: JSONSchema;
+	schema: JSONSchema | undefined;
 	uiSchema?: UiSchema;
 	extraFormats?: Format[];
 	extraContext?: object;
@@ -164,6 +164,7 @@ export function getObjectPropertyNames({
 		schemaPropertyNames,
 		nonSchemaPropertyNames,
 	);
+
 	return get(uiSchema, 'ui:explicit', false)
 		? allObjectPropertyNames.filter((propName) => has(uiSchema, propName))
 		: allObjectPropertyNames;

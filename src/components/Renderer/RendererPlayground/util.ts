@@ -72,7 +72,7 @@ const generateObjectMetaSchema = (
 		type: ['array'],
 		items: {
 			type: 'string',
-			enum: keys(schema.properties).concat(['*']),
+			enum: keys(schema?.properties).concat(['*']),
 		},
 	};
 
@@ -175,7 +175,7 @@ export const generateUiSchemaMetaSchema = ({
 		setWidgetOptions(metaSchema, type);
 	}
 
-	setUiOptions({ metaSchema, format: schema.format, input });
+	setUiOptions({ metaSchema, format: schema?.format, input });
 
 	return metaSchema;
 };

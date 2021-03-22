@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/Renderer Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+  >
+    <div
+      class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dtTInj iyfbTY"
+    >
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+      >
+        <div
+          class="sc-fKFyDc euqOvB sc-bBXqnf kYwmpI"
+        >
+          Field Title
+        </div>
+        <div
+          class="sc-fKFyDc jHCVxA sc-bBXqnf eNkluL"
+        >
+          Field description
+        </div>
+      </div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dtTInj iyfbTY"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        >
+          <div
+            class="sc-fKFyDc euqOvB sc-bBXqnf kYwmpI"
+          >
+            A String Field
+          </div>
+        </div>
+        <div
+          class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI"
+        >
+          The string value
+        </div>
+      </div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dtTInj iyfbTY"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        >
+          <div
+            class="sc-fKFyDc euqOvB sc-bBXqnf kYwmpI"
+          >
+            A Number Field
+          </div>
+        </div>
+        <div
+          class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI"
+        >
+          12.345
+        </div>
+      </div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dtTInj iyfbTY"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        >
+          <div
+            class="sc-fKFyDc euqOvB sc-bBXqnf kYwmpI"
+          >
+            An Integer Field
+          </div>
+        </div>
+        <div
+          class="sc-fKFyDc jHCVxA sc-bBXqnf kYwmpI"
+        >
+          5000
+        </div>
+      </div>
+      <div
+        class="sc-gKsewC cgpPfo sc-iBPRYJ ildvdb sc-hHftDr jpCUGc sc-dtTInj iyfbTY"
+      >
+        <div
+          class="sc-gKsewC cgpPfo sc-iBPRYJ dlUrgp"
+        >
+          <div
+            class="sc-fKFyDc euqOvB sc-bBXqnf kYwmpI"
+          >
+            A Boolean Field
+          </div>
+        </div>
+        <div
+          class="sc-dOSReg dbySSX sc-bBrOnJ bcspbY"
+        >
+          <label
+            class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 hixiBW"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 kDZMxH StyledCheckBox-sc-1dbk5ju-6 hOFfoi"
+            >
+              <input
+                class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 gnmdLR"
+                type="checkbox"
+              />
+              <div
+                class="StyledBox-sc-13pk1d4-0 gFpUiV StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 kRWCTA"
+              />
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
