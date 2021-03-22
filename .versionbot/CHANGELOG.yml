@@ -1,4 +1,14 @@
 - commits:
+    - subject: Fix tests
+      hash: f15b8a0dbd35e129c02a0154a05bd3921bd90f4e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 20.10.8
+  date: 2021-03-22T18:53:01.302Z
+- commits:
     - subject: Update dependencies
       hash: 8daf616937f55c4040f1dc069379102601fa1346
       body: ''
