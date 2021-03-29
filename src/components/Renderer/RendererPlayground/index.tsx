@@ -17,7 +17,7 @@ import { Select } from '../../Select';
 import { Button } from '../../Button';
 import { Heading } from '../../Heading';
 import { Checkbox } from '../../Checkbox';
-import { Renderer, RendererProps } from '../index';
+import { Renderer } from '../index';
 import { Value, JSONSchema, UiSchema } from '../types';
 import { CONTEXT_FUNCTIONS, EXTRA_FORMATS } from '../examples';
 import JsonEditor from './JsonEditor';
@@ -70,16 +70,6 @@ const RendererPlaygroundBase = ({
 	const [schema, setSchema] = React.useState<object>({});
 	const [uiSchema, setUiSchema] = React.useState<object>({});
 
-	const [valueStr, setValueStr] = React.useState<string>(
-		JSON.stringify(value, null, 2),
-	);
-	const [schemaStr, setSchemaStr] = React.useState<string>(
-		JSON.stringify(schema, null, 2),
-	);
-	const [uiSchemaStr, setUiSchemaStr] = React.useState<string>(
-		JSON.stringify(uiSchema, null, 2),
-	);
-
 	const [isValueJsonValid, setIsValueJsonValid] = React.useState<boolean>(true);
 	const [isSchemaJsonValid, setIsSchemaJsonValid] = React.useState<boolean>(
 		true,
@@ -88,55 +78,47 @@ const RendererPlaygroundBase = ({
 		true,
 	);
 
-	const [uiSchemaMetaSchema, setUiSchemaMetaSchema] = React.useState<object>(
-		{},
-	);
-
-	const [jsonProps, setJsonProps] = React.useState<RendererProps>(
-		defaultJsonProps,
-	);
-
 	const reset = React.useCallback(() => {
 		setSelectedExample('');
 		setSearchTermRegExp(defaultRegExp);
 	}, [setSelectedExample, setSearchTermRegExp]);
 
-	React.useEffect(() => {
+	const onValueStrChange = React.useCallback((valueStr: string) => {
 		try {
 			setValue(JSON.parse(valueStr));
 			setIsValueJsonValid(true);
 		} catch {
 			setIsValueJsonValid(false);
 		}
-	}, [valueStr]);
+	}, []);
 
-	React.useEffect(() => {
+	const onSchemaStrChange = React.useCallback((schemaStr: string) => {
 		try {
 			setSchema(JSON.parse(schemaStr));
 			setIsSchemaJsonValid(true);
 		} catch {
 			setIsSchemaJsonValid(false);
 		}
-	}, [schemaStr]);
+	}, []);
 
-	React.useEffect(() => {
+	const onUiSchemaStrChange = React.useCallback((uiSchemaStr: string) => {
 		try {
 			setUiSchema(JSON.parse(uiSchemaStr));
 			setIsUiSchemaJsonValid(true);
 		} catch {
 			setIsUiSchemaJsonValid(false);
 		}
-	}, [uiSchemaStr]);
+	}, []);
 
 	React.useEffect(() => {
 		const example = get(examples, selectedExample, defaultJsonProps);
-		setValueStr(JSON.stringify(example.value, null, 2));
-		setSchemaStr(JSON.stringify(example.schema, null, 2));
-		setUiSchemaStr(JSON.stringify(example.uiSchema, null, 2));
+		setValue(example.value);
+		setSchema(example.schema);
+		setUiSchema(example.uiSchema);
 		setSearchTermRegExp(defaultRegExp);
 	}, [selectedExample]);
 
-	React.useEffect(() => {
+	const uiSchemaMetaSchema = React.useMemo(() => {
 		try {
 			const newMetaSchema = generateUiSchemaMetaSchema({
 				value,
@@ -147,12 +129,24 @@ const RendererPlaygroundBase = ({
 					root: value,
 				},
 			});
-			setUiSchemaMetaSchema(newMetaSchema);
-			setJsonProps({ value, schema, uiSchema });
+			return newMetaSchema;
 		} catch (error) {
 			console.error('Failed to parse schemas', error);
+			throw new Error('Failed to parse schemas');
 		}
 	}, [uiSchema, schema, value]);
+
+	const valueStr = React.useMemo<string>(() => JSON.stringify(value, null, 2), [
+		value,
+	]);
+	const schemaStr = React.useMemo<string>(
+		() => JSON.stringify(schema, null, 2),
+		[schema],
+	);
+	const uiSchemaStr = React.useMemo<string>(
+		() => JSON.stringify(uiSchema, null, 2),
+		[uiSchema],
+	);
 
 	const unfilteredExampleNames = getExampleNames(examples);
 	const exampleNames = searchTermRegExp.source
@@ -192,21 +186,21 @@ const RendererPlaygroundBase = ({
 					<JsonEditor
 						title="Data"
 						value={valueStr}
-						onChange={setValueStr}
+						onChange={onValueStrChange}
 						schema={schema}
 						isValid={isValueJsonValid}
 					/>
 					<JsonEditor
 						title="Schema"
 						value={schemaStr}
-						onChange={setSchemaStr}
+						onChange={onSchemaStrChange}
 						schema={JsonSchema7Schema}
 						isValid={isSchemaJsonValid}
 					/>
 					<JsonEditor
 						title="UI Schema"
 						value={uiSchemaStr}
-						onChange={setUiSchemaStr}
+						onChange={onUiSchemaStrChange}
 						schema={uiSchemaMetaSchema}
 						isValid={isUiSchemaJsonValid}
 					/>
@@ -226,7 +220,9 @@ const RendererPlaygroundBase = ({
 					}
 				>
 					<Renderer
-						{...jsonProps}
+						value={value}
+						schema={schema}
+						uiSchema={uiSchema}
 						p={2}
 						pb={1}
 						validate={validate}
@@ -234,7 +230,7 @@ const RendererPlaygroundBase = ({
 						extraFormats={EXTRA_FORMATS}
 						extraContext={{
 							...CONTEXT_FUNCTIONS,
-							root: jsonProps.value,
+							root: value,
 						}}
 					/>
 				</ResultCard>
