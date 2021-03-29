@@ -155,7 +155,7 @@ const RendererBase = ({
 	});
 	const processedValue = getValue(value, schema, processedUiSchema);
 
-	if (processedValue === undefined || processedValue === null) {
+	if (processedValue == null) {
 		return null;
 	}
 
@@ -166,7 +166,7 @@ const RendererBase = ({
 	);
 	const Widget = getWidget(
 		processedValue,
-		schema.format,
+		schema?.format,
 		processedUiSchema['ui:widget'],
 		formats,
 	);
@@ -218,8 +218,9 @@ interface InternalRendererProps extends React.HTMLAttributes<HTMLElement> {
 	valueKey?: string;
 	/** The data that should be rendere */
 	value?: Value;
-	/** A json schema describing the shape of the data you would like to render */
-	schema: JSONSchema;
+	// User should always provide a schema but internal calls for materialized field will have this undefined.
+	/** A json schema describing the shape of the data you would like to render. */
+	schema: JSONSchema | undefined;
 	/** A configuration object used to change the styling and layout of the rendered data. */
 	uiSchema?: UiSchema;
 	/** An optional array of formats to pass to the validator, and an optional custom widget for the format. See [addFormat](https://github.com/ajv-validator/ajv#api-addformat) for details of formatters. */

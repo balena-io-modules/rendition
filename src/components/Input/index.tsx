@@ -51,7 +51,7 @@ export interface InternalInputProps
 	onChange?: React.ChangeEventHandler<HTMLInputElement>;
 	type?: string;
 	autoFocus?: boolean;
-	autoComplete?: string | boolean;
+	autoComplete?: string;
 	readOnly?: boolean;
 	disabled?: boolean;
 	pattern?: string;

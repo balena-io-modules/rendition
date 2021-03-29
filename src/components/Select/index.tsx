@@ -15,7 +15,7 @@ type AdjustedGrommetSelectProps = Omit<
 >;
 
 const StyledGrommetSelect = styled(
-	GrommetSelect as React.ComponentClass<AdjustedGrommetSelectProps, any>,
+	GrommetSelect as React.ComponentType<AdjustedGrommetSelectProps>,
 )<InternalSelectProps<any>>`
 	font-family: ${(props) => props.theme.font};
 	font-size: ${(props) => px(props.theme.fontSizes[2])};
