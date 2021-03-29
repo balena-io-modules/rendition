@@ -1,4 +1,26 @@
 - commits:
+    - subject: Fix GrommetSelect type casting for latest Grommet
+      hash: f724567665a8a5b20ae0396f283a37cf5c2159dd
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+    - subject: Fix tests reverting typescript version to 3.9.6
+      hash: ee4ff1a706158e8617c397f6f9d43012885612a3
+      body: |
+        Revert typescript version to 3.9.6 to fix several tests errors
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.10.8
+  date: 2021-03-29T16:27:11.209Z
+- commits:
     - subject: Update dependencies
       hash: 8daf616937f55c4040f1dc069379102601fa1346
       body: ''
