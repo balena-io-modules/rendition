@@ -58,8 +58,8 @@ const getDiscreteBarValue = (
 const DiscreteBar = ({ value, numSlices, ...props }: DiscreteBarProps) => {
 	return (
 		<Flex flexDirection="row">
-			{range(numSlices).map((idx) => (
-				<Box flex={1} mr={idx === numSlices - 1 ? 0 : 2}>
+			{range(numSlices).map((idx, i) => (
+				<Box key={i} flex={1} mr={idx === numSlices - 1 ? 0 : 2}>
 					<ProgressBar
 						value={getDiscreteBarValue(value, numSlices, idx)}
 						{...props}
