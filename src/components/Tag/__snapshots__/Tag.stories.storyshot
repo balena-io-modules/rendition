@@ -3,25 +3,25 @@
 exports[`Storyshots Core/Tag Clickable 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-GqfZa cHWpcm"
+      class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc hSiBVy sc-FBwyV jeQdCq"
     >
       <button
-        class="StyledButton-sc-323bzc-0 jajFOe sc-bqyKva sc-bkzZxe gjQfnS hgJIgM sc-dIUggk YDvpG"
+        class="StyledButton-sc-323bzc-0 dDXISN sc-bqqNGx sc-bjLpWZ fLtAMU fslEki sc-dILjMz hHsOxK"
         type="button"
       >
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-clsHhM cLDXoV bjaVYF"
+          class="sc-gKkhHZ cxMPyI sc-iCEByO gQMsVC sc-hHopXc sc-cljKOb hSiBVy dNgXns"
         >
           <div
-            class="sc-fKFyDc dTkenA sc-bBXqnf iHGIIw"
+            class="sc-fKwCjr ilBSZT sc-bCgmGQ bUddEz"
           >
             Tag: 
           </div>
           <div
-            class="sc-fKFyDc euqOvB sc-bBXqnf iHGIIw"
+            class="sc-fKwCjr fJnwxC sc-bCgmGQ bUddEz"
           >
             Value
           </div>
@@ -35,27 +35,27 @@ exports[`Storyshots Core/Tag Clickable 1`] = `
 exports[`Storyshots Core/Tag Closable 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-GqfZa cHWpcm"
+      class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc hSiBVy sc-FBwyV jeQdCq"
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-clsHhM cLDXoV bjaVYF"
+        class="sc-gKkhHZ cxMPyI sc-iCEByO gQMsVC sc-hHopXc sc-cljKOb hSiBVy dNgXns"
       >
         <div
-          class="sc-fKFyDc dTkenA sc-bBXqnf iHGIIw"
+          class="sc-fKwCjr ilBSZT sc-bCgmGQ bUddEz"
         >
           Tag: 
         </div>
         <div
-          class="sc-fKFyDc euqOvB sc-bBXqnf iHGIIw"
+          class="sc-fKwCjr fJnwxC sc-bCgmGQ bUddEz"
         >
           Value
         </div>
       </div>
       <button
-        class="StyledButton-sc-323bzc-0 jajFOe sc-bqyKva sc-bkzZxe gjQfnS hgJIgM sc-dIUggk fBWcUT sc-fbkhIv hQBnSA"
+        class="StyledButton-sc-323bzc-0 dDXISN sc-bqqNGx sc-bjLpWZ fLtAMU fslEki sc-dILjMz kjXeUX sc-fbtecg kDQhZK"
         type="button"
       >
         <svg
@@ -82,21 +82,21 @@ exports[`Storyshots Core/Tag Closable 1`] = `
 exports[`Storyshots Core/Tag Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-GqfZa cHWpcm"
+      class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc hSiBVy sc-FBwyV jeQdCq"
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-clsHhM cLDXoV bjaVYF"
+        class="sc-gKkhHZ cxMPyI sc-iCEByO gQMsVC sc-hHopXc sc-cljKOb hSiBVy dNgXns"
       >
         <div
-          class="sc-fKFyDc dTkenA sc-bBXqnf iHGIIw"
+          class="sc-fKwCjr ilBSZT sc-bCgmGQ bUddEz"
         >
           Tag: 
         </div>
         <div
-          class="sc-fKFyDc euqOvB sc-bBXqnf iHGIIw"
+          class="sc-fKwCjr fJnwxC sc-bCgmGQ bUddEz"
         >
           Value
         </div>
@@ -109,16 +109,16 @@ exports[`Storyshots Core/Tag Default 1`] = `
 exports[`Storyshots Core/Tag Empty 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-GqfZa cHWpcm"
+      class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc hSiBVy sc-FBwyV jeQdCq"
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-clsHhM cLDXoV bjaVYF"
+        class="sc-gKkhHZ cxMPyI sc-iCEByO gQMsVC sc-hHopXc sc-cljKOb hSiBVy dNgXns"
       >
         <div
-          class="sc-fKFyDc kZwXGu sc-bBXqnf iHGIIw"
+          class="sc-fKwCjr ZRUSd sc-bCgmGQ bUddEz"
         >
           no value
         </div>
@@ -131,36 +131,36 @@ exports[`Storyshots Core/Tag Empty 1`] = `
 exports[`Storyshots Core/Tag Multiple Values 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-GqfZa cHWpcm"
+      class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc hSiBVy sc-FBwyV jeQdCq"
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-clsHhM cLDXoV bjaVYF"
+        class="sc-gKkhHZ cxMPyI sc-iCEByO gQMsVC sc-hHopXc sc-cljKOb hSiBVy dNgXns"
       >
         <div
-          class="sc-fKFyDc dTkenA sc-bBXqnf iHGIIw"
+          class="sc-fKwCjr ilBSZT sc-bCgmGQ bUddEz"
         >
           Tag1 contains 
         </div>
         <div
-          class="sc-fKFyDc euqOvB sc-bBXqnf iHGIIw"
+          class="sc-fKwCjr fJnwxC sc-bCgmGQ bUddEz"
         >
           value1
         </div>
         <div
-          class="sc-fKFyDc krMjta sc-bBXqnf iHGIIw"
+          class="sc-fKwCjr OaQel sc-bCgmGQ bUddEz"
         >
             or  
         </div>
         <div
-          class="sc-fKFyDc dTkenA sc-bBXqnf iHGIIw"
+          class="sc-fKwCjr ilBSZT sc-bCgmGQ bUddEz"
         >
           Tag2 contains 
         </div>
         <div
-          class="sc-fKFyDc euqOvB sc-bBXqnf iHGIIw"
+          class="sc-fKwCjr fJnwxC sc-bCgmGQ bUddEz"
         >
           value2
         </div>
@@ -173,16 +173,16 @@ exports[`Storyshots Core/Tag Multiple Values 1`] = `
 exports[`Storyshots Core/Tag Only Name 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-GqfZa cHWpcm"
+      class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc hSiBVy sc-FBwyV jeQdCq"
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-clsHhM cLDXoV bjaVYF"
+        class="sc-gKkhHZ cxMPyI sc-iCEByO gQMsVC sc-hHopXc sc-cljKOb hSiBVy dNgXns"
       >
         <div
-          class="sc-fKFyDc euqOvB sc-bBXqnf iHGIIw"
+          class="sc-fKwCjr fJnwxC sc-bCgmGQ bUddEz"
         >
           Name
         </div>
@@ -195,16 +195,16 @@ exports[`Storyshots Core/Tag Only Name 1`] = `
 exports[`Storyshots Core/Tag Only Value 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-GqfZa cHWpcm"
+      class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc hSiBVy sc-FBwyV jeQdCq"
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-clsHhM cLDXoV bjaVYF"
+        class="sc-gKkhHZ cxMPyI sc-iCEByO gQMsVC sc-hHopXc sc-cljKOb hSiBVy dNgXns"
       >
         <div
-          class="sc-fKFyDc euqOvB sc-bBXqnf iHGIIw"
+          class="sc-fKwCjr fJnwxC sc-bCgmGQ bUddEz"
         >
           Value
         </div>
@@ -217,26 +217,26 @@ exports[`Storyshots Core/Tag Only Value 1`] = `
 exports[`Storyshots Core/Tag Overflow 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr cLDXoV sc-GqfZa cHWpcm"
+      class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc hSiBVy sc-FBwyV jeQdCq"
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ egHqKA sc-hHftDr sc-clsHhM cLDXoV bjaVYF"
+        class="sc-gKkhHZ cxMPyI sc-iCEByO gQMsVC sc-hHopXc sc-cljKOb hSiBVy dNgXns"
       >
         <div
-          class="sc-fKFyDc dTkenA sc-bBXqnf iHGIIw"
+          class="sc-fKwCjr ilBSZT sc-bCgmGQ bUddEz"
         >
           Tag1 contains 
         </div>
         <div
-          class="sc-fKFyDc euqOvB sc-bBXqnf iHGIIw"
+          class="sc-fKwCjr fJnwxC sc-bCgmGQ bUddEz"
         >
           value1
         </div>
         <div
-          class="sc-fKFyDc dTkenA sc-bBXqnf iHGIIw"
+          class="sc-fKwCjr ilBSZT sc-bCgmGQ bUddEz"
         >
           ... and 3 more
         </div>

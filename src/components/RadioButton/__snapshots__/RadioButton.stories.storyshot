@@ -3,28 +3,28 @@
 exports[`Storyshots Core/RadioButton Checked 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <div
-      class="sc-gyUeRy byZlja sc-gkdzZj dDFlzP"
+      class="sc-gyMicV fRpuqn sc-gkmwsU kLffam"
     >
       <label
-        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 kpowLU"
+        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 eBGZZL"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 bCQoHO StyledRadioButton-g1f6ld-5 imYubY"
+          class="StyledBox-sc-13pk1d4-0 dxpjCF StyledRadioButton-g1f6ld-5 faNYKv"
         >
           <input
             checked=""
-            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hIKMbD"
+            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 ivWYmc"
             name="radio button"
             type="radio"
           />
           <div
-            class="StyledBox-sc-13pk1d4-0 gdySah StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 kGVpuu"
+            class="StyledBox-sc-13pk1d4-0 euJrhi StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 bDuVfd"
           >
             <svg
-              class="StyledRadioButton__StyledRadioButtonIcon-g1f6ld-3 jLTrkN"
+              class="StyledRadioButton__StyledRadioButtonIcon-g1f6ld-3 bSqPxG"
               preserveAspectRatio="xMidYMid meet"
               viewBox="0 0 24 24"
             >
@@ -50,24 +50,24 @@ exports[`Storyshots Core/RadioButton Checked 1`] = `
 exports[`Storyshots Core/RadioButton Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <div
-      class="sc-gyUeRy cAFpBO sc-gkdzZj dDFlzP"
+      class="sc-gyMicV ksuWwf sc-gkmwsU kLffam"
     >
       <label
-        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 kpowLU"
+        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 eBGZZL"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 bCQoHO StyledRadioButton-g1f6ld-5 imYubY"
+          class="StyledBox-sc-13pk1d4-0 dxpjCF StyledRadioButton-g1f6ld-5 faNYKv"
         >
           <input
-            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 hIKMbD"
+            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 ivWYmc"
             name="radio button"
             type="radio"
           />
           <div
-            class="StyledBox-sc-13pk1d4-0 eqKQex StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 kGVpuu"
+            class="StyledBox-sc-13pk1d4-0 fszNWu StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 bDuVfd"
           />
         </div>
         <span
@@ -84,26 +84,26 @@ exports[`Storyshots Core/RadioButton Default 1`] = `
 exports[`Storyshots Core/RadioButton Disabled 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <div
-      class="sc-gyUeRy cAFpBO sc-gkdzZj dDFlzP"
+      class="sc-gyMicV ksuWwf sc-gkmwsU kLffam"
     >
       <label
-        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 gmkESR"
+        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 eJtYIq"
         disabled=""
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 bCQoHO StyledRadioButton-g1f6ld-5 imYubY"
+          class="StyledBox-sc-13pk1d4-0 dxpjCF StyledRadioButton-g1f6ld-5 faNYKv"
         >
           <input
-            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 NlSSr"
+            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 fmxEro"
             disabled=""
             name="radio button"
             type="radio"
           />
           <div
-            class="StyledBox-sc-13pk1d4-0 eqKQex StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 kGVpuu"
+            class="StyledBox-sc-13pk1d4-0 fszNWu StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 bDuVfd"
           />
         </div>
         <span

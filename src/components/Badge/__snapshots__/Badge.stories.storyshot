@@ -3,10 +3,10 @@
 exports[`Storyshots Core/Badge Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <span
-      class="sc-fKFyDc jHCVxA sc-iwyYcG cxxFta sc-iJuUWI bYpSjD sc-giIncl dUYCyj"
+      class="sc-fKwCjr fXUfSH sc-ivKoCB gtaNOF sc-iJSLoz dWxiVA sc-giQjQO ctedrJ"
     >
       Badge
     </span>

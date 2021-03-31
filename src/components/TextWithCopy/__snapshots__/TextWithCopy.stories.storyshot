@@ -3,10 +3,10 @@
 exports[`Storyshots Core/TextWithCopy Always Show 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <span
-      class="sc-fKFyDc jHCVxA sc-iwyYcG bsaCCL sc-kiYtDG htJzkp text-with-copy"
+      class="sc-fKwCjr fXUfSH sc-ivKoCB fgvtZk sc-kijKdB hngnSn text-with-copy"
     >
       <span
         class="text-with-copy__content"
@@ -17,7 +17,7 @@ exports[`Storyshots Core/TextWithCopy Always Show 1`] = `
         class="text-with-copy__copy_wrapper"
       >
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP text-with-copy__copy"
+          class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd text-with-copy__copy"
         >
           <svg
             aria-hidden="true"
@@ -44,10 +44,10 @@ exports[`Storyshots Core/TextWithCopy Always Show 1`] = `
 exports[`Storyshots Core/TextWithCopy Code 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <span
-      class="sc-fKFyDc jHCVxA sc-iwyYcG bsaCCL sc-kiYtDG cohYER text-with-copy"
+      class="sc-fKwCjr fXUfSH sc-ivKoCB fgvtZk sc-kijKdB lljVMH text-with-copy"
       title="This value has been copied to your clipboard!"
     >
       <code
@@ -59,7 +59,7 @@ exports[`Storyshots Core/TextWithCopy Code 1`] = `
         class="text-with-copy__copy_wrapper"
       >
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP text-with-copy__copy"
+          class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd text-with-copy__copy"
         >
           <svg
             aria-hidden="true"
@@ -86,10 +86,10 @@ exports[`Storyshots Core/TextWithCopy Code 1`] = `
 exports[`Storyshots Core/TextWithCopy Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <span
-      class="sc-fKFyDc jHCVxA sc-iwyYcG bsaCCL sc-kiYtDG cohYER text-with-copy"
+      class="sc-fKwCjr fXUfSH sc-ivKoCB fgvtZk sc-kijKdB lljVMH text-with-copy"
       title="This value has been copied to your clipboard!"
     >
       <span
@@ -108,7 +108,7 @@ exports[`Storyshots Core/TextWithCopy Default 1`] = `
         class="text-with-copy__copy_wrapper"
       >
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP text-with-copy__copy"
+          class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd text-with-copy__copy"
         >
           <svg
             aria-hidden="true"

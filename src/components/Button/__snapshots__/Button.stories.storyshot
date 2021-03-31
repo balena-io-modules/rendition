@@ -3,10 +3,10 @@
 exports[`Storyshots Core/Button Active 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <button
-      class="StyledButton-sc-323bzc-0 djzULC sc-bqyKva sc-kstrdz gjQfnS EqQzD sc-dIUggk YDvpG"
+      class="StyledButton-sc-323bzc-0 ggTvsl sc-bqqNGx sc-krVALI fLtAMU klMHFD sc-dILjMz hHsOxK"
       type="button"
     >
       Active
@@ -18,10 +18,10 @@ exports[`Storyshots Core/Button Active 1`] = `
 exports[`Storyshots Core/Button Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <button
-      class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk YDvpG"
+      class="StyledButton-sc-323bzc-0 fNFKlo sc-bqqNGx sc-hCcOGj fLtAMU gnvURH sc-dILjMz hHsOxK"
       type="button"
     >
       Default
@@ -33,10 +33,10 @@ exports[`Storyshots Core/Button Default 1`] = `
 exports[`Storyshots Core/Button Disabled 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <button
-      class="StyledButton-sc-323bzc-0 soChx sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk YDvpG"
+      class="StyledButton-sc-323bzc-0 bRuLPC sc-bqqNGx sc-hCcOGj fLtAMU gnvURH sc-dILjMz hHsOxK"
       disabled=""
       type="button"
     >
@@ -49,10 +49,10 @@ exports[`Storyshots Core/Button Disabled 1`] = `
 exports[`Storyshots Core/Button Icon Only 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <button
-      class="StyledButton-sc-323bzc-0 LKyTv sc-bqyKva sc-bkzZxe gjQfnS hgJIgM sc-dIUggk YDvpG"
+      class="StyledButton-sc-323bzc-0 cXyBtU sc-bqqNGx sc-bjLpWZ fLtAMU fslEki sc-dILjMz hHsOxK"
       type="button"
     >
       <svg
@@ -78,10 +78,10 @@ exports[`Storyshots Core/Button Icon Only 1`] = `
 exports[`Storyshots Core/Button Link 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <a
-      class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk YDvpG"
+      class="StyledButton-sc-323bzc-0 fNFKlo sc-bqqNGx sc-hCcOGj fLtAMU gnvURH sc-dILjMz hHsOxK"
       href="#"
     >
       Link
@@ -93,10 +93,10 @@ exports[`Storyshots Core/Button Link 1`] = `
 exports[`Storyshots Core/Button Outlined 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <button
-      class="StyledButton-sc-323bzc-0 cfpfuP sc-bqyKva sc-hBEYos gjQfnS kmijuE sc-dIUggk YDvpG"
+      class="StyledButton-sc-323bzc-0 fNFKlo sc-bqqNGx sc-hCcOGj fLtAMU gnvURH sc-dILjMz hHsOxK"
       type="button"
     >
       Outlined
@@ -108,10 +108,10 @@ exports[`Storyshots Core/Button Outlined 1`] = `
 exports[`Storyshots Core/Button Plain 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <button
-      class="StyledButton-sc-323bzc-0 jajFOe sc-bqyKva sc-bkzZxe gjQfnS hgJIgM sc-dIUggk YDvpG"
+      class="StyledButton-sc-323bzc-0 dDXISN sc-bqqNGx sc-bjLpWZ fLtAMU fslEki sc-dILjMz hHsOxK"
       type="button"
     >
       Plain
@@ -123,10 +123,10 @@ exports[`Storyshots Core/Button Plain 1`] = `
 exports[`Storyshots Core/Button Primary 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <button
-      class="StyledButton-sc-323bzc-0 fGJlAh sc-bqyKva sc-kstrdz gjQfnS FUwNf sc-dIUggk YDvpG"
+      class="StyledButton-sc-323bzc-0 kYJWdG sc-bqqNGx sc-krVALI fLtAMU hBSiXf sc-dILjMz hHsOxK"
       type="button"
     >
       Primary
@@ -138,10 +138,10 @@ exports[`Storyshots Core/Button Primary 1`] = `
 exports[`Storyshots Core/Button Underlined 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <button
-      class="StyledButton-sc-323bzc-0 jajFOe sc-bqyKva sc-bkzZxe sc-idOhPF gjQfnS hgJIgM iZyZXn sc-dIUggk YDvpG"
+      class="StyledButton-sc-323bzc-0 dDXISN sc-bqqNGx sc-bjLpWZ sc-ieCRpK fLtAMU fslEki jQqqhC sc-dILjMz hHsOxK"
       type="button"
     >
       Underlined
@@ -153,10 +153,10 @@ exports[`Storyshots Core/Button Underlined 1`] = `
 exports[`Storyshots Core/Button With Confirmation 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <button
-      class="StyledButton-sc-323bzc-0 bxeVfd sc-bqyKva sc-kstrdz gjQfnS ekgxxv sc-dIUggk YDvpG"
+      class="StyledButton-sc-323bzc-0 cIcfMS sc-bqqNGx sc-krVALI fLtAMU jutVkH sc-dILjMz hHsOxK"
       type="button"
     >
       Dangerous
@@ -168,14 +168,14 @@ exports[`Storyshots Core/Button With Confirmation 1`] = `
 exports[`Storyshots Core/Button With Icon 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <button
-      class="StyledButton-sc-323bzc-0 jajFOe sc-bqyKva sc-bkzZxe gjQfnS hgJIgM sc-dIUggk YDvpG"
+      class="StyledButton-sc-323bzc-0 dDXISN sc-bqqNGx sc-bjLpWZ fLtAMU fslEki sc-dILjMz hHsOxK"
       type="button"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 iQEJEP"
+        class="StyledBox-sc-13pk1d4-0 ihOyQQ"
       >
         <svg
           aria-hidden="true"
@@ -193,7 +193,7 @@ exports[`Storyshots Core/Button With Icon 1`] = `
           />
         </svg>
         <div
-          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 fAbILH"
+          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 fEKiSw"
         />
         With icon
       </div>
