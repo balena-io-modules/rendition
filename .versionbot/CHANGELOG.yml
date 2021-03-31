@@ -1,4 +1,17 @@
 - commits:
+    - subject: Export multiple components from Renderer component
+      hash: 546bdc9bcb9995f8ae850087b1e064dba173942d
+      body: |
+        Export multiple components from Renderer component
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.11.0
+  date: 2021-03-31T11:27:09.944Z
+- commits:
     - subject: 'RendererPlaygroud: Simplify using useMemo instead of follow-up useEffect'
       hash: e82315da3c7ecb5ad9ebc85d129f7c60e62de48f
       body: |
