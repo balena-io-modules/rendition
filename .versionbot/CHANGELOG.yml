@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'StatsBar: Add missing key property'
+      hash: eebc9e567301d4798366e0bd0c4decbdbf7256cc
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 20.10.10
+  date: 2021-03-31T14:03:04.040Z
+- commits:
     - subject: 'RendererPlaygroud: Simplify using useMemo instead of follow-up useEffect'
       hash: e82315da3c7ecb5ad9ebc85d129f7c60e62de48f
       body: |
