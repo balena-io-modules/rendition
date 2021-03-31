@@ -3,13 +3,13 @@
 exports[`Storyshots Core/Spinner Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ewcxWD sc-hHftDr fYuNSV sc-cbDGPM jfOLHm"
+      class="sc-gKkhHZ cxMPyI sc-iCEByO czzHJd sc-hHopXc DRrMe sc-cbuKwb eiNSJQ"
     >
       <div
-        class="sc-ljRboo dKVzgf"
+        class="sc-ljIeUD cIXua-d"
       />
     </div>
   </div>
@@ -19,13 +19,13 @@ exports[`Storyshots Core/Spinner Default 1`] = `
 exports[`Storyshots Core/Spinner Emphasized 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ewcxWD sc-hHftDr cMsQud sc-cbDGPM jfOLHm"
+      class="sc-gKkhHZ cxMPyI sc-iCEByO czzHJd sc-hHopXc bXBTrm sc-cbuKwb eiNSJQ"
     >
       <div
-        class="sc-ljRboo FpWZZ"
+        class="sc-ljIeUD dXobzD"
       />
     </div>
   </div>
@@ -35,32 +35,32 @@ exports[`Storyshots Core/Spinner Emphasized 1`] = `
 exports[`Storyshots Core/Spinner With Children 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <div
-      class="sc-jmhFOf Irpdp sc-cbDGPM jfOLHm"
+      class="sc-jlJPwo cnTyAu sc-cbuKwb eiNSJQ"
     >
       <div
-        class="sc-gKsewC cgpPfo sc-iBPRYJ dWRxlP sc-hHftDr sc-dUrnRO kFVJVF iKHNoa"
+        class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc sc-dTCErJ gVVCNS kTjcFj"
       >
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ ewcxWD sc-hHftDr fYuNSV"
+          class="sc-gKkhHZ cxMPyI sc-iCEByO czzHJd sc-hHopXc DRrMe"
         >
           <div
-            class="sc-ljRboo dKVzgf"
+            class="sc-ljIeUD cIXua-d"
           />
           <div
-            class="sc-fKFyDc jHCVxA sc-bBXqnf kCTWx"
+            class="sc-fKwCjr fXUfSH sc-bCgmGQ EaAsW"
           >
             Spinning...
           </div>
         </div>
       </div>
       <div
-        class="sc-httYMd fxrWNV"
+        class="sc-htBVAG dWVPqE"
       >
         <div
-          class="sc-gKsewC cgpPfo sc-iBPRYJ bgxczn"
+          class="sc-gKkhHZ cxMPyI sc-iCEByO cbepGZ"
           style="background-color: rgb(248, 249, 253);"
         >
           Spinning, the wrapped children are made opaque
@@ -74,23 +74,23 @@ exports[`Storyshots Core/Spinner With Children 1`] = `
 exports[`Storyshots Core/Spinner With Component Label 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ewcxWD sc-hHftDr fYuNSV sc-cbDGPM jfOLHm"
+      class="sc-gKkhHZ cxMPyI sc-iCEByO czzHJd sc-hHopXc DRrMe sc-cbuKwb eiNSJQ"
     >
       <div
-        class="sc-ljRboo dKVzgf"
+        class="sc-ljIeUD cIXua-d"
       />
       <div
-        class="sc-fKFyDc jHCVxA sc-bBXqnf kCTWx"
+        class="sc-fKwCjr fXUfSH sc-bCgmGQ EaAsW"
       >
         <div
-          class="sc-fKFyDc jHCVxA sc-bBXqnf gUmJJR"
+          class="sc-fKwCjr fXUfSH sc-bCgmGQ cNUeIG"
         >
           Building image 
           <button
-            class="StyledButton-sc-323bzc-0 jajFOe sc-bqyKva sc-bkzZxe gjQfnS hgJIgM sc-dIUggk YDvpG"
+            class="StyledButton-sc-323bzc-0 dDXISN sc-bqqNGx sc-bjLpWZ fLtAMU fslEki sc-dILjMz hHsOxK"
             type="button"
           >
             12345
@@ -106,16 +106,16 @@ exports[`Storyshots Core/Spinner With Component Label 1`] = `
 exports[`Storyshots Core/Spinner With Label 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <div
-      class="sc-gKsewC cgpPfo sc-iBPRYJ ewcxWD sc-hHftDr fYuNSV sc-cbDGPM jfOLHm"
+      class="sc-gKkhHZ cxMPyI sc-iCEByO czzHJd sc-hHopXc DRrMe sc-cbuKwb eiNSJQ"
     >
       <div
-        class="sc-ljRboo dKVzgf"
+        class="sc-ljIeUD cIXua-d"
       />
       <div
-        class="sc-fKFyDc jHCVxA sc-bBXqnf kCTWx"
+        class="sc-fKwCjr fXUfSH sc-bCgmGQ EaAsW"
       >
         Spinning...
       </div>

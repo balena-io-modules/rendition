@@ -3,10 +3,10 @@
 exports[`Storyshots Core/Heading Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <h3
-      class="sc-gWHgXt eCVPSB sc-cBNfnY hJuLdz"
+      class="sc-gXvQxy hKQgRw sc-cBEiUn eEmtjQ"
     >
       Heading h3
     </h3>
@@ -17,10 +17,10 @@ exports[`Storyshots Core/Heading Default 1`] = `
 exports[`Storyshots Core/Heading H 1 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <h1
-      class="sc-gWHgXt eCVPSB sc-citwmv gCCLOD"
+      class="sc-gXvQxy hKQgRw sc-ciCsGg lcMmoU"
     >
       Heading h1
     </h1>
@@ -31,10 +31,10 @@ exports[`Storyshots Core/Heading H 1 1`] = `
 exports[`Storyshots Core/Heading H 2 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <h2
-      class="sc-gWHgXt eCVPSB sc-jcVebW fcdKNU"
+      class="sc-gXvQxy hKQgRw sc-jcguBR cDmxBX"
     >
       Heading h2
     </h2>
@@ -45,10 +45,10 @@ exports[`Storyshots Core/Heading H 2 1`] = `
 exports[`Storyshots Core/Heading H 3 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <h3
-      class="sc-gWHgXt eCVPSB sc-bZSQDF QBWsK"
+      class="sc-gXvQxy hKQgRw sc-caHA-dK ftXvyU"
     >
       Heading h3
     </h3>
@@ -59,10 +59,10 @@ exports[`Storyshots Core/Heading H 3 1`] = `
 exports[`Storyshots Core/Heading H 4 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <h4
-      class="sc-gWHgXt vKAIQ sc-iUuytg hGhxwq"
+      class="sc-gXvQxy jigUsZ sc-iUlBZv hjmOVA"
     >
       Heading h4
     </h4>
@@ -73,10 +73,10 @@ exports[`Storyshots Core/Heading H 4 1`] = `
 exports[`Storyshots Core/Heading H 5 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jdcmMW sc-eFubAy kVQCHm"
+    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
   >
     <h5
-      class="sc-gWHgXt vKAIQ sc-iBaPrD eWrQCP"
+      class="sc-gXvQxy jigUsZ sc-iBjLLo jnAwKi"
     >
       Heading h5
     </h5>
