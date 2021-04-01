@@ -1,4 +1,17 @@
 - commits:
+    - subject: Generate missing snapshots
+      hash: 77f29b868c03bc90cc84d73a538ab35b507b80b2
+      body: |
+        Generate missing snapshots
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.10.11
+  date: 2021-04-01T12:53:04.345Z
+- commits:
     - subject: 'StatsBar: Add missing key property'
       hash: eebc9e567301d4798366e0bd0c4decbdbf7256cc
       body: ''
