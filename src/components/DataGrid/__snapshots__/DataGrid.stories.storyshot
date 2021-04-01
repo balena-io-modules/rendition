@@ -3,25 +3,25 @@
 exports[`Storyshots Core/DataGrid Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
+    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <div
-      class="sc-xqHvd jbppsU"
+      class="sc-xiKGw jmxZvk"
     >
       <div
-        class="sc-dWlYLs gThsmh"
+        class="sc-dVNiOx kUOLNr"
       >
         <div
-          class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc sc-dlwItR hSiBVy ewcwIm sc-cTZfEe JtxAm sc-jNDhzP jkhaKE"
+          class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj OuQI sc-jObXwK daJbGE"
         >
           <div
-            class="sc-gKkhHZ cxMPyI sc-iCEByO hbUDLW"
+            class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
           >
             <div
-              class="sc-gKkhHZ cxMPyI sc-iCEByO iXcCUs"
+              class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
             >
               <div
-                class="sc-fKwCjr bYNGTs sc-bCgmGQ fJeuiQ"
+                class="sc-fKVsgm bHxeza sc-bBHwJV kJVMYn"
               >
                 1
               </div>
@@ -30,19 +30,19 @@ exports[`Storyshots Core/DataGrid Default 1`] = `
         </div>
       </div>
       <div
-        class="sc-dWlYLs gThsmh"
+        class="sc-dVNiOx kUOLNr"
       >
         <div
-          class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc sc-dlwItR hSiBVy ewcwIm sc-cTZfEe JtxAm sc-jNDhzP jkhaKE"
+          class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj OuQI sc-jObXwK daJbGE"
         >
           <div
-            class="sc-gKkhHZ cxMPyI sc-iCEByO hbUDLW"
+            class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
           >
             <div
-              class="sc-gKkhHZ cxMPyI sc-iCEByO iXcCUs"
+              class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
             >
               <div
-                class="sc-fKwCjr bYNGTs sc-bCgmGQ fJeuiQ"
+                class="sc-fKVsgm bHxeza sc-bBHwJV kJVMYn"
               >
                 2
               </div>
@@ -51,19 +51,19 @@ exports[`Storyshots Core/DataGrid Default 1`] = `
         </div>
       </div>
       <div
-        class="sc-dWlYLs gThsmh"
+        class="sc-dVNiOx kUOLNr"
       >
         <div
-          class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc sc-dlwItR hSiBVy ewcwIm sc-cTZfEe JtxAm sc-jNDhzP jkhaKE"
+          class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj OuQI sc-jObXwK daJbGE"
         >
           <div
-            class="sc-gKkhHZ cxMPyI sc-iCEByO hbUDLW"
+            class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
           >
             <div
-              class="sc-gKkhHZ cxMPyI sc-iCEByO iXcCUs"
+              class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
             >
               <div
-                class="sc-fKwCjr bYNGTs sc-bCgmGQ fJeuiQ"
+                class="sc-fKVsgm bHxeza sc-bBHwJV kJVMYn"
               >
                 3
               </div>
@@ -72,19 +72,19 @@ exports[`Storyshots Core/DataGrid Default 1`] = `
         </div>
       </div>
       <div
-        class="sc-dWlYLs gThsmh"
+        class="sc-dVNiOx kUOLNr"
       >
         <div
-          class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc sc-dlwItR hSiBVy ewcwIm sc-cTZfEe JtxAm sc-jNDhzP jkhaKE"
+          class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj OuQI sc-jObXwK daJbGE"
         >
           <div
-            class="sc-gKkhHZ cxMPyI sc-iCEByO hbUDLW"
+            class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
           >
             <div
-              class="sc-gKkhHZ cxMPyI sc-iCEByO iXcCUs"
+              class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
             >
               <div
-                class="sc-fKwCjr bYNGTs sc-bCgmGQ fJeuiQ"
+                class="sc-fKVsgm bHxeza sc-bBHwJV kJVMYn"
               >
                 4
               </div>
@@ -93,19 +93,19 @@ exports[`Storyshots Core/DataGrid Default 1`] = `
         </div>
       </div>
       <div
-        class="sc-dWlYLs gThsmh"
+        class="sc-dVNiOx kUOLNr"
       >
         <div
-          class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc sc-dlwItR hSiBVy ewcwIm sc-cTZfEe JtxAm sc-jNDhzP jkhaKE"
+          class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj OuQI sc-jObXwK daJbGE"
         >
           <div
-            class="sc-gKkhHZ cxMPyI sc-iCEByO hbUDLW"
+            class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
           >
             <div
-              class="sc-gKkhHZ cxMPyI sc-iCEByO iXcCUs"
+              class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
             >
               <div
-                class="sc-fKwCjr bYNGTs sc-bCgmGQ fJeuiQ"
+                class="sc-fKVsgm bHxeza sc-bBHwJV kJVMYn"
               >
                 5
               </div>
@@ -114,19 +114,19 @@ exports[`Storyshots Core/DataGrid Default 1`] = `
         </div>
       </div>
       <div
-        class="sc-dWlYLs gThsmh"
+        class="sc-dVNiOx kUOLNr"
       >
         <div
-          class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc sc-dlwItR hSiBVy ewcwIm sc-cTZfEe JtxAm sc-jNDhzP jkhaKE"
+          class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj OuQI sc-jObXwK daJbGE"
         >
           <div
-            class="sc-gKkhHZ cxMPyI sc-iCEByO hbUDLW"
+            class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
           >
             <div
-              class="sc-gKkhHZ cxMPyI sc-iCEByO iXcCUs"
+              class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
             >
               <div
-                class="sc-fKwCjr bYNGTs sc-bCgmGQ fJeuiQ"
+                class="sc-fKVsgm bHxeza sc-bBHwJV kJVMYn"
               >
                 6
               </div>

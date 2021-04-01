@@ -3,13 +3,13 @@
 exports[`Storyshots Core/Pager Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
+    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <div
-      class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc khDowU"
+      class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah dancCe"
     >
       <div
-        class="sc-fKwCjr fXUfSH sc-bCgmGQ cgDZsB"
+        class="sc-fKVsgm hjxFYR sc-bBHwJV kVZSOm"
       >
         <strong>
           51
@@ -23,13 +23,13 @@ exports[`Storyshots Core/Pager Default 1`] = `
         </strong>
       </div>
       <div
-        class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc hSiBVy"
+        class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah cisfns"
       >
         <div
-          class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc sc-kLEdLr hSiBVy cljlng"
+          class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-kLwgWK cisfns bMLnwa"
         >
           <button
-            class="StyledButton-sc-323bzc-0 hlsARa sc-bqqNGx sc-hCcOGj fLtAMU VSZBT sc-dILjMz hHsOxK rendition-pager__btn--prev"
+            class="StyledButton-sc-323bzc-0 hMZcmT sc-bqiQRQ sc-hBURRC dZBHzy hEVqZs sc-dJjZJu bJNpNW rendition-pager__btn--prev"
             type="button"
           >
             <svg
@@ -49,7 +49,7 @@ exports[`Storyshots Core/Pager Default 1`] = `
             </svg>
           </button>
           <button
-            class="StyledButton-sc-323bzc-0 hlsARa sc-bqqNGx sc-hCcOGj fLtAMU VSZBT sc-dILjMz hHsOxK rendition-pager__btn--next"
+            class="StyledButton-sc-323bzc-0 hMZcmT sc-bqiQRQ sc-hBURRC dZBHzy hEVqZs sc-dJjZJu bJNpNW rendition-pager__btn--next"
             type="button"
           >
             <svg

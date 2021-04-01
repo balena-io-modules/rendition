@@ -3,13 +3,13 @@
 exports[`Storyshots Core/Box Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
+    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <div
-      class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd"
+      class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl"
     >
       <div
-        class="sc-fKwCjr fXUfSH sc-bCgmGQ jeUYnT"
+        class="sc-fKVsgm hjxFYR sc-bBHwJV ghoMNI"
       >
         I'm in a Box!
       </div>

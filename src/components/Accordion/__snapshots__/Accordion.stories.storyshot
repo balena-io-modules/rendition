@@ -3,36 +3,36 @@
 exports[`Storyshots Core/Accordion Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
+    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 cXmCLE"
+      class="StyledBox-sc-13pk1d4-0 hvUCKZ"
       role="tablist"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 fIypGl"
+        class="StyledBox-sc-13pk1d4-0 iuBOfw"
       >
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 hQLlUp"
+          class="StyledButton-sc-323bzc-0 jDncYU"
           role="tab"
           type="button"
         >
           <div
-            class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc leTfGG"
+            class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah kfDFoA"
           >
             <div
-              class="sc-gKkhHZ cxMPyI sc-iCEByO eggjRa sc-hHopXc hSiBVy"
+              class="sc-gKckTs jhmBNr sc-iCfLBT geTtOq sc-hGPAah cisfns"
             >
               <div
-                class="sc-fKwCjr fJnwxC sc-bCgmGQ hYdlYi"
+                class="sc-fKVsgm kcFwyk sc-bBHwJV faEqjl"
               >
                 Heading one
               </div>
             </div>
             <div
-              class="sc-gKkhHZ cxMPyI sc-iCEByO fBrEev sc-hHopXc khDowU"
+              class="sc-gKckTs jhmBNr sc-iCfLBT gLTfSP sc-hGPAah dancCe"
             >
               <svg
                 aria-hidden="true"
@@ -54,38 +54,38 @@ exports[`Storyshots Core/Accordion Default 1`] = `
           </div>
         </button>
         <div
-          class="StyledBox-sc-13pk1d4-0 izRXcf"
+          class="StyledBox-sc-13pk1d4-0 ijhmMK"
         >
           <div
             aria-hidden="true"
-            class="StyledBox-sc-13pk1d4-0 cXmCLE Collapsible__AnimatedBox-sc-15kniua-0 dLCcRM"
+            class="StyledBox-sc-13pk1d4-0 hvUCKZ Collapsible__AnimatedBox-sc-15kniua-0 irPKSt"
           />
         </div>
       </div>
       <div
-        class="StyledBox-sc-13pk1d4-0 fIypGl"
+        class="StyledBox-sc-13pk1d4-0 iuBOfw"
       >
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 hQLlUp"
+          class="StyledButton-sc-323bzc-0 jDncYU"
           role="tab"
           type="button"
         >
           <div
-            class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc leTfGG"
+            class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah kfDFoA"
           >
             <div
-              class="sc-gKkhHZ cxMPyI sc-iCEByO eggjRa sc-hHopXc hSiBVy"
+              class="sc-gKckTs jhmBNr sc-iCfLBT geTtOq sc-hGPAah cisfns"
             >
               <div
-                class="sc-fKwCjr fJnwxC sc-bCgmGQ hYdlYi"
+                class="sc-fKVsgm kcFwyk sc-bBHwJV faEqjl"
               >
                 Second Heading
               </div>
             </div>
             <div
-              class="sc-gKkhHZ cxMPyI sc-iCEByO fBrEev sc-hHopXc khDowU"
+              class="sc-gKckTs jhmBNr sc-iCfLBT gLTfSP sc-hGPAah dancCe"
             >
               <svg
                 aria-hidden="true"
@@ -107,11 +107,11 @@ exports[`Storyshots Core/Accordion Default 1`] = `
           </div>
         </button>
         <div
-          class="StyledBox-sc-13pk1d4-0 izRXcf"
+          class="StyledBox-sc-13pk1d4-0 ijhmMK"
         >
           <div
             aria-hidden="true"
-            class="StyledBox-sc-13pk1d4-0 cXmCLE Collapsible__AnimatedBox-sc-15kniua-0 dLCcRM"
+            class="StyledBox-sc-13pk1d4-0 hvUCKZ Collapsible__AnimatedBox-sc-15kniua-0 irPKSt"
           />
         </div>
       </div>
