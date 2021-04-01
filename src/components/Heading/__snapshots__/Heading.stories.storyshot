@@ -3,10 +3,10 @@
 exports[`Storyshots Core/Heading Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
+    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <h3
-      class="sc-gXvQxy hKQgRw sc-cBEiUn eEmtjQ"
+      class="sc-gWXaA-D bfOJSR sc-cCcYRi kVjTpC"
     >
       Heading h3
     </h3>
@@ -17,10 +17,10 @@ exports[`Storyshots Core/Heading Default 1`] = `
 exports[`Storyshots Core/Heading H 1 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
+    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <h1
-      class="sc-gXvQxy hKQgRw sc-ciCsGg lcMmoU"
+      class="sc-gWXaA-D bfOJSR sc-cidCJl eyQaHc"
     >
       Heading h1
     </h1>
@@ -31,10 +31,10 @@ exports[`Storyshots Core/Heading H 1 1`] = `
 exports[`Storyshots Core/Heading H 2 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
+    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <h2
-      class="sc-gXvQxy hKQgRw sc-jcguBR cDmxBX"
+      class="sc-gWXaA-D bfOJSR sc-jcFkyM iORiWN"
     >
       Heading h2
     </h2>
@@ -45,10 +45,10 @@ exports[`Storyshots Core/Heading H 2 1`] = `
 exports[`Storyshots Core/Heading H 3 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
+    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <h3
-      class="sc-gXvQxy hKQgRw sc-caHA-dK ftXvyU"
+      class="sc-gWXaA-D bfOJSR sc-caiKgP dfcPIP"
     >
       Heading h3
     </h3>
@@ -59,10 +59,10 @@ exports[`Storyshots Core/Heading H 3 1`] = `
 exports[`Storyshots Core/Heading H 4 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
+    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <h4
-      class="sc-gXvQxy jigUsZ sc-iUlBZv hjmOVA"
+      class="sc-gWXaA-D iitkgk sc-iUKrWq jsxObM"
     >
       Heading h4
     </h4>
@@ -73,10 +73,10 @@ exports[`Storyshots Core/Heading H 4 1`] = `
 exports[`Storyshots Core/Heading H 5 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
+    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <h5
-      class="sc-gXvQxy jigUsZ sc-iBjLLo jnAwKi"
+      class="sc-gWXaA-D iitkgk sc-iAKVOt cShAhT"
     >
       Heading h5
     </h5>

@@ -3,19 +3,19 @@
 exports[`Storyshots Core/Card Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
+    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <div
       style="width: 400px; height: 400px;"
     >
       <div
-        class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc sc-dlwItR hSiBVy ewcwIm sc-cTZfEe JtxAm sc-jNDhzP jkhaKE"
+        class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj OuQI sc-jObXwK daJbGE"
       >
         <div
-          class="sc-gKkhHZ cxMPyI sc-iCEByO hbUDLW"
+          class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
         >
           <div
-            class="sc-gKkhHZ cxMPyI sc-iCEByO iXcCUs"
+            class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
   scelerisque euismod risus at gravida. Pellentesque a nunc semper,
@@ -31,19 +31,19 @@ exports[`Storyshots Core/Card Default 1`] = `
 exports[`Storyshots Core/Card Small 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
+    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <div
       style="width: 400px; height: 400px;"
     >
       <div
-        class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc sc-dlwItR hSiBVy ewcwIm sc-cTZfEe fXRqyl sc-jNDhzP jkhaKE"
+        class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj iHyFVj sc-jObXwK daJbGE"
       >
         <div
-          class="sc-gKkhHZ cxMPyI sc-iCEByO hbUDLW"
+          class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
         >
           <div
-            class="sc-gKkhHZ cxMPyI sc-iCEByO iXcCUs"
+            class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
   scelerisque euismod risus at gravida. Pellentesque a nunc semper,
@@ -59,37 +59,37 @@ exports[`Storyshots Core/Card Small 1`] = `
 exports[`Storyshots Core/Card With Header 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
+    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <div
       style="width: 400px; height: 400px;"
     >
       <div
-        class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc sc-dlwItR hSiBVy ewcwIm sc-cTZfEe JtxAm sc-jNDhzP jkhaKE"
+        class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj OuQI sc-jObXwK daJbGE"
       >
         <div
-          class="sc-gKkhHZ cxMPyI sc-iCEByO hbUDLW"
+          class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
         >
           <div
-            class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc leTfGG"
+            class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah kfDFoA"
           >
             <h5
-              class="sc-gXvQxy jigUsZ sc-iBjLLo dcuzDc"
+              class="sc-gWXaA-D iitkgk sc-iAKVOt flZRRl"
             >
               Card with Button
             </h5>
             <button
-              class="StyledButton-sc-323bzc-0 gWVXgU sc-bqqNGx sc-bjLpWZ fLtAMU felHXn sc-dILjMz hHsOxK"
+              class="StyledButton-sc-323bzc-0 bTZyVl sc-bqiQRQ sc-bkkfTU dZBHzy jcglJa sc-dJjZJu bJNpNW"
               type="button"
             >
               Update
             </button>
           </div>
           <hr
-            class="sc-ikBCnG gROgll sc-hiulGA gCgwqw"
+            class="sc-ikJzcn blqzkB sc-hiCivh iDGhYe"
           />
           <div
-            class="sc-gKkhHZ cxMPyI sc-iCEByO iXcCUs"
+            class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
   scelerisque euismod risus at gravida. Pellentesque a nunc semper,
@@ -105,27 +105,27 @@ exports[`Storyshots Core/Card With Header 1`] = `
 exports[`Storyshots Core/Card With Rows 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
+    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <div
       style="width: 400px; height: 400px;"
     >
       <div
-        class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc sc-dlwItR hSiBVy ewcwIm sc-cTZfEe JtxAm sc-jNDhzP jkhaKE"
+        class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj OuQI sc-jObXwK daJbGE"
       >
         <div
-          class="sc-gKkhHZ cxMPyI sc-iCEByO hbUDLW"
+          class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
         >
           <div
-            class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc leTfGG"
+            class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah kfDFoA"
           >
             <h5
-              class="sc-gXvQxy jigUsZ sc-iBjLLo dcuzDc"
+              class="sc-gWXaA-D iitkgk sc-iAKVOt flZRRl"
             >
               Card with Button
             </h5>
             <a
-              class="sc-eGZQJn bLnTyJ sc-ctiUpC gMbSSC"
+              class="sc-eGRTUG hyiPSP sc-ctqRej UpykM"
               color="primary.main"
               href="https://balena.io"
             >
@@ -133,23 +133,23 @@ exports[`Storyshots Core/Card With Rows 1`] = `
             </a>
           </div>
           <hr
-            class="sc-ikBCnG gROgll sc-hiulGA gCgwqw"
+            class="sc-ikJzcn blqzkB sc-hiCivh iDGhYe"
           />
           <div
-            class="sc-gKkhHZ cxMPyI sc-iCEByO fLkcde"
+            class="sc-gKckTs jhmBNr sc-iCfLBT ga-DGEu"
           >
             <div>
               Lorem Ipsum dolor si amet
             </div>
           </div>
           <div
-            class="sc-gKkhHZ cxMPyI sc-iCEByO fLkcde"
+            class="sc-gKckTs jhmBNr sc-iCfLBT ga-DGEu"
           >
             <hr
-              class="sc-ikBCnG gROgll sc-hiulGA ZixbU"
+              class="sc-ikJzcn blqzkB sc-hiCivh cMgYW"
             />
             <a
-              class="sc-eGZQJn bLnTyJ sc-ctiUpC gMbSSC"
+              class="sc-eGRTUG hyiPSP sc-ctqRej UpykM"
               color="primary.main"
               href="www.balena.io"
             >
@@ -157,13 +157,13 @@ exports[`Storyshots Core/Card With Rows 1`] = `
             </a>
           </div>
           <div
-            class="sc-gKkhHZ cxMPyI sc-iCEByO fLkcde"
+            class="sc-gKckTs jhmBNr sc-iCfLBT ga-DGEu"
           >
             <hr
-              class="sc-ikBCnG gROgll sc-hiulGA ZixbU"
+              class="sc-ikJzcn blqzkB sc-hiCivh cMgYW"
             />
             <span
-              class="sc-fKwCjr fXUfSH sc-ivKoCB fgvtZk sc-kijKdB hngnSn text-with-copy"
+              class="sc-fKVsgm hjxFYR sc-iwjezw cUnsQP sc-kiIAaw fSZLZj text-with-copy"
               title="This value has been copied to your clipboard!"
             >
               <span
@@ -175,7 +175,7 @@ exports[`Storyshots Core/Card With Rows 1`] = `
                 class="text-with-copy__copy_wrapper"
               >
                 <div
-                  class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd text-with-copy__copy"
+                  class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl text-with-copy__copy"
                 >
                   <svg
                     aria-hidden="true"
@@ -197,13 +197,13 @@ exports[`Storyshots Core/Card With Rows 1`] = `
             </span>
           </div>
           <div
-            class="sc-gKkhHZ cxMPyI sc-iCEByO fLkcde"
+            class="sc-gKckTs jhmBNr sc-iCfLBT ga-DGEu"
           >
             <hr
-              class="sc-ikBCnG gROgll sc-hiulGA ZixbU"
+              class="sc-ikJzcn blqzkB sc-hiCivh cMgYW"
             />
             <div
-              class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd sc-hHopXc ePPqtG"
+              class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah glQHfA"
             >
               <div>
                 Row with
@@ -214,10 +214,10 @@ exports[`Storyshots Core/Card With Rows 1`] = `
             </div>
           </div>
           <div
-            class="sc-gKkhHZ cxMPyI sc-iCEByO fLkcde"
+            class="sc-gKckTs jhmBNr sc-iCfLBT ga-DGEu"
           >
             <hr
-              class="sc-ikBCnG gROgll sc-hiulGA ZixbU"
+              class="sc-ikJzcn blqzkB sc-hiCivh cMgYW"
             />
             <div>
               Lorem Ipsum dolor si amet

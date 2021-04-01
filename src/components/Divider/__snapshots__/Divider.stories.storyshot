@@ -3,10 +3,10 @@
 exports[`Storyshots Core/Divider Dashed 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
+    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <hr
-      class="sc-ikBCnG gIkLUD sc-hiulGA ZixbU"
+      class="sc-ikJzcn EGMhf sc-hiCivh cMgYW"
       type="dashed"
     />
   </div>
@@ -16,10 +16,10 @@ exports[`Storyshots Core/Divider Dashed 1`] = `
 exports[`Storyshots Core/Divider Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
+    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <hr
-      class="sc-ikBCnG gROgll sc-hiulGA ZixbU"
+      class="sc-ikJzcn blqzkB sc-hiCivh cMgYW"
     />
   </div>
 </div>
@@ -28,10 +28,10 @@ exports[`Storyshots Core/Divider Default 1`] = `
 exports[`Storyshots Core/Divider With Custom Color 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
+    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <hr
-      class="sc-ikBCnG fRsQsE sc-hiulGA dFOSUw"
+      class="sc-ikJzcn ihKoNM sc-hiCivh jpeDOu"
       color="#ccc"
     />
   </div>
@@ -41,22 +41,22 @@ exports[`Storyshots Core/Divider With Custom Color 1`] = `
 exports[`Storyshots Core/Divider With Text Content 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
+    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <div
-      class="sc-gKkhHZ cxMPyI sc-iCEByO hbUDLW sc-hHopXc ggFlpe sc-hiulGA ZixbU"
+      class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK sc-hGPAah gcFPXo sc-hiCivh cMgYW"
     >
       <hr
-        class="sc-ikBCnG sc-jJwNel gIkLUD ezhaTT"
+        class="sc-ikJzcn sc-jJoQpE EGMhf cJmPRF"
         type="dashed"
       />
       <span
-        class="sc-fKwCjr fXUfSH sc-ivKoCB kZUNMm"
+        class="sc-fKVsgm hjxFYR sc-iwjezw huFwl"
       >
         some text
       </span>
       <hr
-        class="sc-ikBCnG sc-jJwNel gIkLUD ezhaTT"
+        class="sc-ikJzcn sc-jJoQpE EGMhf cJmPRF"
         type="dashed"
       />
     </div>

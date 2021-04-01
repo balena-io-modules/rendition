@@ -3,10 +3,10 @@
 exports[`Storyshots Extra/Mermaid Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 iyWydp sc-eEFsat jGBTLB"
+    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <div
-      class="sc-gKkhHZ cxMPyI sc-iCEByO eQSjnd"
+      class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl"
     >
       <div>
         Unable to parse input: labelSvg.node(...).getBBox is not a function
