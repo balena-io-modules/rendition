@@ -1,4 +1,17 @@
 - commits:
+    - subject: Refactor Table component with hooks
+      hash: a2c8a5368d5f1cc62179774ba928a83b585dc5f3
+      body: |
+        Refactor Table component with hooks and remove some unnecessary logic
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.10.12
+  date: 2021-04-01T16:15:00.687Z
+- commits:
     - subject: Generate missing snapshots
       hash: 77f29b868c03bc90cc84d73a538ab35b507b80b2
       body: |
