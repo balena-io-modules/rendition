@@ -128,7 +128,6 @@ const Base = styled.div<BaseTableProps>`
 const HeaderButton = styled(Button)`
 	display: block;
 `;
-
 interface TableState<T> {
 	allChecked: boolean;
 	sort: {
@@ -668,6 +667,12 @@ export interface TableProps<T> {
 	itemsPerPage?: number;
 	/** Sets whether the pager is displayed at the top of the table, the bottom of the table or in both positions. Only used if `usePager` is true. Defaults to `top`. */
 	pagerPosition?: 'top' | 'bottom' | 'both';
+	/** */
+	tagField?: keyof T;
+	/** */
+	columnStateRestorationKey?: string;
+	/** */
+	sortingStateRestorationKey?: string;
 }
 
 export { TableColumn, TableRow };
