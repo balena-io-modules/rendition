@@ -13,7 +13,7 @@ export interface PokedexInterface {
 	biometrics?: {
 		Height: number;
 		Weight: number;
-	},
+	};
 	Description?: string;
 	Category?: string;
 	nationality?: string;

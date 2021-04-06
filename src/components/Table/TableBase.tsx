@@ -58,17 +58,13 @@ const Base = styled.div<InternalTableBaseProps>`
 					${(props) => props.theme.colors.quartenary.main};
 				text-align: left;
 				vertical-align: middle;
-				padding: 10px 20px;
+				padding: 5px 20px;
 				font-size: ${(props) => px(props.theme.fontSizes[2])};
 			}
 
 			> [data-display='table-cell']:first-child {
 				padding-left: ${(props) => (props.hasCheckbox ? '20px' : '40px')};
 				${(props) => (props.hasCheckbox ? 'width: 60px' : '')};
-			}
-
-			> [data-display='table-cell']:last-child {
-				padding-right: 40px;
 			}
 		}
 	}
@@ -86,7 +82,7 @@ const Base = styled.div<InternalTableBaseProps>`
 				display: table-cell;
 				text-align: left;
 				vertical-align: middle;
-				padding: 14px 20px;
+				padding: 5px 20px;
 				text-decoration: none;
 				color: inherit;
 			}
@@ -94,10 +90,6 @@ const Base = styled.div<InternalTableBaseProps>`
 			> [data-display='table-cell']:first-child {
 				padding-left: ${(props) => (props.hasCheckbox ? '20px' : '40px')};
 				${(props) => (props.hasCheckbox ? 'width: 60px' : '')};
-			}
-
-			> [data-display='table-cell']:last-child {
-				padding-right: 40px;
 			}
 
 			> a[data-display='table-cell'] {
@@ -681,4 +673,6 @@ export interface TableBaseProps<T> {
 	loadColumnPreferences?: () => TableColumnState[] | undefined;
 	/** */
 	saveColumnPreferences?: (newColumns: TableColumnState[]) => void;
+	/** */
+	withCustomColumns?: boolean;
 }

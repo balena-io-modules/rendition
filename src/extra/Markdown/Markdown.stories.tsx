@@ -12,30 +12,32 @@ import source, {
 import { TableState } from '~/components/Table';
 
 const generateTableData = () => {
-	return customizationSamples.map(({ markdown, sanitizerOptions }: any, index) => {
-		const customSanitizerOptions = defaults(
-			cloneDeep(sanitizerOptions || {}),
-			defaultSanitizerOptions,
-		);
-		return {
-			id: index,
-			'Specific Sanitizer Options': (
-				<pre>{JSON.stringify(sanitizerOptions, null, 2)}</pre>
-			),
-			Original: (
-				<Card small>
-					<Markdown>{markdown}</Markdown>
-				</Card>
-			),
-			Customized: (
-				<Card small>
-					<Markdown sanitizerOptions={customSanitizerOptions}>
-						{markdown}
-					</Markdown>
-				</Card>
-			),
-		};
-	});
+	return customizationSamples.map(
+		({ markdown, sanitizerOptions }: any, index) => {
+			const customSanitizerOptions = defaults(
+				cloneDeep(sanitizerOptions || {}),
+				defaultSanitizerOptions,
+			);
+			return {
+				id: index,
+				'Specific Sanitizer Options': (
+					<pre>{JSON.stringify(sanitizerOptions, null, 2)}</pre>
+				),
+				Original: (
+					<Card small>
+						<Markdown>{markdown}</Markdown>
+					</Card>
+				),
+				Customized: (
+					<Card small>
+						<Markdown sanitizerOptions={customSanitizerOptions}>
+							{markdown}
+						</Markdown>
+					</Card>
+				),
+			};
+		},
+	);
 };
 
 export default {
@@ -53,11 +55,13 @@ const cellAttributes = { style: { verticalAlign: 'top' } };
 Customized.decorators = [
 	() => (
 		<Table
-			columns={[
-				{ field: 'Specific Sanitizer Options', cellAttributes },
-				{ field: 'Original', cellAttributes },
-				{ field: 'Customized', cellAttributes },
-			] as TableState<any>[]}
+			columns={
+				[
+					{ field: 'Specific Sanitizer Options', cellAttributes },
+					{ field: 'Original', cellAttributes },
+					{ field: 'Customized', cellAttributes },
+				] as Array<TableState<any>>
+			}
 			data={generateTableData()}
 		/>
 	),

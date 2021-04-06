@@ -33,7 +33,7 @@ const columns = [
 		label: 'First Seen',
 		sortable: true,
 	},
-] as TableState<PokedexInterface>[];
+] as Array<TableState<PokedexInterface>>;
 
 const getRowClass = (pokemon: any) => {
 	const classNames = ['pokemon'];
@@ -398,7 +398,7 @@ describe('Table component', () => {
 				},
 			] as any;
 
-			const data: Array<PokedexInterface> = [
+			const data: PokedexInterface[] = [
 				{
 					id: 1,
 					Name: 'Caterpie',
@@ -454,7 +454,7 @@ describe('Table component', () => {
 				},
 			] as any;
 
-			const data: Array<PokedexInterface> = [
+			const data: PokedexInterface[] = [
 				{
 					id: 1,
 					Name: 'Caterpie',
@@ -553,7 +553,7 @@ describe('Table component', () => {
 				},
 			] as any;
 
-			const data: Array<PokedexInterface> = [
+			const data: PokedexInterface[] = [
 				{
 					id: 1,
 					Name: 'Caterpie',
@@ -609,7 +609,11 @@ describe('Table component', () => {
 			const fn = (row: any) => `https://www.pokemon.com/uk/pokedex/${row.Name}`;
 			const component = mount(
 				<Provider>
-					<Table<PokedexInterface> getRowHref={fn} columns={cols} data={PokeDex} />
+					<Table<PokedexInterface>
+						getRowHref={fn}
+						columns={cols}
+						data={PokeDex}
+					/>
 				</Provider>,
 			);
 
@@ -761,7 +765,7 @@ describe('Table component', () => {
 				{
 					field: 'Name',
 				},
-			] as TableState<PokedexInterface>[];
+			] as Array<TableState<PokedexInterface>>;
 			const spy = sinon.spy();
 			const component = mount(
 				<Provider>
@@ -839,7 +843,7 @@ describe('Table component', () => {
 					<Table<PokedexInterface>
 						rowKey="pokedex_number"
 						highlightedRows={[2]}
-						columns={[{ field: 'Name' }] as TableState<PokedexInterface>[]}
+						columns={[{ field: 'Name' }] as Array<TableState<PokedexInterface>>}
 						data={PokeDex}
 					/>
 				</Provider>,
@@ -856,7 +860,7 @@ describe('Table component', () => {
 					<Table<PokedexInterface>
 						rowKey="pokedex_number"
 						highlightedRows={[3, 5]}
-						columns={[{ field: 'Name' }] as TableState<PokedexInterface>[]}
+						columns={[{ field: 'Name' }] as Array<TableState<PokedexInterface>>}
 						data={PokeDex}
 					/>
 				</Provider>,
@@ -873,7 +877,7 @@ describe('Table component', () => {
 			const component = mount(
 				<Provider>
 					<Table<PokedexInterface>
-						columns={[{ field: 'Name' }] as TableState<PokedexInterface>[]}
+						columns={[{ field: 'Name' }] as Array<TableState<PokedexInterface>>}
 						data={PokeDex}
 						usePager
 						itemsPerPage={3}
@@ -896,7 +900,11 @@ describe('Table component', () => {
 		it('should display a pager', () => {
 			const component = mount(
 				<Provider>
-					<Table<PokedexInterface> columns={[{ field: 'Name' }] as TableState<PokedexInterface>[]} data={PokeDex} usePager />
+					<Table<PokedexInterface>
+						columns={[{ field: 'Name' }] as Array<TableState<PokedexInterface>>}
+						data={PokeDex}
+						usePager
+					/>
 				</Provider>,
 			);
 
@@ -906,7 +914,11 @@ describe('Table component', () => {
 		it("shouldn't display a pager if there are no items", () => {
 			const component = mount(
 				<Provider>
-					<Table<PokedexInterface> columns={[{ field: 'Name' }] as TableState<PokedexInterface>[]} data={[]} usePager />
+					<Table<PokedexInterface>
+						columns={[{ field: 'Name' }] as Array<TableState<PokedexInterface>>}
+						data={[]}
+						usePager
+					/>
 				</Provider>,
 			);
 
@@ -966,7 +978,11 @@ describe('getRowClass property', () => {
 	it('should not add any classes if not present', () => {
 		const component = mount(
 			<Provider>
-				<Table<PokedexInterface> rowKey="pokedex_number" columns={columns} data={PokeDex} />
+				<Table<PokedexInterface>
+					rowKey="pokedex_number"
+					columns={columns}
+					data={PokeDex}
+				/>
 			</Provider>,
 		);
 
@@ -1003,7 +1019,11 @@ describe('manually select rows', () => {
 	it('should select the first two rows', () => {
 		const component = mount(
 			<Provider>
-				<Table<PokedexInterface> rowKey="pokedex_number" columns={columns} data={PokeDex} />
+				<Table<PokedexInterface>
+					rowKey="pokedex_number"
+					columns={columns}
+					data={PokeDex}
+				/>
 			</Provider>,
 		);
 
@@ -1018,7 +1038,11 @@ describe('manually select rows', () => {
 	it('should select all rows', () => {
 		const component = mount(
 			<Provider>
-				<Table<PokedexInterface> rowKey="pokedex_number" columns={columns} data={PokeDex} />
+				<Table<PokedexInterface>
+					rowKey="pokedex_number"
+					columns={columns}
+					data={PokeDex}
+				/>
 			</Provider>,
 		);
 
@@ -1033,7 +1057,11 @@ describe('manually select rows', () => {
 	it('should clear all rows', () => {
 		const component = mount(
 			<Provider>
-				<Table<PokedexInterface> rowKey="pokedex_number" columns={columns} data={PokeDex} />
+				<Table<PokedexInterface>
+					rowKey="pokedex_number"
+					columns={columns}
+					data={PokeDex}
+				/>
 			</Provider>,
 		);
 

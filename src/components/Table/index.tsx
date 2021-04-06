@@ -1,9 +1,5 @@
 import * as React from 'react';
-import {
-	TableBase,
-	TableBaseProps,
-	TableSortOptions,
-} from './TableBase';
+import { TableBase, TableBaseProps, TableSortOptions } from './TableBase';
 import styled, { css } from 'styled-components';
 import keys from 'lodash/keys';
 import assign from 'lodash/assign';
@@ -109,17 +105,8 @@ const StyledTable = styled(TableBase)`
 		white-space: nowrap;
 
 		&:last-child {
-			padding-right: 50px;
+			padding-right: ${(props) => (props.withCustomColumns ? '50px' : '0px')};
 		}
-	}
-
-	> [data-display='table-head']
-		> [data-display='table-row']
-		> [data-display='table-cell'],
-	> [data-display='table-body']
-		> [data-display='table-row']
-		> [data-display='table-cell'] {
-		padding: 5px 20px;
 	}
 
 	> [data-display='table-head'] > [data-display='table-row'] {
@@ -386,16 +373,16 @@ const addCustomColumns = <T extends TaggedResource>(props: TableProps<T>) => {
 	const {
 		columns,
 		tagField,
-		withCustomColumn,
+		withCustomColumns,
 		columnStateRestorationKey,
 	} = props;
 	let allColumns = columns.map((column) =>
-		normalizeTableColumn(column, withCustomColumn),
+		normalizeTableColumn(column, withCustomColumns),
 	);
 
 	if (tagField) {
 		allColumns = allColumns.concat(
-			getAllTagsTableColumn(tagField, withCustomColumn),
+			getAllTagsTableColumn(tagField, withCustomColumns),
 		);
 	}
 
@@ -407,7 +394,7 @@ const addCustomColumns = <T extends TaggedResource>(props: TableProps<T>) => {
 		allColumns,
 		loadedColumns,
 		tagField,
-		withCustomColumn,
+		withCustomColumns,
 	);
 	return allColumns;
 };
@@ -424,7 +411,7 @@ export interface TableProps<T> extends TableBaseProps<T> {
 	loadColumnPreferences?: () => TableColumnState[] | undefined;
 	saveColumnPreferences?: (newColumns: TableColumnState[]) => void;
 	sortingStateRestorationKey?: string;
-	withCustomColumn?: boolean;
+	withCustomColumns?: boolean;
 }
 
 interface TableWithCustomColumnsState<T> {
@@ -673,6 +660,7 @@ export class Table<T extends TaggedResource> extends React.Component<
 			sort: sortProp,
 			sortingStateRestorationKey,
 			innerRef,
+			withCustomColumns,
 			onSort,
 			onRowClick,
 			...props
@@ -688,6 +676,7 @@ export class Table<T extends TaggedResource> extends React.Component<
 					width="100%"
 				>
 					<TypedTable<T>
+						withCustomColumns={withCustomColumns}
 						columns={this.state.visibleColumns}
 						rowKey="id"
 						getRowHref={({ id }) => `${window.location.pathname}/${id}`}
@@ -698,7 +687,7 @@ export class Table<T extends TaggedResource> extends React.Component<
 						{...props}
 					/>
 				</CustomSideScrollBox>
-				{false && (
+				{withCustomColumns && (
 					<TableColumnSelectorSizer>
 						<TableColumnSelector
 							columns={this.state.allColumns}
