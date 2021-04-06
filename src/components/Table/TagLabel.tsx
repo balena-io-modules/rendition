@@ -72,10 +72,10 @@ const getTagCompositeText = (tag: ResourceTagBase) => {
 	return text;
 };
 
-const stopEvent = (event: React.MouseEvent<HTMLElement, MouseEvent> ) => {
-  event.preventDefault();
+const stopEvent = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
+	event.preventDefault();
 	event.stopPropagation();
-}
+};
 
 export interface TagLabelProps extends TxtProps {
 	tag?: ResourceTagBase;
