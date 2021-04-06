@@ -2,28 +2,30 @@ import React from 'react';
 import { Meta } from '@storybook/react';
 import { createTemplate, createStory } from '../../stories/utils';
 import PokeDex from '../../stories/assets/pokedex';
-import { Table, TableProps } from '.';
+import { Table, TableProps } from './';
 
 const prefixNum = (num: number) =>
 	num.toString().length === 1 ? `0${num}` : num;
 const columns = [
 	{
+		title: 'Name',
 		field: 'Name',
 		sortable: true,
 	},
 	{
+		title: 'National Pokedex Number',
 		field: 'pokedex_number',
-		label: 'National Pokedex Number',
 		sortable: true,
 		render: (value: any) => <code>{value}</code>,
 	},
 	{
+		title: 'Category',
 		field: 'Category',
 		sortable: true,
 	},
 	{
+		title: 'First Seen',
 		field: 'first_seen',
-		label: 'First Seen',
 		sortable: true,
 		render: (value: any) => {
 			if (value == null) {

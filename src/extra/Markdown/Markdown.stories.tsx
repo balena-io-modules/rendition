@@ -9,14 +9,16 @@ import source, {
 	customizationSamples,
 	decoratorSample,
 } from '../../stories/assets/markdownSample';
+import { TableState } from '~/components/Table';
 
 const generateTableData = () => {
-	return customizationSamples.map(({ markdown, sanitizerOptions }: any) => {
+	return customizationSamples.map(({ markdown, sanitizerOptions }: any, index) => {
 		const customSanitizerOptions = defaults(
 			cloneDeep(sanitizerOptions || {}),
 			defaultSanitizerOptions,
 		);
 		return {
+			id: index,
 			'Specific Sanitizer Options': (
 				<pre>{JSON.stringify(sanitizerOptions, null, 2)}</pre>
 			),
@@ -55,7 +57,7 @@ Customized.decorators = [
 				{ field: 'Specific Sanitizer Options', cellAttributes },
 				{ field: 'Original', cellAttributes },
 				{ field: 'Customized', cellAttributes },
-			]}
+			] as TableState<any>[]}
 			data={generateTableData()}
 		/>
 	),

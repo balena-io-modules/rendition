@@ -7,8 +7,24 @@ export const getNameFromSlug = (slug: string) => {
 		.join(' ');
 };
 
+export interface PokedexInterface {
+	id: number;
+	Name: string;
+	biometrics?: {
+		Height: number;
+		Weight: number;
+	},
+	Description?: string;
+	Category?: string;
+	nationality?: string;
+	Abilities?: string[];
+	pokedex_number?: number;
+	caught?: boolean;
+}
+
 export default [
 	{
+		id: 1,
 		Name: 'Bulbasaur',
 		biometrics: {
 			Height: 0.7,
@@ -23,6 +39,7 @@ export default [
 		caught: true,
 	},
 	{
+		id: 2,
 		Name: 'Ivysaur',
 		biometrics: {
 			Height: 1,
@@ -37,6 +54,7 @@ export default [
 		caught: false,
 	},
 	{
+		id: 3,
 		Name: 'Venusaur',
 		biometrics: {
 			Height: 2,
@@ -51,6 +69,7 @@ export default [
 		caught: false,
 	},
 	{
+		id: 4,
 		Name: 'Charmander',
 		biometrics: {
 			Height: 0.6,
@@ -65,6 +84,7 @@ export default [
 		caught: false,
 	},
 	{
+		id: 5,
 		Name: 'Charmeleon',
 		biometrics: {
 			Height: 1.1,
@@ -80,6 +100,7 @@ export default [
 		caught: false,
 	},
 	{
+		id: 6,
 		Name: 'Charizard',
 		biometrics: {
 			Height: 1.7,
@@ -105,6 +126,7 @@ export default [
 		],
 	},
 	{
+		id: 7,
 		Name: 'Squirtle',
 		biometrics: {
 			Height: 0.5,
@@ -130,6 +152,7 @@ export default [
 		],
 	},
 	{
+		id: 8,
 		Name: 'Wartortle',
 		biometrics: {
 			Height: 1,
@@ -144,6 +167,7 @@ export default [
 		caught: false,
 	},
 	{
+		id: 1,
 		Name: 'Blastoise',
 		biometrics: {
 			Height: 1.6,
@@ -158,6 +182,7 @@ export default [
 		caught: false,
 	},
 	{
+		id: 9,
 		Name: 'Caterpie',
 		biometrics: {
 			Height: 0.3,
@@ -172,6 +197,7 @@ export default [
 		caught: true,
 	},
 	{
+		id: 10,
 		Name: 'Staryu',
 		biometrics: {
 			Height: 0.8,
