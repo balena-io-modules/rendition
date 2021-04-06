@@ -41,10 +41,10 @@ const ItemIcon = styled.span`
 `;
 
 const StyledDivider = styled(Divider)<DividerProps>`
-  height: 1px;
-  color: ${props => props.theme.colors.gray.main};
-  margin: 8px 0;
-`
+	height: 1px;
+	color: ${(props) => props.theme.colors.gray.main};
+	margin: 8px 0;
+`;
 
 export interface TableColumnStateBase {
 	title?: string;
@@ -152,6 +152,7 @@ export const TableColumnSelector = function <T extends TableColumnState>(
 	const failedAddColumnRule = canAddColumnRules.find((rule) => rule.test());
 	const canAddTagColumn = !failedAddColumnRule;
 	const addTagColumnTitle = failedAddColumnRule && failedAddColumnRule.message;
+	console.log(props.columns);
 
 	return (
 		<DropDownButton
@@ -169,7 +170,7 @@ export const TableColumnSelector = function <T extends TableColumnState>(
 						onClick={(e) => {
 							toggleSelectedColumn(col);
 							e.preventDefault();
-	            e.stopPropagation();
+							e.stopPropagation();
 						}}
 					>
 						<ItemIcon>
@@ -193,7 +194,7 @@ export const TableColumnSelector = function <T extends TableColumnState>(
 					!props.tagKeys
 						? []
 						: [
-								<StyledDivider key="divider"/>,
+								<StyledDivider key="divider" />,
 								<Item
 									key="Add Tag Column"
 									disabled={!canAddTagColumn}
