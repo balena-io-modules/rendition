@@ -39,7 +39,7 @@ const Container = styled(Flex)`
 	position: relative;
 `;
 
-const TableColumnSelectorSizer = styled.div`
+export const TableColumnSelectorSizer = styled.div`
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -329,7 +329,7 @@ const applyColumnPreferences = <T extends TaggedResource>(
 	columns: Array<TableState<T>>,
 	loadedColumns: TableColumnState[] | undefined,
 	tagField: keyof T | undefined,
-	withCustomColumn?: boolean,
+	withCustomColumns?: boolean,
 ): Array<TableState<T>> => {
 	if (!size(loadedColumns)) {
 		return columns;
@@ -364,7 +364,7 @@ const applyColumnPreferences = <T extends TaggedResource>(
 		insertTagColumns(columns, tagColumns);
 	}
 
-	columns.forEach((column) => normalizeTableColumn(column, withCustomColumn));
+	columns.forEach((column) => normalizeTableColumn(column, withCustomColumns));
 
 	return columns;
 };

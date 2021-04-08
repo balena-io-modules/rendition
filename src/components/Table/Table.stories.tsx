@@ -11,22 +11,26 @@ const columns = [
 		title: 'Name',
 		field: 'Name',
 		sortable: true,
+		selected: true,
 	},
 	{
 		title: 'National Pokedex Number',
 		field: 'pokedex_number',
 		sortable: true,
+		selected: true,
 		render: (value: any) => <code>{value}</code>,
 	},
 	{
 		title: 'Category',
 		field: 'Category',
 		sortable: true,
+		selected: true,
 	},
 	{
 		title: 'First Seen',
 		field: 'first_seen',
 		sortable: true,
+		selected: false,
 		render: (value: any) => {
 			if (value == null) {
 				return null;
@@ -117,3 +121,7 @@ export const WithConditionalRowClasses = createStory<TableProps<any>>(
 		},
 	},
 );
+
+export const withCustomColumns = createStory<TableProps<any>>(Template, {
+	withCustomColumns: true,
+});

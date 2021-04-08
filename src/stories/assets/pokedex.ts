@@ -167,7 +167,7 @@ export default [
 		caught: false,
 	},
 	{
-		id: 1,
+		id: 9,
 		Name: 'Blastoise',
 		biometrics: {
 			Height: 1.6,
@@ -182,7 +182,7 @@ export default [
 		caught: false,
 	},
 	{
-		id: 9,
+		id: 10,
 		Name: 'Caterpie',
 		biometrics: {
 			Height: 0.3,
@@ -197,7 +197,7 @@ export default [
 		caught: true,
 	},
 	{
-		id: 10,
+		id: 11,
 		Name: 'Staryu',
 		biometrics: {
 			Height: 0.8,

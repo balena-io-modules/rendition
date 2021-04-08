@@ -663,16 +663,16 @@ export interface TableBaseProps<T> {
 	itemsPerPage?: number;
 	/** Sets whether the pager is displayed at the top of the table, the bottom of the table or in both positions. Only used if `usePager` is true. Defaults to `top`. */
 	pagerPosition?: 'top' | 'bottom' | 'both';
-	/** */
+	/** Set a field for tags */
 	tagField?: keyof T;
-	/** */
+	/** Key to store columns preferences to show when withCustomColumns is true */
 	columnStateRestorationKey?: string;
-	/** */
+	/** Key to store custom sorting */
 	sortingStateRestorationKey?: string;
-	/** */
+	/** Custom function to store column preferences */
 	loadColumnPreferences?: () => TableColumnState[] | undefined;
-	/** */
+	/** Custom function to store custom sorting preferences */
 	saveColumnPreferences?: (newColumns: TableColumnState[]) => void;
-	/** */
+	/** Show a Table with custom columns which gives the possibility to display and hide the selected columns */
 	withCustomColumns?: boolean;
 }
