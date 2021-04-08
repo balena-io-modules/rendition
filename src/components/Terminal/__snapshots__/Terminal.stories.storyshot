@@ -9,10 +9,10 @@ exports[`Storyshots Core/Terminal Default 1`] = `
       style="height: 500px;"
     >
       <div
-        class="sc-gKckTs bTSdEc sc-iCfLBT cAqrFv sc-hGPAah sc-jtXFOG cisfns ZSlsh"
+        class="sc-gKckTs bTSdEc sc-iCfLBT cAqrFv sc-hGPAah sc-dSfclH cisfns lcaPYP"
       >
         <div
-          class="sc-gKckTs bTSdEc sc-iCfLBT gEsLGl sc-hGPAah sc-eldixR jrGUyo hWzMiR"
+          class="sc-gKckTs bTSdEc sc-iCfLBT gEsLGl sc-hGPAah sc-hZpJuv jrGUyo ghnscM"
         />
       </div>
     </div>
@@ -29,10 +29,10 @@ exports[`Storyshots Core/Terminal Noninteractive Terminal 1`] = `
       style="height: 500px;"
     >
       <div
-        class="sc-gKckTs bTSdEc sc-iCfLBT cAqrFv sc-hGPAah sc-jtXFOG cisfns ZSlsh"
+        class="sc-gKckTs bTSdEc sc-iCfLBT cAqrFv sc-hGPAah sc-dSfclH cisfns lcaPYP"
       >
         <div
-          class="sc-gKckTs bTSdEc sc-iCfLBT gEsLGl sc-hGPAah sc-eldixR jrGUyo hWzMiR"
+          class="sc-gKckTs bTSdEc sc-iCfLBT gEsLGl sc-hGPAah sc-hZpJuv jrGUyo ghnscM"
         />
       </div>
     </div>

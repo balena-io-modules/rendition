@@ -9,67 +9,75 @@ exports[`Storyshots Core/Copy Always Show 1`] = `
       class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-AjmZR bckzCO eiyeut"
     >
       <div
-        class="sc-iqVVwt iACpFK"
+        class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-fyrnIy cisfns cDFntV"
       >
         <div
-          class="sc-eWfWgB iMxuYj"
+          class="sc-gKckTs jhmBNr sc-iCfLBT dhohIN sc-hGPAah sc-jKTbIA cisfns eggsBD"
         >
           <div
-            data-display="table-head"
+            class="sc-iqVVwt iACpFK"
           >
             <div
-              data-display="table-row"
+              class="sc-eWfWgB ibppTl sc-bUbQrF jfwalj"
             >
               <div
-                data-display="table-cell"
+                data-display="table-head"
               >
-                Name
+                <div
+                  data-display="table-row"
+                >
+                  <div
+                    data-display="table-cell"
+                  >
+                    Name
+                  </div>
+                  <div
+                    data-display="table-cell"
+                  >
+                    Value
+                  </div>
+                </div>
               </div>
               <div
-                data-display="table-cell"
+                data-display="table-body"
               >
-                Value
+                <div
+                  class=""
+                  data-display="table-row"
+                  data-highlight="false"
+                >
+                  <a
+                    data-display="table-cell"
+                    href="//undefined"
+                  >
+                    Type
+                  </a>
+                  <a
+                    data-display="table-cell"
+                    href="//undefined"
+                  >
+                    Beginner
+                  </a>
+                </div>
+                <div
+                  class=""
+                  data-display="table-row"
+                  data-highlight="false"
+                >
+                  <a
+                    data-display="table-cell"
+                    href="//undefined"
+                  >
+                    Type
+                  </a>
+                  <a
+                    data-display="table-cell"
+                    href="//undefined"
+                  >
+                    Advanced
+                  </a>
+                </div>
               </div>
-            </div>
-          </div>
-          <div
-            data-display="table-body"
-          >
-            <div
-              class=""
-              data-display="table-row"
-              data-highlight="false"
-            >
-              <a
-                data-display="table-cell"
-                data-key="0"
-              >
-                Type
-              </a>
-              <a
-                data-display="table-cell"
-                data-key="0"
-              >
-                Beginner
-              </a>
-            </div>
-            <div
-              class=""
-              data-display="table-row"
-              data-highlight="false"
-            >
-              <a
-                data-display="table-cell"
-                data-key="1"
-              >
-                Type
-              </a>
-              <a
-                data-display="table-cell"
-                data-key="1"
-              >
-                Advanced
-              </a>
             </div>
           </div>
         </div>
