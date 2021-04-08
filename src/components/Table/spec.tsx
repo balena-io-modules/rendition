@@ -12,6 +12,7 @@ import PokeDex, { PokedexInterface } from '../../stories/assets/pokedex';
 
 import { Pager, Provider, Table } from '../../';
 import { TableState } from '.';
+import { TableBase } from './TableBase';
 
 const columns = [
 	{
@@ -942,7 +943,7 @@ describe('Table component', () => {
 				),
 			);
 
-			const table: any = component.find(Table).instance();
+			const table: any = component.find(TableBase).instance();
 			expect(table.state.page).toEqual(0);
 			table.incrementPage();
 			table.incrementPage();
@@ -1009,7 +1010,7 @@ describe('control selected rows', () => {
 			</Provider>,
 		);
 
-		const table: any = component.find(Table).instance();
+		const table: any = component.find(TableBase).instance();
 		expect(table.state.checkedItems.length).toEqual(2);
 		expect(table.state.allChecked).toEqual(false);
 	});
@@ -1027,7 +1028,7 @@ describe('manually select rows', () => {
 			</Provider>,
 		);
 
-		const table: any = component.find(Table).instance();
+		const table: any = component.find(TableBase).instance();
 		expect(table.state.checkedItems.length).toEqual(0);
 
 		table.setRowSelection(PokeDex.slice(0, 2));
@@ -1046,7 +1047,7 @@ describe('manually select rows', () => {
 			</Provider>,
 		);
 
-		const table: any = component.find(Table).instance();
+		const table: any = component.find(TableBase).instance();
 		expect(table.state.checkedItems.length).toEqual(0);
 
 		table.setRowSelection(PokeDex);
@@ -1065,7 +1066,7 @@ describe('manually select rows', () => {
 			</Provider>,
 		);
 
-		const table: any = component.find(Table).instance();
+		const table: any = component.find(TableBase).instance();
 		expect(table.state.checkedItems.length).toEqual(0);
 
 		table.setRowSelection(PokeDex);
@@ -1089,7 +1090,7 @@ describe('manually select rows', () => {
 			),
 		);
 
-		const table: any = component.find(Table).instance();
+		const table: any = component.find(TableBase).instance();
 		expect(table.state.checkedItems.length).toEqual(0);
 
 		table.setRowSelection(PokeDex);
@@ -1145,9 +1146,46 @@ describe('sorting', () => {
 			),
 		);
 
-		const table: any = component.find(Table).instance();
+		const table: any = component.find(TableBase).instance();
 		expect(table.state.sort).toEqual(defaultSort);
 		component.setProps({ sort: updatedSort });
 		expect(table.state.sort).toEqual(updatedSort);
+	});
+});
+
+describe('custom columns', () => {
+	it('should render the Table component with a cog', () => {
+		const component = mount(
+			<Provider>
+				<Table<PokedexInterface>
+					rowKey="pokedex_number"
+					columns={columns}
+					data={PokeDex}
+					withCustomColumns
+				/>
+			</Provider>,
+		);
+
+		const cog = component.find(TableColumnSelectorSizer);
+		expect(cog).toBeDefined();
+	});
+
+	it('should render only selected columns', () => {
+		const component = mount(
+			<Provider>
+				<Table<PokedexInterface>
+					rowKey="pokedex_number"
+					columns={columns}
+					data={PokeDex}
+					withCustomColumns
+				/>
+			</Provider>,
+		);
+		const cols = component.find(
+			'[data-display="table-head"] [data-display="table-cell"]',
+		);
+		const numberOfColumnsToShow = columns.filter((c) => c.selected).length;
+
+		expect(cols).toHaveLength(numberOfColumnsToShow);
 	});
 });
