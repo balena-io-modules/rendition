@@ -11,28 +11,32 @@ import sinon from 'sinon';
 import PokeDex, { PokedexInterface } from '../../stories/assets/pokedex';
 
 import { Pager, Provider, Table } from '../../';
-import { TableState } from '.';
+import { TableColumnSelectorSizer, TableState } from '.';
 import { TableBase } from './TableBase';
 
 const columns = [
 	{
 		field: 'Name',
 		sortable: true,
+		selected: true,
 	},
 	{
 		field: 'pokedex_number',
 		label: 'National Pokedex Number',
 		sortable: true,
+		selected: true,
 		render: (value: any) => <code>{value}</code>,
 	},
 	{
 		field: 'Category',
 		sortable: true,
+		selected: false,
 	},
 	{
 		field: 'first_seen',
 		label: 'First Seen',
 		sortable: true,
+		selected: true,
 	},
 ] as Array<TableState<PokedexInterface>>;
 
@@ -1169,7 +1173,6 @@ describe('custom columns', () => {
 		const cog = component.find(TableColumnSelectorSizer);
 		expect(cog).toBeDefined();
 	});
-
 	it('should render only selected columns', () => {
 		const component = mount(
 			<Provider>
