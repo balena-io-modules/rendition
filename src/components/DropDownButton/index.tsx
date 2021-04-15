@@ -98,49 +98,31 @@ const Toggle = ({
 	open: boolean;
 	handler: React.MouseEventHandler<HTMLElement>;
 }) => {
+	const toggleProps = {
+		...props,
+		// Avoid submitting parent forms when
+		// clicking on the toggle.
+		type: 'button',
+		onClick: handler,
+	};
+	const icon = open ? faChevronUp : faChevronDown;
 	const shouldCompact = useBreakpoint(compact || [false]);
 	if (joined) {
 		if (label || props.icon) {
 			return (
-				<JoinedButton {...props} onClick={handler}>
+				<JoinedButton {...toggleProps}>
 					<Flex justifyContent="space-between" alignItems="center">
 						{!shouldCompact && <Box mr={2}>{label}</Box>}
-						{open ? (
-							<FontAwesomeIcon icon={faChevronUp} />
-						) : (
-							<FontAwesomeIcon icon={faChevronDown} />
-						)}
+						{<FontAwesomeIcon icon={icon} />}
 					</Flex>
 				</JoinedButton>
 			);
 		}
 		return (
-			<JoinedButton
-				{...props}
-				icon={
-					open ? (
-						<FontAwesomeIcon icon={faChevronUp} />
-					) : (
-						<FontAwesomeIcon icon={faChevronDown} />
-					)
-				}
-				onClick={handler}
-			/>
+			<JoinedButton {...toggleProps} icon={<FontAwesomeIcon icon={icon} />} />
 		);
 	}
-	return (
-		<ToggleBase
-			{...props}
-			icon={
-				open ? (
-					<FontAwesomeIcon icon={faChevronUp} />
-				) : (
-					<FontAwesomeIcon icon={faChevronDown} />
-				)
-			}
-			onClick={handler}
-		/>
-	);
+	return <ToggleBase {...toggleProps} icon={<FontAwesomeIcon icon={icon} />} />;
 };
 
 interface DropDownButtonState {
