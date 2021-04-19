@@ -400,17 +400,25 @@ const addCustomColumns = <T extends TaggedResource>(props: TableProps<T>) => {
 };
 
 export interface TableProps<T> extends TableBaseProps<T> {
+	/** An array of objects that will be displayed in the table */
 	data: T[];
+	/** An array of column objects, as described above */
 	columns: Array<TableState<T>>;
+	/** Set a field for tags */
 	tagField?: keyof T;
 	innerRef?:
 		| React.RefObject<TableBase<T>>
 		| ((instance: TableBase<T>) => void)
 		| null;
+	/** Key to store columns preferences to show when withCustomColumns is true */
 	columnStateRestorationKey?: string;
-	loadColumnPreferences?: () => TableColumnState[] | undefined;
-	saveColumnPreferences?: (newColumns: TableColumnState[]) => void;
+	/** Key to store custom sorting */
 	sortingStateRestorationKey?: string;
+	/** Custom function to store column preferences */
+	loadColumnPreferences?: () => TableColumnState[] | undefined;
+	/** Custom function to store custom sorting preferences */
+	saveColumnPreferences?: (newColumns: TableColumnState[]) => void;
+	/** Show a Table with custom columns which gives the possibility to display and hide the selected columns */
 	withCustomColumns?: boolean;
 }
 
