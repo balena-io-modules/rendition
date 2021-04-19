@@ -8,31 +8,37 @@ import reverse from 'lodash/reverse';
 import React from 'react';
 import sinon from 'sinon';
 // @ts-ignore
-import PokeDex from '../../stories/assets/pokedex';
+import PokeDex, { PokedexInterface } from '../../stories/assets/pokedex';
 
 import { Pager, Provider, Table } from '../../';
+import { TableColumn, TableColumnSelectorSizer } from '.';
+import { TableBase } from './TableBase';
 
 const columns = [
 	{
 		field: 'Name',
 		sortable: true,
+		selected: true,
 	},
 	{
 		field: 'pokedex_number',
 		label: 'National Pokedex Number',
 		sortable: true,
+		selected: true,
 		render: (value: any) => <code>{value}</code>,
 	},
 	{
 		field: 'Category',
 		sortable: true,
+		selected: false,
 	},
 	{
 		field: 'first_seen',
 		label: 'First Seen',
 		sortable: true,
+		selected: true,
 	},
-] as any;
+] as Array<TableColumn<PokedexInterface>>;
 
 const getRowClass = (pokemon: any) => {
 	const classNames = ['pokemon'];
@@ -52,7 +58,7 @@ describe('Table component', () => {
 		it('should render a table header cell for each column', () => {
 			const component = mount(
 				<Provider>
-					<Table columns={columns} data={PokeDex} />
+					<Table<PokedexInterface> columns={columns} data={PokeDex} />
 				</Provider>,
 			);
 
@@ -73,7 +79,7 @@ describe('Table component', () => {
 
 				const component = mount(
 					<Provider>
-						<Table columns={cols} data={PokeDex} />
+						<Table<PokedexInterface> columns={cols} data={PokeDex} />
 					</Provider>,
 				);
 
@@ -93,7 +99,7 @@ describe('Table component', () => {
 
 				const component = mount(
 					<Provider>
-						<Table columns={cols} data={PokeDex} />
+						<Table<PokedexInterface> columns={cols} data={PokeDex} />
 					</Provider>,
 				);
 
@@ -118,7 +124,7 @@ describe('Table component', () => {
 
 				const component = mount(
 					<Provider>
-						<Table columns={cols} data={PokeDex} />
+						<Table<PokedexInterface> columns={cols} data={PokeDex} />
 					</Provider>,
 				);
 
@@ -139,7 +145,7 @@ describe('Table component', () => {
 
 				const component = mount(
 					<Provider>
-						<Table columns={cols} data={PokeDex} />
+						<Table<PokedexInterface> columns={cols} data={PokeDex} />
 					</Provider>,
 				);
 
@@ -158,7 +164,7 @@ describe('Table component', () => {
 
 				const component = mount(
 					<Provider>
-						<Table columns={cols} data={PokeDex} />
+						<Table<PokedexInterface> columns={cols} data={PokeDex} />
 					</Provider>,
 				);
 
@@ -178,7 +184,7 @@ describe('Table component', () => {
 
 				mount(
 					<Provider>
-						<Table columns={cols} data={PokeDex} />
+						<Table<PokedexInterface> columns={cols} data={PokeDex} />
 					</Provider>,
 				);
 
@@ -207,7 +213,7 @@ describe('Table component', () => {
 
 				const component = mount(
 					<Provider>
-						<Table columns={cols} data={PokeDex} />
+						<Table<PokedexInterface> columns={cols} data={PokeDex} />
 					</Provider>,
 				);
 
@@ -234,7 +240,7 @@ describe('Table component', () => {
 
 				const component = mount(
 					<Provider>
-						<Table columns={cols} data={PokeDex} />
+						<Table<PokedexInterface> columns={cols} data={PokeDex} />
 					</Provider>,
 				);
 
@@ -254,7 +260,7 @@ describe('Table component', () => {
 
 				const component = mount(
 					<Provider>
-						<Table columns={cols} data={PokeDex} />
+						<Table<PokedexInterface> columns={cols} data={PokeDex} />
 					</Provider>,
 				);
 
@@ -280,7 +286,7 @@ describe('Table component', () => {
 
 				const component = mount(
 					<Provider>
-						<Table columns={cols} data={PokeDex} />
+						<Table<PokedexInterface> columns={cols} data={PokeDex} />
 					</Provider>,
 				);
 
@@ -308,7 +314,7 @@ describe('Table component', () => {
 
 				const component = mount(
 					<Provider>
-						<Table columns={cols} data={PokeDex} />
+						<Table<PokedexInterface> columns={cols} data={PokeDex} />
 					</Provider>,
 				);
 
@@ -338,7 +344,7 @@ describe('Table component', () => {
 
 				const component = mount(
 					<Provider>
-						<Table columns={cols} data={PokeDex} />
+						<Table<PokedexInterface> columns={cols} data={PokeDex} />
 					</Provider>,
 				);
 
@@ -364,18 +370,20 @@ describe('Table component', () => {
 
 			const data = [
 				{
+					id: 1,
 					Name: 'Caterpie',
-					description: 'lorem ipsum dolor sit amet',
+					Description: 'lorem ipsum dolor sit amet',
 				},
 				{
+					id: 2,
 					Name: 'Blastoise',
-					description: 'consecteur adipiscing elit, sed do eiusmod',
+					Description: 'consecteur adipiscing elit, sed do eiusmod',
 				},
 			];
 
 			const component = mount(
 				<Provider>
-					<Table columns={cols} data={data} />
+					<Table<PokedexInterface> columns={cols} data={data} />
 				</Provider>,
 			);
 
@@ -395,14 +403,16 @@ describe('Table component', () => {
 				},
 			] as any;
 
-			const data: Array<{ Name: string; description?: string }> = [
+			const data: PokedexInterface[] = [
 				{
+					id: 1,
 					Name: 'Caterpie',
-					description: 'lorem ipsum dolor sit amet',
+					Description: 'lorem ipsum dolor sit amet',
 				},
 				{
+					id: 2,
 					Name: 'Blastoise',
-					description: 'consecteur adipiscing elit, sed do eiusmod',
+					Description: 'consecteur adipiscing elit, sed do eiusmod',
 				},
 			];
 
@@ -410,7 +420,7 @@ describe('Table component', () => {
 				React.createElement(
 					(props) => (
 						<Provider>
-							<Table {...props} />
+							<Table<PokedexInterface> {...props} />
 						</Provider>
 					),
 					{ columns: cols, data },
@@ -426,6 +436,7 @@ describe('Table component', () => {
 			expect(cellsText).toEqual(dataText);
 
 			data.push({
+				id: 3,
 				Name: 'Squrtle',
 			});
 
@@ -448,14 +459,16 @@ describe('Table component', () => {
 				},
 			] as any;
 
-			const data: Array<{ Name: string; description?: string }> = [
+			const data: PokedexInterface[] = [
 				{
+					id: 1,
 					Name: 'Caterpie',
-					description: 'lorem ipsum dolor sit amet',
+					Description: 'lorem ipsum dolor sit amet',
 				},
 				{
+					id: 2,
 					Name: 'Blastoise',
-					description: 'consecteur adipiscing elit, sed do eiusmod',
+					Description: 'consecteur adipiscing elit, sed do eiusmod',
 				},
 			];
 
@@ -463,7 +476,7 @@ describe('Table component', () => {
 				React.createElement(
 					(props) => (
 						<Provider>
-							<Table {...props} />
+							<Table<PokedexInterface> {...props} />
 						</Provider>
 					),
 					{ columns: cols, data },
@@ -471,6 +484,7 @@ describe('Table component', () => {
 			);
 
 			data.push({
+				id: 3,
 				Name: 'Squirtle',
 			});
 
@@ -494,10 +508,12 @@ describe('Table component', () => {
 
 			const data = [
 				{
+					id: 1,
 					Name: 'Caterpie',
 					description: 'lorem ipsum dolor sit amet',
 				},
 				{
+					id: 2,
 					Name: 'Blastoise',
 					description: 'consecteur adipiscing elit, sed do eiusmod',
 				},
@@ -507,7 +523,7 @@ describe('Table component', () => {
 				React.createElement(
 					(props) => (
 						<Provider>
-							<Table {...props} />
+							<Table<PokedexInterface> {...props} />
 						</Provider>
 					),
 					{ columns: cols, data },
@@ -542,14 +558,16 @@ describe('Table component', () => {
 				},
 			] as any;
 
-			const data: Array<{ Name: string; description?: string }> = [
+			const data: PokedexInterface[] = [
 				{
+					id: 1,
 					Name: 'Caterpie',
-					description: 'lorem ipsum dolor sit amet',
+					Description: 'lorem ipsum dolor sit amet',
 				},
 				{
+					id: 2,
 					Name: 'Blastoise',
-					description: 'consecteur adipiscing elit, sed do eiusmod',
+					Description: 'consecteur adipiscing elit, sed do eiusmod',
 				},
 			];
 
@@ -557,7 +575,7 @@ describe('Table component', () => {
 				React.createElement(
 					(props) => (
 						<Provider>
-							<Table {...props} />
+							<Table<PokedexInterface> {...props} />
 						</Provider>
 					),
 					{ columns: cols, data },
@@ -572,7 +590,7 @@ describe('Table component', () => {
 
 			expect(cellsText).toEqual(dataText);
 
-			data[0] = { Name: 'Squirtle' };
+			data[0] = { id: 1, Name: 'Squirtle' };
 
 			component.setProps({ data });
 
@@ -596,7 +614,11 @@ describe('Table component', () => {
 			const fn = (row: any) => `https://www.pokemon.com/uk/pokedex/${row.Name}`;
 			const component = mount(
 				<Provider>
-					<Table getRowHref={fn} columns={cols} data={PokeDex} />
+					<Table<PokedexInterface>
+						getRowHref={fn}
+						columns={cols}
+						data={PokeDex}
+					/>
 				</Provider>,
 			);
 
@@ -614,7 +636,7 @@ describe('Table component', () => {
 		it('should cause a checkbox to be rendered in the header', () => {
 			const component = mount(
 				<Provider>
-					<Table
+					<Table<PokedexInterface>
 						rowKey="pokedex_number"
 						onCheck={noop}
 						columns={columns}
@@ -630,7 +652,7 @@ describe('Table component', () => {
 		it('should cause a checkbox to be rendered on each row', () => {
 			const component = mount(
 				<Provider>
-					<Table
+					<Table<PokedexInterface>
 						rowKey="pokedex_number"
 						onCheck={noop}
 						columns={columns}
@@ -646,7 +668,7 @@ describe('Table component', () => {
 		it('should show a disabled checkbox for disabled rows', () => {
 			const component = mount(
 				<Provider>
-					<Table
+					<Table<PokedexInterface>
 						rowKey="pokedex_number"
 						onCheck={noop}
 						columns={columns}
@@ -671,7 +693,7 @@ describe('Table component', () => {
 			const spy = sinon.spy();
 			const component = mount(
 				<Provider>
-					<Table
+					<Table<PokedexInterface>
 						rowKey="pokedex_number"
 						onCheck={spy}
 						columns={columns}
@@ -701,7 +723,7 @@ describe('Table component', () => {
 			const spy = sinon.spy();
 			const component = mount(
 				<Provider>
-					<Table
+					<Table<PokedexInterface>
 						rowKey="pokedex_number"
 						onCheck={spy}
 						columns={columns}
@@ -748,11 +770,11 @@ describe('Table component', () => {
 				{
 					field: 'Name',
 				},
-			];
+			] as Array<TableColumn<PokedexInterface>>;
 			const spy = sinon.spy();
 			const component = mount(
 				<Provider>
-					<Table
+					<Table<PokedexInterface>
 						onRowClick={spy}
 						rowKey="pokedex_number"
 						columns={cols}
@@ -786,7 +808,7 @@ describe('Table component', () => {
 			] as any;
 			const component = mount(
 				<Provider>
-					<Table
+					<Table<PokedexInterface>
 						rowAnchorAttributes={{ 'data-foo': 'bar' } as any}
 						columns={cols}
 						data={PokeDex}
@@ -805,7 +827,7 @@ describe('Table component', () => {
 		it('should insert an element at the top of the table body', () => {
 			const component = mount(
 				<Provider>
-					<Table
+					<Table<PokedexInterface>
 						tbodyPrefix={<span className="foobarbaz" />}
 						columns={columns}
 						data={PokeDex}
@@ -823,10 +845,12 @@ describe('Table component', () => {
 		it('should highlight the specified row', () => {
 			const component = mount(
 				<Provider>
-					<Table
+					<Table<PokedexInterface>
 						rowKey="pokedex_number"
 						highlightedRows={[2]}
-						columns={[{ field: 'Name' }]}
+						columns={
+							[{ field: 'Name' }] as Array<TableColumn<PokedexInterface>>
+						}
 						data={PokeDex}
 					/>
 				</Provider>,
@@ -840,10 +864,12 @@ describe('Table component', () => {
 		it('should be able to highlight multiple rows', () => {
 			const component = mount(
 				<Provider>
-					<Table
+					<Table<PokedexInterface>
 						rowKey="pokedex_number"
 						highlightedRows={[3, 5]}
-						columns={[{ field: 'Name' }]}
+						columns={
+							[{ field: 'Name' }] as Array<TableColumn<PokedexInterface>>
+						}
 						data={PokeDex}
 					/>
 				</Provider>,
@@ -859,8 +885,10 @@ describe('Table component', () => {
 		it('should limit the number of items shown at one time', () => {
 			const component = mount(
 				<Provider>
-					<Table
-						columns={[{ field: 'Name' }]}
+					<Table<PokedexInterface>
+						columns={
+							[{ field: 'Name' }] as Array<TableColumn<PokedexInterface>>
+						}
 						data={PokeDex}
 						usePager
 						itemsPerPage={3}
@@ -883,7 +911,13 @@ describe('Table component', () => {
 		it('should display a pager', () => {
 			const component = mount(
 				<Provider>
-					<Table columns={[{ field: 'Name' }]} data={PokeDex} usePager />
+					<Table<PokedexInterface>
+						columns={
+							[{ field: 'Name' }] as Array<TableColumn<PokedexInterface>>
+						}
+						data={PokeDex}
+						usePager
+					/>
 				</Provider>,
 			);
 
@@ -893,7 +927,13 @@ describe('Table component', () => {
 		it("shouldn't display a pager if there are no items", () => {
 			const component = mount(
 				<Provider>
-					<Table columns={[{ field: 'Name' }]} data={[]} usePager />
+					<Table<PokedexInterface>
+						columns={
+							[{ field: 'Name' }] as Array<TableColumn<PokedexInterface>>
+						}
+						data={[]}
+						usePager
+					/>
 				</Provider>,
 			);
 
@@ -905,7 +945,7 @@ describe('Table component', () => {
 				React.createElement(
 					(props: any) => (
 						<Provider>
-							<Table {...props} />
+							<Table<PokedexInterface> {...props} />
 						</Provider>
 					),
 					{
@@ -917,7 +957,7 @@ describe('Table component', () => {
 				),
 			);
 
-			const table: any = component.find(Table).instance();
+			const table: any = component.find(TableBase).instance();
 			expect(table.state.page).toEqual(0);
 			table.incrementPage();
 			table.incrementPage();
@@ -932,7 +972,7 @@ describe('getRowClass property', () => {
 	it('should add a class to every row', () => {
 		const component = mount(
 			<Provider>
-				<Table
+				<Table<PokedexInterface>
 					rowKey="pokedex_number"
 					getRowClass={getRowClass}
 					columns={columns}
@@ -953,7 +993,11 @@ describe('getRowClass property', () => {
 	it('should not add any classes if not present', () => {
 		const component = mount(
 			<Provider>
-				<Table rowKey="pokedex_number" columns={columns} data={PokeDex} />
+				<Table<PokedexInterface>
+					rowKey="pokedex_number"
+					columns={columns}
+					data={PokeDex}
+				/>
 			</Provider>,
 		);
 
@@ -971,7 +1015,7 @@ describe('control selected rows', () => {
 	it('should select the first two rows', () => {
 		const component = mount(
 			<Provider>
-				<Table
+				<Table<PokedexInterface>
 					rowKey="pokedex_number"
 					columns={columns}
 					data={PokeDex}
@@ -980,7 +1024,7 @@ describe('control selected rows', () => {
 			</Provider>,
 		);
 
-		const table: any = component.find(Table).instance();
+		const table: any = component.find(TableBase).instance();
 		expect(table.state.checkedItems.length).toEqual(2);
 		expect(table.state.allChecked).toEqual(false);
 	});
@@ -990,11 +1034,15 @@ describe('manually select rows', () => {
 	it('should select the first two rows', () => {
 		const component = mount(
 			<Provider>
-				<Table rowKey="pokedex_number" columns={columns} data={PokeDex} />
+				<Table<PokedexInterface>
+					rowKey="pokedex_number"
+					columns={columns}
+					data={PokeDex}
+				/>
 			</Provider>,
 		);
 
-		const table: any = component.find(Table).instance();
+		const table: any = component.find(TableBase).instance();
 		expect(table.state.checkedItems.length).toEqual(0);
 
 		table.setRowSelection(PokeDex.slice(0, 2));
@@ -1005,11 +1053,15 @@ describe('manually select rows', () => {
 	it('should select all rows', () => {
 		const component = mount(
 			<Provider>
-				<Table rowKey="pokedex_number" columns={columns} data={PokeDex} />
+				<Table<PokedexInterface>
+					rowKey="pokedex_number"
+					columns={columns}
+					data={PokeDex}
+				/>
 			</Provider>,
 		);
 
-		const table: any = component.find(Table).instance();
+		const table: any = component.find(TableBase).instance();
 		expect(table.state.checkedItems.length).toEqual(0);
 
 		table.setRowSelection(PokeDex);
@@ -1020,11 +1072,15 @@ describe('manually select rows', () => {
 	it('should clear all rows', () => {
 		const component = mount(
 			<Provider>
-				<Table rowKey="pokedex_number" columns={columns} data={PokeDex} />
+				<Table<PokedexInterface>
+					rowKey="pokedex_number"
+					columns={columns}
+					data={PokeDex}
+				/>
 			</Provider>,
 		);
 
-		const table: any = component.find(Table).instance();
+		const table: any = component.find(TableBase).instance();
 		expect(table.state.checkedItems.length).toEqual(0);
 
 		table.setRowSelection(PokeDex);
@@ -1041,14 +1097,14 @@ describe('manually select rows', () => {
 			React.createElement(
 				(props: any) => (
 					<Provider>
-						<Table {...props} />
+						<Table<PokedexInterface> {...props} />
 					</Provider>
 				),
 				{ columns, rowKey: 'pokedex_number', data: PokeDex as any },
 			),
 		);
 
-		const table: any = component.find(Table).instance();
+		const table: any = component.find(TableBase).instance();
 		expect(table.state.checkedItems.length).toEqual(0);
 
 		table.setRowSelection(PokeDex);
@@ -1066,7 +1122,7 @@ describe('sorting', () => {
 		const spy = sinon.spy();
 		const component = mount(
 			<Provider>
-				<Table
+				<Table<PokedexInterface>
 					rowKey="pokedex_number"
 					onSort={spy}
 					columns={columns}
@@ -1092,7 +1148,7 @@ describe('sorting', () => {
 			React.createElement(
 				(props: any) => (
 					<Provider>
-						<Table {...props} />
+						<Table<PokedexInterface> {...props} />
 					</Provider>
 				),
 				{
@@ -1104,9 +1160,45 @@ describe('sorting', () => {
 			),
 		);
 
-		const table: any = component.find(Table).instance();
+		const table: any = component.find(TableBase).instance();
 		expect(table.state.sort).toEqual(defaultSort);
 		component.setProps({ sort: updatedSort });
 		expect(table.state.sort).toEqual(updatedSort);
+	});
+});
+
+describe('custom columns', () => {
+	it('should render the Table component with a cog', () => {
+		const component = mount(
+			<Provider>
+				<Table<PokedexInterface>
+					rowKey="pokedex_number"
+					columns={columns}
+					data={PokeDex}
+					enableCustomColumns
+				/>
+			</Provider>,
+		);
+
+		const cog = component.find(TableColumnSelectorSizer);
+		expect(cog).toBeDefined();
+	});
+	it('should render only selected columns', () => {
+		const component = mount(
+			<Provider>
+				<Table<PokedexInterface>
+					rowKey="pokedex_number"
+					columns={columns}
+					data={PokeDex}
+					enableCustomColumns
+				/>
+			</Provider>,
+		);
+		const cols = component.find(
+			'[data-display="table-head"] [data-display="table-cell"]',
+		);
+		const numberOfColumnsToShow = columns.filter((c) => c.selected).length;
+
+		expect(cols).toHaveLength(numberOfColumnsToShow);
 	});
 });

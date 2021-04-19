@@ -21,7 +21,7 @@ import theme from '../../theme';
 import { px } from '../../utils';
 import { Checkbox, CheckboxProps } from '../Checkbox';
 import { Pager } from '../Pager';
-import { CheckboxWrapper, TableColumn, TableRow } from './TableRow';
+import { CheckboxWrapper, TableBaseColumn, TableRow } from './TableRow';
 
 const highlightStyle = `
 	background-color: ${theme.colors.info.light};
@@ -30,19 +30,19 @@ const highlightStyle = `
 const BaseTableWrapper = styled.div`
 	overflow-x: auto;
 	max-width: 100%;
+	border-bottom: 1px solid ${(props) => props.theme.colors.quartenary.main};
 `;
 
-interface BaseTableProps {
+interface InternalTableBaseProps {
 	hasCheckbox: boolean;
 	hasRowClick: boolean;
 	hasGetRowRef: boolean;
 }
 
-const Base = styled.div<BaseTableProps>`
+const Base = styled.div<InternalTableBaseProps>`
 	display: table;
 	width: 100%;
 	border-spacing: 0;
-	border-bottom: 1px solid ${(props) => props.theme.colors.quartenary.main};
 
 	> [data-display='table-head'] {
 		display: table-header-group;
@@ -57,18 +57,25 @@ const Base = styled.div<BaseTableProps>`
 					${(props) => props.theme.colors.quartenary.main};
 				text-align: left;
 				vertical-align: middle;
-				padding: 10px 20px;
+				padding: 5px 20px;
 				font-size: ${(props) => px(props.theme.fontSizes[2])};
+				font-weight: normal;
+				white-space: nowrap;
 			}
 
-			> [data-display='table-cell']:first-child {
-				padding-left: ${(props) => (props.hasCheckbox ? '20px' : '40px')};
-				${(props) => (props.hasCheckbox ? 'width: 60px' : '')};
-			}
-
-			> [data-display='table-cell']:last-child {
-				padding-right: 40px;
-			}
+			${(props) =>
+				props.hasCheckbox
+					? `
+					> [data-display='table-cell']:first-child {
+						width: 60px;
+					}`
+					: `
+					> [data-display='table-cell']:first-child {
+						padding-left: 40px;
+					}
+					> [data-display='table-cell']:last-child {
+						padding-right: 40px;
+					}`};
 		}
 	}
 
@@ -79,25 +86,31 @@ const Base = styled.div<BaseTableProps>`
 			display: table-row;
 			text-decoration: none;
 			color: ${(props) => props.theme.colors.secondary.main};
+			background-color: #fff;
 			font-size: ${(props) => px(props.theme.fontSizes[2])};
 
 			> [data-display='table-cell'] {
 				display: table-cell;
 				text-align: left;
 				vertical-align: middle;
-				padding: 14px 20px;
+				padding: 5px 20px;
 				text-decoration: none;
 				color: inherit;
 			}
 
-			> [data-display='table-cell']:first-child {
-				padding-left: ${(props) => (props.hasCheckbox ? '20px' : '40px')};
-				${(props) => (props.hasCheckbox ? 'width: 60px' : '')};
-			}
-
-			> [data-display='table-cell']:last-child {
-				padding-right: 40px;
-			}
+			${(props) =>
+				props.hasCheckbox
+					? `
+					> [data-display='table-cell']:first-child {
+						width: 60px;
+					}`
+					: `
+					> [data-display='table-cell']:first-child {
+						padding-left: 40px;
+					}
+					> [data-display='table-cell']:last-child {
+						padding-right: 40px;
+					}`};
 
 			> a[data-display='table-cell'] {
 				cursor: ${(props) =>
@@ -128,8 +141,7 @@ const Base = styled.div<BaseTableProps>`
 const HeaderButton = styled(Button)`
 	display: block;
 `;
-
-interface TableState<T> {
+interface TableBaseState<T> {
 	allChecked: boolean;
 	sort: {
 		reverse: boolean;
@@ -139,57 +151,11 @@ interface TableState<T> {
 	page: number;
 }
 
-/**
- * A component used to generate a styled table.
- *
- * ## Columns
- *
- * The `columns` property defines what columns the table should display, how they
- * are rendered and whether or not the column is sortable.
- *
- * The `columns` property should be an array of objects with the following properties:
- *
- * | Name          | Type      | Required | Description                                          |
- * | ------------- | --------- | -------- | ---------------------------------------------------- |
- * | field         | `keyof T`  | ✓ | The name of the field this column should render, this should correspond to a key on the objects passed to the `data` property of the `Table` component |
- * | key | `string` | - | Custom key for React to use instead of the field name above |
- * | cellAttributes | <code>object &#124; (value: any, row: T) => object</code> | - | Attributes that are passed to each cell in this column. This can also be a function, which will be called with the value of the `field` provided and the row data (`T`) |
- * | label | <code>string &#124; JSX.Element</code> | - | A string or JSX element that will be used to display the name of the column. If this property is not provided, the `field` property will be used instead |
- * | render | <code>(value: any, row: T) => string &#124; number &#124; number &#124; JSX.Element &#124; null</code> | - | Use a custom render function to display the value in each column cell. This function will be called with the value of the `field` provided and the row data (`T`) |
- * | sortable | <code>boolean &#124; (a: T, b: T) => number</code> | - | If true, the column will be sortable using an alphanumeric sort, alternatively a function can be provided allowing finer grained control over sorting |
- *
- * ## Notes
- *
- * For performance reasons table rows are only re-rendered if the row properties
- * have changed. For this reason, rows **will not** re-render if their properties
- * are mutated: you should clone the item instead, for example:
- *
- * ```js
- * update (index) {
- *   const newData = this.state.data
- *   const element = newData[index]
- *   newData[index] = Object.assign({}, element, { active: !element.active })
- *   this.setState({ data: newData })
- * }
- * ```
- *
- * See the **Updating data in a table** story for an example of how this can be
- * done using a high order component.
- *
- * Additionally, because of this rendering behaviour the `render()` functions in
- * the `Table` component's `columns` property should only use values provided to
- * the render function.
- * When `render()` functions are provided, they must act like pure functions with
- * respect to their props. They should only rely on their arguments to generate
- * their output and not use any context variables. If you are using a context
- * variable in your `render()` function, then changes to that variable will not
- * cause a re-render of the component and will not be reflected on the table.
- *
- *
- * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Table/Table.stories.tsx)
- */
-export class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
-	constructor(props: TableProps<T>) {
+export class TableBase<T> extends React.Component<
+	TableBaseProps<T>,
+	TableBaseState<T>
+> {
+	constructor(props: TableBaseProps<T>) {
 		super(props);
 
 		if (props.onCheck && !props.rowKey) {
@@ -210,7 +176,7 @@ export class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
 		};
 	}
 
-	public componentDidUpdate(prevProps: TableProps<T>) {
+	public componentDidUpdate(prevProps: TableBaseProps<T>) {
 		if (this.props.sort && !isEqual(prevProps.sort, this.props.sort)) {
 			this.setState({
 				sort: this.props.sort,
@@ -629,9 +595,9 @@ export interface TableSortOptions<T> {
 	field: keyof T | null;
 }
 
-export interface TableProps<T> {
+export interface TableBaseProps<T> {
 	/** An array of column objects, as described above */
-	columns: Array<TableColumn<T>>;
+	columns: Array<TableBaseColumn<T>>;
 	/** An array of objects that will be displayed in the table */
 	data?: T[] | null;
 	/** If provided, it will make the checked rows a controlled aspect of the table */
@@ -669,5 +635,3 @@ export interface TableProps<T> {
 	/** Sets whether the pager is displayed at the top of the table, the bottom of the table or in both positions. Only used if `usePager` is true. Defaults to `top`. */
 	pagerPosition?: 'top' | 'bottom' | 'both';
 }
-
-export { TableColumn, TableRow };

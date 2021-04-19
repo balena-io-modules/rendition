@@ -8,7 +8,7 @@ import { Checkbox, CheckboxProps } from '../Checkbox';
  * Get the value specified by the `field` value
  * If a `render` function is available, use it to get the display value.
  */
-const renderField = <T extends {}>(row: T, column: TableColumn<T>): any => {
+const renderField = <T extends {}>(row: T, column: TableBaseColumn<T>): any => {
 	const value = get(row, column.field);
 	if (column.render) {
 		return column.render(value, row);
@@ -23,7 +23,7 @@ export const CheckboxWrapper = styled.div`
 
 export type TableSortFunction<T> = (a: T, b: T) => number;
 
-export interface TableColumn<T> {
+export interface TableBaseColumn<T> {
 	cellAttributes?:
 		| React.AnchorHTMLAttributes<HTMLAnchorElement>
 		| ((value: any, row: T) => React.AnchorHTMLAttributes<HTMLAnchorElement>);
@@ -47,7 +47,7 @@ export interface TableRowProps<T> {
 	onRowClick: (e: any) => void;
 	toggleChecked: (e: any) => void;
 	showCheck: boolean;
-	columns: Array<TableColumn<T>>;
+	columns: Array<TableBaseColumn<T>>;
 	href?: string;
 	data: T;
 	attributes?: React.AnchorHTMLAttributes<HTMLAnchorElement>;

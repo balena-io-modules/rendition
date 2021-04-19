@@ -42,3 +42,8 @@ export const withConditional = <TProps extends {}>(
 		});
 	};
 };
+
+export const stopEvent = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
+	event.preventDefault();
+	event.stopPropagation();
+};

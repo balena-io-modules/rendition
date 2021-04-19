@@ -9,31 +9,35 @@ import source, {
 	customizationSamples,
 	decoratorSample,
 } from '../../stories/assets/markdownSample';
+import { TableColumn } from '~/components/Table';
 
 const generateTableData = () => {
-	return customizationSamples.map(({ markdown, sanitizerOptions }: any) => {
-		const customSanitizerOptions = defaults(
-			cloneDeep(sanitizerOptions || {}),
-			defaultSanitizerOptions,
-		);
-		return {
-			'Specific Sanitizer Options': (
-				<pre>{JSON.stringify(sanitizerOptions, null, 2)}</pre>
-			),
-			Original: (
-				<Card small>
-					<Markdown>{markdown}</Markdown>
-				</Card>
-			),
-			Customized: (
-				<Card small>
-					<Markdown sanitizerOptions={customSanitizerOptions}>
-						{markdown}
-					</Markdown>
-				</Card>
-			),
-		};
-	});
+	return customizationSamples.map(
+		({ markdown, sanitizerOptions }: any, index) => {
+			const customSanitizerOptions = defaults(
+				cloneDeep(sanitizerOptions || {}),
+				defaultSanitizerOptions,
+			);
+			return {
+				id: index,
+				'Specific Sanitizer Options': (
+					<pre>{JSON.stringify(sanitizerOptions, null, 2)}</pre>
+				),
+				Original: (
+					<Card small>
+						<Markdown>{markdown}</Markdown>
+					</Card>
+				),
+				Customized: (
+					<Card small>
+						<Markdown sanitizerOptions={customSanitizerOptions}>
+							{markdown}
+						</Markdown>
+					</Card>
+				),
+			};
+		},
+	);
 };
 
 export default {
@@ -48,17 +52,13 @@ export const Default = createStory<MarkdownProps>(Template, {
 
 export const Customized = createStory<MarkdownProps>(Template, {});
 const cellAttributes = { style: { verticalAlign: 'top' } };
+const columns: Array<TableColumn<any>> = [
+	{ field: 'Specific Sanitizer Options', cellAttributes },
+	{ field: 'Original', cellAttributes },
+	{ field: 'Customized', cellAttributes },
+];
 Customized.decorators = [
-	() => (
-		<Table
-			columns={[
-				{ field: 'Specific Sanitizer Options', cellAttributes },
-				{ field: 'Original', cellAttributes },
-				{ field: 'Customized', cellAttributes },
-			]}
-			data={generateTableData()}
-		/>
-	),
+	() => <Table columns={columns} data={generateTableData()} />,
 ];
 
 export const WithDecorators = createStory<MarkdownProps>(Template, {
