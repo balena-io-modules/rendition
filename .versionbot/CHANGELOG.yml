@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add Table column selector component
+      hash: 5dd1c8d83fd53ffc688d922eb94ed5b9ab47ee0d
+      body: |
+        Add Table column selector component
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.11.0
+  date: 2021-04-19T12:53:43.287Z
+- commits:
     - subject: Generate missing snapshots
       hash: 77f29b868c03bc90cc84d73a538ab35b507b80b2
       body: |
