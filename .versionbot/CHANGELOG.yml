@@ -1,4 +1,14 @@
 - commits:
+    - subject: Allow specifying the type of `extraContext` for widgets
+      hash: b294f866746bf46690509ef819ac036a79d73435
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Pagan Gazzard
+  version: 20.11.0
+  date: 2021-04-20T12:59:04.118Z
+- commits:
     - subject: 'DropDownButton: Prevent the menu button from submitting parent forms'
       hash: f713a197c4ee92acd33b5aaeee784355af5d3211
       body: ''
