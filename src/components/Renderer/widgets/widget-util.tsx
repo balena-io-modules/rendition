@@ -14,16 +14,16 @@ import { DefinedValue, JSONSchema, UiSchema, Format, Value } from '../types';
 import { UiOptions } from './ui-options';
 import { formatDistance } from 'date-fns';
 
-export interface WidgetProps {
+export interface WidgetProps<T extends object = object> {
 	value: DefinedValue;
 	schema: JSONSchema | undefined;
 	uiSchema?: UiSchema;
 	extraFormats?: Format[];
-	extraContext?: object;
+	extraContext?: T;
 }
 
-export interface Widget {
-	(props: WidgetProps): JSX.Element | null;
+export interface Widget<T extends object = object> {
+	(props: WidgetProps<T>): JSX.Element | null;
 	uiOptions?: UiOptions;
 	supportedTypes?: string[];
 	displayName: string;
