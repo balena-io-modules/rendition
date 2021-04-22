@@ -117,8 +117,9 @@ const RendererBase = ({
 	const [validation, setValidation] = React.useState<Validation | null>(
 		validate && !nested ? buildValidation(schema, formats) : null,
 	);
-	const [validationErrors, setValidationErrors] =
-		React.useState<ajv.ErrorObject[] | null | undefined>(null);
+	const [validationErrors, setValidationErrors] = React.useState<
+		ajv.ErrorObject[] | null | undefined
+	>(null);
 
 	React.useEffect(() => {
 		if (!validate || nested) {

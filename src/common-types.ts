@@ -43,6 +43,9 @@ export type PineDataType =
 	| 'Semver Range'
 	| 'Semver';
 
+export interface Dictionary<T> {
+	[key: string]: T;
+}
 export interface SchemaEntry {
 	type: PineDataType;
 	values?: string[];

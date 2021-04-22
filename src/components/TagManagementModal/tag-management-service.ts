@@ -51,6 +51,12 @@ export const groupResourcesByTags = <
 	return tagsWithItems;
 };
 
+export interface ResourceTagModelService {
+	submit(
+		tagSubmitInfo: SubmitInfo<ResourceTagSubmitInfo, ResourceTagSubmitInfo>,
+	): Promise<void>;
+}
+
 export const getResourceTagSubmitInfo = <T extends TaggedResource>(
 	tags: Array<ResourceTagInfo<T>>,
 ) => {
@@ -74,18 +80,4 @@ export const getResourceTagSubmitInfo = <T extends TaggedResource>(
 	});
 
 	return submitInfo;
-};
-
-export interface ResourceTagModelService {
-	submit(
-		tagSubmitInfo: SubmitInfo<ResourceTagSubmitInfo, ResourceTagSubmitInfo>,
-	): Promise<void>;
-}
-
-export const submitResourceTags = <T extends TaggedResource>(
-	tagService: ResourceTagModelService,
-	resourceTags: Array<ResourceTagInfo<T>>,
-) => {
-	const submitInfo = getResourceTagSubmitInfo(resourceTags);
-	return tagService.submit(submitInfo);
 };

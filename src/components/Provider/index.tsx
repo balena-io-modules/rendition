@@ -13,6 +13,8 @@ import {
 	WidgetContextValue,
 } from '../../contexts/WidgetContext';
 import { TranslationContext } from '../../contexts/TranslationContext';
+import { HistoryContext } from '../../contexts/HistoryContext';
+import type { History } from 'history';
 
 const Base = styled(Grommet)`
 	font-family: ${(props) => props.theme.font};
