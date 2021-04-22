@@ -5,7 +5,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { RenditionSystemProps } from '../../common-types';
-import { px } from '../../utils';
+import { px, stopEvent } from '../../utils';
 import { Box } from '../Box';
 import { Txt, TxtProps } from '../Txt';
 
@@ -67,13 +67,7 @@ const BaseTextWithCopy = ({
 
 			{code && <code title={normalizedCopy}>{contentToRender}</code>}
 
-			<span
-				onClick={(e) => {
-					e.stopPropagation();
-					e.preventDefault();
-				}}
-				className="text-with-copy__copy_wrapper"
-			>
+			<span onClick={stopEvent} className="text-with-copy__copy_wrapper">
 				<Box
 					tooltip={{ text: 'Copied!', trigger: 'click' }}
 					onClick={() => copyToClipboard(normalizedCopy)}

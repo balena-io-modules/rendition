@@ -2,29 +2,35 @@ import React from 'react';
 import { Meta } from '@storybook/react';
 import { createTemplate, createStory } from '../../stories/utils';
 import PokeDex from '../../stories/assets/pokedex';
-import { Table, TableProps } from '.';
+import { Table, TableProps } from './';
 
 const prefixNum = (num: number) =>
 	num.toString().length === 1 ? `0${num}` : num;
 const columns = [
 	{
+		title: 'Name',
 		field: 'Name',
 		sortable: true,
+		selected: true,
 	},
 	{
+		title: 'National Pokedex Number',
 		field: 'pokedex_number',
-		label: 'National Pokedex Number',
 		sortable: true,
+		selected: true,
 		render: (value: any) => <code>{value}</code>,
 	},
 	{
+		title: 'Category',
 		field: 'Category',
 		sortable: true,
+		selected: true,
 	},
 	{
+		title: 'First Seen',
 		field: 'first_seen',
-		label: 'First Seen',
 		sortable: true,
+		selected: false,
 		render: (value: any) => {
 			if (value == null) {
 				return null;
@@ -48,7 +54,7 @@ export default {
 		columns,
 		data: PokeDex,
 		rowKey: 'pokedex_number',
-		// onCheck: null,
+		onCheck: null,
 		// onRowClick: null,
 	},
 } as Meta;
@@ -115,3 +121,7 @@ export const WithConditionalRowClasses = createStory<TableProps<any>>(
 		},
 	},
 );
+
+export const withCustomColumns = createStory<TableProps<any>>(Template, {
+	enableCustomColumns: true,
+});

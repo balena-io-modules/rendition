@@ -1,142 +1,433 @@
-import { faSort } from '@fortawesome/free-solid-svg-icons/faSort';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import every from 'lodash/every';
-import filter from 'lodash/filter';
-import find from 'lodash/find';
-import includes from 'lodash/includes';
-import isEqual from 'lodash/isEqual';
-import isPlainObject from 'lodash/isPlainObject';
-import map from 'lodash/map';
-import reject from 'lodash/reject';
-import reverse from 'lodash/reverse';
-import some from 'lodash/some';
-import sortBy from 'lodash/sortBy';
 import * as React from 'react';
-import styled from 'styled-components';
+import { TableBase, TableBaseProps, TableSortOptions } from './TableBase';
+import styled, { css } from 'styled-components';
+import keys from 'lodash/keys';
+import assign from 'lodash/assign';
+import pick from 'lodash/pick';
+import filter from 'lodash/filter';
+import map from 'lodash/map';
+import flatMap from 'lodash/flatMap';
+import uniq from 'lodash/uniq';
+import reduce from 'lodash/reduce';
+import some from 'lodash/some';
+import without from 'lodash/without';
+import isEqual from 'lodash/isEqual';
+import keyBy from 'lodash/keyBy';
+import size from 'lodash/size';
+import { Flex } from '../Flex';
+import {
+	getFromLocalStorage,
+	getResourceTags,
+	ResourceTagBase,
+	setToLocalStorage,
+	TaggedResource,
+} from './TableUtils';
+import {
+	getNewTagTableColumnState,
+	TableColumnSelector,
+	TableColumnState,
+	TableColumnStateStoredProps,
+	TagTableColumnState,
+} from './TableColumnSelector';
+import { TagLabel } from './TagLabel';
+import { TagLabelList } from './TagLabelList';
+import { CustomColumnHeader } from './CustomColumnHeader';
+import { TableBaseColumn, TableRow } from './TableRow';
 
-import { Button } from '../Button';
-
-// TODO: Remove explicit import and depend on provider instead.
-import theme from '../../theme';
-import { px } from '../../utils';
-import { Checkbox, CheckboxProps } from '../Checkbox';
-import { Pager } from '../Pager';
-import { CheckboxWrapper, TableColumn, TableRow } from './TableRow';
-
-const highlightStyle = `
-	background-color: ${theme.colors.info.light};
+const Container = styled(Flex)`
+	position: relative;
 `;
 
-const BaseTableWrapper = styled.div`
-	overflow-x: auto;
-	max-width: 100%;
+export const TableColumnSelectorSizer = styled.div`
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	height: 40px;
+	padding: 0 8px;
+	background: ${(props) => props.theme.colors.quartenary.semilight};
 `;
 
-interface BaseTableProps {
-	hasCheckbox: boolean;
-	hasRowClick: boolean;
-	hasGetRowRef: boolean;
+const fixedFirstColumnWidth = '60px';
+const fixedFirstColumnCss = (bg: string) => css`
+	max-width: calc(100% - ${fixedFirstColumnWidth});
+	margin-left: ${fixedFirstColumnWidth};
+
+	white-space: nowrap;
+
+	> [data-display='table-head']
+		> [data-display='table-row']
+		> [data-display='table-cell'],
+	> [data-display='table-body']
+		> [data-display='table-row']
+		> [data-display='table-cell'] {
+		&:first-child {
+			position: absolute;
+			left: 0;
+			display: flex;
+			align-items: center;
+			width: ${fixedFirstColumnWidth};
+			height: inherit;
+			z-index: 3;
+			background-color: inherit;
+			> input[type='checkbox'] {
+				margin: 0;
+			}
+		}
+	}
+	> [data-display='table-head']
+		> [data-display='table-row']
+		> [data-display='table-cell']:first-child {
+		background-color: ${bg};
+	}
+`;
+
+const StyledTable = styled(TableBase)<{ enableCustomColumns?: boolean }>`
+	${(props) =>
+		props.enableCustomColumns
+			? `
+		> [data-display='table-head']
+			> [data-display='table-row']
+			> [data-display='table-cell']:last-child {
+			padding-right: 50px;
+		}
+	`
+			: ''};
+
+	> [data-display='table-head'] > [data-display='table-row'] {
+		height: 42px;
+	}
+
+	> [data-display='table-body'] > [data-display='table-row'] {
+		height: 50px;
+	}
+
+	${(props) =>
+		!!props.onCheck
+			? fixedFirstColumnCss(props.theme.colors.quartenary.semilight)
+			: ''};
+`;
+
+const TypedTable: new <T>() => React.Component<
+	TableBaseProps<T> & { enableCustomColumns?: boolean }
+> = StyledTable as any;
+
+const ALL_TAGS_COLUMN_KEY = 'All Tags';
+
+const tagCellAttributes = {
+	href: undefined,
+	style: {
+		cursor: 'auto',
+		paddingTop: '6px',
+		paddingBottom: '6px',
+	},
+};
+
+const isCustomTagColumn = (
+	column: TableColumnState,
+): column is TagTableColumnState =>
+	column.type === 'tag' && column.key !== ALL_TAGS_COLUMN_KEY;
+
+const insertTagColumns = (
+	columns: TableColumnState[],
+	newTagColumns: TableColumnState[],
+) => {
+	let allTagsColumnIndex = columns.findIndex(
+		(column) => column.key === ALL_TAGS_COLUMN_KEY,
+	);
+	if (allTagsColumnIndex < 0) {
+		allTagsColumnIndex = columns.length - 1;
+	}
+
+	columns.splice(allTagsColumnIndex, 0, ...newTagColumns);
+};
+
+const findTagOfTaggedResource = <T extends TaggedResource>(
+	taggedResource: T,
+	tagField: keyof T,
+	tagKey: string,
+) =>
+	getResourceTags(taggedResource, tagField)?.find(
+		(tag) => tag.tag_key === tagKey,
+	);
+
+export interface TableColumn<T> extends TableBaseColumn<T> {
+	title?: string;
+	selected?: boolean;
+	locked?: boolean;
 }
 
-const Base = styled.div<BaseTableProps>`
-	display: table;
-	width: 100%;
-	border-spacing: 0;
-	border-bottom: 1px solid ${(props) => props.theme.colors.quartenary.main};
+type TableColumnInternal<T> = TableBaseColumn<T> & TableColumnState;
 
-	> [data-display='table-head'] {
-		display: table-header-group;
-		background-color: ${(props) => props.theme.colors.quartenary.semilight};
-
-		> [data-display='table-row'] {
-			display: table-row;
-
-			> [data-display='table-cell'] {
-				display: table-cell;
-				border-bottom: 1px solid
-					${(props) => props.theme.colors.quartenary.main};
-				text-align: left;
-				vertical-align: middle;
-				padding: 10px 20px;
-				font-size: ${(props) => px(props.theme.fontSizes[2])};
-			}
-
-			> [data-display='table-cell']:first-child {
-				padding-left: ${(props) => (props.hasCheckbox ? '20px' : '40px')};
-				${(props) => (props.hasCheckbox ? 'width: 60px' : '')};
-			}
-
-			> [data-display='table-cell']:last-child {
-				padding-right: 40px;
-			}
-		}
-	}
-
-	> [data-display='table-body'] {
-		display: table-row-group;
-
-		> [data-display='table-row'] {
-			display: table-row;
-			text-decoration: none;
-			color: ${(props) => props.theme.colors.secondary.main};
-			font-size: ${(props) => px(props.theme.fontSizes[2])};
-
-			> [data-display='table-cell'] {
-				display: table-cell;
-				text-align: left;
-				vertical-align: middle;
-				padding: 14px 20px;
-				text-decoration: none;
-				color: inherit;
-			}
-
-			> [data-display='table-cell']:first-child {
-				padding-left: ${(props) => (props.hasCheckbox ? '20px' : '40px')};
-				${(props) => (props.hasCheckbox ? 'width: 60px' : '')};
-			}
-
-			> [data-display='table-cell']:last-child {
-				padding-right: 40px;
-			}
-
-			> a[data-display='table-cell'] {
-				cursor: ${(props) =>
-					props.hasRowClick || props.hasGetRowRef ? 'pointer' : 'auto'};
-			}
-
-			&:nth-of-type(even) {
-				background-color: ${(props) => props.theme.colors.quartenary.light};
-			}
-
-			&:hover {
-				text-decoration: none;
-				${(props) =>
-					props.hasRowClick || props.hasGetRowRef || props.hasCheckbox
-						? highlightStyle
-						: ''};
-			}
-
-			&[data-highlight='true'] {
-				${highlightStyle} > [data-display="table-cell"]:first-child {
-					box-shadow: inset 3px 0px 0 ${(props) => props.theme.colors.info.main};
-				}
-			}
-		}
-	}
-`;
-
-const HeaderButton = styled(Button)`
-	display: block;
-`;
-
-interface TableState<T> {
-	allChecked: boolean;
-	sort: {
-		reverse: boolean;
-		field: null | keyof T;
+const getTagTableColumn = <T extends TaggedResource>(
+	columnState: TagTableColumnState,
+	tagField: keyof T,
+) => {
+	const column: TableColumnInternal<T> = {
+		...columnState,
+		// this field path doesn't exist
+		// but we need to define something unique
+		// for the table to work
+		field: `${tagField}.${columnState.tagKey}` as keyof T,
+		cellAttributes: tagCellAttributes,
 	};
-	checkedItems: T[];
-	page: number;
+	column.sortable = (a: T, b: T) => {
+		const tagKey = column.tagKey;
+		if (!tagKey) {
+			return 0;
+		}
+
+		const item1tag = findTagOfTaggedResource(a, tagField, tagKey);
+		const item2tag = findTagOfTaggedResource(b, tagField, tagKey);
+
+		// first compare the objects
+		// so that we differentiate not having a value
+		// with not having the tag at all
+		if (!item1tag && !item2tag) {
+			return 0;
+		}
+
+		if (!item1tag) {
+			return 1;
+		}
+
+		if (!item2tag) {
+			return -1;
+		}
+
+		return (item1tag.value || '').localeCompare(item2tag.value || '');
+	};
+	column.render = (_value: any, data: T) => {
+		const tagKey = column.tagKey;
+		if (!tagKey) {
+			return null;
+		}
+
+		const tag = findTagOfTaggedResource(data, tagField, tagKey);
+		if (!tag) {
+			return null;
+		}
+		return <TagLabel tag={tag} showTagKey={false} />;
+	};
+	return column;
+};
+
+const normalizeTableColumn = <T extends {}>(
+	originalColumn: TableColumn<T> & Partial<Pick<TableColumnState, 'type'>>,
+	enableCustomColumns?: boolean,
+): TableColumnInternal<T> => {
+	const column = originalColumn as TableColumnInternal<T>;
+	if (isCustomTagColumn(column) && !column.title && column.tagKey) {
+		column.title = column.tagKey;
+	}
+
+	column.label = column.label || column.title;
+	// when custom columns are off, all columns show appear
+	// locked columns should always be visible
+	column.selected =
+		!enableCustomColumns ||
+		originalColumn.locked ||
+		originalColumn.selected ||
+		false;
+
+	return column;
+};
+
+const getAllTagsTableColumn = <T extends TaggedResource>(
+	tagField: keyof T,
+	enableCustomColumns?: boolean,
+) =>
+	normalizeTableColumn(
+		{
+			title: 'All Tags',
+			key: ALL_TAGS_COLUMN_KEY,
+			selected: false,
+			type: 'predefined',
+			field: tagField,
+			cellAttributes: tagCellAttributes,
+			render: (tags: ResourceTagBase[]) => {
+				if (!tags) {
+					return null;
+				}
+				return <TagLabelList tags={tags} nowrap />;
+			},
+		},
+		enableCustomColumns,
+	);
+
+const loadSortingPreferences = <T extends unknown>(
+	sortingStateRestorationKey: string,
+): TableSortOptions<T> | undefined => {
+	if (!sortingStateRestorationKey) {
+		return;
+	}
+
+	const sortPreferences = getFromLocalStorage<TableSortOptions<T>>(
+		sortingStateRestorationKey,
+	);
+
+	if (!sortPreferences || !sortPreferences.field) {
+		return;
+	}
+
+	return sortPreferences;
+};
+
+const saveSortingPreferences = <T extends unknown>(
+	sortingStateRestorationKey: string,
+	sortPreferences: TableSortOptions<T>,
+) => {
+	if (!sortingStateRestorationKey) {
+		return;
+	}
+
+	setToLocalStorage(sortingStateRestorationKey, sortPreferences);
+};
+
+const loadColumnPreferences = (columnStateRestorationKey?: string) => {
+	if (!columnStateRestorationKey) {
+		return [];
+	}
+
+	const loadedColumns = getFromLocalStorage<TableColumnState[]>(
+		columnStateRestorationKey,
+	);
+
+	// storage restored objects do not contain undefined props
+	loadedColumns?.forEach((c) => {
+		if (c.type === 'tag' && !c.tagKey) {
+			c.tagKey = undefined;
+		}
+	});
+
+	return loadedColumns;
+};
+
+const saveColumnPreferences = (
+	columnStateRestorationKey: string | undefined,
+	newColumns: TableColumnState[],
+) => {
+	if (!columnStateRestorationKey) {
+		return;
+	}
+
+	const savePayload = newColumns.map((c) =>
+		pick(c, TableColumnStateStoredProps),
+	);
+
+	setToLocalStorage(columnStateRestorationKey, savePayload);
+};
+
+const applyColumnPreferences = <T extends TaggedResource>(
+	columns: Array<TableColumnInternal<T>>,
+	loadedColumns: TableColumnState[] | undefined,
+	tagField: keyof T | undefined,
+	enableCustomColumns?: boolean,
+): Array<TableColumnInternal<T>> => {
+	if (!size(loadedColumns)) {
+		return columns;
+	}
+
+	const columnsByKey = keyBy(columns, 'key');
+	const loadedColumnsByKey = keyBy(loadedColumns, 'key');
+
+	const tableColumnStateAssignedProps = without(
+		TableColumnStateStoredProps,
+		'key',
+	);
+
+	keys(columnsByKey).forEach((key) => {
+		const column = columnsByKey[key];
+		const loadedColumn = loadedColumnsByKey[key];
+
+		if (!loadedColumn) {
+			return;
+		}
+
+		assign(column, pick(loadedColumn, tableColumnStateAssignedProps));
+	});
+
+	// we need to populate the rest properties
+	// for the restored tag columns
+	if (tagField) {
+		const loadedTagColumns = filter(loadedColumns, isCustomTagColumn);
+		const tagColumns = map(loadedTagColumns, (c) =>
+			getTagTableColumn<T>(c, tagField),
+		);
+		insertTagColumns(columns, tagColumns);
+	}
+
+	columns.forEach((column) =>
+		normalizeTableColumn(column, enableCustomColumns),
+	);
+
+	return columns;
+};
+
+const addCustomColumns = <T extends TaggedResource>(props: TableProps<T>) => {
+	const {
+		columns,
+		tagField,
+		enableCustomColumns,
+		columnStateRestorationKey,
+	} = props;
+	let allColumns = columns.map((column) =>
+		normalizeTableColumn(column, enableCustomColumns),
+	);
+
+	if (tagField) {
+		allColumns = allColumns.concat(
+			getAllTagsTableColumn(tagField, enableCustomColumns),
+		);
+	}
+
+	const loadedColumns = props.loadColumnPreferences
+		? props.loadColumnPreferences()
+		: loadColumnPreferences(columnStateRestorationKey);
+
+	allColumns = applyColumnPreferences(
+		allColumns,
+		loadedColumns,
+		tagField,
+		enableCustomColumns,
+	);
+	return allColumns;
+};
+
+export interface TableProps<T> extends TableBaseProps<T> {
+	/** An array of objects that will be displayed in the table */
+	data: T[];
+	/** An array of column objects, as described above */
+	columns: Array<TableColumn<T>>;
+	/** Set a field for tags */
+	tagField?: keyof T;
+	innerRef?: React.LegacyRef<
+		React.Component<
+			TableProps<T> & { enableCustomColumns?: boolean | undefined },
+			{},
+			any
+		>
+	>;
+	/** Key to store columns preferences to show when enableCustomColumns is true */
+	columnStateRestorationKey?: string;
+	/** Key to store custom sorting */
+	sortingStateRestorationKey?: string;
+	/** Custom function to store column preferences */
+	loadColumnPreferences?: () => TableColumnState[] | undefined;
+	/** Custom function to store custom sorting preferences */
+	saveColumnPreferences?: (newColumns: TableColumnState[]) => void;
+	/** Show a Table with custom columns which gives the possibility to display and hide the selected columns */
+	enableCustomColumns?: boolean;
+}
+
+interface TableWithCustomColumnsState<T> {
+	allColumns: Array<TableColumnInternal<T>>;
+	visibleColumns: Array<TableColumnInternal<T>>;
+	tagKeys: string[];
+	selectedTagColumnKeys: string[];
+	newTagColumnKeys: string[];
+	sort: TableSortOptions<T> | undefined;
 }
 
 /**
@@ -157,6 +448,12 @@ interface TableState<T> {
  * | label | <code>string &#124; JSX.Element</code> | - | A string or JSX element that will be used to display the name of the column. If this property is not provided, the `field` property will be used instead |
  * | render | <code>(value: any, row: T) => string &#124; number &#124; number &#124; JSX.Element &#124; null</code> | - | Use a custom render function to display the value in each column cell. This function will be called with the value of the `field` provided and the row data (`T`) |
  * | sortable | <code>boolean &#124; (a: T, b: T) => number</code> | - | If true, the column will be sortable using an alphanumeric sort, alternatively a function can be provided allowing finer grained control over sorting |
+ * | selected | <code>boolean</code> | - | This boolean allow to choose which columns are visible, when custom columns are activated with `enableCustomColumns`. |
+ *
+ * ## Custom Columns
+ *
+ * The `enableCustomColumns` property allows to have visible and hidden columns, which can be managed from a side menu that allow to choose which of these to display.
+ * In this mode it is also provided the possibility to save ( `saveColumnPreferences` ) and load ( `loadColumnPreferences` ) the column preferences to always maintain the chosen ones.
  *
  * ## Notes
  *
@@ -188,486 +485,282 @@ interface TableState<T> {
  *
  * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Table/Table.stories.tsx)
  */
-export class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
+
+export class Table<T extends TaggedResource> extends React.Component<
+	TableProps<T>,
+	TableWithCustomColumnsState<T>
+> {
 	constructor(props: TableProps<T>) {
 		super(props);
 
-		if (props.onCheck && !props.rowKey) {
-			throw new Error(
-				'A `rowKey` property must be provided if using `onCheck` with a Table component',
-			);
-		}
+		const allColumns = addCustomColumns(props);
 
-		const sortState = props.sort || {
-			reverse: false,
-			field: null,
-		};
-
-		this.state = {
-			sort: sortState,
-			page: 0,
-			...this.getSelectedRows(props.checkedItems),
-		};
+		this.state = this.getNewStateSlice(allColumns, this.props.data);
 	}
 
-	public componentDidUpdate(prevProps: TableProps<T>) {
-		if (this.props.sort && !isEqual(prevProps.sort, this.props.sort)) {
-			this.setState({
-				sort: this.props.sort,
+	public componentWillReceiveProps(newProps: TableProps<T>) {
+		if (
+			this.props.data !== newProps.data ||
+			this.props.columns !== newProps.columns
+		) {
+			let { allColumns } = this.state;
+			if (this.props.columns !== newProps.columns) {
+				allColumns = addCustomColumns(newProps);
+			}
+
+			const newStateSlice = this.getNewStateSlice(allColumns, newProps.data);
+
+			const shouldSaveUpdatedColumns = !isEqual(
+				map(this.state.visibleColumns, 'key'),
+				map(newStateSlice.visibleColumns, 'key'),
+			);
+
+			this.setState(newStateSlice, () => {
+				if (shouldSaveUpdatedColumns) {
+					this.saveColumnPreferences(newStateSlice.allColumns);
+				}
+			});
+		}
+	}
+
+	protected getTagKeys(columns: Array<TableColumnInternal<T>>, data: T[]) {
+		if (!this.props.tagField) {
+			return {
+				tagKeys: [],
+				selectedTagColumnKeys: [],
+				newTagColumnKeys: [],
+			};
+		}
+
+		const tagKeys = uniq(
+			flatMap(
+				data,
+				(d) =>
+					(getResourceTags(d, this.props.tagField!) as ResourceTagBase[]) || [],
+			).map((t) => t.tag_key),
+		).sort();
+
+		const selectedTagColumnKeys = reduce(
+			columns,
+			(acc, c) => {
+				if (c.type === 'tag' && c.tagKey) {
+					acc.push(c.tagKey);
+				}
+				return acc;
+			},
+			[] as string[],
+		);
+
+		const newTagColumnKeys = without(tagKeys, ...selectedTagColumnKeys);
+
+		if (
+			!this.state ||
+			!isEqual(this.state.tagKeys, tagKeys) ||
+			!isEqual(this.state.selectedTagColumnKeys, selectedTagColumnKeys) ||
+			!isEqual(this.props.columns, columns)
+		) {
+			const addedFirstTag =
+				!!this.state && !some(this.state.tagKeys) && some(tagKeys);
+			columns = columns.map((c) => {
+				if (isCustomTagColumn(c)) {
+					// we need to refresh the headers of all tag columns
+					this.setTagTableColumnHeader({ tagKeys, selectedTagColumnKeys }, c);
+				} else if (
+					addedFirstTag &&
+					c.key === ALL_TAGS_COLUMN_KEY &&
+					!c.selected
+				) {
+					// make the "All Tags" column pop when we first add a tag
+					c.selected = true;
+				}
+				return c;
 			});
 		}
 
-		if (
-			this.props.checkedItems &&
-			prevProps.checkedItems !== this.props.checkedItems
-		) {
-			this.setRowSelection(this.props.checkedItems);
-		}
-
-		const totalItems = this.props.data?.length ?? 0;
-		const itemsPerPage = this.props.itemsPerPage ?? 50;
-		if (this.state.page !== 0 && totalItems <= this.state.page * itemsPerPage) {
-			this.resetPager();
-		}
+		return { tagKeys, selectedTagColumnKeys, newTagColumnKeys };
 	}
 
-	public isChecked(item: T) {
-		const rowKey = this.props.rowKey;
-		if (!rowKey) {
-			return false;
+	protected getNewStateSlice(
+		columns: Array<TableColumnInternal<T>>,
+		data: T[],
+	): TableWithCustomColumnsState<T> {
+		const visibleColumns = filter(columns, 'selected');
+
+		let sort: TableSortOptions<T> | undefined;
+		if (this.state) {
+			sort = this.state.sort;
+		} else if (!this.props.sort && this.props.sortingStateRestorationKey) {
+			const loadedSort = loadSortingPreferences(
+				this.props.sortingStateRestorationKey,
+			);
+			if (
+				loadedSort &&
+				some(visibleColumns, (c) => c.field === loadedSort.field)
+			) {
+				sort = loadedSort;
+			}
 		}
 
-		const identifier = item[rowKey];
-		return some(this.state.checkedItems, { [rowKey]: identifier });
+		return {
+			allColumns: columns,
+			visibleColumns,
+			sort,
+			...this.getTagKeys(columns, data),
+		};
 	}
 
-	public isHighlighted(item: T) {
-		if (
-			!this.props.highlightedRows ||
-			this.props.highlightedRows.length === 0
-		) {
-			return false;
-		}
-
-		const rowKey = this.props.rowKey;
-		if (!rowKey) {
-			return false;
-		}
-
-		const identifier = item[rowKey];
-		return includes(this.props.highlightedRows, identifier);
+	protected setColumns(newColumns: Array<TableColumnInternal<T>>) {
+		const newState = this.getNewStateSlice(newColumns.slice(), this.props.data);
+		return new Promise<void>((resolve) => this.setState(newState, resolve));
 	}
 
-	public isDisabled(item: T) {
-		if (!this.props.disabledRows || this.props.disabledRows.length === 0) {
-			return false;
-		}
-
-		const rowKey = this.props.rowKey;
-		if (!rowKey) {
-			return false;
-		}
-
-		const identifier = item[rowKey];
-		return includes(this.props.disabledRows, identifier);
-	}
-
-	public isEachRowChecked(checkedItems: T[]): boolean {
-		const rowKey = this.props.rowKey;
-		if (!rowKey) {
-			return false;
-		}
-
-		const selectedKeys = map(checkedItems, rowKey);
-
-		return every(this.props.data, (x) => includes(selectedKeys, x[rowKey]));
-	}
-
-	public sortData(data: T[]): T[] {
-		const { sort } = this.state;
-		if (!sort || sort.field === null) {
-			return data;
-		}
-
-		const column = find(this.props.columns, { field: sort.field });
-
-		if (!column) {
-			return data;
-		}
-
-		let collection;
-
-		const columnAny = column || ({} as any);
-
-		if ('sortable' in columnAny && typeof columnAny.sortable === 'function') {
-			collection = data.slice().sort(columnAny.sortable);
+	protected saveColumnPreferences(newColumns: TableColumnState[]) {
+		if (this.props.saveColumnPreferences) {
+			this.props.saveColumnPreferences(newColumns);
 		} else {
-			collection = sortBy<T>(data.slice(), (item) => {
-				const sortableValue = item[sort.field as keyof T];
-				return isPlainObject(sortableValue)
-					? (sortableValue as any).value
-					: sortableValue;
-			});
+			saveColumnPreferences(this.props.columnStateRestorationKey, newColumns);
 		}
-
-		if (sort.reverse) {
-			reverse(collection);
-		}
-
-		return collection;
 	}
 
-	private getSelectedRows = (selectedRows: T[] | undefined) => {
-		const { rowKey, data } = this.props;
-
-		if (!rowKey || selectedRows?.length === 0) {
-			return { checkedItems: [], allChecked: false };
-		}
-
-		const selectedRowsIds = map(selectedRows, rowKey);
-
-		let checkedItems: T[] = [];
-		let allChecked = false;
-
-		if (data) {
-			checkedItems = filter(this.props.data, (x) =>
-				includes(selectedRowsIds, x[rowKey]),
-			);
-			allChecked = data.length > 0 && checkedItems.length === data.length;
-		}
-
-		return { checkedItems, allChecked };
+	protected setColumnsAndSave = async (
+		columns: Array<TableColumnInternal<T>>,
+	) => {
+		await this.setColumns(columns);
+		// if nothing breaks, save the column preferences
+		this.saveColumnPreferences(columns);
 	};
 
-	public setRowSelection = (selectedRows: T[]): void => {
-		this.setState(this.getSelectedRows(selectedRows));
-	};
-
-	public toggleAllChecked = () => {
-		const { data } = this.props;
-
-		const allChecked = !this.state.allChecked;
-		const checkedItems = allChecked
-			? (data || []).slice().filter((r) => !this.isDisabled(r))
-			: [];
-
-		if (this.props.onCheck) {
-			this.props.onCheck(checkedItems);
-		}
-
-		this.setState({ allChecked, checkedItems });
-	};
-
-	public toggleChecked = (e: React.ChangeEvent<HTMLInputElement>) => {
-		const rowKey = this.props.rowKey;
-		const { key } = e.currentTarget.dataset;
-		if (!rowKey || !key) {
-			return false;
-		}
-
-		const item = this.getElementFromKey(key);
-
-		if (!item) {
+	protected addTagColumn = () => {
+		const {
+			tagKeys,
+			newTagColumnKeys,
+			allColumns,
+			selectedTagColumnKeys,
+		} = this.state;
+		if (!this.props.tagField) {
 			return;
 		}
 
-		const identifier = item[rowKey];
-
-		const isChecked = !this.isChecked(item);
-		const checkedItems = isChecked
-			? this.state.checkedItems.concat(item)
-			: ((reject(this.state.checkedItems, {
-					[rowKey]: identifier,
-			  }) as unknown) as Array<typeof item>);
-
-		if (this.props.onCheck) {
-			this.props.onCheck(checkedItems);
-		}
-
-		this.setState({
-			allChecked: this.isEachRowChecked(checkedItems),
-			checkedItems,
-		});
-	};
-
-	public toggleSort = (e: React.MouseEvent<HTMLButtonElement>) => {
-		const { field } = e.currentTarget.dataset;
-		const { sort } = this.state;
-		if (!field) {
+		if (
+			some(allColumns, {
+				type: 'tag',
+				tagKey: undefined,
+			})
+		) {
+			// don't add extra unconfigured tag columns
 			return;
 		}
 
-		let nextSort = {
-			field: field as keyof T,
-			reverse: false,
-		};
+		// when there is only one unselected tag
+		// then auto-select it for the new tag column
+		const tagKey =
+			newTagColumnKeys.length === 1 ? newTagColumnKeys[0] : undefined;
+		const newColumnState = getNewTagTableColumnState(tagKey);
 
-		if (sort.field === field) {
-			nextSort = { field: sort.field, reverse: !sort.reverse };
+		const columns = allColumns.slice();
+		const newTagColumn = getTagTableColumn(newColumnState, this.props.tagField);
+		this.setTagTableColumnHeader(
+			{ tagKeys, selectedTagColumnKeys },
+			newTagColumn,
+		);
+		insertTagColumns(columns, [newTagColumn]);
+		this.setColumnsAndSave(columns);
+	};
+
+	protected setTagTableColumnHeader(
+		state: { tagKeys: string[]; selectedTagColumnKeys: string[] },
+		column: TableColumnInternal<T>,
+	) {
+		column.label = (
+			<CustomColumnHeader
+				columnInfo={column}
+				items={state.tagKeys}
+				disabledItems={state.selectedTagColumnKeys}
+				label="Tag"
+				setColumn={this.configureTagColumn}
+			/>
+		);
+	}
+
+	protected configureTagColumn = (
+		column: TableColumnInternal<T>,
+		tagKey: string,
+	) => {
+		if (!column || !tagKey || !this.props.tagField) {
+			return;
 		}
 
-		this.setState({ sort: nextSort });
+		const indexOfColumn = this.state.allColumns.indexOf(column);
+		if (indexOfColumn < 0) {
+			return;
+		}
+
+		const newColumn = getTagTableColumn(
+			getNewTagTableColumnState(tagKey),
+			this.props.tagField,
+		);
+		const columns = this.state.allColumns.slice();
+		columns.splice(indexOfColumn, 1, newColumn);
+		// trigger a refresh
+		this.setColumnsAndSave(columns);
+	};
+
+	protected onSort = (sort: TableSortOptions<T>) => {
+		if (this.props.sortingStateRestorationKey) {
+			saveSortingPreferences(this.props.sortingStateRestorationKey, sort);
+			this.setState({
+				sort,
+			});
+		}
 
 		if (this.props.onSort) {
-			this.props.onSort(nextSort);
+			this.props.onSort(sort);
 		}
-	};
-
-	public getElementFromKey(key: string) {
-		const { data, rowKey } = this.props;
-		if (!data) {
-			return;
-		}
-
-		if (rowKey) {
-			// Normalize the key value to a string for comparison, because data
-			// attributes on elements are always strings
-			return find(data, (element) => `${element[rowKey]}` === key);
-		}
-
-		return data[Number(key)];
-	}
-
-	public onRowClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-		if (!this.props.onRowClick) {
-			return;
-		}
-
-		if (!this.props.rowKey) {
-			return console.warn(
-				'onRowClick requires that you provide a `rowKey` property',
-			);
-		}
-
-		const { key } = e.currentTarget.dataset;
-
-		if (!key) {
-			return console.warn('onRowClick called on an element without a key set');
-		}
-		const row = this.getElementFromKey(key);
-
-		if (row) {
-			this.props.onRowClick(row, e);
-		}
-	};
-
-	public setPage = (change: any) => {
-		if (this.props.onPageChange) {
-			this.props.onPageChange(change);
-		}
-
-		this.setState({ page: change });
-	};
-
-	public resetPager = () => {
-		this.setPage(0);
-	};
-
-	public incrementPage = () => {
-		this.setPage(this.state.page + 1);
-	};
-
-	public decrementPage = () => {
-		this.setPage(this.state.page - 1);
 	};
 
 	public render() {
 		const {
 			columns,
-			data,
-			usePager,
-			itemsPerPage,
-			pagerPosition,
-			rowAnchorAttributes,
-			rowKey,
-			onCheck,
+			tagField,
+			sortingStateRestorationKey,
+			columnStateRestorationKey,
+			loadColumnPreferences,
+			saveColumnPreferences,
+			sort: sortProp,
+			innerRef,
+			onSort,
 			onRowClick,
-			getRowHref,
-			getRowClass,
 			...props
 		} = this.props;
 
-		const { page, sort } = this.state;
-		const items = data || [];
-		const totalItems = items.length;
-
-		const _itemsPerPage = itemsPerPage || 50;
-		const _pagerPosition = pagerPosition || 'top';
-
-		const lowerBound = usePager ? page * _itemsPerPage : 0;
-		const upperBound = usePager
-			? Math.min((page + 1) * _itemsPerPage, totalItems)
-			: totalItems;
-
-		const sortedData = this.sortData(items).slice(lowerBound, upperBound);
-
-		const shouldShowPaper = !!usePager && totalItems > 0;
+		const sort =
+			sortProp || (sortingStateRestorationKey ? this.state.sort : undefined);
 
 		return (
-			<>
-				{shouldShowPaper &&
-					(_pagerPosition === 'top' || _pagerPosition === 'both') && (
-						<Pager
-							totalItems={totalItems}
-							itemsPerPage={_itemsPerPage}
-							page={page}
-							nextPage={this.incrementPage}
-							prevPage={this.decrementPage}
-							mb={2}
-						/>
-					)}
-
-				<BaseTableWrapper>
-					<Base
+			<Container>
+				<Flex flexDirection="column" flex="1" width="100%">
+					<TypedTable<T>
+						columns={this.state.visibleColumns}
+						ref={innerRef}
+						sort={sort}
+						onSort={this.onSort}
+						onRowClick={onRowClick}
 						{...props}
-						hasRowClick={!!onRowClick}
-						hasGetRowRef={!!getRowHref}
-						hasCheckbox={!!onCheck}
-					>
-						<div data-display="table-head">
-							<div data-display="table-row">
-								{onCheck && (
-									<CheckboxWrapper data-display="table-cell">
-										<Checkbox
-											checked={this.state.allChecked}
-											onChange={this.toggleAllChecked}
-										/>
-									</CheckboxWrapper>
-								)}
-								{map(columns, (item) => {
-									if (item.sortable) {
-										return (
-											<div
-												data-display="table-cell"
-												key={item.key || (item.field as string)}
-											>
-												<HeaderButton
-													data-field={item.field}
-													plain
-													primary={sort.field === item.field}
-													onClick={this.toggleSort}
-												>
-													{item.label || item.field}
-													&nbsp;
-													<FontAwesomeIcon
-														icon={faSort}
-														color={
-															sort.field === item.field
-																? theme.colors.info.main
-																: ''
-														}
-													/>
-												</HeaderButton>
-											</div>
-										);
-									}
-									return (
-										<div
-											data-display="table-cell"
-											key={item.key || (item.field as string)}
-										>
-											{item.label || item.field}
-										</div>
-									);
-								})}
-							</div>
-						</div>
-						<div data-display="table-body">
-							{this.props.tbodyPrefix}
-							{map(sortedData, (row, i) => {
-								const isChecked = onCheck ? this.isChecked(row) : false;
-								const isHighlighted = this.isHighlighted(row);
-								const isDisabled = this.isDisabled(row);
-								const key = rowKey ? (row[rowKey] as any) : i;
-								const href = !!getRowHref ? getRowHref(row) : undefined;
-								const classNamesList =
-									typeof getRowClass === 'function' ? getRowClass(row) : [];
-								const className = Array.isArray(classNamesList)
-									? classNamesList.join(' ')
-									: '';
-								return (
-									<TableRow
-										isChecked={isChecked}
-										isHighlighted={isHighlighted}
-										isDisabled={isDisabled}
-										key={key}
-										keyAttribute={key}
-										href={href}
-										data={row}
-										showCheck={!!onCheck}
-										columns={columns}
-										attributes={rowAnchorAttributes}
-										checkboxAttributes={this.props.rowCheckboxAttributes}
-										toggleChecked={this.toggleChecked}
-										onRowClick={this.onRowClick}
-										className={className}
-									/>
-								);
-							})}
-						</div>
-					</Base>
-				</BaseTableWrapper>
-
-				{shouldShowPaper &&
-					(_pagerPosition === 'bottom' || _pagerPosition === 'both') && (
-						<Pager
-							totalItems={totalItems}
-							itemsPerPage={_itemsPerPage}
-							page={page}
-							nextPage={this.incrementPage}
-							prevPage={this.decrementPage}
-							mt={2}
+					/>
+				</Flex>
+				{this.props.enableCustomColumns && (
+					<TableColumnSelectorSizer>
+						<TableColumnSelector
+							columns={this.state.allColumns}
+							setColumns={this.setColumnsAndSave}
+							addTagColumn={this.addTagColumn}
+							tagKeys={tagField ? this.state.tagKeys : undefined}
 						/>
-					)}
-			</>
+					</TableColumnSelectorSizer>
+				)}
+			</Container>
 		);
 	}
 }
 
-export interface TableSortOptions<T> {
-	reverse: boolean;
-	field: keyof T | null;
-}
-
-export interface TableProps<T> {
-	/** An array of column objects, as described above */
-	columns: Array<TableColumn<T>>;
-	/** An array of objects that will be displayed in the table */
-	data?: T[] | null;
-	/** If provided, it will make the checked rows a controlled aspect of the table */
-	checkedItems?: T[];
-	/** If provided, each row in the table will be a clickable link, this function is used to create the link href */
-	getRowHref?: (row: T) => string;
-	/** If provided, each row will begin with a checkbox. This function is called with every checked row every time a checkbox is toggled on or off. This property requires that you have provided a `rowKey` property */
-	onCheck?: (checkedItems: T[]) => void;
-	/** A function that is called when a row is clicked. This property requires that you have provided a `rowKey` property */
-	onRowClick?: (row: T, event: React.MouseEvent<HTMLAnchorElement>) => void;
-	/** A function that is called when a column is sorted */
-	onSort?: (sort: TableSortOptions<T>) => void;
-	/** A function that is called when the page is incremented, decremented and reset */
-	onPageChange?: (page: number) => void;
-	/** sort options to be used both as a default sort, and on subsequent renders if the passed sort changes */
-	sort?: TableSortOptions<T>;
-	/** Attributes to pass to the anchor element used in a row */
-	rowAnchorAttributes?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
-	/** Attributes to pass to the checkbox element used in a row */
-	rowCheckboxAttributes?: CheckboxProps;
-	/** A field on a row that contains a unique identifier, can help speed up render performance and is required for the onCheck property */
-	rowKey?: keyof T;
-	/** JSX element(s) to display at the top of the table body */
-	tbodyPrefix?: JSX.Element | JSX.Element[];
-	/** Highlights one or more rows. This property requires that you have provided a rowKey property: the row with a `rowKey` property that matches one of these values is highlighted. */
-	highlightedRows?: any;
-	/** Disable one or more rows. This property requires that you have provided a rowKey property: the row with a `rowKey` property that matches one of these values is disabled. */
-	disabledRows?: Array<T[keyof T]>;
-	/** If provided each row will have classes based on some conditions. Should return a className string */
-	getRowClass?: (row: T) => string[];
-	/** If true, a pager will be used when displaying items. */
-	usePager?: boolean;
-	/** The number of items to be shown per page. Only used if `usePager` is true. Defaults to 50. */
-	itemsPerPage?: number;
-	/** Sets whether the pager is displayed at the top of the table, the bottom of the table or in both positions. Only used if `usePager` is true. Defaults to `top`. */
-	pagerPosition?: 'top' | 'bottom' | 'both';
-}
-
-export { TableColumn, TableRow };
+export { TableBaseColumn, TableRow, TableSortOptions };

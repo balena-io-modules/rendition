@@ -6,135 +6,141 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <div
-      class="sc-iqVVwt iACpFK"
+      class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-fyrnIy cisfns jYuVlE"
     >
       <div
-        class="sc-eWfWgB iMxuYj"
+        class="sc-gKckTs bTSdEc sc-iCfLBT cEOlPK sc-hGPAah jrGUyo"
       >
         <div
-          data-display="table-head"
+          class="sc-iqVVwt jSXBjg"
         >
           <div
-            data-display="table-row"
+            class="sc-eWfWgB gHiqeh sc-jKTbIA fCRseS"
           >
             <div
-              data-display="table-cell"
+              data-display="table-head"
             >
-              Specific Sanitizer Options
+              <div
+                data-display="table-row"
+              >
+                <div
+                  data-display="table-cell"
+                >
+                  Specific Sanitizer Options
+                </div>
+                <div
+                  data-display="table-cell"
+                >
+                  Original
+                </div>
+                <div
+                  data-display="table-cell"
+                >
+                  Customized
+                </div>
+              </div>
             </div>
             <div
-              data-display="table-cell"
+              data-display="table-body"
             >
-              Original
-            </div>
-            <div
-              data-display="table-cell"
-            >
-              Customized
-            </div>
-          </div>
-        </div>
-        <div
-          data-display="table-body"
-        >
-          <div
-            class=""
-            data-display="table-row"
-            data-highlight="false"
-          >
-            <a
-              data-display="table-cell"
-              data-key="0"
-              style="vertical-align: top;"
-            >
-              <pre>
-                {
+              <div
+                class=""
+                data-display="table-row"
+                data-highlight="false"
+              >
+                <a
+                  data-display="table-cell"
+                  data-key="0"
+                  style="vertical-align: top;"
+                >
+                  <pre>
+                    {
   "tagNames": [
     "p"
   ]
 }
-              </pre>
-            </a>
-            <a
-              data-display="table-cell"
-              data-key="0"
-              style="vertical-align: top;"
-            >
-              <div
-                class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj iHyFVj sc-jObXwK daJbGE"
-              >
-                <div
-                  class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
+                  </pre>
+                </a>
+                <a
+                  data-display="table-cell"
+                  data-key="0"
+                  style="vertical-align: top;"
                 >
                   <div
-                    class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
+                    class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj iHyFVj sc-jObXwK daJbGE"
                   >
                     <div
-                      class="sc-fKVsgm hjxFYR sc-bBHwJV ghoMNI sc-hZpJuv eCZfUW"
+                      class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
                     >
-                      <div>
-                        <h1
-                          class="sc-gWXaA-D bfOJSR sc-cidCJl eyQaHc"
+                      <div
+                        class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
+                      >
+                        <div
+                          class="sc-fKVsgm hjxFYR sc-bBHwJV ghoMNI sc-eicnZh hFmGmq"
                         >
-                          A title
-                        </h1>
-                        <img
-                          src="https://via.placeholder.com/150"
-                        />
-                        <p
-                          class="sc-fKVsgm hjxFYR sc-cxpRKc kFKUJa"
-                        >
-                          A paragraph
-                        </p>
+                          <div>
+                            <h1
+                              class="sc-gWXaA-D bfOJSR sc-cidCJl eyQaHc"
+                            >
+                              A title
+                            </h1>
+                            <img
+                              src="https://via.placeholder.com/150"
+                            />
+                            <p
+                              class="sc-fKVsgm hjxFYR sc-cxpRKc kFKUJa"
+                            >
+                              A paragraph
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </a>
-            <a
-              data-display="table-cell"
-              data-key="0"
-              style="vertical-align: top;"
-            >
-              <div
-                class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj iHyFVj sc-jObXwK daJbGE"
-              >
-                <div
-                  class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
+                </a>
+                <a
+                  data-display="table-cell"
+                  data-key="0"
+                  style="vertical-align: top;"
                 >
                   <div
-                    class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
+                    class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj iHyFVj sc-jObXwK daJbGE"
                   >
                     <div
-                      class="sc-fKVsgm hjxFYR sc-bBHwJV ghoMNI sc-hZpJuv eCZfUW"
+                      class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
                     >
-                      <div>
-                        A title
-                        <p
-                          class="sc-fKVsgm hjxFYR sc-cxpRKc kFKUJa"
+                      <div
+                        class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
+                      >
+                        <div
+                          class="sc-fKVsgm hjxFYR sc-bBHwJV ghoMNI sc-eicnZh hFmGmq"
                         >
-                          A paragraph
-                        </p>
+                          <div>
+                            A title
+                            <p
+                              class="sc-fKVsgm hjxFYR sc-cxpRKc kFKUJa"
+                            >
+                              A paragraph
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
-            </a>
-          </div>
-          <div
-            class=""
-            data-display="table-row"
-            data-highlight="false"
-          >
-            <a
-              data-display="table-cell"
-              data-key="1"
-              style="vertical-align: top;"
-            >
-              <pre>
-                {
+              <div
+                class=""
+                data-display="table-row"
+                data-highlight="false"
+              >
+                <a
+                  data-display="table-cell"
+                  data-key="1"
+                  style="vertical-align: top;"
+                >
+                  <pre>
+                    {
   "tagNames": [
     "img"
   ],
@@ -144,160 +150,162 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
     ]
   }
 }
-              </pre>
-            </a>
-            <a
-              data-display="table-cell"
-              data-key="1"
-              style="vertical-align: top;"
-            >
-              <div
-                class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj iHyFVj sc-jObXwK daJbGE"
-              >
-                <div
-                  class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
+                  </pre>
+                </a>
+                <a
+                  data-display="table-cell"
+                  data-key="1"
+                  style="vertical-align: top;"
                 >
                   <div
-                    class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
+                    class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj iHyFVj sc-jObXwK daJbGE"
                   >
                     <div
-                      class="sc-fKVsgm hjxFYR sc-bBHwJV ghoMNI sc-hZpJuv eCZfUW"
+                      class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
                     >
-                      <div>
-                        <h1
-                          class="sc-gWXaA-D bfOJSR sc-cidCJl eyQaHc"
+                      <div
+                        class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
+                      >
+                        <div
+                          class="sc-fKVsgm hjxFYR sc-bBHwJV ghoMNI sc-eicnZh hFmGmq"
                         >
-                          A title
-                        </h1>
-                        <img
-                          src="https://via.placeholder.com/150"
-                        />
-                        <p
-                          class="sc-fKVsgm hjxFYR sc-cxpRKc kFKUJa"
-                        >
-                          A paragraph
-                        </p>
+                          <div>
+                            <h1
+                              class="sc-gWXaA-D bfOJSR sc-cidCJl eyQaHc"
+                            >
+                              A title
+                            </h1>
+                            <img
+                              src="https://via.placeholder.com/150"
+                            />
+                            <p
+                              class="sc-fKVsgm hjxFYR sc-cxpRKc kFKUJa"
+                            >
+                              A paragraph
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </a>
-            <a
-              data-display="table-cell"
-              data-key="1"
-              style="vertical-align: top;"
-            >
-              <div
-                class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj iHyFVj sc-jObXwK daJbGE"
-              >
-                <div
-                  class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
+                </a>
+                <a
+                  data-display="table-cell"
+                  data-key="1"
+                  style="vertical-align: top;"
                 >
                   <div
-                    class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
+                    class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj iHyFVj sc-jObXwK daJbGE"
                   >
                     <div
-                      class="sc-fKVsgm hjxFYR sc-bBHwJV ghoMNI sc-hZpJuv eCZfUW"
+                      class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
                     >
-                      <div>
-                        A title
-                        <img
-                          src="https://via.placeholder.com/150"
-                        />
-                        A paragraph
+                      <div
+                        class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
+                      >
+                        <div
+                          class="sc-fKVsgm hjxFYR sc-bBHwJV ghoMNI sc-eicnZh hFmGmq"
+                        >
+                          <div>
+                            A title
+                            <img
+                              src="https://via.placeholder.com/150"
+                            />
+                            A paragraph
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
-            </a>
-          </div>
-          <div
-            class=""
-            data-display="table-row"
-            data-highlight="false"
-          >
-            <a
-              data-display="table-cell"
-              data-key="2"
-              style="vertical-align: top;"
-            >
-              <pre>
-                {
+              <div
+                class=""
+                data-display="table-row"
+                data-highlight="false"
+              >
+                <a
+                  data-display="table-cell"
+                  data-key="2"
+                  style="vertical-align: top;"
+                >
+                  <pre>
+                    {
   "tagNames": [
     "h1"
   ]
 }
-              </pre>
-            </a>
-            <a
-              data-display="table-cell"
-              data-key="2"
-              style="vertical-align: top;"
-            >
-              <div
-                class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj iHyFVj sc-jObXwK daJbGE"
-              >
-                <div
-                  class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
+                  </pre>
+                </a>
+                <a
+                  data-display="table-cell"
+                  data-key="2"
+                  style="vertical-align: top;"
                 >
                   <div
-                    class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
+                    class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj iHyFVj sc-jObXwK daJbGE"
                   >
                     <div
-                      class="sc-fKVsgm hjxFYR sc-bBHwJV ghoMNI sc-hZpJuv eCZfUW"
+                      class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
                     >
-                      <div>
-                        <h1
-                          class="sc-gWXaA-D bfOJSR sc-cidCJl eyQaHc"
+                      <div
+                        class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
+                      >
+                        <div
+                          class="sc-fKVsgm hjxFYR sc-bBHwJV ghoMNI sc-eicnZh hFmGmq"
                         >
-                          A title
-                        </h1>
-                        <img
-                          src="https://via.placeholder.com/150"
-                        />
-                        <p
-                          class="sc-fKVsgm hjxFYR sc-cxpRKc kFKUJa"
-                        >
-                          A paragraph
-                        </p>
+                          <div>
+                            <h1
+                              class="sc-gWXaA-D bfOJSR sc-cidCJl eyQaHc"
+                            >
+                              A title
+                            </h1>
+                            <img
+                              src="https://via.placeholder.com/150"
+                            />
+                            <p
+                              class="sc-fKVsgm hjxFYR sc-cxpRKc kFKUJa"
+                            >
+                              A paragraph
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </a>
-            <a
-              data-display="table-cell"
-              data-key="2"
-              style="vertical-align: top;"
-            >
-              <div
-                class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj iHyFVj sc-jObXwK daJbGE"
-              >
-                <div
-                  class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
+                </a>
+                <a
+                  data-display="table-cell"
+                  data-key="2"
+                  style="vertical-align: top;"
                 >
                   <div
-                    class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
+                    class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-dlVyqM cisfns jiwipY sc-cTApHj iHyFVj sc-jObXwK daJbGE"
                   >
                     <div
-                      class="sc-fKVsgm hjxFYR sc-bBHwJV ghoMNI sc-hZpJuv eCZfUW"
+                      class="sc-gKckTs jhmBNr sc-iCfLBT cEOlPK"
                     >
-                      <div>
-                        <h1
-                          class="sc-gWXaA-D bfOJSR sc-cidCJl eyQaHc"
+                      <div
+                        class="sc-gKckTs jhmBNr sc-iCfLBT OEWPY"
+                      >
+                        <div
+                          class="sc-fKVsgm hjxFYR sc-bBHwJV ghoMNI sc-eicnZh hFmGmq"
                         >
-                          A title
-                        </h1>
-                        A paragraph
+                          <div>
+                            <h1
+                              class="sc-gWXaA-D bfOJSR sc-cidCJl eyQaHc"
+                            >
+                              A title
+                            </h1>
+                            A paragraph
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </div>
@@ -312,7 +320,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <div
-      class="sc-fKVsgm hjxFYR sc-bBHwJV ghoMNI sc-hZpJuv eCZfUW"
+      class="sc-fKVsgm hjxFYR sc-bBHwJV ghoMNI sc-eicnZh hFmGmq"
     >
       <div>
         <h1
@@ -928,7 +936,7 @@ exports[`Storyshots Extra/Markdown With Decorators 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
   >
     <div
-      class="sc-fKVsgm hjxFYR sc-bBHwJV ghoMNI sc-hZpJuv eCZfUW"
+      class="sc-fKVsgm hjxFYR sc-bBHwJV ghoMNI sc-eicnZh hFmGmq"
     >
       <div>
         <p
