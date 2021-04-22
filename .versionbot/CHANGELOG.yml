@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add TableWithCustomColumns
+      hash: 937ab59d2706e067c689c1033cea51d81935949e
+      body: |
+        Add TableWithCustomColumns component
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.12.0
+  date: 2021-04-22T08:24:32.655Z
+- commits:
     - subject: Allow specifying the type of `extraContext` for widgets
       hash: b294f866746bf46690509ef819ac036a79d73435
       body: ''
