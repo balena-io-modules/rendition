@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'Table: Remove the unnecessary id field requirement from the generic arg'
+      hash: 6ecd27e2c96e75b4dbb63f9089f2dfaded648140
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 20.12.2
+  date: 2021-04-26T12:33:45.386Z
+- commits:
     - subject: 'MarkdownEditor: Update styles based on latest upstream'
       hash: ee98f2e62bf335e0bff53a896372e5c61dde23a1
       body: ''
