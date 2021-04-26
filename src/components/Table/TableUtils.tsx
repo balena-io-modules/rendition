@@ -4,9 +4,8 @@ import {
 } from './TableColumnSelector';
 
 export const ALL_TAGS_COLUMN_KEY = 'All Tags';
-export type TaggedResource = { id: number };
-export interface ResourceTagBase {
-	id: number;
+export type TaggedResource = {};
+export interface ResourceTagBase extends TaggedResource {
 	tag_key: string;
 	value: string;
 }
