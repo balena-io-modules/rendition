@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'MarkdownEditor: Update styles based on latest upstream'
+      hash: ee98f2e62bf335e0bff53a896372e5c61dde23a1
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 20.12.1
+  date: 2021-04-26T12:18:34.804Z
+- commits:
     - subject: Add TableWithCustomColumns
       hash: 937ab59d2706e067c689c1033cea51d81935949e
       body: |
