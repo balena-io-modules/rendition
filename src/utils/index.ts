@@ -47,3 +47,57 @@ export const stopEvent = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
 	event.preventDefault();
 	event.stopPropagation();
 };
+
+export const stopKeyDownEvent = (
+	e: React.KeyboardEvent<HTMLElement>,
+	keyCode: number,
+	handler?: () => void,
+) => {
+	if (!e.defaultPrevented && e.keyCode === keyCode) {
+		e.preventDefault();
+		e.stopPropagation();
+		if (handler) {
+			handler();
+		}
+	}
+};
+
+export const withPreventDefault =
+	(fn: () => unknown) => (e?: React.FormEvent<HTMLElement>) => {
+		if (e && e.preventDefault) {
+			e.preventDefault();
+		}
+		return fn();
+	};
+
+export const getFromLocalStorage = <T extends any>(
+	key: string,
+): T | undefined => {
+	try {
+		const val = localStorage.getItem(key);
+		if (val != null) {
+			return JSON.parse(val);
+		}
+
+		return undefined;
+	} catch (err) {
+		console.error(err);
+		return undefined;
+	}
+};
+
+export const setToLocalStorage = (key: string, value: any) => {
+	try {
+		localStorage.setItem(key, JSON.stringify(value));
+	} catch (err) {
+		console.error(err);
+	}
+};
+
+export const removeFromLocalStorage = (key: string) => {
+	try {
+		localStorage.removeItem(key);
+	} catch (err) {
+		console.error(err);
+	}
+};

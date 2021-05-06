@@ -3,9 +3,12 @@ import ColorHash from 'color-hash';
 import find from 'lodash/find';
 import get from 'lodash/get';
 import memoize from 'lodash/memoize';
-import { Theme } from '../common-types';
+import { Coloring, Theme } from '../common-types';
+import { ThemeType } from '..';
 
 const colorHash = new ColorHash();
+
+export type ColorShade = 'main' | 'light' | 'dark';
 
 const shadeCustomColor = (color: string, shade: 'main' | 'light' | 'dark') => {
 	if (shade === 'main') {
@@ -75,7 +78,7 @@ export const getColoringType = (props: {
 export const getColor = (
 	props: { theme: Theme; [key: string]: any },
 	key: string,
-	shade: 'main' | 'light' | 'dark',
+	shade: ColorShade,
 ) => {
 	if (get(props, key)) {
 		return shadeCustomColor(get(props, key), shade);
@@ -91,4 +94,20 @@ export const getColor = (
 			return shadeCustomColor(color, shade);
 		}
 	}
+};
+
+export const getThemeColoring = (
+	theme: ThemeType,
+	props: { [key: string]: any },
+	shade: ColorShade = 'main',
+) => {
+	// get primary, tertiary, secondary etc
+	const type = find(
+		Object.keys(props) as Array<keyof Coloring>,
+		(b) => !!props[b] && !!theme.colors[b],
+	);
+	if (type) {
+		return getColor({ ...props, theme }, type, shade);
+	}
+	return '';
 };

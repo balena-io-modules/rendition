@@ -19,7 +19,7 @@ export default css`
 	}
 	.CodeMirror-gutter-filler,
 	.CodeMirror-scrollbar-filler {
-		background-color: #fff;
+		background-color: transparent;
 	}
 	.CodeMirror-gutters {
 		border-right: 1px solid #ddd;
@@ -441,7 +441,7 @@ export default css`
 	.EasyMDEContainer .CodeMirror-sided {
 		width: 50% !important;
 	}
-	.EasyMDEContainer.sided--no-fullscreen .CodeMirror-sided {
+	.EasyMDEContainer .CodeMirror-sided.sided--no-fullscreen {
 		border-right: none !important;
 		border-bottom-right-radius: 0;
 		position: relative;
@@ -531,7 +531,7 @@ export default css`
 		margin: 0;
 		padding: 0;
 	}
-	.EasyMDEContainer.sided--no-fullscreen .editor-toolbar {
+	.editor-toolbar.sided--no-fullscreen {
 		width: 100%;
 	}
 	.editor-toolbar .easymde-dropdown,
@@ -601,7 +601,7 @@ export default css`
 		color: #959694;
 		text-align: right;
 	}
-	.EasyMDEContainer.sided--no-fullscreen .editor-statusbar {
+	.editor-statusbar.sided--no-fullscreen {
 		width: 100%;
 	}
 	.editor-statusbar span {
@@ -645,7 +645,7 @@ export default css`
 	.editor-preview-active-side {
 		display: block;
 	}
-	.EasyMDEContainer.sided--no-fullscreen .editor-preview-active-side {
+	.editor-preview-active-side.sided--no-fullscreen {
 		flex: 1 1 auto;
 		height: auto;
 		position: static;

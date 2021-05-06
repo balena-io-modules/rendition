@@ -6,7 +6,7 @@ import map from 'lodash/map';
 import sortBy from 'lodash/sortBy';
 import { TxtProps } from '../Txt';
 import { Flex } from '../Flex';
-import { ResourceTagBase } from '../TagManagementModal/models';
+import { ResourceTagBase } from './models';
 
 export const TagLabel = styled(TagLabelBase)`
 	display: inline-flex;

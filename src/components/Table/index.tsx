@@ -16,13 +16,6 @@ import keyBy from 'lodash/keyBy';
 import size from 'lodash/size';
 import { Flex } from '../Flex';
 import {
-	getFromLocalStorage,
-	getResourceTags,
-	ResourceTagBase,
-	setToLocalStorage,
-	TaggedResource,
-} from './TableUtils';
-import {
 	getNewTagTableColumnState,
 	TableColumnSelector,
 	TableColumnState,
@@ -33,6 +26,9 @@ import { TagLabel } from './TagLabel';
 import { TagLabelList } from './TagLabelList';
 import { CustomColumnHeader } from './CustomColumnHeader';
 import { TableBaseColumn, TableRow } from './TableRow';
+import { ResourceTagBase } from '../TagManagementModal/models';
+import { getResourceTags } from '../TagManagementModal/tag-management-service';
+import { getFromLocalStorage, setToLocalStorage } from '../../utils';
 
 const Container = styled(Flex)`
 	position: relative;
@@ -143,7 +139,7 @@ const insertTagColumns = (
 	columns.splice(allTagsColumnIndex, 0, ...newTagColumns);
 };
 
-const findTagOfTaggedResource = <T extends TaggedResource>(
+const findTagOfTaggedResource = <T extends {}>(
 	taggedResource: T,
 	tagField: keyof T,
 	tagKey: string,
@@ -160,7 +156,7 @@ export interface TableColumn<T> extends TableBaseColumn<T> {
 
 type TableColumnInternal<T> = TableBaseColumn<T> & TableColumnState;
 
-const getTagTableColumn = <T extends TaggedResource>(
+const getTagTableColumn = <T extends {}>(
 	columnState: TagTableColumnState,
 	tagField: keyof T,
 ) => {
@@ -234,7 +230,7 @@ const normalizeTableColumn = <T extends {}>(
 	return column;
 };
 
-const getAllTagsTableColumn = <T extends TaggedResource>(
+const getAllTagsTableColumn = <T extends {}>(
 	tagField: keyof T,
 	enableCustomColumns?: boolean,
 ) =>
@@ -319,7 +315,7 @@ const saveColumnPreferences = (
 	setToLocalStorage(columnStateRestorationKey, savePayload);
 };
 
-const applyColumnPreferences = <T extends TaggedResource>(
+const applyColumnPreferences = <T extends {}>(
 	columns: Array<TableColumnInternal<T>>,
 	loadedColumns: TableColumnState[] | undefined,
 	tagField: keyof T | undefined,
@@ -365,7 +361,7 @@ const applyColumnPreferences = <T extends TaggedResource>(
 	return columns;
 };
 
-const addCustomColumns = <T extends TaggedResource>(props: TableProps<T>) => {
+const addCustomColumns = <T extends {}>(props: TableProps<T>) => {
 	const { columns, tagField, enableCustomColumns, columnStateRestorationKey } =
 		props;
 	let allColumns = columns.map((column) =>
@@ -482,7 +478,7 @@ interface TableWithCustomColumnsState<T> {
  * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Table/Table.stories.tsx)
  */
 
-export class Table<T extends TaggedResource> extends React.Component<
+export class Table<T extends {}> extends React.Component<
 	TableProps<T>,
 	TableWithCustomColumnsState<T>
 > {
