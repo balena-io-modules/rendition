@@ -103,6 +103,5 @@ interface InternalSpinnerProps extends React.HTMLAttributes<HTMLElement> {
 export type SpinnerProps = InternalSpinnerProps & RenditionSystemProps;
 
 /** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Spinner/Spinner.stories.tsx) */
-export const Spinner = asRendition<React.FunctionComponent<SpinnerProps>>(
-	BaseSpinner,
-);
+export const Spinner =
+	asRendition<React.FunctionComponent<SpinnerProps>>(BaseSpinner);

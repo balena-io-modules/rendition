@@ -49,6 +49,7 @@ export type RadioButtonGroupProps = InternalRadioButtonGroupProps &
 	RenditionSystemProps;
 
 /** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/RadioButtonGroup/RadioButtonGroup.stories.tsx) */
-export const RadioButtonGroup = asRendition<
-	React.FunctionComponent<RadioButtonGroupProps>
->(BaseRadioButtonGroup);
+export const RadioButtonGroup =
+	asRendition<React.FunctionComponent<RadioButtonGroupProps>>(
+		BaseRadioButtonGroup,
+	);

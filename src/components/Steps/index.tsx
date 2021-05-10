@@ -308,8 +308,9 @@ export type StepsProps = InternalStepsProps & RenditionSystemProps;
  *
  * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Steps/Steps.stories.tsx)
  */
-export const Steps = asRendition<
-	React.ForwardRefExoticComponent<
-		StepsProps & React.RefAttributes<HTMLDivElement>
-	>
->(BaseSteps);
+export const Steps =
+	asRendition<
+		React.ForwardRefExoticComponent<
+			StepsProps & React.RefAttributes<HTMLDivElement>
+		>
+	>(BaseSteps);

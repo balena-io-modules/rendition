@@ -73,6 +73,6 @@ const TabsBase = ({ children, compact = false, ...props }: TabsProps) => {
  *
  * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Tabs/Tabs.stories.tsx)
  */
-export const Tabs = (asRendition(
+export const Tabs = asRendition(
 	TabsBase,
-) as unknown) as React.FunctionComponent<TabsProps>;
+) as unknown as React.FunctionComponent<TabsProps>;

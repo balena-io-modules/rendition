@@ -117,9 +117,8 @@ const RendererBase = ({
 	const [validation, setValidation] = React.useState<Validation | null>(
 		validate && !nested ? buildValidation(schema, formats) : null,
 	);
-	const [validationErrors, setValidationErrors] = React.useState<
-		ajv.ErrorObject[] | null | undefined
-	>(null);
+	const [validationErrors, setValidationErrors] =
+		React.useState<ajv.ErrorObject[] | null | undefined>(null);
 
 	React.useEffect(() => {
 		if (!validate || nested) {
@@ -231,9 +230,8 @@ interface InternalRendererProps extends React.HTMLAttributes<HTMLElement> {
 
 export type RendererProps = InternalRendererProps & RenditionSystemProps;
 
-const RenditionRendererBase = asRendition<
-	React.FunctionComponent<RendererProps>
->(RendererBase);
+const RenditionRendererBase =
+	asRendition<React.FunctionComponent<RendererProps>>(RendererBase);
 
 /**
  * A component used to render JSON data based on a schema and a UI schema.

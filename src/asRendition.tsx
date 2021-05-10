@@ -52,18 +52,17 @@ const propTypes = {
 
 const styledSystemProps = Object.keys(propTypes);
 
-const filterStyledSystemProps = (passthroughProps: string[]) => (
-	Base: React.ComponentType<{ ref: any }>,
-) => {
-	const omitProps = difference(styledSystemProps, passthroughProps);
-	return React.forwardRef((props: { [key: string]: any }, ref) => {
-		const nextProps = { ...props };
-		for (const k of omitProps) {
-			delete nextProps[k];
-		}
-		return <Base {...nextProps} ref={ref} />;
-	});
-};
+const filterStyledSystemProps =
+	(passthroughProps: string[]) => (Base: React.ComponentType<{ ref: any }>) => {
+		const omitProps = difference(styledSystemProps, passthroughProps);
+		return React.forwardRef((props: { [key: string]: any }, ref) => {
+			const nextProps = { ...props };
+			for (const k of omitProps) {
+				delete nextProps[k];
+			}
+			return <Base {...nextProps} ref={ref} />;
+		});
+	};
 
 export const withStyledSystem = (child: React.ComponentType) => {
 	const Base = styled(child)<StyledSystemProps>`
@@ -119,11 +118,11 @@ export default function asRendition<T>(
 	> = [],
 	passthroughProps: string[] = [],
 ) {
-	return (compose(
+	return compose(
 		withTheme,
 		...(additionalEnhancers || []),
 		withTooltip,
 		withStyledSystem,
 		filterStyledSystemProps(passthroughProps),
-	)(component) as unknown) as T;
+	)(component) as unknown as T;
 }

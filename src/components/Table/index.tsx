@@ -366,12 +366,8 @@ const applyColumnPreferences = <T extends TaggedResource>(
 };
 
 const addCustomColumns = <T extends TaggedResource>(props: TableProps<T>) => {
-	const {
-		columns,
-		tagField,
-		enableCustomColumns,
-		columnStateRestorationKey,
-	} = props;
+	const { columns, tagField, enableCustomColumns, columnStateRestorationKey } =
+		props;
 	let allColumns = columns.map((column) =>
 		normalizeTableColumn(column, enableCustomColumns),
 	);
@@ -631,12 +627,8 @@ export class Table<T extends TaggedResource> extends React.Component<
 	};
 
 	protected addTagColumn = () => {
-		const {
-			tagKeys,
-			newTagColumnKeys,
-			allColumns,
-			selectedTagColumnKeys,
-		} = this.state;
+		const { tagKeys, newTagColumnKeys, allColumns, selectedTagColumnKeys } =
+			this.state;
 		if (!this.props.tagField) {
 			return;
 		}

@@ -50,9 +50,8 @@ export interface PasswordStrengthProps {
 }
 
 const PasswordStrength = ({ password }: PasswordStrengthProps) => {
-	const [strengthScore, setStrengthScore] = React.useState<
-		number | undefined
-	>();
+	const [strengthScore, setStrengthScore] =
+		React.useState<number | undefined>();
 
 	React.useEffect(() => {
 		// @ts-ignore If you wish to show a stength meter, you need to load and set `zxcvbn` to a window variable by yourself.

@@ -228,13 +228,15 @@ export const MarkdownBase = ({
 	...rest
 }: MarkdownProps) => {
 	const content = React.useMemo(() => {
-		return (getProcessor(
-			componentOverrides,
-			sanitizerOptions,
-			disableRawHtml,
-			disableCodeHighlight,
-			decorators,
-		).processSync(children) as any).result; // type any because vFile types doesn't contains result, even though it should.
+		return (
+			getProcessor(
+				componentOverrides,
+				sanitizerOptions,
+				disableRawHtml,
+				disableCodeHighlight,
+				decorators,
+			).processSync(children) as any
+		).result; // type any because vFile types doesn't contains result, even though it should.
 	}, [
 		componentOverrides,
 		sanitizerOptions,

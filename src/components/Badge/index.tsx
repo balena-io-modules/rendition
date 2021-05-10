@@ -88,6 +88,5 @@ export type BadgeProps = InternalBadgeProps & RenditionSystemProps;
  *
  * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Badge/Badge.stories.tsx)
  */
-export const Badge = asRendition<React.FunctionComponent<BadgeProps>>(
-	BaseBadge,
-);
+export const Badge =
+	asRendition<React.FunctionComponent<BadgeProps>>(BaseBadge);

@@ -20,9 +20,8 @@ const splitTextIntoNodes = (text: string, decorator: Decorator) => {
 
 		// This is useful when we want to decorate only single capture group.
 		const captureGroupIndex = decorator.captureGroupIndex || 0;
-		const [captureGroupStartIndex, captureGroupEndIndex] = result.indices[
-			captureGroupIndex
-		];
+		const [captureGroupStartIndex, captureGroupEndIndex] =
+			result.indices[captureGroupIndex];
 		const matchedString = text.slice(
 			captureGroupStartIndex,
 			captureGroupEndIndex,

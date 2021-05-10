@@ -188,10 +188,8 @@ const BaseForm = React.forwardRef<RsjfForm<any>, FormProps>(
 			const parsedSchema = parseSchema(schema);
 			// Some keywords cause errors in RJSF validation, so they are removed from the
 			// schema before being passed as a prop.
-			const {
-				$schema,
-				...resultingSchema
-			} = utils.disallowAdditionalProperties(parsedSchema);
+			const { $schema, ...resultingSchema } =
+				utils.disallowAdditionalProperties(parsedSchema);
 			return resultingSchema;
 		}, [schema]);
 		const [formState, setFormState] = React.useState(value);

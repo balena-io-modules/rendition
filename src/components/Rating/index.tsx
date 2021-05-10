@@ -71,6 +71,5 @@ const BaseRating = React.memo(
 export type RatingProps = InternalRatingProps & RenditionSystemProps;
 
 /** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Rating/Rating.stories.tsx) */
-export const Rating = asRendition<React.FunctionComponent<RatingProps>>(
-	BaseRating,
-);
+export const Rating =
+	asRendition<React.FunctionComponent<RatingProps>>(BaseRating);

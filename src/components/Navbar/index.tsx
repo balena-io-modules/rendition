@@ -125,8 +125,8 @@ export interface NavbarProps extends React.HTMLAttributes<HTMLElement> {
  *
  * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Navbar/Navbar.stories.tsx)
  */
-export const Navbar = (compose(setDefaultProps)(
+export const Navbar = compose(setDefaultProps)(
 	BaseNavbar,
-) as unknown) as React.ForwardRefExoticComponent<
+) as unknown as React.ForwardRefExoticComponent<
 	NavbarProps & React.RefAttributes<BaseNavbar>
 >;

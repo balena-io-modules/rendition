@@ -342,9 +342,9 @@ export class TableBase<T> extends React.Component<
 		const isChecked = !this.isChecked(item);
 		const checkedItems = isChecked
 			? this.state.checkedItems.concat(item)
-			: ((reject(this.state.checkedItems, {
+			: (reject(this.state.checkedItems, {
 					[rowKey]: identifier,
-			  }) as unknown) as Array<typeof item>);
+			  }) as unknown as Array<typeof item>);
 
 		if (this.props.onCheck) {
 			this.props.onCheck(checkedItems);

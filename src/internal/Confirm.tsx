@@ -68,10 +68,8 @@ export function withConfirm<T extends {}>(
 	return React.forwardRef<T, ForwardedComponentProps<T>>(
 		({ onClick, confirmation, ...rest }, ref) => {
 			const targetRef = useForwardedRef(ref);
-			const [
-				clickEvent,
-				setClickEvent,
-			] = React.useState<React.SyntheticEvent<T> | null>(null);
+			const [clickEvent, setClickEvent] =
+				React.useState<React.SyntheticEvent<T> | null>(null);
 
 			const handleOk = React.useCallback(() => {
 				if (onClick) {

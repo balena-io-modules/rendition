@@ -81,6 +81,5 @@ export interface InternalAvatarProps
 export type AvatarProps = InternalAvatarProps & RenditionSystemProps;
 
 /** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Avatar/Avatar.stories.tsx) */
-export const Avatar = asRendition<React.FunctionComponent<AvatarProps>>(
-	BaseAvatar,
-);
+export const Avatar =
+	asRendition<React.FunctionComponent<AvatarProps>>(BaseAvatar);

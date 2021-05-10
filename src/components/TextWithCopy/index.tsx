@@ -99,6 +99,5 @@ export type TextWithCopyProps = InternalTextWithCopyProps &
  *
  * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/TextWithCopy/TextWithCopy.stories.tsx)
  */
-export const TextWithCopy = asRendition<
-	React.FunctionComponent<TextWithCopyProps>
->(BaseTextWithCopy);
+export const TextWithCopy =
+	asRendition<React.FunctionComponent<TextWithCopyProps>>(BaseTextWithCopy);
