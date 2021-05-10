@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix lint with new published prittier version
+      hash: ae72651645f663ed09750197a55c59943913fb07
+      body: |
+        Fix lint with new published prittier version
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.12.3
+  date: 2021-05-10T15:20:21.425Z
+- commits:
     - subject: 'Table: Remove the unnecessary id field requirement from the generic arg'
       hash: 6ecd27e2c96e75b4dbb63f9089f2dfaded648140
       body: ''
