@@ -3,25 +3,25 @@
 exports[`Storyshots Core/StatsBar Cpu Temp 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-gKckTs bTSdEc sc-iCfLBT hzUUA-D sc-hGPAah jrGUyo"
+      class="sc-gKAaRy bzVAry sc-iCoGMd kGhixU sc-hHEiqL eBjmLM"
     >
       <div
-        class="sc-gKckTs jhmBNr sc-iCfLBT fTIWvs sc-hGPAah klAKPZ"
+        class="sc-gKAaRy iZvmHx sc-iCoGMd hHyBbL sc-hHEiqL bmThKJ"
       >
         <span
-          class="sc-fKVsgm hjxFYR sc-iwjezw cUnsQP"
+          class="sc-fKgJPI jlSUcY sc-iwajpm ikqdDt"
         >
           <div
-            class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah dmFwtM"
+            class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL eNUPvY"
           >
             <div
-              class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl"
+              class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu"
             >
               <span
-                class="sc-fKVsgm hjxFYR sc-iwjezw gOPvtD"
+                class="sc-fKgJPI jlSUcY sc-iwajpm IIRpd"
               >
                 <svg
                   aria-hidden="true"
@@ -40,13 +40,13 @@ exports[`Storyshots Core/StatsBar Cpu Temp 1`] = `
                 </svg>
               </span>
               <span
-                class="sc-fKVsgm hjxFYR sc-iwjezw cUnsQP"
+                class="sc-fKgJPI jlSUcY sc-iwajpm ikqdDt"
               >
                 Temperature
               </span>
             </div>
             <span
-              class="sc-fKVsgm hjxFYR sc-iwjezw cukcMJ"
+              class="sc-fKgJPI jlSUcY sc-iwajpm gtvBdb"
               style="line-height: 1;"
             >
               ​
@@ -54,31 +54,31 @@ exports[`Storyshots Core/StatsBar Cpu Temp 1`] = `
           </div>
         </span>
         <span
-          class="sc-fKVsgm hjxFYR sc-iwjezw cUnsQP"
+          class="sc-fKgJPI jlSUcY sc-iwajpm ikqdDt"
         >
           ~34C
         </span>
       </div>
       <div
-        class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah kwurGc"
+        class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL cDSIaw"
       >
         <div
-          class="sc-gKckTs bTSdEc sc-iCfLBT iSXkYr"
+          class="sc-gKAaRy bzVAry sc-iCoGMd gxfzzc"
         >
           <div
-            class="sc-FNZbm iVKgax sc-jWUzTF jVnlHW"
+            class="sc-EZqKI btQcRO sc-jXcxbT AQTQX"
             color="#fff"
             type="success"
           >
             <div
-              class="sc-bQtJOP fhHOJg"
+              class="sc-bQCEYZ jiukjW"
             />
             <div
-              class="sc-jHkVfK fRXutk"
+              class="sc-jHcXXw jkOYNu"
               style="width: 34%;"
             >
               <div
-                class="sc-fXEqXD eJshLY"
+                class="sc-fXgAZx hcKfZC"
                 style="width: 294.11764705882354%;"
               />
             </div>
@@ -93,25 +93,25 @@ exports[`Storyshots Core/StatsBar Cpu Temp 1`] = `
 exports[`Storyshots Core/StatsBar Cpu Usage 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-gKckTs bTSdEc sc-iCfLBT hzUUA-D sc-hGPAah jrGUyo"
+      class="sc-gKAaRy bzVAry sc-iCoGMd kGhixU sc-hHEiqL eBjmLM"
     >
       <div
-        class="sc-gKckTs jhmBNr sc-iCfLBT fTIWvs sc-hGPAah klAKPZ"
+        class="sc-gKAaRy iZvmHx sc-iCoGMd hHyBbL sc-hHEiqL bmThKJ"
       >
         <span
-          class="sc-fKVsgm hjxFYR sc-iwjezw cUnsQP"
+          class="sc-fKgJPI jlSUcY sc-iwajpm ikqdDt"
         >
           <div
-            class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah dmFwtM"
+            class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL eNUPvY"
           >
             <div
-              class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl"
+              class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu"
             >
               <span
-                class="sc-fKVsgm hjxFYR sc-iwjezw gOPvtD"
+                class="sc-fKgJPI jlSUcY sc-iwajpm IIRpd"
               >
                 <svg
                   aria-hidden="true"
@@ -130,13 +130,13 @@ exports[`Storyshots Core/StatsBar Cpu Usage 1`] = `
                 </svg>
               </span>
               <span
-                class="sc-fKVsgm hjxFYR sc-iwjezw cUnsQP"
+                class="sc-fKgJPI jlSUcY sc-iwajpm ikqdDt"
               >
                 CPU
               </span>
             </div>
             <span
-              class="sc-fKVsgm hjxFYR sc-iwjezw cukcMJ"
+              class="sc-fKgJPI jlSUcY sc-iwajpm gtvBdb"
               style="line-height: 1;"
             >
               ​
@@ -144,119 +144,119 @@ exports[`Storyshots Core/StatsBar Cpu Usage 1`] = `
           </div>
         </span>
         <span
-          class="sc-fKVsgm hjxFYR sc-iwjezw cUnsQP"
+          class="sc-fKgJPI jlSUcY sc-iwajpm ikqdDt"
         >
           ~23%
         </span>
       </div>
       <div
-        class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah kwurGc"
+        class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL cDSIaw"
       >
         <div
-          class="sc-gKckTs bTSdEc sc-iCfLBT kQjUeP"
+          class="sc-gKAaRy bzVAry sc-iCoGMd iQsJTs"
         >
           <div
-            class="sc-FNZbm iVKgax sc-jWUzTF jVnlHW"
+            class="sc-EZqKI btQcRO sc-jXcxbT AQTQX"
             color="#fff"
             type="success"
           >
             <div
-              class="sc-bQtJOP fhHOJg"
+              class="sc-bQCEYZ jiukjW"
             />
             <div
-              class="sc-jHkVfK fRXutk"
+              class="sc-jHcXXw jkOYNu"
               style="width: 100%;"
             >
               <div
-                class="sc-fXEqXD eJshLY"
+                class="sc-fXgAZx hcKfZC"
                 style="width: 100%;"
               />
             </div>
           </div>
         </div>
         <div
-          class="sc-gKckTs bTSdEc sc-iCfLBT kQjUeP"
+          class="sc-gKAaRy bzVAry sc-iCoGMd iQsJTs"
         >
           <div
-            class="sc-FNZbm iVKgax sc-jWUzTF jVnlHW"
+            class="sc-EZqKI btQcRO sc-jXcxbT AQTQX"
             color="#fff"
             type="success"
           >
             <div
-              class="sc-bQtJOP fhHOJg"
+              class="sc-bQCEYZ jiukjW"
             />
             <div
-              class="sc-jHkVfK fRXutk"
+              class="sc-jHcXXw jkOYNu"
               style="width: 100%;"
             >
               <div
-                class="sc-fXEqXD eJshLY"
+                class="sc-fXgAZx hcKfZC"
                 style="width: 100%;"
               />
             </div>
           </div>
         </div>
         <div
-          class="sc-gKckTs bTSdEc sc-iCfLBT kQjUeP"
+          class="sc-gKAaRy bzVAry sc-iCoGMd iQsJTs"
         >
           <div
-            class="sc-FNZbm iVKgax sc-jWUzTF jVnlHW"
+            class="sc-EZqKI btQcRO sc-jXcxbT AQTQX"
             color="#fff"
             type="success"
           >
             <div
-              class="sc-bQtJOP fhHOJg"
+              class="sc-bQCEYZ jiukjW"
             />
             <div
-              class="sc-jHkVfK fRXutk"
+              class="sc-jHcXXw jkOYNu"
               style="width: 0%;"
             >
               <div
-                class="sc-fXEqXD eJshLY"
+                class="sc-fXgAZx hcKfZC"
                 style="width: 0%;"
               />
             </div>
           </div>
         </div>
         <div
-          class="sc-gKckTs bTSdEc sc-iCfLBT kQjUeP"
+          class="sc-gKAaRy bzVAry sc-iCoGMd iQsJTs"
         >
           <div
-            class="sc-FNZbm iVKgax sc-jWUzTF jVnlHW"
+            class="sc-EZqKI btQcRO sc-jXcxbT AQTQX"
             color="#fff"
             type="success"
           >
             <div
-              class="sc-bQtJOP fhHOJg"
+              class="sc-bQCEYZ jiukjW"
             />
             <div
-              class="sc-jHkVfK fRXutk"
+              class="sc-jHcXXw jkOYNu"
               style="width: 0%;"
             >
               <div
-                class="sc-fXEqXD eJshLY"
+                class="sc-fXgAZx hcKfZC"
                 style="width: 0%;"
               />
             </div>
           </div>
         </div>
         <div
-          class="sc-gKckTs bTSdEc sc-iCfLBT iSXkYr"
+          class="sc-gKAaRy bzVAry sc-iCoGMd gxfzzc"
         >
           <div
-            class="sc-FNZbm iVKgax sc-jWUzTF jVnlHW"
+            class="sc-EZqKI btQcRO sc-jXcxbT AQTQX"
             color="#fff"
             type="success"
           >
             <div
-              class="sc-bQtJOP fhHOJg"
+              class="sc-bQCEYZ jiukjW"
             />
             <div
-              class="sc-jHkVfK fRXutk"
+              class="sc-jHcXXw jkOYNu"
               style="width: 0%;"
             >
               <div
-                class="sc-fXEqXD eJshLY"
+                class="sc-fXgAZx hcKfZC"
                 style="width: 0%;"
               />
             </div>
@@ -271,25 +271,25 @@ exports[`Storyshots Core/StatsBar Cpu Usage 1`] = `
 exports[`Storyshots Core/StatsBar Memory 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-gKckTs bTSdEc sc-iCfLBT hzUUA-D sc-hGPAah jrGUyo"
+      class="sc-gKAaRy bzVAry sc-iCoGMd kGhixU sc-hHEiqL eBjmLM"
     >
       <div
-        class="sc-gKckTs jhmBNr sc-iCfLBT fTIWvs sc-hGPAah klAKPZ"
+        class="sc-gKAaRy iZvmHx sc-iCoGMd hHyBbL sc-hHEiqL bmThKJ"
       >
         <span
-          class="sc-fKVsgm hjxFYR sc-iwjezw cUnsQP"
+          class="sc-fKgJPI jlSUcY sc-iwajpm ikqdDt"
         >
           <div
-            class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah dmFwtM"
+            class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL eNUPvY"
           >
             <div
-              class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl"
+              class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu"
             >
               <span
-                class="sc-fKVsgm hjxFYR sc-iwjezw gOPvtD"
+                class="sc-fKgJPI jlSUcY sc-iwajpm IIRpd"
               >
                 <svg
                   aria-hidden="true"
@@ -308,13 +308,13 @@ exports[`Storyshots Core/StatsBar Memory 1`] = `
                 </svg>
               </span>
               <span
-                class="sc-fKVsgm hjxFYR sc-iwjezw cUnsQP"
+                class="sc-fKgJPI jlSUcY sc-iwajpm ikqdDt"
               >
                 Memory
               </span>
             </div>
             <span
-              class="sc-fKVsgm hjxFYR sc-iwjezw cukcMJ"
+              class="sc-fKgJPI jlSUcY sc-iwajpm gtvBdb"
               style="line-height: 1;"
             >
               ​
@@ -322,41 +322,41 @@ exports[`Storyshots Core/StatsBar Memory 1`] = `
           </div>
         </span>
         <span
-          class="sc-fKVsgm hjxFYR sc-iwjezw cUnsQP"
+          class="sc-fKgJPI jlSUcY sc-iwajpm ikqdDt"
         >
           <span
-            class="sc-fKVsgm hjxFYR sc-iwjezw cUnsQP"
+            class="sc-fKgJPI jlSUcY sc-iwajpm ikqdDt"
           >
             453 MB
           </span>
           /
           <span
-            class="sc-fKVsgm hjxFYR sc-iwjezw fsYJxm"
+            class="sc-fKgJPI jlSUcY sc-iwajpm cQCbmE"
           >
             1 GB
           </span>
         </span>
       </div>
       <div
-        class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah kwurGc"
+        class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL cDSIaw"
       >
         <div
-          class="sc-gKckTs bTSdEc sc-iCfLBT iSXkYr"
+          class="sc-gKAaRy bzVAry sc-iCoGMd gxfzzc"
         >
           <div
-            class="sc-FNZbm iVKgax sc-jWUzTF jVnlHW"
+            class="sc-EZqKI btQcRO sc-jXcxbT AQTQX"
             color="#fff"
             type="success"
           >
             <div
-              class="sc-bQtJOP fhHOJg"
+              class="sc-bQCEYZ jiukjW"
             />
             <div
-              class="sc-jHkVfK fRXutk"
+              class="sc-jHcXXw jkOYNu"
               style="width: 45.300000000000004%;"
             >
               <div
-                class="sc-fXEqXD eJshLY"
+                class="sc-fXgAZx hcKfZC"
                 style="width: 220.75055187637966%;"
               />
             </div>
@@ -371,25 +371,25 @@ exports[`Storyshots Core/StatsBar Memory 1`] = `
 exports[`Storyshots Core/StatsBar Storage 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-gKckTs bTSdEc sc-iCfLBT hzUUA-D sc-hGPAah jrGUyo"
+      class="sc-gKAaRy bzVAry sc-iCoGMd kGhixU sc-hHEiqL eBjmLM"
     >
       <div
-        class="sc-gKckTs jhmBNr sc-iCfLBT fTIWvs sc-hGPAah klAKPZ"
+        class="sc-gKAaRy iZvmHx sc-iCoGMd hHyBbL sc-hHEiqL bmThKJ"
       >
         <span
-          class="sc-fKVsgm hjxFYR sc-iwjezw cUnsQP"
+          class="sc-fKgJPI jlSUcY sc-iwajpm ikqdDt"
         >
           <div
-            class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah dmFwtM"
+            class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL eNUPvY"
           >
             <div
-              class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl"
+              class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu"
             >
               <span
-                class="sc-fKVsgm hjxFYR sc-iwjezw gOPvtD"
+                class="sc-fKgJPI jlSUcY sc-iwajpm IIRpd"
               >
                 <svg
                   aria-hidden="true"
@@ -408,13 +408,13 @@ exports[`Storyshots Core/StatsBar Storage 1`] = `
                 </svg>
               </span>
               <span
-                class="sc-fKVsgm hjxFYR sc-iwjezw cUnsQP"
+                class="sc-fKgJPI jlSUcY sc-iwajpm ikqdDt"
               >
                 Storage
               </span>
             </div>
             <span
-              class="sc-fKVsgm hjxFYR sc-iwjezw cukcMJ"
+              class="sc-fKgJPI jlSUcY sc-iwajpm gtvBdb"
               style="line-height: 1;"
             >
               Storage block device
@@ -422,41 +422,41 @@ exports[`Storyshots Core/StatsBar Storage 1`] = `
           </div>
         </span>
         <span
-          class="sc-fKVsgm hjxFYR sc-iwjezw cUnsQP"
+          class="sc-fKgJPI jlSUcY sc-iwajpm ikqdDt"
         >
           <span
-            class="sc-fKVsgm hjxFYR sc-iwjezw cUnsQP"
+            class="sc-fKgJPI jlSUcY sc-iwajpm ikqdDt"
           >
             623 MB
           </span>
           /
           <span
-            class="sc-fKVsgm hjxFYR sc-iwjezw fsYJxm"
+            class="sc-fKgJPI jlSUcY sc-iwajpm cQCbmE"
           >
             1 GB
           </span>
         </span>
       </div>
       <div
-        class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah kwurGc"
+        class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL cDSIaw"
       >
         <div
-          class="sc-gKckTs bTSdEc sc-iCfLBT iSXkYr"
+          class="sc-gKAaRy bzVAry sc-iCoGMd gxfzzc"
         >
           <div
-            class="sc-FNZbm iVKgax sc-jWUzTF jVnlHW"
+            class="sc-EZqKI btQcRO sc-jXcxbT AQTQX"
             color="#fff"
             type="warning"
           >
             <div
-              class="sc-bQtJOP fhHOJg"
+              class="sc-bQCEYZ jiukjW"
             />
             <div
-              class="sc-jHkVfK jpVPIE"
+              class="sc-jHcXXw huuZAy"
               style="width: 62.3%;"
             >
               <div
-                class="sc-fXEqXD eJshLY"
+                class="sc-fXgAZx hcKfZC"
                 style="width: 160.51364365971108%;"
               />
             </div>

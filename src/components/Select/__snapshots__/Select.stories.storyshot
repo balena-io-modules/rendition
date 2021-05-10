@@ -3,28 +3,28 @@
 exports[`Storyshots Core/Select Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-eJwXpk cSvIgq sc-nVjpj gBlvCf"
+      class="sc-eJocfa gLjnqf sc-oeezt cXBTtc"
     >
       <button
         aria-label="Open Drop"
-        class="StyledButton-sc-323bzc-0 ffRhrh Select__StyledSelectDropButton-sc-17idtfo-1 kQlWUB"
+        class="StyledButton-sc-323bzc-0 jIoYQb Select__StyledSelectDropButton-sc-17idtfo-1 kPbBtL"
         type="button"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 hoBZOR"
+          class="StyledBox-sc-13pk1d4-0 jAWuzL"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 dtQiSn"
+            class="StyledBox-sc-13pk1d4-0 gtvRqp"
           >
             <div
-              class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 cnyLED"
+              class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 gXHnix"
             >
               <input
                 autocomplete="off"
-                class="StyledTextInput-sc-1x30a0s-0 MyZBA Select__SelectTextInput-sc-17idtfo-0 kMNVoA sc-jeqYYF eATGVe"
+                class="StyledTextInput-sc-1x30a0s-0 brZmPW Select__SelectTextInput-sc-17idtfo-0 hZZumW sc-jffHpj fuZjo"
                 readonly=""
                 tabindex="-1"
                 type="text"
@@ -33,12 +33,12 @@ exports[`Storyshots Core/Select Default 1`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 jzyREm"
+            class="StyledBox-sc-13pk1d4-0 cVOXoU"
             style="min-width: auto;"
           >
             <svg
               aria-label="FormDown"
-              class="StyledIcon-ofa7kd-0 egSDBj"
+              class="StyledIcon-ofa7kd-0 btgQjJ"
               viewBox="0 0 24 24"
             >
               <polyline
@@ -59,28 +59,28 @@ exports[`Storyshots Core/Select Default 1`] = `
 exports[`Storyshots Core/Select Emphasized 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-eJwXpk cSvIgq sc-nVjpj gBlvCf"
+      class="sc-eJocfa gLjnqf sc-oeezt cXBTtc"
     >
       <button
         aria-label="Open Drop"
-        class="StyledButton-sc-323bzc-0 ffRhrh Select__StyledSelectDropButton-sc-17idtfo-1 kQlWUB"
+        class="StyledButton-sc-323bzc-0 jIoYQb Select__StyledSelectDropButton-sc-17idtfo-1 kPbBtL"
         type="button"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 hoBZOR"
+          class="StyledBox-sc-13pk1d4-0 jAWuzL"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 dtQiSn"
+            class="StyledBox-sc-13pk1d4-0 gtvRqp"
           >
             <div
-              class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 cnyLED"
+              class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 gXHnix"
             >
               <input
                 autocomplete="off"
-                class="StyledTextInput-sc-1x30a0s-0 MyZBA Select__SelectTextInput-sc-17idtfo-0 kMNVoA sc-jeqYYF gZkBER"
+                class="StyledTextInput-sc-1x30a0s-0 brZmPW Select__SelectTextInput-sc-17idtfo-0 hZZumW sc-jffHpj hDHsCH"
                 readonly=""
                 tabindex="-1"
                 type="text"
@@ -89,12 +89,12 @@ exports[`Storyshots Core/Select Emphasized 1`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 jzyREm"
+            class="StyledBox-sc-13pk1d4-0 cVOXoU"
             style="min-width: auto;"
           >
             <svg
               aria-label="FormDown"
-              class="StyledIcon-ofa7kd-0 egSDBj"
+              class="StyledIcon-ofa7kd-0 btgQjJ"
               viewBox="0 0 24 24"
             >
               <polyline
@@ -115,28 +115,28 @@ exports[`Storyshots Core/Select Emphasized 1`] = `
 exports[`Storyshots Core/Select Invalid 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-eJwXpk jxDcHM sc-nVjpj gBlvCf"
+      class="sc-eJocfa hEvmex sc-oeezt cXBTtc"
     >
       <button
         aria-label="Open Drop"
-        class="StyledButton-sc-323bzc-0 ffRhrh Select__StyledSelectDropButton-sc-17idtfo-1 kQlWUB"
+        class="StyledButton-sc-323bzc-0 jIoYQb Select__StyledSelectDropButton-sc-17idtfo-1 kPbBtL"
         type="button"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 hoBZOR"
+          class="StyledBox-sc-13pk1d4-0 jAWuzL"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 dtQiSn"
+            class="StyledBox-sc-13pk1d4-0 gtvRqp"
           >
             <div
-              class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 cnyLED"
+              class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 gXHnix"
             >
               <input
                 autocomplete="off"
-                class="StyledTextInput-sc-1x30a0s-0 MyZBA Select__SelectTextInput-sc-17idtfo-0 kMNVoA sc-jeqYYF eATGVe"
+                class="StyledTextInput-sc-1x30a0s-0 brZmPW Select__SelectTextInput-sc-17idtfo-0 hZZumW sc-jffHpj fuZjo"
                 readonly=""
                 tabindex="-1"
                 type="text"
@@ -145,12 +145,12 @@ exports[`Storyshots Core/Select Invalid 1`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 jzyREm"
+            class="StyledBox-sc-13pk1d4-0 cVOXoU"
             style="min-width: auto;"
           >
             <svg
               aria-label="FormDown"
-              class="StyledIcon-ofa7kd-0 egSDBj"
+              class="StyledIcon-ofa7kd-0 btgQjJ"
               viewBox="0 0 24 24"
             >
               <polyline
@@ -171,28 +171,28 @@ exports[`Storyshots Core/Select Invalid 1`] = `
 exports[`Storyshots Core/Select Object Options 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-eJwXpk cSvIgq sc-nVjpj gBlvCf"
+      class="sc-eJocfa gLjnqf sc-oeezt cXBTtc"
     >
       <button
         aria-label="Open Drop"
-        class="StyledButton-sc-323bzc-0 ffRhrh Select__StyledSelectDropButton-sc-17idtfo-1 kQlWUB"
+        class="StyledButton-sc-323bzc-0 jIoYQb Select__StyledSelectDropButton-sc-17idtfo-1 kPbBtL"
         type="button"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 hoBZOR"
+          class="StyledBox-sc-13pk1d4-0 jAWuzL"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 dtQiSn"
+            class="StyledBox-sc-13pk1d4-0 gtvRqp"
           >
             <div
-              class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 cnyLED"
+              class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 gXHnix"
             >
               <input
                 autocomplete="off"
-                class="StyledTextInput-sc-1x30a0s-0 MyZBA Select__SelectTextInput-sc-17idtfo-0 kMNVoA sc-jeqYYF eATGVe"
+                class="StyledTextInput-sc-1x30a0s-0 brZmPW Select__SelectTextInput-sc-17idtfo-0 hZZumW sc-jffHpj fuZjo"
                 readonly=""
                 tabindex="-1"
                 type="text"
@@ -201,12 +201,12 @@ exports[`Storyshots Core/Select Object Options 1`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 jzyREm"
+            class="StyledBox-sc-13pk1d4-0 cVOXoU"
             style="min-width: auto;"
           >
             <svg
               aria-label="FormDown"
-              class="StyledIcon-ofa7kd-0 egSDBj"
+              class="StyledIcon-ofa7kd-0 btgQjJ"
               viewBox="0 0 24 24"
             >
               <polyline
@@ -227,28 +227,28 @@ exports[`Storyshots Core/Select Object Options 1`] = `
 exports[`Storyshots Core/Select With Custom Option 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-eJwXpk cSvIgq sc-nVjpj gBlvCf"
+      class="sc-eJocfa gLjnqf sc-oeezt cXBTtc"
     >
       <button
         aria-label="Open Drop"
-        class="StyledButton-sc-323bzc-0 ffRhrh Select__StyledSelectDropButton-sc-17idtfo-1 kQlWUB"
+        class="StyledButton-sc-323bzc-0 jIoYQb Select__StyledSelectDropButton-sc-17idtfo-1 kPbBtL"
         type="button"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 hoBZOR"
+          class="StyledBox-sc-13pk1d4-0 jAWuzL"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 dtQiSn"
+            class="StyledBox-sc-13pk1d4-0 gtvRqp"
           >
             <div
-              class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 cnyLED"
+              class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 gXHnix"
             >
               <input
                 autocomplete="off"
-                class="StyledTextInput-sc-1x30a0s-0 MyZBA Select__SelectTextInput-sc-17idtfo-0 kMNVoA sc-jeqYYF eATGVe"
+                class="StyledTextInput-sc-1x30a0s-0 brZmPW Select__SelectTextInput-sc-17idtfo-0 hZZumW sc-jffHpj fuZjo"
                 readonly=""
                 tabindex="-1"
                 type="text"
@@ -257,12 +257,12 @@ exports[`Storyshots Core/Select With Custom Option 1`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 jzyREm"
+            class="StyledBox-sc-13pk1d4-0 cVOXoU"
             style="min-width: auto;"
           >
             <svg
               aria-label="FormDown"
-              class="StyledIcon-ofa7kd-0 egSDBj"
+              class="StyledIcon-ofa7kd-0 btgQjJ"
               viewBox="0 0 24 24"
             >
               <polyline
@@ -283,28 +283,28 @@ exports[`Storyshots Core/Select With Custom Option 1`] = `
 exports[`Storyshots Core/Select With Placeholder 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-eJwXpk cSvIgq sc-nVjpj gBlvCf"
+      class="sc-eJocfa gLjnqf sc-oeezt cXBTtc"
     >
       <button
         aria-label="Open Drop"
-        class="StyledButton-sc-323bzc-0 ffRhrh Select__StyledSelectDropButton-sc-17idtfo-1 kQlWUB"
+        class="StyledButton-sc-323bzc-0 jIoYQb Select__StyledSelectDropButton-sc-17idtfo-1 kPbBtL"
         type="button"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 hoBZOR"
+          class="StyledBox-sc-13pk1d4-0 jAWuzL"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 dtQiSn"
+            class="StyledBox-sc-13pk1d4-0 gtvRqp"
           >
             <div
-              class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 cnyLED"
+              class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 gXHnix"
             >
               <input
                 autocomplete="off"
-                class="StyledTextInput-sc-1x30a0s-0 MyZBA Select__SelectTextInput-sc-17idtfo-0 kMNVoA sc-jeqYYF eATGVe"
+                class="StyledTextInput-sc-1x30a0s-0 brZmPW Select__SelectTextInput-sc-17idtfo-0 hZZumW sc-jffHpj fuZjo"
                 placeholder="Select one..."
                 readonly=""
                 tabindex="-1"
@@ -314,12 +314,12 @@ exports[`Storyshots Core/Select With Placeholder 1`] = `
             </div>
           </div>
           <div
-            class="StyledBox-sc-13pk1d4-0 jzyREm"
+            class="StyledBox-sc-13pk1d4-0 cVOXoU"
             style="min-width: auto;"
           >
             <svg
               aria-label="FormDown"
-              class="StyledIcon-ofa7kd-0 egSDBj"
+              class="StyledIcon-ofa7kd-0 btgQjJ"
               viewBox="0 0 24 24"
             >
               <polyline

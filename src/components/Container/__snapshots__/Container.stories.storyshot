@@ -3,13 +3,13 @@
 exports[`Storyshots Core/Container Centered Content 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-gKckTs jhmBNr sc-iCfLBT fQkLTT sc-dkQkSb kmNtZz sc-jivCuG bISoUr"
+      class="sc-gKAaRy iZvmHx sc-iCoGMd cNdjQg sc-dksuTV gwiFjK sc-jhGUec iJuZUX"
     >
       <h3
-        class="sc-gWXaA-D bfOJSR sc-cCcYRi kVjTpC"
+        class="sc-gXfVKN bnTPVg sc-cBoqAE jXwGUO"
       >
         I am in a container
       </h3>
@@ -21,13 +21,13 @@ exports[`Storyshots Core/Container Centered Content 1`] = `
 exports[`Storyshots Core/Container Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-gKckTs jhmBNr sc-iCfLBT fQkLTT sc-dkQkSb hRRCDU sc-jivCuG bISoUr"
+      class="sc-gKAaRy iZvmHx sc-iCoGMd cNdjQg sc-dksuTV kuvbch sc-jhGUec iJuZUX"
     >
       <h3
-        class="sc-gWXaA-D bfOJSR sc-cCcYRi kVjTpC"
+        class="sc-gXfVKN bnTPVg sc-cBoqAE jXwGUO"
       >
         I am in a container
       </h3>
