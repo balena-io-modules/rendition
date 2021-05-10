@@ -62,6 +62,5 @@ interface InternalAccordionProps {
 export type AccordionProps = InternalAccordionProps & RenditionSystemProps;
 
 /** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Accordion/Accordion.stories.tsx) */
-export const Accordion = asRendition<React.FunctionComponent<AccordionProps>>(
-	BaseAccordion,
-);
+export const Accordion =
+	asRendition<React.FunctionComponent<AccordionProps>>(BaseAccordion);

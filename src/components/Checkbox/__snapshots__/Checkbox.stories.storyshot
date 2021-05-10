@@ -3,23 +3,23 @@
 exports[`Storyshots Core/Checkbox Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-dPiKHq eNprhi sc-bBHHQT gKMvxS"
+      class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
     >
       <label
-        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iEdmUw"
+        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 jKFhht StyledCheckBox-sc-1dbk5ju-6 fJLUFg"
+          class="StyledBox-sc-13pk1d4-0 gprQIL StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
         >
           <input
-            class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 yfuML"
+            class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 cUBbSF"
             type="checkbox"
           />
           <div
-            class="StyledBox-sc-13pk1d4-0 cgzEGn StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 eNpbdq"
+            class="StyledBox-sc-13pk1d4-0 cMvHdd StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 UuYxY"
           />
         </div>
       </label>
@@ -31,26 +31,26 @@ exports[`Storyshots Core/Checkbox Default 1`] = `
 exports[`Storyshots Core/Checkbox Disabled 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-dPiKHq eNprhi sc-bBHHQT gKMvxS"
+      class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
     >
       <label
-        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 djUivJ"
+        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 dylVbb"
         disabled=""
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 itMSJI StyledCheckBox-sc-1dbk5ju-6 fJLUFg"
+          class="StyledBox-sc-13pk1d4-0 iqDqTy StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
           disabled=""
         >
           <input
-            class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 bMHRUL"
+            class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 bqLGVJ"
             disabled=""
             type="checkbox"
           />
           <div
-            class="StyledBox-sc-13pk1d4-0 cgzEGn StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 eNpbdq"
+            class="StyledBox-sc-13pk1d4-0 cMvHdd StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 UuYxY"
             disabled=""
           />
         </div>
@@ -66,26 +66,26 @@ exports[`Storyshots Core/Checkbox Disabled 1`] = `
 exports[`Storyshots Core/Checkbox Reversed Label 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-dPiKHq eNprhi sc-bBHHQT gKMvxS"
+      class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
     >
       <label
-        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iEdmUw"
+        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
       >
         <span>
           Checkbox
         </span>
         <div
-          class="StyledBox-sc-13pk1d4-0 dWkobQ StyledCheckBox-sc-1dbk5ju-6 fJLUFg"
+          class="StyledBox-sc-13pk1d4-0 hafFhG StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
         >
           <input
-            class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 yfuML"
+            class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 cUBbSF"
             type="checkbox"
           />
           <div
-            class="StyledBox-sc-13pk1d4-0 cgzEGn StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 eNpbdq"
+            class="StyledBox-sc-13pk1d4-0 cMvHdd StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 UuYxY"
           />
         </div>
       </label>
@@ -97,26 +97,26 @@ exports[`Storyshots Core/Checkbox Reversed Label 1`] = `
 exports[`Storyshots Core/Checkbox Toggle 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-dPiKHq eNprhi sc-bBHHQT gKMvxS"
+      class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
     >
       <label
-        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iEdmUw"
+        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 itMSJI StyledCheckBox-sc-1dbk5ju-6 fJLUFg"
+          class="StyledBox-sc-13pk1d4-0 iqDqTy StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
         >
           <input
-            class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 yfuML"
+            class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 cUBbSF"
             type="checkbox"
           />
           <span
-            class="StyledCheckBox__StyledCheckBoxToggle-sc-1dbk5ju-4 ikGUbR"
+            class="StyledCheckBox__StyledCheckBoxToggle-sc-1dbk5ju-4 kgyMEf"
           >
             <span
-              class="StyledCheckBox__StyledCheckBoxKnob-sc-1dbk5ju-5 dFguCt"
+              class="StyledCheckBox__StyledCheckBoxKnob-sc-1dbk5ju-5 cqIUVv"
             />
           </span>
         </div>
@@ -132,23 +132,23 @@ exports[`Storyshots Core/Checkbox Toggle 1`] = `
 exports[`Storyshots Core/Checkbox With Label 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-dPiKHq eNprhi sc-bBHHQT gKMvxS"
+      class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
     >
       <label
-        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iEdmUw"
+        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 itMSJI StyledCheckBox-sc-1dbk5ju-6 fJLUFg"
+          class="StyledBox-sc-13pk1d4-0 iqDqTy StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
         >
           <input
-            class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 yfuML"
+            class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 cUBbSF"
             type="checkbox"
           />
           <div
-            class="StyledBox-sc-13pk1d4-0 cgzEGn StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 eNpbdq"
+            class="StyledBox-sc-13pk1d4-0 cMvHdd StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 UuYxY"
           />
         </div>
         <span>

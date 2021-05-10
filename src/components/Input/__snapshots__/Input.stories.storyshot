@@ -3,14 +3,14 @@
 exports[`Storyshots Core/Input Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 cnyLED"
+      class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 gXHnix"
     >
       <input
         autocomplete="off"
-        class="StyledTextInput-sc-1x30a0s-0 bPSUjJ sc-jgrIVw iUPIph sc-gSQGeZ kMVRwO"
+        class="StyledTextInput-sc-1x30a0s-0 bMAGLr sc-jgPyTC eyCtVz sc-gSYDnn jJgXuM"
         value=""
       />
     </div>
@@ -21,14 +21,14 @@ exports[`Storyshots Core/Input Default 1`] = `
 exports[`Storyshots Core/Input Emphasized 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 cnyLED"
+      class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 gXHnix"
     >
       <input
         autocomplete="off"
-        class="StyledTextInput-sc-1x30a0s-0 bPSUjJ sc-jgrIVw eVAeOq sc-gSQGeZ kMVRwO"
+        class="StyledTextInput-sc-1x30a0s-0 bMAGLr sc-jgPyTC eWDZKw sc-gSYDnn jJgXuM"
         value=""
       />
     </div>
@@ -39,14 +39,14 @@ exports[`Storyshots Core/Input Emphasized 1`] = `
 exports[`Storyshots Core/Input Monospace 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 cnyLED"
+      class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 gXHnix"
     >
       <input
         autocomplete="off"
-        class="StyledTextInput-sc-1x30a0s-0 bPSUjJ sc-jgrIVw dSEjPw sc-gSQGeZ kMVRwO"
+        class="StyledTextInput-sc-1x30a0s-0 bMAGLr sc-jgPyTC kWYLGm sc-gSYDnn jJgXuM"
         value=""
       />
     </div>
@@ -57,14 +57,14 @@ exports[`Storyshots Core/Input Monospace 1`] = `
 exports[`Storyshots Core/Input With Placeholder 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 cnyLED"
+      class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 gXHnix"
     >
       <input
         autocomplete="off"
-        class="StyledTextInput-sc-1x30a0s-0 bPSUjJ sc-jgrIVw iUPIph sc-gSQGeZ kMVRwO"
+        class="StyledTextInput-sc-1x30a0s-0 bMAGLr sc-jgPyTC eyCtVz sc-gSYDnn jJgXuM"
         placeholder="This is a placeholder"
         value=""
       />

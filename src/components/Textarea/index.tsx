@@ -110,6 +110,5 @@ export interface InternalTextareaProps
 export type TextareaProps = InternalTextareaProps & RenditionSystemProps;
 
 /** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Textarea/Textarea.stories.tsx) */
-export const Textarea = asRendition<React.FunctionComponent<TextareaProps>>(
-	BaseTextearea,
-);
+export const Textarea =
+	asRendition<React.FunctionComponent<TextareaProps>>(BaseTextearea);

@@ -216,9 +216,8 @@ class ObjectField extends React.Component<ObjectFieldProps> {
 		// @ts-ignore
 		const type = schema.additionalProperties.type;
 		const newFormData = { ...this.props.formData };
-		newFormData[
-			this.getAvailableKey('newKey', newFormData)
-		] = this.getDefaultValue(type);
+		newFormData[this.getAvailableKey('newKey', newFormData)] =
+			this.getDefaultValue(type);
 		this.props.onChange(newFormData);
 	};
 

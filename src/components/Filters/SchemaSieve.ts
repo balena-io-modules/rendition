@@ -137,12 +137,14 @@ export const createFilter = (
 			return {};
 		}
 
-		return (model.createFilter as (
-			field: string,
-			operator: string,
-			value: any,
-			subSchema: JSONSchema,
-		) => JSONSchema)(field, operator, value, subSchema);
+		return (
+			model.createFilter as (
+				field: string,
+				operator: string,
+				value: any,
+				subSchema: JSONSchema,
+			) => JSONSchema
+		)(field, operator, value, subSchema);
 	});
 
 	return {

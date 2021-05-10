@@ -11,9 +11,8 @@ const StyledImg = styled.img<ImgProps>`
 `;
 
 export const BaseImg = ({ fallback, src, ...props }: ImgProps) => {
-	const [normalizedSrc, setNormalizedSrc] = React.useState<string | undefined>(
-		src,
-	);
+	const [normalizedSrc, setNormalizedSrc] =
+		React.useState<string | undefined>(src);
 
 	React.useEffect(() => {
 		setNormalizedSrc(src);

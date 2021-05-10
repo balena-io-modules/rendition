@@ -89,8 +89,9 @@ export type SearchProps = InternalSearchProps & RenditionSystemProps;
  *
  * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Search/Search.stories.tsx)
  */
-export const Search = asRendition<
-	React.ForwardRefExoticComponent<
-		SearchProps & React.RefAttributes<HTMLInputElement>
-	>
->(BaseSearch);
+export const Search =
+	asRendition<
+		React.ForwardRefExoticComponent<
+			SearchProps & React.RefAttributes<HTMLInputElement>
+		>
+	>(BaseSearch);

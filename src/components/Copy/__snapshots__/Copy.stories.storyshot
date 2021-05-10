@@ -3,22 +3,22 @@
 exports[`Storyshots Core/Copy Always Show 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-AjmZR bckzCO eiyeut"
+      class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL sc-Arkif dBEHri jNSfGi"
     >
       <div
-        class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-fyrnIy cisfns jYuVlE"
+        class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL sc-fyjqAk bJSggk ddekvr"
       >
         <div
-          class="sc-gKckTs bTSdEc sc-iCfLBT cEOlPK sc-hGPAah jrGUyo"
+          class="sc-gKAaRy bzVAry sc-iCoGMd eAGOxR sc-hHEiqL eBjmLM"
         >
           <div
-            class="sc-iqVVwt jSXBjg"
+            class="sc-irKDMX iYcajE"
           >
             <div
-              class="sc-eWfWgB gHiqeh sc-jKTbIA fCRseS"
+              class="sc-eWnToP fXmjkm sc-jLqRGG ilGtXa"
             >
               <div
                 data-display="table-head"
@@ -83,7 +83,7 @@ exports[`Storyshots Core/Copy Always Show 1`] = `
         </div>
       </div>
       <div
-        class="sc-gKckTs jhmBNr sc-iCfLBT hjWEaa sc-cNKpQo dnibBa"
+        class="sc-gKAaRy iZvmHx sc-iCoGMd ghcIKp sc-cOifOu hWJxhd"
       >
         <svg
           aria-hidden="true"
@@ -109,18 +109,18 @@ exports[`Storyshots Core/Copy Always Show 1`] = `
 exports[`Storyshots Core/Copy Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-AjmZR bckzCO eiyeut"
+      class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL sc-Arkif dBEHri jNSfGi"
     >
       <div
-        class="sc-fKVsgm hjxFYR sc-bBHwJV ghoMNI"
+        class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi"
       >
         Hover me and click on icon to copy
       </div>
       <div
-        class="sc-gKckTs jhmBNr sc-iCfLBT hjWEaa sc-cNKpQo dnibBa"
+        class="sc-gKAaRy iZvmHx sc-iCoGMd ghcIKp sc-cOifOu hWJxhd"
       >
         <svg
           aria-hidden="true"
@@ -146,17 +146,17 @@ exports[`Storyshots Core/Copy Default 1`] = `
 exports[`Storyshots Core/Copy Icon Only 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-gKckTs jhmBNr sc-iCfLBT hTpBAt"
+      class="sc-gKAaRy iZvmHx sc-iCoGMd hSbIkS"
     >
       Only copy icon that can be placed anywhere.
       <div
-        class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-AjmZR bckzCO kqlthe"
+        class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL sc-Arkif dBEHri bCNAVV"
       >
         <div
-          class="sc-gKckTs jhmBNr sc-iCfLBT hjWEaa sc-cNKpQo dnibBa"
+          class="sc-gKAaRy iZvmHx sc-iCoGMd ghcIKp sc-cOifOu hWJxhd"
         >
           <svg
             aria-hidden="true"
@@ -183,31 +183,31 @@ exports[`Storyshots Core/Copy Icon Only 1`] = `
 exports[`Storyshots Core/Copy With Tag 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 kueJNo sc-eFehXo gnniYV"
+    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <div
-      class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah sc-AjmZR bckzCO eiyeut"
+      class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL sc-Arkif dBEHri jNSfGi"
     >
       <div
-        class="sc-gKckTs jhmBNr sc-iCfLBT gEsLGl sc-hGPAah cisfns sc-GamvQ hOHCYz"
+        class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL bJSggk sc-FRrlG fljcEQ"
       >
         <div
-          class="sc-gKckTs jhmBNr sc-iCfLBT blxGie sc-hGPAah sc-clIAKW cisfns bbEvNJ"
+          class="sc-gKAaRy iZvmHx sc-iCoGMd VOfsJ sc-hHEiqL sc-ckTSus bJSggk jSlscN"
         >
           <div
-            class="sc-fKVsgm bcRRQZ sc-bBHwJV kmbjgw"
+            class="sc-fKgJPI udtlg sc-bCwfaz cCHbrW"
           >
             Type: 
           </div>
           <div
-            class="sc-fKVsgm kcFwyk sc-bBHwJV kmbjgw"
+            class="sc-fKgJPI bWgzyJ sc-bCwfaz cCHbrW"
           >
             Beginner
           </div>
         </div>
       </div>
       <div
-        class="sc-gKckTs jhmBNr sc-iCfLBT hjWEaa sc-cNKpQo dnibBa"
+        class="sc-gKAaRy iZvmHx sc-iCoGMd ghcIKp sc-cOifOu hWJxhd"
       >
         <svg
           aria-hidden="true"

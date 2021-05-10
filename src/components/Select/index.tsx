@@ -98,7 +98,6 @@ export interface SelectProps<T>
 		>,
 		RenditionSystemProps {}
 
+type SelectType = <T extends {}>(props: SelectProps<T>) => JSX.Element;
 /** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Select/Select.stories.tsx) */
-export const Select = asRendition<
-	<T extends {}>(props: SelectProps<T>) => JSX.Element
->(BaseSelect);
+export const Select = asRendition<SelectType>(BaseSelect);

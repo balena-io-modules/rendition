@@ -62,21 +62,18 @@ const RendererPlaygroundBase = ({
 }: ThemedRendererPlaygroundProps) => {
 	const [validate, setValidate] = React.useState<boolean>(true);
 	const [selectedExample, setSelectedExample] = React.useState<string>('');
-	const [searchTermRegExp, setSearchTermRegExp] = React.useState<RegExp>(
-		defaultRegExp,
-	);
+	const [searchTermRegExp, setSearchTermRegExp] =
+		React.useState<RegExp>(defaultRegExp);
 
 	const [value, setValue] = React.useState<Value>({});
 	const [schema, setSchema] = React.useState<object>({});
 	const [uiSchema, setUiSchema] = React.useState<object>({});
 
 	const [isValueJsonValid, setIsValueJsonValid] = React.useState<boolean>(true);
-	const [isSchemaJsonValid, setIsSchemaJsonValid] = React.useState<boolean>(
-		true,
-	);
-	const [isUiSchemaJsonValid, setIsUiSchemaJsonValid] = React.useState<boolean>(
-		true,
-	);
+	const [isSchemaJsonValid, setIsSchemaJsonValid] =
+		React.useState<boolean>(true);
+	const [isUiSchemaJsonValid, setIsUiSchemaJsonValid] =
+		React.useState<boolean>(true);
 
 	const reset = React.useCallback(() => {
 		setSelectedExample('');
@@ -136,9 +133,10 @@ const RendererPlaygroundBase = ({
 		}
 	}, [uiSchema, schema, value]);
 
-	const valueStr = React.useMemo<string>(() => JSON.stringify(value, null, 2), [
-		value,
-	]);
+	const valueStr = React.useMemo<string>(
+		() => JSON.stringify(value, null, 2),
+		[value],
+	);
 	const schemaStr = React.useMemo<string>(
 		() => JSON.stringify(schema, null, 2),
 		[schema],

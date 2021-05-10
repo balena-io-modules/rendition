@@ -71,6 +71,5 @@ export type InputProps = InternalInputProps &
 	RenditionSystemProps & { ref?: React.Ref<HTMLInputElement | null> };
 
 /** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Input/Input.stories.tsx) */
-export const Input = asRendition<React.FunctionComponent<InputProps>>(
-	BaseInput,
-);
+export const Input =
+	asRendition<React.FunctionComponent<InputProps>>(BaseInput);

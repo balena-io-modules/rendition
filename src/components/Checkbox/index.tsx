@@ -86,6 +86,5 @@ export interface InternalCheckboxProps
 export type CheckboxProps = InternalCheckboxProps & RenditionSystemProps;
 
 /** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Checkbox/Checkbox.stories.tsx) */
-export const Checkbox = asRendition<React.FunctionComponent<CheckboxProps>>(
-	BaseCheckbox,
-);
+export const Checkbox =
+	asRendition<React.FunctionComponent<CheckboxProps>>(BaseCheckbox);

@@ -73,6 +73,5 @@ interface InternalRadioButtonProps
 export type RadioButtonProps = InternalRadioButtonProps & RenditionSystemProps;
 
 /** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/RadioButton/RadioButton.stories.tsx) */
-export const RadioButton = asRendition<
-	React.FunctionComponent<RadioButtonProps>
->(BaseRadioButton);
+export const RadioButton =
+	asRendition<React.FunctionComponent<RadioButtonProps>>(BaseRadioButton);
