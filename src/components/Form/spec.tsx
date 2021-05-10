@@ -1,4 +1,3 @@
-import Promise from 'bluebird';
 import { mount } from 'enzyme';
 import React from 'react';
 import sinon from 'sinon';
@@ -6,6 +5,7 @@ import { JSONSchema7 } from 'json-schema';
 
 import { Alert, Form, Provider } from '../../';
 import { EXTRA_FORMATS } from './examples';
+import { delay } from '../../utils/promises';
 
 const schema = {
 	type: 'object',
@@ -139,7 +139,7 @@ describe('Form component', () => {
 			input.simulate('change', { target: { value } });
 			component.update();
 
-			return Promise.delay(150).then(() => {
+			return delay(150).then(() => {
 				component.find('form').simulate('submit');
 				expect(callback.callCount).toEqual(1);
 				expect(callback.getCall(0).args[0].formData).toEqual({ Name: value });
@@ -163,7 +163,7 @@ describe('Form component', () => {
 			input.simulate('change', { target: { value } });
 			component.update();
 
-			return Promise.delay(150).then(() => {
+			return delay(150).then(() => {
 				expect(callback.called).toEqual(true);
 				expect(callback.lastCall.args[0].formData).toEqual({ Name: value });
 
@@ -268,7 +268,7 @@ describe('Form component', () => {
 				.simulate('click');
 			component.update();
 
-			return Promise.delay(150).then(() => {
+			return delay(150).then(() => {
 				const callArg = callback.lastCall.args[0];
 				expect(callArg.formData).toEqual({ testfield: 'foo' });
 			});
@@ -335,7 +335,7 @@ describe('Form component', () => {
 
 			component.update();
 
-			return Promise.delay(150).then(() => {
+			return delay(150).then(() => {
 				const callArg = callback.lastCall.args[0];
 				expect(callArg.formData).toEqual({
 					Array: [value],
@@ -359,7 +359,7 @@ describe('Form component', () => {
 
 			component.update();
 
-			return Promise.delay(150).then(() => {
+			return delay(150).then(() => {
 				const callArg = callback.lastCall.args[0];
 				expect(callArg.formData).toEqual({
 					Array: [value1, value2],
@@ -375,7 +375,7 @@ describe('Form component', () => {
 
 			component.update();
 
-			return Promise.delay(150).then(() => {
+			return delay(150).then(() => {
 				const callArg = callback.lastCall.args[0];
 				expect(callArg.formData).toEqual({
 					Array: [value2, value1],
@@ -391,7 +391,7 @@ describe('Form component', () => {
 
 			component.update();
 
-			return Promise.delay(150).then(() => {
+			return delay(150).then(() => {
 				const callArg = callback.lastCall.args[0];
 				expect(callArg.formData).toEqual({
 					Array: [value1, value2],
@@ -407,7 +407,7 @@ describe('Form component', () => {
 
 			component.update();
 
-			return Promise.delay(150).then(() => {
+			return delay(150).then(() => {
 				const callArg = callback.lastCall.args[0];
 				expect(callArg.formData).toEqual({
 					Array: [value1],
