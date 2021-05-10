@@ -1,4 +1,21 @@
 - commits:
+    - subject: Stop using Bluebird
+      hash: 0e477327a3105de3bdbc6ff53c2bc7dd542ada7d
+      body: |
+        We were only using it in specs even though it was
+        not in our devDependencies and it only worked b/c
+        storybook has it as a dependency of its own. The
+        inline implementation atm should be tree shaked
+        away by consumers, since it's only used in tests.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 20.12.4
+  date: 2021-05-10T21:09:23.563Z
+- commits:
     - subject: Fix lint with new published prittier version
       hash: ae72651645f663ed09750197a55c59943913fb07
       body: |
