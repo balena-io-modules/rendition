@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add useTranslation hook and t provider
+      hash: a5fffa29c7e841860601b5e2058e2d1737bf710f
+      body: |
+        Add useTranslation hook and t provider
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.13.0
+  date: 2021-05-11T09:58:00.004Z
+- commits:
     - subject: Stop using Bluebird
       hash: 0e477327a3105de3bdbc6ff53c2bc7dd542ada7d
       body: |
