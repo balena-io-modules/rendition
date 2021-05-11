@@ -88,7 +88,10 @@ export { List, ListProps } from './components/List';
 export { Popover, PopoverProps, PopoverOptions } from './components/Popover';
 export { Tab, TabProps, Tabs, TabsProps } from './components/Tabs';
 export { Tag, TagProps, TagItem } from './components/Tag';
-
+export {
+	TagManagementModal,
+	TagManagementModalProps,
+} from './components/TagManagementModal';
 export { Avatar, AvatarProps } from './components/Avatar';
 export { Box, BoxProps } from './components/Box';
 export { Breadcrumbs, BreadcrumbsProps, Crumb } from './components/Breadcrumbs';

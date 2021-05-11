@@ -3,9 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import copyToClipboard from 'copy-to-clipboard';
 import * as React from 'react';
 import styled from 'styled-components';
-import { stopEvent } from '../../utils';
-import { ResourceTagBase } from '../TagManagementModal/models';
 import { Txt, TxtProps } from '../Txt';
+import { useTranslation } from '../../hooks/useTranslation';
+import { stopEvent } from '../../utils';
+import { ResourceTagBase } from './models';
 
 const Label = styled(Txt.span)`
 	display: inline-flex;
@@ -82,12 +83,13 @@ export interface TagLabelProps extends TxtProps {
 }
 
 export const TagLabel = (props: TagLabelProps) => {
+	const { t } = useTranslation();
 	const {
 		tag,
 		maxValueLength,
 		wrapValue,
 		showTagKey = true,
-		placeholder = 'no value',
+		placeholder = t('no_data.no_value') as string,
 		...restProps
 	} = props;
 
@@ -103,7 +105,7 @@ export const TagLabel = (props: TagLabelProps) => {
 		<Label onClick={stopEvent} title={compositeTagString} {...restProps}>
 			<TagText
 				tooltip={{
-					text: 'Copied!',
+					text: t('actions_messages.copied'),
 					trigger: 'click',
 				}}
 			>

@@ -262,7 +262,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                         >
                           <div>
                             <p
@@ -305,7 +305,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                         >
                           <div>
                             <p
@@ -412,7 +412,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                            class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                           >
                             <div>
                               <p
@@ -744,7 +744,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                         >
                           <div>
                             <p
@@ -787,7 +787,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                         >
                           <div>
                             <p
@@ -894,7 +894,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                            class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                           >
                             <div>
                               <p
@@ -1234,7 +1234,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                         >
                           <div>
                             <p
@@ -1278,7 +1278,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                         >
                           <div>
                             <p
@@ -1387,7 +1387,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                            class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                           >
                             <div>
                               <p
@@ -1719,7 +1719,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                         >
                           <div>
                             <p
@@ -1762,7 +1762,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                         >
                           <div>
                             <p
@@ -1869,7 +1869,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                            class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                           >
                             <div>
                               <p
@@ -2196,7 +2196,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                         >
                           <div>
                             <p
@@ -2239,7 +2239,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                         >
                           <div>
                             <p
@@ -2346,7 +2346,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                            class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                           >
                             <div>
                               <p
@@ -2571,7 +2571,7 @@ exports[`Storyshots Core/Form With Extra Widgets 1`] = `
       class="sc-gKAaRy iZvmHx sc-iCoGMd hOhWwQ"
     >
       <div
-        class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+        class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
       >
         <div>
           <h1
@@ -3363,7 +3363,7 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                         Markdown
                       </label>
                       <div
-                        class="sc-hKiEVl hKKjto"
+                        class="sc-bTJQgd caJBVf"
                         id="simplemde-editor-1-wrapper"
                       >
                         <textarea
@@ -3654,7 +3654,7 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                         Captcha
                       </label>
                       <div
-                        class="sc-exqIPC bUJNzq"
+                        class="sc-hQYpqk ixLPNS"
                       />
                     </div>
                   </div>
@@ -3751,7 +3751,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                         id="root_Name"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                         >
                           <div>
                             <p
@@ -3961,7 +3961,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                         >
                           <div>
                             <p
@@ -4004,7 +4004,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                         >
                           <div>
                             <p
@@ -4135,7 +4135,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                            class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                           >
                             <div>
                               <p
@@ -4821,7 +4821,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                         >
                           <div>
                             <p
@@ -4864,7 +4864,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                         >
                           <div>
                             <p
@@ -4995,7 +4995,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                            class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                           >
                             <div>
                               <p
@@ -5136,7 +5136,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                             class="sc-gKAaRy iZvmHx sc-iCoGMd eZYjXy sc-hHEiqL fOpvOh sc-dtLLSn plZaY"
                           >
                             <div
-                              class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                              class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                             >
                               <div>
                                 <p
@@ -5366,7 +5366,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                         >
                           <div>
                             <p
@@ -5409,7 +5409,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                         >
                           <div>
                             <p
@@ -5540,7 +5540,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-eiQWpL fXlmWN"
+                            class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi sc-fTFMiz YcEOB"
                           >
                             <div>
                               <p
