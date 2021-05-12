@@ -44,6 +44,52 @@ const translationMap = {
 		'Tag names beginning with {{namespace}} are reserved',
 	'fields_errors.tag_with_same_name_exists':
 		'A tag with the same name already exists',
+
+	// DownloadImageModal
+	'placeholders.select_device_type': 'Select device type',
+	'placeholders.select_os_type_status': 'Select OS type',
+	'placeholders.choose_device_type': 'Choose a device type...',
+	'placeholders.select_os_type': 'Select OS type...',
+	'placeholders.select_version': 'Select version',
+	'placeholders.select_edition': 'Select edition',
+
+	'labels.instructions': 'Instructions',
+
+	'info.production_and_enterprise_plan_only':
+		'production and enterprise plan only',
+	'info.no_esr_versions_are_available_for_device_type':
+		'No ESR versions are available for this device type yet. Check the documentation for device types that already have ESR versions.',
+	'info.recommended_for_new_users': 'Recommended for first time users',
+
+	'actions.add_new_device': 'Add new device',
+	'actions.use_from_to_configure_and_download':
+		'Use the form on the left above to configure and download balenaOS for your new device.',
+	'actions_messages.appearance_device_explanation':
+		'Your device should appear in your application dashboard within a few minutes. Have fun!',
+	'actions.download_configuration_file': 'Download configuration file',
+	'actions.download_balenaos': 'Download balenaOS',
+	'actions.download_configuration_file_only':
+		'Download configuration file only',
+
+	'loading.generating_configuration_file': 'Generating configuration file...',
+	'loading.fetching_versions': 'Fetching versions...',
+
+	'no_data.no_os_versions_available_for_download':
+		'No OS versions available for download',
+	'no_data.no_instructions_found':
+		'Instructions for this application are not currently available. Please try again later.',
+	'no_data.no_versions_yet': 'no versions yet',
+
+	'info.development_images_for_local_development_1':
+		'Development images should be used when you are developing an application and want to use the fast',
+	'info.development_images_for_local_development_2': 'local mode',
+	'info.development_images_for_local_development_3': 'workflow.',
+	'info.development_images_for_local_development_4':
+		'This variant should never be used in production.',
+	'info.production_images_not_for_local_development':
+		"Production images are ready for production deployments, but don't offer easy access for local development.",
+
+	'redirects.view_docs': 'View docs',
 };
 
 const getTranslation = (str: string, opts?: any) => {
@@ -71,7 +117,7 @@ export const useTranslation = () => {
 		if (result == null || result === str) {
 			result = getTranslation(str, opts);
 		}
-		return result;
+		return result ?? str;
 	};
 
 	return { t };
