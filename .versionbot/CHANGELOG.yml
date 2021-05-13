@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add Download image modal component as unstable
+      hash: b081af746fe3fbfe5f6fa386b7720f26cb188bc1
+      body: |
+        Add download image modal component as unstable
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.14.0
+  date: 2021-05-13T17:06:20.144Z
+- commits:
     - subject: Add useTranslation hook and t provider
       hash: a5fffa29c7e841860601b5e2058e2d1737bf710f
       body: |
