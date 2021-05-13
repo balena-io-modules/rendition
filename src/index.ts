@@ -129,3 +129,7 @@ export {
 	Tooltip,
 	RenditionSystemProps,
 } from './common-types';
+export {
+	UnstableTempDownloadImageModal,
+	UnstableTempDownloadImageModalProps,
+} from './unstable-temp/DownloadImageModal/DownloadImageModal';

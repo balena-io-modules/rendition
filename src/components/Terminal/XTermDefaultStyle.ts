@@ -5,7 +5,6 @@ import { css } from 'styled-components';
 
 export default css`
 	.xterm {
-		font-feature-settings: 'liga' 0;
 		position: relative;
 		user-select: none;
 		-ms-user-select: none;
