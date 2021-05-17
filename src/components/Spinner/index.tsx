@@ -5,6 +5,7 @@ import { RenditionSystemProps } from '../../common-types';
 import { rotate360 } from '../../animations';
 import asRendition from '../../asRendition';
 import { px } from '../../utils';
+import { Box } from '../Box';
 import { Flex } from '../Flex';
 import { Txt } from '../Txt';
 
@@ -21,7 +22,7 @@ const CircleLoader = styled.div<Pick<InternalSpinnerProps, 'emphasized'>>`
 	animation-fill-mode: both;
 `;
 
-const Container = styled.div`
+const Container = styled(Box)`
 	position: relative;
 `;
 
@@ -31,13 +32,11 @@ const SpinnerContainer = styled(Flex)`
 	left: 0;
 	bottom: 0;
 	right: 0;
-	z-index: 4;
 `;
 
-const ChildrenContainer = styled.div<Pick<InternalSpinnerProps, 'show'>>`
+const ChildrenContainer = styled(Box)<Pick<InternalSpinnerProps, 'show'>>`
 	opacity: ${(props) => (props.show ? 0.4 : 1)};
 	transition: opacity 250ms;
-	z-index: 3;
 `;
 
 const Base = ({
@@ -80,13 +79,13 @@ const BaseSpinner = ({
 
 	return (
 		<Container {...otherProps}>
+			<ChildrenContainer show={show}>{children}</ChildrenContainer>
+
 			{show && (
 				<SpinnerContainer justifyContent="center" alignItems="center">
 					<Base label={label} emphasized={emphasized} />
 				</SpinnerContainer>
 			)}
-
-			<ChildrenContainer show={show}>{children}</ChildrenContainer>
 		</Container>
 	);
 };
