@@ -12,6 +12,7 @@ import { Txt } from '../../components/Txt';
 
 import { DownloadFormModel, FormModel } from './FormModel';
 import { DeviceType } from './models';
+import { DownloadOptions } from './DownloadImageModal';
 
 const debounceDownloadSize = debounce(
 	(getDownloadSize, deviceType, rawVersion, setDownloadSize) =>
@@ -66,6 +67,10 @@ interface ImageFormProps {
 	rawVersion: string | null;
 	deviceType: DeviceType;
 	authToken?: string;
+	onDownloadStart?: (
+		downloadConfigOnly: boolean,
+		downloadOptions: DownloadOptions,
+	) => void;
 	setIsDownloadingConfig: (isDownloading: boolean) => void;
 	downloadConfig?: (event: React.MouseEvent) => Promise<void> | undefined;
 	getDownloadSize?: () => Promise<string> | undefined;
@@ -78,6 +83,7 @@ export const ImageForm = ({
 	rawVersion,
 	deviceType,
 	authToken,
+	onDownloadStart,
 	setIsDownloadingConfig,
 	downloadConfig,
 	getDownloadSize,
@@ -93,6 +99,18 @@ export const ImageForm = ({
 	});
 
 	const setDownloadConfigOnly = (downloadConfigOnly: boolean) => {
+		const downloadOptions = {
+			applicationId: appId,
+			deviceType: deviceType.slug,
+			appUpdatePollInterval: model.appUpdatePollInterval,
+			downloadConfigOnly,
+			network: model.network,
+			version: rawVersion,
+		} as DownloadOptions;
+
+		if (typeof onDownloadStart === 'function') {
+			onDownloadStart(downloadConfigOnly, downloadOptions);
+		}
 		setModel({
 			...model,
 			downloadConfigOnly,
