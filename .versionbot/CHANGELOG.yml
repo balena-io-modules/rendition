@@ -1,4 +1,25 @@
 - commits:
+    - subject: 'Spinner: Spread display & flex props to the children container'
+      hash: 31add8180f69c1a2010269796ab37f554228ed02
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+    - subject: 'Spinner: Replace z-index by order element'
+      hash: 106d3a9594d2511f04fbe788c185d4e9d16a9f17
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 20.15.0
+  date: 2021-05-17T12:09:47.415Z
+- commits:
     - subject: Add Download image modal component as unstable
       hash: b081af746fe3fbfe5f6fa386b7720f26cb188bc1
       body: |
