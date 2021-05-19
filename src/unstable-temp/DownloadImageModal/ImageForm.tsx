@@ -67,8 +67,8 @@ interface ImageFormProps {
 	deviceType: DeviceType;
 	authToken?: string;
 	setIsDownloadingConfig: (isDownloading: boolean) => void;
-	downloadConfig: (event: React.MouseEvent) => Promise<void>;
-	getDownloadSize: () => Promise<string>;
+	downloadConfig?: (event: React.MouseEvent) => Promise<void> | undefined;
+	getDownloadSize?: () => Promise<string> | undefined;
 	configurationComponent: React.ReactNode;
 }
 
@@ -106,7 +106,7 @@ export const ImageForm = ({
 	}, [hasDockerImageDownload, model.downloadConfigOnly]);
 
 	React.useEffect(() => {
-		if (!deviceType || !rawVersion) {
+		if (!deviceType || !rawVersion || !getDownloadSize) {
 			setDownloadSize(null);
 			return;
 		}
@@ -162,32 +162,13 @@ export const ImageForm = ({
 			})}
 
 			<Flex>
-				<DropDownButton
-					mt={2}
-					primary
-					ml="auto"
-					className="e2e-download-image-submit"
-					type="submit"
-					disabled={isDownloadDisabled(model, rawVersion)}
-					onClick={async (e) => {
-						if (model.downloadConfigOnly) {
-							setIsDownloadingConfig(true);
-							await downloadConfig(e);
-							setIsDownloadingConfig(false);
-						}
-					}}
-					icon={<FontAwesomeIcon icon={faDownload} />}
-					label={
-						model.downloadConfigOnly
-							? t('actions.download_configuration_file')
-							: t('actions.download_balenaos') +
-							  (rawVersion && downloadSize ? ` (~${downloadSize})` : '')
-					}
-					alignRight
-					dropUp
-				>
+				{!downloadConfig && (
 					<Button
-						plain
+						mt={2}
+						ml="auto"
+						className="e2e-download-image-submit"
+						primary
+						type="submit"
 						disabled={hasDockerImageDownload}
 						onClick={() => setDownloadConfigOnly(false)}
 					>
@@ -195,12 +176,48 @@ export const ImageForm = ({
 							{t('actions.download_balenaos')}
 						</Txt>
 					</Button>
-					<Button plain onClick={() => setDownloadConfigOnly(true)}>
-						<Txt bold={!!model.downloadConfigOnly}>
-							{t('actions.download_configuration_file_only')}
-						</Txt>
-					</Button>
-				</DropDownButton>
+				)}
+				{!!downloadConfig && (
+					<DropDownButton
+						mt={2}
+						primary
+						ml="auto"
+						className="e2e-download-image-submit"
+						type="submit"
+						disabled={isDownloadDisabled(model, rawVersion)}
+						onClick={async (e) => {
+							if (model.downloadConfigOnly && downloadConfig) {
+								setIsDownloadingConfig(true);
+								await downloadConfig(e);
+								setIsDownloadingConfig(false);
+							}
+						}}
+						icon={<FontAwesomeIcon icon={faDownload} />}
+						label={
+							model.downloadConfigOnly
+								? t('actions.download_configuration_file')
+								: t('actions.download_balenaos') +
+								  (rawVersion && downloadSize ? ` (~${downloadSize})` : '')
+						}
+						alignRight
+						dropUp
+					>
+						<Button
+							plain
+							disabled={hasDockerImageDownload}
+							onClick={() => setDownloadConfigOnly(false)}
+						>
+							<Txt bold={!model.downloadConfigOnly}>
+								{t('actions.download_balenaos')}
+							</Txt>
+						</Button>
+						<Button plain onClick={() => setDownloadConfigOnly(true)}>
+							<Txt bold={!!model.downloadConfigOnly}>
+								{t('actions.download_configuration_file_only')}
+							</Txt>
+						</Button>
+					</DropDownButton>
+				)}
 			</Flex>
 		</form>
 	);
