@@ -77,18 +77,18 @@ export interface UnstableTempDownloadImageModalProps {
 		applicationId: number,
 		deviceTypeSlug: string,
 	) => Promise<string[]>;
-	getDockerArtifact: (deviceTypeSlug: string, rawVersion: string) => string;
-	hasEsrVersions: (deviceTypeSlugs: string[]) => Promise<Dictionary<boolean>>;
-	downloadConfig: (
+	downloadConfig?: (
 		deviceType: DeviceType,
 		rawVersion: string | null,
 	) => Promise<void>;
-	getDownloadSize: (
+	getDownloadSize?: (
 		deviceType: DeviceType,
 		rawVersion: string | null,
-	) => Promise<string>;
+	) => Promise<string> | undefined;
+	getDockerArtifact: (deviceTypeSlug: string, rawVersion: string) => string;
+	hasEsrVersions?: (deviceTypeSlugs: string[]) => Promise<Dictionary<boolean>>;
 	onClose: () => void;
-	authToken: string | null;
+	authToken?: string;
 }
 
 export const UnstableTempDownloadImageModal = ({
@@ -133,7 +133,7 @@ export const UnstableTempDownloadImageModal = ({
 	const defaultDisplayName = deviceType?.name ?? '-';
 
 	React.useEffect(() => {
-		if (!compatibleDeviceTypes) {
+		if (!compatibleDeviceTypes || !hasEsrVersions) {
 			return;
 		}
 		hasEsrVersions(compatibleDeviceTypes.map((dt) => dt.slug)).then(
@@ -210,7 +210,7 @@ export const UnstableTempDownloadImageModal = ({
 		[compatibleDeviceTypes, deviceType],
 	);
 
-	if (!deviceType || !authToken) {
+	if (!deviceType) {
 		return null;
 	}
 
@@ -255,10 +255,14 @@ export const UnstableTempDownloadImageModal = ({
 									downloadUrl={downloadUrl}
 									rawVersion={rawVersion}
 									authToken={authToken}
-									downloadConfig={() => downloadConfig(deviceType, rawVersion)}
-									getDownloadSize={() =>
-										getDownloadSize(deviceType, rawVersion)
-									}
+									{...(downloadConfig && {
+										downloadConfig: () =>
+											downloadConfig(deviceType, rawVersion),
+									})}
+									{...(getDownloadSize && {
+										getDownloadSize: () =>
+											getDownloadSize(deviceType, rawVersion),
+									})}
 									configurationComponent={
 										<OsConfiguration
 											compatibleDeviceTypes={compatibleDeviceTypes}
@@ -272,7 +276,9 @@ export const UnstableTempDownloadImageModal = ({
 											}
 											onSelectedVersionChange={setRawVersion}
 											onSelectedOsTypeChange={setOsType}
-											hasEsrVersions={deviceTypeHasEsr[deviceType.slug]}
+											hasEsrVersions={
+												deviceTypeHasEsr[deviceType.slug] ?? false
+											}
 										/>
 									}
 								/>
