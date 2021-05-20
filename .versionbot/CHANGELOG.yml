@@ -1,4 +1,17 @@
 - commits:
+    - subject: Rework unstable image modal
+      hash: ffbf6251e37db6d0b68c8c278b26028d92a3b3e6
+      body: |
+        Rework unstable image modal
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.14.1
+  date: 2021-05-19T15:23:34.439Z
+- commits:
     - subject: Add Download image modal component as unstable
       hash: b081af746fe3fbfe5f6fa386b7720f26cb188bc1
       body: |
