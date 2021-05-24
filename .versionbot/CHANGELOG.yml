@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'Terminal: Use the native ResizeObserver if available'
+      hash: fa7362c88a000588693a914959b65dfe109bbd67
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 20.15.0
+  date: 2021-05-24T16:14:34.935Z
+- commits:
     - subject: 'Terminal: Fix resize observer memory & cpu leak'
       hash: 2b61af5050cf0350730087af0139c1941388e6f9
       body: ''
