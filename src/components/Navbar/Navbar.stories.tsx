@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Meta } from '@storybook/react';
 import { createTemplate, createStory } from '../../stories/utils';
 import { Img, Link } from '../../';
-// @ts-ignore
+// @ts-expect-error
 import logo from '../../stories/assets/balena.png';
 import { Navbar, NavbarProps } from '.';
 

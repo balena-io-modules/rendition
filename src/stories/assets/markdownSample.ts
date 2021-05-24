@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-expect-error
 import image from './GitHub-Mark-120px-plus.png';
 
 export const customizationSamples = [

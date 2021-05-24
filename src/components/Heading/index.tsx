@@ -31,7 +31,7 @@ const Factory = (tag?: string) => {
 	return asRendition<React.FunctionComponent<InternalHeadingProps>>(
 		(props: InternalHeadingProps) => {
 			// Styled components v4 typing for `as` is not properly typed yet, so it needs to be ignored. https://github.com/DefinitelyTyped/DefinitelyTyped/blob/03186dbc08372aa1ca9689147386523588be6efd/types/styled-components/index.d.ts#L186
-			// @ts-ignore
+			// @ts-expect-error
 			return <BaseHeading as={tag} {...props} />;
 		},
 		[setDefaultProps],

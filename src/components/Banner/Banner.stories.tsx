@@ -2,7 +2,7 @@ import React from 'react';
 import { Meta } from '@storybook/react';
 import { createTemplate, createStory } from '../../stories/utils';
 import { Banner, BannerProps } from '.';
-// @ts-ignore
+// @ts-expect-error
 import bgImage from '../../stories/assets/bg.png';
 
 export default {

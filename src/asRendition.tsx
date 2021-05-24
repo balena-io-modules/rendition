@@ -81,7 +81,7 @@ export const withStyledSystem = (child: React.ComponentType) => {
 	Base.displayName = getDisplayName(child);
 
 	// The styled component messes up with the propTypes typings. We don't really need typesafety here anyway, so it is safe to just ignore it.
-	// @ts-ignore
+	// @ts-expect-error
 	Base.propTypes = propTypes;
 
 	return React.forwardRef((props: any, ref: any) => {
