@@ -34,8 +34,8 @@
     "test": "npm run build && npm run test:fast && npm run catch-uncommitted",
     "jest": "jest --maxWorkers=4",
     "jest:watch": "jest --maxWorkers=4 --watch",
-    "lint:fix": "balena-lint --typescript --fix src",
-    "lint": "balena-lint --typescript src",
+    "lint:fix": "balena-lint --fix src",
+    "lint": "balena-lint src",
     "catch-uncommitted": "catch-uncommitted --catch-no-git --skip-node-versionbot-changes",
     "precommit": "lint-staged",
     "prepack": "npm run build",
@@ -43,7 +43,7 @@
     "deploy": "npm run build:storybook && gh-pages -d .out"
   },
   "devDependencies": {
-    "@balena/lint": "^5.4.1",
+    "@balena/lint": "^6.1.1",
     "@storybook/addon-actions": "^6.0.28",
     "@storybook/addon-essentials": "^6.0.28",
     "@storybook/addon-links": "^6.0.28",
@@ -147,7 +147,7 @@
       "git add ./src/components/Terminal/XTermDefaultStyle.ts"
     ],
     "*.{ts,tsx}": [
-      "balena-lint --typescript --fix",
+      "balena-lint --fix",
       "git add"
     ]
   },
