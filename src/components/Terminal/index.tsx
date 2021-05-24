@@ -116,6 +116,7 @@ export class Terminal extends React.Component<ThemedTerminalProps, {}> {
 	// Used as the element to mount XTERM into
 	private mountElement: HTMLDivElement | null;
 	private termConfig: ITerminalOptions;
+	private resizeObserver: ResizeObserver | null;
 
 	constructor(props: ThemedTerminalProps) {
 		super(props);
@@ -160,15 +161,22 @@ export class Terminal extends React.Component<ThemedTerminalProps, {}> {
 			}
 			this.resize();
 			if (typeof ResizeObserver === 'function') {
-				const resizeObserver = new ResizeObserver(() => {
+				this.resizeObserver = new ResizeObserver(() => {
 					this.resize();
 				});
-				resizeObserver.observe(this.mountElement!);
+				this.resizeObserver.observe(this.mountElement!);
 			}
 		});
 	}
 
 	public componentWillUnmount() {
+		if (this.resizeObserver) {
+			if (this.mountElement) {
+				this.resizeObserver.unobserve(this.mountElement);
+			}
+			this.resizeObserver.disconnect();
+			this.resizeObserver = null;
+		}
 		// Don't destroy tty on unmount if this Terminal is persistent
 		if (!this.props.persistent) {
 			this.destroy();
