@@ -1,4 +1,34 @@
 - commits:
+    - subject: Bump balena-lint to v6
+      hash: b49b37aea90f251eafd77b01ea521979e29d3811
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+    - subject: Switch all ts-ignore to ts-expect-error
+      hash: d42eca63dfd3ed25b1b55cb7273c15f1a7824128
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+    - subject: Remove unnecessary ts-ignore directives
+      hash: 3a15fa29d229d0f3a2225eb78022e26bd07ff28b
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 20.15.1
+  date: 2021-05-24T16:34:15.748Z
+- commits:
     - subject: 'Terminal: Use the native ResizeObserver if available'
       hash: fa7362c88a000588693a914959b65dfe109bbd67
       body: ''
