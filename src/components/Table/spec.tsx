@@ -7,7 +7,6 @@ import noop from 'lodash/noop';
 import reverse from 'lodash/reverse';
 import React from 'react';
 import sinon from 'sinon';
-// @ts-ignore
 import PokeDex, { PokedexInterface } from '../../stories/assets/pokedex';
 
 import { Pager, Provider, Table } from '../../';

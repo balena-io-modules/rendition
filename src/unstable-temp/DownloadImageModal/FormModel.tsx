@@ -156,7 +156,6 @@ const FormControl = ({ onModelChange, options, model }: FormControlProps) => {
 								}
 							}}
 							value={model[options.name] as number | undefined}
-							// @ts-ignore
 							min={options.min}
 							max={options.max}
 						/>
