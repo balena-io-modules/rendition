@@ -23,7 +23,7 @@ describe.only('Renderer component', () => {
 						},
 					}}
 				>
-					{/* @ts-ignore */}
+					{/* @ts-expect-error */}
 					<Renderer
 						validate
 						{...example}

@@ -25,7 +25,7 @@ export class CaptchaWidget extends React.Component<CaptchaWidgetProps> {
 	}
 
 	public componentDidMount() {
-		// @ts-ignore If there is no recaptcha key, just set a dummy value so forms that require it will be filled-in.
+		// @ts-expect-error If there is no recaptcha key, just set a dummy value so forms that require it will be filled-in.
 		if (!window.RECAPTCHA_V2_API_KEY) {
 			this.props.onChange('dummy');
 		}
@@ -48,7 +48,7 @@ export class CaptchaWidget extends React.Component<CaptchaWidgetProps> {
 	};
 
 	public render() {
-		// @ts-ignore Don't render and require recaptcha when the key doesn't exist.
+		// @ts-expect-error Don't render and require recaptcha when the key doesn't exist.
 		const captchaKey = window.RECAPTCHA_V2_API_KEY;
 		if (!captchaKey) {
 			return null;

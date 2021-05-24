@@ -6,6 +6,6 @@ import { Format } from '../Renderer/types';
 export const EXTRA_FORMATS: Format[] = [
 	{ name: 'markdown', format: '.*', widget: MarkdownWidget },
 	{ name: 'mermaid', format: '.*', widget: MermaidWidget },
-	// @ts-ignore
+	// @ts-expect-error
 	{ name: 'captcha', format: '.*', widget: CaptchaWidget },
 ];

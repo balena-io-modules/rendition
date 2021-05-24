@@ -39,7 +39,7 @@ const StyledGrommetInput = styled(GrommetTextInput)<{
 
 const BaseInput = React.forwardRef(
 	({ ...otherProps }: InternalInputProps, ref) => {
-		// @ts-ignore The grommet typings don't include `ref`, but they do pass it to the input component.
+		// @ts-expect-error The grommet typings don't include `ref`, but they do pass it to the input component.
 		return <StyledGrommetInput {...otherProps} ref={ref} />;
 	},
 );

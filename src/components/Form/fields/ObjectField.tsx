@@ -4,14 +4,14 @@
  */
 
 import * as React from 'react';
-// @ts-ignore
+// @ts-expect-error
 import AddButton from '@rjsf/core/dist/cjs/components/AddButton';
 import PatternPropertiesField from './PatternPropertiesField';
 
 import { JSONSchema7 as JSONSchema } from 'json-schema';
 import { FormValidation, IdSchema, UiSchema } from '@rjsf/core';
 import {
-	// @ts-ignore
+	// @ts-expect-error
 	ADDITIONAL_PROPERTY_FLAG,
 	getDefaultRegistry,
 	getUiOptions,
@@ -213,7 +213,7 @@ class ObjectField extends React.Component<ObjectFieldProps> {
 	}
 
 	public handleAddClick = (schema: JSONSchema) => () => {
-		// @ts-ignore
+		// @ts-expect-error
 		const type = schema.additionalProperties.type;
 		const newFormData = { ...this.props.formData };
 		newFormData[this.getAvailableKey('newKey', newFormData)] =

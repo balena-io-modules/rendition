@@ -1,7 +1,7 @@
 import { Meta } from '@storybook/react';
 import { createTemplate, createStory } from '../../stories/utils';
 import { Img, ImgProps } from '.';
-// @ts-ignore
+// @ts-expect-error
 import logo from '../../stories/assets/balena.png';
 
 export default {

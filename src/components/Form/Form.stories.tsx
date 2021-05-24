@@ -6,12 +6,12 @@ import { Markdown } from '../../extra/Markdown';
 import { Form, FormProps } from '.';
 
 // Any valid key would work in order to show the captcha in the story.
-// @ts-ignore
+// @ts-expect-error
 window.RECAPTCHA_V2_API_KEY = '6Ld-faYUAAAAAF92j1FX-GgG0uNPbw9sCCmnbJ2D';
 
-// @ts-ignore
+// @ts-expect-error
 import zxcvbn from 'zxcvbn';
-// @ts-ignore
+// @ts-expect-error
 window.zxcvbn = zxcvbn;
 
 const extraWidgetsReadme = `
