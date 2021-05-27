@@ -191,7 +191,8 @@ export const ImageForm = ({
 						onClick={() => setDownloadConfigOnly(false)}
 					>
 						<Txt bold={!model.downloadConfigOnly}>
-							{t('actions.download_balenaos')}
+							{t('actions.download_balenaos') +
+								(rawVersion && downloadSize ? ` (~${downloadSize})` : '')}
 						</Txt>
 					</Button>
 				)}
