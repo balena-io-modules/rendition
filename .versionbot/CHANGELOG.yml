@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add missing on download event
+      hash: 9b5c154d2be1f79965de8dd0af104bd79f3a14e8
+      body: |
+        Add missing on download event
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.15.2
+  date: 2021-05-27T14:14:48.463Z
+- commits:
     - subject: Bump balena-lint to v6
       hash: b49b37aea90f251eafd77b01ea521979e29d3811
       body: ''
