@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add initial AutoUi concept
+      hash: 4f7075fa19739b13b8e2a190a07ab0ed81e67684
+      body: |
+        Add initial AutoUi concept, start from collection component
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.16.0
+  date: 2021-06-08T09:26:37.246Z
+- commits:
     - subject: Fix download modal image size info
       hash: 7b8b2e909e4cf82c448a17faa98452765235f35a
       body: |
