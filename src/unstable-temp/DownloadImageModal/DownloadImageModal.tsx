@@ -12,9 +12,9 @@ import {
 	OsVersionsByDeviceType,
 	Application,
 	DeviceType,
-	Dictionary,
 	OsTypesEnum,
 } from './models';
+import { Dictionary } from '../../common-types';
 import { Box } from '../../components/Box';
 import { Flex } from '../../components/Flex';
 import { Txt } from '../../components/Txt';

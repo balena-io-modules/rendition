@@ -1,11 +1,11 @@
 import template from 'lodash/template';
 import {
-	Dictionary,
 	DeviceType,
 	OptionalNavigationResource,
 	OsTypesEnum,
 	Device,
 } from './models';
+import { Dictionary } from '../../common-types';
 
 export const OS_VARIANT_FULL_DISPLAY_TEXT_MAP: Dictionary<string> = {
 	dev: 'Development',

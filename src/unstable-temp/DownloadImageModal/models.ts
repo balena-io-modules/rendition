@@ -1,3 +1,5 @@
+import { Dictionary } from '../../common-types';
+
 export interface WithId {
 	id: number;
 }
@@ -16,10 +18,6 @@ export type OptionalNavigationResource<T = WithId> =
 export enum OsTypesEnum {
 	DEFAULT = 'default',
 	ESR = 'esr',
-}
-
-export interface Dictionary<T> {
-	[key: string]: T;
 }
 
 export interface WithId {

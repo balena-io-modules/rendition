@@ -16,7 +16,7 @@ import {
 	SimpleConfirmationModalProps,
 } from '../../internal/SimpleConfirmationModal';
 import { withPreventDefault, stopKeyDownEvent } from '../../utils';
-import { useTranslation } from '../../hooks/useTranslation';
+import { useTranslation, TFunction } from '../../hooks/useTranslation';
 
 const Alert = styled(AlertBase)`
 	padding: 8px 0 18px;
@@ -71,7 +71,7 @@ const newTagValidationRules = <T extends {}>(
 };
 
 interface AddTagFormProps<T> {
-	t: any;
+	t: TFunction;
 	itemType: string;
 	existingTags: Array<ResourceTagInfo<T>>;
 	overwritableTags?: Array<ResourceTagInfo<T>>;

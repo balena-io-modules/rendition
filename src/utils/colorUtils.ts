@@ -3,11 +3,10 @@ import ColorHash from 'color-hash';
 import find from 'lodash/find';
 import get from 'lodash/get';
 import memoize from 'lodash/memoize';
-import { Coloring, Theme } from '../common-types';
 import { ThemeType } from '..';
+import { Coloring, Theme } from '../common-types';
 
 const colorHash = new ColorHash();
-
 export type ColorShade = 'main' | 'light' | 'dark';
 
 const shadeCustomColor = (color: string, shade: 'main' | 'light' | 'dark') => {

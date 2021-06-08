@@ -110,6 +110,21 @@ import * as SchemaSieve from './components/Filters/SchemaSieve';
 export { SchemaSieve };
 
 export {
+	AutoUICollection,
+	AutoUICollectionProps,
+	autoUIRunTransformers,
+	autoUIDefaultPermissions,
+	autoUIGetModelForCollection,
+	autoUIAddToSchema,
+	AutoUIAction,
+	AutoUIBaseResource,
+	AutoUIRawModel,
+	AutoUIModel,
+	autoUIJsonSchemaPick,
+	autoUIGetDisabledReason,
+} from './extra/AutoUi/Collection';
+
+export {
 	ResponsiveStyle,
 	StyledSystemProps,
 	PineDataType,

@@ -1,5 +1,6 @@
 import uniq from 'lodash/uniq';
-import { Dictionary, OsVersion } from './models';
+import { OsVersion } from './models';
+import { Dictionary } from '../../common-types';
 
 export interface VersionSelectionOptions {
 	title: string;

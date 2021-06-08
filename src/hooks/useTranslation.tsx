@@ -2,6 +2,8 @@ import template from 'lodash/template';
 import { TranslationContext } from '../contexts/TranslationContext';
 import React from 'react';
 
+export type TFunction = (str: string, options?: any) => string;
+
 const translationMap = {
 	// TagManagement
 	'labels.tags': 'Tags',
@@ -90,6 +92,14 @@ const translationMap = {
 		"Production images are ready for production deployments, but don't offer easy access for local development.",
 
 	'redirects.view_docs': 'View docs',
+
+	// autoUI
+
+	'labels.actions': 'Actions',
+
+	'resource.item_plural': 'Items',
+
+	no_resource_data: "You don't have any {{resource}} yet.",
 };
 
 const getTranslation = (str: string, opts?: any) => {
@@ -109,7 +119,7 @@ const getTranslation = (str: string, opts?: any) => {
 
 export const useTranslation = () => {
 	const externalT = React.useContext(TranslationContext);
-	const t = (str: string, opts?: any) => {
+	const t: TFunction = (str: string, opts?: any) => {
 		let result = str;
 		if (!!externalT && typeof externalT === 'function') {
 			result = externalT(str, opts);

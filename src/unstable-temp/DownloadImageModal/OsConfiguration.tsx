@@ -153,8 +153,9 @@ export const OsConfiguration = ({
 }: OsConfigurationProps) => {
 	const { t } = useTranslation();
 	const [showAllVersions, setShowAllVersions] = React.useState(false);
-	const [version, setVersion] =
-		React.useState<VersionSelectionOptions | undefined>();
+	const [version, setVersion] = React.useState<
+		VersionSelectionOptions | undefined
+	>();
 	const [variant, setVariant] = React.useState<BuildVariant>('prod');
 	const {
 		proposedSelectionOpts,

@@ -290,8 +290,9 @@ export const TagManagementModal = <T extends TaggedResource>({
 	done,
 }: TagManagementModalProps<T>) => {
 	const { t } = useTranslation();
-	const [editingTag, setEditingTag] =
-		React.useState<ResourceTagInfo<T> | undefined>(undefined);
+	const [editingTag, setEditingTag] = React.useState<
+		ResourceTagInfo<T> | undefined
+	>(undefined);
 	const [tags, setTags] = React.useState<Array<ResourceTagInfo<T>>>();
 	const [partialTags, setPartialTags] =
 		React.useState<Array<ResourceTagInfo<T>>>();

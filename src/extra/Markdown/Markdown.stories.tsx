@@ -9,7 +9,7 @@ import source, {
 	customizationSamples,
 	decoratorSample,
 } from '../../stories/assets/markdownSample';
-import { TableColumn } from '~/components/Table';
+import { TableColumn } from '../../components/Table';
 
 const generateTableData = () => {
 	return customizationSamples.map(
