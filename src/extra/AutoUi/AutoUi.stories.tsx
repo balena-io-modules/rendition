@@ -9,8 +9,7 @@ import {
 import {
 	dataExample,
 	AugmentedSshKey,
-	model,
-	SshKeyWithoutPermissions,
+	model as sshKeyModel,
 	transformers,
 } from './models/example';
 
@@ -19,9 +18,11 @@ export default {
 	component: AutoUICollection,
 } as Meta;
 
-const DemoCollection = (
-	_props: AutoUICollectionProps<SshKeyWithoutPermissions>,
-) => {
+const DemoCollection = ({
+	data,
+	model,
+	...otherProps
+}: AutoUICollectionProps<AugmentedSshKey>) => {
 	const memoizedData = React.useMemo(
 		() =>
 			autoUIRunTransformers(dataExample, transformers, {
@@ -32,18 +33,18 @@ const DemoCollection = (
 
 	return (
 		<AutoUICollection<AugmentedSshKey>
-			data={memoizedData}
-			model={autoUIGetModelForCollection(model)}
+			data={data ?? memoizedData}
+			model={model ?? autoUIGetModelForCollection(sshKeyModel)}
 			actions={[]}
+			{...otherProps}
 		/>
 	);
 };
 
 const Template =
-	createTemplate<AutoUICollectionProps<SshKeyWithoutPermissions>>(
-		DemoCollection,
-	);
+	createTemplate<AutoUICollectionProps<AugmentedSshKey>>(DemoCollection);
 
-export const Default = createStory<
-	AutoUICollectionProps<SshKeyWithoutPermissions>
->(Template, {});
+export const Default = createStory<AutoUICollectionProps<AugmentedSshKey>>(
+	Template,
+	{},
+);

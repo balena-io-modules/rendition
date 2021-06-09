@@ -9,19 +9,19 @@ exports[`Storyshots Core/ButtonGroup Default 1`] = `
       class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL sc-kLojOw bJSggk jsEAXh"
     >
       <button
-        class="StyledButton-sc-323bzc-0 ecOiOP sc-bqGGPW sc-hBMUJo ffJBuc gunUgR sc-dIvrsQ jZURTW"
+        class="StyledButton-sc-323bzc-0 xRNC sc-bqGGPW sc-hBMUJo ffJBuc gunUgR sc-dIvrsQ jZURTW"
         type="button"
       >
         First
       </button>
       <button
-        class="StyledButton-sc-323bzc-0 ecOiOP sc-bqGGPW sc-hBMUJo ffJBuc gunUgR sc-dIvrsQ jZURTW"
+        class="StyledButton-sc-323bzc-0 xRNC sc-bqGGPW sc-hBMUJo ffJBuc gunUgR sc-dIvrsQ jZURTW"
         type="button"
       >
         Second
       </button>
       <button
-        class="StyledButton-sc-323bzc-0 ecOiOP sc-bqGGPW sc-hBMUJo ffJBuc gunUgR sc-dIvrsQ jZURTW"
+        class="StyledButton-sc-323bzc-0 xRNC sc-bqGGPW sc-hBMUJo ffJBuc gunUgR sc-dIvrsQ jZURTW"
         type="button"
       >
         Third
@@ -40,7 +40,7 @@ exports[`Storyshots Core/ButtonGroup With Icon Button 1`] = `
       class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL sc-kLojOw bJSggk jsEAXh"
     >
       <button
-        class="StyledButton-sc-323bzc-0 jWSenB sc-bqGGPW sc-hBMUJo ffJBuc gunUgR sc-dIvrsQ jZURTW"
+        class="StyledButton-sc-323bzc-0 wXtEM sc-bqGGPW sc-hBMUJo ffJBuc gunUgR sc-dIvrsQ jZURTW"
         type="button"
       >
         <svg
@@ -60,7 +60,7 @@ exports[`Storyshots Core/ButtonGroup With Icon Button 1`] = `
         </svg>
       </button>
       <button
-        class="StyledButton-sc-323bzc-0 jWSenB sc-bqGGPW sc-hBMUJo ffJBuc gunUgR sc-dIvrsQ jZURTW"
+        class="StyledButton-sc-323bzc-0 wXtEM sc-bqGGPW sc-hBMUJo ffJBuc gunUgR sc-dIvrsQ jZURTW"
         type="button"
       >
         <svg
@@ -80,7 +80,7 @@ exports[`Storyshots Core/ButtonGroup With Icon Button 1`] = `
         </svg>
       </button>
       <button
-        class="StyledButton-sc-323bzc-0 jWSenB sc-bqGGPW sc-hBMUJo ffJBuc gunUgR sc-dIvrsQ jZURTW"
+        class="StyledButton-sc-323bzc-0 wXtEM sc-bqGGPW sc-hBMUJo ffJBuc gunUgR sc-dIvrsQ jZURTW"
         type="button"
       >
         <svg

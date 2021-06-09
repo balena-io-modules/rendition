@@ -13,7 +13,7 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
           class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL eWQPeQ"
         >
           <button
-            class="StyledButton-sc-323bzc-0 kmwkaF sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ fyJLWq"
+            class="StyledButton-sc-323bzc-0 eyYhzk sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ fyJLWq"
             type="button"
             width="200"
           >
@@ -76,7 +76,7 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
               class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-jOFryr bwDtGt sc-bTDOke jkzMth"
             >
               <button
-                class="StyledButton-sc-323bzc-0 egGcH sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW sc-eKYRIR gQHFoo"
+                class="StyledButton-sc-323bzc-0 KXpyO sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW sc-eKYRIR gQHFoo"
                 type="button"
               >
                 <div
@@ -1110,7 +1110,7 @@ exports[`Storyshots Core/Filters Compact 1`] = `
           class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL eWQPeQ"
         >
           <button
-            class="StyledButton-sc-323bzc-0 oBJqz sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ fbXIML"
+            class="StyledButton-sc-323bzc-0 GotEq sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ fbXIML"
             type="button"
           >
             <svg
@@ -1164,7 +1164,7 @@ exports[`Storyshots Core/Filters Compact 1`] = `
               class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-jOFryr bwDtGt sc-bTDOke cQRkfA"
             >
               <button
-                class="StyledButton-sc-323bzc-0 egGcH sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW sc-eKYRIR gQHFoo"
+                class="StyledButton-sc-323bzc-0 KXpyO sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW sc-eKYRIR gQHFoo"
                 type="button"
               >
                 <div
@@ -2193,7 +2193,7 @@ exports[`Storyshots Core/Filters Default 1`] = `
           class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL eWQPeQ"
         >
           <button
-            class="StyledButton-sc-323bzc-0 kmwkaF sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ fbXIML"
+            class="StyledButton-sc-323bzc-0 eyYhzk sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ fbXIML"
             type="button"
           >
             <div
@@ -2255,7 +2255,7 @@ exports[`Storyshots Core/Filters Default 1`] = `
               class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-jOFryr bwDtGt sc-bTDOke cQRkfA"
             >
               <button
-                class="StyledButton-sc-323bzc-0 egGcH sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW sc-eKYRIR gQHFoo"
+                class="StyledButton-sc-323bzc-0 KXpyO sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW sc-eKYRIR gQHFoo"
                 type="button"
               >
                 <div
@@ -3289,7 +3289,7 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
           class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL eWQPeQ"
         >
           <button
-            class="StyledButton-sc-323bzc-0 gAULHW sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ fbXIML"
+            class="StyledButton-sc-323bzc-0 hndxqv sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ fbXIML"
             disabled=""
             type="button"
           >
@@ -3354,7 +3354,7 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
               disabled=""
             >
               <button
-                class="StyledButton-sc-323bzc-0 hHrkYF sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW sc-eKYRIR gQHFoo"
+                class="StyledButton-sc-323bzc-0 djXoPI sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW sc-eKYRIR gQHFoo"
                 disabled=""
                 type="button"
               >
@@ -4389,7 +4389,7 @@ exports[`Storyshots Core/Filters Render Modes 1`] = `
           class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL eWQPeQ"
         >
           <button
-            class="StyledButton-sc-323bzc-0 kmwkaF sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ fbXIML"
+            class="StyledButton-sc-323bzc-0 eyYhzk sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ fbXIML"
             type="button"
           >
             <div
@@ -4424,7 +4424,7 @@ exports[`Storyshots Core/Filters Render Modes 1`] = `
               class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-jOFryr bwDtGt sc-bTDOke cQRkfA"
             >
               <button
-                class="StyledButton-sc-323bzc-0 egGcH sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW sc-eKYRIR gQHFoo"
+                class="StyledButton-sc-323bzc-0 KXpyO sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW sc-eKYRIR gQHFoo"
                 type="button"
               >
                 <div
@@ -4499,14 +4499,14 @@ exports[`Storyshots Core/Filters Render Modes 1`] = `
                 )
               </div>
               <button
-                class="StyledButton-sc-323bzc-0 hwtmIT sc-bqGGPW sc-bkbkJK ffJBuc jLVuZo sc-dIvrsQ jZURTW"
+                class="StyledButton-sc-323bzc-0 fshUsC sc-bqGGPW sc-bkbkJK ffJBuc jLVuZo sc-dIvrsQ jZURTW"
                 type="button"
               >
                 Clear all
               </button>
             </div>
             <button
-              class="StyledButton-sc-323bzc-0 hwtmIT sc-bqGGPW sc-bkbkJK ffJBuc jLVuZo sc-dIvrsQ jZURTW"
+              class="StyledButton-sc-323bzc-0 fshUsC sc-bqGGPW sc-bkbkJK ffJBuc jLVuZo sc-dIvrsQ jZURTW"
               type="button"
             >
               <div
@@ -4541,7 +4541,7 @@ exports[`Storyshots Core/Filters Render Modes 1`] = `
               class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL bJSggk sc-FRrlG kDzTfx"
             >
               <button
-                class="StyledButton-sc-323bzc-0 kBaGWu sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW"
+                class="StyledButton-sc-323bzc-0 ktHwXr sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW"
                 type="button"
               >
                 <div
@@ -4575,7 +4575,7 @@ exports[`Storyshots Core/Filters Render Modes 1`] = `
                 </div>
               </button>
               <button
-                class="StyledButton-sc-323bzc-0 kBaGWu sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jxoEUL sc-fbIWvP jJrEzk"
+                class="StyledButton-sc-323bzc-0 ktHwXr sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jxoEUL sc-fbIWvP jJrEzk"
                 type="button"
               >
                 <svg

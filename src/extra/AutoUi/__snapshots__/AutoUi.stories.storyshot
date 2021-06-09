@@ -31,7 +31,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                     class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL eWQPeQ"
                   >
                     <button
-                      class="StyledButton-sc-323bzc-0 cdARoH sc-bqGGPW sc-hBMUJo ffJBuc fEWhys sc-dIvrsQ fbXIML"
+                      class="StyledButton-sc-323bzc-0 jRwsoG sc-bqGGPW sc-hBMUJo ffJBuc fEWhys sc-dIvrsQ fbXIML"
                       type="button"
                     >
                       <div
@@ -92,7 +92,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                         class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-jOFryr bwDtGt sc-bTDOke cQRkfA"
                       >
                         <button
-                          class="StyledButton-sc-323bzc-0 egGcH sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW sc-eKYRIR gQHFoo"
+                          class="StyledButton-sc-323bzc-0 KXpyO sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW sc-eKYRIR gQHFoo"
                           type="button"
                         >
                           <div
@@ -169,7 +169,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                 class="sc-irKDMX iYcajE"
               >
                 <div
-                  class="sc-eWnToP kbuGRs sc-jLqRGG fOXZzv"
+                  class="sc-eWnToP kSXELk sc-jLqRGG eMKMqW"
                 >
                   <div
                     data-display="table-head"
@@ -178,34 +178,10 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                       data-display="table-row"
                     >
                       <div
-                        class="sc-iGkqmO fLMWEY"
-                        data-display="table-cell"
-                      >
-                        <div
-                          class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
-                        >
-                          <label
-                            class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
-                          >
-                            <div
-                              class="StyledBox-sc-13pk1d4-0 gprQIL StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
-                            >
-                              <input
-                                class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 cUBbSF"
-                                type="checkbox"
-                              />
-                              <div
-                                class="StyledBox-sc-13pk1d4-0 cMvHdd StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 UuYxY"
-                              />
-                            </div>
-                          </label>
-                        </div>
-                      </div>
-                      <div
                         data-display="table-cell"
                       >
                         <button
-                          class="StyledButton-sc-323bzc-0 kBaGWu sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW sc-kTCsyW bnqTza"
+                          class="StyledButton-sc-323bzc-0 ktHwXr sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW sc-kTCsyW bnqTza"
                           data-field="title"
                           type="button"
                         >
@@ -233,7 +209,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                         data-display="table-cell"
                       >
                         <button
-                          class="StyledButton-sc-323bzc-0 kBaGWu sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW sc-kTCsyW bnqTza"
+                          class="StyledButton-sc-323bzc-0 ktHwXr sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW sc-kTCsyW bnqTza"
                           data-field="description"
                           type="button"
                         >
@@ -261,7 +237,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                         data-display="table-cell"
                       >
                         <button
-                          class="StyledButton-sc-323bzc-0 kBaGWu sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW sc-kTCsyW bnqTza"
+                          class="StyledButton-sc-323bzc-0 ktHwXr sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW sc-kTCsyW bnqTza"
                           data-field="public_key"
                           type="button"
                         >
@@ -289,7 +265,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                         data-display="table-cell"
                       >
                         <button
-                          class="StyledButton-sc-323bzc-0 kBaGWu sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW sc-kTCsyW bnqTza"
+                          class="StyledButton-sc-323bzc-0 ktHwXr sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW sc-kTCsyW bnqTza"
                           data-field="fingerprint"
                           type="button"
                         >
@@ -323,31 +299,6 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                       data-display="table-row"
                       data-highlight="false"
                     >
-                      <div
-                        class="sc-iGkqmO fLMWEY"
-                        data-display="table-cell"
-                      >
-                        <div
-                          class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
-                        >
-                          <label
-                            class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
-                          >
-                            <div
-                              class="StyledBox-sc-13pk1d4-0 gprQIL StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
-                            >
-                              <input
-                                class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 cUBbSF"
-                                data-key="1"
-                                type="checkbox"
-                              />
-                              <div
-                                class="StyledBox-sc-13pk1d4-0 cMvHdd StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 UuYxY"
-                              />
-                            </div>
-                          </label>
-                        </div>
-                      </div>
                       <a
                         data-display="table-cell"
                         data-key="1"
@@ -382,31 +333,6 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                       data-display="table-row"
                       data-highlight="false"
                     >
-                      <div
-                        class="sc-iGkqmO fLMWEY"
-                        data-display="table-cell"
-                      >
-                        <div
-                          class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
-                        >
-                          <label
-                            class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
-                          >
-                            <div
-                              class="StyledBox-sc-13pk1d4-0 gprQIL StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
-                            >
-                              <input
-                                class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 cUBbSF"
-                                data-key="2"
-                                type="checkbox"
-                              />
-                              <div
-                                class="StyledBox-sc-13pk1d4-0 cMvHdd StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 UuYxY"
-                              />
-                            </div>
-                          </label>
-                        </div>
-                      </div>
                       <a
                         data-display="table-cell"
                         data-key="2"
@@ -441,31 +367,6 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                       data-display="table-row"
                       data-highlight="false"
                     >
-                      <div
-                        class="sc-iGkqmO fLMWEY"
-                        data-display="table-cell"
-                      >
-                        <div
-                          class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
-                        >
-                          <label
-                            class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
-                          >
-                            <div
-                              class="StyledBox-sc-13pk1d4-0 gprQIL StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
-                            >
-                              <input
-                                class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 cUBbSF"
-                                data-key="3"
-                                type="checkbox"
-                              />
-                              <div
-                                class="StyledBox-sc-13pk1d4-0 cMvHdd StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 UuYxY"
-                              />
-                            </div>
-                          </label>
-                        </div>
-                      </div>
                       <a
                         data-display="table-cell"
                         data-key="3"
@@ -500,31 +401,6 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                       data-display="table-row"
                       data-highlight="false"
                     >
-                      <div
-                        class="sc-iGkqmO fLMWEY"
-                        data-display="table-cell"
-                      >
-                        <div
-                          class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
-                        >
-                          <label
-                            class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
-                          >
-                            <div
-                              class="StyledBox-sc-13pk1d4-0 gprQIL StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
-                            >
-                              <input
-                                class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 cUBbSF"
-                                data-key="4"
-                                type="checkbox"
-                              />
-                              <div
-                                class="StyledBox-sc-13pk1d4-0 cMvHdd StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 UuYxY"
-                              />
-                            </div>
-                          </label>
-                        </div>
-                      </div>
                       <a
                         data-display="table-cell"
                         data-key="4"
@@ -559,31 +435,6 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                       data-display="table-row"
                       data-highlight="false"
                     >
-                      <div
-                        class="sc-iGkqmO fLMWEY"
-                        data-display="table-cell"
-                      >
-                        <div
-                          class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
-                        >
-                          <label
-                            class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
-                          >
-                            <div
-                              class="StyledBox-sc-13pk1d4-0 gprQIL StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
-                            >
-                              <input
-                                class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 cUBbSF"
-                                data-key="5"
-                                type="checkbox"
-                              />
-                              <div
-                                class="StyledBox-sc-13pk1d4-0 cMvHdd StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 UuYxY"
-                              />
-                            </div>
-                          </label>
-                        </div>
-                      </div>
                       <a
                         data-display="table-cell"
                         data-key="5"
@@ -618,31 +469,6 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                       data-display="table-row"
                       data-highlight="false"
                     >
-                      <div
-                        class="sc-iGkqmO fLMWEY"
-                        data-display="table-cell"
-                      >
-                        <div
-                          class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
-                        >
-                          <label
-                            class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
-                          >
-                            <div
-                              class="StyledBox-sc-13pk1d4-0 gprQIL StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
-                            >
-                              <input
-                                class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 cUBbSF"
-                                data-key="6"
-                                type="checkbox"
-                              />
-                              <div
-                                class="StyledBox-sc-13pk1d4-0 cMvHdd StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 UuYxY"
-                              />
-                            </div>
-                          </label>
-                        </div>
-                      </div>
                       <a
                         data-display="table-cell"
                         data-key="6"
@@ -677,31 +503,6 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                       data-display="table-row"
                       data-highlight="false"
                     >
-                      <div
-                        class="sc-iGkqmO fLMWEY"
-                        data-display="table-cell"
-                      >
-                        <div
-                          class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
-                        >
-                          <label
-                            class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
-                          >
-                            <div
-                              class="StyledBox-sc-13pk1d4-0 gprQIL StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
-                            >
-                              <input
-                                class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 cUBbSF"
-                                data-key="7"
-                                type="checkbox"
-                              />
-                              <div
-                                class="StyledBox-sc-13pk1d4-0 cMvHdd StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 UuYxY"
-                              />
-                            </div>
-                          </label>
-                        </div>
-                      </div>
                       <a
                         data-display="table-cell"
                         data-key="7"
@@ -758,7 +559,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                     class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL sc-kLojOw bJSggk jsEAXh"
                   >
                     <button
-                      class="StyledButton-sc-323bzc-0 bhMVMP sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW rendition-pager__btn--prev"
+                      class="StyledButton-sc-323bzc-0 dMgQzm sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW rendition-pager__btn--prev"
                       disabled=""
                       type="button"
                     >
@@ -779,7 +580,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                       </svg>
                     </button>
                     <button
-                      class="StyledButton-sc-323bzc-0 bhMVMP sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW rendition-pager__btn--next"
+                      class="StyledButton-sc-323bzc-0 dMgQzm sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW rendition-pager__btn--next"
                       disabled=""
                       type="button"
                     >
@@ -810,7 +611,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                 class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-jOFryr bwDtGt sc-bTDOke fXFHeC"
               >
                 <button
-                  class="StyledButton-sc-323bzc-0 hwtmIT sc-bqGGPW sc-bkbkJK ffJBuc jLVuZo sc-dIvrsQ jZURTW sc-eKYRIR gQHFoo"
+                  class="StyledButton-sc-323bzc-0 fshUsC sc-bqGGPW sc-bkbkJK ffJBuc jLVuZo sc-dIvrsQ jZURTW sc-eKYRIR gQHFoo"
                   type="button"
                 >
                   <div

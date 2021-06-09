@@ -6,7 +6,7 @@ exports[`Storyshots Core/Button Active 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <button
-      class="StyledButton-sc-323bzc-0 hPmTma sc-bqGGPW sc-ksluID ffJBuc gmfpxH sc-dIvrsQ jZURTW"
+      class="StyledButton-sc-323bzc-0 hiSEVf sc-bqGGPW sc-ksluID ffJBuc gmfpxH sc-dIvrsQ jZURTW"
       type="button"
     >
       Active
@@ -21,7 +21,7 @@ exports[`Storyshots Core/Button Default 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <button
-      class="StyledButton-sc-323bzc-0 ecOiOP sc-bqGGPW sc-hBMUJo ffJBuc gunUgR sc-dIvrsQ jZURTW"
+      class="StyledButton-sc-323bzc-0 xRNC sc-bqGGPW sc-hBMUJo ffJBuc gunUgR sc-dIvrsQ jZURTW"
       type="button"
     >
       Default
@@ -36,7 +36,7 @@ exports[`Storyshots Core/Button Disabled 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <button
-      class="StyledButton-sc-323bzc-0 dTpiwl sc-bqGGPW sc-hBMUJo ffJBuc gunUgR sc-dIvrsQ jZURTW"
+      class="StyledButton-sc-323bzc-0 lnKzZg sc-bqGGPW sc-hBMUJo ffJBuc gunUgR sc-dIvrsQ jZURTW"
       disabled=""
       type="button"
     >
@@ -52,7 +52,7 @@ exports[`Storyshots Core/Button Icon Only 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <button
-      class="StyledButton-sc-323bzc-0 jqvWKP sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW"
+      class="StyledButton-sc-323bzc-0 kDzTIW sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW"
       type="button"
     >
       <svg
@@ -81,7 +81,7 @@ exports[`Storyshots Core/Button Link 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <a
-      class="StyledButton-sc-323bzc-0 ecOiOP sc-bqGGPW sc-hBMUJo ffJBuc gunUgR sc-dIvrsQ jZURTW"
+      class="StyledButton-sc-323bzc-0 xRNC sc-bqGGPW sc-hBMUJo ffJBuc gunUgR sc-dIvrsQ jZURTW"
       href="#"
     >
       Link
@@ -96,7 +96,7 @@ exports[`Storyshots Core/Button Outlined 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <button
-      class="StyledButton-sc-323bzc-0 ecOiOP sc-bqGGPW sc-hBMUJo ffJBuc gunUgR sc-dIvrsQ jZURTW"
+      class="StyledButton-sc-323bzc-0 xRNC sc-bqGGPW sc-hBMUJo ffJBuc gunUgR sc-dIvrsQ jZURTW"
       type="button"
     >
       Outlined
@@ -111,7 +111,7 @@ exports[`Storyshots Core/Button Plain 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <button
-      class="StyledButton-sc-323bzc-0 kBaGWu sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW"
+      class="StyledButton-sc-323bzc-0 ktHwXr sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW"
       type="button"
     >
       Plain
@@ -126,7 +126,7 @@ exports[`Storyshots Core/Button Primary 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <button
-      class="StyledButton-sc-323bzc-0 kmwkaF sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
+      class="StyledButton-sc-323bzc-0 eyYhzk sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
       type="button"
     >
       Primary
@@ -141,7 +141,7 @@ exports[`Storyshots Core/Button Underlined 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <button
-      class="StyledButton-sc-323bzc-0 kBaGWu sc-bqGGPW sc-bkbkJK sc-iemWCZ ffJBuc ejJZLx jLBBnU sc-dIvrsQ jZURTW"
+      class="StyledButton-sc-323bzc-0 ktHwXr sc-bqGGPW sc-bkbkJK sc-iemWCZ ffJBuc ejJZLx jLBBnU sc-dIvrsQ jZURTW"
       type="button"
     >
       Underlined
@@ -156,7 +156,7 @@ exports[`Storyshots Core/Button With Confirmation 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <button
-      class="StyledButton-sc-323bzc-0 gcRTFB sc-bqGGPW sc-ksluID ffJBuc hsMNeD sc-dIvrsQ jZURTW"
+      class="StyledButton-sc-323bzc-0 hdKmmw sc-bqGGPW sc-ksluID ffJBuc hsMNeD sc-dIvrsQ jZURTW"
       type="button"
     >
       Dangerous
@@ -171,7 +171,7 @@ exports[`Storyshots Core/Button With Icon 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
   >
     <button
-      class="StyledButton-sc-323bzc-0 kBaGWu sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW"
+      class="StyledButton-sc-323bzc-0 ktHwXr sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW"
       type="button"
     >
       <div

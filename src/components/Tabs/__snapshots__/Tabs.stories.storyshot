@@ -15,7 +15,7 @@ exports[`Storyshots Core/Tabs Compact 1`] = `
         <button
           aria-expanded="true"
           aria-selected="true"
-          class="StyledButton-sc-323bzc-0 ewJzBO"
+          class="StyledButton-sc-323bzc-0 eipDAT"
           role="tab"
           type="button"
         >
@@ -32,7 +32,7 @@ exports[`Storyshots Core/Tabs Compact 1`] = `
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 ewJzBO"
+          class="StyledButton-sc-323bzc-0 eipDAT"
           role="tab"
           type="button"
         >
@@ -49,7 +49,7 @@ exports[`Storyshots Core/Tabs Compact 1`] = `
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 ewJzBO"
+          class="StyledButton-sc-323bzc-0 eipDAT"
           role="tab"
           type="button"
         >
@@ -66,7 +66,7 @@ exports[`Storyshots Core/Tabs Compact 1`] = `
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 ewJzBO"
+          class="StyledButton-sc-323bzc-0 eipDAT"
           role="tab"
           type="button"
         >
@@ -83,7 +83,7 @@ exports[`Storyshots Core/Tabs Compact 1`] = `
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 ewJzBO"
+          class="StyledButton-sc-323bzc-0 eipDAT"
           role="tab"
           type="button"
         >
@@ -100,7 +100,7 @@ exports[`Storyshots Core/Tabs Compact 1`] = `
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 ewJzBO"
+          class="StyledButton-sc-323bzc-0 eipDAT"
           role="tab"
           type="button"
         >
@@ -146,7 +146,7 @@ exports[`Storyshots Core/Tabs Default 1`] = `
         <button
           aria-expanded="true"
           aria-selected="true"
-          class="StyledButton-sc-323bzc-0 ewJzBO"
+          class="StyledButton-sc-323bzc-0 eipDAT"
           role="tab"
           type="button"
         >
@@ -163,7 +163,7 @@ exports[`Storyshots Core/Tabs Default 1`] = `
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 ewJzBO"
+          class="StyledButton-sc-323bzc-0 eipDAT"
           role="tab"
           type="button"
         >
@@ -180,7 +180,7 @@ exports[`Storyshots Core/Tabs Default 1`] = `
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 ewJzBO"
+          class="StyledButton-sc-323bzc-0 eipDAT"
           role="tab"
           type="button"
         >
@@ -226,7 +226,7 @@ exports[`Storyshots Core/Tabs With Long Titles 1`] = `
         <button
           aria-expanded="true"
           aria-selected="true"
-          class="StyledButton-sc-323bzc-0 ewJzBO"
+          class="StyledButton-sc-323bzc-0 eipDAT"
           role="tab"
           type="button"
         >
@@ -243,7 +243,7 @@ exports[`Storyshots Core/Tabs With Long Titles 1`] = `
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 ewJzBO"
+          class="StyledButton-sc-323bzc-0 eipDAT"
           role="tab"
           type="button"
         >
@@ -260,7 +260,7 @@ exports[`Storyshots Core/Tabs With Long Titles 1`] = `
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 ewJzBO"
+          class="StyledButton-sc-323bzc-0 eipDAT"
           role="tab"
           type="button"
         >

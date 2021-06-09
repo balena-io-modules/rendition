@@ -9,7 +9,7 @@ exports[`Storyshots Core/Modal Custom Action 1`] = `
       class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu"
     >
       <button
-        class="StyledButton-sc-323bzc-0 kmwkaF sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
+        class="StyledButton-sc-323bzc-0 eyYhzk sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
         type="button"
       >
         Open Modal
@@ -28,7 +28,7 @@ exports[`Storyshots Core/Modal Default 1`] = `
       class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu"
     >
       <button
-        class="StyledButton-sc-323bzc-0 kmwkaF sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
+        class="StyledButton-sc-323bzc-0 eyYhzk sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
         type="button"
       >
         Open Modal
@@ -47,7 +47,7 @@ exports[`Storyshots Core/Modal Nested 1`] = `
       class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu"
     >
       <button
-        class="StyledButton-sc-323bzc-0 kmwkaF sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
+        class="StyledButton-sc-323bzc-0 eyYhzk sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
         type="button"
       >
         Open Modal
@@ -66,7 +66,7 @@ exports[`Storyshots Core/Modal No Cancel 1`] = `
       class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu"
     >
       <button
-        class="StyledButton-sc-323bzc-0 kmwkaF sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
+        class="StyledButton-sc-323bzc-0 eyYhzk sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
         type="button"
       >
         Open Modal
@@ -85,7 +85,7 @@ exports[`Storyshots Core/Modal With Custom Width 1`] = `
       class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu"
     >
       <button
-        class="StyledButton-sc-323bzc-0 kmwkaF sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
+        class="StyledButton-sc-323bzc-0 eyYhzk sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
         type="button"
       >
         Open Modal
@@ -104,7 +104,7 @@ exports[`Storyshots Core/Modal With Customized Buttons 1`] = `
       class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu"
     >
       <button
-        class="StyledButton-sc-323bzc-0 kmwkaF sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
+        class="StyledButton-sc-323bzc-0 eyYhzk sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
         type="button"
       >
         Open Modal
@@ -123,7 +123,7 @@ exports[`Storyshots Core/Modal With Multielement Title 1`] = `
       class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu"
     >
       <button
-        class="StyledButton-sc-323bzc-0 kmwkaF sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
+        class="StyledButton-sc-323bzc-0 eyYhzk sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
         type="button"
       >
         Open Modal
@@ -142,7 +142,7 @@ exports[`Storyshots Core/Modal With Overflowing Content 1`] = `
       class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu"
     >
       <button
-        class="StyledButton-sc-323bzc-0 kmwkaF sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
+        class="StyledButton-sc-323bzc-0 eyYhzk sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
         type="button"
       >
         Open Modal
@@ -161,7 +161,7 @@ exports[`Storyshots Core/Modal With Title Details 1`] = `
       class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu"
     >
       <button
-        class="StyledButton-sc-323bzc-0 kmwkaF sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
+        class="StyledButton-sc-323bzc-0 eyYhzk sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
         type="button"
       >
         Open Modal
@@ -180,7 +180,7 @@ exports[`Storyshots Core/Modal With Tooltip 1`] = `
       class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu"
     >
       <button
-        class="StyledButton-sc-323bzc-0 kmwkaF sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
+        class="StyledButton-sc-323bzc-0 eyYhzk sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
         type="button"
       >
         Open Modal
