@@ -169,7 +169,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                 class="sc-irKDMX iYcajE"
               >
                 <div
-                  class="sc-eWnToP kbuGRs sc-jLqRGG fOXZzv"
+                  class="sc-eWnToP kSXELk sc-jLqRGG eMKMqW"
                 >
                   <div
                     data-display="table-head"
@@ -177,30 +177,6 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                     <div
                       data-display="table-row"
                     >
-                      <div
-                        class="sc-iGkqmO fLMWEY"
-                        data-display="table-cell"
-                      >
-                        <div
-                          class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
-                        >
-                          <label
-                            class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
-                          >
-                            <div
-                              class="StyledBox-sc-13pk1d4-0 gprQIL StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
-                            >
-                              <input
-                                class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 cUBbSF"
-                                type="checkbox"
-                              />
-                              <div
-                                class="StyledBox-sc-13pk1d4-0 cMvHdd StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 UuYxY"
-                              />
-                            </div>
-                          </label>
-                        </div>
-                      </div>
                       <div
                         data-display="table-cell"
                       >
@@ -323,31 +299,6 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                       data-display="table-row"
                       data-highlight="false"
                     >
-                      <div
-                        class="sc-iGkqmO fLMWEY"
-                        data-display="table-cell"
-                      >
-                        <div
-                          class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
-                        >
-                          <label
-                            class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
-                          >
-                            <div
-                              class="StyledBox-sc-13pk1d4-0 gprQIL StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
-                            >
-                              <input
-                                class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 cUBbSF"
-                                data-key="1"
-                                type="checkbox"
-                              />
-                              <div
-                                class="StyledBox-sc-13pk1d4-0 cMvHdd StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 UuYxY"
-                              />
-                            </div>
-                          </label>
-                        </div>
-                      </div>
                       <a
                         data-display="table-cell"
                         data-key="1"
@@ -382,31 +333,6 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                       data-display="table-row"
                       data-highlight="false"
                     >
-                      <div
-                        class="sc-iGkqmO fLMWEY"
-                        data-display="table-cell"
-                      >
-                        <div
-                          class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
-                        >
-                          <label
-                            class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
-                          >
-                            <div
-                              class="StyledBox-sc-13pk1d4-0 gprQIL StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
-                            >
-                              <input
-                                class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 cUBbSF"
-                                data-key="2"
-                                type="checkbox"
-                              />
-                              <div
-                                class="StyledBox-sc-13pk1d4-0 cMvHdd StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 UuYxY"
-                              />
-                            </div>
-                          </label>
-                        </div>
-                      </div>
                       <a
                         data-display="table-cell"
                         data-key="2"
@@ -441,31 +367,6 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                       data-display="table-row"
                       data-highlight="false"
                     >
-                      <div
-                        class="sc-iGkqmO fLMWEY"
-                        data-display="table-cell"
-                      >
-                        <div
-                          class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
-                        >
-                          <label
-                            class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
-                          >
-                            <div
-                              class="StyledBox-sc-13pk1d4-0 gprQIL StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
-                            >
-                              <input
-                                class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 cUBbSF"
-                                data-key="3"
-                                type="checkbox"
-                              />
-                              <div
-                                class="StyledBox-sc-13pk1d4-0 cMvHdd StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 UuYxY"
-                              />
-                            </div>
-                          </label>
-                        </div>
-                      </div>
                       <a
                         data-display="table-cell"
                         data-key="3"
@@ -500,31 +401,6 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                       data-display="table-row"
                       data-highlight="false"
                     >
-                      <div
-                        class="sc-iGkqmO fLMWEY"
-                        data-display="table-cell"
-                      >
-                        <div
-                          class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
-                        >
-                          <label
-                            class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
-                          >
-                            <div
-                              class="StyledBox-sc-13pk1d4-0 gprQIL StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
-                            >
-                              <input
-                                class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 cUBbSF"
-                                data-key="4"
-                                type="checkbox"
-                              />
-                              <div
-                                class="StyledBox-sc-13pk1d4-0 cMvHdd StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 UuYxY"
-                              />
-                            </div>
-                          </label>
-                        </div>
-                      </div>
                       <a
                         data-display="table-cell"
                         data-key="4"
@@ -559,31 +435,6 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                       data-display="table-row"
                       data-highlight="false"
                     >
-                      <div
-                        class="sc-iGkqmO fLMWEY"
-                        data-display="table-cell"
-                      >
-                        <div
-                          class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
-                        >
-                          <label
-                            class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
-                          >
-                            <div
-                              class="StyledBox-sc-13pk1d4-0 gprQIL StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
-                            >
-                              <input
-                                class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 cUBbSF"
-                                data-key="5"
-                                type="checkbox"
-                              />
-                              <div
-                                class="StyledBox-sc-13pk1d4-0 cMvHdd StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 UuYxY"
-                              />
-                            </div>
-                          </label>
-                        </div>
-                      </div>
                       <a
                         data-display="table-cell"
                         data-key="5"
@@ -618,31 +469,6 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                       data-display="table-row"
                       data-highlight="false"
                     >
-                      <div
-                        class="sc-iGkqmO fLMWEY"
-                        data-display="table-cell"
-                      >
-                        <div
-                          class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
-                        >
-                          <label
-                            class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
-                          >
-                            <div
-                              class="StyledBox-sc-13pk1d4-0 gprQIL StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
-                            >
-                              <input
-                                class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 cUBbSF"
-                                data-key="6"
-                                type="checkbox"
-                              />
-                              <div
-                                class="StyledBox-sc-13pk1d4-0 cMvHdd StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 UuYxY"
-                              />
-                            </div>
-                          </label>
-                        </div>
-                      </div>
                       <a
                         data-display="table-cell"
                         data-key="6"
@@ -677,31 +503,6 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                       data-display="table-row"
                       data-highlight="false"
                     >
-                      <div
-                        class="sc-iGkqmO fLMWEY"
-                        data-display="table-cell"
-                      >
-                        <div
-                          class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
-                        >
-                          <label
-                            class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
-                          >
-                            <div
-                              class="StyledBox-sc-13pk1d4-0 gprQIL StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
-                            >
-                              <input
-                                class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 cUBbSF"
-                                data-key="7"
-                                type="checkbox"
-                              />
-                              <div
-                                class="StyledBox-sc-13pk1d4-0 cMvHdd StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 UuYxY"
-                              />
-                            </div>
-                          </label>
-                        </div>
-                      </div>
                       <a
                         data-display="table-cell"
                         data-key="7"

@@ -159,6 +159,10 @@ export const List = <T extends AutoUIBaseResource<T>>({
 		}
 	};
 
+	const hasUpdateActions = !!autouiContext.actions?.filter(
+		(action) => action.type !== 'create',
+	)?.length;
+
 	return (
 		<>
 			{lens === CollectionLenses.Table && (
@@ -167,7 +171,7 @@ export const List = <T extends AutoUIBaseResource<T>>({
 					data={filtered}
 					checkedItems={selected}
 					columns={columns}
-					onCheck={changeSelected}
+					{...(hasUpdateActions && { onCheck: changeSelected })}
 					usePager={data && data.length > 5}
 					pagerPosition={'bottom'}
 					itemsPerPage={50}

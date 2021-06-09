@@ -9,8 +9,6 @@ export interface AugmentedSshKey extends AutoUIBaseResource<AugmentedSshKey> {
 	fingerprint?: string;
 }
 
-export type SshKeyWithoutPermissions = Omit<AugmentedSshKey, '__permissions'>;
-
 export const model: AutoUIRawModel<AugmentedSshKey> = {
 	resource: 'sshKey',
 	schema: {
