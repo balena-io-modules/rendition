@@ -15,7 +15,7 @@ exports[`Storyshots Core/Accordion Default 1`] = `
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 ewJzBO"
+          class="StyledButton-sc-323bzc-0 eipDAT"
           role="tab"
           type="button"
         >
@@ -54,11 +54,11 @@ exports[`Storyshots Core/Accordion Default 1`] = `
           </div>
         </button>
         <div
-          class="StyledBox-sc-13pk1d4-0 fmbfSE"
+          class="StyledBox-sc-13pk1d4-0 kRcyMg"
         >
           <div
             aria-hidden="true"
-            class="StyledBox-sc-13pk1d4-0 kUTqHn Collapsible__AnimatedBox-sc-15kniua-0 deXRSH"
+            class="StyledBox-sc-13pk1d4-0 kUTqHn Collapsible__AnimatedBox-sc-15kniua-0 yEhzs"
           />
         </div>
       </div>
@@ -68,7 +68,7 @@ exports[`Storyshots Core/Accordion Default 1`] = `
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 ewJzBO"
+          class="StyledButton-sc-323bzc-0 eipDAT"
           role="tab"
           type="button"
         >
@@ -107,11 +107,11 @@ exports[`Storyshots Core/Accordion Default 1`] = `
           </div>
         </button>
         <div
-          class="StyledBox-sc-13pk1d4-0 fmbfSE"
+          class="StyledBox-sc-13pk1d4-0 kRcyMg"
         >
           <div
             aria-hidden="true"
-            class="StyledBox-sc-13pk1d4-0 kUTqHn Collapsible__AnimatedBox-sc-15kniua-0 deXRSH"
+            class="StyledBox-sc-13pk1d4-0 kUTqHn Collapsible__AnimatedBox-sc-15kniua-0 yEhzs"
           />
         </div>
       </div>

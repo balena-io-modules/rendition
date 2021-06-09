@@ -79,7 +79,7 @@ exports[`Storyshots Core/Card With Header 1`] = `
               Card with Button
             </h5>
             <button
-              class="StyledButton-sc-323bzc-0 hwtmIT sc-bqGGPW sc-bkbkJK ffJBuc jLVuZo sc-dIvrsQ jZURTW"
+              class="StyledButton-sc-323bzc-0 fshUsC sc-bqGGPW sc-bkbkJK ffJBuc jLVuZo sc-dIvrsQ jZURTW"
               type="button"
             >
               Update

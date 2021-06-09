@@ -9,7 +9,7 @@ exports[`Storyshots Core/Checkbox Default 1`] = `
       class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
     >
       <label
-        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
+        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 khrfCP"
       >
         <div
           class="StyledBox-sc-13pk1d4-0 gprQIL StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
@@ -37,7 +37,7 @@ exports[`Storyshots Core/Checkbox Disabled 1`] = `
       class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
     >
       <label
-        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 dylVbb"
+        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 bFQGcy"
         disabled=""
       >
         <div
@@ -72,7 +72,7 @@ exports[`Storyshots Core/Checkbox Reversed Label 1`] = `
       class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
     >
       <label
-        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
+        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 khrfCP"
       >
         <span>
           Checkbox
@@ -103,7 +103,7 @@ exports[`Storyshots Core/Checkbox Toggle 1`] = `
       class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
     >
       <label
-        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
+        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 khrfCP"
       >
         <div
           class="StyledBox-sc-13pk1d4-0 iqDqTy StyledCheckBox-sc-1dbk5ju-6 cKmmdu"
@@ -138,7 +138,7 @@ exports[`Storyshots Core/Checkbox With Label 1`] = `
       class="sc-dPaNzc diKRPN sc-bBjRSN cAhuws"
     >
       <label
-        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 itFolq"
+        class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 khrfCP"
       >
         <div
           class="StyledBox-sc-13pk1d4-0 iqDqTy StyledCheckBox-sc-1dbk5ju-6 cKmmdu"

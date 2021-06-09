@@ -9,7 +9,7 @@ exports[`Storyshots Core/RadioButton Checked 1`] = `
       class="sc-gzcbmu hRSugT sc-gkCoMD EiHmM"
     >
       <label
-        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 fsRQTo"
+        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hUgCgz"
       >
         <div
           class="StyledBox-sc-13pk1d4-0 jVtzvO StyledRadioButton-g1f6ld-5 cQxxvY"
@@ -56,7 +56,7 @@ exports[`Storyshots Core/RadioButton Default 1`] = `
       class="sc-gzcbmu grSxBP sc-gkCoMD EiHmM"
     >
       <label
-        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 fsRQTo"
+        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hUgCgz"
       >
         <div
           class="StyledBox-sc-13pk1d4-0 jVtzvO StyledRadioButton-g1f6ld-5 cQxxvY"
@@ -90,7 +90,7 @@ exports[`Storyshots Core/RadioButton Disabled 1`] = `
       class="sc-gzcbmu grSxBP sc-gkCoMD EiHmM"
     >
       <label
-        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 Pamnx"
+        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hCiKQq"
         disabled=""
       >
         <div

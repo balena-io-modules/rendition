@@ -90,7 +90,7 @@ exports[`Storyshots Core/Spinner With Component Label 1`] = `
         >
           Building image 
           <button
-            class="StyledButton-sc-323bzc-0 kBaGWu sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW"
+            class="StyledButton-sc-323bzc-0 ktHwXr sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW"
             type="button"
           >
             12345

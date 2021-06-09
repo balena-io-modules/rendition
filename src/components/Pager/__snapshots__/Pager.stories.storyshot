@@ -29,7 +29,7 @@ exports[`Storyshots Core/Pager Default 1`] = `
           class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL sc-kLojOw bJSggk jsEAXh"
         >
           <button
-            class="StyledButton-sc-323bzc-0 jThnGV sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW rendition-pager__btn--prev"
+            class="StyledButton-sc-323bzc-0 fUhPGE sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW rendition-pager__btn--prev"
             type="button"
           >
             <svg
@@ -49,7 +49,7 @@ exports[`Storyshots Core/Pager Default 1`] = `
             </svg>
           </button>
           <button
-            class="StyledButton-sc-323bzc-0 jThnGV sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW rendition-pager__btn--next"
+            class="StyledButton-sc-323bzc-0 fUhPGE sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW rendition-pager__btn--next"
             type="button"
           >
             <svg
