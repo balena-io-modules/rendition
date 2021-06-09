@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove AutoUICollection checkboxes when no update actions
+      hash: 56f93fc96edbeaabf5144f6fe411f81ddfa07f96
+      body: |
+        Remove AutoUICollection checkboxes when no update actions
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.16.1
+  date: 2021-06-09T13:55:31.393Z
+- commits:
     - subject: Add initial AutoUi concept
       hash: 4f7075fa19739b13b8e2a190a07ab0ed81e67684
       body: |
