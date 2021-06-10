@@ -100,6 +100,8 @@ const translationMap = {
 	'resource.item_plural': 'Items',
 
 	no_resource_data: "You don't have any {{resource}} yet.",
+
+	'questions.how_about_adding_one': 'How about adding one?',
 };
 
 const getTranslation = (str: string, opts?: any) => {
