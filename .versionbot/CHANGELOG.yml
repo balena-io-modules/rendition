@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix no data autoui collection label
+      hash: 97333e95dc98818e21b06c35a255b8ba994a7d87
+      body: |
+        Fix no data autoui collection label
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.16.2
+  date: 2021-06-10T15:59:43.509Z
+- commits:
     - subject: Remove AutoUICollection checkboxes when no update actions
       hash: 56f93fc96edbeaabf5144f6fe411f81ddfa07f96
       body: |
