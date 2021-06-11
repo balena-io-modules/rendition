@@ -32,6 +32,27 @@ const schema = {
 				type: 'string',
 			},
 		},
+		secondaryAbilities: {
+			title: 'Secondary Abilities',
+			type: 'array',
+			items: {
+				type: 'string',
+				oneOf: [
+					{
+						title: 'Swimming',
+						const: 'swimming',
+					},
+					{
+						title: 'Fly',
+						const: 'fly',
+					},
+					{
+						title: 'Cut',
+						const: 'cut',
+					},
+				],
+			},
+		},
 		tag: {
 			type: 'object',
 			properties: {
@@ -128,6 +149,10 @@ const FiltersDemo = (props: FiltersProps) => {
 							<tr>
 								<td>Abilities</td>
 								<td>{item.Abilities.join(', ')}</td>
+							</tr>
+							<tr>
+								<td>Secondary Abilities</td>
+								<td>{item.secondaryAbilities.join(', ')}</td>
 							</tr>
 							<tr>
 								<td>First Seen</td>
