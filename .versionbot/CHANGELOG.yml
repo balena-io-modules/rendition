@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add array oneOf filter case
+      hash: a3cfd5da92e017a036caa7487e45d3d8996af2cb
+      body: |
+        Add array oneOf filter case
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.17.0
+  date: 2021-06-11T09:50:45.724Z
+- commits:
     - subject: Fix no data autoui collection label
       hash: 97333e95dc98818e21b06c35a255b8ba994a7d87
       body: |
