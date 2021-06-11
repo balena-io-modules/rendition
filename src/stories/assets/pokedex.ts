@@ -18,6 +18,7 @@ export interface PokedexInterface {
 	Category?: string;
 	nationality?: string;
 	Abilities?: string[];
+	secondaryAbilities?: string[];
 	pokedex_number?: number;
 	caught?: boolean;
 }
@@ -35,6 +36,7 @@ export default [
 		Category: 'Seed',
 		nationality: 'chinese',
 		Abilities: ['Overgrow'],
+		secondaryAbilities: ['cut'],
 		pokedex_number: 1,
 		caught: true,
 	},
@@ -50,6 +52,7 @@ export default [
 		Category: 'Seed',
 		nationality: 'chinese',
 		Abilities: ['Overgrow'],
+		secondaryAbilities: ['cut'],
 		pokedex_number: 2,
 		caught: false,
 	},
@@ -65,6 +68,7 @@ export default [
 		Category: 'Seed',
 		nationality: 'italian',
 		Abilities: ['Overgrow'],
+		secondaryAbilities: ['cut'],
 		pokedex_number: 3,
 		caught: false,
 	},
@@ -80,6 +84,7 @@ export default [
 		Category: 'Lizard',
 		nationality: 'french',
 		Abilities: ['Blaze'],
+		secondaryAbilities: ['fly'],
 		pokedex_number: 4,
 		caught: false,
 	},
@@ -95,6 +100,7 @@ export default [
 		Category: 'Flame',
 		nationality: 'greek',
 		Abilities: ['Blaze'],
+		secondaryAbilities: ['fly'],
 		pokedex_number: 5,
 		first_seen: '2012-01-01T14:43:02.000Z',
 		caught: false,
@@ -111,6 +117,7 @@ export default [
 		Category: 'Flame',
 		nationality: 'south_african',
 		Abilities: ['Blaze'],
+		secondaryAbilities: ['fly'],
 		first_seen: '2013-04-17T14:43:02.000Z',
 		pokedex_number: 6,
 		caught: false,
@@ -137,6 +144,7 @@ export default [
 		Category: 'Tiny Turtle',
 		nationality: 'georgian',
 		Abilities: ['Torrent'],
+		secondaryAbilities: ['swimming'],
 		pokedex_number: 7,
 		first_seen: '2017-11-03T08:49:26.961Z',
 		caught: false,
@@ -163,6 +171,7 @@ export default [
 		Category: 'Turtle',
 		nationality: 'polish',
 		Abilities: ['Torrent'],
+		secondaryAbilities: ['swimming'],
 		pokedex_number: 8,
 		caught: false,
 	},
@@ -178,6 +187,7 @@ export default [
 		Category: 'Shellfish',
 		nationality: 'new_zealand',
 		Abilities: ['Torrent'],
+		secondaryAbilities: ['swimming', 'cut'],
 		pokedex_number: 9,
 		caught: false,
 	},
@@ -193,6 +203,7 @@ export default [
 		Category: 'Worm',
 		nationality: 'croatian',
 		Abilities: ['Shield Dust'],
+		secondaryAbilities: ['cut'],
 		pokedex_number: 10,
 		caught: true,
 	},
@@ -208,6 +219,7 @@ export default [
 		Category: 'Star Shape',
 		nationality: 'english',
 		Abilities: ['Natural Cure', 'Illuminate'],
+		secondaryAbilities: ['swimming'],
 		pokedex_number: 120,
 		caught: true,
 	},

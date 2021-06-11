@@ -188,6 +188,14 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                cut
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td />
@@ -266,6 +274,14 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
               </td>
               <td>
                 Overgrow
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                cut
               </td>
             </tr>
             <tr>
@@ -352,6 +368,14 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                cut
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td />
@@ -430,6 +454,14 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
               </td>
               <td>
                 Blaze
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                fly
               </td>
             </tr>
             <tr>
@@ -516,6 +548,14 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                fly
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td>
@@ -596,6 +636,14 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
               </td>
               <td>
                 Blaze
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                fly
               </td>
             </tr>
             <tr>
@@ -711,6 +759,14 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                swimming
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td>
@@ -822,6 +878,14 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                swimming
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td />
@@ -900,6 +964,14 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
               </td>
               <td>
                 Torrent
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                swimming, cut
               </td>
             </tr>
             <tr>
@@ -986,6 +1058,14 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                cut
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td />
@@ -1064,6 +1144,14 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
               </td>
               <td>
                 Natural Cure, Illuminate
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                swimming
               </td>
             </tr>
             <tr>
@@ -1271,6 +1359,14 @@ exports[`Storyshots Core/Filters Compact 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                cut
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td />
@@ -1349,6 +1445,14 @@ exports[`Storyshots Core/Filters Compact 1`] = `
               </td>
               <td>
                 Overgrow
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                cut
               </td>
             </tr>
             <tr>
@@ -1435,6 +1539,14 @@ exports[`Storyshots Core/Filters Compact 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                cut
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td />
@@ -1513,6 +1625,14 @@ exports[`Storyshots Core/Filters Compact 1`] = `
               </td>
               <td>
                 Blaze
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                fly
               </td>
             </tr>
             <tr>
@@ -1599,6 +1719,14 @@ exports[`Storyshots Core/Filters Compact 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                fly
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td>
@@ -1679,6 +1807,14 @@ exports[`Storyshots Core/Filters Compact 1`] = `
               </td>
               <td>
                 Blaze
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                fly
               </td>
             </tr>
             <tr>
@@ -1794,6 +1930,14 @@ exports[`Storyshots Core/Filters Compact 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                swimming
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td>
@@ -1905,6 +2049,14 @@ exports[`Storyshots Core/Filters Compact 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                swimming
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td />
@@ -1983,6 +2135,14 @@ exports[`Storyshots Core/Filters Compact 1`] = `
               </td>
               <td>
                 Torrent
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                swimming, cut
               </td>
             </tr>
             <tr>
@@ -2069,6 +2229,14 @@ exports[`Storyshots Core/Filters Compact 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                cut
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td />
@@ -2147,6 +2315,14 @@ exports[`Storyshots Core/Filters Compact 1`] = `
               </td>
               <td>
                 Natural Cure, Illuminate
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                swimming
               </td>
             </tr>
             <tr>
@@ -2367,6 +2543,14 @@ exports[`Storyshots Core/Filters Default 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                cut
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td />
@@ -2445,6 +2629,14 @@ exports[`Storyshots Core/Filters Default 1`] = `
               </td>
               <td>
                 Overgrow
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                cut
               </td>
             </tr>
             <tr>
@@ -2531,6 +2723,14 @@ exports[`Storyshots Core/Filters Default 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                cut
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td />
@@ -2609,6 +2809,14 @@ exports[`Storyshots Core/Filters Default 1`] = `
               </td>
               <td>
                 Blaze
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                fly
               </td>
             </tr>
             <tr>
@@ -2695,6 +2903,14 @@ exports[`Storyshots Core/Filters Default 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                fly
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td>
@@ -2775,6 +2991,14 @@ exports[`Storyshots Core/Filters Default 1`] = `
               </td>
               <td>
                 Blaze
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                fly
               </td>
             </tr>
             <tr>
@@ -2890,6 +3114,14 @@ exports[`Storyshots Core/Filters Default 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                swimming
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td>
@@ -3001,6 +3233,14 @@ exports[`Storyshots Core/Filters Default 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                swimming
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td />
@@ -3079,6 +3319,14 @@ exports[`Storyshots Core/Filters Default 1`] = `
               </td>
               <td>
                 Torrent
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                swimming, cut
               </td>
             </tr>
             <tr>
@@ -3165,6 +3413,14 @@ exports[`Storyshots Core/Filters Default 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                cut
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td />
@@ -3243,6 +3499,14 @@ exports[`Storyshots Core/Filters Default 1`] = `
               </td>
               <td>
                 Natural Cure, Illuminate
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                swimming
               </td>
             </tr>
             <tr>
@@ -3467,6 +3731,14 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                cut
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td />
@@ -3545,6 +3817,14 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
               </td>
               <td>
                 Overgrow
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                cut
               </td>
             </tr>
             <tr>
@@ -3631,6 +3911,14 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                cut
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td />
@@ -3709,6 +3997,14 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
               </td>
               <td>
                 Blaze
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                fly
               </td>
             </tr>
             <tr>
@@ -3795,6 +4091,14 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                fly
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td>
@@ -3875,6 +4179,14 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
               </td>
               <td>
                 Blaze
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                fly
               </td>
             </tr>
             <tr>
@@ -3990,6 +4302,14 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                swimming
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td>
@@ -4101,6 +4421,14 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                swimming
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td />
@@ -4179,6 +4507,14 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
               </td>
               <td>
                 Torrent
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                swimming, cut
               </td>
             </tr>
             <tr>
@@ -4265,6 +4601,14 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
             </tr>
             <tr>
               <td>
+                Secondary Abilities
+              </td>
+              <td>
+                cut
+              </td>
+            </tr>
+            <tr>
+              <td>
                 First Seen
               </td>
               <td />
@@ -4343,6 +4687,14 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
               </td>
               <td>
                 Natural Cure, Illuminate
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                swimming
               </td>
             </tr>
             <tr>
@@ -4652,6 +5004,14 @@ exports[`Storyshots Core/Filters Render Modes 1`] = `
               </td>
               <td>
                 Torrent
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Secondary Abilities
+              </td>
+              <td>
+                swimming
               </td>
             </tr>
             <tr>
