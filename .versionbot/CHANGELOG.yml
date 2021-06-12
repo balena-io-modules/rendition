@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add missing qs dependency
+      hash: 3eb232200a5a7168bb1f8c3a054c60ae5c49ddea
+      body: |
+        Required by PersistentFilters
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 20.17.1
+  date: 2021-06-12T04:20:04.770Z
+- commits:
     - subject: Add array oneOf filter case
       hash: a3cfd5da92e017a036caa7487e45d3d8996af2cb
       body: |
