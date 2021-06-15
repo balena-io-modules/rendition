@@ -381,9 +381,9 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                                 class="StyledIcon-ofa7kd-0 btgQjJ"
                                 viewBox="0 0 24 24"
                               >
-                                <polyline
+                                <path
+                                  d="m18 9-6 6-6-6"
                                   fill="none"
-                                  points="18 9 12 15 6 9"
                                   stroke="#000"
                                   stroke-width="2"
                                 />
@@ -863,9 +863,9 @@ exports[`Storyshots Core/Form Default 1`] = `
                                 class="StyledIcon-ofa7kd-0 btgQjJ"
                                 viewBox="0 0 24 24"
                               >
-                                <polyline
+                                <path
+                                  d="m18 9-6 6-6-6"
                                   fill="none"
-                                  points="18 9 12 15 6 9"
                                   stroke="#000"
                                   stroke-width="2"
                                 />
@@ -1356,9 +1356,9 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                                 class="StyledIcon-ofa7kd-0 btgQjJ"
                                 viewBox="0 0 24 24"
                               >
-                                <polyline
+                                <path
+                                  d="m18 9-6 6-6-6"
                                   fill="none"
-                                  points="18 9 12 15 6 9"
                                   stroke="#000"
                                   stroke-width="2"
                                 />
@@ -1838,9 +1838,9 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                                 class="StyledIcon-ofa7kd-0 btgQjJ"
                                 viewBox="0 0 24 24"
                               >
-                                <polyline
+                                <path
+                                  d="m18 9-6 6-6-6"
                                   fill="none"
-                                  points="18 9 12 15 6 9"
                                   stroke="#000"
                                   stroke-width="2"
                                 />
@@ -2315,9 +2315,9 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                                 class="StyledIcon-ofa7kd-0 btgQjJ"
                                 viewBox="0 0 24 24"
                               >
-                                <polyline
+                                <path
+                                  d="m18 9-6 6-6-6"
                                   fill="none"
-                                  points="18 9 12 15 6 9"
                                   stroke="#000"
                                   stroke-width="2"
                                 />
@@ -4104,9 +4104,9 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                                 class="StyledIcon-ofa7kd-0 btgQjJ"
                                 viewBox="0 0 24 24"
                               >
-                                <polyline
+                                <path
+                                  d="m18 9-6 6-6-6"
                                   fill="none"
-                                  points="18 9 12 15 6 9"
                                   stroke="#000"
                                   stroke-width="2"
                                 />
@@ -4964,9 +4964,9 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                                 class="StyledIcon-ofa7kd-0 btgQjJ"
                                 viewBox="0 0 24 24"
                               >
-                                <polyline
+                                <path
+                                  d="m18 9-6 6-6-6"
                                   fill="none"
-                                  points="18 9 12 15 6 9"
                                   stroke="#000"
                                   stroke-width="2"
                                 />
@@ -5509,9 +5509,9 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                                 class="StyledIcon-ofa7kd-0 btgQjJ"
                                 viewBox="0 0 24 24"
                               >
-                                <polyline
+                                <path
+                                  d="m18 9-6 6-6-6"
                                   fill="none"
-                                  points="18 9 12 15 6 9"
                                   stroke="#000"
                                   stroke-width="2"
                                 />
