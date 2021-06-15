@@ -26,6 +26,7 @@ import { Img } from '../../components/Img';
 import { useTranslation } from '../../hooks/useTranslation';
 import { stripVersionBuild } from './utils';
 import { OsConfiguration } from './OsConfiguration';
+import { FormModel } from './FormModel';
 
 export const DeviceLogo = styled(Img)<{ small?: boolean }>`
 	// To prevent Save Image dialog
@@ -93,6 +94,7 @@ export interface UnstableTempDownloadImageModalProps {
 	downloadConfig?: (
 		deviceType: DeviceType,
 		rawVersion: string | null,
+		model: FormModel,
 	) => Promise<void>;
 	getDownloadSize?: (
 		deviceType: DeviceType,
@@ -252,54 +254,55 @@ export const UnstableTempDownloadImageModal = ({
 					<Spinner
 						show={isDownloadingConfig}
 						label={t('loading.generating_configuration_file')}
-					/>
-					<Spinner show={isFetching} label={t('loading.fetching_versions')} />
-					{!isDownloadingConfig && !isFetching && (
-						<>
-							{isEmpty(osVersions) && (
-								<Alert plaintext warning>
-									{t('no_data.no_os_versions_available_for_download')}
-								</Alert>
-							)}
-							{!!osType && !!compatibleDeviceTypes && (
-								<ImageForm
-									onDownloadStart={onDownloadStart}
-									setIsDownloadingConfig={setIsDownloadingConfig}
-									deviceType={deviceType}
-									appId={application.id}
-									downloadUrl={downloadUrl}
-									rawVersion={rawVersion}
-									authToken={authToken}
-									{...(downloadConfig && {
-										downloadConfig: () =>
-											downloadConfig(deviceType, rawVersion),
-									})}
-									{...(getDownloadSize && {
-										getDownloadSize: () =>
-											getDownloadSize(deviceType, rawVersion),
-									})}
-									configurationComponent={
-										<OsConfiguration
-											compatibleDeviceTypes={compatibleDeviceTypes}
-											selectedDeviceType={deviceType}
-											selectedOsType={osType}
-											deviceTypeOsVersions={osVersions}
-											osTypes={osTypes}
-											isInitialDefault={isInitialDefault}
-											onSelectedDeviceTypeChange={
-												handleSelectedDeviceTypeChange
-											}
-											onSelectedVersionChange={setRawVersion}
-											onSelectedOsTypeChange={setOsType}
-											hasEsrVersions={
-												deviceTypeHasEsr[deviceType.slug] ?? false
-											}
-										/>
-									}
-								/>
-							)}
-						</>
-					)}
+					>
+						<Spinner show={isFetching} label={t('loading.fetching_versions')} />
+						{!isFetching && (
+							<>
+								{isEmpty(osVersions) && (
+									<Alert plaintext warning>
+										{t('no_data.no_os_versions_available_for_download')}
+									</Alert>
+								)}
+								{!!osType && !!compatibleDeviceTypes && (
+									<ImageForm
+										onDownloadStart={onDownloadStart}
+										setIsDownloadingConfig={setIsDownloadingConfig}
+										deviceType={deviceType}
+										appId={application.id}
+										downloadUrl={downloadUrl}
+										rawVersion={rawVersion}
+										authToken={authToken}
+										{...(downloadConfig && {
+											downloadConfig: (model) =>
+												downloadConfig(deviceType, rawVersion, model),
+										})}
+										{...(getDownloadSize && {
+											getDownloadSize: () =>
+												getDownloadSize(deviceType, rawVersion),
+										})}
+										configurationComponent={
+											<OsConfiguration
+												compatibleDeviceTypes={compatibleDeviceTypes}
+												selectedDeviceType={deviceType}
+												selectedOsType={osType}
+												deviceTypeOsVersions={osVersions}
+												osTypes={osTypes}
+												isInitialDefault={isInitialDefault}
+												onSelectedDeviceTypeChange={
+													handleSelectedDeviceTypeChange
+												}
+												onSelectedVersionChange={setRawVersion}
+												onSelectedOsTypeChange={setOsType}
+												hasEsrVersions={
+													deviceTypeHasEsr[deviceType.slug] ?? false
+												}
+											/>
+										}
+									/>
+								)}
+							</>
+						)}
+					</Spinner>
 				</Box>
 				<Box flex={1} ml={[0, 0, 0, 3]} mt={[3, 0, 0, 0]}>
 					<ApplicationInstructions
