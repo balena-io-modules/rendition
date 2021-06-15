@@ -1,4 +1,17 @@
 - commits:
+    - subject: Improve and fix download image modal code
+      hash: f3c4e7b9e0c42fd7811b86bb495668435075138d
+      body: |
+        Improve and fix download image modal code
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.17.2
+  date: 2021-06-15T12:29:49.834Z
+- commits:
     - subject: Add missing qs dependency
       hash: 3eb232200a5a7168bb1f8c3a054c60ae5c49ddea
       body: |
