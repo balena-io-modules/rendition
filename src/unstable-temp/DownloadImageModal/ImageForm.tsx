@@ -72,7 +72,7 @@ interface ImageFormProps {
 		downloadOptions: DownloadOptions,
 	) => void;
 	setIsDownloadingConfig: (isDownloading: boolean) => void;
-	downloadConfig?: (event: React.MouseEvent) => Promise<void> | undefined;
+	downloadConfig?: (model: FormModel) => Promise<void> | undefined;
 	getDownloadSize?: () => Promise<string> | undefined;
 	configurationComponent: React.ReactNode;
 }
@@ -202,12 +202,12 @@ export const ImageForm = ({
 						primary
 						ml="auto"
 						className="e2e-download-image-submit"
-						type="submit"
+						type={!model.downloadConfigOnly ? 'submit' : 'button'}
 						disabled={isDownloadDisabled(model, rawVersion)}
-						onClick={async (e) => {
+						onClick={async () => {
 							if (model.downloadConfigOnly && downloadConfig) {
 								setIsDownloadingConfig(true);
-								await downloadConfig(e);
+								await downloadConfig(model);
 								setIsDownloadingConfig(false);
 							}
 						}}
