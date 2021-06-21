@@ -1,5 +1,6 @@
 import * as React from 'react';
 import format from 'date-fns/format';
+import skhema from 'skhema';
 import jsone from 'json-e';
 import merge from 'lodash/merge';
 import pickBy from 'lodash/pickBy';
@@ -10,6 +11,7 @@ import has from 'lodash/has';
 import concat from 'lodash/concat';
 import get from 'lodash/get';
 import pick from 'lodash/pick';
+import { JSONSchema6 } from 'json-schema';
 import { DefinedValue, JSONSchema, UiSchema, Format, Value } from '../types';
 import { UiOptions } from './ui-options';
 import { formatDistance } from 'date-fns';
@@ -91,6 +93,37 @@ export const transformUiSchema = ({
 		return merge({}, uiSchema, processedUiSchema);
 	}
 	return jsone(uiSchema, context);
+};
+
+// If the schema defines an anyOf array, return the schema option
+// that best matches the value; otherwise just return the original schema.
+// Internally uses skhema.match to score the schema options
+// against the value.
+export const getBestSchemaMatch = (
+	schema: JSONSchema | undefined,
+	value: any,
+) => {
+	if (!schema?.anyOf) {
+		return schema;
+	}
+	const mostRelevantSchema = schema.anyOf.reduce(
+		(mostRelevantSchema, anyOfItem: JSONSchema) => {
+			const match = skhema.match(anyOfItem as JSONSchema6, value);
+			if (match.valid && match.score > mostRelevantSchema.score) {
+				return {
+					schema: anyOfItem,
+					score: match.score,
+				};
+			}
+			return mostRelevantSchema;
+		},
+		{
+			schema,
+			score: 0,
+		},
+	);
+
+	return mostRelevantSchema.schema;
 };
 
 export const getArrayItems = ({

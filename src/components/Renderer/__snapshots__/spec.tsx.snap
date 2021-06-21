@@ -2593,6 +2593,416 @@ exports[`Renderer component An Img widget 1`] = `
 </div>
 `;
 
+exports[`Renderer component An array of different type items 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c6 {
+  margin-right: 8px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c7 {
+  font-weight: 600;
+}
+
+.c9 {
+  font-weight: normal;
+}
+
+.c10 {
+  margin: 0;
+  font-size: 58px;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
+.c8 code[class*='language-'],
+.c8 pre[class*='language-'] {
+  color: black;
+  background: none;
+  text-shadow: 0 1px white;
+  font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.c8 pre[class*='language-']::-moz-selection,
+.c8 pre[class*='language-'] ::-moz-selection,
+.c8 code[class*='language-']::-moz-selection,
+.c8 code[class*='language-'] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+.c8 pre[class*='language-']::selection,
+.c8 pre[class*='language-'] ::selection,
+.c8 code[class*='language-']::selection,
+.c8 code[class*='language-'] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+.c8 pre[class*='language-'] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+
+.c8:not(pre) > code[class*='language-'],
+.c8 pre[class*='language-'] {
+  background: #f5f2f0;
+}
+
+.c8:not(pre) > code[class*='language-'] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.c8 .token.comment,
+.c8 .token.prolog,
+.c8 .token.doctype,
+.c8 .token.cdata {
+  color: slategray;
+}
+
+.c8 .token.punctuation {
+  color: #999;
+}
+
+.c8 .token.namespace {
+  opacity: 0.7;
+}
+
+.c8 .token.property,
+.c8 .token.tag,
+.c8 .token.boolean,
+.c8 .token.number,
+.c8 .token.constant,
+.c8 .token.symbol,
+.c8 .token.deleted {
+  color: #905;
+}
+
+.c8 .token.selector,
+.c8 .token.attr-name,
+.c8 .token.string,
+.c8 .token.char,
+.c8 .token.builtin,
+.c8 .token.inserted {
+  color: #690;
+}
+
+.c8 .token.operator,
+.c8 .token.entity,
+.c8 .token.url,
+.c8 .language-css .token.string,
+.c8 .style .token.string {
+  color: #9a6e3a;
+  background: hsla(0,0%,100%,0.5);
+}
+
+.c8 .token.atrule,
+.c8 .token.attr-value,
+.c8 .token.keyword {
+  color: #07a;
+}
+
+.c8 .token.function,
+.c8 .token.class-name {
+  color: #dd4a68;
+}
+
+.c8 .token.regex,
+.c8 .token.important,
+.c8 .token.variable {
+  color: #e90;
+}
+
+.c8 .token.important,
+.c8 .token.bold {
+  font-weight: bold;
+}
+
+.c8 .token.italic {
+  font-style: italic;
+}
+
+.c8 .token.entity {
+  cursor: help;
+}
+
+.c8 * {
+  box-sizing: border-box;
+}
+
+.c8 code {
+  background-color: #f4f4f4;
+  padding: 0.2em 0px;
+  margin: 0px;
+  border-radius: 3px;
+  line-height: 1.2;
+}
+
+.c8 p {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.c8 p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.c8 pre {
+  background-color: #f4f4f4;
+}
+
+.c8 pre > code {
+  display: block;
+  background: none;
+  overflow-y: auto;
+}
+
+.c8 code,
+.c8 kbd,
+.c8 pre {
+  font-family: 'Ubuntu Mono','Courier New',monospace;
+}
+
+.c8 kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #2A506F;
+  vertical-align: middle;
+  background-color: rgba(244,244,244,0.7);
+  border: solid 1px #c6c8c9;
+  border-bottom-color: hsl(200,2.7%,70.4%);
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 hsl(200,2.7%,70.4%);
+}
+
+.c8 dl {
+  padding: 0;
+}
+
+.c8 dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.c8 dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.c8 td,
+.c8 th {
+  padding: 0;
+}
+
+.c8 table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.c8 table th {
+  font-weight: 600;
+}
+
+.c8 table th,
+.c8 table td {
+  padding: 6px 13px;
+  border: 1px solid #c6c8c9;
+}
+
+.c8 table tr {
+  background-color: #fff;
+  border-top: 1px solid #f4f4f4;
+}
+
+.c8 table tr:nth-child(2n) {
+  background-color: #f4f4f4;
+}
+
+.c8 blockquote {
+  margin: 0;
+}
+
+.c8 blockquote,
+.c8 dl,
+.c8 table {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.c8 blockquote {
+  padding: 0 1em;
+  color: #2A506F;
+  border-left: 0.25em solid #c6c8c9;
+}
+
+.c8 blockquote > :first-child {
+  margin-top: 0;
+}
+
+.c8 blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  .c8 code[class*='language-'],
+  .c8 pre[class*='language-'] {
+    text-shadow: none;
+  }
+}
+
+<div>
+  <div
+    class="c0 c1"
+  >
+    <div
+      class="c2 c3 c4 "
+    >
+      <div
+        class="c2 c5"
+      >
+        <div
+          class="c2 c3 c4 "
+        >
+          <div
+            class="c2 c3 c4 "
+          >
+            <div
+              class="c2 c6"
+            >
+              <div
+                class="c7 "
+              >
+                Number
+              </div>
+            </div>
+            <div
+              class=""
+            >
+              5
+            </div>
+          </div>
+        </div>
+        <div
+          class="c2 c3 c4 "
+        >
+          <div
+            class="c2 c6"
+          >
+            <div
+              class="c7 "
+            >
+              Text
+            </div>
+          </div>
+          <div
+            class="c2 c3 c4 "
+          >
+            <div
+              class="c2 c6"
+            >
+              <div
+                class="c7 "
+              >
+                Text
+              </div>
+            </div>
+            <div
+              class="c8"
+            >
+              <div>
+                <h1
+                  class="c9 c10"
+                >
+                  This is markdown
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Renderer component An array of strings field 1`] = `
 .c0 {
   font-family: 'Source Sans Pro',Helvetica,sans-serif;
@@ -3865,6 +4275,373 @@ exports[`Renderer component Using context functions 1`] = `
         class=""
       >
         Hello Jellyfish
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Renderer component anyOf options 1`] = `
+.c0 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c2 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  margin-bottom: 4px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.c5 {
+  margin-right: 8px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c6 {
+  font-weight: 600;
+}
+
+.c8 {
+  font-weight: normal;
+}
+
+.c9 {
+  margin: 0;
+  font-size: 58px;
+}
+
+.c1 {
+  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-size: 14px;
+  color: #2A506F;
+}
+
+.c7 code[class*='language-'],
+.c7 pre[class*='language-'] {
+  color: black;
+  background: none;
+  text-shadow: 0 1px white;
+  font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.c7 pre[class*='language-']::-moz-selection,
+.c7 pre[class*='language-'] ::-moz-selection,
+.c7 code[class*='language-']::-moz-selection,
+.c7 code[class*='language-'] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+.c7 pre[class*='language-']::selection,
+.c7 pre[class*='language-'] ::selection,
+.c7 code[class*='language-']::selection,
+.c7 code[class*='language-'] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+.c7 pre[class*='language-'] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+
+.c7:not(pre) > code[class*='language-'],
+.c7 pre[class*='language-'] {
+  background: #f5f2f0;
+}
+
+.c7:not(pre) > code[class*='language-'] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.c7 .token.comment,
+.c7 .token.prolog,
+.c7 .token.doctype,
+.c7 .token.cdata {
+  color: slategray;
+}
+
+.c7 .token.punctuation {
+  color: #999;
+}
+
+.c7 .token.namespace {
+  opacity: 0.7;
+}
+
+.c7 .token.property,
+.c7 .token.tag,
+.c7 .token.boolean,
+.c7 .token.number,
+.c7 .token.constant,
+.c7 .token.symbol,
+.c7 .token.deleted {
+  color: #905;
+}
+
+.c7 .token.selector,
+.c7 .token.attr-name,
+.c7 .token.string,
+.c7 .token.char,
+.c7 .token.builtin,
+.c7 .token.inserted {
+  color: #690;
+}
+
+.c7 .token.operator,
+.c7 .token.entity,
+.c7 .token.url,
+.c7 .language-css .token.string,
+.c7 .style .token.string {
+  color: #9a6e3a;
+  background: hsla(0,0%,100%,0.5);
+}
+
+.c7 .token.atrule,
+.c7 .token.attr-value,
+.c7 .token.keyword {
+  color: #07a;
+}
+
+.c7 .token.function,
+.c7 .token.class-name {
+  color: #dd4a68;
+}
+
+.c7 .token.regex,
+.c7 .token.important,
+.c7 .token.variable {
+  color: #e90;
+}
+
+.c7 .token.important,
+.c7 .token.bold {
+  font-weight: bold;
+}
+
+.c7 .token.italic {
+  font-style: italic;
+}
+
+.c7 .token.entity {
+  cursor: help;
+}
+
+.c7 * {
+  box-sizing: border-box;
+}
+
+.c7 code {
+  background-color: #f4f4f4;
+  padding: 0.2em 0px;
+  margin: 0px;
+  border-radius: 3px;
+  line-height: 1.2;
+}
+
+.c7 p {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.c7 p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.c7 pre {
+  background-color: #f4f4f4;
+}
+
+.c7 pre > code {
+  display: block;
+  background: none;
+  overflow-y: auto;
+}
+
+.c7 code,
+.c7 kbd,
+.c7 pre {
+  font-family: 'Ubuntu Mono','Courier New',monospace;
+}
+
+.c7 kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #2A506F;
+  vertical-align: middle;
+  background-color: rgba(244,244,244,0.7);
+  border: solid 1px #c6c8c9;
+  border-bottom-color: hsl(200,2.7%,70.4%);
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 hsl(200,2.7%,70.4%);
+}
+
+.c7 dl {
+  padding: 0;
+}
+
+.c7 dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.c7 dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.c7 td,
+.c7 th {
+  padding: 0;
+}
+
+.c7 table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.c7 table th {
+  font-weight: 600;
+}
+
+.c7 table th,
+.c7 table td {
+  padding: 6px 13px;
+  border: 1px solid #c6c8c9;
+}
+
+.c7 table tr {
+  background-color: #fff;
+  border-top: 1px solid #f4f4f4;
+}
+
+.c7 table tr:nth-child(2n) {
+  background-color: #f4f4f4;
+}
+
+.c7 blockquote {
+  margin: 0;
+}
+
+.c7 blockquote,
+.c7 dl,
+.c7 table {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.c7 blockquote {
+  padding: 0 1em;
+  color: #2A506F;
+  border-left: 0.25em solid #c6c8c9;
+}
+
+.c7 blockquote > :first-child {
+  margin-top: 0;
+}
+
+.c7 blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  .c7 code[class*='language-'],
+  .c7 pre[class*='language-'] {
+    text-shadow: none;
+  }
+}
+
+<div>
+  <div
+    class="c0 c1"
+  >
+    <div
+      class="c2 c3 c4 "
+    >
+      <div
+        class="c2 c5"
+      >
+        <div
+          class="c6 "
+        >
+          Text
+        </div>
+      </div>
+      <div
+        class="c2 c3 c4 "
+      >
+        <div
+          class="c2 c5"
+        >
+          <div
+            class="c6 "
+          >
+            Text
+          </div>
+        </div>
+        <div
+          class="c7"
+        >
+          <div>
+            <h1
+              class="c8 c9"
+            >
+              This is markdown
+            </h1>
+          </div>
+        </div>
       </div>
     </div>
   </div>

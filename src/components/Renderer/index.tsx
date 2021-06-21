@@ -16,7 +16,7 @@ import {
 	WidgetWrapperUiOptions,
 	WidgetMeta,
 } from './widgets';
-import { transformUiSchema } from './widgets/widget-util';
+import { transformUiSchema, getBestSchemaMatch } from './widgets/widget-util';
 import { Value, JSONSchema, UiSchema, Format } from './types';
 import { WidgetContext } from '../../contexts/WidgetContext';
 
@@ -101,6 +101,10 @@ const RendererBase = ({
 	...props
 }: ThemedRendererProps) => {
 	const { renderer } = React.useContext(WidgetContext);
+	const processedSchema = React.useMemo(() => {
+		return getBestSchemaMatch(schema, value);
+	}, [schema, value]);
+
 	const formats = React.useMemo(
 		() =>
 			uniqBy(
@@ -115,7 +119,7 @@ const RendererBase = ({
 	);
 
 	const [validation, setValidation] = React.useState<Validation | null>(
-		validate && !nested ? buildValidation(schema, formats) : null,
+		validate && !nested ? buildValidation(processedSchema, formats) : null,
 	);
 	const [validationErrors, setValidationErrors] = React.useState<
 		ajv.ErrorObject[] | null | undefined
@@ -126,8 +130,8 @@ const RendererBase = ({
 			setValidationErrors(null);
 			return;
 		}
-		setValidation(buildValidation(schema, formats));
-	}, [validate, nested, formats, schema]);
+		setValidation(buildValidation(processedSchema, formats));
+	}, [validate, nested, formats, processedSchema]);
 
 	React.useEffect(() => {
 		if (!validate || nested) {
@@ -135,12 +139,12 @@ const RendererBase = ({
 		}
 		let v = validation;
 		if (!v) {
-			v = buildValidation(schema, formats);
+			v = buildValidation(processedSchema, formats);
 			setValidation(v);
 		}
 		v.validate(value);
 		setValidationErrors(v.validate.errors);
-	}, [validate, nested, validation, value]);
+	}, [validate, nested, validation, value, processedSchema]);
 
 	// Setting the UI Schema explicitly to null (as opposed to it being
 	// undefined) indicates you don't want to render anything.
@@ -153,7 +157,7 @@ const RendererBase = ({
 		uiSchema,
 		extraContext,
 	});
-	const processedValue = getValue(value, schema, processedUiSchema);
+	const processedValue = getValue(value, processedSchema, processedUiSchema);
 
 	if (processedValue == null) {
 		return null;
@@ -166,7 +170,7 @@ const RendererBase = ({
 	);
 	const Widget = getWidget(
 		processedValue,
-		schema?.format,
+		processedSchema?.format,
 		processedUiSchema['ui:widget'],
 		formats,
 	);
@@ -192,7 +196,7 @@ const RendererBase = ({
 				</Alert>
 			)}
 			<WidgetMeta
-				schema={schema}
+				schema={processedSchema}
 				uiSchema={processedUiSchema}
 				valueKey={valueKey}
 			/>
@@ -200,7 +204,7 @@ const RendererBase = ({
 				extraContext={extraContext}
 				extraFormats={formats}
 				value={processedValue}
-				schema={schema}
+				schema={processedSchema}
 				uiSchema={processedUiSchema}
 			/>
 		</Flex>
