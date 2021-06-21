@@ -11,6 +11,7 @@ import sanitize from 'rehype-sanitize';
 import raw from 'rehype-raw';
 import prism from '@mapbox/rehype-prism';
 import { Divider } from '../../components/Divider';
+import { px } from 'styled-system';
 import styled, { withTheme } from 'styled-components';
 import gh from 'hast-util-sanitize/lib/github.json';
 import { Theme } from '../../common-types';
@@ -35,7 +36,11 @@ const MarkdownWrapper = styled(Txt)`
 	}
 
 	& p {
-		margin: 0;
+		margin-top: 0;
+		margin-bottom: ${(props) => px(props.theme.space[2])};
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
 	}
 
 	& pre {
