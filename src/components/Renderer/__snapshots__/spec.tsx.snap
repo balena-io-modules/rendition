@@ -1759,7 +1759,12 @@ exports[`Renderer component A markdown field 1`] = `
 }
 
 .c5 p {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.c5 p:last-child {
+  margin-bottom: 0 !important;
 }
 
 .c5 pre {
