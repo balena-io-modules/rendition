@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'Markdown: improve css styling of paragraphs'
+      hash: 4b2aaf9c8a9c33740d47a562f8bf9cf7a514505b
+      body: >
+        Paragraphs should have a bottom margin set - except for the last
+        paragraph.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 20.17.3
+  date: 2021-06-21T09:25:34.377Z
+- commits:
     - subject: Improve and fix download image modal code
       hash: f3c4e7b9e0c42fd7811b86bb495668435075138d
       body: |
