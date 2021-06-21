@@ -1,4 +1,33 @@
 - commits:
+    - subject: 'Renderer: handle anyOf options'
+      hash: 29ab79f2a3545e2ae8e92d6509be43447f2aba8b
+      body: >
+        The Renderer component now checks if `anyOf` options are specified in
+        the schema. If they are, it uses `skhema.match` to find the option that
+        most closely matches the value and returns that schema.
+
+
+        This also works with array items that can be of different types. See
+        examples for details.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: Bump monaco-editor-webpack-plugin version
+      hash: 6ae010ba64229933a619c0ef87dda9f3c5c5f1c8
+      body: |
+        v3 caused errors when running `npm run build`.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 20.18.0
+  date: 2021-06-21T13:47:18.840Z
+- commits:
     - subject: 'Markdown: improve css styling of paragraphs'
       hash: 4b2aaf9c8a9c33740d47a562f8bf9cf7a514505b
       body: >
