@@ -604,6 +604,65 @@ const jsonDataExamples = {
 		},
 		uiSchema: {},
 	},
+	'anyOf options': {
+		value: { text: '# This is markdown' },
+		schema: {
+			type: 'object',
+			anyOf: [
+				{
+					type: 'object',
+					title: 'Text',
+					properties: {
+						text: {
+							type: 'string',
+							format: 'markdown',
+						},
+					},
+				},
+				{
+					type: 'object',
+					properties: {
+						num: {
+							type: 'number',
+							title: 'Number',
+						},
+					},
+				},
+			],
+		},
+		uiSchema: {},
+	},
+	'An array of different type items': {
+		value: [{ num: 5 }, { text: '# This is markdown' }],
+		schema: {
+			type: 'array',
+			items: {
+				type: 'object',
+				anyOf: [
+					{
+						type: 'object',
+						title: 'Text',
+						properties: {
+							text: {
+								type: 'string',
+								format: 'markdown',
+							},
+						},
+					},
+					{
+						type: 'object',
+						properties: {
+							num: {
+								type: 'number',
+								title: 'Number',
+							},
+						},
+					},
+				],
+			},
+		},
+		uiSchema: {},
+	},
 };
 
 export default jsonDataExamples;

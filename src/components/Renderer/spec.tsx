@@ -7,7 +7,7 @@ import { Provider } from '../..';
 import { Renderer } from '.';
 import allExamples, { CONTEXT_FUNCTIONS, EXTRA_FORMATS } from './examples';
 
-describe.only('Renderer component', () => {
+describe('Renderer component', () => {
 	const {
 		['A mermaid field']: _aMermaidField,
 		['A date time field']: _aDateTimeField,
