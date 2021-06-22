@@ -68,6 +68,7 @@ const getUniqueOsTypes = (
 
 export interface DownloadOptions {
 	applicationId: number;
+	releaseId?: number;
 	deviceType: string;
 	appUpdatePollInterval?: number;
 	downloadConfigOnly?: boolean;
@@ -77,6 +78,7 @@ export interface DownloadOptions {
 
 export interface UnstableTempDownloadImageModalProps {
 	application: Application;
+	releaseId?: number;
 	compatibleDeviceTypes: DeviceType[] | null;
 	initialDeviceType?: DeviceType;
 	initialOsVersions?: OsVersionsByDeviceType;
@@ -109,6 +111,7 @@ export interface UnstableTempDownloadImageModalProps {
 export const UnstableTempDownloadImageModal = ({
 	downloadUrl,
 	application,
+	releaseId,
 	compatibleDeviceTypes,
 	initialDeviceType,
 	initialOsVersions,
@@ -269,6 +272,7 @@ export const UnstableTempDownloadImageModal = ({
 										setIsDownloadingConfig={setIsDownloadingConfig}
 										deviceType={deviceType}
 										appId={application.id}
+										releaseId={releaseId}
 										downloadUrl={downloadUrl}
 										rawVersion={rawVersion}
 										authToken={authToken}
