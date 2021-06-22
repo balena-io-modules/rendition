@@ -64,6 +64,7 @@ const isDownloadDisabled = (
 interface ImageFormProps {
 	downloadUrl: string;
 	appId: number;
+	releaseId?: number;
 	rawVersion: string | null;
 	deviceType: DeviceType;
 	authToken?: string;
@@ -80,6 +81,7 @@ interface ImageFormProps {
 export const ImageForm = ({
 	downloadUrl,
 	appId,
+	releaseId,
 	rawVersion,
 	deviceType,
 	authToken,
@@ -101,6 +103,7 @@ export const ImageForm = ({
 	const setDownloadConfigOnly = (downloadConfigOnly: boolean) => {
 		const downloadOptions = {
 			applicationId: appId,
+			releaseId,
 			deviceType: deviceType.slug,
 			appUpdatePollInterval: model.appUpdatePollInterval,
 			downloadConfigOnly,
@@ -149,6 +152,7 @@ export const ImageForm = ({
 			style={{ display: 'flex', flexDirection: 'column', height: '100%' }}
 		>
 			<input type="hidden" name="appId" value={appId} />
+			{releaseId && <input type="hidden" name="releaseId" value={releaseId} />}
 			<input type="hidden" name="_token" value={authToken} />
 			<input name="version" value={rawVersion ?? ''} type="hidden" />
 			<input name="deviceType" value={deviceType?.slug} type="hidden" />
