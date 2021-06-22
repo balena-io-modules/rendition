@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix unstable DownloadImageModal typing
+      hash: 77e65b343938156ba91b586e9da3bb4d0e9c5264
+      body: |
+        Fix unstable DownloadImageModal typing
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.18.1
+  date: 2021-06-22T11:43:28.156Z
+- commits:
     - subject: 'Renderer: handle anyOf options'
       hash: 29ab79f2a3545e2ae8e92d6509be43447f2aba8b
       body: >
