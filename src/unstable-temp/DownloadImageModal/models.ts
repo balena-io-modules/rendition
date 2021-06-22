@@ -136,14 +136,6 @@ export interface DeviceTypeInstructions {
 	osx: string[];
 	windows: string[];
 }
-export interface DeviceType {
-	id: number;
-	slug: string;
-	name: string;
-	is_private: boolean;
-	logo: string | null;
-	contract: Contract | null;
-}
 export interface DeviceTypeDownloadAlert {
 	type: string;
 	message: string;
@@ -167,11 +159,6 @@ export interface DeviceTypeOptions {
 	message: string;
 	name: string;
 }
-export interface DeviceInitializationOptions {
-	message: string;
-	type: string;
-	name: string;
-}
 export interface DeviceTypeOptionsGroup {
 	default: number | string;
 	message: string;
@@ -187,32 +174,15 @@ export interface DeviceTypeOptionsGroup {
 export interface DeviceType {
 	slug: string;
 	name: string;
-	aliases: string[];
-	arch: string;
-	state?: string;
-	community?: boolean;
-	private?: boolean;
-	isDependent?: boolean;
 	imageDownloadAlerts?: DeviceTypeDownloadAlert[];
 	instructions?: string[] | DeviceTypeInstructions;
 	gettingStartedLink?: string | DeviceTypeGettingStartedLink;
-	stateInstructions?: {
-		[key: string]: string[];
-	};
 	options?: DeviceTypeOptions[];
-	initialization?: {
-		options?: DeviceInitializationOptions[];
-		operations: Array<{
-			command: string;
-		}>;
-	};
-	supportsBlink?: boolean;
 	yocto: {
 		fstype?: string;
 		deployArtifact: string;
 	};
 	/** Holds the latest balenaOS version */
-	buildId?: string;
 	logoUrl?: string;
 }
 
