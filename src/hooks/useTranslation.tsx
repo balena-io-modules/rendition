@@ -90,6 +90,8 @@ const translationMap = {
 		'This variant should never be used in production.',
 	'info.production_images_not_for_local_development':
 		"Production images are ready for production deployments, but don't offer easy access for local development.",
+	'info.applications_support_devices_with_same_architecture':
+		'Applications can support any devices that share the same architecture as their default device type.',
 
 	'redirects.view_docs': 'View docs',
 
