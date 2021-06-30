@@ -53,6 +53,7 @@ const listFilterQuery = (schema: JSONSchema, rules: JSONSchema[]) => {
 			flatSchema,
 			flattenFilter,
 		) as FilterSignature[];
+		console.log(flatSchema, flattenFilter, signatures);
 		return signatures.map<ListQueryStringFilterObject>(
 			({ field, operator, value }) => ({
 				n: field,
@@ -71,7 +72,7 @@ const loadRulesFromUrl = (
 	if (!searchLocation) {
 		return [];
 	}
-	const parsed = qs.parse(searchLocation.replace(/^\?/, '')) || {};
+	const parsed = qs.parse(searchLocation) || {};
 	const rules = filter(parsed, isQueryStringFilterRuleset).map(
 		// @ts-expect-error
 		(rules: ListQueryStringFilterObject[]) => {
@@ -89,8 +90,10 @@ const loadRulesFromUrl = (
 			// TODO: fix in rendition => this should be handled by Rendition, calling the
 			// createFilter function handle the case.
 			if (signatures[0].operator === FULL_TEXT_SLUG) {
+				console.log('createFullTextSearchFilter', signatures);
 				return createFullTextSearchFilter(schema, signatures[0].value);
 			}
+			console.log('create', signatures);
 			return createFilter(schema, signatures);
 		},
 	);
@@ -124,7 +127,7 @@ export const PersistentFilters = ({
 		return !!urlRules?.length
 			? urlRules
 			: getFromLocalStorage<JSONSchema[]>(filtersRestorationKey) ?? [];
-	}, [history?.location?.search, schema, filtersRestorationKey]);
+	}, [schema, filtersRestorationKey]);
 
 	React.useEffect(() => {
 		updateUrl(storedFilters);
@@ -141,7 +144,7 @@ export const PersistentFilters = ({
 
 	const updateUrl = (filters: JSONSchema[]) => {
 		const { pathname } = window.location;
-
+		console.log(schema, filters);
 		history?.replace?.({
 			pathname,
 			search: listFilterQuery(schema, filters),
