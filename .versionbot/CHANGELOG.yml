@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove console logs and fix missing dependency
+      hash: 7840742ccd8bd5d9ad80061d3cbdeb2a94aa46d7
+      body: |
+        Remove console logs and fix missing dependency
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.19.3
+  date: 2021-06-30T15:21:44.436Z
+- commits:
     - subject: Fix qs parse on loadRulesFromUrl
       hash: 6941a672ef22602516781a43f6b4f734d7ca31d4
       body: |
