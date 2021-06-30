@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix qs parse on loadRulesFromUrl
+      hash: 6941a672ef22602516781a43f6b4f734d7ca31d4
+      body: |
+        Fix qs parse on loadRulesFromUrl
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.19.2
+  date: 2021-06-30T14:56:47.940Z
+- commits:
     - subject: Add missing download image modal string
       hash: 5336b9a803d89672d0d48730e76e48728bd44b22
       body: |
