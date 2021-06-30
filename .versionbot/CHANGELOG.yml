@@ -1,4 +1,17 @@
 - commits:
+    - subject: Delete CODEOWNERS
+      hash: 4aeff94e3089b637f5cd08a536f5ecd1543b077a
+      body: |
+        Delete CODEOWNERS
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.19.4
+  date: 2021-06-30T15:53:16.739Z
+- commits:
     - subject: Remove console logs and fix missing dependency
       hash: 7840742ccd8bd5d9ad80061d3cbdeb2a94aa46d7
       body: |
