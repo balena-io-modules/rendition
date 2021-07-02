@@ -18,7 +18,7 @@ import { Dictionary } from '../../common-types';
 import { Box } from '../../components/Box';
 import { Flex } from '../../components/Flex';
 import { Txt } from '../../components/Txt';
-import { Button } from '../../components/Button';
+import { Button, ButtonProps } from '../../components/Button';
 import { Spinner } from '../../components/Spinner';
 import { Alert } from '../../components/Alert';
 import { Modal } from '../../components/Modal';
@@ -67,7 +67,7 @@ const getUniqueOsTypes = (
 };
 
 export interface DownloadOptions {
-	applicationId: number;
+	appId: number;
 	releaseId?: number;
 	deviceType: string;
 	appUpdatePollInterval?: number;
@@ -105,6 +105,11 @@ export interface UnstableTempDownloadImageModalProps {
 	getDockerArtifact: (deviceTypeSlug: string, rawVersion: string) => string;
 	hasEsrVersions?: (deviceTypeSlugs: string[]) => Promise<Dictionary<boolean>>;
 	onClose: () => void;
+	modalActions?: Array<
+		Omit<ButtonProps, 'onClick'> & {
+			onClick: (event: React.MouseEvent, model: DownloadOptions) => void;
+		}
+	>;
 	authToken?: string;
 }
 
@@ -124,6 +129,7 @@ export const UnstableTempDownloadImageModal = ({
 	downloadConfig,
 	getDownloadSize,
 	onClose,
+	modalActions,
 	authToken,
 }: UnstableTempDownloadImageModalProps) => {
 	const { t } = useTranslation();
@@ -275,6 +281,7 @@ export const UnstableTempDownloadImageModal = ({
 										releaseId={releaseId}
 										downloadUrl={downloadUrl}
 										rawVersion={rawVersion}
+										modalActions={modalActions}
 										authToken={authToken}
 										{...(downloadConfig && {
 											downloadConfig: (model) =>
