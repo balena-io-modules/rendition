@@ -6,11 +6,18 @@ const SelectWidget = (props: FormWidgetProps) => {
 	const { id, options, value, disabled, readonly, onChange } = props;
 
 	const { enumOptions, enumDisabled } = options;
-	const selectOptions = (enumOptions as any[])?.map((option) => {
+	if (!Array.isArray(enumOptions)) {
+		return null;
+	}
+	const sanitizedEnumDisabled = Array.isArray(enumDisabled)
+		? enumDisabled
+		: null;
+	const selectOptions = enumOptions.map((option) => {
 		return {
 			...option,
 			disabled:
-				enumDisabled && (enumDisabled as any[]).indexOf(option.value) !== -1,
+				sanitizedEnumDisabled != null &&
+				sanitizedEnumDisabled.includes(option.value),
 		};
 	});
 
@@ -19,7 +26,9 @@ const SelectWidget = (props: FormWidgetProps) => {
 			width="100%"
 			id={id}
 			value={
-				value ? selectOptions.find((option: any) => option.value === value) : ''
+				value !== undefined
+					? selectOptions.find((option) => option.value === value)
+					: undefined
 			}
 			disabled={disabled || readonly}
 			onChange={({ option }: any) => {
