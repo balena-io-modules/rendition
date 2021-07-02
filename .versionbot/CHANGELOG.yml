@@ -1,4 +1,25 @@
 - commits:
+    - subject: 'Form/SelectWidget: Check enum options properly and reduce any usage'
+      hash: 2f271c2521ed66e99c98b71740191c7c90ac5e44
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+    - subject: 'Form/SelectWidget: Support using falsy values as options'
+      hash: 7b7aed83e39cdbc2a7b1e9d73a253db28b22998a
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 20.19.5
+  date: 2021-07-02T14:59:36.778Z
+- commits:
     - subject: Delete CODEOWNERS
       hash: 4aeff94e3089b637f5cd08a536f5ecd1543b077a
       body: |
