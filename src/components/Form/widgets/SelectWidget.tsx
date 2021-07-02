@@ -19,7 +19,9 @@ const SelectWidget = (props: FormWidgetProps) => {
 			width="100%"
 			id={id}
 			value={
-				value ? selectOptions.find((option: any) => option.value === value) : ''
+				value !== undefined
+					? selectOptions.find((option) => option.value === value)
+					: undefined
 			}
 			disabled={disabled || readonly}
 			onChange={({ option }: any) => {
