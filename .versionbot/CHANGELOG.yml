@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add additionl custom download image modal actions
+      hash: 8799c504694fa7e94cb2be38f8409074d4bad47a
+      body: |
+        Add additionl custom download image modal actions
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 20.20.0
+  date: 2021-07-02T15:08:42.430Z
+- commits:
     - subject: Delete CODEOWNERS
       hash: 4aeff94e3089b637f5cd08a536f5ecd1543b077a
       body: |
