@@ -5,7 +5,7 @@ import debounce from 'lodash/debounce';
 import * as React from 'react';
 import { useTranslation } from '../../hooks/useTranslation';
 import { Alert } from '../../components/Alert';
-import { Button } from '../../components/Button';
+import { Button, ButtonProps } from '../../components/Button';
 import { DropDownButton } from '../../components/DropDownButton';
 import { Flex } from '../../components/Flex';
 import { Txt } from '../../components/Txt';
@@ -75,6 +75,7 @@ interface ImageFormProps {
 	setIsDownloadingConfig: (isDownloading: boolean) => void;
 	downloadConfig?: (model: FormModel) => Promise<void> | undefined;
 	getDownloadSize?: () => Promise<string> | undefined;
+	modalActions?: Array<Omit<ButtonProps, 'onClick'> & { onClick: (event: React.MouseEvent, model: DownloadOptions) => void }>
 	configurationComponent: React.ReactNode;
 }
 
@@ -89,6 +90,7 @@ export const ImageForm = ({
 	setIsDownloadingConfig,
 	downloadConfig,
 	getDownloadSize,
+	modalActions,
 	configurationComponent,
 }: ImageFormProps) => {
 	const [downloadSize, setDownloadSize] = React.useState<string | null>(null);
@@ -100,19 +102,19 @@ export const ImageForm = ({
 		downloadConfigOnly: hasDockerImageDownload,
 	});
 
+	const downloadOptions = React.useMemo(() => ({
+		appId,
+		releaseId,
+		deviceType: deviceType.slug,
+		appUpdatePollInterval: model.appUpdatePollInterval,
+		network: model.network,
+		version: rawVersion,
+	}), [appId, releaseId, deviceType, model, rawVersion]) as DownloadOptions;
+
 	const setDownloadConfigOnly = (downloadConfigOnly: boolean) => {
-		const downloadOptions = {
-			applicationId: appId,
-			releaseId,
-			deviceType: deviceType.slug,
-			appUpdatePollInterval: model.appUpdatePollInterval,
-			downloadConfigOnly,
-			network: model.network,
-			version: rawVersion,
-		} as DownloadOptions;
 
 		if (typeof onDownloadStart === 'function') {
-			onDownloadStart(downloadConfigOnly, downloadOptions);
+			onDownloadStart(downloadConfigOnly, { ...downloadOptions, downloadConfigOnly });
 		}
 		setModel({
 			...model,
@@ -184,6 +186,16 @@ export const ImageForm = ({
 			})}
 
 			<Flex>
+				{!!modalActions?.length && (modalActions.map(({onClick, ...otherProps}) => (
+					<Button
+						mt={2}
+						onClick={(event) => {
+							console.log(downloadOptions);
+							return onClick(event, downloadOptions)
+						}}
+						{...otherProps}
+					/>
+				)))}
 				{!downloadConfig && (
 					<Button
 						mt={2}
