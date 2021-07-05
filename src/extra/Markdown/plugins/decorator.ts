@@ -1,5 +1,5 @@
 import unified from 'unified';
-import type { Node } from 'unist';
+import type { Node, Literal, Parent } from 'unist';
 import visitParents from 'unist-util-visit-parents';
 import exec from 'regexp-match-indices';
 
@@ -67,8 +67,20 @@ const splitTextIntoNodes = (text: string, decorator: Decorator) => {
 	return nodes;
 };
 
-const isCodeBlock = (node: Node) => {
-	return node.tagName === 'code';
+const isLiteralNode = (node: Node): node is Literal => {
+	return node.type === 'text';
+};
+
+interface Element extends Parent {
+	type: 'element';
+	tagName: string;
+}
+const isElementNode = (node: Node): node is Element => {
+	return node.type === 'element';
+};
+
+const isCodeBlock = (node: Node): node is Element => {
+	return isElementNode(node) && node.tagName === 'code';
 };
 
 export interface Decorator {
@@ -90,9 +102,13 @@ export const decoratorPlugin: unified.Plugin<[DecoratorPluginOptions]> = (
 		return;
 	}
 
-	const visitor: visitParents.Visitor<any> = (node, parents) => {
+	const visitor: visitParents.Visitor<Node> = (node, parents) => {
+		if (!isLiteralNode(node) || typeof node.value !== 'string') {
+			return;
+		}
+		const { value } = node;
 		const decorator = options.decorators!.find((entry) => {
-			return node.type === 'text' && entry.match.test(node.value);
+			return entry.match.test(value);
 		});
 
 		if (!decorator) {
@@ -103,9 +119,10 @@ export const decoratorPlugin: unified.Plugin<[DecoratorPluginOptions]> = (
 			return visitParents.SKIP;
 		}
 
-		node.type = 'element';
-		node.tagName = 'span';
-		node.children = splitTextIntoNodes(node.value, decorator);
+		const element = node as Node as Element;
+		element.type = 'element';
+		element.tagName = 'span';
+		element.children = splitTextIntoNodes(node.value, decorator);
 
 		return visitParents.SKIP;
 	};
