@@ -72,6 +72,7 @@ export const FilterModal = ({
 	edit,
 }: FilterModalProps) => {
 	const [filters, setFilters] = useState(edit);
+	const [searchTerm, setSearchTerm] = useState('');
 
 	const setEditField = (field: string, index: number) => {
 		const currentEdit = filters.map((filter, i) =>
@@ -101,6 +102,29 @@ export const FilterModal = ({
 		);
 		setFilters(currentEdit);
 	};
+
+	const fieldOptions = React.useMemo(() => {
+		return map(schema.properties, (s: JSONSchema, field) => ({
+			field,
+			title: s.title || field,
+		})).sort((a, b) =>
+			a.title.toLowerCase().localeCompare(b.title.toLowerCase()),
+		);
+	}, [schema.properties]);
+
+	const filteredFieldOptions = React.useMemo(() => {
+		if (!searchTerm) {
+			return fieldOptions;
+		}
+		const searchTermRegEx = new RegExp(searchTerm, 'i');
+		return fieldOptions.filter((option) => {
+			return (
+				option.title.match(searchTermRegEx) ||
+				option.field.match(searchTermRegEx)
+			);
+		});
+	}, [searchTerm, fieldOptions]);
+
 	return (
 		<Modal
 			title="Filter by"
@@ -116,10 +140,10 @@ export const FilterModal = ({
 						<Flex>
 							<Box flex={1}>
 								<Select<{ field: string; title: string }>
-									options={map(schema.properties, (s: JSONSchema, field) => ({
-										field,
-										title: s.title || field,
-									}))}
+									id="filtermodal__fieldselect"
+									options={filteredFieldOptions}
+									onSearch={setSearchTerm}
+									searchPlaceholder="Search..."
 									valueKey="field"
 									labelKey="title"
 									// TODO: Remove this logic and pass the primitive value when this is fixed https://github.com/grommet/grommet/issues/3154
