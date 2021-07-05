@@ -107,7 +107,9 @@ export const FilterModal = ({
 		return map(schema.properties, (s: JSONSchema, field) => ({
 			field,
 			title: s.title || field,
-		}));
+		})).sort((a, b) =>
+			a.title.toLowerCase().localeCompare(b.title.toLowerCase()),
+		);
 	}, [schema.properties]);
 
 	const filteredFieldOptions = React.useMemo(() => {
