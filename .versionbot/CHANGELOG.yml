@@ -1,4 +1,30 @@
 - commits:
+    - subject: Sort filter field options alphabetically
+      hash: 892bfced063d0e97b26e2a1712a33e8d1c8db58d
+      body: |
+        Case insensitive!
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: 'FilterModal: Fields drop-down is searchable'
+      hash: 44f4a516aae1d3b77fe112e75905d1a7bb4a9dbe
+      body: >
+        Add ability to search for field options. This is useful if there are a
+        large number of options. Also if the field name and the title are
+        different and the user is looking for the field name but can't find it
+        because the title is displayed.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 20.20.0
+  date: 2021-07-05T08:13:29.630Z
+- commits:
     - subject: 'Form/SelectWidget: Check enum options properly and reduce any usage'
       hash: 2f271c2521ed66e99c98b71740191c7c90ac5e44
       body: ''
