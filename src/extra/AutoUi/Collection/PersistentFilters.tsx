@@ -71,7 +71,7 @@ const loadRulesFromUrl = (
 	if (!searchLocation) {
 		return [];
 	}
-	const parsed = qs.parse(searchLocation) || {};
+	const parsed = qs.parse(searchLocation, { ignoreQueryPrefix: true }) || {};
 	const rules = filter(parsed, isQueryStringFilterRuleset).map(
 		// @ts-expect-error
 		(rules: ListQueryStringFilterObject[]) => {
@@ -86,9 +86,11 @@ const loadRulesFromUrl = (
 			}));
 			// full_text_search filter has always a single signature
 			// since we cannot add multiple search text filters.
-			// TODO: fix in rendition => this should be handled by Rendition, calling the
-			// createFilter function handle the case.
+			// TODO: createFilter should handle this case as well.
 			if (signatures[0].operator === FULL_TEXT_SLUG) {
+				// TODO: listFilterQuery serializes the already escaped value and this
+				// then re-escapes while de-serializing. Fix that loop, which can keep
+				// escaping regex characters (eg \) indefinitely on each call/reload from the url.
 				return createFullTextSearchFilter(schema, signatures[0].value);
 			}
 			return createFilter(schema, signatures);
@@ -119,19 +121,13 @@ export const PersistentFilters = ({
 		() => getFromLocalStorage<FiltersView[]>(viewsRestorationKey) ?? [],
 		[viewsRestorationKey],
 	);
+	const locationSearch = history?.location?.search ?? '';
 	const storedFilters = React.useMemo(() => {
-		const urlRules = loadRulesFromUrl(history?.location?.search ?? '', schema);
+		const urlRules = loadRulesFromUrl(locationSearch, schema);
 		return !!urlRules?.length
 			? urlRules
 			: getFromLocalStorage<JSONSchema[]>(filtersRestorationKey) ?? [];
-	}, [history?.location?.search, schema, filtersRestorationKey]);
-
-	React.useEffect(() => {
-		updateUrl(storedFilters);
-		if (!filters?.length && storedFilters && onFiltersUpdate) {
-			onFiltersUpdate(storedFilters);
-		}
-	}, [storedFilters]);
+	}, [locationSearch, schema, filtersRestorationKey]);
 
 	React.useEffect(() => {
 		if (!views && storedViews && onViewsUpdate) {
@@ -146,6 +142,16 @@ export const PersistentFilters = ({
 			search: listFilterQuery(schema, filters),
 		});
 	};
+
+	// When the component mounts, if the parent component hasn't provided any filters
+	// and we were able to load some from the local storage, then communicate them
+	// back to the parent component.
+	React.useEffect(() => {
+		updateUrl(storedFilters);
+		if (!filters?.length && storedFilters.length && onFiltersUpdate) {
+			onFiltersUpdate(storedFilters);
+		}
+	}, []);
 
 	const viewsUpdate = (views: FiltersView[]) => {
 		setToLocalStorage(viewsRestorationKey, views);
