@@ -1,6 +1,6 @@
 {
   "name": "rendition",
-  "version": "20.20.0",
+  "version": "20.20.1",
   "description": "React components library",
   "repository": {
     "type": "git",
@@ -180,5 +180,8 @@
     "setupFilesAfterEnv": [
       "<rootDir>scripts/setupTestsAfterEnv.js"
     ]
+  },
+  "versionist": {
+    "publishedAt": "2021-07-06T10:23:54.506Z"
   }
 }

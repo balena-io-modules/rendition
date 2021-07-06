@@ -1,4 +1,20 @@
 - commits:
+    - subject: Fix Markdown decorator typings after recent upstream update
+      hash: e94ba297c58a25d0bff42affb811b8e08e5ade47
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        See: >-
+          https://www.flowdock.com/app/rulemotion/f-rendition/threads/shNurL8O28ZNkWn5q4Nayml1wdh
+        see: >-
+          https://www.flowdock.com/app/rulemotion/f-rendition/threads/shNurL8O28ZNkWn5q4Nayml1wdh
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 20.20.1
+  date: 2021-07-06T10:23:54.397Z
+- commits:
     - subject: Sort filter field options alphabetically
       hash: 892bfced063d0e97b26e2a1712a33e8d1c8db58d
       body: |
