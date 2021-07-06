@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'autoUI: Fix using multiple filters'
+      hash: b574313cad0d9128d5d0132121068564d50f8a13
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 20.20.2
+  date: 2021-07-06T14:08:38.242Z
+- commits:
     - subject: Fix Markdown decorator typings after recent upstream update
       hash: e94ba297c58a25d0bff42affb811b8e08e5ade47
       body: ''
