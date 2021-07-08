@@ -1,3 +1,5 @@
+jest.mock('lodash/debounce', () => jest.fn((fn) => fn));
+
 import { mount } from 'enzyme';
 import sinon from 'sinon';
 import React from 'react';

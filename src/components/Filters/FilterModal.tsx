@@ -2,6 +2,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { JSONSchema7 as JSONSchema } from 'json-schema';
 import map from 'lodash/map';
+import debounce from 'lodash/debounce';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Button } from '../Button';
@@ -74,6 +75,8 @@ export const FilterModal = ({
 	const [filters, setFilters] = useState(edit);
 	const [searchTerm, setSearchTerm] = useState('');
 
+	const debouncedSetSearchTerm = debounce(setSearchTerm, 300);
+
 	const setEditField = (field: string, index: number) => {
 		const currentEdit = filters.map((filter, i) =>
 			i === index ? SchemaSieve.getCleanEditModel(schema, field) : filter,
@@ -142,7 +145,7 @@ export const FilterModal = ({
 								<Select<{ field: string; title: string }>
 									id="filtermodal__fieldselect"
 									options={filteredFieldOptions}
-									onSearch={setSearchTerm}
+									onSearch={debouncedSetSearchTerm}
 									searchPlaceholder="Search..."
 									valueKey="field"
 									labelKey="title"
