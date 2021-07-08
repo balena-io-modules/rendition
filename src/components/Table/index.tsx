@@ -109,7 +109,7 @@ const TypedTable: new <T>() => React.Component<
 	TableBaseProps<T> & { enableCustomColumns?: boolean }
 > = StyledTable as any;
 
-const ALL_TAGS_COLUMN_KEY = 'All Tags';
+const TAGS_COLUMN_KEY = 'Tags';
 
 const tagCellAttributes = {
 	href: undefined,
@@ -123,14 +123,14 @@ const tagCellAttributes = {
 const isCustomTagColumn = (
 	column: TableColumnState,
 ): column is TagTableColumnState =>
-	column.type === 'tag' && column.key !== ALL_TAGS_COLUMN_KEY;
+	column.type === 'tag' && column.key !== TAGS_COLUMN_KEY;
 
 const insertTagColumns = (
 	columns: TableColumnState[],
 	newTagColumns: TableColumnState[],
 ) => {
 	let allTagsColumnIndex = columns.findIndex(
-		(column) => column.key === ALL_TAGS_COLUMN_KEY,
+		(column) => column.key === TAGS_COLUMN_KEY,
 	);
 	if (allTagsColumnIndex < 0) {
 		allTagsColumnIndex = columns.length - 1;
@@ -236,8 +236,8 @@ const getAllTagsTableColumn = <T extends {}>(
 ) =>
 	normalizeTableColumn(
 		{
-			title: 'All Tags',
-			key: ALL_TAGS_COLUMN_KEY,
+			title: 'Tags',
+			key: TAGS_COLUMN_KEY,
 			selected: false,
 			type: 'predefined',
 			field: tagField,
@@ -557,12 +557,8 @@ export class Table<T extends {}> extends React.Component<
 				if (isCustomTagColumn(c)) {
 					// we need to refresh the headers of all tag columns
 					this.setTagTableColumnHeader({ tagKeys, selectedTagColumnKeys }, c);
-				} else if (
-					addedFirstTag &&
-					c.key === ALL_TAGS_COLUMN_KEY &&
-					!c.selected
-				) {
-					// make the "All Tags" column pop when we first add a tag
+				} else if (addedFirstTag && c.key === TAGS_COLUMN_KEY && !c.selected) {
+					// make the "Tags" column pop when we first add a tag
 					c.selected = true;
 				}
 				return c;
