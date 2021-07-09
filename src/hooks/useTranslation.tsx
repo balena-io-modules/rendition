@@ -53,6 +53,7 @@ const translationMap = {
 	'placeholders.choose_device_type': 'Choose a device type...',
 	'placeholders.select_os_type': 'Select OS type...',
 	'placeholders.select_version': 'Select version',
+	'placeholders.select_balenaos_version': 'Select balenaOS version',
 	'placeholders.select_edition': 'Select edition',
 
 	'labels.instructions': 'Instructions',
