@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'FilterModal: debounce the search for filter title'
+      hash: 0fcdcc64cc1a004b242bbcc5b0558509d25d2f8e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 20.20.3
+  date: 2021-07-09T02:17:55.198Z
+- commits:
     - subject: 'autoUI: Fix using multiple filters'
       hash: b574313cad0d9128d5d0132121068564d50f8a13
       body: ''
