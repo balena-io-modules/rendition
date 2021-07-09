@@ -253,7 +253,7 @@ export const OsConfiguration = ({
 						/>
 					</Box>
 				)}
-				{(!isInitialDefault || !selectedOsType) && (
+				{(!isInitialDefault || !selectedOsType) && hasEsrVersions && (
 					<Box flex={2} ml={2}>
 						<DownloadImageLabel>
 							{t('placeholders.select_os_type_status')}{' '}
@@ -304,11 +304,11 @@ export const OsConfiguration = ({
 			)}
 
 			{hasEditions && (!isInitialDefault || !variant) && (
-				<Box mb={2}>
+				<Box>
 					<DownloadImageLabel>
 						{t('placeholders.select_edition')}
 					</DownloadImageLabel>
-					<Box mr={4} mb={3}>
+					<Box>
 						<VariantSelector
 							t={t}
 							version={version}
