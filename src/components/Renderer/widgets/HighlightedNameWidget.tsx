@@ -12,6 +12,9 @@ const HighlightedNameWidget: Widget = ({
 	uiSchema,
 	...props
 }: WidgetProps) => {
+	if (value == null) {
+		return null;
+	}
 	const bg = get(props, 'bg', generateColorFromString(value.toString()));
 	const color = get(props, 'color', isLight(bg) ? '#000' : '#FFF');
 	return (

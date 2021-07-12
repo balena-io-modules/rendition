@@ -16,6 +16,9 @@ const HeadingWidget: Widget = ({
 	size,
 	...props
 }: HeadingWidgetProps) => {
+	if (value == null) {
+		return null;
+	}
 	const HeadingComponent = get(Heading, `h${size}`, Heading.h3);
 	return <HeadingComponent {...props}>{value.toString()}</HeadingComponent>;
 };

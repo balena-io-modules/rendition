@@ -12,6 +12,9 @@ export const MermaidWidget: Widget = ({
 	uiSchema,
 	...props
 }: WidgetProps) => {
+	if (value == null) {
+		return null;
+	}
 	return <Mermaid width="100%" {...props} value={value.toString()} />;
 };
 

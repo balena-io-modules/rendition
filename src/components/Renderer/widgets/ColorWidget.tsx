@@ -32,6 +32,9 @@ const ColorWidget: Widget = ({
 	height = DEFAULT_HEIGHT,
 	...props
 }: ColorWidgetProps) => {
+	if (value == null) {
+		return null;
+	}
 	const bg = value.toString() || 'transparent';
 	const color = isLight(bg) ? '#000' : '#FFF';
 	return (

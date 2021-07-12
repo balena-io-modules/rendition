@@ -11,6 +11,9 @@ const LinkWidget: Widget = ({
 	uiSchema,
 	...props
 }: WidgetProps) => {
+	if (value == null) {
+		return null;
+	}
 	let href = get(props, 'href', value.toString());
 	if (get(schema, 'format') === 'email') {
 		href = `mailto:${href.replace(/^mailto:/, '')}`;

@@ -12,6 +12,9 @@ const BadgeWidget: Widget = ({
 	uiSchema,
 	...props
 }: WidgetProps) => {
+	if (value == null) {
+		return null;
+	}
 	const shade = get(props, 'shade', hashCode(value.toString(), 23));
 	return (
 		<Badge {...props} shade={shade}>

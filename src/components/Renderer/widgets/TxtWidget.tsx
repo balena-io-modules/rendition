@@ -38,7 +38,8 @@ const TxtWidget: Widget = ({
 		? getArrayValue(value, uiSchema)
 		: value?.toString();
 	if (DATE_TIME_FORMATS.includes(schema?.format ?? '')) {
-		displayValue = formatTimestamp(displayValue, uiSchema);
+		displayValue =
+			displayValue != null ? formatTimestamp(displayValue, uiSchema) : '';
 	}
 	const Component = get(uiSchema, ['ui:options', 'truncate'])
 		? SingleLineTxt

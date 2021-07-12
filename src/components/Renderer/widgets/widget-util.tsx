@@ -12,12 +12,12 @@ import concat from 'lodash/concat';
 import get from 'lodash/get';
 import pick from 'lodash/pick';
 import { JSONSchema6 } from 'json-schema';
-import { DefinedValue, JSONSchema, UiSchema, Format, Value } from '../types';
+import { JSONSchema, UiSchema, Format, Value } from '../types';
 import { UiOptions } from './ui-options';
 import { formatDistance } from 'date-fns';
 
 export interface WidgetProps<T extends object = object> {
-	value: DefinedValue;
+	value: Value;
 	schema: JSONSchema | undefined;
 	uiSchema?: UiSchema;
 	extraFormats?: Format[];
