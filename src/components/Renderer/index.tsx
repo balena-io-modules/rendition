@@ -57,17 +57,11 @@ export const getWidget = (
 
 	const extraFormat = extraFormats?.find(
 		(extraFormat) =>
-			extraFormat.name === format || extraFormat.name === uiSchemaWidget,
+			(extraFormat.name === format || extraFormat.name === uiSchemaWidget) &&
+			extraFormat.widget?.supportedTypes?.includes(valueType),
 	);
 
-	if (
-		extraFormat?.widget &&
-		extraFormat.widget.supportedTypes?.includes(valueType)
-	) {
-		return extraFormat.widget;
-	}
-
-	return typeWidgets[valueType] ?? typeWidgets.default;
+	return extraFormat?.widget ?? typeWidgets[valueType] ?? typeWidgets.default;
 };
 
 type Validation = {
