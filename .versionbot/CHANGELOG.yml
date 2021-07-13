@@ -1,4 +1,18 @@
 - commits:
+    - subject: Stop actively supporting node versions below v12
+      hash: 1ea47cfca8cd6a1676bdeac90760a4153e3552e3
+      body: |
+        Our dependencies already require node 12 features
+        which causes the tests on master to fail.
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 21.0.0
+  date: 2021-07-13T11:18:01.022Z
+- commits:
     - subject: 'FilterModal: debounce the search for filter title'
       hash: 0fcdcc64cc1a004b242bbcc5b0558509d25d2f8e
       body: ''
