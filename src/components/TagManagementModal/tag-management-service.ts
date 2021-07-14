@@ -10,7 +10,7 @@ import flatMap from 'lodash/flatMap';
 import map from 'lodash/map';
 import groupBy from 'lodash/groupBy';
 
-export const ALL_TAGS_COLUMN_KEY = 'All Tags';
+export const TAGS_COLUMN_KEY = 'Tags';
 
 export const getTagKeyValueComposite = (tagKey: string, value: string) =>
 	`${tagKey}: ${value}`;
