@@ -509,6 +509,22 @@ const jsonDataExamples = {
 			},
 		},
 	},
+	'A ProgressBar widget': {
+		value: 82.63512353,
+		schema: {
+			type: 'number',
+		},
+		uiSchema: {
+			'ui:title': 'Progress',
+			'ui:widget': 'ProgressBar',
+			'ui:options': {
+				flex: 1,
+				alignItems: 'stretch',
+				background: '',
+				tertiary: true,
+			},
+		},
+	},
 	'A HighlightedName widget': {
 		value: 'Jellyfish',
 		schema: {
