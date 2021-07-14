@@ -14,11 +14,22 @@ import { Select } from '../Select';
 import { Txt } from '../Txt';
 import * as SchemaSieve from './SchemaSieve';
 
+export interface FilterFieldOption {
+	field: string;
+	title: string;
+}
+
+export type FilterFieldCompareFn = (
+	a: FilterFieldOption,
+	b: FilterFieldOption,
+) => number;
+
 export interface FilterModalProps {
 	addFilter: (filters: EditModel[]) => void;
 	onClose: () => void;
 	schema: JSONSchema;
 	edit: EditModel[];
+	fieldCompareFn?: FilterFieldCompareFn;
 }
 
 export interface FilterInputProps {
@@ -33,6 +44,10 @@ export interface EditModel {
 	operator: string;
 	value: string | number | { [k: string]: string };
 }
+
+const defaultFilterCompareFn: FilterFieldCompareFn = (a, b) => {
+	return a.title.toLowerCase().localeCompare(b.title.toLowerCase());
+};
 
 const FilterInput = (props: FilterInputProps) => {
 	const model = getDataModel(props.schema);
@@ -71,6 +86,7 @@ export const FilterModal = ({
 	onClose,
 	schema,
 	edit,
+	fieldCompareFn,
 }: FilterModalProps) => {
 	const [filters, setFilters] = useState(edit);
 	const [searchTerm, setSearchTerm] = useState('');
@@ -106,13 +122,11 @@ export const FilterModal = ({
 		setFilters(currentEdit);
 	};
 
-	const fieldOptions = React.useMemo(() => {
+	const fieldOptions: FilterFieldOption[] = React.useMemo(() => {
 		return map(schema.properties, (s: JSONSchema, field) => ({
 			field,
 			title: s.title || field,
-		})).sort((a, b) =>
-			a.title.toLowerCase().localeCompare(b.title.toLowerCase()),
-		);
+		})).sort(fieldCompareFn || defaultFilterCompareFn);
 	}, [schema.properties]);
 
 	const filteredFieldOptions = React.useMemo(() => {
