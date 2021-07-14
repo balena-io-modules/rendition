@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'Filters: Add optional filterFieldCompareFn prop'
+      hash: 9651afa4a9d4d5f223ccf31e11d183585f538816
+      body: >
+        This prop can be used to provide a compare function callback to
+        determine the order in which to display filter field options in the
+        filter modal.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 21.2.0
+  date: 2021-07-14T03:19:41.679Z
+- commits:
     - subject: 'Form: Support using null values in the widgets when it''s valid type'
       hash: 3adfd01b830ef6474e47379f30f21e488721fb10
       body: ''
