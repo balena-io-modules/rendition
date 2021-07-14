@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'Form: Support using null values in the widgets when it''s valid type'
+      hash: 3adfd01b830ef6474e47379f30f21e488721fb10
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 21.1.0
+  date: 2021-07-13T13:32:04.648Z
+- commits:
     - subject: 'Renderer: Support defining many same format extra widgets'
       hash: bd350d8f629541c997c2903d7199cc718e31141b
       body: ''
