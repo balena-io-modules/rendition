@@ -10,6 +10,9 @@ const ButtonWidget: Widget = ({
 	uiSchema,
 	...props
 }: WidgetProps) => {
+	if (value == null) {
+		return null;
+	}
 	return <Button {...props}>{value.toString()}</Button>;
 };
 

@@ -11,7 +11,7 @@ export const JsonTypes = {
 	string: 'string',
 	boolean: 'boolean',
 	null: 'null',
-};
+} as const;
 
 export type DefinedValue =
 	| number

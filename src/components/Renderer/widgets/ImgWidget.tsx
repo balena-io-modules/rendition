@@ -10,6 +10,9 @@ const ImgWidget: Widget = ({
 	uiSchema,
 	...props
 }: WidgetProps) => {
+	if (value == null) {
+		return null;
+	}
 	return <Img {...props} src={value.toString()} />;
 };
 

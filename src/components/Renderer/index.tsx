@@ -1,4 +1,5 @@
 import * as React from 'react';
+import castArray from 'lodash/castArray';
 import forEach from 'lodash/forEach';
 import uniqBy from 'lodash/uniqBy';
 import keys from 'lodash/keys';
@@ -17,7 +18,7 @@ import {
 	WidgetMeta,
 } from './widgets';
 import { transformUiSchema, getBestSchemaMatch } from './widgets/widget-util';
-import { Value, JSONSchema, UiSchema, Format } from './types';
+import { Value, JSONSchema, UiSchema, Format, JsonTypes } from './types';
 import { WidgetContext } from '../../contexts/WidgetContext';
 
 export const getValue = (
@@ -153,7 +154,12 @@ const RendererBase = ({
 	});
 	const processedValue = getValue(value, processedSchema, processedUiSchema);
 
-	if (processedValue == null) {
+	const types =
+		processedSchema?.type != null ? castArray(processedSchema.type) : [];
+	if (
+		processedValue === undefined ||
+		(processedValue === null && !types.includes(JsonTypes.null))
+	) {
 		return null;
 	}
 

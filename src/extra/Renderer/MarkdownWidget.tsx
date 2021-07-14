@@ -12,6 +12,9 @@ export const MarkdownWidget: Widget = ({
 	uiSchema,
 	...props
 }: WidgetProps) => {
+	if (value == null) {
+		return null;
+	}
 	return <Markdown {...props}>{value.toString()}</Markdown>;
 };
 
