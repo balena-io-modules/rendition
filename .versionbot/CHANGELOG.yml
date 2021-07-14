@@ -1,4 +1,16 @@
 - commits:
+    - subject: Rename "All Tags" column to "Tags"
+      hash: 4d7ee547c80c28f1b85d989e56f88d7f2aa2b2d6
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 21.2.2
+  date: 2021-07-14T12:28:00.309Z
+- commits:
     - subject: Add Balena CI config
       hash: 3266049f4f0da4c14e2c9e910faef76461bc462b
       body: |
