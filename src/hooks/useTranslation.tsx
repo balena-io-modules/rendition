@@ -65,7 +65,7 @@ const translationMap = {
 
 	'actions.add_new_device': 'Add new device',
 	'actions.use_from_to_configure_and_download':
-		'Use the form on the left above to configure and download balenaOS for your new device.',
+		'Use the form on the left to configure and download balenaOS for your new device.',
 	'actions_messages.appearance_device_explanation':
 		'Your device should appear in your application dashboard within a few minutes. Have fun!',
 	'actions.download_configuration_file': 'Download configuration file',
