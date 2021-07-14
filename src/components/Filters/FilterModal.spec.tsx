@@ -10,29 +10,33 @@ import { FilterModal } from './FilterModal';
 const sandbox = sinon.createSandbox();
 
 describe('FilterModal', () => {
-	it('lets the user search for filter fields', () => {
-		const addFilter = sandbox.stub();
-		const onClose = sandbox.stub();
-		const edit = [
-			{
-				field: 'name',
-				operator: 'is',
-				value: '',
+	const addFilter = sandbox.stub();
+	const onClose = sandbox.stub();
+	const edit = [
+		{
+			field: 'name',
+			operator: 'is',
+			value: '',
+		},
+	];
+	// A schema with two properties that will be filter targets
+	const schema: JSONSchema = {
+		type: 'object',
+		properties: {
+			name: {
+				type: 'string',
 			},
-		];
-		// A schema with two properties that will be filter targets
-		const schema: JSONSchema = {
-			type: 'object',
-			properties: {
-				name: {
-					type: 'string',
-				},
-				type: {
-					type: 'string',
-				},
+			type: {
+				type: 'string',
 			},
-		};
+		},
+	};
 
+	afterEach(() => {
+		sandbox.reset();
+	});
+
+	it('lets the user search for filter fields', () => {
 		const component = mount(
 			<Provider>
 				<FilterModal
@@ -66,5 +70,34 @@ describe('FilterModal', () => {
 		);
 		expect(options.length).toBe(1);
 		expect(options.at(0).text()).toBe('type');
+	});
+
+	it('allows a custom comparer to be provided', () => {
+		const component = mount(
+			<Provider>
+				<FilterModal
+					schema={schema}
+					addFilter={addFilter}
+					edit={edit}
+					onClose={onClose}
+					fieldCompareFn={(a, b) => {
+						// Reverse the sort order
+						return b.title.toLowerCase().localeCompare(a.title.toLowerCase());
+					}}
+				/>
+			</Provider>,
+		);
+
+		// Open the filter select
+		const fieldSelect = component.find('Select').first();
+		fieldSelect.simulate('click');
+
+		const options = component.find(
+			'#filtermodal__fieldselect__select-drop button[role="menuitem"]',
+		);
+		expect(options.length).toBe(2);
+		// Fields are ordered in reverse-alphabetical order now
+		expect(options.at(0).text()).toBe('type');
+		expect(options.at(1).text()).toBe('name');
 	});
 });

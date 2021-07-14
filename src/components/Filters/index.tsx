@@ -15,7 +15,7 @@ import { Box } from '../Box';
 import { DropDownButtonProps } from '../DropDownButton';
 import { Flex } from '../Flex';
 import { Search } from '../Search';
-import { FilterModal } from './FilterModal';
+import { FilterFieldCompareFn, FilterModal } from './FilterModal';
 import * as SchemaSieve from './SchemaSieve';
 import Summary from './Summary';
 import ViewsMenu from './ViewsMenu';
@@ -336,6 +336,7 @@ class BaseFilters extends React.Component<FiltersProps, FiltersState> {
 							onClose={() => this.setState({ showModal: false })}
 							schema={this.state.schema}
 							edit={this.state.edit}
+							fieldCompareFn={this.props.filterFieldCompareFn}
 						/>
 					)}
 				</Flex>
@@ -452,6 +453,8 @@ export interface FiltersProps extends React.HTMLAttributes<HTMLElement> {
 	dark?: boolean;
 	/** Accept a boolean for each rendition breakpoint. If true remove `Filters` labels */
 	compact?: boolean[];
+	/** An optional callback used to sort filter field options */
+	filterFieldCompareFn?: FilterFieldCompareFn;
 }
 
 /**
