@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix DownloadImageModal instructions step 1 typo
+      hash: 9939be39d2dd8a0bf8eb8beb704d983aaa779654
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 21.2.3
+  date: 2021-07-14T13:35:43.747Z
+- commits:
     - subject: Rename "All Tags" column to "Tags"
       hash: 4d7ee547c80c28f1b85d989e56f88d7f2aa2b2d6
       body: ''
