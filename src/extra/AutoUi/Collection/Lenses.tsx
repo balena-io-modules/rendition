@@ -49,6 +49,7 @@ export const Lenses = <T extends AutoUIBaseResource<T>>({
 			{supportedLenses.map((lensEntry) => {
 				return (
 					<Button
+						key={lensEntry}
 						quartenary
 						outline
 						active={lens === lensEntry}
