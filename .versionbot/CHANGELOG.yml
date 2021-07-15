@@ -1,4 +1,27 @@
 - commits:
+    - subject: Update snapshots
+      hash: aa893f10afbc5667c4333edaebb2ce445bcb56c8
+      body: |
+        No code changes - just dependency updates
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: 'feat: Add new ProgressBar Renderer widget'
+      hash: fe7e9674f64b8f60c5b3f37394031495e22611f6
+      body: |
+        This widget supports numeric values only.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 21.3.0
+  date: 2021-07-15T00:24:43.800Z
+- commits:
     - subject: Fix DownloadImageModal instructions step 1 typo
       hash: 9939be39d2dd8a0bf8eb8beb704d983aaa779654
       body: ''
