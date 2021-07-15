@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add additional custom download image modal actions
+      hash: 6e7f58ae8111e668814a1b72bf4dba418240f250
+      body: |
+        Add additional custom download image modal actions
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 21.3.0
+  date: 2021-07-15T11:43:24.502Z
+- commits:
     - subject: 'Lenses: Add missing key prop'
       hash: 2afa552ddc7290253caff09d0c7952e9e1e73ad8
       body: ''
