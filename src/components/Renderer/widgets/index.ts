@@ -11,6 +11,7 @@ import ImgWidget from './ImgWidget';
 import LinkWidget from './LinkWidget';
 import ListWidget from './ListWidget';
 import ObjectWidget from './ObjectWidget';
+import ProgressBarWidget from './ProgressBarWidget';
 import TagWidget from './TagWidget';
 import TxtWidget from './TxtWidget';
 import { Format } from '../types';
@@ -59,6 +60,7 @@ export const defaultFormats: Format[] = [
 		LinkWidget,
 		ListWidget,
 		ObjectWidget,
+		ProgressBarWidget,
 		TagWidget,
 		TxtWidget,
 	].map((widget) => ({
