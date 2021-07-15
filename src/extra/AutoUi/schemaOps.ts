@@ -62,7 +62,7 @@ export interface AutoUIContext<T> {
 	};
 	cardRenderer?: (resource: T) => React.ReactNode;
 	actions?: Array<AutoUIAction<T>>;
-	customSort?: Dictionary<(a: T, b: T) => void>;
+	customSort?: Dictionary<(a: T, b: T) => number>;
 }
 
 // The implementation lacks handling of nested schemas and some edge cases, but is enough for now.

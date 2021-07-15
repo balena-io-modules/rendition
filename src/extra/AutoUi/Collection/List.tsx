@@ -1,15 +1,17 @@
 import React from 'react';
 import { JSONSchema7 as JSONSchema } from 'json-schema';
 import { CollectionLenses } from './Lenses';
-import { AutoUIContext, AutoUIBaseResource, Priorities } from '../schemaOps';
+import { Dictionary } from '../../../common-types';
 import { Format, UiSchema, Value } from '../../../components/Renderer/types';
 import { DataGrid } from '../../../components/DataGrid';
 import { transformUiSchema } from '../../../components/Renderer/widgets/widget-util';
 import { getValue, getWidget } from '../../../components/Renderer';
-import { Table } from '../../../components/Table';
+import { Table, TableColumn } from '../../../components/Table';
+import type { TableSortFunction } from '../../../components/Table/TableRow';
 import { useHistory } from '../../../hooks/useHistory';
+import { AutoUIContext, AutoUIBaseResource, Priorities } from '../schemaOps';
 
-const formatSorters: { [key: string]: (a: any, b: any) => number } = {};
+const formatSorters: Dictionary<TableSortFunction<any>> = {};
 
 const getSortingFunction = (schemaKey: string, schemaValue: JSONSchema) => {
 	if (formatSorters[schemaValue.format ?? '']) {
@@ -55,11 +57,14 @@ const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 	customSort: AutoUIContext<T>['customSort'];
 	priorities?: Priorities<T>;
 	formats?: Format[];
-}) => {
+}): Array<TableColumn<T>> => {
 	return (
 		Object.entries(schema.properties ?? {})
 			// The tables treats tags differently, handle it better
-			.filter(([key]) => key !== tagField && key !== idField)
+			.filter(
+				(entry): entry is [keyof T, typeof entry[1]] =>
+					entry[0] !== tagField && entry[0] !== idField,
+			)
 			.map(([key, val]) => {
 				if (typeof val !== 'object') {
 					return;
@@ -87,7 +92,9 @@ const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 						),
 				};
 			})
-			.filter((columnDef) => !!columnDef)
+			.filter(
+				(columnDef): columnDef is NonNullable<typeof columnDef> => !!columnDef,
+			)
 	);
 };
 
@@ -116,7 +123,7 @@ export const List = <T extends AutoUIBaseResource<T>>({
 }: ListProps<T>) => {
 	// const listKey = autouiContext.baseUrl.split('/').join('-');
 	const history = useHistory();
-	const columns: any = React.useMemo(
+	const columns = React.useMemo(
 		() =>
 			getColumnsFromSchema<T>({
 				schema,
