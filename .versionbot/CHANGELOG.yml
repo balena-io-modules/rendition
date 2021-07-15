@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'AutoUI: Improve the typings'
+      hash: 0a8c6c9c00b58926ecaf570892917ff8418d2b72
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 21.2.4
+  date: 2021-07-15T10:45:44.530Z
+- commits:
     - subject: Fix DownloadImageModal instructions step 1 typo
       hash: 9939be39d2dd8a0bf8eb8beb704d983aaa779654
       body: ''
