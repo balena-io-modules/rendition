@@ -1,4 +1,27 @@
 - commits:
+    - subject: Update snapshots
+      hash: f42ede07fe7ca441afa7ce8825c240472886c84e
+      body: |
+        No code changes - just dependency updates
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+    - subject: 'feat: Add new ProgressBar Renderer widget'
+      hash: 0aef23e961e09cf95c6fe984ada1d1d73483e372
+      body: |
+        This widget supports numeric values only.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+  version: 21.4.0
+  date: 2021-07-16T01:30:00.020Z
+- commits:
     - subject: Add additional custom download image modal actions
       hash: 6e7f58ae8111e668814a1b72bf4dba418240f250
       body: |
