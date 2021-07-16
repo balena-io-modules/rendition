@@ -10,6 +10,7 @@ import { Table, TableColumn } from '../../../components/Table';
 import type { TableSortFunction } from '../../../components/Table/TableRow';
 import { useHistory } from '../../../hooks/useHistory';
 import { AutoUIContext, AutoUIBaseResource, Priorities } from '../schemaOps';
+import { Txt } from '../../../components/Txt';
 
 const formatSorters: Dictionary<TableSortFunction<any>> = {};
 
@@ -88,7 +89,9 @@ const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 								extraContext={entry}
 							/>
 						) : (
-							fieldVal
+							<Txt maxWidth="300px" truncate title={fieldVal}>
+								{fieldVal}
+							</Txt>
 						),
 				};
 			})
