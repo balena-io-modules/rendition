@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix collection cell maxWidth
+      hash: c1f634d0698c3d750678fb3810aa4ea00e3259aa
+      body: |
+        Fix collection cell maxWidth
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 21.4.1
+  date: 2021-07-16T16:40:04.995Z
+- commits:
     - subject: Update snapshots
       hash: f42ede07fe7ca441afa7ce8825c240472886c84e
       body: |
