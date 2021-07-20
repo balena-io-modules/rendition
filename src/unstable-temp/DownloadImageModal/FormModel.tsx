@@ -105,7 +105,7 @@ const FormControl = ({ onModelChange, options, model }: FormControlProps) => {
 								name={options.name}
 								value={model[options.name] as string}
 							/>
-							<Box mr={4} mb={3}>
+							<Box mr={4}>
 								<RadioButtonGroup
 									options={(options.choices as string[]).map((choice) => ({
 										disabled: false,
@@ -217,7 +217,7 @@ interface FormGroupProps extends Omit<FormFieldsProps, 'options'> {
 const FormGroup = ({ onModelChange, model, options }: FormGroupProps) => {
 	return (
 		<>
-			<Divider type="dashed" my={3} />
+			<Divider type="dashed" />
 			<Collapsible
 				collapsible={!!options.isCollapsible}
 				initiallyCollapsed={options.collapsed}

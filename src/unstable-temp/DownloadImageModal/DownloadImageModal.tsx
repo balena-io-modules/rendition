@@ -259,7 +259,7 @@ export const UnstableTempDownloadImageModal = ({
 			done={noop}
 		>
 			<Flex flexDirection={['column', 'column', 'column', 'row']}>
-				<Box flex={1} mr={[0, 0, 0, 3]}>
+				<Box flex={2} mr={[0, 0, 0, 3]}>
 					<Spinner
 						show={isDownloadingConfig}
 						label={t('loading.generating_configuration_file')}
