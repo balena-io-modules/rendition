@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add disabled tooltip to DownloadImageModal ("Add device" modal)
+      hash: 389be1a7ed5d68936a2bacd3ff03d637ce8937bd
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 21.4.1
+  date: 2021-07-20T14:56:09.349Z
+- commits:
     - subject: Update snapshots
       hash: f42ede07fe7ca441afa7ce8825c240472886c84e
       body: |
