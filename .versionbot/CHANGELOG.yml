@@ -1,4 +1,16 @@
 - commits:
+    - subject: Don't show "Select OS Type" if ESR is disabled
+      hash: 52e87e89e0301f60a6c10db0ed71ec23daa1f100
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 21.4.2
+  date: 2021-07-20T19:25:39.792Z
+- commits:
     - subject: Add disabled tooltip to DownloadImageModal ("Add device" modal)
       hash: 389be1a7ed5d68936a2bacd3ff03d637ce8937bd
       body: ''
