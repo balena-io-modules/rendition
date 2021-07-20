@@ -33,6 +33,10 @@ const translationMap = {
 		'A tag name group exists on {{count}} other {{itemType}} and will be overwritten.',
 	'warnings.tag_name_group_exists_and_will_be_overwritten_plural':
 		'A tag name group exists on {{count}} other {{itemType}}s and will be overwritten.',
+	'warnings.fill_wifi_credentials':
+		'Please fill in the wifi credentials or select "Ethernet only" in the "Network Connection" section',
+	'warnings.image_deployed_to_docker':
+		'This image is deployed to docker so you can only download its config',
 
 	'errors.no_tags_for_selected_itemtype':
 		'The selected {{itemType}} has no tags',

@@ -211,6 +211,11 @@ export const ImageForm = ({
 						primary
 						type="submit"
 						disabled={hasDockerImageDownload}
+						tooltip={
+							hasDockerImageDownload
+								? t('warnings.image_deployed_to_docker')
+								: ''
+						}
 						onClick={() => setDownloadConfigOnly(false)}
 					>
 						<Txt bold={!model.downloadConfigOnly}>
@@ -227,6 +232,11 @@ export const ImageForm = ({
 						className="e2e-download-image-submit"
 						type={!model.downloadConfigOnly ? 'submit' : 'button'}
 						disabled={isDownloadDisabled(model, rawVersion)}
+						tooltip={
+							isDownloadDisabled(model, rawVersion)
+								? t('warnings.fill_wifi_credentials')
+								: ''
+						}
 						onClick={async () => {
 							if (model.downloadConfigOnly && downloadConfig) {
 								setIsDownloadingConfig(true);
@@ -247,6 +257,11 @@ export const ImageForm = ({
 						<Button
 							plain
 							disabled={hasDockerImageDownload}
+							tooltip={
+								hasDockerImageDownload
+									? t('warnings.image_deployed_to_docker')
+									: ''
+							}
 							onClick={() => setDownloadConfigOnly(false)}
 						>
 							<Txt bold={!model.downloadConfigOnly}>
