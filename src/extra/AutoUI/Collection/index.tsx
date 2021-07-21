@@ -1,13 +1,13 @@
-import React from 'react';
-import { JSONSchema7 as JSONSchema } from 'json-schema';
-import isEqual from 'lodash/isEqual';
-import size from 'lodash/size';
-import intersectionBy from 'lodash/intersectionBy';
-import { Tags } from './Tags';
-import { Create } from './Actions/Create';
-import { Filters } from './Filters';
-import { Update } from './Actions/Update';
-import { LensRenderer } from './LensRenderer';
+import React from "react";
+import { JSONSchema7 as JSONSchema } from "json-schema";
+import isEqual from "lodash/isEqual";
+import size from "lodash/size";
+import intersectionBy from "lodash/intersectionBy";
+import { Tags } from "./Tags";
+import { Create } from "./Actions/Create";
+import { Filters } from "./Filters";
+import { Update } from "./Actions/Update";
+import { LensRenderer } from "./LensRenderer";
 
 import {
 	AutoUIAction,
@@ -17,32 +17,32 @@ import {
 	getFieldForFormat,
 	AutoUIRawModel,
 	autoUIJsonSchemaPick,
-} from '../schemaOps';
-import styled from 'styled-components';
-import { Flex } from '../../../components/Flex';
-import { ResourceTagModelService } from '../../../components/TagManagementModal/tag-management-service';
-import { notifications } from '../../../components/Notifications';
-import { Spinner } from '../../../components/Spinner';
-import { Box } from '../../../components/Box';
-import { filter } from '../../../components/Filters/SchemaSieve';
-import { Format } from '../../../components/Renderer/types';
+} from "../schemaOps";
+import styled from "styled-components";
+import { Flex } from "../../../components/Flex";
+import { ResourceTagModelService } from "../../../components/TagManagementModal/tag-management-service";
+import { notifications } from "../../../components/Notifications";
+import { Spinner } from "../../../components/Spinner";
+import { Box } from "../../../components/Box";
+import { filter } from "../../../components/Filters/SchemaSieve";
+import { Format } from "../../../components/Renderer/types";
 import {
 	ResourceTagSubmitInfo,
 	SubmitInfo,
-} from '../../../components/TagManagementModal/models';
+} from "../../../components/TagManagementModal/models";
 import {
 	autoUIRunTransformers,
 	autoUIGetModelForCollection,
 	autoUIDefaultPermissions,
 	autoUIAddToSchema,
-} from '../models/helpers';
-import { autoUIGetDisabledReason } from '../utils';
-import { NoRecordsFoundArrow } from './NoRecordsFoundArrow';
-import { Dictionary } from '../../../common-types';
-import { useTranslation } from '../../../hooks/useTranslation';
-import { LensSelection } from '../Lenses/LensSelection';
-import { getLenses, LensTemplate } from '../Lenses';
-import { getFromLocalStorage, setToLocalStorage } from '../../../utils';
+} from "../models/helpers";
+import { autoUIGetDisabledReason } from "../utils";
+import { NoRecordsFoundArrow } from "./NoRecordsFoundArrow";
+import { Dictionary } from "../../../common-types";
+import { useTranslation } from "../../../hooks/useTranslation";
+import { LensSelection } from "../Lenses/LensSelection";
+import { getLenses, LensTemplate } from "../Lenses";
+import { getFromLocalStorage, setToLocalStorage } from "../../../utils";
 
 // Assumptions that I think we can easily make:
 // We only handle a single-level schema. If a schema is nested, it is handled by the `format` component internally.
@@ -76,13 +76,13 @@ const HeaderGrid = styled(Flex)`
 
 const getSelectedItems = <T extends AutoUIBaseResource<T>>(
 	newItems: T[],
-	selectedItems: T[],
+	selectedItems: T[]
 ) => {
 	if (!size(selectedItems)) {
 		return selectedItems;
 	}
 	// update the selections
-	selectedItems = intersectionBy(newItems, selectedItems, 'id');
+	selectedItems = intersectionBy(newItems, selectedItems, "id");
 	return selectedItems;
 };
 
@@ -115,7 +115,7 @@ export interface AutoUICollectionProps<T> {
 	/** Event emitted on entity click */
 	onEntityClick?: (
 		entry: T,
-		event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+		event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
 	) => void;
 	/** All the lenses available for this AutoUI component. Any default lenses will automatically be added to this array. */
 	customLenses?: LensTemplate[];
@@ -201,6 +201,7 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 	}, [modelRaw]);
 	const [filters, setFilters] = React.useState<JSONSchema[]>([]);
 	const [selected, setSelected] = React.useState<T[]>([]);
+	const [filteredSelected, setFilteredSelected] = React.useState<T[]>([]);
 	const [isBusyMessage, setIsBusyMessage] = React.useState<
 		string | undefined
 	>();
@@ -211,7 +212,7 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 
 	const lenses = React.useMemo(
 		() => getLenses(data, lensContext, customLenses),
-		[data, customLenses],
+		[data, customLenses]
 	);
 
 	const [lens, setLens] = React.useState<LensTemplate>(lenses[0]);
@@ -232,26 +233,26 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 		() =>
 			({
 				resource: model.resource,
-				idField: 'id',
-				nameField: model.priorities?.primary[0] ?? 'id',
-				tagField: getFieldForFormat(model.schema, 'tag'),
+				idField: "id",
+				nameField: model.priorities?.primary[0] ?? "id",
+				tagField: getFieldForFormat(model.schema, "tag"),
 				getBaseUrl,
 				onEntityClick,
 				actions,
 				customSort,
 				sdk,
 			} as AutoUIContext<T>),
-		[model, actions, sdk, onEntityClick],
+		[model, actions, sdk, onEntityClick]
 	);
 
 	const filtered = React.useMemo(
 		() => (data ? filter(filters, data) : []) as T[],
-		[data, filters],
+		[data, filters]
 	);
 
 	React.useEffect(() => {
-		setSelected((oldSelected) => getSelectedItems(oldSelected, filtered));
-	}, [filtered]);
+		setFilteredSelected(getSelectedItems(selected, filtered));
+	}, [selected, filtered]);
 
 	const changeTags = React.useCallback(
 		async (tags: SubmitInfo<ResourceTagSubmitInfo, ResourceTagSubmitInfo>) => {
@@ -261,31 +262,30 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 
 			setIsBusyMessage(t(`loading.updating_release_tags`));
 			notifications.addNotification({
-				id: 'change-tags-loading',
+				id: "change-tags-loading",
 				content: t(`loading.updating_release_tags`),
 			});
 
 			try {
 				await sdk.tags.submit(tags);
-				setSelected([]);
 				notifications.addNotification({
-					id: 'change-tags',
-					content: 'Tags updated successfully',
-					type: 'success',
+					id: "change-tags",
+					content: "Tags updated successfully",
+					type: "success",
 				});
 				refresh?.();
 			} catch (err) {
 				notifications.addNotification({
-					id: 'change-tags',
+					id: "change-tags",
 					content: err.message,
-					type: 'danger',
+					type: "danger",
 				});
 			} finally {
-				notifications.removeNotification('change-tags-loading');
+				notifications.removeNotification("change-tags-loading");
 				setIsBusyMessage(undefined);
 			}
 		},
-		[sdk?.tags, refresh],
+		[sdk?.tags, refresh, selected, filteredSelected]
 	);
 
 	const onActionTriggered = React.useCallback((actionData: ActionData<T>) => {
@@ -297,20 +297,12 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 		}
 	}, []);
 
-	const onActionDone = React.useCallback((isSuccessful: boolean) => {
-		if (isSuccessful) {
-			setSelected([]);
-		}
-
-		setActionData(undefined);
-	}, []);
-
 	return (
 		<Flex flexDirection="column" mt={2}>
 			<Spinner
 				label={
 					isBusyMessage ??
-					t('loading.resource', {
+					t("loading.resource", {
 						resource: t(`resource.${model.resource}_plural`).toLowerCase(),
 					})
 				}
@@ -326,7 +318,7 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 						/>
 						<Box
 							order={[-1, -1, -1, 0]}
-							flex={['1 0 100%', '1 0 100%', '1 0 100%', 'auto']}
+							flex={["1 0 100%", "1 0 100%", "1 0 100%", "auto"]}
 						>
 							{showFilters && (
 								<Filters
@@ -341,14 +333,14 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 							{showActions && !!sdk?.tags && (
 								<Tags
 									autouiContext={autouiContext}
-									selected={selected}
+									selected={filteredSelected}
 									changeTags={changeTags}
 								/>
 							)}
 							{showActions && (
 								<Update
 									model={model}
-									selected={selected}
+									selected={filteredSelected}
 									autouiContext={autouiContext}
 									hasOngoingAction={false}
 									onActionTriggered={onActionTriggered}
@@ -362,7 +354,7 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 										setLens(lens);
 										setToLocalStorage(
 											`${model.resource}__view_lens`,
-											lens.slug,
+											lens.slug
 										);
 									}}
 								/>
@@ -371,7 +363,7 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 					</HeaderGrid>
 
 					<Filters
-						renderMode={'summary'}
+						renderMode={"summary"}
 						schema={model.schema}
 						filters={filters}
 						autouiContext={autouiContext}
@@ -385,7 +377,7 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 							resource: t(`resource.item_plural`).toLowerCase(),
 						})}
 						<br />
-						{t('questions.how_about_adding_one')}
+						{t("questions.how_about_adding_one")}
 					</NoRecordsFoundArrow>
 				)}
 
@@ -407,7 +399,7 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 					actionData.action.renderer({
 						schema: actionData.schema,
 						affectedEntries: actionData.affectedEntries,
-						onDone: onActionDone,
+						onDone: () => setActionData(undefined),
 					})}
 			</Spinner>
 		</Flex>

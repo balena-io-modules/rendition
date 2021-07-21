@@ -10,7 +10,7 @@ describe('Pager component', () => {
 		const component = mount(
 			<Provider>
 				<Pager
-					totalItems={436}
+					totalFilteredItems={436}
 					itemsPerPage={50}
 					page={0}
 					nextPage={noop}
@@ -31,7 +31,7 @@ describe('Pager component', () => {
 		const component = mount(
 			<Provider>
 				<Pager
-					totalItems={100}
+					totalFilteredItems={100}
 					itemsPerPage={50}
 					page={1}
 					nextPage={callback}

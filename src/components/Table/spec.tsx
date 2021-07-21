@@ -1025,7 +1025,7 @@ describe('control selected rows', () => {
 
 		const table: any = component.find(TableBase).instance();
 		expect(table.state.checkedItems.length).toEqual(2);
-		expect(table.state.allChecked).toEqual(false);
+		expect(table.state.allChecked).toEqual('some');
 	});
 });
 
@@ -1046,7 +1046,7 @@ describe('manually select rows', () => {
 
 		table.setRowSelection(PokeDex.slice(0, 2));
 		expect(table.state.checkedItems.length).toEqual(2);
-		expect(table.state.allChecked).toEqual(false);
+		expect(table.state.allChecked).toEqual('some');
 	});
 
 	it('should select all rows', () => {
@@ -1065,7 +1065,7 @@ describe('manually select rows', () => {
 
 		table.setRowSelection(PokeDex);
 		expect(table.state.checkedItems.length).toEqual(PokeDex.length);
-		expect(table.state.allChecked).toEqual(true);
+		expect(table.state.allChecked).toEqual('all');
 	});
 
 	it('should clear all rows', () => {
@@ -1084,11 +1084,11 @@ describe('manually select rows', () => {
 
 		table.setRowSelection(PokeDex);
 		expect(table.state.checkedItems.length).toEqual(PokeDex.length);
-		expect(table.state.allChecked).toEqual(true);
+		expect(table.state.allChecked).toEqual('all');
 
 		table.setRowSelection([]);
 		expect(table.state.checkedItems.length).toEqual(0);
-		expect(table.state.allChecked).toEqual(false);
+		expect(table.state.allChecked).toEqual('none');
 	});
 
 	it('should clear selection if data is set to null after instantiation', () => {
@@ -1113,6 +1113,7 @@ describe('manually select rows', () => {
 		table.setRowSelection([]);
 
 		expect(table.state.checkedItems.length).toEqual(0);
+		expect(table.state.allChecked).toEqual('none');
 	});
 });
 
