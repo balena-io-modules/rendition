@@ -361,6 +361,15 @@ export const Edit = (props: DataTypeEditProps) => {
 	const valueLabel =
 		(schema.properties![schemaValue] as JSONSchema).title || 'Value';
 
+	React.useEffect(() => {
+		onUpdate(
+			Object.assign(value, {
+				[schemaKey]: '',
+				[schemaValue]: '',
+			}),
+		);
+	}, [operator]);
+
 	// Convert strings to objects
 	if (typeof value === 'string') {
 		const p: { [k: string]: string } = {};
