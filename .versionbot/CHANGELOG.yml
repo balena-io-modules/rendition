@@ -1,4 +1,17 @@
 - commits:
+    - subject: Show checkboxes in autoUICollection with tags action
+      hash: eaf88ef4fa7b62b4c41f15449b105d34e5d6a92a
+      body: |
+        Show checkboxes in autoUICollection with tags action
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 21.4.4
+  date: 2021-07-26T12:36:08.804Z
+- commits:
     - subject: Fix data types object with key value
       hash: 67b4e101d9f04e6e93a029324282c3d4b1cbb8b5
       body: |
