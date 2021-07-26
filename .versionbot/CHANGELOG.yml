@@ -1,4 +1,18 @@
 - commits:
+    - subject: >-
+        Add `docsIcon` property to DownloadImageModal so it can use the docs
+        icon
+      hash: a01991532b8ec6c27c15a2a97c715f660868ad40
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 21.4.6
+  date: 2021-07-26T17:37:33.625Z
+- commits:
     - subject: Fix search filter on property select
       hash: a22e839a6ffa043c2351dae5b58082c98963ba32
       body: |
