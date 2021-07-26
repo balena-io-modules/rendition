@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix data types object with key value
+      hash: 67b4e101d9f04e6e93a029324282c3d4b1cbb8b5
+      body: |
+        Fix data types object with key value
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 21.4.3
+  date: 2021-07-23T15:48:04.452Z
+- commits:
     - subject: Don't show "Select OS Type" if ESR is disabled
       hash: 52e87e89e0301f60a6c10db0ed71ec23daa1f100
       body: ''
