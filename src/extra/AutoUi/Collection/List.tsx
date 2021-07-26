@@ -2,7 +2,12 @@ import React from 'react';
 import { JSONSchema7 as JSONSchema } from 'json-schema';
 import { CollectionLenses } from './Lenses';
 import { Dictionary } from '../../../common-types';
-import { Format, UiSchema, Value } from '../../../components/Renderer/types';
+import {
+	Format,
+	UiSchema,
+	Value,
+	JsonTypes,
+} from '../../../components/Renderer/types';
 import { DataGrid } from '../../../components/DataGrid';
 import { transformUiSchema } from '../../../components/Renderer/widgets/widget-util';
 import { getValue, getWidget } from '../../../components/Renderer';
@@ -10,6 +15,7 @@ import { Table, TableColumn } from '../../../components/Table';
 import type { TableSortFunction } from '../../../components/Table/TableRow';
 import { useHistory } from '../../../hooks/useHistory';
 import { AutoUIContext, AutoUIBaseResource, Priorities } from '../schemaOps';
+import castArray from 'lodash/castArray';
 
 const formatSorters: Dictionary<TableSortFunction<any>> = {};
 
@@ -224,8 +230,12 @@ export const CustomWidget = ({
 	});
 
 	const processedValue = getValue(value, schema, processedUiSchema);
+	const types = schema?.type != null ? castArray(schema.type) : [];
 
-	if (processedValue === undefined || processedValue === null) {
+	if (
+		processedValue === undefined ||
+		(processedValue === null && !types.includes(JsonTypes.null))
+	) {
 		return null;
 	}
 
