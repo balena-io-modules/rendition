@@ -98,6 +98,7 @@ export const FilterModal = ({
 			i === index ? SchemaSieve.getCleanEditModel(schema, field) : filter,
 		);
 		setFilters(currentEdit);
+		setSearchTerm('');
 	};
 
 	const setEditOperator = (operator: string, index: number) => {
