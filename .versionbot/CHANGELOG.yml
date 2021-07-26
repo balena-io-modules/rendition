@@ -1,4 +1,17 @@
 - commits:
+    - subject: Allow null values on autoUIColletion widget
+      hash: 30cb05db3931478aaa3218420179a89350da36ce
+      body: |
+        Allow null values on autoUIColletion widget
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 21.4.7
+  date: 2021-07-26T18:45:13.905Z
+- commits:
     - subject: >-
         Add `docsIcon` property to DownloadImageModal so it can use the docs
         icon
