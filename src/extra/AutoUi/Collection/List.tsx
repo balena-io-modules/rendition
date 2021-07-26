@@ -174,7 +174,7 @@ export const List = <T extends AutoUIBaseResource<T>>({
 
 	const hasUpdateActions =
 		!!autouiContext.actions?.filter((action) => action.type !== 'create')
-			?.length || !!autouiContext.tagField;
+			?.length || !!autouiContext.sdk?.tags;
 
 	return (
 		<>

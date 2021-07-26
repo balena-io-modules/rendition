@@ -220,8 +220,9 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 				actions,
 				cardRenderer,
 				customSort,
+				sdk,
 			} as AutoUIContext<T>),
-		[model, actions, cardRenderer],
+		[model, actions, cardRenderer, sdk],
 	);
 
 	const filtered = React.useMemo(
@@ -318,7 +319,7 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 							)}
 						</Box>
 						<HeaderGrid>
-							{showActions && (
+							{showActions && !!sdk?.tags && (
 								<Tags
 									autouiContext={autouiContext}
 									selected={selected}
