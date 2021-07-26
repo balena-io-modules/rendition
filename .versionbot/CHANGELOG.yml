@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix search filter on property select
+      hash: a22e839a6ffa043c2351dae5b58082c98963ba32
+      body: |
+        Fix search filter on property select
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 21.4.5
+  date: 2021-07-26T14:02:34.387Z
+- commits:
     - subject: Show checkboxes in autoUICollection with tags action
       hash: eaf88ef4fa7b62b4c41f15449b105d34e5d6a92a
       body: |
