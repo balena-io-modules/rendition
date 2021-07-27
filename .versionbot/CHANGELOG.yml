@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add onRowClick dependency to AutoUIColleciton autouiContext useMemo
+      hash: 381f293b1e1226dc8961e818c56e16ca6b9f42a7
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 21.4.9
+  date: 2021-07-27T13:14:59.643Z
+- commits:
     - subject: Fix List checks for tags action and checkboxes
       hash: bfb2bd0fec30fad679f78e78ab54fbbf64a046a2
       body: |
