@@ -222,7 +222,7 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 				customSort,
 				sdk,
 			} as AutoUIContext<T>),
-		[model, actions, cardRenderer, sdk],
+		[model, actions, cardRenderer, sdk, onRowClick],
 	);
 
 	const filtered = React.useMemo(
