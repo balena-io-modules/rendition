@@ -1,6 +1,7 @@
 import { JSONSchema7 as JSONSchema } from 'json-schema';
 import $pick from 'lodash/pick';
 import { Dictionary } from '../../common-types';
+import { ResourceTagModelService } from '~/components/TagManagementModal/tag-management-service';
 
 export interface AutoUIBaseResource<T> {
 	id: number;
@@ -63,6 +64,9 @@ export interface AutoUIContext<T> {
 	cardRenderer?: (resource: T) => React.ReactNode;
 	actions?: Array<AutoUIAction<T>>;
 	customSort?: Dictionary<(a: T, b: T) => number>;
+	sdk?: {
+		tags?: ResourceTagModelService;
+	};
 }
 
 // The implementation lacks handling of nested schemas and some edge cases, but is enough for now.
