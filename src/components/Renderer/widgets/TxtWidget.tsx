@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { Txt } from '../../Txt';
 import { JsonTypes, Value, UiSchema } from '../types';
 import { UiOption } from './ui-options';
-import { Widget, WidgetProps, formatTimestamp } from './widget-util';
+import { widgetFactory, formatTimestamp } from './widget-util';
 
 const SingleLineTxt = styled(Txt)`
 	white-space: nowrap;
@@ -28,14 +28,54 @@ const getArrayValue = (value: Value[], uiSchema?: UiSchema): string => {
 
 const DATE_TIME_FORMATS = ['date-time', 'date', 'time'];
 
-const TxtWidget: Widget = ({
-	value,
-	schema,
-	uiSchema,
-	...props
-}: WidgetProps) => {
+const TxtWidget = widgetFactory(
+	'Txt',
+	{
+		dtFormat: UiOption.string,
+		bold: UiOption.boolean,
+		italic: UiOption.boolean,
+		monospace: UiOption.boolean,
+		caps: UiOption.boolean,
+		align: {
+			...UiOption.string,
+			enum: [
+				'left',
+				'right',
+				'center',
+				'justify',
+				'justify-all',
+				'start',
+				'end',
+				'match-parent',
+				'inherit',
+				'initial',
+				'unset',
+			],
+		},
+		whitespace: {
+			...UiOption.string,
+			enum: [
+				'normal',
+				'nowrap',
+				'pre',
+				'pre-line',
+				'pre-wrap',
+				'initial',
+				'inherit',
+			],
+		},
+	},
+	[
+		JsonTypes.string,
+		JsonTypes.null,
+		JsonTypes.integer,
+		JsonTypes.number,
+		JsonTypes.boolean,
+		JsonTypes.array,
+	],
+)(({ value, schema, uiSchema, ...props }) => {
 	let displayValue = isArray(value)
-		? getArrayValue(value, uiSchema)
+		? getArrayValue(value as Array<Exclude<typeof value, any[]>>, uiSchema)
 		: value?.toString();
 	if (DATE_TIME_FORMATS.includes(schema?.format ?? '')) {
 		displayValue =
@@ -45,53 +85,6 @@ const TxtWidget: Widget = ({
 		? SingleLineTxt
 		: Txt;
 	return <Component {...props}>{displayValue || ''}</Component>;
-};
-
-TxtWidget.displayName = 'Txt';
-
-TxtWidget.uiOptions = {
-	dtFormat: UiOption.string,
-	bold: UiOption.boolean,
-	italic: UiOption.boolean,
-	monospace: UiOption.boolean,
-	caps: UiOption.boolean,
-	align: {
-		...UiOption.string,
-		enum: [
-			'left',
-			'right',
-			'center',
-			'justify',
-			'justify-all',
-			'start',
-			'end',
-			'match-parent',
-			'inherit',
-			'initial',
-			'unset',
-		],
-	},
-	whitespace: {
-		...UiOption.string,
-		enum: [
-			'normal',
-			'nowrap',
-			'pre',
-			'pre-line',
-			'pre-wrap',
-			'initial',
-			'inherit',
-		],
-	},
-};
-
-TxtWidget.supportedTypes = [
-	JsonTypes.string,
-	JsonTypes.null,
-	JsonTypes.integer,
-	JsonTypes.number,
-	JsonTypes.boolean,
-	JsonTypes.array,
-];
+});
 
 export default TxtWidget;

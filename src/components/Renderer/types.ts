@@ -13,6 +13,16 @@ export const JsonTypes = {
 	null: 'null',
 } as const;
 
+export interface JsonTypesTypeMap {
+	array: unknown[];
+	object: {};
+	number: number;
+	integer: number;
+	string: string;
+	boolean: boolean;
+	null: null;
+}
+
 export type DefinedValue =
 	| number
 	| string

@@ -2,16 +2,18 @@ import * as React from 'react';
 import get from 'lodash/get';
 import { HighlightedName } from '../../HighlightedName';
 import { UiOption } from './ui-options';
-import { Widget, WidgetProps } from './widget-util';
+import { widgetFactory } from './widget-util';
 import { JsonTypes } from '../types';
 import { generateColorFromString, isLight } from '../../../utils/colorUtils';
 
-const HighlightedNameWidget: Widget = ({
-	value,
-	schema,
-	uiSchema,
-	...props
-}: WidgetProps) => {
+const HighlightedNameWidget = widgetFactory(
+	'HighlightedName',
+	{
+		bg: UiOption.string,
+		color: UiOption.string,
+	},
+	[JsonTypes.string, JsonTypes.integer, JsonTypes.number, JsonTypes.boolean],
+)(({ value, schema, uiSchema, ...props }) => {
 	if (value == null) {
 		return null;
 	}
@@ -22,20 +24,6 @@ const HighlightedNameWidget: Widget = ({
 			{value.toString()}
 		</HighlightedName>
 	);
-};
-
-HighlightedNameWidget.displayName = 'HighlightedName';
-
-HighlightedNameWidget.uiOptions = {
-	bg: UiOption.string,
-	color: UiOption.string,
-};
-
-HighlightedNameWidget.supportedTypes = [
-	JsonTypes.string,
-	JsonTypes.integer,
-	JsonTypes.number,
-	JsonTypes.boolean,
-];
+});
 
 export default HighlightedNameWidget;

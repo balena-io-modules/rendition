@@ -1,49 +1,54 @@
 import * as React from 'react';
 import map from 'lodash/map';
 import { List } from '../../List';
-import { Widget, WidgetProps, getArrayItems } from './widget-util';
+import { widgetFactory, getArrayItems } from './widget-util';
 import { Renderer } from '../index';
 import { JsonTypes } from '../types';
 import { UiOption } from './ui-options';
 
-interface ListWidgetProps extends WidgetProps {
+interface ExtraListWidgetProps {
 	truncate: number;
 }
 
-const ListWidget: Widget = ({
-	value,
-	schema,
-	uiSchema,
-	truncate,
-	extraFormats,
-	extraContext,
-	...props
-}: ListWidgetProps) => {
-	const items = getArrayItems({
+const ListWidget = widgetFactory(
+	'List',
+	{
+		truncate: UiOption.integer,
+		ordered: UiOption.boolean,
+	},
+	[JsonTypes.array],
+)<object, ExtraListWidgetProps>(
+	({
 		value,
 		schema,
 		uiSchema,
-		extraContext,
+		truncate,
 		extraFormats,
-	});
-	return (
-		<List {...props}>
-			{map(items, (item: WidgetProps, index: number) => {
-				return (
-					<Renderer key={index} nested {...item} extraFormats={extraFormats} />
-				);
-			})}
-		</List>
-	);
-};
-
-ListWidget.displayName = 'List';
-
-ListWidget.uiOptions = {
-	truncate: UiOption.integer,
-	ordered: UiOption.boolean,
-};
-
-ListWidget.supportedTypes = [JsonTypes.array];
+		extraContext,
+		...props
+	}) => {
+		const items = getArrayItems({
+			value,
+			schema,
+			uiSchema,
+			extraContext,
+			extraFormats,
+		});
+		return (
+			<List {...props}>
+				{map(items, (item, index) => {
+					return (
+						<Renderer
+							key={index}
+							nested
+							{...item}
+							extraFormats={extraFormats}
+						/>
+					);
+				})}
+			</List>
+		);
+	},
+);
 
 export default ListWidget;
