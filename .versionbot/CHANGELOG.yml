@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix List checks for tags action and checkboxes
+      hash: bfb2bd0fec30fad679f78e78ab54fbbf64a046a2
+      body: |
+        Fix List checks for tags action and checkboxes
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 21.4.8
+  date: 2021-07-27T09:56:01.701Z
+- commits:
     - subject: Allow null values on autoUIColletion widget
       hash: 30cb05db3931478aaa3218420179a89350da36ce
       body: |
