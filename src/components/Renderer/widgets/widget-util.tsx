@@ -12,7 +12,14 @@ import concat from 'lodash/concat';
 import get from 'lodash/get';
 import pick from 'lodash/pick';
 import { JSONSchema6 } from 'json-schema';
-import { JSONSchema, UiSchema, Format, Value } from '../types';
+import type {
+	JSONSchema,
+	JsonTypesTypeMap,
+	UiSchema,
+	Format,
+	Value,
+} from '../types';
+import type { Overwrite } from '../../../common-types';
 import { UiOptions } from './ui-options';
 import { formatDistance } from 'date-fns';
 
@@ -24,17 +31,51 @@ export interface WidgetProps<T extends object = object> {
 	extraContext?: T;
 }
 
-export interface Widget<T extends object = object> {
-	(props: WidgetProps<T>): JSX.Element | null;
+interface WidgetStaticProperties {
 	uiOptions?: UiOptions;
 	supportedTypes?: string[];
 	displayName: string;
 }
 
+export interface Widget<T extends object = object>
+	extends WidgetStaticProperties {
+	(props: WidgetProps<T>): JSX.Element | null;
+}
+
+// TODO: Replace the HOF with a plain function once TS supports optional generic types
+// See: https://github.com/microsoft/TypeScript/issues/14400
+// TODO: convert the fn args to an object once we bump TS
+export function widgetFactory<ST extends Array<keyof JsonTypesTypeMap>>(
+	displayName: string,
+	uiOptions: Widget['uiOptions'],
+	supportedTypes: ST,
+) {
+	return function <
+		T extends object,
+		ExtraProps extends {} = {},
+		V extends WidgetProps['value'] | null = JsonTypesTypeMap[ST[number]],
+	>(
+		widgetFn: (
+			props: Overwrite<WidgetProps<T>, { value: V }> & ExtraProps,
+		) => JSX.Element | null,
+	): Widget<T> & ExtraProps {
+		const widget = widgetFn as Widget<T> & ExtraProps;
+		Object.assign(widget, {
+			displayName,
+			uiOptions,
+			supportedTypes,
+		});
+		return widget;
+	};
+}
+
 const DATE_FORMAT = 'MMM do yyyy';
 const TIME_FORMAT = 'h:mm a';
 
-export function formatTimestamp(timestamp: string, uiSchema: UiSchema = {}) {
+export function formatTimestamp(
+	timestamp: string | number,
+	uiSchema: UiSchema = {},
+) {
 	if (!timestamp) {
 		return '';
 	}
@@ -44,7 +85,7 @@ export function formatTimestamp(timestamp: string, uiSchema: UiSchema = {}) {
 	return format(new Date(timestamp), uiFormat);
 }
 
-export const timeSince = (timestamp: string, suffix = true) =>
+export const timeSince = (timestamp: string | number, suffix = true) =>
 	formatDistance(new Date(timestamp), new Date(), { addSuffix: suffix });
 
 // This HOC function wraps a Widget component and converts

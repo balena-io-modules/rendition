@@ -18,7 +18,10 @@ import { Format } from '../types';
 import { Widget, withOptionProps } from './widget-util';
 import { ElapsedTimeWidget } from './ElapsedTimeWidget';
 export { WidgetWrapperUiOptions } from './ui-options';
-export { getObjectPropertyNames } from './widget-util';
+export {
+	getObjectPropertyNames,
+	widgetFactory as WidgetFactory,
+} from './widget-util';
 export { default as WidgetMeta } from './WidgetMeta';
 
 type Widgets = {

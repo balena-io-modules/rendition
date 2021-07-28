@@ -27,7 +27,13 @@ export {
 	RenditionUiSchema,
 } from './components/Form';
 
-export { Renderer, RendererProps } from './components/Renderer';
+export {
+	Renderer,
+	RendererProps,
+	Widget,
+	WidgetProps,
+	widgetFactory,
+} from './components/Renderer';
 
 export { DataGrid, DataGridProps } from './components/DataGrid';
 export {

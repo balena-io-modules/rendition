@@ -3,15 +3,17 @@ import get from 'lodash/get';
 import { Badge } from '../../Badge';
 import { hashCode } from '../../../utils';
 import { UiOption } from './ui-options';
-import { Widget, WidgetProps } from './widget-util';
+import { widgetFactory } from './widget-util';
 import { JsonTypes } from '../types';
 
-const BadgeWidget: Widget = ({
-	value,
-	schema,
-	uiSchema,
-	...props
-}: WidgetProps) => {
+const BadgeWidget = widgetFactory(
+	'Badge',
+	{
+		shade: UiOption.number,
+	},
+	[JsonTypes.string, JsonTypes.integer, JsonTypes.number, JsonTypes.boolean],
+)(({ value, schema, uiSchema, ...props }) => {
+	// TODO: check whether we really need this
 	if (value == null) {
 		return null;
 	}
@@ -21,19 +23,6 @@ const BadgeWidget: Widget = ({
 			{value.toString()}
 		</Badge>
 	);
-};
-
-BadgeWidget.displayName = 'Badge';
-
-BadgeWidget.uiOptions = {
-	shade: UiOption.number,
-};
-
-BadgeWidget.supportedTypes = [
-	JsonTypes.string,
-	JsonTypes.integer,
-	JsonTypes.number,
-	JsonTypes.boolean,
-];
+});
 
 export default BadgeWidget;
