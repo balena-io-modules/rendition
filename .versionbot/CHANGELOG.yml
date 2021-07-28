@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'widgetFactory: Fix typing bug in ExtraProps generic argument'
+      hash: 6b390f65a9b22eb36f9565989ff55be756a44794
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 21.5.1
+  date: 2021-07-28T09:23:50.534Z
+- commits:
     - subject: Add a widgetFactory to infer the value type based on the supported types
       hash: 21d41ecfd39c586b4685d47d484f930aefbef56e
       body: ''
