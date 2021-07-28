@@ -1,4 +1,20 @@
 - commits:
+    - subject: Add a widgetFactory to infer the value type based on the supported types
+      hash: 21d41ecfd39c586b4685d47d484f930aefbef56e
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        See: >-
+          https://www.flowdock.com/app/rulemotion/f-rendition/threads/Df8PTYUG0VVHe3G4SwXiz3b6o-Z
+        see: >-
+          https://www.flowdock.com/app/rulemotion/f-rendition/threads/Df8PTYUG0VVHe3G4SwXiz3b6o-Z
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 21.5.0
+  date: 2021-07-27T21:24:43.640Z
+- commits:
     - subject: Add onRowClick dependency to AutoUIColleciton autouiContext useMemo
       hash: 381f293b1e1226dc8961e818c56e16ca6b9f42a7
       body: ''
