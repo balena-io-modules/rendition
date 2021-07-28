@@ -113,6 +113,7 @@ export interface AutoUICollectionProps<T> {
 		entry: T,
 		event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
 	) => void;
+	itemsPerPage?: number;
 }
 
 /** Collection component is one of the components that are part of a larger project, namely AutoUI. This component renders a list using an array of data and a template.
@@ -179,6 +180,7 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 	cardRenderer,
 	getBaseUrl,
 	onRowClick,
+	itemsPerPage,
 }: AutoUICollectionProps<T>) => {
 	const { t } = useTranslation();
 	const defaultLens = !!cardRenderer
@@ -373,6 +375,7 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 						filtered={filtered}
 						changeSelected={setSelected}
 						formats={formats}
+						itemsPerPage={itemsPerPage}
 					/>
 				)}
 

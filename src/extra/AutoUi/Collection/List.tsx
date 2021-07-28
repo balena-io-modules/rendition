@@ -114,6 +114,7 @@ interface ListProps<T> {
 	changeSelected: (selected: T[]) => void;
 	priorities?: Priorities<T>;
 	formats?: Format[];
+	itemsPerPage?: number;
 }
 
 export const List = <T extends AutoUIBaseResource<T>>({
@@ -126,6 +127,7 @@ export const List = <T extends AutoUIBaseResource<T>>({
 	changeSelected,
 	priorities,
 	formats,
+	itemsPerPage = 50,
 }: ListProps<T>) => {
 	// const listKey = autouiContext.baseUrl.split('/').join('-');
 	const history = useHistory();
@@ -187,7 +189,7 @@ export const List = <T extends AutoUIBaseResource<T>>({
 					{...(hasUpdateActions && { onCheck: changeSelected })}
 					usePager={data && data.length > 5}
 					pagerPosition={'bottom'}
-					itemsPerPage={50}
+					itemsPerPage={itemsPerPage}
 					getRowHref={autouiContext.getBaseUrl}
 					onRowClick={onRowClick}
 					columnStateRestorationKey={`${autouiContext.resource}__columns`}
