@@ -1,4 +1,18 @@
 - commits:
+    - subject: >-
+        Fix DownloadImageModal alignment when there are not multiple compatible
+        device types
+      hash: a6e6a41fd667246d2dab5a431c8856f4f42008f2
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 21.5.2
+  date: 2021-07-28T12:25:27.186Z
+- commits:
     - subject: 'widgetFactory: Fix typing bug in ExtraProps generic argument'
       hash: 6b390f65a9b22eb36f9565989ff55be756a44794
       body: ''
