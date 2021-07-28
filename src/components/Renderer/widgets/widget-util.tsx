@@ -37,9 +37,9 @@ interface WidgetStaticProperties {
 	displayName: string;
 }
 
-export interface Widget<T extends object = object>
+export interface Widget<T extends object = object, ExtraProps = {}>
 	extends WidgetStaticProperties {
-	(props: WidgetProps<T>): JSX.Element | null;
+	(props: WidgetProps<T> & ExtraProps): JSX.Element | null;
 }
 
 // TODO: Replace the HOF with a plain function once TS supports optional generic types
@@ -58,8 +58,8 @@ export function widgetFactory<ST extends Array<keyof JsonTypesTypeMap>>(
 		widgetFn: (
 			props: Overwrite<WidgetProps<T>, { value: V }> & ExtraProps,
 		) => JSX.Element | null,
-	): Widget<T> & ExtraProps {
-		const widget = widgetFn as Widget<T> & ExtraProps;
+	): Widget<T, ExtraProps> {
+		const widget = widgetFn as Widget<T, ExtraProps>;
 		Object.assign(widget, {
 			displayName,
 			uiOptions,
