@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add itemsPerPage prop to AutoUICollection
+      hash: ff239bc7363e5b6a9bbcd11e60a181257c8995b2
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 21.5.2
+  date: 2021-07-28T13:08:50.166Z
+- commits:
     - subject: 'widgetFactory: Fix typing bug in ExtraProps generic argument'
       hash: 6b390f65a9b22eb36f9565989ff55be756a44794
       body: ''
