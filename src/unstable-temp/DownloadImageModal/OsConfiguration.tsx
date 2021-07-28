@@ -240,9 +240,9 @@ export const OsConfiguration = ({
 
 	return (
 		<>
-			<Flex mb={3}>
+			<Flex mb={3} mx={-2}>
 				{compatibleDeviceTypes.length > 1 && (
-					<Box flex={3} mr={2}>
+					<Box flex={3} mx={2}>
 						<DownloadImageLabel>
 							{t('placeholders.select_device_type')}
 							<QuestionMark
@@ -259,7 +259,7 @@ export const OsConfiguration = ({
 					</Box>
 				)}
 				{(!isInitialDefault || !selectedOsType) && hasEsrVersions && (
-					<Box flex={2} ml={2}>
+					<Box flex={2} mx={2}>
 						<DownloadImageLabel>
 							{t('placeholders.select_os_type_status')}{' '}
 							<DocsLink
@@ -282,8 +282,8 @@ export const OsConfiguration = ({
 						{t('placeholders.select_version')}
 					</DownloadImageLabel>
 
-					<Flex alignItems="center">
-						<Box flex={3} mr={2}>
+					<Flex alignItems="center" mx={-2}>
+						<Box flex={3} mx={2}>
 							<Select<VersionSelectionOptions>
 								id="e2e-download-image-versions-list"
 								valueKey="value"
@@ -299,7 +299,7 @@ export const OsConfiguration = ({
 						</Box>
 
 						{shouldShowAllVersionsToggle && (
-							<Box flex={2} ml={2}>
+							<Box flex={2} mx={2}>
 								<Checkbox
 									checked={showAllVersions}
 									label={'Show outdated versions'}
