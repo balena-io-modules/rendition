@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add Renovate config
+      hash: ec4b38d9df1720f4ab4443a6fe05b13498cd618b
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+  version: 21.5.3
+  date: 2021-07-29T03:15:34.903Z
+- commits:
     - subject: >-
         Fix DownloadImageModal alignment when there are not multiple compatible
         device types
