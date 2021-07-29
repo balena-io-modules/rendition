@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "enabledManagers": [
+    "npm"
+  ],
+  "pruneStaleBranches": false,
+  "rangeStrategy": "bump",
+  "commitMessagePrefix": "patch:",
+  "commitBody": "Update {{depName}} from {{currentVersion}} to {{newVersion}}\n\nChange-type: patch",
+  "prHourlyLimit": 0,
+  "labels": [
+    "dependencies"
+  ]
+}
