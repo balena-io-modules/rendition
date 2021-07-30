@@ -1,3 +1,4 @@
+import castArray from 'lodash/castArray';
 import React from 'react';
 import { JSONSchema7 as JSONSchema } from 'json-schema';
 import { CollectionLenses } from './Lenses';
@@ -15,7 +16,7 @@ import { Table, TableColumn } from '../../../components/Table';
 import type { TableSortFunction } from '../../../components/Table/TableRow';
 import { useHistory } from '../../../hooks/useHistory';
 import { AutoUIContext, AutoUIBaseResource, Priorities } from '../schemaOps';
-import castArray from 'lodash/castArray';
+import { diff } from '../../../utils';
 
 const formatSorters: Dictionary<TableSortFunction<any>> = {};
 
@@ -24,17 +25,18 @@ const getSortingFunction = (schemaKey: string, schemaValue: JSONSchema) => {
 		return formatSorters[schemaValue.format ?? ''];
 	}
 
-	switch (schemaValue.type) {
-		case 'string': {
-			return (a: any, b: any) =>
-				a[schemaKey]?.toLowerCase().localeCompare(b[schemaKey]?.toLowerCase());
-		}
-
-		case 'number':
-		case 'integer':
-		default:
-			return (a: any, b: any) => a[schemaKey] - b[schemaKey];
+	const types = castArray(schemaValue.type);
+	if (types.includes(JsonTypes.string)) {
+		return (a: Record<string, any>, b: Record<string, any>) => {
+			const aa = a[schemaKey] ?? '';
+			const bb = b[schemaKey] ?? '';
+			if (typeof aa === 'string' && typeof bb === 'string') {
+				return aa.toLowerCase().localeCompare(bb.toLowerCase());
+			}
+			return diff(aa, bb);
+		};
 	}
+	return diff;
 };
 
 const getSelected = <T, K extends keyof T>(

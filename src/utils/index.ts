@@ -5,6 +5,13 @@ export * from './styledUtils';
 
 const matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;
 
+export const diff = <T extends number | string | boolean>(a: T, b: T) => {
+	if (a === b) {
+		return 0;
+	}
+	return a > b ? 1 : -1;
+};
+
 export const hashCode = function (text: string, max: number): number {
 	let hash = 0;
 	for (let index = 0; index < text.length; index++) {
