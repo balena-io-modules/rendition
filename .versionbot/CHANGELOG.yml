@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'autoUI: Support sorting multi-type values'
+      hash: f8787fb2f8a68ebf9412d827956cd8f54ba56d15
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 21.5.3
+  date: 2021-07-30T10:38:29.862Z
+- commits:
     - subject: >-
         Fix DownloadImageModal alignment when there are not multiple compatible
         device types
