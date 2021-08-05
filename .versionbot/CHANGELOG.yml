@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix infinite updating notice when applying no tag changes
+      hash: 4cdaa12df80eaf6c0b1f5adab5148886ee7b8457
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 21.5.4
+  date: 2021-08-05T20:01:43.628Z
+- commits:
     - subject: 'autoUI: Support sorting multi-type values'
       hash: f8787fb2f8a68ebf9412d827956cd8f54ba56d15
       body: ''
