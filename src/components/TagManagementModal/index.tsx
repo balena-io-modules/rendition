@@ -427,6 +427,14 @@ export const TagManagementModal = <T extends TaggedResource>({
 					count: items.length,
 				}).toLowerCase(),
 			})}
+			primaryButtonProps={{
+				disabled:
+					Object.values(getResourceTagSubmitInfo(tags)).filter(
+						(changedTags) => changedTags.length > 0,
+					).length === 0
+						? true
+						: false,
+			}}
 		>
 			<Flex>
 				<TagTable>
