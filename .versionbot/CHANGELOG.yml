@@ -1,4 +1,16 @@
 - commits:
+    - subject: Memoize tag differences in TagManagementModal
+      hash: 07fe13b05e7750cb6a70a071594cfb30f2be9731
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 21.5.5
+  date: 2021-08-06T12:56:38.835Z
+- commits:
     - subject: Fix infinite updating notice when applying no tag changes
       hash: 4cdaa12df80eaf6c0b1f5adab5148886ee7b8457
       body: ''
