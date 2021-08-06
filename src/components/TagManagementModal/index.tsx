@@ -297,6 +297,11 @@ export const TagManagementModal = <T extends TaggedResource>({
 	const [partialTags, setPartialTags] =
 		React.useState<Array<ResourceTagInfo<T>>>();
 
+	const tagDiffs = React.useMemo(
+		() => getResourceTagSubmitInfo(tags || []),
+		[tags],
+	);
+
 	React.useEffect(() => {
 		const allTags = groupResourcesByTags(items, tagField);
 		const [commonTags, $partialTags] = partition(
@@ -420,7 +425,7 @@ export const TagManagementModal = <T extends TaggedResource>({
 				</div>
 			}
 			cancel={cancel}
-			done={withPreventDefault(() => done(getResourceTagSubmitInfo(tags)))}
+			done={withPreventDefault(() => done(tagDiffs))}
 			action={t(`actions.apply_item_type_count`, {
 				count: items.length,
 				itemType: t('labels.' + itemType, {
@@ -429,7 +434,7 @@ export const TagManagementModal = <T extends TaggedResource>({
 			})}
 			primaryButtonProps={{
 				disabled:
-					Object.values(getResourceTagSubmitInfo(tags)).filter(
+					Object.values(tagDiffs).filter(
 						(changedTags) => changedTags.length > 0,
 					).length === 0
 						? true
