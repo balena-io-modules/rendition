@@ -450,7 +450,7 @@ export class TableBase<T> extends React.Component<
 			onRowClick,
 			getRowHref,
 			getRowClass,
-			...props
+			className,
 		} = this.props;
 
 		const { page, sort } = this.state;
@@ -485,7 +485,7 @@ export class TableBase<T> extends React.Component<
 
 				<BaseTableWrapper>
 					<Base
-						{...props}
+						className={className}
 						hasRowClick={!!onRowClick}
 						hasGetRowRef={!!getRowHref}
 						hasCheckbox={!!onCheck}
@@ -634,4 +634,5 @@ export interface TableBaseProps<T> {
 	itemsPerPage?: number;
 	/** Sets whether the pager is displayed at the top of the table, the bottom of the table or in both positions. Only used if `usePager` is true. Defaults to `top`. */
 	pagerPosition?: 'top' | 'bottom' | 'both';
+	className?: string;
 }
