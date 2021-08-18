@@ -8,7 +8,7 @@ export interface UIMarker {
 	lng: number;
 	title?: string;
 	icon?: string;
-	click?: () => void;
+	click?: (entry: google.maps.MouseEvent) => void;
 }
 
 // Coordinates of Seattle, avoid having the map centered in the middle of the sea

@@ -2,6 +2,8 @@ import { JSONSchema7 as JSONSchema } from 'json-schema';
 import $pick from 'lodash/pick';
 import { Dictionary } from '../../common-types';
 import { ResourceTagModelService } from '../../components/TagManagementModal/tag-management-service';
+import { UIMarker } from '~/components/Map';
+import { CollectionLenses } from './Collection/Lenses';
 
 export interface AutoUIBaseResource<T> {
 	id: number;
@@ -51,8 +53,9 @@ export interface AutoUIContext<T> {
 	resource: string;
 	getBaseUrl?: (entry: T) => string;
 	onRowClick?: (
-		entry: T,
+		entry: T | any,
 		event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+		lens?: CollectionLenses,
 	) => void;
 	idField: string;
 	nameField?: string;
@@ -62,6 +65,7 @@ export interface AutoUIContext<T> {
 		longitudeField?: string;
 	};
 	cardRenderer?: (resource: T) => React.ReactNode;
+	mapRenderer?: (marker: UIMarker[]) => React.ReactNode;
 	actions?: Array<AutoUIAction<T>>;
 	customSort?: Dictionary<(a: T, b: T) => number>;
 	sdk?: {

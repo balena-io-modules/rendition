@@ -17,6 +17,7 @@ import type { TableSortFunction } from '../../../components/Table/TableRow';
 import { useHistory } from '../../../hooks/useHistory';
 import { AutoUIContext, AutoUIBaseResource, Priorities } from '../schemaOps';
 import { diff } from '../../../utils';
+import { AutoUIMap } from './Map';
 
 const formatSorters: Dictionary<TableSortFunction<any>> = {};
 
@@ -202,10 +203,24 @@ export const List = <T extends AutoUIBaseResource<T>>({
 				<DataGrid<T>
 					items={filtered}
 					renderItem={autouiContext.cardRenderer}
-					getItemKey={(app) => app.id}
+					getItemKey={(entry) => entry.id}
 					itemMinWidth={'350px'}
 				/>
 			)}
+			{lens === CollectionLenses.Map &&
+				autouiContext.mapRenderer &&
+				autouiContext.geolocation && (
+					<AutoUIMap<T>
+						getItemKey={(entry) => entry.id}
+						getItemName={(entry) =>
+							(entry as any)[autouiContext.nameField ?? 'id'].toString()
+						}
+						onItemClick={autouiContext.onRowClick}
+						data={filtered}
+						geolocationFields={autouiContext.geolocation}
+						mapComponent={autouiContext.mapRenderer}
+					/>
+				)}
 		</>
 	);
 };
