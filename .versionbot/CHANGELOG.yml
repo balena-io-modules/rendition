@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add map lens in autoUI
+      hash: 67fadb1173775f37892af8bf7ce9c6a7f05221ff
+      body: |
+        Add map lens in autoUI
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 21.6.0
+  date: 2021-08-18T13:27:33.803Z
+- commits:
     - subject: Replace tilde import to fix downstream error in TS 4.3.5
       hash: 5c3904118639655a1fb4a1efa83a3b35d4fdf7ff
       body: ''
