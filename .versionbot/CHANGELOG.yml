@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add renovate packages rules
+      hash: bbfca13556e700f4dc28d7191aa26575d06589c4
+      body: |
+        Add renovate packages rules
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 21.6.0
+  date: 2021-08-19T08:28:34.154Z
+- commits:
     - subject: Replace tilde import to fix downstream error in TS 4.3.5
       hash: 5c3904118639655a1fb4a1efa83a3b35d4fdf7ff
       body: ''
