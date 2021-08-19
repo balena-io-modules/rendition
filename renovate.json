@@ -1,0 +1,163 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "enabledManagers": [
+    "npm"
+  ],
+  "force": {
+    "constraints": {
+      "node": "< 15.0.0",
+      "npm": "< 7.0.0"
+    }
+  },
+  "pruneStaleBranches": false,
+  "rangeStrategy": "bump",
+  "commitMessagePrefix": "patch:",
+  "commitBody": "Update {{depName}} from {{currentVersion}} to {{newVersion}}\n\nChange-type: patch",
+  "prHourlyLimit": 0,
+  "labels": [
+    "dependencies"
+  ],
+  "ignoreDeps": [
+    "node"
+  ],
+  "packageRules": [
+    {
+      "groupName": "storybook-non-major",
+      "matchPackagePrefixes": ["@storybook"],
+      "commitBody": "Change-type: patch",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "storybook-major",
+      "matchPackagePrefixes": ["@storybook"],
+      "commitBody": "Change-type: patch",
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": false
+    },
+    {
+      "groupName": "types",
+      "matchPackagePrefixes": ["@types"],
+      "commitBody": "Change-type: patch",
+      "automerge": true
+    },
+    {
+      "groupName": "fontawesome",
+      "matchPackagePrefixes": ["@fortawesome"],
+      "commitBody": "Change-type: patch",
+      "automerge": true
+    },
+    {
+      "groupName": "tests",
+      "matchPackagePrefixes": ["enzyme-", "jest-"],
+      "matchPackageNames": ["enzyme", "jest", "jsdom", "match-media-mock", "sinon", "ts-jest", "resize-observer"],
+      "commitBody": "Change-type: patch",
+      "automerge": true
+    },
+    {
+      "groupName": "grommet-non-major",
+      "matchPackageNames": ["grommet"],
+      "commitBody": "Change-type: patch",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "grommet-major",
+      "matchPackageNames": ["grommet"],
+      "commitBody": "Change-type: minor",
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": false
+    },
+    {
+      "groupName": "react-libs",
+      "matchPackageNames": ["@rjsf/core"],
+      "matchPackagePrefixes": ["react-", "@react"],
+      "commitBody": "Change-type: patch",
+      "automerge": true
+    },
+    {
+      "groupName": "react-non-major",
+      "matchPackageNames": ["react"],
+      "commitBody": "Change-type: patch",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "react-major",
+      "matchPackageNames": ["react"],
+      "commitBody": "Change-type: minor",
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": false
+    },
+    {
+      "groupName": "rehype",
+      "matchPackagePrefixes": ["rehype-", "@mapbox/rehype"],
+      "commitBody": "Change-type: patch",
+      "automerge": true
+    },
+    {
+      "groupName": "remark",
+      "matchPackagePrefixes": ["remark-"],
+      "commitBody": "Change-type: patch",
+      "automerge": true
+    },
+    {
+      "groupName": "xterm-non-major",
+      "matchPackageNames": ["xterm"],
+      "matchPackagePrefixes": ["xterm-"],
+      "commitBody": "Change-type: patch",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "xterm-major",
+      "matchPackageNames": ["xterm"],
+      "matchPackagePrefixes": ["xterm-"],
+      "commitBody": "Change-type: minor",
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": false
+    },
+    {
+      "groupName": "style",
+      "matchPackageNames": ["color"],
+      "matchPackagePrefixes": ["styled-", "strip-css-comments", "color"],
+      "commitBody": "Change-type: patch",
+      "automerge": true
+    },
+    {
+      "groupName": "ajv",
+      "matchPackageNames": ["ajv"],
+      "matchPackagePrefixes": ["ajv-"],
+      "commitBody": "Change-type: patch",
+      "automerge": true
+    },
+    {
+      "groupName": "regex",
+      "matchPackagePrefixes": ["regex"],
+      "commitBody": "Change-type: patch",
+      "automerge": true
+    }
+  ]
+}
