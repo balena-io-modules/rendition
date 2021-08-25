@@ -11,7 +11,15 @@ import * as stringType from './string';
 const isDateTimeFormat = (format: string | undefined) =>
 	format?.endsWith('date-time');
 
-export const getDataModel = (schema?: JSONSchema) => {
+const typeMap = {
+	array: arrayType,
+	string: stringType,
+	object: objectType,
+	boolean: booleanType,
+	number: numberType,
+} as const;
+
+export const getDataModel = (schema: JSONSchema | undefined) => {
 	if (!schema) {
 		return null;
 	}
@@ -24,24 +32,21 @@ export const getDataModel = (schema?: JSONSchema) => {
 	if (schema.oneOf) {
 		return oneOfType;
 	}
-	if (type === 'array') {
-		return arrayType;
-	}
-	if (type === 'string') {
-		if (isDateTimeFormat(format)) {
-			return dateTimeType;
-		}
-		return stringType;
-	}
-	if (type === 'object') {
-		return objectType;
-	}
-	if (type === 'boolean') {
-		return booleanType;
-	}
-	if (type === 'number') {
-		return numberType;
+
+	const typeSet = Array.isArray(type) ? type : [type];
+	// Find the first type we can render, based on the typeMap preference order.
+	// TODO: Add handling for 'null` type.
+	const dataTypeKey = (
+		Object.keys(typeMap) as Array<keyof typeof typeMap>
+	).find((t) => typeSet.includes(t));
+	if (!dataTypeKey) {
+		return null;
 	}
 
-	return null;
+	const dataType = typeMap[dataTypeKey];
+	if (dataType === stringType && isDateTimeFormat(format)) {
+		return dateTimeType;
+	}
+
+	return dataType;
 };

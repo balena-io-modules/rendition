@@ -3,39 +3,39 @@
 exports[`Storyshots Extra/AutoUICollection Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
+    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
   >
     <div
-      class="sc-gKAaRy iZvmHx sc-iCoGMd gJNHgL sc-hHEiqL eBjmLM"
+      class="sc-gKseQn cOdZAq sc-iBPTik iXlKfM sc-hHfuMS ictdbZ"
     >
       <div
-        class="sc-jlZJtj kqRTMR sc-cbeScs bRaXkq"
+        class="sc-jmhFuu igAKDV sc-cbDFGl kpXWbY"
       >
         <div
-          class="sc-htmcrh hroWaq"
+          class="sc-httYss PsAFC"
         >
           <div
-            class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu"
+            class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB"
           >
             <div
-              class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL sc-fTFMiz duPXDD eocRZA"
+              class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-hHfuMS sc-fTNIjK EUECC iqQmmj"
             >
               <div
-                class="sc-gKAaRy ghtIJb sc-iCoGMd fbiImu"
+                class="sc-gKseQn bkeHkg sc-iBPTik bqhgIB"
                 order="-1,-1,-1,0"
               >
                 <div
-                  class="sc-gKAaRy iZvmHx sc-iCoGMd hoKXmw sc-fcmMJX faUBoe"
+                  class="sc-gKseQn cOdZAq sc-iBPTik goUwSb sc-fbNZge cutEsa"
                 >
                   <div
-                    class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL eWQPeQ"
+                    class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-hHfuMS jXjVxB"
                   >
                     <button
-                      class="StyledButton-sc-323bzc-0 jRwsoG sc-bqGGPW sc-hBMUJo ffJBuc fEWhys sc-dIvrsQ fbXIML"
+                      class="StyledButton-sc-323bzc-0 dogvZT sc-bqyKOL sc-hBEYId hvbETX jUZgWV sc-dIUeWJ jHQDZl"
                       type="button"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 jncmfT"
+                        class="StyledBox-sc-13pk1d4-0 hyBrKq"
                       >
                         <svg
                           aria-hidden="true"
@@ -53,16 +53,16 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                           />
                         </svg>
                         <div
-                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dBJtGv"
+                          class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ifOIqK"
                         />
                         Add filter
                       </div>
                     </button>
                     <div
-                      class="sc-fuISkM juRfbW"
+                      class="sc-fvhFOF eyKoqn"
                     >
                       <div
-                        class="sc-khIgEk bsANAN sc-hTRkXV irvSbW"
+                        class="sc-khAkCZ cFzjEL sc-hTZgZg bGMMWs"
                       >
                         <input
                           placeholder="Search entries..."
@@ -86,17 +86,17 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                       </div>
                     </div>
                     <div
-                      class="sc-kHWWYL"
+                      class="sc-kIeSZW"
                     >
                       <div
-                        class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-jOFryr bwDtGt sc-bTDOke cQRkfA"
+                        class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-jONnzC dGEmGK sc-bTvSiT enXa-dM"
                       >
                         <button
-                          class="StyledButton-sc-323bzc-0 KXpyO sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW sc-eKYRIR gQHFoo"
+                          class="StyledButton-sc-323bzc-0 dGFQkr sc-bqyKOL sc-hBEYId hvbETX iGebuQ sc-dIUeWJ cyJleo sc-eLgNKc guOGqH"
                           type="button"
                         >
                           <div
-                            class="StyledBox-sc-13pk1d4-0 jncmfT"
+                            class="StyledBox-sc-13pk1d4-0 hyBrKq"
                           >
                             <svg
                               aria-hidden="true"
@@ -114,13 +114,13 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                               />
                             </svg>
                             <div
-                              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 dBJtGv"
+                              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 ifOIqK"
                             />
                             <div
-                              class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL fywhVk"
+                              class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-hHfuMS bWpGHh"
                             >
                               <div
-                                class="sc-gKAaRy iZvmHx sc-iCoGMd iQsJTs"
+                                class="sc-gKseQn cOdZAq sc-iBPTik kLgwUP"
                               >
                                 Views
                               </div>
@@ -148,28 +148,28 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                 </div>
               </div>
               <div
-                class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL sc-fTFMiz bJSggk eocRZA"
+                class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-hHfuMS sc-fTNIjK kXuowN iqQmmj"
               />
             </div>
             <div
-              class="sc-gKAaRy iZvmHx sc-iCoGMd hoKXmw sc-fcmMJX faUBoe"
+              class="sc-gKseQn cOdZAq sc-iBPTik goUwSb sc-fbNZge cutEsa"
             >
               <div
-                class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL eWQPeQ"
+                class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-hHfuMS jXjVxB"
               />
             </div>
           </div>
           <div
-            class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL sc-fyjqAk bJSggk ddekvr"
+            class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-hHfuMS sc-fybuyZ kXuowN cQafrn"
           >
             <div
-              class="sc-gKAaRy bzVAry sc-iCoGMd eAGOxR sc-hHEiqL eBjmLM"
+              class="sc-gKseQn hKUJNt sc-iBPTik kWuhSW sc-hHfuMS ictdbZ"
             >
               <div
-                class="sc-irKDMX iYcajE"
+                class="sc-irlQje ktyxdV"
               >
                 <div
-                  class="sc-eWnToP kSXELk sc-jLqRGG eMKMqW"
+                  class="sc-eWvPqa iBnUda sc-jLiVFv lczNPz"
                 >
                   <div
                     data-display="table-head"
@@ -181,7 +181,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                         data-display="table-cell"
                       >
                         <button
-                          class="StyledButton-sc-323bzc-0 ktHwXr sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW sc-kTCsyW bnqTza"
+                          class="StyledButton-sc-323bzc-0 jPMrnq sc-bqyKOL sc-bkzYnD hvbETX bfVEDN sc-dIUeWJ cyJleo sc-kUbgcP dkFzwe"
                           data-field="title"
                           type="button"
                         >
@@ -209,7 +209,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                         data-display="table-cell"
                       >
                         <button
-                          class="StyledButton-sc-323bzc-0 ktHwXr sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW sc-kTCsyW bnqTza"
+                          class="StyledButton-sc-323bzc-0 jPMrnq sc-bqyKOL sc-bkzYnD hvbETX bfVEDN sc-dIUeWJ cyJleo sc-kUbgcP dkFzwe"
                           data-field="description"
                           type="button"
                         >
@@ -237,7 +237,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                         data-display="table-cell"
                       >
                         <button
-                          class="StyledButton-sc-323bzc-0 ktHwXr sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW sc-kTCsyW bnqTza"
+                          class="StyledButton-sc-323bzc-0 jPMrnq sc-bqyKOL sc-bkzYnD hvbETX bfVEDN sc-dIUeWJ cyJleo sc-kUbgcP dkFzwe"
                           data-field="public_key"
                           type="button"
                         >
@@ -265,7 +265,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                         data-display="table-cell"
                       >
                         <button
-                          class="StyledButton-sc-323bzc-0 ktHwXr sc-bqGGPW sc-bkbkJK ffJBuc ejJZLx sc-dIvrsQ jZURTW sc-kTCsyW bnqTza"
+                          class="StyledButton-sc-323bzc-0 jPMrnq sc-bqyKOL sc-bkzYnD hvbETX bfVEDN sc-dIUeWJ cyJleo sc-kUbgcP dkFzwe"
                           data-field="fingerprint"
                           type="button"
                         >
@@ -316,7 +316,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                         data-key="1"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi"
+                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy"
                         >
                           ecdsa-sha2-nistp521 faMAKw1VP0720N3IledQ38PA9RcnuUIR7wIprQK45y6QfxssSwNTI4r3AI9pJM
                         </div>
@@ -350,7 +350,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                         data-key="2"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi"
+                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy"
                         >
                           ecdsa-sha2-nistp521 faMAKw1VP0720N3IledQ38PA9RcnuUIR7wIprQK45y6QfxssSwNTI4r3AI9pJM
                         </div>
@@ -384,7 +384,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                         data-key="3"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi"
+                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy"
                         >
                           ecdsa-sha2-nistp521 faMAKw1VP0720N3IledQ38PA9RcnuUIR7wIprQK45y6QfxssSwNTI4r3AI9pJM
                         </div>
@@ -418,7 +418,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                         data-key="4"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi"
+                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy"
                         >
                           ecdsa-sha2-nistp521 faMAKw1VP0720N3IledQ38PA9RcnuUIR7wIprQK45y6QfxssSwNTI4r3AI9pJM
                         </div>
@@ -452,7 +452,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                         data-key="5"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi"
+                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy"
                         >
                           ecdsa-sha2-nistp521 faMAKw1VP0720N3IledQ38PA9RcnuUIR7wIprQK45y6QfxssSwNTI4r3AI9pJM
                         </div>
@@ -486,7 +486,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                         data-key="6"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi"
+                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy"
                         >
                           ecdsa-sha2-nistp521 faMAKw1VP0720N3IledQ38PA9RcnuUIR7wIprQK45y6QfxssSwNTI4r3AI9pJM
                         </div>
@@ -520,7 +520,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                         data-key="7"
                       >
                         <div
-                          class="sc-fKgJPI jlSUcY sc-bCwfaz ecGcZi"
+                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy"
                         >
                           ecdsa-sha2-nistp521 faMAKw1VP0720N3IledQ38PA9RcnuUIR7wIprQK45y6QfxssSwNTI4r3AI9pJM
                         </div>
@@ -536,10 +536,10 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                 </div>
               </div>
               <div
-                class="sc-gKAaRy iZvmHx sc-iCoGMd gJNHgL sc-hHEiqL cCLgrC"
+                class="sc-gKseQn cOdZAq sc-iBPTik iXlKfM sc-hHfuMS kJJCtr"
               >
                 <div
-                  class="sc-fKgJPI jlSUcY sc-bCwfaz dACknc"
+                  class="sc-fKFxtB eNMjwF sc-bBXrwG kgqmaw"
                 >
                   <strong>
                     1
@@ -553,13 +553,13 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                   </strong>
                 </div>
                 <div
-                  class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL bJSggk"
+                  class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-hHfuMS kXuowN"
                 >
                   <div
-                    class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL sc-kLojOw bJSggk jsEAXh"
+                    class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-hHfuMS sc-kLgnNl kXuowN euta-Di"
                   >
                     <button
-                      class="StyledButton-sc-323bzc-0 dMgQzm sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW rendition-pager__btn--prev"
+                      class="StyledButton-sc-323bzc-0 fhmDYP sc-bqyKOL sc-hBEYId hvbETX iGebuQ sc-dIUeWJ cyJleo rendition-pager__btn--prev"
                       disabled=""
                       type="button"
                     >
@@ -580,7 +580,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                       </svg>
                     </button>
                     <button
-                      class="StyledButton-sc-323bzc-0 dMgQzm sc-bqGGPW sc-hBMUJo ffJBuc mONCh sc-dIvrsQ jZURTW rendition-pager__btn--next"
+                      class="StyledButton-sc-323bzc-0 fhmDYP sc-bqyKOL sc-hBEYId hvbETX iGebuQ sc-dIUeWJ cyJleo rendition-pager__btn--next"
                       disabled=""
                       type="button"
                     >
@@ -605,24 +605,24 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
               </div>
             </div>
             <div
-              class="sc-iXeHaJ gocTvx"
+              class="sc-iWFTwQ fiYfwp"
             >
               <div
-                class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-jOFryr bwDtGt sc-bTDOke fXFHeC"
+                class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-jONnzC dGEmGK sc-bTvSiT hMisuq"
               >
                 <button
-                  class="StyledButton-sc-323bzc-0 fshUsC sc-bqGGPW sc-bkbkJK ffJBuc jLVuZo sc-dIvrsQ jZURTW sc-eKYRIR gQHFoo"
+                  class="StyledButton-sc-323bzc-0 cPRQTb sc-bqyKOL sc-bkzYnD hvbETX gyZVCQ sc-dIUeWJ cyJleo sc-eLgNKc guOGqH"
                   type="button"
                 >
                   <div
-                    class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL fywhVk"
+                    class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-hHfuMS bWpGHh"
                   >
                     <div
-                      class="sc-gKAaRy iZvmHx sc-iCoGMd iQsJTs"
+                      class="sc-gKseQn cOdZAq sc-iBPTik kLgwUP"
                     >
                       <svg
                         aria-hidden="true"
-                        class="svg-inline--fa fa-cog fa-w-16 sc-dvUynV ewnFQO"
+                        class="svg-inline--fa fa-cog fa-w-16 sc-dwcupg iEwBLb"
                         data-icon="cog"
                         data-prefix="fas"
                         focusable="false"

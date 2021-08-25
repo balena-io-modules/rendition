@@ -3,22 +3,22 @@
 exports[`Storyshots Core/RadioButtonGroup Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
+    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 kUTqHn sc-flUlpA ittgRa sc-eXuyPJ jgaLdy"
+      class="StyledBox-sc-13pk1d4-0 kSZjsO sc-flMpop bTydnJ sc-eWVLlQ eyPIkt"
       role="radiogroup"
     >
       <label
-        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hUgCgz"
+        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 bsbPNu"
         for="plain 1"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 jVtzvO StyledRadioButton-g1f6ld-5 cQxxvY"
+          class="StyledBox-sc-13pk1d4-0 kqpbkf StyledRadioButton-g1f6ld-5 MBaYF"
         >
           <input
             checked=""
-            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 bRmCoz"
+            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 kTMaqq"
             id="plain 1"
             name="radio button group"
             tabindex="0"
@@ -26,10 +26,10 @@ exports[`Storyshots Core/RadioButtonGroup Default 1`] = `
             value="plain 1"
           />
           <div
-            class="StyledBox-sc-13pk1d4-0 cRLbDt StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 lkJviK"
+            class="StyledBox-sc-13pk1d4-0 gZVniw StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 bOYFlj"
           >
             <svg
-              class="StyledRadioButton__StyledRadioButtonIcon-g1f6ld-3 cePNMx"
+              class="StyledRadioButton__StyledRadioButtonIcon-g1f6ld-3 ieBzqo"
               preserveAspectRatio="xMidYMid meet"
               viewBox="0 0 24 24"
             >
@@ -48,17 +48,17 @@ exports[`Storyshots Core/RadioButtonGroup Default 1`] = `
         </span>
       </label>
       <div
-        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 htfuze"
+        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cNVajf"
       />
       <label
-        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hUgCgz"
+        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 bsbPNu"
         for="plain 2"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 jVtzvO StyledRadioButton-g1f6ld-5 cQxxvY"
+          class="StyledBox-sc-13pk1d4-0 kqpbkf StyledRadioButton-g1f6ld-5 MBaYF"
         >
           <input
-            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 bRmCoz"
+            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 kTMaqq"
             id="plain 2"
             name="radio button group"
             tabindex="-1"
@@ -66,7 +66,7 @@ exports[`Storyshots Core/RadioButtonGroup Default 1`] = `
             value="plain 2"
           />
           <div
-            class="StyledBox-sc-13pk1d4-0 beWZHJ StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 lkJviK"
+            class="StyledBox-sc-13pk1d4-0 gioviw StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 bOYFlj"
           />
         </div>
         <span
@@ -83,21 +83,21 @@ exports[`Storyshots Core/RadioButtonGroup Default 1`] = `
 exports[`Storyshots Core/RadioButtonGroup With Expanded Options 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
+    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 kUTqHn sc-flUlpA eNJTou sc-eXuyPJ jgaLdy"
+      class="StyledBox-sc-13pk1d4-0 kSZjsO sc-flMpop a-DbsF sc-eWVLlQ eyPIkt"
       role="radiogroup"
     >
       <label
-        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hCiKQq"
+        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 emmNdn"
         disabled=""
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 jVtzvO StyledRadioButton-g1f6ld-5 cQxxvY"
+          class="StyledBox-sc-13pk1d4-0 kqpbkf StyledRadioButton-g1f6ld-5 MBaYF"
         >
           <input
-            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 dNUTGX"
+            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 fUKAsy"
             disabled=""
             name="radio button group"
             tabindex="-1"
@@ -105,7 +105,7 @@ exports[`Storyshots Core/RadioButtonGroup With Expanded Options 1`] = `
             value="disabled"
           />
           <div
-            class="StyledBox-sc-13pk1d4-0 beWZHJ StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 lkJviK"
+            class="StyledBox-sc-13pk1d4-0 gioviw StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 bOYFlj"
           />
         </div>
         <span
@@ -115,23 +115,23 @@ exports[`Storyshots Core/RadioButtonGroup With Expanded Options 1`] = `
         </span>
       </label>
       <div
-        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 htfuze"
+        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cNVajf"
       />
       <label
-        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hUgCgz"
+        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 bsbPNu"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 jVtzvO StyledRadioButton-g1f6ld-5 cQxxvY"
+          class="StyledBox-sc-13pk1d4-0 kqpbkf StyledRadioButton-g1f6ld-5 MBaYF"
         >
           <input
-            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 bRmCoz"
+            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 kTMaqq"
             name="radio button group"
             tabindex="-1"
             type="radio"
             value="enabled"
           />
           <div
-            class="StyledBox-sc-13pk1d4-0 beWZHJ StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 lkJviK"
+            class="StyledBox-sc-13pk1d4-0 gioviw StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 bOYFlj"
           />
         </div>
         <span
@@ -141,27 +141,27 @@ exports[`Storyshots Core/RadioButtonGroup With Expanded Options 1`] = `
         </span>
       </label>
       <div
-        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 htfuze"
+        class="StyledBox__StyledBoxGap-sc-13pk1d4-1 cNVajf"
       />
       <label
-        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 hUgCgz"
+        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 bsbPNu"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 jVtzvO StyledRadioButton-g1f6ld-5 cQxxvY"
+          class="StyledBox-sc-13pk1d4-0 kqpbkf StyledRadioButton-g1f6ld-5 MBaYF"
         >
           <input
             checked=""
-            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 bRmCoz"
+            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 kTMaqq"
             name="radio button group"
             tabindex="0"
             type="radio"
             value="selected"
           />
           <div
-            class="StyledBox-sc-13pk1d4-0 cRLbDt StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 lkJviK"
+            class="StyledBox-sc-13pk1d4-0 gZVniw StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 bOYFlj"
           >
             <svg
-              class="StyledRadioButton__StyledRadioButtonIcon-g1f6ld-3 cePNMx"
+              class="StyledRadioButton__StyledRadioButtonIcon-g1f6ld-3 ieBzqo"
               preserveAspectRatio="xMidYMid meet"
               viewBox="0 0 24 24"
             >
