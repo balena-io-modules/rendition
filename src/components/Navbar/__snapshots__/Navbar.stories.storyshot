@@ -3,37 +3,37 @@
 exports[`Storyshots Core/Navbar Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
+    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
   >
     <div
-      class="sc-gKAaRy iZvmHx sc-iCoGMd hhGjou"
+      class="sc-gKseQn cOdZAq sc-iBPTik icKUIt"
     >
       <div
-        class="sc-gKAaRy iZvmHx sc-iCoGMd cNdjQg sc-dksuTV kuvbch sc-jhGUec iJuZUX"
+        class="sc-gKseQn cOdZAq sc-iBPTik jCoLHv sc-dkAqVg dbZNWR sc-jifHHV juzEvz"
       >
         <div
-          class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL iDpqKT"
+          class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-hHfuMS hyLyPm"
         >
           <div
-            class="sc-gKAaRy iZvmHx sc-iCoGMd fbiImu sc-hHEiqL bJSggk"
+            class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-hHfuMS kXuowN"
           >
             <div
-              class="sc-gKAaRy iZvmHx sc-iCoGMd cePEKz sc-hkoqWr coUVvI"
+              class="sc-gKseQn cOdZAq sc-iBPTik bEdFVY sc-hkwmXC klUrZH"
             >
               <a
-                class="sc-eGJWMs djmdVr sc-csTbgd cuhYhL"
+                class="sc-eGCaLh ivtBsX sc-ctaXho gJOVRq"
                 color="white"
                 href="/"
               >
                 <img
-                  class="sc-bXexck bEwFOL"
+                  class="sc-bXDkGd izFrJb"
                   src=""
                   style="height: 20px;"
                 />
               </a>
             </div>
             <div
-              class="sc-gKAaRy iZvmHx sc-iCoGMd hLjaPK sc-bShgHC gWhWDd"
+              class="sc-gKseQn cOdZAq sc-iBPTik kRHOup sc-bSFUlv dXJrVV"
             >
               <svg
                 aria-hidden="true"
@@ -53,16 +53,16 @@ exports[`Storyshots Core/Navbar Default 1`] = `
             </div>
           </div>
           <div
-            class="sc-gKAaRy iZvmHx sc-iCoGMd kBjGzt sc-hHEiqL sc-juXuNZ bJSggk hrkgag"
+            class="sc-gKseQn cOdZAq sc-iBPTik fLsURK sc-hHfuMS sc-jvfqPk kXuowN MmqKb"
           >
             <div
-              class="sc-gKAaRy iZvmHx sc-iCoGMd hKplNG sc-hHEiqL iDpqKT"
+              class="sc-gKseQn cOdZAq sc-iBPTik dSEnBp sc-hHfuMS hyLyPm"
             >
               <div
-                class="sc-gKAaRy iZvmHx sc-iCoGMd dSzdry"
+                class="sc-gKseQn cOdZAq sc-iBPTik iFfILx"
               >
                 <a
-                  class="sc-eGJWMs djmdVr sc-csTbgd cuhYhL"
+                  class="sc-eGCaLh ivtBsX sc-ctaXho gJOVRq"
                   color="white"
                   href="/docs/"
                 >
@@ -70,10 +70,10 @@ exports[`Storyshots Core/Navbar Default 1`] = `
                 </a>
               </div>
               <div
-                class="sc-gKAaRy iZvmHx sc-iCoGMd dSzdry"
+                class="sc-gKseQn cOdZAq sc-iBPTik iFfILx"
               >
                 <a
-                  class="sc-eGJWMs djmdVr sc-csTbgd cuhYhL"
+                  class="sc-eGCaLh ivtBsX sc-ctaXho gJOVRq"
                   color="white"
                   href="/changelog/"
                 >
@@ -81,10 +81,10 @@ exports[`Storyshots Core/Navbar Default 1`] = `
                 </a>
               </div>
               <div
-                class="sc-gKAaRy iZvmHx sc-iCoGMd dSzdry"
+                class="sc-gKseQn cOdZAq sc-iBPTik iFfILx"
               >
                 <a
-                  class="sc-eGJWMs djmdVr sc-csTbgd cuhYhL"
+                  class="sc-eGCaLh ivtBsX sc-ctaXho gJOVRq"
                   color="white"
                   href="/gitter/"
                 >

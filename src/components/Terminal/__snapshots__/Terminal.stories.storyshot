@@ -3,16 +3,16 @@
 exports[`Storyshots Core/Terminal Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
+    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
   >
     <div
       style="height: 500px;"
     >
       <div
-        class="sc-gKAaRy bzVAry sc-iCoGMd kPskCE sc-hHEiqL sc-tsGVs bJSggk RIIZo"
+        class="sc-gKseQn hKUJNt sc-iBPTik zWJT sc-hHfuMS sc-tkKUh kXuowN dreIvJ"
       >
         <div
-          class="sc-gKAaRy bzVAry sc-iCoGMd fbiImu sc-hHEiqL sc-dSnXvR eBjmLM dnConE"
+          class="sc-gKseQn hKUJNt sc-iBPTik bqhgIB sc-hHfuMS sc-dRPjRY ictdbZ jlqmrn"
         />
       </div>
     </div>
@@ -23,16 +23,16 @@ exports[`Storyshots Core/Terminal Default 1`] = `
 exports[`Storyshots Core/Terminal Noninteractive Terminal 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
+    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
   >
     <div
       style="height: 500px;"
     >
       <div
-        class="sc-gKAaRy bzVAry sc-iCoGMd kPskCE sc-hHEiqL sc-tsGVs bJSggk RIIZo"
+        class="sc-gKseQn hKUJNt sc-iBPTik zWJT sc-hHfuMS sc-tkKUh kXuowN dreIvJ"
       >
         <div
-          class="sc-gKAaRy bzVAry sc-iCoGMd fbiImu sc-hHEiqL sc-dSnXvR eBjmLM dnConE"
+          class="sc-gKseQn hKUJNt sc-iBPTik bqhgIB sc-hHfuMS sc-dRPjRY ictdbZ jlqmrn"
         />
       </div>
     </div>

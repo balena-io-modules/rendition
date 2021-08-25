@@ -3,10 +3,10 @@
 exports[`Storyshots Core/TagManagementModal Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
+    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
   >
     <button
-      class="StyledButton-sc-323bzc-0 eyYhzk sc-bqGGPW sc-ksluID ffJBuc cNdPLP sc-dIvrsQ jZURTW"
+      class="StyledButton-sc-323bzc-0 iITEJt sc-bqyKOL sc-kstqJO hvbETX cpfnze sc-dIUeWJ cyJleo"
       type="button"
     >
       Tags

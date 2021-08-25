@@ -3,10 +3,10 @@
 exports[`Storyshots Extra/MarkdownEditor Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jXAVEG sc-eEVmNe jhNcBG"
+    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
   >
     <div
-      class="sc-clGGWX eachsx"
+      class="sc-clhTte gMRvHi"
       id="simplemde-editor-2-wrapper"
     >
       <textarea
@@ -182,6 +182,7 @@ exports[`Storyshots Extra/MarkdownEditor Default 1`] = `
         </div>
         <div
           class="CodeMirror cm-s-easymde CodeMirror-wrap"
+          translate="no"
         >
           <div
             style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 0px;"
