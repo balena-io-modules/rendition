@@ -1,4 +1,29 @@
 - commits:
+    - subject: 'DataTypes: Add initial support for array types'
+      hash: 52590133461ff6bcd2d4006cfa029377f6756c62
+      body: |
+        This allows the filter modal to render an input for the
+        case that the schema's `type` is an array. This
+        currently unblocks us for nullable types.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+    - subject: Update snapshots
+      hash: 1393fbfed80383ac50750b41d2a973ff743cb3e3
+      body: |
+        No code changes - just dependency updates
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 21.6.1
+  date: 2021-08-25T18:34:59.805Z
+- commits:
     - subject: Add renovate packages rules
       hash: bbfca13556e700f4dc28d7191aa26575d06589c4
       body: |
