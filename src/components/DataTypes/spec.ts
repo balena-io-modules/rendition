@@ -9,7 +9,9 @@ describe('DataTypes', () => {
 		const dataModelKeys = ['Edit', 'operators', 'createFilter', 'decodeFilter'];
 
 		it('should return null if provided with a falsey value as the schema parameter', () => {
+			// @ts-expect-error
 			expect(getDataModel()).toBe(null);
+			expect(getDataModel(undefined)).toBe(null);
 			expect(getDataModel(0 as any)).toBe(null);
 			expect(getDataModel(false as any)).toBe(null);
 			expect(getDataModel(null as any)).toBe(null);
@@ -27,6 +29,14 @@ describe('DataTypes', () => {
 		it('should return a model for string types', () => {
 			const schema = {
 				type: 'string',
+			} as any;
+
+			expectMatchesKeys(getDataModel(schema), dataModelKeys);
+		});
+
+		it('should return a model for string | null types', () => {
+			const schema = {
+				type: ['string', 'null'],
 			} as any;
 
 			expectMatchesKeys(getDataModel(schema), dataModelKeys);
