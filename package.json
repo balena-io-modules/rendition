@@ -113,7 +113,7 @@
     "date-fns": "^2.16.1",
     "grommet": "^2.16.3",
     "hast-util-sanitize": "^3.0.0",
-    "json-e": "^4.1.0",
+    "json-e": "^4.4.1",
     "lodash": "^4.17.21",
     "mermaid": "^8.8.3",
     "prismjs": "^1.21.0",
