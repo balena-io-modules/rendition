@@ -108,7 +108,7 @@ const schema = {
 const FiltersDemo = (props: FiltersProps) => {
 	const [filters, setFilters] = React.useState(props.filters ?? []);
 	const [views, setViews] = React.useState(props.views ?? []);
-	const items = SchemaSieve.filter(filters, PokeDex) as any[];
+	const items = SchemaSieve.filter(filters, PokeDex);
 
 	return (
 		<div>

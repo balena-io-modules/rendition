@@ -29,10 +29,18 @@ interface FullTextFilterItem {
 	numberProperties: { maximum: number; minimum: number } | null;
 }
 
-export const filter = (
+export function filter<T>(
 	filters: JSONSchema | JSONSchema[],
-	collection: any[],
-) => {
+	collection: T[],
+): T[];
+export function filter<T>(
+	filters: JSONSchema | JSONSchema[],
+	collection: Record<string, T>,
+): Record<string, T>;
+export function filter<T>(
+	filters: JSONSchema | JSONSchema[],
+	collection: T[] | Record<string, T>,
+) {
 	// Remove all schemas that may have been compiled already
 	ajv.removeSchema(/^.*$/);
 
@@ -44,7 +52,7 @@ export const filter = (
 	}
 
 	return pickBy(collection, (m) => every(validators, (v) => v(m)));
-};
+}
 
 export const createFullTextSearchFilter = (
 	schema: JSONSchema,
