@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency monaco-editor-webpack-plugin to ^4.1.2'
+      hash: 1e173f26bd53e51cc612b5dc01a42481cc794859
+      body: |
+        Update monaco-editor-webpack-plugin from 4.0.0 to 4.1.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.6.2
+  date: 2021-08-25T18:57:03.992Z
+- commits:
     - subject: 'DataTypes: Add initial support for array types'
       hash: 52590133461ff6bcd2d4006cfa029377f6756c62
       body: |
