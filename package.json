@@ -162,7 +162,7 @@
       "^.+\\.(jsx?|tsx?)$": "ts-jest"
     },
     "transformIgnorePatterns": [
-      "node_modules/(?!(entity-decode|mermaid|monaco-editor|react-monaco-editor)/)"
+      "node_modules/(?!(entity-decode|mermaid|monaco-editor|react-monaco-editor|d3|internmap|delaunator|robust-predicates))"
     ],
     "testRegex": ".*spec.tsx?$",
     "moduleFileExtensions": [
