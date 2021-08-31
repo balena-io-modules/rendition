@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'Filters/SchemaSieve: Improve filter() return type inference'
+      hash: b7c49684c1617a0405708eb7469b99ea58c7f96e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 21.6.5
+  date: 2021-08-31T10:33:43.630Z
+- commits:
     - subject: 'autoUI: Fix sorting non-string colums'
       hash: 5aa435a03c0289231af0b4a2779a98dfcd8c6339
       body: ''
