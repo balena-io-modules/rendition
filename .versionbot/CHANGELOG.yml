@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency mermaid to ^8.12.0'
+      hash: 05d4a04c1e91dc7e6b183552aea3ab83617477a2
+      body: |
+        Update mermaid from 8.8.3 to 8.12.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.6.6
+  date: 2021-08-31T10:58:58.643Z
+- commits:
     - subject: 'Filters/SchemaSieve: Improve filter() return type inference'
       hash: b7c49684c1617a0405708eb7469b99ea58c7f96e
       body: ''
