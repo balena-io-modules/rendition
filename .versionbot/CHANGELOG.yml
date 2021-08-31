@@ -1,4 +1,20 @@
 - commits:
+    - subject: 'autoUI: Fix sorting non-string colums'
+      hash: 5aa435a03c0289231af0b4a2779a98dfcd8c6339
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        See: >-
+          https://www.flowdock.com/app/rulemotion/resin-frontend/threads/tONHAYGyMuDto2AqZx_mKINc5pJ
+        see: >-
+          https://www.flowdock.com/app/rulemotion/resin-frontend/threads/tONHAYGyMuDto2AqZx_mKINc5pJ
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 21.6.4
+  date: 2021-08-31T10:17:53.490Z
+- commits:
     - subject: Update Jest transformIgnorePatterns
       hash: 28dfa48e3f915ec949a0928626925a6aeab665af
       body: |
