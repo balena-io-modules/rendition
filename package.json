@@ -124,7 +124,7 @@
     "react-monaco-editor": "^0.40.0",
     "react-notifications-component": "^2.4.1",
     "react-simplemde-editor": "^4.1.3",
-    "recompose": "0.26.0",
+    "recompose": "0.30.0",
     "regex-parser": "^2.2.11",
     "regexp-match-indices": "^1.0.2",
     "rehype-raw": "^5.0.0",
