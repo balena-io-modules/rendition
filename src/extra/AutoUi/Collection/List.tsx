@@ -20,23 +20,28 @@ import { diff } from '../../../utils';
 
 const formatSorters: Dictionary<TableSortFunction<any>> = {};
 
-const getSortingFunction = (schemaKey: string, schemaValue: JSONSchema) => {
+const getSortingFunction = <T extends any>(
+	schemaKey: keyof T,
+	schemaValue: JSONSchema,
+): TableSortFunction<T> => {
 	if (formatSorters[schemaValue.format ?? '']) {
 		return formatSorters[schemaValue.format ?? ''];
 	}
 
 	const types = castArray(schemaValue.type);
 	if (types.includes(JsonTypes.string)) {
-		return (a: Record<string, any>, b: Record<string, any>) => {
-			const aa = a[schemaKey] ?? '';
-			const bb = b[schemaKey] ?? '';
+		return (a: T, b: T) => {
+			const aa = (a[schemaKey] ?? '') as string;
+			const bb = (b[schemaKey] ?? '') as string;
 			if (typeof aa === 'string' && typeof bb === 'string') {
 				return aa.toLowerCase().localeCompare(bb.toLowerCase());
 			}
 			return diff(aa, bb);
 		};
 	}
-	return diff;
+	return (a: T, b: T) =>
+		// @ts-expect-error
+		diff(a[schemaKey], b[schemaKey]);
 };
 
 const getSelected = <T, K extends keyof T>(
