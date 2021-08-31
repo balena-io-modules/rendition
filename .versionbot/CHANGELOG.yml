@@ -1,4 +1,25 @@
 - commits:
+    - subject: Update Jest transformIgnorePatterns
+      hash: 28dfa48e3f915ec949a0928626925a6aeab665af
+      body: |
+        Update Jest transformIgnorePatterns
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+    - subject: 'patch: Update dependency json-e to ^4.4.1'
+      hash: d7c4ca091d4e6ca5b0d7cd7ea01acb900ac6213d
+      body: |
+        Update json-e from 4.1.0 to 4.4.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.6.3
+  date: 2021-08-30T15:21:12.815Z
+- commits:
     - subject: 'patch: Update dependency monaco-editor-webpack-plugin to ^4.1.2'
       hash: 1e173f26bd53e51cc612b5dc01a42481cc794859
       body: |
