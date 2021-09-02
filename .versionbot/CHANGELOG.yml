@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix unknown event handler onSort in TableBase
+      hash: 999b85c4952047b676ea0cfa4007c1f2d6885710
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 21.6.8
+  date: 2021-09-01T19:11:22.985Z
+- commits:
     - subject: 'patch: Update dependency recompose to v0.30.0'
       hash: f5e7cf6c373aed508fd2cc32fe4472dbf7e117f9
       body: |
