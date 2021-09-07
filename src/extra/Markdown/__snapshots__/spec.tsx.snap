@@ -311,6 +311,23 @@ exports[`Markdown component Custom sanitizer options: allowedTags can be overrid
   -webkit-font-smoothing: antialiased;
 }
 
+.c3 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c3:active,
+.c3:hover {
+  color: hsl(196.29999999999995,100%,37.5%);
+}
+
+.c4 {
+  color: #00AEEF;
+}
+
 .c1 {
   font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
@@ -588,6 +605,15 @@ exports[`Markdown component Custom sanitizer options: allowedTags can be overrid
       class="c2"
     >
       <div>
+        <a
+          aria-hidden="true"
+          class="c3 c4"
+          color="primary.main"
+          href="#foobar"
+          tabindex="-1"
+        >
+          <span />
+        </a>
         Foobar
         
 
@@ -1571,6 +1597,23 @@ exports[`Markdown component should not highlight code when disabled 1`] = `
   font-size: 34px;
 }
 
+.c5 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c5:active,
+.c5:hover {
+  color: hsl(196.29999999999995,100%,37.5%);
+}
+
+.c6 {
+  color: #00AEEF;
+}
+
 .c1 {
   font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
@@ -1850,7 +1893,19 @@ exports[`Markdown component should not highlight code when disabled 1`] = `
       <div>
         <h2
           class="c3 c4"
+          id="user-content-code-blocks"
         >
+          <a
+            aria-hidden="true"
+            class="c5 c6"
+            color="primary.main"
+            href="#code-blocks"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Code blocks
         </h2>
         
@@ -1904,6 +1959,23 @@ exports[`Markdown component should not render raw html when disabled 1`] = `
   font-size: 34px;
 }
 
+.c5 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c5:active,
+.c5:hover {
+  color: hsl(196.29999999999995,100%,37.5%);
+}
+
+.c6 {
+  color: #00AEEF;
+}
+
 .c1 {
   font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
@@ -2183,7 +2255,19 @@ exports[`Markdown component should not render raw html when disabled 1`] = `
       <div>
         <h2
           class="c3 c4"
+          id="user-content-inline-html"
         >
+          <a
+            aria-hidden="true"
+            class="c5 c6"
+            color="primary.main"
+            href="#inline-html"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Inline HTML
         </h2>
         
@@ -2214,7 +2298,19 @@ exports[`Markdown component should not render raw html when disabled 1`] = `
 
         <h2
           class="c3 c4"
+          id="user-content-keyboard-keys"
         >
+          <a
+            aria-hidden="true"
+            class="c5 c6"
+            color="primary.main"
+            href="#keyboard-keys"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Keyboard keys
         </h2>
         
@@ -5077,6 +5173,23 @@ exports[`Markdown component should render markdown h1 headers 1`] = `
   font-size: 58px;
 }
 
+.c5 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c5:active,
+.c5:hover {
+  color: hsl(196.29999999999995,100%,37.5%);
+}
+
+.c6 {
+  color: #00AEEF;
+}
+
 .c1 {
   font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
@@ -5356,7 +5469,19 @@ exports[`Markdown component should render markdown h1 headers 1`] = `
       <div>
         <h1
           class="c3 c4"
+          id="user-content-foobar"
         >
+          <a
+            aria-hidden="true"
+            class="c5 c6"
+            color="primary.main"
+            href="#foobar"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Foobar
         </h1>
       </div>
@@ -5384,6 +5509,23 @@ exports[`Markdown component should render markdown h2 headers 1`] = `
 .c4 {
   margin: 0;
   font-size: 34px;
+}
+
+.c5 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c5:active,
+.c5:hover {
+  color: hsl(196.29999999999995,100%,37.5%);
+}
+
+.c6 {
+  color: #00AEEF;
 }
 
 .c1 {
@@ -5665,7 +5807,19 @@ exports[`Markdown component should render markdown h2 headers 1`] = `
       <div>
         <h2
           class="c3 c4"
+          id="user-content-foobar"
         >
+          <a
+            aria-hidden="true"
+            class="c5 c6"
+            color="primary.main"
+            href="#foobar"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Foobar
         </h2>
       </div>
@@ -5693,6 +5847,23 @@ exports[`Markdown component should render markdown h3 headers 1`] = `
 .c4 {
   margin: 0;
   font-size: 24px;
+}
+
+.c5 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c5:active,
+.c5:hover {
+  color: hsl(196.29999999999995,100%,37.5%);
+}
+
+.c6 {
+  color: #00AEEF;
 }
 
 .c1 {
@@ -5974,7 +6145,19 @@ exports[`Markdown component should render markdown h3 headers 1`] = `
       <div>
         <h3
           class="c3 c4"
+          id="user-content-foobar"
         >
+          <a
+            aria-hidden="true"
+            class="c5 c6"
+            color="primary.main"
+            href="#foobar"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Foobar
         </h3>
       </div>
@@ -6005,6 +6188,23 @@ exports[`Markdown component should render markdown h4 headers 1`] = `
   font-size: 18px;
 }
 
+.c5 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c5:active,
+.c5:hover {
+  color: hsl(196.29999999999995,100%,37.5%);
+}
+
+.c6 {
+  color: #00AEEF;
+}
+
 .c1 {
   font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
@@ -6284,7 +6484,19 @@ exports[`Markdown component should render markdown h4 headers 1`] = `
       <div>
         <h4
           class="c3 c4"
+          id="user-content-foobar"
         >
+          <a
+            aria-hidden="true"
+            class="c5 c6"
+            color="primary.main"
+            href="#foobar"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Foobar
         </h4>
       </div>
@@ -6315,6 +6527,23 @@ exports[`Markdown component should render markdown h4 headers 2`] = `
   font-size: 18px;
 }
 
+.c5 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c5:active,
+.c5:hover {
+  color: hsl(196.29999999999995,100%,37.5%);
+}
+
+.c6 {
+  color: #00AEEF;
+}
+
 .c1 {
   font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
@@ -6594,7 +6823,19 @@ exports[`Markdown component should render markdown h4 headers 2`] = `
       <div>
         <h4
           class="c3 c4"
+          id="user-content-foobar"
         >
+          <a
+            aria-hidden="true"
+            class="c5 c6"
+            color="primary.main"
+            href="#foobar"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Foobar
         </h4>
       </div>
@@ -6623,6 +6864,23 @@ exports[`Markdown component should render markdown h5 headers 1`] = `
 .c4 {
   margin: 0;
   font-size: 16px;
+}
+
+.c5 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c5:active,
+.c5:hover {
+  color: hsl(196.29999999999995,100%,37.5%);
+}
+
+.c6 {
+  color: #00AEEF;
 }
 
 .c1 {
@@ -6904,7 +7162,19 @@ exports[`Markdown component should render markdown h5 headers 1`] = `
       <div>
         <h5
           class="c3 c4"
+          id="user-content-foobar"
         >
+          <a
+            aria-hidden="true"
+            class="c5 c6"
+            color="primary.main"
+            href="#foobar"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Foobar
         </h5>
       </div>
@@ -6933,6 +7203,23 @@ exports[`Markdown component should render markdown h5 headers 2`] = `
 .c4 {
   margin: 0;
   font-size: 14px;
+}
+
+.c5 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c5:active,
+.c5:hover {
+  color: hsl(196.29999999999995,100%,37.5%);
+}
+
+.c6 {
+  color: #00AEEF;
 }
 
 .c1 {
@@ -7214,7 +7501,19 @@ exports[`Markdown component should render markdown h5 headers 2`] = `
       <div>
         <h6
           class="c3 c4"
+          id="user-content-foobar"
         >
+          <a
+            aria-hidden="true"
+            class="c5 c6"
+            color="primary.main"
+            href="#foobar"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Foobar
         </h6>
       </div>

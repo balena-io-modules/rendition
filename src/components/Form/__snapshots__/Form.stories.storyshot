@@ -2576,7 +2576,19 @@ exports[`Storyshots Core/Form With Extra Widgets 1`] = `
         <div>
           <h1
             class="sc-gWHigU hGGoTM sc-citxvW hoVVGj"
+            id="user-content-extra-widgets"
           >
+            <a
+              aria-hidden="true"
+              class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+              color="primary.main"
+              href="#extra-widgets"
+              tabindex="-1"
+            >
+              <span
+                class="icon icon-link"
+              />
+            </a>
             Extra widgets
           </h1>
           

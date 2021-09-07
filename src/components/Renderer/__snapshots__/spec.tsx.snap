@@ -1811,9 +1811,26 @@ exports[`Renderer component A markdown field 1`] = `
   font-size: 58px;
 }
 
-.c8 {
+.c10 {
   margin: 0;
   font-size: 34px;
+}
+
+.c8 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c8:active,
+.c8:hover {
+  color: hsl(196.29999999999995,100%,37.5%);
+}
+
+.c9 {
+  color: #00AEEF;
 }
 
 .c1 {
@@ -2098,14 +2115,38 @@ exports[`Renderer component A markdown field 1`] = `
         <div>
           <h1
             class="c6 c7"
+            id="user-content-something-important"
           >
+            <a
+              aria-hidden="true"
+              class="c8 c9"
+              color="primary.main"
+              href="#something-important"
+              tabindex="-1"
+            >
+              <span
+                class="icon icon-link"
+              />
+            </a>
             Something Important
           </h1>
           
 
           <h2
-            class="c6 c8"
+            class="c6 c10"
+            id="user-content-something-less-important"
           >
+            <a
+              aria-hidden="true"
+              class="c8 c9"
+              color="primary.main"
+              href="#something-less-important"
+              tabindex="-1"
+            >
+              <span
+                class="icon icon-link"
+              />
+            </a>
             Something less important
           </h2>
         </div>
@@ -2925,6 +2966,23 @@ exports[`Renderer component An array of different type items 1`] = `
   font-size: 58px;
 }
 
+.c11 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c11:active,
+.c11:hover {
+  color: hsl(196.29999999999995,100%,37.5%);
+}
+
+.c12 {
+  color: #00AEEF;
+}
+
 .c1 {
   font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
@@ -3256,7 +3314,19 @@ exports[`Renderer component An array of different type items 1`] = `
               <div>
                 <h1
                   class="c9 c10"
+                  id="user-content-this-is-markdown"
                 >
+                  <a
+                    aria-hidden="true"
+                    class="c11 c12"
+                    color="primary.main"
+                    href="#this-is-markdown"
+                    tabindex="-1"
+                  >
+                    <span
+                      class="icon icon-link"
+                    />
+                  </a>
                   This is markdown
                 </h1>
               </div>
@@ -4616,6 +4686,23 @@ exports[`Renderer component anyOf options 1`] = `
   font-size: 58px;
 }
 
+.c10 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+  display: inline-block;
+}
+
+.c10:active,
+.c10:hover {
+  color: hsl(196.29999999999995,100%,37.5%);
+}
+
+.c11 {
+  color: #00AEEF;
+}
+
 .c1 {
   font-family: 'Source Sans Pro',Helvetica,sans-serif;
   font-size: 14px;
@@ -4919,7 +5006,19 @@ exports[`Renderer component anyOf options 1`] = `
           <div>
             <h1
               class="c8 c9"
+              id="user-content-this-is-markdown"
             >
+              <a
+                aria-hidden="true"
+                class="c10 c11"
+                color="primary.main"
+                href="#this-is-markdown"
+                tabindex="-1"
+              >
+                <span
+                  class="icon icon-link"
+                />
+              </a>
               This is markdown
             </h1>
           </div>
