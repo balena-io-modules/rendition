@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency tslib to ^2.3.1'
+      hash: c2f97652941ce64ff6ac882895022d1b7c160473
+      body: |
+        Update tslib from 2.1.0 to 2.3.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.6.9
+  date: 2021-09-02T11:58:16.610Z
+- commits:
     - subject: Fix unknown event handler onSort in TableBase
       hash: 999b85c4952047b676ea0cfa4007c1f2d6885710
       body: ''
