@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency copy-to-clipboard to ^3.3.1'
+      hash: be2a2a9aab6234c5d9bd4c4fe9ef9062275d1943
+      body: |
+        Update copy-to-clipboard from 3.0.8 to 3.3.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.6.11
+  date: 2021-09-07T12:53:55.535Z
+- commits:
     - subject: 'patch: Update dependency hast-util-sanitize to ^3.0.2'
       hash: 4d9d3594d38452d41ac9133435647a5d960c2d33
       body: |
