@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency hast-util-sanitize to ^3.0.2'
+      hash: 4d9d3594d38452d41ac9133435647a5d960c2d33
+      body: |
+        Update hast-util-sanitize from 3.0.0 to 3.0.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.6.10
+  date: 2021-09-07T10:27:55.537Z
+- commits:
     - subject: 'patch: Update dependency tslib to ^2.3.1'
       hash: c2f97652941ce64ff6ac882895022d1b7c160473
       body: |
