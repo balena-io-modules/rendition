@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency unified to ^9.2.2'
+      hash: 20da538de885e699c04acffbd288773f45f1ba4f
+      body: |
+        Update unified from 9.1.0 to 9.2.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.6.12
+  date: 2021-09-07T14:11:18.636Z
+- commits:
     - subject: 'patch: Update dependency copy-to-clipboard to ^3.3.1'
       hash: be2a2a9aab6234c5d9bd4c4fe9ef9062275d1943
       body: |
