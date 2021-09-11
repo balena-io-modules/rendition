@@ -8,6 +8,8 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import rehypeReact from 'rehype-react';
 import sanitize from 'rehype-sanitize';
+import autoLinkHeadings from 'rehype-autolink-headings';
+import slug from 'rehype-slug';
 import raw from 'rehype-raw';
 import prism from '@mapbox/rehype-prism';
 import { Divider } from '../../components/Divider';
@@ -168,6 +170,8 @@ export const getProcessor = (
 	if (!disableCodeHighlight) {
 		processor = processor.use(prism, { ignoreMissing: true });
 	}
+
+	processor = processor.use(slug).use(autoLinkHeadings);
 
 	if (!disableRawHtml) {
 		processor = processor.use(raw);

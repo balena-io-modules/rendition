@@ -130,4 +130,8 @@ export default css`
 	.xterm-underline {
 		text-decoration: underline;
 	}
+
+	.xterm-strikethrough {
+		text-decoration: line-through;
+	}
 `;

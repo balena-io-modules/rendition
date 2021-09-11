@@ -325,7 +325,19 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
       <div>
         <h1
           class="sc-gWHigU hGGoTM sc-citxvW hoVVGj"
+          id="user-content-markdown"
         >
+          <a
+            aria-hidden="true"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            color="primary.main"
+            href="#markdown"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Markdown
         </h1>
         
@@ -343,14 +355,38 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
 
         <h2
           class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          id="user-content-headers"
         >
+          <a
+            aria-hidden="true"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            color="primary.main"
+            href="#headers"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Headers
         </h2>
         
 
         <h1
           class="sc-gWHigU hGGoTM sc-citxvW hoVVGj"
+          id="user-content-this-is-an-h1-tag"
         >
+          <a
+            aria-hidden="true"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            color="primary.main"
+            href="#this-is-an-h1-tag"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           This is an 
           <code>
             &lt;h1&gt;
@@ -361,7 +397,19 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
 
         <h2
           class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          id="user-content-this-is-an-h2-tag"
         >
+          <a
+            aria-hidden="true"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            color="primary.main"
+            href="#this-is-an-h2-tag"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           This is an 
           <code>
             &lt;h2&gt;
@@ -372,7 +420,19 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
 
         <h6
           class="sc-gWHigU jmkjIR sc-eggMyH dhyhkx"
+          id="user-content-this-is-an-h6-tag"
         >
+          <a
+            aria-hidden="true"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            color="primary.main"
+            href="#this-is-an-h6-tag"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           This is an 
           <code>
             &lt;h6&gt;
@@ -383,7 +443,19 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
 
         <h2
           class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          id="user-content-emphasis"
         >
+          <a
+            aria-hidden="true"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            color="primary.main"
+            href="#emphasis"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Emphasis
         </h2>
         
@@ -433,14 +505,38 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
 
         <h2
           class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          id="user-content-lists"
         >
+          <a
+            aria-hidden="true"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            color="primary.main"
+            href="#lists"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Lists
         </h2>
         
 
         <h3
           class="sc-gWHigU hGGoTM sc-bZSRNg dcjMWL"
+          id="user-content-unordered"
         >
+          <a
+            aria-hidden="true"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            color="primary.main"
+            href="#unordered"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Unordered
         </h3>
         
@@ -480,7 +576,19 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
 
         <h3
           class="sc-gWHigU hGGoTM sc-bZSRNg dcjMWL"
+          id="user-content-ordered"
         >
+          <a
+            aria-hidden="true"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            color="primary.main"
+            href="#ordered"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Ordered
         </h3>
         
@@ -525,7 +633,19 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
 
         <h2
           class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          id="user-content-images"
         >
+          <a
+            aria-hidden="true"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            color="primary.main"
+            href="#images"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Images
         </h2>
         
@@ -542,7 +662,19 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
 
         <h2
           class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          id="user-content-links"
         >
+          <a
+            aria-hidden="true"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            color="primary.main"
+            href="#links"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Links
         </h2>
         
@@ -576,7 +708,19 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
 
         <h2
           class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          id="user-content-blockquotes"
         >
+          <a
+            aria-hidden="true"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            color="primary.main"
+            href="#blockquotes"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Blockquotes
         </h2>
         
@@ -603,7 +747,19 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
 
         <h2
           class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          id="user-content-inline-code"
         >
+          <a
+            aria-hidden="true"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            color="primary.main"
+            href="#inline-code"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Inline code
         </h2>
         
@@ -624,7 +780,19 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
 
         <h2
           class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          id="user-content-code-blocks"
         >
+          <a
+            aria-hidden="true"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            color="primary.main"
+            href="#code-blocks"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Code blocks
         </h2>
         
@@ -721,7 +889,19 @@ const foo = () =&gt; {
 
         <h2
           class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          id="user-content-task-lists"
         >
+          <a
+            aria-hidden="true"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            color="primary.main"
+            href="#task-lists"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Task Lists
         </h2>
         
@@ -771,7 +951,19 @@ const foo = () =&gt; {
 
         <h2
           class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          id="user-content-tables"
         >
+          <a
+            aria-hidden="true"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            color="primary.main"
+            href="#tables"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Tables
         </h2>
         
@@ -827,7 +1019,19 @@ const foo = () =&gt; {
 
         <h2
           class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          id="user-content-strikethrough"
         >
+          <a
+            aria-hidden="true"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            color="primary.main"
+            href="#strikethrough"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Strikethrough
         </h2>
         
@@ -854,7 +1058,19 @@ const foo = () =&gt; {
 
         <h2
           class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          id="user-content-inline-html"
         >
+          <a
+            aria-hidden="true"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            color="primary.main"
+            href="#inline-html"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Inline HTML
         </h2>
         
@@ -900,7 +1116,19 @@ const foo = () =&gt; {
 
         <h2
           class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          id="user-content-keyboard-keys"
         >
+          <a
+            aria-hidden="true"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            color="primary.main"
+            href="#keyboard-keys"
+            tabindex="-1"
+          >
+            <span
+              class="icon icon-link"
+            />
+          </a>
           Keyboard keys
         </h2>
         
