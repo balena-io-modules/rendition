@@ -1,4 +1,16 @@
 - commits:
+    - subject: Link headings in markdown
+      hash: db27d52d8f5fef58778d96ac488294d01d6aadf0
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Amit Solanki <amit@balena.io>
+        signed-off-by: Amit Solanki <amit@balena.io>
+      author: Amit Solanki
+  version: 21.7.0
+  date: 2021-09-11T13:06:30.025Z
+- commits:
     - subject: 'patch: Update dependency unified to ^9.2.2'
       hash: 20da538de885e699c04acffbd288773f45f1ba4f
       body: |
