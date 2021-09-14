@@ -1,4 +1,14 @@
 - commits:
+    - subject: Allow uploading files
+      hash: 4e8b6df482017fa528cd5bb2379c01d349206b40
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: karaxuna
+  version: 21.8.0
+  date: 2021-09-14T13:58:57.280Z
+- commits:
     - subject: Link headings in markdown
       hash: db27d52d8f5fef58778d96ac488294d01d6aadf0
       body: ''
