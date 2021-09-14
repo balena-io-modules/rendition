@@ -271,6 +271,11 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 
 	const onActionTriggered = React.useCallback((actionData: ActionData<T>) => {
 		setActionData(actionData);
+		if (actionData.action.actionFn) {
+			actionData.action.actionFn({
+				affectedEntries: actionData.affectedEntries || [],
+			});
+		}
 	}, []);
 
 	const onActionDone = React.useCallback((isSuccessful: boolean) => {
@@ -376,7 +381,7 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 					/>
 				)}
 
-				{actionData &&
+				{actionData?.action?.renderer &&
 					actionData.action.renderer({
 						schema: actionData.schema,
 						affectedEntries: actionData.affectedEntries,

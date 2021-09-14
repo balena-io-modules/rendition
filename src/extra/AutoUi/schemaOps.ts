@@ -38,11 +38,12 @@ export interface AutoUIModel<T> {
 export interface AutoUIAction<T> {
 	title: string;
 	type: 'create' | 'update' | 'delete';
-	renderer: (props: {
+	renderer?: (props: {
 		schema: JSONSchema;
 		affectedEntries?: T[];
 		onDone: (isSuccessful: boolean) => void;
 	}) => React.ReactNode;
+	actionFn?: (props: { affectedEntries?: T[] }) => void;
 	isDisabled?: (props: { affectedEntries?: T[] }) => string | false;
 	isDangerous?: boolean;
 }
