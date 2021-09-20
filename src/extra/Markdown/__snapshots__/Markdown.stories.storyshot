@@ -76,7 +76,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                         class="sc-gKseQn cOdZAq sc-iBPTik jsUrGU"
                       >
                         <div
-                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-cipXqI eSXusk"
+                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-cipXqI ioQWsw"
                         >
                           <div>
                             <h1
@@ -113,7 +113,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                         class="sc-gKseQn cOdZAq sc-iBPTik jsUrGU"
                       >
                         <div
-                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-cipXqI eSXusk"
+                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-cipXqI ioQWsw"
                         >
                           <div>
                             A title
@@ -167,7 +167,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                         class="sc-gKseQn cOdZAq sc-iBPTik jsUrGU"
                       >
                         <div
-                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-cipXqI eSXusk"
+                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-cipXqI ioQWsw"
                         >
                           <div>
                             <h1
@@ -204,7 +204,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                         class="sc-gKseQn cOdZAq sc-iBPTik jsUrGU"
                       >
                         <div
-                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-cipXqI eSXusk"
+                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-cipXqI ioQWsw"
                         >
                           <div>
                             A title
@@ -252,7 +252,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                         class="sc-gKseQn cOdZAq sc-iBPTik jsUrGU"
                       >
                         <div
-                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-cipXqI eSXusk"
+                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-cipXqI ioQWsw"
                         >
                           <div>
                             <h1
@@ -289,7 +289,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                         class="sc-gKseQn cOdZAq sc-iBPTik jsUrGU"
                       >
                         <div
-                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-cipXqI eSXusk"
+                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-cipXqI ioQWsw"
                         >
                           <div>
                             <h1
@@ -320,7 +320,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
   >
     <div
-      class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-cipXqI eSXusk"
+      class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-cipXqI ioQWsw"
     >
       <div>
         <h1
@@ -328,11 +328,9 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-markdown"
         >
           <a
-            aria-hidden="true"
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
             color="primary.main"
             href="#markdown"
-            tabindex="-1"
           >
             <span
               class="icon icon-link"
@@ -358,11 +356,9 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-headers"
         >
           <a
-            aria-hidden="true"
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
             color="primary.main"
             href="#headers"
-            tabindex="-1"
           >
             <span
               class="icon icon-link"
@@ -377,11 +373,9 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-this-is-an-h1-tag"
         >
           <a
-            aria-hidden="true"
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
             color="primary.main"
             href="#this-is-an-h1-tag"
-            tabindex="-1"
           >
             <span
               class="icon icon-link"
@@ -400,11 +394,9 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-this-is-an-h2-tag"
         >
           <a
-            aria-hidden="true"
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
             color="primary.main"
             href="#this-is-an-h2-tag"
-            tabindex="-1"
           >
             <span
               class="icon icon-link"
@@ -423,11 +415,9 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-this-is-an-h6-tag"
         >
           <a
-            aria-hidden="true"
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
             color="primary.main"
             href="#this-is-an-h6-tag"
-            tabindex="-1"
           >
             <span
               class="icon icon-link"
@@ -446,11 +436,9 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-emphasis"
         >
           <a
-            aria-hidden="true"
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
             color="primary.main"
             href="#emphasis"
-            tabindex="-1"
           >
             <span
               class="icon icon-link"
@@ -508,11 +496,9 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-lists"
         >
           <a
-            aria-hidden="true"
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
             color="primary.main"
             href="#lists"
-            tabindex="-1"
           >
             <span
               class="icon icon-link"
@@ -527,11 +513,9 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-unordered"
         >
           <a
-            aria-hidden="true"
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
             color="primary.main"
             href="#unordered"
-            tabindex="-1"
           >
             <span
               class="icon icon-link"
@@ -579,11 +563,9 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-ordered"
         >
           <a
-            aria-hidden="true"
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
             color="primary.main"
             href="#ordered"
-            tabindex="-1"
           >
             <span
               class="icon icon-link"
@@ -636,11 +618,9 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-images"
         >
           <a
-            aria-hidden="true"
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
             color="primary.main"
             href="#images"
-            tabindex="-1"
           >
             <span
               class="icon icon-link"
@@ -665,11 +645,9 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-links"
         >
           <a
-            aria-hidden="true"
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
             color="primary.main"
             href="#links"
-            tabindex="-1"
           >
             <span
               class="icon icon-link"
@@ -711,11 +689,9 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-blockquotes"
         >
           <a
-            aria-hidden="true"
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
             color="primary.main"
             href="#blockquotes"
-            tabindex="-1"
           >
             <span
               class="icon icon-link"
@@ -750,11 +726,9 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-inline-code"
         >
           <a
-            aria-hidden="true"
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
             color="primary.main"
             href="#inline-code"
-            tabindex="-1"
           >
             <span
               class="icon icon-link"
@@ -783,11 +757,9 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-code-blocks"
         >
           <a
-            aria-hidden="true"
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
             color="primary.main"
             href="#code-blocks"
-            tabindex="-1"
           >
             <span
               class="icon icon-link"
@@ -892,11 +864,9 @@ const foo = () =&gt; {
           id="user-content-task-lists"
         >
           <a
-            aria-hidden="true"
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
             color="primary.main"
             href="#task-lists"
-            tabindex="-1"
           >
             <span
               class="icon icon-link"
@@ -954,11 +924,9 @@ const foo = () =&gt; {
           id="user-content-tables"
         >
           <a
-            aria-hidden="true"
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
             color="primary.main"
             href="#tables"
-            tabindex="-1"
           >
             <span
               class="icon icon-link"
@@ -1022,11 +990,9 @@ const foo = () =&gt; {
           id="user-content-strikethrough"
         >
           <a
-            aria-hidden="true"
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
             color="primary.main"
             href="#strikethrough"
-            tabindex="-1"
           >
             <span
               class="icon icon-link"
@@ -1061,11 +1027,9 @@ const foo = () =&gt; {
           id="user-content-inline-html"
         >
           <a
-            aria-hidden="true"
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
             color="primary.main"
             href="#inline-html"
-            tabindex="-1"
           >
             <span
               class="icon icon-link"
@@ -1119,11 +1083,9 @@ const foo = () =&gt; {
           id="user-content-keyboard-keys"
         >
           <a
-            aria-hidden="true"
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
             color="primary.main"
             href="#keyboard-keys"
-            tabindex="-1"
           >
             <span
               class="icon icon-link"
@@ -1164,7 +1126,7 @@ exports[`Storyshots Extra/Markdown With Decorators 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
   >
     <div
-      class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-cipXqI eSXusk"
+      class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-cipXqI ioQWsw"
     >
       <div>
         <p
