@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'Map: Fix mouse event not triggering'
+      hash: d1632114b8b5e37851b854d2cb412c1c47835061
+      body: ''
+      footer:
+        Resolves: '#1402'
+        resolves: '#1402'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 21.7.2
+  date: 2021-09-21T19:06:29.909Z
+- commits:
     - subject: Add icon to markdown heading links
       hash: e04de50a076082c740b0cb0e16f897a4fb1d2a36
       body: ''
