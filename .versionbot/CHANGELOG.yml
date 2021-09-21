@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add icon to markdown heading links
+      hash: e04de50a076082c740b0cb0e16f897a4fb1d2a36
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Amit Solanki <amit@balena.io>
+        signed-off-by: Amit Solanki <amit@balena.io>
+      author: Amit Solanki
+  version: 21.7.1
+  date: 2021-09-21T06:32:27.981Z
+- commits:
     - subject: Link headings in markdown
       hash: db27d52d8f5fef58778d96ac488294d01d6aadf0
       body: ''
