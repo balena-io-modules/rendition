@@ -149,6 +149,43 @@ const MarkdownWrapper = styled(Txt)`
 	blockquote > :last-child {
 		margin-bottom: 0;
 	}
+
+	.heading-anchor-link span.icon {
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAA/1BMVEUAAAAAAAAAgIAAVVVAQIAzZmYrVYAkSW0wUHAtS2kmTXMkVW0sTm8pUnAnTmwmTHEuUm0tU3EpU24oUXIpUW4oT3ErUW0qTm0rUHErUW8qT3EsUHArUXApT3EqUW4sUXApT28qUXApT3ApT28rUG8qUW8pUHAqUG8rT28qT28rUG4qUG4pUW8qUXAqUG4pUW8qUHAqUHAqUG4qUW8rUW8qUW4qUG8rUW8qUHAqUG8qUG4qUG8qUG8qUW8pUG8rUHAqUG8pUG8pUW8rUG8qUW8qUG8qUG8rUG8qUG8rUW8qUG8rUG8qUG8qUG8qUG8qUG8qUG8qUG8qUG8qUG////+bGS/DAAAAU3RSTlMAAQIDBAUGBxARFBUXGRobHCIlJiwtLzE2PD1AQkRPUl5iZGpsbnBzd3p9f4iLjY6SmZ2eoausrrC1u7y9vr/Aw8vR0tTW3d7j5Onq6+zx9fr7/UBGcCYAAAABYktHRFTkA4ilAAAArElEQVQYGa3BV1bCUABAwQuhh94kICoISgfphmZEpYm0/e+Fl5Ccw7/McAPxrC7OFXlyuhjLWCRtGkUXnWkSpvzGw4XnN4dp0Mbghk6f0msC4b2FLvAJjSHq/FAAqt8SwoeK/asMPOwV8K7rNkjvg1S2PoS3CaCsV2ryRYOegu5xh+B/rkWKP+DC8LTFFDsomEZdLI1lxo4gt/5CWBzN48mwuONK+D4rpJz81xnMWxXLF2A3LAAAAABJRU5ErkJggg==');
+		width: 20px;
+		background-repeat: no-repeat;
+		height: 20px;
+		display: inline-block;
+		transform-origin: 0px 0px;
+		visibility: hidden;
+	}
+	.heading-anchor-link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translateX(-100%);
+		width: 20px;
+		height: 20px;
+		padding-right: 4px;
+	}
+
+	h1:hover .heading-anchor-link span.icon,
+	h2:hover .heading-anchor-link span.icon,
+	h3:hover .heading-anchor-link span.icon,
+	h4:hover .heading-anchor-link span.icon,
+	h5:hover .heading-anchor-link span.icon,
+	h6:hover .heading-anchor-link span.icon {
+		visibility: visible;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		position: relative;
+	}
 `;
 
 type components = {
@@ -171,7 +208,9 @@ export const getProcessor = (
 		processor = processor.use(prism, { ignoreMissing: true });
 	}
 
-	processor = processor.use(slug).use(autoLinkHeadings);
+	processor = processor.use(slug).use(autoLinkHeadings, {
+		properties: { className: 'heading-anchor-link' },
+	});
 
 	if (!disableRawHtml) {
 		processor = processor.use(raw);
