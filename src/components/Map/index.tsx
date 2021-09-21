@@ -146,7 +146,7 @@ const BaseMap = <T extends any>({
 			{apiKey && (
 				<LoadScript
 					googleMapsApiKey={apiKey}
-					version="3.41"
+					version="3"
 					language="en"
 					preventGoogleFontsLoading
 				>
