@@ -15,6 +15,9 @@ export default {
 			</div>
 		),
 	],
+	argTypes: {
+		mapClick: { action: 'mapClick' },
+	},
 } as Meta;
 
 const Template = createTemplate<MapProps<any>>(Map);
