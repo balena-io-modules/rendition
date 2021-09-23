@@ -1,7 +1,7 @@
 import defaultTo from 'lodash/defaultTo';
-import { withProps } from 'recompose';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
+import { withProps } from '../../utils';
 import { RenditionSystemProps, ResponsiveStyle } from '../../common-types';
 
 const Base = styled.div<FixedBaseProps>`

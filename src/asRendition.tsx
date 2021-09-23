@@ -1,7 +1,6 @@
 import difference from 'lodash/difference';
 import { arrayOf, number, oneOfType, string } from 'prop-types';
 import * as React from 'react';
-import { compose, getDisplayName } from 'recompose';
 import styled, { withTheme } from 'styled-components';
 import {
 	color,
@@ -17,6 +16,20 @@ import {
 } from 'styled-system';
 import { StyledSystemProps } from './common-types';
 import { Tooltips } from './tooltips';
+import { compose } from './utils';
+
+// Returns the display name of a React component. Falls back to 'Component'.
+export const getDisplayName = (component: React.ComponentType): string => {
+	if (typeof component === 'string') {
+		return component;
+	}
+
+	if (!component) {
+		return 'Component';
+	}
+
+	return component.displayName || component.name || 'Component';
+};
 
 const tooltip = new Tooltips();
 

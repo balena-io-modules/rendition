@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { withProps } from 'recompose';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { RenditionSystemProps } from '../../common-types';
-import { monospace } from '../../utils';
+import { monospace, withProps } from '../../utils';
 import { FlexProps } from '../Flex';
 import { align, bold, caps } from '../Txt';
 

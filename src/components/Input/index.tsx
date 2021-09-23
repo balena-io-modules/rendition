@@ -65,6 +65,8 @@ export interface InternalInputProps
 	/** If true, render text in a monospace font */
 	monospace?: boolean;
 	list?: string;
+	min?: string | number;
+	max?: string | number;
 }
 
 export type InputProps = InternalInputProps &
