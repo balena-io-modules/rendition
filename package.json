@@ -50,7 +50,7 @@
     "@storybook/addon-storyshots": "^6.0.28",
     "@storybook/react": "^6.0.28",
     "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.0",
+    "@testing-library/react": "^11.2.7",
     "@types/enzyme": "^3.10.8",
     "@types/googlemaps": "^3.39.7",
     "@types/highlightjs": "^9.12.0",
