@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove new browser tab from download image process
+      hash: f82d4d3c00f0486938a0dec39b1b5814bc3080b4
+      body: |
+        Remove new browser tab from download image process
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 21.7.6
+  date: 2021-09-24T16:05:29.479Z
+- commits:
     - subject: 'patch: Update dependency date-fns to ^2.24.0'
       hash: 9979a1247baf15d37bc7d176a392e14c96b6377f
       body: |
