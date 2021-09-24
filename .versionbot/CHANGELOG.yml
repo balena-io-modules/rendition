@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update npm to >=5.10.0'
+      hash: ee5c6b1098a21a194098b66ae04722d66364fde3
+      body: |
+        Update npm from 5.7.0 to 5.10.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.7.4
+  date: 2021-09-24T08:30:48.399Z
+- commits:
     - subject: 'patch: Update dependency mermaid to ^8.13.0'
       hash: 2fc8b9ddd20f5594d7e408d4d69005b6c19df603
       body: |
