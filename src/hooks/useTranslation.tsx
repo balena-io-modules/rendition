@@ -78,6 +78,8 @@ const translationMap = {
 		'Download configuration file only',
 
 	'loading.generating_configuration_file': 'Generating configuration file...',
+	'loading.download_image_from_url':
+		'this operation might take several minutes. You can close the modal but do not exit from this page.',
 	'loading.fetching_versions': 'Fetching versions...',
 
 	'no_data.no_os_versions_available_for_download':

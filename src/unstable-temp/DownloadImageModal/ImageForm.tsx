@@ -14,6 +14,11 @@ import { DownloadFormModel, FormModel } from './FormModel';
 import { DeviceType } from './models';
 import { DownloadOptions } from './DownloadImageModal';
 
+export enum DownloadTypeEnum {
+	config,
+	image,
+}
+
 const debounceDownloadSize = debounce(
 	(getDownloadSize, deviceType, rawVersion, setDownloadSize) =>
 		getDownloadSize(deviceType.slug, rawVersion)
@@ -72,7 +77,7 @@ interface ImageFormProps {
 		downloadConfigOnly: boolean,
 		downloadOptions: DownloadOptions,
 	) => void;
-	setIsDownloadingConfig: (isDownloading: boolean) => void;
+	setIsDownloadingType: (isDownloading: DownloadTypeEnum | null) => void;
 	downloadConfig?: (model: FormModel) => Promise<void> | undefined;
 	getDownloadSize?: () => Promise<string> | undefined;
 	modalActions?: Array<
@@ -91,7 +96,7 @@ export const ImageForm = ({
 	deviceType,
 	authToken,
 	onDownloadStart,
-	setIsDownloadingConfig,
+	setIsDownloadingType,
 	downloadConfig,
 	getDownloadSize,
 	modalActions,
@@ -152,23 +157,42 @@ export const ImageForm = ({
 		);
 	}, [deviceType?.slug, rawVersion]);
 
+	const download = async (url: string) => {
+		try {
+			const res = await fetch(url, {
+				method: 'GET',
+				headers: new Headers({
+					Authorization: 'Bearer ' + authToken,
+				}),
+			});
+			const blob = await res.blob();
+			const newBlob = new Blob([blob]);
+
+			const blobUrl = window.URL.createObjectURL(newBlob);
+
+			const link = document.createElement('a');
+			link.href = blobUrl;
+			link.setAttribute(
+				'download',
+				`${window.location.host}-${deviceType.slug}-${rawVersion}.img.zip`,
+			);
+			document.body.appendChild(link);
+			link.click();
+			link.parentNode?.removeChild(link);
+
+			window.URL.revokeObjectURL(blob as any);
+		} catch (error) {
+			console.error(error);
+		}
+	};
+
 	const { t } = useTranslation();
 
 	return (
 		<form
-			action={downloadUrl}
-			target="_blank"
-			method="post"
 			autoComplete="off"
 			style={{ display: 'flex', flexDirection: 'column', height: '100%' }}
 		>
-			<input type="hidden" name="appId" value={appId} />
-			{releaseId && <input type="hidden" name="releaseId" value={releaseId} />}
-			<input type="hidden" name="_token" value={authToken} />
-			<input name="version" value={rawVersion ?? ''} type="hidden" />
-			<input name="deviceType" value={deviceType?.slug} type="hidden" />
-			<input name="fileType" value=".zip" type="hidden" />
-
 			{configurationComponent}
 
 			<Flex flexDirection="column" flex="1">
@@ -237,12 +261,20 @@ export const ImageForm = ({
 								? t('warnings.fill_wifi_credentials')
 								: ''
 						}
-						onClick={async () => {
+						onClick={async (event) => {
+							event.preventDefault();
+							event.stopPropagation();
 							if (model.downloadConfigOnly && downloadConfig) {
-								setIsDownloadingConfig(true);
+								setIsDownloadingType(DownloadTypeEnum.config);
 								await downloadConfig(model);
-								setIsDownloadingConfig(false);
+							} else {
+								setIsDownloadingType(DownloadTypeEnum.image);
+								await download(
+									downloadUrl +
+										`?appId=${appId}&deviceType=${deviceType?.slug}`,
+								);
 							}
+							setIsDownloadingType(null);
 						}}
 						icon={<FontAwesomeIcon icon={faDownload} />}
 						label={

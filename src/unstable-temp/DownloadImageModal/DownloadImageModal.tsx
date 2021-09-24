@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import styled from 'styled-components';
 import { ApplicationInstructions } from './ApplicationInstructions';
-import { ImageForm } from './ImageForm';
+import { ImageForm, DownloadTypeEnum } from './ImageForm';
 import isEmpty from 'lodash/isEmpty';
 import noop from 'lodash/noop';
 import find from 'lodash/find';
@@ -66,7 +66,6 @@ const getUniqueOsTypes = (
 
 	return uniq(osVersions[deviceTypeSlug].map((x) => x.osType));
 };
-
 export interface DownloadOptions {
 	appId: number;
 	releaseId?: number;
@@ -154,7 +153,8 @@ export const UnstableTempDownloadImageModal = ({
 			: {},
 	);
 
-	const [isDownloadingConfig, setIsDownloadingConfig] = React.useState(false);
+	const [downloadingType, setDownloadingType] =
+		React.useState<DownloadTypeEnum | null>();
 	const [isFetching, setIsFetching] = React.useState(isEmpty(osVersions));
 
 	const logoSrc = deviceType?.logoUrl ?? undefined;
@@ -264,8 +264,12 @@ export const UnstableTempDownloadImageModal = ({
 			<Flex flexDirection={['column', 'column', 'column', 'row']}>
 				<Box flex={2} mr={[0, 0, 0, 3]}>
 					<Spinner
-						show={isDownloadingConfig}
-						label={t('loading.generating_configuration_file')}
+						show={!!downloadingType}
+						label={
+							downloadingType === DownloadTypeEnum.config
+								? t('loading.generating_configuration_file')
+								: t('loading.download_image_from_url')
+						}
 					>
 						<Spinner show={isFetching} label={t('loading.fetching_versions')} />
 						{!isFetching && (
@@ -278,7 +282,7 @@ export const UnstableTempDownloadImageModal = ({
 								{!!osType && !!compatibleDeviceTypes && (
 									<ImageForm
 										onDownloadStart={onDownloadStart}
-										setIsDownloadingConfig={setIsDownloadingConfig}
+										setIsDownloadingType={setDownloadingType}
 										deviceType={deviceType}
 										appId={application.id}
 										releaseId={releaseId}
