@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency date-fns to ^2.24.0'
+      hash: 9979a1247baf15d37bc7d176a392e14c96b6377f
+      body: |
+        Update date-fns from 2.16.1 to 2.24.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.7.5
+  date: 2021-09-24T10:56:14.567Z
+- commits:
     - subject: 'patch: Update npm to >=5.10.0'
       hash: ee5c6b1098a21a194098b66ae04722d66364fde3
       body: |
