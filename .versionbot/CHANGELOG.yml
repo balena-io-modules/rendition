@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency mermaid to ^8.13.0'
+      hash: 2fc8b9ddd20f5594d7e408d4d69005b6c19df603
+      body: |
+        Update mermaid from 8.12.0 to 8.13.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.7.3
+  date: 2021-09-23T16:57:39.648Z
+- commits:
     - subject: 'Map: Fix mouse event not triggering'
       hash: d1632114b8b5e37851b854d2cb412c1c47835061
       body: ''
