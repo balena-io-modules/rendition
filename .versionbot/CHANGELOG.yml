@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency @testing-library/react to ^11.2.7'
+      hash: 2f011d0b180398f59df6a805637e318ce285070a
+      body: |
+        Update @testing-library/react from 11.2.0 to 11.2.7
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.7.6
+  date: 2021-09-24T14:18:05.351Z
+- commits:
     - subject: 'patch: Update dependency date-fns to ^2.24.0'
       hash: 9979a1247baf15d37bc7d176a392e14c96b6377f
       body: |
