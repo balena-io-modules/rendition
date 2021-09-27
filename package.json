@@ -61,7 +61,7 @@
     "@types/sinon": "^9.0.8",
     "@types/unist": "^2.0.3",
     "catch-uncommitted": "^1.4.0",
-    "core-js": "^3.7.0",
+    "core-js": "^3.18.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "gh-pages": "2.0.0",
