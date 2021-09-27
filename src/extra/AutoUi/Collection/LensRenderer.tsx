@@ -1,39 +1,38 @@
-import castArray from 'lodash/castArray';
-import React from 'react';
-import { JSONSchema7 as JSONSchema } from 'json-schema';
-import { CollectionLenses } from './Lenses';
-import { Dictionary } from '../../../common-types';
+import castArray from "lodash/castArray";
+import React from "react";
+import { JSONSchema7 as JSONSchema } from "json-schema";
+import { Dictionary } from "../../../common-types";
 import {
 	Format,
 	UiSchema,
 	Value,
 	JsonTypes,
-} from '../../../components/Renderer/types';
-import { DataGrid } from '../../../components/DataGrid';
-import { transformUiSchema } from '../../../components/Renderer/widgets/widget-util';
-import { getValue, getWidget } from '../../../components/Renderer';
-import { Table, TableColumn } from '../../../components/Table';
-import type { TableSortFunction } from '../../../components/Table/TableRow';
-import { useHistory } from '../../../hooks/useHistory';
-import { AutoUIContext, AutoUIBaseResource, Priorities } from '../schemaOps';
-import { diff } from '../../../utils';
+} from "../../../components/Renderer/types";
+import { transformUiSchema } from "../../../components/Renderer/widgets/widget-util";
+import { getValue, getWidget } from "../../../components/Renderer";
+import { TableColumn } from "../../../components/Table";
+import type { TableSortFunction } from "../../../components/Table/TableRow";
+import { useHistory } from "../../../hooks/useHistory";
+import { AutoUIContext, AutoUIBaseResource, Priorities } from "../schemaOps";
+import { diff } from "../../../utils";
+import { LensTemplate } from "../Lenses";
 
 const formatSorters: Dictionary<TableSortFunction<any>> = {};
 
 const getSortingFunction = <T extends any>(
 	schemaKey: keyof T,
-	schemaValue: JSONSchema,
+	schemaValue: JSONSchema
 ): TableSortFunction<T> => {
-	if (formatSorters[schemaValue.format ?? '']) {
-		return formatSorters[schemaValue.format ?? ''];
+	if (formatSorters[schemaValue.format ?? ""]) {
+		return formatSorters[schemaValue.format ?? ""];
 	}
 
 	const types = castArray(schemaValue.type);
 	if (types.includes(JsonTypes.string)) {
 		return (a: T, b: T) => {
-			const aa = (a[schemaKey] ?? '') as string;
-			const bb = (b[schemaKey] ?? '') as string;
-			if (typeof aa === 'string' && typeof bb === 'string') {
+			const aa = (a[schemaKey] ?? "") as string;
+			const bb = (b[schemaKey] ?? "") as string;
+			if (typeof aa === "string" && typeof bb === "string") {
 				return aa.toLowerCase().localeCompare(bb.toLowerCase());
 			}
 			return diff(aa, bb);
@@ -46,7 +45,7 @@ const getSortingFunction = <T extends any>(
 
 const getSelected = <T, K extends keyof T>(
 	key: K,
-	priorities?: Priorities<T>,
+	priorities?: Priorities<T>
 ) => {
 	if (!priorities) {
 		return true;
@@ -65,9 +64,9 @@ const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 	formats,
 }: {
 	schema: JSONSchema;
-	idField: AutoUIContext<T>['idField'];
-	tagField: AutoUIContext<T>['tagField'];
-	customSort: AutoUIContext<T>['customSort'];
+	idField: AutoUIContext<T>["idField"];
+	tagField: AutoUIContext<T>["tagField"];
+	customSort: AutoUIContext<T>["customSort"];
 	priorities?: Priorities<T>;
 	formats?: Format[];
 }): Array<TableColumn<T>> => {
@@ -76,10 +75,10 @@ const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 			// The tables treats tags differently, handle it better
 			.filter(
 				(entry): entry is [keyof T, typeof entry[1]] =>
-					entry[0] !== tagField && entry[0] !== idField,
+					entry[0] !== tagField && entry[0] !== idField
 			)
 			.map(([key, val]) => {
-				if (typeof val !== 'object') {
+				if (typeof val !== "object") {
 					return;
 				}
 
@@ -90,7 +89,7 @@ const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 					// This is used for storing columns and views
 					key,
 					selected: getSelected(key as keyof T, priorities),
-					type: 'predefined',
+					type: "predefined",
 					sortable: customSort?.[key] ?? getSortingFunction(key, val),
 					render: (fieldVal: string, entry: T) =>
 						val.format ? (
@@ -106,16 +105,16 @@ const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 				};
 			})
 			.filter(
-				(columnDef): columnDef is NonNullable<typeof columnDef> => !!columnDef,
+				(columnDef): columnDef is NonNullable<typeof columnDef> => !!columnDef
 			)
 	);
 };
 
-interface ListProps<T> {
+interface LensRendererProps<T> {
 	data: T[] | undefined;
 	schema: JSONSchema;
 	autouiContext: AutoUIContext<T>;
-	lens: CollectionLenses;
+	lens: LensTemplate;
 	filtered: T[];
 	selected: T[];
 	changeSelected: (selected: T[]) => void;
@@ -123,7 +122,7 @@ interface ListProps<T> {
 	formats?: Format[];
 }
 
-export const List = <T extends AutoUIBaseResource<T>>({
+export const LensRenderer = <T extends AutoUIBaseResource<T>>({
 	data,
 	schema,
 	autouiContext,
@@ -133,8 +132,7 @@ export const List = <T extends AutoUIBaseResource<T>>({
 	changeSelected,
 	priorities,
 	formats,
-}: ListProps<T>) => {
-	// const listKey = autouiContext.baseUrl.split('/').join('-');
+}: LensRendererProps<T>) => {
 	const history = useHistory();
 	const columns = React.useMemo(
 		() =>
@@ -152,15 +150,15 @@ export const List = <T extends AutoUIBaseResource<T>>({
 			autouiContext.tagField,
 			autouiContext.customSort,
 			priorities,
-		],
+		]
 	);
 
-	const onRowClick = (
+	const onEntityClick = (
 		row: T,
-		event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+		event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
 	) => {
-		if (autouiContext.onRowClick) {
-			autouiContext.onRowClick(row, event);
+		if (autouiContext.onEntityClick) {
+			autouiContext.onEntityClick(row, event);
 		}
 
 		if (event.isPropagationStopped() && event.isDefaultPrevented()) {
@@ -180,38 +178,20 @@ export const List = <T extends AutoUIBaseResource<T>>({
 	};
 
 	const hasUpdateActions =
-		!!autouiContext.actions?.filter((action) => action.type !== 'create')
+		!!autouiContext.actions?.filter((action) => action.type !== "create")
 			?.length || !!autouiContext.sdk?.tags;
 
 	return (
-		<>
-			{lens === CollectionLenses.Table && (
-				<Table<T>
-					rowKey={'id'}
-					data={filtered}
-					checkedItems={selected}
-					columns={columns}
-					{...(hasUpdateActions && { onCheck: changeSelected })}
-					usePager={data && data.length > 5}
-					pagerPosition={'bottom'}
-					itemsPerPage={50}
-					getRowHref={autouiContext.getBaseUrl}
-					onRowClick={onRowClick}
-					columnStateRestorationKey={`${autouiContext.resource}__columns`}
-					sortingStateRestorationKey={`${autouiContext.resource}__sort`}
-					tagField={autouiContext.tagField as keyof T}
-					enableCustomColumns
-				/>
-			)}
-			{lens === CollectionLenses.Grid && autouiContext.cardRenderer && (
-				<DataGrid<T>
-					items={filtered}
-					renderItem={autouiContext.cardRenderer}
-					getItemKey={(app) => app.id}
-					itemMinWidth={'350px'}
-				/>
-			)}
-		</>
+		<lens.data.renderer
+			filtered={filtered}
+			selected={selected}
+			columns={columns}
+			hasUpdateActions={hasUpdateActions}
+			changeSelected={changeSelected}
+			data={data}
+			autouiContext={autouiContext}
+			onEntityClick={onEntityClick}
+		/>
 	);
 };
 
@@ -250,7 +230,7 @@ export const CustomWidget = ({
 		processedValue,
 		schema.format,
 		undefined,
-		extraFormats,
+		extraFormats
 	);
 
 	return (
