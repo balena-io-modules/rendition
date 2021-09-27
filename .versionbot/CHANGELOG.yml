@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency core-js to ^3.18.1'
+      hash: 1c01408e5f8d6f5e877844849a2a80a92fd11b85
+      body: |
+        Update core-js from 3.7.0 to 3.18.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.7.7
+  date: 2021-09-26T23:48:34.375Z
+- commits:
     - subject: 'patch: Update dependency @testing-library/react to ^11.2.7'
       hash: 2f011d0b180398f59df6a805637e318ce285070a
       body: |
