@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency @testing-library/jest-dom to ^5.14.1'
+      hash: f66948613b18af28e2034f503a60602c3531f91c
+      body: |
+        Update @testing-library/jest-dom from 5.11.6 to 5.14.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.7.12
+  date: 2021-09-28T15:46:05.164Z
+- commits:
     - subject: 'patch: Update tests'
       hash: 79c15aa6b35bb436143c8bc0e2772adbf88501c8
       body: ''
