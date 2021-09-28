@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency monaco-editor-webpack-plugin to ^4.2.0'
+      hash: 7a9931858418df2784365124723589aa019fee90
+      body: |
+        Update monaco-editor-webpack-plugin from 4.1.2 to 4.2.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.7.9
+  date: 2021-09-28T12:09:18.286Z
+- commits:
     - subject: 'patch: Update dependency uuid to ^3.4.0'
       hash: 90910af61c89eef0b6f829235f77fba9d580b9ac
       body: |
