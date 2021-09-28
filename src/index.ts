@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export { Alert, AlertProps } from './components/Alert';
 export { Async } from './components/Async';
 export { Badge, BadgeProps } from './components/Badge';
@@ -13,18 +12,6 @@ export { Card, CardProps } from './components/Card';
 export { Checkbox, CheckboxProps } from './components/Checkbox';
 export { Copy, CopyProps } from './components/Copy';
 export { Divider, DividerProps } from './components/Divider';
-=======
-export { Alert, AlertProps } from "./components/Alert";
-export { Async } from "./components/Async";
-export { Badge, BadgeProps } from "./components/Badge";
-export { Banner, BannerProps } from "./components/Banner";
-export { Button, ButtonProps } from "./components/Button";
-export { ButtonGroup } from "./components/ButtonGroup";
-export { Card, CardProps } from "./components/Card";
-export { Checkbox, CheckboxProps } from "./components/Checkbox";
-export { Copy, CopyProps } from "./components/Copy";
-export { Divider, DividerProps } from "./components/Divider";
->>>>>>> Add AutoUI Lenses
 export {
 	Filters,
 	FiltersProps,
@@ -35,14 +22,14 @@ export {
 	DataTypeModel,
 	DataTypeEditProps,
 	EditModel,
-} from "./components/Filters";
-export { Fixed, FixedProps } from "./components/Fixed";
+} from './components/Filters';
+export { Fixed, FixedProps } from './components/Fixed';
 export {
 	Form,
 	FormProps,
 	FormWidgetProps,
 	RenditionUiSchema,
-} from "./components/Form";
+} from './components/Form';
 
 export {
 	Renderer,
@@ -50,9 +37,9 @@ export {
 	Widget,
 	WidgetProps,
 	widgetFactory,
-} from "./components/Renderer";
+} from './components/Renderer';
 
-export { DataGrid, DataGridProps } from "./components/DataGrid";
+export { DataGrid, DataGridProps } from './components/DataGrid';
 export {
 	HighlightedName,
 	HighlightedNameProps,
@@ -79,13 +66,13 @@ export {
 	StatsTitleProps,
 	ValueWithMaxTitle,
 	ValueWithMaxTitleProps,
-} from "./components/StatsBar";
-export { Steps, Step, StepsProps } from "./components/Steps";
-export { RadioButton, RadioButtonProps } from "./components/RadioButton";
+} from './components/StatsBar';
+export { Steps, Step, StepsProps } from './components/Steps';
+export { RadioButton, RadioButtonProps } from './components/RadioButton';
 export {
 	RadioButtonGroup,
 	RadioButtonGroupProps,
-} from "./components/RadioButtonGroup";
+} from './components/RadioButtonGroup';
 
 export {
 	Table,
@@ -93,34 +80,33 @@ export {
 	TableColumn,
 	TableSortOptions,
 	TableProps,
-} from "./components/Table";
-export { Accordion, AccordionProps } from "./components/Accordion";
-export { Terminal, TerminalProps } from "./components/Terminal";
-export { TextWithCopy, TextWithCopyProps } from "./components/TextWithCopy";
-export { Txt, TxtProps } from "./components/Txt";
-export { Textarea, TextareaProps } from "./components/Textarea";
-export { Img, ImgProps } from "./components/Img";
-export { Heading } from "./components/Heading";
+} from './components/Table';
+export { Accordion, AccordionProps } from './components/Accordion';
+export { Terminal, TerminalProps } from './components/Terminal';
+export { TextWithCopy, TextWithCopyProps } from './components/TextWithCopy';
+export { Txt, TxtProps } from './components/Txt';
+export { Textarea, TextareaProps } from './components/Textarea';
+export { Img, ImgProps } from './components/Img';
+export { Heading } from './components/Heading';
 export {
 	NotificationsContainer,
 	notifications,
-} from "./components/Notifications";
-export { Container } from "./components/Container";
+} from './components/Notifications';
+export { Container } from './components/Container';
 export {
 	DropDownButton,
 	DropDownButtonProps,
-} from "./components/DropDownButton";
-export { Map, MapProps } from "./components/Map";
-export { Navbar, NavbarProps } from "./components/Navbar";
-export { Link, LinkProps } from "./components/Link";
-export { List, ListProps } from "./components/List";
-export { Popover, PopoverProps, PopoverOptions } from "./components/Popover";
-export { Tab, TabProps, Tabs, TabsProps } from "./components/Tabs";
-export { Tag, TagProps, TagItem } from "./components/Tag";
+} from './components/DropDownButton';
+export { Map, MapProps } from './components/Map';
+export { Navbar, NavbarProps } from './components/Navbar';
+export { Link, LinkProps } from './components/Link';
+export { List, ListProps } from './components/List';
+export { Popover, PopoverProps, PopoverOptions } from './components/Popover';
+export { Tab, TabProps, Tabs, TabsProps } from './components/Tabs';
+export { Tag, TagProps, TagItem } from './components/Tag';
 export {
 	TagManagementModal,
 	TagManagementModalProps,
-<<<<<<< HEAD
 } from './components/TagManagementModal';
 export { Avatar, AvatarProps } from './components/Avatar';
 export { Box, BoxProps } from './components/Box';
@@ -130,27 +116,17 @@ export { useTheme } from './hooks/useTheme';
 export { useBreakpoint } from './hooks/useBreakpoint';
 export { default as Theme } from './theme';
 export { Theme as ThemeType } from './common-types';
-=======
-} from "./components/TagManagementModal";
-export { Avatar, AvatarProps } from "./components/Avatar";
-export { Box, BoxProps } from "./components/Box";
-export { Breadcrumbs, BreadcrumbsProps, Crumb } from "./components/Breadcrumbs";
-export { Flex, FlexProps } from "./components/Flex";
-export { useTheme } from "./hooks/useTheme";
-export { default as Theme } from "./theme";
-export { Theme as ThemeType } from "./common-types";
->>>>>>> Add AutoUI Lenses
 
 export {
 	default as asRendition,
 	withStyledSystem,
 	withTooltip,
-} from "./asRendition";
+} from './asRendition';
 
-import * as SchemaSieve from "./components/Filters/SchemaSieve";
+import * as SchemaSieve from './components/Filters/SchemaSieve';
 export { SchemaSieve };
 
-export { AutoUI, AutoUIProps } from "./extra/AutoUi";
+export { AutoUI, AutoUIProps } from './extra/AutoUI';
 export {
 	AutoUICollection,
 	AutoUICollectionProps,
@@ -164,9 +140,9 @@ export {
 	AutoUIModel,
 	autoUIJsonSchemaPick,
 	autoUIGetDisabledReason,
-} from "./extra/AutoUi/Collection";
-export { AutoUIEntity, AutoUIEntityProps } from "./extra/AutoUi/Entity";
-export * from "./extra/AutoUi/Lenses/types";
+} from './extra/AutoUI/Collection';
+export { AutoUIEntity, AutoUIEntityProps } from './extra/AutoUI/Entity';
+export * from './extra/AutoUI/Lenses/types';
 
 export {
 	ResponsiveStyle,
@@ -187,8 +163,8 @@ export {
 	TooltipProps,
 	Tooltip,
 	RenditionSystemProps,
-} from "./common-types";
+} from './common-types';
 export {
 	UnstableTempDownloadImageModal,
 	UnstableTempDownloadImageModalProps,
-} from "./unstable-temp/DownloadImageModal/DownloadImageModal";
+} from './unstable-temp/DownloadImageModal/DownloadImageModal';

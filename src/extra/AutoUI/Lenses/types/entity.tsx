@@ -32,7 +32,13 @@ export const entity: LensTemplate = {
 	data: {
 		label: 'Entity',
 		format: 'summary',
-		renderer: (props: EntityProps<any>) => {
+		renderer: ({
+			entity,
+			properties,
+			hasUpdateActions,
+			model,
+			autouiContext,
+		}: EntityProps<any>) => {
 			const [actionData, setActionData] = React.useState<
 				ActionData<any> | undefined
 			>();
@@ -54,23 +60,21 @@ export const entity: LensTemplate = {
 
 			return (
 				<Card>
-					{props.entity && (
+					{entity && (
 						<>
 							<Flex flexDirection="row" justifyContent="space-between">
 								<Flex flexDirection="column">
 									<Heading.h2>
-										{props.properties[0].render(
-											props.entity[props.properties[0].key],
-											props.entity,
-										)}
+										{properties.length > 0 &&
+											properties[0].render(entity[properties[0].key], entity)}
 									</Heading.h2>
 								</Flex>
 								<Flex flexDirection="column" alignItems="flex-end">
-									{props.hasUpdateActions && (
+									{hasUpdateActions && (
 										<Update
-											model={props.model}
-											selected={[props.entity]}
-											autouiContext={props.autouiContext}
+											model={model}
+											selected={[entity]}
+											autouiContext={autouiContext}
 											hasOngoingAction={false}
 											onActionTriggered={onActionTriggered}
 										/>
@@ -84,7 +88,7 @@ export const entity: LensTemplate = {
 								justifyContent="space-between"
 								alignItems="center"
 							>
-								{props.properties.map(
+								{properties.map(
 									(property) =>
 										property.priority !== 'primary' && (
 											<Flex
@@ -95,10 +99,7 @@ export const entity: LensTemplate = {
 											>
 												<Label>{property.title}</Label>
 												<Txt>
-													{property.render(
-														props.entity[property.key],
-														props.entity,
-													)}
+													{property.render(entity[property.key], entity)}
 												</Txt>
 											</Flex>
 										),

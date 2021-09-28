@@ -262,7 +262,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                         >
                           <div>
                             <p
@@ -305,7 +305,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                         >
                           <div>
                             <p
@@ -412,7 +412,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                            class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                           >
                             <div>
                               <p
@@ -744,7 +744,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                         >
                           <div>
                             <p
@@ -787,7 +787,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                         >
                           <div>
                             <p
@@ -894,7 +894,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                            class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                           >
                             <div>
                               <p
@@ -1234,7 +1234,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                         >
                           <div>
                             <p
@@ -1278,7 +1278,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                         >
                           <div>
                             <p
@@ -1387,7 +1387,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                            class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                           >
                             <div>
                               <p
@@ -1719,7 +1719,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                         >
                           <div>
                             <p
@@ -1762,7 +1762,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                         >
                           <div>
                             <p
@@ -1869,7 +1869,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                            class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                           >
                             <div>
                               <p
@@ -2196,7 +2196,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                         >
                           <div>
                             <p
@@ -2239,7 +2239,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                         >
                           <div>
                             <p
@@ -2346,7 +2346,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                            class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                           >
                             <div>
                               <p
@@ -2571,7 +2571,7 @@ exports[`Storyshots Core/Form With Extra Widgets 1`] = `
       class="sc-gKclnd exdBHI sc-iCfMLu cibyyY"
     >
       <div
-        class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+        class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
       >
         <div>
           <h1
@@ -3373,7 +3373,7 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                         Markdown
                       </label>
                       <div
-                        class="sc-bzPmhk cDgJoI"
+                        class="sc-bxDdli dTZMNh"
                         id="simplemde-editor-1-wrapper"
                       >
                         <textarea
@@ -3665,7 +3665,7 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                         Captcha
                       </label>
                       <div
-                        class="sc-jYmNlR bqMpKp"
+                        class="sc-jWaEpP hdslPu"
                       />
                     </div>
                   </div>
@@ -3762,7 +3762,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                         id="root_Name"
                       >
                         <div
-                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                         >
                           <div>
                             <p
@@ -3972,7 +3972,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                         >
                           <div>
                             <p
@@ -4015,7 +4015,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                         >
                           <div>
                             <p
@@ -4146,7 +4146,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                            class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                           >
                             <div>
                               <p
@@ -4832,7 +4832,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                         >
                           <div>
                             <p
@@ -4875,7 +4875,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                         >
                           <div>
                             <p
@@ -5006,7 +5006,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                            class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                           >
                             <div>
                               <p
@@ -5147,7 +5147,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                             class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-bilyIR kdyjCP"
                           >
                             <div
-                              class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                              class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                             >
                               <div>
                                 <p
@@ -5377,7 +5377,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                         >
                           <div>
                             <p
@@ -5420,7 +5420,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                         >
                           <div>
                             <p
@@ -5551,7 +5551,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+                            class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-dGXBhE cWAbok"
                           >
                             <div>
                               <p

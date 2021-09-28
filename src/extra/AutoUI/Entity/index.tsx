@@ -1,5 +1,5 @@
-import React from "react";
-import isEqual from "lodash/isEqual";
+import React from 'react';
+import isEqual from 'lodash/isEqual';
 
 import {
 	AutoUIAction,
@@ -7,26 +7,31 @@ import {
 	AutoUIModel,
 	AutoUIBaseResource,
 	getFieldForFormat,
-} from "../schemaOps";
-import styled from "styled-components";
-import { Flex } from "../../../components/Flex";
-import { ResourceTagModelService } from "../../../components/TagManagementModal/tag-management-service";
-import { Spinner } from "../../../components/Spinner";
-import { Format } from "../../../components/Renderer/types";
-import { useTranslation } from "../../../hooks/useTranslation";
-import { LensSelection } from "../Lenses/LensSelection";
-import { getLenses, LensTemplate } from "../Lenses";
-import { entity } from "../Lenses/types";
-import { getFromLocalStorage, setToLocalStorage } from "../../../utils";
-import { getColumnsFromSchema } from "../Collection/LensRenderer";
+} from '../schemaOps';
+import styled from 'styled-components';
+import { Flex } from '../../../components/Flex';
+import { ResourceTagModelService } from '../../../components/TagManagementModal/tag-management-service';
+import { Spinner } from '../../../components/Spinner';
+import { Format } from '../../../components/Renderer/types';
+import { useTranslation } from '../../../hooks/useTranslation';
+import { LensSelection } from '../Lenses/LensSelection';
+import { getLenses, LensTemplate } from '../Lenses';
+import { entity } from '../Lenses/types';
+import { getFromLocalStorage, setToLocalStorage } from '../../../utils';
+import { getColumnsFromSchema } from '../Collection/LensRenderer';
 
 const HeaderGrid = styled(Flex)`
-	margin-left: -4px;
-	margin-right: -4px;
-
 	> * {
-		margin-left: 4px;
-		margin-right: 4px;
+		&:first-child {
+			margin-right: 4px;
+		}
+		&:not(:last-child):not(:first-child) {
+			margin-left: 4px;
+			margin-right: 4px;
+		}
+		&:last-child {
+			margin-left: 4px;
+		}
 	}
 `;
 
@@ -43,8 +48,9 @@ export interface AutoUIEntityProps<T> {
 	sdk?: {
 		tags?: ResourceTagModelService;
 	};
-	/** all the lenses available for this AutoUI component */
+	/** All the lenses available for this AutoUI component. Any default lenses will automatically be added to this array. */
 	customLenses?: LensTemplate[];
+	/** Additional context for picking the right lens */
 	lensContext?: object;
 }
 
@@ -68,11 +74,11 @@ export const AutoUIEntity = <T extends AutoUIBaseResource<T>>({
 		return modelRaw;
 	}, [modelRaw]);
 	const defaultLensSlug =
-		getFromLocalStorage(`${model.resource}__view_lens`) || "entity";
+		getFromLocalStorage(`${model.resource}__view_lens`) || 'entity';
 
 	const lenses = React.useMemo(
 		() => getLenses(data, lensContext, customLenses),
-		[data, customLenses]
+		[data, customLenses],
 	);
 
 	const [lens, setLens] = React.useState<LensTemplate>(entity);
@@ -90,13 +96,13 @@ export const AutoUIEntity = <T extends AutoUIBaseResource<T>>({
 		() =>
 			({
 				resource: model.resource,
-				idField: "id",
-				nameField: model.priorities?.primary[0] ?? "id",
-				tagField: getFieldForFormat(model.schema, "tag"),
+				idField: 'id',
+				nameField: model.priorities?.primary[0] ?? 'id',
+				tagField: getFieldForFormat(model.schema, 'tag'),
 				actions,
 				sdk,
 			} as AutoUIContext<T>),
-		[model, actions, sdk]
+		[model, actions, sdk],
 	);
 
 	const properties = React.useMemo(
@@ -113,17 +119,17 @@ export const AutoUIEntity = <T extends AutoUIBaseResource<T>>({
 			autouiContext.idField,
 			autouiContext.tagField,
 			model.priorities,
-		]
+		],
 	);
 
 	const hasUpdateActions =
-		!!autouiContext.actions?.filter((action) => action.type !== "create")
+		!!autouiContext.actions?.filter((action) => action.type !== 'create')
 			?.length || !!autouiContext.sdk?.tags;
 
 	return (
 		<Flex>
 			<Spinner
-				label={t("loading.resource", {
+				label={t('loading.resource', {
 					resource: t(`resource.${model.resource}_plural`).toLowerCase(),
 				})}
 				show={data == null}
@@ -139,7 +145,7 @@ export const AutoUIEntity = <T extends AutoUIBaseResource<T>>({
 										setLens(lens);
 										setToLocalStorage(
 											`${model.resource}__view_lens`,
-											lens.slug
+											lens.slug,
 										);
 									}}
 								/>

@@ -62,7 +62,6 @@ export interface AutoUIContext<T> {
 		latitudeField?: string;
 		longitudeField?: string;
 	};
-	cardRenderer?: (resource: T) => React.ReactNode;
 	actions?: Array<AutoUIAction<T>>;
 	customSort?: Dictionary<(a: T, b: T) => number>;
 	sdk?: {

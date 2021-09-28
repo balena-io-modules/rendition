@@ -7,7 +7,7 @@ import { faTable } from '@fortawesome/free-solid-svg-icons/faTable';
 interface TableProps<T> {
 	filtered: T[];
 	selected: T[];
-	columns: Array<TableColumn<T>>;
+	properties: Array<TableColumn<T>>;
 	hasUpdateActions: boolean;
 	changeSelected: (selected: T[]) => void;
 	data?: T[];
@@ -24,21 +24,30 @@ export const table: LensTemplate = {
 	data: {
 		label: 'Table',
 		format: 'table',
-		renderer: (props: TableProps<any>) => (
+		renderer: ({
+			filtered,
+			selected,
+			properties,
+			hasUpdateActions,
+			changeSelected,
+			data,
+			autouiContext,
+			onEntityClick,
+		}: TableProps<any>) => (
 			<Table<any>
 				rowKey="id"
-				data={props.filtered}
-				checkedItems={props.selected}
-				columns={props.columns}
-				{...(props.hasUpdateActions && { onCheck: props.changeSelected })}
-				usePager={props.data && props.data.length > 5}
+				data={filtered}
+				checkedItems={selected}
+				columns={properties}
+				{...(hasUpdateActions && { onCheck: changeSelected })}
+				usePager={data && data.length > 5}
 				pagerPosition="bottom"
 				itemsPerPage={50}
-				getRowHref={props.autouiContext.getBaseUrl}
-				onRowClick={props.onEntityClick}
-				columnStateRestorationKey={`${props.autouiContext.resource}__columns`}
-				sortingStateRestorationKey={`${props.autouiContext.resource}__sort`}
-				tagField={props.autouiContext.tagField as keyof any}
+				getRowHref={autouiContext.getBaseUrl}
+				onRowClick={onEntityClick}
+				columnStateRestorationKey={`${autouiContext.resource}__columns`}
+				sortingStateRestorationKey={`${autouiContext.resource}__sort`}
+				tagField={autouiContext.tagField}
 				enableCustomColumns
 			/>
 		),
