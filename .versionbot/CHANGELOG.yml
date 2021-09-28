@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency uuid to ^3.4.0'
+      hash: 90910af61c89eef0b6f829235f77fba9d580b9ac
+      body: |
+        Update uuid from 3.2.1 to 3.4.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.7.8
+  date: 2021-09-28T09:58:08.862Z
+- commits:
     - subject: 'patch: Update dependency core-js to ^3.18.1'
       hash: 1c01408e5f8d6f5e877844849a2a80a92fd11b85
       body: |
