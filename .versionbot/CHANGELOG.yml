@@ -1,4 +1,14 @@
 - commits:
+    - subject: 'patch: Update style'
+      hash: 12304597f87bd9c62cba2fae278eadb0818e094c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.7.10
+  date: 2021-09-28T12:49:11.600Z
+- commits:
     - subject: 'patch: Update dependency monaco-editor-webpack-plugin to ^4.2.0'
       hash: 7a9931858418df2784365124723589aa019fee90
       body: |
