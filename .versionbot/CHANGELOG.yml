@@ -1,4 +1,14 @@
 - commits:
+    - subject: 'patch: Update tests'
+      hash: 79c15aa6b35bb436143c8bc0e2772adbf88501c8
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.7.11
+  date: 2021-09-28T13:25:04.383Z
+- commits:
     - subject: 'patch: Update style'
       hash: 12304597f87bd9c62cba2fae278eadb0818e094c
       body: ''
