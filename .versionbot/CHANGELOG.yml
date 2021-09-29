@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency lint-staged to ^4.3.0'
+      hash: ef253342f35cdc25cfdb132845bb53a8b533d0f9
+      body: |
+        Update lint-staged from 4.1.1 to 4.3.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.7.15
+  date: 2021-09-29T12:13:23.734Z
+- commits:
     - subject: 'UnstableTempDownloadImageModal: Drop unnecessary types & helper code'
       hash: 32adb04cebf14520960a0de3e85cc0565b5570ff
       body: ''
