@@ -1,6 +1,5 @@
 import find from 'lodash/find';
 import * as React from 'react';
-import { withProps } from 'recompose';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import {
@@ -9,7 +8,7 @@ import {
 	Sizing,
 	Theme,
 } from '../../common-types';
-import { px } from '../../utils';
+import { px, withProps } from '../../utils';
 
 const transition = 'width linear 250ms';
 

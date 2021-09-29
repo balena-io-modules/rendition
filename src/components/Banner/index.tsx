@@ -1,7 +1,7 @@
-import { withProps } from 'recompose';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { Flex, FlexProps } from '../Flex';
+import { withProps } from '../../utils';
 
 const setDefaultProps = withProps((props: BannerProps) => {
 	// set defaults

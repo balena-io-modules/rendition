@@ -1,10 +1,9 @@
 import get from 'lodash/get';
 import * as React from 'react';
-import { withProps } from 'recompose';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { RenditionSystemProps } from '../../common-types';
-import { darken, monospace } from '../../utils';
+import { darken, monospace, withProps } from '../../utils';
 import { align, bold, caps } from '../Txt';
 
 const Base = styled.a<InternalLinkProps>`

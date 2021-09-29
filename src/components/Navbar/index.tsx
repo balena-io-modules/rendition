@@ -2,11 +2,11 @@ import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
-import { compose, withProps } from 'recompose';
 import styled from 'styled-components';
 import { Box, BoxProps } from '../Box';
 import { Container } from '../Container';
 import { Flex, FlexProps } from '../Flex';
+import { compose, withProps } from '../../utils';
 
 const BrandBox = styled(Box)`
 	display: flex;

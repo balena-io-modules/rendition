@@ -1,11 +1,10 @@
 import last from 'lodash/last';
 import * as React from 'react';
-import { withProps } from 'recompose';
 import styled from 'styled-components';
 import { textAlign, TextAlignProps } from 'styled-system';
 import asRendition from '../../asRendition';
 import { RenditionSystemProps, Theme } from '../../common-types';
-import { px } from '../../utils';
+import { px, withProps } from '../../utils';
 import { Box } from '../Box';
 
 const ContainerBase = styled(Box)<ThemedContainerProps>`

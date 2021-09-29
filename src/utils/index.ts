@@ -1,4 +1,5 @@
 import * as React from 'react';
+export * from './reactUtils';
 export * from './colorUtils';
 export * from './schemaUtils';
 export * from './styledUtils';
