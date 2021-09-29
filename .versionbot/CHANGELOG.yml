@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'UnstableTempDownloadImageModal: Drop unnecessary types & helper code'
+      hash: 32adb04cebf14520960a0de3e85cc0565b5570ff
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        See: 'https://github.com/balena-io/balena-sdk/pull/1124'
+        see: 'https://github.com/balena-io/balena-sdk/pull/1124'
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 21.7.14
+  date: 2021-09-29T11:50:20.527Z
+- commits:
     - subject: Remove deprecated recompose package
       hash: 66b7a3a09c4f510a2e70ee5c91b0cb64243e08b4
       body: |
