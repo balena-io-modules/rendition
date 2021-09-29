@@ -1,10 +1,5 @@
 import template from 'lodash/template';
-import {
-	DeviceType,
-	OptionalNavigationResource,
-	OsTypesEnum,
-	Device,
-} from './models';
+import { DeviceType, OptionalNavigationResource, OsTypesEnum } from './models';
 import { Dictionary } from '../../common-types';
 
 export const OS_VARIANT_FULL_DISPLAY_TEXT_MAP: Dictionary<string> = {
@@ -51,36 +46,6 @@ export const getOsTypeName = (osTypeSlug: string) => {
 	}
 };
 
-/**
- * @return known return values are 'dev', 'prod' & ''
- */
-export const getOsVariant = (deviceOrVersion: Device | string): string => {
-	if (!deviceOrVersion) {
-		return '';
-	}
-
-	let version;
-	if (typeof deviceOrVersion === 'string') {
-		version = deviceOrVersion;
-	} else {
-		if (deviceOrVersion.os_variant) {
-			return deviceOrVersion.os_variant;
-		}
-
-		version = deviceOrVersion.os_version || '';
-	}
-
-	const versionVariantMatch = version.match(/(prod|dev)/) || [];
-	return versionVariantMatch[1] || '';
-};
-
-export const getOsVariantDisplayText = (
-	deviceOrVariant: Device | string,
-): string => {
-	const variant =
-		typeof deviceOrVariant === 'string'
-			? deviceOrVariant
-			: getOsVariant(deviceOrVariant as Device);
-
+export const getOsVariantDisplayText = (variant: string): string => {
 	return OS_VARIANT_FULL_DISPLAY_TEXT_MAP[variant] || variant;
 };
