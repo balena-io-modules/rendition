@@ -1,4 +1,27 @@
 - commits:
+    - subject: Remove deprecated recompose package
+      hash: 66b7a3a09c4f510a2e70ee5c91b0cb64243e08b4
+      body: |
+        Recompose is no longer being actively maintained and since we are using
+        a very small subset of its API its a simple thing to replace.
+        The `getDisplayName()` method is trivial and only used in a single
+        place.
+        The `compose()` method is functionally the same as `lodash.flowRight()`
+        so can be swapped out.
+        This leaves `withProps()` which again is relatively straightforward.
+        I've added a new utils function that handles the props wrapping this
+        method previously provided.
+      footer:
+        Connects-to: '#1361'
+        connects-to: '#1361'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+  version: 21.7.13
+  date: 2021-09-29T09:14:12.851Z
+- commits:
     - subject: 'patch: Update dependency @testing-library/jest-dom to ^5.14.1'
       hash: f66948613b18af28e2034f503a60602c3531f91c
       body: |
