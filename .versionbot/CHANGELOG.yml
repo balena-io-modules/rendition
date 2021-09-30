@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency git-url-parse to ^7.2.0'
+      hash: 56b6edb4c19b7198201cd07e73aae39c8d174866
+      body: |
+        Update git-url-parse from 7.0.0 to 7.2.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.7.16
+  date: 2021-09-29T16:04:15.174Z
+- commits:
     - subject: 'patch: Update dependency lint-staged to ^4.3.0'
       hash: ef253342f35cdc25cfdb132845bb53a8b533d0f9
       body: |
