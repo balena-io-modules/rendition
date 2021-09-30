@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency gh-pages to v2.2.0'
+      hash: af1ac41a05bd2a31ba97102a428d5f5bb3a1a6c3
+      body: |
+        Update gh-pages from 2.0.0 to 2.2.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.7.17
+  date: 2021-09-30T09:45:04.768Z
+- commits:
     - subject: 'patch: Update dependency git-url-parse to ^7.2.0'
       hash: 56b6edb4c19b7198201cd07e73aae39c8d174866
       body: |
