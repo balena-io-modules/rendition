@@ -1,4 +1,5 @@
 import { faSearch } from '@fortawesome/free-solid-svg-icons/faSearch';
+import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import styled from 'styled-components';
@@ -6,6 +7,8 @@ import asRendition from '../../asRendition';
 import { RenditionSystemProps } from '../../common-types';
 import { px } from '../../utils';
 import { Flex } from '../Flex';
+import { Button } from '../Button';
+import { Keyboard } from 'grommet';
 
 const Wrapper = styled(Flex)`
 	position: relative;
@@ -19,6 +22,13 @@ const Wrapper = styled(Flex)`
 		position: absolute;
 		top: 50%;
 		left: ${(props) => px(props.theme.space[2])};
+		transform: translateY(-50%);
+	}
+	.clear-icon {
+		color: ${(props) => props.theme.colors.tertiary.semilight};
+		position: absolute;
+		top: 50%;
+		right: ${(props) => px(props.theme.space[2])};
 		transform: translateY(-50%);
 	}
 	input {
@@ -51,20 +61,36 @@ const BaseSearch = React.forwardRef(
 			placeholder,
 			value,
 			onChange,
+			onEnter,
 		}: InternalSearchProps,
 		ref,
 	) => {
 		return (
 			<Wrapper className={className}>
-				<input
-					style={{ color: dark ? '#fff' : undefined }}
-					disabled={disabled}
-					placeholder={placeholder || 'Search entries...'}
-					value={value}
-					onChange={onChange}
-					ref={ref as any}
-				/>
+				<Keyboard onEnter={onEnter}>
+					<input
+						style={{ color: dark ? '#fff' : undefined }}
+						disabled={disabled}
+						placeholder={placeholder || 'Search entries...'}
+						value={value}
+						onChange={onChange}
+						ref={ref as any}
+					/>
+				</Keyboard>
 				<FontAwesomeIcon icon={faSearch} className="search-icon" />
+				{value !== '' && (
+					<Button
+						plain
+						className="clear-icon"
+						onClick={() => {
+							if (onChange) {
+								onChange({ target: { value: '' } });
+							}
+						}}
+					>
+						<FontAwesomeIcon icon={faTimes} />
+					</Button>
+				)}
 			</Wrapper>
 		);
 	},
@@ -81,6 +107,7 @@ export interface InternalSearchProps extends React.HTMLAttributes<HTMLElement> {
 	value?: string;
 	/** A function that is called when the input changes */
 	onChange?: (value: any) => void;
+	onEnter?: () => void;
 }
 
 export type SearchProps = InternalSearchProps & RenditionSystemProps;

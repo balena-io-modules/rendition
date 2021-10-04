@@ -1,10 +1,11 @@
 import { mount } from 'enzyme';
 import React from 'react';
 
-import { Filters, Provider, SchemaSieve, Search, Select, Txt } from '../../';
+import { Filters, Provider, SchemaSieve, Select, Txt } from '../../';
 import FiltersSummary from '../../components/Filters/Summary';
 import { ViewListItem } from '../../components/Filters/ViewsMenu';
 import { JSONSchema7 } from 'json-schema';
+import { Keyboard } from 'grommet';
 
 /* FieldSummary buttons in order:
   0. Clear all filters
@@ -376,33 +377,7 @@ describe('Filters component', () => {
 			component.unmount();
 		});
 
-		it('should clear the `searchString` state prop after search filter removal', () => {
-			const component = mount(
-				<Provider>
-					<Filters schema={schema} views={[view]} />
-				</Provider>,
-			);
-
-			expect(component.find(Search)).toHaveLength(1);
-			expect(component.find(Search).prop('value')).toEqual('');
-
-			component
-				.find('input')
-				.simulate('change', { target: { value: 'Squirtle' } });
-			const searchValue = component
-				.find(FiltersSummary)
-				.find('button')
-				.at(2)
-				.text();
-			expect(searchValue).toContain('Squirtle');
-
-			component.find(FiltersSummary).find('button').at(3).simulate('click');
-			expect(component.find(FiltersSummary)).toHaveLength(0);
-
-			component.unmount();
-		});
-
-		it('should clear all filters and `searchString` when `clear all filters` gets clicked', () => {
+		it('should clear all filters when `clear all filters` gets clicked', () => {
 			const defaultFilters = SchemaSieve.createFilter(schema, [
 				{ field: 'Name', operator: 'contains', value: 's' },
 				{ field: 'Name', operator: 'contains', value: 'q' },
@@ -419,17 +394,14 @@ describe('Filters component', () => {
 			component
 				.find('input')
 				.simulate('change', { target: { value: 'Squirtle' } });
-			const searchValue = component
-				.find(FiltersSummary)
-				.find('button')
-				.at(4)
-				.text();
-			expect(searchValue).toContain('Squirtle');
+			component.find(Keyboard).simulate('keypress', { key: 'Enter' });
+			expect(component.text()).toContain('Clear all');
 
-			component.find(FiltersSummary).find('button').at(0).simulate('click');
+			component
+				.findWhere((node) => node.text() === 'Clear all')
+				.at(1)
+				.simulate('click');
 			expect(component.find(FiltersSummary)).toHaveLength(0);
-			const inputValue = component.find('input').prop('value');
-			expect(inputValue).toEqual('');
 
 			component.unmount();
 		});

@@ -20,16 +20,40 @@ import * as SchemaSieve from './SchemaSieve';
 import Summary from './Summary';
 import ViewsMenu from './ViewsMenu';
 
-const SearchWrapper = styled.div`
+const SearchWrapper = styled(Box)`
 	flex-basis: 500px;
+	position: relative;
 `;
 
 const FilterWrapper = styled(Box)`
 	position: relative;
 `;
 
+const onClickOutOrEsc = (wrapper: HTMLDivElement, callback: () => void) => {
+	const handleClickOutside = (event: MouseEvent) => {
+		if (!wrapper.contains(event.target as Node)) {
+			handler();
+		}
+	};
+	const handleEsc = (event: KeyboardEvent) => {
+		if (event.key === 'Escape') {
+			handler();
+		}
+	};
+	const handler = () => {
+		callback();
+		if (document.activeElement instanceof HTMLElement) {
+			document.activeElement.blur();
+		}
+		document.removeEventListener('mousedown', handleClickOutside);
+		document.removeEventListener('keydown', handleEsc);
+	};
+	document.addEventListener('mousedown', handleClickOutside);
+	document.addEventListener('keydown', handleEsc);
+};
+
 class BaseFilters extends React.Component<FiltersProps, FiltersState> {
-	private searchElementRef = React.createRef<HTMLInputElement>();
+	private searchContainer = React.createRef<HTMLDivElement>();
 
 	constructor(props: FiltersProps) {
 		super(props);
@@ -48,9 +72,11 @@ class BaseFilters extends React.Component<FiltersProps, FiltersState> {
 			views: flatViews,
 			schema: flatSchema,
 			edit: [],
+			showSearchDropDown: false,
 		};
 
 		this.state.edit.push(this.getCleanEditModel());
+		this.searchContainer = React.createRef();
 	}
 
 	public componentDidUpdate(prevProps: FiltersProps) {
@@ -174,7 +200,6 @@ class BaseFilters extends React.Component<FiltersProps, FiltersState> {
 
 	public editFilter(filter: JSONSchema) {
 		if (filter.title === SchemaSieve.FULL_TEXT_SLUG) {
-			this.searchElementRef.current?.focus();
 			return;
 		}
 
@@ -244,26 +269,6 @@ class BaseFilters extends React.Component<FiltersProps, FiltersState> {
 		);
 	}
 
-	public setSimpleSearch(term: string) {
-		this.setState(
-			(prevState) => {
-				const newFilters = term
-					? SchemaSieve.upsertFullTextSearch(
-							this.state.schema,
-							prevState.filters,
-							term,
-					  )
-					: SchemaSieve.removeFullTextSearch(prevState.filters);
-
-				return {
-					searchString: term,
-					filters: newFilters,
-				};
-			},
-			() => this.emitFilterUpdate(),
-		);
-	}
-
 	public shouldRenderComponent(mode: FilterRenderMode): boolean {
 		// If a render mode is not specified, render all components
 		if (!this.props.renderMode) {
@@ -280,7 +285,7 @@ class BaseFilters extends React.Component<FiltersProps, FiltersState> {
 	}
 
 	public render() {
-		const { filters } = this.state;
+		const { filters, searchString, showSearchDropDown } = this.state;
 
 		return (
 			<FilterWrapper mb={3}>
@@ -301,16 +306,54 @@ class BaseFilters extends React.Component<FiltersProps, FiltersState> {
 					)}
 
 					{this.shouldRenderComponent('search') && (
-						<SearchWrapper>
+						<SearchWrapper
+							ref={this.searchContainer}
+							onFocus={() => {
+								this.setState({ showSearchDropDown: true });
+								if (this.searchContainer.current) {
+									onClickOutOrEsc(this.searchContainer.current, () => {
+										this.setState({ showSearchDropDown: false });
+									});
+								}
+							}}
+						>
 							<Search
 								dark={this.props.dark}
 								disabled={this.props.disabled}
-								value={this.state.searchString}
-								onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-									this.setSimpleSearch(e.target.value)
-								}
-								ref={this.searchElementRef}
+								value={searchString}
+								onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+									if (e.target.value !== '') {
+										this.setState({ showSearchDropDown: true });
+									} else {
+										this.setState({ showSearchDropDown: false });
+									}
+									this.setState({ searchString: e.target.value });
+								}}
+								onEnter={() => {
+									if (!searchString) {
+										return;
+									}
+									this.setState(
+										(prevState) => {
+											const newFilters = SchemaSieve.insertFullTextSearch(
+												this.state.schema,
+												prevState.filters,
+												searchString,
+											);
+
+											return {
+												filters: newFilters,
+												searchString: '',
+											};
+										},
+										() => this.emitFilterUpdate(),
+									);
+								}}
 							/>
+							{searchString &&
+								showSearchDropDown &&
+								this.props.onSearch &&
+								this.props.onSearch(searchString)}
 						</SearchWrapper>
 					)}
 
@@ -426,6 +469,7 @@ export interface FiltersState {
 	filters: JSONSchema[];
 	views: FiltersView[];
 	schema: JSONSchema;
+	showSearchDropDown: boolean;
 }
 
 export interface FiltersProps extends React.HTMLAttributes<HTMLElement> {
@@ -441,6 +485,7 @@ export interface FiltersProps extends React.HTMLAttributes<HTMLElement> {
 	onFiltersUpdate?: (filters: JSONSchema[]) => void;
 	/** A function that is called when views are updated */
 	onViewsUpdate?: (views: FiltersView[]) => void;
+	onSearch?: (searchTerm: string) => React.ReactElement | null;
 	/** A json schema describing the shape of the objects you want to filter */
 	schema: JSONSchema;
 	/** Properties that are passed to the "Add filter" button, these are the same props used for the [`Button`](#button) component */

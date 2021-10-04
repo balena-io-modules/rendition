@@ -1,38 +1,38 @@
-import castArray from "lodash/castArray";
-import React from "react";
-import { JSONSchema7 as JSONSchema } from "json-schema";
-import { Dictionary } from "../../../common-types";
+import castArray from 'lodash/castArray';
+import React from 'react';
+import { JSONSchema7 as JSONSchema } from 'json-schema';
+import { Dictionary } from '../../../common-types';
 import {
 	Format,
 	UiSchema,
 	Value,
 	JsonTypes,
-} from "../../../components/Renderer/types";
-import { transformUiSchema } from "../../../components/Renderer/widgets/widget-util";
-import { getValue, getWidget } from "../../../components/Renderer";
-import { TableColumn } from "../../../components/Table";
-import type { TableSortFunction } from "../../../components/Table/TableRow";
-import { useHistory } from "../../../hooks/useHistory";
-import { AutoUIContext, AutoUIBaseResource, Priorities } from "../schemaOps";
-import { diff } from "../../../utils";
-import { LensTemplate } from "../Lenses";
+} from '../../../components/Renderer/types';
+import { transformUiSchema } from '../../../components/Renderer/widgets/widget-util';
+import { getValue, getWidget } from '../../../components/Renderer';
+import { TableColumn } from '../../../components/Table';
+import type { TableSortFunction } from '../../../components/Table/TableRow';
+import { useHistory } from '../../../hooks/useHistory';
+import { AutoUIContext, AutoUIBaseResource, Priorities } from '../schemaOps';
+import { diff } from '../../../utils';
+import { LensTemplate } from '../Lenses';
 
 const formatSorters: Dictionary<TableSortFunction<any>> = {};
 
 const getSortingFunction = <T extends any>(
 	schemaKey: keyof T,
-	schemaValue: JSONSchema
+	schemaValue: JSONSchema,
 ): TableSortFunction<T> => {
-	if (formatSorters[schemaValue.format ?? ""]) {
-		return formatSorters[schemaValue.format ?? ""];
+	if (formatSorters[schemaValue.format ?? '']) {
+		return formatSorters[schemaValue.format ?? ''];
 	}
 
 	const types = castArray(schemaValue.type);
 	if (types.includes(JsonTypes.string)) {
 		return (a: T, b: T) => {
-			const aa = (a[schemaKey] ?? "") as string;
-			const bb = (b[schemaKey] ?? "") as string;
-			if (typeof aa === "string" && typeof bb === "string") {
+			const aa = (a[schemaKey] ?? '') as string;
+			const bb = (b[schemaKey] ?? '') as string;
+			if (typeof aa === 'string' && typeof bb === 'string') {
 				return aa.toLowerCase().localeCompare(bb.toLowerCase());
 			}
 			return diff(aa, bb);
@@ -45,7 +45,7 @@ const getSortingFunction = <T extends any>(
 
 const getSelected = <T, K extends keyof T>(
 	key: K,
-	priorities?: Priorities<T>
+	priorities?: Priorities<T>,
 ) => {
 	if (!priorities) {
 		return true;
@@ -64,9 +64,9 @@ export const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 	formats,
 }: {
 	schema: JSONSchema;
-	idField: AutoUIContext<T>["idField"];
-	tagField: AutoUIContext<T>["tagField"];
-	customSort?: AutoUIContext<T>["customSort"];
+	idField: AutoUIContext<T>['idField'];
+	tagField: AutoUIContext<T>['tagField'];
+	customSort?: AutoUIContext<T>['customSort'];
 	priorities?: Priorities<T>;
 	formats?: Format[];
 }): Array<TableColumn<T>> =>
@@ -76,20 +76,20 @@ export const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 			return entry[0] !== tagField && entry[0] !== idField;
 		})
 		.map(([key, val]) => {
-			if (typeof val !== "object") {
+			if (typeof val !== 'object') {
 				return;
 			}
 
 			const definedPriorities = priorities ?? ({} as Priorities<T>);
 			const priority = definedPriorities.primary.find(
-				(prioritizedKey) => prioritizedKey === key
+				(prioritizedKey) => prioritizedKey === key,
 			)
-				? "primary"
+				? 'primary'
 				: definedPriorities.secondary.find(
-						(prioritizedKey) => prioritizedKey === key
+						(prioritizedKey) => prioritizedKey === key,
 				  )
-				? "secondary"
-				: "tertiary";
+				? 'secondary'
+				: 'tertiary';
 
 			const widgetSchema = { ...val, title: undefined };
 			return {
@@ -99,7 +99,7 @@ export const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 				key,
 				selected: getSelected(key as keyof T, priorities),
 				priority,
-				type: "predefined",
+				type: 'predefined',
 				sortable: customSort?.[key] ?? getSortingFunction(key, val),
 				render: (fieldVal: string, entry: T) =>
 					val.format ? (
@@ -115,7 +115,7 @@ export const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 			};
 		})
 		.filter(
-			(columnDef): columnDef is NonNullable<typeof columnDef> => !!columnDef
+			(columnDef): columnDef is NonNullable<typeof columnDef> => !!columnDef,
 		);
 
 interface LensRendererProps<T> {
@@ -158,12 +158,12 @@ export const LensRenderer = <T extends AutoUIBaseResource<T>>({
 			autouiContext.tagField,
 			autouiContext.customSort,
 			priorities,
-		]
+		],
 	);
 
 	const onEntityClick = (
 		row: T,
-		event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+		event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
 	) => {
 		if (autouiContext.onEntityClick) {
 			autouiContext.onEntityClick(row, event);
@@ -186,7 +186,7 @@ export const LensRenderer = <T extends AutoUIBaseResource<T>>({
 	};
 
 	const hasUpdateActions =
-		!!autouiContext.actions?.filter((action) => action.type !== "create")
+		!!autouiContext.actions?.filter((action) => action.type !== 'create')
 			?.length || !!autouiContext.sdk?.tags;
 
 	return (
@@ -238,7 +238,7 @@ export const CustomWidget = ({
 		processedValue,
 		schema.format,
 		undefined,
-		extraFormats
+		extraFormats,
 	);
 
 	return (

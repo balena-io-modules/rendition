@@ -14,6 +14,7 @@ interface FiltersProps<T> {
 	autouiContext: AutoUIContext<T>;
 	changeFilters: (filters: JSONSchema[]) => void;
 	renderMode?: FilterRenderMode;
+	onSearch?: (searchTerm: string) => React.ReactElement | null;
 }
 
 export const Filters = <T extends AutoUIBaseResource<T>>({
@@ -22,6 +23,7 @@ export const Filters = <T extends AutoUIBaseResource<T>>({
 	changeFilters,
 	autouiContext,
 	renderMode,
+	onSearch,
 }: FiltersProps<T>) => {
 	const history = useHistory();
 	return (
@@ -37,6 +39,7 @@ export const Filters = <T extends AutoUIBaseResource<T>>({
 					onFiltersUpdate={changeFilters}
 					addFilterButtonProps={{ outline: true }}
 					renderMode={renderMode ?? ['add', 'search', 'views']}
+					onSearch={onSearch}
 				/>
 			) : (
 				<RenditionFilters
@@ -46,6 +49,7 @@ export const Filters = <T extends AutoUIBaseResource<T>>({
 					onFiltersUpdate={changeFilters}
 					addFilterButtonProps={{ outline: true }}
 					renderMode={renderMode ?? ['add', 'search', 'views']}
+					onSearch={onSearch}
 				/>
 			)}
 		</>

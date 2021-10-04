@@ -11,7 +11,6 @@ import some from 'lodash/some';
 import sortBy from 'lodash/sortBy';
 import * as React from 'react';
 import styled from 'styled-components';
-
 import { Button } from '../Button';
 
 // TODO: Remove explicit import and depend on provider instead.
@@ -21,7 +20,6 @@ import { CheckboxProps, Checkbox } from '../Checkbox';
 import { Pager } from '../Pager';
 import { CheckboxWrapper, TableBaseColumn, TableRow } from './TableRow';
 import filter from 'lodash/filter';
-import every from 'lodash/every';
 
 const highlightStyle = `
 	background-color: ${theme.colors.info.light};
@@ -180,25 +178,22 @@ export class TableBase<T> extends React.Component<
 	}
 
 	public componentDidUpdate(prevProps: TableBaseProps<T>) {
-		if (this.props.sort && !isEqual(prevProps.sort, this.props.sort)) {
+		const { sort, checkedItems, data, itemsPerPage } = this.props;
+		if (sort && !isEqual(prevProps.sort, sort)) {
 			this.setState({
-				sort: this.props.sort,
+				sort,
 			});
 		}
 
-		if (
-			(this.props.checkedItems &&
-				prevProps.checkedItems !== this.props.checkedItems) ||
-			(this.props.data && prevProps.data !== this.props.data)
-		) {
-			if (this.props.checkedItems) {
-				this.setRowSelection(this.props.checkedItems);
-			}
+		if (checkedItems && prevProps.checkedItems !== checkedItems) {
+			this.setRowSelection(checkedItems);
 		}
 
-		const totalItems = this.props.data?.length ?? 0;
-		const itemsPerPage = this.props.itemsPerPage ?? 50;
-		if (this.state.page !== 0 && totalItems <= this.state.page * itemsPerPage) {
+		const totalItems = data?.length ?? 0;
+		if (
+			this.state.page !== 0 &&
+			totalItems <= this.state.page * (itemsPerPage ?? 50)
+		) {
 			this.resetPager();
 		}
 	}
@@ -244,19 +239,15 @@ export class TableBase<T> extends React.Component<
 		return includes(this.props.disabledRows, identifier);
 	}
 
-	public isEachRowChecked(checkedItems: T[]): CheckedTypes {
+	public howManyRowsChecked(checkedItems: T[]): CheckedTypes {
 		const { rowKey, data } = this.props;
 		if (!rowKey || !data) {
 			return 'none';
 		}
 
-		const allDataCount: number = this.props.allDataCount || data.length;
-		const selectedKeys = map(checkedItems, rowKey);
-
-		return every(data, (x) => includes(selectedKeys, x[rowKey])) &&
-			allDataCount === checkedItems.length
+		return data.length === checkedItems.length
 			? 'all'
-			: some(data, (x) => includes(selectedKeys, x[rowKey]))
+			: checkedItems.length > 0
 			? 'some'
 			: 'none';
 	}
@@ -301,31 +292,15 @@ export class TableBase<T> extends React.Component<
 		let checkedItems: T[] = [];
 		let allChecked: CheckedTypes = 'none';
 
-		if (!data) {
-			return { checkedItems, allChecked };
-		}
-
-		const allDataCount: number = this.props.allDataCount
-			? this.props.allDataCount
-			: data.length;
-
-		if (!rowKey || selectedRows?.length === 0) {
+		if (!data || !rowKey || !selectedRows || selectedRows.length === 0) {
 			return { checkedItems, allChecked };
 		}
 
 		const selectedRowsIds = map(selectedRows, rowKey);
-
-		if (data) {
-			checkedItems = filter(data, (x) => {
-				return includes(selectedRowsIds, x[rowKey]);
-			});
-			allChecked =
-				allDataCount > 0 && checkedItems.length === allDataCount
-					? 'all'
-					: checkedItems.length < allDataCount
-					? 'some'
-					: 'none';
-		}
+		checkedItems = filter(data, (x) => {
+			return includes(selectedRowsIds, x[rowKey]);
+		});
+		allChecked = this.howManyRowsChecked(checkedItems);
 
 		return { checkedItems, allChecked };
 	};
@@ -339,14 +314,14 @@ export class TableBase<T> extends React.Component<
 
 		const checkedItems =
 			this.state.checkedItems.length === 0
-				? (data || []).slice().filter((r) => !this.isDisabled(r))
+				? (data || []).filter((r) => !this.isDisabled(r))
 				: [];
 		if (onCheck) {
 			onCheck(checkedItems);
 		}
 
 		this.setState({
-			allChecked: this.isEachRowChecked(checkedItems),
+			allChecked: this.howManyRowsChecked(checkedItems),
 			checkedItems,
 		});
 	};
@@ -380,7 +355,7 @@ export class TableBase<T> extends React.Component<
 		}
 
 		this.setState({
-			allChecked: this.isEachRowChecked(checkedItems),
+			allChecked: this.howManyRowsChecked(checkedItems),
 			checkedItems,
 		});
 	};
@@ -480,14 +455,11 @@ export class TableBase<T> extends React.Component<
 			getRowHref,
 			getRowClass,
 			className,
-			allDataCount,
-			checkedItems,
 		} = this.props;
 
 		const { page, sort } = this.state;
 		const items = data || [];
 		const totalItems = items.length;
-
 		const _itemsPerPage = itemsPerPage || 50;
 		const _pagerPosition = pagerPosition || 'top';
 
@@ -505,9 +477,7 @@ export class TableBase<T> extends React.Component<
 				{shouldShowPaper &&
 					(_pagerPosition === 'top' || _pagerPosition === 'both') && (
 						<Pager
-							totalItems={allDataCount}
-							totalFilteredItems={totalItems}
-							selectedItemsCount={checkedItems?.length}
+							totalItems={totalItems}
 							itemsPerPage={_itemsPerPage}
 							page={page}
 							nextPage={this.incrementPage}
@@ -611,9 +581,7 @@ export class TableBase<T> extends React.Component<
 				{shouldShowPaper &&
 					(_pagerPosition === 'bottom' || _pagerPosition === 'both') && (
 						<Pager
-							totalItems={allDataCount}
-							totalFilteredItems={totalItems}
-							selectedItemsCount={checkedItems?.length}
+							totalItems={totalItems}
 							itemsPerPage={_itemsPerPage}
 							page={page}
 							nextPage={this.incrementPage}
@@ -636,8 +604,6 @@ export interface TableBaseProps<T> {
 	columns: Array<TableBaseColumn<T>>;
 	/** An array of objects that will be displayed in the table */
 	data?: T[] | null;
-	/** The amount of items in the original list of items */
-	allDataCount?: number;
 	/** The amount of selected items in the original list of checked (selected) items */
 	checkedItems?: T[];
 	/** If provided, each row in the table will be a clickable link, this function is used to create the link href */
