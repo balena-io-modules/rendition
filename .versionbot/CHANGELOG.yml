@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency mermaid to ^8.13.2'
+      hash: da8e655fd3ca8ca78dde42e66f4fb031664044e1
+      body: |
+        Update mermaid from 8.13.0 to 8.13.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.7.19
+  date: 2021-10-05T09:42:32.396Z
+- commits:
     - subject: 'patch: Update dependency gh-pages to v3'
       hash: eeef6514c1ab49a189e692c7945c4a6b59ffb87b
       body: |
