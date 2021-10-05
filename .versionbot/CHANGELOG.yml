@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency gh-pages to v3'
+      hash: eeef6514c1ab49a189e692c7945c4a6b59ffb87b
+      body: |
+        Update gh-pages from 2.0.0 to 3.2.3
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.7.18
+  date: 2021-10-05T08:51:32.827Z
+- commits:
     - subject: Update the storyshots based on the latest dependencies
       hash: 84ec52df5e743ec433823bc7428248742fbebc2a
       body: ''
