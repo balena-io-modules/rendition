@@ -9,22 +9,22 @@ exports[`Storyshots Core/RadioButton Checked 1`] = `
       class="sc-gyUflj irwfst sc-gkdBiK XzJgE"
     >
       <label
-        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 bsbPNu"
+        class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 eBjExH"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 kqpbkf StyledRadioButton-g1f6ld-5 MBaYF"
+          class="StyledBox-sc-13pk1d4-0 kqpbkf StyledRadioButton-sc-g1f6ld-5 chIzBU"
         >
           <input
             checked=""
-            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 kTMaqq"
+            class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 cQcVYv"
             name="radio button"
             type="radio"
           />
           <div
-            class="StyledBox-sc-13pk1d4-0 gZVniw StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 bOYFlj"
+            class="StyledBox-sc-13pk1d4-0 gZVniw StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 enovQq"
           >
             <svg
-              class="StyledRadioButton__StyledRadioButtonIcon-g1f6ld-3 ieBzqo"
+              class="StyledRadioButton__StyledRadioButtonIcon-sc-g1f6ld-3 fjJOKt"
               preserveAspectRatio="xMidYMid meet"
               viewBox="0 0 24 24"
             >
@@ -37,7 +37,7 @@ exports[`Storyshots Core/RadioButton Checked 1`] = `
           </div>
         </div>
         <span
-          class="StyledRadioButton__StyledRadioButtonLabel-g1f6ld-2"
+          class="StyledRadioButton__StyledRadioButtonLabel-sc-g1f6ld-2"
         >
           Radio button
         </span>
@@ -56,22 +56,22 @@ exports[`Storyshots Core/RadioButton Default 1`] = `
       class="sc-gyUflj cGeIxV sc-gkdBiK XzJgE"
     >
       <label
-        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 bsbPNu"
+        class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 eBjExH"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 kqpbkf StyledRadioButton-g1f6ld-5 MBaYF"
+          class="StyledBox-sc-13pk1d4-0 kqpbkf StyledRadioButton-sc-g1f6ld-5 chIzBU"
         >
           <input
-            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 kTMaqq"
+            class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 cQcVYv"
             name="radio button"
             type="radio"
           />
           <div
-            class="StyledBox-sc-13pk1d4-0 gioviw StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 bOYFlj"
+            class="StyledBox-sc-13pk1d4-0 gioviw StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 enovQq"
           />
         </div>
         <span
-          class="StyledRadioButton__StyledRadioButtonLabel-g1f6ld-2"
+          class="StyledRadioButton__StyledRadioButtonLabel-sc-g1f6ld-2"
         >
           Radio button
         </span>
@@ -90,24 +90,24 @@ exports[`Storyshots Core/RadioButton Disabled 1`] = `
       class="sc-gyUflj cGeIxV sc-gkdBiK XzJgE"
     >
       <label
-        class="StyledRadioButton__StyledRadioButtonContainer-g1f6ld-0 emmNdn"
+        class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 buxzcS"
         disabled=""
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 kqpbkf StyledRadioButton-g1f6ld-5 MBaYF"
+          class="StyledBox-sc-13pk1d4-0 kqpbkf StyledRadioButton-sc-g1f6ld-5 chIzBU"
         >
           <input
-            class="StyledRadioButton__StyledRadioButtonInput-g1f6ld-1 fUKAsy"
+            class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 cpejXz"
             disabled=""
             name="radio button"
             type="radio"
           />
           <div
-            class="StyledBox-sc-13pk1d4-0 gioviw StyledRadioButton__StyledRadioButtonBox-g1f6ld-4 bOYFlj"
+            class="StyledBox-sc-13pk1d4-0 gioviw StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 enovQq"
           />
         </div>
         <span
-          class="StyledRadioButton__StyledRadioButtonLabel-g1f6ld-2"
+          class="StyledRadioButton__StyledRadioButtonLabel-sc-g1f6ld-2"
         >
           Radio button
         </span>
