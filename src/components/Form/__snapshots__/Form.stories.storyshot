@@ -3295,11 +3295,11 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                         Mermaid
                       </label>
                       <div
-                        class="StyledBox-sc-13pk1d4-0 kSZjsO StyledTabs-a4fwxl-2 bDoHYe"
+                        class="StyledBox-sc-13pk1d4-0 kSZjsO StyledTabs-sc-a4fwxl-2 keuzHD"
                         role="tablist"
                       >
                         <div
-                          class="StyledBox-sc-13pk1d4-0 bjBOvl StyledTabs__StyledTabsHeader-a4fwxl-0 drFjkF"
+                          class="StyledBox-sc-13pk1d4-0 bjBOvl StyledTabs__StyledTabsHeader-sc-a4fwxl-0 emAudU"
                         >
                           <button
                             aria-expanded="true"
@@ -3338,7 +3338,7 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                         </div>
                         <div
                           aria-label="Write Tab Contents"
-                          class="StyledTabs__StyledTabPanel-a4fwxl-1 iSBXKq"
+                          class="StyledTabs__StyledTabPanel-sc-a4fwxl-1 dPgVAv"
                           role="tabpanel"
                         >
                           <textarea
