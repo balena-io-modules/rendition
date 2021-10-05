@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update the storyshots based on the latest dependencies
+      hash: 84ec52df5e743ec433823bc7428248742fbebc2a
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 21.7.17
+  date: 2021-10-05T08:27:18.420Z
+- commits:
     - subject: 'patch: Update dependency git-url-parse to ^7.2.0'
       hash: 56b6edb4c19b7198201cd07e73aae39c8d174866
       body: |
