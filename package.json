@@ -114,7 +114,7 @@
     "hast-util-sanitize": "^3.0.2",
     "json-e": "^4.4.1",
     "lodash": "^4.17.21",
-    "mermaid": "^8.13.0",
+    "mermaid": "^8.13.2",
     "prismjs": "^1.21.0",
     "prop-types": "^15.7.2",
     "qs": "^6.10.1",
