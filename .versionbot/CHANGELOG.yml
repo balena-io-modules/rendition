@@ -1,4 +1,14 @@
 - commits:
+    - subject: 'patch: Update storybook-non-major to ^6.3.9'
+      hash: b838aa61a429eb8ffb201b4e7a7095432bf7c2d7
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.7.20
+  date: 2021-10-05T13:32:43.031Z
+- commits:
     - subject: 'patch: Update dependency mermaid to ^8.13.2'
       hash: da8e655fd3ca8ca78dde42e66f4fb031664044e1
       body: |
