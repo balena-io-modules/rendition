@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency prettier to ^2.4.1'
+      hash: 47a8fc0e7915c5b45a515f134813228655e46842
+      body: |
+        Update prettier from 2.2.1 to 2.4.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.7.21
+  date: 2021-10-06T11:50:14.564Z
+- commits:
     - subject: 'patch: Update storybook-non-major to ^6.3.9'
       hash: b838aa61a429eb8ffb201b4e7a7095432bf7c2d7
       body: ''
