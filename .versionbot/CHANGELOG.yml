@@ -1,4 +1,14 @@
 - commits:
+    - subject: 'patch: Update react-libs'
+      hash: c5aabfc5eed1a396a0a9f9dd36810d6b0e6d4756
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.8.1
+  date: 2021-10-07T09:16:30.736Z
+- commits:
     - subject: Add actionFn property to AutoUICollection
       hash: 030a67ce923e938dc4714c65fb348b8b53e20dab
       body: ''
