@@ -420,7 +420,6 @@ export const TagManagementModal = <T extends TaggedResource>({
 					<CollectionSummary
 						items={items.map(getItemTitle).sort()}
 						itemsType={itemType}
-						maxVisibleItemCount={10}
 					/>
 				</div>
 			}
