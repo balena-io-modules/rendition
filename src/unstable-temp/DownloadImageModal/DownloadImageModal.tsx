@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import styled from 'styled-components';
 import { ApplicationInstructions } from './ApplicationInstructions';
-import { ImageForm } from './ImageForm';
+import { ImageForm, ModalAction } from './ImageForm';
 import isEmpty from 'lodash/isEmpty';
 import noop from 'lodash/noop';
 import find from 'lodash/find';
@@ -18,7 +18,7 @@ import { Dictionary } from '../../common-types';
 import { Box } from '../../components/Box';
 import { Flex } from '../../components/Flex';
 import { Txt } from '../../components/Txt';
-import { Button, ButtonProps } from '../../components/Button';
+import { Button } from '../../components/Button';
 import { Spinner } from '../../components/Spinner';
 import { Alert } from '../../components/Alert';
 import { Modal } from '../../components/Modal';
@@ -67,13 +67,11 @@ const getUniqueOsTypes = (
 	return uniq(osVersions[deviceTypeSlug].map((x) => x.osType));
 };
 
-export interface DownloadOptions {
+export interface DownloadOptions extends FormModel {
 	appId: number;
 	releaseId?: number;
 	deviceType: string;
-	appUpdatePollInterval?: number;
 	downloadConfigOnly?: boolean;
-	network: 'ethernet' | 'wifi';
 	version: string;
 }
 
@@ -106,11 +104,7 @@ export interface UnstableTempDownloadImageModalProps {
 	getDockerArtifact: (deviceTypeSlug: string, rawVersion: string) => string;
 	hasEsrVersions?: (deviceTypeSlugs: string[]) => Promise<Dictionary<boolean>>;
 	onClose: () => void;
-	modalActions?: Array<
-		Omit<ButtonProps, 'onClick'> & {
-			onClick: (event: React.MouseEvent, model: DownloadOptions) => void;
-		}
-	>;
+	modalActions?: ModalAction[];
 	authToken?: string;
 	docsIcon?: IconProp;
 }
