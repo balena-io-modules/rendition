@@ -1,4 +1,3 @@
-// import * as semver from 'balena-semver';
 import partition from 'lodash/partition';
 import * as React from 'react';
 
@@ -26,6 +25,9 @@ import { getOsVariantDisplayText } from './utils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { faFileAlt } from '@fortawesome/free-regular-svg-icons/faFileAlt';
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons/faExclamationTriangle';
+import { useTheme } from '../../hooks/useTheme';
+import { Theme } from '~/theme';
 
 export const DownloadImageLabel = styled.label`
 	display: flex;
@@ -143,6 +145,39 @@ const VariantSelector = ({
 	);
 };
 
+const VersionSelectOption = ({
+	option,
+	theme,
+}: {
+	option: VersionSelectionOptions;
+	theme: Theme;
+}) => (
+	<Flex
+		alignItems="center"
+		py={2}
+		pl={3}
+		tooltip={option.knownIssueList ?? undefined}
+		maxWidth="445px"
+	>
+		<Txt mr={2}>{option.title}</Txt>{' '}
+		{!!option.knownIssueList && (
+			<Box
+				ml={2}
+				tooltip={option.knownIssueList}
+				display="contents"
+				style={{ lineHeight: 'normal' }}
+			>
+				<FontAwesomeIcon
+					color={theme.colors.warning.main}
+					icon={faExclamationTriangle}
+				/>
+				<Txt ml={1} truncate>
+					{option.knownIssueList}
+				</Txt>
+			</Box>
+		)}
+	</Flex>
+);
 export const OsConfiguration = ({
 	deviceTypeOsVersions,
 	compatibleDeviceTypes,
@@ -156,6 +191,7 @@ export const OsConfiguration = ({
 	onSelectedOsTypeChange,
 	docsIcon,
 }: OsConfigurationProps) => {
+	const theme = useTheme();
 	const { t } = useTranslation();
 	const [showAllVersions, setShowAllVersions] = React.useState(false);
 	const [version, setVersion] = React.useState<
@@ -289,13 +325,22 @@ export const OsConfiguration = ({
 								valueKey="value"
 								labelKey="title"
 								emptySearchMessage="No version available for this application type"
-								value={version ?? {}}
+								value={version}
+								valueLabel={
+									version && (
+										<VersionSelectOption option={version} theme={theme} />
+									)
+								}
 								placeholder={'Choose a version...'}
 								onChange={({ option }) => {
 									setVersion(option);
 								}}
 								options={versionSelectionOpts}
-							/>
+							>
+								{(option) => (
+									<VersionSelectOption option={option} theme={theme} />
+								)}
+							</Select>
 						</Box>
 
 						{shouldShowAllVersionsToggle && (

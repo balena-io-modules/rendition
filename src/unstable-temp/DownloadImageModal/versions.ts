@@ -9,6 +9,7 @@ export interface VersionSelectionOptions {
 	supportsBuildEditions: boolean;
 	osType: string;
 	line?: string;
+	knownIssueList: string | null;
 	rawVersions: {
 		dev: string | null;
 		prod: string | null;
@@ -28,6 +29,7 @@ export const transformVersions = (
 				supportsBuildEditions: false,
 				osType: v.osType,
 				line: v.line,
+				knownIssueList: v.known_issue_list,
 				rawVersions: {
 					dev: null,
 					prod: v.rawVersion,
@@ -52,6 +54,7 @@ export const transformVersions = (
 				supportsBuildEditions: true,
 				osType: version.osType,
 				line: version.line,
+				knownIssueList: version.known_issue_list,
 				rawVersions: {
 					dev:
 						version.variant === 'dev'
@@ -98,7 +101,6 @@ export const getPreferredVersionOpts = (
 		return Object.values(preferredMultilineOpts);
 	} else {
 		const preferredDefaultOpts: VersionSelectionOptions[] = [];
-
 		for (const option of opts) {
 			if (preferredDefaultOpts.length >= 3) {
 				break;
