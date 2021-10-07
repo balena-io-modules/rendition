@@ -61,6 +61,11 @@ const isDownloadDisabled = (
 	return formModel.network === 'wifi' && !formModel.wifiSsid;
 };
 
+export type ModalAction = Omit<ButtonProps, 'onClick' | 'label'> & {
+	label: string;
+	onClick?: (event: React.MouseEvent, model: DownloadOptions) => void;
+};
+
 interface ImageFormProps {
 	downloadUrl: string;
 	appId: number;
@@ -75,11 +80,7 @@ interface ImageFormProps {
 	setIsDownloadingConfig: (isDownloading: boolean) => void;
 	downloadConfig?: (model: FormModel) => Promise<void> | undefined;
 	getDownloadSize?: () => Promise<string> | undefined;
-	modalActions?: Array<
-		Omit<ButtonProps, 'onClick'> & {
-			onClick: (event: React.MouseEvent, model: DownloadOptions) => void;
-		}
-	>;
+	modalActions?: ModalAction[];
 	configurationComponent: React.ReactNode;
 }
 
@@ -97,6 +98,7 @@ export const ImageForm = ({
 	modalActions,
 	configurationComponent,
 }: ImageFormProps) => {
+	const { t } = useTranslation();
 	const [downloadSize, setDownloadSize] = React.useState<string | null>(null);
 	// If the image is deployed to docker, we only offer config
 	// download, so there is no need to show the toggle
@@ -106,14 +108,42 @@ export const ImageForm = ({
 		downloadConfigOnly: hasDockerImageDownload,
 	});
 
+	const actions: ModalAction[] = [
+		...(modalActions ?? []),
+		{
+			plain: true,
+			disabled: hasDockerImageDownload,
+			tooltip: hasDockerImageDownload
+				? t('warnings.image_deployed_to_docker')
+				: '',
+			label: t('actions.download_balenaos'),
+			type: 'submit',
+		},
+		{
+			plain: true,
+			onClick: async () => {
+				if (model.downloadConfigOnly && downloadConfig) {
+					setIsDownloadingConfig(true);
+					await downloadConfig(model);
+					setIsDownloadingConfig(false);
+				}
+				setDownloadConfigOnly(true);
+			},
+			label: t('actions.download_configuration_file_only'),
+		},
+	];
+
+	const [selectedActionLabel, setSelectedActionLabel] = React.useState<string>(
+		actions[0].label,
+	);
+
 	const downloadOptions = React.useMemo(
 		() => ({
 			appId,
 			releaseId,
 			deviceType: deviceType.slug,
-			appUpdatePollInterval: model.appUpdatePollInterval,
-			network: model.network,
 			version: rawVersion,
+			...model,
 		}),
 		[appId, releaseId, deviceType, model, rawVersion],
 	) as DownloadOptions;
@@ -151,8 +181,6 @@ export const ImageForm = ({
 			setDownloadSize,
 		);
 	}, [deviceType?.slug, rawVersion]);
-
-	const { t } = useTranslation();
 
 	return (
 		<form
@@ -195,15 +223,7 @@ export const ImageForm = ({
 			})}
 
 			<Flex>
-				{!!modalActions?.length &&
-					modalActions.map(({ onClick, ...otherProps }) => (
-						<Button
-							mt={2}
-							onClick={(event) => onClick(event, downloadOptions)}
-							{...otherProps}
-						/>
-					))}
-				{!downloadConfig && (
+				{!downloadConfig && !modalActions && (
 					<Button
 						mt={2}
 						ml="auto"
@@ -224,7 +244,7 @@ export const ImageForm = ({
 						</Txt>
 					</Button>
 				)}
-				{!!downloadConfig && (
+				{(!!downloadConfig || !!modalActions) && (
 					<DropDownButton
 						mt={2}
 						primary
@@ -237,42 +257,33 @@ export const ImageForm = ({
 								? t('warnings.fill_wifi_credentials')
 								: ''
 						}
-						onClick={async () => {
-							if (model.downloadConfigOnly && downloadConfig) {
-								setIsDownloadingConfig(true);
-								await downloadConfig(model);
-								setIsDownloadingConfig(false);
+						onClick={(event: React.MouseEvent) => {
+							const action = actions.find(
+								(act) => act.label === selectedActionLabel,
+							);
+							if (action?.onClick) {
+								event.preventDefault();
+								event.stopPropagation();
+								action.onClick(event, downloadOptions);
 							}
 						}}
 						icon={<FontAwesomeIcon icon={faDownload} />}
-						label={
-							model.downloadConfigOnly
-								? t('actions.download_configuration_file')
-								: t('actions.download_balenaos') +
-								  (rawVersion && downloadSize ? ` (~${downloadSize})` : '')
-						}
+						label={selectedActionLabel}
 						alignRight
 						dropUp
 					>
-						<Button
-							plain
-							disabled={hasDockerImageDownload}
-							tooltip={
-								hasDockerImageDownload
-									? t('warnings.image_deployed_to_docker')
-									: ''
-							}
-							onClick={() => setDownloadConfigOnly(false)}
-						>
-							<Txt bold={!model.downloadConfigOnly}>
-								{t('actions.download_balenaos')}
-							</Txt>
-						</Button>
-						<Button plain onClick={() => setDownloadConfigOnly(true)}>
-							<Txt bold={!!model.downloadConfigOnly}>
-								{t('actions.download_configuration_file_only')}
-							</Txt>
-						</Button>
+						{!!actions?.length &&
+							actions.map(({ onClick, label, ...otherProps }) => (
+								<Button
+									mt={2}
+									onClick={() => {
+										setSelectedActionLabel(label);
+									}}
+									{...otherProps}
+								>
+									<Txt bold={selectedActionLabel === label}>{label}</Txt>
+								</Button>
+							))}
 					</DropDownButton>
 				)}
 			</Flex>
