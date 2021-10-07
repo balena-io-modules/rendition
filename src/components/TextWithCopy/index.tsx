@@ -13,22 +13,6 @@ const Wrapper = styled(Txt.span)<InternalTextWithCopyProps>`
 	display: inline-block;
 	white-space: ${(props) => (props.code ? 'initial' : 'nowrap')};
 
-	.text-with-copy__content {
-		white-space: normal;
-		word-wrap: break-word;
-		margin-right: ${(props) => px(props.theme.space[1])};
-	}
-
-	& > .text-with-copy__copy_wrapper {
-		display: inline-block;
-	}
-
-	.text-with-copy__copy {
-		cursor: pointer;
-		visibility: ${(props) =>
-			props.showCopyButton === 'always' ? 'visible' : 'hidden'};
-	}
-
 	code {
 		font-family: ${(props) => props.theme.monospace};
 		padding: 2px 4px;
@@ -42,10 +26,25 @@ const Wrapper = styled(Txt.span)<InternalTextWithCopyProps>`
 		margin-right: ${(props) => px(props.theme.space[1])};
 		display: inline-block;
 	}
+`;
 
-	&:hover .text-with-copy__copy {
+const Content = styled.span`
+	white-space: normal;
+	word-wrap: break-word;
+	margin-right: ${(props) => px(props.theme.space[1])};
+`;
+
+const Copy = styled(Box)<{ showCopyButton: 'always' | 'hover' | undefined }>`
+	cursor: pointer;
+	visibility: ${(props) =>
+		props.showCopyButton === 'always' ? 'visible' : 'hidden'};
+	&:hover {
 		visibility: visible;
 	}
+`;
+
+const CopyWrapper = styled.span`
+	display: inline-block;
 `;
 
 const BaseTextWithCopy = ({
@@ -53,29 +52,27 @@ const BaseTextWithCopy = ({
 	code,
 	text,
 	children,
-	...props
+	showCopyButton,
 }: InternalTextWithCopyProps) => {
 	const normalizedText = (text || '').toString().trim();
 	const normalizedCopy = (copy || normalizedText).toString().trim();
 	const contentToRender = children || normalizedText || normalizedCopy;
 
 	return (
-		<Wrapper copy={copy} title={copy} {...props} className="text-with-copy">
-			{!code && (
-				<span className="text-with-copy__content">{contentToRender}</span>
-			)}
+		<Wrapper copy={copy} title={copy}>
+			{!code && <Content>{contentToRender}</Content>}
 
 			{code && <code title={normalizedCopy}>{contentToRender}</code>}
 
-			<span onClick={stopEvent} className="text-with-copy__copy_wrapper">
-				<Box
+			<CopyWrapper onClick={stopEvent}>
+				<Copy
 					tooltip={{ text: 'Copied!', trigger: 'click' }}
 					onClick={() => copyToClipboard(normalizedCopy)}
-					className="text-with-copy__copy"
+					showCopyButton={showCopyButton}
 				>
 					<FontAwesomeIcon icon={faCopy} />
-				</Box>
-			</span>
+				</Copy>
+			</CopyWrapper>
 		</Wrapper>
 	);
 };

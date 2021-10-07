@@ -163,19 +163,19 @@ exports[`Storyshots Core/Card With Rows 1`] = `
               class="sc-iktFfs fGhlyA sc-hiSbEG iXlJCC"
             />
             <span
-              class="sc-fKFxtB eNMjwF sc-iwyWTf kPghqC sc-hYZPxA eicDbK text-with-copy"
+              class="sc-fKFxtB eNMjwF sc-iwyWTf kPghqC sc-hYZPxA kEjrfv"
               title="This value has been copied to your clipboard!"
             >
               <span
-                class="text-with-copy__content"
+                class="sc-cHjwLt kFEMXp"
               >
                 Row with Copy component
               </span>
               <span
-                class="text-with-copy__copy_wrapper"
+                class="sc-gHfsNP dROUvG"
               >
                 <div
-                  class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB text-with-copy__copy"
+                  class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-JAcba kulegd"
                 >
                   <svg
                     aria-hidden="true"

@@ -6,18 +6,18 @@ exports[`Storyshots Core/TextWithCopy Always Show 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
   >
     <span
-      class="sc-fKFxtB eNMjwF sc-iwyWTf kPghqC sc-hYZPxA eicDbK text-with-copy"
+      class="sc-fKFxtB eNMjwF sc-iwyWTf kPghqC sc-hYZPxA kEjrfv"
     >
       <span
-        class="text-with-copy__content"
+        class="sc-cHjwLt kFEMXp"
       >
         Click the icon
       </span>
       <span
-        class="text-with-copy__copy_wrapper"
+        class="sc-gHfsNP dROUvG"
       >
         <div
-          class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB text-with-copy__copy"
+          class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-JAcba kulegd"
         >
           <svg
             aria-hidden="true"
@@ -47,7 +47,7 @@ exports[`Storyshots Core/TextWithCopy Code 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
   >
     <span
-      class="sc-fKFxtB eNMjwF sc-iwyWTf kPghqC sc-hYZPxA eJpxlG text-with-copy"
+      class="sc-fKFxtB eNMjwF sc-iwyWTf kPghqC sc-hYZPxA kEjrfv"
       title="This value has been copied to your clipboard!"
     >
       <code
@@ -56,10 +56,10 @@ exports[`Storyshots Core/TextWithCopy Code 1`] = `
         3555432
       </code>
       <span
-        class="text-with-copy__copy_wrapper"
+        class="sc-gHfsNP dROUvG"
       >
         <div
-          class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB text-with-copy__copy"
+          class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-JAcba bCbxch"
         >
           <svg
             aria-hidden="true"
@@ -89,11 +89,11 @@ exports[`Storyshots Core/TextWithCopy Default 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
   >
     <span
-      class="sc-fKFxtB eNMjwF sc-iwyWTf kPghqC sc-hYZPxA eJpxlG text-with-copy"
+      class="sc-fKFxtB eNMjwF sc-iwyWTf kPghqC sc-hYZPxA kEjrfv"
       title="This value has been copied to your clipboard!"
     >
       <span
-        class="text-with-copy__content"
+        class="sc-cHjwLt kFEMXp"
       >
         <i>
           hover
@@ -105,10 +105,10 @@ exports[`Storyshots Core/TextWithCopy Default 1`] = `
          the icon
       </span>
       <span
-        class="text-with-copy__copy_wrapper"
+        class="sc-gHfsNP dROUvG"
       >
         <div
-          class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB text-with-copy__copy"
+          class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-JAcba bCbxch"
         >
           <svg
             aria-hidden="true"
