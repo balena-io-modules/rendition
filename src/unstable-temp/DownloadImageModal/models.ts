@@ -58,6 +58,7 @@ export interface OsVersion {
 	variant?: string;
 	formattedVersion: string;
 	isRecommended?: boolean;
+	known_issue_list: string | null;
 }
 export interface OsVersionsByDeviceType {
 	[deviceTypeSlug: string]: OsVersion[];
