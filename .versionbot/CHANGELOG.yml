@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add Download image modal missing informations and unify actions
+      hash: ca67cb43937bc7163cfa840e3a1b91b0aff99cdc
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 21.8.2
+  date: 2021-10-07T13:38:01.565Z
+- commits:
     - subject: 'patch: Update react-libs'
       hash: c5aabfc5eed1a396a0a9f9dd36810d6b0e6d4756
       body: ''
