@@ -1,4 +1,14 @@
 - commits:
+    - subject: 'patch: Update storybook-non-major to ^6.3.10'
+      hash: a4bfb9595d56f361f88d9c8f233a8b7aab885cb4
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.8.4
+  date: 2021-10-08T15:53:51.254Z
+- commits:
     - subject: Use styled components instead of classNames in TextWithCopy
       hash: 260e17c78bc03c4a44324479cb3be8087c6b8465
       body: ''
