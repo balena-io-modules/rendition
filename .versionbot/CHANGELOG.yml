@@ -1,4 +1,16 @@
 - commits:
+    - subject: Use styled components instead of classNames in TextWithCopy
+      hash: 260e17c78bc03c4a44324479cb3be8087c6b8465
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 21.8.3
+  date: 2021-10-08T15:32:16.892Z
+- commits:
     - subject: Add Download image modal missing informations and unify actions
       hash: ca67cb43937bc7163cfa840e3a1b91b0aff99cdc
       body: ''
