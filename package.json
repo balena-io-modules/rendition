@@ -115,7 +115,7 @@
     "json-e": "^4.4.1",
     "lodash": "^4.17.21",
     "mermaid": "^8.13.2",
-    "prismjs": "^1.21.0",
+    "prismjs": "^1.25.0",
     "prop-types": "^15.7.2",
     "qs": "^6.10.1",
     "react-google-recaptcha": "^2.1.0",
