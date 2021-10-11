@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency prismjs to ^1.25.0'
+      hash: 7402ba2cf3c8341fe1c4b4613c1bbd8c2fb2912b
+      body: |
+        Update prismjs from 1.21.0 to 1.25.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.8.5
+  date: 2021-10-08T16:12:41.067Z
+- commits:
     - subject: 'patch: Update storybook-non-major to ^6.3.10'
       hash: a4bfb9595d56f361f88d9c8f233a8b7aab885cb4
       body: ''
