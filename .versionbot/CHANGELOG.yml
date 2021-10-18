@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency @testing-library/react to v12'
+      hash: 0c157c9b12b863865e9c4c76c754e52b6bb9a560
+      body: |
+        Update @testing-library/react from 11.2.7 to 12.1.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.8.6
+  date: 2021-10-11T21:38:44.770Z
+- commits:
     - subject: 'patch: Update dependency prismjs to ^1.25.0'
       hash: 7402ba2cf3c8341fe1c4b4613c1bbd8c2fb2912b
       body: |
