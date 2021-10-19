@@ -3,10 +3,10 @@
 exports[`Storyshots Core/Search Dark 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
   >
     <div
-      class="sc-khAkCZ cFzjEL sc-hTZgZg bGMMWs"
+      class="sc-khQegj ffXoGL sc-hUpaCq igPhtM"
     >
       <input
         placeholder="Search entries..."
@@ -36,10 +36,10 @@ exports[`Storyshots Core/Search Dark 1`] = `
 exports[`Storyshots Core/Search Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
   >
     <div
-      class="sc-khAkCZ cFzjEL sc-hTZgZg bGMMWs"
+      class="sc-khQegj ffXoGL sc-hUpaCq igPhtM"
     >
       <input
         placeholder="Search entries..."
@@ -68,10 +68,10 @@ exports[`Storyshots Core/Search Default 1`] = `
 exports[`Storyshots Core/Search Disabled 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
   >
     <div
-      class="sc-khAkCZ cFzjEL sc-hTZgZg bGMMWs"
+      class="sc-khQegj ffXoGL sc-hUpaCq igPhtM"
     >
       <input
         disabled=""
@@ -101,10 +101,10 @@ exports[`Storyshots Core/Search Disabled 1`] = `
 exports[`Storyshots Core/Search With Placeholder 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
   >
     <div
-      class="sc-khAkCZ cFzjEL sc-hTZgZg bGMMWs"
+      class="sc-khQegj ffXoGL sc-hUpaCq igPhtM"
     >
       <input
         placeholder="Search here"

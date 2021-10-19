@@ -3,27 +3,27 @@
 exports[`Storyshots Core/Tabs Compact 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 kSZjsO StyledTabs-sc-a4fwxl-2 keuzHD sc-hYAvtR bUTIbE sc-hJJRrs ekdgwD"
+      class="StyledBox-sc-13pk1d4-0 hpSXsQ StyledTabs-sc-a4fwxl-2 dhCfhN sc-hYQoXb ityjhj sc-hJZKUC cnvZUb"
       role="tablist"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 bjBOvl StyledTabs__StyledTabsHeader-sc-a4fwxl-0 emAudU"
+        class="StyledBox-sc-13pk1d4-0 VjJEf StyledTabs__StyledTabsHeader-sc-a4fwxl-0 dgAlpm"
       >
         <button
           aria-expanded="true"
           aria-selected="true"
-          class="StyledButton-sc-323bzc-0 ckmUZO"
+          class="StyledButton-sc-323bzc-0 dhZPjc"
           role="tab"
           type="button"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 yEOHg StyledTab-sc-1nnwnsb-0 Nlsgy"
+            class="StyledBox-sc-13pk1d4-0 jiARCy StyledTab-sc-1nnwnsb-0 cYFjUk"
           >
             <span
-              class="StyledText-sc-1sadyjn-0 dXBIz"
+              class="StyledText-sc-1sadyjn-0 jyNumd"
             >
               Tab 1
             </span>
@@ -32,15 +32,15 @@ exports[`Storyshots Core/Tabs Compact 1`] = `
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 ckmUZO"
+          class="StyledButton-sc-323bzc-0 dhZPjc"
           role="tab"
           type="button"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 jvaJyk StyledTab-sc-1nnwnsb-0 Nlsgy"
+            class="StyledBox-sc-13pk1d4-0 bWKcbe StyledTab-sc-1nnwnsb-0 cYFjUk"
           >
             <span
-              class="StyledText-sc-1sadyjn-0 frAKea"
+              class="StyledText-sc-1sadyjn-0 jUyKlw"
             >
               Tab 2
             </span>
@@ -49,15 +49,15 @@ exports[`Storyshots Core/Tabs Compact 1`] = `
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 ckmUZO"
+          class="StyledButton-sc-323bzc-0 dhZPjc"
           role="tab"
           type="button"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 jvaJyk StyledTab-sc-1nnwnsb-0 Nlsgy"
+            class="StyledBox-sc-13pk1d4-0 bWKcbe StyledTab-sc-1nnwnsb-0 cYFjUk"
           >
             <span
-              class="StyledText-sc-1sadyjn-0 frAKea"
+              class="StyledText-sc-1sadyjn-0 jUyKlw"
             >
               Tab 3
             </span>
@@ -66,15 +66,15 @@ exports[`Storyshots Core/Tabs Compact 1`] = `
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 ckmUZO"
+          class="StyledButton-sc-323bzc-0 dhZPjc"
           role="tab"
           type="button"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 jvaJyk StyledTab-sc-1nnwnsb-0 Nlsgy"
+            class="StyledBox-sc-13pk1d4-0 bWKcbe StyledTab-sc-1nnwnsb-0 cYFjUk"
           >
             <span
-              class="StyledText-sc-1sadyjn-0 frAKea"
+              class="StyledText-sc-1sadyjn-0 jUyKlw"
             >
               This is a very long tab name
             </span>
@@ -83,15 +83,15 @@ exports[`Storyshots Core/Tabs Compact 1`] = `
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 ckmUZO"
+          class="StyledButton-sc-323bzc-0 dhZPjc"
           role="tab"
           type="button"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 jvaJyk StyledTab-sc-1nnwnsb-0 Nlsgy"
+            class="StyledBox-sc-13pk1d4-0 bWKcbe StyledTab-sc-1nnwnsb-0 cYFjUk"
           >
             <span
-              class="StyledText-sc-1sadyjn-0 frAKea"
+              class="StyledText-sc-1sadyjn-0 jUyKlw"
             >
               This is another very long tab name
             </span>
@@ -100,15 +100,15 @@ exports[`Storyshots Core/Tabs Compact 1`] = `
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 ckmUZO"
+          class="StyledButton-sc-323bzc-0 dhZPjc"
           role="tab"
           type="button"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 jvaJyk StyledTab-sc-1nnwnsb-0 Nlsgy"
+            class="StyledBox-sc-13pk1d4-0 bWKcbe StyledTab-sc-1nnwnsb-0 cYFjUk"
           >
             <span
-              class="StyledText-sc-1sadyjn-0 frAKea"
+              class="StyledText-sc-1sadyjn-0 jUyKlw"
             >
               And this is a third very long tab name testing
             </span>
@@ -117,11 +117,11 @@ exports[`Storyshots Core/Tabs Compact 1`] = `
       </div>
       <div
         aria-label="Tab 1 Tab Contents"
-        class="StyledTabs__StyledTabPanel-sc-a4fwxl-1 dPgVAv"
+        class="StyledTabs__StyledTabPanel-sc-a4fwxl-1 eLcQnl"
         role="tabpanel"
       >
         <div
-          class="sc-fKFxtB eNMjwF sc-bBXrwG gvzEro"
+          class="sc-fKVqWL hOcWtv sc-bBHxTw cuAIQb"
         >
           Here is tab #1
         </div>
@@ -134,27 +134,27 @@ exports[`Storyshots Core/Tabs Compact 1`] = `
 exports[`Storyshots Core/Tabs Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 kSZjsO StyledTabs-sc-a4fwxl-2 keuzHD sc-hYAvtR ctpoIh sc-hJJRrs ekdgwD"
+      class="StyledBox-sc-13pk1d4-0 hpSXsQ StyledTabs-sc-a4fwxl-2 dhCfhN sc-hYQoXb jNUPAa sc-hJZKUC cnvZUb"
       role="tablist"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 bjBOvl StyledTabs__StyledTabsHeader-sc-a4fwxl-0 emAudU"
+        class="StyledBox-sc-13pk1d4-0 VjJEf StyledTabs__StyledTabsHeader-sc-a4fwxl-0 dgAlpm"
       >
         <button
           aria-expanded="true"
           aria-selected="true"
-          class="StyledButton-sc-323bzc-0 ckmUZO"
+          class="StyledButton-sc-323bzc-0 dhZPjc"
           role="tab"
           type="button"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 yEOHg StyledTab-sc-1nnwnsb-0 Nlsgy"
+            class="StyledBox-sc-13pk1d4-0 jiARCy StyledTab-sc-1nnwnsb-0 cYFjUk"
           >
             <span
-              class="StyledText-sc-1sadyjn-0 dXBIz"
+              class="StyledText-sc-1sadyjn-0 jyNumd"
             >
               Tab 1
             </span>
@@ -163,15 +163,15 @@ exports[`Storyshots Core/Tabs Default 1`] = `
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 ckmUZO"
+          class="StyledButton-sc-323bzc-0 dhZPjc"
           role="tab"
           type="button"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 jvaJyk StyledTab-sc-1nnwnsb-0 Nlsgy"
+            class="StyledBox-sc-13pk1d4-0 bWKcbe StyledTab-sc-1nnwnsb-0 cYFjUk"
           >
             <span
-              class="StyledText-sc-1sadyjn-0 frAKea"
+              class="StyledText-sc-1sadyjn-0 jUyKlw"
             >
               Tab 2
             </span>
@@ -180,15 +180,15 @@ exports[`Storyshots Core/Tabs Default 1`] = `
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 ckmUZO"
+          class="StyledButton-sc-323bzc-0 dhZPjc"
           role="tab"
           type="button"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 jvaJyk StyledTab-sc-1nnwnsb-0 Nlsgy"
+            class="StyledBox-sc-13pk1d4-0 bWKcbe StyledTab-sc-1nnwnsb-0 cYFjUk"
           >
             <span
-              class="StyledText-sc-1sadyjn-0 frAKea"
+              class="StyledText-sc-1sadyjn-0 jUyKlw"
             >
               Tab 3
             </span>
@@ -197,11 +197,11 @@ exports[`Storyshots Core/Tabs Default 1`] = `
       </div>
       <div
         aria-label="Tab 1 Tab Contents"
-        class="StyledTabs__StyledTabPanel-sc-a4fwxl-1 dPgVAv"
+        class="StyledTabs__StyledTabPanel-sc-a4fwxl-1 eLcQnl"
         role="tabpanel"
       >
         <div
-          class="sc-fKFxtB eNMjwF sc-bBXrwG gvzEro"
+          class="sc-fKVqWL hOcWtv sc-bBHxTw cuAIQb"
         >
           Here is tab #1
         </div>
@@ -214,27 +214,27 @@ exports[`Storyshots Core/Tabs Default 1`] = `
 exports[`Storyshots Core/Tabs With Long Titles 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 kSZjsO StyledTabs-sc-a4fwxl-2 keuzHD sc-hYAvtR ctpoIh sc-hJJRrs ekdgwD"
+      class="StyledBox-sc-13pk1d4-0 hpSXsQ StyledTabs-sc-a4fwxl-2 dhCfhN sc-hYQoXb jNUPAa sc-hJZKUC cnvZUb"
       role="tablist"
     >
       <div
-        class="StyledBox-sc-13pk1d4-0 bjBOvl StyledTabs__StyledTabsHeader-sc-a4fwxl-0 emAudU"
+        class="StyledBox-sc-13pk1d4-0 VjJEf StyledTabs__StyledTabsHeader-sc-a4fwxl-0 dgAlpm"
       >
         <button
           aria-expanded="true"
           aria-selected="true"
-          class="StyledButton-sc-323bzc-0 ckmUZO"
+          class="StyledButton-sc-323bzc-0 dhZPjc"
           role="tab"
           type="button"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 yEOHg StyledTab-sc-1nnwnsb-0 Nlsgy"
+            class="StyledBox-sc-13pk1d4-0 jiARCy StyledTab-sc-1nnwnsb-0 cYFjUk"
           >
             <span
-              class="StyledText-sc-1sadyjn-0 dXBIz"
+              class="StyledText-sc-1sadyjn-0 jyNumd"
             >
               This is a very long tab name
             </span>
@@ -243,15 +243,15 @@ exports[`Storyshots Core/Tabs With Long Titles 1`] = `
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 ckmUZO"
+          class="StyledButton-sc-323bzc-0 dhZPjc"
           role="tab"
           type="button"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 jvaJyk StyledTab-sc-1nnwnsb-0 Nlsgy"
+            class="StyledBox-sc-13pk1d4-0 bWKcbe StyledTab-sc-1nnwnsb-0 cYFjUk"
           >
             <span
-              class="StyledText-sc-1sadyjn-0 frAKea"
+              class="StyledText-sc-1sadyjn-0 jUyKlw"
             >
               This is another very long tab name
             </span>
@@ -260,15 +260,15 @@ exports[`Storyshots Core/Tabs With Long Titles 1`] = `
         <button
           aria-expanded="false"
           aria-selected="false"
-          class="StyledButton-sc-323bzc-0 ckmUZO"
+          class="StyledButton-sc-323bzc-0 dhZPjc"
           role="tab"
           type="button"
         >
           <div
-            class="StyledBox-sc-13pk1d4-0 jvaJyk StyledTab-sc-1nnwnsb-0 Nlsgy"
+            class="StyledBox-sc-13pk1d4-0 bWKcbe StyledTab-sc-1nnwnsb-0 cYFjUk"
           >
             <span
-              class="StyledText-sc-1sadyjn-0 frAKea"
+              class="StyledText-sc-1sadyjn-0 jUyKlw"
             >
               And this is a third very long tab name
             </span>
@@ -277,11 +277,11 @@ exports[`Storyshots Core/Tabs With Long Titles 1`] = `
       </div>
       <div
         aria-label="This is a very long tab name Tab Contents"
-        class="StyledTabs__StyledTabPanel-sc-a4fwxl-1 dPgVAv"
+        class="StyledTabs__StyledTabPanel-sc-a4fwxl-1 eLcQnl"
         role="tabpanel"
       >
         <div
-          class="sc-fKFxtB eNMjwF sc-bBXrwG gvzEro"
+          class="sc-fKVqWL hOcWtv sc-bBHxTw cuAIQb"
         >
           Here is tab #1
         </div>

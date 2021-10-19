@@ -3,10 +3,10 @@
 exports[`Storyshots Core/Divider Dashed 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
   >
     <hr
-      class="sc-iktFfs gcLjqy sc-hiSbEG iXlJCC"
+      class="sc-ikJyIC fpaKKe sc-hiCibw fhBOc"
       type="dashed"
     />
   </div>
@@ -16,10 +16,10 @@ exports[`Storyshots Core/Divider Dashed 1`] = `
 exports[`Storyshots Core/Divider Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
   >
     <hr
-      class="sc-iktFfs fGhlyA sc-hiSbEG iXlJCC"
+      class="sc-ikJyIC fyVnc sc-hiCibw fhBOc"
     />
   </div>
 </div>
@@ -28,10 +28,10 @@ exports[`Storyshots Core/Divider Default 1`] = `
 exports[`Storyshots Core/Divider With Custom Color 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
   >
     <hr
-      class="sc-iktFfs tXkpF sc-hiSbEG iePNYO"
+      class="sc-ikJyIC kUYIpl sc-hiCibw eBsIAg"
       color="#ccc"
     />
   </div>
@@ -41,22 +41,22 @@ exports[`Storyshots Core/Divider With Custom Color 1`] = `
 exports[`Storyshots Core/Divider With Text Content 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
   >
     <div
-      class="sc-gKseQn cOdZAq sc-iBPTik kWuhSW sc-hHfuMS jFLXel sc-hiSbEG iXlJCC"
+      class="sc-gKclnd exdBHI sc-iCfMLu frGhDt sc-hGPBjI dGJbEs sc-hiCibw fhBOc"
     >
       <hr
-        class="sc-iktFfs sc-jJEKmz gcLjqy hwsabM"
+        class="sc-ikJyIC sc-jJoQJp fpaKKe laXgVz"
         type="dashed"
       />
       <span
-        class="sc-fKFxtB eNMjwF sc-iwyWTf jHzKJs"
+        class="sc-fKVqWL hOcWtv sc-iwjdpV tynpC"
       >
         some text
       </span>
       <hr
-        class="sc-iktFfs sc-jJEKmz gcLjqy hwsabM"
+        class="sc-ikJyIC sc-jJoQJp fpaKKe laXgVz"
         type="dashed"
       />
     </div>

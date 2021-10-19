@@ -1,6 +1,5 @@
 import * as React from 'react';
-import * as monacoEditor from 'monaco-editor/esm/vs/editor/editor.api';
-import MonacoEditor, { MonacoEditorProps } from 'react-monaco-editor';
+import MonacoEditor, { monaco, MonacoEditorProps } from 'react-monaco-editor';
 import get from 'lodash/get';
 import cloneDeep from 'lodash/cloneDeep';
 import findIndex from 'lodash/findIndex';
@@ -40,7 +39,7 @@ const defaultOptions: MonacoEditorProps['options'] = {
 
 const monacoEditorSchemas = cloneDeep(
 	get(
-		monacoEditor,
+		monaco,
 		['languages', 'json', 'jsonDefaults', 'diagnosticsOptions', 'schemas'],
 		[],
 	),
@@ -54,10 +53,10 @@ interface JsonEditorProps {
 	isValid: boolean;
 }
 
-const getModel = (fileUri: monacoEditor.Uri, valueStr: string) => {
+const getModel = (fileUri: monaco.Uri, valueStr: string) => {
 	const model =
-		monacoEditor.editor.getModel(fileUri) ||
-		monacoEditor.editor.createModel(valueStr, 'json', fileUri);
+		monaco.editor.getModel(fileUri) ||
+		monaco.editor.createModel(valueStr, 'json', fileUri);
 	model.updateOptions({ tabSize: 2 });
 	return model;
 };
@@ -70,9 +69,9 @@ const JsonEditor = ({
 	isValid,
 }: JsonEditorProps) => {
 	const fileName = `file:///${title}.json`;
-	const fileUri = monacoEditor.Uri.parse(fileName);
+	const fileUri = monaco.Uri.parse(fileName);
 
-	const [model, setModel] = React.useState<monacoEditor.editor.ITextModel>(
+	const [model, setModel] = React.useState<monaco.editor.ITextModel>(
 		getModel(fileUri, value),
 	);
 
@@ -100,7 +99,7 @@ const JsonEditor = ({
 		} else {
 			monacoEditorSchemas.push(thisSchema);
 		}
-		monacoEditor.languages.json.jsonDefaults.setDiagnosticsOptions({
+		monaco.languages.json.jsonDefaults.setDiagnosticsOptions({
 			validate: true,
 			schemas: monacoEditorSchemas,
 		});

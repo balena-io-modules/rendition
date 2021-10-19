@@ -3,10 +3,10 @@
 exports[`Storyshots Core/Img Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
   >
     <img
-      class="sc-bXDkGd izFrJb"
+      class="sc-bXTejn foFpYE"
       src=""
     />
   </div>
@@ -16,10 +16,10 @@ exports[`Storyshots Core/Img Default 1`] = `
 exports[`Storyshots Core/Img With Fallback 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
   >
     <img
-      class="sc-bXDkGd izFrJb"
+      class="sc-bXTejn foFpYE"
       src="imgthatfails"
     />
   </div>
