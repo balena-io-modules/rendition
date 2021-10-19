@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix monaco editor import conflict
+      hash: 3cdc04b57ad9f624ab6694a7b2b6e0deab638b19
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 21.8.7
+  date: 2021-10-19T16:32:42.302Z
+- commits:
     - subject: 'patch: Update dependency @testing-library/react to v12'
       hash: 0c157c9b12b863865e9c4c76c754e52b6bb9a560
       body: |
