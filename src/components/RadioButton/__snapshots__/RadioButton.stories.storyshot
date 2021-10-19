@@ -3,28 +3,28 @@
 exports[`Storyshots Core/RadioButton Checked 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
   >
     <div
-      class="sc-gyUflj irwfst sc-gkdBiK XzJgE"
+      class="sc-gyElHZ bKDQex sc-gjNHFA bySJqW"
     >
       <label
-        class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 eBjExH"
+        class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 jGWwCF"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 kqpbkf StyledRadioButton-sc-g1f6ld-5 chIzBU"
+          class="StyledBox-sc-13pk1d4-0 guhInB StyledRadioButton-sc-g1f6ld-5 hNMTMW"
         >
           <input
             checked=""
-            class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 cQcVYv"
+            class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 fhNmLR"
             name="radio button"
             type="radio"
           />
           <div
-            class="StyledBox-sc-13pk1d4-0 gZVniw StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 enovQq"
+            class="StyledBox-sc-13pk1d4-0 hGxhDW StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 ivjGdo"
           >
             <svg
-              class="StyledRadioButton__StyledRadioButtonIcon-sc-g1f6ld-3 fjJOKt"
+              class="StyledRadioButton__StyledRadioButtonIcon-sc-g1f6ld-3 cnhARf"
               preserveAspectRatio="xMidYMid meet"
               viewBox="0 0 24 24"
             >
@@ -50,24 +50,24 @@ exports[`Storyshots Core/RadioButton Checked 1`] = `
 exports[`Storyshots Core/RadioButton Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
   >
     <div
-      class="sc-gyUflj cGeIxV sc-gkdBiK XzJgE"
+      class="sc-gyElHZ kHOant sc-gjNHFA bySJqW"
     >
       <label
-        class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 eBjExH"
+        class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 jGWwCF"
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 kqpbkf StyledRadioButton-sc-g1f6ld-5 chIzBU"
+          class="StyledBox-sc-13pk1d4-0 guhInB StyledRadioButton-sc-g1f6ld-5 hNMTMW"
         >
           <input
-            class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 cQcVYv"
+            class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 fhNmLR"
             name="radio button"
             type="radio"
           />
           <div
-            class="StyledBox-sc-13pk1d4-0 gioviw StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 enovQq"
+            class="StyledBox-sc-13pk1d4-0 iEnEti StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 ivjGdo"
           />
         </div>
         <span
@@ -84,26 +84,26 @@ exports[`Storyshots Core/RadioButton Default 1`] = `
 exports[`Storyshots Core/RadioButton Disabled 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
   >
     <div
-      class="sc-gyUflj cGeIxV sc-gkdBiK XzJgE"
+      class="sc-gyElHZ kHOant sc-gjNHFA bySJqW"
     >
       <label
-        class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 buxzcS"
+        class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 bgseKw"
         disabled=""
       >
         <div
-          class="StyledBox-sc-13pk1d4-0 kqpbkf StyledRadioButton-sc-g1f6ld-5 chIzBU"
+          class="StyledBox-sc-13pk1d4-0 guhInB StyledRadioButton-sc-g1f6ld-5 hNMTMW"
         >
           <input
-            class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 cpejXz"
+            class="StyledRadioButton__StyledRadioButtonInput-sc-g1f6ld-1 gjwrmF"
             disabled=""
             name="radio button"
             type="radio"
           />
           <div
-            class="StyledBox-sc-13pk1d4-0 gioviw StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 enovQq"
+            class="StyledBox-sc-13pk1d4-0 iEnEti StyledRadioButton__StyledRadioButtonBox-sc-g1f6ld-4 ivjGdo"
           />
         </div>
         <span

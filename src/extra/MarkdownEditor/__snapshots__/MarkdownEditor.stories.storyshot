@@ -3,10 +3,10 @@
 exports[`Storyshots Extra/MarkdownEditor Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
   >
     <div
-      class="sc-kGNyvp kFYwZx"
+      class="sc-kHdrYz gZnkdE"
       id="simplemde-editor-2-wrapper"
     >
       <textarea
@@ -191,7 +191,7 @@ exports[`Storyshots Extra/MarkdownEditor Default 1`] = `
               autocapitalize="off"
               autocorrect="off"
               spellcheck="false"
-              style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"
+              style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; min-height: 1em; outline: none;"
               tabindex="0"
             />
           </div>
