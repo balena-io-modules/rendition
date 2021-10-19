@@ -3,19 +3,19 @@
 exports[`Storyshots Extra/Markdown Customized 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
   >
     <div
-      class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-hHfuMS sc-fybuyZ kXuowN cQafrn"
+      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-fyrocj dljPk jxvgud"
     >
       <div
-        class="sc-gKseQn hKUJNt sc-iBPTik kWuhSW sc-hHfuMS ictdbZ"
+        class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
       >
         <div
-          class="sc-irlQje ktyxdV"
+          class="sc-iqVWFU hIAseQ"
         >
           <div
-            class="sc-eWvPqa gBcxMo sc-jLiVFv cinAJT"
+            class="sc-eWfVMQ kmJZgg sc-jKTccl fWCWlF"
           >
             <div
               data-display="table-head"
@@ -67,20 +67,20 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                   style="vertical-align: top;"
                 >
                   <div
-                    class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-hHfuMS sc-dmlqKv kXuowN gYmPhZ sc-cTkxnA hhrhQr sc-jNMcJZ gZAVzW"
+                    class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-dlVxhl dljPk hzmnYo sc-cTAqQK QYclH sc-jObWnj cJAcre"
                   >
                     <div
-                      class="sc-gKseQn cOdZAq sc-iBPTik kWuhSW"
+                      class="sc-gKclnd exdBHI sc-iCfMLu frGhDt"
                     >
                       <div
-                        class="sc-gKseQn cOdZAq sc-iBPTik jsUrGU"
+                        class="sc-gKclnd exdBHI sc-iCfMLu gHPssH"
                       >
                         <div
-                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-jYCGPb cDTTdv"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-jYmNlR kVdGQG"
                         >
                           <div>
                             <h1
-                              class="sc-gWHigU hGGoTM sc-citxvW hoVVGj"
+                              class="sc-gWXbKe gGPSCF sc-cidDSM koDaHu"
                             >
                               A title
                             </h1>
@@ -88,7 +88,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                               src="https://via.placeholder.com/150"
                             />
                             <p
-                              class="sc-fKFxtB eNMjwF sc-cxFLGX THyzS"
+                              class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
                             >
                               A paragraph
                             </p>
@@ -104,21 +104,21 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                   style="vertical-align: top;"
                 >
                   <div
-                    class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-hHfuMS sc-dmlqKv kXuowN gYmPhZ sc-cTkxnA hhrhQr sc-jNMcJZ gZAVzW"
+                    class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-dlVxhl dljPk hzmnYo sc-cTAqQK QYclH sc-jObWnj cJAcre"
                   >
                     <div
-                      class="sc-gKseQn cOdZAq sc-iBPTik kWuhSW"
+                      class="sc-gKclnd exdBHI sc-iCfMLu frGhDt"
                     >
                       <div
-                        class="sc-gKseQn cOdZAq sc-iBPTik jsUrGU"
+                        class="sc-gKclnd exdBHI sc-iCfMLu gHPssH"
                       >
                         <div
-                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-jYCGPb cDTTdv"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-jYmNlR kVdGQG"
                         >
                           <div>
                             A title
                             <p
-                              class="sc-fKFxtB eNMjwF sc-cxFLGX THyzS"
+                              class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
                             >
                               A paragraph
                             </p>
@@ -158,20 +158,20 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                   style="vertical-align: top;"
                 >
                   <div
-                    class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-hHfuMS sc-dmlqKv kXuowN gYmPhZ sc-cTkxnA hhrhQr sc-jNMcJZ gZAVzW"
+                    class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-dlVxhl dljPk hzmnYo sc-cTAqQK QYclH sc-jObWnj cJAcre"
                   >
                     <div
-                      class="sc-gKseQn cOdZAq sc-iBPTik kWuhSW"
+                      class="sc-gKclnd exdBHI sc-iCfMLu frGhDt"
                     >
                       <div
-                        class="sc-gKseQn cOdZAq sc-iBPTik jsUrGU"
+                        class="sc-gKclnd exdBHI sc-iCfMLu gHPssH"
                       >
                         <div
-                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-jYCGPb cDTTdv"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-jYmNlR kVdGQG"
                         >
                           <div>
                             <h1
-                              class="sc-gWHigU hGGoTM sc-citxvW hoVVGj"
+                              class="sc-gWXbKe gGPSCF sc-cidDSM koDaHu"
                             >
                               A title
                             </h1>
@@ -179,7 +179,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                               src="https://via.placeholder.com/150"
                             />
                             <p
-                              class="sc-fKFxtB eNMjwF sc-cxFLGX THyzS"
+                              class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
                             >
                               A paragraph
                             </p>
@@ -195,16 +195,16 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                   style="vertical-align: top;"
                 >
                   <div
-                    class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-hHfuMS sc-dmlqKv kXuowN gYmPhZ sc-cTkxnA hhrhQr sc-jNMcJZ gZAVzW"
+                    class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-dlVxhl dljPk hzmnYo sc-cTAqQK QYclH sc-jObWnj cJAcre"
                   >
                     <div
-                      class="sc-gKseQn cOdZAq sc-iBPTik kWuhSW"
+                      class="sc-gKclnd exdBHI sc-iCfMLu frGhDt"
                     >
                       <div
-                        class="sc-gKseQn cOdZAq sc-iBPTik jsUrGU"
+                        class="sc-gKclnd exdBHI sc-iCfMLu gHPssH"
                       >
                         <div
-                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-jYCGPb cDTTdv"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-jYmNlR kVdGQG"
                         >
                           <div>
                             A title
@@ -243,20 +243,20 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                   style="vertical-align: top;"
                 >
                   <div
-                    class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-hHfuMS sc-dmlqKv kXuowN gYmPhZ sc-cTkxnA hhrhQr sc-jNMcJZ gZAVzW"
+                    class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-dlVxhl dljPk hzmnYo sc-cTAqQK QYclH sc-jObWnj cJAcre"
                   >
                     <div
-                      class="sc-gKseQn cOdZAq sc-iBPTik kWuhSW"
+                      class="sc-gKclnd exdBHI sc-iCfMLu frGhDt"
                     >
                       <div
-                        class="sc-gKseQn cOdZAq sc-iBPTik jsUrGU"
+                        class="sc-gKclnd exdBHI sc-iCfMLu gHPssH"
                       >
                         <div
-                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-jYCGPb cDTTdv"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-jYmNlR kVdGQG"
                         >
                           <div>
                             <h1
-                              class="sc-gWHigU hGGoTM sc-citxvW hoVVGj"
+                              class="sc-gWXbKe gGPSCF sc-cidDSM koDaHu"
                             >
                               A title
                             </h1>
@@ -264,7 +264,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                               src="https://via.placeholder.com/150"
                             />
                             <p
-                              class="sc-fKFxtB eNMjwF sc-cxFLGX THyzS"
+                              class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
                             >
                               A paragraph
                             </p>
@@ -280,20 +280,20 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                   style="vertical-align: top;"
                 >
                   <div
-                    class="sc-gKseQn cOdZAq sc-iBPTik bqhgIB sc-hHfuMS sc-dmlqKv kXuowN gYmPhZ sc-cTkxnA hhrhQr sc-jNMcJZ gZAVzW"
+                    class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-dlVxhl dljPk hzmnYo sc-cTAqQK QYclH sc-jObWnj cJAcre"
                   >
                     <div
-                      class="sc-gKseQn cOdZAq sc-iBPTik kWuhSW"
+                      class="sc-gKclnd exdBHI sc-iCfMLu frGhDt"
                     >
                       <div
-                        class="sc-gKseQn cOdZAq sc-iBPTik jsUrGU"
+                        class="sc-gKclnd exdBHI sc-iCfMLu gHPssH"
                       >
                         <div
-                          class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-jYCGPb cDTTdv"
+                          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-jYmNlR kVdGQG"
                         >
                           <div>
                             <h1
-                              class="sc-gWHigU hGGoTM sc-citxvW hoVVGj"
+                              class="sc-gWXbKe gGPSCF sc-cidDSM koDaHu"
                             >
                               A title
                             </h1>
@@ -317,18 +317,18 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
 exports[`Storyshots Extra/Markdown Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
   >
     <div
-      class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-jYCGPb cDTTdv"
+      class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-jYmNlR kVdGQG"
     >
       <div>
         <h1
-          class="sc-gWHigU hGGoTM sc-citxvW hoVVGj"
+          class="sc-gWXbKe gGPSCF sc-cidDSM koDaHu"
           id="user-content-markdown"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv heading-anchor-link"
             color="primary.main"
             href="#markdown"
           >
@@ -341,7 +341,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-fKFxtB eNMjwF sc-cxFLGX THyzS"
+          class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
         >
           A simple component for rendering 
           <em>
@@ -352,11 +352,11 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h2
-          class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          class="sc-gWXbKe gGPSCF sc-jcFjpl bPpIzB"
           id="user-content-headers"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv heading-anchor-link"
             color="primary.main"
             href="#headers"
           >
@@ -369,11 +369,11 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h1
-          class="sc-gWHigU hGGoTM sc-citxvW hoVVGj"
+          class="sc-gWXbKe gGPSCF sc-cidDSM koDaHu"
           id="user-content-this-is-an-h1-tag"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv heading-anchor-link"
             color="primary.main"
             href="#this-is-an-h1-tag"
           >
@@ -390,11 +390,11 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h2
-          class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          class="sc-gWXbKe gGPSCF sc-jcFjpl bPpIzB"
           id="user-content-this-is-an-h2-tag"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv heading-anchor-link"
             color="primary.main"
             href="#this-is-an-h2-tag"
           >
@@ -411,11 +411,11 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h6
-          class="sc-gWHigU jmkjIR sc-eggMyH dhyhkx"
+          class="sc-gWXbKe kMRLBA sc-efQSVx iygbhF"
           id="user-content-this-is-an-h6-tag"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv heading-anchor-link"
             color="primary.main"
             href="#this-is-an-h6-tag"
           >
@@ -432,11 +432,11 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h2
-          class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          class="sc-gWXbKe gGPSCF sc-jcFjpl bPpIzB"
           id="user-content-emphasis"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv heading-anchor-link"
             color="primary.main"
             href="#emphasis"
           >
@@ -449,7 +449,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-fKFxtB eNMjwF sc-cxFLGX THyzS"
+          class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
         >
           <em>
             This text will be italic
@@ -464,7 +464,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-fKFxtB eNMjwF sc-cxFLGX THyzS"
+          class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
         >
           <strong>
             This text will be bold
@@ -479,7 +479,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-fKFxtB eNMjwF sc-cxFLGX THyzS"
+          class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
         >
           <em>
             You 
@@ -492,11 +492,11 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h2
-          class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          class="sc-gWXbKe gGPSCF sc-jcFjpl bPpIzB"
           id="user-content-lists"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv heading-anchor-link"
             color="primary.main"
             href="#lists"
           >
@@ -509,11 +509,11 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h3
-          class="sc-gWHigU hGGoTM sc-bZSRNg dcjMWL"
+          class="sc-gWXbKe gGPSCF sc-caiLqq iWWVnC"
           id="user-content-unordered"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv heading-anchor-link"
             color="primary.main"
             href="#unordered"
           >
@@ -559,11 +559,11 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h3
-          class="sc-gWHigU hGGoTM sc-bZSRNg dcjMWL"
+          class="sc-gWXbKe gGPSCF sc-caiLqq iWWVnC"
           id="user-content-ordered"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv heading-anchor-link"
             color="primary.main"
             href="#ordered"
           >
@@ -614,11 +614,11 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h2
-          class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          class="sc-gWXbKe gGPSCF sc-jcFjpl bPpIzB"
           id="user-content-images"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv heading-anchor-link"
             color="primary.main"
             href="#images"
           >
@@ -631,7 +631,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-fKFxtB eNMjwF sc-cxFLGX THyzS"
+          class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
         >
           <img
             alt="Example Image"
@@ -641,11 +641,11 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h2
-          class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          class="sc-gWXbKe gGPSCF sc-jcFjpl bPpIzB"
           id="user-content-links"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv heading-anchor-link"
             color="primary.main"
             href="#links"
           >
@@ -658,10 +658,10 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-fKFxtB eNMjwF sc-cxFLGX THyzS"
+          class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv"
             color="primary.main"
             href="http://github.com"
           >
@@ -672,10 +672,10 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-fKFxtB eNMjwF sc-cxFLGX THyzS"
+          class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv"
             color="primary.main"
             href="http://github.com"
           >
@@ -685,11 +685,11 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h2
-          class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          class="sc-gWXbKe gGPSCF sc-jcFjpl bPpIzB"
           id="user-content-blockquotes"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv heading-anchor-link"
             color="primary.main"
             href="#blockquotes"
           >
@@ -702,7 +702,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-fKFxtB eNMjwF sc-cxFLGX THyzS"
+          class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
         >
           As Ash Ketchum said:
         </p>
@@ -712,7 +712,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           
 
           <p
-            class="sc-fKFxtB eNMjwF sc-cxFLGX THyzS"
+            class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
           >
             Do you always need a reason to help somebody?
           </p>
@@ -722,11 +722,11 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h2
-          class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          class="sc-gWXbKe gGPSCF sc-jcFjpl bPpIzB"
           id="user-content-inline-code"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv heading-anchor-link"
             color="primary.main"
             href="#inline-code"
           >
@@ -739,7 +739,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-fKFxtB eNMjwF sc-cxFLGX THyzS"
+          class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
         >
           I think you should use an
           <br />
@@ -753,11 +753,11 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <h2
-          class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          class="sc-gWXbKe gGPSCF sc-jcFjpl bPpIzB"
           id="user-content-code-blocks"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv heading-anchor-link"
             color="primary.main"
             href="#code-blocks"
           >
@@ -860,11 +860,11 @@ const foo = () =&gt; {
         
 
         <h2
-          class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          class="sc-gWXbKe gGPSCF sc-jcFjpl bPpIzB"
           id="user-content-task-lists"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv heading-anchor-link"
             color="primary.main"
             href="#task-lists"
           >
@@ -920,11 +920,11 @@ const foo = () =&gt; {
         
 
         <h2
-          class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          class="sc-gWXbKe gGPSCF sc-jcFjpl bPpIzB"
           id="user-content-tables"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv heading-anchor-link"
             color="primary.main"
             href="#tables"
           >
@@ -986,11 +986,11 @@ const foo = () =&gt; {
         
 
         <h2
-          class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          class="sc-gWXbKe gGPSCF sc-jcFjpl bPpIzB"
           id="user-content-strikethrough"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv heading-anchor-link"
             color="primary.main"
             href="#strikethrough"
           >
@@ -1003,7 +1003,7 @@ const foo = () =&gt; {
         
 
         <p
-          class="sc-fKFxtB eNMjwF sc-cxFLGX THyzS"
+          class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
         >
           <del>
             Crossed out
@@ -1012,7 +1012,7 @@ const foo = () =&gt; {
         
 
         <p
-          class="sc-fKFxtB eNMjwF sc-cxFLGX THyzS"
+          class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
         >
           Any word wrapped with two tildes (like 
           <code>
@@ -1023,11 +1023,11 @@ const foo = () =&gt; {
         
 
         <h2
-          class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          class="sc-gWXbKe gGPSCF sc-jcFjpl bPpIzB"
           id="user-content-inline-html"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv heading-anchor-link"
             color="primary.main"
             href="#inline-html"
           >
@@ -1040,7 +1040,7 @@ const foo = () =&gt; {
         
 
         <p
-          class="sc-fKFxtB eNMjwF sc-cxFLGX THyzS"
+          class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
         >
           <strong>
             An image:
@@ -1069,7 +1069,7 @@ const foo = () =&gt; {
           
 
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv"
             color="primary.main"
             href="http://github.com/"
           >
@@ -1079,11 +1079,11 @@ const foo = () =&gt; {
         
 
         <h2
-          class="sc-gWHigU hGGoTM sc-jcVcSv hlgMRX"
+          class="sc-gWXbKe gGPSCF sc-jcFjpl bPpIzB"
           id="user-content-keyboard-keys"
         >
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF heading-anchor-link"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv heading-anchor-link"
             color="primary.main"
             href="#keyboard-keys"
           >
@@ -1096,7 +1096,7 @@ const foo = () =&gt; {
         
 
         <p
-          class="sc-fKFxtB eNMjwF sc-cxFLGX THyzS"
+          class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
         >
           <kbd>
             cmd
@@ -1123,14 +1123,14 @@ const foo = () =&gt; {
 exports[`Storyshots Extra/Markdown With Decorators 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 cNraFD sc-eFuaqX iXQyXF"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
   >
     <div
-      class="sc-fKFxtB eNMjwF sc-bBXrwG caFSBy sc-jYCGPb cDTTdv"
+      class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-jYmNlR kVdGQG"
     >
       <div>
         <p
-          class="sc-fKFxtB eNMjwF sc-cxFLGX THyzS"
+          class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
         >
           <span>
             
@@ -1142,7 +1142,7 @@ exports[`Storyshots Extra/Markdown With Decorators 1`] = `
              foo @bad@bad 
           </span>
           <a
-            class="sc-eGCaLh hMASKi sc-ctaXho jnunmF"
+            class="sc-eGRUor fekqPY sc-ctqQKy fghAZv"
             color="primary.main"
             href="https://github.com"
           >
@@ -1171,7 +1171,7 @@ exports[`Storyshots Extra/Markdown With Decorators 1`] = `
         
 
         <p
-          class="sc-fKFxtB eNMjwF sc-cxFLGX THyzS"
+          class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
         >
           <span>
             
