@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add OS issues icon and tooltip in DownloadImageModal
+      hash: 37fea07a3623c354c415a971e7548769c41ef2b4
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 21.9.0
+  date: 2021-10-21T13:27:01.150Z
+- commits:
     - subject: Fix monaco editor import conflict
       hash: 3cdc04b57ad9f624ab6694a7b2b6e0deab638b19
       body: ''
