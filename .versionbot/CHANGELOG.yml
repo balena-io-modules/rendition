@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency core-js to ^3.18.3'
+      hash: fb2d32bb838998437a92a33a5a6e1ac3adaadaf4
+      body: |
+        Update core-js from 3.18.1 to 3.18.3
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.9.1
+  date: 2021-10-21T14:09:47.046Z
+- commits:
     - subject: Add OS issues icon and tooltip in DownloadImageModal
       hash: 37fea07a3623c354c415a971e7548769c41ef2b4
       body: ''
