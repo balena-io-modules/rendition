@@ -1,105 +1,13 @@
 - commits:
-    - subject: 'patch: Update dependency core-js to ^3.18.3'
-      hash: fb2d32bb838998437a92a33a5a6e1ac3adaadaf4
-      body: |
-        Update core-js from 3.18.1 to 3.18.3
-      footer:
-        Change-type: patch
-        change-type: patch
-      author: Renovate Bot
-  version: 21.9.1
-  date: 2021-10-21T14:09:47.046Z
-- commits:
-    - subject: Add OS issues icon and tooltip in DownloadImageModal
-      hash: 37fea07a3623c354c415a971e7548769c41ef2b4
+    - subject: Allow user to see list of all affected entities when confirming actions
+      hash: eebb195d26db4bd4cc4f9a4675c092adc06bb47d
       body: ''
       footer:
         Change-type: minor
         change-type: minor
-        Signed-off-by: Andrea Rosci <andrear@balena.io>
-        signed-off-by: Andrea Rosci <andrear@balena.io>
-      author: JSReds
-  version: 21.9.0
-  date: 2021-10-21T13:27:01.150Z
-- commits:
-    - subject: Fix monaco editor import conflict
-      hash: 3cdc04b57ad9f624ab6694a7b2b6e0deab638b19
-      body: ''
-      footer:
-        Change-type: patch
-        change-type: patch
-        Signed-off-by: Andrea Rosci <andrear@balena.io>
-        signed-off-by: Andrea Rosci <andrear@balena.io>
-      author: JSReds
-  version: 21.8.7
-  date: 2021-10-19T16:32:42.302Z
-- commits:
-    - subject: 'patch: Update dependency @testing-library/react to v12'
-      hash: 0c157c9b12b863865e9c4c76c754e52b6bb9a560
-      body: |
-        Update @testing-library/react from 11.2.7 to 12.1.2
-      footer:
-        Change-type: patch
-        change-type: patch
-      author: Renovate Bot
-  version: 21.8.6
-  date: 2021-10-11T21:38:44.770Z
-- commits:
-    - subject: 'patch: Update dependency prismjs to ^1.25.0'
-      hash: 7402ba2cf3c8341fe1c4b4613c1bbd8c2fb2912b
-      body: |
-        Update prismjs from 1.21.0 to 1.25.0
-      footer:
-        Change-type: patch
-        change-type: patch
-      author: Renovate Bot
-  version: 21.8.5
-  date: 2021-10-08T16:12:41.067Z
-- commits:
-    - subject: 'patch: Update storybook-non-major to ^6.3.10'
-      hash: a4bfb9595d56f361f88d9c8f233a8b7aab885cb4
-      body: ''
-      footer:
-        Change-type: patch
-        change-type: patch
-      author: Renovate Bot
-  version: 21.8.4
-  date: 2021-10-08T15:53:51.254Z
-- commits:
-    - subject: Use styled components instead of classNames in TextWithCopy
-      hash: 260e17c78bc03c4a44324479cb3be8087c6b8465
-      body: ''
-      footer:
-        Change-type: patch
-        change-type: patch
         Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
         signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
       author: Matthew Yarmolinsky
-  version: 21.8.3
-  date: 2021-10-08T15:32:16.892Z
-- commits:
-    - subject: Add Download image modal missing informations and unify actions
-      hash: ca67cb43937bc7163cfa840e3a1b91b0aff99cdc
-      body: ''
-      footer:
-        Change-type: patch
-        change-type: patch
-        Signed-off-by: Andrea Rosci <andrear@balena.io>
-        signed-off-by: Andrea Rosci <andrear@balena.io>
-      author: JSReds
-  version: 21.8.2
-  date: 2021-10-07T13:38:01.565Z
-- commits:
-    - subject: 'patch: Update react-libs'
-      hash: c5aabfc5eed1a396a0a9f9dd36810d6b0e6d4756
-      body: ''
-      footer:
-        Change-type: patch
-        change-type: patch
-      author: Renovate Bot
-  version: 21.8.1
-  date: 2021-10-07T09:16:30.736Z
-- commits:
     - subject: Add actionFn property to AutoUICollection
       hash: 030a67ce923e938dc4714c65fb348b8b53e20dab
       body: ''
@@ -110,7 +18,7 @@
         signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
       author: Matthew Yarmolinsky
   version: 21.8.0
-  date: 2021-10-06T16:46:20.970Z
+  date: 2021-10-25T19:31:24.709Z
 - commits:
     - subject: 'patch: Update dependency prettier to ^2.4.1'
       hash: 47a8fc0e7915c5b45a515f134813228655e46842
