@@ -1,4 +1,25 @@
 - commits:
+    - subject: Allow user to see list of all affected entities when confirming actions
+      hash: eebb195d26db4bd4cc4f9a4675c092adc06bb47d
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+    - subject: Add actionFn property to AutoUICollection
+      hash: 030a67ce923e938dc4714c65fb348b8b53e20dab
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 21.8.0
+  date: 2021-10-25T19:34:21.228Z
+- commits:
     - subject: 'patch: Update dependency prettier to ^2.4.1'
       hash: 47a8fc0e7915c5b45a515f134813228655e46842
       body: |
