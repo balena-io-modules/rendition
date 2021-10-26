@@ -151,7 +151,7 @@ const Plain = styled(ButtonBase)`
 		border-radius: 0;
 		${(props) =>
 			getHoverEffectOverride(
-				'none',
+				'#f8f9fd',
 				getColor(props, 'color', 'dark') || props.theme.colors.text.light,
 			)};
 	}
