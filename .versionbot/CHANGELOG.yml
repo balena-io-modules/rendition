@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix autoUI tagManagement resource translations
+      hash: 7af55f82b5739af9b2c14b51620edad41aa3717a
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 21.9.2
+  date: 2021-10-26T07:55:07.473Z
+- commits:
     - subject: 'patch: Update dependency core-js to ^3.18.3'
       hash: fb2d32bb838998437a92a33a5a6e1ac3adaadaf4
       body: |
