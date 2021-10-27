@@ -1,4 +1,18 @@
 - commits:
+    - subject: Fix issue where mermaid import no longer works
+      hash: c69e6fde077b84afeb8a7e583282e1d36fdab2e0
+      body: |
+        This change fixes an issue where the mermaid library is not imported
+        correctly, resulting in render failing in downstream projects.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+  version: 21.9.3
+  date: 2021-10-27T12:58:00.422Z
+- commits:
     - subject: Fix autoUI tagManagement resource translations
       hash: 7af55f82b5739af9b2c14b51620edad41aa3717a
       body: ''
