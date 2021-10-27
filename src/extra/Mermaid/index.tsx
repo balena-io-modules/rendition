@@ -1,4 +1,4 @@
-import { mermaidAPI } from 'mermaid';
+import mermaid from 'mermaid';
 import * as React from 'react';
 import uuid from 'uuid/v4';
 import { Box, BoxProps } from '../../components/Box';
@@ -43,7 +43,7 @@ export class Mermaid extends React.Component<MermaidProps, {}> {
 		}
 
 		try {
-			mermaidAPI.render(this.id, value, (svgCode, bindFunctions) => {
+			mermaid.mermaidAPI.render(this.id, value, (svgCode, bindFunctions) => {
 				renderArea.innerHTML = svgCode;
 
 				if (typeof bindFunctions === 'function') {
