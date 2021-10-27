@@ -1,4 +1,14 @@
 - commits:
+    - subject: 'patch: Update dependency styled-components to ^5.3.3'
+      hash: ec06f6569f96d606be75d28d0743bcd688944f66
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.9.4
+  date: 2021-10-27T13:24:47.457Z
+- commits:
     - subject: Fix issue where mermaid import no longer works
       hash: c69e6fde077b84afeb8a7e583282e1d36fdab2e0
       body: |
