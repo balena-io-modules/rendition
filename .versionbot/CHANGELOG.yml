@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency catch-uncommitted to ^1.6.2'
+      hash: a24661632babb4c0084d4ffe942a609a7b8b96a2
+      body: |
+        Update catch-uncommitted from 1.4.0 to 1.6.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.9.6
+  date: 2021-10-27T14:16:03.687Z
+- commits:
     - subject: 'patch: Update storybook-non-major to ^6.3.12'
       hash: e1c4240c4aa909ab08ee366922abbc346107db3b
       body: ''
