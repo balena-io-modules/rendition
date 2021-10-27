@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency git-url-parse to v11'
+      hash: 82297215770ebe23cd02dd7909e0882ac6a4c9a3
+      body: |
+        Update git-url-parse from 7.2.0 to 11.6.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.9.6
+  date: 2021-10-27T14:16:37.767Z
+- commits:
     - subject: 'patch: Update storybook-non-major to ^6.3.12'
       hash: e1c4240c4aa909ab08ee366922abbc346107db3b
       body: ''
