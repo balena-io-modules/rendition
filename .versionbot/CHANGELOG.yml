@@ -1,4 +1,14 @@
 - commits:
+    - subject: 'patch: Update storybook-non-major to ^6.3.12'
+      hash: e1c4240c4aa909ab08ee366922abbc346107db3b
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.9.5
+  date: 2021-10-27T13:49:13.592Z
+- commits:
     - subject: 'patch: Update dependency styled-components to ^5.3.3'
       hash: ec06f6569f96d606be75d28d0743bcd688944f66
       body: ''
