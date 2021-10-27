@@ -3,7 +3,7 @@
 exports[`Storyshots Core/StatsBar Cpu Temp 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
       class="sc-gKclnd iQIogj sc-iCfMLu gZewII sc-hGPBjI kBwkZQ"
@@ -93,7 +93,7 @@ exports[`Storyshots Core/StatsBar Cpu Temp 1`] = `
 exports[`Storyshots Core/StatsBar Cpu Usage 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
       class="sc-gKclnd iQIogj sc-iCfMLu gZewII sc-hGPBjI kBwkZQ"
@@ -271,7 +271,7 @@ exports[`Storyshots Core/StatsBar Cpu Usage 1`] = `
 exports[`Storyshots Core/StatsBar Memory 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
       class="sc-gKclnd iQIogj sc-iCfMLu gZewII sc-hGPBjI kBwkZQ"
@@ -371,7 +371,7 @@ exports[`Storyshots Core/StatsBar Memory 1`] = `
 exports[`Storyshots Core/StatsBar Storage 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
       class="sc-gKclnd iQIogj sc-iCfMLu gZewII sc-hGPBjI kBwkZQ"

@@ -3,21 +3,21 @@
 exports[`Storyshots Core/TextWithCopy Always Show 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <span
-      class="sc-fKVqWL hOcWtv sc-iwjdpV iXrUAY sc-hZpJaK djDbBF"
+      class="sc-fKVqWL hOcWtv sc-iwjdpV iXrUAY sc-cHzqoD bBDeUQ"
     >
       <span
-        class="sc-cHzqoD cBlKfa"
+        class="sc-JkixQ dLBRgg"
       >
         Click the icon
       </span>
       <span
-        class="sc-gGPzkF fxnEtP"
+        class="sc-dkQkyq brNuSp"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-JkixQ gfDyTp"
+          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-gGPzkF jGlSeL"
         >
           <svg
             aria-hidden="true"
@@ -44,10 +44,10 @@ exports[`Storyshots Core/TextWithCopy Always Show 1`] = `
 exports[`Storyshots Core/TextWithCopy Code 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <span
-      class="sc-fKVqWL hOcWtv sc-iwjdpV iXrUAY sc-hZpJaK djDbBF"
+      class="sc-fKVqWL hOcWtv sc-iwjdpV iXrUAY sc-cHzqoD bBDeUQ"
       title="This value has been copied to your clipboard!"
     >
       <code
@@ -56,10 +56,10 @@ exports[`Storyshots Core/TextWithCopy Code 1`] = `
         3555432
       </code>
       <span
-        class="sc-gGPzkF fxnEtP"
+        class="sc-dkQkyq brNuSp"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-JkixQ jvhfll"
+          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-gGPzkF ecWwir"
         >
           <svg
             aria-hidden="true"
@@ -86,14 +86,14 @@ exports[`Storyshots Core/TextWithCopy Code 1`] = `
 exports[`Storyshots Core/TextWithCopy Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <span
-      class="sc-fKVqWL hOcWtv sc-iwjdpV iXrUAY sc-hZpJaK djDbBF"
+      class="sc-fKVqWL hOcWtv sc-iwjdpV iXrUAY sc-cHzqoD bBDeUQ"
       title="This value has been copied to your clipboard!"
     >
       <span
-        class="sc-cHzqoD cBlKfa"
+        class="sc-JkixQ dLBRgg"
       >
         <i>
           hover
@@ -105,10 +105,10 @@ exports[`Storyshots Core/TextWithCopy Default 1`] = `
          the icon
       </span>
       <span
-        class="sc-gGPzkF fxnEtP"
+        class="sc-dkQkyq brNuSp"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-JkixQ jvhfll"
+          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-gGPzkF ecWwir"
         >
           <svg
             aria-hidden="true"

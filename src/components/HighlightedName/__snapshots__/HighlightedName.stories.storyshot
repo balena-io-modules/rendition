@@ -3,7 +3,7 @@
 exports[`Storyshots Core/HighlightedName Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <span
       class="sc-fKVqWL hOcWtv sc-iwjdpV csrXjq sc-GEbAx cVEuIT sc-gsNilK dlEAUa"
@@ -17,7 +17,7 @@ exports[`Storyshots Core/HighlightedName Default 1`] = `
 exports[`Storyshots Core/HighlightedName With Custom Colors 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <span
       class="sc-fKVqWL hOcWtv sc-iwjdpV vGMJF sc-GEbAx cVEuIT sc-gsNilK dhNLzR"

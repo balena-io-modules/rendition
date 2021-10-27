@@ -3,10 +3,10 @@
 exports[`Storyshots Core/RadioButton Checked 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
-      class="sc-gyElHZ bKDQex sc-gjNHFA bySJqW"
+      class="sc-gjNHFA cTVbHk sc-fmciRz FNnoD"
     >
       <label
         class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 jGWwCF"
@@ -50,10 +50,10 @@ exports[`Storyshots Core/RadioButton Checked 1`] = `
 exports[`Storyshots Core/RadioButton Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
-      class="sc-gyElHZ kHOant sc-gjNHFA bySJqW"
+      class="sc-gjNHFA eVZCMM sc-fmciRz FNnoD"
     >
       <label
         class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 jGWwCF"
@@ -84,10 +84,10 @@ exports[`Storyshots Core/RadioButton Default 1`] = `
 exports[`Storyshots Core/RadioButton Disabled 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
-      class="sc-gyElHZ kHOant sc-gjNHFA bySJqW"
+      class="sc-gjNHFA eVZCMM sc-fmciRz FNnoD"
     >
       <label
         class="StyledRadioButton__StyledRadioButtonContainer-sc-g1f6ld-0 bgseKw"

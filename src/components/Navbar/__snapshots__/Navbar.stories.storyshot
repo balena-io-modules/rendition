@@ -3,13 +3,13 @@
 exports[`Storyshots Core/Navbar Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
       class="sc-gKclnd exdBHI sc-iCfMLu kisQim"
     >
       <div
-        class="sc-gKclnd exdBHI sc-iCfMLu cGgNNs sc-bSqaIl KbNKZ sc-jvvksu bDmWVF"
+        class="sc-gKclnd exdBHI sc-iCfMLu cGgNNs sc-jvvksu rvCKa sc-edERGn kyDWed"
       >
         <div
           class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI fcICqX"
@@ -18,7 +18,7 @@ exports[`Storyshots Core/Navbar Default 1`] = `
             class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI dljPk"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu mkOAX sc-edERGn bKSvKY"
+              class="sc-gKclnd exdBHI sc-iCfMLu mkOAX sc-jlsrNB cWFfXI"
             >
               <a
                 class="sc-eGRUor eisEdB sc-ctqQKy jEA-DWI"
@@ -33,7 +33,7 @@ exports[`Storyshots Core/Navbar Default 1`] = `
               </a>
             </div>
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu kSWvTu sc-jlsrNB hynsUc"
+              class="sc-gKclnd exdBHI sc-iCfMLu kSWvTu sc-iWBNLc ifndUK"
             >
               <svg
                 aria-hidden="true"
@@ -53,7 +53,7 @@ exports[`Storyshots Core/Navbar Default 1`] = `
             </div>
           </div>
           <div
-            class="sc-gKclnd exdBHI sc-iCfMLu hdtGKh sc-hGPBjI sc-iWBNLc dljPk hjYDnQ"
+            class="sc-gKclnd exdBHI sc-iCfMLu hdtGKh sc-hGPBjI sc-hYQoXb dljPk fFovzs"
           >
             <div
               class="sc-gKclnd exdBHI sc-iCfMLu iEFwjy sc-hGPBjI fcICqX"

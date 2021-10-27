@@ -3,19 +3,19 @@
 exports[`Storyshots Core/Table Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-fyrocj dljPk jxvgud"
+      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-iWVNaa dljPk YIrmE"
     >
       <div
         class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
       >
         <div
-          class="sc-iqVWFU hIAseQ"
+          class="sc-eWfVMQ gmreIg"
         >
           <div
-            class="sc-eWfVMQ kmJZgg sc-jKTccl fWCWlF"
+            class="sc-kTLmzF kNwxgk sc-bUbRBg hsvIRe"
           >
             <div
               data-display="table-head"
@@ -27,7 +27,7 @@ exports[`Storyshots Core/Table Default 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="Name"
                     type="button"
                   >
@@ -55,7 +55,7 @@ exports[`Storyshots Core/Table Default 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -83,7 +83,7 @@ exports[`Storyshots Core/Table Default 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="Category"
                     type="button"
                   >
@@ -111,7 +111,7 @@ exports[`Storyshots Core/Table Default 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="first_seen"
                     type="button"
                   >
@@ -506,19 +506,19 @@ exports[`Storyshots Core/Table Default 1`] = `
 exports[`Storyshots Core/Table Sorted 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-fyrocj dljPk jxvgud"
+      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-iWVNaa dljPk YIrmE"
     >
       <div
         class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
       >
         <div
-          class="sc-iqVWFU hIAseQ"
+          class="sc-eWfVMQ gmreIg"
         >
           <div
-            class="sc-eWfVMQ kmJZgg sc-jKTccl fWCWlF"
+            class="sc-kTLmzF kNwxgk sc-bUbRBg hsvIRe"
           >
             <div
               data-display="table-head"
@@ -530,7 +530,7 @@ exports[`Storyshots Core/Table Sorted 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 dxCrOx sc-bqiRlB sc-bkkeKt edofBN hOrbaG sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 dxCrOx sc-bqiRlB sc-bkkeKt edofBN hOrbaG sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="Name"
                     type="button"
                   >
@@ -558,7 +558,7 @@ exports[`Storyshots Core/Table Sorted 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -586,7 +586,7 @@ exports[`Storyshots Core/Table Sorted 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="Category"
                     type="button"
                   >
@@ -614,7 +614,7 @@ exports[`Storyshots Core/Table Sorted 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="first_seen"
                     type="button"
                   >
@@ -1009,19 +1009,19 @@ exports[`Storyshots Core/Table Sorted 1`] = `
 exports[`Storyshots Core/Table With Anchor Rows 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-fyrocj dljPk jxvgud"
+      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-iWVNaa dljPk YIrmE"
     >
       <div
         class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
       >
         <div
-          class="sc-iqVWFU hIAseQ"
+          class="sc-eWfVMQ gmreIg"
         >
           <div
-            class="sc-eWfVMQ jIMImu sc-jKTccl fWCWlF"
+            class="sc-kTLmzF gNkruy sc-bUbRBg hsvIRe"
           >
             <div
               data-display="table-head"
@@ -1033,7 +1033,7 @@ exports[`Storyshots Core/Table With Anchor Rows 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="Name"
                     type="button"
                   >
@@ -1061,7 +1061,7 @@ exports[`Storyshots Core/Table With Anchor Rows 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -1089,7 +1089,7 @@ exports[`Storyshots Core/Table With Anchor Rows 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="Category"
                     type="button"
                   >
@@ -1117,7 +1117,7 @@ exports[`Storyshots Core/Table With Anchor Rows 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="first_seen"
                     type="button"
                   >
@@ -1600,19 +1600,19 @@ exports[`Storyshots Core/Table With Anchor Rows 1`] = `
 exports[`Storyshots Core/Table With Checkboxes 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-fyrocj dljPk jxvgud"
+      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-iWVNaa dljPk YIrmE"
     >
       <div
         class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
       >
         <div
-          class="sc-iqVWFU hIAseQ"
+          class="sc-eWfVMQ gmreIg"
         >
           <div
-            class="sc-eWfVMQ xUXjS sc-jKTccl cKEcNg"
+            class="sc-kTLmzF beZem sc-bUbRBg bnwCgX"
           >
             <div
               data-display="table-head"
@@ -1621,7 +1621,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-display="table-row"
               >
                 <div
-                  class="sc-iFMAIt bKXgtf"
+                  class="sc-iqVWFU cmiHhz"
                   data-display="table-cell"
                 >
                   <div
@@ -1648,7 +1648,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="Name"
                     type="button"
                   >
@@ -1676,7 +1676,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -1704,7 +1704,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="Category"
                     type="button"
                   >
@@ -1732,7 +1732,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="first_seen"
                     type="button"
                   >
@@ -1767,7 +1767,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="true"
               >
                 <div
-                  class="sc-iFMAIt bKXgtf"
+                  class="sc-iqVWFU cmiHhz"
                   data-display="table-cell"
                 >
                   <div
@@ -1834,7 +1834,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="true"
               >
                 <div
-                  class="sc-iFMAIt bKXgtf"
+                  class="sc-iqVWFU cmiHhz"
                   data-display="table-cell"
                 >
                   <div
@@ -1901,7 +1901,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="true"
               >
                 <div
-                  class="sc-iFMAIt bKXgtf"
+                  class="sc-iqVWFU cmiHhz"
                   data-display="table-cell"
                 >
                   <div
@@ -1968,7 +1968,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-iFMAIt bKXgtf"
+                  class="sc-iqVWFU cmiHhz"
                   data-display="table-cell"
                 >
                   <div
@@ -2023,7 +2023,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-iFMAIt bKXgtf"
+                  class="sc-iqVWFU cmiHhz"
                   data-display="table-cell"
                 >
                   <div
@@ -2086,7 +2086,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-iFMAIt bKXgtf"
+                  class="sc-iqVWFU cmiHhz"
                   data-display="table-cell"
                 >
                   <div
@@ -2149,7 +2149,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-iFMAIt bKXgtf"
+                  class="sc-iqVWFU cmiHhz"
                   data-display="table-cell"
                 >
                   <div
@@ -2212,7 +2212,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-iFMAIt bKXgtf"
+                  class="sc-iqVWFU cmiHhz"
                   data-display="table-cell"
                 >
                   <div
@@ -2267,7 +2267,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-iFMAIt bKXgtf"
+                  class="sc-iqVWFU cmiHhz"
                   data-display="table-cell"
                 >
                   <div
@@ -2322,7 +2322,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-iFMAIt bKXgtf"
+                  class="sc-iqVWFU cmiHhz"
                   data-display="table-cell"
                 >
                   <div
@@ -2377,7 +2377,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-iFMAIt bKXgtf"
+                  class="sc-iqVWFU cmiHhz"
                   data-display="table-cell"
                 >
                   <div
@@ -2438,19 +2438,19 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
 exports[`Storyshots Core/Table With Conditional Row Classes 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-fyrocj dljPk jxvgud"
+      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-iWVNaa dljPk YIrmE"
     >
       <div
         class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
       >
         <div
-          class="sc-iqVWFU hIAseQ"
+          class="sc-eWfVMQ gmreIg"
         >
           <div
-            class="sc-eWfVMQ kmJZgg sc-jKTccl fWCWlF"
+            class="sc-kTLmzF kNwxgk sc-bUbRBg hsvIRe"
           >
             <div
               data-display="table-head"
@@ -2462,7 +2462,7 @@ exports[`Storyshots Core/Table With Conditional Row Classes 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="Name"
                     type="button"
                   >
@@ -2490,7 +2490,7 @@ exports[`Storyshots Core/Table With Conditional Row Classes 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -2518,7 +2518,7 @@ exports[`Storyshots Core/Table With Conditional Row Classes 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="Category"
                     type="button"
                   >
@@ -2546,7 +2546,7 @@ exports[`Storyshots Core/Table With Conditional Row Classes 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="first_seen"
                     type="button"
                   >
@@ -2941,19 +2941,19 @@ exports[`Storyshots Core/Table With Conditional Row Classes 1`] = `
 exports[`Storyshots Core/Table With Custom Columns 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-fyrocj dljPk jxvgud"
+      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-iWVNaa dljPk YIrmE"
     >
       <div
         class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
       >
         <div
-          class="sc-iqVWFU hIAseQ"
+          class="sc-eWfVMQ gmreIg"
         >
           <div
-            class="sc-eWfVMQ kmJZgg sc-jKTccl jBYHQx"
+            class="sc-kTLmzF kNwxgk sc-bUbRBg hEZFOe"
           >
             <div
               data-display="table-head"
@@ -2965,7 +2965,7 @@ exports[`Storyshots Core/Table With Custom Columns 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="Name"
                     type="button"
                   >
@@ -2993,7 +2993,7 @@ exports[`Storyshots Core/Table With Custom Columns 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -3021,7 +3021,7 @@ exports[`Storyshots Core/Table With Custom Columns 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="Category"
                     type="button"
                   >
@@ -3049,7 +3049,7 @@ exports[`Storyshots Core/Table With Custom Columns 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="first_seen"
                     type="button"
                   >
@@ -3437,7 +3437,7 @@ exports[`Storyshots Core/Table With Custom Columns 1`] = `
         </div>
       </div>
       <div
-        class="sc-iWVNaa ibsBWj"
+        class="sc-jKTccl fizxqw"
       >
         <div
           class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-jOxtWs iRYYIV sc-bTfYFJ isjOxD"
@@ -3454,7 +3454,7 @@ exports[`Storyshots Core/Table With Custom Columns 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-cog fa-w-16 sc-dwsnSq eHVipD"
+                  class="svg-inline--fa fa-cog fa-w-16 sc-jtXEFf jMRJqw"
                   data-icon="cog"
                   data-prefix="fas"
                   focusable="false"
@@ -3495,19 +3495,19 @@ exports[`Storyshots Core/Table With Custom Columns 1`] = `
 exports[`Storyshots Core/Table With Highlighted Rows 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-fyrocj dljPk jxvgud"
+      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-iWVNaa dljPk YIrmE"
     >
       <div
         class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
       >
         <div
-          class="sc-iqVWFU hIAseQ"
+          class="sc-eWfVMQ gmreIg"
         >
           <div
-            class="sc-eWfVMQ kmJZgg sc-jKTccl fWCWlF"
+            class="sc-kTLmzF kNwxgk sc-bUbRBg hsvIRe"
           >
             <div
               data-display="table-head"
@@ -3519,7 +3519,7 @@ exports[`Storyshots Core/Table With Highlighted Rows 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="Name"
                     type="button"
                   >
@@ -3547,7 +3547,7 @@ exports[`Storyshots Core/Table With Highlighted Rows 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -3575,7 +3575,7 @@ exports[`Storyshots Core/Table With Highlighted Rows 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="Category"
                     type="button"
                   >
@@ -3603,7 +3603,7 @@ exports[`Storyshots Core/Table With Highlighted Rows 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="first_seen"
                     type="button"
                   >
@@ -3998,10 +3998,10 @@ exports[`Storyshots Core/Table With Highlighted Rows 1`] = `
 exports[`Storyshots Core/Table With Pager 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-fyrocj dljPk jxvgud"
+      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-iWVNaa dljPk YIrmE"
     >
       <div
         class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
@@ -4074,10 +4074,10 @@ exports[`Storyshots Core/Table With Pager 1`] = `
           </div>
         </div>
         <div
-          class="sc-iqVWFU hIAseQ"
+          class="sc-eWfVMQ gmreIg"
         >
           <div
-            class="sc-eWfVMQ kmJZgg sc-jKTccl fWCWlF"
+            class="sc-kTLmzF kNwxgk sc-bUbRBg hsvIRe"
           >
             <div
               data-display="table-head"
@@ -4089,7 +4089,7 @@ exports[`Storyshots Core/Table With Pager 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="Name"
                     type="button"
                   >
@@ -4117,7 +4117,7 @@ exports[`Storyshots Core/Table With Pager 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -4145,7 +4145,7 @@ exports[`Storyshots Core/Table With Pager 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="Category"
                     type="button"
                   >
@@ -4173,7 +4173,7 @@ exports[`Storyshots Core/Table With Pager 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="first_seen"
                     type="button"
                   >
@@ -4371,19 +4371,19 @@ exports[`Storyshots Core/Table With Pager 1`] = `
 exports[`Storyshots Core/Table With Prefix 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-fyrocj dljPk jxvgud"
+      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-iWVNaa dljPk YIrmE"
     >
       <div
         class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
       >
         <div
-          class="sc-iqVWFU hIAseQ"
+          class="sc-eWfVMQ gmreIg"
         >
           <div
-            class="sc-eWfVMQ kmJZgg sc-jKTccl fWCWlF"
+            class="sc-kTLmzF kNwxgk sc-bUbRBg hsvIRe"
           >
             <div
               data-display="table-head"
@@ -4395,7 +4395,7 @@ exports[`Storyshots Core/Table With Prefix 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="Name"
                     type="button"
                   >
@@ -4423,7 +4423,7 @@ exports[`Storyshots Core/Table With Prefix 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -4451,7 +4451,7 @@ exports[`Storyshots Core/Table With Prefix 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="Category"
                     type="button"
                   >
@@ -4479,7 +4479,7 @@ exports[`Storyshots Core/Table With Prefix 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="first_seen"
                     type="button"
                   >
@@ -4896,19 +4896,19 @@ exports[`Storyshots Core/Table With Prefix 1`] = `
 exports[`Storyshots Core/Table With Row Click 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-fyrocj dljPk jxvgud"
+      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-iWVNaa dljPk YIrmE"
     >
       <div
         class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
       >
         <div
-          class="sc-iqVWFU hIAseQ"
+          class="sc-eWfVMQ gmreIg"
         >
           <div
-            class="sc-eWfVMQ jIMImu sc-jKTccl fWCWlF"
+            class="sc-kTLmzF gNkruy sc-bUbRBg hsvIRe"
           >
             <div
               data-display="table-head"
@@ -4920,7 +4920,7 @@ exports[`Storyshots Core/Table With Row Click 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="Name"
                     type="button"
                   >
@@ -4948,7 +4948,7 @@ exports[`Storyshots Core/Table With Row Click 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -4976,7 +4976,7 @@ exports[`Storyshots Core/Table With Row Click 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="Category"
                     type="button"
                   >
@@ -5004,7 +5004,7 @@ exports[`Storyshots Core/Table With Row Click 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-kTLmzF eezwuu"
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
                     data-field="first_seen"
                     type="button"
                   >
