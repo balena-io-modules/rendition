@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency catch-uncommitted to v2'
+      hash: 8ca870d6f4e1c2b42d590d5b4003e56a5d35815b
+      body: |
+        Update catch-uncommitted from 1.4.0 to 2.0.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.9.7
+  date: 2021-10-28T15:14:03.756Z
+- commits:
     - subject: Remove unused dependencies
       hash: 7dd0157102aa521699d189da5280c7268ee93999
       body: ''
