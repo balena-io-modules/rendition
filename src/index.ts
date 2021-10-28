@@ -3,7 +3,11 @@ export { Async } from './components/Async';
 export { Badge, BadgeProps } from './components/Badge';
 export { Banner, BannerProps } from './components/Banner';
 export { Button, ButtonProps } from './components/Button';
-export { ButtonGroup } from './components/ButtonGroup';
+export {
+	ButtonGroup,
+	ButtonGroupProps,
+	ButtonGroupOption,
+} from './components/ButtonGroup';
 export { Card, CardProps } from './components/Card';
 export { Checkbox, CheckboxProps } from './components/Checkbox';
 export { Copy, CopyProps } from './components/Copy';
