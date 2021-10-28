@@ -1,4 +1,16 @@
 - commits:
+    - subject: Remove unused dependencies
+      hash: 7dd0157102aa521699d189da5280c7268ee93999
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 21.9.6
+  date: 2021-10-28T14:40:31.409Z
+- commits:
     - subject: 'patch: Update storybook-non-major to ^6.3.12'
       hash: e1c4240c4aa909ab08ee366922abbc346107db3b
       body: ''
