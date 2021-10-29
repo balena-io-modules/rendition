@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add styled system props to Search
+      hash: 3b72710089b8f0270e99cb9d0d39b55cc9eb348d
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 21.10.0
+  date: 2021-10-29T18:06:09.909Z
+- commits:
     - subject: 'patch: Update dependency catch-uncommitted to v2'
       hash: 8ca870d6f4e1c2b42d590d5b4003e56a5d35815b
       body: |
