@@ -5,8 +5,9 @@ import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { RenditionSystemProps } from '../../common-types';
 import { px } from '../../utils';
+import { Flex } from '../Flex';
 
-const Wrapper = styled.div`
+const Wrapper = styled(Flex)`
 	position: relative;
 	width: 100%;
 	border-bottom: 1px solid ${(props) => props.theme.colors.quartenary.main};

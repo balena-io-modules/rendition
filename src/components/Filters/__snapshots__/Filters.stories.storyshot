@@ -46,7 +46,7 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
             class="sc-fvxzrP giviWi"
           >
             <div
-              class="sc-khQegj ffXoGL sc-hUpaCq igPhtM"
+              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-khQegj dljPk ffXoGL sc-hUpaCq igPhtM"
             >
               <input
                 placeholder="Search entries..."
@@ -1222,7 +1222,7 @@ exports[`Storyshots Core/Filters Compact 1`] = `
             class="sc-fvxzrP giviWi"
           >
             <div
-              class="sc-khQegj ffXoGL sc-hUpaCq igPhtM"
+              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-khQegj dljPk ffXoGL sc-hUpaCq igPhtM"
             >
               <input
                 placeholder="Search entries..."
@@ -2401,7 +2401,7 @@ exports[`Storyshots Core/Filters Default 1`] = `
             class="sc-fvxzrP giviWi"
           >
             <div
-              class="sc-khQegj ffXoGL sc-hUpaCq igPhtM"
+              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-khQegj dljPk ffXoGL sc-hUpaCq igPhtM"
             >
               <input
                 placeholder="Search entries..."
@@ -3586,7 +3586,7 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
             class="sc-fvxzrP giviWi"
           >
             <div
-              class="sc-khQegj ffXoGL sc-hUpaCq igPhtM"
+              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-khQegj dljPk ffXoGL sc-hUpaCq igPhtM"
             >
               <input
                 disabled=""
