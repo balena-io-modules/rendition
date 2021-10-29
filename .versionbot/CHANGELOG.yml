@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency monaco-editor-webpack-plugin to v5'
+      hash: b3f5a1a67fe9122b812c5d8981c2f32412b28291
+      body: |
+        Update monaco-editor-webpack-plugin from 4.2.0 to 5.0.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.10.1
+  date: 2021-10-29T19:04:08.756Z
+- commits:
     - subject: Add styled system props to Search
       hash: 3b72710089b8f0270e99cb9d0d39b55cc9eb348d
       body: ''
