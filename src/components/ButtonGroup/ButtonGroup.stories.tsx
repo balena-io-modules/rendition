@@ -6,7 +6,7 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons/faSpinner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { createTemplate, createStory } from '../../stories/utils';
 import { Button } from '../Button';
-import { ButtonGroup, ButtonGroupProps } from '.';
+import { ButtonGroup, ButtonGroupProps, ButtonGroupOption } from '.';
 
 export default {
 	title: 'Core/ButtonGroup',
@@ -14,7 +14,27 @@ export default {
 	subcomponents: { Button },
 } as Meta;
 
+const OptionsDemoTemplate = (props: ButtonGroupProps) => {
+	if (!('options' in props)) {
+		return null;
+	}
+
+	const [selected, setSelected] = React.useState<
+		ButtonGroupOption | string | undefined
+	>(props.value);
+
+	return (
+		<ButtonGroup
+			{...props}
+			options={props.options}
+			onChange={setSelected}
+			value={selected}
+		/>
+	);
+};
+
 const Template = createTemplate<ButtonGroupProps>(ButtonGroup);
+const OptionsTemplate = createTemplate<ButtonGroupProps>(OptionsDemoTemplate);
 
 export const Default = createStory<ButtonGroupProps>(Template, {
 	children: (
@@ -24,6 +44,11 @@ export const Default = createStory<ButtonGroupProps>(Template, {
 			<Button>Third</Button>
 		</>
 	),
+});
+
+export const GroupSelect = createStory<ButtonGroupProps>(OptionsTemplate, {
+	options: ['option1', 'option2', 'option3'],
+	value: 'option2',
 });
 
 export const WithIconButton = createStory<ButtonGroupProps>(Template, {
