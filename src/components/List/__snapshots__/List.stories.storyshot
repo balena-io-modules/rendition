@@ -3,7 +3,7 @@
 exports[`Storyshots Core/List Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <ul
       class="sc-dFtzxp sc-gIDmLj eTnbjW eTAwSV sc-evcjhq bmbhlJ"
@@ -52,7 +52,7 @@ exports[`Storyshots Core/List Default 1`] = `
 exports[`Storyshots Core/List Ordered 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <ol
       class="sc-dFtzxp sc-brSvTw eTnbjW iUbKCC sc-evcjhq bmbhlJ"

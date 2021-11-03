@@ -3,7 +3,7 @@
 exports[`Storyshots Core/ProgressBar Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
       class="sc-XxNYO gNUYFN sc-ilfuhL gPrLKN"
@@ -35,7 +35,7 @@ exports[`Storyshots Core/ProgressBar Default 1`] = `
 exports[`Storyshots Core/ProgressBar Different Color 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
       class="sc-XxNYO gNUYFN sc-ilfuhL gPrLKN"
@@ -68,7 +68,7 @@ exports[`Storyshots Core/ProgressBar Different Color 1`] = `
 exports[`Storyshots Core/ProgressBar Emphasized 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
       class="sc-XxNYO kdGSto sc-ilfuhL gPrLKN"

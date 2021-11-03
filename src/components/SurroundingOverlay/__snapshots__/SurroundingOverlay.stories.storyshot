@@ -1,16 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Core/Input Default 1`] = `
+exports[`Storyshots Core/SurroundingOverlay Default 1`] = `
 <div>
   <div
     class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
+    <div
+      class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 jqwtzG"
+    >
+      <input
+        autocomplete="off"
+        class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo jzuYuc"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 jqwtzG"
+    >
+      <input
+        autocomplete="off"
+        class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo jzuYuc"
+        type="text"
+        value=""
+      />
+    </div>
     <div
       class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 jqwtzG"
     >
       <input
         autocomplete="off"
         class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo kimdWC"
+        type="datetime-local"
         value=""
       />
     </div>
@@ -18,7 +39,7 @@ exports[`Storyshots Core/Input Default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Core/Input Emphasized 1`] = `
+exports[`Storyshots Core/SurroundingOverlay With Different Color 1`] = `
 <div>
   <div
     class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
@@ -28,44 +49,28 @@ exports[`Storyshots Core/Input Emphasized 1`] = `
     >
       <input
         autocomplete="off"
-        class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph eVNsmB sc-gSQFLo kimdWC"
+        class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo jzuYuc"
+        type="text"
         value=""
       />
     </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Core/Input Monospace 1`] = `
-<div>
-  <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
-  >
     <div
       class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 jqwtzG"
     >
       <input
         autocomplete="off"
-        class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jYoOjT sc-gSQFLo kimdWC"
+        class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo jzuYuc"
+        type="text"
         value=""
       />
     </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Core/Input With Placeholder 1`] = `
-<div>
-  <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
-  >
     <div
       class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 jqwtzG"
     >
       <input
         autocomplete="off"
         class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo kimdWC"
-        placeholder="This is a placeholder"
+        type="datetime-local"
         value=""
       />
     </div>

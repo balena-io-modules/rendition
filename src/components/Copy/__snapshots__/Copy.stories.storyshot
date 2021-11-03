@@ -3,22 +3,22 @@
 exports[`Storyshots Core/Copy Always Show 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
       class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-AjmGg ceYMaG iAHxUc"
     >
       <div
-        class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-fyrocj dljPk jxvgud"
+        class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-iWVNaa dljPk YIrmE"
       >
         <div
           class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
         >
           <div
-            class="sc-iqVWFU hIAseQ"
+            class="sc-eWfVMQ gmreIg"
           >
             <div
-              class="sc-eWfVMQ kmJZgg sc-jKTccl fWCWlF"
+              class="sc-kTLmzF kNwxgk sc-bUbRBg hsvIRe"
             >
               <div
                 data-display="table-head"
@@ -109,7 +109,7 @@ exports[`Storyshots Core/Copy Always Show 1`] = `
 exports[`Storyshots Core/Copy Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
       class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-AjmGg ceYMaG iAHxUc"
@@ -146,7 +146,7 @@ exports[`Storyshots Core/Copy Default 1`] = `
 exports[`Storyshots Core/Copy Icon Only 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
       class="sc-gKclnd exdBHI sc-iCfMLu fBDGQC"
@@ -183,7 +183,7 @@ exports[`Storyshots Core/Copy Icon Only 1`] = `
 exports[`Storyshots Core/Copy With Tag 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-eFegNN gAaKNc"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
     <div
       class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-AjmGg ceYMaG iAHxUc"

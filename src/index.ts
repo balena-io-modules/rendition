@@ -46,6 +46,12 @@ export {
 } from './components/HighlightedName';
 export { Input, InputProps } from './components/Input';
 export { Modal, ModalProps } from './components/Modal';
+export {
+	SurroundingOverlay,
+	SurroundingOverlayProps,
+	PartialDomRect,
+	getBoundingContainerRect,
+} from './components/SurroundingOverlay';
 export { Pager, PagerProps } from './components/Pager';
 export { ProgressBar, ProgressBarProps } from './components/ProgressBar';
 export { Provider } from './components/Provider';
