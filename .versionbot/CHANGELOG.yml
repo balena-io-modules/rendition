@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add button group select
+      hash: 0b627f36c744ca2aa09a9db639a0123f931480b9
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 21.11.0
+  date: 2021-11-03T17:14:54.164Z
+- commits:
     - subject: Add styled system props to Search
       hash: 3b72710089b8f0270e99cb9d0d39b55cc9eb348d
       body: ''
