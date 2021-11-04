@@ -3,7 +3,7 @@
 exports[`Storyshots Core/Breadcrumbs Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <div
       class="sc-gKclnd exdBHI sc-iCfMLu frGhDt sc-hGPBjI fA-dHZr"
@@ -18,13 +18,13 @@ exports[`Storyshots Core/Breadcrumbs Default 1`] = `
             class="sc-gKclnd exdBHI sc-iCfMLu frGhDt sc-hGPBjI jouXBw"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-BHvUt dljPk fEvoVG"
+              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-hJhJFJ dljPk icjSfz"
             />
             <div
               class="sc-gKclnd exdBHI sc-iCfMLu DnkNu sc-hGPBjI dljPk"
             >
               <a
-                class="sc-eGRUor fekqPY sc-ctqQKy eRIVQk"
+                class="sc-fbyfCU hJTRtN sc-GEbAx iqrnGo"
                 color="primary.main"
                 href="/?path=/story/core-breadcrumbs--default"
                 style="display: inherit;"
@@ -60,13 +60,13 @@ exports[`Storyshots Core/Breadcrumbs Default 1`] = `
             class="sc-gKclnd exdBHI sc-iCfMLu frGhDt sc-hGPBjI jouXBw"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-BHvUt dljPk fEvoVG"
+              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-hJhJFJ dljPk icjSfz"
             />
             <div
               class="sc-gKclnd exdBHI sc-iCfMLu DnkNu sc-hGPBjI dljPk"
             >
               <a
-                class="sc-eGRUor fekqPY sc-ctqQKy eRIVQk"
+                class="sc-fbyfCU hJTRtN sc-GEbAx iqrnGo"
                 color="primary.main"
                 href="/?path=/story/core-breadcrumbs--default"
                 style="display: inherit;"
@@ -102,13 +102,13 @@ exports[`Storyshots Core/Breadcrumbs Default 1`] = `
             class="sc-gKclnd exdBHI sc-iCfMLu frGhDt sc-hGPBjI jouXBw"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-BHvUt dljPk eOEyFa"
+              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-hJhJFJ dljPk vohuD"
             />
             <div
               class="sc-gKclnd exdBHI sc-iCfMLu DnkNu sc-hGPBjI dljPk"
             >
               <a
-                class="sc-eGRUor fekqPY sc-ctqQKy eRIVQk"
+                class="sc-fbyfCU hJTRtN sc-GEbAx iqrnGo"
                 color="primary.main"
                 href="/?path=/story/core-breadcrumbs--default"
                 style="display: inherit;"
@@ -154,7 +154,7 @@ exports[`Storyshots Core/Breadcrumbs Default 1`] = `
 exports[`Storyshots Core/Breadcrumbs Wrapped 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <div
       class="sc-gKclnd exdBHI sc-iCfMLu cZjQcD sc-hGPBjI dljPk"
@@ -172,13 +172,13 @@ exports[`Storyshots Core/Breadcrumbs Wrapped 1`] = `
               class="sc-gKclnd exdBHI sc-iCfMLu frGhDt sc-hGPBjI jouXBw"
             >
               <div
-                class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-BHvUt dljPk fEvoVG"
+                class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-hJhJFJ dljPk icjSfz"
               />
               <div
                 class="sc-gKclnd exdBHI sc-iCfMLu DnkNu sc-hGPBjI dljPk"
               >
                 <a
-                  class="sc-eGRUor fekqPY sc-ctqQKy eRIVQk"
+                  class="sc-fbyfCU hJTRtN sc-GEbAx iqrnGo"
                   color="primary.main"
                   href="/?path=/story/core-breadcrumbs--default"
                   style="display: inherit;"
@@ -214,13 +214,13 @@ exports[`Storyshots Core/Breadcrumbs Wrapped 1`] = `
               class="sc-gKclnd exdBHI sc-iCfMLu frGhDt sc-hGPBjI jouXBw"
             >
               <div
-                class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-BHvUt dljPk fEvoVG"
+                class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-hJhJFJ dljPk icjSfz"
               />
               <div
                 class="sc-gKclnd exdBHI sc-iCfMLu DnkNu sc-hGPBjI dljPk"
               >
                 <a
-                  class="sc-eGRUor fekqPY sc-ctqQKy eRIVQk"
+                  class="sc-fbyfCU hJTRtN sc-GEbAx iqrnGo"
                   color="primary.main"
                   href="/?path=/story/core-breadcrumbs--default"
                   style="display: inherit;"
@@ -256,13 +256,13 @@ exports[`Storyshots Core/Breadcrumbs Wrapped 1`] = `
               class="sc-gKclnd exdBHI sc-iCfMLu frGhDt sc-hGPBjI jouXBw"
             >
               <div
-                class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-BHvUt dljPk eOEyFa"
+                class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-hJhJFJ dljPk vohuD"
               />
               <div
                 class="sc-gKclnd exdBHI sc-iCfMLu DnkNu sc-hGPBjI dljPk"
               >
                 <a
-                  class="sc-eGRUor fekqPY sc-ctqQKy eRIVQk"
+                  class="sc-fbyfCU hJTRtN sc-GEbAx iqrnGo"
                   color="primary.main"
                   href="/?path=/story/core-breadcrumbs--default"
                   style="display: inherit;"

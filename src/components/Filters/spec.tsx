@@ -1,11 +1,11 @@
 import { mount } from 'enzyme';
 import React from 'react';
 
-import { Filters, Provider, SchemaSieve, Select, Txt } from '../../';
+import { Filters, Provider, SchemaSieve, Select, Box } from '../../';
 import FiltersSummary from '../../components/Filters/Summary';
-import { ViewListItem } from '../../components/Filters/ViewsMenu';
 import { JSONSchema7 } from 'json-schema';
 import { Keyboard } from 'grommet';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /* FieldSummary buttons in order:
   0. Clear all filters
@@ -234,7 +234,9 @@ describe('Filters component', () => {
 			);
 
 			component.find('button').at(1).simulate('click');
-			expect(component.find(ViewListItem)).toHaveLength(0);
+			expect(component.find(Box).at(1).html()).toContain(
+				"You haven't created any views yet",
+			);
 			component.unmount();
 		});
 
@@ -246,7 +248,7 @@ describe('Filters component', () => {
 			);
 
 			component.find('button').at(1).simulate('click');
-			expect(component.find(ViewListItem)).toHaveLength(1);
+			expect(component.find(FontAwesomeIcon)).toHaveLength(5);
 			component.unmount();
 		});
 
@@ -294,7 +296,7 @@ describe('Filters component', () => {
 
 			component.find('button').at(1).simulate('click');
 
-			expect(component.find(Txt).at(0).text()).toEqual('foo');
+			expect(component.find('strong').at(0).text()).toEqual('foo');
 			expect(component.find("[children='bar']")).toHaveLength(0);
 
 			component.unmount();
@@ -313,7 +315,7 @@ describe('Filters component', () => {
 
 			component.find('button').at(1).simulate('click');
 
-			expect(component.find(Txt).at(0).text()).toEqual('Unscoped');
+			expect(component.find('strong').at(0).text()).toEqual('Unscoped');
 			expect(component.find("[children='foo']")).toHaveLength(0);
 			expect(component.find("[children='bar']")).toHaveLength(0);
 
@@ -335,7 +337,7 @@ describe('Filters component', () => {
 			component.setProps({ views: [view] } as any);
 			component.update();
 			component.find('button').at(1).simulate('click');
-			expect(component.find(ViewListItem)).toHaveLength(1);
+			expect(component.find(FontAwesomeIcon)).toHaveLength(5);
 			component.unmount();
 		});
 
@@ -354,7 +356,9 @@ describe('Filters component', () => {
 			component.setProps({ views: null } as any);
 			component.update();
 			component.find('button').at(1).simulate('click');
-			expect(component.find(ViewListItem)).toHaveLength(0);
+			expect(component.find(Box).at(1).html()).toContain(
+				"You haven't created any views yet",
+			);
 			component.unmount();
 		});
 

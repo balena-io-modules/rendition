@@ -3,7 +3,7 @@
 exports[`Storyshots Core/Card Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <div
       style="width: 400px; height: 400px;"
@@ -31,7 +31,7 @@ exports[`Storyshots Core/Card Default 1`] = `
 exports[`Storyshots Core/Card Small 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <div
       style="width: 400px; height: 400px;"
@@ -59,7 +59,7 @@ exports[`Storyshots Core/Card Small 1`] = `
 exports[`Storyshots Core/Card With Header 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <div
       style="width: 400px; height: 400px;"
@@ -105,7 +105,7 @@ exports[`Storyshots Core/Card With Header 1`] = `
 exports[`Storyshots Core/Card With Rows 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <div
       style="width: 400px; height: 400px;"
@@ -125,7 +125,7 @@ exports[`Storyshots Core/Card With Rows 1`] = `
               Card with Button
             </h5>
             <a
-              class="sc-eGRUor fekqPY sc-ctqQKy fghAZv"
+              class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH"
               color="primary.main"
               href="https://balena.io"
             >
@@ -149,7 +149,7 @@ exports[`Storyshots Core/Card With Rows 1`] = `
               class="sc-ikJyIC fyVnc sc-hiCibw fhBOc"
             />
             <a
-              class="sc-eGRUor fekqPY sc-ctqQKy fghAZv"
+              class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH"
               color="primary.main"
               href="www.balena.io"
             >
@@ -163,19 +163,19 @@ exports[`Storyshots Core/Card With Rows 1`] = `
               class="sc-ikJyIC fyVnc sc-hiCibw fhBOc"
             />
             <span
-              class="sc-fKVqWL hOcWtv sc-iwjdpV iXrUAY sc-cHzqoD bBDeUQ"
+              class="sc-fKVqWL hOcWtv sc-iwjdpV iXrUAY sc-fyrocj iGVHpg"
               title="This value has been copied to your clipboard!"
             >
               <span
-                class="sc-JkixQ dLBRgg"
+                class="sc-iWVNaa fMWGij"
               >
                 Row with Copy component
               </span>
               <span
-                class="sc-dkQkyq brNuSp"
+                class="sc-bUbRBg bFPHIO"
               >
                 <div
-                  class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-gGPzkF jGlSeL"
+                  class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-jKTccl kMfDul"
                 >
                   <svg
                     aria-hidden="true"
