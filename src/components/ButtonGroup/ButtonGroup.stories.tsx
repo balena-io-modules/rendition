@@ -49,8 +49,12 @@ export const Default = createStory<ButtonGroupProps>(Template, {
 });
 
 export const GroupSelect = createStory<ButtonGroupProps>(OptionsTemplate, {
-	options: ['option1', 'option2', 'option3'],
-	value: 'option2',
+	options: [
+		{ label: 'option 1', value: 'option1' },
+		{ label: 'option 2', value: 'option2' },
+		{ label: 'option 3', value: 'option3' },
+	],
+	value: { label: 'option 2', value: 'option2' },
 });
 
 export const WithIconButton = createStory<ButtonGroupProps>(Template, {

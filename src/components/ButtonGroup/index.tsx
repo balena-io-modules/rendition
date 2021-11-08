@@ -28,16 +28,13 @@ const ButtonGroupBase = styled(Flex)<{ isSelect?: boolean }>`
 		${(props) =>
 			props.isSelect
 				? `
-			border: 1px solid black;
+			border: 1px solid ${props.theme.global.control.border.color};
 			width: fit-content;
 			border-radius: ${props.theme.button.border.radius};
 			padding: 2px;
-			> * {
+			> button {
 				padding: 2px 16px;
 				border: 0px;
-				&:not(:first-child) {
-					margin-left: ${props.theme.space[1]};
-				}
 			}
 		`
 				: `
@@ -69,9 +66,9 @@ const ButtonGroupBase = styled(Flex)<{ isSelect?: boolean }>`
 
 export const ButtonGroup = (props: ButtonGroupProps) => {
 	if ('options' in props) {
-		const { onGroupChange, ...otherProps } = props;
+		const { onGroupChange, height, ...otherProps } = props;
 		return (
-			<ButtonGroupBase isSelect {...otherProps}>
+			<ButtonGroupBase isSelect {...otherProps} alignItems="center">
 				{props.options.map((option) => {
 					const label = typeof option !== 'object' ? option : option.label;
 					return (
@@ -87,6 +84,7 @@ export const ButtonGroup = (props: ButtonGroupProps) => {
 									onGroupChange(option);
 								}
 							}}
+							height={height}
 						>
 							{label}
 						</Button>
