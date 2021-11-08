@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix ButtonGroup select mode typing and props
+      hash: fdd12127673351a5b635696ad840004e92d42d11
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 21.12.1
+  date: 2021-11-05T17:44:39.332Z
+- commits:
     - subject: Add OpaqueLayer component
       hash: 9cca3844f8f39c171d7090bca69cff4cc1af8328
       body: ''
