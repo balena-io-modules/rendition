@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix ButtonGroup select style
+      hash: fb1054b3819f76465bc8e3dcc5f68b5fc8013f2a
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 21.12.2
+  date: 2021-11-08T13:34:58.873Z
+- commits:
     - subject: Fix ButtonGroup select mode typing and props
       hash: fdd12127673351a5b635696ad840004e92d42d11
       body: ''
