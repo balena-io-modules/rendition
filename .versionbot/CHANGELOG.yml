@@ -1,4 +1,16 @@
 - commits:
+    - subject: Export useBreakpoint hook and delete empty useRequest file
+      hash: 042a6573b6296600d701df6144428ba7c2814a40
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 21.12.3
+  date: 2021-11-08T14:31:43.387Z
+- commits:
     - subject: Fix ButtonGroup select style
       hash: fb1054b3819f76465bc8e3dcc5f68b5fc8013f2a
       body: ''
