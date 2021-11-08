@@ -6,7 +6,7 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons/faSpinner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { createTemplate, createStory } from '../../stories/utils';
 import { Button } from '../Button';
-import { ButtonGroup, ButtonGroupProps, ButtonGroupOption } from '.';
+import { ButtonGroup, ButtonGroupProps, OptionType } from '.';
 
 export default {
 	title: 'Core/ButtonGroup',
@@ -19,15 +19,17 @@ const OptionsDemoTemplate = (props: ButtonGroupProps) => {
 		return null;
 	}
 
-	const [selected, setSelected] = React.useState<
-		ButtonGroupOption | string | undefined
-	>(props.value);
+	if (typeof props.value !== 'object') {
+		return null;
+	}
+
+	const [selected, setSelected] = React.useState<OptionType>(props.value);
 
 	return (
 		<ButtonGroup
 			{...props}
 			options={props.options}
-			onChange={setSelected}
+			onGroupChange={setSelected}
 			value={selected}
 		/>
 	);

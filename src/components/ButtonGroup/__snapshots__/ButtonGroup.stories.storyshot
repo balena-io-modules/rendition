@@ -35,31 +35,7 @@ exports[`Storyshots Core/ButtonGroup Group Select 1`] = `
 <div>
   <div
     class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
-  >
-    <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-kLwhqv dljPk dfsSxc"
-      value="option2"
-    >
-      <button
-        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT cGuTUx"
-        type="button"
-      >
-        option1
-      </button>
-      <button
-        class="StyledButton-sc-323bzc-0 eFzidw sc-bqiRlB sc-ksdxgE edofBN dJfWty sc-dJjYzT cGuTUx"
-        type="button"
-      >
-        option2
-      </button>
-      <button
-        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT cGuTUx"
-        type="button"
-      >
-        option3
-      </button>
-    </div>
-  </div>
+  />
 </div>
 `;
 

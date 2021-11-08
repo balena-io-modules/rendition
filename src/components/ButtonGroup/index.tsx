@@ -4,17 +4,17 @@ import { Flex, FlexProps } from '../Flex';
 import { Button } from '../Button';
 import { TooltipProps } from '../../common-types';
 
+export type OptionType = ButtonGroupOption | string | number | boolean;
 export interface ButtonGroupOption {
 	label: string | number;
 	value: unknown;
 	tooltip?: string | TooltipProps;
 }
-
 export interface ButtonGroupWithOptionsProps
-	extends Omit<FlexProps, 'children' | 'onChange'> {
-	options: Array<ButtonGroupOption | string>;
-	value?: ButtonGroupOption | string;
-	onChange: (value: ButtonGroupOption | string) => void;
+	extends Omit<FlexProps, 'children'> {
+	options: OptionType[];
+	value?: OptionType;
+	onGroupChange: (value: OptionType) => void;
 }
 
 export type ButtonGroupProps = FlexProps | ButtonGroupWithOptionsProps;
@@ -69,22 +69,22 @@ const ButtonGroupBase = styled(Flex)<{ isSelect?: boolean }>`
 
 export const ButtonGroup = (props: ButtonGroupProps) => {
 	if ('options' in props) {
-		const { onChange, ...otherProps } = props;
+		const { onGroupChange, ...otherProps } = props;
 		return (
 			<ButtonGroupBase isSelect {...otherProps}>
 				{props.options.map((option) => {
-					const label = typeof option === 'string' ? option : option.label;
+					const label = typeof option !== 'object' ? option : option.label;
 					return (
 						<Button
 							active={
-								typeof option === 'string'
+								typeof option !== 'object'
 									? option === props.value
 									: option.value === props.value
 							}
 							tooltip={typeof option === 'object' ? option.tooltip : undefined}
 							onClick={() => {
-								if (onChange) {
-									onChange(option);
+								if (onGroupChange) {
+									onGroupChange(option);
 								}
 							}}
 						>
