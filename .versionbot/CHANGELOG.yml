@@ -1,4 +1,16 @@
 - commits:
+    - subject: Make modal text color match theme
+      hash: 6f0779a6c538c56394b9a9d71e1c4690e8325912
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 21.12.4
+  date: 2021-11-11T21:26:03.068Z
+- commits:
     - subject: Export useBreakpoint hook and delete empty useRequest file
       hash: 042a6573b6296600d701df6144428ba7c2814a40
       body: ''
