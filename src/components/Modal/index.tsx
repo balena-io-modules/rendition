@@ -136,6 +136,7 @@ class BaseModal extends React.Component<ThemedModalProps, any> {
 				animate={false}
 				style={{
 					marginTop: props.position === 'top' ? theme.header.height : undefined,
+					color: theme.colors.text.main,
 				}}
 			>
 				<GlobalStyle />
