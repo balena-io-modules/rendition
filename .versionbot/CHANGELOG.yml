@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency lint-staged to v11'
+      hash: 135a9f56e44634ad4c2f31e9b12f65b1739b4079
+      body: |
+        Update lint-staged from 4.3.0 to 11.2.6
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.12.8
+  date: 2021-11-12T17:01:19.558Z
+- commits:
     - subject: Fix wrong command in contributor checklist
       hash: 244ac8fcde2820e4a0c8ca866930393d830cac52
       body: ''
