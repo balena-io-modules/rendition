@@ -7,7 +7,7 @@ Change-type: major|minor|patch <!-- The change type of this PR -->
 ---
 ##### Contributor checklist
 <!-- For completed items, change [ ] to [x].  -->
-- [ ] I have regenerated screenshots for any affected components with `npm run generate-screenshots`
+- [ ] I have regenerated screenshots for any affected components with `npm run generate-snapshots`
 - [ ] I have regenerated jest snapshots for any affected components with `npm run jest -- -u`
 
 ##### Reviewer Guidelines
