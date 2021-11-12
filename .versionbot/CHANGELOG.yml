@@ -1,4 +1,14 @@
 - commits:
+    - subject: 'patch: Update dependency jest-styled-components to ^7.0.6'
+      hash: 6c2f821f4e4aa24658e0eb16b5bc5d29c4287e94
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.12.6
+  date: 2021-11-12T15:27:24.909Z
+- commits:
     - subject: 'patch: Update dependency ts-node to v10'
       hash: d14e5e57dd9a4dbdcd7f7751111475260001910f
       body: |
