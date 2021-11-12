@@ -69,7 +69,7 @@
     "jest-styled-components": "^7.0.6",
     "jest-transform-stub": "^2.0.0",
     "jsdom": "^11.12.0",
-    "lint-staged": "^4.3.0",
+    "lint-staged": "^11.2.6",
     "match-media-mock": "^0.1.1",
     "monaco-editor-webpack-plugin": "^4.2.0",
     "prettier": "^2.4.1",
