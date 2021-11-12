@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency ts-node to v10'
+      hash: d14e5e57dd9a4dbdcd7f7751111475260001910f
+      body: |
+        Update ts-node from 9.1.1 to 10.4.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 21.12.5
+  date: 2021-11-11T21:49:30.547Z
+- commits:
     - subject: Make modal text color match theme
       hash: 6f0779a6c538c56394b9a9d71e1c4690e8325912
       body: ''
