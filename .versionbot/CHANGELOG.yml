@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix wrong command in contributor checklist
+      hash: 244ac8fcde2820e4a0c8ca866930393d830cac52
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 21.12.7
+  date: 2021-11-12T16:38:05.350Z
+- commits:
     - subject: 'patch: Update dependency jest-styled-components to ^7.0.6'
       hash: 6c2f821f4e4aa24658e0eb16b5bc5d29c4287e94
       body: ''
