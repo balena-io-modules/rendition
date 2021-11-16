@@ -1,7 +1,6 @@
 import castArray from 'lodash/castArray';
 import React from 'react';
 import { JSONSchema7 as JSONSchema } from 'json-schema';
-import { CollectionLenses } from './Lenses';
 import { Dictionary } from '../../../common-types';
 import {
 	Format,
@@ -9,14 +8,14 @@ import {
 	Value,
 	JsonTypes,
 } from '../../../components/Renderer/types';
-import { DataGrid } from '../../../components/DataGrid';
 import { transformUiSchema } from '../../../components/Renderer/widgets/widget-util';
 import { getValue, getWidget } from '../../../components/Renderer';
-import { Table, TableColumn } from '../../../components/Table';
+import { TableColumn } from '../../../components/Table';
 import type { TableSortFunction } from '../../../components/Table/TableRow';
 import { useHistory } from '../../../hooks/useHistory';
 import { AutoUIContext, AutoUIBaseResource, Priorities } from '../schemaOps';
 import { diff } from '../../../utils';
+import { LensTemplate } from '../Lenses';
 
 const formatSorters: Dictionary<TableSortFunction<any>> = {};
 
@@ -56,7 +55,7 @@ const getSelected = <T, K extends keyof T>(
 	);
 };
 
-const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
+export const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 	schema,
 	idField,
 	tagField,
@@ -67,55 +66,63 @@ const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 	schema: JSONSchema;
 	idField: AutoUIContext<T>['idField'];
 	tagField: AutoUIContext<T>['tagField'];
-	customSort: AutoUIContext<T>['customSort'];
+	customSort?: AutoUIContext<T>['customSort'];
 	priorities?: Priorities<T>;
 	formats?: Format[];
-}): Array<TableColumn<T>> => {
-	return (
-		Object.entries(schema.properties ?? {})
-			// The tables treats tags differently, handle it better
-			.filter(
-				(entry): entry is [keyof T, typeof entry[1]] =>
-					entry[0] !== tagField && entry[0] !== idField,
-			)
-			.map(([key, val]) => {
-				if (typeof val !== 'object') {
-					return;
-				}
+}): Array<TableColumn<T>> =>
+	Object.entries(schema.properties ?? {})
+		// The tables treats tags differently, handle it better
+		.filter((entry): entry is [keyof T, typeof entry[1]] => {
+			return entry[0] !== tagField && entry[0] !== idField;
+		})
+		.map(([key, val]) => {
+			if (typeof val !== 'object') {
+				return;
+			}
 
-				const widgetSchema = { ...val, title: undefined };
-				return {
-					title: val.title,
-					field: key,
-					// This is used for storing columns and views
-					key,
-					selected: getSelected(key as keyof T, priorities),
-					type: 'predefined',
-					sortable: customSort?.[key] ?? getSortingFunction(key, val),
-					render: (fieldVal: string, entry: T) =>
-						val.format ? (
-							<CustomWidget
-								extraFormats={formats ?? ([] as Format[])}
-								schema={widgetSchema}
-								value={fieldVal}
-								extraContext={entry}
-							/>
-						) : (
-							fieldVal
-						),
-				};
-			})
-			.filter(
-				(columnDef): columnDef is NonNullable<typeof columnDef> => !!columnDef,
+			const definedPriorities = priorities ?? ({} as Priorities<T>);
+			const priority = definedPriorities.primary.find(
+				(prioritizedKey) => prioritizedKey === key,
 			)
-	);
-};
+				? 'primary'
+				: definedPriorities.secondary.find(
+						(prioritizedKey) => prioritizedKey === key,
+				  )
+				? 'secondary'
+				: 'tertiary';
 
-interface ListProps<T> {
+			const widgetSchema = { ...val, title: undefined };
+			return {
+				title: val.title || key,
+				field: key,
+				// This is used for storing columns and views
+				key,
+				selected: getSelected(key as keyof T, priorities),
+				priority,
+				type: 'predefined',
+				sortable: customSort?.[key] ?? getSortingFunction(key, val),
+				render: (fieldVal: string, entry: T) =>
+					val.format ? (
+						<CustomWidget
+							extraFormats={formats ?? ([] as Format[])}
+							schema={widgetSchema}
+							value={fieldVal}
+							extraContext={entry}
+						/>
+					) : (
+						fieldVal
+					),
+			};
+		})
+		.filter(
+			(columnDef): columnDef is NonNullable<typeof columnDef> => !!columnDef,
+		);
+
+interface LensRendererProps<T> {
 	data: T[] | undefined;
 	schema: JSONSchema;
 	autouiContext: AutoUIContext<T>;
-	lens: CollectionLenses;
+	lens: LensTemplate;
 	filtered: T[];
 	selected: T[];
 	changeSelected: (selected: T[]) => void;
@@ -123,7 +130,7 @@ interface ListProps<T> {
 	formats?: Format[];
 }
 
-export const List = <T extends AutoUIBaseResource<T>>({
+export const LensRenderer = <T extends AutoUIBaseResource<T>>({
 	data,
 	schema,
 	autouiContext,
@@ -133,10 +140,9 @@ export const List = <T extends AutoUIBaseResource<T>>({
 	changeSelected,
 	priorities,
 	formats,
-}: ListProps<T>) => {
-	// const listKey = autouiContext.baseUrl.split('/').join('-');
+}: LensRendererProps<T>) => {
 	const history = useHistory();
-	const columns = React.useMemo(
+	const properties = React.useMemo(
 		() =>
 			getColumnsFromSchema<T>({
 				schema,
@@ -155,12 +161,12 @@ export const List = <T extends AutoUIBaseResource<T>>({
 		],
 	);
 
-	const onRowClick = (
+	const onEntityClick = (
 		row: T,
 		event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
 	) => {
-		if (autouiContext.onRowClick) {
-			autouiContext.onRowClick(row, event);
+		if (autouiContext.onEntityClick) {
+			autouiContext.onEntityClick(row, event);
 		}
 
 		if (event.isPropagationStopped() && event.isDefaultPrevented()) {
@@ -184,34 +190,16 @@ export const List = <T extends AutoUIBaseResource<T>>({
 			?.length || !!autouiContext.sdk?.tags;
 
 	return (
-		<>
-			{lens === CollectionLenses.Table && (
-				<Table<T>
-					rowKey={'id'}
-					data={filtered}
-					checkedItems={selected}
-					columns={columns}
-					{...(hasUpdateActions && { onCheck: changeSelected })}
-					usePager={data && data.length > 5}
-					pagerPosition={'bottom'}
-					itemsPerPage={50}
-					getRowHref={autouiContext.getBaseUrl}
-					onRowClick={onRowClick}
-					columnStateRestorationKey={`${autouiContext.resource}__columns`}
-					sortingStateRestorationKey={`${autouiContext.resource}__sort`}
-					tagField={autouiContext.tagField as keyof T}
-					enableCustomColumns
-				/>
-			)}
-			{lens === CollectionLenses.Grid && autouiContext.cardRenderer && (
-				<DataGrid<T>
-					items={filtered}
-					renderItem={autouiContext.cardRenderer}
-					getItemKey={(app) => app.id}
-					itemMinWidth={'350px'}
-				/>
-			)}
-		</>
+		<lens.data.renderer
+			filtered={filtered}
+			selected={selected}
+			properties={properties}
+			hasUpdateActions={hasUpdateActions}
+			changeSelected={changeSelected}
+			data={data}
+			autouiContext={autouiContext}
+			onEntityClick={onEntityClick}
+		/>
 	);
 };
 
