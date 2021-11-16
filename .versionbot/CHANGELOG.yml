@@ -1,4 +1,25 @@
 - commits:
+    - subject: Add AutoUI and AutoUIEntity components
+      hash: 48dc3fcf1ba016e6ae62a52f090e0fdb11dfff42
+      body: ''
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+    - subject: Add AutoUI Lenses
+      hash: f91ab6d0cc0be4cde82030630be6d1182129a788
+      body: ''
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 22.0.0
+  date: 2021-11-15T20:27:43.050Z
+- commits:
     - subject: Fix wrong command in contributor checklist
       hash: 244ac8fcde2820e4a0c8ca866930393d830cac52
       body: ''
