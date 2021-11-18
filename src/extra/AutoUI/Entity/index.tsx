@@ -16,7 +16,6 @@ import { Format } from '../../../components/Renderer/types';
 import { useTranslation } from '../../../hooks/useTranslation';
 import { LensSelection } from '../Lenses/LensSelection';
 import { getLenses, LensTemplate } from '../Lenses';
-import { entity } from '../Lenses/types';
 import { getFromLocalStorage, setToLocalStorage } from '../../../utils';
 import { getColumnsFromSchema } from '../Collection/LensRenderer';
 
@@ -73,19 +72,18 @@ export const AutoUIEntity = <T extends AutoUIBaseResource<T>>({
 		}
 		return modelRaw;
 	}, [modelRaw]);
-	const defaultLensSlug =
-		getFromLocalStorage(`${model.resource}__view_lens`) || 'entity';
+	const defaultLensSlug = getFromLocalStorage(`${model.resource}__view_lens`);
 
 	const lenses = React.useMemo(
 		() => getLenses(data, lensContext, customLenses),
 		[data, customLenses],
 	);
 
-	const [lens, setLens] = React.useState<LensTemplate>(entity);
+	const [lens, setLens] = React.useState<LensTemplate>(lenses[0]);
 
 	React.useEffect(() => {
 		const foundLens =
-			lenses.find((lens) => lens.slug === defaultLensSlug) || entity;
+			lenses.find((lens) => lens.slug === defaultLensSlug) || lenses[0];
 		if (lens.slug === foundLens.slug) {
 			return;
 		}
