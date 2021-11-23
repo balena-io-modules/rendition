@@ -11,7 +11,7 @@ import { AutoUIEntity } from './Entity';
 export interface AutoUIProps<T> {
 	/** Model is the property that describe the data to display with a JSON structure */
 	model: AutoUIModel<T>;
-	/** Array of data to display */
+	/** Array of data or data entity to display */
 	data: T[] | T | undefined;
 	/** Formats are custom widgets to render in the table cell. The type of format to display is described in the model. */
 	formats?: Format[];
@@ -52,6 +52,9 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 	customLenses,
 	lensContext,
 }: AutoUIProps<T>) => {
+	if (!data) {
+		return null;
+	}
 	return Array.isArray(data) ? (
 		<AutoUICollection<T>
 			formats={formats}
