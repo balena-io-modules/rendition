@@ -1,21 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Extra/AutoUI Default 1`] = `
+exports[`Storyshots Extra/AutoUICollection Default 1`] = `
 <div>
   <div
     class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
   >
-    <h5
-      class="sc-gWXbKe kMRLBA sc-iAKWXU guhlxZ"
-    >
-      The AutoUI component determines whether to use an AutoUICollection or AutoUIEntity based on the value passed into it for its "data" property. Click the button below to change the value passed in for "data".
-    </h5>
-    <button
-      class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT gpZlQJ"
-      type="button"
-    >
-      Pass an entity for "data"
-    </button>
     <div
       class="sc-gKclnd exdBHI sc-iCfMLu gALdNb sc-hGPBjI kBwkZQ"
     >
@@ -29,7 +18,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
             class="sc-gKclnd exdBHI sc-iCfMLu jciJBO"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-lgarKF fReLan esopbm"
+              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-fivaXQ fReLan bsTZts"
             >
               <div
                 class="sc-gKclnd kCaRJe sc-iCfMLu jciJBO"
@@ -159,7 +148,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                 </div>
               </div>
               <div
-                class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-lgarKF dljPk esopbm"
+                class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-fivaXQ dljPk bsTZts"
               />
             </div>
             <div
