@@ -1,4 +1,16 @@
 - commits:
+    - subject: Use highest scoring lens as default
+      hash: 3e1c58dfffa461f892743e9e3a217210d4b45c18
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 22.0.2
+  date: 2021-11-23T15:40:17.335Z
+- commits:
     - subject: Lock grommet to 2.18
       hash: 700d0a4ecdec46e0e447d0d6ba09342b98122076
       body: ''
