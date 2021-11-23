@@ -42,7 +42,6 @@ import { Dictionary } from '../../../common-types';
 import { useTranslation } from '../../../hooks/useTranslation';
 import { LensSelection } from '../Lenses/LensSelection';
 import { getLenses, LensTemplate } from '../Lenses';
-import { table } from '../Lenses/types';
 import { getFromLocalStorage, setToLocalStorage } from '../../../utils';
 
 // Assumptions that I think we can easily make:
@@ -208,19 +207,18 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 	const [actionData, setActionData] = React.useState<
 		ActionData<T> | undefined
 	>();
-	const defaultLensSlug =
-		getFromLocalStorage(`${model.resource}__view_lens`) || 'table';
+	const defaultLensSlug = getFromLocalStorage(`${model.resource}__view_lens`);
 
 	const lenses = React.useMemo(
 		() => getLenses(data, lensContext, customLenses),
 		[data, customLenses],
 	);
 
-	const [lens, setLens] = React.useState<LensTemplate>(table);
+	const [lens, setLens] = React.useState<LensTemplate>(lenses[0]);
 
 	React.useEffect(() => {
 		const foundLens =
-			lenses.find((lens) => lens.slug === defaultLensSlug) || table;
+			lenses.find((lens) => lens.slug === defaultLensSlug) || lenses[0];
 		if (lens.slug === foundLens.slug) {
 			return;
 		}
