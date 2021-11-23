@@ -1,4 +1,16 @@
 - commits:
+    - subject: Lock grommet to 2.18
+      hash: 700d0a4ecdec46e0e447d0d6ba09342b98122076
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 22.0.1
+  date: 2021-11-23T15:16:18.563Z
+- commits:
     - subject: Add AutoUI and AutoUIEntity components
       hash: 48dc3fcf1ba016e6ae62a52f090e0fdb11dfff42
       body: ''
