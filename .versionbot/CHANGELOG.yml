@@ -1,4 +1,16 @@
 - commits:
+    - subject: Deleted AuotUi duplicated snapshot
+      hash: bf7eef291740082ec6f0391024300364faf426d2
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 22.0.4
+  date: 2021-11-26T11:44:52.348Z
+- commits:
     - subject: Return null if undefined is passed for data in AutoUI
       hash: 44667030723fec99feb231b89f22860a1b480c00
       body: ''
