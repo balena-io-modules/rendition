@@ -1,4 +1,25 @@
 - commits:
+    - subject: Lock @storybook/addon-storyshot to ~6.3.12
+      hash: 9ca79086f60eebb5603cb93765476f95da484b10
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+    - subject: Lock @storybook/react to ~6.3.12
+      hash: b290c7be555ba856aae82c7f5389d14ea1794887
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 22.0.5
+  date: 2021-11-29T20:53:46.140Z
+- commits:
     - subject: Deleted AuotUi duplicated snapshot
       hash: bf7eef291740082ec6f0391024300364faf426d2
       body: ''
