@@ -144,12 +144,7 @@ const BaseMap = <T extends any>({
 	return (
 		<Box height="100%" className={className}>
 			{apiKey && (
-				<LoadScript
-					googleMapsApiKey={apiKey}
-					version="3"
-					language="en"
-					preventGoogleFontsLoading
-				>
+				<LoadScript googleMapsApiKey={apiKey} version="3" language="en">
 					<GoogleMap
 						mapContainerStyle={{
 							height: '100%',
