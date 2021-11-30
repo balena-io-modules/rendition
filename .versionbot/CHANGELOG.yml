@@ -1,4 +1,16 @@
 - commits:
+    - subject: Lock all storybook modules to ~6.3.12
+      hash: 8be58c3458448ab34056a024848fba959599f14e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 22.0.6
+  date: 2021-11-30T12:34:02.567Z
+- commits:
     - subject: Lock @storybook/addon-storyshot to ~6.3.12
       hash: 9ca79086f60eebb5603cb93765476f95da484b10
       body: ''
