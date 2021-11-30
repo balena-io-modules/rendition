@@ -115,6 +115,7 @@ export { Breadcrumbs, BreadcrumbsProps, Crumb } from './components/Breadcrumbs';
 export { Flex, FlexProps } from './components/Flex';
 export { useTheme } from './hooks/useTheme';
 export { useBreakpoint } from './hooks/useBreakpoint';
+export { useRequest } from './hooks/useRequest';
 export { default as Theme } from './theme';
 export { Theme as ThemeType } from './common-types';
 
