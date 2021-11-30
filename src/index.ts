@@ -144,6 +144,8 @@ export {
 } from './extra/AutoUI';
 export * from './extra/AutoUI/Lenses/types';
 
+export { AutoUIApp, AutoUIAppProps } from './extra/AutoUIApp';
+
 export {
 	ResponsiveStyle,
 	StyledSystemProps,
