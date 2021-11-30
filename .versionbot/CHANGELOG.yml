@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add style colors story
+      hash: 71fedbb3ae8c44161b454531a8438f9555e8f272
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 22.1.0
+  date: 2021-11-30T13:35:11.967Z
+- commits:
     - subject: Lock all storybook modules to ~6.3.12
       hash: 8be58c3458448ab34056a024848fba959599f14e
       body: ''
