@@ -1,4 +1,27 @@
 - commits:
+    - subject: 'Map: Stop preventing loading google fonts, since it breaks click events'
+      hash: af6e7651d3f687806d30cd2d1ff3e320b492d727
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        See: 'https://github.com/JustFly1984/react-google-maps-api/issues/2906'
+        see: 'https://github.com/JustFly1984/react-google-maps-api/issues/2906'
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+    - subject: Lock all storybook modules to ~6.3.12
+      hash: 8be58c3458448ab34056a024848fba959599f14e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 22.0.6
+  date: 2021-11-30T12:36:49.942Z
+- commits:
     - subject: Lock @storybook/addon-storyshot to ~6.3.12
       hash: 9ca79086f60eebb5603cb93765476f95da484b10
       body: ''
