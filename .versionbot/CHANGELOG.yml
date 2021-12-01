@@ -1,4 +1,25 @@
 - commits:
+    - subject: Improve AutoUICollection searching
+      hash: 9d1933d317e0df4833dedbe518db612b19fe0c0e
+      body: ''
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+    - subject: Add subselection checkbox
+      hash: 384ef6dcba0436657fbfc6787a4385b11f0a273a
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 23.0.0
+  date: 2021-12-01T19:53:40.292Z
+- commits:
     - subject: Add style colors story
       hash: 71fedbb3ae8c44161b454531a8438f9555e8f272
       body: ''
