@@ -1,13 +1,12 @@
 import React from 'react';
 import { JSONSchema7 as JSONSchema } from 'json-schema';
 import isEqual from 'lodash/isEqual';
-import size from 'lodash/size';
-import intersectionBy from 'lodash/intersectionBy';
 import { Tags } from './Tags';
 import { Create } from './Actions/Create';
 import { Filters } from './Filters';
 import { Update } from './Actions/Update';
 import { LensRenderer } from './LensRenderer';
+import { getLenses, LensTemplate } from '../Lenses';
 
 import {
 	AutoUIAction,
@@ -27,6 +26,11 @@ import { Box } from '../../../components/Box';
 import { filter } from '../../../components/Filters/SchemaSieve';
 import { Format } from '../../../components/Renderer/types';
 import {
+	getFromLocalStorage,
+	setToLocalStorage,
+	stopEvent,
+} from '../../../utils';
+import {
 	ResourceTagSubmitInfo,
 	SubmitInfo,
 } from '../../../components/TagManagementModal/models';
@@ -36,13 +40,16 @@ import {
 	autoUIDefaultPermissions,
 	autoUIAddToSchema,
 } from '../models/helpers';
+import { LensSelection } from '../Lenses/LensSelection';
 import { autoUIGetDisabledReason } from '../utils';
 import { NoRecordsFoundArrow } from './NoRecordsFoundArrow';
 import { Dictionary } from '../../../common-types';
 import { useTranslation } from '../../../hooks/useTranslation';
-import { LensSelection } from '../Lenses/LensSelection';
-import { getLenses, LensTemplate } from '../Lenses';
-import { getFromLocalStorage, setToLocalStorage } from '../../../utils';
+import groupBy from 'lodash/groupBy';
+import { useHistory } from '../../../hooks/useHistory';
+import { Checkbox } from '../../../components/Checkbox';
+import reject from 'lodash/reject';
+import { Txt } from '../../../components/Txt';
 
 // Assumptions that I think we can easily make:
 // We only handle a single-level schema. If a schema is nested, it is handled by the `format` component internally.
@@ -74,17 +81,31 @@ const HeaderGrid = styled(Flex)`
 	}
 `;
 
-const getSelectedItems = <T extends AutoUIBaseResource<T>>(
-	newItems: T[],
-	selectedItems: T[],
-) => {
-	if (!size(selectedItems)) {
-		return selectedItems;
+const Focus = styled(Box)`
+	flex-basis: 500px;
+	background-color: white;
+	border: solid 1px ${(props) => props.theme.colors.quartenary.dark};
+	max-height: 200px;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+	border-radius: 0 0 ${(props) => props.theme.global.drop.border.radius}
+		${(props) => props.theme.global.drop.border.radius};
+	overflow: hidden;
+`;
+
+const FocusContent = styled(Box)`
+	max-height: 180px;
+	overflow-y: auto;
+	overflow-x: auto;
+`;
+
+const FocusItem = styled(Box)`
+	cursor: pointer;
+	&:hover {
+		background: #dde1f0; // This is the background color Select uses for entities on hover. We do not have it in our theme
 	}
-	// update the selections
-	selectedItems = intersectionBy(newItems, selectedItems, 'id');
-	return selectedItems;
-};
+`;
 
 export interface ActionData<T> {
 	action: AutoUIAction<T>;
@@ -189,6 +210,7 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 	customLenses,
 	lensContext,
 }: AutoUICollectionProps<T>) => {
+	const history = useHistory();
 	const { t } = useTranslation();
 	const modelRef = React.useRef(modelRaw);
 	// This allows the collection to work even if
@@ -250,8 +272,8 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 	);
 
 	React.useEffect(() => {
-		setSelected((oldSelected) => getSelectedItems(oldSelected, filtered));
-	}, [filtered]);
+		setSelected([]);
+	}, [filters]);
 
 	const changeTags = React.useCallback(
 		async (tags: SubmitInfo<ResourceTagSubmitInfo, ResourceTagSubmitInfo>) => {
@@ -267,7 +289,6 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 
 			try {
 				await sdk.tags.submit(tags);
-				setSelected([]);
 				notifications.addNotification({
 					id: 'change-tags',
 					content: 'Tags updated successfully',
@@ -285,7 +306,7 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 				setIsBusyMessage(undefined);
 			}
 		},
-		[sdk?.tags, refresh],
+		[sdk?.tags, refresh, selected],
 	);
 
 	const onActionTriggered = React.useCallback((actionData: ActionData<T>) => {
@@ -297,13 +318,88 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 		}
 	}, []);
 
-	const onActionDone = React.useCallback((isSuccessful: boolean) => {
-		if (isSuccessful) {
-			setSelected([]);
+	const onSearch = (searchTerm: string) => {
+		const queryTerms = searchTerm.split(' ').map((x) => x.toLowerCase());
+
+		const filteredById = groupBy(
+			filtered.map((entity) => ({
+				id: entity.id,
+				searchTerms: Object.values(entity).filter((val) => val?.length > 0),
+			})),
+			(entity) => entity.id,
+		);
+
+		const filteredFittingSearchTerms = filtered.filter((entity) => {
+			const { searchTerms } = filteredById[entity.id][0];
+			return queryTerms.every((term) =>
+				searchTerms.some((field) => field.includes(term)),
+			);
+		});
+
+		if (!filteredFittingSearchTerms.length) {
+			return (
+				<Focus>
+					<Flex justifyContent="space-around" py={2}>
+						<em>no results</em>
+					</Flex>
+				</Focus>
+			);
 		}
 
-		setActionData(undefined);
-	}, []);
+		return (
+			<Focus>
+				<FocusContent>
+					{filteredFittingSearchTerms.map((entity) => (
+						<FocusItem
+							px={1}
+							py={2}
+							key={entity.id}
+							onClick={(e) => {
+								e.preventDefault();
+								if (autouiContext.getBaseUrl && history) {
+									history.push?.(autouiContext.getBaseUrl(entity));
+								}
+							}}
+						>
+							<Flex flexDirection="row">
+								{actions && actions.length > 0 && (
+									<Flex
+										flexDirection="column"
+										ml={1}
+										mr={3}
+										alignItems="center"
+									>
+										<Checkbox
+											onChange={() => {
+												const isChecked = !!selected.find(
+													(s) => s.id === entity.id,
+												);
+												const checkedItems = !isChecked
+													? selected.concat(entity)
+													: (reject(selected, {
+															id: entity.id,
+													  }) as unknown as Array<typeof entity>);
+												setSelected(checkedItems);
+											}}
+											checked={!!selected.find((s) => s.id === entity.id)}
+											onClick={stopEvent}
+										/>
+									</Flex>
+								)}
+								<Flex
+									flexDirection="column"
+									alignItems="center"
+									ml={!actions || actions.length === 0 ? 1 : undefined}
+								>
+									<Txt>{entity[model.priorities?.primary[0] ?? 'id']}</Txt>
+								</Flex>
+							</Flex>
+						</FocusItem>
+					))}
+				</FocusContent>
+			</Focus>
+		);
+	};
 
 	return (
 		<Flex flexDirection="column" mt={2}>
@@ -317,7 +413,11 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 				show={data == null || !!isBusyMessage}
 			>
 				<Box>
-					<HeaderGrid flexWrap="wrap" justifyContent="space-between">
+					<HeaderGrid
+						flexWrap="wrap"
+						justifyContent="space-between"
+						alignItems="baseline"
+					>
 						<Create
 							model={model}
 							autouiContext={autouiContext}
@@ -334,6 +434,7 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 									filters={filters}
 									autouiContext={autouiContext}
 									changeFilters={setFilters}
+									onSearch={onSearch}
 								/>
 							)}
 						</Box>
@@ -407,7 +508,7 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 					actionData.action.renderer({
 						schema: actionData.schema,
 						affectedEntries: actionData.affectedEntries,
-						onDone: onActionDone,
+						onDone: () => setActionData(undefined),
 					})}
 			</Spinner>
 		</Flex>

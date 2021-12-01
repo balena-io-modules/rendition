@@ -41,7 +41,7 @@ export interface AutoUIAction<T> {
 	renderer?: (props: {
 		schema: JSONSchema;
 		affectedEntries?: T[];
-		onDone: (isSuccessful: boolean) => void;
+		onDone: () => void;
 	}) => React.ReactNode;
 	actionFn?: (props: { affectedEntries?: T[] }) => void;
 	isDisabled?: (props: { affectedEntries?: T[] }) => string | false;

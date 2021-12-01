@@ -34,9 +34,11 @@ const Container = styled(Flex)`
 	position: relative;
 `;
 
-export const TableColumnSelectorSizer = styled.div`
+export const TableColumnSelectorSizer = styled.div<{
+	pagerPosition: 'top' | 'bottom' | 'both' | undefined;
+}>`
 	position: absolute;
-	top: 0;
+	top: ${(props) => (props.pagerPosition === 'bottom' ? 0 : '47px')};
 	right: 0;
 	display: flex;
 	align-items: center;
@@ -733,7 +735,7 @@ export class Table<T extends {}> extends React.Component<
 					/>
 				</Flex>
 				{this.props.enableCustomColumns && (
-					<TableColumnSelectorSizer>
+					<TableColumnSelectorSizer pagerPosition={props.pagerPosition}>
 						<TableColumnSelector
 							columns={this.state.allColumns}
 							setColumns={this.setColumnsAndSave}

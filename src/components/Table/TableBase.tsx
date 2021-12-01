@@ -1,7 +1,5 @@
 import { faSort } from '@fortawesome/free-solid-svg-icons/faSort';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import every from 'lodash/every';
-import filter from 'lodash/filter';
 import find from 'lodash/find';
 import includes from 'lodash/includes';
 import isEqual from 'lodash/isEqual';
@@ -13,15 +11,15 @@ import some from 'lodash/some';
 import sortBy from 'lodash/sortBy';
 import * as React from 'react';
 import styled from 'styled-components';
-
 import { Button } from '../Button';
 
 // TODO: Remove explicit import and depend on provider instead.
 import theme from '../../theme';
 import { px } from '../../utils';
-import { Checkbox, CheckboxProps } from '../Checkbox';
+import { CheckboxProps, Checkbox } from '../Checkbox';
 import { Pager } from '../Pager';
 import { CheckboxWrapper, TableBaseColumn, TableRow } from './TableRow';
+import filter from 'lodash/filter';
 
 const highlightStyle = `
 	background-color: ${theme.colors.info.light};
@@ -141,13 +139,16 @@ const Base = styled.div<InternalTableBaseProps>`
 const HeaderButton = styled(Button)`
 	display: block;
 `;
+
+type CheckedTypes = 'none' | 'some' | 'all';
+
 interface TableBaseState<T> {
-	allChecked: boolean;
+	allChecked: CheckedTypes;
+	checkedItems: T[];
 	sort: {
 		reverse: boolean;
 		field: null | keyof T;
 	};
-	checkedItems: T[];
 	page: number;
 }
 
@@ -177,22 +178,22 @@ export class TableBase<T> extends React.Component<
 	}
 
 	public componentDidUpdate(prevProps: TableBaseProps<T>) {
-		if (this.props.sort && !isEqual(prevProps.sort, this.props.sort)) {
+		const { sort, checkedItems, data, itemsPerPage } = this.props;
+		if (sort && !isEqual(prevProps.sort, sort)) {
 			this.setState({
-				sort: this.props.sort,
+				sort,
 			});
 		}
 
-		if (
-			this.props.checkedItems &&
-			prevProps.checkedItems !== this.props.checkedItems
-		) {
-			this.setRowSelection(this.props.checkedItems);
+		if (checkedItems && prevProps.checkedItems !== checkedItems) {
+			this.setRowSelection(checkedItems);
 		}
 
-		const totalItems = this.props.data?.length ?? 0;
-		const itemsPerPage = this.props.itemsPerPage ?? 50;
-		if (this.state.page !== 0 && totalItems <= this.state.page * itemsPerPage) {
+		const totalItems = data?.length ?? 0;
+		if (
+			this.state.page !== 0 &&
+			totalItems <= this.state.page * (itemsPerPage ?? 50)
+		) {
 			this.resetPager();
 		}
 	}
@@ -238,15 +239,17 @@ export class TableBase<T> extends React.Component<
 		return includes(this.props.disabledRows, identifier);
 	}
 
-	public isEachRowChecked(checkedItems: T[]): boolean {
-		const rowKey = this.props.rowKey;
-		if (!rowKey) {
-			return false;
+	public howManyRowsChecked(checkedItems: T[]): CheckedTypes {
+		const { rowKey, data } = this.props;
+		if (!rowKey || !data) {
+			return 'none';
 		}
 
-		const selectedKeys = map(checkedItems, rowKey);
-
-		return every(this.props.data, (x) => includes(selectedKeys, x[rowKey]));
+		return data.length === checkedItems.length
+			? 'all'
+			: checkedItems.length > 0
+			? 'some'
+			: 'none';
 	}
 
 	public sortData(data: T[]): T[] {
@@ -286,21 +289,18 @@ export class TableBase<T> extends React.Component<
 	private getSelectedRows = (selectedRows: T[] | undefined) => {
 		const { rowKey, data } = this.props;
 
-		if (!rowKey || selectedRows?.length === 0) {
-			return { checkedItems: [], allChecked: false };
+		let checkedItems: T[] = [];
+		let allChecked: CheckedTypes = 'none';
+
+		if (!data || !rowKey || !selectedRows || selectedRows.length === 0) {
+			return { checkedItems, allChecked };
 		}
 
 		const selectedRowsIds = map(selectedRows, rowKey);
-
-		let checkedItems: T[] = [];
-		let allChecked = false;
-
-		if (data) {
-			checkedItems = filter(this.props.data, (x) =>
-				includes(selectedRowsIds, x[rowKey]),
-			);
-			allChecked = data.length > 0 && checkedItems.length === data.length;
-		}
+		checkedItems = filter(data, (x) => {
+			return includes(selectedRowsIds, x[rowKey]);
+		});
+		allChecked = this.howManyRowsChecked(checkedItems);
 
 		return { checkedItems, allChecked };
 	};
@@ -310,18 +310,20 @@ export class TableBase<T> extends React.Component<
 	};
 
 	public toggleAllChecked = () => {
-		const { data } = this.props;
+		const { data, onCheck } = this.props;
 
-		const allChecked = !this.state.allChecked;
-		const checkedItems = allChecked
-			? (data || []).slice().filter((r) => !this.isDisabled(r))
-			: [];
-
-		if (this.props.onCheck) {
-			this.props.onCheck(checkedItems);
+		const checkedItems =
+			this.state.checkedItems.length === 0
+				? (data || []).filter((r) => !this.isDisabled(r))
+				: [];
+		if (onCheck) {
+			onCheck(checkedItems);
 		}
 
-		this.setState({ allChecked, checkedItems });
+		this.setState({
+			allChecked: this.howManyRowsChecked(checkedItems),
+			checkedItems,
+		});
 	};
 
 	public toggleChecked = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -339,10 +341,12 @@ export class TableBase<T> extends React.Component<
 
 		const identifier = item[rowKey];
 
+		const oldCheckedItems = this.props.checkedItems || this.state.checkedItems;
+
 		const isChecked = !this.isChecked(item);
 		const checkedItems = isChecked
-			? this.state.checkedItems.concat(item)
-			: (reject(this.state.checkedItems, {
+			? oldCheckedItems.concat(item)
+			: (reject(oldCheckedItems, {
 					[rowKey]: identifier,
 			  }) as unknown as Array<typeof item>);
 
@@ -351,7 +355,7 @@ export class TableBase<T> extends React.Component<
 		}
 
 		this.setState({
-			allChecked: this.isEachRowChecked(checkedItems),
+			allChecked: this.howManyRowsChecked(checkedItems),
 			checkedItems,
 		});
 	};
@@ -456,7 +460,6 @@ export class TableBase<T> extends React.Component<
 		const { page, sort } = this.state;
 		const items = data || [];
 		const totalItems = items.length;
-
 		const _itemsPerPage = itemsPerPage || 50;
 		const _pagerPosition = pagerPosition || 'top';
 
@@ -495,7 +498,8 @@ export class TableBase<T> extends React.Component<
 								{onCheck && (
 									<CheckboxWrapper data-display="table-cell">
 										<Checkbox
-											checked={this.state.allChecked}
+											checked={this.state.allChecked === 'all'}
+											indeterminate={this.state.allChecked === 'some'}
 											onChange={this.toggleAllChecked}
 										/>
 									</CheckboxWrapper>
@@ -600,7 +604,7 @@ export interface TableBaseProps<T> {
 	columns: Array<TableBaseColumn<T>>;
 	/** An array of objects that will be displayed in the table */
 	data?: T[] | null;
-	/** If provided, it will make the checked rows a controlled aspect of the table */
+	/** The amount of selected items in the original list of checked (selected) items */
 	checkedItems?: T[];
 	/** If provided, each row in the table will be a clickable link, this function is used to create the link href */
 	getRowHref?: (row: T) => string;

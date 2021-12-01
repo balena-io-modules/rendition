@@ -115,6 +115,7 @@ export const PersistentFilters = ({
 	viewsRestorationKey,
 	filtersRestorationKey,
 	history,
+	onSearch,
 	...otherProps
 }: PersistentFiltersProps) => {
 	const storedViews = React.useMemo(
@@ -178,6 +179,7 @@ export const PersistentFilters = ({
 			onFiltersUpdate={filtersUpdate}
 			onViewsUpdate={viewsUpdate}
 			{...otherProps}
+			onSearch={onSearch}
 		/>
 	);
 };

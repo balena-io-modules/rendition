@@ -59,6 +59,17 @@ export default {
 	},
 } as Meta;
 
+const TableWithCheckboxesTemplate = createTemplate<TableProps<any>>((props) => {
+	const [selected, setSelected] = React.useState(props.checkedItems ?? []);
+	return (
+		<Table
+			{...props}
+			checkedItems={selected}
+			onCheck={(items) => setSelected(items)}
+		/>
+	);
+});
+
 const Template = createTemplate<TableProps<any>>(Table);
 export const Default = createStory<TableProps<any>>(Template, {});
 export const WithPager = createStory<TableProps<any>>(Template, {
@@ -71,10 +82,12 @@ export const Sorted = createStory<TableProps<any>>(Template, {
 	sort: { field: 'Name', reverse: true },
 });
 
-export const WithCheckboxes = createStory<TableProps<any>>(Template, {
-	onCheck: () => null,
-	checkedItems: PokeDex.slice(0, 3),
-});
+export const WithCheckboxes = createStory<TableProps<any>>(
+	TableWithCheckboxesTemplate,
+	{
+		checkedItems: PokeDex.slice(0, 3),
+	},
+);
 
 export const WithRowClick = createStory<TableProps<any>>(Template, {
 	onRowClick: () => null,

@@ -4,7 +4,6 @@ import { JSONSchema7 as JSONSchema } from 'json-schema';
 import cloneDeep from 'lodash/cloneDeep';
 import defaults from 'lodash/defaults';
 import every from 'lodash/every';
-import findIndex from 'lodash/findIndex';
 import findKey from 'lodash/findKey';
 import includes from 'lodash/includes';
 import map from 'lodash/map';
@@ -112,21 +111,14 @@ export const createFullTextSearchFilter = (
 	return filter as JSONSchema;
 };
 
-// Update or insert a full text search filter into an array of filters
-export const upsertFullTextSearch = (
+// Insert a full text search filter into an array of filters
+export const insertFullTextSearch = (
 	schema: JSONSchema,
 	filters: JSONSchema[] = [],
 	term: string,
 ) => {
 	const searchFilter = createFullTextSearchFilter(schema, term);
-	const existingSearchIndex = findIndex(filters, { title: FULL_TEXT_SLUG });
-
-	if (existingSearchIndex > -1) {
-		return filters.map((filter, i) =>
-			existingSearchIndex === i ? searchFilter : filter,
-		);
-	}
-	return [...filters, searchFilter as JSONSchema];
+	return filters.concat(searchFilter);
 };
 
 // Removes a full text search filter from an array of filters

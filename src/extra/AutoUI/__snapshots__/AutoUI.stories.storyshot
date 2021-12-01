@@ -29,7 +29,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
             class="sc-gKclnd exdBHI sc-iCfMLu jciJBO"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-lgarKF fReLan esopbm"
+              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-lgarKF cAFujn esopbm"
             >
               <div
                 class="sc-gKclnd kCaRJe sc-iCfMLu jciJBO"
@@ -70,10 +70,10 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                       </div>
                     </button>
                     <div
-                      class="sc-fvxzrP giviWi"
+                      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-fvxzrP lgbZcV"
                     >
                       <div
-                        class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-khQegj dljPk ffXoGL sc-hUpaCq igPhtM"
+                        class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-khQegj dljPk dJsfTS sc-hUpaCq igPhtM"
                       >
                         <input
                           placeholder="Search entries..."
@@ -95,6 +95,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                           />
                         </svg>
                       </div>
+                      
                     </div>
                     <div
                       class="sc-kHOZwM"
@@ -616,7 +617,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
               </div>
             </div>
             <div
-              class="sc-jKTccl fizxqw"
+              class="sc-jKTccl dGufWr"
             >
               <div
                 class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-jOxtWs iRYYIV sc-bTfYFJ isjOxD"

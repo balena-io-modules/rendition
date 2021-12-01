@@ -1625,7 +1625,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPiLbb krGoUJ sc-bBHHxi doLBYL"
+                    class="sc-dPiLbb gVtLIl sc-bBHHxi doLBYL"
                   >
                     <label
                       class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 UZeto"
@@ -1639,7 +1639,18 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                         />
                         <div
                           class="StyledBox-sc-13pk1d4-0 iHfoym StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iRWScv"
-                        />
+                        >
+                          <svg
+                            class="StyledCheckBox__StyledCheckBoxIcon-sc-1dbk5ju-0 fUkZyQ"
+                            preserveAspectRatio="xMidYMid meet"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M6,12 L18,12"
+                              fill="none"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </label>
                   </div>
@@ -3437,7 +3448,7 @@ exports[`Storyshots Core/Table With Custom Columns 1`] = `
         </div>
       </div>
       <div
-        class="sc-jKTccl fizxqw"
+        class="sc-jKTccl erHgxo"
       >
         <div
           class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-jOxtWs iRYYIV sc-bTfYFJ isjOxD"

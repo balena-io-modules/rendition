@@ -46,7 +46,7 @@ const getBaseStyle = (props: any) => `
 		font-size: ${px(props.theme.fontSizes[2])};
 	}
 	${
-		props.isChecked
+		props.isChecked || props.isIndeterminate
 			? `
 		& label input + div {
 			border-color: ${props.theme.colors.primary.main};
@@ -64,14 +64,21 @@ const getBaseStyle = (props: any) => `
 	}
 `;
 
-const CheckboxWrapper = styled.div<{ isChecked?: boolean }>`
+const CheckboxWrapper = styled.div<{
+	isChecked?: boolean;
+	isIndeterminate?: boolean;
+}>`
 	${getBaseStyle}
 	${getHoverStyle}
 `;
 
 const BaseCheckbox = ({ className, ...otherProps }: InternalCheckboxProps) => {
 	return (
-		<CheckboxWrapper isChecked={otherProps.checked} className={className}>
+		<CheckboxWrapper
+			isChecked={otherProps.checked}
+			isIndeterminate={otherProps.indeterminate}
+			className={className}
+		>
 			<GrommetCheckbox {...otherProps} />
 		</CheckboxWrapper>
 	);

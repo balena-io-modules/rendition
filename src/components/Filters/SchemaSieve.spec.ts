@@ -1100,7 +1100,7 @@ describe('SchemaSieve', () => {
 		});
 	});
 
-	describe('.upsertFullTextSearch()', () => {
+	describe('.insertFullTextSearch()', () => {
 		const collection = [
 			{
 				test: 'abcde',
@@ -1123,35 +1123,23 @@ describe('SchemaSieve', () => {
 
 			const term = 'lorem';
 
-			const filters = sieve.upsertFullTextSearch(schema, [], term);
+			let filters = sieve.insertFullTextSearch(schema, [], term);
 
 			expect(filters).toHaveLength(1);
 			expect(sieve.filter(filters, collection)).toHaveLength(1);
 			expect(sieve.filter(filters, collection)).toEqual([collection[1]]);
 
 			expect(filters).toHaveLength(1);
-		});
 
-		it('should modify an existing search filter', () => {
-			const schema = {
-				type: 'object',
-				properties: {
-					test: { type: 'string' },
-					description: { type: 'string' },
-				},
-			} as any;
+			const term2 = 'test';
 
-			const existingFilters = [
-				sieve.createFullTextSearchFilter(schema, 'test'),
-			];
+			filters = sieve.insertFullTextSearch(schema, filters, term2);
 
-			const term = 'lorem';
+			expect(filters).toHaveLength(2);
+			expect(sieve.filter(filters, collection)).toHaveLength(0);
+			expect(sieve.filter(filters, collection)).toEqual([]);
 
-			const filters = sieve.upsertFullTextSearch(schema, existingFilters, term);
-
-			expect(filters).toHaveLength(1);
-			expect(sieve.filter(filters, collection)).toHaveLength(1);
-			expect(sieve.filter(filters, collection)).toEqual([collection[1]]);
+			expect(filters).toHaveLength(2);
 		});
 	});
 
