@@ -1,4 +1,16 @@
 - commits:
+    - subject: Improve DropDownButton component
+      hash: 8b15393ffe21d2e3661beddd21e7b3df72ffaaef
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 23.1.0
+  date: 2021-12-01T21:29:28.110Z
+- commits:
     - subject: Improve AutoUICollection searching
       hash: 9d1933d317e0df4833dedbe518db612b19fe0c0e
       body: ''
