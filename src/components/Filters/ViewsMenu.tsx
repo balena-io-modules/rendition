@@ -7,19 +7,14 @@ import groupBy from 'lodash/groupBy';
 import map from 'lodash/map';
 import * as React from 'react';
 import styled from 'styled-components';
+import { stopEvent } from '../../utils';
 import { FilterRenderMode, FiltersView } from '.';
 import { Box } from '../Box';
+import { Button } from '../Button';
 import { DropDownButton, DropDownButtonProps } from '../DropDownButton';
-import { Txt } from '../Txt';
 import FilterDescription from './FilterDescription';
-
-const Wrapper = styled.div``;
-
-const UnstyledList = styled.ul`
-	list-style: none;
-	padding: 0 !important;
-	margin: 0;
-`;
+import { Flex } from '../Flex';
+import theme from '../../theme';
 
 const PlainPanel = styled.div`
 	border-radius: 2px;
@@ -39,133 +34,93 @@ const Preview = styled(PlainPanel)`
 	padding: 15px 15px 5px;
 `;
 
-export const ViewListItem = styled.li`
-	position: relative;
-	padding: 7px 40px 7px 20px;
-	&:hover {
-		background-color: #f3f3f3;
-	}
-	& > p {
-		padding-right: 20px;
-	}
-	& > button {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		right: 2px;
-		padding: 8px;
-		background: none;
-		border: none;
-		display: none;
-		cursor: pointer;
-	}
-	&:hover > button {
-		display: block;
-		opacity: 0.7;
-	}
-	> button:hover {
-		opacity: 1;
-	}
-	&:hover ${Preview} {
-		display: block;
-	}
-`;
-
-const ViewListItemLabel = styled(Txt)`
-	cursor: pointer;
-`;
-
-class ViewsMenu extends React.Component<ViewsMenuProps, ViewsMenuState> {
-	constructor(props: ViewsMenuProps) {
-		super(props);
-
-		this.state = {
-			showViewsMenu: false,
-		};
-	}
-
-	public loadView(view: FiltersView) {
+const ViewsMenu = (props: ViewsMenuProps) => {
+	const loadView = (view: FiltersView) => {
 		const filters = cloneDeep(view.filters);
-		this.props.setFilters(filters);
-		this.setState({ showViewsMenu: false });
+		props.setFilters(filters);
+	};
+
+	const { views, renderMode, hasMultipleScopes, compact, deleteView } = props;
+	const hasViews = views.length > 0;
+	const groupedViews = groupBy(views, (item) => item.scope || 'Unscoped');
+
+	let soloRender = false;
+	if (renderMode) {
+		const mode = Array.isArray(renderMode) ? renderMode : [renderMode];
+		soloRender = mode.length === 1 && mode[0] === 'views';
 	}
 
-	public render() {
-		const { views, renderMode, hasMultipleScopes, compact } = this.props;
-		const hasViews = views.length > 0;
-		const groupedViews = groupBy(views, (item) => item.scope || 'Unscoped');
-
-		let soloRender = false;
-		if (renderMode) {
-			const mode = Array.isArray(renderMode) ? renderMode : [renderMode];
-			soloRender = mode.length === 1 && mode[0] === 'views';
-		}
-
-		return (
-			<Wrapper>
-				<DropDownButton
-					ml={soloRender ? 0 : 30}
-					disabled={this.props.disabled}
-					quartenary={!this.props.dark}
-					light={this.props.dark}
-					outline
-					joined
-					alignRight={!soloRender}
-					noListFormat
-					icon={<FontAwesomeIcon icon={faChartPie} />}
-					label="Views"
-					compact={compact}
-					{...this.props.buttonProps}
-				>
-					<Box py={1}>
-						{!hasViews && (
-							<Box py={2} px={3}>
-								{"You haven't created any views yet"}
-							</Box>
-						)}
-						{hasViews &&
-							map(groupedViews, (views: FiltersView[], scope) => (
-								<Box key={scope}>
-									{hasMultipleScopes && (
-										<Txt fontSize={13} ml={20} mb={2} mt={2} color="#aaa">
-											{scope}
-										</Txt>
-									)}
-									<UnstyledList>
-										{views.map((view) => (
-											<ViewListItem key={view.name}>
-												<ViewListItemLabel
-													m={0}
-													onClick={() => this.loadView(view)}
-												>
-													{view.name}
-													<br />
-													<Txt m={0} fontSize={12} color="#aaa">
-														{view.filters.length} filter
-														{view.filters.length > 1 && 's'}
-													</Txt>
-												</ViewListItemLabel>
-												<button onClick={() => this.props.deleteView(view)}>
-													<FontAwesomeIcon icon={faTrash} />
-												</button>
-												<Preview>
-													{view.filters.map((filter) => (
-														<Box mb={10} key={filter.$id}>
-															<FilterDescription filter={filter} />
-														</Box>
-													))}
-												</Preview>
-											</ViewListItem>
+	const memoizedItems = React.useMemo(
+		() =>
+			!hasViews
+				? [[{ content: "You haven't created any views yet" }]]
+				: map(groupedViews, (views: FiltersView[], scope) =>
+						views.map((view, index) => ({
+							content: (
+								<Flex
+									flexDirection="row"
+									justifyContent="space-between"
+									alignItems="center"
+									key={`${scope}-${index}`}
+								>
+									<Flex flexDirection="column" mr={3}>
+										<Flex flexDirection="row">
+											{hasMultipleScopes && (
+												<Flex flexDirection="column" mr={1}>
+													<strong>{scope}</strong>
+												</Flex>
+											)}
+											<Flex flexDirection="column">{view.name}</Flex>
+										</Flex>
+										<Flex flexDirection="row" color={theme.colors.gray}>
+											{view.filters.length} filter
+											{view.filters.length > 1 && 's'}
+										</Flex>
+									</Flex>
+									<Flex flexDirection="column">
+										<Button
+											plain
+											onClick={(e) => {
+												deleteView(view);
+												stopEvent(e);
+											}}
+										>
+											<FontAwesomeIcon icon={faTrash} />
+										</Button>
+									</Flex>
+									<Preview>
+										{view.filters.map((filter) => (
+											<Box mb={10} key={filter.$id}>
+												<FilterDescription filter={filter} />
+											</Box>
 										))}
-									</UnstyledList>
-								</Box>
-							))}
-					</Box>
-				</DropDownButton>
-			</Wrapper>
-		);
-	}
-}
+									</Preview>
+								</Flex>
+							),
+							onClick: () => loadView(view),
+						})),
+				  ),
+		[views, deleteView],
+	);
+
+	return (
+		<DropDownButton
+			ml={soloRender ? 0 : 30}
+			disabled={props.disabled}
+			quartenary={!props.dark}
+			light={props.dark}
+			outline
+			joined
+			alignRight={!soloRender}
+			noListFormat
+			icon={<FontAwesomeIcon icon={faChartPie} />}
+			label="Views"
+			compact={compact}
+			{...props.buttonProps}
+			items={memoizedItems}
+		/>
+	);
+};
 
 export interface ViewsMenuProps {
 	buttonProps?: DropDownButtonProps;
@@ -178,10 +133,6 @@ export interface ViewsMenuProps {
 	deleteView: (view: FiltersView) => any;
 	renderMode?: FilterRenderMode | FilterRenderMode[];
 	compact?: boolean[];
-}
-
-interface ViewsMenuState {
-	showViewsMenu: boolean;
 }
 
 export default ViewsMenu;

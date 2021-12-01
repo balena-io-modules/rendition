@@ -182,6 +182,19 @@ export const ImageForm = ({
 		);
 	}, [deviceType?.slug, rawVersion]);
 
+	const memoizedItems = React.useMemo(
+		() =>
+			!!actions?.length
+				? [
+						actions.map(({ label }) => ({
+							content: <Txt bold={selectedActionLabel === label}>{label}</Txt>,
+							onClick: () => setSelectedActionLabel(label),
+						})),
+				  ]
+				: [],
+		[actions],
+	);
+
 	return (
 		<form
 			action={downloadUrl}
@@ -271,20 +284,8 @@ export const ImageForm = ({
 						label={selectedActionLabel}
 						alignRight
 						dropUp
-					>
-						{!!actions?.length &&
-							actions.map(({ onClick, label, ...otherProps }) => (
-								<Button
-									mt={2}
-									onClick={() => {
-										setSelectedActionLabel(label);
-									}}
-									{...otherProps}
-								>
-									<Txt bold={selectedActionLabel === label}>{label}</Txt>
-								</Button>
-							))}
-					</DropDownButton>
+						items={memoizedItems}
+					/>
 				)}
 			</Flex>
 		</form>

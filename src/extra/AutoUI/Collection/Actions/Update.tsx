@@ -9,10 +9,12 @@ import {
 } from '../../schemaOps';
 import { ActionData } from '..';
 import { autoUIGetDisabledReason } from '../../utils';
-import { Button } from '../../../../components/Button';
 import { DropDownButton } from '../../../../components/DropDownButton';
 import { faEllipsisH } from '@fortawesome/free-solid-svg-icons/faEllipsisH';
 import { useTranslation } from '../../../../hooks/useTranslation';
+import groupBy from 'lodash/groupBy';
+import map from 'lodash/map';
+import { Button } from '../../../../components/Button';
 
 interface UpdateProps<T extends AutoUIBaseResource<T>> {
 	model: AutoUIModel<T>;
@@ -40,7 +42,8 @@ export const Update = <T extends AutoUIBaseResource<T>>({
 		return null;
 	}
 
-	const actionHandlers = updateActions.map((action) => {
+	if (updateActions.length === 1) {
+		const action = updateActions[0];
 		const disabledReason =
 			autoUIGetDisabledReason(
 				selected,
@@ -48,7 +51,6 @@ export const Update = <T extends AutoUIBaseResource<T>>({
 				action.type as 'update' | 'delete',
 				t,
 			) ?? action.isDisabled?.({ affectedEntries: selected });
-
 		return (
 			<Button
 				key={action.title}
@@ -76,11 +78,43 @@ export const Update = <T extends AutoUIBaseResource<T>>({
 				{action.title}
 			</Button>
 		);
-	});
-
-	if (actionHandlers.length === 1) {
-		return actionHandlers[0];
 	}
+
+	const groupedActions = groupBy(
+		updateActions,
+		(action) => !!action.isDangerous,
+	);
+	const actionHandlers = map(groupedActions, (actions) =>
+		actions.map((action) => {
+			const disabledReason =
+				autoUIGetDisabledReason(
+					selected,
+					hasOngoingAction,
+					action.type as 'update' | 'delete',
+					t,
+				) ?? action.isDisabled?.({ affectedEntries: selected });
+
+			return {
+				content: action.title,
+				onClick: () =>
+					onActionTriggered({
+						action,
+						schema:
+							action.type === 'delete'
+								? {}
+								: autoUIJsonSchemaPick(
+										model.schema,
+										model.permissions[action.type],
+								  ),
+						affectedEntries: selected,
+					}),
+				tooltip:
+					typeof disabledReason === 'string' ? disabledReason : undefined,
+				disabled: !!disabledReason,
+				danger: action.isDangerous,
+			};
+		}),
+	);
 
 	const disabledReason = autoUIGetDisabledReason(
 		selected,
@@ -95,13 +129,13 @@ export const Update = <T extends AutoUIBaseResource<T>>({
 			compact={[true, true, false, false]}
 			joined
 			outline
+			alignRight
 			quartenary
 			disabled={!!disabledReason}
 			tooltip={disabledReason}
 			icon={<FontAwesomeIcon icon={faEllipsisH} />}
 			label={t('labels.actions')}
-		>
-			{actionHandlers}
-		</DropDownButton>
+			items={actionHandlers}
+		/>
 	);
 };

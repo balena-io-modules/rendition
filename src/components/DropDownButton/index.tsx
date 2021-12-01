@@ -1,6 +1,7 @@
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons/faChevronDown';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons/faChevronUp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import flatten from 'lodash/flatten';
 import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
@@ -42,7 +43,6 @@ const MenuBase = styled(Box)<{
 }>`
 	background: white;
 	position: absolute;
-	box-shadow: ${(props) => '1px 1px 5px' + props.theme.colors.gray.light};
 	border-radius: ${(props) => px(props.theme.radius)};
 	border: ${(props) => '1px solid ' + props.theme.colors.gray.main};
 	z-index: 1;
@@ -51,8 +51,9 @@ const MenuBase = styled(Box)<{
 	bottom: ${(props) => (props.dropUp ? props.theme.button.height : 'auto')};
 	left: ${(props) => (props.alignRight ? 'auto' : 0)};
 	right: ${(props) => (!props.alignRight ? 'auto' : 0)};
-	white-space: nowrap;
+	width: 200px;
 	overflow-y: auto;
+	overflow-x: hidden;
 `;
 
 const Wrapper = styled(Box)`
@@ -67,19 +68,30 @@ const Wrapper = styled(Box)`
 	}
 `;
 
-const Item = styled.div<{ border: boolean }>`
-	padding: 4px 16px;
-	border-top: ${(props) =>
-		props.border ? `1px solid ${props.theme.colors.gray.main}` : '0'};
-	border-radius: ${(props) => px(props.theme.radius)};
+const getHoverStyle = (props: any) => `
+	${
+		props.hasActionFn &&
+		`&:hover {
+	background: #dde1f0; // This is the background color Select uses for entities on hover. We do not have it in our theme
+	cursor: ${props.disabled ? 'not-allowed' : 'pointer'};}`
+	}`;
 
-	&:hover:enabled {
-		background: ${(props) => props.theme.colors.gray.light};
-	}
+const getDangerStyle = (props: any) => `
+	${props.danger && `color: ${props.theme.colors.danger.main};`}
+	`;
 
-	&:empty {
-		display: none;
-	}
+const getDisabledStyle = (props: any) => `
+	${props.disabled && `opacity: 1; color: ${props.theme.colors.gray.main};`}
+	`;
+
+const Item = styled(Box)<{
+	disabled?: boolean;
+	danger?: boolean;
+	hasActionFn: boolean;
+}>`
+	${getHoverStyle}
+	${getDangerStyle}
+	${getDisabledStyle}
 `;
 
 const JoinedButton = styled(Button)`
@@ -93,6 +105,7 @@ const Toggle = ({
 	label,
 	joined,
 	compact,
+	items,
 	...props
 }: InternalDropDownButtonProps & {
 	open: boolean;
@@ -113,7 +126,7 @@ const Toggle = ({
 				<JoinedButton {...toggleProps}>
 					<Flex justifyContent="space-between" alignItems="center">
 						{!shouldCompact && <Box mr={2}>{label}</Box>}
-						{<FontAwesomeIcon icon={icon} />}
+						<FontAwesomeIcon icon={icon} />
 					</Flex>
 				</JoinedButton>
 			);
@@ -127,7 +140,14 @@ const Toggle = ({
 
 interface DropDownButtonState {
 	open: boolean;
-	minWidth: number;
+}
+
+export interface DropdownOption {
+	content: string | JSX.Element;
+	onClick?: React.MouseEventHandler<HTMLElement>;
+	tooltip?: string;
+	disabled?: boolean;
+	danger?: boolean;
 }
 
 class BaseDropDownButton extends React.Component<
@@ -140,7 +160,6 @@ class BaseDropDownButton extends React.Component<
 		super(props);
 		this.state = {
 			open: false,
-			minWidth: 0,
 		};
 	}
 
@@ -171,7 +190,6 @@ class BaseDropDownButton extends React.Component<
 
 		this.setState({
 			open: isNextOpen,
-			minWidth: (this as any).base && (this as any).base.offsetWidth,
 		});
 	};
 
@@ -191,6 +209,9 @@ class BaseDropDownButton extends React.Component<
 			outline,
 			className,
 			onClick,
+			items,
+			disabled,
+			tooltip,
 			...props
 		} = this.props;
 
@@ -210,6 +231,13 @@ class BaseDropDownButton extends React.Component<
 						label={label}
 						handler={this.toggle}
 						open={this.state.open}
+						items={items}
+						tooltip={
+							tooltip ?? flatten(items).length === 0
+								? 'No options available'
+								: undefined
+						}
+						disabled={disabled ?? flatten(items).length === 0}
 					/>
 				) : (
 					<span>
@@ -221,6 +249,13 @@ class BaseDropDownButton extends React.Component<
 							outline={outline}
 							handler={this.toggle}
 							open={this.state.open}
+							items={items}
+							tooltip={
+								tooltip ?? flatten(items).length === 0
+									? 'No options available'
+									: undefined
+							}
+							disabled={disabled ?? flatten(items).length === 0}
 						/>
 					</span>
 				)}
@@ -229,26 +264,58 @@ class BaseDropDownButton extends React.Component<
 					<MenuBase
 						dropUp={dropUp}
 						alignRight={alignRight}
-						onClick={this.toggle}
-						minWidth={`${this.state.minWidth}px`}
-						maxHeight={px(this.props.listMaxHeight)}
+						maxHeight={px(this.props.listMaxHeight ?? 300)}
 					>
-						{React.Children.map(children, (child, i) => {
-							if (noListFormat) {
-								return child;
-							}
-							if (!child) {
-								return;
-							}
-							if ((child as any).type === Divider) {
-								return child;
-							}
-							return (
-								<Item border={Boolean(border && i)} key={i}>
-									{child}
-								</Item>
-							);
-						})}
+						{items
+							? items.map((itemGroup, i) => (
+									<Box key={i}>
+										{itemGroup.map(
+											(item, j) =>
+												item && (
+													<Item
+														px={3}
+														py={1}
+														onClick={(event) => {
+															if (!item.disabled && item.onClick) {
+																item.onClick(event);
+																this.toggle();
+															}
+														}}
+														tooltip={item.tooltip}
+														disabled={item.disabled}
+														danger={item.danger}
+														hasActionFn={!!item.onClick}
+														key={j}
+													>
+														{item.content}
+													</Item>
+												),
+										)}
+										{i < items.length - 1 && <Divider />}
+									</Box>
+							  ))
+							: React.Children.map(children, (child, i) => {
+									if (noListFormat) {
+										return child;
+									}
+									if (!child) {
+										return;
+									}
+									if ((child as any).type === Divider) {
+										return child;
+									}
+									return (
+										<Item
+											px={3}
+											py={1}
+											onClick={() => null}
+											hasActionFn={false}
+											key={i}
+										>
+											{child}
+										</Item>
+									);
+							  })}
 					</MenuBase>
 				)}
 			</Wrapper>
@@ -257,6 +324,8 @@ class BaseDropDownButton extends React.Component<
 }
 
 export interface InternalDropDownButtonProps extends ButtonProps {
+	/** A 2D array. Each child array contains a group of items. Each child array is separated by Dividers */
+	items?: Array<Array<DropdownOption | undefined>>;
 	/** Optionally provide a JSX element that will be displayed inside the main button */
 	label?: string | JSX.Element;
 	/** If true, place a border between each item in the dropdown */
@@ -269,7 +338,7 @@ export interface InternalDropDownButtonProps extends ButtonProps {
 	dropUp?: boolean;
 	/** If true, render children as a single JSX element instead of iterating over each of them */
 	noListFormat?: boolean;
-	/** If setted, it defines the maximum height of the dropdown list */
+	/** If set, it defines the maximum height of the dropdown list */
 	listMaxHeight?: string | number;
 }
 

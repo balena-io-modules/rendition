@@ -3,24 +3,24 @@
 exports[`Storyshots Core/ProgressBar Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <div
-      class="sc-XxNYO gNUYFN sc-ilfuhL gPrLKN"
+      class="sc-evcjhq gzaCbu sc-fHeRUh cTzQCH"
       color="#fff"
     >
       <div
-        class="sc-dtDOqo kXVrNy"
+        class="sc-brSvTw gdvvdB"
       >
         10
         %
       </div>
       <div
-        class="sc-fHeRUh bIbKiY"
+        class="sc-dFtzxp ijcGKc"
         style="width: 10%;"
       >
         <div
-          class="sc-dkYRCH cAkbxc"
+          class="sc-gIDmLj dMSlCq"
           style="width: 1000%;"
         >
           10
@@ -35,25 +35,25 @@ exports[`Storyshots Core/ProgressBar Default 1`] = `
 exports[`Storyshots Core/ProgressBar Different Color 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <div
-      class="sc-XxNYO gNUYFN sc-ilfuhL gPrLKN"
+      class="sc-evcjhq gzaCbu sc-fHeRUh cTzQCH"
       color="#fff"
       type="danger"
     >
       <div
-        class="sc-dtDOqo kXVrNy"
+        class="sc-brSvTw gdvvdB"
       >
         10
         %
       </div>
       <div
-        class="sc-fHeRUh iumutO"
+        class="sc-dFtzxp dFRHvW"
         style="width: 10%;"
       >
         <div
-          class="sc-dkYRCH cAkbxc"
+          class="sc-gIDmLj dMSlCq"
           style="width: 1000%;"
         >
           10
@@ -68,24 +68,24 @@ exports[`Storyshots Core/ProgressBar Different Color 1`] = `
 exports[`Storyshots Core/ProgressBar Emphasized 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <div
-      class="sc-XxNYO kdGSto sc-ilfuhL gPrLKN"
+      class="sc-evcjhq jQwmuH sc-fHeRUh cTzQCH"
       color="#fff"
     >
       <div
-        class="sc-dtDOqo kXVrNy"
+        class="sc-brSvTw gdvvdB"
       >
         10
         %
       </div>
       <div
-        class="sc-fHeRUh bIbKiY"
+        class="sc-dFtzxp ijcGKc"
         style="width: 10%;"
       >
         <div
-          class="sc-dkYRCH cAkbxc"
+          class="sc-gIDmLj dMSlCq"
           style="width: 1000%;"
         >
           10

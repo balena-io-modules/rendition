@@ -7,25 +7,16 @@ import styled from 'styled-components';
 import clone from 'lodash/clone';
 import reduce from 'lodash/reduce';
 import without from 'lodash/without';
-import filter from 'lodash/filter';
-import { Divider, DividerProps } from '../Divider';
-import { DropDownButton } from '../DropDownButton';
+import { DropDownButton, DropdownOption } from '../DropDownButton';
+import { Flex } from '../Flex';
+import { stopEvent } from '../../utils';
+import theme from '../../theme';
+import { Txt } from '../Txt';
 
 const SmallFontAwesomeIcon = styled(FontAwesomeIcon)`
 	& {
 		font-size: inherit !important;
 	}
-`;
-
-const Item = styled.div<
-	{ light?: boolean; disabled?: boolean } & React.HTMLProps<HTMLDivElement>
->`
-	display: flex;
-	align-items: center;
-	justify-content: stretch;
-	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
-	color: ${(props) =>
-		props.light || props.disabled ? props.theme.colors.text.light : 'inherit'};
 `;
 
 const ItemIcon = styled.span`
@@ -38,12 +29,6 @@ const ItemIcon = styled.span`
 	& svg {
 		transform: translateY(-1px);
 	}
-`;
-
-const StyledDivider = styled(Divider)<DividerProps>`
-	height: 1px;
-	color: ${(props) => props.theme.colors.gray.main};
-	margin: 8px 0;
 `;
 
 export interface TableColumnStateBase {
@@ -101,29 +86,31 @@ interface TableColumnSelectorProps<T extends TableColumnState> {
 export const TableColumnSelector = function <T extends TableColumnState>(
 	props: TableColumnSelectorProps<T>,
 ) {
+	const { columns, tagKeys, addTagColumn, setColumns } = props;
+
 	const toggleSelectedColumn = (column: T) => {
-		const columnIndex = props.columns.indexOf(column);
+		const columnIndex = columns.indexOf(column);
 		if (columnIndex < 0) {
 			return;
 		}
 
-		const columns = props.columns.slice();
+		const columnsCopy = columns.slice();
 		column = clone(column);
 		column.selected = !column.selected;
 
 		const shouldRemoveColumn = column.type === 'tag' && !column.selected;
 		if (shouldRemoveColumn) {
-			columns.splice(columnIndex, 1);
+			columnsCopy.splice(columnIndex, 1);
 		} else {
 			// replace the updated column object
-			columns.splice(columnIndex, 1, column);
+			columnsCopy.splice(columnIndex, 1, column);
 		}
 
-		props.setColumns(columns);
+		setColumns(columnsCopy);
 	};
 
 	const existingTagColumnKeys = reduce(
-		props.columns,
+		columns,
 		(acc, c) => {
 			if (c.type === 'tag' && (c as TagTableColumnState).tagKey) {
 				acc.push((c as TagTableColumnState).tagKey!);
@@ -135,7 +122,7 @@ export const TableColumnSelector = function <T extends TableColumnState>(
 
 	const canAddColumnRules = [
 		{
-			test: () => !(props.tagKeys || []).length,
+			test: () => !(tagKeys || []).length,
 			message: 'No tags available.',
 		},
 		{
@@ -143,8 +130,7 @@ export const TableColumnSelector = function <T extends TableColumnState>(
 			message: 'Unconfigured tag column already exists',
 		},
 		{
-			test: () =>
-				!without(props.tagKeys || [], ...existingTagColumnKeys).length,
+			test: () => !without(tagKeys || [], ...existingTagColumnKeys).length,
 			message: 'All tags used',
 		},
 	];
@@ -153,6 +139,54 @@ export const TableColumnSelector = function <T extends TableColumnState>(
 	const canAddTagColumn = !failedAddColumnRule;
 	const addTagColumnTitle = failedAddColumnRule && failedAddColumnRule.message;
 
+	const memoizedItems = React.useMemo(
+		(): DropdownOption[][] => [
+			columns
+				.filter((col) => !col.locked)
+				.map((col) => ({
+					content: (
+						<Flex
+							key={col.key}
+							alignItems="center"
+							color={!col.selected ? theme.colors.text.light : undefined}
+						>
+							<ItemIcon>
+								{col.selected ? <FontAwesomeIcon icon={faCheck} /> : null}
+							</ItemIcon>
+							{col.type !== 'tag' ? (
+								col.title
+							) : (
+								<Txt>
+									Tag : {col.title ? <strong>{col.title}</strong> : 'Not set'}
+								</Txt>
+							)}
+						</Flex>
+					),
+					onClick: (e) => {
+						toggleSelectedColumn(col);
+						stopEvent(e);
+					},
+				})),
+			!tagKeys
+				? []
+				: [
+						{
+							content: (
+								<Flex alignItems="center">
+									<ItemIcon>
+										<FontAwesomeIcon icon={faPlus} />
+									</ItemIcon>
+									{addTagColumnTitle ?? 'Add Tag Column'}
+								</Flex>
+							),
+							onClick: () => canAddTagColumn && addTagColumn(),
+							disabled: !canAddTagColumn,
+						},
+				  ],
+		],
+		[columns, tagKeys, addTagColumn],
+	);
+
 	return (
 		<DropDownButton
 			joined
@@ -160,53 +194,7 @@ export const TableColumnSelector = function <T extends TableColumnState>(
 			primary
 			plain
 			label={<SmallFontAwesomeIcon icon={faCog} />}
-		>
-			{filter(props.columns, (col) => !col.locked)
-				.map((col) => (
-					<Item
-						key={col.key}
-						light={!col.selected}
-						onClick={(e) => {
-							toggleSelectedColumn(col);
-							e.preventDefault();
-							e.stopPropagation();
-						}}
-					>
-						<ItemIcon>
-							{col.selected ? <FontAwesomeIcon icon={faCheck} /> : null}
-						</ItemIcon>
-						{col.type !== 'tag' ? (
-							col.title
-						) : (
-							<span>
-								<span>Tag :</span>{' '}
-								{col.title ? (
-									<strong>{col.title}</strong>
-								) : (
-									<span>Not set</span>
-								)}
-							</span>
-						)}
-					</Item>
-				))
-				.concat(
-					!props.tagKeys
-						? []
-						: [
-								<StyledDivider key="divider" />,
-								<Item
-									key="Add Tag Column"
-									disabled={!canAddTagColumn}
-									title={addTagColumnTitle}
-									onClick={() => canAddTagColumn && props.addTagColumn()}
-								>
-									<ItemIcon>
-										<FontAwesomeIcon icon={faPlus} />
-									</ItemIcon>
-									Add Tag Column
-								</Item>,
-						  ],
-				)}
-		</DropDownButton>
+			items={memoizedItems}
+		/>
 	);
 };

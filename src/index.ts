@@ -96,6 +96,7 @@ export { Container } from './components/Container';
 export {
 	DropDownButton,
 	DropDownButtonProps,
+	DropdownOption,
 } from './components/DropDownButton';
 export { Map, MapProps } from './components/Map';
 export { Navbar, NavbarProps } from './components/Navbar';

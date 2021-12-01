@@ -3,10 +3,10 @@
 exports[`Storyshots Core/Container Centered Content 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu cGgNNs sc-jvvksu iZWZbd sc-edERGn kyDWed"
+      class="sc-gKclnd exdBHI sc-iCfMLu cGgNNs sc-cHzqoD dfvmsJ sc-JkixQ hOtXST"
     >
       <h3
         class="sc-gWXbKe gGPSCF sc-cCcXHH hYTSJh"
@@ -21,10 +21,10 @@ exports[`Storyshots Core/Container Centered Content 1`] = `
 exports[`Storyshots Core/Container Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu cGgNNs sc-jvvksu rvCKa sc-edERGn kyDWed"
+      class="sc-gKclnd exdBHI sc-iCfMLu cGgNNs sc-cHzqoD cwrePO sc-JkixQ hOtXST"
     >
       <h3
         class="sc-gWXbKe gGPSCF sc-cCcXHH hYTSJh"

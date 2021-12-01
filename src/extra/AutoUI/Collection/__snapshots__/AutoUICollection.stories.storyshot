@@ -3,29 +3,29 @@
 exports[`Storyshots Extra/AutoUICollection Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <div
       class="sc-gKclnd exdBHI sc-iCfMLu gALdNb sc-hGPBjI kBwkZQ"
     >
       <div
-        class="sc-dUbtfd kuvLYf sc-hjGZqJ iGsnMG"
+        class="sc-eFegNN bbTGmj sc-jlRLRk kMMBEL"
       >
         <div
-          class="sc-cbTzjv lhvXCi"
+          class="sc-lkgTHX fswapt"
         >
           <div
             class="sc-gKclnd exdBHI sc-iCfMLu jciJBO"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-lgarKF cAFujn esopbm"
+              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-bUhFKy cAFujn wAVbk"
             >
               <div
                 class="sc-gKclnd kCaRJe sc-iCfMLu jciJBO"
                 order="-1,-1,-1,0"
               >
                 <div
-                  class="sc-gKclnd exdBHI sc-iCfMLu kkMeyg sc-fbyfCU kDDgIn"
+                  class="sc-gKclnd exdBHI sc-iCfMLu kkMeyg sc-cZMNgc gJCjeg"
                 >
                   <div
                     class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI kZhRrI"
@@ -59,7 +59,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                       </div>
                     </button>
                     <div
-                      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-fvxzrP lgbZcV"
+                      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-dtMgUX lllbMy"
                     >
                       <div
                         class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-khQegj dljPk dJsfTS sc-hUpaCq igPhtM"
@@ -87,73 +87,69 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                       
                     </div>
                     <div
-                      class="sc-kHOZwM"
+                      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-jOxtWs iRYYIV sc-bTfYFJ jQBzNp"
                     >
-                      <div
-                        class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-jOxtWs iRYYIV sc-bTfYFJ jQBzNp"
+                      <button
+                        class="StyledButton-sc-323bzc-0 jFToxV sc-bqiRlB sc-hBUSln edofBN dlhkLz sc-dJjYzT cGuTUx sc-eLwHnm kxmuUM"
+                        type="button"
                       >
-                        <button
-                          class="StyledButton-sc-323bzc-0 jFToxV sc-bqiRlB sc-hBUSln edofBN dlhkLz sc-dJjYzT cGuTUx sc-eLwHnm kxmuUM"
-                          type="button"
+                        <div
+                          class="StyledBox-sc-13pk1d4-0 hLqWpM"
                         >
-                          <div
-                            class="StyledBox-sc-13pk1d4-0 hLqWpM"
+                          <svg
+                            aria-hidden="true"
+                            class="svg-inline--fa fa-chart-pie fa-w-17 "
+                            data-icon="chart-pie"
+                            data-prefix="fas"
+                            focusable="false"
+                            role="img"
+                            viewBox="0 0 544 512"
+                            xmlns="http://www.w3.org/2000/svg"
                           >
+                            <path
+                              d="M527.79 288H290.5l158.03 158.03c6.04 6.04 15.98 6.53 22.19.68 38.7-36.46 65.32-85.61 73.13-140.86 1.34-9.46-6.51-17.85-16.06-17.85zm-15.83-64.8C503.72 103.74 408.26 8.28 288.8.04 279.68-.59 272 7.1 272 16.24V240h223.77c9.14 0 16.82-7.68 16.19-16.8zM224 288V50.71c0-9.55-8.39-17.4-17.84-16.06C86.99 51.49-4.1 155.6.14 280.37 4.5 408.51 114.83 513.59 243.03 511.98c50.4-.63 96.97-16.87 135.26-44.03 7.9-5.6 8.42-17.23 1.57-24.08L224 288z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                          <div
+                            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hDcxXI"
+                          />
+                          <div
+                            class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI iqksqQ"
+                          >
+                            <div
+                              class="sc-gKclnd exdBHI sc-iCfMLu iBCaVk"
+                            >
+                              Views
+                            </div>
                             <svg
                               aria-hidden="true"
-                              class="svg-inline--fa fa-chart-pie fa-w-17 "
-                              data-icon="chart-pie"
+                              class="svg-inline--fa fa-chevron-down fa-w-14 "
+                              data-icon="chevron-down"
                               data-prefix="fas"
                               focusable="false"
                               role="img"
-                              viewBox="0 0 544 512"
+                              viewBox="0 0 448 512"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M527.79 288H290.5l158.03 158.03c6.04 6.04 15.98 6.53 22.19.68 38.7-36.46 65.32-85.61 73.13-140.86 1.34-9.46-6.51-17.85-16.06-17.85zm-15.83-64.8C503.72 103.74 408.26 8.28 288.8.04 279.68-.59 272 7.1 272 16.24V240h223.77c9.14 0 16.82-7.68 16.19-16.8zM224 288V50.71c0-9.55-8.39-17.4-17.84-16.06C86.99 51.49-4.1 155.6.14 280.37 4.5 408.51 114.83 513.59 243.03 511.98c50.4-.63 96.97-16.87 135.26-44.03 7.9-5.6 8.42-17.23 1.57-24.08L224 288z"
+                                d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
                                 fill="currentColor"
                               />
                             </svg>
-                            <div
-                              class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hDcxXI"
-                            />
-                            <div
-                              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI iqksqQ"
-                            >
-                              <div
-                                class="sc-gKclnd exdBHI sc-iCfMLu iBCaVk"
-                              >
-                                Views
-                              </div>
-                              <svg
-                                aria-hidden="true"
-                                class="svg-inline--fa fa-chevron-down fa-w-14 "
-                                data-icon="chevron-down"
-                                data-prefix="fas"
-                                focusable="false"
-                                role="img"
-                                viewBox="0 0 448 512"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                            </div>
                           </div>
-                        </button>
-                      </div>
+                        </div>
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
               <div
-                class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-lgarKF dljPk esopbm"
+                class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-bUhFKy dljPk wAVbk"
               />
             </div>
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu kkMeyg sc-fbyfCU kDDgIn"
+              class="sc-gKclnd exdBHI sc-iCfMLu kkMeyg sc-cZMNgc gJCjeg"
             >
               <div
                 class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI kZhRrI"
@@ -161,16 +157,16 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
             </div>
           </div>
           <div
-            class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-iWVNaa dljPk YIrmE"
+            class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-gslxeA dljPk jLImRG"
           >
             <div
               class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
             >
               <div
-                class="sc-eWfVMQ gmreIg"
+                class="sc-fmciRz gXrEcX"
               >
                 <div
-                  class="sc-kTLmzF gNkruy sc-bUbRBg hEZFOe"
+                  class="sc-eXlEPa fOrGqF sc-kmQMED frYren"
                 >
                   <div
                     data-display="table-head"
@@ -182,7 +178,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                         data-display="table-cell"
                       >
                         <button
-                          class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
+                          class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
                           data-field="title"
                           type="button"
                         >
@@ -210,7 +206,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                         data-display="table-cell"
                       >
                         <button
-                          class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
+                          class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
                           data-field="description"
                           type="button"
                         >
@@ -238,7 +234,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                         data-display="table-cell"
                       >
                         <button
-                          class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
+                          class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
                           data-field="public_key"
                           type="button"
                         >
@@ -266,7 +262,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                         data-display="table-cell"
                       >
                         <button
-                          class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-dwsnSq hZFOwY"
+                          class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
                           data-field="fingerprint"
                           type="button"
                         >
@@ -606,7 +602,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
               </div>
             </div>
             <div
-              class="sc-jKTccl dGufWr"
+              class="sc-avest bszoHz"
             >
               <div
                 class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-jOxtWs iRYYIV sc-bTfYFJ isjOxD"
@@ -623,7 +619,7 @@ exports[`Storyshots Extra/AutoUICollection Default 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="svg-inline--fa fa-cog fa-w-16 sc-jtXEFf jMRJqw"
+                        class="svg-inline--fa fa-cog fa-w-16 sc-iqVWFU nxMsN"
                         data-icon="cog"
                         data-prefix="fas"
                         focusable="false"

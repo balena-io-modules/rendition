@@ -3,13 +3,13 @@
 exports[`Storyshots Core/Spinner Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu dqOFRa sc-hGPBjI dIoSYo sc-hjGZqJ iGsnMG"
+      class="sc-gKclnd exdBHI sc-iCfMLu dqOFRa sc-hGPBjI dIoSYo sc-jlRLRk kMMBEL"
     >
       <div
-        class="sc-jlRLRk fkKuWz"
+        class="sc-jWUzzU jYfav"
       />
     </div>
   </div>
@@ -19,13 +19,13 @@ exports[`Storyshots Core/Spinner Default 1`] = `
 exports[`Storyshots Core/Spinner Emphasized 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu dqOFRa sc-hGPBjI jrnTxU sc-hjGZqJ iGsnMG"
+      class="sc-gKclnd exdBHI sc-iCfMLu dqOFRa sc-hGPBjI jrnTxU sc-jlRLRk kMMBEL"
     >
       <div
-        class="sc-jlRLRk fbeEUJ"
+        class="sc-jWUzzU eyzOyh"
       />
     </div>
   </div>
@@ -35,19 +35,19 @@ exports[`Storyshots Core/Spinner Emphasized 1`] = `
 exports[`Storyshots Core/Spinner With Children 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <div
-      class="sc-dUbtfd kuvLYf sc-hjGZqJ iGsnMG"
+      class="sc-eFegNN bbTGmj sc-jlRLRk kMMBEL"
     >
       <div
-        class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-htJRVC duIhFM yMIng"
+        class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-fmBCVi duIhFM iUWTNY"
       >
         <div
           class="sc-gKclnd exdBHI sc-iCfMLu dqOFRa sc-hGPBjI dIoSYo"
         >
           <div
-            class="sc-jlRLRk fkKuWz"
+            class="sc-jWUzzU jYfav"
           />
           <div
             class="sc-fKVqWL hOcWtv sc-bBHxTw fbMhcE"
@@ -57,7 +57,7 @@ exports[`Storyshots Core/Spinner With Children 1`] = `
         </div>
       </div>
       <div
-        class="sc-cbTzjv jwWtfF"
+        class="sc-lkgTHX bhDRMC"
       >
         <div
           class="sc-gKclnd exdBHI sc-iCfMLu eWtVmG"
@@ -74,13 +74,13 @@ exports[`Storyshots Core/Spinner With Children 1`] = `
 exports[`Storyshots Core/Spinner With Component Label 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu dqOFRa sc-hGPBjI dIoSYo sc-hjGZqJ iGsnMG"
+      class="sc-gKclnd exdBHI sc-iCfMLu dqOFRa sc-hGPBjI dIoSYo sc-jlRLRk kMMBEL"
     >
       <div
-        class="sc-jlRLRk fkKuWz"
+        class="sc-jWUzzU jYfav"
       />
       <div
         class="sc-fKVqWL hOcWtv sc-bBHxTw fbMhcE"
@@ -106,13 +106,13 @@ exports[`Storyshots Core/Spinner With Component Label 1`] = `
 exports[`Storyshots Core/Spinner With Label 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu dqOFRa sc-hGPBjI dIoSYo sc-hjGZqJ iGsnMG"
+      class="sc-gKclnd exdBHI sc-iCfMLu dqOFRa sc-hGPBjI dIoSYo sc-jlRLRk kMMBEL"
     >
       <div
-        class="sc-jlRLRk fkKuWz"
+        class="sc-jWUzzU jYfav"
       />
       <div
         class="sc-fKVqWL hOcWtv sc-bBHxTw fbMhcE"

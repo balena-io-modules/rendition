@@ -3,7 +3,7 @@
 exports[`Storyshots Core/Button Active 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <button
       class="StyledButton-sc-323bzc-0 eFzidw sc-bqiRlB sc-ksdxgE edofBN dJfWty sc-dJjYzT cGuTUx"
@@ -18,7 +18,7 @@ exports[`Storyshots Core/Button Active 1`] = `
 exports[`Storyshots Core/Button Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <button
       class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT cGuTUx"
@@ -33,7 +33,7 @@ exports[`Storyshots Core/Button Default 1`] = `
 exports[`Storyshots Core/Button Disabled 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <button
       class="StyledButton-sc-323bzc-0 djIyDn sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT cGuTUx"
@@ -49,7 +49,7 @@ exports[`Storyshots Core/Button Disabled 1`] = `
 exports[`Storyshots Core/Button Icon Only 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <button
       class="StyledButton-sc-323bzc-0 hclgal sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx"
@@ -78,7 +78,7 @@ exports[`Storyshots Core/Button Icon Only 1`] = `
 exports[`Storyshots Core/Button Link 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <a
       class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT cGuTUx"
@@ -93,7 +93,7 @@ exports[`Storyshots Core/Button Link 1`] = `
 exports[`Storyshots Core/Button Outlined 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <button
       class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT cGuTUx"
@@ -108,7 +108,7 @@ exports[`Storyshots Core/Button Outlined 1`] = `
 exports[`Storyshots Core/Button Plain 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <button
       class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx"
@@ -123,7 +123,7 @@ exports[`Storyshots Core/Button Plain 1`] = `
 exports[`Storyshots Core/Button Primary 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <button
       class="StyledButton-sc-323bzc-0 cLGAaT sc-bqiRlB sc-ksdxgE edofBN gWXKEC sc-dJjYzT cGuTUx"
@@ -138,7 +138,7 @@ exports[`Storyshots Core/Button Primary 1`] = `
 exports[`Storyshots Core/Button Underlined 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <button
       class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt sc-ieecCq edofBN hOYLYz feeXzs sc-dJjYzT cGuTUx"
@@ -153,7 +153,7 @@ exports[`Storyshots Core/Button Underlined 1`] = `
 exports[`Storyshots Core/Button With Confirmation 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <button
       class="StyledButton-sc-323bzc-0 ehgFzb sc-bqiRlB sc-ksdxgE edofBN eMbKsS sc-dJjYzT cGuTUx"
@@ -168,7 +168,7 @@ exports[`Storyshots Core/Button With Confirmation 1`] = `
 exports[`Storyshots Core/Button With Icon 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fmBCVi dwxdYI"
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <button
       class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx"
