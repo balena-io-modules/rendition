@@ -1,4 +1,14 @@
 - commits:
+    - subject: fix broken badges
+      hash: a330957f270c287312259017e4f8b7460a3b9a7c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Martin Rauscher
+  version: 23.1.1
+  date: 2021-12-02T13:59:53.695Z
+- commits:
     - subject: Improve DropDownButton component
       hash: 8b15393ffe21d2e3661beddd21e7b3df72ffaaef
       body: ''
