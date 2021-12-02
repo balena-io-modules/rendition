@@ -1,7 +1,7 @@
 # Rendition
 
-[![npm version](https://badge.fury.io/js/rendition.svg)](http://badge.fury.io/js/rendition)
-[![Dependency Status](https://img.shields.io/david/balena-io-modules/rendition.svg)](https://david-dm.org/balena-io-modules/rendition)
+[![npm version](https://img.shields.io/npm/v/rendition)](https://img.shields.io/npm/v/rendition)
+[![Dependency Status](https://img.shields.io/librariesio/release/npm/rendition)](https://img.shields.io/librariesio/release/npm/rendition)
 [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 
 A library of UI components, built using [React][react], [styled-components][styled-components] and [styled-system][styled-system].
