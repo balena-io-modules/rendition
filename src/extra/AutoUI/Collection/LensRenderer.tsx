@@ -128,6 +128,8 @@ interface LensRendererProps<T> {
 	changeSelected: (selected: T[]) => void;
 	priorities?: Priorities<T>;
 	formats?: Format[];
+	page?: number;
+	onPageChange?: (page: number) => void;
 }
 
 export const LensRenderer = <T extends AutoUIBaseResource<T>>({
@@ -140,6 +142,8 @@ export const LensRenderer = <T extends AutoUIBaseResource<T>>({
 	changeSelected,
 	priorities,
 	formats,
+	page,
+	onPageChange,
 }: LensRendererProps<T>) => {
 	const history = useHistory();
 	const properties = React.useMemo(
@@ -199,6 +203,8 @@ export const LensRenderer = <T extends AutoUIBaseResource<T>>({
 			data={data}
 			autouiContext={autouiContext}
 			onEntityClick={onEntityClick}
+			page={page}
+			onPageChange={onPageChange}
 		/>
 	);
 };

@@ -172,17 +172,15 @@ export class TableBase<T> extends React.Component<
 
 		this.state = {
 			sort: sortState,
-			page: 0,
+			page: props.page ?? 0,
 			...this.getSelectedRows(props.checkedItems),
 		};
 	}
 
 	public componentDidUpdate(prevProps: TableBaseProps<T>) {
-		const { sort, checkedItems, data, itemsPerPage } = this.props;
+		const { sort, checkedItems, data, itemsPerPage, page } = this.props;
 		if (sort && !isEqual(prevProps.sort, sort)) {
-			this.setState({
-				sort,
-			});
+			this.setState({ sort });
 		}
 
 		if (checkedItems && prevProps.checkedItems !== checkedItems) {
@@ -190,6 +188,9 @@ export class TableBase<T> extends React.Component<
 		}
 
 		const totalItems = data?.length ?? 0;
+		if (!isEqual(prevProps.page, page) && page !== undefined) {
+			this.setState({ page });
+		}
 		if (
 			this.state.page !== 0 &&
 			totalItems <= this.state.page * (itemsPerPage ?? 50)
@@ -614,6 +615,8 @@ export interface TableBaseProps<T> {
 	onRowClick?: (row: T, event: React.MouseEvent<HTMLAnchorElement>) => void;
 	/** A function that is called when a column is sorted */
 	onSort?: (sort: TableSortOptions<T>) => void;
+	/** The current page */
+	page?: number;
 	/** A function that is called when the page is incremented, decremented and reset */
 	onPageChange?: (page: number) => void;
 	/** sort options to be used both as a default sort, and on subsequent renders if the passed sort changes */
