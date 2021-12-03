@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix dropdowns being disabled and showing no options
+      hash: 266f9130c7554f4cd4e212be11e57461360d98c3
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 23.1.4
+  date: 2021-12-03T20:16:31.264Z
+- commits:
     - subject: 'patch: Update dependency date-fns to ^2.27.0'
       hash: 50a9fda80a6c48c6868f88080f12134db753fef6
       body: |
