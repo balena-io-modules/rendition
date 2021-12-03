@@ -3604,6 +3604,7 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
           </div>
           <div
             class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-jOxtWs iRYYIV sc-bTfYFJ jQBzNp"
+            disabled=""
           >
             <button
               class="StyledButton-sc-323bzc-0 eBLkED sc-bqiRlB sc-hBUSln edofBN dlhkLz sc-dJjYzT cGuTUx sc-eLwHnm kxmuUM"

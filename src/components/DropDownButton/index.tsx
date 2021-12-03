@@ -1,7 +1,6 @@
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons/faChevronDown';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons/faChevronUp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import flatten from 'lodash/flatten';
 import * as React from 'react';
 import styled from 'styled-components';
 import asRendition from '../../asRendition';
@@ -210,8 +209,6 @@ class BaseDropDownButton extends React.Component<
 			className,
 			onClick,
 			items,
-			disabled,
-			tooltip,
 			...props
 		} = this.props;
 
@@ -232,12 +229,6 @@ class BaseDropDownButton extends React.Component<
 						handler={this.toggle}
 						open={this.state.open}
 						items={items}
-						tooltip={
-							tooltip ?? flatten(items).length === 0
-								? 'No options available'
-								: undefined
-						}
-						disabled={disabled ?? flatten(items).length === 0}
 					/>
 				) : (
 					<span>
@@ -250,12 +241,7 @@ class BaseDropDownButton extends React.Component<
 							handler={this.toggle}
 							open={this.state.open}
 							items={items}
-							tooltip={
-								tooltip ?? flatten(items).length === 0
-									? 'No options available'
-									: undefined
-							}
-							disabled={disabled ?? flatten(items).length === 0}
+							// TODO: when children handling is removed, add tooltip and disabled for if items is empty
 						/>
 					</span>
 				)}
