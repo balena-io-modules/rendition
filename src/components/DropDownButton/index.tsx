@@ -250,6 +250,7 @@ class BaseDropDownButton extends React.Component<
 					<MenuBase
 						dropUp={dropUp}
 						alignRight={alignRight}
+						onClick={() => (!items ? this.toggle() : undefined)}
 						maxHeight={px(this.props.listMaxHeight ?? 300)}
 					>
 						{items
@@ -291,13 +292,7 @@ class BaseDropDownButton extends React.Component<
 										return child;
 									}
 									return (
-										<Item
-											px={3}
-											py={1}
-											onClick={() => null}
-											hasActionFn={false}
-											key={i}
-										>
+										<Item px={3} py={1} hasActionFn={false} key={i}>
 											{child}
 										</Item>
 									);
