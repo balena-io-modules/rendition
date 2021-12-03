@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix search filter breaking
+      hash: 5e0c13770a4d5c28b87657167b4b7e00c6eb5917
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 23.1.2
+  date: 2021-12-03T18:16:32.706Z
+- commits:
     - subject: fix broken badges
       hash: a330957f270c287312259017e4f8b7460a3b9a7c
       body: ''
