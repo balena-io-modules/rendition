@@ -331,8 +331,12 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 
 		const filteredFittingSearchTerms = filtered.filter((entity) => {
 			const { searchTerms } = filteredById[entity.id][0];
+
 			return queryTerms.every((term) =>
-				searchTerms.some((field) => field.includes(term)),
+				searchTerms.some(
+					(field) =>
+						typeof field !== 'function' && field.toString().includes(term),
+				),
 			);
 		});
 
@@ -362,7 +366,7 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 							}}
 						>
 							<Flex flexDirection="row">
-								{actions && actions.length > 0 && (
+								{actions && actions.length > 0 && actions[0].type !== 'create' && (
 									<Flex
 										flexDirection="column"
 										ml={1}
@@ -389,7 +393,13 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 								<Flex
 									flexDirection="column"
 									alignItems="center"
-									ml={!actions || actions.length === 0 ? 1 : undefined}
+									ml={
+										!actions ||
+										actions.length === 0 ||
+										(actions.length === 1 && actions[0].type === 'create')
+											? 1
+											: undefined
+									}
 								>
 									<Txt>{entity[model.priorities?.primary[0] ?? 'id']}</Txt>
 								</Flex>
