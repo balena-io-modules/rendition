@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency date-fns to ^2.27.0'
+      hash: 50a9fda80a6c48c6868f88080f12134db753fef6
+      body: |
+        Update date-fns from 2.24.0 to 2.27.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 23.1.3
+  date: 2021-12-03T18:37:58.998Z
+- commits:
     - subject: Fix search filter breaking
       hash: 5e0c13770a4d5c28b87657167b4b7e00c6eb5917
       body: ''
