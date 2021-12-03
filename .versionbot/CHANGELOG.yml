@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix dropdowns with no items not hiding onclick
+      hash: 8bd34eed6ca15c97096451d923393d1cd3659505
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 23.1.5
+  date: 2021-12-03T21:44:13.756Z
+- commits:
     - subject: Fix dropdowns being disabled and showing no options
       hash: 266f9130c7554f4cd4e212be11e57461360d98c3
       body: ''
