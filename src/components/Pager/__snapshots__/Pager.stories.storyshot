@@ -9,18 +9,26 @@ exports[`Storyshots Core/Pager Default 1`] = `
       class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI dLlxyS"
     >
       <div
-        class="sc-fKVqWL hOcWtv sc-bBHxTw fYiSNr"
+        class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI kBwkZQ"
       >
-        <strong>
-          51
-           - 
-          100
-        </strong>
-         
-        of 
-        <strong>
-          436
-        </strong>
+        <div
+          class="sc-gKclnd exdBHI sc-iCfMLu iBCaVk sc-hGPBjI dGhHw"
+        >
+          <div
+            class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh"
+          >
+            <strong>
+              51
+               - 
+              100
+            </strong>
+             
+            of 
+            <strong>
+              436
+            </strong>
+          </div>
+        </div>
       </div>
       <div
         class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI dljPk"

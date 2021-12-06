@@ -4021,18 +4021,26 @@ exports[`Storyshots Core/Table With Pager 1`] = `
           class="sc-gKclnd exdBHI sc-iCfMLu rflXv sc-hGPBjI dLlxyS"
         >
           <div
-            class="sc-fKVqWL hOcWtv sc-bBHxTw fYiSNr"
+            class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI kBwkZQ"
           >
-            <strong>
-              1
-               - 
-              3
-            </strong>
-             
-            of 
-            <strong>
-              11
-            </strong>
+            <div
+              class="sc-gKclnd exdBHI sc-iCfMLu iBCaVk sc-hGPBjI dGhHw"
+            >
+              <div
+                class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh"
+              >
+                <strong>
+                  1
+                   - 
+                  3
+                </strong>
+                 
+                of 
+                <strong>
+                  11
+                </strong>
+              </div>
+            </div>
           </div>
           <div
             class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI dljPk"
@@ -4310,18 +4318,26 @@ exports[`Storyshots Core/Table With Pager 1`] = `
           class="sc-gKclnd exdBHI sc-iCfMLu gALdNb sc-hGPBjI dLlxyS"
         >
           <div
-            class="sc-fKVqWL hOcWtv sc-bBHxTw fYiSNr"
+            class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI kBwkZQ"
           >
-            <strong>
-              1
-               - 
-              3
-            </strong>
-             
-            of 
-            <strong>
-              11
-            </strong>
+            <div
+              class="sc-gKclnd exdBHI sc-iCfMLu iBCaVk sc-hGPBjI dGhHw"
+            >
+              <div
+                class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh"
+              >
+                <strong>
+                  1
+                   - 
+                  3
+                </strong>
+                 
+                of 
+                <strong>
+                  11
+                </strong>
+              </div>
+            </div>
           </div>
           <div
             class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI dljPk"

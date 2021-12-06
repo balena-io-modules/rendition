@@ -13,6 +13,7 @@ const BasePager = ({
 	page,
 	nextPage,
 	prevPage,
+	selectedCount,
 	...props
 }: PagerProps) => {
 	const lowerBound = page * itemsPerPage;
@@ -20,12 +21,23 @@ const BasePager = ({
 
 	return (
 		<Flex justifyContent="flex-end" alignItems="center" {...props}>
-			<Txt mr={2}>
-				<strong>
-					{lowerBound + 1} - {upperBound}
-				</strong>{' '}
-				of <strong>{totalItems}</strong>
-			</Txt>
+			<Flex flexDirection="column">
+				<Flex flexDirection="row" mr={2}>
+					<Txt>
+						<strong>
+							{lowerBound + 1} - {upperBound}
+						</strong>{' '}
+						of <strong>{totalItems}</strong>
+					</Txt>
+				</Flex>
+				{!!selectedCount && (
+					<Flex flexDirection="row">
+						<Txt>
+							<strong>{selectedCount}</strong> selected
+						</Txt>
+					</Flex>
+				)}
+			</Flex>
 
 			<Flex>
 				<ButtonGroup>
@@ -65,6 +77,8 @@ export interface PagerProps extends FlexProps {
 	nextPage: () => void;
 	/** Callback invoked when the "previous page" button is clicked */
 	prevPage: () => void;
+	/** Number of items selected */
+	selectedCount?: number;
 }
 
 /**

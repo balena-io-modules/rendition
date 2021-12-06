@@ -484,6 +484,7 @@ export class TableBase<T> extends React.Component<
 							nextPage={this.incrementPage}
 							prevPage={this.decrementPage}
 							mb={2}
+							selectedCount={this.state.checkedItems.length}
 						/>
 					)}
 
@@ -588,6 +589,7 @@ export class TableBase<T> extends React.Component<
 							nextPage={this.incrementPage}
 							prevPage={this.decrementPage}
 							mt={2}
+							selectedCount={this.state.checkedItems.length}
 						/>
 					)}
 			</>

@@ -519,6 +519,7 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 									page={page}
 									nextPage={() => setPage(page + 1)}
 									prevPage={() => setPage(page - 1)}
+									selectedCount={selected.length}
 								/>
 							)}
 						</HeaderGrid>
