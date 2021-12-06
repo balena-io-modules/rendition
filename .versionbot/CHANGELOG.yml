@@ -1,4 +1,25 @@
 - commits:
+    - subject: Add selection count to Pager
+      hash: 2f6990697105043f6423a55ed338850317292397
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+    - subject: Bring pager to AutoUICollection header
+      hash: 3e8c08a949b808c767c32a38318162c9cc64ff03
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 23.2.0
+  date: 2021-12-06T20:11:38.201Z
+- commits:
     - subject: Fix dropdowns with no items not hiding onclick
       hash: 8bd34eed6ca15c97096451d923393d1cd3659505
       body: ''
