@@ -127,10 +127,9 @@ export {
 import * as SchemaSieve from './components/Filters/SchemaSieve';
 export { SchemaSieve };
 
-export { AutoUI, AutoUIProps } from './extra/AutoUI';
 export {
-	AutoUICollection,
-	AutoUICollectionProps,
+	AutoUI,
+	AutoUIProps,
 	autoUIRunTransformers,
 	autoUIDefaultPermissions,
 	autoUIGetModelForCollection,
@@ -141,8 +140,7 @@ export {
 	AutoUIModel,
 	autoUIJsonSchemaPick,
 	autoUIGetDisabledReason,
-} from './extra/AutoUI/Collection';
-export { AutoUIEntity, AutoUIEntityProps } from './extra/AutoUI/Entity';
+} from './extra/AutoUI';
 export * from './extra/AutoUI/Lenses/types';
 
 export {

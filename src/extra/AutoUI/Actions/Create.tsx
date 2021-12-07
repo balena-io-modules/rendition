@@ -4,13 +4,13 @@ import {
 	AutoUIModel,
 	AutoUIBaseResource,
 	autoUIJsonSchemaPick,
-} from '../../schemaOps';
+} from '../schemaOps';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ActionData } from '..';
-import { getCreateDisabledReason } from '../../utils';
-import { Button } from '../../../../components/Button';
+import { ActionData } from '../schemaOps';
+import { getCreateDisabledReason } from '../utils';
+import { Button } from '../../../components/Button';
 import { faMagic } from '@fortawesome/free-solid-svg-icons/faMagic';
-import { useTranslation } from '../../../../hooks/useTranslation';
+import { useTranslation } from '../../../hooks/useTranslation';
 
 interface CreateProps<T extends AutoUIBaseResource<T>> {
 	model: AutoUIModel<T>;

@@ -7,12 +7,12 @@ import { Txt } from '../../../../components/Txt';
 import { Heading } from '../../../../components/Heading';
 import { Divider } from '../../../../components/Divider';
 import { AutoUIContext, AutoUIModel } from '../../schemaOps';
-import { Update } from '../../Collection/Actions/Update';
-import { ActionData } from '../../Collection';
+import { Update } from '../../Actions/Update';
+import { ActionData } from '../../schemaOps';
 import styled from 'styled-components';
 
 interface EntityProps<T> {
-	entity: T;
+	data: T;
 	properties: Array<any & { key: string }>;
 	autouiContext: AutoUIContext<T>;
 	model: AutoUIModel<T>;
@@ -33,7 +33,7 @@ export const entity: LensTemplate = {
 		label: 'Entity',
 		format: 'summary',
 		renderer: ({
-			entity,
+			data,
 			properties,
 			hasUpdateActions,
 			model,
@@ -60,20 +60,20 @@ export const entity: LensTemplate = {
 
 			return (
 				<Card>
-					{entity && (
+					{data && (
 						<>
 							<Flex flexDirection="row" justifyContent="space-between">
 								<Flex flexDirection="column">
 									<Heading.h2>
 										{properties.length > 0 &&
-											properties[0].render(entity[properties[0].key], entity)}
+											properties[0].render(data[properties[0].key], data)}
 									</Heading.h2>
 								</Flex>
 								<Flex flexDirection="column" alignItems="flex-end">
 									{hasUpdateActions && (
 										<Update
 											model={model}
-											selected={[entity]}
+											selected={[data]}
 											autouiContext={autouiContext}
 											hasOngoingAction={false}
 											onActionTriggered={onActionTriggered}
@@ -98,9 +98,7 @@ export const entity: LensTemplate = {
 												flex={['100%', '0 0 30%']}
 											>
 												<Label>{property.title}</Label>
-												<Txt>
-													{property.render(entity[property.key], entity)}
-												</Txt>
+												<Txt>{property.render(data[property.key], data)}</Txt>
 											</Flex>
 										),
 								)}

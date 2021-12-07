@@ -69,6 +69,12 @@ export interface AutoUIContext<T> {
 	};
 }
 
+export interface ActionData<T> {
+	action: AutoUIAction<T>;
+	schema: JSONSchema;
+	affectedEntries?: T[];
+}
+
 // The implementation lacks handling of nested schemas and some edge cases, but is enough for now.
 export const autoUIJsonSchemaPick = <T>(
 	schema: JSONSchema,

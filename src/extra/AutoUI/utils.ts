@@ -1,5 +1,10 @@
-import { AutoUIBaseResource, Permissions } from './schemaOps';
+import { AutoUIBaseResource, Permissions, Priorities } from './schemaOps';
 import { TFunction } from '../../hooks/useTranslation';
+import { TableSortFunction } from '../../components/Table/TableRow';
+import { JSONSchema7 as JSONSchema } from 'json-schema';
+import { JsonTypes } from '../../components/Renderer/types';
+import { diff } from '../../utils';
+import castArray from 'lodash/castArray';
 
 export const getTagsDisabledReason = <T extends AutoUIBaseResource<T>>(
 	selected: T[],
@@ -70,4 +75,40 @@ export const autoUIGetDisabledReason = <T extends AutoUIBaseResource<T>>(
 			resource: 'item',
 		});
 	}
+};
+
+export const getSortingFunction = <T extends any>(
+	schemaKey: keyof T,
+	schemaValue: JSONSchema,
+): TableSortFunction<T> => {
+	const types = castArray(schemaValue.type);
+	if (types.includes(JsonTypes.string)) {
+		return (a: T, b: T) => {
+			if (typeof a === 'string' && typeof b === 'string') {
+				return a.toLowerCase().localeCompare(b.toLowerCase());
+			}
+			if (
+				(typeof a === 'number' && typeof b === 'number') ||
+				(typeof a === 'boolean' && typeof b === 'boolean')
+			) {
+				return diff(a, b);
+			}
+			return 0;
+		};
+	}
+	return (a: T, b: T) =>
+		// @ts-expect-error
+		diff(a[schemaKey], b[schemaKey]);
+};
+
+export const getSelected = <T, K extends keyof T>(
+	key: K,
+	priorities?: Priorities<T>,
+) => {
+	if (!priorities) {
+		return true;
+	}
+	return (
+		priorities?.primary.includes(key) || priorities?.secondary.includes(key)
+	);
 };

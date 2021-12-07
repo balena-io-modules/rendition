@@ -6,15 +6,15 @@ import {
 	AutoUIModel,
 	AutoUIBaseResource,
 	autoUIJsonSchemaPick,
-} from '../../schemaOps';
-import { ActionData } from '..';
-import { autoUIGetDisabledReason } from '../../utils';
-import { DropDownButton } from '../../../../components/DropDownButton';
+} from '../schemaOps';
+import { ActionData } from '../schemaOps';
+import { autoUIGetDisabledReason } from '../utils';
+import { DropDownButton } from '../../../components/DropDownButton';
 import { faEllipsisH } from '@fortawesome/free-solid-svg-icons/faEllipsisH';
-import { useTranslation } from '../../../../hooks/useTranslation';
+import { useTranslation } from '../../../hooks/useTranslation';
 import groupBy from 'lodash/groupBy';
 import map from 'lodash/map';
-import { Button } from '../../../../components/Button';
+import { Button } from '../../../components/Button';
 
 interface UpdateProps<T extends AutoUIBaseResource<T>> {
 	model: AutoUIModel<T>;

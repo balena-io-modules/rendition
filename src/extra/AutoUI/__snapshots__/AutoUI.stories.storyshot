@@ -8,7 +8,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
     <h5
       class="sc-gWXbKe kMRLBA sc-iAKWXU guhlxZ"
     >
-      The AutoUI component determines whether to use an AutoUICollection or AutoUIEntity based on the value passed into it for its "data" property. Click the button below to change the value passed in for "data".
+      The AutoUI component determines whether the data passed into it is a collection or an entity. Click the button below to change the value passed in for "data".
     </h5>
     <button
       class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT gpZlQJ"
@@ -29,7 +29,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
             class="sc-gKclnd exdBHI sc-iCfMLu jciJBO"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-bUhFKy cAFujn wAVbk"
+              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-BHvUt cAFujn eKguMa"
             >
               <div
                 class="sc-gKclnd kCaRJe sc-iCfMLu jciJBO"
@@ -156,8 +156,12 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                 </div>
               </div>
               <div
-                class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-bUhFKy dljPk wAVbk"
-              />
+                class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-BHvUt dljPk eKguMa"
+              >
+                <div
+                  class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-BHvUt dljPk eKguMa"
+                />
+              </div>
             </div>
             <div
               class="sc-gKclnd exdBHI sc-iCfMLu kkMeyg sc-cZMNgc gJCjeg"
@@ -177,7 +181,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                 class="sc-fmciRz gXrEcX"
               >
                 <div
-                  class="sc-eXlEPa fOrGqF sc-kmQMED frYren"
+                  class="sc-eXlEPa kUkFif sc-kmQMED frYren"
                 >
                   <div
                     data-display="table-head"

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { useTheme } from '../../../hooks/useTheme';
-import { Flex } from '../../../components/Flex';
-import { Txt } from '../../../components/Txt';
+import { useTheme } from '../../hooks/useTheme';
+import { Flex } from '../../components/Flex';
+import { Txt } from '../../components/Txt';
 
 const Left = styled.div`
 	padding-left: 58px;
