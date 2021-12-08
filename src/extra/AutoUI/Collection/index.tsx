@@ -100,8 +100,8 @@ const FocusContent = styled(Box)`
 	overflow-x: auto;
 `;
 
-const FocusItem = styled(Box)`
-	cursor: pointer;
+const FocusItem = styled(Box)<{ hasGetBaseUrl: boolean }>`
+	cursor: ${(props) => (props.hasGetBaseUrl ? 'pointer' : 'default')};
 	&:hover {
 		background: #dde1f0; // This is the background color Select uses for entities on hover. We do not have it in our theme
 	}
@@ -364,32 +364,35 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 									history.push?.(autouiContext.getBaseUrl(entity));
 								}
 							}}
+							hasGetBaseUrl={!!autouiContext.getBaseUrl}
 						>
 							<Flex flexDirection="row">
-								{actions && actions.length > 0 && actions[0].type !== 'create' && (
-									<Flex
-										flexDirection="column"
-										ml={1}
-										mr={3}
-										alignItems="center"
-									>
-										<Checkbox
-											onChange={() => {
-												const isChecked = !!selected.find(
-													(s) => s.id === entity.id,
-												);
-												const checkedItems = !isChecked
-													? selected.concat(entity)
-													: (reject(selected, {
-															id: entity.id,
-													  }) as unknown as Array<typeof entity>);
-												setSelected(checkedItems);
-											}}
-											checked={!!selected.find((s) => s.id === entity.id)}
-											onClick={stopEvent}
-										/>
-									</Flex>
-								)}
+								{actions &&
+									(actions.length > 1 ||
+										(actions.length === 1 && actions[0].type !== 'create')) && (
+										<Flex
+											flexDirection="column"
+											ml={1}
+											mr={3}
+											alignItems="center"
+										>
+											<Checkbox
+												onChange={() => {
+													const isChecked = !!selected.find(
+														(s) => s.id === entity.id,
+													);
+													const checkedItems = !isChecked
+														? selected.concat(entity)
+														: (reject(selected, {
+																id: entity.id,
+														  }) as unknown as Array<typeof entity>);
+													setSelected(checkedItems);
+												}}
+												checked={!!selected.find((s) => s.id === entity.id)}
+												onClick={stopEvent}
+											/>
+										</Flex>
+									)}
 								<Flex
 									flexDirection="column"
 									alignItems="center"
