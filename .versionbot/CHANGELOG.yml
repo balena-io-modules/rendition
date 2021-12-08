@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix checkbox not showing in Focus Search
+      hash: e9526989131588617f25058b7361b0ecd54ad87c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 23.1.6
+  date: 2021-12-08T16:10:48.415Z
+- commits:
     - subject: Fix dropdowns with no items not hiding onclick
       hash: 8bd34eed6ca15c97096451d923393d1cd3659505
       body: ''
