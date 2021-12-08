@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency monaco-editor-webpack-plugin to v6'
+      hash: 0e7e3405ed098576dfb1c7f56d3e82147c5f1e52
+      body: |
+        Update monaco-editor-webpack-plugin from 4.2.0 to 6.0.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 23.1.7
+  date: 2021-12-08T16:35:24.951Z
+- commits:
     - subject: Fix checkbox not showing in Focus Search
       hash: e9526989131588617f25058b7361b0ecd54ad87c
       body: ''
