@@ -361,7 +361,12 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 							onClick={(e) => {
 								e.preventDefault();
 								if (autouiContext.getBaseUrl && history) {
-									history.push?.(autouiContext.getBaseUrl(entity));
+									try {
+										const url = new URL(autouiContext.getBaseUrl(entity));
+										window.open(url.toString(), '_blank');
+									} catch (err) {
+										history.push?.(autouiContext.getBaseUrl(entity));
+									}
 								}
 							}}
 							hasGetBaseUrl={!!autouiContext.getBaseUrl}

@@ -181,7 +181,12 @@ export const LensRenderer = <T extends AutoUIBaseResource<T>>({
 			history
 		) {
 			event.preventDefault();
-			history.push?.(autouiContext.getBaseUrl(row));
+			try {
+				const url = new URL(autouiContext.getBaseUrl(row));
+				window.open(url.toString(), '_blank');
+			} catch (err) {
+				history.push?.(autouiContext.getBaseUrl(row));
+			}
 		}
 	};
 

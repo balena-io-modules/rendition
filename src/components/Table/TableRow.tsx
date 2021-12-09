@@ -91,13 +91,22 @@ export class TableRow<T> extends React.PureComponent<TableRowProps<T>, {}> {
 						typeof column.cellAttributes === 'function'
 							? column.cellAttributes(data, get(data, column.field))
 							: column.cellAttributes || {};
+					let url: URL | null;
+					try {
+						url = new URL(href ?? '');
+					} catch (err) {
+						url = null;
+					}
 					return (
 						<a
 							{...attributes}
-							href={href}
 							data-display="table-cell"
+							href={href}
 							data-key={keyAttribute}
-							onClick={this.props.onRowClick}
+							onClick={(props) => {
+								this.props.onRowClick(props);
+							}}
+							target={url ? '_blank' : undefined}
 							{...cellAttributes}
 							key={column.key || (column.field as string)}
 						>
