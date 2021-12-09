@@ -1,4 +1,16 @@
 - commits:
+    - subject: Basic Header implementation
+      hash: 08904e2b603f7bf4262b28688eee1f54db5a599b
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Amit Solanki <amit@balena.io>
+        signed-off-by: Amit Solanki <amit@balena.io>
+      author: Amit Solanki
+  version: 23.2.0
+  date: 2021-12-09T07:47:08.099Z
+- commits:
     - subject: Fix checkbox not showing in Focus Search
       hash: e9526989131588617f25058b7361b0ecd54ad87c
       body: ''
