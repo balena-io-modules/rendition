@@ -99,6 +99,7 @@ export const ImageForm = ({
 	configurationComponent,
 }: ImageFormProps) => {
 	const { t } = useTranslation();
+	const formElement = React.useRef<HTMLFormElement | null>(null);
 	const [downloadSize, setDownloadSize] = React.useState<string | null>(null);
 	// If the image is deployed to docker, we only offer config
 	// download, so there is no need to show the toggle
@@ -112,6 +113,10 @@ export const ImageForm = ({
 		...(modalActions ?? []),
 		{
 			plain: true,
+			onClick: () => {
+				formElement?.current?.submit();
+			},
+			icon: <FontAwesomeIcon icon={faDownload} />,
 			disabled: hasDockerImageDownload,
 			tooltip: hasDockerImageDownload
 				? t('warnings.image_deployed_to_docker')
@@ -129,6 +134,7 @@ export const ImageForm = ({
 				}
 				setDownloadConfigOnly(true);
 			},
+			icon: <FontAwesomeIcon icon={faDownload} />,
 			label: t('actions.download_configuration_file_only'),
 		},
 	];
@@ -186,14 +192,23 @@ export const ImageForm = ({
 		() =>
 			!!actions?.length
 				? [
-						actions.map(({ label }) => ({
-							content: <Txt bold={selectedActionLabel === label}>{label}</Txt>,
-							onClick: () => setSelectedActionLabel(label),
+						actions.map(({ label, tooltip, onClick }) => ({
+							content: (
+								<Txt bold={selectedActionLabel === label} tooltip={tooltip}>
+									{label}
+								</Txt>
+							),
+							onClick: (event: React.MouseEvent) => {
+								setSelectedActionLabel(label);
+								onClick?.(event, downloadOptions);
+							},
 						})),
 				  ]
 				: [],
-		[actions],
+		[actions, downloadOptions],
 	);
+
+	const action = actions.find((act) => act.label === selectedActionLabel);
 
 	return (
 		<form
@@ -202,6 +217,7 @@ export const ImageForm = ({
 			method="post"
 			autoComplete="off"
 			style={{ display: 'flex', flexDirection: 'column', height: '100%' }}
+			ref={formElement}
 		>
 			<input type="hidden" name="appId" value={appId} />
 			{releaseId && <input type="hidden" name="releaseId" value={releaseId} />}
@@ -268,19 +284,14 @@ export const ImageForm = ({
 						tooltip={
 							isDownloadDisabled(model, rawVersion)
 								? t('warnings.fill_wifi_credentials')
-								: ''
+								: action?.tooltip
 						}
 						onClick={(event: React.MouseEvent) => {
-							const action = actions.find(
-								(act) => act.label === selectedActionLabel,
-							);
 							if (action?.onClick) {
-								event.preventDefault();
-								event.stopPropagation();
 								action.onClick(event, downloadOptions);
 							}
 						}}
-						icon={<FontAwesomeIcon icon={faDownload} />}
+						icon={action?.icon}
 						label={selectedActionLabel}
 						alignRight
 						dropUp

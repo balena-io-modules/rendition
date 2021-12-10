@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import asRendition from '../../asRendition';
 import { RenditionSystemProps } from '../../common-types';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
-import { px } from '../../utils';
+import { px, stopEvent } from '../../utils';
 import { Box } from '../Box';
 import { Button, ButtonProps } from '../Button';
 import { Divider } from '../Divider';
@@ -211,7 +211,6 @@ class BaseDropDownButton extends React.Component<
 			items,
 			...props
 		} = this.props;
-
 		return (
 			<Wrapper
 				className={className}
@@ -238,6 +237,7 @@ class BaseDropDownButton extends React.Component<
 						<Toggle
 							{...props}
 							outline={outline}
+							onMouseEnter={stopEvent}
 							handler={this.toggle}
 							open={this.state.open}
 							items={items}
