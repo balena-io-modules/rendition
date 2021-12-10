@@ -8,17 +8,17 @@ import { Textarea, TextareaProps } from '../Textarea';
 import { getJsonDescription } from './utils';
 
 export const operators = {
-	is: {
-		getLabel: (_s: JSONSchema) => 'is',
-	},
 	contains: {
 		getLabel: (_s: JSONSchema) => 'contains',
 	},
-	full_text_search: {
-		getLabel: (_s: JSONSchema) => 'full text search',
-	},
 	not_contains: {
 		getLabel: (_s: JSONSchema) => 'does not contain',
+	},
+	is: {
+		getLabel: (_s: JSONSchema) => 'is',
+	},
+	full_text_search: {
+		getLabel: (_s: JSONSchema) => 'full text search',
 	},
 	matches_re: {
 		getLabel: (_s: JSONSchema) => 'matches RegEx',
