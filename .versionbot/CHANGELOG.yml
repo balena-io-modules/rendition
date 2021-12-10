@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix download image modal actions tooltips and clicks
+      hash: b1ce3f128e032e38c6a8b143384210f0417accb3
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 23.1.7
+  date: 2021-12-10T11:45:00.112Z
+- commits:
     - subject: Fix checkbox not showing in Focus Search
       hash: e9526989131588617f25058b7361b0ecd54ad87c
       body: ''
