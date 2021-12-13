@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'Filters: Default to contains instead of is when filtering'
+      hash: 6d1a4fc33d37bafd8b4d14c5509ecaeb55ad9660
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 23.1.8
+  date: 2021-12-13T12:51:33.380Z
+- commits:
     - subject: Fix download image modal actions tooltips and clicks
       hash: b1ce3f128e032e38c6a8b143384210f0417accb3
       body: ''
