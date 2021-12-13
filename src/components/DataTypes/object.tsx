@@ -22,6 +22,12 @@ const getValueLabel = (schema: JSONSchema) => {
 };
 
 export const operators = {
+	key_contains: {
+		getLabel: (s: JSONSchema) => `${getKeyLabel(s)} contains`,
+	},
+	key_not_contains: {
+		getLabel: (s: JSONSchema) => `${getKeyLabel(s)} does not contain`,
+	},
 	is: {
 		getLabel: (_s: JSONSchema) => 'is',
 	},
@@ -30,12 +36,6 @@ export const operators = {
 	},
 	key_is: {
 		getLabel: (s: JSONSchema) => `${getKeyLabel(s)} is`,
-	},
-	key_contains: {
-		getLabel: (s: JSONSchema) => `${getKeyLabel(s)} contains`,
-	},
-	key_not_contains: {
-		getLabel: (s: JSONSchema) => `${getKeyLabel(s)} does not contain`,
 	},
 	key_matches_re: {
 		getLabel: (s: JSONSchema) => `${getKeyLabel(s)} matches RegEx`,
