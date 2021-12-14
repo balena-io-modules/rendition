@@ -1,4 +1,16 @@
 - commits:
+    - subject: Make getBaseUrl accept full URLs as strings
+      hash: 4dc274438d145af974d4344a964f30a3239c66fd
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 23.2.0
+  date: 2021-12-13T17:26:15.892Z
+- commits:
     - subject: 'Filters: Default to contains instead of is when filtering'
       hash: 6d1a4fc33d37bafd8b4d14c5509ecaeb55ad9660
       body: ''
