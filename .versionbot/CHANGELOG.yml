@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix download image submit button
+      hash: 3425405398940cce724244f796b32c5b27e1845e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 23.2.1
+  date: 2021-12-14T16:49:34.623Z
+- commits:
     - subject: Make getBaseUrl accept full URLs as strings
       hash: 4dc274438d145af974d4344a964f30a3239c66fd
       body: ''
