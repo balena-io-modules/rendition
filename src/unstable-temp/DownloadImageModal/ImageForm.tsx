@@ -279,7 +279,7 @@ export const ImageForm = ({
 						primary
 						ml="auto"
 						className="e2e-download-image-submit"
-						type={!model.downloadConfigOnly ? 'submit' : 'button'}
+						type={action?.type || 'button'}
 						disabled={isDownloadDisabled(model, rawVersion)}
 						tooltip={
 							isDownloadDisabled(model, rawVersion)
