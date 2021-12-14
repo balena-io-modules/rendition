@@ -16,6 +16,8 @@ interface TableProps<T> {
 		entity: T,
 		event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
 	) => void;
+	page?: number;
+	onPageChange?: (page: number) => void;
 }
 
 export const table: LensTemplate = {
@@ -33,6 +35,8 @@ export const table: LensTemplate = {
 			data,
 			autouiContext,
 			onEntityClick,
+			page,
+			onPageChange,
 		}: TableProps<any>) => (
 			<Table<any>
 				rowKey="id"
@@ -43,6 +47,8 @@ export const table: LensTemplate = {
 				usePager={data && data.length > 5}
 				pagerPosition="bottom"
 				itemsPerPage={50}
+				page={page}
+				onPageChange={onPageChange}
 				getRowHref={autouiContext.getBaseUrl}
 				onRowClick={onEntityClick}
 				columnStateRestorationKey={`${autouiContext.resource}__columns`}

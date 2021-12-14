@@ -1,7 +1,6 @@
 import React from 'react';
 import { JSONSchema7 as JSONSchema } from 'json-schema';
 import isEqual from 'lodash/isEqual';
-import { Tags } from './Tags';
 import { Create } from './Actions/Create';
 import { Filters } from './Filters';
 import { Update } from './Actions/Update';
@@ -41,7 +40,7 @@ import {
 	autoUIAddToSchema,
 } from '../models/helpers';
 import { LensSelection } from '../Lenses/LensSelection';
-import { autoUIGetDisabledReason } from '../utils';
+import { autoUIGetDisabledReason, getTagsDisabledReason } from '../utils';
 import { NoRecordsFoundArrow } from './NoRecordsFoundArrow';
 import { Dictionary } from '../../../common-types';
 import { useTranslation } from '../../../hooks/useTranslation';
@@ -50,6 +49,8 @@ import { useHistory } from '../../../hooks/useHistory';
 import { Checkbox } from '../../../components/Checkbox';
 import reject from 'lodash/reject';
 import { Txt } from '../../../components/Txt';
+import { TagManagementModal } from '../../../components/TagManagementModal';
+import { Pager } from '../../../components/Pager';
 
 // Assumptions that I think we can easily make:
 // We only handle a single-level schema. If a schema is nested, it is handled by the `format` component internally.
@@ -229,6 +230,7 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 	const [actionData, setActionData] = React.useState<
 		ActionData<T> | undefined
 	>();
+	const [page, setPage] = React.useState(0);
 	const defaultLensSlug = getFromLocalStorage(`${model.resource}__view_lens`);
 
 	const lenses = React.useMemo(
@@ -250,6 +252,45 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 	const showFilters = !!(data?.length && data.length > 5);
 	const showActions = !!data?.length;
 
+	const tagsDisabledReason = React.useMemo(
+		() =>
+			getTagsDisabledReason(
+				selected,
+				getFieldForFormat(model.schema, 'tag') as keyof T,
+				t,
+			),
+		[selected],
+	);
+
+	const actionsWithTags = React.useMemo(
+		() =>
+			(showActions &&
+				!!sdk?.tags &&
+				getFieldForFormat(model.schema, 'tag') &&
+				model.priorities?.primary[0]) ??
+			'id'
+				? actions?.concat({
+						title: 'Manage Tags',
+						type: 'update',
+						renderer: ({ onDone }) => (
+							<TagManagementModal<T>
+								items={selected}
+								itemType={model.resource}
+								titleField={model.priorities?.primary[0] ?? ('id' as keyof T)}
+								tagField={getFieldForFormat(model.schema, 'tag') as keyof T}
+								done={(tagSubmitInfo) => {
+									changeTags(tagSubmitInfo);
+									onDone();
+								}}
+								cancel={() => onDone()}
+							/>
+						),
+						isDisabled: () => tagsDisabledReason ?? false,
+				  })
+				: actions,
+		[actions, selected, model, sdk],
+	);
+
 	const autouiContext = React.useMemo(
 		() =>
 			({
@@ -259,11 +300,11 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 				tagField: getFieldForFormat(model.schema, 'tag'),
 				getBaseUrl,
 				onEntityClick,
-				actions,
+				actions: actionsWithTags,
 				customSort,
 				sdk,
 			} as AutoUIContext<T>),
-		[model, actions, sdk, onEntityClick],
+		[model, sdk, onEntityClick, actionsWithTags],
 	);
 
 	const filtered = React.useMemo(
@@ -457,13 +498,6 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 							)}
 						</Box>
 						<HeaderGrid>
-							{showActions && !!sdk?.tags && (
-								<Tags
-									autouiContext={autouiContext}
-									selected={selected}
-									changeTags={changeTags}
-								/>
-							)}
 							{showActions && (
 								<Update
 									model={model}
@@ -484,6 +518,16 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 											lens.slug,
 										);
 									}}
+								/>
+							)}
+							{lens.slug === 'table' && (
+								<Pager
+									totalItems={filtered.length}
+									itemsPerPage={50}
+									page={page}
+									nextPage={() => setPage(page + 1)}
+									prevPage={() => setPage(page - 1)}
+									selectedCount={selected.length}
 								/>
 							)}
 						</HeaderGrid>
@@ -518,6 +562,8 @@ export const AutoUICollection = <T extends AutoUIBaseResource<T>>({
 						selected={selected}
 						filtered={filtered}
 						changeSelected={setSelected}
+						page={page}
+						onPageChange={setPage}
 						formats={formats}
 					/>
 				)}
