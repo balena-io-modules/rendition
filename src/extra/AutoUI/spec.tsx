@@ -2,25 +2,21 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { Provider, Table } from '../..';
 import {
-	AutoUICollectionProps,
 	autoUIRunTransformers,
-	AutoUICollection,
 	autoUIGetModelForCollection,
-} from './Collection';
+	AutoUIProps,
+	AutoUI,
+} from './index';
 import {
 	dataExample,
 	AugmentedSshKey,
 	transformers,
 	model as sshKeyModel,
 } from './models/example';
-const props = {} as AutoUICollectionProps<AugmentedSshKey>;
-const TestCollection = () => <DemoCollection {...props} />;
+const props = {} as AutoUIProps<AugmentedSshKey>;
+const TestAutoUI = () => <Demo {...props} />;
 
-const DemoCollection = ({
-	data,
-	model,
-	...otherProps
-}: AutoUICollectionProps<AugmentedSshKey>) => {
+const Demo = ({ data, model, ...otherProps }: AutoUIProps<AugmentedSshKey>) => {
 	const memoizedData = React.useMemo(
 		() =>
 			autoUIRunTransformers(dataExample, transformers, {
@@ -30,7 +26,7 @@ const DemoCollection = ({
 	) as AugmentedSshKey[];
 
 	return (
-		<AutoUICollection<AugmentedSshKey>
+		<AutoUI<AugmentedSshKey>
 			data={data ?? memoizedData}
 			model={model ?? autoUIGetModelForCollection(sshKeyModel)}
 			actions={[]}
@@ -44,7 +40,7 @@ describe('AutoUI', () => {
 		it('should render the collection with N results', () => {
 			const component = mount(
 				<Provider>
-					<TestCollection />
+					<TestAutoUI />
 				</Provider>,
 			);
 			const table = component.find(Table);

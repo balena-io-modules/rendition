@@ -39,9 +39,9 @@ const DemoAutoUI = ({
 	return (
 		<>
 			<Heading.h5>
-				The AutoUI component determines whether to use an AutoUICollection or
-				AutoUIEntity based on the value passed into it for its "data" property.
-				Click the button below to change the value passed in for "data".
+				The AutoUI component determines whether the data passed into it is a
+				collection or an entity. Click the button below to change the value
+				passed in for "data".
 			</Heading.h5>
 			<Button
 				onClick={() => setDataIsArray(!dataIsArray)}
