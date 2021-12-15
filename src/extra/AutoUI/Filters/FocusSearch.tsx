@@ -64,7 +64,7 @@ export const FocusSearch = <T extends { id: number; [key: string]: any }>({
 		filtered.map((entity) => ({
 			id: entity.id,
 			searchTerms: Object.values(entity).filter(
-				(val) => typeof val === 'number' || val.length > 0,
+				(val) => typeof val === 'number' || val?.length > 0,
 			),
 		})),
 		(entity) => entity.id,
