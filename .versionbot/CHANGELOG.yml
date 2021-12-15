@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix focus search crashing due to `length` not existing on val
+      hash: 4eb5ecb94ed107c2aba4dd85cc729797ecfeff62
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 24.0.1
+  date: 2021-12-15T20:20:19.772Z
+- commits:
     - subject: Remove AutoUICollection and AutoUIEntity in favor of AutoUI
       hash: 7a08b8dac5617004862b9ae14ca17eff3749398f
       body: ''
