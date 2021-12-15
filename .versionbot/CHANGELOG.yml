@@ -1,4 +1,16 @@
 - commits:
+    - subject: Remove AutoUICollection and AutoUIEntity in favor of AutoUI
+      hash: 7a08b8dac5617004862b9ae14ca17eff3749398f
+      body: ''
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 24.0.0
+  date: 2021-12-15T17:12:09.756Z
+- commits:
     - subject: Fix download image submit button
       hash: 3425405398940cce724244f796b32c5b27e1845e
       body: ''
