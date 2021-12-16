@@ -13,6 +13,7 @@ import { Txt } from '../../components/Txt';
 import { DownloadFormModel, FormModel } from './FormModel';
 import { DeviceType } from './models';
 import { DownloadOptions } from './DownloadImageModal';
+import { TFunction } from '../../hooks/useTranslation';
 
 const debounceDownloadSize = debounce(
 	(getDownloadSize, deviceType, rawVersion, setDownloadSize) =>
@@ -28,7 +29,7 @@ const debounceDownloadSize = debounce(
 	},
 );
 
-const getDeviceTypeOptions = (deviceType: DeviceType) => {
+const getDeviceTypeOptions = (t: TFunction, deviceType: DeviceType) => {
 	if (!deviceType.options) {
 		return [];
 	}
@@ -43,6 +44,16 @@ const getDeviceTypeOptions = (deviceType: DeviceType) => {
 						wifi: 'Wifi + Ethernet',
 					};
 				}
+			});
+		}
+
+		// Add extra input field to advanced config
+		if (group.name === 'advanced') {
+			group.options.push({
+				message: t('labels.provisioning_key_name'),
+				name: 'provisioningKeyName',
+				default: '',
+				type: 'text',
 			});
 		}
 
@@ -232,7 +243,7 @@ export const ImageForm = ({
 				<DownloadFormModel
 					model={model}
 					onModelChange={setModel}
-					options={getDeviceTypeOptions(deviceType)}
+					options={getDeviceTypeOptions(t, deviceType)}
 				/>
 			</Flex>
 

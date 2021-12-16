@@ -71,6 +71,7 @@ export interface DownloadOptions extends FormModel {
 	appId: number;
 	releaseId?: number;
 	deviceType: string;
+	provisioningKeyName?: string;
 	downloadConfigOnly?: boolean;
 	version: string;
 }
