@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency typescript to ^3.9.10'
+      hash: 9906637936ef7d911e8eaf8074ff8d157d7e9e1c
+      body: |
+        Update typescript from 3.9.6 to 3.9.10
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 24.1.2
+  date: 2021-12-17T18:49:32.610Z
+- commits:
     - subject: Update the label for provisioning key.
       hash: 47a71cf34fca35f837c10cab22d1528c7bb3e7e9
       body: ''
