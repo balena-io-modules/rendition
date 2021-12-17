@@ -60,7 +60,7 @@ const translationMap = {
 	'placeholders.select_edition': 'Select edition',
 
 	'labels.instructions': 'Instructions',
-	'labels.provisioning_key_name': 'Provisioning Key name: ',
+	'labels.provisioning_key_name': 'Provisioning Key name',
 
 	'info.production_and_enterprise_plan_only':
 		'production and enterprise plan only',
