@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update the label for provisioning key.
+      hash: 47a71cf34fca35f837c10cab22d1528c7bb3e7e9
+      body: ''
+      footer:
+        Change-Type: patch
+        change-type: patch
+        Signed-off-by: Nitish Agarwal <1592163+nitishagar@users.noreply.github.com>
+        signed-off-by: Nitish Agarwal <1592163+nitishagar@users.noreply.github.com>
+      author: Nitish Agarwal
+  version: 24.1.1
+  date: 2021-12-17T13:15:14.035Z
+- commits:
     - subject: Update downloadOptions to include provisioning key name
       hash: 700e53e4046e7911bc6b8d234d56b6e937642d54
       body: ''
