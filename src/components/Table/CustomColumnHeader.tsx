@@ -35,7 +35,7 @@ export const CustomColumnHeader = <TC extends TableColumnState>(
 					tooltip: disabled
 						? `This ${label.toLowerCase()} is already selected`
 						: undefined,
-					actionFn: () => setColumn(columnInfo, item),
+					onClick: () => setColumn(columnInfo, item),
 				};
 			}),
 		],
