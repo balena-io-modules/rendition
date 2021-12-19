@@ -58,7 +58,7 @@ export interface AutoUIContext<T> {
 	idField: string;
 	nameField?: string;
 	tagField?: string;
-	geolocation: {
+	geolocation?: {
 		latitudeField?: string;
 		longitudeField?: string;
 	};
