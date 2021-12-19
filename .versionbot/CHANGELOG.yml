@@ -1,4 +1,20 @@
 - commits:
+    - subject: 'AutoUI: Fix collection item click causing full page reload'
+      hash: 8e8ae0a1ad92d0a19c45cfdc557f94c1431555c0
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        See: >-
+          https://www.flowdock.com/app/rulemotion/resin-frontend/threads/7zeCbXnadFPFdlM0srXfTzlFeVA
+        see: >-
+          https://www.flowdock.com/app/rulemotion/resin-frontend/threads/7zeCbXnadFPFdlM0srXfTzlFeVA
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 24.1.4
+  date: 2021-12-18T23:56:33.358Z
+- commits:
     - subject: 'Table: Fix tag column selection'
       hash: d395d5717cf67a37819e9404b87d886946b907f3
       body: ''
