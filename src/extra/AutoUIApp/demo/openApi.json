@@ -1,0 +1,1692 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Service for namespace resin",
+    "description": "This service is located at [https://localhost/service-root/](https://localhost/service-root/)",
+    "version": ""
+  },
+  "servers": [
+    {
+      "url": "https://localhost/service-root"
+    }
+  ],
+  "tags": [
+    {
+      "name": "application"
+    }
+  ],
+  "paths": {
+    "/application": {
+      "get": {
+        "summary": "Get entities from application",
+        "tags": [
+          "application"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/count"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "created_at",
+                  "created_at desc",
+                  "modified_at",
+                  "modified_at desc",
+                  "id",
+                  "id desc",
+                  "actor",
+                  "actor desc",
+                  "should_track_latest_release",
+                  "should_track_latest_release desc",
+                  "is_of__class",
+                  "is_of__class desc",
+                  "app_name",
+                  "app_name desc",
+                  "slug",
+                  "slug desc",
+                  "is_host",
+                  "is_host desc",
+                  "is_archived",
+                  "is_archived desc",
+                  "uuid",
+                  "uuid desc",
+                  "is_public",
+                  "is_public desc",
+                  "is_accessible_by_support_until__date",
+                  "is_accessible_by_support_until__date desc",
+                  "is_discoverable",
+                  "is_discoverable desc",
+                  "is_stored_at__repository_url",
+                  "is_stored_at__repository_url desc"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "created_at",
+                  "modified_at",
+                  "id",
+                  "actor",
+                  "should_track_latest_release",
+                  "is_of__class",
+                  "app_name",
+                  "slug",
+                  "is_host",
+                  "is_archived",
+                  "uuid",
+                  "is_public",
+                  "is_accessible_by_support_until__date",
+                  "is_discoverable",
+                  "is_stored_at__repository_url"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$expand",
+            "description": "Expand related entities, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "*",
+                  "organization",
+                  "is_for__device_type",
+                  "should_be_running__release",
+                  "depends_on__application",
+                  "application_type",
+                  "public_organization"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved entities",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Collection of application",
+                  "properties": {
+                    "@odata.count": {
+                      "$ref": "#/components/schemas/count"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/resin.application"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "4XX": {
+            "$ref": "#/components/responses/error"
+          }
+        }
+      },
+      "post": {
+        "summary": "Add new entity to application",
+        "tags": [
+          "application"
+        ],
+        "requestBody": {
+          "description": "New entity",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/resin.application-create"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/resin.application"
+                }
+              }
+            }
+          },
+          "4XX": {
+            "$ref": "#/components/responses/error"
+          }
+        }
+      }
+    },
+    "/application({id})": {
+      "parameters": [
+        {
+          "description": "key: id",
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "schema": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "format": "int64",
+            "example": "42"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Get entity from application by key",
+        "tags": [
+          "application"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "created_at",
+                  "modified_at",
+                  "id",
+                  "actor",
+                  "should_track_latest_release",
+                  "is_of__class",
+                  "app_name",
+                  "slug",
+                  "is_host",
+                  "is_archived",
+                  "uuid",
+                  "is_public",
+                  "is_accessible_by_support_until__date",
+                  "is_discoverable",
+                  "is_stored_at__repository_url"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$expand",
+            "description": "Expand related entities, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "*",
+                  "organization",
+                  "is_for__device_type",
+                  "should_be_running__release",
+                  "depends_on__application",
+                  "application_type",
+                  "public_organization"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/resin.application"
+                }
+              }
+            }
+          },
+          "4XX": {
+            "$ref": "#/components/responses/error"
+          }
+        }
+      },
+      "patch": {
+        "summary": "Update entity in application",
+        "tags": [
+          "application"
+        ],
+        "requestBody": {
+          "description": "New property values",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/resin.application-update"
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "Success"
+          },
+          "4XX": {
+            "$ref": "#/components/responses/error"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete entity from application",
+        "tags": [
+          "application"
+        ],
+        "responses": {
+          "204": {
+            "description": "Success"
+          },
+          "4XX": {
+            "$ref": "#/components/responses/error"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "resin.application": {
+        "title": "application",
+        "type": "object",
+        "properties": {
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "modified_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "format": "int64",
+            "example": "42"
+          },
+          "actor": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "format": "int64",
+            "example": "42"
+          },
+          "should_track_latest_release": {
+            "type": "boolean"
+          },
+          "is_of__class": {
+            "type": "string"
+          },
+          "app_name": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "is_host": {
+            "type": "boolean"
+          },
+          "is_archived": {
+            "type": "boolean"
+          },
+          "uuid": {
+            "type": "string"
+          },
+          "is_public": {
+            "type": "boolean"
+          },
+          "is_accessible_by_support_until__date": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z",
+            "nullable": true
+          },
+          "is_discoverable": {
+            "type": "boolean"
+          },
+          "is_stored_at__repository_url": {
+            "type": "string",
+            "nullable": true
+          },
+          "organization": {
+            "$ref": "#/components/schemas/resin.organization"
+          },
+          "is_for__device_type": {
+            "$ref": "#/components/schemas/resin.device_type"
+          },
+          "should_be_running__release": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/resin.release"
+              }
+            ],
+            "nullable": true
+          },
+          "depends_on__application": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/resin.application"
+              }
+            ],
+            "nullable": true
+          },
+          "application_type": {
+            "$ref": "#/components/schemas/resin.application_type"
+          },
+          "public_organization": {
+            "$ref": "#/components/schemas/resin.public_organization"
+          }
+        }
+      },
+      "resin.application-create": {
+        "title": "application (for create)",
+        "type": "object",
+        "properties": {
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "modified_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "format": "int64",
+            "example": "42"
+          },
+          "actor": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "format": "int64",
+            "example": "42"
+          },
+          "should_track_latest_release": {
+            "type": "boolean"
+          },
+          "is_of__class": {
+            "type": "string"
+          },
+          "app_name": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "is_host": {
+            "type": "boolean"
+          },
+          "is_archived": {
+            "type": "boolean"
+          },
+          "uuid": {
+            "type": "string"
+          },
+          "is_public": {
+            "type": "boolean"
+          },
+          "is_accessible_by_support_until__date": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z",
+            "nullable": true
+          },
+          "is_discoverable": {
+            "type": "boolean"
+          },
+          "is_stored_at__repository_url": {
+            "type": "string",
+            "nullable": true
+          },
+          "organization@odata.bind": {
+            "$ref": "#/components/schemas/entityReference"
+          },
+          "is_for__device_type@odata.bind": {
+            "$ref": "#/components/schemas/entityReference"
+          },
+          "application_type@odata.bind": {
+            "$ref": "#/components/schemas/entityReference"
+          },
+          "public_organization@odata.bind": {
+            "$ref": "#/components/schemas/entityReference"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "resin.application-update": {
+        "title": "application (for update)",
+        "type": "object",
+        "properties": {
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "modified_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "actor": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "format": "int64",
+            "example": "42"
+          },
+          "should_track_latest_release": {
+            "type": "boolean"
+          },
+          "is_of__class": {
+            "type": "string"
+          },
+          "app_name": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "is_host": {
+            "type": "boolean"
+          },
+          "is_archived": {
+            "type": "boolean"
+          },
+          "uuid": {
+            "type": "string"
+          },
+          "is_public": {
+            "type": "boolean"
+          },
+          "is_accessible_by_support_until__date": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z",
+            "nullable": true
+          },
+          "is_discoverable": {
+            "type": "boolean"
+          },
+          "is_stored_at__repository_url": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "resin.organization": {
+        "title": "organization",
+        "type": "object",
+        "properties": {
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "modified_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "format": "int64",
+            "example": "42"
+          },
+          "name": {
+            "type": "string"
+          },
+          "handle": {
+            "type": "string"
+          },
+          "is_active": {
+            "type": "boolean"
+          },
+          "company_name": {
+            "type": "string",
+            "nullable": true
+          },
+          "internal_company_name": {
+            "type": "string",
+            "nullable": true
+          },
+          "internal_note": {
+            "type": "string",
+            "nullable": true
+          },
+          "billing_account_code": {
+            "type": "string",
+            "nullable": true
+          },
+          "has_past_due_invoice_since__date": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z",
+            "nullable": true
+          },
+          "tradegecko_company_id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "industry": {
+            "type": "string",
+            "nullable": true
+          },
+          "website": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "resin.organization-create": {
+        "title": "organization (for create)",
+        "type": "object",
+        "properties": {
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "modified_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "format": "int64",
+            "example": "42"
+          },
+          "name": {
+            "type": "string"
+          },
+          "handle": {
+            "type": "string"
+          },
+          "is_active": {
+            "type": "boolean"
+          },
+          "company_name": {
+            "type": "string",
+            "nullable": true
+          },
+          "internal_company_name": {
+            "type": "string",
+            "nullable": true
+          },
+          "internal_note": {
+            "type": "string",
+            "nullable": true
+          },
+          "billing_account_code": {
+            "type": "string",
+            "nullable": true
+          },
+          "has_past_due_invoice_since__date": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z",
+            "nullable": true
+          },
+          "tradegecko_company_id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "industry": {
+            "type": "string",
+            "nullable": true
+          },
+          "website": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "resin.organization-update": {
+        "title": "organization (for update)",
+        "type": "object",
+        "properties": {
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "modified_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "name": {
+            "type": "string"
+          },
+          "handle": {
+            "type": "string"
+          },
+          "is_active": {
+            "type": "boolean"
+          },
+          "company_name": {
+            "type": "string",
+            "nullable": true
+          },
+          "internal_company_name": {
+            "type": "string",
+            "nullable": true
+          },
+          "internal_note": {
+            "type": "string",
+            "nullable": true
+          },
+          "billing_account_code": {
+            "type": "string",
+            "nullable": true
+          },
+          "has_past_due_invoice_since__date": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z",
+            "nullable": true
+          },
+          "tradegecko_company_id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "industry": {
+            "type": "string",
+            "nullable": true
+          },
+          "website": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "resin.device_type": {
+        "title": "device_type",
+        "type": "object",
+        "properties": {
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "modified_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "format": "int64",
+            "example": "42"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "logo": {
+            "type": "string",
+            "nullable": true
+          },
+          "contract": {
+            "type": "string",
+            "nullable": true
+          },
+          "is_private": {
+            "type": "boolean"
+          },
+          "is_of__cpu_architecture": {
+            "$ref": "#/components/schemas/resin.cpu_architecture"
+          },
+          "belongs_to__device_family": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/resin.device_family"
+              }
+            ],
+            "nullable": true
+          }
+        }
+      },
+      "resin.device_type-create": {
+        "title": "device_type (for create)",
+        "type": "object",
+        "properties": {
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "modified_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "format": "int64",
+            "example": "42"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "logo": {
+            "type": "string",
+            "nullable": true
+          },
+          "contract": {
+            "type": "string",
+            "nullable": true
+          },
+          "is_private": {
+            "type": "boolean"
+          },
+          "is_of__cpu_architecture@odata.bind": {
+            "$ref": "#/components/schemas/entityReference"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "resin.device_type-update": {
+        "title": "device_type (for update)",
+        "type": "object",
+        "properties": {
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "modified_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "logo": {
+            "type": "string",
+            "nullable": true
+          },
+          "contract": {
+            "type": "string",
+            "nullable": true
+          },
+          "is_private": {
+            "type": "boolean"
+          }
+        }
+      },
+      "resin.release": {
+        "title": "release",
+        "type": "object",
+        "properties": {
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "modified_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "format": "int64",
+            "example": "42"
+          },
+          "commit": {
+            "type": "string"
+          },
+          "composition": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "build_log": {
+            "type": "string",
+            "nullable": true
+          },
+          "is_invalidated": {
+            "type": "boolean"
+          },
+          "start_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "end_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z",
+            "nullable": true
+          },
+          "update_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "release_version": {
+            "type": "string",
+            "nullable": true
+          },
+          "contract": {
+            "type": "string",
+            "nullable": true
+          },
+          "is_passing_tests": {
+            "type": "boolean"
+          },
+          "is_finalized_at__date": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z",
+            "nullable": true
+          },
+          "semver_major": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "semver_minor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "semver_patch": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "revision": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "known_issue_list": {
+            "type": "string",
+            "nullable": true
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          },
+          "invalidation_reason": {
+            "type": "string",
+            "nullable": true
+          },
+          "statistics_set": {
+            "type": "string",
+            "nullable": true
+          },
+          "is_final": {
+            "type": "boolean"
+          },
+          "semver": {
+            "type": "string"
+          },
+          "raw_version": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "belongs_to__application": {
+            "$ref": "#/components/schemas/resin.application"
+          },
+          "is_created_by__user": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/resin.user"
+              }
+            ],
+            "nullable": true
+          }
+        }
+      },
+      "resin.release-create": {
+        "title": "release (for create)",
+        "type": "object",
+        "properties": {
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "modified_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "format": "int64",
+            "example": "42"
+          },
+          "commit": {
+            "type": "string"
+          },
+          "composition": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "build_log": {
+            "type": "string",
+            "nullable": true
+          },
+          "is_invalidated": {
+            "type": "boolean"
+          },
+          "start_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "end_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z",
+            "nullable": true
+          },
+          "update_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "release_version": {
+            "type": "string",
+            "nullable": true
+          },
+          "contract": {
+            "type": "string",
+            "nullable": true
+          },
+          "is_passing_tests": {
+            "type": "boolean"
+          },
+          "is_finalized_at__date": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z",
+            "nullable": true
+          },
+          "semver_major": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "semver_minor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "semver_patch": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "revision": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "known_issue_list": {
+            "type": "string",
+            "nullable": true
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          },
+          "invalidation_reason": {
+            "type": "string",
+            "nullable": true
+          },
+          "statistics_set": {
+            "type": "string",
+            "nullable": true
+          },
+          "is_final": {
+            "type": "boolean"
+          },
+          "semver": {
+            "type": "string"
+          },
+          "raw_version": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "belongs_to__application@odata.bind": {
+            "$ref": "#/components/schemas/entityReference"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "resin.release-update": {
+        "title": "release (for update)",
+        "type": "object",
+        "properties": {
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "modified_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "commit": {
+            "type": "string"
+          },
+          "composition": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "build_log": {
+            "type": "string",
+            "nullable": true
+          },
+          "is_invalidated": {
+            "type": "boolean"
+          },
+          "start_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "end_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z",
+            "nullable": true
+          },
+          "update_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "release_version": {
+            "type": "string",
+            "nullable": true
+          },
+          "contract": {
+            "type": "string",
+            "nullable": true
+          },
+          "is_passing_tests": {
+            "type": "boolean"
+          },
+          "is_finalized_at__date": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z",
+            "nullable": true
+          },
+          "semver_major": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "semver_minor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "semver_patch": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "revision": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "known_issue_list": {
+            "type": "string",
+            "nullable": true
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          },
+          "invalidation_reason": {
+            "type": "string",
+            "nullable": true
+          },
+          "statistics_set": {
+            "type": "string",
+            "nullable": true
+          },
+          "is_final": {
+            "type": "boolean"
+          },
+          "semver": {
+            "type": "string"
+          },
+          "raw_version": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          }
+        }
+      },
+      "resin.application_type": {
+        "title": "application_type",
+        "type": "object",
+        "properties": {
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "modified_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "format": "int64",
+            "example": "42"
+          },
+          "name": {
+            "type": "string"
+          },
+          "supports_web_url": {
+            "type": "boolean"
+          },
+          "supports_multicontainer": {
+            "type": "boolean"
+          },
+          "supports_gateway_mode": {
+            "type": "boolean"
+          },
+          "needs__os_version_range": {
+            "type": "string",
+            "nullable": true
+          },
+          "requires_payment": {
+            "type": "boolean"
+          },
+          "is_legacy": {
+            "type": "boolean"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "maximum_device_count": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        }
+      },
+      "resin.application_type-create": {
+        "title": "application_type (for create)",
+        "type": "object",
+        "properties": {
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "modified_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "format": "int64",
+            "example": "42"
+          },
+          "name": {
+            "type": "string"
+          },
+          "supports_web_url": {
+            "type": "boolean"
+          },
+          "supports_multicontainer": {
+            "type": "boolean"
+          },
+          "supports_gateway_mode": {
+            "type": "boolean"
+          },
+          "needs__os_version_range": {
+            "type": "string",
+            "nullable": true
+          },
+          "requires_payment": {
+            "type": "boolean"
+          },
+          "is_legacy": {
+            "type": "boolean"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "maximum_device_count": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "resin.application_type-update": {
+        "title": "application_type (for update)",
+        "type": "object",
+        "properties": {
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "modified_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04Z"
+          },
+          "name": {
+            "type": "string"
+          },
+          "supports_web_url": {
+            "type": "boolean"
+          },
+          "supports_multicontainer": {
+            "type": "boolean"
+          },
+          "supports_gateway_mode": {
+            "type": "boolean"
+          },
+          "needs__os_version_range": {
+            "type": "string",
+            "nullable": true
+          },
+          "requires_payment": {
+            "type": "boolean"
+          },
+          "is_legacy": {
+            "type": "boolean"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "maximum_device_count": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        }
+      },
+      "resin.public_organization": {
+        "title": "public_organization",
+        "type": "object",
+        "properties": {
+          "id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "format": "int64",
+            "example": "42"
+          },
+          "name": {
+            "type": "string"
+          },
+          "handle": {
+            "type": "string"
+          }
+        }
+      },
+      "resin.public_organization-create": {
+        "title": "public_organization (for create)",
+        "type": "object",
+        "properties": {
+          "id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "format": "int64",
+            "example": "42"
+          },
+          "name": {
+            "type": "string"
+          },
+          "handle": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "resin.public_organization-update": {
+        "title": "public_organization (for update)",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "handle": {
+            "type": "string"
+          }
+        }
+      },
+      "count": {
+        "anyOf": [
+          {
+            "type": "integer",
+            "minimum": 0
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The number of entities in the collection. Available when using the [$count](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptioncount) query option."
+      },
+      "entityReference": {
+        "type": "string",
+        "format": "uri",
+        "description": "[Link to a related entity](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_LinktoRelatedEntitiesWhenCreatinganE)"
+      },
+      "error": {
+        "type": "object",
+        "required": [
+          "error"
+        ],
+        "properties": {
+          "error": {
+            "type": "object",
+            "required": [
+              "code",
+              "message"
+            ],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "target": {
+                "type": "string"
+              },
+              "details": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "code",
+                    "message"
+                  ],
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "target": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "innererror": {
+                "type": "object",
+                "description": "The structure of this object is service-specific"
+              }
+            }
+          }
+        }
+      }
+    },
+    "parameters": {
+      "top": {
+        "name": "$top",
+        "in": "query",
+        "description": "Show only the first n items, see [Paging - Top](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptiontop)",
+        "schema": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "example": 50
+      },
+      "skip": {
+        "name": "$skip",
+        "in": "query",
+        "description": "Skip the first n items, see [Paging - Skip](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionskip)",
+        "schema": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "count": {
+        "name": "$count",
+        "in": "query",
+        "description": "Include count of items, see [Count](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptioncount)",
+        "schema": {
+          "type": "boolean"
+        }
+      },
+      "search": {
+        "name": "$search",
+        "in": "query",
+        "description": "Search items by search phrases, see [Searching](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionsearch)",
+        "schema": {
+          "type": "string"
+        }
+      }
+    },
+    "responses": {
+      "error": {
+        "description": "Error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/error"
+            }
+          }
+        }
+      }
+    }
+  }
+}

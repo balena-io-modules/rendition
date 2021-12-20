@@ -44,4 +44,5 @@ global.requestAnimationFrame = function (callback) {
 global.cancelAnimationFrame = function (id) {
   clearTimeout(id);
 };
+global.fetch = jest.fn(() => Promise.resolve());
 copyProps(window, global);

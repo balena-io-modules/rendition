@@ -5,6 +5,35 @@ import { JSONSchema7 as JSONSchema } from 'json-schema';
 import { JsonTypes } from '../../components/Renderer/types';
 import { diff } from '../../utils';
 import castArray from 'lodash/castArray';
+import { createBrowserHistory } from 'history';
+
+export const history = createBrowserHistory();
+
+export const findInObject = (obj: any, key: string): any => {
+	let result;
+	for (const property in obj) {
+		if (obj.hasOwnProperty(property)) {
+			if (property === key) {
+				return obj[key]; // returns the value
+			} else if (typeof obj[property] === 'object') {
+				// in case it is an object
+				result = findInObject(obj[property], key);
+
+				if (typeof result !== 'undefined') {
+					return result;
+				}
+			}
+		}
+	}
+};
+
+export const ObjectFromEntries = (entries: any[]) => {
+	const obj = {} as any;
+	for (const [key, value] of entries) {
+		obj[key] = value;
+	}
+	return obj;
+};
 
 export const getTagsDisabledReason = <T extends AutoUIBaseResource<T>>(
 	selected: T[],
