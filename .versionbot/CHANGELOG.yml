@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'AutoUI: Fix sorting'
+      hash: 457767fd4fa3b4105a3a52f653a2ef35d4b89332
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 24.2.1
+  date: 2021-12-20T18:01:32.278Z
+- commits:
     - subject: Add autoUIApp to generate an app from a openApi json
       hash: d79cff01283e8aef3668ac580997205d6dfe473a
       body: ''
