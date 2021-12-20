@@ -113,21 +113,15 @@ export const getSortingFunction = <T extends any>(
 	const types = castArray(schemaValue.type);
 	if (types.includes(JsonTypes.string)) {
 		return (a: T, b: T) => {
-			if (typeof a === 'string' && typeof b === 'string') {
-				return a.toLowerCase().localeCompare(b.toLowerCase());
+			const aa = a[schemaKey] ?? '';
+			const bb = b[schemaKey] ?? '';
+			if (typeof aa === 'string' && typeof bb === 'string') {
+				return aa.toLowerCase().localeCompare(bb.toLowerCase());
 			}
-			if (
-				(typeof a === 'number' && typeof b === 'number') ||
-				(typeof a === 'boolean' && typeof b === 'boolean')
-			) {
-				return diff(a, b);
-			}
-			return 0;
+			return diff(a[schemaKey], b[schemaKey]);
 		};
 	}
-	return (a: T, b: T) =>
-		// @ts-expect-error
-		diff(a[schemaKey], b[schemaKey]);
+	return (a: T, b: T) => diff(a[schemaKey], b[schemaKey]);
 };
 
 export const getSelected = <T, K extends keyof T>(
