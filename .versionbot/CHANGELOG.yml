@@ -1,4 +1,16 @@
 - commits:
+    - subject: Stop allowing undefined DropDownButton items
+      hash: 519ba820c8ddc6d745979141aae8a70f61fa996f
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 24.2.2
+  date: 2021-12-20T21:18:36.945Z
+- commits:
     - subject: 'AutoUI: Fix sorting'
       hash: 457767fd4fa3b4105a3a52f653a2ef35d4b89332
       body: ''
