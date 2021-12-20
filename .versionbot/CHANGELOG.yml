@@ -1,4 +1,25 @@
 - commits:
+    - subject: Add autoUIApp to generate an app from a openApi json
+      hash: d79cff01283e8aef3668ac580997205d6dfe473a
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+    - subject: Add useRequest hook
+      hash: 2613bf033ac7440c9e9836950978a28d24fa3ce9
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 24.2.0
+  date: 2021-12-20T12:48:29.277Z
+- commits:
     - subject: 'AutoUI: Fix collection item click causing full page reload'
       hash: 8e8ae0a1ad92d0a19c45cfdc557f94c1431555c0
       body: ''
