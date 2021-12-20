@@ -6,7 +6,7 @@ export * from './styledUtils';
 
 const matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;
 
-export const diff = <T extends number | string | boolean>(a: T, b: T) => {
+export const diff = <T extends unknown>(a: T, b: T) => {
 	if (a === b) {
 		return 0;
 	}
