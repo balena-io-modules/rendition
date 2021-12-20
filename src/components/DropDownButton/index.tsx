@@ -306,7 +306,7 @@ class BaseDropDownButton extends React.Component<
 
 export interface InternalDropDownButtonProps extends ButtonProps {
 	/** A 2D array. Each child array contains a group of items. Each child array is separated by Dividers */
-	items?: Array<Array<DropdownOption | undefined>>;
+	items?: DropdownOption[][];
 	/** Optionally provide a JSX element that will be displayed inside the main button */
 	label?: string | JSX.Element;
 	/** If true, place a border between each item in the dropdown */
