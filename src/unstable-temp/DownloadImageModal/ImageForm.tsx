@@ -90,6 +90,7 @@ interface ImageFormProps {
 	appId: number;
 	releaseId?: number;
 	rawVersion: string | null;
+	developmentMode: boolean;
 	deviceType: DeviceType;
 	authToken?: string;
 	onDownloadStart?: (
@@ -111,6 +112,7 @@ export const ImageForm = ({
 	appId,
 	releaseId,
 	rawVersion,
+	developmentMode,
 	deviceType,
 	authToken,
 	onDownloadStart,
@@ -127,9 +129,10 @@ export const ImageForm = ({
 	// download, so there is no need to show the toggle
 	const hasDockerImageDownload =
 		deviceType?.yocto?.deployArtifact === 'docker-image';
-	const [model, setModel] = React.useState<FormModel>({
-		downloadConfigOnly: hasDockerImageDownload,
-	});
+	const [downloadConfigOnly, setDownloadConfigOnly] = React.useState(
+		hasDockerImageDownload,
+	);
+	const [model, setModel] = React.useState<FormModel>({});
 
 	const actions: ModalAction[] = [
 		...(modalActions ?? []),
@@ -149,12 +152,12 @@ export const ImageForm = ({
 		{
 			plain: true,
 			onClick: async () => {
-				if (model.downloadConfigOnly && downloadConfig) {
+				if (downloadConfigOnly && downloadConfig) {
 					setIsDownloadingConfig(true);
 					await downloadConfig(model);
 					setIsDownloadingConfig(false);
 				}
-				setDownloadConfigOnly(true);
+				startDownload(true);
 			},
 			icon: <FontAwesomeIcon icon={faDownload} />,
 			label: t('actions.download_configuration_file_only'),
@@ -171,29 +174,26 @@ export const ImageForm = ({
 			releaseId,
 			deviceType: deviceType.slug,
 			version: rawVersion,
+			developmentMode,
 			...model,
 		}),
-		[appId, releaseId, deviceType, model, rawVersion],
+		[appId, releaseId, deviceType, model, rawVersion, developmentMode],
 	) as DownloadOptions;
 
-	const setDownloadConfigOnly = (downloadConfigOnly: boolean) => {
+	const startDownload = (downloadConfigOnly: boolean) => {
 		if (typeof onDownloadStart === 'function') {
 			onDownloadStart(downloadConfigOnly, {
 				...downloadOptions,
-				downloadConfigOnly,
 			});
 		}
-		setModel({
-			...model,
-			downloadConfigOnly,
-		});
+		setDownloadConfigOnly(downloadConfigOnly);
 	};
 
 	React.useEffect(() => {
-		if (hasDockerImageDownload && !model.downloadConfigOnly) {
+		if (hasDockerImageDownload && !downloadConfigOnly) {
 			setDownloadConfigOnly(true);
 		}
-	}, [hasDockerImageDownload, model.downloadConfigOnly]);
+	}, [hasDockerImageDownload, downloadConfigOnly]);
 
 	React.useEffect(() => {
 		if (!deviceType || !rawVersion || !getDownloadSize) {
@@ -245,6 +245,11 @@ export const ImageForm = ({
 			{releaseId && <input type="hidden" name="releaseId" value={releaseId} />}
 			<input type="hidden" name="_token" value={authToken} />
 			<input name="version" value={rawVersion ?? ''} type="hidden" />
+			<input
+				name="developmentMode"
+				value={developmentMode.toString()}
+				type="hidden"
+			/>
 			<input name="deviceType" value={deviceType?.slug} type="hidden" />
 			<input name="fileType" value=".zip" type="hidden" />
 
@@ -287,9 +292,9 @@ export const ImageForm = ({
 								? t('warnings.image_deployed_to_docker')
 								: ''
 						}
-						onClick={() => setDownloadConfigOnly(false)}
+						onClick={() => startDownload(false)}
 					>
-						<Txt bold={!model.downloadConfigOnly}>
+						<Txt bold={!downloadConfigOnly}>
 							{t('actions.download_balenaos') +
 								(rawVersion && downloadSize ? ` (~${downloadSize})` : '')}
 						</Txt>

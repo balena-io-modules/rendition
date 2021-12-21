@@ -1,13 +1,16 @@
-import partition from 'lodash/partition';
 import * as React from 'react';
-
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons/faExclamationTriangle';
+import { faFileAlt } from '@fortawesome/free-regular-svg-icons/faFileAlt';
 import { Alert } from '../../components/Alert';
 import { Box } from '../../components/Box';
 import { Checkbox } from '../../components/Checkbox';
 import { Flex } from '../../components/Flex';
 import { Link } from '../../components/Link';
 import { Select } from '../../components/Select';
-import { RadioButton } from '../../components/RadioButton';
+import { RadioButton, RadioButtonProps } from '../../components/RadioButton';
 import { Txt } from '../../components/Txt';
 
 import { QuestionMark } from './QuestionMark';
@@ -20,12 +23,7 @@ import {
 } from './versions';
 import { DeviceType, OsVersionsByDeviceType } from './models';
 import { useTranslation } from '../../hooks/useTranslation';
-import styled from 'styled-components';
 import { getOsVariantDisplayText } from './utils';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { faFileAlt } from '@fortawesome/free-regular-svg-icons/faFileAlt';
-import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons/faExclamationTriangle';
 import { useTheme } from '../../hooks/useTheme';
 import { Theme } from '~/theme';
 
@@ -49,16 +47,14 @@ interface OsConfigurationProps {
 	isInitialDefault?: boolean;
 	onSelectedDeviceTypeChange: (deviceType: DeviceType) => void;
 	onSelectedVersionChange: (osVersion: string) => void;
+	onSelectedDevelopmentMode: (developmentMode: boolean) => void;
 	onSelectedOsTypeChange: (osType: string) => void;
 	docsIcon?: IconProp;
 }
 
-export type BuildVariant = 'dev' | 'prod';
+const BuildVariants = ['dev', 'prod'] as const;
 
-const canSelectVariant = (
-	variant: BuildVariant,
-	selectedVersion: VersionSelectionOptions | undefined,
-) => Boolean(selectedVersion && selectedVersion.rawVersions[variant]);
+export type BuildVariant = typeof BuildVariants[number];
 
 const getCategorizedVersions = (
 	deviceTypeOsVersions: OsVersionsByDeviceType,
@@ -70,29 +66,11 @@ const getCategorizedVersions = (
 		? osVersions.filter((osVersion) => osVersion.osType === osType)
 		: osVersions;
 
-	const [proposedVersions, noBuildVariantVersions] = partition(
-		deviceOsVersions,
-		(v) => {
-			// TODO: check if worth installing semver on rendition;
-			// const major = semver.major(v.strippedVersion);
-			const major = v.strippedVersion?.match(/\d+/)?.join();
-			return major && parseInt(major, 10) >= 2;
-		},
-	);
-
-	const proposedSelectionOpts = transformVersions(proposedVersions, true);
-	const noBuildVariantSelectionOpts = transformVersions(
-		noBuildVariantVersions,
-		false,
-	);
-	const preferredSelectionOpts = getPreferredVersionOpts(
-		proposedSelectionOpts,
-		noBuildVariantSelectionOpts,
-	);
+	const selectionOpts = transformVersions(deviceOsVersions);
+	const preferredSelectionOpts = getPreferredVersionOpts(selectionOpts);
 
 	return {
-		proposedSelectionOpts,
-		noBuildVariantSelectionOpts,
+		selectionOpts,
 		preferredSelectionOpts,
 	};
 };
@@ -108,21 +86,30 @@ const VariantSelector = ({
 	variant: BuildVariant;
 	t: (s: string) => string;
 }) => {
+	const [devOpts, prodOpts] = BuildVariants.map((vrnt): RadioButtonProps => {
+		let label = <Txt.span bold>{getOsVariantDisplayText(vrnt)}</Txt.span>;
+		if (vrnt === 'dev') {
+			label = (
+				<>
+					{label}
+					<Alert ml={3} info plaintext>
+						{t('info.recommended_for_new_users')}
+					</Alert>
+				</>
+			);
+		}
+		return {
+			label,
+			disabled:
+				version == null ||
+				(version.hasPrebuiltVariants && !version.rawVersions[vrnt]),
+			checked: vrnt === variant,
+			onChange: () => onVariantChange(vrnt),
+		};
+	});
 	return (
 		<>
-			<RadioButton
-				label={
-					<>
-						<Txt.span bold>{getOsVariantDisplayText('dev')}</Txt.span>
-						<Alert ml={3} info plaintext>
-							{t('info.recommended_for_new_users')}
-						</Alert>
-					</>
-				}
-				disabled={!canSelectVariant('dev', version)}
-				checked={variant === 'dev'}
-				onChange={() => onVariantChange('dev')}
-			/>
+			<RadioButton {...devOpts} />
 			<Txt.p fontSize={1} mt={1} mb={3} color="tertiary.main">
 				{t('info.development_images_for_local_development_1')}{' '}
 				<Link href="https://balena.io/docs/development/local-mode/" blank>
@@ -132,12 +119,7 @@ const VariantSelector = ({
 				<strong>{t('info.development_images_for_local_development_4')}</strong>
 			</Txt.p>
 
-			<RadioButton
-				label={<Txt.span bold>{getOsVariantDisplayText('prod')}</Txt.span>}
-				disabled={!canSelectVariant('prod', version)}
-				checked={variant === 'prod'}
-				onChange={() => onVariantChange('prod')}
-			/>
+			<RadioButton {...prodOpts} />
 			<Txt.p fontSize={1} mt={1} color="tertiary.main">
 				{t('info.production_images_not_for_local_development')}
 			</Txt.p>
@@ -187,6 +169,7 @@ export const OsConfiguration = ({
 	selectedOsType,
 	isInitialDefault,
 	onSelectedVersionChange,
+	onSelectedDevelopmentMode,
 	onSelectedDeviceTypeChange,
 	onSelectedOsTypeChange,
 	docsIcon,
@@ -198,48 +181,31 @@ export const OsConfiguration = ({
 		VersionSelectionOptions | undefined
 	>();
 	const [variant, setVariant] = React.useState<BuildVariant>('prod');
-	const {
-		proposedSelectionOpts,
-		noBuildVariantSelectionOpts,
-		preferredSelectionOpts,
-	} = getCategorizedVersions(
+	const { selectionOpts, preferredSelectionOpts } = getCategorizedVersions(
 		deviceTypeOsVersions,
 		selectedDeviceType,
 		selectedOsType,
 	);
-	// Default to showing the 3 most recent major-minor versions
-	let versionSelectionOpts = preferredSelectionOpts;
-
-	if (showAllVersions) {
-		versionSelectionOpts = proposedSelectionOpts.concat(
-			noBuildVariantSelectionOpts,
-		);
-	}
-
-	const hasEditions = Boolean(
-		versionSelectionOpts && version?.supportsBuildEditions,
-	);
-
-	const shouldShowAllVersionsToggle =
-		preferredSelectionOpts.length <
-		proposedSelectionOpts.length + noBuildVariantSelectionOpts.length;
-
-	React.useEffect(() => {
-		const versionWithVariant = version?.rawVersions[variant];
-		if (!versionWithVariant) {
-			return;
-		}
-
-		onSelectedVersionChange(versionWithVariant);
-	}, [version, variant]);
+	const versionSelectionOpts = showAllVersions
+		? selectionOpts
+		: preferredSelectionOpts;
+	const showAllVersionsToggle =
+		preferredSelectionOpts.length < selectionOpts.length;
 
 	React.useEffect(() => {
 		if (!version) {
 			return;
 		}
 
-		const selectedVariantExists = version.rawVersions[variant];
-		if (!selectedVariantExists) {
+		const versionWithVariant = version.hasPrebuiltVariants
+			? version.rawVersions[variant]
+			: version.rawVersion;
+		if (versionWithVariant) {
+			onSelectedVersionChange(versionWithVariant);
+			onSelectedDevelopmentMode(variant === 'dev');
+		}
+
+		if (version.hasPrebuiltVariants && !version.rawVersions[variant]) {
 			setVariant(variant === 'dev' ? 'prod' : 'dev');
 		}
 	}, [version, variant]);
@@ -267,6 +233,24 @@ export const OsConfiguration = ({
 		}
 	};
 
+	const handleSelectedDeviceTypeChange = React.useCallback(
+		(dt: DeviceType) => {
+			if (selectedDeviceType?.slug === dt.slug) {
+				return;
+			}
+
+			const newDeviceType = compatibleDeviceTypes?.find(
+				(cdt) => cdt.slug === dt.slug,
+			);
+			if (!newDeviceType) {
+				return;
+			}
+
+			onSelectedDeviceTypeChange(newDeviceType);
+		},
+		[compatibleDeviceTypes, selectedDeviceType],
+	);
+
 	React.useEffect(() => {
 		setVersion(
 			versionSelectionOpts.find((ver) => ver.isRecommended) ??
@@ -290,7 +274,7 @@ export const OsConfiguration = ({
 						<DeviceTypeSelector
 							deviceTypeOptions={compatibleDeviceTypes}
 							selectedDeviceType={selectedDeviceType}
-							selectDeviceTypeOption={onSelectedDeviceTypeChange}
+							selectDeviceTypeOption={handleSelectedDeviceTypeChange}
 						/>
 					</Box>
 				)}
@@ -343,7 +327,7 @@ export const OsConfiguration = ({
 							</Select>
 						</Box>
 
-						{shouldShowAllVersionsToggle && (
+						{showAllVersionsToggle && (
 							<Box flex={2} mx={2}>
 								<Checkbox
 									checked={showAllVersions}
@@ -356,7 +340,7 @@ export const OsConfiguration = ({
 				</Box>
 			)}
 
-			{hasEditions && (!isInitialDefault || !variant) && (
+			{(!isInitialDefault || !variant) && (
 				<Box>
 					<DownloadImageLabel>
 						{t('placeholders.select_edition')}
