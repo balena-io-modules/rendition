@@ -256,28 +256,25 @@ class BaseDropDownButton extends React.Component<
 						{items
 							? items.map((itemGroup, i) => (
 									<Box key={i}>
-										{itemGroup.map(
-											(item, j) =>
-												item && (
-													<Item
-														px={3}
-														py={1}
-														onClick={(event) => {
-															if (!item.disabled && item.onClick) {
-																item.onClick(event);
-																this.toggle();
-															}
-														}}
-														tooltip={item.tooltip}
-														disabled={item.disabled}
-														danger={item.danger}
-														hasActionFn={!!item.onClick}
-														key={j}
-													>
-														{item.content}
-													</Item>
-												),
-										)}
+										{itemGroup.map((item, j) => (
+											<Item
+												px={3}
+												py={1}
+												onClick={(event) => {
+													if (!item.disabled && item.onClick) {
+														item.onClick(event);
+														this.toggle();
+													}
+												}}
+												tooltip={item.tooltip}
+												disabled={item.disabled}
+												danger={item.danger}
+												hasActionFn={!!item.onClick}
+												key={j}
+											>
+												{item.content}
+											</Item>
+										))}
 										{i < items.length - 1 && <Divider />}
 									</Box>
 							  ))
