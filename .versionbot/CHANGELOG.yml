@@ -1,4 +1,16 @@
 - commits:
+    - subject: Drop support for undefined DropDownButton items
+      hash: 6a1b5e6e1c409ff26f7b8e3d2c35141db033271f
+      body: ''
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 25.0.0
+  date: 2021-12-21T17:41:53.411Z
+- commits:
     - subject: 'DownloadImageModal: Properly type the getDownloadSize() helper'
       hash: 15a95c8d40db65d25122a3d031ddc40ba006b65c
       body: ''
