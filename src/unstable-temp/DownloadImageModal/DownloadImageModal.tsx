@@ -286,7 +286,7 @@ export const UnstableTempDownloadImageModal = ({
 												downloadConfig(deviceType, rawVersion, model),
 										})}
 										{...(getDownloadSize && {
-											getDownloadSize: () =>
+											getDownloadSize: async () =>
 												getDownloadSize(deviceType, rawVersion),
 										})}
 										configurationComponent={

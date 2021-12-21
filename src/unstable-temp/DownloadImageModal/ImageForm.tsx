@@ -16,12 +16,20 @@ import { DownloadOptions } from './DownloadImageModal';
 import { TFunction } from '../../hooks/useTranslation';
 
 const debounceDownloadSize = debounce(
-	(getDownloadSize, deviceType, rawVersion, setDownloadSize) =>
-		getDownloadSize(deviceType.slug, rawVersion)
-			.then(setDownloadSize)
-			.catch(() => {
-				setDownloadSize(null);
-			}),
+	async (
+		getDownloadSize: NonNullable<ImageFormProps['getDownloadSize']>,
+		deviceTypeSlug: string,
+		rawVersion: string,
+		setDownloadSize: (value: string | null) => void,
+	) => {
+		try {
+			setDownloadSize(
+				(await getDownloadSize(deviceTypeSlug, rawVersion)) ?? null,
+			);
+		} catch {
+			setDownloadSize(null);
+		}
+	},
 	200,
 	{
 		trailing: true,
@@ -90,7 +98,10 @@ interface ImageFormProps {
 	) => void;
 	setIsDownloadingConfig: (isDownloading: boolean) => void;
 	downloadConfig?: (model: FormModel) => Promise<void> | undefined;
-	getDownloadSize?: () => Promise<string> | undefined;
+	getDownloadSize?: (
+		slug: string,
+		version: string | null,
+	) => Promise<string | undefined>;
 	modalActions?: ModalAction[];
 	configurationComponent: React.ReactNode;
 }
@@ -193,7 +204,7 @@ export const ImageForm = ({
 		// Debounce as the version changes right after the devicetype does, resulting in multiple requests.
 		debounceDownloadSize(
 			getDownloadSize,
-			deviceType,
+			deviceType.slug,
 			rawVersion,
 			setDownloadSize,
 		);
