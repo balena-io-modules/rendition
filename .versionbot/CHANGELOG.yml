@@ -1,4 +1,25 @@
 - commits:
+    - subject: 'DownloadImageModal: Properly type the getDownloadSize() helper'
+      hash: 15a95c8d40db65d25122a3d031ddc40ba006b65c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+    - subject: 'DownloadImageModalProps: Deprecate the DeviceType JSON properties'
+      hash: 29369adc90283a367e10fec07fa427461e80092a
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 24.2.3
+  date: 2021-12-21T14:59:07.807Z
+- commits:
     - subject: Stop allowing undefined DropDownButton items
       hash: 519ba820c8ddc6d745979141aae8a70f61fa996f
       body: ''
