@@ -66,14 +66,17 @@ const getUniqueOsTypes = (
 	return uniq(osVersions[deviceTypeSlug].map((x) => x.osType));
 };
 
-export interface DownloadOptions extends FormModel {
+export interface DownloadOptionsBase {
 	appId: number;
 	releaseId?: number;
 	deviceType: string;
 	provisioningKeyName?: string;
 	downloadConfigOnly?: boolean;
 	version: string;
+	developmentMode?: boolean;
 }
+
+export interface DownloadOptions extends DownloadOptionsBase, FormModel {}
 
 export interface UnstableTempDownloadImageModalProps {
 	application: Application;

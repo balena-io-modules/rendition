@@ -12,7 +12,7 @@ import { Txt } from '../../components/Txt';
 
 import { DownloadFormModel, FormModel } from './FormModel';
 import { DeviceType } from './models';
-import { DownloadOptions } from './DownloadImageModal';
+import { DownloadOptions, DownloadOptionsBase } from './DownloadImageModal';
 import { TFunction } from '../../hooks/useTranslation';
 
 const debounceDownloadSize = debounce(
@@ -168,17 +168,24 @@ export const ImageForm = ({
 		actions[0].label,
 	);
 
-	const downloadOptions = React.useMemo(
-		() => ({
+	const downloadOptionsBase = React.useMemo(
+		(): DownloadOptionsBase => ({
 			appId,
 			releaseId,
 			deviceType: deviceType.slug,
-			version: rawVersion,
+			version: rawVersion ?? '',
 			developmentMode,
+		}),
+		[appId, releaseId, deviceType, rawVersion, developmentMode],
+	);
+
+	const downloadOptions = React.useMemo(
+		(): DownloadOptions => ({
+			...downloadOptionsBase,
 			...model,
 		}),
-		[appId, releaseId, deviceType, model, rawVersion, developmentMode],
-	) as DownloadOptions;
+		[downloadOptionsBase, model],
+	);
 
 	const startDownload = (downloadConfigOnly: boolean) => {
 		if (typeof onDownloadStart === 'function') {
@@ -241,17 +248,15 @@ export const ImageForm = ({
 			style={{ display: 'flex', flexDirection: 'column', height: '100%' }}
 			ref={formElement}
 		>
-			<input type="hidden" name="appId" value={appId} />
-			{releaseId && <input type="hidden" name="releaseId" value={releaseId} />}
 			<input type="hidden" name="_token" value={authToken} />
-			<input name="version" value={rawVersion ?? ''} type="hidden" />
-			<input
-				name="developmentMode"
-				value={developmentMode.toString()}
-				type="hidden"
-			/>
-			<input name="deviceType" value={deviceType?.slug} type="hidden" />
 			<input name="fileType" value=".zip" type="hidden" />
+
+			{Object.entries(downloadOptionsBase).map(([key, value]) => {
+				if (value === undefined) {
+					return null;
+				}
+				return <input type="hidden" name={key} key={key} value={`${value}`} />;
+			})}
 
 			{configurationComponent}
 
