@@ -113,14 +113,22 @@ export interface DeviceTypeOptionsGroup {
 export interface DeviceType {
 	slug: string;
 	name: string;
+	logo?: string;
+	contract?: Record<string, any>;
+
+	/** @deprecated */
 	imageDownloadAlerts?: DeviceTypeDownloadAlert[];
+	/** @deprecated */
 	instructions?: string[] | DeviceTypeInstructions;
+	/** @deprecated */
 	gettingStartedLink?: string | DeviceTypeGettingStartedLink;
+	/** @deprecated */
 	options?: DeviceTypeOptions[];
-	yocto: {
+	/** @deprecated */
+	yocto?: {
 		fstype?: string;
 		deployArtifact: string;
 	};
-	/** Holds the latest balenaOS version */
+	/** @deprecated use DeviceType.logo */
 	logoUrl?: string;
 }

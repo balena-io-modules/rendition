@@ -74,7 +74,7 @@ export const ApplicationInstructions = React.memo(
 		if (
 			!deviceType ||
 			!instructions ||
-			deviceType?.yocto.deployArtifact === 'empty'
+			deviceType?.yocto?.deployArtifact === 'empty'
 		) {
 			return <Txt>{t('no_data.no_instructions_found')}</Txt>;
 		}

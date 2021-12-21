@@ -152,7 +152,7 @@ export const UnstableTempDownloadImageModal = ({
 	const [isDownloadingConfig, setIsDownloadingConfig] = React.useState(false);
 	const [isFetching, setIsFetching] = React.useState(isEmpty(osVersions));
 
-	const logoSrc = deviceType?.logoUrl ?? undefined;
+	const logoSrc = deviceType?.logo ?? deviceType?.logoUrl ?? undefined;
 	const defaultDisplayName = deviceType?.name ?? '-';
 
 	React.useEffect(() => {
@@ -286,7 +286,7 @@ export const UnstableTempDownloadImageModal = ({
 												downloadConfig(deviceType, rawVersion, model),
 										})}
 										{...(getDownloadSize && {
-											getDownloadSize: () =>
+											getDownloadSize: async () =>
 												getDownloadSize(deviceType, rawVersion),
 										})}
 										configurationComponent={

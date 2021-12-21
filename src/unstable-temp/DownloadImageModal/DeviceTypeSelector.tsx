@@ -22,7 +22,7 @@ const DeviceTypeOption = ({
 	const { t } = useTranslation();
 	const typeDisplayName =
 		deviceType?.name ?? t('placeholders.choose_device_type');
-	const logoSrc = deviceType?.logoUrl ?? undefined;
+	const logoSrc = deviceType?.logo ?? deviceType?.logoUrl ?? undefined;
 	const defaultDisplayName = deviceType?.name ?? '-';
 
 	return (
