@@ -98,7 +98,7 @@ interface ImageFormProps {
 		downloadOptions: DownloadOptions,
 	) => void;
 	setIsDownloadingConfig: (isDownloading: boolean) => void;
-	downloadConfig?: (model: FormModel) => Promise<void> | undefined;
+	downloadConfig?: (model: DownloadOptions) => Promise<void> | undefined;
 	getDownloadSize?: (
 		slug: string,
 		version: string | null,
@@ -134,6 +134,25 @@ export const ImageForm = ({
 	);
 	const [model, setModel] = React.useState<FormModel>({});
 
+	const downloadOptionsBase = React.useMemo(
+		(): DownloadOptionsBase => ({
+			appId,
+			releaseId,
+			deviceType: deviceType.slug,
+			version: rawVersion ?? '',
+			developmentMode,
+		}),
+		[appId, releaseId, deviceType, rawVersion, developmentMode],
+	);
+
+	const downloadOptions = React.useMemo(
+		(): DownloadOptions => ({
+			...downloadOptionsBase,
+			...model,
+		}),
+		[downloadOptionsBase, model],
+	);
+
 	const actions: ModalAction[] = [
 		...(modalActions ?? []),
 		{
@@ -154,7 +173,7 @@ export const ImageForm = ({
 			onClick: async () => {
 				if (downloadConfigOnly && downloadConfig) {
 					setIsDownloadingConfig(true);
-					await downloadConfig(model);
+					await downloadConfig(downloadOptions);
 					setIsDownloadingConfig(false);
 				}
 				startDownload(true);
@@ -166,25 +185,6 @@ export const ImageForm = ({
 
 	const [selectedActionLabel, setSelectedActionLabel] = React.useState<string>(
 		actions[0].label,
-	);
-
-	const downloadOptionsBase = React.useMemo(
-		(): DownloadOptionsBase => ({
-			appId,
-			releaseId,
-			deviceType: deviceType.slug,
-			version: rawVersion ?? '',
-			developmentMode,
-		}),
-		[appId, releaseId, deviceType, rawVersion, developmentMode],
-	);
-
-	const downloadOptions = React.useMemo(
-		(): DownloadOptions => ({
-			...downloadOptionsBase,
-			...model,
-		}),
-		[downloadOptionsBase, model],
 	);
 
 	const startDownload = (downloadConfigOnly: boolean) => {

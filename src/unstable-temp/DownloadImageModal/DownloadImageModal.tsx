@@ -260,8 +260,15 @@ export const UnstableTempDownloadImageModal = ({
 										modalActions={modalActions}
 										authToken={authToken}
 										{...(downloadConfig && {
-											downloadConfig: (model) =>
-												downloadConfig(deviceType, rawVersion, model),
+											downloadConfig: ({
+												appId,
+												releaseId,
+												deviceType: _deviceTypeSlug,
+												version,
+												...model
+											}) =>
+												// TODO: Change this to be passing the whole model
+												downloadConfig(deviceType, version, model),
 										})}
 										{...(getDownloadSize && {
 											getDownloadSize: async () =>
