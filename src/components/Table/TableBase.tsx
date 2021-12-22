@@ -167,7 +167,7 @@ export class TableBase<T> extends React.Component<
 		this.state = {
 			sort: sortState,
 			page: 0,
-			...this.getSelectedRows(props.checkedItems),
+			...this.getSelectedRows(props.checkedItems ?? []),
 		};
 	}
 
@@ -181,7 +181,9 @@ export class TableBase<T> extends React.Component<
 
 		if (
 			checkedItems &&
-			(prevProps.checkedItems !== checkedItems || prevProps.rowKey !== rowKey)
+			(prevProps.checkedItems !== checkedItems ||
+				prevProps.rowKey !== rowKey ||
+				data !== prevProps.data)
 		) {
 			this.setRowSelection(checkedItems);
 		}
@@ -196,7 +198,7 @@ export class TableBase<T> extends React.Component<
 	}
 
 	protected $getSelectedIdentifiersSet = memoizee(
-		(selectedRows: T[] | undefined, rowKey: keyof T) => {
+		(selectedRows: T[] | undefined, rowKey: keyof T | undefined) => {
 			if (!rowKey) {
 				return new Set<unknown>();
 			}
@@ -268,6 +270,7 @@ export class TableBase<T> extends React.Component<
 		this.$getHighlightedRowIdentifiers.clear();
 		this.$getDisabledRowIdentifiers.clear();
 		this.$getSelectedIdentifiersSet.clear();
+		this.$getValidatedCheckedItems.clear();
 	}
 
 	public howManyRowsChecked(checkedItems: T[]): CheckedTypes {
@@ -317,25 +320,55 @@ export class TableBase<T> extends React.Component<
 		return collection;
 	}
 
-	private getSelectedRows = (selectedRows: T[] | undefined) => {
+	private $getValidatedCheckedItems = memoizee(
+		(
+			data: T[] | null | undefined,
+			selectedKeys: Set<unknown>,
+			rowKey: keyof T | undefined,
+			checkedItems: T[],
+		) => {
+			const newCheckedItems =
+				!data || !rowKey || selectedKeys.size === 0
+					? []
+					: data.filter((x) => selectedKeys.has(x[rowKey]));
+			// shallow equality check
+			for (
+				let i = 0;
+				i < Math.max(checkedItems.length, newCheckedItems.length);
+				i++
+			) {
+				if (checkedItems[i] !== newCheckedItems[i]) {
+					return newCheckedItems;
+				}
+			}
+			return checkedItems;
+		},
+		{ max: 1 },
+	);
+
+	private getSelectedRows = (selectedRows: T[]) => {
 		const { rowKey, data } = this.props;
 
-		let checkedItems: T[] = [];
-		let allChecked: CheckedTypes = 'none';
-
-		if (!data || !rowKey || !selectedRows || selectedRows.length === 0) {
-			return { checkedItems, allChecked };
-		}
-
 		const selectedKeys = this.$getSelectedIdentifiersSet(selectedRows, rowKey);
-		checkedItems = data.filter((x) => selectedKeys.has(x[rowKey]));
-		allChecked = this.howManyRowsChecked(checkedItems);
+		const checkedItems = this.$getValidatedCheckedItems(
+			data,
+			selectedKeys,
+			rowKey,
+			selectedRows,
+		);
+		const allChecked = this.howManyRowsChecked(checkedItems);
 
 		return { checkedItems, allChecked };
 	};
 
 	public setRowSelection = (selectedRows: T[]): void => {
-		this.setState(this.getSelectedRows(selectedRows));
+		const newState = this.getSelectedRows(selectedRows);
+		const hasCheckedItemsChanged =
+			newState.checkedItems !== this.state.checkedItems;
+		this.setState(newState);
+		if (this.props.onCheck && hasCheckedItemsChanged) {
+			this.props.onCheck(newState.checkedItems);
+		}
 	};
 
 	public toggleAllChecked = () => {
