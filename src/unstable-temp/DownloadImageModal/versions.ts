@@ -1,88 +1,79 @@
 import uniq from 'lodash/uniq';
+import partition from 'lodash/partition';
 import { OsVersion } from './models';
 import { Dictionary } from '../../common-types';
 
-export interface VersionSelectionOptions {
+export type VersionSelectionOptions = {
 	title: string;
 	value: string;
 	isRecommended?: boolean;
-	supportsBuildEditions: boolean;
 	osType: string;
 	line?: string;
 	knownIssueList: string | null;
-	rawVersions: {
-		dev: string | null;
-		prod: string | null;
-	};
-}
-
-export const transformVersions = (
-	versions: OsVersion[],
-	hasEditions: boolean,
-) => {
-	if (!hasEditions) {
-		return versions.map<VersionSelectionOptions>((v) => {
-			return {
-				title: v.formattedVersion,
-				value: v.strippedVersion,
-				isRecommended: v.isRecommended,
-				supportsBuildEditions: false,
-				osType: v.osType,
-				line: v.line,
-				knownIssueList: v.known_issue_list,
-				rawVersions: {
-					dev: null,
-					prod: v.rawVersion,
-				},
+} & (
+	| {
+			hasPrebuiltVariants: false;
+			rawVersion: string;
+	  }
+	| {
+			hasPrebuiltVariants: true;
+			rawVersions: {
+				dev?: string;
+				prod?: string;
 			};
-		});
-	}
+	  }
+);
 
+export const transformVersions = (versions: OsVersion[]) => {
 	// Get a single object per stripped version, with both variants of it included (if they exist). It expects a sorted `
-	const selectionOptsMap = versions.reduce(
-		(selectionOpts: Dictionary<VersionSelectionOptions>, version) => {
-			const existingSelectionOpt = selectionOpts[version.strippedVersion];
-			// We always want to use the 'prod' variant's formatted version as it can contain additional information (such as recommended label).
-			const defaultTitle =
-				existingSelectionOpt?.title ?? version.formattedVersion;
-			const title =
-				version.variant !== 'dev' ? version.formattedVersion : defaultTitle;
+	const optsByVersion: Dictionary<VersionSelectionOptions> = {};
+	versions.forEach((version) => {
+		const existingSelectionOpt = optsByVersion[version.strippedVersion];
+		// We always want to use the 'prod' variant's formatted version as it can contain additional information (such as recommended label).
+		const title =
+			(version.variant === 'dev' ? existingSelectionOpt?.title : null) ??
+			version.formattedVersion;
 
-			selectionOpts[version.strippedVersion] = {
-				title,
-				value: version.strippedVersion,
-				supportsBuildEditions: true,
-				osType: version.osType,
-				line: version.line,
-				knownIssueList: version.known_issue_list,
-				rawVersions: {
-					dev:
-						version.variant === 'dev'
-							? version.rawVersion
-							: existingSelectionOpt?.rawVersions.dev,
-					prod:
-						version.variant !== 'dev'
-							? version.rawVersion
-							: existingSelectionOpt?.rawVersions.prod,
-				},
-			};
+		optsByVersion[version.strippedVersion] = {
+			title,
+			value: version.strippedVersion,
+			osType: version.osType,
+			line: version.line,
+			knownIssueList: version.known_issue_list,
+			...(version.variant == null
+				? {
+						hasPrebuiltVariants: false,
+						rawVersion: version.rawVersion,
+				  }
+				: {
+						hasPrebuiltVariants: true,
+						rawVersions: {
+							...(existingSelectionOpt != null &&
+								'rawVersions' in existingSelectionOpt &&
+								existingSelectionOpt.rawVersions),
+							[version.variant]: version.rawVersion,
+						},
+				  }),
+		};
+	});
 
-			return selectionOpts;
-		},
-		{},
-	);
-
-	return Object.values(selectionOptsMap);
+	return Object.values(optsByVersion);
 };
 
-// This returns the 3 most preferred versions for a os type. For multi-line os types, that would be the latest of each line, otherwise it is the latest 3 versions.
+const LEGACY_OS_VERSION_MAJOR = 1;
+
+// This returns the 3 most preferred versions for an os type. For multi-line os types, that would be the latest of each line, otherwise it is the latest 3 versions.
 export const getPreferredVersionOpts = (
-	proposedVersionOpts: VersionSelectionOptions[],
-	noBuildVariantVersionOpts: VersionSelectionOptions[],
+	versionOpts: VersionSelectionOptions[],
 ) => {
-	const opts = proposedVersionOpts.length
-		? proposedVersionOpts
-		: noBuildVariantVersionOpts;
+	const [supportedVersions, legacyVersions] = partition(versionOpts, (v) => {
+		// TODO: check if worth installing semver on rendition;
+		// const major = semver.major(v.strippedVersion);
+		const major = v.value.match(/\d+/)?.join();
+		return major && parseInt(major, 10) > LEGACY_OS_VERSION_MAJOR;
+	});
+
+	const opts = supportedVersions.length ? supportedVersions : legacyVersions;
 
 	const lines = uniq(opts.map((option) => option.line));
 	const hasMultipleLines = lines.length > 1;
@@ -107,10 +98,11 @@ export const getPreferredVersionOpts = (
 			}
 
 			const match = option.value.match(/\d+\.\d+\./);
-			if (match) {
-				if (!preferredDefaultOpts.find((v) => v.value.startsWith(match[0]))) {
-					preferredDefaultOpts.push(option);
-				}
+			if (
+				match &&
+				!preferredDefaultOpts.find((v) => v.value.startsWith(match[0]))
+			) {
+				preferredDefaultOpts.push(option);
 			}
 		}
 

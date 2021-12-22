@@ -12,7 +12,7 @@ import { Txt } from '../../components/Txt';
 
 import { DownloadFormModel, FormModel } from './FormModel';
 import { DeviceType } from './models';
-import { DownloadOptions } from './DownloadImageModal';
+import { DownloadOptions, DownloadOptionsBase } from './DownloadImageModal';
 import { TFunction } from '../../hooks/useTranslation';
 
 const debounceDownloadSize = debounce(
@@ -90,6 +90,7 @@ interface ImageFormProps {
 	appId: number;
 	releaseId?: number;
 	rawVersion: string | null;
+	developmentMode: boolean;
 	deviceType: DeviceType;
 	authToken?: string;
 	onDownloadStart?: (
@@ -97,7 +98,7 @@ interface ImageFormProps {
 		downloadOptions: DownloadOptions,
 	) => void;
 	setIsDownloadingConfig: (isDownloading: boolean) => void;
-	downloadConfig?: (model: FormModel) => Promise<void> | undefined;
+	downloadConfig?: (model: DownloadOptions) => Promise<void> | undefined;
 	getDownloadSize?: (
 		slug: string,
 		version: string | null,
@@ -111,6 +112,7 @@ export const ImageForm = ({
 	appId,
 	releaseId,
 	rawVersion,
+	developmentMode,
 	deviceType,
 	authToken,
 	onDownloadStart,
@@ -127,9 +129,29 @@ export const ImageForm = ({
 	// download, so there is no need to show the toggle
 	const hasDockerImageDownload =
 		deviceType?.yocto?.deployArtifact === 'docker-image';
-	const [model, setModel] = React.useState<FormModel>({
-		downloadConfigOnly: hasDockerImageDownload,
-	});
+	const [downloadConfigOnly, setDownloadConfigOnly] = React.useState(
+		hasDockerImageDownload,
+	);
+	const [model, setModel] = React.useState<FormModel>({});
+
+	const downloadOptionsBase = React.useMemo(
+		(): DownloadOptionsBase => ({
+			appId,
+			releaseId,
+			deviceType: deviceType.slug,
+			version: rawVersion ?? '',
+			developmentMode,
+		}),
+		[appId, releaseId, deviceType, rawVersion, developmentMode],
+	);
+
+	const downloadOptions = React.useMemo(
+		(): DownloadOptions => ({
+			...downloadOptionsBase,
+			...model,
+		}),
+		[downloadOptionsBase, model],
+	);
 
 	const actions: ModalAction[] = [
 		...(modalActions ?? []),
@@ -149,12 +171,12 @@ export const ImageForm = ({
 		{
 			plain: true,
 			onClick: async () => {
-				if (model.downloadConfigOnly && downloadConfig) {
+				if (downloadConfigOnly && downloadConfig) {
 					setIsDownloadingConfig(true);
-					await downloadConfig(model);
+					await downloadConfig(downloadOptions);
 					setIsDownloadingConfig(false);
 				}
-				setDownloadConfigOnly(true);
+				startDownload(true);
 			},
 			icon: <FontAwesomeIcon icon={faDownload} />,
 			label: t('actions.download_configuration_file_only'),
@@ -165,35 +187,20 @@ export const ImageForm = ({
 		actions[0].label,
 	);
 
-	const downloadOptions = React.useMemo(
-		() => ({
-			appId,
-			releaseId,
-			deviceType: deviceType.slug,
-			version: rawVersion,
-			...model,
-		}),
-		[appId, releaseId, deviceType, model, rawVersion],
-	) as DownloadOptions;
-
-	const setDownloadConfigOnly = (downloadConfigOnly: boolean) => {
+	const startDownload = (downloadConfigOnly: boolean) => {
 		if (typeof onDownloadStart === 'function') {
 			onDownloadStart(downloadConfigOnly, {
 				...downloadOptions,
-				downloadConfigOnly,
 			});
 		}
-		setModel({
-			...model,
-			downloadConfigOnly,
-		});
+		setDownloadConfigOnly(downloadConfigOnly);
 	};
 
 	React.useEffect(() => {
-		if (hasDockerImageDownload && !model.downloadConfigOnly) {
+		if (hasDockerImageDownload && !downloadConfigOnly) {
 			setDownloadConfigOnly(true);
 		}
-	}, [hasDockerImageDownload, model.downloadConfigOnly]);
+	}, [hasDockerImageDownload, downloadConfigOnly]);
 
 	React.useEffect(() => {
 		if (!deviceType || !rawVersion || !getDownloadSize) {
@@ -241,12 +248,15 @@ export const ImageForm = ({
 			style={{ display: 'flex', flexDirection: 'column', height: '100%' }}
 			ref={formElement}
 		>
-			<input type="hidden" name="appId" value={appId} />
-			{releaseId && <input type="hidden" name="releaseId" value={releaseId} />}
 			<input type="hidden" name="_token" value={authToken} />
-			<input name="version" value={rawVersion ?? ''} type="hidden" />
-			<input name="deviceType" value={deviceType?.slug} type="hidden" />
 			<input name="fileType" value=".zip" type="hidden" />
+
+			{Object.entries(downloadOptionsBase).map(([key, value]) => {
+				if (value === undefined) {
+					return null;
+				}
+				return <input type="hidden" name={key} key={key} value={`${value}`} />;
+			})}
 
 			{configurationComponent}
 
@@ -287,9 +297,9 @@ export const ImageForm = ({
 								? t('warnings.image_deployed_to_docker')
 								: ''
 						}
-						onClick={() => setDownloadConfigOnly(false)}
+						onClick={() => startDownload(false)}
 					>
-						<Txt bold={!model.downloadConfigOnly}>
+						<Txt bold={!downloadConfigOnly}>
 							{t('actions.download_balenaos') +
 								(rawVersion && downloadSize ? ` (~${downloadSize})` : '')}
 						</Txt>

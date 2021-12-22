@@ -6,7 +6,6 @@ import { ApplicationInstructions } from './ApplicationInstructions';
 import { ImageForm, ModalAction } from './ImageForm';
 import isEmpty from 'lodash/isEmpty';
 import noop from 'lodash/noop';
-import find from 'lodash/find';
 import uniq from 'lodash/uniq';
 import {
 	OsVersionsByDeviceType,
@@ -67,14 +66,17 @@ const getUniqueOsTypes = (
 	return uniq(osVersions[deviceTypeSlug].map((x) => x.osType));
 };
 
-export interface DownloadOptions extends FormModel {
+export interface DownloadOptionsBase {
 	appId: number;
 	releaseId?: number;
 	deviceType: string;
 	provisioningKeyName?: string;
 	downloadConfigOnly?: boolean;
 	version: string;
+	developmentMode?: boolean;
 }
+
+export interface DownloadOptions extends DownloadOptionsBase, FormModel {}
 
 export interface UnstableTempDownloadImageModalProps {
 	application: Application;
@@ -133,6 +135,7 @@ export const UnstableTempDownloadImageModal = ({
 	const { t } = useTranslation();
 	const [deviceType, setDeviceType] = React.useState(initialDeviceType);
 	const [rawVersion, setRawVersion] = React.useState<string | null>(null);
+	const [developmentMode, setDevelopmentMode] = React.useState(false);
 	const [osVersions, setOsVersions] = React.useState<OsVersionsByDeviceType>(
 		initialOsVersions ?? {},
 	);
@@ -207,32 +210,6 @@ export const UnstableTempDownloadImageModal = ({
 		getSupportedOsTypes(application.id, deviceType?.slug).then(setOsTypes);
 	}, [deviceType?.slug, application.id]);
 
-	const templateData = {
-		dockerImage:
-			rawVersion && deviceType
-				? getDockerArtifact(deviceType.slug, stripVersionBuild(rawVersion))
-				: '',
-	};
-
-	const handleSelectedDeviceTypeChange = React.useCallback(
-		(dt: DeviceType) => {
-			if (deviceType?.slug === dt.slug) {
-				return;
-			}
-
-			const selectedDeviceType = find(compatibleDeviceTypes, {
-				slug: dt.slug,
-			});
-
-			if (!selectedDeviceType) {
-				return;
-			}
-
-			setDeviceType(selectedDeviceType);
-		},
-		[compatibleDeviceTypes, deviceType],
-	);
-
 	if (!deviceType) {
 		return null;
 	}
@@ -279,11 +256,19 @@ export const UnstableTempDownloadImageModal = ({
 										releaseId={releaseId}
 										downloadUrl={downloadUrl}
 										rawVersion={rawVersion}
+										developmentMode={developmentMode}
 										modalActions={modalActions}
 										authToken={authToken}
 										{...(downloadConfig && {
-											downloadConfig: (model) =>
-												downloadConfig(deviceType, rawVersion, model),
+											downloadConfig: ({
+												appId,
+												releaseId,
+												deviceType: _deviceTypeSlug,
+												version,
+												...model
+											}) =>
+												// TODO: Change this to be passing the whole model
+												downloadConfig(deviceType, version, model),
 										})}
 										{...(getDownloadSize && {
 											getDownloadSize: async () =>
@@ -297,10 +282,9 @@ export const UnstableTempDownloadImageModal = ({
 												deviceTypeOsVersions={osVersions}
 												osTypes={osTypes}
 												isInitialDefault={isInitialDefault}
-												onSelectedDeviceTypeChange={
-													handleSelectedDeviceTypeChange
-												}
+												onSelectedDeviceTypeChange={setDeviceType}
 												onSelectedVersionChange={setRawVersion}
+												onSelectedDevelopmentMode={setDevelopmentMode}
 												onSelectedOsTypeChange={setOsType}
 												hasEsrVersions={
 													deviceTypeHasEsr[deviceType.slug] ?? false
@@ -316,8 +300,15 @@ export const UnstableTempDownloadImageModal = ({
 				</Box>
 				<Box flex={1} ml={[0, 0, 0, 3]} mt={[3, 0, 0, 0]}>
 					<ApplicationInstructions
-						templateData={templateData}
 						deviceType={deviceType}
+						templateData={{
+							dockerImage: rawVersion
+								? getDockerArtifact(
+										deviceType.slug,
+										stripVersionBuild(rawVersion),
+								  )
+								: '',
+						}}
 					/>
 				</Box>
 			</Flex>
