@@ -96,7 +96,8 @@ export default css`
 		cursor: default;
 	}
 
-	.xterm.xterm-cursor-pointer {
+	.xterm.xterm-cursor-pointer,
+	.xterm .xterm-cursor-pointer {
 		cursor: pointer;
 	}
 
