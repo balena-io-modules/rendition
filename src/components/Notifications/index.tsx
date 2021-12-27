@@ -2,7 +2,7 @@ import * as React from 'react';
 import ReactNotification, { store } from 'react-notifications-component';
 import styled from 'styled-components';
 import { animations } from '../../animations';
-import { Alert } from '../Alert';
+import { Alert, AlertProps } from '../Alert';
 import styles from './defaultStyle';
 
 type CONTAINER =
@@ -15,7 +15,7 @@ type CONTAINER =
 
 type NOTIFICATION_TYPE = 'danger' | 'warning' | 'success' | 'info';
 
-export interface NotificationOptions {
+export interface NotificationOptions extends Pick<AlertProps, 'prefix'> {
 	/** The content you wish to display in the notification */
 	content: React.ReactNode;
 	/** A callback function that is triggered when the "dismiss" button is clicked */
@@ -70,19 +70,13 @@ const getTransformedOptions = (
 	}
 };
 
-type NotificationContainerProps = {
-	children: React.ReactNode;
-	type?: NotificationOptions['type'];
-	onDismiss: NotificationOptions['onDismiss'];
-	id: NotificationOptions['id'];
-};
-
 const NotificationContainer = ({
-	children,
+	content,
 	type,
 	onDismiss,
 	id,
-}: NotificationContainerProps) => {
+	...props
+}: NotificationOptions) => {
 	return (
 		<FullWidthContainer
 			emphasized={Boolean(type)}
@@ -96,8 +90,9 @@ const NotificationContainer = ({
 				}
 				store.removeNotification(id);
 			}}
+			{...props}
 		>
-			{children}
+			{content}
 		</FullWidthContainer>
 	);
 };
@@ -161,9 +156,9 @@ export const notifications = {
 					type={transformedOptions.type}
 					onDismiss={transformedOptions.onDismiss}
 					id={transformedOptions.id}
-				>
-					{transformedOptions.content}
-				</NotificationContainer>
+					content={transformedOptions.content}
+					prefix={transformedOptions.prefix}
+				/>
 			),
 		});
 	},
