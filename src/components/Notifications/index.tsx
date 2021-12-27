@@ -4,6 +4,10 @@ import styled from 'styled-components';
 import { animations } from '../../animations';
 import { Alert, AlertProps } from '../Alert';
 import styles from './defaultStyle';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBan } from '@fortawesome/free-solid-svg-icons/faBan';
+import { Txt } from '../Txt';
+import theme from '../../theme';
 
 type CONTAINER =
 	| 'top-left'
@@ -75,7 +79,7 @@ const NotificationContainer = ({
 	type,
 	onDismiss,
 	id,
-	...props
+	prefix,
 }: NotificationOptions) => {
 	return (
 		<FullWidthContainer
@@ -90,7 +94,17 @@ const NotificationContainer = ({
 				}
 				store.removeNotification(id);
 			}}
-			{...props}
+			prefix={
+				prefix ??
+				(type === 'danger' ? (
+					<>
+						<Txt.span color={theme.colors.danger.main} mr={2}>
+							<FontAwesomeIcon icon={faBan} />
+						</Txt.span>
+						<Txt.span>Error!</Txt.span>
+					</>
+				) : undefined)
+			}
 		>
 			{content}
 		</FullWidthContainer>
