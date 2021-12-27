@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update snapshots
+      hash: f83f7419d8c5165d2756ca795fdea2ebe567a016
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 25.1.1
+  date: 2021-12-27T13:58:04.359Z
+- commits:
     - subject: 'DownloadImageModal: Wire additional properties to downloadConfig'
       hash: c74f5c80ba50a4a876386db687dad98bb1f2e120
       body: ''
