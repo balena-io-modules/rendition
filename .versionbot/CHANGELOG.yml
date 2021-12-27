@@ -1,4 +1,16 @@
 - commits:
+    - subject: Change danger notifications to error notifications
+      hash: d3482e514288548d04a811bdc7f604a11ac29428
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 25.3.0
+  date: 2021-12-27T21:07:25.051Z
+- commits:
     - subject: Make Notifications accept prefix from AlertProps
       hash: d2708d11c1a8a2d3538516303001e64b9751e82d
       body: ''
