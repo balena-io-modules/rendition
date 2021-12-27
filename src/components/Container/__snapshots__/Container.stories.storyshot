@@ -6,10 +6,10 @@ exports[`Storyshots Core/Container Centered Content 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds bkEkLP sc-cHPgQl dLNfax sc-KfMfS dLjbBZ"
+      class="sc-gKXOVf QRSBg sc-iBkjds bkEkLP sc-jKDlA-D iNkNXJ sc-bTMaZy iamCcR"
     >
       <h3
-        class="sc-gXmSlM kKsxAv sc-cCsOjp kdvCNm"
+        class="sc-ciZhAO btUqKl sc-jdAMXn iwAvbM"
       >
         I am in a container
       </h3>
@@ -24,10 +24,10 @@ exports[`Storyshots Core/Container Default 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds bkEkLP sc-cHPgQl geNtXS sc-KfMfS dLjbBZ"
+      class="sc-gKXOVf QRSBg sc-iBkjds bkEkLP sc-jKDlA-D loJEki sc-bTMaZy iamCcR"
     >
       <h3
-        class="sc-gXmSlM kKsxAv sc-cCsOjp kdvCNm"
+        class="sc-ciZhAO btUqKl sc-jdAMXn iwAvbM"
       >
         I am in a container
       </h3>

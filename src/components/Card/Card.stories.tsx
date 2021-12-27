@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link, Flex, Button, TextWithCopy } from '../..';
+import { Link, Flex, Button, Txt } from '../..';
 import { Meta } from '@storybook/react';
 import { createTemplate, createStory } from '../../stories/utils';
 import { Card, CardProps } from './';
@@ -7,12 +7,12 @@ import { Card, CardProps } from './';
 const rows = [
 	<div>Lorem Ipsum dolor si amet</div>,
 	<Link href="www.balena.io">Link</Link>,
-	<TextWithCopy
-		showCopyButton="always"
+	<Txt
+		showCopyMode="always"
 		copy="This value has been copied to your clipboard!"
 	>
 		Row with Copy component
-	</TextWithCopy>,
+	</Txt>,
 	<Flex justifyContent="space-between">
 		<div>Row with</div>
 		<div>Flex</div>

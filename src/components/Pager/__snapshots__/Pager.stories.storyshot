@@ -9,7 +9,7 @@ exports[`Storyshots Core/Pager Default 1`] = `
       class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK hoTTom"
     >
       <div
-        class="sc-fLlhyt gAlhfr sc-bBrHrO kevwqp"
+        class="sc-ivTmOn jVwBQP sc-cxabCf bOpZdj"
       >
         <strong>
           51
@@ -28,7 +28,7 @@ exports[`Storyshots Core/Pager Default 1`] = `
         class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY"
       >
         <div
-          class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kLLXSd iKIurY lcvtzu"
+          class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-jIZahH iKIurY hlMcTG"
         >
           <button
             class="StyledButton-sc-323bzc-0 jIlaYJ sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR kAoSkv rendition-pager__btn--prev"
@@ -86,7 +86,7 @@ exports[`Storyshots Core/Pager Fuzzy 1`] = `
       class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK hoTTom"
     >
       <div
-        class="sc-fLlhyt gAlhfr sc-bBrHrO kevwqp"
+        class="sc-ivTmOn jVwBQP sc-cxabCf bOpZdj"
       >
         <strong>
           51
@@ -105,7 +105,7 @@ exports[`Storyshots Core/Pager Fuzzy 1`] = `
         class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY"
       >
         <div
-          class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kLLXSd iKIurY lcvtzu"
+          class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-jIZahH iKIurY hlMcTG"
         >
           <button
             class="StyledButton-sc-323bzc-0 jIlaYJ sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR kAoSkv rendition-pager__btn--prev"

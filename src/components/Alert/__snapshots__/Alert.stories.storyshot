@@ -6,10 +6,10 @@ exports[`Storyshots Core/Alert Default 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds gwVQPy sc-hHLeRK sc-dmRaPn iKIurY eeClkm sc-llJcti hQwFFc"
+      class="sc-gKXOVf QRSBg sc-iBkjds gwVQPy sc-hHLeRK sc-dmRaPn iKIurY eeClkm sc-gicCDI cmHWGP"
     >
       <div
-        class="sc-fLlhyt gAlhfr sc-bBrHrO ddiZCg"
+        class="sc-ivTmOn jVwBQP sc-cxabCf CTiCS"
       >
         <svg
           aria-hidden="true"
@@ -31,12 +31,12 @@ exports[`Storyshots Core/Alert Default 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds jAkInX"
       >
         <span
-          class="sc-fLlhyt iYlmke sc-ivTmOn ixflud"
+          class="sc-ivTmOn CrJHK sc-llJcti egDqiq"
         >
           Success!
         </span>
         <span
-          class="sc-fLlhyt gAlhfr sc-ivTmOn fbiySe"
+          class="sc-ivTmOn jVwBQP sc-llJcti iKEiEp"
         >
           This is a default alert
         </span>
@@ -52,10 +52,10 @@ exports[`Storyshots Core/Alert Emphasized 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds dnRYSM sc-hHLeRK sc-dmRaPn iKIurY dELywO sc-llJcti hQwFFc"
+      class="sc-gKXOVf QRSBg sc-iBkjds dnRYSM sc-hHLeRK sc-dmRaPn iKIurY dELywO sc-gicCDI cmHWGP"
     >
       <div
-        class="sc-fLlhyt gAlhfr sc-bBrHrO iNQEwe"
+        class="sc-ivTmOn jVwBQP sc-cxabCf eemXLs"
       >
         <svg
           aria-hidden="true"
@@ -77,12 +77,12 @@ exports[`Storyshots Core/Alert Emphasized 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds tsoYt"
       >
         <span
-          class="sc-fLlhyt iYlmke sc-ivTmOn ixflud"
+          class="sc-ivTmOn CrJHK sc-llJcti egDqiq"
         >
           Note!
         </span>
         <span
-          class="sc-fLlhyt gAlhfr sc-ivTmOn irBlAP"
+          class="sc-ivTmOn jVwBQP sc-llJcti lccPfE"
         >
           This is an emphasized alert
         </span>
@@ -98,10 +98,10 @@ exports[`Storyshots Core/Alert Plaintext 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY sc-llJcti hQwFFc"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY sc-gicCDI cmHWGP"
     >
       <div
-        class="sc-fLlhyt gAlhfr sc-bBrHrO iNQEwe"
+        class="sc-ivTmOn jVwBQP sc-cxabCf eemXLs"
       >
         <svg
           aria-hidden="true"
@@ -120,7 +120,7 @@ exports[`Storyshots Core/Alert Plaintext 1`] = `
         </svg>
       </div>
       <span
-        class="sc-fLlhyt gAlhfr sc-ivTmOn irBlAP"
+        class="sc-ivTmOn jVwBQP sc-llJcti lccPfE"
       >
         This is a plaintext alert
       </span>
@@ -135,10 +135,10 @@ exports[`Storyshots Core/Alert With Link 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds gwVQPy sc-hHLeRK sc-dmRaPn iKIurY eeClkm sc-llJcti hQwFFc"
+      class="sc-gKXOVf QRSBg sc-iBkjds gwVQPy sc-hHLeRK sc-dmRaPn iKIurY eeClkm sc-gicCDI cmHWGP"
     >
       <div
-        class="sc-fLlhyt gAlhfr sc-bBrHrO ddiZCg"
+        class="sc-ivTmOn jVwBQP sc-cxabCf CTiCS"
       >
         <svg
           aria-hidden="true"
@@ -160,12 +160,12 @@ exports[`Storyshots Core/Alert With Link 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds jAkInX"
       >
         <span
-          class="sc-fLlhyt iYlmke sc-ivTmOn ixflud"
+          class="sc-ivTmOn CrJHK sc-llJcti egDqiq"
         >
           Success!
         </span>
         <span
-          class="sc-fLlhyt gAlhfr sc-ivTmOn fbiySe"
+          class="sc-ivTmOn jVwBQP sc-llJcti iKEiEp"
         >
           With a 
           <a
@@ -188,10 +188,10 @@ exports[`Storyshots Core/Alert Without Dismiss 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds gwVQPy sc-hHLeRK sc-dmRaPn iKIurY eeClkm sc-llJcti hQwFFc"
+      class="sc-gKXOVf QRSBg sc-iBkjds gwVQPy sc-hHLeRK sc-dmRaPn iKIurY eeClkm sc-gicCDI cmHWGP"
     >
       <div
-        class="sc-fLlhyt gAlhfr sc-bBrHrO ddiZCg"
+        class="sc-ivTmOn jVwBQP sc-cxabCf CTiCS"
       >
         <svg
           aria-hidden="true"
@@ -213,12 +213,12 @@ exports[`Storyshots Core/Alert Without Dismiss 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds jAkInX"
       >
         <span
-          class="sc-fLlhyt iYlmke sc-ivTmOn ixflud"
+          class="sc-ivTmOn CrJHK sc-llJcti egDqiq"
         >
           Success!
         </span>
         <span
-          class="sc-fLlhyt gAlhfr sc-ivTmOn fbiySe"
+          class="sc-ivTmOn jVwBQP sc-llJcti iKEiEp"
         >
           Without a dismiss button
         </span>
@@ -234,10 +234,10 @@ exports[`Storyshots Core/Alert Without Prefix 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds gwVQPy sc-hHLeRK sc-dmRaPn iKIurY eeClkm sc-llJcti hQwFFc"
+      class="sc-gKXOVf QRSBg sc-iBkjds gwVQPy sc-hHLeRK sc-dmRaPn iKIurY eeClkm sc-gicCDI cmHWGP"
     >
       <div
-        class="sc-fLlhyt gAlhfr sc-bBrHrO ddiZCg"
+        class="sc-ivTmOn jVwBQP sc-cxabCf CTiCS"
       >
         <svg
           aria-hidden="true"
@@ -259,12 +259,12 @@ exports[`Storyshots Core/Alert Without Prefix 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds jAkInX"
       >
         <span
-          class="sc-fLlhyt iYlmke sc-ivTmOn ixflud"
+          class="sc-ivTmOn CrJHK sc-llJcti egDqiq"
         >
           Success!
         </span>
         <span
-          class="sc-fLlhyt gAlhfr sc-ivTmOn fbiySe"
+          class="sc-ivTmOn jVwBQP sc-llJcti iKEiEp"
         >
           Without a prefix
         </span>

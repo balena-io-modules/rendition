@@ -5,27 +5,26 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { RenditionSystemProps } from '../../common-types';
 import { px } from '../../utils';
-import { Box } from '../Box';
-import { Flex, FlexProps } from '../Flex';
+import { Box, BoxProps } from '../Box';
 
 const ClipboardContainer = styled(Box)`
 	cursor: pointer;
-	/* We want the clipboard icon slightly smaller, but it should be the same height as normal text so it lines up nicely */
 	font-size: 0.875em;
-	line-height: ${(props) =>
-		px(props.theme.lineHeight * props.theme.fontSizes[2])};
 `;
 
-const CopyContainer = styled(Flex)<{
-	show: InternalCopyProps['show'];
-}>`
+const CopyContainer = styled(Box)<{ show: InternalCopyProps['show'] }>`
+	display: inline-flex;
+	align-items: center;
 	${ClipboardContainer} {
-		display: ${(props) => (props.show === 'always' ? 'inline' : 'none')};
+		visibility: ${(props) => (props.show === 'always' ? 'visible' : 'hidden')};
+		svg {
+			margin: ${(props) => `0 ${px(props.theme.space[1])}`};
+		}
 	}
 
 	&:hover {
 		${ClipboardContainer} {
-			display: inline;
+			visibility: visible;
 		}
 	}
 `;
@@ -35,20 +34,15 @@ const BaseCopy = ({
 	show,
 	children,
 	onClick,
+	onCopy,
 	...otherProps
 }: InternalCopyProps) => {
 	const normalizedText = (content || '').toString().trim();
 
 	return (
-		<CopyContainer
-			show={!!children ? show : 'always'}
-			flexDirection="row"
-			flexWrap="nowrap"
-			{...otherProps}
-		>
+		<CopyContainer show={!!children ? show : 'always'} {...otherProps}>
 			{children}
 			<ClipboardContainer
-				mx={2}
 				tooltip={{ text: 'Copied!', trigger: 'click' }}
 				onClick={(e) => {
 					e.stopPropagation();
@@ -57,6 +51,7 @@ const BaseCopy = ({
 					if (onClick) {
 						onClick(normalizedText);
 					}
+					onCopy?.(e);
 				}}
 			>
 				<FontAwesomeIcon icon={faCopy} />
@@ -65,15 +60,16 @@ const BaseCopy = ({
 	);
 };
 
-interface InternalCopyProps extends Omit<FlexProps, 'onClick'> {
+interface InternalCopyProps extends Omit<BoxProps, 'onClick' | 'onCopy'> {
 	/** The value that should be copied to the clipboard */
-	content: string;
+	content: string | number;
 	/** Optionally show the copy button on hover or always show the button */
 	show?: 'hover' | 'always';
 	/** onClick handler, useful if you wish to do other actions after content was copied */
 	onClick?: (content: string) => void;
 	/** The content next to which the clipboard button should be shown */
 	children?: React.ReactNode;
+	onCopy?: React.MouseEventHandler<HTMLElement>;
 }
 
 export type CopyProps = InternalCopyProps & RenditionSystemProps;

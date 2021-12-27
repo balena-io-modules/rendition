@@ -1625,7 +1625,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPyBCJ etMwTo sc-bBXxYQ hqGdPE"
+                    class="sc-cOFTSb bmpDMZ sc-BeQoi dmAMvw"
                   >
                     <label
                       class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
@@ -1782,7 +1782,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPyBCJ dhbijv sc-bBXxYQ hqGdPE"
+                    class="sc-cOFTSb kDHVRu sc-BeQoi dmAMvw"
                   >
                     <label
                       class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
@@ -1849,7 +1849,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPyBCJ dhbijv sc-bBXxYQ hqGdPE"
+                    class="sc-cOFTSb kDHVRu sc-BeQoi dmAMvw"
                   >
                     <label
                       class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
@@ -1916,7 +1916,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPyBCJ dhbijv sc-bBXxYQ hqGdPE"
+                    class="sc-cOFTSb kDHVRu sc-BeQoi dmAMvw"
                   >
                     <label
                       class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
@@ -1983,7 +1983,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
+                    class="sc-cOFTSb eAnjwB sc-BeQoi dmAMvw"
                   >
                     <label
                       class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
@@ -2038,7 +2038,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
+                    class="sc-cOFTSb eAnjwB sc-BeQoi dmAMvw"
                   >
                     <label
                       class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
@@ -2101,7 +2101,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
+                    class="sc-cOFTSb eAnjwB sc-BeQoi dmAMvw"
                   >
                     <label
                       class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
@@ -2164,7 +2164,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
+                    class="sc-cOFTSb eAnjwB sc-BeQoi dmAMvw"
                   >
                     <label
                       class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
@@ -2227,7 +2227,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
+                    class="sc-cOFTSb eAnjwB sc-BeQoi dmAMvw"
                   >
                     <label
                       class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
@@ -2282,7 +2282,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
+                    class="sc-cOFTSb eAnjwB sc-BeQoi dmAMvw"
                   >
                     <label
                       class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
@@ -2337,7 +2337,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
+                    class="sc-cOFTSb eAnjwB sc-BeQoi dmAMvw"
                   >
                     <label
                       class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
@@ -2392,7 +2392,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
+                    class="sc-cOFTSb eAnjwB sc-BeQoi dmAMvw"
                   >
                     <label
                       class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
@@ -3518,7 +3518,7 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
           class="sc-gKXOVf QRSBg sc-iBkjds hNqnWQ sc-hHLeRK hoTTom"
         >
           <div
-            class="sc-fLlhyt gAlhfr sc-bBrHrO kevwqp"
+            class="sc-ivTmOn jVwBQP sc-cxabCf bOpZdj"
           >
             <strong>
               1
@@ -3537,7 +3537,7 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
             class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY"
           >
             <div
-              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kLLXSd iKIurY lcvtzu"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-jIZahH iKIurY hlMcTG"
             >
               <button
                 class="StyledButton-sc-323bzc-0 iNgVbb sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR kAoSkv rendition-pager__btn--prev"
@@ -3809,7 +3809,7 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
           class="sc-gKXOVf QRSBg sc-iBkjds jKcfYg sc-hHLeRK hoTTom"
         >
           <div
-            class="sc-fLlhyt gAlhfr sc-bBrHrO kevwqp"
+            class="sc-ivTmOn jVwBQP sc-cxabCf bOpZdj"
           >
             <strong>
               1
@@ -3828,7 +3828,7 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
             class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY"
           >
             <div
-              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kLLXSd iKIurY lcvtzu"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-jIZahH iKIurY hlMcTG"
             >
               <button
                 class="StyledButton-sc-323bzc-0 iNgVbb sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR kAoSkv rendition-pager__btn--prev"
@@ -4398,7 +4398,7 @@ exports[`Storyshots Core/Table With Pager 1`] = `
           class="sc-gKXOVf QRSBg sc-iBkjds hNqnWQ sc-hHLeRK hoTTom"
         >
           <div
-            class="sc-fLlhyt gAlhfr sc-bBrHrO kevwqp"
+            class="sc-ivTmOn jVwBQP sc-cxabCf bOpZdj"
           >
             <strong>
               1
@@ -4417,7 +4417,7 @@ exports[`Storyshots Core/Table With Pager 1`] = `
             class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY"
           >
             <div
-              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kLLXSd iKIurY lcvtzu"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-jIZahH iKIurY hlMcTG"
             >
               <button
                 class="StyledButton-sc-323bzc-0 iNgVbb sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR kAoSkv rendition-pager__btn--prev"
@@ -4689,7 +4689,7 @@ exports[`Storyshots Core/Table With Pager 1`] = `
           class="sc-gKXOVf QRSBg sc-iBkjds jKcfYg sc-hHLeRK hoTTom"
         >
           <div
-            class="sc-fLlhyt gAlhfr sc-bBrHrO kevwqp"
+            class="sc-ivTmOn jVwBQP sc-cxabCf bOpZdj"
           >
             <strong>
               1
@@ -4708,7 +4708,7 @@ exports[`Storyshots Core/Table With Pager 1`] = `
             class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY"
           >
             <div
-              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kLLXSd iKIurY lcvtzu"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-jIZahH iKIurY hlMcTG"
             >
               <button
                 class="StyledButton-sc-323bzc-0 iNgVbb sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR kAoSkv rendition-pager__btn--prev"

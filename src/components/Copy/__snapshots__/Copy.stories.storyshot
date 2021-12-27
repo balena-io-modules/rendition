@@ -6,7 +6,7 @@ exports[`Storyshots Core/Copy Always Show 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-BeQoi hjgDFS cQSAXM"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-bBrHrO HodyL"
     >
       <div
         class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-grVGCS iKIurY ikgPpo"
@@ -83,7 +83,7 @@ exports[`Storyshots Core/Copy Always Show 1`] = `
         </div>
       </div>
       <div
-        class="sc-gKXOVf QRSBg sc-iBkjds bLnKxG sc-cOFTSb fDnjgK"
+        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-fLlhyt hXwBjW"
       >
         <svg
           aria-hidden="true"
@@ -112,15 +112,15 @@ exports[`Storyshots Core/Copy Default 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-BeQoi hjgDFS cQSAXM"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-bBrHrO HodyL"
     >
       <div
-        class="sc-fLlhyt gAlhfr sc-bBrHrO cKEGnj"
+        class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF"
       >
         Hover me and click on icon to copy
       </div>
       <div
-        class="sc-gKXOVf QRSBg sc-iBkjds bLnKxG sc-cOFTSb fDnjgK"
+        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-fLlhyt hXwBjW"
       >
         <svg
           aria-hidden="true"
@@ -153,10 +153,10 @@ exports[`Storyshots Core/Copy Icon Only 1`] = `
     >
       Only copy icon that can be placed anywhere.
       <div
-        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-BeQoi hjgDFS jncHez"
+        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-bBrHrO ejUXtf"
       >
         <div
-          class="sc-gKXOVf QRSBg sc-iBkjds bLnKxG sc-cOFTSb fDnjgK"
+          class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-fLlhyt hXwBjW"
         >
           <svg
             aria-hidden="true"
@@ -186,7 +186,7 @@ exports[`Storyshots Core/Copy With Tag 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-BeQoi hjgDFS cQSAXM"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-bBrHrO HodyL"
     >
       <div
         class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY sc-eFWqGp gPSCbK"
@@ -195,19 +195,19 @@ exports[`Storyshots Core/Copy With Tag 1`] = `
           class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
         >
           <div
-            class="sc-fLlhyt fsEJDz sc-bBrHrO dtPeUL"
+            class="sc-ivTmOn dUHDxn sc-cxabCf ecsbJB"
           >
             Type: 
           </div>
           <div
-            class="sc-fLlhyt iYlmke sc-bBrHrO dtPeUL"
+            class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
           >
             Beginner
           </div>
         </div>
       </div>
       <div
-        class="sc-gKXOVf QRSBg sc-iBkjds bLnKxG sc-cOFTSb fDnjgK"
+        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-fLlhyt hXwBjW"
       >
         <svg
           aria-hidden="true"

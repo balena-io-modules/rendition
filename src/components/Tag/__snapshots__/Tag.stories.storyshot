@@ -16,12 +16,12 @@ exports[`Storyshots Core/Tag Clickable 1`] = `
           class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
         >
           <div
-            class="sc-fLlhyt fsEJDz sc-bBrHrO dtPeUL"
+            class="sc-ivTmOn dUHDxn sc-cxabCf ecsbJB"
           >
             Tag: 
           </div>
           <div
-            class="sc-fLlhyt iYlmke sc-bBrHrO dtPeUL"
+            class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
           >
             Value
           </div>
@@ -44,12 +44,12 @@ exports[`Storyshots Core/Tag Closable 1`] = `
         class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
       >
         <div
-          class="sc-fLlhyt fsEJDz sc-bBrHrO dtPeUL"
+          class="sc-ivTmOn dUHDxn sc-cxabCf ecsbJB"
         >
           Tag: 
         </div>
         <div
-          class="sc-fLlhyt iYlmke sc-bBrHrO dtPeUL"
+          class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
         >
           Value
         </div>
@@ -91,12 +91,12 @@ exports[`Storyshots Core/Tag Default 1`] = `
         class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
       >
         <div
-          class="sc-fLlhyt fsEJDz sc-bBrHrO dtPeUL"
+          class="sc-ivTmOn dUHDxn sc-cxabCf ecsbJB"
         >
           Tag: 
         </div>
         <div
-          class="sc-fLlhyt iYlmke sc-bBrHrO dtPeUL"
+          class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
         >
           Value
         </div>
@@ -118,7 +118,7 @@ exports[`Storyshots Core/Tag Empty 1`] = `
         class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
       >
         <div
-          class="sc-fLlhyt hNrqXd sc-bBrHrO dtPeUL"
+          class="sc-ivTmOn cLsgKJ sc-cxabCf ecsbJB"
         >
           no value
         </div>
@@ -140,27 +140,27 @@ exports[`Storyshots Core/Tag Multiple Values 1`] = `
         class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
       >
         <div
-          class="sc-fLlhyt fsEJDz sc-bBrHrO dtPeUL"
+          class="sc-ivTmOn dUHDxn sc-cxabCf ecsbJB"
         >
           Tag1 contains 
         </div>
         <div
-          class="sc-fLlhyt iYlmke sc-bBrHrO dtPeUL"
+          class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
         >
           value1
         </div>
         <div
-          class="sc-fLlhyt hcILSF sc-bBrHrO dtPeUL"
+          class="sc-ivTmOn gdxSrh sc-cxabCf ecsbJB"
         >
             or  
         </div>
         <div
-          class="sc-fLlhyt fsEJDz sc-bBrHrO dtPeUL"
+          class="sc-ivTmOn dUHDxn sc-cxabCf ecsbJB"
         >
           Tag2 contains 
         </div>
         <div
-          class="sc-fLlhyt iYlmke sc-bBrHrO dtPeUL"
+          class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
         >
           value2
         </div>
@@ -182,7 +182,7 @@ exports[`Storyshots Core/Tag Only Name 1`] = `
         class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
       >
         <div
-          class="sc-fLlhyt iYlmke sc-bBrHrO dtPeUL"
+          class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
         >
           Name
         </div>
@@ -204,7 +204,7 @@ exports[`Storyshots Core/Tag Only Value 1`] = `
         class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
       >
         <div
-          class="sc-fLlhyt iYlmke sc-bBrHrO dtPeUL"
+          class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
         >
           Value
         </div>
@@ -226,17 +226,17 @@ exports[`Storyshots Core/Tag Overflow 1`] = `
         class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
       >
         <div
-          class="sc-fLlhyt fsEJDz sc-bBrHrO dtPeUL"
+          class="sc-ivTmOn dUHDxn sc-cxabCf ecsbJB"
         >
           Tag1 contains 
         </div>
         <div
-          class="sc-fLlhyt iYlmke sc-bBrHrO dtPeUL"
+          class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
         >
           value1
         </div>
         <div
-          class="sc-fLlhyt fsEJDz sc-bBrHrO dtPeUL"
+          class="sc-ivTmOn dUHDxn sc-cxabCf ecsbJB"
         >
           ... and 3 more
         </div>

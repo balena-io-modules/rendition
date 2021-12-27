@@ -6,7 +6,7 @@ exports[`Storyshots Core/Divider Dashed 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <hr
-      class="sc-ikZpkk gsqVGX sc-himrzO bFeaYz"
+      class="sc-himrzO kVxDcQ sc-cCsOjp lhBdCS"
       type="dashed"
     />
   </div>
@@ -19,7 +19,7 @@ exports[`Storyshots Core/Divider Default 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <hr
-      class="sc-ikZpkk gktiUR sc-himrzO bFeaYz"
+      class="sc-himrzO dDBpFK sc-cCsOjp lhBdCS"
     />
   </div>
 </div>
@@ -31,7 +31,7 @@ exports[`Storyshots Core/Divider With Custom Color 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <hr
-      class="sc-ikZpkk zmDuI sc-himrzO fnmhr"
+      class="sc-himrzO dCLeSr sc-cCsOjp gBFNXm"
       color="#ccc"
     />
   </div>
@@ -44,19 +44,19 @@ exports[`Storyshots Core/Divider With Text Content 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK qjMas sc-himrzO bFeaYz"
+      class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK qjMas sc-cCsOjp lhBdCS"
     >
       <hr
-        class="sc-ikZpkk sc-jIZahH gsqVGX ckJNCF"
+        class="sc-himrzO sc-gXmSlM kVxDcQ kBpmXZ"
         type="dashed"
       />
       <span
-        class="sc-fLlhyt gAlhfr sc-ivTmOn loZvwN"
+        class="sc-ivTmOn jVwBQP sc-llJcti bwLrqm"
       >
         some text
       </span>
       <hr
-        class="sc-ikZpkk sc-jIZahH gsqVGX ckJNCF"
+        class="sc-himrzO sc-gXmSlM kVxDcQ kBpmXZ"
         type="dashed"
       />
     </div>

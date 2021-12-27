@@ -63,7 +63,7 @@ const propTypes = {
 	py: prop,
 };
 
-const styledSystemProps = Object.keys(propTypes);
+export const styledSystemProps = Object.keys(propTypes);
 
 const filterStyledSystemProps =
 	(passthroughProps: string[]) => (Base: React.ComponentType<{ ref: any }>) => {

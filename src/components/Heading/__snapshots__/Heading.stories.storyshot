@@ -6,7 +6,7 @@ exports[`Storyshots Core/Heading Default 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <h3
-      class="sc-gXmSlM kKsxAv sc-cCsOjp kdvCNm"
+      class="sc-ciZhAO btUqKl sc-jdAMXn iwAvbM"
     >
       Heading h3
     </h3>
@@ -20,7 +20,7 @@ exports[`Storyshots Core/Heading H 1 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <h1
-      class="sc-gXmSlM kKsxAv sc-ciZhAO hkVzFW"
+      class="sc-ciZhAO btUqKl sc-bZnhIo lpvFVg"
     >
       Heading h1
     </h1>
@@ -34,7 +34,7 @@ exports[`Storyshots Core/Heading H 2 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <h2
-      class="sc-gXmSlM kKsxAv sc-jdAMXn CFtkS"
+      class="sc-ciZhAO btUqKl sc-iTONeN kZBtbJ"
     >
       Heading h2
     </h2>
@@ -48,7 +48,7 @@ exports[`Storyshots Core/Heading H 3 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <h3
-      class="sc-gXmSlM kKsxAv sc-bZnhIo htVspD"
+      class="sc-ciZhAO btUqKl sc-iAvgwm iVTgLU"
     >
       Heading h3
     </h3>
@@ -62,7 +62,7 @@ exports[`Storyshots Core/Heading H 4 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <h4
-      class="sc-gXmSlM ikNIBi sc-iTONeN gEEDeP"
+      class="sc-ciZhAO iJFBxw sc-efBctP kDkMSi"
     >
       Heading h4
     </h4>
@@ -76,7 +76,7 @@ exports[`Storyshots Core/Heading H 5 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <h5
-      class="sc-gXmSlM ikNIBi sc-iAvgwm kUKanV"
+      class="sc-ciZhAO iJFBxw sc-cTQhss dOQXsM"
     >
       Heading h5
     </h5>
