@@ -10,7 +10,7 @@ import { List } from '../../components/List';
 import { Heading } from '../../components/Heading';
 import { useTranslation } from '../../hooks/useTranslation';
 import { DeviceType, DeviceTypeInstructions } from './models';
-import { getGettingStartedLink, interpolateMustache } from './utils';
+import { interpolateMustache } from './utils';
 
 export type OsOptions = ReturnType<typeof getUserOs>;
 
@@ -115,20 +115,18 @@ export const ApplicationInstructions = React.memo(
 
 				<InstructionsList instructions={finalInstructions} />
 
-				{!!deviceType.gettingStartedLink && (
-					<Flex mt={4}>
-						<Txt>
-							For more details please refer to our{' '}
-							<Link
-								blank
-								href={getGettingStartedLink(deviceType, normalizedOs)}
-							>
-								Getting Started Guide
-							</Link>
-							.
-						</Txt>
-					</Flex>
-				)}
+				<Flex mt={4}>
+					<Txt>
+						For more details please refer to our{' '}
+						<Link
+							blank
+							href={`https://www.balena.io/docs/learn/getting-started/${deviceType.slug}/nodejs/`}
+						>
+							Getting Started Guide
+						</Link>
+						.
+					</Txt>
+				</Flex>
 			</Flex>
 		);
 	},
