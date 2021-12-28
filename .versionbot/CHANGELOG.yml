@@ -1,4 +1,29 @@
 - commits:
+    - subject: 'DownloadImageModal: Stop expecting the gettingStartedLink property'
+      hash: 609031ae50072e28a7b5274cc3acaa3b06b731a5
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+    - subject: 'DownloadImageModal: Infer the getting started link'
+      hash: a9bac3768c67336a7bc331857925abffba172838
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        See: >-
+          https://jel.ly.fish/improvement-stop-relying-device-types-v1-device-type-json-unrelated-things-4fbac3c
+        see: >-
+          https://jel.ly.fish/improvement-stop-relying-device-types-v1-device-type-json-unrelated-things-4fbac3c
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 25.4.0
+  date: 2021-12-28T00:23:04.086Z
+- commits:
     - subject: Change danger notifications to error notifications
       hash: d3482e514288548d04a811bdc7f604a11ac29428
       body: ''
