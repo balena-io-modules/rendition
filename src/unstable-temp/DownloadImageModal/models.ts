@@ -84,12 +84,6 @@ export interface DeviceTypeInstructions {
 	osx: string[];
 	windows: string[];
 }
-export interface DeviceTypeGettingStartedLink {
-	linux: string;
-	osx: string;
-	windows: string;
-	[key: string]: string;
-}
 export interface DeviceTypeOptions {
 	options: DeviceTypeOptionsGroup[];
 	collapsed: boolean;
@@ -120,8 +114,6 @@ export interface DeviceType {
 	imageDownloadAlerts?: DeviceTypeDownloadAlert[];
 	/** @deprecated */
 	instructions?: string[] | DeviceTypeInstructions;
-	/** @deprecated */
-	gettingStartedLink?: string | DeviceTypeGettingStartedLink;
 	/** @deprecated */
 	options?: DeviceTypeOptions[];
 	/** @deprecated */
