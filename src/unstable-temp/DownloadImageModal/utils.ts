@@ -1,5 +1,5 @@
 import template from 'lodash/template';
-import { DeviceType, OptionalNavigationResource, OsTypesEnum } from './models';
+import { OptionalNavigationResource, OsTypesEnum } from './models';
 import { Dictionary } from '../../common-types';
 
 export const OS_VARIANT_FULL_DISPLAY_TEXT_MAP: Dictionary<string> = {
@@ -18,22 +18,6 @@ export const interpolateMustache = (
 	data: { [key: string]: string },
 	tpl: string,
 ) => template(tpl, { interpolate: /{{([\s\S]+?)}}/g })(data);
-
-export const getGettingStartedLink = (
-	deviceType: DeviceType,
-	preferredOsType: 'linux' | 'osx' | 'windows' = 'windows',
-) => {
-	if (!deviceType || !deviceType.gettingStartedLink) {
-		return '';
-	}
-	if (typeof deviceType.gettingStartedLink === 'string') {
-		return deviceType.gettingStartedLink;
-	}
-	return (
-		deviceType.gettingStartedLink[preferredOsType] ||
-		deviceType.gettingStartedLink['windows']
-	);
-};
 
 export const getOsTypeName = (osTypeSlug: string) => {
 	switch (osTypeSlug) {
