@@ -107,8 +107,8 @@ export interface DeviceTypeOptionsGroup {
 export interface DeviceType {
 	slug: string;
 	name: string;
-	logo?: string;
-	contract?: Record<string, any>;
+	logo?: string | null;
+	contract?: Record<string, any> | null;
 
 	/** @deprecated */
 	imageDownloadAlerts?: DeviceTypeDownloadAlert[];
