@@ -139,8 +139,8 @@ export const TableColumnSelector = function <T extends TableColumnState>(
 	const canAddTagColumn = !failedAddColumnRule;
 	const addTagColumnTitle = failedAddColumnRule && failedAddColumnRule.message;
 
-	const memoizedItems = React.useMemo(
-		(): DropdownOption[][] => [
+	const memoizedItems = React.useMemo(() => {
+		const items: DropdownOption[][] = [
 			columns
 				.filter((col) => !col.locked)
 				.map((col) => ({
@@ -167,25 +167,27 @@ export const TableColumnSelector = function <T extends TableColumnState>(
 						stopEvent(e);
 					},
 				})),
-			!tagKeys
-				? []
-				: [
-						{
-							content: (
-								<Flex alignItems="center">
-									<ItemIcon>
-										<FontAwesomeIcon icon={faPlus} />
-									</ItemIcon>
-									{addTagColumnTitle ?? 'Add Tag Column'}
-								</Flex>
-							),
-							onClick: () => canAddTagColumn && addTagColumn(),
-							disabled: !canAddTagColumn,
-						},
-				  ],
-		],
-		[columns, tagKeys, addTagColumn],
-	);
+		];
+
+		if (tagKeys) {
+			items.push([
+				{
+					content: (
+						<Flex alignItems="center">
+							<ItemIcon>
+								<FontAwesomeIcon icon={faPlus} />
+							</ItemIcon>
+							{addTagColumnTitle ?? 'Add Tag Column'}
+						</Flex>
+					),
+					onClick: () => canAddTagColumn && addTagColumn(),
+					disabled: !canAddTagColumn,
+				},
+			]);
+		}
+
+		return items;
+	}, [columns, tagKeys, addTagColumn]);
 
 	return (
 		<DropDownButton
