@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix TableColumnSelector showing an empty group when there are no tags
+      hash: 1a376ded4c3ffe4624428c0d5c47137bfcdec470
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 25.4.2
+  date: 2021-12-31T14:06:32.052Z
+- commits:
     - subject: 'DownloadImageModal: Allow null for the DeviceType''s logo & contact props'
       hash: fa7fdac03e94c54b29775e6c5c282f0d75ceb290
       body: ''
