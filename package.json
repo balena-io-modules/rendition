@@ -112,7 +112,7 @@
     "date-fns": "^2.27.0",
     "grommet": "~2.18.0",
     "hast-util-sanitize": "^3.0.2",
-    "json-e": "^4.4.1",
+    "json-e": "^4.4.3",
     "lodash": "^4.17.21",
     "memoizee": "^0.4.15",
     "mermaid": "^8.13.2",
