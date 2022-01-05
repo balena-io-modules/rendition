@@ -1,14 +1,9 @@
 import { faSort } from '@fortawesome/free-solid-svg-icons/faSort';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import find from 'lodash/find';
-import includes from 'lodash/includes';
 import isEqual from 'lodash/isEqual';
 import isPlainObject from 'lodash/isPlainObject';
-import map from 'lodash/map';
-import reject from 'lodash/reject';
-import reverse from 'lodash/reverse';
-import some from 'lodash/some';
 import sortBy from 'lodash/sortBy';
+import memoizee from 'memoizee';
 import * as React from 'react';
 import styled from 'styled-components';
 import { Button } from '../Button';
@@ -19,7 +14,6 @@ import { px } from '../../utils';
 import { CheckboxProps, Checkbox } from '../Checkbox';
 import { Pager } from '../Pager';
 import { CheckboxWrapper, TableBaseColumn, TableRow } from './TableRow';
-import filter from 'lodash/filter';
 
 const highlightStyle = `
 	background-color: ${theme.colors.info.light};
@@ -178,14 +172,17 @@ export class TableBase<T> extends React.Component<
 	}
 
 	public componentDidUpdate(prevProps: TableBaseProps<T>) {
-		const { sort, checkedItems, data, itemsPerPage } = this.props;
+		const { sort, checkedItems, data, itemsPerPage, rowKey } = this.props;
 		if (sort && !isEqual(prevProps.sort, sort)) {
 			this.setState({
 				sort,
 			});
 		}
 
-		if (checkedItems && prevProps.checkedItems !== checkedItems) {
+		if (
+			checkedItems &&
+			(prevProps.checkedItems !== checkedItems || prevProps.rowKey !== rowKey)
+		) {
 			this.setRowSelection(checkedItems);
 		}
 
@@ -198,45 +195,79 @@ export class TableBase<T> extends React.Component<
 		}
 	}
 
+	protected $getSelectedIdentifiersSet = memoizee(
+		(selectedRows: T[] | undefined, rowKey: keyof T) => {
+			if (!rowKey) {
+				return new Set<unknown>();
+			}
+			return new Set<unknown>((selectedRows ?? []).map((x) => x[rowKey]));
+		},
+		{ max: 1 },
+	);
+
+	protected getCheckedRowIdentifiers() {
+		const rowKey = this.props.rowKey;
+		if (!rowKey) {
+			return new Set();
+		}
+
+		return this.$getSelectedIdentifiersSet(this.state.checkedItems, rowKey);
+	}
+
+	/** @deprecated */
 	public isChecked(item: T) {
-		const rowKey = this.props.rowKey;
-		if (!rowKey) {
-			return false;
-		}
-
-		const identifier = item[rowKey];
-		return some(this.state.checkedItems, { [rowKey]: identifier });
+		return (
+			this.props.rowKey &&
+			this.getCheckedRowIdentifiers().has(item[this.props.rowKey])
+		);
 	}
 
+	protected $getHighlightedRowIdentifiers = memoizee(
+		(highlightedRows: NonNullable<TableBaseProps<T>['highlightedRows']>) =>
+			new Set(highlightedRows),
+		{ max: 1 },
+	);
+
+	protected getHighlightedRowIdentifiers() {
+		if (!this.props.highlightedRows || !this.props.rowKey) {
+			return new Set();
+		}
+		return this.$getHighlightedRowIdentifiers(this.props.highlightedRows);
+	}
+
+	/** @deprecated */
 	public isHighlighted(item: T) {
-		if (
-			!this.props.highlightedRows ||
-			this.props.highlightedRows.length === 0
-		) {
-			return false;
-		}
-
-		const rowKey = this.props.rowKey;
-		if (!rowKey) {
-			return false;
-		}
-
-		const identifier = item[rowKey];
-		return includes(this.props.highlightedRows, identifier);
+		return (
+			this.props.rowKey &&
+			this.getHighlightedRowIdentifiers().has(item[this.props.rowKey])
+		);
 	}
 
+	protected $getDisabledRowIdentifiers = memoizee(
+		(disabledRows: NonNullable<TableBaseProps<T>['disabledRows']>) =>
+			new Set(disabledRows),
+		{ max: 1 },
+	);
+
+	protected getDisabledRowIdentifiers() {
+		if (!this.props.disabledRows || !this.props.rowKey) {
+			return new Set();
+		}
+		return this.$getDisabledRowIdentifiers(this.props.disabledRows);
+	}
+
+	/** @deprecated */
 	public isDisabled(item: T) {
-		if (!this.props.disabledRows || this.props.disabledRows.length === 0) {
-			return false;
-		}
+		return (
+			this.props.rowKey &&
+			this.getDisabledRowIdentifiers().has(item[this.props.rowKey])
+		);
+	}
 
-		const rowKey = this.props.rowKey;
-		if (!rowKey) {
-			return false;
-		}
-
-		const identifier = item[rowKey];
-		return includes(this.props.disabledRows, identifier);
+	public componentWillUnmount() {
+		this.$getHighlightedRowIdentifiers.clear();
+		this.$getDisabledRowIdentifiers.clear();
+		this.$getSelectedIdentifiersSet.clear();
 	}
 
 	public howManyRowsChecked(checkedItems: T[]): CheckedTypes {
@@ -258,7 +289,7 @@ export class TableBase<T> extends React.Component<
 			return data;
 		}
 
-		const column = find(this.props.columns, { field: sort.field });
+		const column = this.props.columns.find((c) => c.field === sort.field);
 
 		if (!column) {
 			return data;
@@ -280,7 +311,7 @@ export class TableBase<T> extends React.Component<
 		}
 
 		if (sort.reverse) {
-			reverse(collection);
+			collection.reverse();
 		}
 
 		return collection;
@@ -296,10 +327,8 @@ export class TableBase<T> extends React.Component<
 			return { checkedItems, allChecked };
 		}
 
-		const selectedRowsIds = map(selectedRows, rowKey);
-		checkedItems = filter(data, (x) => {
-			return includes(selectedRowsIds, x[rowKey]);
-		});
+		const selectedKeys = this.$getSelectedIdentifiersSet(selectedRows, rowKey);
+		checkedItems = data.filter((x) => selectedKeys.has(x[rowKey]));
 		allChecked = this.howManyRowsChecked(checkedItems);
 
 		return { checkedItems, allChecked };
@@ -310,12 +339,16 @@ export class TableBase<T> extends React.Component<
 	};
 
 	public toggleAllChecked = () => {
-		const { data, onCheck } = this.props;
+		const { data, onCheck, rowKey } = this.props;
 
-		const checkedItems =
-			this.state.checkedItems.length === 0
-				? (data || []).filter((r) => !this.isDisabled(r))
-				: [];
+		let checkedItems: T[] = [];
+		if (data && this.state.checkedItems.length === 0) {
+			const disabledRowsSet = this.getDisabledRowIdentifiers();
+			checkedItems =
+				rowKey && disabledRowsSet.size > 0
+					? data.filter((r) => !disabledRowsSet.has(r[rowKey]))
+					: data.slice();
+		}
 		if (onCheck) {
 			onCheck(checkedItems);
 		}
@@ -340,15 +373,12 @@ export class TableBase<T> extends React.Component<
 		}
 
 		const identifier = item[rowKey];
+		const newIsChecked = !this.getCheckedRowIdentifiers().has(identifier);
 
 		const oldCheckedItems = this.props.checkedItems || this.state.checkedItems;
-
-		const isChecked = !this.isChecked(item);
-		const checkedItems = isChecked
+		const checkedItems = newIsChecked
 			? oldCheckedItems.concat(item)
-			: (reject(oldCheckedItems, {
-					[rowKey]: identifier,
-			  }) as unknown as Array<typeof item>);
+			: (oldCheckedItems ?? []).filter((x) => x[rowKey] !== identifier);
 
 		if (this.props.onCheck) {
 			this.props.onCheck(checkedItems);
@@ -392,7 +422,7 @@ export class TableBase<T> extends React.Component<
 		if (rowKey) {
 			// Normalize the key value to a string for comparison, because data
 			// attributes on elements are always strings
-			return find(data, (element) => `${element[rowKey]}` === key);
+			return data.find((element) => `${element[rowKey]}` === key);
 		}
 
 		return data[Number(key)];
@@ -472,6 +502,10 @@ export class TableBase<T> extends React.Component<
 
 		const shouldShowPaper = !!usePager && totalItems > 0;
 
+		const checkedRowIdentifiers = this.getCheckedRowIdentifiers();
+		const highlightedRowIdentifiers = this.getHighlightedRowIdentifiers();
+		const disabledRowIdentifiers = this.getDisabledRowIdentifiers();
+
 		return (
 			<>
 				{shouldShowPaper &&
@@ -504,7 +538,7 @@ export class TableBase<T> extends React.Component<
 										/>
 									</CheckboxWrapper>
 								)}
-								{map(columns, (item) => {
+								{columns.map((item) => {
 									if (item.sortable) {
 										return (
 											<div
@@ -544,10 +578,17 @@ export class TableBase<T> extends React.Component<
 						</div>
 						<div data-display="table-body">
 							{this.props.tbodyPrefix}
-							{map(sortedData, (row, i) => {
-								const isChecked = onCheck ? this.isChecked(row) : false;
-								const isHighlighted = this.isHighlighted(row);
-								const isDisabled = this.isDisabled(row);
+							{sortedData.map((row, i) => {
+								let isChecked = false;
+								let isHighlighted = false;
+								let isDisabled = false;
+								if (rowKey) {
+									const identifier = row[rowKey];
+									isChecked =
+										!!onCheck && checkedRowIdentifiers.has(identifier);
+									isHighlighted = highlightedRowIdentifiers.has(identifier);
+									isDisabled = disabledRowIdentifiers.has(identifier);
+								}
 								const key = rowKey ? (row[rowKey] as any) : i;
 								const href = !!getRowHref ? getRowHref(row) : undefined;
 								const classNamesList =
