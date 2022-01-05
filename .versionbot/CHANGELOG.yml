@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'Table: Optimize for large number of items'
+      hash: 59423a5e3b42f9d2859aef1f7b742dd02d79850a
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 25.4.3
+  date: 2022-01-05T18:49:33.954Z
+- commits:
     - subject: Fix TableColumnSelector showing an empty group when there are no tags
       hash: 1a376ded4c3ffe4624428c0d5c47137bfcdec470
       body: ''
