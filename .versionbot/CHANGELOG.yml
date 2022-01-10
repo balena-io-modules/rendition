@@ -1,4 +1,14 @@
 - commits:
+    - subject: 'patch: Update dependency ajv to ^6.12.6'
+      hash: a3ed3a353e1bdea0e1008921865cc996b344ff29
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 25.4.7
+  date: 2022-01-10T13:02:30.948Z
+- commits:
     - subject: 'patch: Update fontawesome'
       hash: 3c0683d6442d330fd79c7fccf83e4dc83749f4f8
       body: ''
