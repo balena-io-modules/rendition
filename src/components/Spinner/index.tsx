@@ -21,10 +21,6 @@ const CircleLoader = styled.div<Pick<InternalSpinnerProps, 'emphasized'>>`
 	animation-fill-mode: both;
 `;
 
-const Container = styled.div`
-	position: relative;
-`;
-
 const SpinnerContainer = styled(Flex)`
 	position: absolute;
 	top: 0;
@@ -34,7 +30,7 @@ const SpinnerContainer = styled(Flex)`
 	z-index: 4;
 `;
 
-const ChildrenContainer = styled.div<Pick<InternalSpinnerProps, 'show'>>`
+const ChildrenContainer = styled(Flex)<Pick<InternalSpinnerProps, 'show'>>`
 	opacity: ${(props) => (props.show ? 0.4 : 1)};
 	transition: opacity 250ms;
 	z-index: 3;
@@ -79,15 +75,17 @@ const BaseSpinner = ({
 	}
 
 	return (
-		<Container {...otherProps}>
+		<Flex flexDirection="column" {...otherProps}>
 			{show && (
 				<SpinnerContainer justifyContent="center" alignItems="center">
 					<Base label={label} emphasized={emphasized} />
 				</SpinnerContainer>
 			)}
 
-			<ChildrenContainer show={show}>{children}</ChildrenContainer>
-		</Container>
+			<ChildrenContainer flexDirection="column" show={show}>
+				{children}
+			</ChildrenContainer>
+		</Flex>
 	);
 };
 
