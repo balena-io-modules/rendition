@@ -1,4 +1,16 @@
 - commits:
+    - subject: Make table reevaluate checkedItems when length of data changes
+      hash: e97dc4b86884a22e9f8be535d4ded4d24b8535bd
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 25.4.5
+  date: 2022-01-07T16:11:56.812Z
+- commits:
     - subject: 'patch: Update dependency json-e to ^4.4.3'
       hash: 8aaaf8c64f30be81d360eb23d4962db4c38a555b
       body: |
