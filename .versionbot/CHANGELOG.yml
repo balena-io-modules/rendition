@@ -1,4 +1,14 @@
 - commits:
+    - subject: 'patch: Update fontawesome'
+      hash: 3c0683d6442d330fd79c7fccf83e4dc83749f4f8
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 25.4.6
+  date: 2022-01-10T12:38:47.108Z
+- commits:
     - subject: Make table reevaluate checkedItems when length of data changes
       hash: e97dc4b86884a22e9f8be535d4ded4d24b8535bd
       body: ''
