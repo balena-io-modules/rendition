@@ -1,4 +1,16 @@
 - commits:
+    - subject: Make lens renderer height fill container
+      hash: 64c80aac835128013dedf8cbf6e8423fa026703e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 25.4.8
+  date: 2022-01-10T17:38:30.941Z
+- commits:
     - subject: 'patch: Update dependency ajv to ^6.12.6'
       hash: a3ed3a353e1bdea0e1008921865cc996b344ff29
       body: ''
