@@ -104,7 +104,7 @@
     "@types/styled-components": "^5.1.9",
     "@types/styled-system": "^4.0.0",
     "@types/uuid": "^3.4.3",
-    "ajv": "^6.12.3",
+    "ajv": "^6.12.6",
     "ajv-keywords": "^3.5.2",
     "color": "^3.2.1",
     "color-hash": "^1.1.1",
