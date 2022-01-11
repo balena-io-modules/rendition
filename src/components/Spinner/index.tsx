@@ -5,7 +5,7 @@ import { RenditionSystemProps } from '../../common-types';
 import { rotate360 } from '../../animations';
 import asRendition from '../../asRendition';
 import { px } from '../../utils';
-import { Flex } from '../Flex';
+import { Flex, FlexProps } from '../Flex';
 import { Txt } from '../Txt';
 
 const CircleLoader = styled.div<Pick<InternalSpinnerProps, 'emphasized'>>`
@@ -21,8 +21,9 @@ const CircleLoader = styled.div<Pick<InternalSpinnerProps, 'emphasized'>>`
 	animation-fill-mode: both;
 `;
 
-const Container = styled.div`
+const Container = styled(Flex)`
 	position: relative;
+	flex-direction: column;
 `;
 
 const SpinnerContainer = styled(Flex)`
@@ -38,6 +39,7 @@ const ChildrenContainer = styled.div<Pick<InternalSpinnerProps, 'show'>>`
 	opacity: ${(props) => (props.show ? 0.4 : 1)};
 	transition: opacity 250ms;
 	z-index: 3;
+	flex: 1;
 `;
 
 const Base = ({
@@ -91,7 +93,7 @@ const BaseSpinner = ({
 	);
 };
 
-interface InternalSpinnerProps extends React.HTMLAttributes<HTMLElement> {
+interface InternalSpinnerProps extends FlexProps {
 	/** If passed, it will control whether the spinner is shown or not */
 	show?: boolean;
 	/** If true, it will render a large spinner */

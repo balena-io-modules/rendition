@@ -38,7 +38,7 @@ exports[`Storyshots Core/Spinner With Children 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <div
-      class="sc-eFegNN bbTGmj sc-jlRLRk kMMBEL"
+      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-eFegNN dljPk eYJisQ sc-jlRLRk kMMBEL"
     >
       <div
         class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-fmBCVi duIhFM iUWTNY"
@@ -57,7 +57,7 @@ exports[`Storyshots Core/Spinner With Children 1`] = `
         </div>
       </div>
       <div
-        class="sc-lkgTHX bhDRMC"
+        class="sc-lkgTHX idqgGG"
       >
         <div
           class="sc-gKclnd exdBHI sc-iCfMLu eWtVmG"
