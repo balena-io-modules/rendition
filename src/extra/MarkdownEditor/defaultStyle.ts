@@ -63,7 +63,6 @@ export default css`
 	}
 	.cm-animate-fat-cursor {
 		width: auto;
-		border: 0;
 		-webkit-animation: blink 1.06s steps(1) infinite;
 		-moz-animation: blink 1.06s steps(1) infinite;
 		animation: blink 1.06s steps(1) infinite;
@@ -407,6 +406,9 @@ export default css`
 	.EasyMDEContainer {
 		display: block;
 	}
+	.CodeMirror-rtl pre {
+		direction: rtl;
+	}
 	.EasyMDEContainer.sided--no-fullscreen {
 		display: flex;
 		flex-direction: row;
@@ -740,7 +742,8 @@ export default css`
 		top: 30px;
 	}
 	.easymde-dropdown:active .easymde-dropdown-content,
-	.easymde-dropdown:focus .easymde-dropdown-content {
+	.easymde-dropdown:focus .easymde-dropdown-content,
+	.easymde-dropdown:focus-within .easymde-dropdown-content {
 		visibility: visible;
 	}
 	span[data-img-src]::after {

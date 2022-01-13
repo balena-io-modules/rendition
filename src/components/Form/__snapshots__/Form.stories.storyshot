@@ -3373,7 +3373,7 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                         Markdown
                       </label>
                       <div
-                        class="sc-kHdrYz gZnkdE"
+                        class="sc-kHdrYz leveaG"
                         id="simplemde-editor-1-wrapper"
                       >
                         <textarea
