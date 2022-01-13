@@ -49,7 +49,7 @@
     "@storybook/addon-links": "~6.3.12",
     "@storybook/addon-storyshots": "~6.3.12",
     "@storybook/react": "~6.3.12",
-    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@types/enzyme": "^3.10.8",
     "@types/googlemaps": "^3.39.7",
