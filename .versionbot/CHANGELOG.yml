@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update snapshots
+      hash: 2233449a42a8d0d760be7db37a35e62a5833920d
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 25.4.8
+  date: 2022-01-13T20:30:37.373Z
+- commits:
     - subject: 'patch: Update dependency ajv to ^6.12.6'
       hash: a3ed3a353e1bdea0e1008921865cc996b344ff29
       body: ''
