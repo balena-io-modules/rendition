@@ -1,4 +1,20 @@
 - commits:
+    - subject: Add missing dependency on react-router
+      hash: 0debc83e9c5625c779aa4b23319c651914d08959
+      body: |
+        AutoUI explicitly imports `react-router` but it's not a dependency
+        of rendition defined in package.json, instead being implicitly installed
+        through `react-router-dom`. This can cause a lot of headaches,
+        especially for downstream libraries using rendition.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+  version: 25.4.10
+  date: 2022-01-14T12:00:16.704Z
+- commits:
     - subject: 'patch: Update dependency @testing-library/jest-dom to ^5.16.1'
       hash: 7516eda58c0233fcfe5c4979010ba02af1532301
       body: |
