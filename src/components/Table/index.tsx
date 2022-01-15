@@ -12,7 +12,6 @@ import some from 'lodash/some';
 import without from 'lodash/without';
 import isEqual from 'lodash/isEqual';
 import keyBy from 'lodash/keyBy';
-import size from 'lodash/size';
 import { Flex } from '../Flex';
 import {
 	getNewTagTableColumnState,
@@ -322,7 +321,7 @@ const applyColumnPreferences = <T extends {}>(
 	tagField: keyof T | undefined,
 	enableCustomColumns?: boolean,
 ): Array<TableColumnInternal<T>> => {
-	if (!size(loadedColumns)) {
+	if (!loadedColumns?.length) {
 		return columns;
 	}
 

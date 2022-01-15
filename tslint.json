@@ -6,6 +6,7 @@
       "lodash",
       "lodash/assign",
       "lodash/omit",
+      "lodash/size",
       "@fortawesome/free-solid-svg-icons",
       "@fortawesome/free-regular-svg-icons"
     ],
