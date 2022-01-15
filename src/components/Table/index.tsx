@@ -2,7 +2,6 @@ import * as React from 'react';
 import { TableBase, TableBaseProps, TableSortOptions } from './TableBase';
 import styled, { css } from 'styled-components';
 import keys from 'lodash/keys';
-import assign from 'lodash/assign';
 import pick from 'lodash/pick';
 import filter from 'lodash/filter';
 import map from 'lodash/map';
@@ -339,11 +338,11 @@ const applyColumnPreferences = <T extends {}>(
 		const column = columnsByKey[key];
 		const loadedColumn = loadedColumnsByKey[key];
 
-		if (!loadedColumn) {
+		if (!loadedColumn || !column) {
 			return;
 		}
 
-		assign(column, pick(loadedColumn, tableColumnStateAssignedProps));
+		Object.assign(column, pick(loadedColumn, tableColumnStateAssignedProps));
 	});
 
 	// we need to populate the rest properties
