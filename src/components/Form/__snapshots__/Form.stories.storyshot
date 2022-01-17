@@ -3373,7 +3373,7 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                         Markdown
                       </label>
                       <div
-                        class="sc-kHdrYz leveaG"
+                        class="sc-kHdrYz hhDzGT"
                         id="simplemde-editor-1-wrapper"
                       >
                         <textarea
@@ -3381,274 +3381,270 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                           style="display: none;"
                         />
                         <div
-                          class="EasyMDEContainer"
+                          class="editor-toolbar"
+                        >
+                          <button
+                            class="bold"
+                            tabindex="-1"
+                            title="Bold (Ctrl-B)"
+                            type="button"
+                          >
+                            <i
+                              class="fa fa-bold"
+                            />
+                          </button>
+                          <button
+                            class="italic"
+                            tabindex="-1"
+                            title="Italic (Ctrl-I)"
+                            type="button"
+                          >
+                            <i
+                              class="fa fa-italic"
+                            />
+                          </button>
+                          <button
+                            class="heading"
+                            tabindex="-1"
+                            title="Heading (Ctrl-H)"
+                            type="button"
+                          >
+                            <i
+                              class="fa fa-header fa-heading"
+                            />
+                          </button>
+                          <i
+                            class="separator"
+                          >
+                            |
+                          </i>
+                          <button
+                            class="code"
+                            tabindex="-1"
+                            title="Code (Ctrl-Alt-C)"
+                            type="button"
+                          >
+                            <i
+                              class="fa fa-code"
+                            />
+                          </button>
+                          <button
+                            class="quote"
+                            tabindex="-1"
+                            title="Quote (Ctrl-')"
+                            type="button"
+                          >
+                            <i
+                              class="fa fa-quote-left"
+                            />
+                          </button>
+                          <button
+                            class="unordered-list"
+                            tabindex="-1"
+                            title="Generic List (Ctrl-L)"
+                            type="button"
+                          >
+                            <i
+                              class="fa fa-list-ul"
+                            />
+                          </button>
+                          <button
+                            class="ordered-list"
+                            tabindex="-1"
+                            title="Numbered List (Ctrl-Alt-L)"
+                            type="button"
+                          >
+                            <i
+                              class="fa fa-list-ol"
+                            />
+                          </button>
+                          <i
+                            class="separator"
+                          >
+                            |
+                          </i>
+                          <button
+                            class="link"
+                            tabindex="-1"
+                            title="Create Link (Ctrl-K)"
+                            type="button"
+                          >
+                            <i
+                              class="fa fa-link"
+                            />
+                          </button>
+                          <button
+                            class="image"
+                            tabindex="-1"
+                            title="Insert Image (Ctrl-Alt-I)"
+                            type="button"
+                          >
+                            <i
+                              class="fa fa-image"
+                            />
+                          </button>
+                          <button
+                            class="table"
+                            tabindex="-1"
+                            title="Insert Table"
+                            type="button"
+                          >
+                            <i
+                              class="fa fa-table"
+                            />
+                          </button>
+                          <i
+                            class="separator"
+                          >
+                            |
+                          </i>
+                          <button
+                            class="preview no-disable"
+                            tabindex="-1"
+                            title="Toggle Preview (Ctrl-P)"
+                            type="button"
+                          >
+                            <i
+                              class="fa fa-eye"
+                            />
+                          </button>
+                          <button
+                            class="side-by-side no-disable no-mobile"
+                            tabindex="-1"
+                            title="Toggle Side by Side (F9)"
+                            type="button"
+                          >
+                            <i
+                              class="fa fa-columns"
+                            />
+                          </button>
+                          <button
+                            class="fullscreen no-disable no-mobile"
+                            tabindex="-1"
+                            title="Toggle Fullscreen (F11)"
+                            type="button"
+                          >
+                            <i
+                              class="fa fa-arrows-alt"
+                            />
+                          </button>
+                          <i
+                            class="separator"
+                          >
+                            |
+                          </i>
+                          <button
+                            class="guide no-disable"
+                            tabindex="-1"
+                            title="Markdown Guide"
+                            type="button"
+                          >
+                            <i
+                              class="fa fa-question-circle"
+                            />
+                          </button>
+                        </div>
+                        <div
+                          class="CodeMirror cm-s-easymde CodeMirror-wrap"
+                          translate="no"
                         >
                           <div
-                            class="editor-toolbar"
+                            style="overflow: hidden; position: relative; width: 3px; height: 0px;"
                           >
-                            <button
-                              class="bold"
-                              tabindex="-1"
-                              title="Bold (Ctrl-B)"
-                              type="button"
-                            >
-                              <i
-                                class="fa fa-bold"
-                              />
-                            </button>
-                            <button
-                              class="italic"
-                              tabindex="-1"
-                              title="Italic (Ctrl-I)"
-                              type="button"
-                            >
-                              <i
-                                class="fa fa-italic"
-                              />
-                            </button>
-                            <button
-                              class="heading"
-                              tabindex="-1"
-                              title="Heading (Ctrl-H)"
-                              type="button"
-                            >
-                              <i
-                                class="fa fa-header fa-heading"
-                              />
-                            </button>
-                            <i
-                              class="separator"
-                            >
-                              |
-                            </i>
-                            <button
-                              class="code"
-                              tabindex="-1"
-                              title="Code (Ctrl-Alt-C)"
-                              type="button"
-                            >
-                              <i
-                                class="fa fa-code"
-                              />
-                            </button>
-                            <button
-                              class="quote"
-                              tabindex="-1"
-                              title="Quote (Ctrl-')"
-                              type="button"
-                            >
-                              <i
-                                class="fa fa-quote-left"
-                              />
-                            </button>
-                            <button
-                              class="unordered-list"
-                              tabindex="-1"
-                              title="Generic List (Ctrl-L)"
-                              type="button"
-                            >
-                              <i
-                                class="fa fa-list-ul"
-                              />
-                            </button>
-                            <button
-                              class="ordered-list"
-                              tabindex="-1"
-                              title="Numbered List (Ctrl-Alt-L)"
-                              type="button"
-                            >
-                              <i
-                                class="fa fa-list-ol"
-                              />
-                            </button>
-                            <i
-                              class="separator"
-                            >
-                              |
-                            </i>
-                            <button
-                              class="link"
-                              tabindex="-1"
-                              title="Create Link (Ctrl-K)"
-                              type="button"
-                            >
-                              <i
-                                class="fa fa-link"
-                              />
-                            </button>
-                            <button
-                              class="image"
-                              tabindex="-1"
-                              title="Insert Image (Ctrl-Alt-I)"
-                              type="button"
-                            >
-                              <i
-                                class="fa fa-image"
-                              />
-                            </button>
-                            <button
-                              class="table"
-                              tabindex="-1"
-                              title="Insert Table"
-                              type="button"
-                            >
-                              <i
-                                class="fa fa-table"
-                              />
-                            </button>
-                            <i
-                              class="separator"
-                            >
-                              |
-                            </i>
-                            <button
-                              class="preview no-disable"
-                              tabindex="-1"
-                              title="Toggle Preview (Ctrl-P)"
-                              type="button"
-                            >
-                              <i
-                                class="fa fa-eye"
-                              />
-                            </button>
-                            <button
-                              class="side-by-side no-disable no-mobile"
-                              tabindex="-1"
-                              title="Toggle Side by Side (F9)"
-                              type="button"
-                            >
-                              <i
-                                class="fa fa-columns"
-                              />
-                            </button>
-                            <button
-                              class="fullscreen no-disable no-mobile"
-                              tabindex="-1"
-                              title="Toggle Fullscreen (F11)"
-                              type="button"
-                            >
-                              <i
-                                class="fa fa-arrows-alt"
-                              />
-                            </button>
-                            <i
-                              class="separator"
-                            >
-                              |
-                            </i>
-                            <button
-                              class="guide no-disable"
-                              tabindex="-1"
-                              title="Markdown Guide"
-                              type="button"
-                            >
-                              <i
-                                class="fa fa-question-circle"
-                              />
-                            </button>
+                            <textarea
+                              autocapitalize="off"
+                              autocorrect="off"
+                              spellcheck="false"
+                              style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; min-height: 1em; outline: none;"
+                              tabindex="0"
+                            />
                           </div>
                           <div
-                            class="CodeMirror cm-s-easymde CodeMirror-wrap"
-                            translate="no"
+                            class="CodeMirror-vscrollbar"
+                            cm-not-content="true"
+                            tabindex="-1"
                           >
                             <div
-                              style="overflow: hidden; position: relative; width: 3px; height: 0px;"
-                            >
-                              <textarea
-                                autocapitalize="off"
-                                autocorrect="off"
-                                spellcheck="false"
-                                style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; min-height: 1em; outline: none;"
-                                tabindex="0"
-                              />
-                            </div>
-                            <div
-                              class="CodeMirror-vscrollbar"
-                              cm-not-content="true"
-                              tabindex="-1"
-                            >
-                              <div
-                                style="min-width: 1px;"
-                              />
-                            </div>
-                            <div
-                              class="CodeMirror-hscrollbar"
-                              cm-not-content="true"
-                              tabindex="-1"
-                            >
-                              <div
-                                style="height: 100%; min-height: 1px;"
-                              />
-                            </div>
-                            <div
-                              class="CodeMirror-scrollbar-filler"
-                              cm-not-content="true"
+                              style="min-width: 1px;"
                             />
+                          </div>
+                          <div
+                            class="CodeMirror-hscrollbar"
+                            cm-not-content="true"
+                            tabindex="-1"
+                          >
                             <div
-                              class="CodeMirror-gutter-filler"
-                              cm-not-content="true"
+                              style="height: 100%; min-height: 1px;"
                             />
+                          </div>
+                          <div
+                            class="CodeMirror-scrollbar-filler"
+                            cm-not-content="true"
+                          />
+                          <div
+                            class="CodeMirror-gutter-filler"
+                            cm-not-content="true"
+                          />
+                          <div
+                            class="CodeMirror-scroll"
+                            style="min-height: 300px;"
+                            tabindex="-1"
+                          >
                             <div
-                              class="CodeMirror-scroll"
-                              style="min-height: 300px;"
-                              tabindex="-1"
+                              class="CodeMirror-sizer"
+                              style="margin-left: 0px;"
                             >
                               <div
-                                class="CodeMirror-sizer"
-                                style="margin-left: 0px;"
+                                style="position: relative;"
                               >
                                 <div
-                                  style="position: relative;"
+                                  class="CodeMirror-lines"
+                                  role="presentation"
                                 >
                                   <div
-                                    class="CodeMirror-lines"
                                     role="presentation"
+                                    style="position: relative; outline: none;"
                                   >
                                     <div
-                                      role="presentation"
-                                      style="position: relative; outline: none;"
+                                      class="CodeMirror-measure"
                                     >
-                                      <div
-                                        class="CodeMirror-measure"
+                                      <pre
+                                        class="CodeMirror-line-like"
                                       >
-                                        <pre
-                                          class="CodeMirror-line-like"
-                                        >
-                                          <span>
-                                            xxxxxxxxxx
-                                          </span>
-                                        </pre>
-                                      </div>
-                                      <div
-                                        class="CodeMirror-measure"
-                                      />
-                                      <div
-                                        style="position: relative; z-index: 1;"
-                                      />
-                                      <div
-                                        class="CodeMirror-cursors"
-                                      />
-                                      <div
-                                        class="CodeMirror-code"
-                                        role="presentation"
-                                      />
+                                        <span>
+                                          xxxxxxxxxx
+                                        </span>
+                                      </pre>
                                     </div>
+                                    <div
+                                      class="CodeMirror-measure"
+                                    />
+                                    <div
+                                      style="position: relative; z-index: 1;"
+                                    />
+                                    <div
+                                      class="CodeMirror-cursors"
+                                    />
+                                    <div
+                                      class="CodeMirror-code"
+                                      role="presentation"
+                                    />
                                   </div>
                                 </div>
                               </div>
-                              <div
-                                style="position: absolute; height: 50px; width: 1px;"
-                              />
-                              <div
-                                class="CodeMirror-gutters"
-                                style="display: none;"
-                              />
                             </div>
+                            <div
+                              style="position: absolute; height: 50px; width: 1px;"
+                            />
+                            <div
+                              class="CodeMirror-gutters"
+                              style="display: none;"
+                            />
                           </div>
-                          <div
-                            class="editor-preview-side editor-preview"
-                          />
                         </div>
+                        <div
+                          class="editor-preview-side editor-preview"
+                        />
                       </div>
                     </div>
                   </div>

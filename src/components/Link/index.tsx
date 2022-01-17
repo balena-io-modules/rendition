@@ -54,7 +54,7 @@ const setDefaultProps = withProps((props: InternalLinkProps) => {
 });
 
 export interface InternalLinkProps
-	extends Omit<React.HTMLAttributes<HTMLElement>, 'is'> {
+	extends Omit<React.HTMLAttributes<HTMLElement>, 'is' | 'css'> {
 	/** If true, open the link in a new tab */
 	blank?: boolean;
 	/** If true, disable the link */
