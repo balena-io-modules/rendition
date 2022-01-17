@@ -1,4 +1,14 @@
 - commits:
+    - subject: Fix wrong css property typing
+      hash: 6d999718fc71a71d23b3b075c5fbdae396078945
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: karaxuna
+  version: 25.4.11
+  date: 2022-01-17T23:44:41.420Z
+- commits:
     - subject: Add missing dependency on react-router
       hash: 0debc83e9c5625c779aa4b23319c651914d08959
       body: |
