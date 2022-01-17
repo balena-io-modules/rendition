@@ -26,7 +26,6 @@ test('useTheme should return correct theme object', () => {
 });
 
 const resizeWindow = (width = 600) => {
-	// @ts-expect-error
 	global.window.innerWidth = width;
 	global.window.dispatchEvent(new Event('resize'));
 };
