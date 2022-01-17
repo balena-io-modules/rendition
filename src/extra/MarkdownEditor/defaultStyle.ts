@@ -63,6 +63,7 @@ export default css`
 	}
 	.cm-animate-fat-cursor {
 		width: auto;
+		border: 0;
 		-webkit-animation: blink 1.06s steps(1) infinite;
 		-moz-animation: blink 1.06s steps(1) infinite;
 		animation: blink 1.06s steps(1) infinite;
@@ -206,16 +207,16 @@ export default css`
 	}
 	.CodeMirror-scroll {
 		overflow: scroll !important;
-		margin-bottom: -50px;
-		margin-right: -50px;
-		padding-bottom: 50px;
+		margin-bottom: -30px;
+		margin-right: -30px;
+		padding-bottom: 30px;
 		height: 100%;
 		outline: 0;
 		position: relative;
 	}
 	.CodeMirror-sizer {
 		position: relative;
-		border-right: 50px solid transparent;
+		border-right: 30px solid transparent;
 	}
 	.CodeMirror-gutter-filler,
 	.CodeMirror-hscrollbar,
@@ -224,7 +225,6 @@ export default css`
 		position: absolute;
 		z-index: 6;
 		display: none;
-		outline: 0;
 	}
 	.CodeMirror-vscrollbar {
 		right: 0;
@@ -258,7 +258,7 @@ export default css`
 		height: 100%;
 		display: inline-block;
 		vertical-align: top;
-		margin-bottom: -50px;
+		margin-bottom: -30px;
 	}
 	.CodeMirror-gutter-wrapper {
 		position: absolute;
@@ -403,18 +403,7 @@ export default css`
 	span.CodeMirror-selectedtext {
 		background: 0 0;
 	}
-	.EasyMDEContainer {
-		display: block;
-	}
-	.CodeMirror-rtl pre {
-		direction: rtl;
-	}
-	.EasyMDEContainer.sided--no-fullscreen {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
-	.EasyMDEContainer .CodeMirror {
+	.CodeMirror {
 		box-sizing: border-box;
 		height: auto;
 		border: 1px solid #ddd;
@@ -425,10 +414,10 @@ export default css`
 		z-index: 0;
 		word-wrap: break-word;
 	}
-	.EasyMDEContainer .CodeMirror-scroll {
+	.CodeMirror-scroll {
 		cursor: text;
 	}
-	.EasyMDEContainer .CodeMirror-fullscreen {
+	.CodeMirror-fullscreen {
 		background: #fff;
 		position: fixed !important;
 		top: 50px;
@@ -440,19 +429,13 @@ export default css`
 		border-right: none !important;
 		border-bottom-right-radius: 0 !important;
 	}
-	.EasyMDEContainer .CodeMirror-sided {
+	.CodeMirror-sided {
 		width: 50% !important;
 	}
-	.EasyMDEContainer.sided--no-fullscreen .CodeMirror-sided {
-		border-right: none !important;
-		border-bottom-right-radius: 0;
-		position: relative;
-		flex: 1 1 auto;
-	}
-	.EasyMDEContainer .CodeMirror-placeholder {
+	.CodeMirror-placeholder {
 		opacity: 0.5;
 	}
-	.EasyMDEContainer .CodeMirror-focused .CodeMirror-selected {
+	.CodeMirror-focused .CodeMirror-selected {
 		background: #d9d9d9;
 	}
 	.editor-toolbar {
@@ -462,12 +445,24 @@ export default css`
 		-ms-user-select: none;
 		-o-user-select: none;
 		user-select: none;
-		padding: 9px 10px;
+		padding: 0 10px;
 		border-top: 1px solid #bbb;
 		border-left: 1px solid #bbb;
 		border-right: 1px solid #bbb;
 		border-top-left-radius: 4px;
 		border-top-right-radius: 4px;
+	}
+	.editor-toolbar:after,
+	.editor-toolbar:before {
+		display: block;
+		content: ' ';
+		height: 1px;
+	}
+	.editor-toolbar:before {
+		margin-bottom: 8px;
+	}
+	.editor-toolbar:after {
+		margin-top: 8px;
 	}
 	.editor-toolbar.fullscreen {
 		width: 100%;
@@ -532,9 +527,6 @@ export default css`
 		right: 0;
 		margin: 0;
 		padding: 0;
-	}
-	.EasyMDEContainer.sided--no-fullscreen .editor-toolbar {
-		width: 100%;
 	}
 	.editor-toolbar .easymde-dropdown,
 	.editor-toolbar button {
@@ -603,9 +595,6 @@ export default css`
 		color: #959694;
 		text-align: right;
 	}
-	.EasyMDEContainer.sided--no-fullscreen .editor-statusbar {
-		width: 100%;
-	}
 	.editor-statusbar span {
 		display: inline-block;
 		min-width: 4em;
@@ -646,11 +635,6 @@ export default css`
 	}
 	.editor-preview-active-side {
 		display: block;
-	}
-	.EasyMDEContainer.sided--no-fullscreen .editor-preview-active-side {
-		flex: 1 1 auto;
-		height: auto;
-		position: static;
 	}
 	.editor-preview-active {
 		display: block;
@@ -732,8 +716,7 @@ export default css`
 		);
 	}
 	.easymde-dropdown-content {
-		display: block;
-		visibility: hidden;
+		display: none;
 		position: absolute;
 		background-color: #f9f9f9;
 		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -742,21 +725,8 @@ export default css`
 		top: 30px;
 	}
 	.easymde-dropdown:active .easymde-dropdown-content,
-	.easymde-dropdown:focus .easymde-dropdown-content,
-	.easymde-dropdown:focus-within .easymde-dropdown-content {
-		visibility: visible;
-	}
-	span[data-img-src]::after {
-		content: '';
-		background-image: var(--bg-image);
+	.easymde-dropdown:focus .easymde-dropdown-content {
 		display: block;
-		max-height: 100%;
-		max-width: 100%;
-		background-size: contain;
-		height: 0;
-		padding-top: var(--height);
-		width: var(--width);
-		background-repeat: no-repeat;
 	}
 	.CodeMirror
 		.cm-spell-error:not(.cm-url):not(.cm-comment):not(.cm-tag):not(.cm-word) {
