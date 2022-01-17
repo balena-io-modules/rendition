@@ -14,9 +14,8 @@ import raw from 'rehype-raw';
 import prism from '@mapbox/rehype-prism';
 import { Divider } from '../../components/Divider';
 import { px } from 'styled-system';
-import styled, { withTheme } from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import gh from 'hast-util-sanitize/lib/github.json';
-import { Theme } from '../../common-types';
 import defaultStyle from './defaultStyle';
 import { darken, lighten } from '../../utils';
 import { Decorator, decoratorPlugin } from './plugins/decorator';
@@ -255,7 +254,6 @@ export type MarkdownProps = TxtProps & {
 	children: string;
 	/** Object specifying component Overrides. ex. `{ p: Txt.p }` */
 	componentOverrides?: components;
-	theme: Theme;
 	/** Specifies the options used when sanitizing the generated HTML. Passing `null` would disable the sanitization. */
 	sanitizerOptions?: any; // https://github.com/syntax-tree/hast-util-sanitize#schema
 	/** When disabled it does not renders raw html in markdown */
@@ -264,37 +262,6 @@ export type MarkdownProps = TxtProps & {
 	disableCodeHighlight?: boolean;
 	/** Decorate part of the text if it matches some condition */
 	decorators?: Decorator[];
-};
-
-export const MarkdownBase = ({
-	children,
-	componentOverrides,
-	sanitizerOptions,
-	disableRawHtml,
-	disableCodeHighlight,
-	decorators,
-	...rest
-}: MarkdownProps) => {
-	const content = React.useMemo(() => {
-		return (
-			getProcessor(
-				componentOverrides,
-				sanitizerOptions,
-				disableRawHtml,
-				disableCodeHighlight,
-				decorators,
-			).processSync(children) as any
-		).result; // type any because vFile types doesn't contains result, even though it should.
-	}, [
-		componentOverrides,
-		sanitizerOptions,
-		disableRawHtml,
-		disableCodeHighlight,
-		decorators,
-		children,
-	]);
-
-	return <MarkdownWrapper {...rest}>{content}</MarkdownWrapper>;
 };
 
 /**
@@ -324,4 +291,38 @@ export const MarkdownBase = ({
  *
  * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/extra/Markdown/Markdown.stories.ts)
  */
-export const Markdown = withTheme(MarkdownBase);
+export const Markdown = ({
+	children,
+	componentOverrides,
+	sanitizerOptions,
+	disableRawHtml,
+	disableCodeHighlight,
+	decorators,
+	...rest
+}: MarkdownProps) => {
+	const theme = useTheme();
+	const content = React.useMemo(() => {
+		return (
+			getProcessor(
+				componentOverrides,
+				sanitizerOptions,
+				disableRawHtml,
+				disableCodeHighlight,
+				decorators,
+			).processSync(children) as any
+		).result; // type any because vFile types doesn't contains result, even though it should.
+	}, [
+		componentOverrides,
+		sanitizerOptions,
+		disableRawHtml,
+		disableCodeHighlight,
+		decorators,
+		children,
+	]);
+
+	return (
+		<MarkdownWrapper theme={theme} {...rest}>
+			{content}
+		</MarkdownWrapper>
+	);
+};

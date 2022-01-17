@@ -4,7 +4,7 @@ import { createTemplate, createStory } from '../../stories/utils';
 import { SurroundingOverlay, SurroundingOverlayProps, PartialDomRect } from '.';
 import { Input } from '../Input';
 
-const SurroundingOverlayDemo = (props: SurroundingOverlayProps) => {
+const SurroundingOverlayDemo = (props: Partial<SurroundingOverlayProps>) => {
 	const [rect, setRect] = React.useState<PartialDomRect | null>(null);
 	return (
 		<>
