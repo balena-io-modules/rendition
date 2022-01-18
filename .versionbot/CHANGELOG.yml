@@ -1,4 +1,21 @@
 - commits:
+    - subject: Add react as peer dep
+      hash: ce6fcd434e7a3d500bce12ee37de17ab0c6beb01
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: karaxuna
+    - subject: Lock packs that have different react major version
+      hash: 0010c6ef45be0ca891e59670774394222d83e394
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: karaxuna
+  version: 25.5.0
+  date: 2022-01-18T14:14:26.702Z
+- commits:
     - subject: Stop using lodash/some in favor of the native method
       hash: 4c974556882fe779ecb0359f49a1f1115f19cbe3
       body: ''
