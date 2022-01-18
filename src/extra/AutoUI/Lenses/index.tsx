@@ -11,14 +11,31 @@ import { JSONSchema7 } from 'json-schema';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import map from 'lodash/map';
 import uniq from 'lodash/uniq';
+import { TableColumn } from '../../../components/Table';
+import { AutoUIContext, AutoUIModel } from '../schemaOps';
 
-export interface LensTemplate {
+export interface RendererProps<T = any> {
+	filtered: T[];
+	selected: T[];
+	properties: Array<any & { key: string }> | Array<TableColumn<T>>;
+	hasUpdateActions: boolean;
+	changeSelected: (selected: T[]) => void;
+	data: T[] | T | undefined;
+	autouiContext: AutoUIContext<T>;
+	onEntityClick: (
+		entity: T,
+		event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+	) => void;
+	model: AutoUIModel<T>;
+}
+
+export interface LensTemplate<T = any> {
 	slug: string;
 	name: string;
 	data: {
 		label: string;
 		format: string;
-		renderer: (props: any) => React.ReactElement;
+		renderer: (props: RendererProps<T>) => React.ReactElement;
 		icon: IconProp;
 		type: string;
 		filter: JSONSchema7;

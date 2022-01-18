@@ -1,22 +1,7 @@
 import React from 'react';
-import { Table, TableColumn } from '../../../../components/Table';
+import { Table } from '../../../../components/Table';
 import { LensTemplate } from '..';
-import { AutoUIContext } from '../../schemaOps';
 import { faTable } from '@fortawesome/free-solid-svg-icons/faTable';
-
-interface TableProps<T> {
-	filtered: T[];
-	selected: T[];
-	properties: Array<TableColumn<T>>;
-	hasUpdateActions: boolean;
-	changeSelected: (selected: T[]) => void;
-	data?: T[];
-	autouiContext: AutoUIContext<T>;
-	onEntityClick: (
-		entity: T,
-		event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-	) => void;
-}
 
 export const table: LensTemplate = {
 	slug: 'table',
@@ -33,7 +18,7 @@ export const table: LensTemplate = {
 			data,
 			autouiContext,
 			onEntityClick,
-		}: TableProps<any>) => (
+		}) => (
 			<Table<any>
 				rowKey="id"
 				data={filtered}
