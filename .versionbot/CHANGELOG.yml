@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix AutoUI not filling screen height
+      hash: aa7428bec798317b78df15914543b57e2780431f
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 25.4.15
+  date: 2022-01-18T20:28:15.706Z
+- commits:
     - subject: 'patch: Update dependency mermaid to ^8.13.9'
       hash: 2c4446ec971dc6952ca368abdf2a2b9fe1f62077
       body: |
