@@ -1,4 +1,16 @@
 - commits:
+    - subject: Drop custom mermaid typings
+      hash: f90aa89ce246ec7e00f82b13a409c42e311b83c7
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 25.4.13
+  date: 2022-01-18T16:00:54.806Z
+- commits:
     - subject: Stop using lodash/some in favor of the native method
       hash: 4c974556882fe779ecb0359f49a1f1115f19cbe3
       body: ''
