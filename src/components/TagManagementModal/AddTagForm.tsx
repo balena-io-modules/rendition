@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import * as uuid from 'uuid';
 
 import { ResourceTagInfo } from './models';
-import some from 'lodash/some';
 import find from 'lodash/find';
 import startsWith from 'lodash/startsWith';
 import isEmpty from 'lodash/isEmpty';
@@ -61,8 +60,7 @@ const newTagValidationRules = <T extends {}>(
 		},
 		{
 			test: () =>
-				some(
-					existingTags,
+				existingTags.some(
 					(tag) => tag.state !== 'deleted' && tag.tag_key === key,
 				),
 			message: t('fields_errors.tag_with_same_name_exists'),

@@ -8,7 +8,6 @@ import map from 'lodash/map';
 import flatMap from 'lodash/flatMap';
 import uniq from 'lodash/uniq';
 import reduce from 'lodash/reduce';
-import some from 'lodash/some';
 import without from 'lodash/without';
 import isEqual from 'lodash/isEqual';
 import keyBy from 'lodash/keyBy';
@@ -552,7 +551,7 @@ export class Table<T extends {}> extends React.Component<
 			!isEqual(this.props.columns, columns)
 		) {
 			const addedFirstTag =
-				!!this.state && !some(this.state.tagKeys) && some(tagKeys);
+				!!this.state && !this.state.tagKeys.length && tagKeys.length;
 			columns = columns.map((c) => {
 				if (isCustomTagColumn(c)) {
 					// we need to refresh the headers of all tag columns
@@ -583,7 +582,7 @@ export class Table<T extends {}> extends React.Component<
 			);
 			if (
 				loadedSort &&
-				some(visibleColumns, (c) => c.field === loadedSort.field)
+				visibleColumns.some((c) => c.field === loadedSort.field)
 			) {
 				sort = loadedSort;
 			}
@@ -625,12 +624,7 @@ export class Table<T extends {}> extends React.Component<
 			return;
 		}
 
-		if (
-			some(allColumns, {
-				type: 'tag',
-				tagKey: undefined,
-			})
-		) {
+		if (allColumns.some((c) => c.type === 'tag' && c.tagKey === undefined)) {
 			// don't add extra unconfigured tag columns
 			return;
 		}
