@@ -1,4 +1,34 @@
 - commits:
+    - subject: Stop using lodash/some in favor of the native method
+      hash: 4c974556882fe779ecb0359f49a1f1115f19cbe3
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+    - subject: Stop using lodash/size in favor of "?.length"
+      hash: 53e2e351710a7047b5b869a431b5022679acab1b
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+    - subject: Stop using lodash/assign in favor of the native method
+      hash: 11bb2e57569a7562aeeafc1be08918bfdbdadcae
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 25.4.12
+  date: 2022-01-18T00:18:56.876Z
+- commits:
     - subject: Fix wrong css property typing
       hash: 6d999718fc71a71d23b3b075c5fbdae396078945
       body: ''
