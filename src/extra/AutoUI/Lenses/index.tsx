@@ -11,16 +11,16 @@ import { JSONSchema7 } from 'json-schema';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import map from 'lodash/map';
 import uniq from 'lodash/uniq';
-import { TableColumn } from '../../../components/Table';
+import { AutoUIEntityPropertyDefinition } from '../';
 import { AutoUIContext, AutoUIModel } from '../schemaOps';
 
 export interface RendererProps<T = any> {
 	filtered: T[];
 	selected: T[];
-	properties: Array<any & { key: string }> | Array<TableColumn<T>>;
+	properties: Array<AutoUIEntityPropertyDefinition<T>>;
 	hasUpdateActions: boolean;
 	changeSelected: (selected: T[]) => void;
-	data: T[] | T | undefined;
+	data: T[] | T;
 	autouiContext: AutoUIContext<T>;
 	onEntityClick: (
 		entity: T,
