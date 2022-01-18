@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency mermaid to ^8.13.9'
+      hash: 2c4446ec971dc6952ca368abdf2a2b9fe1f62077
+      body: |
+        Update mermaid from 8.13.2 to 8.13.9
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 25.4.14
+  date: 2022-01-18T19:21:50.158Z
+- commits:
     - subject: Drop custom mermaid typings
       hash: f90aa89ce246ec7e00f82b13a409c42e311b83c7
       body: ''
