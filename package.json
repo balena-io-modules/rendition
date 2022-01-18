@@ -123,7 +123,7 @@
     "qs": "^6.10.1",
     "react-google-recaptcha": "^2.1.0",
     "react-helmet": "^6.1.0",
-    "react-monaco-editor": "^0.47.0",
+    "react-monaco-editor": "^0.45.0",
     "react-notifications-component": "^2.4.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
