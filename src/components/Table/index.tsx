@@ -2,18 +2,15 @@ import * as React from 'react';
 import { TableBase, TableBaseProps, TableSortOptions } from './TableBase';
 import styled, { css } from 'styled-components';
 import keys from 'lodash/keys';
-import assign from 'lodash/assign';
 import pick from 'lodash/pick';
 import filter from 'lodash/filter';
 import map from 'lodash/map';
 import flatMap from 'lodash/flatMap';
 import uniq from 'lodash/uniq';
 import reduce from 'lodash/reduce';
-import some from 'lodash/some';
 import without from 'lodash/without';
 import isEqual from 'lodash/isEqual';
 import keyBy from 'lodash/keyBy';
-import size from 'lodash/size';
 import { Flex } from '../Flex';
 import {
 	getNewTagTableColumnState,
@@ -323,7 +320,7 @@ const applyColumnPreferences = <T extends {}>(
 	tagField: keyof T | undefined,
 	enableCustomColumns?: boolean,
 ): Array<TableColumnInternal<T>> => {
-	if (!size(loadedColumns)) {
+	if (!loadedColumns?.length) {
 		return columns;
 	}
 
@@ -339,11 +336,11 @@ const applyColumnPreferences = <T extends {}>(
 		const column = columnsByKey[key];
 		const loadedColumn = loadedColumnsByKey[key];
 
-		if (!loadedColumn) {
+		if (!loadedColumn || !column) {
 			return;
 		}
 
-		assign(column, pick(loadedColumn, tableColumnStateAssignedProps));
+		Object.assign(column, pick(loadedColumn, tableColumnStateAssignedProps));
 	});
 
 	// we need to populate the rest properties
@@ -554,7 +551,7 @@ export class Table<T extends {}> extends React.Component<
 			!isEqual(this.props.columns, columns)
 		) {
 			const addedFirstTag =
-				!!this.state && !some(this.state.tagKeys) && some(tagKeys);
+				!!this.state && !this.state.tagKeys.length && tagKeys.length;
 			columns = columns.map((c) => {
 				if (isCustomTagColumn(c)) {
 					// we need to refresh the headers of all tag columns
@@ -585,7 +582,7 @@ export class Table<T extends {}> extends React.Component<
 			);
 			if (
 				loadedSort &&
-				some(visibleColumns, (c) => c.field === loadedSort.field)
+				visibleColumns.some((c) => c.field === loadedSort.field)
 			) {
 				sort = loadedSort;
 			}
@@ -627,12 +624,7 @@ export class Table<T extends {}> extends React.Component<
 			return;
 		}
 
-		if (
-			some(allColumns, {
-				type: 'tag',
-				tagKey: undefined,
-			})
-		) {
+		if (allColumns.some((c) => c.type === 'tag' && c.tagKey === undefined)) {
 			// don't add extra unconfigured tag columns
 			return;
 		}
