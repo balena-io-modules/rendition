@@ -268,10 +268,12 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 
 	return (
 		<Flex
+			flex={1}
 			flexDirection={Array.isArray(data) ? 'column' : undefined}
 			mt={Array.isArray(data) ? 2 : undefined}
 		>
 			<Spinner
+				flex={1}
 				label={
 					isBusyMessage ??
 					t('loading.resource', {
@@ -280,131 +282,134 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 				}
 				show={data == null || !!isBusyMessage}
 			>
-				{Array.isArray(data) && (
-					<>
-						<Box>
-							<HeaderGrid
-								flexWrap="wrap"
-								justifyContent="space-between"
-								alignItems="baseline"
-							>
-								<Create
-									model={model}
-									autouiContext={autouiContext}
-									hasOngoingAction={false}
-									onActionTriggered={onActionTriggered}
-								/>
-								<Box
-									order={[-1, -1, -1, 0]}
-									flex={['1 0 100%', '1 0 100%', '1 0 100%', 'auto']}
+				<Flex height="100%" flexDirection="column">
+					{Array.isArray(data) && (
+						<>
+							<Box>
+								<HeaderGrid
+									flexWrap="wrap"
+									justifyContent="space-between"
+									alignItems="baseline"
 								>
-									{showFilters && (
-										<Filters
-											schema={model.schema}
-											filters={filters}
-											autouiContext={autouiContext}
-											changeFilters={setFilters}
-											onSearch={(term) => (
-												<FocusSearch
-													searchTerm={term}
-													filtered={filtered}
-													selected={selected}
-													setSelected={setSelected}
-													autouiContext={autouiContext}
-													model={model}
-													hasUpdateActions={hasUpdateActions}
-												/>
-											)}
-										/>
-									)}
-								</Box>
-								{data.length > 0 && (
-									<HeaderGrid>
-										{!!sdk?.tags && (
-											<Tags
+									<Create
+										model={model}
+										autouiContext={autouiContext}
+										hasOngoingAction={false}
+										onActionTriggered={onActionTriggered}
+									/>
+									<Box
+										order={[-1, -1, -1, 0]}
+										flex={['1 0 100%', '1 0 100%', '1 0 100%', 'auto']}
+									>
+										{showFilters && (
+											<Filters
+												schema={model.schema}
+												filters={filters}
 												autouiContext={autouiContext}
-												selected={selected}
-												changeTags={changeTags}
+												changeFilters={setFilters}
+												onSearch={(term) => (
+													<FocusSearch
+														searchTerm={term}
+														filtered={filtered}
+														selected={selected}
+														setSelected={setSelected}
+														autouiContext={autouiContext}
+														model={model}
+														hasUpdateActions={hasUpdateActions}
+													/>
+												)}
 											/>
 										)}
-										<Update
-											model={model}
-											selected={selected}
-											autouiContext={autouiContext}
-											hasOngoingAction={false}
-											onActionTriggered={onActionTriggered}
-										/>
+									</Box>
+									{data.length > 0 && (
 										<HeaderGrid>
-											<LensSelection
-												lenses={lenses}
-												lens={lens}
-												setLens={(lens) => {
-													setLens(lens);
-													setToLocalStorage(
-														`${model.resource}__view_lens`,
-														lens.slug,
-													);
-												}}
+											{!!sdk?.tags && (
+												<Tags
+													autouiContext={autouiContext}
+													selected={selected}
+													changeTags={changeTags}
+												/>
+											)}
+											<Update
+												model={model}
+												selected={selected}
+												autouiContext={autouiContext}
+												hasOngoingAction={false}
+												onActionTriggered={onActionTriggered}
 											/>
+											<HeaderGrid>
+												<LensSelection
+													lenses={lenses}
+													lens={lens}
+													setLens={(lens) => {
+														setLens(lens);
+														setToLocalStorage(
+															`${model.resource}__view_lens`,
+															lens.slug,
+														);
+													}}
+												/>
+											</HeaderGrid>
 										</HeaderGrid>
-									</HeaderGrid>
-								)}
-							</HeaderGrid>
-							<Filters
-								renderMode={'summary'}
-								schema={model.schema}
-								filters={filters}
-								autouiContext={autouiContext}
-								changeFilters={setFilters}
+									)}
+								</HeaderGrid>
+								<Filters
+									renderMode={'summary'}
+									schema={model.schema}
+									filters={filters}
+									autouiContext={autouiContext}
+									changeFilters={setFilters}
+								/>
+							</Box>
+							{data.length === 0 && (
+								<NoRecordsFoundArrow>
+									{t(`no_data.no_resource_data`, {
+										resource: t(`resource.item_plural`).toLowerCase(),
+									})}
+									<br />
+									{t('questions.how_about_adding_one')}
+								</NoRecordsFoundArrow>
+							)}
+						</>
+					)}
+					{!Array.isArray(data) && (
+						<HeaderGrid>
+							<LensSelection
+								lenses={lenses}
+								lens={lens}
+								setLens={(lens) => {
+									setLens(lens);
+									setToLocalStorage(`${model.resource}__view_lens`, lens.slug);
+								}}
 							/>
-						</Box>
-						{data.length === 0 && (
-							<NoRecordsFoundArrow>
-								{t(`no_data.no_resource_data`, {
-									resource: t(`resource.item_plural`).toLowerCase(),
-								})}
-								<br />
-								{t('questions.how_about_adding_one')}
-							</NoRecordsFoundArrow>
-						)}
-					</>
-				)}
-				{!Array.isArray(data) && (
-					<HeaderGrid>
-						<LensSelection
-							lenses={lenses}
-							lens={lens}
-							setLens={(lens) => {
-								setLens(lens);
-								setToLocalStorage(`${model.resource}__view_lens`, lens.slug);
-							}}
-						/>
-					</HeaderGrid>
-				)}
-
-				{lens &&
-					data &&
-					(!Array.isArray(data) ||
-						(Array.isArray(data) && data.length > 0)) && (
-						<lens.data.renderer
-							filtered={filtered}
-							selected={selected}
-							properties={properties}
-							hasUpdateActions={hasUpdateActions}
-							changeSelected={setSelected}
-							data={data}
-							autouiContext={autouiContext}
-							onEntityClick={lensRendererOnEntityClick}
-							model={model}
-						/>
+						</HeaderGrid>
 					)}
 
-				{actionData?.action?.renderer &&
-					actionData.action.renderer({
-						schema: actionData.schema,
-						affectedEntries: actionData.affectedEntries,
-						onDone: () => setActionData(undefined),
-					})}
+					{lens &&
+						data &&
+						(!Array.isArray(data) ||
+							(Array.isArray(data) && data.length > 0)) && (
+							<lens.data.renderer
+								flex={1}
+								filtered={filtered}
+								selected={selected}
+								properties={properties}
+								hasUpdateActions={hasUpdateActions}
+								changeSelected={setSelected}
+								data={data}
+								autouiContext={autouiContext}
+								onEntityClick={lensRendererOnEntityClick}
+								model={model}
+							/>
+						)}
+
+					{actionData?.action?.renderer &&
+						actionData.action.renderer({
+							schema: actionData.schema,
+							affectedEntries: actionData.affectedEntries,
+							onDone: () => setActionData(undefined),
+						})}
+				</Flex>
 			</Spinner>
 		</Flex>
 	);
