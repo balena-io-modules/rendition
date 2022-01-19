@@ -12,13 +12,17 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import map from 'lodash/map';
 import uniq from 'lodash/uniq';
 
-export interface LensTemplate {
+export interface LensTemplate<T = any> {
 	slug: string;
 	name: string;
 	data: {
 		label: string;
 		format: string;
-		renderer: (props: any) => React.ReactElement;
+		renderer: (
+			props:
+				| types.CollectionLensRendererProps<T>
+				| types.EntityLensRendererProps<T>,
+		) => React.ReactElement | null;
 		icon: IconProp;
 		type: string;
 		filter: JSONSchema7;

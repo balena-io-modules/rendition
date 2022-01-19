@@ -428,6 +428,13 @@ export {
 	autoUIGetDisabledReason,
 };
 
+export type AutoUIEntityPropertyDefinition<T> = Required<
+	Pick<
+		TableColumn<T>,
+		'title' | 'field' | 'key' | 'selected' | 'sortable' | 'render'
+	>
+> & { type: string; priority: string };
+
 export const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 	schema,
 	idField,
@@ -442,7 +449,7 @@ export const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 	customSort?: AutoUIContext<T>['customSort'];
 	priorities?: Priorities<T>;
 	formats?: Format[];
-}): Array<TableColumn<T>> =>
+}): Array<AutoUIEntityPropertyDefinition<T>> =>
 	Object.entries(schema.properties ?? {})
 		// The tables treats tags differently, handle it better
 		.filter((entry): entry is [keyof T, typeof entry[1]] => {
