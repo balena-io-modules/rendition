@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'AutoUI: Improve the Lenses renderer prop types'
+      hash: dc352ea8abec3fab00dae2f4dacb3400a69ec490
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 25.4.16
+  date: 2022-01-20T14:12:46.370Z
+- commits:
     - subject: Fix AutoUI not filling screen height
       hash: aa7428bec798317b78df15914543b57e2780431f
       body: ''
