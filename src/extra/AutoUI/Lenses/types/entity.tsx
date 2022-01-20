@@ -1,23 +1,15 @@
 import React from 'react';
-import { LensTemplate } from '..';
+import styled from 'styled-components';
 import { faCube } from '@fortawesome/free-solid-svg-icons/faCube';
 import { Flex } from '../../../../components/Flex';
 import { Card } from '../../../../components/Card';
 import { Txt } from '../../../../components/Txt';
 import { Heading } from '../../../../components/Heading';
 import { Divider } from '../../../../components/Divider';
-import { AutoUIContext, AutoUIModel } from '../../schemaOps';
 import { Update } from '../../Actions/Update';
 import { ActionData } from '../../schemaOps';
-import styled from 'styled-components';
-
-interface EntityProps<T> {
-	data: T;
-	properties: Array<any & { key: string }>;
-	autouiContext: AutoUIContext<T>;
-	model: AutoUIModel<T>;
-	hasUpdateActions: boolean;
-}
+import { LensTemplate } from '..';
+import { EntityLensRendererProps } from '.';
 
 const Label = styled(Txt)`
 	color: #252629;
@@ -38,7 +30,7 @@ export const entity: LensTemplate = {
 			hasUpdateActions,
 			model,
 			autouiContext,
-		}: EntityProps<any>) => {
+		}: EntityLensRendererProps<any>) => {
 			const [actionData, setActionData] = React.useState<
 				ActionData<any> | undefined
 			>();
