@@ -2,21 +2,24 @@ import React from 'react';
 import { useLocation } from 'react-router';
 import { AutoUIModel, AutoUIBaseResource } from '../AutoUI/schemaOps';
 import { JSONSchema } from '../../components/Renderer/types';
-
 import { OpenApiJson } from './openApiJson';
 import {
 	getAllNaturalPropertiesKeys,
 	getSelectableOptions,
 	getSchemaFromLocation,
 	pine,
+	getFromRef,
 } from './odata';
 import { useRequest } from '../../hooks/useRequest';
-import { AutoUI, autoUIRunTransformers } from '../AutoUI';
-import { history } from '../AutoUI/utils';
+import { AutoUI, autoUIRunTransformers, AutoUIAction } from '../AutoUI';
+import { findInObject, history } from '../AutoUI/utils';
 import isEmpty from 'lodash/isEmpty';
+import { ActionMethods } from '.';
+import { ActionSidebarProps } from './ActionSidebar';
 
 interface ContentProps {
 	openApiJson: OpenApiJson;
+	openActionSidebar: (info: Omit<ActionSidebarProps, 'openApiJson'>) => void;
 }
 
 const updateSchema = (schema: JSONSchema) => {
@@ -48,7 +51,7 @@ const generateModel = (
 		schema: updateSchema(schema),
 		permissions: {
 			read: [firstPropertyKey, ...otherPropertyKeys],
-			create: [],
+			create: [firstPropertyKey],
 			update: [],
 			delete: false,
 		},
@@ -60,7 +63,7 @@ const generateModel = (
 	} as AutoUIModel<AutoUIBaseResource<unknown>>;
 };
 
-export const Content = ({ openApiJson }: ContentProps) => {
+export const Content = ({ openApiJson, openActionSidebar }: ContentProps) => {
 	const { pathname } = useLocation();
 	const resourceName = pathname.replace(/^\/([^\/]*).*$/, '$1');
 	const id = pathname.substring(pathname.lastIndexOf('/') + 1);
@@ -108,6 +111,54 @@ export const Content = ({ openApiJson }: ContentProps) => {
 		[data, model],
 	);
 
+	const memoizedActions: Array<AutoUIAction<unknown>> | undefined =
+		React.useMemo(() => {
+			if (!correspondingPath) {
+				return undefined;
+			}
+			return Object.entries(correspondingPath)
+				.filter(([pathkey]) =>
+					[
+						ActionMethods.POST,
+						ActionMethods.PATCH,
+						ActionMethods.DELETE,
+					].includes(pathkey as ActionMethods),
+				)
+				.map(([pathKey, pathDescription]) => {
+					const requestSchemaRef = findInObject(
+						pathDescription.requestBody,
+						'$ref',
+					);
+					const requestSchema = requestSchemaRef
+						? getFromRef(openApiJson, requestSchemaRef)
+						: id;
+					if (pathKey === ActionMethods.POST) {
+						return {
+							title: `Add ${resourceName}`,
+							type: 'create',
+							actionFn: () =>
+								openActionSidebar({
+									action: ActionMethods.POST,
+									schema: requestSchema,
+									resourceName,
+									id,
+								}),
+						};
+					}
+					if (pathKey === ActionMethods.PATCH) {
+						return {
+							title: `Update ${resourceName}`,
+							type: 'update',
+						};
+					}
+					// Since we filter by pathKey only POST, PATCH and DELETE methods, we can assume that this will be the DELETE case
+					return {
+						title: `Delete ${resourceName}`,
+						type: 'delete',
+					};
+				});
+		}, [correspondingPath]);
+
 	if (!model) {
 		return <>Could not generate a model</>;
 	}
@@ -119,6 +170,7 @@ export const Content = ({ openApiJson }: ContentProps) => {
 	return (
 		<AutoUI
 			model={model}
+			actions={memoizedActions}
 			data={memoizedData}
 			{...(!endsWithValidId && {
 				onEntityClick: (entity) => history.push(`${pathname}/${entity.id}`),

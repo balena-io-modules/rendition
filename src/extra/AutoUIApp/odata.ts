@@ -1,6 +1,7 @@
 import { Methods, OpenApiJson } from './openApiJson';
 import PineClientFetch from 'pinejs-client-fetch';
 import { JSONSchema } from '~/components/Renderer/types';
+import get from 'lodash/get';
 
 export const pine = new PineClientFetch(
 	{
@@ -39,4 +40,9 @@ export const getSelectableOptions = (
 		pathObject?.get?.parameters?.find((p) => p.name === '$select')?.schema
 			?.items?.enum ?? []
 	);
+};
+
+export const getFromRef = (openApiJson: OpenApiJson, ref: string) => {
+	const tree = ref.replace('#/', '').split('/');
+	return get(openApiJson, tree);
 };

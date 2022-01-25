@@ -19,6 +19,7 @@ import { FilterFieldCompareFn, FilterModal } from './FilterModal';
 import * as SchemaSieve from './SchemaSieve';
 import Summary from './Summary';
 import ViewsMenu from './ViewsMenu';
+import { onClickOutOrEsc } from '../../extra/AutoUI/utils';
 
 const SearchWrapper = styled(Box)`
 	flex-basis: 500px;
@@ -28,29 +29,6 @@ const SearchWrapper = styled(Box)`
 const FilterWrapper = styled(Box)`
 	position: relative;
 `;
-
-const onClickOutOrEsc = (wrapper: HTMLDivElement, callback: () => void) => {
-	const handleClickOutside = (event: MouseEvent) => {
-		if (!wrapper.contains(event.target as Node)) {
-			handler();
-		}
-	};
-	const handleEsc = (event: KeyboardEvent) => {
-		if (event.key === 'Escape') {
-			handler();
-		}
-	};
-	const handler = () => {
-		callback();
-		if (document.activeElement instanceof HTMLElement) {
-			document.activeElement.blur();
-		}
-		document.removeEventListener('mousedown', handleClickOutside);
-		document.removeEventListener('keydown', handleEsc);
-	};
-	document.addEventListener('mousedown', handleClickOutside);
-	document.addEventListener('keydown', handleEsc);
-};
 
 class BaseFilters extends React.Component<FiltersProps, FiltersState> {
 	private searchContainer = React.createRef<HTMLDivElement>();
