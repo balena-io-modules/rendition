@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix autoUIApp labels
+      hash: d56f1eda0470ffc5c3dbe9716e07b979c396db6d
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 25.5.1
+  date: 2022-01-25T13:39:01.377Z
+- commits:
     - subject: Extend autoui with boxprops
       hash: 5aad939ce2417e4f030a02a959b2b0d7c12be91a
       body: ''
