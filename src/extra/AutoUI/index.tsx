@@ -27,7 +27,7 @@ import { useTranslation } from '../../hooks/useTranslation';
 import { NoRecordsFoundArrow } from './NoRecordsFoundArrow';
 import { useHistory } from '../../hooks/useHistory';
 import { Filters } from './Filters/Filters';
-import { Box } from '../../components/Box';
+import { Box, BoxProps } from '../../components/Box';
 import { Tags } from './Actions/Tags';
 import { Update } from './Actions/Update';
 import { notifications } from '../../components/Notifications';
@@ -63,7 +63,7 @@ const HeaderGrid = styled(Flex)`
 	}
 `;
 
-export interface AutoUIProps<T> {
+export interface AutoUIProps<T> extends BoxProps {
 	/** Model is the property that describe the data to display with a JSON structure */
 	model: AutoUIModel<T>;
 	/** Array of data or data entity to display */
@@ -106,6 +106,7 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 	onEntityClick,
 	customLenses,
 	lensContext,
+	...boxProps
 }: AutoUIProps<T>) => {
 	const { t } = useTranslation();
 	const history = useHistory();
@@ -267,11 +268,7 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 	);
 
 	return (
-		<Flex
-			flex={1}
-			flexDirection={Array.isArray(data) ? 'column' : undefined}
-			mt={Array.isArray(data) ? 2 : undefined}
-		>
+		<Flex flex={1} flexDirection="column" {...boxProps}>
 			<Spinner
 				flex={1}
 				label={
