@@ -1,4 +1,16 @@
 - commits:
+    - subject: Extend autoui with boxprops
+      hash: 5aad939ce2417e4f030a02a959b2b0d7c12be91a
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 25.5.0
+  date: 2022-01-25T12:42:17.346Z
+- commits:
     - subject: 'AutoUI: Improve the Lenses renderer prop types'
       hash: dc352ea8abec3fab00dae2f4dacb3400a69ec490
       body: ''
