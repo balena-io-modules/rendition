@@ -18,6 +18,24 @@ interface ContentProps {
 	openApiJson: OpenApiJson;
 }
 
+const updateSchema = (schema: JSONSchema) => {
+	if (!schema.properties) {
+		return schema;
+	}
+	// Add readable "title" on all properties
+	const newSchema = {
+		...schema,
+		properties: Object.entries(schema.properties).reduce(
+			(acc, [key, value]) =>
+				typeof value === 'object'
+					? { ...acc, [key]: { ...value, title: key.split('_').join(' ') } }
+					: { ...acc, [key]: value },
+			{},
+		),
+	};
+	return newSchema;
+};
+
 const generateModel = (
 	schema: JSONSchema,
 	resourceName: string,
@@ -26,7 +44,7 @@ const generateModel = (
 	const [firstPropertyKey, ...otherPropertyKeys] = naturalPropertiesKeys;
 	return {
 		resource: resourceName,
-		schema,
+		schema: updateSchema(schema),
 		permissions: {
 			read: [firstPropertyKey, ...otherPropertyKeys],
 			create: [],
@@ -44,7 +62,7 @@ const generateModel = (
 export const Content = ({ openApiJson }: ContentProps) => {
 	const { pathname } = useLocation();
 	const resourceName = pathname.replace(/^\/([^\/]*).*$/, '$1');
-	const id = pathname.substr(pathname.lastIndexOf('/') + 1);
+	const id = pathname.substring(pathname.lastIndexOf('/') + 1);
 	const endsWithValidId = !isNaN(parseInt(id, 10));
 	const schema = getSchemaFromLocation(openApiJson, resourceName);
 	const naturalPropertiesKeys = getAllNaturalPropertiesKeys(schema?.properties);

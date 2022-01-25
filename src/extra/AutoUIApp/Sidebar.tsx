@@ -50,10 +50,15 @@ export const Sidebar = ({
 	const menuItems = React.useMemo(
 		() =>
 			Object.entries(openApiJson.components.schemas)
-				.filter(([key]) => !key.endsWith('-create') && !key.endsWith('-update')) // add !findInObject(value, '$ref')
+				.filter(
+					([key, value]) =>
+						!key.endsWith('-create') &&
+						!key.endsWith('-update') &&
+						!!value.title,
+				) // add !findInObject(value, '$ref')
 				.map(([key, value]) => ({
-					resource: key.substr(key.indexOf('.') + 1),
-					title: value.title,
+					resource: key.substring(key.indexOf('.') + 1),
+					title: value.title?.split('_')?.join(' '),
 				})),
 		[openApiJson],
 	);
