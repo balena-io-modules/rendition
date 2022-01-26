@@ -30,28 +30,32 @@ export const autoUIRunTransformers = <
 	TResult extends T,
 	TContext extends any,
 >(
-	data: T[] | undefined,
+	data: T[] | T | undefined,
 	transformers: Transformers<T, Omit<TResult, keyof T>, TContext>,
 	context?: TContext,
-): TResult[] | undefined => {
+): TResult[] | TResult | undefined => {
 	if (!data) {
 		return data;
 	}
 
 	if (!transformers || isEmpty(transformers)) {
-		return data as TResult[];
+		return data as TResult[] | TResult;
 	}
 
-	// We mutate the data for performance reasons, it shouldn't matter as it is just a middleware.
-	const mutatedData = data as TResult[];
-	mutatedData.forEach((entry) => {
+	const transformEntry = (entry: TResult) =>
 		Object.entries(transformers).forEach(
 			([fieldName, transformer]: [keyof TResult, any]) => {
 				entry[fieldName] = transformer(entry, context);
 			},
 		);
-	});
 
+	// We mutate the data for performance reasons, it shouldn't matter as it is just a middleware.
+	const mutatedData = data as TResult[] | TResult;
+	if (Array.isArray(mutatedData)) {
+		mutatedData.forEach(transformEntry);
+	} else {
+		transformEntry(mutatedData);
+	}
 	return mutatedData;
 };
 

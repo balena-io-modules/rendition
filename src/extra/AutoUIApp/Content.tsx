@@ -11,8 +11,9 @@ import {
 	pine,
 } from './odata';
 import { useRequest } from '../../hooks/useRequest';
-import { AutoUI } from '../AutoUI';
-import { history, ObjectFromEntries } from '../AutoUI/utils';
+import { AutoUI, autoUIRunTransformers } from '../AutoUI';
+import { history } from '../AutoUI/utils';
+import isEmpty from 'lodash/isEmpty';
 
 interface ContentProps {
 	openApiJson: OpenApiJson;
@@ -70,12 +71,15 @@ export const Content = ({ openApiJson }: ContentProps) => {
 		? openApiJson.paths[`/${resourceName}`]
 		: openApiJson.paths[`/${resourceName}({id})`];
 
-	const [data] = useRequest(
+	const [data] = useRequest<
+		() => Promise<unknown>,
+		AutoUIBaseResource<unknown> | Array<AutoUIBaseResource<unknown>> | undefined
+	>(
 		async () =>
 			await pine.get({
 				resource: resourceName,
+				...(endsWithValidId && { id }),
 				options: {
-					...(endsWithValidId && { id }),
 					$select: [...getSelectableOptions(correspondingPath, [])],
 				},
 			}),
@@ -90,26 +94,32 @@ export const Content = ({ openApiJson }: ContentProps) => {
 		return generateModel(schema, resourceName, naturalPropertiesKeys);
 	}, [schema, resourceName, naturalPropertiesKeys]);
 
+	const memoizedData = React.useMemo(
+		() =>
+			autoUIRunTransformers(
+				data,
+				{
+					// we have to remove the contract until we find a way to render complex objects;
+					contract: () => null,
+					__permissions: () => model?.permissions,
+				},
+				{},
+			),
+		[data, model],
+	);
+
 	if (!model) {
 		return <>Could not generate a model</>;
 	}
 
-	if (!(data as any[])?.length) {
+	if (!memoizedData || isEmpty(memoizedData)) {
 		return <>No data</>;
 	}
-
-	// TODO: since we don't have a way to render an object without a format yet, we will filter it.
-	// In theory we are already doing it in getAllNaturalPropertiesKeys method, but contract it appear to be a type string even if it's not.
-	const [firstEntity, ...otherEntities] = (data as any[]).map((obj) =>
-		ObjectFromEntries(
-			Object.entries(obj).filter(([_, v]) => !!v && typeof v !== 'object'),
-		),
-	);
 
 	return (
 		<AutoUI
 			model={model}
-			data={endsWithValidId ? firstEntity : [firstEntity, ...otherEntities]}
+			data={memoizedData}
 			{...(!endsWithValidId && {
 				onEntityClick: (entity) => history.push(`${pathname}/${entity.id}`),
 			})}
