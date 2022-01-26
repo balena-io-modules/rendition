@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix autoui transformers for entity
+      hash: 32d88e21124ec20d385412485cb0afa2b543bc45
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 25.5.2
+  date: 2022-01-26T15:10:42.632Z
+- commits:
     - subject: Fix autoUIApp labels
       hash: d56f1eda0470ffc5c3dbe9716e07b979c396db6d
       body: ''
