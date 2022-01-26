@@ -1,4 +1,23 @@
 - commits:
+    - subject: 'DownloadImageModal: Remove deployArtifact check for hiding instructions'
+      hash: 8d62d83386413cc6269b4d47e07c6dc4209a5fa9
+      body: |
+        We will now surface them whenver they exist.
+        The deployArtifact was 'empty' only for DTs
+        that didn't have instructions anyway.
+      footer:
+        Change-type: patch
+        change-type: patch
+        See: >-
+          https://jel.ly.fish/improvement-stop-relying-device-types-v1-device-type-json-unrelated-things-4fbac3c
+        see: >-
+          https://jel.ly.fish/improvement-stop-relying-device-types-v1-device-type-json-unrelated-things-4fbac3c
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 25.5.3
+  date: 2022-01-26T17:28:35.530Z
+- commits:
     - subject: Fix autoui transformers for entity
       hash: 32d88e21124ec20d385412485cb0afa2b543bc45
       body: ''
