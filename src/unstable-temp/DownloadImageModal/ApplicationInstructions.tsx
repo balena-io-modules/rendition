@@ -71,11 +71,7 @@ export const ApplicationInstructions = React.memo(
 			}
 		}, [currentOs, setCurrentOs, instructions, hasOsSpecificInstructions]);
 
-		if (
-			!deviceType ||
-			!instructions ||
-			deviceType?.yocto?.deployArtifact === 'empty'
-		) {
+		if (!deviceType || !instructions) {
 			return <Txt>{t('no_data.no_instructions_found')}</Txt>;
 		}
 
