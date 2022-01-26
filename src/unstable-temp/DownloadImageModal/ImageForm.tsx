@@ -221,7 +221,8 @@ export const ImageForm = ({
 		() =>
 			!!actions?.length
 				? [
-						actions.map(({ label, tooltip, onClick }) => ({
+						actions.map(({ label, tooltip, onClick, disabled }) => ({
+							disabled,
 							content: (
 								<Txt bold={selectedActionLabel === label} tooltip={tooltip}>
 									{label}
