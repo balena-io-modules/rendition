@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'DownloadImageModal: Fix dropdown items not being disabled'
+      hash: 32662001b9671f82ec411941663333be35e00cd6
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 25.5.4
+  date: 2022-01-26T18:27:02.349Z
+- commits:
     - subject: 'DownloadImageModal: Remove deployArtifact check for hiding instructions'
       hash: 8d62d83386413cc6269b4d47e07c6dc4209a5fa9
       body: |
