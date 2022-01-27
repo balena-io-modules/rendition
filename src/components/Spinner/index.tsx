@@ -38,7 +38,6 @@ const SpinnerContainer = styled(Flex)`
 const ChildrenContainer = styled.div<Pick<InternalSpinnerProps, 'show'>>`
 	opacity: ${(props) => (props.show ? 0.4 : 1)};
 	transition: opacity 250ms;
-	z-index: 3;
 	flex: 1;
 `;
 
