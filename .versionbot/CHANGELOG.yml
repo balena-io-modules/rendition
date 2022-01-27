@@ -1,7 +1,29 @@
 - commits:
-    - subject: 'DownloadImageModal: Fix dropdown items not being disabled'
+    - subject: Remove wrong zindex
+      hash: 99122aa036747168195e306c46590f43f5992e54
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+    - subject: Fix autoUIRunTransformers typing
+      hash: 2fc853dff2bdf31762eaa02e7d2ea61bd69331fa
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 25.5.5
+  title: Fix typing and zindex
+  date: 2022-01-27T17:16:01.022Z
+- commits:
+    - subject: "DownloadImageModal: Fix dropdown items not being disabled"
       hash: 32662001b9671f82ec411941663333be35e00cd6
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -11,7 +33,7 @@
   version: 25.5.4
   date: 2022-01-26T18:27:02.349Z
 - commits:
-    - subject: 'DownloadImageModal: Remove deployArtifact check for hiding instructions'
+    - subject: "DownloadImageModal: Remove deployArtifact check for hiding instructions"
       hash: 8d62d83386413cc6269b4d47e07c6dc4209a5fa9
       body: |
         We will now surface them whenver they exist.
@@ -20,10 +42,8 @@
       footer:
         Change-type: patch
         change-type: patch
-        See: >-
-          https://jel.ly.fish/improvement-stop-relying-device-types-v1-device-type-json-unrelated-things-4fbac3c
-        see: >-
-          https://jel.ly.fish/improvement-stop-relying-device-types-v1-device-type-json-unrelated-things-4fbac3c
+        See: https://jel.ly.fish/improvement-stop-relying-device-types-v1-device-type-json-unrelated-things-4fbac3c
+        see: https://jel.ly.fish/improvement-stop-relying-device-types-v1-device-type-json-unrelated-things-4fbac3c
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
         signed-off-by: Thodoris Greasidis <thodoris@balena.io>
       author: Thodoris Greasidis
@@ -32,7 +52,7 @@
 - commits:
     - subject: Fix autoui transformers for entity
       hash: 32d88e21124ec20d385412485cb0afa2b543bc45
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -44,7 +64,7 @@
 - commits:
     - subject: Fix autoUIApp labels
       hash: d56f1eda0470ffc5c3dbe9716e07b979c396db6d
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -56,7 +76,7 @@
 - commits:
     - subject: Extend autoui with boxprops
       hash: 5aad939ce2417e4f030a02a959b2b0d7c12be91a
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -66,9 +86,9 @@
   version: 25.5.0
   date: 2022-01-25T12:42:17.346Z
 - commits:
-    - subject: 'AutoUI: Improve the Lenses renderer prop types'
+    - subject: "AutoUI: Improve the Lenses renderer prop types"
       hash: dc352ea8abec3fab00dae2f4dacb3400a69ec490
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -80,7 +100,7 @@
 - commits:
     - subject: Fix AutoUI not filling screen height
       hash: aa7428bec798317b78df15914543b57e2780431f
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -90,7 +110,7 @@
   version: 25.4.15
   date: 2022-01-18T20:28:15.706Z
 - commits:
-    - subject: 'patch: Update dependency mermaid to ^8.13.9'
+    - subject: "patch: Update dependency mermaid to ^8.13.9"
       hash: 2c4446ec971dc6952ca368abdf2a2b9fe1f62077
       body: |
         Update mermaid from 8.13.2 to 8.13.9
@@ -103,7 +123,7 @@
 - commits:
     - subject: Drop custom mermaid typings
       hash: f90aa89ce246ec7e00f82b13a409c42e311b83c7
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -115,7 +135,7 @@
 - commits:
     - subject: Stop using lodash/some in favor of the native method
       hash: 4c974556882fe779ecb0359f49a1f1115f19cbe3
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -124,7 +144,7 @@
       author: Thodoris Greasidis
     - subject: Stop using lodash/size in favor of "?.length"
       hash: 53e2e351710a7047b5b869a431b5022679acab1b
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -133,7 +153,7 @@
       author: Thodoris Greasidis
     - subject: Stop using lodash/assign in favor of the native method
       hash: 11bb2e57569a7562aeeafc1be08918bfdbdadcae
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -145,7 +165,7 @@
 - commits:
     - subject: Fix wrong css property typing
       hash: 6d999718fc71a71d23b3b075c5fbdae396078945
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -169,7 +189,7 @@
   version: 25.4.10
   date: 2022-01-14T12:00:16.704Z
 - commits:
-    - subject: 'patch: Update dependency @testing-library/jest-dom to ^5.16.1'
+    - subject: "patch: Update dependency @testing-library/jest-dom to ^5.16.1"
       hash: 7516eda58c0233fcfe5c4979010ba02af1532301
       body: |
         Update @testing-library/jest-dom from 5.14.1 to 5.16.1
@@ -182,7 +202,7 @@
 - commits:
     - subject: Update snapshots
       hash: 2233449a42a8d0d760be7db37a35e62a5833920d
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -192,9 +212,9 @@
   version: 25.4.8
   date: 2022-01-13T20:30:37.373Z
 - commits:
-    - subject: 'patch: Update dependency ajv to ^6.12.6'
+    - subject: "patch: Update dependency ajv to ^6.12.6"
       hash: a3ed3a353e1bdea0e1008921865cc996b344ff29
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -202,9 +222,9 @@
   version: 25.4.7
   date: 2022-01-10T13:02:30.948Z
 - commits:
-    - subject: 'patch: Update fontawesome'
+    - subject: "patch: Update fontawesome"
       hash: 3c0683d6442d330fd79c7fccf83e4dc83749f4f8
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -214,7 +234,7 @@
 - commits:
     - subject: Make table reevaluate checkedItems when length of data changes
       hash: e97dc4b86884a22e9f8be535d4ded4d24b8535bd
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -224,7 +244,7 @@
   version: 25.4.5
   date: 2022-01-07T16:11:56.812Z
 - commits:
-    - subject: 'patch: Update dependency json-e to ^4.4.3'
+    - subject: "patch: Update dependency json-e to ^4.4.3"
       hash: 8aaaf8c64f30be81d360eb23d4962db4c38a555b
       body: |
         Update json-e from 4.4.1 to 4.4.3
@@ -235,9 +255,9 @@
   version: 25.4.4
   date: 2022-01-05T22:59:18.438Z
 - commits:
-    - subject: 'Table: Optimize for large number of items'
+    - subject: "Table: Optimize for large number of items"
       hash: 59423a5e3b42f9d2859aef1f7b742dd02d79850a
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -249,7 +269,7 @@
 - commits:
     - subject: Fix TableColumnSelector showing an empty group when there are no tags
       hash: 1a376ded4c3ffe4624428c0d5c47137bfcdec470
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -259,9 +279,10 @@
   version: 25.4.2
   date: 2021-12-31T14:06:32.052Z
 - commits:
-    - subject: 'DownloadImageModal: Allow null for the DeviceType''s logo & contact props'
+    - subject: "DownloadImageModal: Allow null for the DeviceType's logo & contact
+        props"
       hash: fa7fdac03e94c54b29775e6c5c282f0d75ceb290
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -271,25 +292,23 @@
   version: 25.4.1
   date: 2021-12-28T00:58:06.254Z
 - commits:
-    - subject: 'DownloadImageModal: Stop expecting the gettingStartedLink property'
+    - subject: "DownloadImageModal: Stop expecting the gettingStartedLink property"
       hash: 609031ae50072e28a7b5274cc3acaa3b06b731a5
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
         signed-off-by: Thodoris Greasidis <thodoris@balena.io>
       author: Thodoris Greasidis
-    - subject: 'DownloadImageModal: Infer the getting started link'
+    - subject: "DownloadImageModal: Infer the getting started link"
       hash: a9bac3768c67336a7bc331857925abffba172838
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
-        See: >-
-          https://jel.ly.fish/improvement-stop-relying-device-types-v1-device-type-json-unrelated-things-4fbac3c
-        see: >-
-          https://jel.ly.fish/improvement-stop-relying-device-types-v1-device-type-json-unrelated-things-4fbac3c
+        See: https://jel.ly.fish/improvement-stop-relying-device-types-v1-device-type-json-unrelated-things-4fbac3c
+        see: https://jel.ly.fish/improvement-stop-relying-device-types-v1-device-type-json-unrelated-things-4fbac3c
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
         signed-off-by: Thodoris Greasidis <thodoris@balena.io>
       author: Thodoris Greasidis
@@ -298,7 +317,7 @@
 - commits:
     - subject: Change danger notifications to error notifications
       hash: d3482e514288548d04a811bdc7f604a11ac29428
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -310,7 +329,7 @@
 - commits:
     - subject: Make Notifications accept prefix from AlertProps
       hash: d2708d11c1a8a2d3538516303001e64b9751e82d
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -322,7 +341,7 @@
 - commits:
     - subject: Update snapshots
       hash: f83f7419d8c5165d2756ca795fdea2ebe567a016
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -332,34 +351,32 @@
   version: 25.1.1
   date: 2021-12-27T13:58:04.359Z
 - commits:
-    - subject: 'DownloadImageModal: Wire additional properties to downloadConfig'
+    - subject: "DownloadImageModal: Wire additional properties to downloadConfig"
       hash: c74f5c80ba50a4a876386db687dad98bb1f2e120
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
         signed-off-by: Thodoris Greasidis <thodoris@balena.io>
       author: Thodoris Greasidis
-    - subject: 'ImageForm: Fill the form in a data driven way'
+    - subject: "ImageForm: Fill the form in a data driven way"
       hash: 09ad3b377455948b6078240f397e65aac3f82cd3
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
         signed-off-by: Thodoris Greasidis <thodoris@balena.io>
       author: Thodoris Greasidis
-    - subject: 'DownloadImageModal: Add support for invariant OS releases'
+    - subject: "DownloadImageModal: Add support for invariant OS releases"
       hash: d8fb8cb8ceb1b58651fd4068bdaa43aefff7e823
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
-        See: >-
-          https://www.flowdock.com/app/rulemotion/r-architecture/threads/YN4RClMOz6v6W-VCfoqBaNoliFZ
-        see: >-
-          https://www.flowdock.com/app/rulemotion/r-architecture/threads/YN4RClMOz6v6W-VCfoqBaNoliFZ
+        See: https://www.flowdock.com/app/rulemotion/r-architecture/threads/YN4RClMOz6v6W-VCfoqBaNoliFZ
+        see: https://www.flowdock.com/app/rulemotion/r-architecture/threads/YN4RClMOz6v6W-VCfoqBaNoliFZ
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
         signed-off-by: Thodoris Greasidis <thodoris@balena.io>
       author: Thodoris Greasidis
@@ -368,7 +385,7 @@
 - commits:
     - subject: Drop support for undefined DropDownButton items
       hash: 6a1b5e6e1c409ff26f7b8e3d2c35141db033271f
-      body: ''
+      body: ""
       footer:
         Change-type: major
         change-type: major
@@ -378,18 +395,18 @@
   version: 25.0.0
   date: 2021-12-21T17:41:53.411Z
 - commits:
-    - subject: 'DownloadImageModal: Properly type the getDownloadSize() helper'
+    - subject: "DownloadImageModal: Properly type the getDownloadSize() helper"
       hash: 15a95c8d40db65d25122a3d031ddc40ba006b65c
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
         signed-off-by: Thodoris Greasidis <thodoris@balena.io>
       author: Thodoris Greasidis
-    - subject: 'DownloadImageModalProps: Deprecate the DeviceType JSON properties'
+    - subject: "DownloadImageModalProps: Deprecate the DeviceType JSON properties"
       hash: 29369adc90283a367e10fec07fa427461e80092a
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -401,7 +418,7 @@
 - commits:
     - subject: Stop allowing undefined DropDownButton items
       hash: 519ba820c8ddc6d745979141aae8a70f61fa996f
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -411,9 +428,9 @@
   version: 24.2.2
   date: 2021-12-20T21:18:36.945Z
 - commits:
-    - subject: 'AutoUI: Fix sorting'
+    - subject: "AutoUI: Fix sorting"
       hash: 457767fd4fa3b4105a3a52f653a2ef35d4b89332
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -425,7 +442,7 @@
 - commits:
     - subject: Add autoUIApp to generate an app from a openApi json
       hash: d79cff01283e8aef3668ac580997205d6dfe473a
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -434,7 +451,7 @@
       author: JSReds
     - subject: Add useRequest hook
       hash: 2613bf033ac7440c9e9836950978a28d24fa3ce9
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -444,39 +461,35 @@
   version: 24.2.0
   date: 2021-12-20T12:48:29.277Z
 - commits:
-    - subject: 'AutoUI: Fix collection item click causing full page reload'
+    - subject: "AutoUI: Fix collection item click causing full page reload"
       hash: 8e8ae0a1ad92d0a19c45cfdc557f94c1431555c0
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
-        See: >-
-          https://www.flowdock.com/app/rulemotion/resin-frontend/threads/7zeCbXnadFPFdlM0srXfTzlFeVA
-        see: >-
-          https://www.flowdock.com/app/rulemotion/resin-frontend/threads/7zeCbXnadFPFdlM0srXfTzlFeVA
+        See: https://www.flowdock.com/app/rulemotion/resin-frontend/threads/7zeCbXnadFPFdlM0srXfTzlFeVA
+        see: https://www.flowdock.com/app/rulemotion/resin-frontend/threads/7zeCbXnadFPFdlM0srXfTzlFeVA
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
         signed-off-by: Thodoris Greasidis <thodoris@balena.io>
       author: Thodoris Greasidis
   version: 24.1.4
   date: 2021-12-18T23:56:33.358Z
 - commits:
-    - subject: 'Table: Fix tag column selection'
+    - subject: "Table: Fix tag column selection"
       hash: d395d5717cf67a37819e9404b87d886946b907f3
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
-        See: >-
-          https://www.flowdock.com/app/rulemotion/resin-frontend/threads/7zeCbXnadFPFdlM0srXfTzlFeVA
-        see: >-
-          https://www.flowdock.com/app/rulemotion/resin-frontend/threads/7zeCbXnadFPFdlM0srXfTzlFeVA
+        See: https://www.flowdock.com/app/rulemotion/resin-frontend/threads/7zeCbXnadFPFdlM0srXfTzlFeVA
+        see: https://www.flowdock.com/app/rulemotion/resin-frontend/threads/7zeCbXnadFPFdlM0srXfTzlFeVA
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
         signed-off-by: Thodoris Greasidis <thodoris@balena.io>
       author: Thodoris Greasidis
   version: 24.1.3
   date: 2021-12-18T15:58:15.736Z
 - commits:
-    - subject: 'patch: Update dependency typescript to ^3.9.10'
+    - subject: "patch: Update dependency typescript to ^3.9.10"
       hash: 9906637936ef7d911e8eaf8074ff8d157d7e9e1c
       body: |
         Update typescript from 3.9.6 to 3.9.10
@@ -489,7 +502,7 @@
 - commits:
     - subject: Update the label for provisioning key.
       hash: 47a71cf34fca35f837c10cab22d1528c7bb3e7e9
-      body: ''
+      body: ""
       footer:
         Change-Type: patch
         change-type: patch
@@ -501,7 +514,7 @@
 - commits:
     - subject: Update downloadOptions to include provisioning key name
       hash: 700e53e4046e7911bc6b8d234d56b6e937642d54
-      body: ''
+      body: ""
       footer:
         Change-Type: minor
         change-type: minor
@@ -513,7 +526,7 @@
 - commits:
     - subject: Fix focus search crashing due to `length` not existing on val
       hash: 4eb5ecb94ed107c2aba4dd85cc729797ecfeff62
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -525,7 +538,7 @@
 - commits:
     - subject: Remove AutoUICollection and AutoUIEntity in favor of AutoUI
       hash: 7a08b8dac5617004862b9ae14ca17eff3749398f
-      body: ''
+      body: ""
       footer:
         Change-type: major
         change-type: major
@@ -537,7 +550,7 @@
 - commits:
     - subject: Fix download image submit button
       hash: 3425405398940cce724244f796b32c5b27e1845e
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -549,7 +562,7 @@
 - commits:
     - subject: Make getBaseUrl accept full URLs as strings
       hash: 4dc274438d145af974d4344a964f30a3239c66fd
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -559,9 +572,9 @@
   version: 23.2.0
   date: 2021-12-13T17:26:15.892Z
 - commits:
-    - subject: 'Filters: Default to contains instead of is when filtering'
+    - subject: "Filters: Default to contains instead of is when filtering"
       hash: 6d1a4fc33d37bafd8b4d14c5509ecaeb55ad9660
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -573,7 +586,7 @@
 - commits:
     - subject: Fix download image modal actions tooltips and clicks
       hash: b1ce3f128e032e38c6a8b143384210f0417accb3
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -585,7 +598,7 @@
 - commits:
     - subject: Fix checkbox not showing in Focus Search
       hash: e9526989131588617f25058b7361b0ecd54ad87c
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -597,7 +610,7 @@
 - commits:
     - subject: Fix dropdowns with no items not hiding onclick
       hash: 8bd34eed6ca15c97096451d923393d1cd3659505
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -609,7 +622,7 @@
 - commits:
     - subject: Fix dropdowns being disabled and showing no options
       hash: 266f9130c7554f4cd4e212be11e57461360d98c3
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -619,7 +632,7 @@
   version: 23.1.4
   date: 2021-12-03T20:16:31.264Z
 - commits:
-    - subject: 'patch: Update dependency date-fns to ^2.27.0'
+    - subject: "patch: Update dependency date-fns to ^2.27.0"
       hash: 50a9fda80a6c48c6868f88080f12134db753fef6
       body: |
         Update date-fns from 2.24.0 to 2.27.0
@@ -632,7 +645,7 @@
 - commits:
     - subject: Fix search filter breaking
       hash: 5e0c13770a4d5c28b87657167b4b7e00c6eb5917
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -644,7 +657,7 @@
 - commits:
     - subject: fix broken badges
       hash: a330957f270c287312259017e4f8b7460a3b9a7c
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -654,7 +667,7 @@
 - commits:
     - subject: Improve DropDownButton component
       hash: 8b15393ffe21d2e3661beddd21e7b3df72ffaaef
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -666,7 +679,7 @@
 - commits:
     - subject: Improve AutoUICollection searching
       hash: 9d1933d317e0df4833dedbe518db612b19fe0c0e
-      body: ''
+      body: ""
       footer:
         Change-type: major
         change-type: major
@@ -675,7 +688,7 @@
       author: Matthew Yarmolinsky
     - subject: Add subselection checkbox
       hash: 384ef6dcba0436657fbfc6787a4385b11f0a273a
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -687,7 +700,7 @@
 - commits:
     - subject: Add style colors story
       hash: 71fedbb3ae8c44161b454531a8438f9555e8f272
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -699,7 +712,7 @@
 - commits:
     - subject: Lock all storybook modules to ~6.3.12
       hash: 8be58c3458448ab34056a024848fba959599f14e
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -711,7 +724,7 @@
 - commits:
     - subject: Lock @storybook/addon-storyshot to ~6.3.12
       hash: 9ca79086f60eebb5603cb93765476f95da484b10
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -720,7 +733,7 @@
       author: Thodoris Greasidis
     - subject: Lock @storybook/react to ~6.3.12
       hash: b290c7be555ba856aae82c7f5389d14ea1794887
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -732,7 +745,7 @@
 - commits:
     - subject: Deleted AuotUi duplicated snapshot
       hash: bf7eef291740082ec6f0391024300364faf426d2
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -744,7 +757,7 @@
 - commits:
     - subject: Return null if undefined is passed for data in AutoUI
       hash: 44667030723fec99feb231b89f22860a1b480c00
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -756,7 +769,7 @@
 - commits:
     - subject: Use highest scoring lens as default
       hash: 3e1c58dfffa461f892743e9e3a217210d4b45c18
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -768,7 +781,7 @@
 - commits:
     - subject: Lock grommet to 2.18
       hash: 700d0a4ecdec46e0e447d0d6ba09342b98122076
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -780,7 +793,7 @@
 - commits:
     - subject: Add AutoUI and AutoUIEntity components
       hash: 48dc3fcf1ba016e6ae62a52f090e0fdb11dfff42
-      body: ''
+      body: ""
       footer:
         Change-type: major
         change-type: major
@@ -789,7 +802,7 @@
       author: Matthew Yarmolinsky
     - subject: Add AutoUI Lenses
       hash: f91ab6d0cc0be4cde82030630be6d1182129a788
-      body: ''
+      body: ""
       footer:
         Change-type: major
         change-type: major
@@ -801,7 +814,7 @@
 - commits:
     - subject: Fix wrong command in contributor checklist
       hash: 244ac8fcde2820e4a0c8ca866930393d830cac52
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -811,9 +824,9 @@
   version: 21.12.7
   date: 2021-11-12T16:38:05.350Z
 - commits:
-    - subject: 'patch: Update dependency jest-styled-components to ^7.0.6'
+    - subject: "patch: Update dependency jest-styled-components to ^7.0.6"
       hash: 6c2f821f4e4aa24658e0eb16b5bc5d29c4287e94
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -821,7 +834,7 @@
   version: 21.12.6
   date: 2021-11-12T15:27:24.909Z
 - commits:
-    - subject: 'patch: Update dependency ts-node to v10'
+    - subject: "patch: Update dependency ts-node to v10"
       hash: d14e5e57dd9a4dbdcd7f7751111475260001910f
       body: |
         Update ts-node from 9.1.1 to 10.4.0
@@ -834,7 +847,7 @@
 - commits:
     - subject: Make modal text color match theme
       hash: 6f0779a6c538c56394b9a9d71e1c4690e8325912
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -846,7 +859,7 @@
 - commits:
     - subject: Export useBreakpoint hook and delete empty useRequest file
       hash: 042a6573b6296600d701df6144428ba7c2814a40
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -858,7 +871,7 @@
 - commits:
     - subject: Fix ButtonGroup select style
       hash: fb1054b3819f76465bc8e3dcc5f68b5fc8013f2a
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -870,7 +883,7 @@
 - commits:
     - subject: Fix ButtonGroup select mode typing and props
       hash: fdd12127673351a5b635696ad840004e92d42d11
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -882,7 +895,7 @@
 - commits:
     - subject: Add OpaqueLayer component
       hash: 9cca3844f8f39c171d7090bca69cff4cc1af8328
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -894,7 +907,7 @@
 - commits:
     - subject: Add button group select
       hash: 0b627f36c744ca2aa09a9db639a0123f931480b9
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -906,7 +919,7 @@
 - commits:
     - subject: Add styled system props to Search
       hash: 3b72710089b8f0270e99cb9d0d39b55cc9eb348d
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -916,7 +929,7 @@
   version: 21.10.0
   date: 2021-10-29T18:06:09.909Z
 - commits:
-    - subject: 'patch: Update dependency catch-uncommitted to v2'
+    - subject: "patch: Update dependency catch-uncommitted to v2"
       hash: 8ca870d6f4e1c2b42d590d5b4003e56a5d35815b
       body: |
         Update catch-uncommitted from 1.4.0 to 2.0.0
@@ -929,7 +942,7 @@
 - commits:
     - subject: Remove unused dependencies
       hash: 7dd0157102aa521699d189da5280c7268ee93999
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -939,9 +952,9 @@
   version: 21.9.6
   date: 2021-10-28T14:40:31.409Z
 - commits:
-    - subject: 'patch: Update storybook-non-major to ^6.3.12'
+    - subject: "patch: Update storybook-non-major to ^6.3.12"
       hash: e1c4240c4aa909ab08ee366922abbc346107db3b
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -949,9 +962,9 @@
   version: 21.9.5
   date: 2021-10-27T13:49:13.592Z
 - commits:
-    - subject: 'patch: Update dependency styled-components to ^5.3.3'
+    - subject: "patch: Update dependency styled-components to ^5.3.3"
       hash: ec06f6569f96d606be75d28d0743bcd688944f66
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -975,7 +988,7 @@
 - commits:
     - subject: Fix autoUI tagManagement resource translations
       hash: 7af55f82b5739af9b2c14b51620edad41aa3717a
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -985,7 +998,7 @@
   version: 21.9.2
   date: 2021-10-26T07:55:07.473Z
 - commits:
-    - subject: 'patch: Update dependency core-js to ^3.18.3'
+    - subject: "patch: Update dependency core-js to ^3.18.3"
       hash: fb2d32bb838998437a92a33a5a6e1ac3adaadaf4
       body: |
         Update core-js from 3.18.1 to 3.18.3
@@ -998,7 +1011,7 @@
 - commits:
     - subject: Add OS issues icon and tooltip in DownloadImageModal
       hash: 37fea07a3623c354c415a971e7548769c41ef2b4
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -1010,7 +1023,7 @@
 - commits:
     - subject: Fix monaco editor import conflict
       hash: 3cdc04b57ad9f624ab6694a7b2b6e0deab638b19
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1020,7 +1033,7 @@
   version: 21.8.7
   date: 2021-10-19T16:32:42.302Z
 - commits:
-    - subject: 'patch: Update dependency @testing-library/react to v12'
+    - subject: "patch: Update dependency @testing-library/react to v12"
       hash: 0c157c9b12b863865e9c4c76c754e52b6bb9a560
       body: |
         Update @testing-library/react from 11.2.7 to 12.1.2
@@ -1031,7 +1044,7 @@
   version: 21.8.6
   date: 2021-10-11T21:38:44.770Z
 - commits:
-    - subject: 'patch: Update dependency prismjs to ^1.25.0'
+    - subject: "patch: Update dependency prismjs to ^1.25.0"
       hash: 7402ba2cf3c8341fe1c4b4613c1bbd8c2fb2912b
       body: |
         Update prismjs from 1.21.0 to 1.25.0
@@ -1042,9 +1055,9 @@
   version: 21.8.5
   date: 2021-10-08T16:12:41.067Z
 - commits:
-    - subject: 'patch: Update storybook-non-major to ^6.3.10'
+    - subject: "patch: Update storybook-non-major to ^6.3.10"
       hash: a4bfb9595d56f361f88d9c8f233a8b7aab885cb4
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1054,7 +1067,7 @@
 - commits:
     - subject: Use styled components instead of classNames in TextWithCopy
       hash: 260e17c78bc03c4a44324479cb3be8087c6b8465
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1066,7 +1079,7 @@
 - commits:
     - subject: Add Download image modal missing informations and unify actions
       hash: ca67cb43937bc7163cfa840e3a1b91b0aff99cdc
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1076,9 +1089,9 @@
   version: 21.8.2
   date: 2021-10-07T13:38:01.565Z
 - commits:
-    - subject: 'patch: Update react-libs'
+    - subject: "patch: Update react-libs"
       hash: c5aabfc5eed1a396a0a9f9dd36810d6b0e6d4756
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1088,7 +1101,7 @@
 - commits:
     - subject: Add actionFn property to AutoUICollection
       hash: 030a67ce923e938dc4714c65fb348b8b53e20dab
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -1098,7 +1111,7 @@
   version: 21.8.0
   date: 2021-10-06T16:46:20.970Z
 - commits:
-    - subject: 'patch: Update dependency prettier to ^2.4.1'
+    - subject: "patch: Update dependency prettier to ^2.4.1"
       hash: 47a8fc0e7915c5b45a515f134813228655e46842
       body: |
         Update prettier from 2.2.1 to 2.4.1
@@ -1109,9 +1122,9 @@
   version: 21.7.21
   date: 2021-10-06T11:50:14.564Z
 - commits:
-    - subject: 'patch: Update storybook-non-major to ^6.3.9'
+    - subject: "patch: Update storybook-non-major to ^6.3.9"
       hash: b838aa61a429eb8ffb201b4e7a7095432bf7c2d7
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1119,7 +1132,7 @@
   version: 21.7.20
   date: 2021-10-05T13:32:43.031Z
 - commits:
-    - subject: 'patch: Update dependency mermaid to ^8.13.2'
+    - subject: "patch: Update dependency mermaid to ^8.13.2"
       hash: da8e655fd3ca8ca78dde42e66f4fb031664044e1
       body: |
         Update mermaid from 8.13.0 to 8.13.2
@@ -1130,7 +1143,7 @@
   version: 21.7.19
   date: 2021-10-05T09:42:32.396Z
 - commits:
-    - subject: 'patch: Update dependency gh-pages to v3'
+    - subject: "patch: Update dependency gh-pages to v3"
       hash: eeef6514c1ab49a189e692c7945c4a6b59ffb87b
       body: |
         Update gh-pages from 2.0.0 to 3.2.3
@@ -1143,7 +1156,7 @@
 - commits:
     - subject: Update the storyshots based on the latest dependencies
       hash: 84ec52df5e743ec433823bc7428248742fbebc2a
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1153,7 +1166,7 @@
   version: 21.7.17
   date: 2021-10-05T08:27:18.420Z
 - commits:
-    - subject: 'patch: Update dependency git-url-parse to ^7.2.0'
+    - subject: "patch: Update dependency git-url-parse to ^7.2.0"
       hash: 56b6edb4c19b7198201cd07e73aae39c8d174866
       body: |
         Update git-url-parse from 7.0.0 to 7.2.0
@@ -1164,7 +1177,7 @@
   version: 21.7.16
   date: 2021-09-29T16:04:15.174Z
 - commits:
-    - subject: 'patch: Update dependency lint-staged to ^4.3.0'
+    - subject: "patch: Update dependency lint-staged to ^4.3.0"
       hash: ef253342f35cdc25cfdb132845bb53a8b533d0f9
       body: |
         Update lint-staged from 4.1.1 to 4.3.0
@@ -1175,14 +1188,14 @@
   version: 21.7.15
   date: 2021-09-29T12:13:23.734Z
 - commits:
-    - subject: 'UnstableTempDownloadImageModal: Drop unnecessary types & helper code'
+    - subject: "UnstableTempDownloadImageModal: Drop unnecessary types & helper code"
       hash: 32adb04cebf14520960a0de3e85cc0565b5570ff
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
-        See: 'https://github.com/balena-io/balena-sdk/pull/1124'
-        see: 'https://github.com/balena-io/balena-sdk/pull/1124'
+        See: https://github.com/balena-io/balena-sdk/pull/1124
+        see: https://github.com/balena-io/balena-sdk/pull/1124
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
         signed-off-by: Thodoris Greasidis <thodoris@balena.io>
       author: Thodoris Greasidis
@@ -1202,8 +1215,8 @@
         I've added a new utils function that handles the props wrapping this
         method previously provided.
       footer:
-        Connects-to: '#1361'
-        connects-to: '#1361'
+        Connects-to: "#1361"
+        connects-to: "#1361"
         Change-type: patch
         change-type: patch
         Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
@@ -1212,7 +1225,7 @@
   version: 21.7.13
   date: 2021-09-29T09:14:12.851Z
 - commits:
-    - subject: 'patch: Update dependency @testing-library/jest-dom to ^5.14.1'
+    - subject: "patch: Update dependency @testing-library/jest-dom to ^5.14.1"
       hash: f66948613b18af28e2034f503a60602c3531f91c
       body: |
         Update @testing-library/jest-dom from 5.11.6 to 5.14.1
@@ -1223,9 +1236,9 @@
   version: 21.7.12
   date: 2021-09-28T15:46:05.164Z
 - commits:
-    - subject: 'patch: Update tests'
+    - subject: "patch: Update tests"
       hash: 79c15aa6b35bb436143c8bc0e2772adbf88501c8
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1233,9 +1246,9 @@
   version: 21.7.11
   date: 2021-09-28T13:25:04.383Z
 - commits:
-    - subject: 'patch: Update style'
+    - subject: "patch: Update style"
       hash: 12304597f87bd9c62cba2fae278eadb0818e094c
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1243,7 +1256,7 @@
   version: 21.7.10
   date: 2021-09-28T12:49:11.600Z
 - commits:
-    - subject: 'patch: Update dependency monaco-editor-webpack-plugin to ^4.2.0'
+    - subject: "patch: Update dependency monaco-editor-webpack-plugin to ^4.2.0"
       hash: 7a9931858418df2784365124723589aa019fee90
       body: |
         Update monaco-editor-webpack-plugin from 4.1.2 to 4.2.0
@@ -1254,7 +1267,7 @@
   version: 21.7.9
   date: 2021-09-28T12:09:18.286Z
 - commits:
-    - subject: 'patch: Update dependency uuid to ^3.4.0'
+    - subject: "patch: Update dependency uuid to ^3.4.0"
       hash: 90910af61c89eef0b6f829235f77fba9d580b9ac
       body: |
         Update uuid from 3.2.1 to 3.4.0
@@ -1265,7 +1278,7 @@
   version: 21.7.8
   date: 2021-09-28T09:58:08.862Z
 - commits:
-    - subject: 'patch: Update dependency core-js to ^3.18.1'
+    - subject: "patch: Update dependency core-js to ^3.18.1"
       hash: 1c01408e5f8d6f5e877844849a2a80a92fd11b85
       body: |
         Update core-js from 3.7.0 to 3.18.1
@@ -1276,7 +1289,7 @@
   version: 21.7.7
   date: 2021-09-26T23:48:34.375Z
 - commits:
-    - subject: 'patch: Update dependency @testing-library/react to ^11.2.7'
+    - subject: "patch: Update dependency @testing-library/react to ^11.2.7"
       hash: 2f011d0b180398f59df6a805637e318ce285070a
       body: |
         Update @testing-library/react from 11.2.0 to 11.2.7
@@ -1287,7 +1300,7 @@
   version: 21.7.6
   date: 2021-09-24T14:18:05.351Z
 - commits:
-    - subject: 'patch: Update dependency date-fns to ^2.24.0'
+    - subject: "patch: Update dependency date-fns to ^2.24.0"
       hash: 9979a1247baf15d37bc7d176a392e14c96b6377f
       body: |
         Update date-fns from 2.16.1 to 2.24.0
@@ -1298,7 +1311,7 @@
   version: 21.7.5
   date: 2021-09-24T10:56:14.567Z
 - commits:
-    - subject: 'patch: Update npm to >=5.10.0'
+    - subject: "patch: Update npm to >=5.10.0"
       hash: ee5c6b1098a21a194098b66ae04722d66364fde3
       body: |
         Update npm from 5.7.0 to 5.10.0
@@ -1309,7 +1322,7 @@
   version: 21.7.4
   date: 2021-09-24T08:30:48.399Z
 - commits:
-    - subject: 'patch: Update dependency mermaid to ^8.13.0'
+    - subject: "patch: Update dependency mermaid to ^8.13.0"
       hash: 2fc8b9ddd20f5594d7e408d4d69005b6c19df603
       body: |
         Update mermaid from 8.12.0 to 8.13.0
@@ -1320,12 +1333,12 @@
   version: 21.7.3
   date: 2021-09-23T16:57:39.648Z
 - commits:
-    - subject: 'Map: Fix mouse event not triggering'
+    - subject: "Map: Fix mouse event not triggering"
       hash: d1632114b8b5e37851b854d2cb412c1c47835061
-      body: ''
+      body: ""
       footer:
-        Resolves: '#1402'
-        resolves: '#1402'
+        Resolves: "#1402"
+        resolves: "#1402"
         Change-type: patch
         change-type: patch
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
@@ -1336,7 +1349,7 @@
 - commits:
     - subject: Add icon to markdown heading links
       hash: e04de50a076082c740b0cb0e16f897a4fb1d2a36
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1348,7 +1361,7 @@
 - commits:
     - subject: Link headings in markdown
       hash: db27d52d8f5fef58778d96ac488294d01d6aadf0
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -1358,7 +1371,7 @@
   version: 21.7.0
   date: 2021-09-11T13:06:30.025Z
 - commits:
-    - subject: 'patch: Update dependency unified to ^9.2.2'
+    - subject: "patch: Update dependency unified to ^9.2.2"
       hash: 20da538de885e699c04acffbd288773f45f1ba4f
       body: |
         Update unified from 9.1.0 to 9.2.2
@@ -1369,7 +1382,7 @@
   version: 21.6.12
   date: 2021-09-07T14:11:18.636Z
 - commits:
-    - subject: 'patch: Update dependency copy-to-clipboard to ^3.3.1'
+    - subject: "patch: Update dependency copy-to-clipboard to ^3.3.1"
       hash: be2a2a9aab6234c5d9bd4c4fe9ef9062275d1943
       body: |
         Update copy-to-clipboard from 3.0.8 to 3.3.1
@@ -1380,7 +1393,7 @@
   version: 21.6.11
   date: 2021-09-07T12:53:55.535Z
 - commits:
-    - subject: 'patch: Update dependency hast-util-sanitize to ^3.0.2'
+    - subject: "patch: Update dependency hast-util-sanitize to ^3.0.2"
       hash: 4d9d3594d38452d41ac9133435647a5d960c2d33
       body: |
         Update hast-util-sanitize from 3.0.0 to 3.0.2
@@ -1391,7 +1404,7 @@
   version: 21.6.10
   date: 2021-09-07T10:27:55.537Z
 - commits:
-    - subject: 'patch: Update dependency tslib to ^2.3.1'
+    - subject: "patch: Update dependency tslib to ^2.3.1"
       hash: c2f97652941ce64ff6ac882895022d1b7c160473
       body: |
         Update tslib from 2.1.0 to 2.3.1
@@ -1404,7 +1417,7 @@
 - commits:
     - subject: Fix unknown event handler onSort in TableBase
       hash: 999b85c4952047b676ea0cfa4007c1f2d6885710
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1414,7 +1427,7 @@
   version: 21.6.8
   date: 2021-09-01T19:11:22.985Z
 - commits:
-    - subject: 'patch: Update dependency recompose to v0.30.0'
+    - subject: "patch: Update dependency recompose to v0.30.0"
       hash: f5e7cf6c373aed508fd2cc32fe4472dbf7e117f9
       body: |
         Update recompose from 0.26.0 to 0.30.0
@@ -1425,7 +1438,7 @@
   version: 21.6.7
   date: 2021-08-31T14:15:13.361Z
 - commits:
-    - subject: 'patch: Update dependency mermaid to ^8.12.0'
+    - subject: "patch: Update dependency mermaid to ^8.12.0"
       hash: 05d4a04c1e91dc7e6b183552aea3ab83617477a2
       body: |
         Update mermaid from 8.8.3 to 8.12.0
@@ -1436,9 +1449,9 @@
   version: 21.6.6
   date: 2021-08-31T10:58:58.643Z
 - commits:
-    - subject: 'Filters/SchemaSieve: Improve filter() return type inference'
+    - subject: "Filters/SchemaSieve: Improve filter() return type inference"
       hash: b7c49684c1617a0405708eb7469b99ea58c7f96e
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1448,16 +1461,14 @@
   version: 21.6.5
   date: 2021-08-31T10:33:43.630Z
 - commits:
-    - subject: 'autoUI: Fix sorting non-string colums'
+    - subject: "autoUI: Fix sorting non-string colums"
       hash: 5aa435a03c0289231af0b4a2779a98dfcd8c6339
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
-        See: >-
-          https://www.flowdock.com/app/rulemotion/resin-frontend/threads/tONHAYGyMuDto2AqZx_mKINc5pJ
-        see: >-
-          https://www.flowdock.com/app/rulemotion/resin-frontend/threads/tONHAYGyMuDto2AqZx_mKINc5pJ
+        See: https://www.flowdock.com/app/rulemotion/resin-frontend/threads/tONHAYGyMuDto2AqZx_mKINc5pJ
+        see: https://www.flowdock.com/app/rulemotion/resin-frontend/threads/tONHAYGyMuDto2AqZx_mKINc5pJ
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
         signed-off-by: Thodoris Greasidis <thodoris@balena.io>
       author: Thodoris Greasidis
@@ -1474,7 +1485,7 @@
         Signed-off-by: Andrea Rosci <andrear@balena.io>
         signed-off-by: Andrea Rosci <andrear@balena.io>
       author: JSReds
-    - subject: 'patch: Update dependency json-e to ^4.4.1'
+    - subject: "patch: Update dependency json-e to ^4.4.1"
       hash: d7c4ca091d4e6ca5b0d7cd7ea01acb900ac6213d
       body: |
         Update json-e from 4.1.0 to 4.4.1
@@ -1485,7 +1496,7 @@
   version: 21.6.3
   date: 2021-08-30T15:21:12.815Z
 - commits:
-    - subject: 'patch: Update dependency monaco-editor-webpack-plugin to ^4.1.2'
+    - subject: "patch: Update dependency monaco-editor-webpack-plugin to ^4.1.2"
       hash: 1e173f26bd53e51cc612b5dc01a42481cc794859
       body: |
         Update monaco-editor-webpack-plugin from 4.0.0 to 4.1.2
@@ -1496,7 +1507,7 @@
   version: 21.6.2
   date: 2021-08-25T18:57:03.992Z
 - commits:
-    - subject: 'DataTypes: Add initial support for array types'
+    - subject: "DataTypes: Add initial support for array types"
       hash: 52590133461ff6bcd2d4006cfa029377f6756c62
       body: |
         This allows the filter modal to render an input for the
@@ -1536,7 +1547,7 @@
 - commits:
     - subject: Replace tilde import to fix downstream error in TS 4.3.5
       hash: 5c3904118639655a1fb4a1efa83a3b35d4fdf7ff
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1548,7 +1559,7 @@
 - commits:
     - subject: Memoize tag differences in TagManagementModal
       hash: 07fe13b05e7750cb6a70a071594cfb30f2be9731
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1560,7 +1571,7 @@
 - commits:
     - subject: Fix infinite updating notice when applying no tag changes
       hash: 4cdaa12df80eaf6c0b1f5adab5148886ee7b8457
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1570,9 +1581,9 @@
   version: 21.5.4
   date: 2021-08-05T20:01:43.628Z
 - commits:
-    - subject: 'autoUI: Support sorting multi-type values'
+    - subject: "autoUI: Support sorting multi-type values"
       hash: f8787fb2f8a68ebf9412d827956cd8f54ba56d15
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1582,11 +1593,10 @@
   version: 21.5.3
   date: 2021-07-30T10:38:29.862Z
 - commits:
-    - subject: >-
-        Fix DownloadImageModal alignment when there are not multiple compatible
+    - subject: Fix DownloadImageModal alignment when there are not multiple compatible
         device types
       hash: a6e6a41fd667246d2dab5a431c8856f4f42008f2
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1596,9 +1606,9 @@
   version: 21.5.2
   date: 2021-07-28T12:25:27.186Z
 - commits:
-    - subject: 'widgetFactory: Fix typing bug in ExtraProps generic argument'
+    - subject: "widgetFactory: Fix typing bug in ExtraProps generic argument"
       hash: 6b390f65a9b22eb36f9565989ff55be756a44794
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1610,14 +1620,12 @@
 - commits:
     - subject: Add a widgetFactory to infer the value type based on the supported types
       hash: 21d41ecfd39c586b4685d47d484f930aefbef56e
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
-        See: >-
-          https://www.flowdock.com/app/rulemotion/f-rendition/threads/Df8PTYUG0VVHe3G4SwXiz3b6o-Z
-        see: >-
-          https://www.flowdock.com/app/rulemotion/f-rendition/threads/Df8PTYUG0VVHe3G4SwXiz3b6o-Z
+        See: https://www.flowdock.com/app/rulemotion/f-rendition/threads/Df8PTYUG0VVHe3G4SwXiz3b6o-Z
+        see: https://www.flowdock.com/app/rulemotion/f-rendition/threads/Df8PTYUG0VVHe3G4SwXiz3b6o-Z
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
         signed-off-by: Thodoris Greasidis <thodoris@balena.io>
       author: Thodoris Greasidis
@@ -1626,7 +1634,7 @@
 - commits:
     - subject: Add onRowClick dependency to AutoUIColleciton autouiContext useMemo
       hash: 381f293b1e1226dc8961e818c56e16ca6b9f42a7
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1662,11 +1670,9 @@
   version: 21.4.7
   date: 2021-07-26T18:45:13.905Z
 - commits:
-    - subject: >-
-        Add `docsIcon` property to DownloadImageModal so it can use the docs
-        icon
+    - subject: Add `docsIcon` property to DownloadImageModal so it can use the docs icon
       hash: a01991532b8ec6c27c15a2a97c715f660868ad40
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1717,7 +1723,7 @@
 - commits:
     - subject: Don't show "Select OS Type" if ESR is disabled
       hash: 52e87e89e0301f60a6c10db0ed71ec23daa1f100
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1729,7 +1735,7 @@
 - commits:
     - subject: Add disabled tooltip to DownloadImageModal ("Add device" modal)
       hash: 389be1a7ed5d68936a2bacd3ff03d637ce8937bd
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1749,7 +1755,7 @@
         Signed-off-by: Graham McCulloch <graham@balena.io>
         signed-off-by: Graham McCulloch <graham@balena.io>
       author: Graham McCulloch
-    - subject: 'feat: Add new ProgressBar Renderer widget'
+    - subject: "feat: Add new ProgressBar Renderer widget"
       hash: 0aef23e961e09cf95c6fe984ada1d1d73483e372
       body: |
         This widget supports numeric values only.
@@ -1775,9 +1781,9 @@
   version: 21.3.0
   date: 2021-07-15T11:43:24.502Z
 - commits:
-    - subject: 'Lenses: Add missing key prop'
+    - subject: "Lenses: Add missing key prop"
       hash: 2afa552ddc7290253caff09d0c7952e9e1e73ad8
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1787,9 +1793,9 @@
   version: 21.2.5
   date: 2021-07-15T11:18:43.966Z
 - commits:
-    - subject: 'AutoUI: Improve the typings'
+    - subject: "AutoUI: Improve the typings"
       hash: 0a8c6c9c00b58926ecaf570892917ff8418d2b72
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1801,7 +1807,7 @@
 - commits:
     - subject: Fix DownloadImageModal instructions step 1 typo
       hash: 9939be39d2dd8a0bf8eb8beb704d983aaa779654
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1813,7 +1819,7 @@
 - commits:
     - subject: Rename "All Tags" column to "Tags"
       hash: 4d7ee547c80c28f1b85d989e56f88d7f2aa2b2d6
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1836,7 +1842,7 @@
   version: 21.2.1
   date: 2021-07-14T09:44:02.957Z
 - commits:
-    - subject: 'Filters: Add optional filterFieldCompareFn prop'
+    - subject: "Filters: Add optional filterFieldCompareFn prop"
       hash: 9651afa4a9d4d5f223ccf31e11d183585f538816
       body: >
         This prop can be used to provide a compare function callback to
@@ -1851,9 +1857,9 @@
   version: 21.2.0
   date: 2021-07-14T03:19:41.679Z
 - commits:
-    - subject: 'Form: Support using null values in the widgets when it''s valid type'
+    - subject: "Form: Support using null values in the widgets when it's valid type"
       hash: 3adfd01b830ef6474e47379f30f21e488721fb10
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -1863,9 +1869,9 @@
   version: 21.1.0
   date: 2021-07-13T13:32:04.648Z
 - commits:
-    - subject: 'Renderer: Support defining many same format extra widgets'
+    - subject: "Renderer: Support defining many same format extra widgets"
       hash: bd350d8f629541c997c2903d7199cc718e31141b
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1889,9 +1895,9 @@
   version: 21.0.0
   date: 2021-07-13T11:18:01.022Z
 - commits:
-    - subject: 'FilterModal: debounce the search for filter title'
+    - subject: "FilterModal: debounce the search for filter title"
       hash: 0fcdcc64cc1a004b242bbcc5b0558509d25d2f8e
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1901,9 +1907,9 @@
   version: 20.20.3
   date: 2021-07-09T02:17:55.198Z
 - commits:
-    - subject: 'autoUI: Fix using multiple filters'
+    - subject: "autoUI: Fix using multiple filters"
       hash: b574313cad0d9128d5d0132121068564d50f8a13
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1915,14 +1921,12 @@
 - commits:
     - subject: Fix Markdown decorator typings after recent upstream update
       hash: e94ba297c58a25d0bff42affb811b8e08e5ade47
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
-        See: >-
-          https://www.flowdock.com/app/rulemotion/f-rendition/threads/shNurL8O28ZNkWn5q4Nayml1wdh
-        see: >-
-          https://www.flowdock.com/app/rulemotion/f-rendition/threads/shNurL8O28ZNkWn5q4Nayml1wdh
+        See: https://www.flowdock.com/app/rulemotion/f-rendition/threads/shNurL8O28ZNkWn5q4Nayml1wdh
+        see: https://www.flowdock.com/app/rulemotion/f-rendition/threads/shNurL8O28ZNkWn5q4Nayml1wdh
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
         signed-off-by: Thodoris Greasidis <thodoris@balena.io>
       author: Thodoris Greasidis
@@ -1939,7 +1943,7 @@
         Signed-off-by: Graham McCulloch <graham@balena.io>
         signed-off-by: Graham McCulloch <graham@balena.io>
       author: Graham McCulloch
-    - subject: 'FilterModal: Fields drop-down is searchable'
+    - subject: "FilterModal: Fields drop-down is searchable"
       hash: 44f4a516aae1d3b77fe112e75905d1a7bb4a9dbe
       body: >
         Add ability to search for field options. This is useful if there are a
@@ -1955,18 +1959,18 @@
   version: 20.20.0
   date: 2021-07-05T08:13:29.630Z
 - commits:
-    - subject: 'Form/SelectWidget: Check enum options properly and reduce any usage'
+    - subject: "Form/SelectWidget: Check enum options properly and reduce any usage"
       hash: 2f271c2521ed66e99c98b71740191c7c90ac5e44
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
         signed-off-by: Thodoris Greasidis <thodoris@balena.io>
       author: Thodoris Greasidis
-    - subject: 'Form/SelectWidget: Support using falsy values as options'
+    - subject: "Form/SelectWidget: Support using falsy values as options"
       hash: 7b7aed83e39cdbc2a7b1e9d73a253db28b22998a
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -2028,9 +2032,9 @@
   version: 20.19.1
   date: 2021-06-28T14:54:23.879Z
 - commits:
-    - subject: 'download-image-modal: allow modal to accept releaseId'
+    - subject: "download-image-modal: allow modal to accept releaseId"
       hash: 03cc7aabe45bf51cc4f91a9363b2dd23677d1fcc
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -2053,7 +2057,7 @@
   version: 20.18.1
   date: 2021-06-22T11:43:28.156Z
 - commits:
-    - subject: 'Renderer: handle anyOf options'
+    - subject: "Renderer: handle anyOf options"
       hash: 29ab79f2a3545e2ae8e92d6509be43447f2aba8b
       body: >
         The Renderer component now checks if `anyOf` options are specified in
@@ -2061,8 +2065,7 @@
         most closely matches the value and returns that schema.
 
 
-        This also works with array items that can be of different types. See
-        examples for details.
+        This also works with array items that can be of different types. See examples for details.
       footer:
         Change-type: minor
         change-type: minor
@@ -2082,7 +2085,7 @@
   version: 20.18.0
   date: 2021-06-21T13:47:18.840Z
 - commits:
-    - subject: 'Markdown: improve css styling of paragraphs'
+    - subject: "Markdown: improve css styling of paragraphs"
       hash: 4b2aaf9c8a9c33740d47a562f8bf9cf7a514505b
       body: >
         Paragraphs should have a bottom margin set - except for the last
@@ -2202,7 +2205,7 @@
 - commits:
     - subject: Bump balena-lint to v6
       hash: b49b37aea90f251eafd77b01ea521979e29d3811
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -2211,7 +2214,7 @@
       author: Thodoris Greasidis
     - subject: Switch all ts-ignore to ts-expect-error
       hash: d42eca63dfd3ed25b1b55cb7273c15f1a7824128
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -2220,7 +2223,7 @@
       author: Thodoris Greasidis
     - subject: Remove unnecessary ts-ignore directives
       hash: 3a15fa29d229d0f3a2225eb78022e26bd07ff28b
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -2230,9 +2233,9 @@
   version: 20.15.1
   date: 2021-05-24T16:34:15.748Z
 - commits:
-    - subject: 'Terminal: Use the native ResizeObserver if available'
+    - subject: "Terminal: Use the native ResizeObserver if available"
       hash: fa7362c88a000588693a914959b65dfe109bbd67
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -2242,9 +2245,9 @@
   version: 20.15.0
   date: 2021-05-24T16:14:34.935Z
 - commits:
-    - subject: 'Terminal: Fix resize observer memory & cpu leak'
+    - subject: "Terminal: Fix resize observer memory & cpu leak"
       hash: 2b61af5050cf0350730087af0139c1941388e6f9
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -2323,9 +2326,9 @@
   version: 20.12.3
   date: 2021-05-10T15:20:21.425Z
 - commits:
-    - subject: 'Table: Remove the unnecessary id field requirement from the generic arg'
+    - subject: "Table: Remove the unnecessary id field requirement from the generic arg"
       hash: 6ecd27e2c96e75b4dbb63f9089f2dfaded648140
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -2335,9 +2338,9 @@
   version: 20.12.2
   date: 2021-04-26T12:33:45.386Z
 - commits:
-    - subject: 'MarkdownEditor: Update styles based on latest upstream'
+    - subject: "MarkdownEditor: Update styles based on latest upstream"
       hash: ee98f2e62bf335e0bff53a896372e5c61dde23a1
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -2362,7 +2365,7 @@
 - commits:
     - subject: Allow specifying the type of `extraContext` for widgets
       hash: b294f866746bf46690509ef819ac036a79d73435
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -2370,9 +2373,9 @@
   version: 20.11.0
   date: 2021-04-20T12:59:04.118Z
 - commits:
-    - subject: 'DropDownButton: Prevent the menu button from submitting parent forms'
+    - subject: "DropDownButton: Prevent the menu button from submitting parent forms"
       hash: f713a197c4ee92acd33b5aaeee784355af5d3211
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -2395,9 +2398,9 @@
   version: 20.10.11
   date: 2021-04-01T12:53:04.345Z
 - commits:
-    - subject: 'StatsBar: Add missing key property'
+    - subject: "StatsBar: Add missing key property"
       hash: eebc9e567301d4798366e0bd0c4decbdbf7256cc
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -2407,7 +2410,8 @@
   version: 20.10.10
   date: 2021-03-31T14:03:04.040Z
 - commits:
-    - subject: 'RendererPlaygroud: Simplify using useMemo instead of follow-up useEffect'
+    - subject: "RendererPlaygroud: Simplify using useMemo instead of follow-up
+        useEffect"
       hash: e82315da3c7ecb5ad9ebc85d129f7c60e62de48f
       body: |
         Avoids an extra initial re-render, which helps
@@ -2423,7 +2427,7 @@
 - commits:
     - subject: Fix GrommetSelect type casting for latest Grommet
       hash: f724567665a8a5b20ae0396f283a37cf5c2159dd
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -2445,7 +2449,7 @@
 - commits:
     - subject: Update dependencies
       hash: 8daf616937f55c4040f1dc069379102601fa1346
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -2464,7 +2468,7 @@
       author: Pagan Gazzard
     - subject: Convert lodash/get usage to native versions
       hash: ebdf5551d63dc582bfb3015d421b3c02821632b7
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -2513,7 +2517,7 @@
 - commits:
     - subject: Prohibit whole lodash and fontawesome icon pack imports
       hash: 43137d7595495fc39d0a6d6c25444bd55489f87e
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -2523,7 +2527,7 @@
   version: 20.10.2
   date: 2021-03-16T17:45:44.638Z
 - commits:
-    - subject: 'fix: handle empty timestamp string in formatTimestamp'
+    - subject: "fix: handle empty timestamp string in formatTimestamp"
       hash: 67e086f8a623e753da140ddb4b74151b206ff60e
       body: >
         Need to handle the case where the timestamp string is an empty string -
@@ -2539,14 +2543,14 @@
 - commits:
     - subject: Update snapshots
       hash: e91f2a99f056ccfe1b2727b147bca36ea1f36d53
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
         Signed-off-by: Graham McCulloch <graham@balena.io>
         signed-off-by: Graham McCulloch <graham@balena.io>
       author: Graham McCulloch
-    - subject: 'DropDownButton: add support for dropping ''up'''
+    - subject: "DropDownButton: add support for dropping 'up'"
       hash: a7e89cdecc2faa2d9aa6c1094a8c8ec5383142d2
       body: >
         When the DropDownButton is located at the bottom of the screen, it can
@@ -2554,9 +2558,7 @@
         the button, rather than below (as is the default).
 
 
-        Obviously it would be even nicer to be able to specify that it should
-        automatically work out whether to open up or down - but adding this
-        `dropUp` prop is a good first step for now.
+        Obviously it would be even nicer to be able to specify that it should automatically work out whether to open up or down - but adding this `dropUp` prop is a good first step for now.
       footer:
         Change-type: minor
         change-type: minor
@@ -2581,14 +2583,14 @@
 - commits:
     - subject: Update test snapshots
       hash: 598c2e598c76460a539ca132b504cc9532e47f49
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
         Signed-off-by: Graham McCulloch <graham@balena.io>
         signed-off-by: Graham McCulloch <graham@balena.io>
       author: Graham McCulloch
-    - subject: 'Tag: add support for limiting max items to display'
+    - subject: "Tag: add support for limiting max items to display"
       hash: 79c799e355d4793c308f4cc75ebc53ecab08bc46
       body: |
         If there are too many items (more than 3), only the
@@ -2603,9 +2605,9 @@
   version: 20.8.0
   date: 2021-02-16T03:12:54.005Z
 - commits:
-    - subject: 'SchemaSieve: fix handling of required fields'
+    - subject: "SchemaSieve: fix handling of required fields"
       hash: f34df37d8ea318f073fe7cbed415f467f51407e3
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -2647,8 +2649,8 @@
       body: |
         Fix select interface according to grommet release v2.16.3
       footer:
-        See: 'https://github.com/grommet/grommet/releases/tag/v2.16.3'
-        see: 'https://github.com/grommet/grommet/releases/tag/v2.16.3'
+        See: https://github.com/grommet/grommet/releases/tag/v2.16.3
+        see: https://github.com/grommet/grommet/releases/tag/v2.16.3
         Change-type: minor
         change-type: minor
         Signed-off-by: Andrea Rosci <andrear@balena.io>
@@ -2657,7 +2659,7 @@
   version: 20.7.0
   date: 2021-02-10T12:46:59.711Z
 - commits:
-    - subject: 'DropDownButton: Hide empty items'
+    - subject: "DropDownButton: Hide empty items"
       hash: cd08600915568390ffd9fdf836c9418a68a989b4
       body: |
         React doesn't offer a way to detect and not render
@@ -2688,9 +2690,9 @@
   version: 20.5.0
   date: 2021-02-04T09:36:01.129Z
 - commits:
-    - subject: 'DropDownButton: Fix the story example'
+    - subject: "DropDownButton: Fix the story example"
       hash: 04d120dc7549cd174fef0ce45439fb9d123bb0c8
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -2700,9 +2702,9 @@
   version: 20.4.2
   date: 2021-02-03T18:44:52.800Z
 - commits:
-    - subject: 'Form: Fix throwing when the schema has non-string array examples'
+    - subject: "Form: Fix throwing when the schema has non-string array examples"
       hash: aed1f38f4e5c88162435a87468c417acc2fde300
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -2714,7 +2716,7 @@
 - commits:
     - subject: Show tooltip when breadcrumb overflows
       hash: 7baa5c5933e444a4949639234f875a29fc6aab4f
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -2726,16 +2728,16 @@
 - commits:
     - subject: Update snapshots
       hash: a92937325c3e1dea37c085f3124dd1fda9d0106f
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
         Signed-off-by: Graham McCulloch <graham@balena.io>
         signed-off-by: Graham McCulloch <graham@balena.io>
       author: Graham McCulloch
-    - subject: 'Renderer: add support for `ui:explicit`'
+    - subject: "Renderer: add support for `ui:explicit`"
       hash: 0148bbd735cd5ad8cd6a8445775d229b5803e000
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -2760,7 +2762,7 @@
 - commits:
     - subject: Make table header slightly darker
       hash: ff4c9e135b7bd4936b5793be5e22eef058f65161
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -2796,7 +2798,7 @@
   version: 20.1.1
   date: 2021-01-15T17:09:53.767Z
 - commits:
-    - subject: 'Form: Allow using the rjsf transformErrors property'
+    - subject: "Form: Allow using the rjsf transformErrors property"
       hash: 4299ab115b9ec2bad0a2d74ed3ca611a143f188b
       body: |
         Required so that we can give a more sensible error
@@ -2812,7 +2814,7 @@
 - commits:
     - subject: Update all the tests after the form and renderer changes
       hash: 995e509389362bf19f206a9cc0de20dc31431554
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -2833,8 +2835,7 @@
 
         Moreover, if you used a reference to call `change` and `submit`
 
-        you will only be able to call submit now by passing the ref directly to
-        the form
+        you will only be able to call submit now by passing the ref directly to the form
 
         and change was completely removed.
       footer:
@@ -2845,35 +2846,29 @@
       author: Stevche Radevski
     - subject: Use Renderer instead of Markdown for Form description fields
       hash: 2a5aa535c48336a3c1471470887e7dc51e6544fd
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
         Signed-off-by: Stevche Radevski <stevche@balena.io>
         signed-off-by: Stevche Radevski <stevche@balena.io>
       author: Stevche Radevski
-    - subject: >-
-        Move JsonSchemaRenderer to core components and remove default
+    - subject: Move JsonSchemaRenderer to core components and remove default
         widgets/formats
       hash: 384af28f04ec6e074f5e5e7a96ebd32106fcf740
       body: >
         This is a breaking change that will require an action. Firstly, if you
         were
 
-        using JsonSchemaRenderer from `extra`, you now need to rename
-        JsonSchemaRenderer
+        using JsonSchemaRenderer from `extra`, you now need to rename JsonSchemaRenderer
 
-        to Renderer, and import it from 'rendition'. The next thing to do is
-        pass
+        to Renderer, and import it from 'rendition'. The next thing to do is pass
 
-        all extra formats that you want the renderer to support that are not
-        default
+        all extra formats that you want the renderer to support that are not default
 
-        (namely Markdown and Mermaid) to the Provider's `widgets` prop. Also,
-        the
+        (namely Markdown and Mermaid) to the Provider's `widgets` prop. Also, the
 
-        error boundary as part of the renderer was removed and you need to add
-        that
+        error boundary as part of the renderer was removed and you need to add that
 
         by yourself if needed.
       footer:
@@ -2940,7 +2935,7 @@
 - commits:
     - subject: Add fallback image source to Img component
       hash: 10fe82982514254d0f5c04704263584cf996889f
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -2966,7 +2961,7 @@
 - commits:
     - subject: Upgrade rehype-raw to latest version
       hash: 5ac27c15e45f4760f2a3c12c32dd262a4def39a8
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -2989,7 +2984,7 @@
 - commits:
     - subject: Turn keydown handler into an arrow function
       hash: beecff9f95df2b687cad606cc08794ba9d32e78d
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3001,10 +2996,10 @@
 - commits:
     - subject: Fix form not getting the Enter key event when nested in a modal
       hash: f71831fda7b5238406a2ed5c025b64c25a188496
-      body: ''
+      body: ""
       footer:
-        Fixes: '#1223'
-        fixes: '#1223'
+        Fixes: "#1223"
+        fixes: "#1223"
         Change-type: patch
         change-type: patch
         Signed-off-by: Stevche Radevski <stevche@balena.io>
@@ -3013,7 +3008,7 @@
   version: 18.20.1
   date: 2020-12-14T12:43:04.270Z
 - commits:
-    - subject: 'feat: Add new StatsBar component'
+    - subject: "feat: Add new StatsBar component"
       hash: cacb2ccadeebc54fc977b7f835837f1de525dd8e
       body: |
         This will be used in both Jellyfish and the Balena Dashboard.
@@ -3049,9 +3044,9 @@
   version: 18.19.2
   date: 2020-12-14T06:01:47.206Z
 - commits:
-    - subject: 'Markdown: Fix line breaks'
+    - subject: "Markdown: Fix line breaks"
       hash: d384093c48d585fe3845c934a0cc9d33ee12ccce
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3061,7 +3056,7 @@
 - commits:
     - subject: Make card size responsive
       hash: 9f2c3c9beba6876dd6de715e2832e738e5198df2
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -3073,7 +3068,7 @@
 - commits:
     - subject: Allow passing responsive values to datagrid width props
       hash: 4b115fbfca2fb2e421f1e57324527640f58f9a55
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -3096,7 +3091,7 @@
   version: 18.17.2
   date: 2020-12-01T18:49:58.500Z
 - commits:
-    - subject: 'Card: make body to be full height'
+    - subject: "Card: make body to be full height"
       hash: d1e1f31bfd65f65f7216180fcb7e9c131cbf77e5
       body: |
         make the body of the card to be full height
@@ -3111,7 +3106,7 @@
 - commits:
     - subject: Add star rating component
       hash: a97c2893a13486938a23654ffc71e16dca8bca88
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -3125,44 +3120,22 @@
         Notable changes:
 
 
-        - Remove screenshot testing in favor of snapshot testing using storybook
-        stories. We had a lot of issues with screenshot tests, some of which
-        were flakiness, slowing down development and contributions. Although
-        there is a benefit of having screenshot tests, we decided to optimize
-        for development speed instead, since visual changes are not as common
-        recently. We might introduce them again in the future only if they are
-        stable and fast. Generating storybook preview deployments is a better
-        alternative IMO.
+        - Remove screenshot testing in favor of snapshot testing using storybook stories. We had a lot of issues with screenshot tests, some of which were flakiness, slowing down development and contributions. Although there is a benefit of having screenshot tests, we decided to optimize for development speed instead, since visual changes are not as common recently. We might introduce them again in the future only if they are stable and fast. Generating storybook preview deployments is a better alternative IMO.
 
 
-        - Upgrade to storybook 6. This was a big one, that simplified our
-        tooling (no more custom webpack setups, etc.), but it required a lot of
-        rewrite on how we write stories. One of the main benefits is the
-        autogenerated Docs page for each component where you can interact with
-        the component and change props on the fly. This also means we removed
-        the README.md files in favor of inline comments inside the source code
-        that gets picked up by SB 6.
+        - Upgrade to storybook 6. This was a big one, that simplified our tooling (no more custom webpack setups, etc.), but it required a lot of rewrite on how we write stories. One of the main benefits is the autogenerated Docs page for each component where you can interact with the component and change props on the fly. This also means we removed the README.md files in favor of inline comments inside the source code that gets picked up by SB 6.
 
 
-        - Moved everything to Typescript. Although the components code was in
-        TS, the tests and stories weren't which meant we had 2 different
-        development tools (eslint + balena-lint), and this just converges to a
-        single tooling stack.
+        - Moved everything to Typescript. Although the components code was in TS, the tests and stories weren't which meant we had 2 different development tools (eslint + balena-lint), and this just converges to a single tooling stack.
 
 
-        - Removed a lot of snapshot tests (and spec.ts files) since the
-        storyshot testing was superior. This means we only need to write unit
-        tests for more complex components, and the storyshot tests should cover
-        the rest.
+        - Removed a lot of snapshot tests (and spec.ts files) since the storyshot testing was superior. This means we only need to write unit tests for more complex components, and the storyshot tests should cover the rest.
 
 
-        - Switch to named exports for all components (outside of Extra). This
-        shouldn't be a breaking change unless you imported the components by
-        deep imports (which you shouldn't do)
+        - Switch to named exports for all components (outside of Extra). This shouldn't be a breaking change unless you imported the components by deep imports (which you shouldn't do)
 
 
-        - Removed babel as it is no longer needed (we use ts-jest for the tests
-        now)
+        - Removed babel as it is no longer needed (we use ts-jest for the tests now)
       footer:
         Change-type: minor
         change-type: minor
@@ -3172,9 +3145,9 @@
   version: 18.16.0
   date: 2020-11-23T11:53:23.032Z
 - commits:
-    - subject: 'Modal: Change the button margins to use the predefined spacing palette'
+    - subject: "Modal: Change the button margins to use the predefined spacing palette"
       hash: 3ef02437937d763b768ccaa36c02581951cc6776
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3184,12 +3157,12 @@
   version: 18.15.1
   date: 2020-11-16T22:36:37.110Z
 - commits:
-    - subject: 'Modal: Move the cancel button first for dangerous & warning actions'
+    - subject: "Modal: Move the cancel button first for dangerous & warning actions"
       hash: 6fa693329ba9bc8adb4baebfc6d63414a2b05f2d
-      body: ''
+      body: ""
       footer:
-        Resolves: '#1210'
-        resolves: '#1210'
+        Resolves: "#1210"
+        resolves: "#1210"
         Change-type: minor
         change-type: minor
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
@@ -3200,7 +3173,7 @@
 - commits:
     - subject: Allow passing checked items as a prop to Table
       hash: 44cce5d3c79496aaee8932476d322e88948ef3f2
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -3212,7 +3185,7 @@
 - commits:
     - subject: Fix accidental complete lodash import
       hash: aa847649d01f2e5438783fadfbe1bc3f2bb7d5dc
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3222,9 +3195,9 @@
   version: 18.13.4
   date: 2020-11-16T15:14:57.857Z
 - commits:
-    - subject: 'Form: Remove the flaky Captcha sceenshot test'
+    - subject: "Form: Remove the flaky Captcha sceenshot test"
       hash: db3a59e3d983ea357ab4108766a7caae2eefa6bc
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3256,7 +3229,7 @@
         Signed-off-by: Graham McCulloch <graham@balena.io>
         signed-off-by: Graham McCulloch <graham@balena.io>
       author: Graham McCulloch
-    - subject: 'Fix: Confirm only depends on the files it needs'
+    - subject: "Fix: Confirm only depends on the files it needs"
       hash: 2041a8d3926c129ac511bbeeb3b268c5cb7f2a87
       body: |
         Avoid calling import from '..'.
@@ -3269,9 +3242,9 @@
   version: 18.13.2
   date: 2020-10-29T04:42:42.687Z
 - commits:
-    - subject: 'Button: Preserve event during confirmation'
+    - subject: "Button: Preserve event during confirmation"
       hash: 5023d8deccb5362c6fdd0f3df97b89556bc9a4d7
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3279,9 +3252,9 @@
   version: 18.13.1
   date: 2020-10-23T10:51:22.648Z
 - commits:
-    - subject: 'Button: Add confirmation property'
+    - subject: "Button: Add confirmation property"
       hash: a62081a1a0fcc90a499190dffaed05adccfd0543
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -3289,7 +3262,7 @@
   version: 18.13.0
   date: 2020-10-22T11:42:22.579Z
 - commits:
-    - subject: 'Tabs: changed interfaces and props'
+    - subject: "Tabs: changed interfaces and props"
       hash: 0998a41d0c8806a9ed3087425b77c28955ef84ad
       body: |
         remove unused props and export extended interfaces
@@ -3304,7 +3277,7 @@
 - commits:
     - subject: Fix Tabs typings
       hash: e4f7a9345e39d1bc109f3a297d5adf30d5b5b842
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3316,7 +3289,7 @@
 - commits:
     - subject: Add a Grid component
       hash: 0fa5c24b4251379afe9085863781c0e2280bfcad
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -3328,7 +3301,7 @@
 - commits:
     - subject: Added more documentation for JsonSchemaRenderer
       hash: a395f48d2d5726e37e2d7d8175bf3280bf92f047
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3338,9 +3311,8 @@
   version: 18.11.3
   date: 2020-10-14T09:03:42.699Z
 - commits:
-    - subject: >-
-        fix: UI schema for JsonSchemaRenderer DropDownButton and ButtonGroup
-        widgets
+    - subject: "fix: UI schema for JsonSchemaRenderer DropDownButton and ButtonGroup
+        widgets"
       hash: 05300580e1e1ad0ca725f1eff5b81e76281e4e42
       body: |
         UI Schema for items can now be set on these widgets.
@@ -3355,7 +3327,7 @@
 - commits:
     - subject: Add dark mode to storybook
       hash: 65d5286aede38f84fa0d8adc3742e1623b0cbe27
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3367,7 +3339,7 @@
 - commits:
     - subject: Allow passing widget to extraFormats field
       hash: 60e96f61f74ac1dea4cf49da5a6bfc3026545d93
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -3379,7 +3351,7 @@
 - commits:
     - subject: Resolve module path not relying on node_moules dir
       hash: c5c9105d771a785655cda171c6692617b0d84716
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3389,7 +3361,7 @@
 - commits:
     - subject: Set tabpanel height so it stretches to full height
       hash: fcb9b89b405958d458c6190172ee01fe39373f74
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3398,7 +3370,7 @@
       author: StefKors
     - subject: Specify tabs width to fix layout problems
       hash: dbc2e59fdbc985918e1262cdc07a9ace9b2a8ec5
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3408,9 +3380,9 @@
   version: 18.10.1
   date: 2020-09-29T14:54:23.494Z
 - commits:
-    - subject: 'feat: Add ColorWidget for JsonSchemaRenderer'
+    - subject: "feat: Add ColorWidget for JsonSchemaRenderer"
       hash: 2dae3252b6f0b767d186a4b813a0a1ff4f06543d
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -3420,9 +3392,9 @@
   version: 18.10.0
   date: 2020-09-24T07:59:52.695Z
 - commits:
-    - subject: 'Markdown: Ignore decorators inside a code block'
+    - subject: "Markdown: Ignore decorators inside a code block"
       hash: 429354f355743bfc1e59deed7229656f5fac4685
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3432,7 +3404,7 @@
 - commits:
     - subject: Add compact variation to tabs
       hash: 0e8752c266e901546092abb5742eb603b6481b5b
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3444,7 +3416,7 @@
 - commits:
     - subject: Improve spacing for Modal and Select components
       hash: f3ad2a497a5a2f752f73288a97c55b6ec50f70ae
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -3454,7 +3426,7 @@
   version: 18.9.0
   date: 2020-09-18T10:47:16.710Z
 - commits:
-    - subject: 'fix: Use widget''s display name to reference the widget'
+    - subject: "fix: Use widget's display name to reference the widget"
       hash: e2d47457c529b089cc2918536d3207398eddb13f
       body: |
         Otherwise obfuscation causes problems in production code!
@@ -3467,7 +3439,7 @@
   version: 18.8.4
   date: 2020-09-17T02:34:22.575Z
 - commits:
-    - subject: 'fix: Fall back to schema default for value in JsonSchemaRenderer'
+    - subject: "fix: Fall back to schema default for value in JsonSchemaRenderer"
       hash: 7136036cf121ff9b454dabe089d2b1212db4f4d5
       body: >
         If the UI schema doesn't define a value and the data value isn't defined
@@ -3482,7 +3454,7 @@
   version: 18.8.3
   date: 2020-09-14T06:36:34.098Z
 - commits:
-    - subject: 'fix: ensure Markdown code blocks don''t overflow their container'
+    - subject: "fix: ensure Markdown code blocks don't overflow their container"
       hash: 9b8ed3edd8f6979f14553753ccd567694738d0bf
       body: >
         Note - the screenshot of the Markdown story doesn't show the horizontal
@@ -3498,7 +3470,7 @@
 - commits:
     - subject: Fix tag not shown correctly when multiple array is empty
       hash: 1a15b94b01b914163fc24d185c14cbfc1147b318
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3513,8 +3485,7 @@
       body: >
         Renamed `stringToNumber` to `hashCode` and moved it to `utils/index`
 
-        `ErrorBoundary` now just does a shallow compare of props to see if it
-        should reset the error state.
+        `ErrorBoundary` now just does a shallow compare of props to see if it should reset the error state.
       footer:
         Change-type: patch
         change-type: patch
@@ -3531,34 +3502,34 @@
         Signed-off-by: Graham McCulloch <graham@balena.io>
         signed-off-by: Graham McCulloch <graham@balena.io>
       author: Graham McCulloch
-    - subject: 'test: Update JsonSchemaRenderer snapshots'
+    - subject: "test: Update JsonSchemaRenderer snapshots"
       hash: 9093770c5d4fedf1666344e23df211d12641b2f2
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
         Signed-off-by: Graham McCulloch <graham@balena.io>
         signed-off-by: Graham McCulloch <graham@balena.io>
       author: Graham McCulloch
-    - subject: 'feat: Minor JsonSchemaRenderer improvements'
+    - subject: "feat: Minor JsonSchemaRenderer improvements"
       hash: 768b4835910e4eed2c0bc00195c3b50f40bfeded
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
         Signed-off-by: Graham McCulloch <graham@balena.io>
         signed-off-by: Graham McCulloch <graham@balena.io>
       author: Graham McCulloch
-    - subject: 'feat: Add support for date-formatting in JsonSchemaRenderer Txt widgets'
+    - subject: "feat: Add support for date-formatting in JsonSchemaRenderer Txt widgets"
       hash: 5cecf3a2f9190515c8063069c3ccd6649997e179
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
         Signed-off-by: Graham McCulloch <graham@balena.io>
         signed-off-by: Graham McCulloch <graham@balena.io>
       author: Graham McCulloch
-    - subject: 'fix: Reset error boundary if props change'
+    - subject: "fix: Reset error boundary if props change"
       hash: 66c9f729592c011ef59d1529a73470cabf36c4a4
       body: >
         Previously, the error boundary was stuck in the error state until it was
@@ -3569,7 +3540,7 @@
         Signed-off-by: Graham McCulloch <graham@balena.io>
         signed-off-by: Graham McCulloch <graham@balena.io>
       author: Graham McCulloch
-    - subject: 'feat: Auto-pick widget based on format field in schema'
+    - subject: "feat: Auto-pick widget based on format field in schema"
       hash: 30b111ad8de170fa843ce02214d27841d0cff263
       body: >
         If the format is mermaid or markdown or email or uri we automatically
@@ -3581,7 +3552,7 @@
         Signed-off-by: Graham McCulloch <graham@balena.io>
         signed-off-by: Graham McCulloch <graham@balena.io>
       author: Graham McCulloch
-    - subject: 'fix: Handle UI schema transformations better'
+    - subject: "fix: Handle UI schema transformations better"
       hash: a8ec57c36a1280f1d5d9c9f47fef3ef42e91ad5f
       body: |
         Handle the situation where value is null or undefined.
@@ -3594,9 +3565,9 @@
   version: 18.8.0
   date: 2020-09-09T03:49:00.062Z
 - commits:
-    - subject: 'Markdown: Add decorator support'
+    - subject: "Markdown: Add decorator support"
       hash: 8b1c8ba38567d15ff0ae4a683b235df4226bdcf4
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -3618,9 +3589,9 @@
   version: 18.6.0
   date: 2020-08-28T06:41:30.011Z
 - commits:
-    - subject: 'fix: Temporarily remove flaky screenshot tests'
+    - subject: "fix: Temporarily remove flaky screenshot tests"
       hash: 231e079546c301c60e1d23f9689f2c36912c50ef
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3637,9 +3608,9 @@
         Signed-off-by: Graham McCulloch <graham@balena.io>
         signed-off-by: Graham McCulloch <graham@balena.io>
       author: Graham McCulloch
-    - subject: 'fix: Patch fixes triggered by dependency updates'
+    - subject: "fix: Patch fixes triggered by dependency updates"
       hash: 8cf16a7a28f13c2ce6c2d76f5c9d4964982ba2fa
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3649,18 +3620,18 @@
   version: 18.5.0
   date: 2020-08-27T10:39:19.297Z
 - commits:
-    - subject: 'fix: Notifications screenshot test'
+    - subject: "fix: Notifications screenshot test"
       hash: c07bb030060eabcfc341ef64cf4a0ae6b079ced2
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
         Signed-off-by: Graham McCulloch <graham@balena.io>
         signed-off-by: Graham McCulloch <graham@balena.io>
       author: Graham McCulloch
-    - subject: 'fix: ArcSlider screenshot tests'
+    - subject: "fix: ArcSlider screenshot tests"
       hash: cfda0b22eed934e9a41407e9f55a50bba8168744
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3680,16 +3651,16 @@
   version: 18.4.1
   date: 2020-08-24T08:36:52.519Z
 - commits:
-    - subject: 'fix: Improve validation logic in JsonSchemaRenderer'
+    - subject: "fix: Improve validation logic in JsonSchemaRenderer"
       hash: b2b25552932c0881899d80a90448ceebbd5661c7
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
         Signed-off-by: Graham McCulloch <graham@balena.io>
         signed-off-by: Graham McCulloch <graham@balena.io>
       author: Graham McCulloch
-    - subject: 'fix: Fallback to value key for title in JsonSchemaRenderer'
+    - subject: "fix: Fallback to value key for title in JsonSchemaRenderer"
       hash: 55d89dbf639b9b7e1a847a1f943c284673d1b89b
       body: >
         If no title is specified in the UI schema or the schema, fallback to
@@ -3700,7 +3671,7 @@
         Signed-off-by: Graham McCulloch <graham@balena.io>
         signed-off-by: Graham McCulloch <graham@balena.io>
       author: Graham McCulloch
-    - subject: 'feat: Add support for materialized UI properties in JsonSchemaRenderer'
+    - subject: "feat: Add support for materialized UI properties in JsonSchemaRenderer"
       hash: a6fadda11ba89a190e68002bf1dfd06b60910c13
       body: >
         You can now specify additional 'fields' in the UI schema, evaluating
@@ -3711,16 +3682,13 @@
         Signed-off-by: Graham McCulloch <graham@balena.io>
         signed-off-by: Graham McCulloch <graham@balena.io>
       author: Graham McCulloch
-    - subject: 'feat: Add support for passing extra context to JsonSchemaRenderer'
+    - subject: "feat: Add support for passing extra context to JsonSchemaRenderer"
       hash: c06e4bcf5d0a39eac5ce55c712129b06986fea42
       body: >
         This extraContext prop is used when evaluating UI schema using json-e.
 
 
-        Additionally, json-e is now run (recursively) just on the UI schema for
-        primitive values. This means we can now use json-e to evaluate the
-        values of array items in the UI schema (see the 'A List Widget'
-        example).
+        Additionally, json-e is now run (recursively) just on the UI schema for primitive values. This means we can now use json-e to evaluate the values of array items in the UI schema (see the 'A List Widget' example).
       footer:
         Change-type: minor
         change-type: minor
@@ -3732,7 +3700,7 @@
 - commits:
     - subject: Set the fallback font to Helvetica
       hash: 19de53cfac53d165bffa3509b3dc11e4345abafc
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -3744,7 +3712,7 @@
 - commits:
     - subject: Add show password button to password input
       hash: 024374ec10d4a51784b0ceacd306df684426152c
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -3754,9 +3722,9 @@
   version: 18.2.0
   date: 2020-08-21T10:06:52.669Z
 - commits:
-    - subject: 'test: Updated snapshots caused by npm dependency  updates'
+    - subject: "test: Updated snapshots caused by npm dependency  updates"
       hash: fc3298ff555b2aaa8088e572c921833c5f9b5b91
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3768,7 +3736,7 @@
 - commits:
     - subject: Allow disabling the whole Form component
       hash: 2586646f643e7fee2bfc1f170cc9db600d995574
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -3783,8 +3751,7 @@
       body: >
         This enables us to use rendition components for the converted HTML.
 
-        That is, instead of plain markup plus css, we can plug our own
-        components.
+        That is, instead of plain markup plus css, we can plug our own components.
 
         For ex. using rendition `Link` for anchors instead of plain `<a>` tags.
 
@@ -3799,7 +3766,7 @@
   version: 18.0.0
   date: 2020-08-19T10:17:47.892Z
 - commits:
-    - subject: 'Avatar: adapt fallback icon colors'
+    - subject: "Avatar: adapt fallback icon colors"
       hash: 00bcefb78c201e5b982689d148c11352d540c556
       body: |
         adapt fallback icon colors to avatar background color
@@ -3809,22 +3776,20 @@
         Signed-off-by: Andrea Rosci <andrear@balena.io>
         signed-off-by: Andrea Rosci <andrear@balena.io>
       author: JSReds
-    - subject: 'Avatar: add default background and use fontSizes'
+    - subject: "Avatar: add default background and use fontSizes"
       hash: 0b47b44c8c05cd246c440cd7d106f44b1e2d8374
       body: |
         add default background color, add background prop to overwrite the
         default value and use fontSizes from theme
       footer:
-        See: >-
-          https://github.com/balena-io-modules/rendition/pull/1169#pullrequestreview-469217211
-        see: >-
-          https://github.com/balena-io-modules/rendition/pull/1169#pullrequestreview-469217211
+        See: https://github.com/balena-io-modules/rendition/pull/1169#pullrequestreview-469217211
+        see: https://github.com/balena-io-modules/rendition/pull/1169#pullrequestreview-469217211
         Change-type: patch
         change-type: patch
         Signed-off-by: Andrea Rosci <andrear@balena.io>
         signed-off-by: Andrea Rosci <andrear@balena.io>
       author: JSReds
-    - subject: 'Avatar: add fallback icon'
+    - subject: "Avatar: add fallback icon"
       hash: d55a6eb7377db62fc023b5d754a111be42842ce5
       body: |
         add fallback icon when no props are passed to the avatar component
@@ -3837,7 +3802,7 @@
   version: 17.0.1
   date: 2020-08-18T17:12:32.957Z
 - commits:
-    - subject: 'feat: Modify notifications API'
+    - subject: "feat: Modify notifications API"
       hash: 3365903a4530748916a86e4ed5e1430643ecc28d
       body: |
         BREAKING CHANGE: Remove baselineHeight from notifications API
@@ -3850,7 +3815,7 @@
   version: 17.0.0
   date: 2020-08-17T01:00:58.649Z
 - commits:
-    - subject: 'fix: number search bar filtering'
+    - subject: "fix: number search bar filtering"
       hash: 406d09a44262e316e4b9eb0532bebc80e689e2af
       body: |
         remove number properties from filters if term is not a number
@@ -3863,7 +3828,7 @@
   version: 16.4.1
   date: 2020-08-13T11:59:23.372Z
 - commits:
-    - subject: 'feat: Add support for positioning notifications'
+    - subject: "feat: Add support for positioning notifications"
       hash: ec88ad6b10e2c46e8710bed41bc8b3f4de1a79e2
       body: >
         This is basically a pass-through prop to the underlying
@@ -3877,7 +3842,7 @@
   version: 16.4.0
   date: 2020-08-13T09:06:48.284Z
 - commits:
-    - subject: 'Add: number match on text search'
+    - subject: "Add: number match on text search"
       hash: 99fbc9f65106febb4d6b2a1100e8e9196fa3229d
       body: >
         add the possibility to filter also fields with type number from the
@@ -3898,8 +3863,8 @@
         node_modules, and it is something we've avoided in other components
         but this one slipped in it seems.
       footer:
-        Connects-to: '#1164'
-        connects-to: '#1164'
+        Connects-to: "#1164"
+        connects-to: "#1164"
         Change-type: patch
         change-type: patch
         Signed-off-by: Stevche Radevski <stevche@balena.io>
@@ -3910,7 +3875,7 @@
 - commits:
     - subject: Improvements to JsonSchemaRenderer component
       hash: ade2229eb9097e1119f6ad67910c8f6e4d3fec81
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3919,7 +3884,7 @@
       author: Graham McCulloch
     - subject: Add ErrorBoundary internal component
       hash: 9285abc9f63c1cc11e5d32b1ec2709be5a24989f
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3928,7 +3893,7 @@
       author: Graham McCulloch
     - subject: Add flex props to Card component
       hash: 36182d19ca962ae978e629b3704d2376317b127d
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -3937,7 +3902,7 @@
       author: Graham McCulloch
     - subject: Refactor lodash imports
       hash: c0f529da0fca8f98a07ad54751b7937c1bb56709
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -3956,14 +3921,14 @@
       author: Graham McCulloch
     - subject: Update Form screenshot test
       hash: 6c7740910aaf11772c44954ab04154c1743b1100
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
         Signed-off-by: Graham McCulloch <graham@balena.io>
         signed-off-by: Graham McCulloch <graham@balena.io>
       author: Graham McCulloch
-    - subject: 'feat: Add JsonSchemaRenderer component'
+    - subject: "feat: Add JsonSchemaRenderer component"
       hash: a62ef7a1d3167cf62e257fc4abbbce8105eddccc
       body: |
         Used to render arbitrary JSON data using a UI schema.
@@ -3976,7 +3941,7 @@
   version: 16.3.0
   date: 2020-08-07T09:55:03.464Z
 - commits:
-    - subject: 'Add: Avatar component'
+    - subject: "Add: Avatar component"
       hash: 5882fe02b250fd996033e54a77b484e0ccb21d5f
       body: |
         Add Avatar component
@@ -3989,7 +3954,7 @@
   version: 16.2.0
   date: 2020-07-31T17:39:59.385Z
 - commits:
-    - subject: 'Add: invalid select prop'
+    - subject: "Add: invalid select prop"
       hash: 78b216a3a45097450bff261fa0b60d82764f8957
       body: |
         add invalid select prop
@@ -4002,7 +3967,7 @@
   version: 16.1.5
   date: 2020-07-28T09:02:13.642Z
 - commits:
-    - subject: 'Fix: duplicate ajv-keywords.d.ts'
+    - subject: "Fix: duplicate ajv-keywords.d.ts"
       hash: e7df8a9c026295eb5aacec8d21845569daf42862
       body: |
         fix build by removing duplicate ajv-keyword.d.ts
@@ -4015,7 +3980,7 @@
   version: 16.1.4
   date: 2020-07-27T16:29:16.917Z
 - commits:
-    - subject: 'Add: container obesrver to resize the terminal'
+    - subject: "Add: container obesrver to resize the terminal"
       hash: ceac7350655423e0088d0075681a82541c43d736
       body: |
         add observer to resize terminal on container resize event
@@ -4030,7 +3995,7 @@
 - commits:
     - subject: Fix how dismiss button is calculated for steps and alerts
       hash: 2b93e1219cb433d07bf1ce807adb7fce4c161467
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4042,7 +4007,7 @@
 - commits:
     - subject: Import components from their files
       hash: 39fa9245ee6e42d7e46237218d725ddd41d8e67c
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4050,7 +4015,7 @@
   version: 16.1.1
   date: 2020-07-14T11:27:09.589Z
 - commits:
-    - subject: 'Update: xterm-js to v4.8.1'
+    - subject: "Update: xterm-js to v4.8.1"
       hash: 7766335e80e64d6b26298918c18655d44cd3b0ca
       body: |
         update xterm version from v3.14.5 to v4.8.1
@@ -4072,11 +4037,9 @@
 
         Move Form from beta to the components folder
 
-        Remove the unstable folder (you now need to import the form from
-        'rendition')
+        Remove the unstable folder (you now need to import the form from 'rendition')
 
-        Use JSON schema 7. This has no user-facing breaking changes, but the
-        typings
+        Use JSON schema 7. This has no user-facing breaking changes, but the typings
 
         changed for the Form and Filters.
       footer:
@@ -4090,7 +4053,7 @@
 - commits:
     - subject: Fix component outline to follow borders
       hash: af827d8c1e50cb51f002ce3d79a813c5cfb4fff7
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4102,7 +4065,7 @@
 - commits:
     - subject: Fix Input ref typings
       hash: 6ee392c67d961b62592f3b63f0cf0d1c47342435
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4114,7 +4077,7 @@
 - commits:
     - subject: Update typescript/tslib
       hash: 2ff6ade31ab55ca380cf46e7345b5a22fafc6519
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -4124,7 +4087,7 @@
 - commits:
     - subject: Update typography style based on design guide
       hash: 36e5655e7e5c47a250e42fb4ec39a1920eccda62
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -4136,7 +4099,7 @@
 - commits:
     - subject: Generate ts declaration files for esm5 build
       hash: f3edeab46874f13624c9e99fbf520de963887f9c
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4146,7 +4109,7 @@
 - commits:
     - subject: Fix loading fonts when nothing is passed to theme
       hash: f18156a48eacb22cc315eaef429761dfee49a14c
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4158,7 +4121,7 @@
 - commits:
     - subject: Style fixes after changing to SSP as the main font
       hash: b5dd1d8abece144201850bd9a4c33a60e2486a48
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4170,7 +4133,7 @@
 - commits:
     - subject: Don't load SSP and Ubuntu mono if custom font is provided
       hash: a814186726d8029e23855a1933b10e5d2533d9b2
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4180,19 +4143,19 @@
   version: 15.2.1
   date: 2020-06-19T14:14:09.724Z
 - commits:
-    - subject: 'Markdown: Fix syntax highlighter for unknown lang'
+    - subject: "Markdown: Fix syntax highlighter for unknown lang"
       hash: 95f656d17195968361755b84f6fbb2b27f31c820
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
       author: Kakhaber
     - subject: Add a Map component
       hash: 34da1975ad1c9d75ef6705881da7c0b6c8114142
-      body: ''
+      body: ""
       footer:
-        Connects-to: '#12'
-        connects-to: '#12'
+        Connects-to: "#12"
+        connects-to: "#12"
         Change-type: minor
         change-type: minor
         Signed-off-by: Stevche Radevski <stevche@balena.io>
@@ -4201,7 +4164,7 @@
   version: 15.2.0
   date: 2020-06-19T11:20:53.988Z
 - commits:
-    - subject: 'fix: object filters'
+    - subject: "fix: object filters"
       hash: 40132904e421ae9be089674231ac184fa50ac366
       body: |
         replace schema with flat schema to match object filters properties
@@ -4229,7 +4192,7 @@
 - commits:
     - subject: Use custom Table column keys for row cells
       hash: a74958d3c5cb3f08da262a0401f51a865a11d86b
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4252,7 +4215,7 @@
 - commits:
     - subject: Can specify custom Table column keys
       hash: 9ff0bf69c613e3ec3d8de67d8b96686c2881b786
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4262,7 +4225,7 @@
 - commits:
     - subject: Add outline to focused element
       hash: bd374e8c2393a7b5a780083a7fcf214632e86b77
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -4274,7 +4237,7 @@
 - commits:
     - subject: fixup font sizes
       hash: 307a54087c62ca303dd1dc3cc87866f80c9f21b2
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4283,7 +4246,7 @@
       author: StefKors
     - subject: Replace typeface Circular std with Source Sans Pro
       hash: 339849bbc02aac46e89fd1d16462a569d40d97fe
-      body: ''
+      body: ""
       footer:
         Change-type: major
         change-type: major
@@ -4292,7 +4255,7 @@
       author: StefKors
     - subject: Add header height in Theme for Modal component
       hash: 82772efd68e53286581467c2da459fd8a35f6010
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4302,11 +4265,10 @@
   version: 15.0.0
   date: 2020-06-04T20:08:09.580Z
 - commits:
-    - subject: >-
-        Memoize the button component and prevent creating a new component on
+    - subject: Memoize the button component and prevent creating a new component on
         rerender
       hash: 65c64134c843af885d55dc9fa4e75960063fb515
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -4347,7 +4309,7 @@
 - commits:
     - subject: Bump node engine to support grommet@2.13.0
       hash: f5b8c2edae5c87b8f971393a56840acbf2febb90
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4356,7 +4318,7 @@
       author: StefKors
     - subject: Update Screenshots
       hash: 8a8f4ccea5a9b6def63913483ce6d693cddf34c7
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4365,7 +4327,7 @@
       author: StefKors
     - subject: Bump grommet and fix typings
       hash: 7f89c695f72c232ecfca856b30cb4ca9d458f06e
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4377,14 +4339,14 @@
 - commits:
     - subject: Update to prettier 2.x to match balena-lint
       hash: 03cc36741172299bc833c744368431b076ee6a38
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
       author: Pagan Gazzard
     - subject: Update to balena-lint 5.x
       hash: 5e9a66eed96e8c1f3f743fde4f845f7a6587a622
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4392,9 +4354,9 @@
   version: 14.11.5
   date: 2020-05-11T13:56:31.502Z
 - commits:
-    - subject: 'CI: Remove nodejs version restriction now the minimum is 8'
+    - subject: "CI: Remove nodejs version restriction now the minimum is 8"
       hash: 313a592290d710915685faa2b4cc3a36e4d370c4
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4404,49 +4366,49 @@
 - commits:
     - subject: Switch to optional chaining instead of lodash/get where possible
       hash: 20558ecf81827b0c8acc032a5bad0736dea3ad1a
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
       author: Pagan Gazzard
     - subject: Switch to native object type checking
       hash: 83bf19538326a8cfe2c8c118b6686b8d2a0de24f
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
       author: Pagan Gazzard
     - subject: Switch to native boolean type checking
       hash: a7b1f011cdef1c5ee554beb7b8e6b434ad0596b6
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
       author: Pagan Gazzard
     - subject: Switch to native function type checking
       hash: c6160cfdfd6b3283b3a3b413fede8bc3f1a4b841
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
       author: Pagan Gazzard
     - subject: Switch to native array type checking
       hash: 2c72eef5cf8a199447acd0b9fe0a212886f6ea7c
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
       author: Pagan Gazzard
     - subject: Switch to native string type check
       hash: e5a607d88f372f27df75a2b42f662dc7970e1e33
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
       author: Pagan Gazzard
     - subject: Switch to native Object.assign
       hash: b67f54b12278bff1425c4d47cc9fd94abf4d84f2
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4454,7 +4416,7 @@
   version: 14.11.3
   date: 2020-05-07T16:28:33.104Z
 - commits:
-    - subject: 'fix: internal nullable prop'
+    - subject: "fix: internal nullable prop"
       hash: f79463b6634d175b4a6e2c056a2a0da4dacedfb4
       body: |
         set index as a nullable internal prop on Step component
@@ -4467,7 +4429,7 @@
   version: 14.11.2
   date: 2020-04-30T16:21:00.782Z
 - commits:
-    - subject: 'fix: overflow bottom padding'
+    - subject: "fix: overflow bottom padding"
       hash: b00504e701d0c33fe34f09232ac97b48e8b09536
       body: |
         fix modal overflow bottom padding
@@ -4480,7 +4442,7 @@
   version: 14.11.1
   date: 2020-04-29T11:17:40.570Z
 - commits:
-    - subject: 'feat: Add sanitizer options to Markdown component'
+    - subject: "feat: Add sanitizer options to Markdown component"
       hash: eed37c74b4ccdebdcb5e5edebe9b51aecb675302
       body: |
         Markdown component has a new (optional) prop: sanitizerOptions.
@@ -4495,10 +4457,10 @@
 - commits:
     - subject: 'feat: Add support for ordered "Steps"'
       hash: a1c5bae0995915ce07497aa574fa1efe0dfe85de
-      body: ''
+      body: ""
       footer:
-        Connects-to: '#1077'
-        connects-to: '#1077'
+        Connects-to: "#1077"
+        connects-to: "#1077"
         Change-type: minor
         change-type: minor
         Signed-off-by: Graham McCulloch <graham@balena.io>
@@ -4507,23 +4469,23 @@
   version: 14.10.0
   date: 2020-04-28T01:00:30.315Z
 - commits:
-    - subject: 'Theme: Allow setting string values to the input & button weight'
+    - subject: "Theme: Allow setting string values to the input & button weight"
       hash: f4d7005fb68887baded0fbc70a04798293e0c12a
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
         signed-off-by: Thodoris Greasidis <thodoris@balena.io>
       author: Thodoris Greasidis
-    - subject: 'Provider: Type the theme property as deep partial'
+    - subject: "Provider: Type the theme property as deep partial"
       hash: 6c598f0ec97bdf005d95f606b8d3a12ada9257f5
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
-        See: 'https://github.com/balena-io/balena-ui/pull/3636'
-        see: 'https://github.com/balena-io/balena-ui/pull/3636'
+        See: https://github.com/balena-io/balena-ui/pull/3636
+        see: https://github.com/balena-io/balena-ui/pull/3636
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
         signed-off-by: Thodoris Greasidis <thodoris@balena.io>
       author: Thodoris Greasidis
@@ -4546,7 +4508,7 @@
 - commits:
     - subject: Apply text color from theme globally
       hash: a970944cac2989c6528f72c6c81ed41700c17f1b
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -4574,10 +4536,10 @@
 - commits:
     - subject: Implement Accordion component
       hash: 7af9108f9741d1de15b856176714e6c1fa4a5c19
-      body: ''
+      body: ""
       footer:
-        Connects-to: '#151'
-        connects-to: '#151'
+        Connects-to: "#151"
+        connects-to: "#151"
         Change-type: Minor
         change-type: Minor
         Signed-off-by: Amit Solanki <amit@balena.io>
@@ -4586,7 +4548,7 @@
   version: 14.7.0
   date: 2020-04-11T11:36:15.913Z
 - commits:
-    - subject: 'add: compact prop on Button and Dropdown'
+    - subject: "add: compact prop on Button and Dropdown"
       hash: 4f55a7748f0ee2bc6458da90d3aaf57b05978478
       body: |
         compact property on Buttons and Dropdown components to hide label
@@ -4596,7 +4558,7 @@
         Signed-off-by: Andrea Rosci <andrear@balena.io>
         signed-off-by: Andrea Rosci <andrear@balena.io>
       author: JSReds
-    - subject: 'revert: previous filters refactor'
+    - subject: "revert: previous filters refactor"
       hash: 716f3f08e1267ade712db53ffa7ae0a1644b10bc
       body: |
         revert previous filters refactor because of a regression on search bar
@@ -4609,18 +4571,18 @@
   version: 14.6.0
   date: 2020-04-02T15:46:57.177Z
 - commits:
-    - subject: 'MarkdownEditor: Update tsifyied styles of easymde to v2.10.0'
+    - subject: "MarkdownEditor: Update tsifyied styles of easymde to v2.10.0"
       hash: 2da2943eaee652d747d06c98048bbc60c000e1b3
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
         signed-off-by: Thodoris Greasidis <thodoris@balena.io>
       author: Thodoris Greasidis
-    - subject: 'Select: Update snap based on new Grommet'
+    - subject: "Select: Update snap based on new Grommet"
       hash: bab6061679ab40befa386ccdef78c36443d3b8a3
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4630,7 +4592,7 @@
   version: 14.5.0
   date: 2020-04-02T15:28:15.044Z
 - commits:
-    - subject: 'refactor: schema sieve service function'
+    - subject: "refactor: schema sieve service function"
       hash: 85deffa9910a8e753fb54cc184b59be37b8f22e4
       body: |
         refactor upsertFullTextSearch function to be a pure function
@@ -4643,7 +4605,7 @@
   version: 14.4.4
   date: 2020-04-01T10:23:16.420Z
 - commits:
-    - subject: 'fix: filters search bar'
+    - subject: "fix: filters search bar"
       hash: 32f8a049ace2359ae97ba27463140eebdee7f19b
       body: |
         fix regression on filters search bar update
@@ -4658,7 +4620,7 @@
 - commits:
     - subject: Make spinner use tertiary color
       hash: 407e7bcc4f268d2b8cd15ede02611dd12ac9563f
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4670,7 +4632,7 @@
 - commits:
     - subject: Bump grommet to 2.11.3
       hash: 8d20df93173d90b42165daf8f33c847293c45734
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4680,7 +4642,7 @@
   version: 14.4.1
   date: 2020-03-30T12:06:18.193Z
 - commits:
-    - subject: 'Add: Compact prop on filters'
+    - subject: "Add: Compact prop on filters"
       hash: 7fef97b1b6ecbc8e908980c5dbb2efd946ef1b15
       body: |
         compact prop allow to remove labels on filters
@@ -4690,7 +4652,7 @@
         Signed-off-by: Andrea Rosci <andrear@balena.io>
         signed-off-by: Andrea Rosci <andrear@balena.io>
       author: JSReds
-    - subject: 'Refactor: Filters component'
+    - subject: "Refactor: Filters component"
       hash: 2569ffc54c7988d00709f4c07193ebebe78ccfac
       body: |
         split and refactor filters components to make it more readable
@@ -4705,7 +4667,7 @@
 - commits:
     - subject: Update the spinner typings to accept a custom label component
       hash: aae46e5c6b99373c7313a59f8675c1999d1f1efc
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4717,7 +4679,7 @@
 - commits:
     - subject: Fix radio button not displayed correctly
       hash: a2a80d4fc773fe538caf7f2ff5c91f9dd78022f2
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4729,10 +4691,10 @@
 - commits:
     - subject: Remove onClick event on DropDownButton toggle button
       hash: 6ada11a0dc730890efa883afd47bc1f24051b259
-      body: ''
+      body: ""
       footer:
-        Closes: '#684'
-        closes: '#684'
+        Closes: "#684"
+        closes: "#684"
         Change-type: patch
         change-type: patch
         Signed-off-by: Lorenzo Alberto Maria Ambrosi <lorenzothunder.ambrosi@gmail.com>
@@ -4743,7 +4705,7 @@
 - commits:
     - subject: Support schema.examples in Form
       hash: 5f34d4c2b70e4a698a148e032959f32c717f9e52
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -4753,7 +4715,7 @@
   version: 14.3.0
   date: 2020-03-24T09:12:11.402Z
 - commits:
-    - subject: 'Provider: Fix the theme prop typings'
+    - subject: "Provider: Fix the theme prop typings"
       hash: 8557031a2533107cecf44b64678fcc1a4ff69d24
       body: |
         Since we do `merge`, we do not require
@@ -4769,7 +4731,7 @@
 - commits:
     - subject: Fix Dropdown Chevron Icon Alignment
       hash: 05fdc421bc720f7732517bdee990a06eeaed553d
-      body: ''
+      body: ""
       footer:
         Change-type: Patch
         change-type: Patch
@@ -4781,7 +4743,7 @@
 - commits:
     - subject: Add onPageChange callback to table component
       hash: 6c89cb4686fa3f33192033efa5e34829fbb21db8
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -4801,9 +4763,9 @@
         Signed-off-by: Amit Solanki <amit@balena.io>
         signed-off-by: Amit Solanki <amit@balena.io>
       author: Amit Solanki
-    - subject: 'Update Alert design, improving accessibility'
+    - subject: Update Alert design, improving accessibility
       hash: 0b9a40225504134957e239109407b6625967e21c
-      body: ''
+      body: ""
       footer:
         Change-type: Patch
         change-type: Patch
@@ -4813,9 +4775,9 @@
   version: 14.1.0
   date: 2020-03-16T14:12:25.254Z
 - commits:
-    - subject: 'Update Grommet, Styled components and supporting libs'
+    - subject: Update Grommet, Styled components and supporting libs
       hash: 502c4620c7d2e38f0a15c5741c9e5a6ca0cbf954
-      body: ''
+      body: ""
       footer:
         Change-type: Major
         change-type: Major
@@ -4827,10 +4789,10 @@
 - commits:
     - subject: Add a spinner component
       hash: 3ab96680b86a6e3d03c06c7ea320ab79d7f090c8
-      body: ''
+      body: ""
       footer:
-        Connects-to: '#1048'
-        connects-to: '#1048'
+        Connects-to: "#1048"
+        connects-to: "#1048"
         Change-type: minor
         change-type: minor
         Signed-off-by: Stevche Radevski <stevche@balena.io>
@@ -4841,7 +4803,7 @@
 - commits:
     - subject: aria-label on alert close button
       hash: 1cd34bea5a7665b01649f24da635fb3cb69c30d0
-      body: ''
+      body: ""
       footer:
         Change-type: Patch
         change-type: Patch
@@ -4851,7 +4813,7 @@
   version: 13.3.3
   date: 2020-03-04T07:38:54.857Z
 - commits:
-    - subject: 'add: useBreakpoint hook to provider'
+    - subject: "add: useBreakpoint hook to provider"
       hash: 1dc837e38ad06e55e3add5a866a766234be3e43c
       body: |
         add useBreakpoint hook to provider context
@@ -4866,7 +4828,7 @@
 - commits:
     - subject: Import react-notifications-component theme with styled-components
       hash: 5f7248410eba5c89ef8311587c7910beeab200e1
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4875,10 +4837,10 @@
       author: Lorenzo Alberto Maria Ambrosi
     - subject: Replace animate.css with keyframes and classes
       hash: 01bed339a5654f7c9efcca897a1d323f70d4656c
-      body: ''
+      body: ""
       footer:
-        Fixes: '#1054'
-        fixes: '#1054'
+        Fixes: "#1054"
+        fixes: "#1054"
         Change-type: patch
         change-type: patch
         Signed-off-by: Lorenzo Alberto Maria Ambrosi <lorenzothunder.ambrosi@gmail.com>
@@ -4900,7 +4862,7 @@
         Signed-off-by: Stevche Radevski <stevche@balena.io>
         signed-off-by: Stevche Radevski <stevche@balena.io>
       author: Stevche Radevski
-    - subject: 'fix: in a diffrent way'
+    - subject: "fix: in a diffrent way"
       hash: 914a56d1db3695b6748241638dee10d6392d6f4c
       body: |
         change previous fix code
@@ -4910,7 +4872,7 @@
         Signed-off-by: Andrea Rosci <andrear@balena.io>
         signed-off-by: Andrea Rosci <andrear@balena.io>
       author: JSReds
-    - subject: 'fix: markdown test'
+    - subject: "fix: markdown test"
       hash: eab4b38a270ea034d84cfa3021daec1c14bba0ba
       body: |
         fix markdown test suit
@@ -4920,7 +4882,7 @@
         Signed-off-by: Andrea Rosci <andrear@balena.io>
         signed-off-by: Andrea Rosci <andrear@balena.io>
       author: JSReds
-    - subject: 'fix: build and bump typescript version'
+    - subject: "fix: build and bump typescript version"
       hash: a65d1f37efb3f13149fb503fb1821feed8a65a72
       body: |
         fix build null index error and bump typescript version
@@ -4935,7 +4897,7 @@
 - commits:
     - subject: Fix Tooltip display for badges
       hash: 0c288998a3f2450b3180b2ffe0a0277a6b6c3bb0
-      body: ''
+      body: ""
       footer:
         Change-type: Patch
         change-type: Patch
@@ -4947,7 +4909,7 @@
 - commits:
     - subject: Update background and text shades for badges
       hash: 43a4553456f72288953aa8c20745f87b58f3aeb7
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -4970,7 +4932,7 @@
   version: 13.2.1
   date: 2020-02-14T10:56:16.528Z
 - commits:
-    - subject: 'fix: modal enter key check'
+    - subject: "fix: modal enter key check"
       hash: 5b6c7120f0f00e6a6f406da0ea737053d31f0845
       body: |
         add check on enter key when primary button is disabled
@@ -4985,7 +4947,7 @@
 - commits:
     - subject: Add new shades for badge and adjust some existing ones
       hash: 6f9f5d443de06fb5531b8e7cb20f553407eb4977
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -4994,7 +4956,7 @@
       author: Stevche Radevski
     - subject: Add new shades for badge and adjust some existing ones
       hash: c19de970e22c3600c572571e8f6eccc420dd7e33
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -5006,7 +4968,7 @@
 - commits:
     - subject: Use resin-lint 3.x for auto-fixing and most of the linting rules
       hash: c0d7683af2011efb795f2bc31d26ead533139735
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -5016,7 +4978,7 @@
 - commits:
     - subject: Allow undefined to be returned from render functions
       hash: ee7032fc91a84f36207114a66ae5b70ba0882b01
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -5026,14 +4988,14 @@
 - commits:
     - subject: Switch xterm.js to dynamic char atlas for performance
       hash: 673bf08401b52dd4d63f6334f7714f5c2485111c
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
       author: Pagan Gazzard
     - subject: Fix filter using is/is_not operators for objects
       hash: 3ceacfd1966ea6dc8e68483b116fca464d2a43ea
-      body: ''
+      body: ""
       footer:
         Change-type: Patch
         change-type: Patch
@@ -5043,7 +5005,7 @@
   version: 13.0.2
   date: 2020-02-10T11:39:05.383Z
 - commits:
-    - subject: 'Update: docs'
+    - subject: "Update: docs"
       hash: 154702150a24168c1273ad21e3f148dacf51751e
       body: |
         update node_modules installation step
@@ -5056,7 +5018,7 @@
   version: 13.0.1
   date: 2020-02-04T15:04:25.019Z
 - commits:
-    - subject: 'Styled system: Add styled system props'
+    - subject: "Styled system: Add styled system props"
       hash: 88cb7bcf8ac6d1f757fb9c9983897f578f256a2a
       body: >
         Add styled system props such as max/min width/height, display, update
@@ -5072,7 +5034,7 @@
 - commits:
     - subject: Refactor utils file and remove unnecessary functions
       hash: af35872cbb71944dc26b91ee58ea0f72b111b7b8
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -5112,16 +5074,16 @@
 - commits:
     - subject: minor improvements and refactoring for the HighlightedName component
       hash: 39956d94ab8a7ff35ab72b4b948003715fec3fae
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
         Signed-off-by: Stevche Radevski <stevche@balena.io>
         signed-off-by: Stevche Radevski <stevche@balena.io>
       author: Stevche Radevski
-    - subject: 'feat(HighlightedName): Add component'
+    - subject: "feat(HighlightedName): Add component"
       hash: 3205a5f8ce49cf1a0c19c1762a34e03e92d9864e
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -5131,7 +5093,7 @@
 - commits:
     - subject: Fix dependency regression for storybook and remove unnecessary Providers
       hash: 424240f3f1614d699da525613023faaf75c9f3ca
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -5143,10 +5105,10 @@
 - commits:
     - subject: Update several dependencies to resolve vulnerabilities
       hash: e0b15f927345d385a1751ac7bcf913c9681e5a99
-      body: ''
+      body: ""
       footer:
-        Connects-to: '#971'
-        connects-to: '#971'
+        Connects-to: "#971"
+        connects-to: "#971"
         Change-type: patch
         change-type: patch
         Signed-off-by: Stevche Radevski <stevche@balena.io>
@@ -5157,10 +5119,10 @@
 - commits:
     - subject: Remove unused travis configuration
       hash: 81ef618d2de29eb5a821d018aea7382fce23a553
-      body: ''
+      body: ""
       footer:
-        Connects-to: '#575'
-        connects-to: '#575'
+        Connects-to: "#575"
+        connects-to: "#575"
         Change-type: patch
         change-type: patch
         Signed-off-by: Stevche Radevski <stevche@balena.io>
@@ -5183,12 +5145,12 @@
   version: 11.35.4
   date: 2020-01-08T17:51:51.889Z
 - commits:
-    - subject: 'Divider: Fix browser inconsistency of the rendered height'
+    - subject: "Divider: Fix browser inconsistency of the rendered height"
       hash: 1301792db19620fb0435c6c166de748b5fcf6b55
-      body: ''
+      body: ""
       footer:
-        Resolves: '#1037'
-        resolves: '#1037'
+        Resolves: "#1037"
+        resolves: "#1037"
         Change-type: patch
         change-type: patch
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
@@ -5197,12 +5159,12 @@
   version: 11.35.3
   date: 2020-01-03T19:09:32.984Z
 - commits:
-    - subject: 'Card: Add `typings for the small` prop'
+    - subject: "Card: Add `typings for the small` prop"
       hash: 26b6314f1ae32f52002087f13e7ce3bd0c8314ea
-      body: ''
+      body: ""
       footer:
-        Resolves: '#1035'
-        resolves: '#1035'
+        Resolves: "#1035"
+        resolves: "#1035"
         Change-type: patch
         change-type: patch
         Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
@@ -5213,7 +5175,7 @@
 - commits:
     - subject: Remove leftover ".only" statement
       hash: 6fd8fd5914e5d81ac11a728e133a8e486fcbbee7
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -5223,7 +5185,7 @@
   version: 11.35.1
   date: 2020-01-01T13:54:05.336Z
 - commits:
-    - subject: 'Markdown: extend allowed set of tags and attributes'
+    - subject: "Markdown: extend allowed set of tags and attributes"
       hash: 1ff6fd7dd38b235e9045333b8923005098409b99
       body: |
         To better support structured contend, extend the set of allowed tags to
@@ -5244,9 +5206,9 @@
   version: 11.35.0
   date: 2020-01-01T11:11:25.739Z
 - commits:
-    - subject: 'minifix(Screenshots): Generate fresh screenshots'
+    - subject: "minifix(Screenshots): Generate fresh screenshots"
       hash: d0469ee07635c5261fdd515255b2e088115d6d5f
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -5256,16 +5218,16 @@
 - commits:
     - subject: Refactor condition into func to be more readable
       hash: 912af11511168125f686ddbd78a37853d87a9095
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
         Signed-off-by: Amit Solanki <amit@balena.io>
         signed-off-by: Amit Solanki <amit@balena.io>
       author: Amit Solanki
-    - subject: 'fix(Filters): hidden fields are applied to Tag Filter'
+    - subject: "fix(Filters): hidden fields are applied to Tag Filter"
       hash: 674e7aec86ca60d430fd53fdcd2b591d134c467f
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -5277,7 +5239,7 @@
 - commits:
     - subject: Reduce the lumonocity threshold in the isLight method
       hash: 68a192860d32b7afee24f85d0532c7328297bd06
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -5287,7 +5249,7 @@
 - commits:
     - subject: 'Filters: make full text search work with "type" array values'
       hash: ac125b02fa665429313cda8e33701b0ea06f0ac3
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -5299,7 +5261,7 @@
 - commits:
     - subject: Hide hamburger button when there are no menu items
       hash: e82f9ea25a60aa384c2eb5203995e5e201f12c3d
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -5311,7 +5273,7 @@
 - commits:
     - subject: Fix bug where mermaid sequence diagrams don't render
       hash: c8631b1b2db59652357046b5310715d26b1c1841
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -5321,9 +5283,9 @@
   version: 11.34.1
   date: 2019-12-12T17:22:54.954Z
 - commits:
-    - subject: 'Add onclick handler to Copy, fix children typings'
+    - subject: Add onclick handler to Copy, fix children typings
       hash: 3c1cf243e9b522dbbba680b75df51c4290347d41
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -5335,7 +5297,7 @@
 - commits:
     - subject: Fix regression in Form recreating itself on every change
       hash: d36826ed0d8979b627fa1faf2069160414c5ff1a
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -5347,7 +5309,7 @@
 - commits:
     - subject: Replace react-icons with font-awesome 5 free icons
       hash: 2f59f08e460fd8f010e0e7f1f6cf0b897fc065df
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -5373,9 +5335,9 @@
   version: 11.32.4
   date: 2019-11-27T09:20:25.459Z
 - commits:
-    - subject: 'minifix: Change how React is imported to work with Typescript'
+    - subject: "minifix: Change how React is imported to work with Typescript"
       hash: 7664665eb3b5408471e8f49687f83796165a2d0b
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -5387,7 +5349,7 @@
 - commits:
     - subject: Update steps for running the storybook.
       hash: 69952fb2e06c51a1436482c44084a9554d994278
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
