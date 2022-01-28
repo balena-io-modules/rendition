@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add `disableAutoHeadingLinking` prop to Markdown
+      hash: 6217e3d148d657becedcfbab18f928d617d65ba5
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 25.6.0
+  title: Add `disableAutoHeadingLinking` prop to Markdown
+  date: 2022-01-28T18:01:17.207Z
+- commits:
     - subject: Remove wrong zindex
       hash: 99122aa036747168195e306c46590f43f5992e54
       body: ""
