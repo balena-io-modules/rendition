@@ -197,6 +197,7 @@ export const getProcessor = (
 	sanitizerOptions?: any,
 	disableRawHtml?: boolean,
 	disableCodeHighlight?: boolean,
+	disableAutoHeadingLinking?: boolean,
 	decorators?: Decorator[] | undefined,
 ) => {
 	let processor = unified()
@@ -208,9 +209,11 @@ export const getProcessor = (
 		processor = processor.use(prism, { ignoreMissing: true });
 	}
 
-	processor = processor.use(slug).use(autoLinkHeadings, {
-		properties: { className: 'heading-anchor-link' },
-	});
+	if (!disableAutoHeadingLinking) {
+		processor = processor.use(slug).use(autoLinkHeadings, {
+			properties: { className: 'heading-anchor-link' },
+		});
+	}
 
 	if (!disableRawHtml) {
 		processor = processor.use(raw);
@@ -264,6 +267,8 @@ export type MarkdownProps = TxtProps & {
 	disableCodeHighlight?: boolean;
 	/** Decorate part of the text if it matches some condition */
 	decorators?: Decorator[];
+	/** Disable automatic heading linking */
+	disableAutoHeadingLinking?: boolean;
 };
 
 export const MarkdownBase = ({
@@ -273,6 +278,7 @@ export const MarkdownBase = ({
 	disableRawHtml,
 	disableCodeHighlight,
 	decorators,
+	disableAutoHeadingLinking,
 	...rest
 }: MarkdownProps) => {
 	const content = React.useMemo(() => {
@@ -282,6 +288,7 @@ export const MarkdownBase = ({
 				sanitizerOptions,
 				disableRawHtml,
 				disableCodeHighlight,
+				disableAutoHeadingLinking,
 				decorators,
 			).processSync(children) as any
 		).result; // type any because vFile types doesn't contains result, even though it should.
@@ -292,6 +299,7 @@ export const MarkdownBase = ({
 		disableCodeHighlight,
 		decorators,
 		children,
+		disableAutoHeadingLinking,
 	]);
 
 	return <MarkdownWrapper {...rest}>{content}</MarkdownWrapper>;
