@@ -131,7 +131,7 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 	>();
 
 	const showFilters = React.useMemo(
-		() => Array.isArray(data) && !!(data?.length && data.length > 5),
+		() => Array.isArray(data) && !!(data?.length && data.length > 0),
 		[data],
 	);
 
