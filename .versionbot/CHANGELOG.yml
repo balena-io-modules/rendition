@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'AutoUI: Show the "Add filter" button as far as there is any item'
+      hash: 14e1e9a0985fa1c586f76e4e84f864c0b9ef4010
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        See: https://jel.ly.fish/137b8db3-663a-4e57-a97d-b4e5debe3a89
+        see: https://jel.ly.fish/137b8db3-663a-4e57-a97d-b4e5debe3a89
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 25.7.0
+  title: 'AutoUI: Show the "Add filter" button as far as there is any item'
+  date: 2022-02-01T16:55:00.486Z
+- commits:
     - subject: Add `disableAutoHeadingLinking` prop to Markdown
       hash: 6217e3d148d657becedcfbab18f928d617d65ba5
       body: ""
