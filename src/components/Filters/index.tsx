@@ -302,7 +302,7 @@ class BaseFilters extends React.Component<FiltersProps, FiltersState> {
 							label="Add filter"
 							compact={this.props.compact}
 							{...this.props.addFilterButtonProps}
-						></Button>
+						/>
 					)}
 
 					{this.shouldRenderComponent('search') && (

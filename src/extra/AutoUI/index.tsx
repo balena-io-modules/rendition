@@ -350,13 +350,15 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 										</HeaderGrid>
 									)}
 								</HeaderGrid>
-								<Filters
-									renderMode={'summary'}
-									schema={model.schema}
-									filters={filters}
-									autouiContext={autouiContext}
-									changeFilters={setFilters}
-								/>
+								{filters.length > 0 && (
+									<Filters
+										renderMode={'summary'}
+										schema={model.schema}
+										filters={filters}
+										autouiContext={autouiContext}
+										changeFilters={setFilters}
+									/>
+								)}
 							</Box>
 							{data.length === 0 && (
 								<NoRecordsFoundArrow>
