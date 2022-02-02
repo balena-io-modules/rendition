@@ -21,7 +21,7 @@ export const NoRecordsFoundArrow = ({
 }) => {
 	const theme = useTheme();
 	return (
-		<Flex mt={-3}>
+		<Flex>
 			<Left>
 				<svg
 					stroke={theme.colors.quartenary.main}
