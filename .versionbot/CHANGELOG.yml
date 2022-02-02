@@ -1,4 +1,19 @@
 - commits:
+    - subject: Remove extra gap between AutoUI header and Filters summary, and between
+        Filters summary and the rendered lens
+      hash: a8d380eb1ef017c57ea2c1e5702fd33d16546df5
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 25.7.1
+  title: Remove extra gap between AutoUI header and Filters summary, and between
+    Filters summary and the rendered lens
+  date: 2022-02-02T17:31:45.815Z
+- commits:
     - subject: 'AutoUI: Show the "Add filter" button as far as there is any item'
       hash: 14e1e9a0985fa1c586f76e4e84f864c0b9ef4010
       body: ""
