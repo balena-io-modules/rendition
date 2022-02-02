@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix NoRecordsFoundArrow overlapping create action in AutoUI
+      hash: ec256a1f4aa660a91e9f66b7795a52c46c87bb48
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 25.7.2
+  title: Fix NoRecordsFoundArrow overlapping create action in AutoUI
+  date: 2022-02-02T18:10:38.203Z
+- commits:
     - subject: Remove extra gap between AutoUI header and Filters summary, and between
         Filters summary and the rendered lens
       hash: a8d380eb1ef017c57ea2c1e5702fd33d16546df5
