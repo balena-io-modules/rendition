@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add AutoUiApp post actions
+      hash: 2cd9c38f91d660550884e0b2a61439d1400e82ab
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 25.8.0
+  title: Add AutoUiApp post actions
+  date: 2022-02-03T09:22:14.780Z
+- commits:
     - subject: Fix NoRecordsFoundArrow overlapping create action in AutoUI
       hash: ec256a1f4aa660a91e9f66b7795a52c46c87bb48
       body: ""
