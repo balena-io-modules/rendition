@@ -1,5 +1,10 @@
 import * as React from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import {
+	GoogleMap,
+	LoadScript,
+	Marker,
+	MarkerClusterer,
+} from '@react-google-maps/api';
 import { Box } from '../Box';
 
 export interface UIMarker {
@@ -155,19 +160,24 @@ const BaseMap = <T extends any>({
 						onLoad={(map) => onGoogleMapsApiLoad(map, markers)}
 						onClick={mapClick}
 					>
-						{markers.map((marker) => (
-							<Marker
-								key={marker.id}
-								position={{
-									lat: isNaN(marker.lat) ? 0 : marker.lat,
-									lng: isNaN(marker.lng) ? 0 : marker.lng,
-								}}
-								clickable={markers.length > 1}
-								onClick={marker.click}
-								title={marker.title}
-								icon={marker.icon}
-							/>
-						))}
+						<MarkerClusterer>
+							{(clusterer) =>
+								markers.map((marker) => (
+									<Marker
+										key={marker.id}
+										position={{
+											lat: isNaN(marker.lat) ? 0 : marker.lat,
+											lng: isNaN(marker.lng) ? 0 : marker.lng,
+										}}
+										clickable={markers.length > 1}
+										onClick={marker.click}
+										title={marker.title}
+										icon={marker.icon}
+										clusterer={clusterer}
+									/>
+								))
+							}
+						</MarkerClusterer>
 					</GoogleMap>
 				</LoadScript>
 			)}
