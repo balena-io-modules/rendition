@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add MarkerClusterer to Map for handling markers in groups
+      hash: d99b3c06c7bc4c83f11d24c0bdd81289f24c7220
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 25.8.0
+  title: "'Add MarkerClusterer to Map for handling markers in groups'"
+  date: 2022-02-03T21:17:00.452Z
+- commits:
     - subject: Fix NoRecordsFoundArrow overlapping create action in AutoUI
       hash: ec256a1f4aa660a91e9f66b7795a52c46c87bb48
       body: ""
