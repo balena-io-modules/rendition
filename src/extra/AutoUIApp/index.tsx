@@ -5,13 +5,15 @@ import { Router, Switch, Route } from 'react-router-dom';
 import { Content } from './Content';
 import { createGlobalStyle } from 'styled-components';
 import { Provider } from '../..';
-import { history } from '../AutoUI/utils';
+import { history, onClickOutOrEsc } from '../AutoUI/utils';
 import { Flex } from '../../components/Flex';
 import { Box } from '../../components/Box';
 import { OpenApiJson } from './openApiJson';
+import { ActionSidebar, ActionSidebarProps } from './ActionSidebar';
 
-const SIDEBAR_WIDTH = '166px';
-const NAVBAR_HEIGHT = '60px';
+const SIDEBAR_WIDTH = 166;
+const NAVBAR_HEIGHT = 60;
+export const ACTION_SIDEBAR_WIDTH = 340;
 
 const GlobalStyle = createGlobalStyle`
 	html,
@@ -30,6 +32,12 @@ declare global {
 	}
 }
 
+export enum ActionMethods {
+	POST = 'post',
+	PATCH = 'patch',
+	DELETE = 'delete',
+}
+
 export interface AutoUIAppProps {
 	openApiJson: OpenApiJson;
 	title: string;
@@ -37,21 +45,40 @@ export interface AutoUIAppProps {
 }
 
 export const AutoUIApp = ({ openApiJson, title, logo }: AutoUIAppProps) => {
+	const actionSidebarWrapper = React.useRef<HTMLDivElement>(null);
+	const [actionSidebar, setActionSidebar] = React.useState<Omit<
+		ActionSidebarProps,
+		'openApiJson'
+	> | null>();
+
+	React.useEffect(() => {
+		if (!actionSidebarWrapper.current) {
+			return;
+		}
+		onClickOutOrEsc(actionSidebarWrapper.current, () => {
+			setActionSidebar(null);
+		});
+	}, [actionSidebarWrapper.current]);
+
 	return (
 		<Provider>
 			<Router history={history}>
 				<GlobalStyle />
 				<Navbar height={NAVBAR_HEIGHT} title={title} logo={logo} />
-				<Flex>
+				<Flex style={{ position: 'relative' }}>
 					<Sidebar
-						width={SIDEBAR_WIDTH}
-						height={`calc(100vh - ${NAVBAR_HEIGHT})`}
+						width={`${SIDEBAR_WIDTH}px`}
+						height={`calc(100vh - ${NAVBAR_HEIGHT}px)`}
 						openApiJson={openApiJson}
 						isCollapsed={false}
 					/>
 					<Box
-						width={`calc(100vw - ${SIDEBAR_WIDTH})`}
-						height={`calc(100vh - ${NAVBAR_HEIGHT})`}
+						width={`calc(100vw - ${
+							actionSidebar
+								? SIDEBAR_WIDTH + ACTION_SIDEBAR_WIDTH
+								: SIDEBAR_WIDTH
+						}px)`}
+						height={`calc(100vh - ${NAVBAR_HEIGHT}px)`}
 						px={2}
 						py={1}
 						style={{ overflow: 'auto' }}
@@ -61,11 +88,25 @@ export const AutoUIApp = ({ openApiJson, title, logo }: AutoUIAppProps) => {
 								<Route
 									key={path}
 									path={path}
-									render={() => <Content openApiJson={openApiJson} />}
+									render={() => (
+										<Content
+											openApiJson={openApiJson}
+											openActionSidebar={setActionSidebar}
+										/>
+									)}
 								/>
 							))}
 						</Switch>
 					</Box>
+					{actionSidebar && (
+						<Flex ref={actionSidebarWrapper}>
+							<ActionSidebar
+								{...actionSidebar}
+								openApiJson={openApiJson}
+								onClose={() => setActionSidebar(null)}
+							/>
+						</Flex>
+					)}
 				</Flex>
 			</Router>
 		</Provider>
