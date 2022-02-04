@@ -1,4 +1,19 @@
 - commits:
+    - subject: Make monaco editor a dev dependency
+      hash: 57d267bcc6ad6d75805c84365b88a6f055628bbc
+      body: |
+        Monaco editor is only used by the renderer playground in storybook and
+        shouldn't be included as a main dependency.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+  version: 25.8.1
+  title: "'Make monaco editor a dev dependency'"
+  date: 2022-02-04T16:28:21.019Z
+- commits:
     - subject: Add AutoUiApp post actions
       hash: 2cd9c38f91d660550884e0b2a61439d1400e82ab
       body: ""
