@@ -1,5 +1,10 @@
 import * as React from 'react';
-import { TableBase, TableBaseProps, TableSortOptions } from './TableBase';
+import {
+	TableBase,
+	TableBaseProps,
+	TableSortOptions,
+	Pagination,
+} from './TableBase';
 import styled, { css } from 'styled-components';
 import keys from 'lodash/keys';
 import pick from 'lodash/pick';
@@ -710,7 +715,6 @@ export class Table<T extends {}> extends React.Component<
 			onRowClick,
 			...props
 		} = this.props;
-
 		const sort =
 			sortProp || (sortingStateRestorationKey ? this.state.sort : undefined);
 
@@ -741,4 +745,10 @@ export class Table<T extends {}> extends React.Component<
 	}
 }
 
-export { TableBaseColumn, TableRow, TableSortOptions, TableSortFunction };
+export {
+	TableBaseColumn,
+	TableRow,
+	TableSortOptions,
+	TableSortFunction,
+	Pagination,
+};

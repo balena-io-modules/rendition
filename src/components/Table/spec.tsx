@@ -890,7 +890,7 @@ describe('Table component', () => {
 						}
 						data={PokeDex}
 						usePager
-						itemsPerPage={3}
+						pagination={{ itemsPerPage: 3 }}
 					/>
 				</Provider>,
 			);
@@ -950,7 +950,7 @@ describe('Table component', () => {
 					{
 						columns: [{ field: 'Name' }] as any,
 						data: PokeDex,
-						itemsPerPage: 2,
+						pagination: { itemsPerPage: 2 },
 						usePager: true,
 					},
 				),
