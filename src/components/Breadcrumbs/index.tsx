@@ -25,6 +25,7 @@ export interface Crumb {
 	href?: string;
 	icon?: React.ReactNode;
 	onClick?: (event: React.MouseEvent) => void;
+	secondaryIcon?: React.ReactNode;
 }
 
 export interface BreadcrumbsProps {
@@ -35,7 +36,11 @@ export interface BreadcrumbsProps {
 }
 
 const BreadcrumbContent = React.memo(
-	({ icon, text }: Pick<Crumb, 'icon' | 'text'>) => {
+	({
+		icon,
+		text,
+		secondaryIcon,
+	}: Pick<Crumb, 'icon' | 'text' | 'secondaryIcon'>) => {
 		const crumbRef = React.useRef<HTMLDivElement>(null);
 		const [shouldShowTooltip, setShouldShowTooltip] = React.useState(false);
 
@@ -60,6 +65,7 @@ const BreadcrumbContent = React.memo(
 				>
 					{text}
 				</Txt>
+				{secondaryIcon && <Flex ml={2}>{secondaryIcon}</Flex>}
 			</Flex>
 		);
 	},
@@ -95,10 +101,15 @@ export const Breadcrumbs = ({ crumbs, emphasized }: BreadcrumbsProps) => {
 												<BreadcrumbContent
 													text={crumb.text}
 													icon={crumb.icon}
+													secondaryIcon={crumb.secondaryIcon}
 												/>
 											</Link>
 										) : (
-											<BreadcrumbContent text={crumb.text} icon={crumb.icon} />
+											<BreadcrumbContent
+												text={crumb.text}
+												icon={crumb.icon}
+												secondaryIcon={crumb.secondaryIcon}
+											/>
 										)}
 									</Flex>
 								</Flex>
