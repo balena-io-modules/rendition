@@ -22,8 +22,8 @@ exports[`Storyshots Core/Steps Default 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-check-circle fa-w-16 "
-                data-icon="check-circle"
+                class="svg-inline--fa fa-circle-check "
+                data-icon="circle-check"
                 data-prefix="fas"
                 focusable="false"
                 role="img"
@@ -31,7 +31,7 @@ exports[`Storyshots Core/Steps Default 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"
                   fill="currentColor"
                 />
               </svg>
@@ -80,8 +80,8 @@ exports[`Storyshots Core/Steps Default 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-check-circle fa-w-16 "
-                data-icon="check-circle"
+                class="svg-inline--fa fa-circle-check "
+                data-icon="circle-check"
                 data-prefix="fas"
                 focusable="false"
                 role="img"
@@ -89,7 +89,7 @@ exports[`Storyshots Core/Steps Default 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"
                   fill="currentColor"
                 />
               </svg>
@@ -138,8 +138,8 @@ exports[`Storyshots Core/Steps Default 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-check-circle fa-w-16 "
-                data-icon="check-circle"
+                class="svg-inline--fa fa-circle-check "
+                data-icon="circle-check"
                 data-prefix="fas"
                 focusable="false"
                 role="img"
@@ -147,7 +147,7 @@ exports[`Storyshots Core/Steps Default 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"
                   fill="currentColor"
                 />
               </svg>
@@ -187,8 +187,8 @@ exports[`Storyshots Core/Steps Ordered 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-check-circle fa-w-16 "
-                data-icon="check-circle"
+                class="svg-inline--fa fa-circle-check "
+                data-icon="circle-check"
                 data-prefix="fas"
                 focusable="false"
                 role="img"
@@ -196,7 +196,7 @@ exports[`Storyshots Core/Steps Ordered 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"
                   fill="currentColor"
                 />
               </svg>
@@ -245,7 +245,7 @@ exports[`Storyshots Core/Steps Ordered 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-circle fa-w-16 "
+                class="svg-inline--fa fa-circle "
                 data-icon="circle"
                 data-prefix="fas"
                 focusable="false"
@@ -254,7 +254,7 @@ exports[`Storyshots Core/Steps Ordered 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                  d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"
                   fill="currentColor"
                 />
               </svg>
@@ -344,8 +344,8 @@ exports[`Storyshots Core/Steps With Custom Title 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="svg-inline--fa fa-map-signs fa-w-16 "
-            data-icon="map-signs"
+            class="svg-inline--fa fa-signs-post "
+            data-icon="signs-post"
             data-prefix="fas"
             focusable="false"
             role="img"
@@ -353,7 +353,7 @@ exports[`Storyshots Core/Steps With Custom Title 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M507.31 84.69L464 41.37c-6-6-14.14-9.37-22.63-9.37H288V16c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v16H56c-13.25 0-24 10.75-24 24v80c0 13.25 10.75 24 24 24h385.37c8.49 0 16.62-3.37 22.63-9.37l43.31-43.31c6.25-6.26 6.25-16.38 0-22.63zM224 496c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V384h-64v112zm232-272H288v-32h-64v32H70.63c-8.49 0-16.62 3.37-22.63 9.37L4.69 276.69c-6.25 6.25-6.25 16.38 0 22.63L48 342.63c6 6 14.14 9.37 22.63 9.37H456c13.25 0 24-10.75 24-24v-80c0-13.25-10.75-24-24-24z"
+              d="M223.1 32C223.1 14.33 238.3 0 255.1 0C273.7 0 288 14.33 288 32H441.4C445.6 32 449.7 33.69 452.7 36.69L500.7 84.69C506.9 90.93 506.9 101.1 500.7 107.3L452.7 155.3C449.7 158.3 445.6 160 441.4 160H63.1C46.33 160 31.1 145.7 31.1 128V64C31.1 46.33 46.33 32 63.1 32L223.1 32zM480 320C480 337.7 465.7 352 448 352H70.63C66.38 352 62.31 350.3 59.31 347.3L11.31 299.3C5.065 293.1 5.065 282.9 11.31 276.7L59.31 228.7C62.31 225.7 66.38 223.1 70.63 223.1H223.1V191.1H288V223.1H448C465.7 223.1 480 238.3 480 255.1V320zM255.1 512C238.3 512 223.1 497.7 223.1 480V384H288V480C288 497.7 273.7 512 255.1 512z"
               fill="currentColor"
             />
           </svg>
@@ -378,8 +378,8 @@ exports[`Storyshots Core/Steps With Custom Title 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-check-circle fa-w-16 "
-                data-icon="check-circle"
+                class="svg-inline--fa fa-circle-check "
+                data-icon="circle-check"
                 data-prefix="fas"
                 focusable="false"
                 role="img"
@@ -387,7 +387,7 @@ exports[`Storyshots Core/Steps With Custom Title 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"
                   fill="currentColor"
                 />
               </svg>
@@ -436,8 +436,8 @@ exports[`Storyshots Core/Steps With Custom Title 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-check-circle fa-w-16 "
-                data-icon="check-circle"
+                class="svg-inline--fa fa-circle-check "
+                data-icon="circle-check"
                 data-prefix="fas"
                 focusable="false"
                 role="img"
@@ -445,7 +445,7 @@ exports[`Storyshots Core/Steps With Custom Title 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"
                   fill="currentColor"
                 />
               </svg>
@@ -494,8 +494,8 @@ exports[`Storyshots Core/Steps With Custom Title 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-check-circle fa-w-16 "
-                data-icon="check-circle"
+                class="svg-inline--fa fa-circle-check "
+                data-icon="circle-check"
                 data-prefix="fas"
                 focusable="false"
                 role="img"
@@ -503,7 +503,7 @@ exports[`Storyshots Core/Steps With Custom Title 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"
                   fill="currentColor"
                 />
               </svg>
@@ -543,8 +543,8 @@ exports[`Storyshots Core/Steps Without Borders 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-check-circle fa-w-16 "
-                data-icon="check-circle"
+                class="svg-inline--fa fa-circle-check "
+                data-icon="circle-check"
                 data-prefix="fas"
                 focusable="false"
                 role="img"
@@ -552,7 +552,7 @@ exports[`Storyshots Core/Steps Without Borders 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"
                   fill="currentColor"
                 />
               </svg>
@@ -602,8 +602,8 @@ exports[`Storyshots Core/Steps Without Borders 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-check-circle fa-w-16 "
-                data-icon="check-circle"
+                class="svg-inline--fa fa-circle-check "
+                data-icon="circle-check"
                 data-prefix="fas"
                 focusable="false"
                 role="img"
@@ -611,7 +611,7 @@ exports[`Storyshots Core/Steps Without Borders 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                  d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"
                   fill="currentColor"
                 />
               </svg>

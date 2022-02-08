@@ -1606,7 +1606,7 @@ exports[`Renderer component A drop-down button widget 1`] = `
             </div>
             <svg
               aria-hidden="true"
-              class="svg-inline--fa fa-chevron-down fa-w-14 "
+              class="svg-inline--fa fa-chevron-down "
               data-icon="chevron-down"
               data-prefix="fas"
               focusable="false"
@@ -1615,7 +1615,7 @@ exports[`Renderer component A drop-down button widget 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
                 fill="currentColor"
               />
             </svg>
@@ -4055,7 +4055,7 @@ exports[`Renderer component An invalid value 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="svg-inline--fa fa-ban fa-w-16 "
+            class="svg-inline--fa fa-ban "
             data-icon="ban"
             data-prefix="fas"
             focusable="false"
@@ -4064,7 +4064,7 @@ exports[`Renderer component An invalid value 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M256 8C119.034 8 8 119.033 8 256s111.034 248 248 248 248-111.034 248-248S392.967 8 256 8zm130.108 117.892c65.448 65.448 70 165.481 20.677 235.637L150.47 105.216c70.204-49.356 170.226-44.735 235.638 20.676zM125.892 386.108c-65.448-65.448-70-165.481-20.677-235.637L361.53 406.784c-70.203 49.356-170.226 44.736-235.638-20.676z"
+              d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM99.5 144.8C77.15 176.1 64 214.5 64 256C64 362 149.1 448 256 448C297.5 448 335.9 434.9 367.2 412.5L99.5 144.8zM448 256C448 149.1 362 64 256 64C214.5 64 176.1 77.15 144.8 99.5L412.5 367.2C434.9 335.9 448 297.5 448 256V256z"
               fill="currentColor"
             />
           </svg>
