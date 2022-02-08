@@ -2,6 +2,9 @@ import template from 'lodash/template';
 import { OptionalNavigationResource, OsTypesEnum } from './models';
 import { Dictionary } from '../../common-types';
 
+export const FALLBACK_LOGO_UNKNOWN_DEVICE =
+	'https://dashboard.balena-cloud.com/img/unknown-device.svg';
+
 export const OS_VARIANT_FULL_DISPLAY_TEXT_MAP: Dictionary<string> = {
 	dev: 'Development',
 	prod: 'Production',
