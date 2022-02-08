@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update fontawesome libs to fix conflicts
+      hash: a895ba976df057644927939bc0c03bf49acef1ac
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 25.9.0
+  title: "'Update fontawesome libs to fix conflicts'"
+  date: 2022-02-08T16:03:19.336Z
+- commits:
     - subject: Make monaco editor a dev dependency
       hash: 57d267bcc6ad6d75805c84365b88a6f055628bbc
       body: |
