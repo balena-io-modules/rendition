@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add `secondaryIcon` prop to Breadcrumbs component
+      hash: 467771a4ec1a8bcf65ad48880312e9a7233979e5
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 25.10.0
+  title: "'Add  prop to Breadcrumbs component'"
+  date: 2022-02-08T18:24:08.386Z
+- commits:
     - subject: Update fontawesome libs to fix conflicts
       hash: a895ba976df057644927939bc0c03bf49acef1ac
       body: ""
