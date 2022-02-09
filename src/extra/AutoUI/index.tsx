@@ -299,23 +299,25 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 										flex={['1 0 100%', '1 0 100%', '1 0 100%', 'auto']}
 									>
 										{showFilters && (
-											<Filters
-												schema={model.schema}
-												filters={filters}
-												autouiContext={autouiContext}
-												changeFilters={setFilters}
-												onSearch={(term) => (
-													<FocusSearch
-														searchTerm={term}
-														filtered={filtered}
-														selected={selected}
-														setSelected={setSelected}
-														autouiContext={autouiContext}
-														model={model}
-														hasUpdateActions={hasUpdateActions}
-													/>
-												)}
-											/>
+											<Box mb={3}>
+												<Filters
+													schema={model.schema}
+													filters={filters}
+													autouiContext={autouiContext}
+													changeFilters={setFilters}
+													onSearch={(term) => (
+														<FocusSearch
+															searchTerm={term}
+															filtered={filtered}
+															selected={selected}
+															setSelected={setSelected}
+															autouiContext={autouiContext}
+															model={model}
+															hasUpdateActions={hasUpdateActions}
+														/>
+													)}
+												/>
+											</Box>
 										)}
 									</Box>
 									{data.length > 0 && (
