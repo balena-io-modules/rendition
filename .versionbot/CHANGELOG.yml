@@ -1,4 +1,19 @@
 - commits:
+    - subject: Fix header for AutoUI collections not having space between buttons when
+        wrapping
+      hash: b8d06f3c547aad64b6cfcf7b71bb97ce693e5a4e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 25.11.1
+  title: "'Fix header for AutoUI collections not having space between buttons when
+    wrapping'"
+  date: 2022-02-09T20:55:14.981Z
+- commits:
     - subject: Show logo for all device types in select
       hash: 4d836c716a303787e9b8e8599b2bfb6bd4065c97
       body: ""
