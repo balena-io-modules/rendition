@@ -23,7 +23,7 @@ import { Alert } from '../../components/Alert';
 import { Modal } from '../../components/Modal';
 import { Img } from '../../components/Img';
 import { useTranslation } from '../../hooks/useTranslation';
-import { stripVersionBuild } from './utils';
+import { FALLBACK_LOGO_UNKNOWN_DEVICE, stripVersionBuild } from './utils';
 import { OsConfiguration } from './OsConfiguration';
 import { FormModel } from './FormModel';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
@@ -155,7 +155,8 @@ export const UnstableTempDownloadImageModal = ({
 	const [isDownloadingConfig, setIsDownloadingConfig] = React.useState(false);
 	const [isFetching, setIsFetching] = React.useState(isEmpty(osVersions));
 
-	const logoSrc = deviceType?.logo ?? deviceType?.logoUrl ?? undefined;
+	const logoSrc =
+		deviceType?.logo ?? deviceType?.logoUrl ?? FALLBACK_LOGO_UNKNOWN_DEVICE;
 	const defaultDisplayName = deviceType?.name ?? '-';
 
 	React.useEffect(() => {

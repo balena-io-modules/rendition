@@ -5,6 +5,7 @@ import { Select } from '../../components/Select';
 import { Txt } from '../../components/Txt';
 import { DeviceLogo } from './DownloadImageModal';
 import { DeviceType } from './models';
+import { FALLBACK_LOGO_UNKNOWN_DEVICE } from './utils';
 
 interface DeviceTypeOptionProps {
 	deviceType?: DeviceType;
@@ -22,7 +23,7 @@ const DeviceTypeOption = ({
 	const { t } = useTranslation();
 	const typeDisplayName =
 		deviceType?.name ?? t('placeholders.choose_device_type');
-	const logoSrc = deviceType?.logo ?? deviceType?.logoUrl ?? undefined;
+	const logoSrc = deviceType?.logo ?? FALLBACK_LOGO_UNKNOWN_DEVICE;
 	const defaultDisplayName = deviceType?.name ?? '-';
 
 	return (
@@ -33,7 +34,7 @@ const DeviceTypeOption = ({
 			width="100%"
 			alignItems="center"
 		>
-			{!isOption && <DeviceLogo src={logoSrc} title={defaultDisplayName} />}
+			{<DeviceLogo src={logoSrc} title={defaultDisplayName} />}
 			<Txt
 				className={isOption ? 'e2e-device-type-option' : ''}
 				ml={2}
