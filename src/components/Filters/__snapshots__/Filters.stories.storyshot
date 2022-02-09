@@ -7,10 +7,10 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
   >
     <div>
       <div
-        class="sc-gKclnd exdBHI sc-iCfMLu kkMeyg sc-cZMNgc gJCjeg"
+        class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-cZMNgc gJCjeg"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI kZhRrI"
+          class="sc-gKclnd exdBHI sc-iCfMLu kkMeyg sc-hGPBjI kZhRrI"
         >
           <button
             class="StyledButton-sc-323bzc-0 cLGAaT sc-bqiRlB sc-ksdxgE edofBN gWXKEC sc-dJjYzT dofHJV"
@@ -1189,10 +1189,10 @@ exports[`Storyshots Core/Filters Compact 1`] = `
   >
     <div>
       <div
-        class="sc-gKclnd exdBHI sc-iCfMLu kkMeyg sc-cZMNgc gJCjeg"
+        class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-cZMNgc gJCjeg"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI kZhRrI"
+          class="sc-gKclnd exdBHI sc-iCfMLu kkMeyg sc-hGPBjI kZhRrI"
         >
           <button
             class="StyledButton-sc-323bzc-0 jXhPZp sc-bqiRlB sc-ksdxgE edofBN gWXKEC sc-dJjYzT bSMRJA"
@@ -2357,10 +2357,10 @@ exports[`Storyshots Core/Filters Default 1`] = `
   >
     <div>
       <div
-        class="sc-gKclnd exdBHI sc-iCfMLu kkMeyg sc-cZMNgc gJCjeg"
+        class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-cZMNgc gJCjeg"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI kZhRrI"
+          class="sc-gKclnd exdBHI sc-iCfMLu kkMeyg sc-hGPBjI kZhRrI"
         >
           <button
             class="StyledButton-sc-323bzc-0 cLGAaT sc-bqiRlB sc-ksdxgE edofBN gWXKEC sc-dJjYzT bSMRJA"
@@ -3538,10 +3538,10 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
   >
     <div>
       <div
-        class="sc-gKclnd exdBHI sc-iCfMLu kkMeyg sc-cZMNgc gJCjeg"
+        class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-cZMNgc gJCjeg"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI kZhRrI"
+          class="sc-gKclnd exdBHI sc-iCfMLu kkMeyg sc-hGPBjI kZhRrI"
         >
           <button
             class="StyledButton-sc-323bzc-0 hcxFhQ sc-bqiRlB sc-ksdxgE edofBN gWXKEC sc-dJjYzT bSMRJA"
@@ -4723,10 +4723,10 @@ exports[`Storyshots Core/Filters Render Modes 1`] = `
   >
     <div>
       <div
-        class="sc-gKclnd exdBHI sc-iCfMLu kkMeyg sc-cZMNgc gJCjeg"
+        class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-cZMNgc gJCjeg"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI kZhRrI"
+          class="sc-gKclnd exdBHI sc-iCfMLu kkMeyg sc-hGPBjI kZhRrI"
         >
           <button
             class="StyledButton-sc-323bzc-0 cLGAaT sc-bqiRlB sc-ksdxgE edofBN gWXKEC sc-dJjYzT bSMRJA"

@@ -265,9 +265,20 @@ class BaseFilters extends React.Component<FiltersProps, FiltersState> {
 	public render() {
 		const { filters, searchString, showSearchDropDown } = this.state;
 
+		const renderingSummaryAndOtherComponents =
+			this.shouldRenderComponent('summary') &&
+			[
+				this.shouldRenderComponent('add'),
+				this.shouldRenderComponent('search'),
+				this.shouldRenderComponent('views'),
+			].includes(true);
+
 		return (
-			<FilterWrapper mb={3}>
-				<Flex justifyContent="space-between">
+			<FilterWrapper>
+				<Flex
+					justifyContent="space-between"
+					mb={renderingSummaryAndOtherComponents ? 3 : undefined}
+				>
 					{this.shouldRenderComponent('add') && (
 						<Button
 							mr={30}
