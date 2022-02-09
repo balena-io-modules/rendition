@@ -1,4 +1,17 @@
 - commits:
+    - subject: Show logo for all device types in select
+      hash: 4d836c716a303787e9b8e8599b2bfb6bd4065c97
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 25.11.0
+  title: "'Show logo for all device types in select'"
+  date: 2022-02-08T21:14:59.631Z
+- commits:
     - subject: Add `secondaryIcon` prop to Breadcrumbs component
       hash: 467771a4ec1a8bcf65ad48880312e9a7233979e5
       body: ""
