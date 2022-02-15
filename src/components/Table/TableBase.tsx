@@ -518,6 +518,7 @@ export class TableBase<T> extends React.Component<
 			getRowHref,
 			getRowClass,
 			className,
+			fuzzyPager,
 		} = this.props;
 
 		const { page, sort } = this.state;
@@ -544,6 +545,7 @@ export class TableBase<T> extends React.Component<
 				{shouldShowPaper &&
 					(_pagerPosition === 'top' || _pagerPosition === 'both') && (
 						<Pager
+							fuzzy={fuzzyPager}
 							totalItems={totalItems}
 							itemsPerPage={_itemsPerPage}
 							page={page}
@@ -655,6 +657,7 @@ export class TableBase<T> extends React.Component<
 				{shouldShowPaper &&
 					(_pagerPosition === 'bottom' || _pagerPosition === 'both') && (
 						<Pager
+							fuzzy={fuzzyPager}
 							totalItems={totalItems}
 							itemsPerPage={_itemsPerPage}
 							page={page}
@@ -708,6 +711,8 @@ export interface TableBaseProps<T> {
 	getRowClass?: (row: T) => string[];
 	/** If true, a pager will be used when displaying items. */
 	usePager?: boolean;
+	/** If true, the total number of items shown on the page will be indicated as being approximate. Useful for when you don't now the full size of your dataset. Only used if `usePager` is true. */
+	fuzzyPager?: boolean;
 	/** The number of items to be shown per page. Only used if `usePager` is true. Defaults to 50. */
 	itemsPerPage?: number;
 	/** Sets whether the pager is displayed at the top of the table, the bottom of the table or in both positions. Only used if `usePager` is true. Defaults to `top`. */

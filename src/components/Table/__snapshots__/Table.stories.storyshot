@@ -3503,6 +3503,383 @@ exports[`Storyshots Core/Table With Custom Columns 1`] = `
 </div>
 `;
 
+exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+  >
+    <div
+      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-gslxeA dljPk jLImRG"
+    >
+      <div
+        class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
+      >
+        <div
+          class="sc-gKclnd exdBHI sc-iCfMLu rflXv sc-hGPBjI dLlxyS"
+        >
+          <div
+            class="sc-fKVqWL hOcWtv sc-bBHxTw fYiSNr"
+          >
+            <strong>
+              1
+               - 
+              3
+            </strong>
+             
+            of
+             
+            <strong>
+              5
+              +
+            </strong>
+          </div>
+          <div
+            class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI dljPk"
+          >
+            <div
+              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-kLwhqv dljPk bzMIBI"
+            >
+              <button
+                class="StyledButton-sc-323bzc-0 GAqvF sc-bqiRlB sc-hBUSln edofBN dlhkLz sc-dJjYzT cGuTUx rendition-pager__btn--prev"
+                disabled=""
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-chevron-left "
+                  data-icon="chevron-left"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 320 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+              <button
+                class="StyledButton-sc-323bzc-0 gKeRwL sc-bqiRlB sc-hBUSln edofBN dlhkLz sc-dJjYzT cGuTUx rendition-pager__btn--next"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-chevron-right "
+                  data-icon="chevron-right"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 320 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-fmciRz gXrEcX"
+        >
+          <div
+            class="sc-eXlEPa kUkFif sc-kmQMED fTascr"
+          >
+            <div
+              data-display="table-head"
+            >
+              <div
+                data-display="table-row"
+              >
+                <div
+                  data-display="table-cell"
+                >
+                  <button
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    data-field="Name"
+                    type="button"
+                  >
+                    Name
+                     
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-sort "
+                      color=""
+                      data-icon="sort"
+                      data-prefix="fas"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 320 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  data-display="table-cell"
+                >
+                  <button
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    data-field="pokedex_number"
+                    type="button"
+                  >
+                    National Pokedex Number
+                     
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-sort "
+                      color=""
+                      data-icon="sort"
+                      data-prefix="fas"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 320 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  data-display="table-cell"
+                >
+                  <button
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    data-field="Category"
+                    type="button"
+                  >
+                    Category
+                     
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-sort "
+                      color=""
+                      data-icon="sort"
+                      data-prefix="fas"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 320 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  data-display="table-cell"
+                >
+                  <button
+                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    data-field="first_seen"
+                    type="button"
+                  >
+                    First Seen
+                     
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-sort "
+                      color=""
+                      data-icon="sort"
+                      data-prefix="fas"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 320 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              data-display="table-body"
+            >
+              <div
+                class=""
+                data-display="table-row"
+                data-highlight="false"
+              >
+                <a
+                  data-display="table-cell"
+                  data-key="1"
+                >
+                  Bulbasaur
+                </a>
+                <a
+                  data-display="table-cell"
+                  data-key="1"
+                >
+                  <code>
+                    1
+                  </code>
+                </a>
+                <a
+                  data-display="table-cell"
+                  data-key="1"
+                >
+                  Seed
+                </a>
+                <a
+                  data-display="table-cell"
+                  data-key="1"
+                />
+              </div>
+              <div
+                class=""
+                data-display="table-row"
+                data-highlight="false"
+              >
+                <a
+                  data-display="table-cell"
+                  data-key="2"
+                >
+                  Ivysaur
+                </a>
+                <a
+                  data-display="table-cell"
+                  data-key="2"
+                >
+                  <code>
+                    2
+                  </code>
+                </a>
+                <a
+                  data-display="table-cell"
+                  data-key="2"
+                >
+                  Seed
+                </a>
+                <a
+                  data-display="table-cell"
+                  data-key="2"
+                />
+              </div>
+              <div
+                class=""
+                data-display="table-row"
+                data-highlight="false"
+              >
+                <a
+                  data-display="table-cell"
+                  data-key="3"
+                >
+                  Venusaur
+                </a>
+                <a
+                  data-display="table-cell"
+                  data-key="3"
+                >
+                  <code>
+                    3
+                  </code>
+                </a>
+                <a
+                  data-display="table-cell"
+                  data-key="3"
+                >
+                  Seed
+                </a>
+                <a
+                  data-display="table-cell"
+                  data-key="3"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-gKclnd exdBHI sc-iCfMLu gALdNb sc-hGPBjI dLlxyS"
+        >
+          <div
+            class="sc-fKVqWL hOcWtv sc-bBHxTw fYiSNr"
+          >
+            <strong>
+              1
+               - 
+              3
+            </strong>
+             
+            of
+             
+            <strong>
+              5
+              +
+            </strong>
+          </div>
+          <div
+            class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI dljPk"
+          >
+            <div
+              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-kLwhqv dljPk bzMIBI"
+            >
+              <button
+                class="StyledButton-sc-323bzc-0 GAqvF sc-bqiRlB sc-hBUSln edofBN dlhkLz sc-dJjYzT cGuTUx rendition-pager__btn--prev"
+                disabled=""
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-chevron-left "
+                  data-icon="chevron-left"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 320 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+              <button
+                class="StyledButton-sc-323bzc-0 gKeRwL sc-bqiRlB sc-hBUSln edofBN dlhkLz sc-dJjYzT cGuTUx rendition-pager__btn--next"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-chevron-right "
+                  data-icon="chevron-right"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 320 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Core/Table With Highlighted Rows 1`] = `
 <div>
   <div
@@ -4029,9 +4406,11 @@ exports[`Storyshots Core/Table With Pager 1`] = `
               3
             </strong>
              
-            of 
+            of
+             
             <strong>
               11
+              
             </strong>
           </div>
           <div
@@ -4318,9 +4697,11 @@ exports[`Storyshots Core/Table With Pager 1`] = `
               3
             </strong>
              
-            of 
+            of
+             
             <strong>
               11
+              
             </strong>
           </div>
           <div
