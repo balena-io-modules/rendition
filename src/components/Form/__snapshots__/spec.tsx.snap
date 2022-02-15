@@ -1,5 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Form component description keyword should support markdown 1`] = `"<div id=\\"root_foo__description\\" class=\\"sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description\\"><div class=\\"sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh\\">Lorem ipsum *dolor* sit amet</div></div>"`;
+exports[`Form component description keyword should support markdown 1`] = `"<div id=\\"root_foo__description\\" class=\\"sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description\\"><div class=\\"sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh\\">Lorem ipsum *dolor* sit amet</div></div>"`;
 
-exports[`Form component ui:help keyword should support markdown 1`] = `"<div id=\\"root_foo\\" class=\\"sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH fDVHNs rendition-form-help\\"><div class=\\"sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh\\">Lorem ipsum *dolor* sit amet</div></div>"`;
+exports[`Form component ui:help keyword should support markdown 1`] = `"<div id=\\"root_foo\\" class=\\"sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp bSIxCL rendition-form-help\\"><div class=\\"sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh\\">Lorem ipsum *dolor* sit amet</div></div>"`;

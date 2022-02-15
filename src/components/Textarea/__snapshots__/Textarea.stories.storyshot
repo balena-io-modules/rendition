@@ -6,7 +6,7 @@ exports[`Storyshots Core/Textarea Auto Rows 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <textarea
-      class="StyledTextArea-sc-17i3mwp-0 cUKiYJ sc-lbhJGD fBtFQY sc-iNGGcK iIzCpx"
+      class="StyledTextArea-sc-17i3mwp-0 cUKiYJ sc-hiwPVj iuiXAh sc-ehCJOs kQJQfW"
     />
   </div>
 </div>
@@ -18,7 +18,7 @@ exports[`Storyshots Core/Textarea Default 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <textarea
-      class="StyledTextArea-sc-17i3mwp-0 cUKiYJ sc-lbhJGD fBtFQY sc-iNGGcK iIzCpx"
+      class="StyledTextArea-sc-17i3mwp-0 cUKiYJ sc-hiwPVj iuiXAh sc-ehCJOs kQJQfW"
     />
   </div>
 </div>
@@ -30,7 +30,7 @@ exports[`Storyshots Core/Textarea Disabled 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <textarea
-      class="StyledTextArea-sc-17i3mwp-0 kLJdsH sc-lbhJGD bBKjjH sc-iNGGcK iIzCpx"
+      class="StyledTextArea-sc-17i3mwp-0 kLJdsH sc-hiwPVj jNwraa sc-ehCJOs kQJQfW"
       disabled=""
     />
   </div>
@@ -43,7 +43,7 @@ exports[`Storyshots Core/Textarea Min Max Rows 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <textarea
-      class="StyledTextArea-sc-17i3mwp-0 cUKiYJ sc-lbhJGD fBtFQY sc-iNGGcK iIzCpx"
+      class="StyledTextArea-sc-17i3mwp-0 cUKiYJ sc-hiwPVj iuiXAh sc-ehCJOs kQJQfW"
       rows="4"
     />
   </div>
@@ -56,7 +56,7 @@ exports[`Storyshots Core/Textarea Monospace 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <textarea
-      class="StyledTextArea-sc-17i3mwp-0 cUKiYJ sc-lbhJGD dnDOa-d sc-iNGGcK iIzCpx"
+      class="StyledTextArea-sc-17i3mwp-0 cUKiYJ sc-hiwPVj efQfYE sc-ehCJOs kQJQfW"
       placeholder="Type something..."
     />
   </div>
@@ -69,7 +69,7 @@ exports[`Storyshots Core/Textarea Read Only 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <textarea
-      class="StyledTextArea-sc-17i3mwp-0 cUKiYJ sc-lbhJGD fBtFQY sc-iNGGcK iIzCpx"
+      class="StyledTextArea-sc-17i3mwp-0 cUKiYJ sc-hiwPVj iuiXAh sc-ehCJOs kQJQfW"
       readonly=""
     />
   </div>
@@ -82,7 +82,7 @@ exports[`Storyshots Core/Textarea With Placeholder 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <textarea
-      class="StyledTextArea-sc-17i3mwp-0 cUKiYJ sc-lbhJGD fBtFQY sc-iNGGcK iIzCpx"
+      class="StyledTextArea-sc-17i3mwp-0 cUKiYJ sc-hiwPVj iuiXAh sc-ehCJOs kQJQfW"
       placeholder="Type something..."
     />
   </div>

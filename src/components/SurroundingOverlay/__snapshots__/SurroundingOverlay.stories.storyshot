@@ -10,7 +10,7 @@ exports[`Storyshots Core/SurroundingOverlay Default 1`] = `
     >
       <input
         autocomplete="off"
-        class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo jzuYuc"
+        class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK hLHCYR"
         type="text"
         value=""
       />
@@ -20,7 +20,7 @@ exports[`Storyshots Core/SurroundingOverlay Default 1`] = `
     >
       <input
         autocomplete="off"
-        class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo jzuYuc"
+        class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK hLHCYR"
         type="text"
         value=""
       />
@@ -30,7 +30,7 @@ exports[`Storyshots Core/SurroundingOverlay Default 1`] = `
     >
       <input
         autocomplete="off"
-        class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo kimdWC"
+        class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK dbmSBX"
         type="datetime-local"
         value=""
       />
@@ -49,7 +49,7 @@ exports[`Storyshots Core/SurroundingOverlay With Different Color 1`] = `
     >
       <input
         autocomplete="off"
-        class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo jzuYuc"
+        class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK hLHCYR"
         type="text"
         value=""
       />
@@ -59,7 +59,7 @@ exports[`Storyshots Core/SurroundingOverlay With Different Color 1`] = `
     >
       <input
         autocomplete="off"
-        class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo jzuYuc"
+        class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK hLHCYR"
         type="text"
         value=""
       />
@@ -69,7 +69,7 @@ exports[`Storyshots Core/SurroundingOverlay With Different Color 1`] = `
     >
       <input
         autocomplete="off"
-        class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo kimdWC"
+        class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK dbmSBX"
         type="datetime-local"
         value=""
       />

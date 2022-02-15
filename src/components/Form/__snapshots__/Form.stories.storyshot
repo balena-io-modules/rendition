@@ -12,7 +12,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
         class="sc-gKclnd iQIogj sc-iCfMLu bCKvxK"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-xiLah hLmaQK"
+          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-ilfuhL jwCiLM"
         >
           <form
             class="rjsf"
@@ -22,7 +22,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
             >
               <section>
                 <legend
-                  class="sc-XxNYO ikUSTd"
+                  class="sc-brSvTw fWsZCP"
                   id="root__title"
                 >
                   Pokèmon
@@ -37,7 +37,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Name"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Name"
                       >
                         Name
@@ -48,7 +48,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                         
                         <input
                           autocomplete="off"
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Name"
                           label="Name"
                           list="dummy-datalist"
@@ -69,7 +69,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_Height"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Height"
                       >
                         Height
@@ -79,7 +79,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Height"
                           label="Height"
                           placeholder=""
@@ -96,7 +96,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_Weight"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Weight"
                       >
                         Weight
@@ -106,7 +106,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Weight"
                           label="Weight"
                           placeholder=""
@@ -123,7 +123,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Description"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Description"
                       >
                         Description
@@ -133,7 +133,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Description"
                           label="Description"
                           placeholder=""
@@ -150,7 +150,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Category"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Category"
                       >
                         Category
@@ -160,7 +160,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Category"
                           label="Category"
                           placeholder=""
@@ -177,7 +177,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Abilities"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Abilities"
                       >
                         Abilities
@@ -187,7 +187,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Abilities"
                           label="Abilities"
                           placeholder=""
@@ -204,7 +204,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_pokedex_number"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_pokedex_number"
                       >
                         National Pokèdex Number
@@ -214,7 +214,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_pokedex_number"
                           label="National Pokèdex Number"
                           placeholder=""
@@ -252,13 +252,13 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_first_seen"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_first_seen"
                       >
                         First seen
                       </label>
                       <div
-                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                         id="root_first_seen__description"
                       >
                         <div
@@ -278,7 +278,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_first_seen"
                           label="First seen"
                           placeholder=""
@@ -295,13 +295,13 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_poke_password"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_poke_password"
                       >
                         Poke Password
                       </label>
                       <div
-                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                         id="root_poke_password__description"
                       >
                         <div
@@ -321,7 +321,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_poke_password"
                           label="Poke Password"
                           placeholder=""
@@ -338,13 +338,13 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_environment"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_environment"
                       >
                         environment
                       </label>
                       <div
-                        class="sc-eJwWfJ ixbnwP sc-nVkyK eFJMsw"
+                        class="sc-iNGGcK iRLpCD sc-jeraig hDpynP"
                       >
                         <button
                           aria-label="Open Drop"
@@ -363,7 +363,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="StyledTextInput-sc-1x30a0s-0 fmjpSL Select__SelectTextInput-sc-17idtfo-0 ecWLed sc-jeraig gzMQIZ"
+                                  class="StyledTextInput-sc-1x30a0s-0 fmjpSL Select__SelectTextInput-sc-17idtfo-0 ecWLed sc-lbhJGD conRIU"
                                   id="root_environment__input"
                                   readonly=""
                                   tabindex="-1"
@@ -402,13 +402,13 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                     >
                       <div>
                         <legend
-                          class="sc-XxNYO ikUSTd"
+                          class="sc-brSvTw fWsZCP"
                           id="root_tags__title"
                         >
                           Tags
                         </legend>
                         <div
-                          class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                          class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                           id="root_tags__description"
                         >
                           <div
@@ -494,7 +494,7 @@ exports[`Storyshots Core/Form Default 1`] = `
         class="sc-gKclnd iQIogj sc-iCfMLu bCKvxK"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-xiLah hLmaQK"
+          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-ilfuhL jwCiLM"
         >
           <form
             class="rjsf"
@@ -504,7 +504,7 @@ exports[`Storyshots Core/Form Default 1`] = `
             >
               <section>
                 <legend
-                  class="sc-XxNYO ikUSTd"
+                  class="sc-brSvTw fWsZCP"
                   id="root__title"
                 >
                   Pokèmon
@@ -519,7 +519,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Name"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Name"
                       >
                         Name
@@ -530,7 +530,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                         
                         <input
                           autocomplete="off"
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Name"
                           label="Name"
                           list="dummy-datalist"
@@ -551,7 +551,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_Height"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Height"
                       >
                         Height
@@ -561,7 +561,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Height"
                           label="Height"
                           placeholder=""
@@ -578,7 +578,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_Weight"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Weight"
                       >
                         Weight
@@ -588,7 +588,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Weight"
                           label="Weight"
                           placeholder=""
@@ -605,7 +605,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Description"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Description"
                       >
                         Description
@@ -615,7 +615,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Description"
                           label="Description"
                           placeholder=""
@@ -632,7 +632,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Category"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Category"
                       >
                         Category
@@ -642,7 +642,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Category"
                           label="Category"
                           placeholder=""
@@ -659,7 +659,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Abilities"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Abilities"
                       >
                         Abilities
@@ -669,7 +669,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Abilities"
                           label="Abilities"
                           placeholder=""
@@ -686,7 +686,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_pokedex_number"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_pokedex_number"
                       >
                         National Pokèdex Number
@@ -696,7 +696,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_pokedex_number"
                           label="National Pokèdex Number"
                           placeholder=""
@@ -734,13 +734,13 @@ exports[`Storyshots Core/Form Default 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_first_seen"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_first_seen"
                       >
                         First seen
                       </label>
                       <div
-                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                         id="root_first_seen__description"
                       >
                         <div
@@ -760,7 +760,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_first_seen"
                           label="First seen"
                           placeholder=""
@@ -777,13 +777,13 @@ exports[`Storyshots Core/Form Default 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_poke_password"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_poke_password"
                       >
                         Poke Password
                       </label>
                       <div
-                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                         id="root_poke_password__description"
                       >
                         <div
@@ -803,7 +803,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_poke_password"
                           label="Poke Password"
                           placeholder=""
@@ -820,13 +820,13 @@ exports[`Storyshots Core/Form Default 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_environment"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_environment"
                       >
                         environment
                       </label>
                       <div
-                        class="sc-eJwWfJ ixbnwP sc-nVkyK eFJMsw"
+                        class="sc-iNGGcK iRLpCD sc-jeraig hDpynP"
                       >
                         <button
                           aria-label="Open Drop"
@@ -845,7 +845,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="StyledTextInput-sc-1x30a0s-0 fmjpSL Select__SelectTextInput-sc-17idtfo-0 ecWLed sc-jeraig gzMQIZ"
+                                  class="StyledTextInput-sc-1x30a0s-0 fmjpSL Select__SelectTextInput-sc-17idtfo-0 ecWLed sc-lbhJGD conRIU"
                                   id="root_environment__input"
                                   readonly=""
                                   tabindex="-1"
@@ -884,13 +884,13 @@ exports[`Storyshots Core/Form Default 1`] = `
                     >
                       <div>
                         <legend
-                          class="sc-XxNYO ikUSTd"
+                          class="sc-brSvTw fWsZCP"
                           id="root_tags__title"
                         >
                           Tags
                         </legend>
                         <div
-                          class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                          class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                           id="root_tags__description"
                         >
                           <div
@@ -976,7 +976,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
         class="sc-gKclnd iQIogj sc-iCfMLu bCKvxK"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-xiLah hLmaQK"
+          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-ilfuhL jwCiLM"
         >
           <form
             class="rjsf"
@@ -986,7 +986,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
             >
               <section>
                 <legend
-                  class="sc-XxNYO ikUSTd"
+                  class="sc-brSvTw fWsZCP"
                   id="root__title"
                 >
                   Pokèmon
@@ -1001,7 +1001,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Name"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Name"
                       >
                         Name
@@ -1012,7 +1012,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                         
                         <input
                           autocomplete="off"
-                          class="StyledTextInput-sc-1x30a0s-0 fkjvEE sc-jgrJph jkKuZR sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 fkjvEE sc-eJwWfJ jOpGaj sc-nVkyK eFJMsw"
                           disabled=""
                           id="root_Name"
                           label="Name"
@@ -1034,7 +1034,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_Height"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Height"
                       >
                         Height
@@ -1044,7 +1044,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 fkjvEE sc-jgrJph jkKuZR sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 fkjvEE sc-eJwWfJ jOpGaj sc-nVkyK eFJMsw"
                           disabled=""
                           id="root_Height"
                           label="Height"
@@ -1062,7 +1062,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_Weight"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Weight"
                       >
                         Weight
@@ -1072,7 +1072,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 fkjvEE sc-jgrJph jkKuZR sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 fkjvEE sc-eJwWfJ jOpGaj sc-nVkyK eFJMsw"
                           disabled=""
                           id="root_Weight"
                           label="Weight"
@@ -1090,7 +1090,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Description"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Description"
                       >
                         Description
@@ -1100,7 +1100,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 fkjvEE sc-jgrJph jkKuZR sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 fkjvEE sc-eJwWfJ jOpGaj sc-nVkyK eFJMsw"
                           disabled=""
                           id="root_Description"
                           label="Description"
@@ -1118,7 +1118,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Category"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Category"
                       >
                         Category
@@ -1128,7 +1128,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 fkjvEE sc-jgrJph jkKuZR sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 fkjvEE sc-eJwWfJ jOpGaj sc-nVkyK eFJMsw"
                           disabled=""
                           id="root_Category"
                           label="Category"
@@ -1146,7 +1146,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Abilities"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Abilities"
                       >
                         Abilities
@@ -1156,7 +1156,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 fkjvEE sc-jgrJph jkKuZR sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 fkjvEE sc-eJwWfJ jOpGaj sc-nVkyK eFJMsw"
                           disabled=""
                           id="root_Abilities"
                           label="Abilities"
@@ -1174,7 +1174,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_pokedex_number"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_pokedex_number"
                       >
                         National Pokèdex Number
@@ -1184,7 +1184,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 fkjvEE sc-jgrJph jkKuZR sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 fkjvEE sc-eJwWfJ jOpGaj sc-nVkyK eFJMsw"
                           disabled=""
                           id="root_pokedex_number"
                           label="National Pokèdex Number"
@@ -1224,13 +1224,13 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_first_seen"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_first_seen"
                       >
                         First seen
                       </label>
                       <div
-                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                         id="root_first_seen__description"
                       >
                         <div
@@ -1250,7 +1250,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 fkjvEE sc-jgrJph jkKuZR sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 fkjvEE sc-eJwWfJ jOpGaj sc-nVkyK eFJMsw"
                           disabled=""
                           id="root_first_seen"
                           label="First seen"
@@ -1268,13 +1268,13 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_poke_password"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_poke_password"
                       >
                         Poke Password
                       </label>
                       <div
-                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                         id="root_poke_password__description"
                       >
                         <div
@@ -1294,7 +1294,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 fkjvEE sc-jgrJph jkKuZR sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 fkjvEE sc-eJwWfJ jOpGaj sc-nVkyK eFJMsw"
                           disabled=""
                           id="root_poke_password"
                           label="Poke Password"
@@ -1312,13 +1312,13 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_environment"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_environment"
                       >
                         environment
                       </label>
                       <div
-                        class="sc-eJwWfJ ixbnwP sc-nVkyK eFJMsw"
+                        class="sc-iNGGcK iRLpCD sc-jeraig hDpynP"
                       >
                         <button
                           aria-label="Open Drop"
@@ -1338,7 +1338,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="StyledTextInput-sc-1x30a0s-0 fmjpSL Select__SelectTextInput-sc-17idtfo-0 cWhQGt sc-jeraig gzMQIZ"
+                                  class="StyledTextInput-sc-1x30a0s-0 fmjpSL Select__SelectTextInput-sc-17idtfo-0 cWhQGt sc-lbhJGD conRIU"
                                   id="root_environment__input"
                                   readonly=""
                                   tabindex="-1"
@@ -1377,13 +1377,13 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                     >
                       <div>
                         <legend
-                          class="sc-XxNYO ikUSTd"
+                          class="sc-brSvTw fWsZCP"
                           id="root_tags__title"
                         >
                           Tags
                         </legend>
                         <div
-                          class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                          class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                           id="root_tags__description"
                         >
                           <div
@@ -1469,7 +1469,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
         class="sc-gKclnd iQIogj sc-iCfMLu bCKvxK"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-xiLah hLmaQK"
+          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-ilfuhL jwCiLM"
         >
           <form
             class="rjsf"
@@ -1479,7 +1479,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
             >
               <section>
                 <legend
-                  class="sc-XxNYO ikUSTd"
+                  class="sc-brSvTw fWsZCP"
                   id="root__title"
                 >
                   Pokèmon
@@ -1494,7 +1494,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Name"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Name"
                       >
                         Name
@@ -1505,7 +1505,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                         
                         <input
                           autocomplete="off"
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Name"
                           label="Name"
                           list="dummy-datalist"
@@ -1526,7 +1526,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_Height"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Height"
                       >
                         Height
@@ -1536,7 +1536,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Height"
                           label="Height"
                           placeholder=""
@@ -1553,7 +1553,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_Weight"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Weight"
                       >
                         Weight
@@ -1563,7 +1563,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Weight"
                           label="Weight"
                           placeholder=""
@@ -1580,7 +1580,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Description"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Description"
                       >
                         Description
@@ -1590,7 +1590,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Description"
                           label="Description"
                           placeholder=""
@@ -1607,7 +1607,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Category"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Category"
                       >
                         Category
@@ -1617,7 +1617,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Category"
                           label="Category"
                           placeholder=""
@@ -1634,7 +1634,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Abilities"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Abilities"
                       >
                         Abilities
@@ -1644,7 +1644,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Abilities"
                           label="Abilities"
                           placeholder=""
@@ -1661,7 +1661,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_pokedex_number"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_pokedex_number"
                       >
                         National Pokèdex Number
@@ -1671,7 +1671,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_pokedex_number"
                           label="National Pokèdex Number"
                           placeholder=""
@@ -1709,13 +1709,13 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_first_seen"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_first_seen"
                       >
                         First seen
                       </label>
                       <div
-                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                         id="root_first_seen__description"
                       >
                         <div
@@ -1735,7 +1735,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_first_seen"
                           label="First seen"
                           placeholder=""
@@ -1752,13 +1752,13 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_poke_password"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_poke_password"
                       >
                         Poke Password
                       </label>
                       <div
-                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                         id="root_poke_password__description"
                       >
                         <div
@@ -1778,7 +1778,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_poke_password"
                           label="Poke Password"
                           placeholder=""
@@ -1795,13 +1795,13 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_environment"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_environment"
                       >
                         environment
                       </label>
                       <div
-                        class="sc-eJwWfJ ixbnwP sc-nVkyK eFJMsw"
+                        class="sc-iNGGcK iRLpCD sc-jeraig hDpynP"
                       >
                         <button
                           aria-label="Open Drop"
@@ -1820,7 +1820,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="StyledTextInput-sc-1x30a0s-0 fmjpSL Select__SelectTextInput-sc-17idtfo-0 ecWLed sc-jeraig gzMQIZ"
+                                  class="StyledTextInput-sc-1x30a0s-0 fmjpSL Select__SelectTextInput-sc-17idtfo-0 ecWLed sc-lbhJGD conRIU"
                                   id="root_environment__input"
                                   readonly=""
                                   tabindex="-1"
@@ -1859,13 +1859,13 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                     >
                       <div>
                         <legend
-                          class="sc-XxNYO ikUSTd"
+                          class="sc-brSvTw fWsZCP"
                           id="root_tags__title"
                         >
                           Tags
                         </legend>
                         <div
-                          class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                          class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                           id="root_tags__description"
                         >
                           <div
@@ -1946,7 +1946,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
         class="sc-gKclnd iQIogj sc-iCfMLu bCKvxK"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-xiLah hLmaQK"
+          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-ilfuhL jwCiLM"
         >
           <form
             class="rjsf"
@@ -1956,7 +1956,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
             >
               <section>
                 <legend
-                  class="sc-XxNYO ikUSTd"
+                  class="sc-brSvTw fWsZCP"
                   id="root__title"
                 >
                   Pokèmon
@@ -1971,7 +1971,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Name"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Name"
                       >
                         Name
@@ -1982,7 +1982,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                         
                         <input
                           autocomplete="off"
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Name"
                           label="Name"
                           list="dummy-datalist"
@@ -2003,7 +2003,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_Height"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Height"
                       >
                         Height
@@ -2013,7 +2013,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Height"
                           label="Height"
                           placeholder=""
@@ -2030,7 +2030,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_Weight"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Weight"
                       >
                         Weight
@@ -2040,7 +2040,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Weight"
                           label="Weight"
                           placeholder=""
@@ -2057,7 +2057,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Description"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Description"
                       >
                         Description
@@ -2067,7 +2067,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Description"
                           label="Description"
                           placeholder=""
@@ -2084,7 +2084,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Category"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Category"
                       >
                         Category
@@ -2094,7 +2094,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Category"
                           label="Category"
                           placeholder=""
@@ -2111,7 +2111,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Abilities"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Abilities"
                       >
                         Abilities
@@ -2121,7 +2121,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Abilities"
                           label="Abilities"
                           placeholder=""
@@ -2138,7 +2138,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_pokedex_number"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_pokedex_number"
                       >
                         National Pokèdex Number
@@ -2148,7 +2148,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_pokedex_number"
                           label="National Pokèdex Number"
                           placeholder=""
@@ -2186,13 +2186,13 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_first_seen"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_first_seen"
                       >
                         First seen
                       </label>
                       <div
-                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                         id="root_first_seen__description"
                       >
                         <div
@@ -2212,7 +2212,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_first_seen"
                           label="First seen"
                           placeholder=""
@@ -2229,13 +2229,13 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_poke_password"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_poke_password"
                       >
                         Poke Password
                       </label>
                       <div
-                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                         id="root_poke_password__description"
                       >
                         <div
@@ -2255,7 +2255,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_poke_password"
                           label="Poke Password"
                           placeholder=""
@@ -2272,13 +2272,13 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_environment"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_environment"
                       >
                         environment
                       </label>
                       <div
-                        class="sc-eJwWfJ ixbnwP sc-nVkyK eFJMsw"
+                        class="sc-iNGGcK iRLpCD sc-jeraig hDpynP"
                       >
                         <button
                           aria-label="Open Drop"
@@ -2297,7 +2297,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="StyledTextInput-sc-1x30a0s-0 fmjpSL Select__SelectTextInput-sc-17idtfo-0 ecWLed sc-jeraig gzMQIZ"
+                                  class="StyledTextInput-sc-1x30a0s-0 fmjpSL Select__SelectTextInput-sc-17idtfo-0 ecWLed sc-lbhJGD conRIU"
                                   id="root_environment__input"
                                   readonly=""
                                   tabindex="-1"
@@ -2336,13 +2336,13 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                     >
                       <div>
                         <legend
-                          class="sc-XxNYO ikUSTd"
+                          class="sc-brSvTw fWsZCP"
                           id="root_tags__title"
                         >
                           Tags
                         </legend>
                         <div
-                          class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                          class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                           id="root_tags__description"
                         >
                           <div
@@ -2434,7 +2434,7 @@ exports[`Storyshots Core/Form With Dependants 1`] = `
         class="sc-gKclnd iQIogj sc-iCfMLu bCKvxK"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-xiLah hLmaQK"
+          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-ilfuhL jwCiLM"
         >
           <form
             class="rjsf"
@@ -2454,7 +2454,7 @@ exports[`Storyshots Core/Form With Dependants 1`] = `
                     >
                       <div>
                         <legend
-                          class="sc-XxNYO ikUSTd"
+                          class="sc-brSvTw fWsZCP"
                           id="root_application_config_variable__title"
                         >
                           Application configuration variables
@@ -2498,7 +2498,7 @@ exports[`Storyshots Core/Form With Dependants 1`] = `
                     >
                       <div>
                         <legend
-                          class="sc-XxNYO ikUSTd"
+                          class="sc-brSvTw fWsZCP"
                           id="root_application_environment_variable__title"
                         >
                           Application environment variables
@@ -2579,7 +2579,7 @@ exports[`Storyshots Core/Form With Extra Widgets 1`] = `
             id="user-content-extra-widgets"
           >
             <a
-              class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH heading-anchor-link"
+              class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb heading-anchor-link"
               color="primary.main"
               href="#extra-widgets"
             >
@@ -3270,7 +3270,7 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
         class="sc-gKclnd iQIogj sc-iCfMLu bCKvxK"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-xiLah hLmaQK"
+          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-ilfuhL jwCiLM"
         >
           <form
             class="rjsf"
@@ -3289,7 +3289,7 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Mermaid"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Mermaid"
                       >
                         Mermaid
@@ -3342,7 +3342,7 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                           role="tabpanel"
                         >
                           <textarea
-                            class="StyledTextArea-sc-17i3mwp-0 cUKiYJ sc-lbhJGD fBtFQY sc-iNGGcK iIzCpx"
+                            class="StyledTextArea-sc-17i3mwp-0 cUKiYJ sc-hiwPVj iuiXAh sc-ehCJOs kQJQfW"
                             label="Mermaid"
                             placeholder=""
                             rows="5"
@@ -3350,7 +3350,7 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                         </div>
                       </div>
                       <a
-                        class="sc-fbyfCU hJTRtN sc-GEbAx dSoGbQ"
+                        class="sc-eLwHnm ebYFPN sc-bTfYFJ dAHmI"
                         color="primary.main"
                         href="https://mermaidjs.github.io/"
                         rel="noopener"
@@ -3367,7 +3367,7 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Markdown"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Markdown"
                       >
                         Markdown
@@ -3655,7 +3655,7 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Captcha"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Captcha"
                       >
                         Captcha
@@ -3705,7 +3705,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
         class="sc-gKclnd iQIogj sc-iCfMLu bCKvxK"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-xiLah hLmaQK"
+          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-ilfuhL jwCiLM"
         >
           <form
             class="rjsf"
@@ -3715,7 +3715,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
             >
               <section>
                 <legend
-                  class="sc-XxNYO ikUSTd"
+                  class="sc-brSvTw fWsZCP"
                   id="root__title"
                 >
                   Pokèmon
@@ -3730,7 +3730,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Name"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Name"
                       >
                         Name
@@ -3741,7 +3741,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                         
                         <input
                           autocomplete="off"
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Name"
                           label="Name"
                           list="dummy-datalist"
@@ -3754,7 +3754,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                         id="dummy-datalist"
                       />
                       <div
-                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH fDVHNs rendition-form-help"
+                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp bSIxCL rendition-form-help"
                         id="root_Name"
                       >
                         <div
@@ -3803,13 +3803,13 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Description"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Description"
                       >
                         Description
                       </label>
                       <textarea
-                        class="StyledTextArea-sc-17i3mwp-0 cUKiYJ sc-lbhJGD fBtFQY sc-iNGGcK iIzCpx form-control"
+                        class="StyledTextArea-sc-17i3mwp-0 cUKiYJ sc-hiwPVj iuiXAh sc-ehCJOs kQJQfW form-control"
                         id="root_Description"
                         placeholder=""
                         rows="5"
@@ -3823,7 +3823,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Abilities"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Abilities"
                       >
                         Abilities
@@ -3833,7 +3833,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Abilities"
                           label="Abilities"
                           placeholder=""
@@ -3850,7 +3850,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_Height"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Height"
                       >
                         Height
@@ -3860,7 +3860,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph eVNsmB sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ edtYET sc-nVkyK eFJMsw"
                           id="root_Height"
                           label="Height"
                           placeholder=""
@@ -3877,7 +3877,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_Weight"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Weight"
                       >
                         Weight
@@ -3887,7 +3887,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Weight"
                           label="Weight"
                           placeholder=""
@@ -3904,7 +3904,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Category"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Category"
                       >
                         Category
@@ -3914,7 +3914,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Category"
                           label="Category"
                           placeholder=""
@@ -3931,7 +3931,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_pokedex_number"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_pokedex_number"
                       >
                         National Pokèdex Number
@@ -3941,7 +3941,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_pokedex_number"
                           label="National Pokèdex Number"
                           placeholder=""
@@ -3958,13 +3958,13 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_first_seen"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_first_seen"
                       >
                         First seen
                       </label>
                       <div
-                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                         id="root_first_seen__description"
                       >
                         <div
@@ -3984,7 +3984,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_first_seen"
                           label="First seen"
                           placeholder=""
@@ -4001,13 +4001,13 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_poke_password"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_poke_password"
                       >
                         Poke Password
                       </label>
                       <div
-                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                         id="root_poke_password__description"
                       >
                         <div
@@ -4030,7 +4030,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                         >
                           
                           <input
-                            class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo ja-dfDn"
+                            class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK fItpzC"
                             id="root_poke_password"
                             label="Poke Password"
                             placeholder=""
@@ -4039,7 +4039,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                           />
                         </div>
                         <button
-                          class="StyledButton-sc-323bzc-0 hclgal sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT vUFAN sc-eGPXGI dLqvxJ"
+                          class="StyledButton-sc-323bzc-0 hclgal sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT vUFAN sc-dtDOqo hAQBhI"
                           type="button"
                         >
                           <svg
@@ -4068,13 +4068,13 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_environment"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_environment"
                       >
                         environment
                       </label>
                       <div
-                        class="sc-eJwWfJ ixbnwP sc-nVkyK eFJMsw"
+                        class="sc-iNGGcK iRLpCD sc-jeraig hDpynP"
                       >
                         <button
                           aria-label="Open Drop"
@@ -4093,7 +4093,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="StyledTextInput-sc-1x30a0s-0 fmjpSL Select__SelectTextInput-sc-17idtfo-0 ecWLed sc-jeraig dGnyPe"
+                                  class="StyledTextInput-sc-1x30a0s-0 fmjpSL Select__SelectTextInput-sc-17idtfo-0 ecWLed sc-lbhJGD eDQECv"
                                   id="root_environment__input"
                                   readonly=""
                                   tabindex="-1"
@@ -4132,13 +4132,13 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                     >
                       <div>
                         <legend
-                          class="sc-XxNYO ikUSTd"
+                          class="sc-brSvTw fWsZCP"
                           id="root_tags__title"
                         >
                           Tags
                         </legend>
                         <div
-                          class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                          class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                           id="root_tags__description"
                         >
                           <div
@@ -4224,7 +4224,7 @@ exports[`Storyshots Core/Form With Pattern Properties 1`] = `
         class="sc-gKclnd iQIogj sc-iCfMLu bCKvxK"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-xiLah hLmaQK"
+          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-ilfuhL jwCiLM"
         >
           <form
             class="rjsf"
@@ -4244,7 +4244,7 @@ exports[`Storyshots Core/Form With Pattern Properties 1`] = `
                     >
                       <section>
                         <legend
-                          class="sc-XxNYO ikUSTd"
+                          class="sc-brSvTw fWsZCP"
                           id="root_dynamicObject__title"
                         >
                           Rules
@@ -4274,7 +4274,7 @@ exports[`Storyshots Core/Form With Pattern Properties 1`] = `
                                     >
                                       <input
                                         autocomplete="off"
-                                        class="StyledTextInput-sc-1x30a0s-0 fkjvEE sc-jgrJph jkKuZR sc-gSQFLo kimdWC rendition-form-pattern-properties__key-field"
+                                        class="StyledTextInput-sc-1x30a0s-0 fkjvEE sc-eJwWfJ jOpGaj sc-nVkyK dbmSBX rendition-form-pattern-properties__key-field"
                                         disabled=""
                                         pattern="^[0-9]+$"
                                         placeholder="Key"
@@ -4288,7 +4288,7 @@ exports[`Storyshots Core/Form With Pattern Properties 1`] = `
                                     >
                                       <input
                                         autocomplete="off"
-                                        class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo kimdWC rendition-form-pattern-properties__value-field"
+                                        class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK dbmSBX rendition-form-pattern-properties__value-field"
                                         id="foo"
                                         placeholder="Rule"
                                         value=""
@@ -4345,7 +4345,7 @@ exports[`Storyshots Core/Form With Titles 1`] = `
         class="sc-gKclnd iQIogj sc-iCfMLu bCKvxK"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-xiLah hLmaQK"
+          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-ilfuhL jwCiLM"
         >
           <form
             class="rjsf"
@@ -4355,7 +4355,7 @@ exports[`Storyshots Core/Form With Titles 1`] = `
             >
               <section>
                 <legend
-                  class="sc-XxNYO ikUSTd"
+                  class="sc-brSvTw fWsZCP"
                   id="root__title"
                 >
                   Networking
@@ -4371,7 +4371,7 @@ exports[`Storyshots Core/Form With Titles 1`] = `
                     >
                       <section>
                         <legend
-                          class="sc-XxNYO ikUSTd"
+                          class="sc-brSvTw fWsZCP"
                           id="root_vpn__title"
                         >
                           Virtual Private Network
@@ -4386,7 +4386,7 @@ exports[`Storyshots Core/Form With Titles 1`] = `
                               class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_vpn_endpoint"
                             >
                               <label
-                                class="sc-uojGG dOYcCp control-label"
+                                class="sc-evcjhq jklYhG control-label"
                                 for="root_vpn_endpoint"
                               >
                                 Endpoint
@@ -4396,7 +4396,7 @@ exports[`Storyshots Core/Form With Titles 1`] = `
                               >
                                 
                                 <input
-                                  class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                                  class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                                   id="root_vpn_endpoint"
                                   label="Endpoint"
                                   placeholder=""
@@ -4413,7 +4413,7 @@ exports[`Storyshots Core/Form With Titles 1`] = `
                               class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_vpn_certificate"
                             >
                               <label
-                                class="sc-uojGG dOYcCp control-label"
+                                class="sc-evcjhq jklYhG control-label"
                                 for="root_vpn_certificate"
                               >
                                 Certificate
@@ -4423,7 +4423,7 @@ exports[`Storyshots Core/Form With Titles 1`] = `
                               >
                                 
                                 <input
-                                  class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                                  class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                                   id="root_vpn_certificate"
                                   label="Certificate"
                                   placeholder=""
@@ -4445,7 +4445,7 @@ exports[`Storyshots Core/Form With Titles 1`] = `
                     >
                       <section>
                         <legend
-                          class="sc-XxNYO ikUSTd"
+                          class="sc-brSvTw fWsZCP"
                           id="root_wifiNetwork__title"
                         >
                           WiFi Network
@@ -4470,7 +4470,7 @@ exports[`Storyshots Core/Form With Titles 1`] = `
                                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_wifiNetwork_wifi_ssid"
                                     >
                                       <label
-                                        class="sc-uojGG dOYcCp control-label"
+                                        class="sc-evcjhq jklYhG control-label"
                                         for="root_wifiNetwork_wifi_ssid"
                                       >
                                         Network SSID
@@ -4480,7 +4480,7 @@ exports[`Storyshots Core/Form With Titles 1`] = `
                                       >
                                         
                                         <input
-                                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                                           id="root_wifiNetwork_wifi_ssid"
                                           label="Network SSID"
                                           placeholder=""
@@ -4511,7 +4511,7 @@ exports[`Storyshots Core/Form With Titles 1`] = `
                                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_wifiNetwork_wifiSecurity_psk"
                                     >
                                       <label
-                                        class="sc-uojGG dOYcCp control-label"
+                                        class="sc-evcjhq jklYhG control-label"
                                         for="root_wifiNetwork_wifiSecurity_psk"
                                       >
                                         Network Passphrase
@@ -4521,7 +4521,7 @@ exports[`Storyshots Core/Form With Titles 1`] = `
                                       >
                                         
                                         <input
-                                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                                           id="root_wifiNetwork_wifiSecurity_psk"
                                           label="Network Passphrase"
                                           placeholder=""
@@ -4585,7 +4585,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
         class="sc-gKclnd iQIogj sc-iCfMLu bCKvxK"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-xiLah hLmaQK"
+          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-ilfuhL jwCiLM"
         >
           <form
             class="rjsf"
@@ -4595,7 +4595,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
             >
               <section>
                 <legend
-                  class="sc-XxNYO ikUSTd"
+                  class="sc-brSvTw fWsZCP"
                   id="root__title"
                 >
                   Pokèmon
@@ -4610,7 +4610,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Name"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Name"
                       >
                         Name
@@ -4621,7 +4621,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                         
                         <input
                           autocomplete="off"
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Name"
                           label="Name"
                           list="dummy-datalist"
@@ -4663,13 +4663,13 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Description"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Description"
                       >
                         Description
                       </label>
                       <textarea
-                        class="StyledTextArea-sc-17i3mwp-0 cUKiYJ sc-lbhJGD fBtFQY sc-iNGGcK iIzCpx form-control"
+                        class="StyledTextArea-sc-17i3mwp-0 cUKiYJ sc-hiwPVj iuiXAh sc-ehCJOs kQJQfW form-control"
                         id="root_Description"
                         placeholder=""
                         rows="5"
@@ -4683,7 +4683,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Abilities"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Abilities"
                       >
                         Abilities
@@ -4693,7 +4693,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Abilities"
                           label="Abilities"
                           placeholder=""
@@ -4710,7 +4710,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_Height"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Height"
                       >
                         Height
@@ -4720,7 +4720,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph eVNsmB sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ edtYET sc-nVkyK eFJMsw"
                           id="root_Height"
                           label="Height"
                           placeholder=""
@@ -4737,7 +4737,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_Weight"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Weight"
                       >
                         Weight
@@ -4747,7 +4747,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Weight"
                           label="Weight"
                           placeholder=""
@@ -4764,7 +4764,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Category"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Category"
                       >
                         Category
@@ -4774,7 +4774,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Category"
                           label="Category"
                           placeholder=""
@@ -4791,7 +4791,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_pokedex_number"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_pokedex_number"
                       >
                         National Pokèdex Number
@@ -4801,7 +4801,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_pokedex_number"
                           label="National Pokèdex Number"
                           placeholder=""
@@ -4818,13 +4818,13 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_first_seen"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_first_seen"
                       >
                         First seen
                       </label>
                       <div
-                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                         id="root_first_seen__description"
                       >
                         <div
@@ -4844,7 +4844,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_first_seen"
                           label="First seen"
                           placeholder=""
@@ -4861,13 +4861,13 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_poke_password"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_poke_password"
                       >
                         Poke Password
                       </label>
                       <div
-                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                         id="root_poke_password__description"
                       >
                         <div
@@ -4890,7 +4890,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                         >
                           
                           <input
-                            class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo ja-dfDn"
+                            class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK fItpzC"
                             id="root_poke_password"
                             label="Poke Password"
                             placeholder=""
@@ -4899,7 +4899,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                           />
                         </div>
                         <button
-                          class="StyledButton-sc-323bzc-0 hclgal sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT vUFAN sc-eGPXGI dLqvxJ"
+                          class="StyledButton-sc-323bzc-0 hclgal sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT vUFAN sc-dtDOqo hAQBhI"
                           type="button"
                         >
                           <svg
@@ -4928,13 +4928,13 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_environment"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_environment"
                       >
                         environment
                       </label>
                       <div
-                        class="sc-eJwWfJ ixbnwP sc-nVkyK eFJMsw"
+                        class="sc-iNGGcK iRLpCD sc-jeraig hDpynP"
                       >
                         <button
                           aria-label="Open Drop"
@@ -4953,7 +4953,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="StyledTextInput-sc-1x30a0s-0 fmjpSL Select__SelectTextInput-sc-17idtfo-0 ecWLed sc-jeraig dGnyPe"
+                                  class="StyledTextInput-sc-1x30a0s-0 fmjpSL Select__SelectTextInput-sc-17idtfo-0 ecWLed sc-lbhJGD eDQECv"
                                   id="root_environment__input"
                                   readonly=""
                                   tabindex="-1"
@@ -4992,13 +4992,13 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                     >
                       <div>
                         <legend
-                          class="sc-XxNYO ikUSTd"
+                          class="sc-brSvTw fWsZCP"
                           id="root_tags__title"
                         >
                           Tags
                         </legend>
                         <div
-                          class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                          class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                           id="root_tags__description"
                         >
                           <div
@@ -5084,7 +5084,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
         class="sc-gKclnd iQIogj sc-iCfMLu bCKvxK"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-xiLah hLmaQK"
+          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-ilfuhL jwCiLM"
         >
           <form
             class="rjsf"
@@ -5094,7 +5094,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
             >
               <section>
                 <legend
-                  class="sc-XxNYO ikUSTd"
+                  class="sc-brSvTw fWsZCP"
                   id="root__title"
                 >
                   Pokèmon
@@ -5109,7 +5109,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Name"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Name"
                       >
                         Name
@@ -5140,7 +5140,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                           class="sc-fKVqWL hOcWtv sc-iwjdpV EQrog"
                         >
                           <div
-                            class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH gGiwlN"
+                            class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ezCwEW"
                           >
                             <div
                               class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
@@ -5166,7 +5166,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                         
                         <input
                           autocomplete="off"
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Name"
                           label="Name"
                           list="dummy-datalist"
@@ -5208,13 +5208,13 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Description"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Description"
                       >
                         Description
                       </label>
                       <textarea
-                        class="StyledTextArea-sc-17i3mwp-0 cUKiYJ sc-lbhJGD fBtFQY sc-iNGGcK iIzCpx form-control"
+                        class="StyledTextArea-sc-17i3mwp-0 cUKiYJ sc-hiwPVj iuiXAh sc-ehCJOs kQJQfW form-control"
                         id="root_Description"
                         placeholder=""
                         rows="5"
@@ -5228,7 +5228,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Abilities"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Abilities"
                       >
                         Abilities
@@ -5238,7 +5238,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Abilities"
                           label="Abilities"
                           placeholder=""
@@ -5255,7 +5255,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_Height"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Height"
                       >
                         Height
@@ -5265,7 +5265,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph eVNsmB sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ edtYET sc-nVkyK eFJMsw"
                           id="root_Height"
                           label="Height"
                           placeholder=""
@@ -5282,7 +5282,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_Weight"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Weight"
                       >
                         Weight
@@ -5292,7 +5292,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Weight"
                           label="Weight"
                           placeholder=""
@@ -5309,7 +5309,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_Category"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_Category"
                       >
                         Category
@@ -5319,7 +5319,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_Category"
                           label="Category"
                           placeholder=""
@@ -5336,7 +5336,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-number rendition-form__field--root_pokedex_number"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_pokedex_number"
                       >
                         National Pokèdex Number
@@ -5346,7 +5346,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_pokedex_number"
                           label="National Pokèdex Number"
                           placeholder=""
@@ -5363,13 +5363,13 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_first_seen"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_first_seen"
                       >
                         First seen
                       </label>
                       <div
-                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                         id="root_first_seen__description"
                       >
                         <div
@@ -5389,7 +5389,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       >
                         
                         <input
-                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo dAwUvB"
+                          class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK eFJMsw"
                           id="root_first_seen"
                           label="First seen"
                           placeholder=""
@@ -5406,13 +5406,13 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_poke_password"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_poke_password"
                       >
                         Poke Password
                       </label>
                       <div
-                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                        class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                         id="root_poke_password__description"
                       >
                         <div
@@ -5435,7 +5435,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                         >
                           
                           <input
-                            class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-jgrJph jaaZuO sc-gSQFLo ja-dfDn"
+                            class="StyledTextInput-sc-1x30a0s-0 bMIWHa sc-eJwWfJ hgwxzI sc-nVkyK fItpzC"
                             id="root_poke_password"
                             label="Poke Password"
                             placeholder=""
@@ -5444,7 +5444,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                           />
                         </div>
                         <button
-                          class="StyledButton-sc-323bzc-0 hclgal sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT vUFAN sc-eGPXGI dLqvxJ"
+                          class="StyledButton-sc-323bzc-0 hclgal sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT vUFAN sc-dtDOqo hAQBhI"
                           type="button"
                         >
                           <svg
@@ -5473,13 +5473,13 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                       class="sc-gKclnd exdBHI sc-iCfMLu rflXv form-group field field-string rendition-form__field--root_environment"
                     >
                       <label
-                        class="sc-uojGG dOYcCp control-label"
+                        class="sc-evcjhq jklYhG control-label"
                         for="root_environment"
                       >
                         environment
                       </label>
                       <div
-                        class="sc-eJwWfJ ixbnwP sc-nVkyK eFJMsw"
+                        class="sc-iNGGcK iRLpCD sc-jeraig hDpynP"
                       >
                         <button
                           aria-label="Open Drop"
@@ -5498,7 +5498,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                               >
                                 <input
                                   autocomplete="off"
-                                  class="StyledTextInput-sc-1x30a0s-0 fmjpSL Select__SelectTextInput-sc-17idtfo-0 ecWLed sc-jeraig dGnyPe"
+                                  class="StyledTextInput-sc-1x30a0s-0 fmjpSL Select__SelectTextInput-sc-17idtfo-0 ecWLed sc-lbhJGD eDQECv"
                                   id="root_environment__input"
                                   readonly=""
                                   tabindex="-1"
@@ -5537,13 +5537,13 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                     >
                       <div>
                         <legend
-                          class="sc-XxNYO ikUSTd"
+                          class="sc-brSvTw fWsZCP"
                           id="root_tags__title"
                         >
                           Tags
                         </legend>
                         <div
-                          class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dkYRCH bDkNKR rendition-form-description"
+                          class="sc-gKclnd exdBHI sc-iCfMLu jxAqTi sc-hGPBjI hhYUbN sc-dFtzxp ffAOia rendition-form-description"
                           id="root_tags__description"
                         >
                           <div

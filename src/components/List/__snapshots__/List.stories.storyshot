@@ -6,7 +6,7 @@ exports[`Storyshots Core/List Default 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <ul
-      class="sc-gsNilK sc-eGRUor hvvdBy bMchgE sc-ctqQKy cSSyDf"
+      class="sc-kHOZwM sc-dtMgUX ffEjJW eTa-Dxn sc-cZMNgc Kcock"
     >
       <li>
         <div
@@ -14,7 +14,7 @@ exports[`Storyshots Core/List Default 1`] = `
         >
           You can put 
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb"
             color="primary.main"
             href="#"
           >
@@ -55,7 +55,7 @@ exports[`Storyshots Core/List Ordered 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
   >
     <ol
-      class="sc-gsNilK sc-bXTejn hvvdBy cFyyFj sc-ctqQKy cSSyDf"
+      class="sc-kHOZwM sc-hOGkXu ffEjJW iMbveC sc-cZMNgc Kcock"
     >
       <li>
         <div
@@ -63,7 +63,7 @@ exports[`Storyshots Core/List Ordered 1`] = `
         >
           You can put 
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb"
             color="primary.main"
             href="#"
           >
