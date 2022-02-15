@@ -125,7 +125,7 @@ exports[`Storyshots Core/Card With Rows 1`] = `
               Card with Button
             </h5>
             <a
-              class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH"
+              class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb"
               color="primary.main"
               href="https://balena.io"
             >
@@ -149,7 +149,7 @@ exports[`Storyshots Core/Card With Rows 1`] = `
               class="sc-ikJyIC fyVnc sc-hiCibw fhBOc"
             />
             <a
-              class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH"
+              class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb"
               color="primary.main"
               href="www.balena.io"
             >

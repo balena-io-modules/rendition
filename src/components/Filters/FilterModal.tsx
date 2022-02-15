@@ -7,13 +7,13 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Button } from '../Button';
 import { Box } from '../Box';
-import { getDataModel } from '../DataTypes';
 import { Flex } from '../Flex';
 import { Modal } from '../Modal';
 import { Select } from '../Select';
 import { Txt } from '../Txt';
 import * as SchemaSieve from './SchemaSieve';
-
+import { Form } from '../Form';
+import { getDataModel } from '../DataTypes';
 export interface FilterFieldOption {
 	field: string;
 	title: string;
@@ -31,14 +31,12 @@ export interface FilterModalProps {
 	edit: EditModel[];
 	fieldCompareFn?: FilterFieldCompareFn;
 }
-
 export interface FilterInputProps {
 	schema: JSONSchema;
 	value: any;
 	operator: string;
 	onUpdate: (value: any) => void;
 }
-
 export interface EditModel {
 	field: string;
 	operator: string;
@@ -49,23 +47,32 @@ const defaultFilterCompareFn: FilterFieldCompareFn = (a, b) => {
 	return a.title.toLowerCase().localeCompare(b.title.toLowerCase());
 };
 
-const FilterInput = (props: FilterInputProps) => {
-	const model = getDataModel(props.schema);
-
-	if (!model) {
-		return null;
+const FilterInput = ({
+	schema,
+	value,
+	operator,
+	onUpdate,
+}: FilterInputProps) => {
+	const model = getDataModel(schema);
+	if (model && 'Edit' in model) {
+		const Edit = model.Edit as React.FC<any>;
+		return (
+			<Edit
+				schema={schema}
+				value={value}
+				operator={operator}
+				onUpdate={onUpdate}
+				slim
+			/>
+		);
 	}
-
-	const Edit = model.Edit as React.FC<any>;
-	// TODO: change this logic as it will not work in future versions
-	// WARNING: Cannot update a component from inside the function body of a different component
 	return (
-		<Edit
-			schema={props.schema}
-			value={props.value}
-			operator={props.operator}
-			onUpdate={props.onUpdate}
-			slim
+		<Form
+			schema={schema}
+			value={value}
+			onFormChange={({ formData }) => onUpdate(formData)}
+			uiSchema={{ 'ui:options': { label: false, inline: true } }}
+			hideSubmitButton
 		/>
 	);
 };
@@ -197,14 +204,14 @@ export const FilterModal = ({
 									/>
 								</Box>
 							)}
-							<Box flex={1}>
+							<Flex flex={1} alignItems="center">
 								<FilterInput
 									operator={operator}
 									value={value}
 									schema={schema.properties![field] as JSONSchema}
 									onUpdate={(v: any) => setEditValue(v, index)}
 								/>
-							</Box>
+							</Flex>
 						</Flex>
 						{index > 0 && (
 							<DeleteButton

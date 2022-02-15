@@ -6,7 +6,7 @@ const expectMatchesKeys = (data: any, keys: any) =>
 
 describe('DataTypes', () => {
 	describe('.getDataModel()', () => {
-		const dataModelKeys = ['Edit', 'operators', 'createFilter', 'decodeFilter'];
+		const dataModelKeys = ['operators', 'createFilter', 'decodeFilter'];
 
 		it('should return null if provided with a falsey value as the schema parameter', () => {
 			// @ts-expect-error
@@ -56,7 +56,7 @@ describe('DataTypes', () => {
 				type: 'object',
 			} as any;
 
-			expectMatchesKeys(getDataModel(schema), dataModelKeys);
+			expectMatchesKeys(getDataModel(schema), ['Edit', ...dataModelKeys]);
 		});
 
 		it('should return a model for boolean types', () => {

@@ -328,7 +328,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-markdown"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH heading-anchor-link"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb heading-anchor-link"
             color="primary.main"
             href="#markdown"
           >
@@ -356,7 +356,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-headers"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH heading-anchor-link"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb heading-anchor-link"
             color="primary.main"
             href="#headers"
           >
@@ -373,7 +373,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-this-is-an-h1-tag"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH heading-anchor-link"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb heading-anchor-link"
             color="primary.main"
             href="#this-is-an-h1-tag"
           >
@@ -394,7 +394,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-this-is-an-h2-tag"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH heading-anchor-link"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb heading-anchor-link"
             color="primary.main"
             href="#this-is-an-h2-tag"
           >
@@ -415,7 +415,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-this-is-an-h6-tag"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH heading-anchor-link"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb heading-anchor-link"
             color="primary.main"
             href="#this-is-an-h6-tag"
           >
@@ -436,7 +436,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-emphasis"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH heading-anchor-link"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb heading-anchor-link"
             color="primary.main"
             href="#emphasis"
           >
@@ -496,7 +496,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-lists"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH heading-anchor-link"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb heading-anchor-link"
             color="primary.main"
             href="#lists"
           >
@@ -513,7 +513,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-unordered"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH heading-anchor-link"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb heading-anchor-link"
             color="primary.main"
             href="#unordered"
           >
@@ -563,7 +563,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-ordered"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH heading-anchor-link"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb heading-anchor-link"
             color="primary.main"
             href="#ordered"
           >
@@ -618,7 +618,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-images"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH heading-anchor-link"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb heading-anchor-link"
             color="primary.main"
             href="#images"
           >
@@ -645,7 +645,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-links"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH heading-anchor-link"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb heading-anchor-link"
             color="primary.main"
             href="#links"
           >
@@ -661,7 +661,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb"
             color="primary.main"
             href="http://github.com"
           >
@@ -675,7 +675,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb"
             color="primary.main"
             href="http://github.com"
           >
@@ -689,7 +689,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-blockquotes"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH heading-anchor-link"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb heading-anchor-link"
             color="primary.main"
             href="#blockquotes"
           >
@@ -726,7 +726,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-inline-code"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH heading-anchor-link"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb heading-anchor-link"
             color="primary.main"
             href="#inline-code"
           >
@@ -757,7 +757,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           id="user-content-code-blocks"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH heading-anchor-link"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb heading-anchor-link"
             color="primary.main"
             href="#code-blocks"
           >
@@ -864,7 +864,7 @@ const foo = () =&gt; {
           id="user-content-task-lists"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH heading-anchor-link"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb heading-anchor-link"
             color="primary.main"
             href="#task-lists"
           >
@@ -924,7 +924,7 @@ const foo = () =&gt; {
           id="user-content-tables"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH heading-anchor-link"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb heading-anchor-link"
             color="primary.main"
             href="#tables"
           >
@@ -990,7 +990,7 @@ const foo = () =&gt; {
           id="user-content-strikethrough"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH heading-anchor-link"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb heading-anchor-link"
             color="primary.main"
             href="#strikethrough"
           >
@@ -1027,7 +1027,7 @@ const foo = () =&gt; {
           id="user-content-inline-html"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH heading-anchor-link"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb heading-anchor-link"
             color="primary.main"
             href="#inline-html"
           >
@@ -1069,7 +1069,7 @@ const foo = () =&gt; {
           
 
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb"
             color="primary.main"
             href="http://github.com/"
           >
@@ -1083,7 +1083,7 @@ const foo = () =&gt; {
           id="user-content-keyboard-keys"
         >
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH heading-anchor-link"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb heading-anchor-link"
             color="primary.main"
             href="#keyboard-keys"
           >
@@ -1142,7 +1142,7 @@ exports[`Storyshots Extra/Markdown With Decorators 1`] = `
              foo @bad@bad 
           </span>
           <a
-            class="sc-fbyfCU hJTRtN sc-GEbAx hJvBRH"
+            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb"
             color="primary.main"
             href="https://github.com"
           >

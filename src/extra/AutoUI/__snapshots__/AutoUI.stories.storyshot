@@ -42,7 +42,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                     class="sc-gKclnd exdBHI sc-iCfMLu kkMeyg"
                   >
                     <div
-                      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-cZMNgc gJCjeg"
+                      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-xiLah bQmlyC"
                     >
                       <div
                         class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI kZhRrI"
@@ -76,7 +76,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                           </div>
                         </button>
                         <div
-                          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-dtMgUX lllbMy"
+                          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-kYHfwS cBYKF"
                         >
                           <div
                             class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-khQegj dljPk dJsfTS sc-hUpaCq igPhtM"
@@ -104,10 +104,10 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                           
                         </div>
                         <div
-                          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-jOxtWs iRYYIV sc-bTfYFJ jQBzNp"
+                          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-fWCJzd SyRni sc-jIkXHa gQDinZ"
                         >
                           <button
-                            class="StyledButton-sc-323bzc-0 jFToxV sc-bqiRlB sc-hBUSln edofBN dlhkLz sc-dJjYzT cGuTUx sc-eLwHnm kxmuUM"
+                            class="StyledButton-sc-323bzc-0 jFToxV sc-bqiRlB sc-hBUSln edofBN dlhkLz sc-dJjYzT cGuTUx sc-TBWPX bmLpyY"
                             type="button"
                           >
                             <div
@@ -620,10 +620,10 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                 class="sc-avest bszoHz"
               >
                 <div
-                  class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-jOxtWs iRYYIV sc-bTfYFJ isjOxD"
+                  class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-fWCJzd SyRni sc-jIkXHa jjtoQT"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 dxCrOx sc-bqiRlB sc-bkkeKt edofBN hOrbaG sc-dJjYzT cGuTUx sc-eLwHnm kxmuUM"
+                    class="StyledButton-sc-323bzc-0 dxCrOx sc-bqiRlB sc-bkkeKt edofBN hOrbaG sc-dJjYzT cGuTUx sc-TBWPX bmLpyY"
                     type="button"
                   >
                     <div

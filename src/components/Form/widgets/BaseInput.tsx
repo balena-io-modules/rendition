@@ -8,7 +8,7 @@ const filterSuggestions = (
 	suggestions: JSONSchema['examples'],
 ) => {
 	if (!text || !suggestions) {
-		return;
+		return [];
 	}
 	if (!Array.isArray(suggestions)) {
 		suggestions = [suggestions];
