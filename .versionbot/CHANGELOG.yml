@@ -1,4 +1,18 @@
 - commits:
+    - subject: Replace custom filter Edit with Form
+      hash: c5ecff0fa2158e91548dd6e0c45edf0303689431
+      body: |
+        Replace custom filter Edit with Form
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 25.12.0
+  title: "'Replace custom filter edit'"
+  date: 2022-02-15T17:57:25.894Z
+- commits:
     - subject: Fix header for AutoUI collections not having space between buttons when
         wrapping
       hash: b8d06f3c547aad64b6cfcf7b71bb97ce693e5a4e
