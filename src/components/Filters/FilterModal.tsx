@@ -54,6 +54,7 @@ const FilterInput = ({
 	onUpdate,
 }: FilterInputProps) => {
 	const model = getDataModel(schema);
+	const uiSchema = model && 'uiSchema' in model ? model.uiSchema : {};
 	if (model && 'Edit' in model) {
 		const Edit = model.Edit as React.FC<any>;
 		return (
@@ -71,7 +72,7 @@ const FilterInput = ({
 			schema={schema}
 			value={value}
 			onFormChange={({ formData }) => onUpdate(formData)}
-			uiSchema={{ 'ui:options': { label: false, inline: true } }}
+			uiSchema={{ 'ui:options': { label: false, inline: true }, ...uiSchema }}
 			hideSubmitButton
 		/>
 	);

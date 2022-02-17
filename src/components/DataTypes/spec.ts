@@ -64,7 +64,7 @@ describe('DataTypes', () => {
 				type: 'boolean',
 			} as any;
 
-			expectMatchesKeys(getDataModel(schema), dataModelKeys);
+			expectMatchesKeys(getDataModel(schema), [...dataModelKeys, 'uiSchema']);
 		});
 
 		it('should return a model for number types', () => {

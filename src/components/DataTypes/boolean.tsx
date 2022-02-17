@@ -74,3 +74,7 @@ export const createFilter = (
 	}
 	return base;
 };
+
+export const uiSchema = {
+	'ui:widget': 'select',
+};
