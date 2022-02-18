@@ -1,4 +1,21 @@
 - commits:
+    - subject: "Table: Add fuzzy pager option"
+      hash: 28c8a5d3e6e19c73bbfec3ade96d9e8b56d44068
+      body: >
+        This change adds a new property `fuzzyPager`, that if true, the total
+        number of items shown on the page will be indicated as being
+        approximate. Useful for when you don't now the full size of your
+        dataset. This is only used if `usePager` is true.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+  version: 25.12.1
+  title: "'Table: Add fuzzy pager option'"
+  date: 2022-02-18T09:27:48.669Z
+- commits:
     - subject: Replace custom filter Edit with Form
       hash: c5ecff0fa2158e91548dd6e0c45edf0303689431
       body: |
