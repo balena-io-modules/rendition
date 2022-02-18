@@ -6,3 +6,4 @@ npm:
       node_versions:
         - "12"
         - "14"
+        - "16"
