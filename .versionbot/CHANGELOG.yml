@@ -1,4 +1,20 @@
 - commits:
+    - subject: Test against node 16
+      hash: cb7bebf7549009a8bc9f98d2145cc4fbf347297a
+      body: |
+        Node 16 is now the official LTS version, which rendition should support.
+
+        Fixes https://github.com/balena-io-modules/rendition/issues/1539
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+  version: 25.12.1
+  title: "'Test against node 16'"
+  date: 2022-02-18T08:30:56.607Z
+- commits:
     - subject: Replace custom filter Edit with Form
       hash: c5ecff0fa2158e91548dd6e0c45edf0303689431
       body: |
