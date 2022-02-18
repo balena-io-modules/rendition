@@ -76,7 +76,7 @@
     "prettier": "^2.4.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-monaco-editor": "^0.45.0",
+    "react-monaco-editor": "0.40.0",
     "rimraf": "^3.0.2",
     "sinon": "^4.5.0",
     "strip-css-comments": "^3.0.0",
