@@ -78,6 +78,14 @@ export const WithPager = createStory<TableProps<any>>(Template, {
 	pagerPosition: 'both',
 });
 
+export const WithFuzzyPager = createStory<TableProps<any>>(Template, {
+	usePager: true,
+	itemsPerPage: 3,
+	pagerPosition: 'both',
+	fuzzyPager: true,
+	data: PokeDex.slice(0, 5),
+});
+
 export const Sorted = createStory<TableProps<any>>(Template, {
 	sort: { field: 'Name', reverse: true },
 });

@@ -29,3 +29,12 @@ export const Default = createStory<PagerProps>(Template, {
 	nextPage: () => null,
 	prevPage: () => null,
 });
+
+export const Fuzzy = createStory<PagerProps>(Template, {
+	totalItems: 200,
+	itemsPerPage: 50,
+	page: 1,
+	nextPage: () => null,
+	prevPage: () => null,
+	fuzzy: true,
+});

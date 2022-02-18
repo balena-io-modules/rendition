@@ -8,6 +8,7 @@ import { Flex, FlexProps } from '../Flex';
 import { Txt } from '../Txt';
 
 const BasePager = ({
+	fuzzy,
 	totalItems,
 	itemsPerPage,
 	page,
@@ -24,7 +25,11 @@ const BasePager = ({
 				<strong>
 					{lowerBound + 1} - {upperBound}
 				</strong>{' '}
-				of <strong>{totalItems}</strong>
+				of{' '}
+				<strong>
+					{totalItems}
+					{fuzzy ? '+' : ''}
+				</strong>
 			</Txt>
 
 			<Flex>
@@ -65,6 +70,8 @@ export interface PagerProps extends FlexProps {
 	nextPage: () => void;
 	/** Callback invoked when the "previous page" button is clicked */
 	prevPage: () => void;
+	/** If true, the total number of items shown will be indicated as being approximate. Useful for when you don't now the full size of your dataset. Only used if `usePager` is true. */
+	fuzzy?: boolean;
 }
 
 /**
