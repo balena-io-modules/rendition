@@ -1,4 +1,29 @@
 - commits:
+    - subject: Fix install failure on node 16
+      hash: 7eb61836d711e0911fcd872f9a4071d0e367fea8
+      body: >
+        This change pins `react-monaco-editor` to v40, as more recent versions
+
+        declare a peer dependency on react v17 (instead of v16).
+
+        Older versions of npm would let the install continue and raise
+
+        a warning, but more recent versions (>v6) will fail the install.
+
+        See https://docs.npmjs.com/cli/v8/configuring-npm/package-json#peerdependencies
+
+
+        Fixes https://github.com/balena-io-modules/rendition/issues/1538
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+  version: 25.12.1
+  title: "'Fix install failure on node 16'"
+  date: 2022-02-18T08:31:25.712Z
+- commits:
     - subject: Replace custom filter Edit with Form
       hash: c5ecff0fa2158e91548dd6e0c45edf0303689431
       body: |
