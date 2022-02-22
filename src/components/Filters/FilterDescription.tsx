@@ -20,6 +20,9 @@ const FilterDescription = ({ filter, ...props }: FilterDescriptionProps) => {
 	const tagProps = filter.anyOf
 		? filter.anyOf.map((filterFragment: JSONSchema, i) => {
 				const parsedFilter = parseFilter(filterFragment);
+				if (typeof parsedFilter.value === 'boolean') {
+					parsedFilter.value = JSON.stringify(parsedFilter.value);
+				}
 				if (i > 0) {
 					parsedFilter.prefix = 'or';
 				}
@@ -27,7 +30,6 @@ const FilterDescription = ({ filter, ...props }: FilterDescriptionProps) => {
 				return parsedFilter;
 		  })
 		: [parseFilter(filter)];
-
 	return <Tag mt={2} multiple={tagProps} {...props} />;
 };
 

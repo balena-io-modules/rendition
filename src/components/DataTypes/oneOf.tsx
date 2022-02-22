@@ -8,8 +8,8 @@ import { getJsonDescription } from './utils';
 const getCaption = (value: any, schema: JSONSchema) => {
 	const item = schema.oneOf!.find(
 		(item) => item && (item as JSONSchema).const === value,
-	);
-	return item ? (item as JSONSchema).title : '';
+	) as JSONSchema;
+	return item && item.title ? item.title : value ?? '';
 };
 
 export const operators = {
