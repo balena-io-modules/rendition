@@ -1,4 +1,17 @@
 - commits:
+    - subject: Improve filters style and fix boolean summary
+      hash: cda601519992b96eeeda5003e3f27c8543a3f703
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 25.12.2
+  title: "'Improve filters style and fix boolean summary'"
+  date: 2022-02-21T16:44:52.014Z
+- commits:
     - subject: "Table: Add fuzzy pager option"
       hash: 28c8a5d3e6e19c73bbfec3ade96d9e8b56d44068
       body: >
