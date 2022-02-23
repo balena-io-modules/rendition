@@ -1,4 +1,16 @@
 - commits:
+    - subject: "patch: Update dependency husky to v7"
+      hash: 98a8fc5ddb58d4c5e59ed609b3574eb5f6eca6b5
+      body: |
+        Update husky from 0.14.3 to 7.0.4
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 25.13.1
+  title: "'patch: Update dependency husky to v7'"
+  date: 2022-02-23T12:27:02.256Z
+- commits:
     - subject: "Mermaid: Add support for callback functions in graphs"
       hash: 753d1b46e85513a66dcdfaffd1eed12b7212f5c0
       body: |
