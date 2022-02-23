@@ -1,4 +1,25 @@
 - commits:
+    - subject: Remove duplicate contributor checklist item on PR template
+      hash: d3744217e34e584a72b7ed23f60ccb6b3bfc773a
+      body: |
+        The contributor checklist was basically asking people to generate the
+        jest snapshots twice using different commands!
+        This change just instructs people to run `generate-snapshots`.
+
+        Generating screenshots is a throwback to when we did visual regression
+        testing using a headless browser. Now we are able to utilise
+        styled-components to get a fully accurate visual representation using
+        only snapshots, which makes the screenshot comment outdated.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+  version: 25.13.1
+  title: "'Remove duplicate contributor checklist item on PR template'"
+  date: 2022-02-23T12:52:07.220Z
+- commits:
     - subject: "Mermaid: Add support for callback functions in graphs"
       hash: 753d1b46e85513a66dcdfaffd1eed12b7212f5c0
       body: |
