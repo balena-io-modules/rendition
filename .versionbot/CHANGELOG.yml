@@ -1,4 +1,27 @@
 - commits:
+    - subject: "Mermaid: Add support for callback functions in graphs"
+      hash: 753d1b46e85513a66dcdfaffd1eed12b7212f5c0
+      body: |
+        Fixes https://github.com/balena-io-modules/rendition/issues/1543
+
+        This change allows you to pass an object of callback functions that can
+        be called from click events in mermaid.
+        These functions have to be bound to the window object to work with
+        mermaid, which could potentially cause some problems if charts have the
+        same callback names.
+        I did try putting the mermaid chart inside an iframe to isolate the
+        functions, but I couldn't get this working - it seems mermaid then
+        cannot find the global function to call.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+  version: 25.13.0
+  title: "'Mermaid: Add support for callback functions in graphs'"
+  date: 2022-02-23T12:03:21.029Z
+- commits:
     - subject: Improve filters style and fix boolean summary
       hash: cda601519992b96eeeda5003e3f27c8543a3f703
       body: ""
