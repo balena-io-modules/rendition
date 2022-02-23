@@ -8,6 +8,7 @@ export default {
 } as Meta;
 
 const Template = createTemplate<MermaidProps>(Mermaid);
+(window as any).callback = (e: any) => console.log('click', e);
 export const Default = createStory<MermaidProps>(Template, {
 	value: `
   graph TD;
@@ -15,5 +16,9 @@ export const Default = createStory<MermaidProps>(Template, {
       A-->C;
       B-->D;
       C-->D;
+			click A callback;
   `,
+	callbackFunctions: {
+		callback: (e: any) => console.log('on click callback:', e),
+	},
 });
