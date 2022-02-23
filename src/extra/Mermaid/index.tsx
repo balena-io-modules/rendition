@@ -1,3 +1,4 @@
+import forEach from 'lodash/forEach';
 import mermaid from 'mermaid';
 import * as React from 'react';
 import uuid from 'uuid/v4';
@@ -6,6 +7,10 @@ import { Box, BoxProps } from '../../components/Box';
 export interface MermaidProps extends BoxProps {
 	/** The mermaid source that should be rendered */
 	value: string;
+	/** An object of callback functions that can be called in the mermaid graph. Functions are called with the ID of the node that was clicked. Note: These values are attached to the window object, which can cause collisions with other properties. */
+	callbackFunctions?: {
+		[name: string]: (value: string) => any;
+	};
 }
 
 /**
@@ -31,6 +36,16 @@ export class Mermaid extends React.Component<MermaidProps, {}> {
 	}
 
 	public componentDidMount() {
+		const { callbackFunctions } = this.props;
+		// MermaidJS expects callback functions to be attached to the window object
+		if (callbackFunctions) {
+			forEach(callbackFunctions, (callback, name) => {
+				(window as any)[name] = callback;
+			});
+			mermaid.initialize({
+				securityLevel: 'loose',
+			});
+		}
 		this.renderSVG();
 	}
 
