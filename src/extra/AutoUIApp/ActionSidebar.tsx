@@ -97,7 +97,7 @@ export const ActionSidebar = ({
 					content: t('success.resource_added_successfully', {
 						name: resourceName,
 					}),
-					type: 'danger',
+					type: 'success',
 				});
 			} catch (err) {
 				notifications.addNotification({

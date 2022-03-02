@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from '../../';
 import { Flex, FlexProps } from '../../components/Flex';
 import { Heading } from '../../components/Heading';
 
@@ -12,6 +14,11 @@ export const Navbar = ({ title, logo, ...flexProps }: NavbarProps) => {
 		<Flex bg="secondary.main" alignItems="center" {...flexProps}>
 			{logo && <img src={logo} alt={title} height="50px" />}
 			<Heading color="white">{title}</Heading>
+			{window.REACT_APP_AUTHENTICATION_PROCESS && (
+				<Link style={{ textDecoration: 'none' }} to="/login">
+					Login
+				</Link>
+			)}
 		</Flex>
 	);
 };

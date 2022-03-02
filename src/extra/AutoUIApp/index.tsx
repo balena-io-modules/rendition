@@ -10,6 +10,10 @@ import { Flex } from '../../components/Flex';
 import { Box } from '../../components/Box';
 import { OpenApiJson } from './openApiJson';
 import { ActionSidebar, ActionSidebarProps } from './ActionSidebar';
+import { Authentication, authPaths } from './Authentication';
+
+// TODO: remove!
+window.REACT_APP_AUTHENTICATION_PROCESS = true;
 
 const SIDEBAR_WIDTH = 166;
 const NAVBAR_HEIGHT = 60;
@@ -27,7 +31,9 @@ const GlobalStyle = createGlobalStyle`
 // tslint:disable-next-line no-namespace
 declare global {
 	interface Window {
+		OPEN_API_ODATA_JSON_PATH: string;
 		REACT_APP_API_HOST: string;
+		REACT_APP_AUTHENTICATION_PROCESS: boolean;
 		REACT_APP_TITLE: string;
 	}
 }
@@ -84,6 +90,16 @@ export const AutoUIApp = ({ openApiJson, title, logo }: AutoUIAppProps) => {
 						style={{ overflow: 'auto' }}
 					>
 						<Switch>
+							{window.REACT_APP_AUTHENTICATION_PROCESS &&
+								Object.keys(authPaths).map((path) => (
+									<Route
+										key={path}
+										path={path}
+										render={({ location }) => (
+											<Authentication location={location} />
+										)}
+									/>
+								))}
 							{Object.keys(openApiJson.paths).map((path) => (
 								<Route
 									key={path}
