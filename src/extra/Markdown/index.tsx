@@ -236,7 +236,7 @@ export const getProcessor = (
 		createElement: React.createElement,
 		components: {
 			p: (props: any) => <Txt.p {...props} />,
-			a: (props: any) => <Link {...props} />,
+			a: (props: any) => <Link blank {...props} />,
 			h1: (props: any) => <Heading.h1 {...props} />,
 			h2: (props: any) => <Heading.h2 {...props} />,
 			h3: (props: any) => <Heading.h3 {...props} />,
