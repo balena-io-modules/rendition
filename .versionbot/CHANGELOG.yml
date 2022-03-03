@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix markdown link to be target blank
+      hash: f01aa71deb58127b6c3fbe4c028991b0573cf61d
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 25.13.2
+  title: "'Fix markdown link to be target blank'"
+  date: 2022-03-03T16:55:34.515Z
+- commits:
     - subject: Remove duplicate contributor checklist item on PR template
       hash: d3744217e34e584a72b7ed23f60ccb6b3bfc773a
       body: |
