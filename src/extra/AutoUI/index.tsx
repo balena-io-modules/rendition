@@ -30,11 +30,6 @@ import { Filters } from './Filters/Filters';
 import { Box, BoxProps } from '../../components/Box';
 import { Tags } from './Actions/Tags';
 import { Update } from './Actions/Update';
-import { notifications } from '../../components/Notifications';
-import {
-	ResourceTagSubmitInfo,
-	SubmitInfo,
-} from '../../components/TagManagementModal/models';
 import { Create } from './Actions/Create';
 import {
 	autoUIAddToSchema,
@@ -42,7 +37,7 @@ import {
 	autoUIGetModelForCollection,
 	autoUIRunTransformers,
 } from './models/helpers';
-import { autoUIGetDisabledReason } from './utils';
+import { autoUIGetDisabledReason, getTagsDisabledReason } from './utils';
 import { FocusSearch } from './Filters/FocusSearch';
 import { TableColumn } from '../../components/Table';
 import { getSelected, getSortingFunction } from './utils';
@@ -146,40 +141,6 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 		setSelected([]);
 	}, [filters]);
 
-	const changeTags = React.useCallback(
-		async (tags: SubmitInfo<ResourceTagSubmitInfo, ResourceTagSubmitInfo>) => {
-			if (!sdk?.tags) {
-				return;
-			}
-
-			setIsBusyMessage(t(`loading.updating_release_tags`));
-			notifications.addNotification({
-				id: 'change-tags-loading',
-				content: t(`loading.updating_release_tags`),
-			});
-
-			try {
-				await sdk.tags.submit(tags);
-				notifications.addNotification({
-					id: 'change-tags',
-					content: 'Tags updated successfully',
-					type: 'success',
-				});
-				refresh?.();
-			} catch (err) {
-				notifications.addNotification({
-					id: 'change-tags',
-					content: err.message,
-					type: 'danger',
-				});
-			} finally {
-				notifications.removeNotification('change-tags-loading');
-				setIsBusyMessage(undefined);
-			}
-		},
-		[sdk?.tags, refresh, selected],
-	);
-
 	const onActionTriggered = React.useCallback((actionData: ActionData<T>) => {
 		setActionData(actionData);
 		if (actionData.action.actionFn) {
@@ -228,20 +189,40 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 		[onEntityClick, getBaseUrl, history],
 	);
 
-	const autouiContext = React.useMemo(
-		(): AutoUIContext<T> => ({
+	const autouiContext = React.useMemo((): AutoUIContext<T> => {
+		const tagField = getFieldForFormat(model.schema, 'tag');
+		const tagsAction: AutoUIAction<T> | null = !!sdk?.tags
+			? {
+					title: t('actions.manage_tags'),
+					type: 'update',
+					renderer: ({ affectedEntries, onDone }) =>
+						!!affectedEntries && (
+							<Tags
+								selected={affectedEntries}
+								autouiContext={autouiContext}
+								onDone={onDone}
+								setIsBusyMessage={setIsBusyMessage}
+								refresh={refresh}
+							/>
+						),
+					isDisabled: ({ affectedEntries }) =>
+						!!affectedEntries &&
+						getTagsDisabledReason(affectedEntries, tagField as keyof T, t),
+			  }
+			: null;
+
+		return {
 			resource: model.resource,
 			idField: 'id',
 			nameField: model.priorities?.primary[0] ?? 'id',
-			tagField: getFieldForFormat(model.schema, 'tag'),
+			tagField,
 			getBaseUrl,
 			onEntityClick,
-			actions,
+			actions: !!tagsAction ? (actions || []).concat(tagsAction) : actions,
 			customSort,
 			sdk,
-		}),
-		[model, getBaseUrl, onEntityClick, actions, customSort, sdk],
-	);
+		};
+	}, [model, getBaseUrl, onEntityClick, actions, customSort, sdk]);
 
 	const properties = React.useMemo(
 		() =>
@@ -284,7 +265,7 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 				<Flex height="100%" flexDirection="column">
 					{Array.isArray(data) && (
 						<>
-							<Box>
+							<Box mb={3}>
 								<HeaderGrid
 									flexWrap="wrap"
 									justifyContent="space-between"
@@ -296,64 +277,53 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 										hasOngoingAction={false}
 										onActionTriggered={onActionTriggered}
 									/>
+									<Update
+										model={model}
+										selected={selected}
+										autouiContext={autouiContext}
+										hasOngoingAction={false}
+										onActionTriggered={onActionTriggered}
+									/>
 									<Box
 										order={[-1, -1, -1, 0]}
 										flex={['1 0 100%', '1 0 100%', '1 0 100%', 'auto']}
+										alignSelf="flex-start"
+										mb={2}
 									>
 										{showFilters && (
-											<Box mb={3}>
-												<Filters
-													schema={model.schema}
-													filters={filters}
-													views={views}
-													autouiContext={autouiContext}
-													changeFilters={setFilters}
-													changeViews={setViews}
-													onSearch={(term) => (
-														<FocusSearch
-															searchTerm={term}
-															filtered={filtered}
-															selected={selected}
-															setSelected={setSelected}
-															autouiContext={autouiContext}
-															model={model}
-															hasUpdateActions={hasUpdateActions}
-														/>
-													)}
-												/>
-											</Box>
+											<Filters
+												schema={model.schema}
+												filters={filters}
+												views={views}
+												autouiContext={autouiContext}
+												changeFilters={setFilters}
+												changeViews={setViews}
+												onSearch={(term) => (
+													<FocusSearch
+														searchTerm={term}
+														filtered={filtered}
+														selected={selected}
+														setSelected={setSelected}
+														autouiContext={autouiContext}
+														model={model}
+														hasUpdateActions={hasUpdateActions}
+													/>
+												)}
+											/>
 										)}
 									</Box>
 									{data.length > 0 && (
-										<HeaderGrid>
-											{!!sdk?.tags && (
-												<Tags
-													autouiContext={autouiContext}
-													selected={selected}
-													changeTags={changeTags}
-												/>
-											)}
-											<Update
-												model={model}
-												selected={selected}
-												autouiContext={autouiContext}
-												hasOngoingAction={false}
-												onActionTriggered={onActionTriggered}
-											/>
-											<HeaderGrid>
-												<LensSelection
-													lenses={lenses}
-													lens={lens}
-													setLens={(lens) => {
-														setLens(lens);
-														setToLocalStorage(
-															`${model.resource}__view_lens`,
-															lens.slug,
-														);
-													}}
-												/>
-											</HeaderGrid>
-										</HeaderGrid>
+										<LensSelection
+											lenses={lenses}
+											lens={lens}
+											setLens={(lens) => {
+												setLens(lens);
+												setToLocalStorage(
+													`${model.resource}__view_lens`,
+													lens.slug,
+												);
+											}}
+										/>
 									)}
 								</HeaderGrid>
 								{filters.length > 0 && (

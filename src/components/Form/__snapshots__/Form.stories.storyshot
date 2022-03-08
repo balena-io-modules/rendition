@@ -424,7 +424,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                           </div>
                         </div>
                         <button
-                          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iZcAqj rendition-form-array-item__add-item"
+                          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iZcAqj rendition-form-array-item__add-item"
                           type="button"
                         >
                           <div
@@ -906,7 +906,7 @@ exports[`Storyshots Core/Form Default 1`] = `
                           </div>
                         </div>
                         <button
-                          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iZcAqj rendition-form-array-item__add-item"
+                          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iZcAqj rendition-form-array-item__add-item"
                           type="button"
                         >
                           <div
@@ -1399,7 +1399,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                           </div>
                         </div>
                         <button
-                          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iZcAqj rendition-form-array-item__add-item"
+                          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iZcAqj rendition-form-array-item__add-item"
                           type="button"
                         >
                           <div
@@ -1881,7 +1881,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                           </div>
                         </div>
                         <button
-                          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iZcAqj rendition-form-array-item__add-item"
+                          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iZcAqj rendition-form-array-item__add-item"
                           type="button"
                         >
                           <div
@@ -2358,7 +2358,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                           </div>
                         </div>
                         <button
-                          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iZcAqj rendition-form-array-item__add-item"
+                          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iZcAqj rendition-form-array-item__add-item"
                           type="button"
                         >
                           <div
@@ -2398,7 +2398,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
               Submit
             </button>
             <button
-              class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT cKBkCP"
+              class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT cKBkCP"
               type="button"
             >
               Skip
@@ -2460,7 +2460,7 @@ exports[`Storyshots Core/Form With Dependants 1`] = `
                           Application configuration variables
                         </legend>
                         <button
-                          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iZcAqj rendition-form-array-item__add-item"
+                          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iZcAqj rendition-form-array-item__add-item"
                           type="button"
                         >
                           <div
@@ -2504,7 +2504,7 @@ exports[`Storyshots Core/Form With Dependants 1`] = `
                           Application environment variables
                         </legend>
                         <button
-                          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iZcAqj rendition-form-array-item__add-item"
+                          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iZcAqj rendition-form-array-item__add-item"
                           type="button"
                         >
                           <div
@@ -4212,7 +4212,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                           </div>
                         </div>
                         <button
-                          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iZcAqj rendition-form-array-item__add-item"
+                          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iZcAqj rendition-form-array-item__add-item"
                           type="button"
                         >
                           <div
@@ -5072,7 +5072,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                           </div>
                         </div>
                         <button
-                          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iZcAqj rendition-form-array-item__add-item"
+                          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iZcAqj rendition-form-array-item__add-item"
                           type="button"
                         >
                           <div
@@ -5617,7 +5617,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                           </div>
                         </div>
                         <button
-                          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iZcAqj rendition-form-array-item__add-item"
+                          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iZcAqj rendition-form-array-item__add-item"
                           type="button"
                         >
                           <div

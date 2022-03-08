@@ -22,8 +22,12 @@ import ViewsMenu from './ViewsMenu';
 import { onClickOutOrEsc } from '../../extra/AutoUI/utils';
 
 const SearchWrapper = styled(Box)`
-	flex-basis: 500px;
+	width: 100%;
+	flex-basis: 100%;
 	position: relative;
+	margin-right: 4px;
+	padding: 0 4px;
+	align-self: center;
 `;
 
 const FilterWrapper = styled(Box)`
@@ -273,27 +277,16 @@ class BaseFilters extends React.Component<FiltersProps, FiltersState> {
 				this.shouldRenderComponent('views'),
 			].includes(true);
 
+		const componentsToRender = !!this.props.renderMode
+			? castArray(this.props.renderMode)
+			: [];
+
 		return (
 			<FilterWrapper>
 				<Flex
 					justifyContent="space-between"
 					mb={renderingSummaryAndOtherComponents ? 3 : undefined}
 				>
-					{this.shouldRenderComponent('add') && (
-						<Button
-							mr={30}
-							disabled={this.props.disabled}
-							primary
-							icon={<FontAwesomeIcon icon={faFilter} />}
-							onClick={() =>
-								this.setState({ showModal: true, editingFilter: null })
-							}
-							label="Add filter"
-							compact={this.props.compact}
-							{...this.props.addFilterButtonProps}
-						/>
-					)}
-
 					{this.shouldRenderComponent('search') && (
 						<SearchWrapper
 							ref={this.searchContainer}
@@ -345,7 +338,20 @@ class BaseFilters extends React.Component<FiltersProps, FiltersState> {
 								this.props.onSearch(searchString)}
 						</SearchWrapper>
 					)}
-
+					{this.shouldRenderComponent('add') && (
+						<Button
+							mx={1}
+							disabled={this.props.disabled}
+							quartenary
+							icon={<FontAwesomeIcon icon={faFilter} />}
+							onClick={() =>
+								this.setState({ showModal: true, editingFilter: null })
+							}
+							label="Add filter"
+							compact={this.props.compact}
+							{...this.props.addFilterButtonProps}
+						/>
+					)}
 					{this.shouldRenderComponent('views') && (
 						<ViewsMenu
 							dark={this.props.dark}
@@ -356,9 +362,9 @@ class BaseFilters extends React.Component<FiltersProps, FiltersState> {
 							hasMultipleScopes={
 								this.props.viewScopes && this.props.viewScopes.length > 1
 							}
+							renderMode={componentsToRender}
 							setFilters={(filters) => this.setFilters(filters)}
 							deleteView={(view) => this.deleteView(view)}
-							renderMode={this.props.renderMode}
 							compact={this.props.compact}
 						/>
 					)}

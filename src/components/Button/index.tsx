@@ -90,9 +90,6 @@ const Outline = styled(ButtonBase)`
 		color: ${(props) => props.theme.colors.text.main};
 		border-color: ${(props) =>
 			getColor(props, 'color', 'main') || props.theme.colors.text.main};
-		svg {
-			color: ${(props) => props.theme.colors.tertiary.main} !important;
-		}
 		${(props) =>
 			getHoverEffectOverride(
 				props.color || props.theme.colors.text.main,

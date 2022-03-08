@@ -12,7 +12,7 @@ import { stopEvent } from '../../../utils';
 import { AutoUIModel } from '..';
 
 const Focus = styled(Box)`
-	flex-basis: 500px;
+	flex-basis: 100%;
 	background-color: white;
 	border: solid 1px ${(props) => props.theme.colors.quartenary.dark};
 	max-height: 200px;

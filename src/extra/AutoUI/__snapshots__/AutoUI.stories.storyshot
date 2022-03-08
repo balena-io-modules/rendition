@@ -11,7 +11,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
       The AutoUI component determines whether the data passed into it is a collection or an entity. Click the button below to change the value passed in for "data".
     </h5>
     <button
-      class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT gpZlQJ"
+      class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT gpZlQJ"
       type="button"
     >
       Pass an entity for "data"
@@ -29,26 +29,82 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
             class="sc-gKclnd exdBHI sc-iCfMLu kHEsbk sc-hGPBjI kBwkZQ"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO"
+              class="sc-gKclnd exdBHI sc-iCfMLu kkMeyg"
             >
               <div
                 class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-BHvUt cAFujn eKguMa"
               >
                 <div
-                  class="sc-gKclnd kCaRJe sc-iCfMLu jciJBO"
+                  class="sc-gKclnd fFoZBR sc-iCfMLu rflXv"
                   order="-1,-1,-1,0"
                 >
                   <div
-                    class="sc-gKclnd exdBHI sc-iCfMLu kkMeyg"
+                    class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-xiLah bQmlyC"
                   >
                     <div
-                      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-xiLah bQmlyC"
+                      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI kZhRrI"
                     >
                       <div
-                        class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI kZhRrI"
+                        class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-kYHfwS lfqBoj"
+                      >
+                        <div
+                          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-khQegj dljPk dJsfTS sc-hUpaCq igPhtM"
+                        >
+                          <input
+                            placeholder="Search entries..."
+                            value=""
+                          />
+                          <svg
+                            aria-hidden="true"
+                            class="svg-inline--fa fa-magnifying-glass search-icon"
+                            data-icon="magnifying-glass"
+                            data-prefix="fas"
+                            focusable="false"
+                            role="img"
+                            viewBox="0 0 512 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </div>
+                        
+                      </div>
+                      <button
+                        class="StyledButton-sc-323bzc-0 jFToxV sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT hrMPjG"
+                        type="button"
+                      >
+                        <div
+                          class="StyledBox-sc-13pk1d4-0 hLqWpM"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="svg-inline--fa fa-filter "
+                            data-icon="filter"
+                            data-prefix="fas"
+                            focusable="false"
+                            role="img"
+                            viewBox="0 0 512 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M3.853 54.87C10.47 40.9 24.54 32 40 32H472C487.5 32 501.5 40.9 508.1 54.87C514.8 68.84 512.7 85.37 502.1 97.33L320 320.9V448C320 460.1 313.2 471.2 302.3 476.6C291.5 482 278.5 480.9 268.8 473.6L204.8 425.6C196.7 419.6 192 410.1 192 400V320.9L9.042 97.33C-.745 85.37-2.765 68.84 3.854 54.87L3.853 54.87z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                          <div
+                            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hDcxXI"
+                          />
+                          Add filter
+                        </div>
+                      </button>
+                      <div
+                        class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-fWCJzd SyRni sc-jIkXHa hDRVjQ"
                       >
                         <button
-                          class="StyledButton-sc-323bzc-0 fovDxF sc-bqiRlB sc-hBUSln edofBN kbjQvu sc-dJjYzT bSMRJA"
+                          class="StyledButton-sc-323bzc-0 jFToxV sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT cGuTUx sc-TBWPX bmLpyY"
                           type="button"
                         >
                           <div
@@ -56,118 +112,51 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                           >
                             <svg
                               aria-hidden="true"
-                              class="svg-inline--fa fa-filter "
-                              data-icon="filter"
+                              class="svg-inline--fa fa-chart-pie "
+                              data-icon="chart-pie"
                               data-prefix="fas"
                               focusable="false"
                               role="img"
-                              viewBox="0 0 512 512"
+                              viewBox="0 0 576 512"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M3.853 54.87C10.47 40.9 24.54 32 40 32H472C487.5 32 501.5 40.9 508.1 54.87C514.8 68.84 512.7 85.37 502.1 97.33L320 320.9V448C320 460.1 313.2 471.2 302.3 476.6C291.5 482 278.5 480.9 268.8 473.6L204.8 425.6C196.7 419.6 192 410.1 192 400V320.9L9.042 97.33C-.745 85.37-2.765 68.84 3.854 54.87L3.853 54.87z"
+                                d="M304 16.58C304 7.555 310.1 0 320 0C443.7 0 544 100.3 544 224C544 233 536.4 240 527.4 240H304V16.58zM32 272C32 150.7 122.1 50.34 238.1 34.25C248.2 32.99 256 40.36 256 49.61V288L412.5 444.5C419.2 451.2 418.7 462.2 411 467.7C371.8 495.6 323.8 512 272 512C139.5 512 32 404.6 32 272zM558.4 288C567.6 288 575 295.8 573.8 305C566.1 360.9 539.1 410.6 499.9 447.3C493.9 452.1 484.5 452.5 478.7 446.7L320 288H558.4z"
                                 fill="currentColor"
                               />
                             </svg>
                             <div
                               class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hDcxXI"
                             />
-                            Add filter
-                          </div>
-                        </button>
-                        <div
-                          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-kYHfwS cBYKF"
-                        >
-                          <div
-                            class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-khQegj dljPk dJsfTS sc-hUpaCq igPhtM"
-                          >
-                            <input
-                              placeholder="Search entries..."
-                              value=""
-                            />
-                            <svg
-                              aria-hidden="true"
-                              class="svg-inline--fa fa-magnifying-glass search-icon"
-                              data-icon="magnifying-glass"
-                              data-prefix="fas"
-                              focusable="false"
-                              role="img"
-                              viewBox="0 0 512 512"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                          
-                        </div>
-                        <div
-                          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-fWCJzd SyRni sc-jIkXHa gQDinZ"
-                        >
-                          <button
-                            class="StyledButton-sc-323bzc-0 jFToxV sc-bqiRlB sc-hBUSln edofBN dlhkLz sc-dJjYzT cGuTUx sc-TBWPX bmLpyY"
-                            type="button"
-                          >
                             <div
-                              class="StyledBox-sc-13pk1d4-0 hLqWpM"
+                              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI iqksqQ"
                             >
+                              <div
+                                class="sc-gKclnd exdBHI sc-iCfMLu iBCaVk"
+                              >
+                                Views
+                              </div>
                               <svg
                                 aria-hidden="true"
-                                class="svg-inline--fa fa-chart-pie "
-                                data-icon="chart-pie"
+                                class="svg-inline--fa fa-chevron-down "
+                                data-icon="chevron-down"
                                 data-prefix="fas"
                                 focusable="false"
                                 role="img"
-                                viewBox="0 0 576 512"
+                                viewBox="0 0 448 512"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M304 16.58C304 7.555 310.1 0 320 0C443.7 0 544 100.3 544 224C544 233 536.4 240 527.4 240H304V16.58zM32 272C32 150.7 122.1 50.34 238.1 34.25C248.2 32.99 256 40.36 256 49.61V288L412.5 444.5C419.2 451.2 418.7 462.2 411 467.7C371.8 495.6 323.8 512 272 512C139.5 512 32 404.6 32 272zM558.4 288C567.6 288 575 295.8 573.8 305C566.1 360.9 539.1 410.6 499.9 447.3C493.9 452.1 484.5 452.5 478.7 446.7L320 288H558.4z"
+                                  d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
                                   fill="currentColor"
                                 />
                               </svg>
-                              <div
-                                class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hDcxXI"
-                              />
-                              <div
-                                class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI iqksqQ"
-                              >
-                                <div
-                                  class="sc-gKclnd exdBHI sc-iCfMLu iBCaVk"
-                                >
-                                  Views
-                                </div>
-                                <svg
-                                  aria-hidden="true"
-                                  class="svg-inline--fa fa-chevron-down "
-                                  data-icon="chevron-down"
-                                  data-prefix="fas"
-                                  focusable="false"
-                                  role="img"
-                                  viewBox="0 0 448 512"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
-                                    fill="currentColor"
-                                  />
-                                </svg>
-                              </div>
                             </div>
-                          </button>
-                        </div>
+                          </div>
+                        </button>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-BHvUt dljPk eKguMa"
-                >
-                  <div
-                    class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-BHvUt dljPk eKguMa"
-                  />
                 </div>
               </div>
             </div>
@@ -570,10 +559,10 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                     class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI dljPk"
                   >
                     <div
-                      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-kLwhqv dljPk bzMIBI"
+                      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-kLwhqv dljPk hLjewn"
                     >
                       <button
-                        class="StyledButton-sc-323bzc-0 GAqvF sc-bqiRlB sc-hBUSln edofBN dlhkLz sc-dJjYzT cGuTUx rendition-pager__btn--prev"
+                        class="StyledButton-sc-323bzc-0 GAqvF sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT cGuTUx rendition-pager__btn--prev"
                         disabled=""
                         type="button"
                       >
@@ -594,7 +583,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                         </svg>
                       </button>
                       <button
-                        class="StyledButton-sc-323bzc-0 GAqvF sc-bqiRlB sc-hBUSln edofBN dlhkLz sc-dJjYzT cGuTUx rendition-pager__btn--next"
+                        class="StyledButton-sc-323bzc-0 GAqvF sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT cGuTUx rendition-pager__btn--next"
                         disabled=""
                         type="button"
                       >

@@ -15,6 +15,7 @@ import { useTranslation } from '../../../hooks/useTranslation';
 import groupBy from 'lodash/groupBy';
 import map from 'lodash/map';
 import { Button } from '../../../components/Button';
+import { Box } from '../../../components/Box';
 
 interface UpdateProps<T extends AutoUIBaseResource<T>> {
 	model: AutoUIModel<T>;
@@ -52,31 +53,34 @@ export const Update = <T extends AutoUIBaseResource<T>>({
 				t,
 			) ?? action.isDisabled?.({ affectedEntries: selected });
 		return (
-			<Button
-				key={action.title}
-				data-action={`${action.type}-${model.resource}`}
-				onClick={() =>
-					onActionTriggered({
-						action,
-						schema:
-							action.type === 'delete'
-								? {}
-								: autoUIJsonSchemaPick(
-										model.schema,
-										model.permissions[action.type],
-								  ),
-						affectedEntries: selected,
-					})
-				}
-				tooltip={
-					typeof disabledReason === 'string' ? disabledReason : undefined
-				}
-				disabled={!!disabledReason}
-				plain={updateActions.length > 1}
-				danger={action.isDangerous}
-			>
-				{action.title}
-			</Button>
+			<Box alignSelf="flex-start">
+				<Button
+					key={action.title}
+					data-action={`${action.type}-${model.resource}`}
+					onClick={() =>
+						onActionTriggered({
+							action,
+							schema:
+								action.type === 'delete'
+									? {}
+									: autoUIJsonSchemaPick(
+											model.schema,
+											model.permissions[action.type],
+									  ),
+							affectedEntries: selected,
+						})
+					}
+					tooltip={
+						typeof disabledReason === 'string' ? disabledReason : undefined
+					}
+					disabled={!!disabledReason}
+					plain={updateActions.length > 1}
+					danger={action.isDangerous}
+					secondary
+				>
+					{action.title}
+				</Button>
+			</Box>
 		);
 	}
 
@@ -124,18 +128,18 @@ export const Update = <T extends AutoUIBaseResource<T>>({
 	);
 
 	return (
-		<DropDownButton
-			ml={2}
-			compact={[true, true, false, false]}
-			joined
-			outline
-			alignRight
-			quartenary
-			disabled={!!disabledReason}
-			tooltip={disabledReason}
-			icon={<FontAwesomeIcon icon={faEllipsisH} />}
-			label={t('labels.actions')}
-			items={actionHandlers}
-		/>
+		<Box alignSelf="flex-start">
+			<DropDownButton
+				compact={[true, true, false, false]}
+				joined
+				alignRight
+				secondary
+				disabled={!!disabledReason}
+				tooltip={disabledReason}
+				icon={<FontAwesomeIcon icon={faEllipsisH} />}
+				label={t('labels.actions')}
+				items={actionHandlers}
+			/>
+		</Box>
 	);
 };

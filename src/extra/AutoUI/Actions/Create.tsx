@@ -11,6 +11,7 @@ import { getCreateDisabledReason } from '../utils';
 import { Button } from '../../../components/Button';
 import { faMagic } from '@fortawesome/free-solid-svg-icons/faMagic';
 import { useTranslation } from '../../../hooks/useTranslation';
+import { Box } from '../../../components/Box';
 
 interface CreateProps<T extends AutoUIBaseResource<T>> {
 	model: AutoUIModel<T>;
@@ -42,20 +43,27 @@ export const Create = <T extends AutoUIBaseResource<T>>({
 		: getCreateDisabledReason(model.permissions, hasOngoingAction, t);
 
 	return (
-		<Button
-			data-action={`create-${model.resource}`}
-			onClick={() =>
-				onActionTriggered({
-					action: createActions[0],
-					schema: autoUIJsonSchemaPick(model.schema, model.permissions.create),
-				})
-			}
-			icon={<FontAwesomeIcon icon={faMagic} />}
-			tooltip={typeof disabledReason === 'string' ? disabledReason : undefined}
-			disabled={!!disabledReason}
-			primary
-		>
-			{createActions[0].title}
-		</Button>
+		<Box>
+			<Button
+				data-action={`create-${model.resource}`}
+				onClick={() =>
+					onActionTriggered({
+						action: createActions[0],
+						schema: autoUIJsonSchemaPick(
+							model.schema,
+							model.permissions.create,
+						),
+					})
+				}
+				icon={<FontAwesomeIcon icon={faMagic} />}
+				tooltip={
+					typeof disabledReason === 'string' ? disabledReason : undefined
+				}
+				disabled={!!disabledReason}
+				primary
+			>
+				{createActions[0].title}
+			</Button>
+		</Box>
 	);
 };
