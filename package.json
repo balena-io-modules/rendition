@@ -120,7 +120,7 @@
     "memoizee": "^0.4.15",
     "mermaid": "^8.13.9",
     "pinejs-client-fetch": "^0.2.2",
-    "prismjs": "^1.25.0",
+    "prismjs": "^1.27.0",
     "prop-types": "^15.7.2",
     "qs": "^6.10.1",
     "react-google-recaptcha": "^2.1.0",
