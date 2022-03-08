@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update to latest version of prismjs
+      hash: 8ac500fb1849949bf248f0de0f871b1f666d7976
+      body: |
+        This update fixes an XSS vulnerability in prismjs.
+        See https://github.com/advisories/GHSA-3949-f494-cm99
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+  version: 25.13.2
+  title: "'Update to latest version of prismjs'"
+  date: 2022-03-08T12:46:31.170Z
+- commits:
     - subject: Remove duplicate contributor checklist item on PR template
       hash: d3744217e34e584a72b7ed23f60ccb6b3bfc773a
       body: |
