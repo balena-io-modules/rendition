@@ -135,4 +135,9 @@ export default css`
 	.xterm-strikethrough {
 		text-decoration: line-through;
 	}
+
+	.xterm-screen .xterm-decoration-container .xterm-decoration {
+		z-index: 6;
+		position: absolute;
+	}
 `;
