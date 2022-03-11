@@ -47,6 +47,7 @@ import { FocusSearch } from './Filters/FocusSearch';
 import { TableColumn } from '../../components/Table';
 import { getSelected, getSortingFunction } from './utils';
 import { CustomWidget } from './CustomWidget';
+import { FiltersView } from '~/components/Filters';
 
 const HeaderGrid = styled(Flex)`
 	> * {
@@ -122,6 +123,7 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 	}, [modelRaw]);
 
 	const [filters, setFilters] = React.useState<JSONSchema[]>([]);
+	const [views, setViews] = React.useState<FiltersView[]>([]);
 	const [selected, setSelected] = React.useState<T[]>([]);
 	const [isBusyMessage, setIsBusyMessage] = React.useState<
 		string | undefined
@@ -303,8 +305,10 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 												<Filters
 													schema={model.schema}
 													filters={filters}
+													views={views}
 													autouiContext={autouiContext}
 													changeFilters={setFilters}
+													changeViews={setViews}
 													onSearch={(term) => (
 														<FocusSearch
 															searchTerm={term}
@@ -357,8 +361,10 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 										renderMode={'summary'}
 										schema={model.schema}
 										filters={filters}
+										views={views}
 										autouiContext={autouiContext}
 										changeFilters={setFilters}
+										changeViews={setViews}
 									/>
 								)}
 							</Box>
