@@ -86,8 +86,13 @@ export const ApplicationInstructions = React.memo(
 			),
 		);
 
+		const hasConfigDownloadOnly =
+			deviceType.yocto?.deployArtifact === 'docker-image';
+
 		const finalInstructions = [
-			t('actions.use_from_to_configure_and_download'),
+			hasConfigDownloadOnly
+				? t('actions.use_form_to_download_configuration')
+				: t('actions.use_from_to_configure_and_download'),
 			...interpolatedInstructions, // TODO: i18n understand how to handle this case
 			t('actions_messages.appearance_device_explanation'),
 		];

@@ -2835,7 +2835,12 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                 {
               </span>
               
-  type
+  
+              <span
+                class="token literal-property property"
+              >
+                type
+              </span>
               <span
                 class="token operator"
               >
@@ -2853,7 +2858,12 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                 ,
               </span>
               
-  properties
+  
+              <span
+                class="token literal-property property"
+              >
+                properties
+              </span>
               <span
                 class="token operator"
               >
@@ -2868,7 +2878,7 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
               
     
               <span
-                class="token maybe-class-name"
+                class="token literal-property property"
               >
                 Markdown
               </span>
@@ -2884,7 +2894,12 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                 {
               </span>
               
-      format
+      
+              <span
+                class="token literal-property property"
+              >
+                format
+              </span>
               <span
                 class="token operator"
               >
@@ -2902,7 +2917,12 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                 ,
               </span>
               
-      type
+      
+              <span
+                class="token literal-property property"
+              >
+                type
+              </span>
               <span
                 class="token operator"
               >
@@ -2929,7 +2949,7 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
               
     
               <span
-                class="token maybe-class-name"
+                class="token literal-property property"
               >
                 Mermaid
               </span>
@@ -2945,7 +2965,12 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                 {
               </span>
               
-      format
+      
+              <span
+                class="token literal-property property"
+              >
+                format
+              </span>
               <span
                 class="token operator"
               >
@@ -2963,7 +2988,12 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
                 ,
               </span>
               
-      type
+      
+              <span
+                class="token literal-property property"
+              >
+                type
+              </span>
               <span
                 class="token operator"
               >
@@ -3111,7 +3141,11 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
               >
                 {
               </span>
-              name
+              <span
+                class="token literal-property property"
+              >
+                name
+              </span>
               <span
                 class="token operator"
               >
@@ -3128,7 +3162,12 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
               >
                 ,
               </span>
-               format
+               
+              <span
+                class="token literal-property property"
+              >
+                format
+              </span>
               <span
                 class="token operator"
               >
@@ -3145,7 +3184,12 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
               >
                 ,
               </span>
-               widget
+               
+              <span
+                class="token literal-property property"
+              >
+                widget
+              </span>
               <span
                 class="token operator"
               >
@@ -3173,7 +3217,11 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
               >
                 {
               </span>
-              name
+              <span
+                class="token literal-property property"
+              >
+                name
+              </span>
               <span
                 class="token operator"
               >
@@ -3190,7 +3238,12 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
               >
                 ,
               </span>
-               format
+               
+              <span
+                class="token literal-property property"
+              >
+                format
+              </span>
               <span
                 class="token operator"
               >
@@ -3207,7 +3260,12 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
               >
                 ,
               </span>
-               widget
+               
+              <span
+                class="token literal-property property"
+              >
+                widget
+              </span>
               <span
                 class="token operator"
               >
