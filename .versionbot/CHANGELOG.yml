@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fetch openApiJson and add Authentication
+      hash: ee9e7b32c62ae3799b5e57cab5c2687cb6214d4a
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 26.0.0
+  title: "'Fetch openApiJson and add Authentication'"
+  date: 2022-03-11T15:18:51.331Z
+- commits:
     - subject: Remove duplicate contributor checklist item on PR template
       hash: d3744217e34e584a72b7ed23f60ccb6b3bfc773a
       body: |
