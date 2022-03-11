@@ -1,4 +1,28 @@
 - commits:
+    - subject: "Terminal: Update XTerm styles"
+      hash: 96f7a0b0bcf2437f9df5d47816b44c82aeb3d1f5
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+    - subject: "DownloadImageModal: Fix instructions for docker image only device types"
+      hash: d9f2507caeda71b4407f8b32174c9588f5e6e371
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        See: https://www.flowdock.com/app/rulemotion/r-beginners/threads/bE1brvAdbSKAlyk1RnzGnXiQ1xc
+        see: https://www.flowdock.com/app/rulemotion/r-beginners/threads/bE1brvAdbSKAlyk1RnzGnXiQ1xc
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 25.13.2
+  title: "'DownloadImageModal: Fix docker image download instructions'"
+  date: 2022-03-11T12:26:13.587Z
+- commits:
     - subject: Remove duplicate contributor checklist item on PR template
       hash: d3744217e34e584a72b7ed23f60ccb6b3bfc773a
       body: |
