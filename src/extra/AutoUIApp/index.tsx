@@ -56,6 +56,8 @@ export const AutoUIApp = ({ openApiJson, title, logo }: AutoUIAppProps) => {
 		ActionSidebarProps,
 		'openApiJson'
 	> | null>();
+	const [server] = openApiJson.servers ?? [];
+	const apiHost = server?.url + '/';
 
 	React.useEffect(() => {
 		if (!actionSidebarWrapper.current) {
@@ -108,6 +110,7 @@ export const AutoUIApp = ({ openApiJson, title, logo }: AutoUIAppProps) => {
 										<Content
 											openApiJson={openApiJson}
 											openActionSidebar={setActionSidebar}
+											apiHost={apiHost}
 										/>
 									)}
 								/>
@@ -119,6 +122,7 @@ export const AutoUIApp = ({ openApiJson, title, logo }: AutoUIAppProps) => {
 							<ActionSidebar
 								{...actionSidebar}
 								openApiJson={openApiJson}
+								apiHost={apiHost}
 								onClose={() => setActionSidebar(null)}
 							/>
 						</Flex>

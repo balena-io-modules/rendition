@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 import { OpenApiJson } from './openApiJson';
 import { Flex, FlexProps } from '../../components/Flex';
 import { Txt } from '../../components/Txt';
+import { findInObject } from '../AutoUI/utils';
 
 const SidebarWrapper = styled(Flex)`
 	overflow: auto;
@@ -54,7 +55,8 @@ export const Sidebar = ({
 					([key, value]) =>
 						!key.endsWith('-create') &&
 						!key.endsWith('-update') &&
-						!!value.title,
+						!!value.title &&
+						!findInObject(value, '$ref'),
 				) // add !findInObject(value, '$ref')
 				.map(([key, value]) => ({
 					resource: key.substring(key.indexOf('.') + 1),

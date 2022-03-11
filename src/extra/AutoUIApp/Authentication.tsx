@@ -6,11 +6,20 @@ import { Form } from '../../components/Form';
 import { Link } from 'react-router-dom';
 import { Location } from 'history';
 import styled from 'styled-components';
-import { px } from '../../utils';
+import { px, setToLocalStorage } from '../../utils';
 import { Divider } from '../../components/Divider';
 import { ISubmitEvent } from '@rjsf/core';
-import { pine } from './odata';
 import { notifications } from '../../components/Notifications';
+import { externalRequest } from './odata';
+
+// NOTES:
+// 1) is it possible to generate authPaths from the API ?
+// 2) we should remove the underscore from the login endpoint if we can't generate these info from the API
+// 3) flow:
+// - check if we have a token stored (how do we check if it's valid ? )
+// - if we have a token, get the right Auth openApiJson and redirect to the first path
+// - if we don't have a token, get the Unauth openApiJson, check if it contains paths then redirect to first path otherwise go to login page
+// - login and if the response contain a token, save it in the localstorage
 
 const StyledForm = styled(Form)`
 	min-width: 350px;
@@ -53,7 +62,7 @@ export const authPaths: AuthPaths = {
 		type: 'object',
 		properties: { username: properties.username },
 	},
-	'/user/reset-password/:loginCode': {
+	'/user/reset-password/:code': {
 		title: 'Reset password Form',
 		type: 'object',
 		properties: {
@@ -85,20 +94,27 @@ export const Authentication = ({ location }: AuthenticationProps) => {
 	const pathSchema = authPaths[location.pathname];
 	const pathIncludes = (pathName: string) =>
 		location.pathname.includes(pathName);
-	console.log(location);
+	const apiHost =
+		process.env.REACT_APP_API_HOST || process.env.STORYBOOK_APP_API_HOST;
+	const pathName = location.pathname.replace('/', '');
+	const reqPath = pathIncludes('login') ? pathName + '_' : pathName;
 
 	const submit = async ({
 		formData,
 	}: ISubmitEvent<JSONSchema['properties']>) => {
 		try {
-			await pine.post({
-				url: location.pathname.replace('/', ''), // This will not work because of the V6
-				body: formData,
-			});
+			const response = await externalRequest(
+				apiHost + reqPath,
+				'POST',
+				formData,
+			);
 			notifications.addNotification({
 				content: '',
 				type: 'success',
 			});
+			if (pathIncludes('login')) {
+				setToLocalStorage('token', response);
+			}
 		} catch (err) {
 			notifications.addNotification({
 				content: err.message ?? err,

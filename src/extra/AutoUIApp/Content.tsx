@@ -20,6 +20,7 @@ import { ActionSidebarProps } from './ActionSidebar';
 interface ContentProps {
 	openApiJson: OpenApiJson;
 	openActionSidebar: (info: Omit<ActionSidebarProps, 'openApiJson'>) => void;
+	apiHost: string;
 }
 
 const updateSchema = (schema: JSONSchema) => {
@@ -63,7 +64,11 @@ const generateModel = (
 	} as AutoUIModel<AutoUIBaseResource<unknown>>;
 };
 
-export const Content = ({ openApiJson, openActionSidebar }: ContentProps) => {
+export const Content = ({
+	openApiJson,
+	openActionSidebar,
+	apiHost,
+}: ContentProps) => {
 	const { pathname } = useLocation();
 	const resourceName = pathname.replace(/^\/([^\/]*).*$/, '$1');
 	const id = pathname.substring(pathname.lastIndexOf('/') + 1);
@@ -79,7 +84,7 @@ export const Content = ({ openApiJson, openActionSidebar }: ContentProps) => {
 		AutoUIBaseResource<unknown> | Array<AutoUIBaseResource<unknown>> | undefined
 	>(
 		async () =>
-			await pine.get({
+			await pine(apiHost).get({
 				resource: resourceName,
 				...(endsWithValidId && { id }),
 				options: {
@@ -141,6 +146,7 @@ export const Content = ({ openApiJson, openActionSidebar }: ContentProps) => {
 									action: ActionMethods.POST,
 									schema: requestSchema,
 									resourceName,
+									apiHost,
 									id,
 								}),
 						};
