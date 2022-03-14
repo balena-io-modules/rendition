@@ -131,10 +131,10 @@ export const PersistentFilters = ({
 	}, [locationSearch, schema, filtersRestorationKey]);
 
 	React.useEffect(() => {
-		if (!views && storedViews && onViewsUpdate) {
+		if (!views?.length && storedViews.length && onViewsUpdate) {
 			onViewsUpdate(storedViews);
 		}
-	}, [views, storedViews, onViewsUpdate]);
+	}, []);
 
 	const updateUrl = (filters: JSONSchema[]) => {
 		const { pathname } = window.location;

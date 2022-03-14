@@ -5,14 +5,17 @@ import { AutoUIContext, AutoUIBaseResource } from '../schemaOps';
 import {
 	FilterRenderMode,
 	Filters as RenditionFilters,
+	FiltersView,
 } from '../../../components/Filters';
 import { useHistory } from '../../../hooks/useHistory';
 
 interface FiltersProps<T> {
 	schema: JSONSchema;
 	filters: JSONSchema[];
+	views: FiltersView[];
 	autouiContext: AutoUIContext<T>;
 	changeFilters: (filters: JSONSchema[]) => void;
+	changeViews: (views: FiltersView[]) => void;
 	renderMode?: FilterRenderMode;
 	onSearch?: (searchTerm: string) => React.ReactElement | null;
 }
@@ -20,7 +23,9 @@ interface FiltersProps<T> {
 export const Filters = <T extends AutoUIBaseResource<T>>({
 	schema,
 	filters,
+	views,
 	changeFilters,
+	changeViews,
 	autouiContext,
 	renderMode,
 	onSearch,
@@ -36,7 +41,9 @@ export const Filters = <T extends AutoUIBaseResource<T>>({
 					history={history}
 					schema={schema}
 					filters={filters}
+					views={views}
 					onFiltersUpdate={changeFilters}
+					onViewsUpdate={changeViews}
 					addFilterButtonProps={{ outline: true }}
 					renderMode={renderMode ?? ['add', 'search', 'views']}
 					onSearch={onSearch}
@@ -46,7 +53,9 @@ export const Filters = <T extends AutoUIBaseResource<T>>({
 					compact={[true, true, false, false]}
 					schema={schema}
 					filters={filters}
+					views={views}
 					onFiltersUpdate={changeFilters}
+					onViewsUpdate={changeViews}
 					addFilterButtonProps={{ outline: true }}
 					renderMode={renderMode ?? ['add', 'search', 'views']}
 					onSearch={onSearch}

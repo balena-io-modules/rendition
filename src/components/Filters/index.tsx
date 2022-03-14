@@ -457,9 +457,9 @@ export interface FiltersState {
 export interface FiltersProps extends React.HTMLAttributes<HTMLElement> {
 	/** If true, disable the entire `Filters` interface */
 	disabled?: boolean;
-	/** An array of json schemas to be displayed as the currently selected filters, typically used when loading when loading filters from storage */
+	/** An array of json schemas to be displayed as the currently selected filters, typically used when loading filters from storage */
 	filters?: JSONSchema[];
-	/** An array of views, as described above, typically used when loading when loading views from storage */
+	/** An array of views, as described above, typically used when loading views from storage */
 	views?: FiltersView[];
 	/** An array of view scopes, as described above */
 	viewScopes?: ViewScope[];
