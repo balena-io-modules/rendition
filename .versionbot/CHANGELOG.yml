@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update the Views menu when new views are saved
+      hash: b1e4505e17ad9382e843cdb69ec5915d0779c821
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 25.13.3
+  title: "'Update the Views menu when new views are saved'"
+  date: 2022-03-11T21:39:00.588Z
+- commits:
     - subject: "Terminal: Update XTerm styles"
       hash: 96f7a0b0bcf2437f9df5d47816b44c82aeb3d1f5
       body: ""
