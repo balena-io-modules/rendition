@@ -1,4 +1,15 @@
 - commits:
+    - subject: "patch: Update dependency react to v17"
+      hash: 600ab0e641ef856502d206c7c1d9252ec168702b
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Renovate Bot
+  version: 25.14.0
+  title: "'patch: Update dependency react to v17'"
+  date: 2022-03-14T17:30:56.445Z
+- commits:
     - subject: Update the Views menu when new views are saved
       hash: b1e4505e17ad9382e843cdb69ec5915d0779c821
       body: ""
