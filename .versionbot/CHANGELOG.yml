@@ -1,4 +1,16 @@
 - commits:
+    - subject: "patch: Update dependency lint-staged to v12"
+      hash: 03c3871bd7db678cd043864a2f3a6b92fbd340ca
+      body: |
+        Update lint-staged from 4.3.0 to 12.3.6
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 25.13.4
+  title: "'patch: Update dependency lint-staged to v12'"
+  date: 2022-03-16T10:48:56.401Z
+- commits:
     - subject: Update the Views menu when new views are saved
       hash: b1e4505e17ad9382e843cdb69ec5915d0779c821
       body: ""
