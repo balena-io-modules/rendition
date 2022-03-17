@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update fontawesome to fix incompatibilities
+      hash: 526e83a35b6d66f7fa2213bd8d750f346fe4b0a5
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 25.13.5
+  title: "'Update fontawesome to fix incompatibilities'"
+  date: 2022-03-17T11:16:43.561Z
+- commits:
     - subject: "patch: Update dependency remark-breaks to ^2.0.2"
       hash: 3b6dae32855fb802df14d70777c4e85a978c8e6f
       body: ""
