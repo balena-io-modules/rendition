@@ -32,12 +32,13 @@ export const LensSelection = ({
 							data-test={`lens-selector--${item.slug}`}
 							data-slug={item.slug}
 							onClick={() => setLens(item)}
-							pt={11}
 							tooltip={{
 								text: item.data.label,
 								placement: 'bottom',
 							}}
 							icon={<FontAwesomeIcon icon={item.data.icon} />}
+							quartenary
+							outline
 						/>
 					);
 				})}

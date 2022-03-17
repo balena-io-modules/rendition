@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Flex, FlexProps } from '../Flex';
 import { Button } from '../Button';
 import { TooltipProps } from '../../common-types';
+import { px } from '../../utils';
 
 export type OptionType = ButtonGroupOption | string | number | boolean;
 export interface ButtonGroupOption {
@@ -42,11 +43,13 @@ const ButtonGroupBase = styled(Flex)<{ isSelect?: boolean }>`
 			&:first-child {
 				border-top-right-radius: 0;
 				border-bottom-right-radius: 0;
+				padding-left: ${px(props.theme.space[3])};
 			}
 	
 			&:last-child {
 				border-top-left-radius: 0;
 				border-bottom-left-radius: 0;
+				padding-right: ${px(props.theme.space[3])};
 			}
 	
 			&:not(:last-child) {

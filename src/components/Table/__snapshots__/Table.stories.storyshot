@@ -3537,10 +3537,10 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
             class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI dljPk"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-kLwhqv dljPk bzMIBI"
+              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-kLwhqv dljPk hLjewn"
             >
               <button
-                class="StyledButton-sc-323bzc-0 GAqvF sc-bqiRlB sc-hBUSln edofBN dlhkLz sc-dJjYzT cGuTUx rendition-pager__btn--prev"
+                class="StyledButton-sc-323bzc-0 GAqvF sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT cGuTUx rendition-pager__btn--prev"
                 disabled=""
                 type="button"
               >
@@ -3561,7 +3561,7 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
                 </svg>
               </button>
               <button
-                class="StyledButton-sc-323bzc-0 gKeRwL sc-bqiRlB sc-hBUSln edofBN dlhkLz sc-dJjYzT cGuTUx rendition-pager__btn--next"
+                class="StyledButton-sc-323bzc-0 gKeRwL sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT cGuTUx rendition-pager__btn--next"
                 type="button"
               >
                 <svg
@@ -3828,10 +3828,10 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
             class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI dljPk"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-kLwhqv dljPk bzMIBI"
+              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-kLwhqv dljPk hLjewn"
             >
               <button
-                class="StyledButton-sc-323bzc-0 GAqvF sc-bqiRlB sc-hBUSln edofBN dlhkLz sc-dJjYzT cGuTUx rendition-pager__btn--prev"
+                class="StyledButton-sc-323bzc-0 GAqvF sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT cGuTUx rendition-pager__btn--prev"
                 disabled=""
                 type="button"
               >
@@ -3852,7 +3852,7 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
                 </svg>
               </button>
               <button
-                class="StyledButton-sc-323bzc-0 gKeRwL sc-bqiRlB sc-hBUSln edofBN dlhkLz sc-dJjYzT cGuTUx rendition-pager__btn--next"
+                class="StyledButton-sc-323bzc-0 gKeRwL sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT cGuTUx rendition-pager__btn--next"
                 type="button"
               >
                 <svg
@@ -4417,10 +4417,10 @@ exports[`Storyshots Core/Table With Pager 1`] = `
             class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI dljPk"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-kLwhqv dljPk bzMIBI"
+              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-kLwhqv dljPk hLjewn"
             >
               <button
-                class="StyledButton-sc-323bzc-0 GAqvF sc-bqiRlB sc-hBUSln edofBN dlhkLz sc-dJjYzT cGuTUx rendition-pager__btn--prev"
+                class="StyledButton-sc-323bzc-0 GAqvF sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT cGuTUx rendition-pager__btn--prev"
                 disabled=""
                 type="button"
               >
@@ -4441,7 +4441,7 @@ exports[`Storyshots Core/Table With Pager 1`] = `
                 </svg>
               </button>
               <button
-                class="StyledButton-sc-323bzc-0 gKeRwL sc-bqiRlB sc-hBUSln edofBN dlhkLz sc-dJjYzT cGuTUx rendition-pager__btn--next"
+                class="StyledButton-sc-323bzc-0 gKeRwL sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT cGuTUx rendition-pager__btn--next"
                 type="button"
               >
                 <svg
@@ -4708,10 +4708,10 @@ exports[`Storyshots Core/Table With Pager 1`] = `
             class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI dljPk"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-kLwhqv dljPk bzMIBI"
+              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-kLwhqv dljPk hLjewn"
             >
               <button
-                class="StyledButton-sc-323bzc-0 GAqvF sc-bqiRlB sc-hBUSln edofBN dlhkLz sc-dJjYzT cGuTUx rendition-pager__btn--prev"
+                class="StyledButton-sc-323bzc-0 GAqvF sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT cGuTUx rendition-pager__btn--prev"
                 disabled=""
                 type="button"
               >
@@ -4732,7 +4732,7 @@ exports[`Storyshots Core/Table With Pager 1`] = `
                 </svg>
               </button>
               <button
-                class="StyledButton-sc-323bzc-0 gKeRwL sc-bqiRlB sc-hBUSln edofBN dlhkLz sc-dJjYzT cGuTUx rendition-pager__btn--next"
+                class="StyledButton-sc-323bzc-0 gKeRwL sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT cGuTUx rendition-pager__btn--next"
                 type="button"
               >
                 <svg

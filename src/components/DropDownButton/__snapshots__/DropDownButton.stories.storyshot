@@ -10,13 +10,13 @@ exports[`Storyshots Core/DropDownButton Bordered List 1`] = `
     >
       <span>
         <button
-          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT cGuTUx sc-faUpoM NWxrs"
+          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT cGuTUx sc-faUpoM NWxrs"
           type="button"
         >
           Dropdown
         </button>
         <button
-          class="StyledButton-sc-323bzc-0 kALHrj sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT cGuTUx sc-clIzBv eddASd"
+          class="StyledButton-sc-323bzc-0 kALHrj sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT cGuTUx sc-clIzBv eddASd"
           type="button"
         >
           <svg
@@ -51,13 +51,13 @@ exports[`Storyshots Core/DropDownButton Default 1`] = `
     >
       <span>
         <button
-          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT cGuTUx sc-faUpoM NWxrs"
+          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT cGuTUx sc-faUpoM NWxrs"
           type="button"
         >
           Dropdown
         </button>
         <button
-          class="StyledButton-sc-323bzc-0 kALHrj sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT cGuTUx sc-clIzBv eddASd"
+          class="StyledButton-sc-323bzc-0 kALHrj sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT cGuTUx sc-clIzBv eddASd"
           type="button"
         >
           <svg
@@ -95,13 +95,13 @@ exports[`Storyshots Core/DropDownButton Drop Up 1`] = `
       >
         <span>
           <button
-            class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT cGuTUx sc-faUpoM NWxrs"
+            class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT cGuTUx sc-faUpoM NWxrs"
             type="button"
           >
             Dropdown
           </button>
           <button
-            class="StyledButton-sc-323bzc-0 kALHrj sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT cGuTUx sc-clIzBv eddASd"
+            class="StyledButton-sc-323bzc-0 kALHrj sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT cGuTUx sc-clIzBv eddASd"
             type="button"
           >
             <svg
@@ -170,7 +170,7 @@ exports[`Storyshots Core/DropDownButton Joined 1`] = `
       class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-fWCJzd SyRni sc-jIkXHa jjtoQT"
     >
       <button
-        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT cGuTUx sc-TBWPX bmLpyY"
+        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT cGuTUx sc-TBWPX bmLpyY"
         type="button"
       >
         <div

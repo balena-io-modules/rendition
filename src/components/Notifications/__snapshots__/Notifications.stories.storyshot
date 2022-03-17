@@ -90,7 +90,7 @@ exports[`Storyshots Core/Notifications Default 1`] = `
                         Some text for the user to read
                       </div>
                       <button
-                        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT cGuTUx"
+                        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT cGuTUx"
                         type="button"
                       >
                         This is a button
@@ -145,13 +145,13 @@ exports[`Storyshots Core/Notifications Default 1`] = `
         />
       </div>
       <button
-        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iNFlLy"
+        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
         type="button"
       >
         Add text notification
       </button>
       <button
-        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iNFlLy"
+        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
         type="button"
       >
         Add button notification
@@ -531,26 +531,26 @@ exports[`Storyshots Core/Notifications Positioning 1`] = `
         class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI dljPk"
       >
         <button
-          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iNFlLy"
+          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
           type="button"
         >
           top-left
         </button>
         <button
-          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iNFlLy"
+          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
           type="button"
         >
           top-center
         </button>
         <button
-          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iNFlLy"
+          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
           type="button"
         >
           top-right
         </button>
       </div>
       <button
-        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iNFlLy"
+        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
         type="button"
       >
         center
@@ -559,19 +559,19 @@ exports[`Storyshots Core/Notifications Positioning 1`] = `
         class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI dljPk"
       >
         <button
-          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iNFlLy"
+          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
           type="button"
         >
           bottom-left
         </button>
         <button
-          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iNFlLy"
+          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
           type="button"
         >
           bottom-center
         </button>
         <button
-          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iNFlLy"
+          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
           type="button"
         >
           bottom-right
@@ -897,25 +897,25 @@ exports[`Storyshots Core/Notifications Types 1`] = `
         />
       </div>
       <button
-        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iNFlLy"
+        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
         type="button"
       >
         danger
       </button>
       <button
-        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iNFlLy"
+        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
         type="button"
       >
         success
       </button>
       <button
-        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iNFlLy"
+        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
         type="button"
       >
         warning
       </button>
       <button
-        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN jaIwDv sc-dJjYzT iNFlLy"
+        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
         type="button"
       >
         info

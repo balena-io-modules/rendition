@@ -13,6 +13,7 @@ const translationMap = {
 	'labels.tag_value': 'Tag value',
 
 	'actions.ok': 'OK',
+	'actions.manage_tags': 'Manage tags',
 	'actions.add_tag': 'Add tag',
 	'actions.continue': 'Continue',
 	'actions.undo_add': 'Undo add',

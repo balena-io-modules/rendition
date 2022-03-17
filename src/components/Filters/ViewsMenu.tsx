@@ -44,12 +44,6 @@ const ViewsMenu = (props: ViewsMenuProps) => {
 	const hasViews = views.length > 0;
 	const groupedViews = groupBy(views, (item) => item.scope || 'Unscoped');
 
-	let soloRender = false;
-	if (renderMode) {
-		const mode = Array.isArray(renderMode) ? renderMode : [renderMode];
-		soloRender = mode.length === 1 && mode[0] === 'views';
-	}
-
 	const memoizedItems = React.useMemo(
 		() =>
 			!hasViews
@@ -105,13 +99,13 @@ const ViewsMenu = (props: ViewsMenuProps) => {
 
 	return (
 		<DropDownButton
-			ml={soloRender ? 0 : 30}
+			mx={renderMode?.length === 1 ? 0 : 1}
 			disabled={props.disabled}
 			quartenary={!props.dark}
 			light={props.dark}
 			outline
 			joined
-			alignRight={!soloRender}
+			alignRight={renderMode?.length === 1}
 			noListFormat
 			icon={<FontAwesomeIcon icon={faChartPie} />}
 			label="Views"
@@ -131,7 +125,7 @@ export interface ViewsMenuProps {
 	hasMultipleScopes?: boolean;
 	setFilters: (filters: JSONSchema[]) => void;
 	deleteView: (view: FiltersView) => any;
-	renderMode?: FilterRenderMode | FilterRenderMode[];
+	renderMode?: FilterRenderMode[];
 	compact?: boolean[];
 }
 

@@ -924,10 +924,6 @@ exports[`Renderer component A button group widget 1`] = `
   border-color: #2A506F;
 }
 
-.c9 svg {
-  color: #527699 !important;
-}
-
 .c9:hover:enabled,
 .c9:focus:enabled,
 .c9:active:enabled {
@@ -968,11 +964,13 @@ exports[`Renderer component A button group widget 1`] = `
 .c6 > *:first-child {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  padding-left: 16px;
 }
 
 .c6 > *:last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  padding-right: 16px;
 }
 
 .c6 > *:not(:last-child) {
@@ -1506,10 +1504,6 @@ exports[`Renderer component A drop-down button widget 1`] = `
 .c8 {
   color: #2A506F;
   border-color: #2A506F;
-}
-
-.c8 svg {
-  color: #527699 !important;
 }
 
 .c8:hover:enabled,
