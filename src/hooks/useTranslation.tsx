@@ -79,6 +79,9 @@ const translationMap = {
 	'actions.download_balenaos': 'Download balenaOS',
 	'actions.download_configuration_file_only':
 		'Download configuration file only',
+	'actions.flash': 'Flash',
+
+	'warning.etcher_min_requirement': 'Etcher v1.7.2 or greater is required',
 
 	'loading.generating_configuration_file': 'Generating configuration file...',
 	'loading.fetching_versions': 'Fetching versions...',
