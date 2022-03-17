@@ -1,4 +1,15 @@
 - commits:
+    - subject: "patch: Update xterm-non-major"
+      hash: c62b93f3565aebdb871a83d5f35b75d6741e8969
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 25.15.2
+  title: "'patch: Update xterm-non-major'"
+  date: 2022-03-17T18:14:26.566Z
+- commits:
     - subject: "patch: Update tests"
       hash: 01fc35513e8f3655ec0188c649469615046c0191
       body: ""
