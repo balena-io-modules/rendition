@@ -1,4 +1,26 @@
 - commits:
+    - subject: "patch: Update dependency qs to ^6.10.3"
+      hash: 5037b114440818ddd36a14c4ab54c891464024fe
+      body: |
+        Update qs from 6.10.1 to 6.10.3
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+    - subject: move "manage tags" action inside the actions menu, improve position and
+        style in the actions/filters bar
+      hash: 3de5f3473ed65be53da223283f8c5a9023b4a325
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 25.15.0
+  title: "'patch: Update dependency qs to ^6.10.3'"
+  date: 2022-03-17T16:11:19.197Z
+- commits:
     - subject: Add flash with etcher button code inside download image modal
       hash: b85f3b394bfcb9767969a0adb7318d0d6f79425e
       body: ""
