@@ -1,4 +1,15 @@
 - commits:
+    - subject: "patch: Update tests"
+      hash: 01fc35513e8f3655ec0188c649469615046c0191
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 25.15.1
+  title: "'patch: Update tests'"
+  date: 2022-03-17T16:55:27.196Z
+- commits:
     - subject: "patch: Update dependency qs to ^6.10.3"
       hash: 5037b114440818ddd36a14c4ab54c891464024fe
       body: |
