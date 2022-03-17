@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add flash with etcher button code inside download image modal
+      hash: b85f3b394bfcb9767969a0adb7318d0d6f79425e
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 25.14.0
+  title: "'Add flash with etcher button code inside download image modal'"
+  date: 2022-03-17T12:54:24.000Z
+- commits:
     - subject: Update fontawesome to fix incompatibilities
       hash: 526e83a35b6d66f7fa2213bd8d750f346fe4b0a5
       body: ""
