@@ -136,7 +136,7 @@
     "rehype-react": "^6.1.0",
     "rehype-sanitize": "^3.0.1",
     "rehype-slug": "^4.0.1",
-    "remark-breaks": "^2.0.1",
+    "remark-breaks": "^2.0.2",
     "remark-parse": "^8.0.3",
     "remark-rehype": "^7.0.0",
     "resize-observer": "^1.0.2",
