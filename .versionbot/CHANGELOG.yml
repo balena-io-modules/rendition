@@ -1,4 +1,17 @@
 - commits:
+    - subject: Lock dependency mermaid to v8.2.8
+      hash: b6a4d7cb0f57c4bf71e80c3b5fa1abae6b65a50f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 25.15.3
+  title: "'Lock dependency mermaid to v8.2.8'"
+  date: 2022-03-23T19:38:01.778Z
+- commits:
     - subject: "patch: Update xterm-non-major"
       hash: c62b93f3565aebdb871a83d5f35b75d6741e8969
       body: ""
