@@ -53,6 +53,7 @@ const BaseTextWithCopy = ({
 	text,
 	children,
 	showCopyButton,
+	onCopyClick,
 }: InternalTextWithCopyProps) => {
 	const normalizedText = (text || '').toString().trim();
 	const normalizedCopy = (copy || normalizedText).toString().trim();
@@ -67,7 +68,10 @@ const BaseTextWithCopy = ({
 			<CopyWrapper onClick={stopEvent}>
 				<Copy
 					tooltip={{ text: 'Copied!', trigger: 'click' }}
-					onClick={() => copyToClipboard(normalizedCopy)}
+					onClick={() => {
+						copyToClipboard(normalizedCopy);
+						onCopyClick?.();
+					}}
 					showCopyButton={showCopyButton}
 				>
 					<FontAwesomeIcon icon={faCopy} />
@@ -86,6 +90,7 @@ export interface InternalTextWithCopyProps
 	showCopyButton?: 'hover' | 'always';
 	code?: boolean;
 	text?: string;
+	onCopyClick?: () => void;
 }
 
 export type TextWithCopyProps = InternalTextWithCopyProps &
