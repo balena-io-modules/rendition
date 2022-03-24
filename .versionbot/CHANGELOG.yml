@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add onCopyClick property to TextWithCopy
+      hash: 5837d3eee83c9598b3e4a071bf7c73acb26768f6
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 25.16.0
+  title: "'Add onCopyClick property to TextWithCopy'"
+  date: 2022-03-24T11:53:48.915Z
+- commits:
     - subject: Lock dependency mermaid to v8.2.8
       hash: b6a4d7cb0f57c4bf71e80c3b5fa1abae6b65a50f
       body: ""
