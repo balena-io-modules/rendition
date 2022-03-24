@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix autoUI update actions visibility rules
+      hash: b7310eb094c0b7b90cd1895290d421ae19af548c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 25.16.1
+  title: "'Fix autoUI update actions visibility rules'"
+  date: 2022-03-24T12:58:10.141Z
+- commits:
     - subject: Add onCopyClick property to TextWithCopy
       hash: 5837d3eee83c9598b3e4a071bf7c73acb26768f6
       body: ""
