@@ -277,20 +277,22 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 										hasOngoingAction={false}
 										onActionTriggered={onActionTriggered}
 									/>
-									<Update
-										model={model}
-										selected={selected}
-										autouiContext={autouiContext}
-										hasOngoingAction={false}
-										onActionTriggered={onActionTriggered}
-									/>
-									<Box
-										order={[-1, -1, -1, 0]}
-										flex={['1 0 100%', '1 0 100%', '1 0 100%', 'auto']}
-										alignSelf="flex-start"
-										mb={2}
-									>
-										{showFilters && (
+									{data.length > 0 && (
+										<Update
+											model={model}
+											selected={selected}
+											autouiContext={autouiContext}
+											hasOngoingAction={false}
+											onActionTriggered={onActionTriggered}
+										/>
+									)}
+									{showFilters && (
+										<Box
+											order={[-1, -1, -1, 0]}
+											flex={['1 0 100%', '1 0 100%', '1 0 100%', 'auto']}
+											alignSelf="flex-start"
+											mb={2}
+										>
 											<Filters
 												schema={model.schema}
 												filters={filters}
@@ -310,8 +312,8 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 													/>
 												)}
 											/>
-										)}
-									</Box>
+										</Box>
+									)}
 									{data.length > 0 && (
 										<LensSelection
 											lenses={lenses}
