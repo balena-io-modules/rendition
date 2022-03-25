@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix filters buttons color styles
+      hash: a28171d48f3f6eaea8da836288cfa6e02e23f7d5
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 25.16.2
+  title: "'Fix filters buttons color styles'"
+  date: 2022-03-25T16:42:52.608Z
+- commits:
     - subject: Fix autoUI update actions visibility rules
       hash: b7310eb094c0b7b90cd1895290d421ae19af548c
       body: ""
