@@ -32,6 +32,7 @@ import { Tags } from './Actions/Tags';
 import { Update } from './Actions/Update';
 import { Create } from './Actions/Create';
 import {
+	autoUIAdaptRefScheme,
 	autoUIAddToSchema,
 	autoUIDefaultPermissions,
 	autoUIGetModelForCollection,
@@ -471,17 +472,19 @@ export const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 				priority,
 				type: 'predefined',
 				sortable: customSort?.[key] ?? getSortingFunction(key, val),
-				render: (fieldVal: string, entry: T) =>
-					val.format ? (
+				render: (fieldVal: string, entry: T) => {
+					const calculatedField = autoUIAdaptRefScheme(fieldVal, val);
+					return val.format ? (
 						<CustomWidget
 							extraFormats={formats ?? ([] as Format[])}
 							schema={widgetSchema}
-							value={fieldVal}
+							value={calculatedField}
 							extraContext={entry}
 						/>
 					) : (
-						fieldVal
-					),
+						calculatedField
+					);
+				},
 			};
 		})
 		.filter(
