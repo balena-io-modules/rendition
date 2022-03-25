@@ -41,7 +41,7 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
             
           </div>
           <button
-            class="StyledButton-sc-323bzc-0 kaLOfe sc-bqiRlB sc-ksdxgE edofBN fmTUYU sc-dJjYzT cRvDTf"
+            class="StyledButton-sc-323bzc-0 jFToxV sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT cRvDTf"
             type="button"
             width="200"
           >
@@ -51,7 +51,6 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
               <svg
                 aria-hidden="true"
                 class="svg-inline--fa fa-filter "
-                color="#444444"
                 data-icon="filter"
                 data-prefix="fas"
                 focusable="false"
@@ -1223,13 +1222,12 @@ exports[`Storyshots Core/Filters Compact 1`] = `
             
           </div>
           <button
-            class="StyledButton-sc-323bzc-0 khkuuo sc-bqiRlB sc-ksdxgE edofBN fmTUYU sc-dJjYzT hrMPjG"
+            class="StyledButton-sc-323bzc-0 gKeRwL sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT hrMPjG"
             type="button"
           >
             <svg
               aria-hidden="true"
               class="svg-inline--fa fa-filter "
-              color="#444444"
               data-icon="filter"
               data-prefix="fas"
               focusable="false"
@@ -2391,7 +2389,7 @@ exports[`Storyshots Core/Filters Default 1`] = `
             
           </div>
           <button
-            class="StyledButton-sc-323bzc-0 kaLOfe sc-bqiRlB sc-ksdxgE edofBN fmTUYU sc-dJjYzT hrMPjG"
+            class="StyledButton-sc-323bzc-0 jFToxV sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT hrMPjG"
             type="button"
           >
             <div
@@ -2400,7 +2398,6 @@ exports[`Storyshots Core/Filters Default 1`] = `
               <svg
                 aria-hidden="true"
                 class="svg-inline--fa fa-filter "
-                color="#444444"
                 data-icon="filter"
                 data-prefix="fas"
                 focusable="false"
@@ -3573,7 +3570,7 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
             
           </div>
           <button
-            class="StyledButton-sc-323bzc-0 EorKg sc-bqiRlB sc-ksdxgE edofBN fmTUYU sc-dJjYzT hrMPjG"
+            class="StyledButton-sc-323bzc-0 eBLkED sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT hrMPjG"
             disabled=""
             type="button"
           >
@@ -3583,7 +3580,6 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
               <svg
                 aria-hidden="true"
                 class="svg-inline--fa fa-filter "
-                color="#444444"
                 data-icon="filter"
                 data-prefix="fas"
                 focusable="false"
@@ -4729,7 +4725,7 @@ exports[`Storyshots Core/Filters Render Modes 1`] = `
           class="sc-gKclnd exdBHI sc-iCfMLu kkMeyg sc-hGPBjI kZhRrI"
         >
           <button
-            class="StyledButton-sc-323bzc-0 kaLOfe sc-bqiRlB sc-ksdxgE edofBN fmTUYU sc-dJjYzT hrMPjG"
+            class="StyledButton-sc-323bzc-0 jFToxV sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT hrMPjG"
             type="button"
           >
             <div
@@ -4738,7 +4734,6 @@ exports[`Storyshots Core/Filters Render Modes 1`] = `
               <svg
                 aria-hidden="true"
                 class="svg-inline--fa fa-filter "
-                color="#444444"
                 data-icon="filter"
                 data-prefix="fas"
                 focusable="false"

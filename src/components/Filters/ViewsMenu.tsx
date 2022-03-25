@@ -101,7 +101,7 @@ const ViewsMenu = (props: ViewsMenuProps) => {
 		<DropDownButton
 			mx={renderMode?.length === 1 ? 0 : 1}
 			disabled={props.disabled}
-			quartenary={!props.dark}
+			quartenary
 			light={props.dark}
 			outline
 			joined

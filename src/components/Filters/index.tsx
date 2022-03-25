@@ -342,6 +342,8 @@ class BaseFilters extends React.Component<FiltersProps, FiltersState> {
 						<Button
 							mx={1}
 							disabled={this.props.disabled}
+							light={this.props.dark}
+							outline
 							quartenary
 							icon={<FontAwesomeIcon icon={faFilter} />}
 							onClick={() =>
