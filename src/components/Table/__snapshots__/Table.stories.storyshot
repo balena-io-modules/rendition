@@ -3,19 +3,19 @@
 exports[`Storyshots Core/Table Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-gslxeA dljPk jLImRG"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-grVGCS iKIurY ikgPpo"
     >
       <div
-        class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
+        class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
       >
         <div
-          class="sc-fmciRz gXrEcX"
+          class="sc-fmrZth clkOUX"
         >
           <div
-            class="sc-eXlEPa kUkFif sc-kmQMED fTascr"
+            class="sc-eXBvqI jmlAON sc-kngDgl juYrxT"
           >
             <div
               data-display="table-head"
@@ -27,7 +27,7 @@ exports[`Storyshots Core/Table Default 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Name"
                     type="button"
                   >
@@ -55,7 +55,7 @@ exports[`Storyshots Core/Table Default 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -83,7 +83,7 @@ exports[`Storyshots Core/Table Default 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Category"
                     type="button"
                   >
@@ -111,7 +111,7 @@ exports[`Storyshots Core/Table Default 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="first_seen"
                     type="button"
                   >
@@ -506,19 +506,19 @@ exports[`Storyshots Core/Table Default 1`] = `
 exports[`Storyshots Core/Table Sorted 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-gslxeA dljPk jLImRG"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-grVGCS iKIurY ikgPpo"
     >
       <div
-        class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
+        class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
       >
         <div
-          class="sc-fmciRz gXrEcX"
+          class="sc-fmrZth clkOUX"
         >
           <div
-            class="sc-eXlEPa kUkFif sc-kmQMED fTascr"
+            class="sc-eXBvqI jmlAON sc-kngDgl juYrxT"
           >
             <div
               data-display="table-head"
@@ -530,7 +530,7 @@ exports[`Storyshots Core/Table Sorted 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 dxCrOx sc-bqiRlB sc-bkkeKt edofBN hOrbaG sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 iFDLDn sc-breuTD sc-bjUoiL Krizp dANmhT sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Name"
                     type="button"
                   >
@@ -558,7 +558,7 @@ exports[`Storyshots Core/Table Sorted 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -586,7 +586,7 @@ exports[`Storyshots Core/Table Sorted 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Category"
                     type="button"
                   >
@@ -614,7 +614,7 @@ exports[`Storyshots Core/Table Sorted 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="first_seen"
                     type="button"
                   >
@@ -1009,19 +1009,19 @@ exports[`Storyshots Core/Table Sorted 1`] = `
 exports[`Storyshots Core/Table With Anchor Rows 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-gslxeA dljPk jLImRG"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-grVGCS iKIurY ikgPpo"
     >
       <div
-        class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
+        class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
       >
         <div
-          class="sc-fmciRz gXrEcX"
+          class="sc-fmrZth clkOUX"
         >
           <div
-            class="sc-eXlEPa fOrGqF sc-kmQMED fTascr"
+            class="sc-eXBvqI gomuLP sc-kngDgl juYrxT"
           >
             <div
               data-display="table-head"
@@ -1033,7 +1033,7 @@ exports[`Storyshots Core/Table With Anchor Rows 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Name"
                     type="button"
                   >
@@ -1061,7 +1061,7 @@ exports[`Storyshots Core/Table With Anchor Rows 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -1089,7 +1089,7 @@ exports[`Storyshots Core/Table With Anchor Rows 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Category"
                     type="button"
                   >
@@ -1117,7 +1117,7 @@ exports[`Storyshots Core/Table With Anchor Rows 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="first_seen"
                     type="button"
                   >
@@ -1600,19 +1600,19 @@ exports[`Storyshots Core/Table With Anchor Rows 1`] = `
 exports[`Storyshots Core/Table With Checkboxes 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-gslxeA dljPk jLImRG"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-grVGCS iKIurY ikgPpo"
     >
       <div
-        class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
+        class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
       >
         <div
-          class="sc-fmciRz gXrEcX"
+          class="sc-fmrZth clkOUX"
         >
           <div
-            class="sc-eXlEPa TIFul sc-kmQMED cKMZQy"
+            class="sc-eXBvqI jzuVmz sc-kngDgl lbrOJe"
           >
             <div
               data-display="table-head"
@@ -1621,27 +1621,27 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-display="table-row"
               >
                 <div
-                  class="sc-gjNHFA fwMUjF"
+                  class="sc-gkJlnC iuFmZI"
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPiLbb gVtLIl sc-bBHHxi doLBYL"
+                    class="sc-dPyBCJ etMwTo sc-bBXxYQ hqGdPE"
                   >
                     <label
-                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 UZeto"
+                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 bkOleo StyledCheckBox-sc-1dbk5ju-6 cQZdeZ"
+                        class="StyledBox-sc-13pk1d4-0 eFOcYa StyledCheckBox-sc-1dbk5ju-6 eJWclz"
                       >
                         <input
-                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 dIAioe"
+                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 jjxirM"
                           type="checkbox"
                         />
                         <div
-                          class="StyledBox-sc-13pk1d4-0 iHfoym StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iRWScv"
+                          class="StyledBox-sc-13pk1d4-0 bLQvIs StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 bNwZfh"
                         >
                           <svg
-                            class="StyledCheckBox__StyledCheckBoxIcon-sc-1dbk5ju-0 fUkZyQ"
+                            class="StyledCheckBox__StyledCheckBoxIcon-sc-1dbk5ju-0 cGSKOC"
                             preserveAspectRatio="xMidYMid meet"
                             viewBox="0 0 24 24"
                           >
@@ -1659,7 +1659,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Name"
                     type="button"
                   >
@@ -1687,7 +1687,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -1715,7 +1715,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Category"
                     type="button"
                   >
@@ -1743,7 +1743,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="first_seen"
                     type="button"
                   >
@@ -1778,29 +1778,29 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="true"
               >
                 <div
-                  class="sc-gjNHFA fwMUjF"
+                  class="sc-gkJlnC iuFmZI"
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPiLbb kDJpOO sc-bBHHxi doLBYL"
+                    class="sc-dPyBCJ dhbijv sc-bBXxYQ hqGdPE"
                   >
                     <label
-                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 UZeto"
+                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 bkOleo StyledCheckBox-sc-1dbk5ju-6 cQZdeZ"
+                        class="StyledBox-sc-13pk1d4-0 eFOcYa StyledCheckBox-sc-1dbk5ju-6 eJWclz"
                       >
                         <input
                           checked=""
-                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 dIAioe"
+                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 jjxirM"
                           data-key="1"
                           type="checkbox"
                         />
                         <div
-                          class="StyledBox-sc-13pk1d4-0 iaFjTy StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iRWScv"
+                          class="StyledBox-sc-13pk1d4-0 pLQPw StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 bNwZfh"
                         >
                           <svg
-                            class="StyledCheckBox__StyledCheckBoxIcon-sc-1dbk5ju-0 fUkZyQ"
+                            class="StyledCheckBox__StyledCheckBoxIcon-sc-1dbk5ju-0 cGSKOC"
                             preserveAspectRatio="xMidYMid meet"
                             viewBox="0 0 24 24"
                           >
@@ -1845,29 +1845,29 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="true"
               >
                 <div
-                  class="sc-gjNHFA fwMUjF"
+                  class="sc-gkJlnC iuFmZI"
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPiLbb kDJpOO sc-bBHHxi doLBYL"
+                    class="sc-dPyBCJ dhbijv sc-bBXxYQ hqGdPE"
                   >
                     <label
-                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 UZeto"
+                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 bkOleo StyledCheckBox-sc-1dbk5ju-6 cQZdeZ"
+                        class="StyledBox-sc-13pk1d4-0 eFOcYa StyledCheckBox-sc-1dbk5ju-6 eJWclz"
                       >
                         <input
                           checked=""
-                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 dIAioe"
+                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 jjxirM"
                           data-key="2"
                           type="checkbox"
                         />
                         <div
-                          class="StyledBox-sc-13pk1d4-0 iaFjTy StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iRWScv"
+                          class="StyledBox-sc-13pk1d4-0 pLQPw StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 bNwZfh"
                         >
                           <svg
-                            class="StyledCheckBox__StyledCheckBoxIcon-sc-1dbk5ju-0 fUkZyQ"
+                            class="StyledCheckBox__StyledCheckBoxIcon-sc-1dbk5ju-0 cGSKOC"
                             preserveAspectRatio="xMidYMid meet"
                             viewBox="0 0 24 24"
                           >
@@ -1912,29 +1912,29 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="true"
               >
                 <div
-                  class="sc-gjNHFA fwMUjF"
+                  class="sc-gkJlnC iuFmZI"
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPiLbb kDJpOO sc-bBHHxi doLBYL"
+                    class="sc-dPyBCJ dhbijv sc-bBXxYQ hqGdPE"
                   >
                     <label
-                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 UZeto"
+                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 bkOleo StyledCheckBox-sc-1dbk5ju-6 cQZdeZ"
+                        class="StyledBox-sc-13pk1d4-0 eFOcYa StyledCheckBox-sc-1dbk5ju-6 eJWclz"
                       >
                         <input
                           checked=""
-                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 dIAioe"
+                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 jjxirM"
                           data-key="3"
                           type="checkbox"
                         />
                         <div
-                          class="StyledBox-sc-13pk1d4-0 iaFjTy StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iRWScv"
+                          class="StyledBox-sc-13pk1d4-0 pLQPw StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 bNwZfh"
                         >
                           <svg
-                            class="StyledCheckBox__StyledCheckBoxIcon-sc-1dbk5ju-0 fUkZyQ"
+                            class="StyledCheckBox__StyledCheckBoxIcon-sc-1dbk5ju-0 cGSKOC"
                             preserveAspectRatio="xMidYMid meet"
                             viewBox="0 0 24 24"
                           >
@@ -1979,25 +1979,25 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-gjNHFA fwMUjF"
+                  class="sc-gkJlnC iuFmZI"
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPiLbb krGoUJ sc-bBHHxi doLBYL"
+                    class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
                   >
                     <label
-                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 UZeto"
+                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 bkOleo StyledCheckBox-sc-1dbk5ju-6 cQZdeZ"
+                        class="StyledBox-sc-13pk1d4-0 eFOcYa StyledCheckBox-sc-1dbk5ju-6 eJWclz"
                       >
                         <input
-                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 dIAioe"
+                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 jjxirM"
                           data-key="4"
                           type="checkbox"
                         />
                         <div
-                          class="StyledBox-sc-13pk1d4-0 iHfoym StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iRWScv"
+                          class="StyledBox-sc-13pk1d4-0 bLQvIs StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 bNwZfh"
                         />
                       </div>
                     </label>
@@ -2034,25 +2034,25 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-gjNHFA fwMUjF"
+                  class="sc-gkJlnC iuFmZI"
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPiLbb krGoUJ sc-bBHHxi doLBYL"
+                    class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
                   >
                     <label
-                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 UZeto"
+                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 bkOleo StyledCheckBox-sc-1dbk5ju-6 cQZdeZ"
+                        class="StyledBox-sc-13pk1d4-0 eFOcYa StyledCheckBox-sc-1dbk5ju-6 eJWclz"
                       >
                         <input
-                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 dIAioe"
+                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 jjxirM"
                           data-key="5"
                           type="checkbox"
                         />
                         <div
-                          class="StyledBox-sc-13pk1d4-0 iHfoym StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iRWScv"
+                          class="StyledBox-sc-13pk1d4-0 bLQvIs StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 bNwZfh"
                         />
                       </div>
                     </label>
@@ -2097,25 +2097,25 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-gjNHFA fwMUjF"
+                  class="sc-gkJlnC iuFmZI"
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPiLbb krGoUJ sc-bBHHxi doLBYL"
+                    class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
                   >
                     <label
-                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 UZeto"
+                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 bkOleo StyledCheckBox-sc-1dbk5ju-6 cQZdeZ"
+                        class="StyledBox-sc-13pk1d4-0 eFOcYa StyledCheckBox-sc-1dbk5ju-6 eJWclz"
                       >
                         <input
-                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 dIAioe"
+                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 jjxirM"
                           data-key="6"
                           type="checkbox"
                         />
                         <div
-                          class="StyledBox-sc-13pk1d4-0 iHfoym StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iRWScv"
+                          class="StyledBox-sc-13pk1d4-0 bLQvIs StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 bNwZfh"
                         />
                       </div>
                     </label>
@@ -2160,25 +2160,25 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-gjNHFA fwMUjF"
+                  class="sc-gkJlnC iuFmZI"
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPiLbb krGoUJ sc-bBHHxi doLBYL"
+                    class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
                   >
                     <label
-                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 UZeto"
+                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 bkOleo StyledCheckBox-sc-1dbk5ju-6 cQZdeZ"
+                        class="StyledBox-sc-13pk1d4-0 eFOcYa StyledCheckBox-sc-1dbk5ju-6 eJWclz"
                       >
                         <input
-                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 dIAioe"
+                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 jjxirM"
                           data-key="7"
                           type="checkbox"
                         />
                         <div
-                          class="StyledBox-sc-13pk1d4-0 iHfoym StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iRWScv"
+                          class="StyledBox-sc-13pk1d4-0 bLQvIs StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 bNwZfh"
                         />
                       </div>
                     </label>
@@ -2223,25 +2223,25 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-gjNHFA fwMUjF"
+                  class="sc-gkJlnC iuFmZI"
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPiLbb krGoUJ sc-bBHHxi doLBYL"
+                    class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
                   >
                     <label
-                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 UZeto"
+                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 bkOleo StyledCheckBox-sc-1dbk5ju-6 cQZdeZ"
+                        class="StyledBox-sc-13pk1d4-0 eFOcYa StyledCheckBox-sc-1dbk5ju-6 eJWclz"
                       >
                         <input
-                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 dIAioe"
+                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 jjxirM"
                           data-key="8"
                           type="checkbox"
                         />
                         <div
-                          class="StyledBox-sc-13pk1d4-0 iHfoym StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iRWScv"
+                          class="StyledBox-sc-13pk1d4-0 bLQvIs StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 bNwZfh"
                         />
                       </div>
                     </label>
@@ -2278,25 +2278,25 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-gjNHFA fwMUjF"
+                  class="sc-gkJlnC iuFmZI"
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPiLbb krGoUJ sc-bBHHxi doLBYL"
+                    class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
                   >
                     <label
-                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 UZeto"
+                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 bkOleo StyledCheckBox-sc-1dbk5ju-6 cQZdeZ"
+                        class="StyledBox-sc-13pk1d4-0 eFOcYa StyledCheckBox-sc-1dbk5ju-6 eJWclz"
                       >
                         <input
-                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 dIAioe"
+                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 jjxirM"
                           data-key="9"
                           type="checkbox"
                         />
                         <div
-                          class="StyledBox-sc-13pk1d4-0 iHfoym StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iRWScv"
+                          class="StyledBox-sc-13pk1d4-0 bLQvIs StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 bNwZfh"
                         />
                       </div>
                     </label>
@@ -2333,25 +2333,25 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-gjNHFA fwMUjF"
+                  class="sc-gkJlnC iuFmZI"
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPiLbb krGoUJ sc-bBHHxi doLBYL"
+                    class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
                   >
                     <label
-                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 UZeto"
+                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 bkOleo StyledCheckBox-sc-1dbk5ju-6 cQZdeZ"
+                        class="StyledBox-sc-13pk1d4-0 eFOcYa StyledCheckBox-sc-1dbk5ju-6 eJWclz"
                       >
                         <input
-                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 dIAioe"
+                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 jjxirM"
                           data-key="10"
                           type="checkbox"
                         />
                         <div
-                          class="StyledBox-sc-13pk1d4-0 iHfoym StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iRWScv"
+                          class="StyledBox-sc-13pk1d4-0 bLQvIs StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 bNwZfh"
                         />
                       </div>
                     </label>
@@ -2388,25 +2388,25 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-gjNHFA fwMUjF"
+                  class="sc-gkJlnC iuFmZI"
                   data-display="table-cell"
                 >
                   <div
-                    class="sc-dPiLbb krGoUJ sc-bBHHxi doLBYL"
+                    class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
                   >
                     <label
-                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 UZeto"
+                      class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
                     >
                       <div
-                        class="StyledBox-sc-13pk1d4-0 bkOleo StyledCheckBox-sc-1dbk5ju-6 cQZdeZ"
+                        class="StyledBox-sc-13pk1d4-0 eFOcYa StyledCheckBox-sc-1dbk5ju-6 eJWclz"
                       >
                         <input
-                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 dIAioe"
+                          class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 jjxirM"
                           data-key="120"
                           type="checkbox"
                         />
                         <div
-                          class="StyledBox-sc-13pk1d4-0 iHfoym StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 iRWScv"
+                          class="StyledBox-sc-13pk1d4-0 bLQvIs StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 bNwZfh"
                         />
                       </div>
                     </label>
@@ -2449,19 +2449,19 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
 exports[`Storyshots Core/Table With Conditional Row Classes 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-gslxeA dljPk jLImRG"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-grVGCS iKIurY ikgPpo"
     >
       <div
-        class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
+        class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
       >
         <div
-          class="sc-fmciRz gXrEcX"
+          class="sc-fmrZth clkOUX"
         >
           <div
-            class="sc-eXlEPa kUkFif sc-kmQMED fTascr"
+            class="sc-eXBvqI jmlAON sc-kngDgl juYrxT"
           >
             <div
               data-display="table-head"
@@ -2473,7 +2473,7 @@ exports[`Storyshots Core/Table With Conditional Row Classes 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Name"
                     type="button"
                   >
@@ -2501,7 +2501,7 @@ exports[`Storyshots Core/Table With Conditional Row Classes 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -2529,7 +2529,7 @@ exports[`Storyshots Core/Table With Conditional Row Classes 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Category"
                     type="button"
                   >
@@ -2557,7 +2557,7 @@ exports[`Storyshots Core/Table With Conditional Row Classes 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="first_seen"
                     type="button"
                   >
@@ -2952,19 +2952,19 @@ exports[`Storyshots Core/Table With Conditional Row Classes 1`] = `
 exports[`Storyshots Core/Table With Custom Columns 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-gslxeA dljPk jLImRG"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-grVGCS iKIurY ikgPpo"
     >
       <div
-        class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
+        class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
       >
         <div
-          class="sc-fmciRz gXrEcX"
+          class="sc-fmrZth clkOUX"
         >
           <div
-            class="sc-eXlEPa kUkFif sc-kmQMED frYren"
+            class="sc-eXBvqI jmlAON sc-kngDgl ccAfIL"
           >
             <div
               data-display="table-head"
@@ -2976,7 +2976,7 @@ exports[`Storyshots Core/Table With Custom Columns 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Name"
                     type="button"
                   >
@@ -3004,7 +3004,7 @@ exports[`Storyshots Core/Table With Custom Columns 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -3032,7 +3032,7 @@ exports[`Storyshots Core/Table With Custom Columns 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Category"
                     type="button"
                   >
@@ -3060,7 +3060,7 @@ exports[`Storyshots Core/Table With Custom Columns 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="first_seen"
                     type="button"
                   >
@@ -3448,24 +3448,24 @@ exports[`Storyshots Core/Table With Custom Columns 1`] = `
         </div>
       </div>
       <div
-        class="sc-avest hRporc"
+        class="sc-afnQL ipIVCr"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-fWCJzd SyRni sc-jIkXHa jjtoQT"
+          class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-fXynhf ifKwFV sc-jIAOiI bpUFTZ"
         >
           <button
-            class="StyledButton-sc-323bzc-0 dxCrOx sc-bqiRlB sc-bkkeKt edofBN hOrbaG sc-dJjYzT cGuTUx sc-TBWPX bmLpyY"
+            class="StyledButton-sc-323bzc-0 iFDLDn sc-breuTD sc-bjUoiL Krizp dANmhT sc-dIouRR kAoSkv sc-TRNrF eEcMpL"
             type="button"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI iqksqQ"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK cBvces"
             >
               <div
-                class="sc-gKclnd exdBHI sc-iCfMLu iBCaVk"
+                class="sc-gKXOVf QRSBg sc-iBkjds dLaGQT"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-gear sc-iqVWFU nxMsN"
+                  class="svg-inline--fa fa-gear sc-iqGgem bLXaTV"
                   data-icon="gear"
                   data-prefix="fas"
                   focusable="false"
@@ -3506,19 +3506,19 @@ exports[`Storyshots Core/Table With Custom Columns 1`] = `
 exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-gslxeA dljPk jLImRG"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-grVGCS iKIurY ikgPpo"
     >
       <div
-        class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
+        class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu rflXv sc-hGPBjI dLlxyS"
+          class="sc-gKXOVf QRSBg sc-iBkjds hNqnWQ sc-hHLeRK hoTTom"
         >
           <div
-            class="sc-fKVqWL hOcWtv sc-bBHxTw fYiSNr"
+            class="sc-fLlhyt gAlhfr sc-bBrHrO kevwqp"
           >
             <strong>
               1
@@ -3534,13 +3534,13 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
             </strong>
           </div>
           <div
-            class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI dljPk"
+            class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-kLwhqv dljPk hLjewn"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kLLXSd iKIurY lcvtzu"
             >
               <button
-                class="StyledButton-sc-323bzc-0 GAqvF sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT cGuTUx rendition-pager__btn--prev"
+                class="StyledButton-sc-323bzc-0 iNgVbb sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR kAoSkv rendition-pager__btn--prev"
                 disabled=""
                 type="button"
               >
@@ -3561,7 +3561,7 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
                 </svg>
               </button>
               <button
-                class="StyledButton-sc-323bzc-0 gKeRwL sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT cGuTUx rendition-pager__btn--next"
+                class="StyledButton-sc-323bzc-0 jIlaYJ sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR kAoSkv rendition-pager__btn--next"
                 type="button"
               >
                 <svg
@@ -3584,10 +3584,10 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
           </div>
         </div>
         <div
-          class="sc-fmciRz gXrEcX"
+          class="sc-fmrZth clkOUX"
         >
           <div
-            class="sc-eXlEPa kUkFif sc-kmQMED fTascr"
+            class="sc-eXBvqI jmlAON sc-kngDgl juYrxT"
           >
             <div
               data-display="table-head"
@@ -3599,7 +3599,7 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Name"
                     type="button"
                   >
@@ -3627,7 +3627,7 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -3655,7 +3655,7 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Category"
                     type="button"
                   >
@@ -3683,7 +3683,7 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="first_seen"
                     type="button"
                   >
@@ -3806,10 +3806,10 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
           </div>
         </div>
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu gALdNb sc-hGPBjI dLlxyS"
+          class="sc-gKXOVf QRSBg sc-iBkjds jKcfYg sc-hHLeRK hoTTom"
         >
           <div
-            class="sc-fKVqWL hOcWtv sc-bBHxTw fYiSNr"
+            class="sc-fLlhyt gAlhfr sc-bBrHrO kevwqp"
           >
             <strong>
               1
@@ -3825,13 +3825,13 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
             </strong>
           </div>
           <div
-            class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI dljPk"
+            class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-kLwhqv dljPk hLjewn"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kLLXSd iKIurY lcvtzu"
             >
               <button
-                class="StyledButton-sc-323bzc-0 GAqvF sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT cGuTUx rendition-pager__btn--prev"
+                class="StyledButton-sc-323bzc-0 iNgVbb sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR kAoSkv rendition-pager__btn--prev"
                 disabled=""
                 type="button"
               >
@@ -3852,7 +3852,7 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
                 </svg>
               </button>
               <button
-                class="StyledButton-sc-323bzc-0 gKeRwL sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT cGuTUx rendition-pager__btn--next"
+                class="StyledButton-sc-323bzc-0 jIlaYJ sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR kAoSkv rendition-pager__btn--next"
                 type="button"
               >
                 <svg
@@ -3883,19 +3883,19 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
 exports[`Storyshots Core/Table With Highlighted Rows 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-gslxeA dljPk jLImRG"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-grVGCS iKIurY ikgPpo"
     >
       <div
-        class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
+        class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
       >
         <div
-          class="sc-fmciRz gXrEcX"
+          class="sc-fmrZth clkOUX"
         >
           <div
-            class="sc-eXlEPa kUkFif sc-kmQMED fTascr"
+            class="sc-eXBvqI jmlAON sc-kngDgl juYrxT"
           >
             <div
               data-display="table-head"
@@ -3907,7 +3907,7 @@ exports[`Storyshots Core/Table With Highlighted Rows 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Name"
                     type="button"
                   >
@@ -3935,7 +3935,7 @@ exports[`Storyshots Core/Table With Highlighted Rows 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -3963,7 +3963,7 @@ exports[`Storyshots Core/Table With Highlighted Rows 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Category"
                     type="button"
                   >
@@ -3991,7 +3991,7 @@ exports[`Storyshots Core/Table With Highlighted Rows 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="first_seen"
                     type="button"
                   >
@@ -4386,19 +4386,19 @@ exports[`Storyshots Core/Table With Highlighted Rows 1`] = `
 exports[`Storyshots Core/Table With Pager 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-gslxeA dljPk jLImRG"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-grVGCS iKIurY ikgPpo"
     >
       <div
-        class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
+        class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
       >
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu rflXv sc-hGPBjI dLlxyS"
+          class="sc-gKXOVf QRSBg sc-iBkjds hNqnWQ sc-hHLeRK hoTTom"
         >
           <div
-            class="sc-fKVqWL hOcWtv sc-bBHxTw fYiSNr"
+            class="sc-fLlhyt gAlhfr sc-bBrHrO kevwqp"
           >
             <strong>
               1
@@ -4414,13 +4414,13 @@ exports[`Storyshots Core/Table With Pager 1`] = `
             </strong>
           </div>
           <div
-            class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI dljPk"
+            class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-kLwhqv dljPk hLjewn"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kLLXSd iKIurY lcvtzu"
             >
               <button
-                class="StyledButton-sc-323bzc-0 GAqvF sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT cGuTUx rendition-pager__btn--prev"
+                class="StyledButton-sc-323bzc-0 iNgVbb sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR kAoSkv rendition-pager__btn--prev"
                 disabled=""
                 type="button"
               >
@@ -4441,7 +4441,7 @@ exports[`Storyshots Core/Table With Pager 1`] = `
                 </svg>
               </button>
               <button
-                class="StyledButton-sc-323bzc-0 gKeRwL sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT cGuTUx rendition-pager__btn--next"
+                class="StyledButton-sc-323bzc-0 jIlaYJ sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR kAoSkv rendition-pager__btn--next"
                 type="button"
               >
                 <svg
@@ -4464,10 +4464,10 @@ exports[`Storyshots Core/Table With Pager 1`] = `
           </div>
         </div>
         <div
-          class="sc-fmciRz gXrEcX"
+          class="sc-fmrZth clkOUX"
         >
           <div
-            class="sc-eXlEPa kUkFif sc-kmQMED fTascr"
+            class="sc-eXBvqI jmlAON sc-kngDgl juYrxT"
           >
             <div
               data-display="table-head"
@@ -4479,7 +4479,7 @@ exports[`Storyshots Core/Table With Pager 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Name"
                     type="button"
                   >
@@ -4507,7 +4507,7 @@ exports[`Storyshots Core/Table With Pager 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -4535,7 +4535,7 @@ exports[`Storyshots Core/Table With Pager 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Category"
                     type="button"
                   >
@@ -4563,7 +4563,7 @@ exports[`Storyshots Core/Table With Pager 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="first_seen"
                     type="button"
                   >
@@ -4686,10 +4686,10 @@ exports[`Storyshots Core/Table With Pager 1`] = `
           </div>
         </div>
         <div
-          class="sc-gKclnd exdBHI sc-iCfMLu gALdNb sc-hGPBjI dLlxyS"
+          class="sc-gKXOVf QRSBg sc-iBkjds jKcfYg sc-hHLeRK hoTTom"
         >
           <div
-            class="sc-fKVqWL hOcWtv sc-bBHxTw fYiSNr"
+            class="sc-fLlhyt gAlhfr sc-bBrHrO kevwqp"
           >
             <strong>
               1
@@ -4705,13 +4705,13 @@ exports[`Storyshots Core/Table With Pager 1`] = `
             </strong>
           </div>
           <div
-            class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI dljPk"
+            class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-kLwhqv dljPk hLjewn"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kLLXSd iKIurY lcvtzu"
             >
               <button
-                class="StyledButton-sc-323bzc-0 GAqvF sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT cGuTUx rendition-pager__btn--prev"
+                class="StyledButton-sc-323bzc-0 iNgVbb sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR kAoSkv rendition-pager__btn--prev"
                 disabled=""
                 type="button"
               >
@@ -4732,7 +4732,7 @@ exports[`Storyshots Core/Table With Pager 1`] = `
                 </svg>
               </button>
               <button
-                class="StyledButton-sc-323bzc-0 gKeRwL sc-bqiRlB sc-hBUSln edofBN cDUgDh sc-dJjYzT cGuTUx rendition-pager__btn--next"
+                class="StyledButton-sc-323bzc-0 jIlaYJ sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR kAoSkv rendition-pager__btn--next"
                 type="button"
               >
                 <svg
@@ -4763,19 +4763,19 @@ exports[`Storyshots Core/Table With Pager 1`] = `
 exports[`Storyshots Core/Table With Prefix 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-gslxeA dljPk jLImRG"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-grVGCS iKIurY ikgPpo"
     >
       <div
-        class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
+        class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
       >
         <div
-          class="sc-fmciRz gXrEcX"
+          class="sc-fmrZth clkOUX"
         >
           <div
-            class="sc-eXlEPa kUkFif sc-kmQMED fTascr"
+            class="sc-eXBvqI jmlAON sc-kngDgl juYrxT"
           >
             <div
               data-display="table-head"
@@ -4787,7 +4787,7 @@ exports[`Storyshots Core/Table With Prefix 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Name"
                     type="button"
                   >
@@ -4815,7 +4815,7 @@ exports[`Storyshots Core/Table With Prefix 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -4843,7 +4843,7 @@ exports[`Storyshots Core/Table With Prefix 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Category"
                     type="button"
                   >
@@ -4871,7 +4871,7 @@ exports[`Storyshots Core/Table With Prefix 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="first_seen"
                     type="button"
                   >
@@ -5288,19 +5288,19 @@ exports[`Storyshots Core/Table With Prefix 1`] = `
 exports[`Storyshots Core/Table With Row Click 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-gslxeA dljPk jLImRG"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-grVGCS iKIurY ikgPpo"
     >
       <div
-        class="sc-gKclnd iQIogj sc-iCfMLu frGhDt sc-hGPBjI kBwkZQ"
+        class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
       >
         <div
-          class="sc-fmciRz gXrEcX"
+          class="sc-fmrZth clkOUX"
         >
           <div
-            class="sc-eXlEPa fOrGqF sc-kmQMED fTascr"
+            class="sc-eXBvqI gomuLP sc-kngDgl juYrxT"
           >
             <div
               data-display="table-head"
@@ -5312,7 +5312,7 @@ exports[`Storyshots Core/Table With Row Click 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Name"
                     type="button"
                   >
@@ -5340,7 +5340,7 @@ exports[`Storyshots Core/Table With Row Click 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="pokedex_number"
                     type="button"
                   >
@@ -5368,7 +5368,7 @@ exports[`Storyshots Core/Table With Row Click 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="Category"
                     type="button"
                   >
@@ -5396,7 +5396,7 @@ exports[`Storyshots Core/Table With Row Click 1`] = `
                   data-display="table-cell"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx sc-iFMAIt jGlqMa"
+                    class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
                     data-field="first_seen"
                     type="button"
                   >

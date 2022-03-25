@@ -44,7 +44,6 @@ export const Filters = <T extends AutoUIBaseResource<T>>({
 					views={views}
 					onFiltersUpdate={changeFilters}
 					onViewsUpdate={changeViews}
-					addFilterButtonProps={{ outline: true }}
 					renderMode={renderMode ?? ['add', 'search', 'views']}
 					onSearch={onSearch}
 				/>
@@ -56,7 +55,6 @@ export const Filters = <T extends AutoUIBaseResource<T>>({
 					views={views}
 					onFiltersUpdate={changeFilters}
 					onViewsUpdate={changeViews}
-					addFilterButtonProps={{ outline: true }}
 					renderMode={renderMode ?? ['add', 'search', 'views']}
 					onSearch={onSearch}
 				/>
