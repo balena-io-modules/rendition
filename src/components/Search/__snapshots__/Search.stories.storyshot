@@ -3,10 +3,10 @@
 exports[`Storyshots Core/Search Dark 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-khQegj dljPk dJsfTS sc-hUpaCq igPhtM"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kgUAyh iKIurY kCkpfb sc-hTtwUo eWqTFt"
     >
       <input
         placeholder="Search entries..."
@@ -29,7 +29,7 @@ exports[`Storyshots Core/Search Dark 1`] = `
         />
       </svg>
       <button
-        class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx clear-icon"
+        class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv clear-icon"
         type="button"
       >
         <svg
@@ -56,10 +56,10 @@ exports[`Storyshots Core/Search Dark 1`] = `
 exports[`Storyshots Core/Search Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-khQegj dljPk dJsfTS sc-hUpaCq igPhtM"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kgUAyh iKIurY kCkpfb sc-hTtwUo eWqTFt"
     >
       <input
         placeholder="Search entries..."
@@ -81,7 +81,7 @@ exports[`Storyshots Core/Search Default 1`] = `
         />
       </svg>
       <button
-        class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx clear-icon"
+        class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv clear-icon"
         type="button"
       >
         <svg
@@ -108,10 +108,10 @@ exports[`Storyshots Core/Search Default 1`] = `
 exports[`Storyshots Core/Search Disabled 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-khQegj dljPk dJsfTS sc-hUpaCq igPhtM"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kgUAyh iKIurY kCkpfb sc-hTtwUo eWqTFt"
     >
       <input
         disabled=""
@@ -134,7 +134,7 @@ exports[`Storyshots Core/Search Disabled 1`] = `
         />
       </svg>
       <button
-        class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx clear-icon"
+        class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv clear-icon"
         type="button"
       >
         <svg
@@ -161,10 +161,10 @@ exports[`Storyshots Core/Search Disabled 1`] = `
 exports[`Storyshots Core/Search With Placeholder 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-khQegj dljPk dJsfTS sc-hUpaCq igPhtM"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kgUAyh iKIurY kCkpfb sc-hTtwUo eWqTFt"
     >
       <input
         placeholder="Search here"
@@ -186,7 +186,7 @@ exports[`Storyshots Core/Search With Placeholder 1`] = `
         />
       </svg>
       <button
-        class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cGuTUx clear-icon"
+        class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv clear-icon"
         type="button"
       >
         <svg

@@ -3,10 +3,10 @@
 exports[`Storyshots Core/Txt Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh"
+      class="sc-fLlhyt gAlhfr sc-bBrHrO cKEGnj"
     >
       Standard
     </div>
@@ -17,10 +17,10 @@ exports[`Storyshots Core/Txt Default 1`] = `
 exports[`Storyshots Core/Txt In Color 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-fKVqWL hOcWtv sc-bBHxTw iKlBqn"
+      class="sc-fLlhyt gAlhfr sc-bBrHrO kyKjKp"
     >
       Colored text
     </div>
@@ -31,10 +31,10 @@ exports[`Storyshots Core/Txt In Color 1`] = `
 exports[`Storyshots Core/Txt Span Component 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <span
-      class="sc-fKVqWL gNOvvf sc-iwjdpV iXrUAY"
+      class="sc-fLlhyt fsEJDz sc-ivTmOn ghimrz"
     >
       Space   is   preserved
     </span>
@@ -45,10 +45,10 @@ exports[`Storyshots Core/Txt Span Component 1`] = `
 exports[`Storyshots Core/Txt Styled 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-fKVqWL gPCQRh sc-bBHxTw bFNBkh"
+      class="sc-fLlhyt fMOSYV sc-bBrHrO cKEGnj"
     >
       Styled text
     </div>

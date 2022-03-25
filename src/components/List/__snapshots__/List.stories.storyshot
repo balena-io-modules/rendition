@@ -3,18 +3,18 @@
 exports[`Storyshots Core/List Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <ul
-      class="sc-kHOZwM sc-dtMgUX ffEjJW eTa-Dxn sc-cZMNgc Kcock"
+      class="sc-kIKDeO sc-dsQDmV zlfFv dwBQur sc-cZwWEu QrmZN"
     >
       <li>
         <div
-          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh"
+          class="sc-fLlhyt gAlhfr sc-bBrHrO cKEGnj"
         >
           You can put 
           <a
-            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb"
+            class="sc-eKBdFk eDgBSD sc-bUbCnL aUvHI"
             color="primary.main"
             href="#"
           >
@@ -24,7 +24,7 @@ exports[`Storyshots Core/List Default 1`] = `
       </li>
       <li>
         <div
-          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh"
+          class="sc-fLlhyt gAlhfr sc-bBrHrO cKEGnj"
         >
           And also some 
           <code>
@@ -34,11 +34,11 @@ exports[`Storyshots Core/List Default 1`] = `
       </li>
       <li>
         <div
-          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh"
+          class="sc-fLlhyt gAlhfr sc-bBrHrO cKEGnj"
         >
           Multiline text
           <div
-            class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh"
+            class="sc-fLlhyt gAlhfr sc-bBrHrO cKEGnj"
           >
             that breaks into multiple lines
           </div>
@@ -52,18 +52,18 @@ exports[`Storyshots Core/List Default 1`] = `
 exports[`Storyshots Core/List Ordered 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <ol
-      class="sc-kHOZwM sc-hOGkXu ffEjJW iMbveC sc-cZMNgc Kcock"
+      class="sc-kIKDeO sc-hNKHps zlfFv eCLmQY sc-cZwWEu QrmZN"
     >
       <li>
         <div
-          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh"
+          class="sc-fLlhyt gAlhfr sc-bBrHrO cKEGnj"
         >
           You can put 
           <a
-            class="sc-eLwHnm ebYFPN sc-bTfYFJ jPFzyb"
+            class="sc-eKBdFk eDgBSD sc-bUbCnL aUvHI"
             color="primary.main"
             href="#"
           >
@@ -73,7 +73,7 @@ exports[`Storyshots Core/List Ordered 1`] = `
       </li>
       <li>
         <div
-          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh"
+          class="sc-fLlhyt gAlhfr sc-bBrHrO cKEGnj"
         >
           And also some 
           <code>
@@ -83,11 +83,11 @@ exports[`Storyshots Core/List Ordered 1`] = `
       </li>
       <li>
         <div
-          class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh"
+          class="sc-fLlhyt gAlhfr sc-bBrHrO cKEGnj"
         >
           Multiline text
           <div
-            class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh"
+            class="sc-fLlhyt gAlhfr sc-bBrHrO cKEGnj"
           >
             that breaks into multiple lines
           </div>

@@ -3,13 +3,13 @@
 exports[`Storyshots Core/Notifications Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu nKarx sc-hGPBjI hhYUbN"
+      class="sc-gKXOVf QRSBg sc-iBkjds iqcFkW sc-hHLeRK dzJWYl"
     >
       <div
-        class="react-notification-root sc-hZpJaK ggFHRD"
+        class="react-notification-root sc-hZFzCs cLlYed"
       >
         <div
           class="notification-container-top-left"
@@ -25,22 +25,22 @@ exports[`Storyshots Core/Notifications Default 1`] = `
               class="notification-item n-child"
             >
               <div
-                class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-dlVxhl dljPk kNGFbM sc-llYSUQ FJxnU sc-dSfdvi guToaT"
+                class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn iKIurY gdKzWA sc-llJcti hQwFFc sc-dSuTWQ iQzoGr"
               >
                 
                 <div
-                  class="sc-gKclnd iQIogj sc-iCfMLu jciJBO"
+                  class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux"
                 >
                   
                   <span
-                    class="sc-fKVqWL hOcWtv sc-iwjdpV gmQuoR"
+                    class="sc-fLlhyt gAlhfr sc-ivTmOn fbiySe"
                   >
                     This is a notification
                   </span>
                 </div>
                 <button
                   aria-label="Dismiss Alert"
-                  class="StyledButton-sc-323bzc-0 dxCrOx sc-bqiRlB sc-bkkeKt edofBN hOrbaG sc-dJjYzT cGuTUx sc-kfPuZi iGpogn"
+                  class="StyledButton-sc-323bzc-0 iFDLDn sc-breuTD sc-bjUoiL Krizp dANmhT sc-dIouRR kAoSkv sc-kgflAQ fJDjHk"
                   title="Dismiss Alert"
                   type="button"
                 >
@@ -71,26 +71,26 @@ exports[`Storyshots Core/Notifications Default 1`] = `
               class="notification-item n-child"
             >
               <div
-                class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-dlVxhl dljPk kNGFbM sc-llYSUQ FJxnU sc-dSfdvi guToaT"
+                class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn iKIurY gdKzWA sc-llJcti hQwFFc sc-dSuTWQ iQzoGr"
               >
                 
                 <div
-                  class="sc-gKclnd iQIogj sc-iCfMLu jciJBO"
+                  class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux"
                 >
                   
                   <span
-                    class="sc-fKVqWL hOcWtv sc-iwjdpV gmQuoR"
+                    class="sc-fLlhyt gAlhfr sc-ivTmOn fbiySe"
                   >
                     <div
-                      class="sc-gKclnd exdBHI sc-iCfMLu jciJBO"
+                      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux"
                     >
                       <div
-                        class="sc-fKVqWL hOcWtv sc-bBHxTw ejOmck"
+                        class="sc-fLlhyt gAlhfr sc-bBrHrO jNwxdu"
                       >
                         Some text for the user to read
                       </div>
                       <button
-                        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT cGuTUx"
+                        class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR kAoSkv"
                         type="button"
                       >
                         This is a button
@@ -100,7 +100,7 @@ exports[`Storyshots Core/Notifications Default 1`] = `
                 </div>
                 <button
                   aria-label="Dismiss Alert"
-                  class="StyledButton-sc-323bzc-0 dxCrOx sc-bqiRlB sc-bkkeKt edofBN hOrbaG sc-dJjYzT cGuTUx sc-kfPuZi iGpogn"
+                  class="StyledButton-sc-323bzc-0 iFDLDn sc-breuTD sc-bjUoiL Krizp dANmhT sc-dIouRR kAoSkv sc-kgflAQ fJDjHk"
                   title="Dismiss Alert"
                   type="button"
                 >
@@ -145,13 +145,13 @@ exports[`Storyshots Core/Notifications Default 1`] = `
         />
       </div>
       <button
-        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
+        class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR itaVlc"
         type="button"
       >
         Add text notification
       </button>
       <button
-        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
+        class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR itaVlc"
         type="button"
       >
         Add button notification
@@ -164,10 +164,10 @@ exports[`Storyshots Core/Notifications Default 1`] = `
 exports[`Storyshots Core/Notifications Positioning 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="react-notification-root sc-hZpJaK ggFHRD"
+      class="react-notification-root sc-hZFzCs cLlYed"
     >
       <div
         class="notification-container-top-left"
@@ -180,22 +180,22 @@ exports[`Storyshots Core/Notifications Positioning 1`] = `
             class="notification-item n-child"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-dlVxhl dljPk kNGFbM sc-llYSUQ FJxnU sc-dSfdvi guToaT"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn iKIurY gdKzWA sc-llJcti hQwFFc sc-dSuTWQ iQzoGr"
             >
               
               <div
-                class="sc-gKclnd iQIogj sc-iCfMLu jciJBO"
+                class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux"
               >
                 
                 <span
-                  class="sc-fKVqWL hOcWtv sc-iwjdpV gmQuoR"
+                  class="sc-fLlhyt gAlhfr sc-ivTmOn fbiySe"
                 >
                   top-left
                 </span>
               </div>
               <button
                 aria-label="Dismiss Alert"
-                class="StyledButton-sc-323bzc-0 dxCrOx sc-bqiRlB sc-bkkeKt edofBN hOrbaG sc-dJjYzT cGuTUx sc-kfPuZi iGpogn"
+                class="StyledButton-sc-323bzc-0 iFDLDn sc-breuTD sc-bjUoiL Krizp dANmhT sc-dIouRR kAoSkv sc-kgflAQ fJDjHk"
                 title="Dismiss Alert"
                 type="button"
               >
@@ -230,22 +230,22 @@ exports[`Storyshots Core/Notifications Positioning 1`] = `
             class="notification-item n-child"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-dlVxhl dljPk kNGFbM sc-llYSUQ FJxnU sc-dSfdvi guToaT"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn iKIurY gdKzWA sc-llJcti hQwFFc sc-dSuTWQ iQzoGr"
             >
               
               <div
-                class="sc-gKclnd iQIogj sc-iCfMLu jciJBO"
+                class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux"
               >
                 
                 <span
-                  class="sc-fKVqWL hOcWtv sc-iwjdpV gmQuoR"
+                  class="sc-fLlhyt gAlhfr sc-ivTmOn fbiySe"
                 >
                   top-right
                 </span>
               </div>
               <button
                 aria-label="Dismiss Alert"
-                class="StyledButton-sc-323bzc-0 dxCrOx sc-bqiRlB sc-bkkeKt edofBN hOrbaG sc-dJjYzT cGuTUx sc-kfPuZi iGpogn"
+                class="StyledButton-sc-323bzc-0 iFDLDn sc-breuTD sc-bjUoiL Krizp dANmhT sc-dIouRR kAoSkv sc-kgflAQ fJDjHk"
                 title="Dismiss Alert"
                 type="button"
               >
@@ -280,22 +280,22 @@ exports[`Storyshots Core/Notifications Positioning 1`] = `
             class="notification-item n-child"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-dlVxhl dljPk kNGFbM sc-llYSUQ FJxnU sc-dSfdvi guToaT"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn iKIurY gdKzWA sc-llJcti hQwFFc sc-dSuTWQ iQzoGr"
             >
               
               <div
-                class="sc-gKclnd iQIogj sc-iCfMLu jciJBO"
+                class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux"
               >
                 
                 <span
-                  class="sc-fKVqWL hOcWtv sc-iwjdpV gmQuoR"
+                  class="sc-fLlhyt gAlhfr sc-ivTmOn fbiySe"
                 >
                   bottom-left
                 </span>
               </div>
               <button
                 aria-label="Dismiss Alert"
-                class="StyledButton-sc-323bzc-0 dxCrOx sc-bqiRlB sc-bkkeKt edofBN hOrbaG sc-dJjYzT cGuTUx sc-kfPuZi iGpogn"
+                class="StyledButton-sc-323bzc-0 iFDLDn sc-breuTD sc-bjUoiL Krizp dANmhT sc-dIouRR kAoSkv sc-kgflAQ fJDjHk"
                 title="Dismiss Alert"
                 type="button"
               >
@@ -330,22 +330,22 @@ exports[`Storyshots Core/Notifications Positioning 1`] = `
             class="notification-item n-child"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-dlVxhl dljPk kNGFbM sc-llYSUQ FJxnU sc-dSfdvi guToaT"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn iKIurY gdKzWA sc-llJcti hQwFFc sc-dSuTWQ iQzoGr"
             >
               
               <div
-                class="sc-gKclnd iQIogj sc-iCfMLu jciJBO"
+                class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux"
               >
                 
                 <span
-                  class="sc-fKVqWL hOcWtv sc-iwjdpV gmQuoR"
+                  class="sc-fLlhyt gAlhfr sc-ivTmOn fbiySe"
                 >
                   bottom-right
                 </span>
               </div>
               <button
                 aria-label="Dismiss Alert"
-                class="StyledButton-sc-323bzc-0 dxCrOx sc-bqiRlB sc-bkkeKt edofBN hOrbaG sc-dJjYzT cGuTUx sc-kfPuZi iGpogn"
+                class="StyledButton-sc-323bzc-0 iFDLDn sc-breuTD sc-bjUoiL Krizp dANmhT sc-dIouRR kAoSkv sc-kgflAQ fJDjHk"
                 title="Dismiss Alert"
                 type="button"
               >
@@ -380,22 +380,22 @@ exports[`Storyshots Core/Notifications Positioning 1`] = `
             class="notification-item n-child"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-dlVxhl dljPk kNGFbM sc-llYSUQ FJxnU sc-dSfdvi guToaT"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn iKIurY gdKzWA sc-llJcti hQwFFc sc-dSuTWQ iQzoGr"
             >
               
               <div
-                class="sc-gKclnd iQIogj sc-iCfMLu jciJBO"
+                class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux"
               >
                 
                 <span
-                  class="sc-fKVqWL hOcWtv sc-iwjdpV gmQuoR"
+                  class="sc-fLlhyt gAlhfr sc-ivTmOn fbiySe"
                 >
                   top-center
                 </span>
               </div>
               <button
                 aria-label="Dismiss Alert"
-                class="StyledButton-sc-323bzc-0 dxCrOx sc-bqiRlB sc-bkkeKt edofBN hOrbaG sc-dJjYzT cGuTUx sc-kfPuZi iGpogn"
+                class="StyledButton-sc-323bzc-0 iFDLDn sc-breuTD sc-bjUoiL Krizp dANmhT sc-dIouRR kAoSkv sc-kgflAQ fJDjHk"
                 title="Dismiss Alert"
                 type="button"
               >
@@ -433,22 +433,22 @@ exports[`Storyshots Core/Notifications Positioning 1`] = `
               class="notification-item n-child"
             >
               <div
-                class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-dlVxhl dljPk kNGFbM sc-llYSUQ FJxnU sc-dSfdvi guToaT"
+                class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn iKIurY gdKzWA sc-llJcti hQwFFc sc-dSuTWQ iQzoGr"
               >
                 
                 <div
-                  class="sc-gKclnd iQIogj sc-iCfMLu jciJBO"
+                  class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux"
                 >
                   
                   <span
-                    class="sc-fKVqWL hOcWtv sc-iwjdpV gmQuoR"
+                    class="sc-fLlhyt gAlhfr sc-ivTmOn fbiySe"
                   >
                     center
                   </span>
                 </div>
                 <button
                   aria-label="Dismiss Alert"
-                  class="StyledButton-sc-323bzc-0 dxCrOx sc-bqiRlB sc-bkkeKt edofBN hOrbaG sc-dJjYzT cGuTUx sc-kfPuZi iGpogn"
+                  class="StyledButton-sc-323bzc-0 iFDLDn sc-breuTD sc-bjUoiL Krizp dANmhT sc-dIouRR kAoSkv sc-kgflAQ fJDjHk"
                   title="Dismiss Alert"
                   type="button"
                 >
@@ -484,22 +484,22 @@ exports[`Storyshots Core/Notifications Positioning 1`] = `
             class="notification-item n-child"
           >
             <div
-              class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI sc-dlVxhl dljPk kNGFbM sc-llYSUQ FJxnU sc-dSfdvi guToaT"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn iKIurY gdKzWA sc-llJcti hQwFFc sc-dSuTWQ iQzoGr"
             >
               
               <div
-                class="sc-gKclnd iQIogj sc-iCfMLu jciJBO"
+                class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux"
               >
                 
                 <span
-                  class="sc-fKVqWL hOcWtv sc-iwjdpV gmQuoR"
+                  class="sc-fLlhyt gAlhfr sc-ivTmOn fbiySe"
                 >
                   bottom-center
                 </span>
               </div>
               <button
                 aria-label="Dismiss Alert"
-                class="StyledButton-sc-323bzc-0 dxCrOx sc-bqiRlB sc-bkkeKt edofBN hOrbaG sc-dJjYzT cGuTUx sc-kfPuZi iGpogn"
+                class="StyledButton-sc-323bzc-0 iFDLDn sc-breuTD sc-bjUoiL Krizp dANmhT sc-dIouRR kAoSkv sc-kgflAQ fJDjHk"
                 title="Dismiss Alert"
                 type="button"
               >
@@ -525,53 +525,53 @@ exports[`Storyshots Core/Notifications Positioning 1`] = `
       </div>
     </div>
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu IXmar sc-hGPBjI jrnTxU"
+      class="sc-gKXOVf QRSBg sc-iBkjds hnToDo sc-hHLeRK fDtTuc"
     >
       <div
-        class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI dljPk"
+        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY"
       >
         <button
-          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
+          class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR itaVlc"
           type="button"
         >
           top-left
         </button>
         <button
-          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
+          class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR itaVlc"
           type="button"
         >
           top-center
         </button>
         <button
-          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
+          class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR itaVlc"
           type="button"
         >
           top-right
         </button>
       </div>
       <button
-        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
+        class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR itaVlc"
         type="button"
       >
         center
       </button>
       <div
-        class="sc-gKclnd exdBHI sc-iCfMLu jciJBO sc-hGPBjI dljPk"
+        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY"
       >
         <button
-          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
+          class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR itaVlc"
           type="button"
         >
           bottom-left
         </button>
         <button
-          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
+          class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR itaVlc"
           type="button"
         >
           bottom-center
         </button>
         <button
-          class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
+          class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR itaVlc"
           type="button"
         >
           bottom-right
@@ -585,13 +585,13 @@ exports[`Storyshots Core/Notifications Positioning 1`] = `
 exports[`Storyshots Core/Notifications Types 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKclnd exdBHI sc-iCfMLu nKarx sc-hGPBjI hhYUbN"
+      class="sc-gKXOVf QRSBg sc-iBkjds iqcFkW sc-hHLeRK dzJWYl"
     >
       <div
-        class="react-notification-root sc-hZpJaK ggFHRD"
+        class="react-notification-root sc-hZFzCs cLlYed"
       >
         <div
           class="notification-container-top-left"
@@ -607,10 +607,10 @@ exports[`Storyshots Core/Notifications Types 1`] = `
               class="notification-item n-child"
             >
               <div
-                class="sc-gKclnd exdBHI sc-iCfMLu huiLtj sc-hGPBjI sc-dlVxhl dljPk nMzZG sc-llYSUQ FJxnU sc-dSfdvi guToaT"
+                class="sc-gKXOVf QRSBg sc-iBkjds dnRYSM sc-hHLeRK sc-dmRaPn iKIurY FGhRa sc-llJcti hQwFFc sc-dSuTWQ iQzoGr"
               >
                 <div
-                  class="sc-fKVqWL hOcWtv sc-bBHxTw eYXqkg"
+                  class="sc-fLlhyt gAlhfr sc-bBrHrO iNQEwe"
                 >
                   <svg
                     aria-hidden="true"
@@ -629,22 +629,22 @@ exports[`Storyshots Core/Notifications Types 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="sc-gKclnd iQIogj sc-iCfMLu lfVmRC"
+                  class="sc-gKXOVf ckXSHX sc-iBkjds tsoYt"
                 >
                   <span
-                    class="sc-fKVqWL Gjjzu sc-iwjdpV fivJgS"
+                    class="sc-fLlhyt iYlmke sc-ivTmOn ixflud"
                   >
                     Note!
                   </span>
                   <span
-                    class="sc-fKVqWL hOcWtv sc-iwjdpV GMWeg"
+                    class="sc-fLlhyt gAlhfr sc-ivTmOn irBlAP"
                   >
                     info
                   </span>
                 </div>
                 <button
                   aria-label="Dismiss Alert"
-                  class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT eeGgB sc-kfPuZi iGpogn"
+                  class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR ftKnur sc-kgflAQ fJDjHk"
                   title="Dismiss Alert"
                   type="button"
                 >
@@ -675,10 +675,10 @@ exports[`Storyshots Core/Notifications Types 1`] = `
               class="notification-item n-child"
             >
               <div
-                class="sc-gKclnd exdBHI sc-iCfMLu eKXQBJ sc-hGPBjI sc-dlVxhl dljPk hYjsLV sc-llYSUQ FJxnU sc-dSfdvi guToaT"
+                class="sc-gKXOVf QRSBg sc-iBkjds gdzJDO sc-hHLeRK sc-dmRaPn iKIurY kIPQvp sc-llJcti hQwFFc sc-dSuTWQ iQzoGr"
               >
                 <div
-                  class="sc-fKVqWL hOcWtv sc-bBHxTw ckwMS"
+                  class="sc-fLlhyt gAlhfr sc-bBrHrO lmsBdk"
                 >
                   <svg
                     aria-hidden="true"
@@ -697,22 +697,22 @@ exports[`Storyshots Core/Notifications Types 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="sc-gKclnd iQIogj sc-iCfMLu lppAwi"
+                  class="sc-gKXOVf ckXSHX sc-iBkjds gurykB"
                 >
                   <span
-                    class="sc-fKVqWL Gjjzu sc-iwjdpV fivJgS"
+                    class="sc-fLlhyt iYlmke sc-ivTmOn ixflud"
                   >
                     Warning!
                   </span>
                   <span
-                    class="sc-fKVqWL hOcWtv sc-iwjdpV EQrog"
+                    class="sc-fLlhyt gAlhfr sc-ivTmOn hiZSRD"
                   >
                     warning
                   </span>
                 </div>
                 <button
                   aria-label="Dismiss Alert"
-                  class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cXJFXh sc-kfPuZi iGpogn"
+                  class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR jKabsr sc-kgflAQ fJDjHk"
                   title="Dismiss Alert"
                   type="button"
                 >
@@ -743,10 +743,10 @@ exports[`Storyshots Core/Notifications Types 1`] = `
               class="notification-item n-child"
             >
               <div
-                class="sc-gKclnd exdBHI sc-iCfMLu bURqap sc-hGPBjI sc-dlVxhl dljPk cynbHW sc-llYSUQ FJxnU sc-dSfdvi guToaT"
+                class="sc-gKXOVf QRSBg sc-iBkjds gwVQPy sc-hHLeRK sc-dmRaPn iKIurY blUbwm sc-llJcti hQwFFc sc-dSuTWQ iQzoGr"
               >
                 <div
-                  class="sc-fKVqWL hOcWtv sc-bBHxTw bkFZrq"
+                  class="sc-fLlhyt gAlhfr sc-bBrHrO ddiZCg"
                 >
                   <svg
                     aria-hidden="true"
@@ -765,22 +765,22 @@ exports[`Storyshots Core/Notifications Types 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="sc-gKclnd iQIogj sc-iCfMLu CqgIU"
+                  class="sc-gKXOVf ckXSHX sc-iBkjds jAkInX"
                 >
                   <span
-                    class="sc-fKVqWL Gjjzu sc-iwjdpV fivJgS"
+                    class="sc-fLlhyt iYlmke sc-ivTmOn ixflud"
                   >
                     Success!
                   </span>
                   <span
-                    class="sc-fKVqWL hOcWtv sc-iwjdpV gwTeFS"
+                    class="sc-fLlhyt gAlhfr sc-ivTmOn whyyV"
                   >
                     success
                   </span>
                 </div>
                 <button
                   aria-label="Dismiss Alert"
-                  class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT cCtRJX sc-kfPuZi iGpogn"
+                  class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR cbTNTl sc-kgflAQ fJDjHk"
                   title="Dismiss Alert"
                   type="button"
                 >
@@ -811,16 +811,16 @@ exports[`Storyshots Core/Notifications Types 1`] = `
               class="notification-item n-child"
             >
               <div
-                class="sc-gKclnd exdBHI sc-iCfMLu bqJAXg sc-hGPBjI sc-dlVxhl dljPk fImdLd sc-llYSUQ FJxnU sc-dSfdvi guToaT"
+                class="sc-gKXOVf QRSBg sc-iBkjds gDBmYX sc-hHLeRK sc-dmRaPn iKIurY jrmdGN sc-llJcti hQwFFc sc-dSuTWQ iQzoGr"
               >
                 <div
-                  class="sc-gKclnd iQIogj sc-iCfMLu bvZgoS"
+                  class="sc-gKXOVf ckXSHX sc-iBkjds iAZiqN"
                 >
                   <span
-                    class="sc-fKVqWL Gjjzu sc-iwjdpV fivJgS"
+                    class="sc-fLlhyt iYlmke sc-ivTmOn ixflud"
                   >
                     <span
-                      class="sc-fKVqWL hOcWtv sc-iwjdpV ZRnYE"
+                      class="sc-fLlhyt gAlhfr sc-ivTmOn kaQlf"
                     >
                       <svg
                         aria-hidden="true"
@@ -839,20 +839,20 @@ exports[`Storyshots Core/Notifications Types 1`] = `
                       </svg>
                     </span>
                     <span
-                      class="sc-fKVqWL hOcWtv sc-iwjdpV iXrUAY"
+                      class="sc-fLlhyt gAlhfr sc-ivTmOn ghimrz"
                     >
                       Error!
                     </span>
                   </span>
                   <span
-                    class="sc-fKVqWL hOcWtv sc-iwjdpV mljjg"
+                    class="sc-fLlhyt gAlhfr sc-ivTmOn eKlMrj"
                   >
                     danger
                   </span>
                 </div>
                 <button
                   aria-label="Dismiss Alert"
-                  class="StyledButton-sc-323bzc-0 idryEU sc-bqiRlB sc-bkkeKt edofBN hOYLYz sc-dJjYzT dFxQZZ sc-kfPuZi iGpogn"
+                  class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR hllURX sc-kgflAQ fJDjHk"
                   title="Dismiss Alert"
                   type="button"
                 >
@@ -897,25 +897,25 @@ exports[`Storyshots Core/Notifications Types 1`] = `
         />
       </div>
       <button
-        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
+        class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR itaVlc"
         type="button"
       >
         danger
       </button>
       <button
-        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
+        class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR itaVlc"
         type="button"
       >
         success
       </button>
       <button
-        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
+        class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR itaVlc"
         type="button"
       >
         warning
       </button>
       <button
-        class="StyledButton-sc-323bzc-0 dEhBwt sc-bqiRlB sc-hBUSln edofBN fjmVsx sc-dJjYzT iNFlLy"
+        class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR itaVlc"
         type="button"
       >
         info
