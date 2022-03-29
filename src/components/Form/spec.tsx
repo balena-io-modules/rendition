@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import { JSONSchema7 } from 'json-schema';
 
 import { Alert, Form, Provider } from '../../';
-import { EXTRA_FORMATS } from './examples';
+// import { EXTRA_FORMATS } from './examples';
 import { delay } from '../../utils/promises';
 
 const schema = {
@@ -444,62 +444,62 @@ describe('Form component', () => {
 		});
 	});
 
-	describe('description keyword', () => {
-		it('should support markdown', () => {
-			const descriptionSchema = {
-				type: 'object',
-				properties: {
-					foo: {
-						type: 'string',
-						description: 'Lorem ipsum *dolor* sit amet',
-					},
-				},
-			} as JSONSchema7;
+	// describe('description keyword', () => {
+	// 	it('should support markdown', () => {
+	// 		const descriptionSchema = {
+	// 			type: 'object',
+	// 			properties: {
+	// 				foo: {
+	// 					type: 'string',
+	// 					description: 'Lorem ipsum *dolor* sit amet',
+	// 				},
+	// 			},
+	// 		} as JSONSchema7;
 
-			const component = mount(
-				<Provider>
-					<Form schema={descriptionSchema} extraFormats={EXTRA_FORMATS} />
-				</Provider>,
-			);
+	// 		const component = mount(
+	// 			<Provider>
+	// 				<Form schema={descriptionSchema} extraFormats={EXTRA_FORMATS} />
+	// 			</Provider>,
+	// 		);
 
-			const description = component.find('.rendition-form-description').first();
+	// 		const description = component.find('.rendition-form-description').first();
 
-			expect(description.html()).toMatchSnapshot();
+	// 		expect(description.html()).toMatchSnapshot();
 
-			component.unmount();
-		});
-	});
+	// 		component.unmount();
+	// 	});
+	// });
 
-	describe('ui:help keyword', () => {
-		it('should support markdown', () => {
-			const component = mount(
-				<Provider>
-					<Form
-						extraFormats={EXTRA_FORMATS}
-						schema={{
-							type: 'object',
-							properties: {
-								foo: {
-									type: 'string',
-								},
-							},
-						}}
-						uiSchema={{
-							foo: {
-								'ui:help': 'Lorem ipsum *dolor* sit amet',
-							},
-						}}
-					/>
-				</Provider>,
-			);
+	// describe('ui:help keyword', () => {
+	// 	it('should support markdown', () => {
+	// 		const component = mount(
+	// 			<Provider>
+	// 				<Form
+	// 					extraFormats={EXTRA_FORMATS}
+	// 					schema={{
+	// 						type: 'object',
+	// 						properties: {
+	// 							foo: {
+	// 								type: 'string',
+	// 							},
+	// 						},
+	// 					}}
+	// 					uiSchema={{
+	// 						foo: {
+	// 							'ui:help': 'Lorem ipsum *dolor* sit amet',
+	// 						},
+	// 					}}
+	// 				/>
+	// 			</Provider>,
+	// 		);
 
-			const description = component.find('.rendition-form-help').first();
+	// 		const description = component.find('.rendition-form-help').first();
 
-			expect(description.html()).toMatchSnapshot();
+	// 		expect(description.html()).toMatchSnapshot();
 
-			component.unmount();
-		});
-	});
+	// 		component.unmount();
+	// 	});
+	// });
 
 	describe('field ids', () => {
 		it('should generate a unique class name for each field', () => {
