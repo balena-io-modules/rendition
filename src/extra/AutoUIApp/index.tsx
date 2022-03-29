@@ -1,11 +1,11 @@
 import React from 'react';
 import { Navbar } from './Navbar';
 import { Sidebar } from './Sidebar';
-import { Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Content } from './Content';
 import { createGlobalStyle } from 'styled-components';
 import { Provider } from '../..';
-import { history, onClickOutOrEsc } from '../AutoUI/utils';
+import { onClickOutOrEsc } from '../AutoUI/utils';
 import { Flex } from '../../components/Flex';
 import { Box } from '../../components/Box';
 import { OpenApiJson } from './openApiJson';
@@ -62,7 +62,7 @@ export const AutoUIApp = ({ openApiJson, title, logo }: AutoUIAppProps) => {
 
 	return (
 		<Provider>
-			<Router history={history}>
+			<BrowserRouter>
 				<GlobalStyle />
 				<Navbar height={NAVBAR_HEIGHT} title={title} logo={logo} />
 				<Flex style={{ position: 'relative' }}>
@@ -83,20 +83,20 @@ export const AutoUIApp = ({ openApiJson, title, logo }: AutoUIAppProps) => {
 						py={1}
 						style={{ overflow: 'auto' }}
 					>
-						<Switch>
+						<Routes>
 							{Object.keys(openApiJson.paths).map((path) => (
 								<Route
 									key={path}
 									path={path}
-									render={() => (
+									element={
 										<Content
 											openApiJson={openApiJson}
 											openActionSidebar={setActionSidebar}
 										/>
-									)}
+									}
 								/>
 							))}
-						</Switch>
+						</Routes>
 					</Box>
 					{actionSidebar && (
 						<Flex ref={actionSidebarWrapper}>
@@ -108,7 +108,7 @@ export const AutoUIApp = ({ openApiJson, title, logo }: AutoUIAppProps) => {
 						</Flex>
 					)}
 				</Flex>
-			</Router>
+			</BrowserRouter>
 		</Provider>
 	);
 };
