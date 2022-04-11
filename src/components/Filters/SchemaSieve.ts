@@ -1,6 +1,9 @@
 import Ajv from 'ajv';
 import ajvKeywords from 'ajv-keywords';
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import {
+	JSONSchema7 as JSONSchema,
+	JSONSchema7TypeName as JSONSchemaTypeName,
+} from 'json-schema';
 import cloneDeep from 'lodash/cloneDeep';
 import defaults from 'lodash/defaults';
 import every from 'lodash/every';
@@ -21,11 +24,11 @@ ajvKeywords(ajv, ['regexp', 'formatMaximum', 'formatMinimum']);
 
 export const FULL_TEXT_SLUG = 'full_text_search';
 const DEFAULT_DELIMITER = '___';
-
 interface FullTextFilterItem {
 	key: string;
-	type: string;
+	type: JSONSchemaTypeName;
 	numberProperties: { maximum: number; minimum: number } | null;
+	items: JSONSchema['items'];
 }
 
 export function filter<T>(
@@ -46,12 +49,15 @@ export function filter<T>(
 	const validators = Array.isArray(filters)
 		? filters.map((s) => ajv.compile(s))
 		: [ajv.compile(filters)];
+
 	if (Array.isArray(collection)) {
 		return collection.filter((m) => every(validators, (v) => v(m)));
 	}
 
 	return pickBy(collection, (m) => every(validators, (v) => v(m)));
 }
+
+const SupportedFullTextSearchTypes = ['string', 'number', 'array'] as const;
 
 export const createFullTextSearchFilter = (
 	schema: JSONSchema,
@@ -60,11 +66,18 @@ export const createFullTextSearchFilter = (
 	const items = Object.entries(schema.properties as JSONSchema).reduce(
 		(itemsAccumulator, entry) => {
 			const [key, item] = entry;
-			const typeArray = Array.isArray(item.type) ? item.type : [item.type];
-			if (typeArray.includes('string') || typeArray.includes('number')) {
+			const typeArray: string[] = Array.isArray(item.type)
+				? item.type
+				: [item.type];
+			const type = typeArray.find(
+				(t): t is typeof SupportedFullTextSearchTypes[number] =>
+					(SupportedFullTextSearchTypes as readonly string[]).includes(t),
+			);
+			if (type != null) {
 				itemsAccumulator.push({
 					key,
-					type: typeArray.includes('number') ? 'number' : 'string',
+					type,
+					items: item.items,
 					numberProperties:
 						typeArray.includes('number') && !isNaN(Number(term))
 							? {
@@ -82,33 +95,49 @@ export const createFullTextSearchFilter = (
 		? items.filter((i) => i.type !== 'number')
 		: items;
 
-	// A schema that matches applies the pattern to each schema field with a type
-	// of 'string'
-	const filter = {
+	const filter = generateFullTextSearchAjvFilter(term, filteredItems);
+	return filter;
+};
+
+// A schema that matches applies the pattern to each schema field
+const generateFullTextSearchAjvFilter = (
+	term: string,
+	items: FullTextFilterItem[],
+): JSONSchema => {
+	return {
 		$id: randomString(),
 		title: FULL_TEXT_SLUG,
 		anyOf: [
 			{
 				title: FULL_TEXT_SLUG,
 				description: `Any field contains ${term}`,
-				anyOf: filteredItems.map((item) => ({
-					properties: {
-						[item.key]: {
-							type: item.type,
-							regexp: {
-								pattern: regexEscape(term),
-								flags: 'i',
+				anyOf: items.map(({ key, type, numberProperties, items }) => {
+					return {
+						properties: {
+							[key]: {
+								type,
+								...numberProperties,
+								...(!items && {
+									regexp: {
+										pattern: regexEscape(term),
+										flags: 'i',
+									},
+								}),
+								// TODO: Drop array check to add support for varying filters bases on array position.
+								// See: https://datatracker.ietf.org/doc/html/draft-handrews-json-schema-validation-01#section-6.4
+								...(typeof items === 'object' &&
+									!Array.isArray(items) && {
+										items: createFullTextSearchFilter(items, term),
+										minItems: 1,
+									}),
 							},
-							...item.numberProperties,
 						},
-					},
-					required: [item.key],
-				})),
+						required: [key],
+					};
+				}),
 			},
 		],
 	};
-
-	return filter as JSONSchema;
 };
 
 // Insert a full text search filter into an array of filters
@@ -282,7 +311,6 @@ export const unflattenSchema = (
 	delimiter: string = DEFAULT_DELIMITER,
 ) => {
 	const base = cloneDeep(schema);
-
 	// Reset the properties object to clean up the flattened fields
 	if (schema.properties) {
 		base.properties = {};
