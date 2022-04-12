@@ -43,7 +43,7 @@ export const transformVersions = (versions: OsVersion[]) => {
 			...(version.variant == null
 				? {
 						hasPrebuiltVariants: false,
-						rawVersion: version.rawVersion,
+						rawVersion: version.raw_version,
 				  }
 				: {
 						hasPrebuiltVariants: true,
@@ -51,7 +51,7 @@ export const transformVersions = (versions: OsVersion[]) => {
 							...(existingSelectionOpt != null &&
 								'rawVersions' in existingSelectionOpt &&
 								existingSelectionOpt.rawVersions),
-							[version.variant]: version.rawVersion,
+							[version.variant]: version.raw_version,
 						},
 				  }),
 		};

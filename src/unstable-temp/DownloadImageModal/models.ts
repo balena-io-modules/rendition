@@ -50,7 +50,7 @@ export declare type OsLines =
 	| undefined;
 export interface OsVersion {
 	id: number;
-	rawVersion: string;
+	raw_version: string;
 	strippedVersion: string;
 	basedOnVersion?: string;
 	osType: string;
