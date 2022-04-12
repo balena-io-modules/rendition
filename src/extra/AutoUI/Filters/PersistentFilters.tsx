@@ -17,6 +17,7 @@ import {
 } from '../../../components/Filters/SchemaSieve';
 import { getFromLocalStorage, setToLocalStorage } from '../../../utils';
 import type { History } from 'history';
+import isEqual from 'lodash/isEqual';
 
 export interface ListQueryStringFilterObject {
 	n: FilterSignature['field'];
@@ -142,7 +143,9 @@ export const PersistentFilters = ({
 	// When the component mounts, filters from the page URL,
 	// then communicate them back to the parent component.
 	React.useEffect(() => {
-		onFiltersUpdate?.(storedFilters);
+		if (!isEqual(storedFilters, filters)) {
+			onFiltersUpdate?.(storedFilters);
+		}
 	}, [storedFilters]);
 
 	const viewsUpdate = (views: FiltersView[]) => {
