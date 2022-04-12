@@ -1,4 +1,19 @@
 - commits:
+    - subject: Remove storedFilters from the dependency array in PersistentFilter's
+        useEffect
+      hash: ddf42f5092c334112fe1fb85fc703a31a9e3e5e8
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 26.0.1
+  title: "'Remove storedFilters from the dependency array in PersistentFilter's
+    useEffect'"
+  date: 2022-04-12T20:44:05.989Z
+- commits:
     - subject: "Download Image Modal: Rename OsVersion property rawVersion to
         raw_version"
       hash: bcf1ad5526e4098665ebb2fbdb23c17ad1c7438c
