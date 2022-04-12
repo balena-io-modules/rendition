@@ -1,4 +1,27 @@
 - commits:
+    - subject: "Download Image Modal: Rename OsVersion property rawVersion to
+        raw_version"
+      hash: bcf1ad5526e4098665ebb2fbdb23c17ad1c7438c
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+    - subject: "Filters: Stop saving filters to local storage"
+      hash: 67a5e4d299491fb361cfa76cefa7a398379a9e78
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 26.0.0
+  title: "'Filters: Stop saving filters to local storage'"
+  date: 2022-04-01T14:08:13.062Z
+- commits:
     - subject: Fix filters buttons color styles
       hash: a28171d48f3f6eaea8da836288cfa6e02e23f7d5
       body: ""
