@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add export for CollectionSummary component
+      hash: 0a582ba67c6a33c9104ced5638f5b7cce3d2f182
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 26.1.0
+  title: "'Add export for CollectionSummary component'"
+  date: 2022-04-13T17:09:28.807Z
+- commits:
     - subject: "Download Image Modal: Rename OsVersion property rawVersion to
         raw_version"
       hash: bcf1ad5526e4098665ebb2fbdb23c17ad1c7438c
