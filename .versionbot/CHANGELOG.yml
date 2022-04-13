@@ -1,4 +1,15 @@
 - commits:
+    - subject: "patch: Update rehype"
+      hash: 02a42e952e6cb3547ec5750321f518038e1c34dd
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 26.1.1
+  title: "'patch: Update rehype'"
+  date: 2022-04-13T17:45:35.458Z
+- commits:
     - subject: Add export for CollectionSummary component
       hash: 0a582ba67c6a33c9104ced5638f5b7cce3d2f182
       body: ""
