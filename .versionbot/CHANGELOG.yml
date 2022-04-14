@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add autoui refscheme support
+      hash: 10357c082e042650b1633b4010791a471f22d3ef
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 26.3.0
+  title: "'Add autoui refscheme support'"
+  date: 2022-04-14T12:40:39.936Z
+- commits:
     - subject: "patch: Update dependency styled-components to ^5.3.5"
       hash: a411c259bad43c148a376eeab9735b2cffa22b40
       body: ""
