@@ -1,4 +1,15 @@
 - commits:
+    - subject: "patch: Update dependency styled-components to ^5.3.5"
+      hash: a411c259bad43c148a376eeab9735b2cffa22b40
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 26.2.1
+  title: "'patch: Update dependency styled-components to ^5.3.5'"
+  date: 2022-04-14T09:57:02.776Z
+- commits:
     - subject: Add support for array of objects in filters
       hash: 7dbe3f378cd67cf788239a513f7d4d634a41e547
       body: ""
