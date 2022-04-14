@@ -6,6 +6,8 @@ import { JsonTypes } from '../../components/Renderer/types';
 import { diff } from '../../utils';
 import castArray from 'lodash/castArray';
 import { createBrowserHistory } from 'history';
+import { isJson } from './models/helpers';
+import get from 'lodash/get';
 
 export const history = createBrowserHistory();
 
@@ -108,20 +110,36 @@ export const autoUIGetDisabledReason = <T extends AutoUIBaseResource<T>>(
 	}
 };
 
+const sortFn = (
+	a: string | unknown,
+	b: string | unknown,
+	ref: string | string[],
+) => {
+	const aa = get(a, ref) ?? '';
+	const bb = get(b, ref) ?? '';
+	if (typeof aa === 'string' && typeof bb === 'string') {
+		return aa.toLowerCase().localeCompare(bb.toLowerCase());
+	}
+	return diff(aa, bb);
+};
+
 export const getSortingFunction = <T extends any>(
 	schemaKey: keyof T,
 	schemaValue: JSONSchema,
 ): TableSortFunction<T> => {
 	const types = castArray(schemaValue.type);
+	const refScheme =
+		schemaValue.description && isJson(schemaValue.description)
+			? JSON.parse(schemaValue.description!)['x-ref-scheme']
+			: null;
 	if (types.includes(JsonTypes.string)) {
-		return (a: T, b: T) => {
-			const aa = a[schemaKey] ?? '';
-			const bb = b[schemaKey] ?? '';
-			if (typeof aa === 'string' && typeof bb === 'string') {
-				return aa.toLowerCase().localeCompare(bb.toLowerCase());
-			}
-			return diff(a[schemaKey], b[schemaKey]);
-		};
+		return (a: T, b: T) => sortFn(a, b, schemaKey);
+	}
+	if (types.includes(JsonTypes.object) && refScheme) {
+		return (a: T, b: T) => sortFn(a, b, [schemaKey, ...[refScheme]]);
+	}
+	if (types.includes(JsonTypes.array) && refScheme) {
+		return (a: T, b: T) => sortFn(a, b, [schemaKey, 0, ...[refScheme]]);
 	}
 	return (a: T, b: T) => diff(a[schemaKey], b[schemaKey]);
 };
