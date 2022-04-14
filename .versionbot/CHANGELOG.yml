@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add support for array of objects in filters
+      hash: 7dbe3f378cd67cf788239a513f7d4d634a41e547
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 26.2.0
+  title: "'Add support for array of objects in filters'"
+  date: 2022-04-14T09:38:14.426Z
+- commits:
     - subject: "patch: Update rehype"
       hash: 02a42e952e6cb3547ec5750321f518038e1c34dd
       body: ""
