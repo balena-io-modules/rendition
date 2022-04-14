@@ -4,8 +4,12 @@ import {
 	autoUIJsonSchemaPick,
 	AutoUIRawModel,
 } from '../schemaOps';
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import {
+	JSONSchema7 as JSONSchema,
+	JSONSchema7Definition as JSONSchemaDefinition,
+} from 'json-schema';
 import { Dictionary } from '../../../common-types';
+import get from 'lodash/get';
 
 type Transformers<
 	T extends Dictionary<any>,
@@ -23,6 +27,15 @@ export const autoUIDefaultPermissions = {
 	create: [],
 	update: [],
 	delete: false,
+};
+
+export const isJson = (str: string) => {
+	try {
+		JSON.parse(str);
+	} catch (err) {
+		return false;
+	}
+	return true;
 };
 
 export const autoUIRunTransformers = <
@@ -57,6 +70,32 @@ export const autoUIRunTransformers = <
 		transformEntry(mutatedData);
 	}
 	return mutatedData;
+};
+
+export const autoUIAdaptRefScheme = (
+	field: unknown,
+	property: JSONSchemaDefinition,
+) => {
+	if (!property || field == null) {
+		return null;
+	}
+
+	if (
+		typeof property === 'boolean' ||
+		!property.description?.includes('x-ref-scheme') ||
+		!isJson(property.description)
+	) {
+		return field;
+	}
+
+	const descriptionObject = JSON.parse(property.description!);
+	const refScheme = descriptionObject['x-ref-scheme'];
+	const transformed =
+		(Array.isArray(field) && field.length <= 1 ? field[0] : field) ?? null;
+	if (refScheme) {
+		return get(transformed, refScheme) ?? null;
+	}
+	return transformed;
 };
 
 // This transformation would happen elsewhere, and it wouldn't be part of AutoUI
