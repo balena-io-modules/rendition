@@ -141,7 +141,7 @@
     "remark-rehype": "^7.0.0",
     "resize-observer": "^1.0.4",
     "skhema": "^5.3.4",
-    "styled-components": "^5.3.3",
+    "styled-components": "^5.3.5",
     "styled-system": "^4.2.4",
     "tslib": "^2.3.1",
     "unified": "^9.2.2",
