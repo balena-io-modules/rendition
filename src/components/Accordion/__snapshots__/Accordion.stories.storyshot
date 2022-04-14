@@ -26,7 +26,7 @@ exports[`Storyshots Core/Accordion Default 1`] = `
               class="sc-gKXOVf QRSBg sc-iBkjds bcbOvi sc-hHLeRK iKIurY"
             >
               <div
-                class="sc-ivTmOn CrJHK sc-cxabCf ecVUgU"
+                class="sc-ivTmOn fSbxau sc-cxabCf ecVUgU"
               >
                 Heading one
               </div>
@@ -79,7 +79,7 @@ exports[`Storyshots Core/Accordion Default 1`] = `
               class="sc-gKXOVf QRSBg sc-iBkjds bcbOvi sc-hHLeRK iKIurY"
             >
               <div
-                class="sc-ivTmOn CrJHK sc-cxabCf ecVUgU"
+                class="sc-ivTmOn fSbxau sc-cxabCf ecVUgU"
               >
                 Second Heading
               </div>

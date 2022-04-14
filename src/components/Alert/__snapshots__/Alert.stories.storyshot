@@ -9,7 +9,7 @@ exports[`Storyshots Core/Alert Default 1`] = `
       class="sc-gKXOVf QRSBg sc-iBkjds gwVQPy sc-hHLeRK sc-dmRaPn iKIurY eeClkm sc-gicCDI cmHWGP"
     >
       <div
-        class="sc-ivTmOn jVwBQP sc-cxabCf CTiCS"
+        class="sc-ivTmOn dNJphr sc-cxabCf CTiCS"
       >
         <svg
           aria-hidden="true"
@@ -31,12 +31,12 @@ exports[`Storyshots Core/Alert Default 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds jAkInX"
       >
         <span
-          class="sc-ivTmOn CrJHK sc-llJcti egDqiq"
+          class="sc-ivTmOn fSbxau sc-llJcti egDqiq"
         >
           Success!
         </span>
         <span
-          class="sc-ivTmOn jVwBQP sc-llJcti iKEiEp"
+          class="sc-ivTmOn dNJphr sc-llJcti iKEiEp"
         >
           This is a default alert
         </span>
@@ -55,7 +55,7 @@ exports[`Storyshots Core/Alert Emphasized 1`] = `
       class="sc-gKXOVf QRSBg sc-iBkjds dnRYSM sc-hHLeRK sc-dmRaPn iKIurY dELywO sc-gicCDI cmHWGP"
     >
       <div
-        class="sc-ivTmOn jVwBQP sc-cxabCf eemXLs"
+        class="sc-ivTmOn dNJphr sc-cxabCf eemXLs"
       >
         <svg
           aria-hidden="true"
@@ -77,12 +77,12 @@ exports[`Storyshots Core/Alert Emphasized 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds tsoYt"
       >
         <span
-          class="sc-ivTmOn CrJHK sc-llJcti egDqiq"
+          class="sc-ivTmOn fSbxau sc-llJcti egDqiq"
         >
           Note!
         </span>
         <span
-          class="sc-ivTmOn jVwBQP sc-llJcti lccPfE"
+          class="sc-ivTmOn dNJphr sc-llJcti lccPfE"
         >
           This is an emphasized alert
         </span>
@@ -101,7 +101,7 @@ exports[`Storyshots Core/Alert Plaintext 1`] = `
       class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY sc-gicCDI cmHWGP"
     >
       <div
-        class="sc-ivTmOn jVwBQP sc-cxabCf eemXLs"
+        class="sc-ivTmOn dNJphr sc-cxabCf eemXLs"
       >
         <svg
           aria-hidden="true"
@@ -120,7 +120,7 @@ exports[`Storyshots Core/Alert Plaintext 1`] = `
         </svg>
       </div>
       <span
-        class="sc-ivTmOn jVwBQP sc-llJcti lccPfE"
+        class="sc-ivTmOn dNJphr sc-llJcti lccPfE"
       >
         This is a plaintext alert
       </span>
@@ -138,7 +138,7 @@ exports[`Storyshots Core/Alert With Link 1`] = `
       class="sc-gKXOVf QRSBg sc-iBkjds gwVQPy sc-hHLeRK sc-dmRaPn iKIurY eeClkm sc-gicCDI cmHWGP"
     >
       <div
-        class="sc-ivTmOn jVwBQP sc-cxabCf CTiCS"
+        class="sc-ivTmOn dNJphr sc-cxabCf CTiCS"
       >
         <svg
           aria-hidden="true"
@@ -160,12 +160,12 @@ exports[`Storyshots Core/Alert With Link 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds jAkInX"
       >
         <span
-          class="sc-ivTmOn CrJHK sc-llJcti egDqiq"
+          class="sc-ivTmOn fSbxau sc-llJcti egDqiq"
         >
           Success!
         </span>
         <span
-          class="sc-ivTmOn jVwBQP sc-llJcti iKEiEp"
+          class="sc-ivTmOn dNJphr sc-llJcti iKEiEp"
         >
           With a 
           <a
@@ -191,7 +191,7 @@ exports[`Storyshots Core/Alert Without Dismiss 1`] = `
       class="sc-gKXOVf QRSBg sc-iBkjds gwVQPy sc-hHLeRK sc-dmRaPn iKIurY eeClkm sc-gicCDI cmHWGP"
     >
       <div
-        class="sc-ivTmOn jVwBQP sc-cxabCf CTiCS"
+        class="sc-ivTmOn dNJphr sc-cxabCf CTiCS"
       >
         <svg
           aria-hidden="true"
@@ -213,12 +213,12 @@ exports[`Storyshots Core/Alert Without Dismiss 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds jAkInX"
       >
         <span
-          class="sc-ivTmOn CrJHK sc-llJcti egDqiq"
+          class="sc-ivTmOn fSbxau sc-llJcti egDqiq"
         >
           Success!
         </span>
         <span
-          class="sc-ivTmOn jVwBQP sc-llJcti iKEiEp"
+          class="sc-ivTmOn dNJphr sc-llJcti iKEiEp"
         >
           Without a dismiss button
         </span>
@@ -237,7 +237,7 @@ exports[`Storyshots Core/Alert Without Prefix 1`] = `
       class="sc-gKXOVf QRSBg sc-iBkjds gwVQPy sc-hHLeRK sc-dmRaPn iKIurY eeClkm sc-gicCDI cmHWGP"
     >
       <div
-        class="sc-ivTmOn jVwBQP sc-cxabCf CTiCS"
+        class="sc-ivTmOn dNJphr sc-cxabCf CTiCS"
       >
         <svg
           aria-hidden="true"
@@ -259,12 +259,12 @@ exports[`Storyshots Core/Alert Without Prefix 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds jAkInX"
       >
         <span
-          class="sc-ivTmOn CrJHK sc-llJcti egDqiq"
+          class="sc-ivTmOn fSbxau sc-llJcti egDqiq"
         >
           Success!
         </span>
         <span
-          class="sc-ivTmOn jVwBQP sc-llJcti iKEiEp"
+          class="sc-ivTmOn dNJphr sc-llJcti iKEiEp"
         >
           Without a prefix
         </span>

@@ -69,6 +69,7 @@ interface InternalCopyProps extends Omit<BoxProps, 'onClick' | 'onCopy'> {
 	onClick?: (content: string) => void;
 	/** The content next to which the clipboard button should be shown */
 	children?: React.ReactNode;
+	/** Calls the given function when the copy icon is clicked */
 	onCopy?: React.MouseEventHandler<HTMLElement>;
 }
 

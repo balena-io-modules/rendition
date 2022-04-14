@@ -121,7 +121,7 @@ exports[`Storyshots Core/Tabs Compact 1`] = `
         role="tabpanel"
       >
         <div
-          class="sc-ivTmOn jVwBQP sc-cxabCf dvzGBf"
+          class="sc-ivTmOn dNJphr sc-cxabCf dvzGBf"
         >
           Here is tab #1
         </div>
@@ -201,7 +201,7 @@ exports[`Storyshots Core/Tabs Default 1`] = `
         role="tabpanel"
       >
         <div
-          class="sc-ivTmOn jVwBQP sc-cxabCf dvzGBf"
+          class="sc-ivTmOn dNJphr sc-cxabCf dvzGBf"
         >
           Here is tab #1
         </div>
@@ -281,7 +281,7 @@ exports[`Storyshots Core/Tabs With Long Titles 1`] = `
         role="tabpanel"
       >
         <div
-          class="sc-ivTmOn jVwBQP sc-cxabCf dvzGBf"
+          class="sc-ivTmOn dNJphr sc-cxabCf dvzGBf"
         >
           Here is tab #1
         </div>

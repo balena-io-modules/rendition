@@ -115,7 +115,7 @@ exports[`Storyshots Core/Copy Default 1`] = `
       class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-bBrHrO HodyL"
     >
       <div
-        class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF"
+        class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF"
       >
         Hover me and click on icon to copy
       </div>
@@ -195,12 +195,12 @@ exports[`Storyshots Core/Copy With Tag 1`] = `
           class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
         >
           <div
-            class="sc-ivTmOn dUHDxn sc-cxabCf ecsbJB"
+            class="sc-ivTmOn qStAn sc-cxabCf ecsbJB"
           >
             Type: 
           </div>
           <div
-            class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+            class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
           >
             Beginner
           </div>

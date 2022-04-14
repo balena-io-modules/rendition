@@ -76,7 +76,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                         class="sc-gKXOVf QRSBg sc-iBkjds gRMaZo"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <h1
@@ -88,7 +88,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                               src="https://via.placeholder.com/150"
                             />
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               A paragraph
                             </p>
@@ -113,12 +113,12 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                         class="sc-gKXOVf QRSBg sc-iBkjds gRMaZo"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             A title
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               A paragraph
                             </p>
@@ -167,7 +167,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                         class="sc-gKXOVf QRSBg sc-iBkjds gRMaZo"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <h1
@@ -179,7 +179,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                               src="https://via.placeholder.com/150"
                             />
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               A paragraph
                             </p>
@@ -204,7 +204,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                         class="sc-gKXOVf QRSBg sc-iBkjds gRMaZo"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             A title
@@ -252,7 +252,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                         class="sc-gKXOVf QRSBg sc-iBkjds gRMaZo"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <h1
@@ -264,7 +264,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                               src="https://via.placeholder.com/150"
                             />
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               A paragraph
                             </p>
@@ -289,7 +289,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                         class="sc-gKXOVf QRSBg sc-iBkjds gRMaZo"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <h1
@@ -320,7 +320,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+      class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
     >
       <div>
         <h1
@@ -341,7 +341,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+          class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
         >
           A simple component for rendering 
           <em>
@@ -449,7 +449,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+          class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
         >
           <em>
             This text will be italic
@@ -464,7 +464,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+          class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
         >
           <strong>
             This text will be bold
@@ -479,7 +479,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+          class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
         >
           <em>
             You 
@@ -631,7 +631,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+          class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
         >
           <img
             alt="Example Image"
@@ -658,7 +658,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+          class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
         >
           <a
             class="sc-eKBdFk eDgBSD sc-bUbCnL aUvHI"
@@ -672,7 +672,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+          class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
         >
           <a
             class="sc-eKBdFk eDgBSD sc-bUbCnL aUvHI"
@@ -702,7 +702,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+          class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
         >
           As Ash Ketchum said:
         </p>
@@ -712,7 +712,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
           
 
           <p
-            class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+            class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
           >
             Do you always need a reason to help somebody?
           </p>
@@ -739,7 +739,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
         
 
         <p
-          class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+          class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
         >
           I think you should use an
           <br />
@@ -1003,7 +1003,7 @@ const foo = () =&gt; {
         
 
         <p
-          class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+          class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
         >
           <del>
             Crossed out
@@ -1012,7 +1012,7 @@ const foo = () =&gt; {
         
 
         <p
-          class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+          class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
         >
           Any word wrapped with two tildes (like 
           <code>
@@ -1040,7 +1040,7 @@ const foo = () =&gt; {
         
 
         <p
-          class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+          class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
         >
           <strong>
             An image:
@@ -1096,7 +1096,7 @@ const foo = () =&gt; {
         
 
         <p
-          class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+          class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
         >
           <kbd>
             cmd
@@ -1126,11 +1126,11 @@ exports[`Storyshots Extra/Markdown With Decorators 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+      class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
     >
       <div>
         <p
-          class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+          class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
         >
           <span>
             
@@ -1171,7 +1171,7 @@ exports[`Storyshots Extra/Markdown With Decorators 1`] = `
         
 
         <p
-          class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+          class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
         >
           <span>
             

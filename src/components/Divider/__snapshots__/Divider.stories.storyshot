@@ -51,7 +51,7 @@ exports[`Storyshots Core/Divider With Text Content 1`] = `
         type="dashed"
       />
       <span
-        class="sc-ivTmOn jVwBQP sc-llJcti bwLrqm"
+        class="sc-ivTmOn dNJphr sc-llJcti bwLrqm"
       >
         some text
       </span>

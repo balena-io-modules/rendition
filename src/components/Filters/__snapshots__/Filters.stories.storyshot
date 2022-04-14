@@ -670,7 +670,7 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
                   >
                     <div
-                      class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+                      class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
                     >
                       10
                     </div>
@@ -683,7 +683,7 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
                   >
                     <div
-                      class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+                      class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
                     >
                       Kanto
                     </div>
@@ -789,7 +789,7 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
                   >
                     <div
-                      class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+                      class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
                     >
                       5
                     </div>
@@ -802,7 +802,7 @@ exports[`Storyshots Core/Filters Button Props 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
                   >
                     <div
-                      class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+                      class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
                     >
                       Johto
                     </div>
@@ -1837,7 +1837,7 @@ exports[`Storyshots Core/Filters Compact 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
                   >
                     <div
-                      class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+                      class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
                     >
                       10
                     </div>
@@ -1850,7 +1850,7 @@ exports[`Storyshots Core/Filters Compact 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
                   >
                     <div
-                      class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+                      class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
                     >
                       Kanto
                     </div>
@@ -1956,7 +1956,7 @@ exports[`Storyshots Core/Filters Compact 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
                   >
                     <div
-                      class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+                      class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
                     >
                       5
                     </div>
@@ -1969,7 +1969,7 @@ exports[`Storyshots Core/Filters Compact 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
                   >
                     <div
-                      class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+                      class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
                     >
                       Johto
                     </div>
@@ -3017,7 +3017,7 @@ exports[`Storyshots Core/Filters Default 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
                   >
                     <div
-                      class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+                      class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
                     >
                       10
                     </div>
@@ -3030,7 +3030,7 @@ exports[`Storyshots Core/Filters Default 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
                   >
                     <div
-                      class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+                      class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
                     >
                       Kanto
                     </div>
@@ -3136,7 +3136,7 @@ exports[`Storyshots Core/Filters Default 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
                   >
                     <div
-                      class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+                      class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
                     >
                       5
                     </div>
@@ -3149,7 +3149,7 @@ exports[`Storyshots Core/Filters Default 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
                   >
                     <div
-                      class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+                      class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
                     >
                       Johto
                     </div>
@@ -4201,7 +4201,7 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
                   >
                     <div
-                      class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+                      class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
                     >
                       10
                     </div>
@@ -4214,7 +4214,7 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
                   >
                     <div
-                      class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+                      class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
                     >
                       Kanto
                     </div>
@@ -4320,7 +4320,7 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
                   >
                     <div
-                      class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+                      class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
                     >
                       5
                     </div>
@@ -4333,7 +4333,7 @@ exports[`Storyshots Core/Filters Disabled 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
                   >
                     <div
-                      class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+                      class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
                     >
                       Johto
                     </div>
@@ -4818,10 +4818,10 @@ exports[`Storyshots Core/Filters Render Modes 1`] = `
               class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY"
             >
               <div
-                class="sc-ivTmOn jVwBQP sc-cxabCf bOpZdj"
+                class="sc-ivTmOn dNJphr sc-cxabCf bOpZdj"
               >
                 <span
-                  class="sc-ivTmOn CrJHK sc-llJcti hQwFFc"
+                  class="sc-ivTmOn fSbxau sc-llJcti hQwFFc"
                 >
                   Filters
                 </span>
@@ -4879,27 +4879,27 @@ exports[`Storyshots Core/Filters Render Modes 1`] = `
                   class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
                 >
                   <div
-                    class="sc-ivTmOn dUHDxn sc-cxabCf ecsbJB"
+                    class="sc-ivTmOn qStAn sc-cxabCf ecsbJB"
                   >
                     Pokemon Name is 
                   </div>
                   <div
-                    class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+                    class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
                   >
                     Squirtle
                   </div>
                   <div
-                    class="sc-ivTmOn gdxSrh sc-cxabCf ecsbJB"
+                    class="sc-ivTmOn dTYjnd sc-cxabCf ecsbJB"
                   >
                       or  
                   </div>
                   <div
-                    class="sc-ivTmOn dUHDxn sc-cxabCf ecsbJB"
+                    class="sc-ivTmOn qStAn sc-cxabCf ecsbJB"
                   >
                     Pokemon Name is 
                   </div>
                   <div
-                    class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+                    class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
                   >
                     Pikachu
                   </div>
@@ -5021,7 +5021,7 @@ exports[`Storyshots Core/Filters Render Modes 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
                   >
                     <div
-                      class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+                      class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
                     >
                       5
                     </div>
@@ -5034,7 +5034,7 @@ exports[`Storyshots Core/Filters Render Modes 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
                   >
                     <div
-                      class="sc-ivTmOn CrJHK sc-cxabCf ecsbJB"
+                      class="sc-ivTmOn fSbxau sc-cxabCf ecsbJB"
                     >
                       Johto
                     </div>

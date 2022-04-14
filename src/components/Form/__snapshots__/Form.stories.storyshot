@@ -262,11 +262,11 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               The first time you saw this pokèmon
                             </p>
@@ -305,11 +305,11 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               Password to access the pokèmon's abilities
                             </p>
@@ -412,11 +412,11 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                            class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                           >
                             <div>
                               <p
-                                class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                                class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                               >
                                 Add useful tags to your pokèmon
                               </p>
@@ -470,7 +470,7 @@ exports[`Storyshots Core/Form Custom Submit Text 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds jbhFus"
       >
         <div
-          class="sc-ivTmOn dWGLGy sc-cxabCf hcBkUF"
+          class="sc-ivTmOn fPjrwC sc-cxabCf hcBkUF"
         >
           <pre>
             {}
@@ -744,11 +744,11 @@ exports[`Storyshots Core/Form Default 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               The first time you saw this pokèmon
                             </p>
@@ -787,11 +787,11 @@ exports[`Storyshots Core/Form Default 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               Password to access the pokèmon's abilities
                             </p>
@@ -894,11 +894,11 @@ exports[`Storyshots Core/Form Default 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                            class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                           >
                             <div>
                               <p
-                                class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                                class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                               >
                                 Add useful tags to your pokèmon
                               </p>
@@ -952,7 +952,7 @@ exports[`Storyshots Core/Form Default 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds jbhFus"
       >
         <div
-          class="sc-ivTmOn dWGLGy sc-cxabCf hcBkUF"
+          class="sc-ivTmOn fPjrwC sc-cxabCf hcBkUF"
         >
           <pre>
             {}
@@ -1234,11 +1234,11 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               The first time you saw this pokèmon
                             </p>
@@ -1278,11 +1278,11 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               Password to access the pokèmon's abilities
                             </p>
@@ -1387,11 +1387,11 @@ exports[`Storyshots Core/Form Disabled 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                            class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                           >
                             <div>
                               <p
-                                class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                                class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                               >
                                 Add useful tags to your pokèmon
                               </p>
@@ -1445,7 +1445,7 @@ exports[`Storyshots Core/Form Disabled 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds jbhFus"
       >
         <div
-          class="sc-ivTmOn dWGLGy sc-cxabCf hcBkUF"
+          class="sc-ivTmOn fPjrwC sc-cxabCf hcBkUF"
         >
           <pre>
             {}
@@ -1719,11 +1719,11 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               The first time you saw this pokèmon
                             </p>
@@ -1762,11 +1762,11 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               Password to access the pokèmon's abilities
                             </p>
@@ -1869,11 +1869,11 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                            class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                           >
                             <div>
                               <p
-                                class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                                class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                               >
                                 Add useful tags to your pokèmon
                               </p>
@@ -1922,7 +1922,7 @@ exports[`Storyshots Core/Form Hidden Submit 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds jbhFus"
       >
         <div
-          class="sc-ivTmOn dWGLGy sc-cxabCf hcBkUF"
+          class="sc-ivTmOn fPjrwC sc-cxabCf hcBkUF"
         >
           <pre>
             {}
@@ -2196,11 +2196,11 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               The first time you saw this pokèmon
                             </p>
@@ -2239,11 +2239,11 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               Password to access the pokèmon's abilities
                             </p>
@@ -2346,11 +2346,11 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                            class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                           >
                             <div>
                               <p
-                                class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                                class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                               >
                                 Add useful tags to your pokèmon
                               </p>
@@ -2410,7 +2410,7 @@ exports[`Storyshots Core/Form Secondary Action 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds jbhFus"
       >
         <div
-          class="sc-ivTmOn dWGLGy sc-cxabCf hcBkUF"
+          class="sc-ivTmOn fPjrwC sc-cxabCf hcBkUF"
         >
           <pre>
             {}
@@ -2550,7 +2550,7 @@ exports[`Storyshots Core/Form With Dependants 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds jbhFus"
       >
         <div
-          class="sc-ivTmOn dWGLGy sc-cxabCf hcBkUF"
+          class="sc-ivTmOn fPjrwC sc-cxabCf hcBkUF"
         >
           <pre>
             {}
@@ -2571,7 +2571,7 @@ exports[`Storyshots Core/Form With Extra Widgets 1`] = `
       class="sc-gKXOVf QRSBg sc-iBkjds bBZNJf"
     >
       <div
-        class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+        class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
       >
         <div>
           <h1
@@ -2592,7 +2592,7 @@ exports[`Storyshots Core/Form With Extra Widgets 1`] = `
           
 
           <p
-            class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+            class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
           >
             Additional widgets for handling different formats can be registered using the 
             <code>
@@ -3739,7 +3739,7 @@ Rendition contains widgets for rendering Markdown and Mermaid text formats that 
         class="sc-gKXOVf ckXSHX sc-iBkjds jbhFus"
       >
         <div
-          class="sc-ivTmOn dWGLGy sc-cxabCf hcBkUF"
+          class="sc-ivTmOn fPjrwC sc-cxabCf hcBkUF"
         >
           <pre>
             {}
@@ -3816,11 +3816,11 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                         id="root_Name"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               Once the 
                               <code>
@@ -4026,11 +4026,11 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               The first time you saw this pokèmon
                             </p>
@@ -4069,11 +4069,11 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               Password to access the pokèmon's abilities
                             </p>
@@ -4200,11 +4200,11 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                            class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                           >
                             <div>
                               <p
-                                class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                                class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                               >
                                 Add useful tags to your pokèmon
                               </p>
@@ -4258,7 +4258,7 @@ exports[`Storyshots Core/Form With Help Text 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds jbhFus"
       >
         <div
-          class="sc-ivTmOn dWGLGy sc-cxabCf hcBkUF"
+          class="sc-ivTmOn fPjrwC sc-cxabCf hcBkUF"
         >
           <pre>
             {}
@@ -4377,7 +4377,7 @@ exports[`Storyshots Core/Form With Pattern Properties 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds jbhFus"
       >
         <div
-          class="sc-ivTmOn dWGLGy sc-cxabCf hcBkUF"
+          class="sc-ivTmOn fPjrwC sc-cxabCf hcBkUF"
         >
           <pre>
             {
@@ -4613,7 +4613,7 @@ exports[`Storyshots Core/Form With Titles 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds jbhFus"
       >
         <div
-          class="sc-ivTmOn dWGLGy sc-cxabCf hcBkUF"
+          class="sc-ivTmOn fPjrwC sc-cxabCf hcBkUF"
         >
           <pre>
             {
@@ -4886,11 +4886,11 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               The first time you saw this pokèmon
                             </p>
@@ -4929,11 +4929,11 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               Password to access the pokèmon's abilities
                             </p>
@@ -5060,11 +5060,11 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                            class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                           >
                             <div>
                               <p
-                                class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                                class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                               >
                                 Add useful tags to your pokèmon
                               </p>
@@ -5118,7 +5118,7 @@ exports[`Storyshots Core/Form With Ui Schema 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds jbhFus"
       >
         <div
-          class="sc-ivTmOn dWGLGy sc-cxabCf hcBkUF"
+          class="sc-ivTmOn fPjrwC sc-cxabCf hcBkUF"
         >
           <pre>
             {}
@@ -5176,7 +5176,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                         class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY sc-gicCDI cAbCAC"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf bLiaOm"
+                          class="sc-ivTmOn dNJphr sc-cxabCf bLiaOm"
                         >
                           <svg
                             aria-hidden="true"
@@ -5195,17 +5195,17 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                           </svg>
                         </div>
                         <span
-                          class="sc-ivTmOn jVwBQP sc-llJcti hkztAs"
+                          class="sc-ivTmOn dNJphr sc-llJcti hkztAs"
                         >
                           <div
                             class="sc-gKXOVf QRSBg sc-iBkjds QRvXl sc-hHLeRK dzJWYl sc-dFdIVH wJFOl"
                           >
                             <div
-                              class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                              class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                             >
                               <div>
                                 <p
-                                  class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                                  class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                                 >
                                   Once the 
                                   <code>
@@ -5431,11 +5431,11 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                         id="root_first_seen__description"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               The first time you saw this pokèmon
                             </p>
@@ -5474,11 +5474,11 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                         id="root_poke_password__description"
                       >
                         <div
-                          class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                         >
                           <div>
                             <p
-                              class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                             >
                               Password to access the pokèmon's abilities
                             </p>
@@ -5605,11 +5605,11 @@ exports[`Storyshots Core/Form With Warning 1`] = `
                           id="root_tags__description"
                         >
                           <div
-                            class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                            class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                           >
                             <div>
                               <p
-                                class="sc-ivTmOn jVwBQP sc-iIPllB eSdPCy"
+                                class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
                               >
                                 Add useful tags to your pokèmon
                               </p>
@@ -5663,7 +5663,7 @@ exports[`Storyshots Core/Form With Warning 1`] = `
         class="sc-gKXOVf ckXSHX sc-iBkjds jbhFus"
       >
         <div
-          class="sc-ivTmOn dWGLGy sc-cxabCf hcBkUF"
+          class="sc-ivTmOn fPjrwC sc-cxabCf hcBkUF"
         >
           <pre>
             {}

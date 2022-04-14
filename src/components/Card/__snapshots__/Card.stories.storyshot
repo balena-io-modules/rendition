@@ -166,7 +166,7 @@ exports[`Storyshots Core/Card With Rows 1`] = `
               class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-bBrHrO ejUXtf"
             >
               <div
-                class="sc-ivTmOn jVwBQP sc-cxabCf hcBkUF"
+                class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF"
               >
                 Row with Copy component
               </div>

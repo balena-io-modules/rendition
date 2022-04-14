@@ -27,6 +27,13 @@ export const code = (props: Pick<ThemedTxtProps, 'theme' | 'code'>) =>
 		  `
 		: null;
 
+export const underline = (props: Pick<ThemedTxtProps, 'theme' | 'underline'>) =>
+	props.underline
+		? css`
+				text-decoration: underline;
+		  `
+		: null;
+
 export const whitespace = (
 	props: Pick<ThemedTxtProps, 'theme' | 'whitespace'>,
 ) =>
@@ -81,6 +88,7 @@ export const BaseTxt = styled.div<TxtProps>`
 	${bold}
 	${italic}
 	${truncate}
+	${underline}
 `;
 
 // TODO: check if there is a better way to type "as" prop
@@ -142,6 +150,8 @@ export interface InternalTxtProps
 	extends Omit<React.HTMLAttributes<HTMLElement>, 'onCopy'> {
 	/** If true, render text in a monospace font */
 	monospace?: boolean;
+	/** If true, adds an underline */
+	underline?: boolean;
 	/** If true, render text in a bold font */
 	bold?: boolean;
 	/** If true, render text in an italic font style */
@@ -160,6 +170,7 @@ export interface InternalTxtProps
 	copy?: string | number;
 	/**  Setting to 'always' ensures that the copy icon is always visible. 'hover' ensures that the copy icon is only visible on hover. By default, this is set to 'hover'. */
 	showCopyMode?: 'hover' | 'always';
+	/** Calls the given function when the copy icon is clicked */
 	onCopy?: React.EventHandler<
 		React.ClipboardEvent<HTMLElement> | React.MouseEvent<HTMLElement>
 	>;
