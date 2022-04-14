@@ -1,11 +1,12 @@
 import { JSONSchema7 as JSONSchema } from 'json-schema';
 import * as React from 'react';
-import { randomString } from '../../utils';
+import { randomString, regexEscape } from '../../utils';
 import { DataTypeEditProps } from '../Filters';
 import { Input, InputProps } from '../Input';
 import { Textarea, TextareaProps } from '../Textarea';
 import { getJsonDescription } from './utils';
 import { Select, SelectProps } from '../Select';
+import { findInObject } from '../../extra/AutoUI/utils';
 
 export const operators = {
 	contains: {
@@ -56,41 +57,11 @@ export const decodeFilter = (
 	value: string;
 } | null => {
 	const operator = filter.title;
-	let value: string;
-	let field: string;
-
-	if (filter.properties) {
-		const keys = Object.keys(filter.properties);
-		if (!keys.length) {
-			return null;
-		}
-
-		field = keys[0];
-
-		if (operator === 'contains') {
-			value = filter.properties[field].contains!.const;
-		} else {
-			return null;
-		}
-	} else if (filter.anyOf) {
-		if (filter.anyOf.length === 0 || !filter.anyOf[0].properties) {
-			return null;
-		}
-		const keys = Object.keys(filter.anyOf[0].properties!);
-		if (!keys.length) {
-			return null;
-		}
-
-		field = keys[0];
-
-		if (operator === 'not_contains') {
-			value = filter.anyOf[0].properties![field].not!.contains.const;
-		} else {
-			return null;
-		}
-	} else {
-		return null;
-	}
+	const properties = findInObject(filter, 'properties');
+	const [firstPropKey] = Object.keys(properties);
+	const field = firstPropKey;
+	const value =
+		findInObject(filter, 'const') ?? findInObject(filter, 'pattern');
 
 	return {
 		field,
@@ -117,14 +88,14 @@ export const createFilter = (
 		type: 'object',
 	};
 
+	const filter = getFilter(schema, value);
+
 	if (operator === 'contains') {
 		return Object.assign(base, {
 			properties: {
 				[field]: {
 					type: 'array',
-					contains: {
-						const: value,
-					},
+					...filter,
 				},
 			},
 			required: [field],
@@ -139,9 +110,7 @@ export const createFilter = (
 						[field]: {
 							type: 'array',
 							not: {
-								contains: {
-									const: value,
-								},
+								...filter,
 							},
 						},
 					},
@@ -209,4 +178,31 @@ export const Edit = ({
 			{...props}
 		/>
 	);
+};
+
+export const getFilter = (schema: JSONSchema, value: string) => {
+	if (
+		!!schema?.items &&
+		typeof schema.items !== 'boolean' &&
+		'properties' in schema.items &&
+		!!schema.items.properties
+	) {
+		return {
+			minItems: 1,
+			items: {
+				properties: Object.keys(schema.items.properties).reduce(
+					(props: NonNullable<JSONSchema['properties']>, propKey: string) => {
+						props[propKey] = {
+							pattern: regexEscape(value),
+							// @ts-expect-error ajv knows this rule
+							flags: 'i',
+						};
+						return props;
+					},
+					{},
+				),
+			},
+		};
+	}
+	return { contains: { const: value } };
 };

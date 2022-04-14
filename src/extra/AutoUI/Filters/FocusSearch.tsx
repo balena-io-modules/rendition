@@ -2,7 +2,6 @@ import React from 'react';
 import { Txt } from '../../../components/Txt';
 import { Checkbox } from '../../../components/Checkbox';
 import reject from 'lodash/reject';
-import groupBy from 'lodash/groupBy';
 import styled from 'styled-components';
 import { Box } from '../../../components/Box';
 import { Flex } from '../../../components/Flex';
@@ -10,6 +9,10 @@ import { useHistory } from '../../../hooks/useHistory';
 import { AutoUIContext } from '../schemaOps';
 import { stopEvent } from '../../../utils';
 import { AutoUIModel } from '..';
+import {
+	createFullTextSearchFilter,
+	filter as schemaSieveFilter,
+} from '../../../components/Filters/SchemaSieve';
 
 const Focus = styled(Box)`
 	flex-basis: 100%;
@@ -58,28 +61,10 @@ export const FocusSearch = <T extends { id: number; [key: string]: any }>({
 }: FocusSearchProps<T>) => {
 	const history = useHistory();
 
-	const queryTerms = searchTerm.split(' ').map((x) => x.toLowerCase());
-
-	const filteredById = groupBy(
-		filtered.map((entity) => ({
-			id: entity.id,
-			searchTerms: Object.values(entity).filter(
-				(val) => typeof val === 'number' || val?.length > 0,
-			),
-		})),
-		(entity) => entity.id,
-	);
-
-	const filteredFittingSearchTerms = filtered.filter((entity) => {
-		const { searchTerms } = filteredById[entity.id][0];
-
-		return queryTerms.every((term) =>
-			searchTerms.some(
-				(field) =>
-					typeof field !== 'function' && field.toString().includes(term),
-			),
-		);
-	});
+	const filteredFittingSearchTerms = React.useMemo(() => {
+		const filter = createFullTextSearchFilter(model.schema, searchTerm);
+		return schemaSieveFilter(filter, filtered);
+	}, [searchTerm, filtered]);
 
 	if (!filteredFittingSearchTerms.length) {
 		return (
