@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add array and object sort based on refScheme
+      hash: 30b43b887712f09626ac87a1fcae18273f0bcd9d
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 26.4.0
+  title: "'Add array and object sort based on refScheme'"
+  date: 2022-04-14T17:00:43.489Z
+- commits:
     - subject: Add autoui refscheme support
       hash: 10357c082e042650b1633b4010791a471f22d3ef
       body: ""
