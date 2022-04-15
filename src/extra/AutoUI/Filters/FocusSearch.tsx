@@ -13,6 +13,7 @@ import {
 	createFullTextSearchFilter,
 	filter as schemaSieveFilter,
 } from '../../../components/Filters/SchemaSieve';
+import { getPropertyRefScheme } from '../models/helpers';
 
 const Focus = styled(Box)`
 	flex-basis: 100%;
@@ -65,6 +66,22 @@ export const FocusSearch = <T extends { id: number; [key: string]: any }>({
 		const filter = createFullTextSearchFilter(model.schema, searchTerm);
 		return schemaSieveFilter(filter, filtered);
 	}, [searchTerm, filtered]);
+
+	const getEntityValue = (entity: T) => {
+		const property = model.priorities?.primary[0]!;
+		const schemaProperty = model.schema.properties?.[property];
+		const refScheme = schemaProperty
+			? getPropertyRefScheme(schemaProperty)
+			: null;
+		if (!refScheme || typeof schemaProperty === 'boolean') {
+			return entity[property];
+		}
+		return schemaProperty?.type === 'array'
+			? entity[property][0]?.[refScheme]
+			: schemaProperty?.type === 'object'
+			? entity[property][refScheme]
+			: entity[property];
+	};
 
 	if (!filteredFittingSearchTerms.length) {
 		return (
@@ -122,7 +139,7 @@ export const FocusSearch = <T extends { id: number; [key: string]: any }>({
 								alignItems="center"
 								ml={!hasUpdateActions ? 1 : undefined}
 							>
-								<Txt>{entity[model.priorities?.primary[0] ?? 'id']}</Txt>
+								<Txt>{getEntityValue(entity)}</Txt>
 							</Flex>
 						</Flex>
 					</FocusItem>

@@ -79,17 +79,15 @@ export const autoUIAdaptRefScheme = (
 	if (!property || field == null) {
 		return null;
 	}
-
 	if (
 		typeof property === 'boolean' ||
 		!property.description?.includes('x-ref-scheme') ||
-		!isJson(property.description)
+		!isJson(property.description) ||
+		!!property.format
 	) {
 		return field;
 	}
-
-	const descriptionObject = JSON.parse(property.description!);
-	const refScheme = descriptionObject['x-ref-scheme'];
+	const refScheme = getPropertyRefScheme(property);
 	const transformed =
 		(Array.isArray(field) && field.length <= 1 ? field[0] : field) ?? null;
 	if (refScheme) {
@@ -136,4 +134,14 @@ export const autoUIAddToSchema = (
 			},
 		},
 	};
+};
+
+export const getPropertyRefScheme = (
+	schemaValue: JSONSchema | JSONSchemaDefinition,
+) => {
+	return typeof schemaValue !== 'boolean' &&
+		!!schemaValue.description &&
+		isJson(schemaValue.description)
+		? JSON.parse(schemaValue.description!)['x-ref-scheme']
+		: null;
 };
