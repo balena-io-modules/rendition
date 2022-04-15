@@ -1,4 +1,15 @@
 - commits:
+    - subject: "patch: Update fontawesome to ^6.1.1"
+      hash: a7af109ceacbf49fc46d9e309aebcc6e3ff3d999
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 26.4.1
+  title: "'patch: Update fontawesome to ^6.1.1'"
+  date: 2022-04-15T14:12:52.667Z
+- commits:
     - subject: Add array and object sort based on refScheme
       hash: 30b43b887712f09626ac87a1fcae18273f0bcd9d
       body: ""
