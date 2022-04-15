@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix search for lists of items and items of type object
+      hash: c8b6374f897cf86398bff4e95d513a102d4205c1
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 26.4.2
+  title: "'Fix search for lists of items and items of type object'"
+  date: 2022-04-15T17:26:24.089Z
+- commits:
     - subject: "patch: Update fontawesome to ^6.1.1"
       hash: a7af109ceacbf49fc46d9e309aebcc6e3ff3d999
       body: ""
