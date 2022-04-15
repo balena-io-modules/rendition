@@ -6,7 +6,7 @@ import { JsonTypes } from '../../components/Renderer/types';
 import { diff } from '../../utils';
 import castArray from 'lodash/castArray';
 import { createBrowserHistory } from 'history';
-import { isJson } from './models/helpers';
+import { getPropertyRefScheme } from './models/helpers';
 import get from 'lodash/get';
 
 export const history = createBrowserHistory();
@@ -128,10 +128,7 @@ export const getSortingFunction = <T extends any>(
 	schemaValue: JSONSchema,
 ): TableSortFunction<T> => {
 	const types = castArray(schemaValue.type);
-	const refScheme =
-		schemaValue.description && isJson(schemaValue.description)
-			? JSON.parse(schemaValue.description!)['x-ref-scheme']
-			: null;
+	const refScheme = getPropertyRefScheme(schemaValue);
 	if (types.includes(JsonTypes.string)) {
 		return (a: T, b: T) => sortFn(a, b, schemaKey);
 	}

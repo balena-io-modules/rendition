@@ -193,9 +193,11 @@ export const getFilter = (schema: JSONSchema, value: string) => {
 				properties: Object.keys(schema.items.properties).reduce(
 					(props: NonNullable<JSONSchema['properties']>, propKey: string) => {
 						props[propKey] = {
-							pattern: regexEscape(value),
-							// @ts-expect-error ajv knows this rule
-							flags: 'i',
+							// @ts-expect-error
+							regexp: {
+								pattern: regexEscape(value),
+								flags: 'i',
+							},
 						};
 						return props;
 					},
