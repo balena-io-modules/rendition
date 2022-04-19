@@ -6,7 +6,7 @@ exports[`Storyshots Core/Checkbox Default 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
+      class="sc-cOFTSb eAnjwB sc-BeQoi dmAMvw"
     >
       <label
         class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
@@ -34,7 +34,7 @@ exports[`Storyshots Core/Checkbox Disabled 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
+      class="sc-cOFTSb eAnjwB sc-BeQoi dmAMvw"
     >
       <label
         class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 ksonYn"
@@ -69,7 +69,7 @@ exports[`Storyshots Core/Checkbox Reversed Label 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
+      class="sc-cOFTSb eAnjwB sc-BeQoi dmAMvw"
     >
       <label
         class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
@@ -100,7 +100,7 @@ exports[`Storyshots Core/Checkbox Toggle 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
+      class="sc-cOFTSb eAnjwB sc-BeQoi dmAMvw"
     >
       <label
         class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"
@@ -135,7 +135,7 @@ exports[`Storyshots Core/Checkbox With Label 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-dPyBCJ TLHwI sc-bBXxYQ hqGdPE"
+      class="sc-cOFTSb eAnjwB sc-BeQoi dmAMvw"
     >
       <label
         class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 iTbhny"

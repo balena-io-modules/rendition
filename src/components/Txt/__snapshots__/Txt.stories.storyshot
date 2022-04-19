@@ -6,7 +6,7 @@ exports[`Storyshots Core/Txt Default 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-fLlhyt gAlhfr sc-bBrHrO cKEGnj"
+      class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF"
     >
       Standard
     </div>
@@ -20,7 +20,7 @@ exports[`Storyshots Core/Txt In Color 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-fLlhyt gAlhfr sc-bBrHrO kyKjKp"
+      class="sc-ivTmOn dNJphr sc-cxabCf lesVkD"
     >
       Colored text
     </div>
@@ -34,7 +34,7 @@ exports[`Storyshots Core/Txt Span Component 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <span
-      class="sc-fLlhyt fsEJDz sc-ivTmOn ghimrz"
+      class="sc-ivTmOn qStAn sc-llJcti hQwFFc"
     >
       Space   is   preserved
     </span>
@@ -48,7 +48,7 @@ exports[`Storyshots Core/Txt Styled 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-fLlhyt fMOSYV sc-bBrHrO cKEGnj"
+      class="sc-ivTmOn jMeriV sc-cxabCf hcBkUF"
     >
       Styled text
     </div>

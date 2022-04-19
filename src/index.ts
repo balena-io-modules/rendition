@@ -83,7 +83,6 @@ export {
 } from './components/Table';
 export { Accordion, AccordionProps } from './components/Accordion';
 export { Terminal, TerminalProps } from './components/Terminal';
-export { TextWithCopy, TextWithCopyProps } from './components/TextWithCopy';
 export { Txt, TxtProps } from './components/Txt';
 export { Textarea, TextareaProps } from './components/Textarea';
 export { Img, ImgProps } from './components/Img';

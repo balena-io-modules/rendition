@@ -9,7 +9,8 @@ exports[`Storyshots Core/Breadcrumbs Default 1`] = `
       class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK dUykMD"
     >
       <div
-        class="sc-fLlhyt gAlhfr sc-bBrHrO bzFkmO"
+        class="sc-ivTmOn dNJphr sc-cxabCf llgkHU"
+        width="100%"
       >
         <div
           class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
@@ -18,7 +19,7 @@ exports[`Storyshots Core/Breadcrumbs Default 1`] = `
             class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
           >
             <div
-              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-hKdnnL iKIurY kujviS"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-hFrEEg iKIurY ftWzhq"
             />
             <div
               class="sc-gKXOVf QRSBg sc-iBkjds dqCdat sc-hHLeRK iKIurY"
@@ -33,7 +34,7 @@ exports[`Storyshots Core/Breadcrumbs Default 1`] = `
                   class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
                 >
                   <div
-                    class="sc-fLlhyt zrTtZ sc-bBrHrO cKEGnj"
+                    class="sc-ivTmOn cSkHqN sc-cxabCf hcBkUF"
                   >
                     route 1
                   </div>
@@ -51,7 +52,8 @@ exports[`Storyshots Core/Breadcrumbs Default 1`] = `
         </div>
       </div>
       <div
-        class="sc-fLlhyt gAlhfr sc-bBrHrO bzFkmO"
+        class="sc-ivTmOn dNJphr sc-cxabCf llgkHU"
+        width="100%"
       >
         <div
           class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
@@ -60,7 +62,7 @@ exports[`Storyshots Core/Breadcrumbs Default 1`] = `
             class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
           >
             <div
-              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-hKdnnL iKIurY kujviS"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-hFrEEg iKIurY ftWzhq"
             />
             <div
               class="sc-gKXOVf QRSBg sc-iBkjds dqCdat sc-hHLeRK iKIurY"
@@ -75,7 +77,7 @@ exports[`Storyshots Core/Breadcrumbs Default 1`] = `
                   class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
                 >
                   <div
-                    class="sc-fLlhyt zrTtZ sc-bBrHrO cKEGnj"
+                    class="sc-ivTmOn cSkHqN sc-cxabCf hcBkUF"
                   >
                     route 2
                   </div>
@@ -93,7 +95,8 @@ exports[`Storyshots Core/Breadcrumbs Default 1`] = `
         </div>
       </div>
       <div
-        class="sc-fLlhyt iYlmke sc-bBrHrO PNihg"
+        class="sc-ivTmOn fSbxau sc-cxabCf eERZHK"
+        width="100%"
       >
         <div
           class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
@@ -102,7 +105,7 @@ exports[`Storyshots Core/Breadcrumbs Default 1`] = `
             class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
           >
             <div
-              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-hKdnnL iKIurY giHwRa"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-hFrEEg iKIurY kHqFwK"
             />
             <div
               class="sc-gKXOVf QRSBg sc-iBkjds dqCdat sc-hHLeRK iKIurY"
@@ -136,7 +139,7 @@ exports[`Storyshots Core/Breadcrumbs Default 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="sc-fLlhyt zrTtZ sc-bBrHrO cKEGnj"
+                    class="sc-ivTmOn cSkHqN sc-cxabCf hcBkUF"
                   >
                     route 3 with icon
                   </div>
@@ -163,7 +166,8 @@ exports[`Storyshots Core/Breadcrumbs Wrapped 1`] = `
         class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK dUykMD"
       >
         <div
-          class="sc-fLlhyt gAlhfr sc-bBrHrO bzFkmO"
+          class="sc-ivTmOn dNJphr sc-cxabCf llgkHU"
+          width="100%"
         >
           <div
             class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
@@ -172,7 +176,7 @@ exports[`Storyshots Core/Breadcrumbs Wrapped 1`] = `
               class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
             >
               <div
-                class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-hKdnnL iKIurY kujviS"
+                class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-hFrEEg iKIurY ftWzhq"
               />
               <div
                 class="sc-gKXOVf QRSBg sc-iBkjds dqCdat sc-hHLeRK iKIurY"
@@ -187,7 +191,7 @@ exports[`Storyshots Core/Breadcrumbs Wrapped 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
                   >
                     <div
-                      class="sc-fLlhyt zrTtZ sc-bBrHrO cKEGnj"
+                      class="sc-ivTmOn cSkHqN sc-cxabCf hcBkUF"
                     >
                       route 1
                     </div>
@@ -205,7 +209,8 @@ exports[`Storyshots Core/Breadcrumbs Wrapped 1`] = `
           </div>
         </div>
         <div
-          class="sc-fLlhyt gAlhfr sc-bBrHrO bzFkmO"
+          class="sc-ivTmOn dNJphr sc-cxabCf llgkHU"
+          width="100%"
         >
           <div
             class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
@@ -214,7 +219,7 @@ exports[`Storyshots Core/Breadcrumbs Wrapped 1`] = `
               class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
             >
               <div
-                class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-hKdnnL iKIurY kujviS"
+                class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-hFrEEg iKIurY ftWzhq"
               />
               <div
                 class="sc-gKXOVf QRSBg sc-iBkjds dqCdat sc-hHLeRK iKIurY"
@@ -229,7 +234,7 @@ exports[`Storyshots Core/Breadcrumbs Wrapped 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
                   >
                     <div
-                      class="sc-fLlhyt zrTtZ sc-bBrHrO cKEGnj"
+                      class="sc-ivTmOn cSkHqN sc-cxabCf hcBkUF"
                     >
                       route 2
                     </div>
@@ -247,7 +252,8 @@ exports[`Storyshots Core/Breadcrumbs Wrapped 1`] = `
           </div>
         </div>
         <div
-          class="sc-fLlhyt iYlmke sc-bBrHrO PNihg"
+          class="sc-ivTmOn fSbxau sc-cxabCf eERZHK"
+          width="100%"
         >
           <div
             class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
@@ -256,7 +262,7 @@ exports[`Storyshots Core/Breadcrumbs Wrapped 1`] = `
               class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
             >
               <div
-                class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-hKdnnL iKIurY giHwRa"
+                class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-hFrEEg iKIurY kHqFwK"
               />
               <div
                 class="sc-gKXOVf QRSBg sc-iBkjds dqCdat sc-hHLeRK iKIurY"
@@ -290,7 +296,7 @@ exports[`Storyshots Core/Breadcrumbs Wrapped 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="sc-fLlhyt zrTtZ sc-bBrHrO cKEGnj"
+                      class="sc-ivTmOn cSkHqN sc-cxabCf hcBkUF"
                     >
                       route 3 with icon
                     </div>

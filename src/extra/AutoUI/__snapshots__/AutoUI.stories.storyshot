@@ -6,7 +6,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <h5
-      class="sc-gXmSlM ikNIBi sc-iAvgwm kUKanV"
+      class="sc-ciZhAO iJFBxw sc-cTQhss dOQXsM"
     >
       The AutoUI component determines whether the data passed into it is a collection or an entity. Click the button below to change the value passed in for "data".
     </h5>
@@ -32,7 +32,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
               class="sc-gKXOVf QRSBg sc-iBkjds diGonb"
             >
               <div
-                class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-BrFsL klWzuj feBrqA"
+                class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-cuqtlR klWzuj eXTlRI"
               >
                 <div
                   class="sc-gKXOVf klumOZ sc-iBkjds hNqnWQ"
@@ -317,7 +317,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                           data-key="1"
                         >
                           <div
-                            class="sc-fLlhyt gAlhfr sc-bBrHrO cKEGnj"
+                            class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF"
                           >
                             ecdsa-sha2-nistp521 faMAKw1VP0720N3IledQ38PA9RcnuUIR7wIprQK45y6QfxssSwNTI4r3AI9pJM
                           </div>
@@ -351,7 +351,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                           data-key="2"
                         >
                           <div
-                            class="sc-fLlhyt gAlhfr sc-bBrHrO cKEGnj"
+                            class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF"
                           >
                             ecdsa-sha2-nistp521 faMAKw1VP0720N3IledQ38PA9RcnuUIR7wIprQK45y6QfxssSwNTI4r3AI9pJM
                           </div>
@@ -385,7 +385,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                           data-key="3"
                         >
                           <div
-                            class="sc-fLlhyt gAlhfr sc-bBrHrO cKEGnj"
+                            class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF"
                           >
                             ecdsa-sha2-nistp521 faMAKw1VP0720N3IledQ38PA9RcnuUIR7wIprQK45y6QfxssSwNTI4r3AI9pJM
                           </div>
@@ -419,7 +419,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                           data-key="4"
                         >
                           <div
-                            class="sc-fLlhyt gAlhfr sc-bBrHrO cKEGnj"
+                            class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF"
                           >
                             ecdsa-sha2-nistp521 faMAKw1VP0720N3IledQ38PA9RcnuUIR7wIprQK45y6QfxssSwNTI4r3AI9pJM
                           </div>
@@ -453,7 +453,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                           data-key="5"
                         >
                           <div
-                            class="sc-fLlhyt gAlhfr sc-bBrHrO cKEGnj"
+                            class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF"
                           >
                             ecdsa-sha2-nistp521 faMAKw1VP0720N3IledQ38PA9RcnuUIR7wIprQK45y6QfxssSwNTI4r3AI9pJM
                           </div>
@@ -487,7 +487,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                           data-key="6"
                         >
                           <div
-                            class="sc-fLlhyt gAlhfr sc-bBrHrO cKEGnj"
+                            class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF"
                           >
                             ecdsa-sha2-nistp521 faMAKw1VP0720N3IledQ38PA9RcnuUIR7wIprQK45y6QfxssSwNTI4r3AI9pJM
                           </div>
@@ -521,7 +521,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                           data-key="7"
                         >
                           <div
-                            class="sc-fLlhyt gAlhfr sc-bBrHrO cKEGnj"
+                            class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF"
                           >
                             ecdsa-sha2-nistp521 faMAKw1VP0720N3IledQ38PA9RcnuUIR7wIprQK45y6QfxssSwNTI4r3AI9pJM
                           </div>
@@ -540,7 +540,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                   class="sc-gKXOVf QRSBg sc-iBkjds jKcfYg sc-hHLeRK hoTTom"
                 >
                   <div
-                    class="sc-fLlhyt gAlhfr sc-bBrHrO kevwqp"
+                    class="sc-ivTmOn dNJphr sc-cxabCf bOpZdj"
                   >
                     <strong>
                       1
@@ -559,7 +559,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                     class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY"
                   >
                     <div
-                      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kLLXSd iKIurY lcvtzu"
+                      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-jIZahH iKIurY hlMcTG"
                     >
                       <button
                         class="StyledButton-sc-323bzc-0 iNgVbb sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR kAoSkv rendition-pager__btn--prev"
