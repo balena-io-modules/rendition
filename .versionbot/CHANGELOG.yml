@@ -1,4 +1,22 @@
 - commits:
+    - subject: Remove TextWithCopy component
+      hash: 854da817776b2eb9952893286f876d1512152188
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+      author: jmakivic
+    - subject: Add copy functionality to Txt
+      hash: 04e5aafbe0ad0691ae01f50afc4fd9ad11384aec
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Balena CI
+  version: 27.0.0
+  title: "'Make Txt base for TextWithCopy component'"
+  date: 2022-04-18T19:17:54.719Z
+- commits:
     - subject: Fix search for lists of items and items of type object
       hash: c8b6374f897cf86398bff4e95d513a102d4205c1
       body: ""
