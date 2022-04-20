@@ -85,12 +85,14 @@ export const createFilter = (
 		required: [field],
 	};
 
+	const val = typeof value === 'number' ? value : parseInt(value, 10);
+
 	if (operator === 'is') {
 		return Object.assign(base, {
 			properties: {
 				[field]: {
 					type: 'number',
-					const: value,
+					const: val,
 				},
 			},
 			required: [field],
@@ -102,7 +104,7 @@ export const createFilter = (
 			properties: {
 				[field]: {
 					type: 'number',
-					exclusiveMinimum: value,
+					exclusiveMinimum: val,
 				},
 			},
 			required: [field],
@@ -114,7 +116,7 @@ export const createFilter = (
 			properties: {
 				[field]: {
 					type: 'number',
-					exclusiveMaximum: value,
+					exclusiveMaximum: val,
 				},
 			},
 		});
