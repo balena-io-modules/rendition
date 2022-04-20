@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix all numeric operators filters
+      hash: af24c64ce8b4527ec576817e4dc62bc675d49815
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 27.0.1
+  title: "'Fix all numeric operators filters '"
+  date: 2022-04-20T12:00:16.281Z
+- commits:
     - subject: Remove TextWithCopy component
       hash: 854da817776b2eb9952893286f876d1512152188
       body: ""
