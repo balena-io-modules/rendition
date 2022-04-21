@@ -5,18 +5,30 @@ import { Flex } from '../Flex';
 import { Txt } from '../Txt';
 import { useTheme } from '../../hooks/useTheme';
 
-const Circle = styled(Flex)<{ isLast: boolean; emphasized?: boolean }>`
+const Circle = styled(Flex)<{
+	isLast: boolean;
+	emphasized?: boolean;
+	dark?: boolean;
+}>`
 	border: 1px solid
 		${(props) =>
 			props.isLast
-				? props.theme.colors.quartenary.light
+				? props.dark
+					? props.theme.colors.secondary.dark
+					: props.theme.colors.quartenary.light
+				: props.dark
+				? props.theme.colors.tertiary.light
 				: props.theme.colors.text.light};
 	border-radius: 50%;
 	width: ${(props) => props.theme.space[props.emphasized ? 3 : 2]}px;
 	height: ${(props) => props.theme.space[props.emphasized ? 3 : 2]}px;
 	background: ${(props) =>
 		props.isLast
-			? props.theme.colors.quartenary.light
+			? props.dark
+				? props.theme.colors.secondary.dark
+				: props.theme.colors.quartenary.light
+			: props.dark
+			? props.theme.colors.tertiary.light
 			: props.theme.colors.text.light};
 `;
 
@@ -33,6 +45,8 @@ export interface BreadcrumbsProps {
 	crumbs: Crumb[];
 	/** If true, use a larger Breadcrumbs */
 	emphasized?: boolean;
+	/** if true , show dark theme breadcrumb */
+	dark?: boolean;
 }
 
 const BreadcrumbContent = React.memo(
@@ -71,7 +85,7 @@ const BreadcrumbContent = React.memo(
 	},
 );
 
-export const Breadcrumbs = ({ crumbs, emphasized }: BreadcrumbsProps) => {
+export const Breadcrumbs = ({ crumbs, emphasized, dark }: BreadcrumbsProps) => {
 	const theme = useTheme();
 	return (
 		<Flex flexDirection="column" flexWrap="wrap" width="100%">
@@ -83,13 +97,17 @@ export const Breadcrumbs = ({ crumbs, emphasized }: BreadcrumbsProps) => {
 						<Txt
 							bold={isLast}
 							fontSize={2}
-							color={isLast ? 'white' : 'secondary.semilight'}
+							color={
+								isLast
+									? `${dark ? 'secondary.dark' : 'white'}`
+									: `${dark ? 'tertiary.light' : 'secondary.semilight'}`
+							}
 							key={crumb.text}
 							width="100%"
 						>
 							<Flex flexDirection="column" width="100%">
 								<Flex alignItems="center" width="100%">
-									<Circle isLast={isLast} emphasized={emphasized} />
+									<Circle dark={dark} isLast={isLast} emphasized={emphasized} />
 									<Flex width={`calc(100% - ${theme.space[2]}px)`} pl={2}>
 										{crumb.onClick ? (
 											<Link
@@ -120,7 +138,11 @@ export const Breadcrumbs = ({ crumbs, emphasized }: BreadcrumbsProps) => {
 										width={theme.space[emphasized ? 3 : 2]}
 										justifyContent="center"
 									>
-										<Flex height={theme.space[4]} width="1px" bg="text.light" />
+										<Flex
+											height={theme.space[4]}
+											width="1px"
+											bg={`text.${dark ? 'dark' : 'light'}`}
+										/>
 									</Flex>
 								)}
 							</Flex>
