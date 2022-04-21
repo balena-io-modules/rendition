@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add Breadcrumbs dark mode
+      hash: 14d1355e6a424127b777faf8307b5aa87da6a534
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 27.1.0
+  title: "'Add Breadcrumbs dark mode'"
+  date: 2022-04-21T07:37:04.632Z
+- commits:
     - subject: Fix all numeric operators filters
       hash: af24c64ce8b4527ec576817e4dc62bc675d49815
       body: ""
