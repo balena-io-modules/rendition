@@ -62,11 +62,14 @@ export const createFilter = (
 		type: 'object',
 	};
 
+	const val =
+		typeof value === 'string' ? value.toLowerCase() === 'true' : value;
+
 	if (operator === 'is') {
 		return Object.assign(base, {
 			properties: {
 				[field]: {
-					const: value,
+					const: val,
 				},
 			},
 			required: [field],
