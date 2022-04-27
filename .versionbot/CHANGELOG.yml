@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix boolean filters
+      hash: 9d70ec1c8a3dca5e8eba200d3c5577883525cf4e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 27.1.1
+  title: "'Fix boolean filters'"
+  date: 2022-04-27T16:30:04.811Z
+- commits:
     - subject: Add Breadcrumbs dark mode
       hash: 14d1355e6a424127b777faf8307b5aa87da6a534
       body: ""
