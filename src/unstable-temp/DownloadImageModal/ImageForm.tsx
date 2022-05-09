@@ -18,6 +18,7 @@ import {
 import { DownloadOptions, DownloadOptionsBase } from './DownloadImageModal';
 import { TFunction } from '../../hooks/useTranslation';
 import pickBy from 'lodash/pickBy';
+import moment from 'moment';
 
 const ETCHER_OPEN_IMAGE_URL = 'https://www.balena.io/etcher/open-image-url';
 const POLL_INTERVAL_DOCS =
@@ -71,6 +72,14 @@ const getDeviceTypeOptions = (t: TFunction, deviceType: DeviceType) => {
 				default: '',
 				type: 'text',
 			});
+
+			group.options.push({
+				message: t('labels.provisioning_key_expiry_date'),
+				name: 'provisioningKeyExpiryDate',
+				default: '',
+				type: 'datetime-local',
+			});
+
 			group.options.map((option) => {
 				if (option.message === 'Check for updates every X minutes') {
 					option.docs = POLL_INTERVAL_DOCS;
@@ -402,6 +411,15 @@ export const ImageForm = ({
 							: action?.tooltip
 					}
 					onClick={(event: React.MouseEvent) => {
+						if (downloadOptions.provisioningKeyExpiryDate) {
+							// Convert to UTC for /download
+							downloadOptions.provisioningKeyExpiryDate = moment(
+								downloadOptions.provisioningKeyExpiryDate,
+							)
+								.utc()
+								.format();
+						}
+
 						if (action?.onClick) {
 							action.onClick(event, downloadOptions);
 						}

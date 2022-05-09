@@ -13,6 +13,7 @@ import styled from 'styled-components';
 import { DeviceTypeOptions, DeviceTypeOptionsGroup } from './models';
 import { DocsLink } from './OsConfiguration';
 import { useTranslation } from '../../hooks/useTranslation';
+import moment from 'moment';
 
 export const DownloadImageLabel = styled.label`
 	display: flex;
@@ -198,6 +199,42 @@ const FormControl = ({ onModelChange, options, model }: FormControlProps) => {
 								autoComplete="new-password"
 							/>
 						</Box>
+					)}
+
+					{options.type === 'datetime-local' && (
+						<>
+							<input
+								type="hidden"
+								name={options.name}
+								value={
+									!!model[options.name]
+										? moment(model[options.name] as string)
+												.utc()
+												.format()
+										: undefined
+								}
+							/>
+							<Input
+								mb={2}
+								type="datetime-local"
+								value={
+									!!model[options.name]
+										? (model[options.name] as string)
+										: undefined
+								}
+								onChange={(e: React.FormEvent<HTMLInputElement>) => {
+									console.log(e.currentTarget.value);
+									onModelChange({
+										[options.name]: e.currentTarget.value,
+									});
+								}}
+								onKeyPress={(e) => {
+									if (e.key === 'Enter' && !!model[options.name]) {
+										onModelChange({ [options.name]: undefined });
+									}
+								}}
+							/>
+						</>
 					)}
 
 					{(!options.type || options.type === 'text') && (
