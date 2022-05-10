@@ -32,7 +32,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
               class="sc-gKXOVf QRSBg sc-iBkjds diGonb"
             >
               <div
-                class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-cuqtlR klWzuj eXTlRI"
+                class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-liHMlC klWzuj liUAJq"
               >
                 <div
                   class="sc-gKXOVf klumOZ sc-iBkjds hNqnWQ"
@@ -161,7 +161,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
               </div>
             </div>
             <div
-              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-grVGCS iKIurY ikgPpo"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-iJkHyd iKIurY bAXBaZ"
             >
               <div
                 class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
@@ -170,7 +170,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                   class="sc-fmrZth clkOUX"
                 >
                   <div
-                    class="sc-eXBvqI gomuLP sc-kngDgl ccAfIL"
+                    class="sc-eXBvqI gomuLP sc-afnQL bbgvAm"
                   >
                     <div
                       data-display="table-head"
@@ -182,7 +182,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                           data-display="table-cell"
                         >
                           <button
-                            class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
+                            class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv"
                             data-field="title"
                             type="button"
                           >
@@ -210,7 +210,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                           data-display="table-cell"
                         >
                           <button
-                            class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
+                            class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv"
                             data-field="description"
                             type="button"
                           >
@@ -238,7 +238,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                           data-display="table-cell"
                         >
                           <button
-                            class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
+                            class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv"
                             data-field="public_key"
                             type="button"
                           >
@@ -266,7 +266,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                           data-display="table-cell"
                         >
                           <button
-                            class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv sc-iFwKgL iVbDRm"
+                            class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv"
                             data-field="fingerprint"
                             type="button"
                           >
@@ -608,7 +608,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                 </div>
               </div>
               <div
-                class="sc-afnQL bFozks"
+                class="sc-grVGCS iQEHCQ"
               >
                 <div
                   class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-fXynhf ifKwFV sc-jIAOiI bpUFTZ"
@@ -625,7 +625,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                       >
                         <svg
                           aria-hidden="true"
-                          class="svg-inline--fa fa-gear sc-iqGgem bLXaTV"
+                          class="svg-inline--fa fa-gear sc-iFwKgL fbKFaR"
                           data-icon="gear"
                           data-prefix="fas"
                           focusable="false"

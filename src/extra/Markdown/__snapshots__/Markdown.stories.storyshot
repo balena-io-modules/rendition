@@ -6,7 +6,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-grVGCS iKIurY ikgPpo"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-iJkHyd iKIurY bAXBaZ"
     >
       <div
         class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
@@ -15,7 +15,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
           class="sc-fmrZth clkOUX"
         >
           <div
-            class="sc-eXBvqI jmlAON sc-kngDgl juYrxT"
+            class="sc-eXBvqI jmlAON sc-afnQL gYeoiq"
           >
             <div
               data-display="table-head"
@@ -76,7 +76,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                         class="sc-gKXOVf QRSBg sc-iBkjds gRMaZo"
                       >
                         <div
-                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-ckCjom goeKAB"
                         >
                           <div>
                             <h1
@@ -113,7 +113,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                         class="sc-gKXOVf QRSBg sc-iBkjds gRMaZo"
                       >
                         <div
-                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-ckCjom goeKAB"
                         >
                           <div>
                             A title
@@ -167,7 +167,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                         class="sc-gKXOVf QRSBg sc-iBkjds gRMaZo"
                       >
                         <div
-                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-ckCjom goeKAB"
                         >
                           <div>
                             <h1
@@ -204,7 +204,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                         class="sc-gKXOVf QRSBg sc-iBkjds gRMaZo"
                       >
                         <div
-                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-ckCjom goeKAB"
                         >
                           <div>
                             A title
@@ -252,7 +252,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                         class="sc-gKXOVf QRSBg sc-iBkjds gRMaZo"
                       >
                         <div
-                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-ckCjom goeKAB"
                         >
                           <div>
                             <h1
@@ -289,7 +289,7 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                         class="sc-gKXOVf QRSBg sc-iBkjds gRMaZo"
                       >
                         <div
-                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
+                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-ckCjom goeKAB"
                         >
                           <div>
                             <h1
@@ -320,7 +320,7 @@ exports[`Storyshots Extra/Markdown Default 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
+      class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-ckCjom goeKAB"
     >
       <div>
         <h1
@@ -1126,7 +1126,7 @@ exports[`Storyshots Extra/Markdown With Decorators 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
+      class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-ckCjom goeKAB"
     >
       <div>
         <p
