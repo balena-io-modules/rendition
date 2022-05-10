@@ -1,4 +1,19 @@
 - commits:
+    - subject: Make sort icon for table column headers remain on the same line as the
+        text
+      hash: fc2d5ad6bb756475f31f7efdabbb24b96ec7fe48
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 27.1.2
+  title: "'Make sort icon for table column headers remain on the same line as the
+    text'"
+  date: 2022-05-10T13:17:02.180Z
+- commits:
     - subject: Fix boolean filters
       hash: 9d70ec1c8a3dca5e8eba200d3c5577883525cf4e
       body: ""
