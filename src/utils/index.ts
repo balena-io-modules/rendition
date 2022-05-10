@@ -4,7 +4,7 @@ export * from './colorUtils';
 export * from './schemaUtils';
 export * from './styledUtils';
 
-const matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;
+const matchOperatorsRe = /[|\\{}()[\]^$+*?]/g;
 
 export const diff = <T extends unknown>(a: T, b: T) => {
 	if (a === b) {
