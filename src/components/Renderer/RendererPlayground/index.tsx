@@ -181,7 +181,7 @@ const RendererPlaygroundBase = ({
 					</Flex>
 				</Flex>
 				<EditCard flex={1} {...commonCardProps}>
-					<JsonEditor
+					{/* <JsonEditor
 						title="Data"
 						value={valueStr}
 						onChange={onValueStrChange}
@@ -201,7 +201,7 @@ const RendererPlaygroundBase = ({
 						onChange={onUiSchemaStrChange}
 						schema={uiSchemaMetaSchema}
 						isValid={isUiSchemaJsonValid}
-					/>
+					/> */}
 				</EditCard>
 			</Flex>
 			<Flex flex="1 1 50%" minWidth={0} flexDirection="column" pl={2}>
