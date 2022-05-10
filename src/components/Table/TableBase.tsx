@@ -130,10 +130,6 @@ const Base = styled.div<InternalTableBaseProps>`
 	}
 `;
 
-const HeaderButton = styled(Button)`
-	display: block;
-`;
-
 type CheckedTypes = 'none' | 'some' | 'all';
 
 interface TableBaseState<T> {
@@ -580,7 +576,7 @@ export class TableBase<T> extends React.Component<
 												data-display="table-cell"
 												key={item.key || (item.field as string)}
 											>
-												<HeaderButton
+												<Button
 													data-field={item.field}
 													plain
 													primary={sort.field === item.field}
@@ -596,7 +592,7 @@ export class TableBase<T> extends React.Component<
 																: ''
 														}
 													/>
-												</HeaderButton>
+												</Button>
 											</div>
 										);
 									}
