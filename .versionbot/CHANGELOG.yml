@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix filters containing dots
+      hash: 71ab047dac3240c59f309a73d1bfcf4d9da00206
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 27.1.3
+  title: "'Fix filters containing dots'"
+  date: 2022-05-10T16:31:52.175Z
+- commits:
     - subject: Make sort icon for table column headers remain on the same line as the
         text
       hash: fc2d5ad6bb756475f31f7efdabbb24b96ec7fe48
