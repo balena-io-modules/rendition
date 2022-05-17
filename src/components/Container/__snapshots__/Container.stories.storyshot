@@ -6,7 +6,7 @@ exports[`Storyshots Core/Container Centered Content 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds bkEkLP sc-iWajrY dbYklC sc-jKDlA-D cLwCtV"
+      class="sc-gKXOVf QRSBg sc-iBkjds bkEkLP sc-bTMaZy kZGhGV sc-tQuYZ AZKVT"
     >
       <h3
         class="sc-ciZhAO btUqKl sc-jdAMXn iwAvbM"
@@ -24,7 +24,7 @@ exports[`Storyshots Core/Container Default 1`] = `
     class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds bkEkLP sc-iWajrY kplmVJ sc-jKDlA-D cLwCtV"
+      class="sc-gKXOVf QRSBg sc-iBkjds bkEkLP sc-bTMaZy iSKKFC sc-tQuYZ AZKVT"
     >
       <h3
         class="sc-ciZhAO btUqKl sc-jdAMXn iwAvbM"

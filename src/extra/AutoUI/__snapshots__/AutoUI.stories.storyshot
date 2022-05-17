@@ -20,10 +20,10 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
       class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux sc-hHLeRK eTSHtc"
     >
       <div
-        class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux sc-hHLeRK sc-eEOqmf iKIurY hdUhpe sc-jmNpzm fnsxXa"
+        class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux sc-hHLeRK sc-lkwKjF iKIurY khcTuI sc-hsOonA fPwlCE"
       >
         <div
-          class="sc-lkwKjF fkiFPs"
+          class="sc-dUWWNf iOmmoa"
         >
           <div
             class="sc-gKXOVf QRSBg sc-iBkjds eRknfj sc-hHLeRK eTSHtc"
@@ -32,7 +32,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
               class="sc-gKXOVf QRSBg sc-iBkjds diGonb"
             >
               <div
-                class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-liHMlC klWzuj liUAJq"
+                class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-cuqtlR klWzuj eXTlRI"
               >
                 <div
                   class="sc-gKXOVf klumOZ sc-iBkjds hNqnWQ"
@@ -161,16 +161,16 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
               </div>
             </div>
             <div
-              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-iJkHyd iKIurY bAXBaZ"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-afnQL iKIurY eFWjlE"
             >
               <div
                 class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
               >
                 <div
-                  class="sc-fmrZth clkOUX"
+                  class="sc-iFwKgL cqyvps"
                 >
                   <div
-                    class="sc-eXBvqI gomuLP sc-afnQL bbgvAm"
+                    class="sc-iqGgem ilPLQu sc-cwpsFg bNFRXc"
                   >
                     <div
                       data-display="table-head"
@@ -608,7 +608,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                 </div>
               </div>
               <div
-                class="sc-grVGCS iQEHCQ"
+                class="sc-kngDgl QwFJh"
               >
                 <div
                   class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-fXynhf ifKwFV sc-jIAOiI bpUFTZ"
@@ -625,7 +625,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                       >
                         <svg
                           aria-hidden="true"
-                          class="svg-inline--fa fa-gear sc-iFwKgL fbKFaR"
+                          class="svg-inline--fa fa-gear sc-eVQfli iSUjrE"
                           data-icon="gear"
                           data-prefix="fas"
                           focusable="false"

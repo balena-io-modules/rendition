@@ -3,7 +3,6 @@ import map from 'lodash/map';
 import * as React from 'react';
 import styled from 'styled-components';
 import { Checkbox, CheckboxProps } from '../Checkbox';
-
 /*
  * Get the value specified by the `field` value
  * If a `render` function is available, use it to get the display value.
