@@ -14,6 +14,7 @@ export interface ButtonGroupOption {
 export interface ButtonGroupWithOptionsProps
 	extends Omit<FlexProps, 'children'> {
 	options: OptionType[];
+	disabled?: string;
 	value?: OptionType;
 	onGroupChange: (value: OptionType) => void;
 }
@@ -25,10 +26,14 @@ export type ButtonGroupProps = FlexProps | ButtonGroupWithOptionsProps;
  *
  * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/ButtonGroup/ButtonGroup.stories.tsx)
  */
-const ButtonGroupBase = styled(Flex)<{ isSelect?: boolean }>`
-		${(props) =>
-			props.isSelect
-				? `
+const ButtonGroupBase = styled(Flex)<{
+	isSelect?: boolean;
+	disabled?: boolean;
+}>`
+	${(props) => props.disabled && `cursor: not-allowed;`}
+	${(props) =>
+		props.isSelect
+			? `
 			border: 1px solid ${props.theme.global.control.border.color};
 			width: fit-content;
 			border-radius: ${props.theme.button.border.radius};
@@ -38,7 +43,7 @@ const ButtonGroupBase = styled(Flex)<{ isSelect?: boolean }>`
 				border: 0px;
 			}
 		`
-				: `
+			: `
 		> * {
 			&:first-child {
 				border-top-right-radius: 0;
@@ -64,14 +69,19 @@ const ButtonGroupBase = styled(Flex)<{ isSelect?: boolean }>`
 				z-index: 1;
 			}
 		`}
-	}
 `;
 
 export const ButtonGroup = (props: ButtonGroupProps) => {
 	if ('options' in props) {
-		const { onGroupChange, height, ...otherProps } = props;
+		const { onGroupChange, height, disabled, ...otherProps } = props;
 		return (
-			<ButtonGroupBase isSelect {...otherProps} alignItems="center">
+			<ButtonGroupBase
+				isSelect
+				{...otherProps}
+				alignItems="center"
+				disabled={!!disabled}
+				tooltip={disabled}
+			>
 				{props.options.map((option) => {
 					const label = typeof option !== 'object' ? option : option.label;
 					return (
@@ -88,6 +98,7 @@ export const ButtonGroup = (props: ButtonGroupProps) => {
 								}
 							}}
 							height={height}
+							disabled={!!disabled}
 						>
 							{label}
 						</Button>
