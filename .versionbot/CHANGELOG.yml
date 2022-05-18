@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add `disabled` property to ButtonGroup component
+      hash: 191ad38f55e794c513198e784b95593a1babd0a1
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 27.2.0
+  title: "'Add  property to ButtonGroup component'"
+  date: 2022-05-17T20:21:43.782Z
+- commits:
     - subject: Fix filters containing dots
       hash: 71ab047dac3240c59f309a73d1bfcf4d9da00206
       body: ""
