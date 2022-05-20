@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add Sidebar component
+      hash: 158295e91b52c85519a7a463ecf476001bbca316
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 27.3.0
+  title: "'Add Sidebar component'"
+  date: 2022-05-20T14:33:00.566Z
+- commits:
     - subject: Add `disabled` property to ButtonGroup component
       hash: 191ad38f55e794c513198e784b95593a1babd0a1
       body: ""
