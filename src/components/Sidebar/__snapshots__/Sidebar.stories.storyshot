@@ -1,0 +1,293 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Core/Sidebar Default 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+  >
+    <div
+      class="sc-gKXOVf QRSBg sc-iBkjds ideygz sc-hHLeRK iKIurY"
+    >
+      <div
+        class="sc-gKXOVf QRSBg sc-iBkjds frRFlp sc-hHLeRK idTdRO"
+      >
+        <div
+          class="sc-gKXOVf QRSBg sc-iBkjds kNKFNd sc-hHLeRK iKIurY"
+        >
+          <div
+            class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK dUykMD"
+          >
+            <div
+              class="sc-ivTmOn dNJphr sc-cxabCf llgkHU"
+              width="100%"
+            >
+              <div
+                class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
+              >
+                <div
+                  class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
+                >
+                  <div
+                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-jWEIYm iKIurY iWCKqs"
+                  />
+                  <div
+                    class="sc-gKXOVf QRSBg sc-iBkjds dqCdat sc-hHLeRK iKIurY"
+                  >
+                    <div
+                      class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
+                    >
+                      <div
+                        class="sc-ivTmOn cSkHqN sc-cxabCf hcBkUF"
+                      >
+                        MenuItem 1
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="sc-gKXOVf QRSBg sc-iBkjds bElihy sc-hHLeRK hyikrs"
+                >
+                  <div
+                    class="sc-gKXOVf QRSBg sc-iBkjds bNJYtY sc-hHLeRK iKIurY"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-ivTmOn fSbxau sc-cxabCf eERZHK"
+              width="100%"
+            >
+              <div
+                class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
+              >
+                <div
+                  class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
+                >
+                  <div
+                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-jWEIYm iKIurY bFtnjU"
+                  />
+                  <div
+                    class="sc-gKXOVf QRSBg sc-iBkjds dqCdat sc-hHLeRK iKIurY"
+                  >
+                    <div
+                      class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
+                    >
+                      <div
+                        class="sc-ivTmOn cSkHqN sc-cxabCf hcBkUF"
+                      >
+                        Summary
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-gKXOVf ckXSHX sc-iBkjds bPEMzd sc-hHLeRK eTSHtc"
+          style="overflow-x: auto;"
+        >
+          <a
+            href="/menuitem1"
+          >
+            <div
+              class="sc-gKXOVf QRSBg sc-iBkjds lbcSYZ sc-hHLeRK sc-eEOqmf dlYhNW hlHheB"
+            >
+              <span
+                class="sc-ivTmOn fSbxau sc-llJcti gHzjsC"
+                style="line-height: 1.33;"
+              >
+                MenuItem 1
+              </span>
+            </div>
+          </a>
+          <a
+            href="/menuitem2"
+          >
+            <div
+              class="sc-gKXOVf QRSBg sc-iBkjds lbcSYZ sc-hHLeRK sc-eEOqmf dlYhNW hlHheB"
+            >
+              <span
+                class="sc-ivTmOn fSbxau sc-llJcti gHzjsC"
+                style="line-height: 1.33;"
+              >
+                MenuItem 2
+              </span>
+            </div>
+          </a>
+          <a
+            href="/menuitem3"
+          >
+            <div
+              class="sc-gKXOVf QRSBg sc-iBkjds lbcSYZ sc-hHLeRK sc-eEOqmf dlYhNW hlHheB"
+            >
+              <span
+                class="sc-ivTmOn fSbxau sc-llJcti gHzjsC"
+                style="line-height: 1.33;"
+              >
+                MenuItem 3
+              </span>
+            </div>
+          </a>
+        </div>
+        <div
+          class="sc-gKXOVf QRSBg sc-iBkjds hCnelI sc-hHLeRK cBvces"
+        />
+      </div>
+      <div
+        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Core/Sidebar With Additional Components 1`] = `
+<div>
+  <div
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+  >
+    <div
+      class="sc-gKXOVf QRSBg sc-iBkjds ideygz sc-hHLeRK iKIurY"
+    >
+      <div
+        class="sc-gKXOVf QRSBg sc-iBkjds frRFlp sc-hHLeRK idTdRO"
+      >
+        <div
+          class="sc-gKXOVf QRSBg sc-iBkjds kNKFNd sc-hHLeRK iKIurY"
+        >
+          <div
+            class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK dUykMD"
+          >
+            <div
+              class="sc-ivTmOn dNJphr sc-cxabCf llgkHU"
+              width="100%"
+            >
+              <div
+                class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
+              >
+                <div
+                  class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
+                >
+                  <div
+                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-jWEIYm iKIurY iWCKqs"
+                  />
+                  <div
+                    class="sc-gKXOVf QRSBg sc-iBkjds dqCdat sc-hHLeRK iKIurY"
+                  >
+                    <div
+                      class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
+                    >
+                      <div
+                        class="sc-ivTmOn cSkHqN sc-cxabCf hcBkUF"
+                      >
+                        MenuItem 1
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="sc-gKXOVf QRSBg sc-iBkjds bElihy sc-hHLeRK hyikrs"
+                >
+                  <div
+                    class="sc-gKXOVf QRSBg sc-iBkjds bNJYtY sc-hHLeRK iKIurY"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-ivTmOn fSbxau sc-cxabCf eERZHK"
+              width="100%"
+            >
+              <div
+                class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
+              >
+                <div
+                  class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
+                >
+                  <div
+                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-jWEIYm iKIurY bFtnjU"
+                  />
+                  <div
+                    class="sc-gKXOVf QRSBg sc-iBkjds dqCdat sc-hHLeRK iKIurY"
+                  >
+                    <div
+                      class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
+                    >
+                      <div
+                        class="sc-ivTmOn cSkHqN sc-cxabCf hcBkUF"
+                      >
+                        Summary
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-gKXOVf ckXSHX sc-iBkjds bPEMzd sc-hHLeRK eTSHtc"
+          style="overflow-x: auto;"
+        >
+          <a
+            href="/menuitem1"
+          >
+            <div
+              class="sc-gKXOVf QRSBg sc-iBkjds lbcSYZ sc-hHLeRK sc-eEOqmf dlYhNW hlHheB"
+            >
+              <span
+                class="sc-ivTmOn fSbxau sc-llJcti gHzjsC"
+                style="line-height: 1.33;"
+              >
+                MenuItem 1
+              </span>
+            </div>
+          </a>
+          <a
+            href="/menuitem2"
+          >
+            <div
+              class="sc-gKXOVf QRSBg sc-iBkjds lbcSYZ sc-hHLeRK sc-eEOqmf dlYhNW hlHheB"
+            >
+              <span
+                class="sc-ivTmOn fSbxau sc-llJcti gHzjsC"
+                style="line-height: 1.33;"
+              >
+                MenuItem 2
+              </span>
+            </div>
+          </a>
+          <a
+            href="/menuitem3"
+          >
+            <div
+              class="sc-gKXOVf QRSBg sc-iBkjds lbcSYZ sc-hHLeRK sc-eEOqmf dlYhNW hlHheB"
+            >
+              <span
+                class="sc-ivTmOn fSbxau sc-llJcti gHzjsC"
+                style="line-height: 1.33;"
+              >
+                MenuItem 3
+              </span>
+            </div>
+          </a>
+        </div>
+        <div
+          class="sc-gKXOVf QRSBg sc-iBkjds hCnelI sc-hHLeRK cBvces"
+        >
+          <div
+            class="sc-ivTmOn dNJphr sc-cxabCf kEsRji"
+          >
+            Another component can go here
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY"
+      />
+    </div>
+  </div>
+</div>
+`;

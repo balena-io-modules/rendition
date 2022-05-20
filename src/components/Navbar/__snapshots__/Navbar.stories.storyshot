@@ -9,7 +9,7 @@ exports[`Storyshots Core/Navbar Default 1`] = `
       class="sc-gKXOVf QRSBg sc-iBkjds dNoAeF"
     >
       <div
-        class="sc-gKXOVf QRSBg sc-iBkjds bkEkLP sc-iWajrY kplmVJ sc-jKDlA-D cLwCtV"
+        class="sc-gKXOVf QRSBg sc-iBkjds bkEkLP sc-bTMaZy iSKKFC sc-tQuYZ AZKVT"
       >
         <div
           class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK lQaPL"
@@ -18,7 +18,7 @@ exports[`Storyshots Core/Navbar Default 1`] = `
             class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY"
           >
             <div
-              class="sc-gKXOVf QRSBg sc-iBkjds fcYCAY sc-bTMaZy dRHQxg"
+              class="sc-gKXOVf QRSBg sc-iBkjds fcYCAY sc-dSuTWQ jXwPLN"
             >
               <a
                 class="sc-eKBdFk gZLGMu sc-bUbCnL kxhRCL"
@@ -33,7 +33,7 @@ exports[`Storyshots Core/Navbar Default 1`] = `
               </a>
             </div>
             <div
-              class="sc-gKXOVf QRSBg sc-iBkjds dyRNlF sc-tQuYZ fTCKDa"
+              class="sc-gKXOVf QRSBg sc-iBkjds dyRNlF sc-hZFzCs bRStsr"
             >
               <svg
                 aria-hidden="true"
@@ -53,7 +53,7 @@ exports[`Storyshots Core/Navbar Default 1`] = `
             </div>
           </div>
           <div
-            class="sc-gKXOVf QRSBg sc-iBkjds guQguK sc-hHLeRK sc-dSuTWQ iKIurY cboQvr"
+            class="sc-gKXOVf QRSBg sc-iBkjds guQguK sc-hHLeRK sc-cHPgQl iKIurY bnImva"
           >
             <div
               class="sc-gKXOVf QRSBg sc-iBkjds fdUOap sc-hHLeRK lQaPL"

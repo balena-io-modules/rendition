@@ -33,7 +33,8 @@ const Circle = styled(Flex)<{
 `;
 
 export interface Crumb {
-	text: string;
+	text?: string;
+	component?: JSX.Element;
 	href?: string;
 	icon?: React.ReactNode;
 	onClick?: (event: React.MouseEvent) => void;
@@ -47,6 +48,8 @@ export interface BreadcrumbsProps {
 	emphasized?: boolean;
 	/** if true , show dark theme breadcrumb */
 	dark?: boolean;
+	/** indicates if collapsed */
+	isCollapsed?: boolean;
 }
 
 const BreadcrumbContent = React.memo(
@@ -85,7 +88,12 @@ const BreadcrumbContent = React.memo(
 	},
 );
 
-export const Breadcrumbs = ({ crumbs, emphasized, dark }: BreadcrumbsProps) => {
+export const Breadcrumbs = ({
+	crumbs,
+	isCollapsed = false,
+	emphasized,
+	dark,
+}: BreadcrumbsProps) => {
 	const theme = useTheme();
 	return (
 		<Flex flexDirection="column" flexWrap="wrap" width="100%">
@@ -107,7 +115,13 @@ export const Breadcrumbs = ({ crumbs, emphasized, dark }: BreadcrumbsProps) => {
 						>
 							<Flex flexDirection="column" width="100%">
 								<Flex alignItems="center" width="100%">
-									<Circle dark={dark} isLast={isLast} emphasized={emphasized} />
+									{!crumb.component && (
+										<Circle
+											dark={dark}
+											isLast={isLast}
+											emphasized={emphasized}
+										/>
+									)}
 									<Flex width={`calc(100% - ${theme.space[2]}px)`} pl={2}>
 										{crumb.onClick ? (
 											<Link
@@ -116,15 +130,31 @@ export const Breadcrumbs = ({ crumbs, emphasized, dark }: BreadcrumbsProps) => {
 												width="100%"
 												href={crumb.href}
 											>
-												<BreadcrumbContent
-													text={crumb.text}
-													icon={crumb.icon}
-													secondaryIcon={crumb.secondaryIcon}
-												/>
+												{!!crumb.component ? (
+													crumb.component
+												) : (
+													<BreadcrumbContent
+														text={
+															isCollapsed && !crumb.icon
+																? crumb.text?.charAt(0)
+																: isCollapsed && !!crumb.icon
+																? ''
+																: crumb.text
+														}
+														icon={crumb.icon}
+														secondaryIcon={crumb.secondaryIcon}
+													/>
+												)}
 											</Link>
 										) : (
 											<BreadcrumbContent
-												text={crumb.text}
+												text={
+													isCollapsed && !crumb.icon
+														? crumb.text?.charAt(0)
+														: isCollapsed && !!crumb.icon
+														? ''
+														: crumb.text
+												}
 												icon={crumb.icon}
 												secondaryIcon={crumb.secondaryIcon}
 											/>
