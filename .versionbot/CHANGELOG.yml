@@ -1,4 +1,26 @@
 - commits:
+    - subject: Add export for Poll class
+      hash: 1063e5ede2dc7b628e56de130cefcbf785f9bb55
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+    - subject: Add Sidebar component
+      hash: 158295e91b52c85519a7a463ecf476001bbca316
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 27.3.0
+  title: "'Add export for Poll class'"
+  date: 2022-05-23T09:30:53.991Z
+- commits:
     - subject: Add `disabled` property to ButtonGroup component
       hash: 191ad38f55e794c513198e784b95593a1babd0a1
       body: ""
