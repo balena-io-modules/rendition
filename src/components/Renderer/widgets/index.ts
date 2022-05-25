@@ -17,6 +17,14 @@ import TxtWidget from './TxtWidget';
 import { Format } from '../types';
 import { Widget, withOptionProps } from './widget-util';
 import { ElapsedTimeWidget } from './ElapsedTimeWidget';
+import { DurationWidget } from './DurationWidget';
+import { CodeWidget } from './CodeWidget';
+import { HashWidget } from './HashWidget';
+import { TemperatureWidget } from './TemperatureWidget';
+import { PercentageWidget } from './PercentageWidget';
+import { DisabledTextWidget } from './DisabledTextWidget';
+import { BooleanAsIconWidget } from './BooleanAsIconWidget';
+import { PlaceholderTextWidget } from './PlaceholderTextWidget';
 export { WidgetWrapperUiOptions } from './ui-options';
 export {
 	getObjectPropertyNames,
@@ -48,6 +56,46 @@ export const defaultFormats: Format[] = [
 		name: 'elapsed-date-time',
 		format: '.*',
 		widget: ElapsedTimeWidget,
+	},
+	{
+		name: 'duration',
+		format: '.*',
+		widget: DurationWidget,
+	},
+	{
+		name: 'code',
+		format: '.*',
+		widget: CodeWidget,
+	},
+	{
+		name: 'hash',
+		format: '.*',
+		widget: HashWidget,
+	},
+	{
+		name: 'temperature',
+		format: '.*',
+		widget: TemperatureWidget,
+	},
+	{
+		name: 'percentage',
+		format: '.*',
+		widget: PercentageWidget,
+	},
+	{
+		name: 'disabled-text',
+		format: '.*',
+		widget: DisabledTextWidget,
+	},
+	{
+		name: 'boolean-as-icon',
+		format: '.*',
+		widget: BooleanAsIconWidget,
+	},
+	{
+		name: 'placeholder-text',
+		format: '.*',
+		widget: PlaceholderTextWidget,
 	},
 	...[
 		ArrayWidget,

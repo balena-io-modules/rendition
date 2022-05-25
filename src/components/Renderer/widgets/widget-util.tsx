@@ -243,3 +243,11 @@ export function getObjectPropertyNames({
 		? allObjectPropertyNames.filter((propName) => has(uiSchema, propName))
 		: allObjectPropertyNames;
 }
+
+export const truncateHash = (str: string, maxLength = 7) => {
+	if (!str || str.length < maxLength) {
+		return str;
+	}
+
+	return str.substring(0, maxLength);
+};

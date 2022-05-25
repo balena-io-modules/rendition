@@ -312,7 +312,14 @@ const RenditionRendererBase =
  * | `List`            | [List](../../../components/List/README.md) | `array` | [ref](#list) |
  * | `Object`          | [Renderer](../README.md)* | `object` | [ref](#object) |
  * | `Tag`             | [Tag](../../../components/Tag/README.md) | `string | integer | number` | [ref](#tag) |
- * | `Txt`             | [Txt](../../../components/Txt/README.md) | `string | integer | number | boolean` | [ref](#txt) |
+ * | `duration`        | [DurationWidget](./widgets/DurationWidget) | `object` | - |
+ * | `code`        		 | [CodeWidget](./widgets/CodeWidget) | `string` | - |
+ * | `hash`        		 | [HashWidget](./widgets/HashWidget) | `string` | - |
+ * | `temperature`     | [TemperatureWidget](./widgets/TemperatureWidget) | `number` | - |
+ * | `percentage`      | [PercentageWidget](./widgets/PercentageWidget) | `string | number` | - |
+ * | `disabled-text`   | [DisabledTextWidget](./widgets/DisabledTextWidget) | `string` | - |
+ * | `placeholder-text`| [PlaceholderTextWidget](./widgets/PlaceholderTextWidget) | `string` | - |
+ * | `boolean-as-icon` | [BooleanAsIconWidget](./widgets/BooleanAsIconWidget) | `boolean` | - |
  *
  *
  * The widgets below are not loaded by default and you need to pass them as extra formats either to the Renderer, or to the Provider as a `widgets` prop.
