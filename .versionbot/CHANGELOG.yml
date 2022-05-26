@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix babel build error, convert Poll class into a function
+      hash: 3fad43c01eef666819d2770f78794def54721948
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 27.3.1
+  date: 2022-05-26T09:30:08.565Z
+- commits:
     - subject: Add export for Poll class
       hash: 1063e5ede2dc7b628e56de130cefcbf785f9bb55
       body: ""
