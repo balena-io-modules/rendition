@@ -20,13 +20,17 @@ export class Poll {
 	private lastCompleteTime = 0;
 	private blocked = false;
 	private isTabActive: boolean;
+	private fn: (poll: Poll) => Promise<any>;
+	private interval: number;
 
 	constructor(
-		private fn: (poll: Poll) => Promise<any>,
-		private interval: number,
+		fn: (poll: Poll) => Promise<any>,
+		interval: number,
 		graceRatio: number,
 		isTabActive: boolean,
 	) {
+		this.interval = interval;
+		this.fn = fn;
 		this.poll = this.poll.bind(this);
 		this.graceInterval = this.interval * graceRatio;
 		this.isTabActive = isTabActive;
