@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix Poll Class build error
+      hash: c8e91f9da297d8e472ea33aabc54a35bda5a475e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 27.3.1
+  title: "'Fix Poll Class build error'"
+  date: 2022-05-29T11:44:43.387Z
+- commits:
     - subject: Add export for Poll class
       hash: 1063e5ede2dc7b628e56de130cefcbf785f9bb55
       body: ""
