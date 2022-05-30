@@ -43,7 +43,8 @@ import { FocusSearch } from './Filters/FocusSearch';
 import { TableColumn } from '../../components/Table';
 import { getSelected, getSortingFunction } from './utils';
 import { CustomWidget } from './CustomWidget';
-import { FiltersView } from '~/components/Filters';
+import { FiltersView } from '../../components/Filters';
+import { defaultFormats } from '../../components/Renderer/widgets';
 
 const HeaderGrid = styled(Flex)`
 	> * {
@@ -254,7 +255,6 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 			!!sdk?.tags,
 		[actions, sdk?.tags],
 	);
-
 	return (
 		<Flex flex={1} flexDirection="column" {...boxProps}>
 			<Spinner
@@ -476,7 +476,10 @@ export const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 					const calculatedField = autoUIAdaptRefScheme(fieldVal, val);
 					return val.format ? (
 						<CustomWidget
-							extraFormats={formats ?? ([] as Format[])}
+							extraFormats={[
+								...(formats ?? ([] as Format[])),
+								...defaultFormats,
+							]}
 							schema={widgetSchema}
 							value={calculatedField}
 							extraContext={entry}
