@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove pointer style rule if row is not clickable
+      hash: ffc84de6d63d758292438f9bfbe7364ddcf90d99
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 27.4.1
+  title: "'Remove pointer style rule if row is not clickable'"
+  date: 2022-05-30T15:09:31.602Z
+- commits:
     - subject: Add Renderer widgets
       hash: d0a71184e63f2d634f30858e2012d1ae0e598c50
       body: ""
