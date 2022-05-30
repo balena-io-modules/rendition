@@ -9,7 +9,7 @@ export interface LensRendererBaseProps<T> extends Pick<BoxProps, 'flex'> {
 	autouiContext: AutoUIContext<T>;
 	model: AutoUIModel<T>;
 	hasUpdateActions: boolean;
-	onEntityClick: (
+	onEntityClick?: (
 		entity: T,
 		event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
 	) => void;

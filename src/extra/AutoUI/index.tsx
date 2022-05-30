@@ -389,7 +389,11 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 								changeSelected={setSelected}
 								data={data}
 								autouiContext={autouiContext}
-								onEntityClick={lensRendererOnEntityClick}
+								onEntityClick={
+									!!onEntityClick || !!getBaseUrl
+										? lensRendererOnEntityClick
+										: undefined
+								}
 								model={model}
 							/>
 						)}
