@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { createPoll, Poll } from '../utils/poll';
-
-export interface UseRequestOptions {
+interface UseRequestOptions {
 	polling: boolean;
 	pollInterval?: number;
 	stopExecution?: boolean;
@@ -17,7 +16,7 @@ type ResolvableReturnType<T extends (...args: any[]) => any> = T extends (
 	: any;
 
 export const useRequest = <
-	TFn extends () => Promise<any>,
+	TFn extends (poll: Poll | undefined) => Promise<any>,
 	TResult extends ResolvableReturnType<TFn>,
 >(
 	action: TFn,
@@ -38,9 +37,9 @@ export const useRequest = <
 			document.removeEventListener('visibilitychange', handleVisibilityChange);
 	});
 
-	const loadData = React.useCallback(async () => {
+	const loadData = React.useCallback(async (poll?: Poll) => {
 		try {
-			const response = await action();
+			const response = await action(poll);
 			setData(response);
 		} catch (e) {
 			if (e instanceof Error) {
@@ -83,6 +82,14 @@ export const useRequest = <
 			}
 		};
 	}, [polling, loadData, pollInterval, stopExecution, isVisible]);
+
+	React.useEffect(() => {
+		if (!polling) {
+			return;
+		}
+		setData(undefined);
+		forcePoll();
+	}, [...deps, polling]);
 
 	return [data, loading, error, forcePoll] as
 		| [TResult | undefined, true, RequestError, ForcePoll]
