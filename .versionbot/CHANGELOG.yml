@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix useReqeust
+      hash: ab6d939eb32b21e0ba527e2cee06a4107c5722c8
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 27.4.2
+  title: "'Fix useReqeust'"
+  date: 2022-05-31T14:35:24.246Z
+- commits:
     - subject: Remove pointer style rule if row is not clickable
       hash: ffc84de6d63d758292438f9bfbe7364ddcf90d99
       body: ""
