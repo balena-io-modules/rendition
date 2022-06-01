@@ -5,14 +5,21 @@ import { Txt } from '../../Txt';
 import { intervalToDuration } from 'date-fns';
 
 export const DurationWidget = widgetFactory('Duration', {}, [JsonTypes.object])(
-	({ value }: { value: { start: number | Date; end: number | Date } }) => {
+	({
+		value,
+	}: {
+		value: { start?: number | Date | null; end?: number | Date | null };
+	}) => {
 		const duration = React.useMemo(() => {
+			if (!value.start || !value.end) {
+				return '';
+			}
 			const interval = intervalToDuration({
-				start: new Date(value.start) ?? 0,
-				end: new Date(value.end) ?? 0,
+				start: new Date(value.start),
+				end: new Date(value.end),
 			});
 			if (!interval) {
-				return '-';
+				return '';
 			}
 			const customInterval: { [key: string]: string } = {};
 			Object.entries(interval).forEach(([key, value]) => {
@@ -35,6 +42,7 @@ export const DurationWidget = widgetFactory('Duration', {}, [JsonTypes.object])(
 			durationText += `${customInterval.hours}:${customInterval.minutes}:${customInterval.seconds}`;
 			return durationText;
 		}, []);
+
 		return <Txt>{duration}</Txt>;
 	},
 );
