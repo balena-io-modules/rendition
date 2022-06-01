@@ -67,32 +67,28 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                   style="vertical-align: top;"
                 >
                   <div
-                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn iKIurY coYthk sc-dPyBCJ eKJPyW sc-bBXxYQ hqGdPE"
+                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn kknPZA coYthk sc-dPyBCJ eKJPyW sc-bBXxYQ hqGdPE"
                   >
                     <div
-                      class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq"
+                      class="sc-gKXOVf ckXSHX sc-iBkjds eYvdLm sc-hHLeRK dUykMD"
                     >
                       <div
-                        class="sc-gKXOVf QRSBg sc-iBkjds gRMaZo"
+                        class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                       >
-                        <div
-                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
-                        >
-                          <div>
-                            <h1
-                              class="sc-ciZhAO btUqKl sc-bZnhIo lpvFVg"
-                            >
-                              A title
-                            </h1>
-                            <img
-                              src="https://via.placeholder.com/150"
-                            />
-                            <p
-                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
-                            >
-                              A paragraph
-                            </p>
-                          </div>
+                        <div>
+                          <h1
+                            class="sc-ciZhAO btUqKl sc-bZnhIo lpvFVg"
+                          >
+                            A title
+                          </h1>
+                          <img
+                            src="https://via.placeholder.com/150"
+                          />
+                          <p
+                            class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
+                          >
+                            A paragraph
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -104,25 +100,21 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                   style="vertical-align: top;"
                 >
                   <div
-                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn iKIurY coYthk sc-dPyBCJ eKJPyW sc-bBXxYQ hqGdPE"
+                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn kknPZA coYthk sc-dPyBCJ eKJPyW sc-bBXxYQ hqGdPE"
                   >
                     <div
-                      class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq"
+                      class="sc-gKXOVf ckXSHX sc-iBkjds eYvdLm sc-hHLeRK dUykMD"
                     >
                       <div
-                        class="sc-gKXOVf QRSBg sc-iBkjds gRMaZo"
+                        class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                       >
-                        <div
-                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
-                        >
-                          <div>
-                            A title
-                            <p
-                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
-                            >
-                              A paragraph
-                            </p>
-                          </div>
+                        <div>
+                          A title
+                          <p
+                            class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
+                          >
+                            A paragraph
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -158,32 +150,28 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                   style="vertical-align: top;"
                 >
                   <div
-                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn iKIurY coYthk sc-dPyBCJ eKJPyW sc-bBXxYQ hqGdPE"
+                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn kknPZA coYthk sc-dPyBCJ eKJPyW sc-bBXxYQ hqGdPE"
                   >
                     <div
-                      class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq"
+                      class="sc-gKXOVf ckXSHX sc-iBkjds eYvdLm sc-hHLeRK dUykMD"
                     >
                       <div
-                        class="sc-gKXOVf QRSBg sc-iBkjds gRMaZo"
+                        class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                       >
-                        <div
-                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
-                        >
-                          <div>
-                            <h1
-                              class="sc-ciZhAO btUqKl sc-bZnhIo lpvFVg"
-                            >
-                              A title
-                            </h1>
-                            <img
-                              src="https://via.placeholder.com/150"
-                            />
-                            <p
-                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
-                            >
-                              A paragraph
-                            </p>
-                          </div>
+                        <div>
+                          <h1
+                            class="sc-ciZhAO btUqKl sc-bZnhIo lpvFVg"
+                          >
+                            A title
+                          </h1>
+                          <img
+                            src="https://via.placeholder.com/150"
+                          />
+                          <p
+                            class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
+                          >
+                            A paragraph
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -195,24 +183,20 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                   style="vertical-align: top;"
                 >
                   <div
-                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn iKIurY coYthk sc-dPyBCJ eKJPyW sc-bBXxYQ hqGdPE"
+                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn kknPZA coYthk sc-dPyBCJ eKJPyW sc-bBXxYQ hqGdPE"
                   >
                     <div
-                      class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq"
+                      class="sc-gKXOVf ckXSHX sc-iBkjds eYvdLm sc-hHLeRK dUykMD"
                     >
                       <div
-                        class="sc-gKXOVf QRSBg sc-iBkjds gRMaZo"
+                        class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                       >
-                        <div
-                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
-                        >
-                          <div>
-                            A title
-                            <img
-                              src="https://via.placeholder.com/150"
-                            />
-                            A paragraph
-                          </div>
+                        <div>
+                          A title
+                          <img
+                            src="https://via.placeholder.com/150"
+                          />
+                          A paragraph
                         </div>
                       </div>
                     </div>
@@ -243,32 +227,28 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                   style="vertical-align: top;"
                 >
                   <div
-                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn iKIurY coYthk sc-dPyBCJ eKJPyW sc-bBXxYQ hqGdPE"
+                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn kknPZA coYthk sc-dPyBCJ eKJPyW sc-bBXxYQ hqGdPE"
                   >
                     <div
-                      class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq"
+                      class="sc-gKXOVf ckXSHX sc-iBkjds eYvdLm sc-hHLeRK dUykMD"
                     >
                       <div
-                        class="sc-gKXOVf QRSBg sc-iBkjds gRMaZo"
+                        class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                       >
-                        <div
-                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
-                        >
-                          <div>
-                            <h1
-                              class="sc-ciZhAO btUqKl sc-bZnhIo lpvFVg"
-                            >
-                              A title
-                            </h1>
-                            <img
-                              src="https://via.placeholder.com/150"
-                            />
-                            <p
-                              class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
-                            >
-                              A paragraph
-                            </p>
-                          </div>
+                        <div>
+                          <h1
+                            class="sc-ciZhAO btUqKl sc-bZnhIo lpvFVg"
+                          >
+                            A title
+                          </h1>
+                          <img
+                            src="https://via.placeholder.com/150"
+                          />
+                          <p
+                            class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
+                          >
+                            A paragraph
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -280,25 +260,21 @@ exports[`Storyshots Extra/Markdown Customized 1`] = `
                   style="vertical-align: top;"
                 >
                   <div
-                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn iKIurY coYthk sc-dPyBCJ eKJPyW sc-bBXxYQ hqGdPE"
+                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-dmRaPn kknPZA coYthk sc-dPyBCJ eKJPyW sc-bBXxYQ hqGdPE"
                   >
                     <div
-                      class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq"
+                      class="sc-gKXOVf ckXSHX sc-iBkjds eYvdLm sc-hHLeRK dUykMD"
                     >
                       <div
-                        class="sc-gKXOVf QRSBg sc-iBkjds gRMaZo"
+                        class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
                       >
-                        <div
-                          class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
-                        >
-                          <div>
-                            <h1
-                              class="sc-ciZhAO btUqKl sc-bZnhIo lpvFVg"
-                            >
-                              A title
-                            </h1>
-                            A paragraph
-                          </div>
+                        <div>
+                          <h1
+                            class="sc-ciZhAO btUqKl sc-bZnhIo lpvFVg"
+                          >
+                            A title
+                          </h1>
+                          A paragraph
                         </div>
                       </div>
                     </div>
