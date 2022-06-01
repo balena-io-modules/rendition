@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix duration widget when one value is null
+      hash: f9e9733738118d28ec3dd48ca506c148639111dd
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 27.4.3
+  title: "'Fix duration widget when one value is null'"
+  date: 2022-06-01T14:49:47.852Z
+- commits:
     - subject: Fix useReqeust
       hash: ab6d939eb32b21e0ba527e2cee06a4107c5722c8
       body: ""
