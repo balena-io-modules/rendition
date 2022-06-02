@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add docs link to poll interval field in download image modal
+      hash: 2164f35a37098c682c8c7a774d51ed857235ddb0
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 27.5.0
+  title: "'Add docs link to poll interval field in download image modal'"
+  date: 2022-06-02T14:00:36.627Z
+- commits:
     - subject: Fix duration widget when one value is null
       hash: f9e9733738118d28ec3dd48ca506c148639111dd
       body: ""
