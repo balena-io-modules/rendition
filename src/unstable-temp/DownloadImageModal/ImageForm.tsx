@@ -15,7 +15,9 @@ import { DownloadOptions, DownloadOptionsBase } from './DownloadImageModal';
 import { TFunction } from '../../hooks/useTranslation';
 import pickBy from 'lodash/pickBy';
 
-const ETCHER_OPEN_IMAGE_URL = `https://www.balena.io/etcher/open-image-url`;
+const ETCHER_OPEN_IMAGE_URL = 'https://www.balena.io/etcher/open-image-url';
+const POLL_INTERVAL_DOCS =
+	'https://www.balena.io/docs/reference/supervisor/bandwidth-reduction/#side-effects--warnings';
 
 const debounceDownloadSize = debounce(
 	async (
@@ -64,6 +66,12 @@ const getDeviceTypeOptions = (t: TFunction, deviceType: DeviceType) => {
 				name: 'provisioningKeyName',
 				default: '',
 				type: 'text',
+			});
+			group.options.map((option) => {
+				if (option.message === 'Check for updates every X minutes') {
+					option.docs = POLL_INTERVAL_DOCS;
+				}
+				return option;
 			});
 		}
 

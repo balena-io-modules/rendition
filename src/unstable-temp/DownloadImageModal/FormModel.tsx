@@ -10,6 +10,7 @@ import { Collapsible } from './Collapsible';
 import { PasswordInput } from './PasswordInput';
 import styled from 'styled-components';
 import { DeviceTypeOptions, DeviceTypeOptionsGroup } from './models';
+import { DocsLink } from './OsConfiguration';
 
 export const DownloadImageLabel = styled.label`
 	display: flex;
@@ -81,7 +82,10 @@ const FormControl = ({ onModelChange, options, model }: FormControlProps) => {
 			{!options.hidden && (
 				<>
 					{options.type !== 'confirm' && (
-						<DownloadImageLabel>{options.message}</DownloadImageLabel>
+						<DownloadImageLabel>
+							{options.message}
+							{!!options.docs && <DocsLink href={options.docs} />}
+						</DownloadImageLabel>
 					)}
 
 					{options.type === 'list' && options.choices?.length === 1 && (
@@ -147,8 +151,8 @@ const FormControl = ({ onModelChange, options, model }: FormControlProps) => {
 					{options.type === 'number' && (
 						<Input
 							mb={2}
-							type="number"
 							name={options.name}
+							type="number"
 							onChange={(e) => {
 								const parsed = toNumber(e.target.value);
 								if (!isNaN(parsed)) {
@@ -292,6 +296,6 @@ export const DownloadFormModel = ({
 			}
 			model={model}
 			options={options}
-		></FormFields>
+		/>
 	);
 };

@@ -99,6 +99,7 @@ export interface DeviceTypeOptionsGroup {
 	type: string;
 	min?: number;
 	max?: number;
+	docs?: string;
 	hidden?: boolean;
 	when?: Dictionary<number | string | boolean>;
 	choices?: string[] | number[];
