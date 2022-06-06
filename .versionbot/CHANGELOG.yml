@@ -1,4 +1,17 @@
 - commits:
+    - subject: Show error in download image modal if poll interval value is invalid
+      hash: 49c934adc43d72afe5dc076d5d802e2fddb02d45
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 27.6.0
+  title: "'Show error in download image modal if poll interval value is invalid'"
+  date: 2022-06-06T12:02:33.809Z
+- commits:
     - subject: Add docs link to poll interval field in download image modal
       hash: 2164f35a37098c682c8c7a774d51ed857235ddb0
       body: ""
