@@ -6,11 +6,13 @@ import { Divider } from '../../components/Divider';
 import { Input } from '../../components/Input';
 import { Select } from '../../components/Select';
 import { RadioButtonGroup } from '../../components/RadioButtonGroup';
+import { Txt } from '../../components/Txt';
 import { Collapsible } from './Collapsible';
 import { PasswordInput } from './PasswordInput';
 import styled from 'styled-components';
 import { DeviceTypeOptions, DeviceTypeOptionsGroup } from './models';
 import { DocsLink } from './OsConfiguration';
+import { useTranslation } from '../../hooks/useTranslation';
 
 export const DownloadImageLabel = styled.label`
 	display: flex;
@@ -58,6 +60,7 @@ interface FormControlProps extends Omit<FormFieldsProps, 'options'> {
 }
 
 const FormControl = ({ onModelChange, options, model }: FormControlProps) => {
+	const { t } = useTranslation();
 	React.useEffect(() => {
 		if (model[options.name]) {
 			return;
@@ -68,6 +71,26 @@ const FormControl = ({ onModelChange, options, model }: FormControlProps) => {
 			onModelChange({ [options.name]: getDefaultValue(options) });
 		}
 	}, [options, model, onModelChange]);
+
+	const error = React.useMemo(() => {
+		const value = model[options.name];
+		if (value !== undefined && typeof value === 'number') {
+			if (options.min) {
+				if (value < options.min) {
+					return t('fields_errors.does_not_satisfy_minimum', {
+						minimum: options.min,
+					});
+				}
+			}
+			if (options.max) {
+				if (value > options.max) {
+					return t('fields_errors.does_not_satisfy_maximum', {
+						maximum: options.max,
+					});
+				}
+			}
+		}
+	}, [options, model]);
 
 	return (
 		<div style={options.hidden ? { display: 'none' } : {}}>
@@ -188,6 +211,11 @@ const FormControl = ({ onModelChange, options, model }: FormControlProps) => {
 							value={model[options.name] as string | undefined}
 							autoComplete="new-password"
 						/>
+					)}
+					{error && (
+						<Txt color="red" fontSize={10}>
+							{error}
+						</Txt>
 					)}
 				</>
 			)}

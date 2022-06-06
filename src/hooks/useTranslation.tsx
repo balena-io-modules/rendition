@@ -36,6 +36,7 @@ const translationMap = {
 		'A tag name group exists on {{count}} other {{itemType}}s and will be overwritten.',
 	'warnings.fill_wifi_credentials':
 		'Please fill in the wifi credentials or select "Ethernet only" in the "Network Connection" section',
+	'warnings.some_fields_are_invalid': 'Some fields are invalid',
 	'warnings.image_deployed_to_docker':
 		'This image is deployed to docker so you can only download its config',
 
@@ -51,6 +52,10 @@ const translationMap = {
 		'Tag names beginning with {{namespace}} are reserved',
 	'fields_errors.tag_with_same_name_exists':
 		'A tag with the same name already exists',
+	'fields_errors.does_not_satisfy_minimum':
+		'Must be greater than or equal to {{minimum}}',
+	'fields_errors.does_not_satisfy_maximum':
+		'Must be less than or equal to {{maximum}}',
 
 	// DownloadImageModal
 	'placeholders.select_device_type': 'Select device type',

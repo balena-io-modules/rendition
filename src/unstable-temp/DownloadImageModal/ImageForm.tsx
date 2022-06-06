@@ -10,7 +10,11 @@ import { DropDownButton } from '../../components/DropDownButton';
 import { Flex } from '../../components/Flex';
 import { Txt } from '../../components/Txt';
 import { DownloadFormModel, FormModel } from './FormModel';
-import { DeviceType } from './models';
+import {
+	DeviceType,
+	DeviceTypeOptions,
+	DeviceTypeOptionsGroup,
+} from './models';
 import { DownloadOptions, DownloadOptionsBase } from './DownloadImageModal';
 import { TFunction } from '../../hooks/useTranslation';
 import pickBy from 'lodash/pickBy';
@@ -306,6 +310,36 @@ export const ImageForm = ({
 		[actions, downloadOptions],
 	);
 
+	const options = React.useMemo<DeviceTypeOptions[]>(
+		() => getDeviceTypeOptions(t, deviceType),
+		[t, deviceType],
+	);
+
+	const isInputValid = React.useMemo(() => {
+		const opts = options.map((option) => {
+			const optionOptions = option.options.map(
+				(opt: DeviceTypeOptionsGroup) => {
+					const value = model[opt.name];
+					if (value !== undefined && typeof value === 'number') {
+						if (opt.min) {
+							if (value < opt.min) {
+								return false;
+							}
+						}
+						if (opt.max) {
+							if (value > opt.max) {
+								return false;
+							}
+						}
+					}
+					return true;
+				},
+			);
+			return !optionOptions.includes(false);
+		});
+		return !opts.includes(false);
+	}, [options, model]);
+
 	const action = actions.find((act) => act.label === selectedActionLabel);
 
 	return (
@@ -333,7 +367,7 @@ export const ImageForm = ({
 				<DownloadFormModel
 					model={model}
 					onModelChange={setModel}
-					options={getDeviceTypeOptions(t, deviceType)}
+					options={options}
 				/>
 			</Flex>
 
@@ -359,10 +393,12 @@ export const ImageForm = ({
 					ml="auto"
 					className="e2e-download-image-submit"
 					type={action?.type || 'button'}
-					disabled={isDownloadDisabled(model, rawVersion)}
+					disabled={isDownloadDisabled(model, rawVersion) || !isInputValid}
 					tooltip={
 						isDownloadDisabled(model, rawVersion)
 							? t('warnings.fill_wifi_credentials')
+							: !isInputValid
+							? t('warnings.some_fields_are_invalid')
 							: action?.tooltip
 					}
 					onClick={(event: React.MouseEvent) => {
