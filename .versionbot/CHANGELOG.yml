@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add array of strings searchtext support and refactor function
+      hash: 3d40e75f6fa0dd34d734f7c2d7ee624fdc4c7bd5
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 27.7.0
+  title: "'Add array of strings searchtext support and refactor function'"
+  date: 2022-06-07T19:21:43.235Z
+- commits:
     - subject: Show error in download image modal if poll interval value is invalid
       hash: 49c934adc43d72afe5dc076d5d802e2fddb02d45
       body: ""

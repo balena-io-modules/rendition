@@ -1,6 +1,6 @@
 {
   "name": "rendition",
-  "version": "27.6.0",
+  "version": "27.7.0",
   "description": "React components library",
   "repository": {
     "type": "git",
@@ -188,6 +188,6 @@
     ]
   },
   "versionist": {
-    "publishedAt": "2022-06-06T12:02:34.192Z"
+    "publishedAt": "2022-06-07T19:21:43.737Z"
   }
 }
