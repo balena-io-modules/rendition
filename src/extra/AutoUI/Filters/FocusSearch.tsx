@@ -70,9 +70,7 @@ export const FocusSearch = <T extends { id: number; [key: string]: any }>({
 	const getEntityValue = (entity: T) => {
 		const property = model.priorities?.primary[0]!;
 		const schemaProperty = model.schema.properties?.[property];
-		const refScheme = schemaProperty
-			? getPropertyRefScheme(schemaProperty)
-			: null;
+		const refScheme = getPropertyRefScheme(schemaProperty)?.[0];
 		if (!refScheme || typeof schemaProperty === 'boolean') {
 			return entity[property];
 		}

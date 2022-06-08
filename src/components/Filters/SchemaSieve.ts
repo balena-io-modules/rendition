@@ -12,6 +12,13 @@ import reduce from 'lodash/reduce';
 import startsWith from 'lodash/startsWith';
 import trimStart from 'lodash/trimStart';
 import without from 'lodash/without';
+import {
+	adaptOperatorForParentModel,
+	generateSchemaFromRefScheme,
+	getPropertyRefScheme,
+	getRefSchemeTitle,
+	getSubSchemaFromRefScheme,
+} from '../../extra/AutoUI/models/helpers';
 import { FilterSignature } from '.';
 import { randomString } from '../../utils';
 import { getDataModel } from '../DataTypes';
@@ -97,6 +104,7 @@ export const createFullTextSearchFilter = (
 				[] as FullTextFilterItem[],
 		  )
 		: [];
+
 	const filter = generateFullTextSearchAjvFilter(term, items);
 	return filter;
 };
@@ -140,13 +148,20 @@ export const createFilter = (
 	schema: JSONSchema,
 	signatures: FilterSignature[],
 ): JSONSchema => {
-	const anyOf = signatures.map(({ field, operator, value }) => {
-		const subSchema = schema.properties![field] as JSONSchema;
-		const model = getDataModel(subSchema);
+	const anyOf = signatures.map(({ field, operator, value, refScheme }) => {
+		const newSchema = generateSchemaFromRefScheme(field, schema, refScheme);
+		const model = getDataModel(newSchema);
 
-		if (!model || !model.operators.hasOwnProperty(operator)) {
+		if (!!model && !model?.operators.hasOwnProperty(operator) && !!refScheme) {
+			operator = adaptOperatorForParentModel(operator);
+		}
+
+		if (!newSchema || !model || !model.operators.hasOwnProperty(operator)) {
 			return {};
 		}
+
+		const title = getRefSchemeTitle(refScheme, newSchema, field);
+		newSchema.title = title;
 
 		return (
 			model.createFilter as (
@@ -154,8 +169,10 @@ export const createFilter = (
 				operator: string,
 				value: any,
 				subSchema: JSONSchema,
+				recursive: boolean,
+				refScheme?: string | null,
 			) => JSONSchema
-		)(field, operator, value, subSchema);
+		)(field, operator, value, newSchema, false, refScheme);
 	});
 
 	return {
@@ -176,12 +193,16 @@ export const decodeFilter = (schema: JSONSchema, filter: JSONSchema) => {
 		) {
 			return null;
 		}
+		const refScheme = getPropertyRefScheme(f)?.[0];
 		const schemaField = f.anyOf
 			? Object.keys((f.anyOf[0] as JSONSchema).properties!).shift()!
 			: Object.keys(f.properties!).shift()!;
-		const subSchema = schema.properties![schemaField] as JSONSchema;
+		const subSchema = generateSchemaFromRefScheme(
+			schemaField,
+			schema,
+			refScheme,
+		);
 		const model = getDataModel(subSchema);
-
 		if (!model) {
 			return {};
 		}
@@ -192,8 +213,14 @@ export const decodeFilter = (schema: JSONSchema, filter: JSONSchema) => {
 	return signatures.filter((s) => s !== null);
 };
 
-export const getOperators = (schema: JSONSchema, field: string) => {
-	const subSchema = schema.properties![field] as JSONSchema;
+export const getOperators = (
+	schema: JSONSchema,
+	field: string,
+	isSubScheme: boolean = false,
+) => {
+	const subSchema = isSubScheme
+		? schema
+		: (schema.properties![field] as JSONSchema);
 	const model = getDataModel(subSchema);
 
 	if (!model) {
@@ -374,34 +401,47 @@ export const unflattenSchema = (
 export const getCleanEditModel = (
 	schema: JSONSchema,
 	field?: string | null,
+	refScheme?: string,
 ) => {
 	if (!field) {
-		field = Object.keys(schema.properties!).shift()!;
+		field = Object.keys(
+			schema.properties!,
+		).shift()! as keyof JSONSchema['properties'];
 	}
 
-	const fieldOperators = getOperators(schema, field);
+	const subSchema = getSubSchemaFromRefScheme(
+		schema.properties![field],
+		refScheme,
+	);
+	const fieldOperators = getOperators(
+		!!refScheme ? subSchema : schema,
+		field,
+		!!refScheme,
+	);
+
 	if (!fieldOperators.length) {
 		return {
 			field,
 			operator: '',
 			value: '',
+			refScheme,
 		};
 	}
 
 	const operator = fieldOperators.shift()!.slug;
 
 	let value: any = '';
-	const subschema = schema.properties![field];
-	if (typeof subschema !== 'boolean') {
-		if (subschema.enum) {
-			value = subschema.enum[0] || '';
+
+	if (typeof subSchema !== 'boolean') {
+		if (subSchema.enum) {
+			value = subSchema.enum[0] || '';
 		}
 
-		if (subschema.oneOf) {
-			value = (subschema.oneOf[0] as JSONSchema).const || '';
+		if (subSchema.oneOf) {
+			value = (subSchema.oneOf[0] as JSONSchema).const || '';
 		}
 
-		if (subschema.type === 'boolean') {
+		if (subSchema.type === 'boolean') {
 			value = true;
 		}
 	}
@@ -410,5 +450,6 @@ export const getCleanEditModel = (
 		field,
 		operator,
 		value,
+		refScheme,
 	};
 };

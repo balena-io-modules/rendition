@@ -133,10 +133,10 @@ export const getSortingFunction = <T extends any>(
 		return (a: T, b: T) => sortFn(a, b, schemaKey);
 	}
 	if (types.includes(JsonTypes.object) && refScheme) {
-		return (a: T, b: T) => sortFn(a, b, [schemaKey, ...[refScheme]]);
+		return (a: T, b: T) => sortFn(a, b, [schemaKey, ...refScheme]);
 	}
 	if (types.includes(JsonTypes.array) && refScheme) {
-		return (a: T, b: T) => sortFn(a, b, [schemaKey, 0, ...[refScheme]]);
+		return (a: T, b: T) => sortFn(a, b, [schemaKey, '0', ...refScheme]);
 	}
 	return (a: T, b: T) => diff(a[schemaKey], b[schemaKey]);
 };

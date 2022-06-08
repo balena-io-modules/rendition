@@ -1,5 +1,7 @@
 import { JSONSchema7 as JSONSchema } from 'json-schema';
+import { getPropertyRefScheme } from '../../extra/AutoUI/models/helpers';
 import { randomString } from '../../utils';
+import { FilterSignature } from '../Filters';
 import { normalizeDateTime } from './date-time-helpers';
 import { getJsonDescription } from './utils';
 
@@ -32,11 +34,7 @@ interface DateTimeFilter extends JSONSchema {
 
 export const decodeFilter = (
 	filter: DateTimeFilter,
-): {
-	field: string;
-	operator: OperatorSlug;
-	value: string;
-} | null => {
+): FilterSignature | null => {
 	if (!filter.properties) {
 		return null;
 	}
@@ -47,6 +45,7 @@ export const decodeFilter = (
 	}
 
 	const field = keys[0];
+	const refScheme = getPropertyRefScheme(filter)?.[0];
 	const operator = filter.title;
 	let value: string;
 
@@ -64,6 +63,7 @@ export const decodeFilter = (
 		field,
 		operator,
 		value,
+		refScheme,
 	};
 };
 
@@ -72,7 +72,9 @@ export const createFilter = (
 	operator: OperatorSlug,
 	value: any,
 	schema: JSONSchema,
-): DateTimeFilter => {
+	recursive: boolean = false,
+	refScheme?: string,
+): DateTimeFilter | JSONSchema => {
 	const { title } = schema;
 	const base: DateTimeFilter = {
 		$id: randomString(),
@@ -81,6 +83,7 @@ export const createFilter = (
 			title || field,
 			operators[operator].getLabel(schema),
 			value,
+			refScheme,
 		),
 		type: 'object',
 	};
@@ -88,42 +91,51 @@ export const createFilter = (
 	const normalizedValue = normalizeDateTime(value);
 
 	if (operator === 'is') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					type: 'string',
-					format: 'date-time',
-					const: normalizedValue,
-				},
-			},
-			required: [field],
-		});
+		const filter: JSONSchema = {
+			type: 'string',
+			format: 'date-time',
+			const: normalizedValue,
+		};
+		return recursive
+			? filter
+			: Object.assign(base, {
+					properties: {
+						[field]: filter,
+					},
+					required: [field],
+			  });
 	}
 
 	if (operator === 'is_before') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					type: 'string',
-					format: 'date-time',
-					formatMaximum: normalizedValue,
-				},
-			},
-			required: [field],
-		});
+		const filter = {
+			type: 'string',
+			format: 'date-time',
+			formatMaximum: normalizedValue,
+		} as JSONSchema;
+		return recursive
+			? filter
+			: Object.assign(base, {
+					properties: {
+						[field]: filter,
+					},
+					required: [field],
+			  });
 	}
 
 	if (operator === 'is_after') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					type: 'string',
-					format: 'date-time',
-					formatMinimum: normalizedValue,
-				},
-			},
-			required: [field],
-		});
+		const filter = {
+			type: 'string',
+			format: 'date-time',
+			formatMinimum: normalizedValue,
+		} as JSONSchema;
+		return recursive
+			? filter
+			: Object.assign(base, {
+					properties: {
+						[field]: filter,
+					},
+					required: [field],
+			  });
 	}
 
 	return base;

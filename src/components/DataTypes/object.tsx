@@ -5,8 +5,9 @@ import includes from 'lodash/includes';
 import mapValues from 'lodash/mapValues';
 import pick from 'lodash/pick';
 import * as React from 'react';
+import { getPropertyRefScheme } from '../../extra/AutoUI/models/helpers';
 import { regexEscape } from '../../utils';
-import { DataTypeEditProps } from '../Filters';
+import { DataTypeEditProps, FilterSignature } from '../Filters';
 import { Flex } from '../Flex';
 import { Input } from '../Input';
 import { getJsonDescription } from './utils';
@@ -113,13 +114,7 @@ interface ObjectFilter extends JSONSchema {
 	};
 }
 
-export const decodeFilter = (
-	filter: ObjectFilter,
-): {
-	field: string;
-	operator: OperatorSlug;
-	value: {};
-} | null => {
+export const decodeFilter = (filter: ObjectFilter): FilterSignature | null => {
 	const operator = filter.title;
 
 	if (!filter.properties) {
@@ -133,6 +128,7 @@ export const decodeFilter = (
 	let value: { [key: string]: string };
 
 	const field = keys[0];
+	const refScheme = getPropertyRefScheme(filter)?.[0];
 
 	if (operator === 'is') {
 		value = mapValues(
@@ -183,6 +179,7 @@ export const decodeFilter = (
 		field,
 		operator,
 		value,
+		refScheme,
 	};
 };
 
@@ -215,142 +212,165 @@ export const createFilter = (
 	operator: OperatorSlug,
 	value: any,
 	schema: JSONSchema,
+	recursive: boolean = false,
+	refScheme?: string,
 ): JSONSchema => {
 	const { title } = schema;
 	value = getValueForOperation(operator, schema, value);
-
 	const base: ObjectFilter = {
 		title: operator,
 		description: getJsonDescription(
 			title || field,
 			operators[operator].getLabel(schema),
 			format(schema, value),
+			refScheme,
 		),
 		type: 'object',
 	};
 
 	if (operator === 'is') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					contains: {
-						title,
-						properties: mapValues(value, (v) => ({ const: v })),
-					},
-				},
+		const filter = {
+			contains: {
+				title,
+				properties: mapValues(value, (v) => ({ const: v })),
 			},
-			required: [field],
-		});
+		};
+		return recursive
+			? filter
+			: Object.assign(base, {
+					properties: {
+						[field]: filter,
+					},
+					required: [field],
+			  });
 	}
 
 	if (operator === 'is_not') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					not: {
-						contains: {
-							title,
-							properties: mapValues(value, (v) => ({ const: v })),
-						},
-					},
+		const filter = {
+			not: {
+				contains: {
+					title,
+					properties: mapValues(value, (v) => ({ const: v })),
 				},
 			},
-		});
+		};
+		return recursive
+			? filter
+			: Object.assign(base, {
+					properties: {
+						[field]: filter,
+					},
+			  });
 	}
 
 	if (operator === 'key_is' || operator === 'value_is') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					contains: {
-						title,
-						properties: mapValues(value, (v) => ({ const: v })),
-					},
-				},
+		const filter = {
+			contains: {
+				title,
+				properties: mapValues(value, (v) => ({ const: v })),
 			},
-			required: [field],
-		});
+		};
+		return recursive
+			? filter
+			: Object.assign(base, {
+					properties: {
+						[field]: filter,
+					},
+					required: [field],
+			  });
 	}
 
 	if (operator === 'key_contains' || operator === 'value_contains') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					contains: {
-						title,
-						properties: mapValues(value, (v) => ({
-							type: 'string',
-							description: v,
-							regexp: {
-								pattern: regexEscape(v),
-								flags: 'i',
-							},
-						})),
+		const filter = {
+			contains: {
+				title,
+				properties: mapValues(value, (v) => ({
+					type: 'string',
+					description: v,
+					regexp: {
+						pattern: regexEscape(v),
+						flags: 'i',
 					},
-				},
+				})),
 			},
-			required: [field],
-		});
+		} as JSONSchema;
+		return recursive
+			? filter
+			: Object.assign(base, {
+					properties: {
+						[field]: filter,
+					},
+					required: [field],
+			  });
 	}
 
 	if (operator === 'key_not_contains' || operator === 'value_not_contains') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					not: {
-						contains: {
-							title,
-							properties: mapValues(value, (v) => ({
-								type: 'string',
-								description: v,
-								regexp: {
-									pattern: regexEscape(v),
-									flags: 'i',
-								},
-							})),
+		const filter = {
+			not: {
+				contains: {
+					title,
+					properties: mapValues(value, (v) => ({
+						type: 'string',
+						description: v,
+						regexp: {
+							pattern: regexEscape(v),
+							flags: 'i',
 						},
-					},
+					})),
 				},
 			},
-		});
+		} as JSONSchema;
+		return recursive
+			? filter
+			: Object.assign(base, {
+					properties: {
+						[field]: filter,
+					},
+			  });
 	}
 
 	if (operator === 'key_matches_re' || operator === 'value_matches_re') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					contains: {
-						title,
-						properties: mapValues(value, (v) => ({
-							type: 'string',
-							pattern: v,
-						})),
-					},
-				},
+		const filter = {
+			contains: {
+				title,
+				properties: mapValues(value, (v) => ({
+					type: 'string',
+					pattern: v,
+				})),
 			},
-			required: [field],
-		});
+		} as JSONSchema;
+		return recursive
+			? filter
+			: Object.assign(base, {
+					properties: {
+						[field]: filter,
+					},
+					required: [field],
+			  });
 	}
 
 	if (
 		operator === 'key_not_matches_re' ||
 		operator === 'value_not_matches_re'
 	) {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					not: {
-						contains: {
-							title,
-							properties: mapValues(value, (v) => ({
-								type: 'string',
-								pattern: v,
-							})),
-						},
-					},
+		const filter = {
+			not: {
+				contains: {
+					title,
+					properties: mapValues(value, (v) => ({
+						type: 'string',
+						pattern: v,
+					})),
 				},
 			},
-		});
+		} as JSONSchema;
+		return recursive
+			? filter
+			: Object.assign(base, {
+					properties: {
+						[field]: filter,
+					},
+			  });
 	}
 
 	return base;

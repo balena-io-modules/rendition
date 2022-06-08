@@ -1,12 +1,17 @@
 import { JSONSchema7 as JSONSchema } from 'json-schema';
 import * as React from 'react';
-import { randomString, regexEscape } from '../../utils';
-import { DataTypeEditProps } from '../Filters';
+import { randomString } from '../../utils';
+import { DataTypeEditProps, FilterSignature } from '../Filters';
 import { Input, InputProps } from '../Input';
 import { Textarea, TextareaProps } from '../Textarea';
 import { getJsonDescription } from './utils';
 import { Select, SelectProps } from '../Select';
 import { findInObject } from '../../extra/AutoUI/utils';
+import { getDataModel } from '.';
+import {
+	getPropertyRefScheme,
+	getSubSchemaFromRefScheme,
+} from '../../extra/AutoUI/models/helpers';
 
 export const operators = {
 	contains: {
@@ -49,13 +54,8 @@ interface StringFilter extends JSONSchema {
 	}>;
 }
 
-export const decodeFilter = (
-	filter: StringFilter,
-): {
-	field: string;
-	operator: OperatorSlug;
-	value: string;
-} | null => {
+export const decodeFilter = (filter: StringFilter): FilterSignature | null => {
+	const refScheme = getPropertyRefScheme(filter)?.[0];
 	const operator = filter.title;
 	const properties = findInObject(filter, 'properties');
 	const [firstPropKey] = Object.keys(properties);
@@ -67,6 +67,7 @@ export const decodeFilter = (
 		field,
 		operator,
 		value,
+		refScheme,
 	};
 };
 
@@ -75,6 +76,8 @@ export const createFilter = (
 	operator: OperatorSlug,
 	value: any,
 	schema: JSONSchema,
+	recursive: boolean = false,
+	refScheme?: string,
 ): JSONSchema => {
 	const { title } = schema;
 	const base: StringFilter = {
@@ -84,6 +87,7 @@ export const createFilter = (
 			title || field,
 			operators[operator].getLabel(schema),
 			value,
+			refScheme,
 		),
 		type: 'object',
 	};
@@ -91,35 +95,47 @@ export const createFilter = (
 	const filter = getFilter(schema, value);
 
 	if (operator === 'contains') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					type: 'array',
-					...filter,
-				},
-			},
-			required: [field],
-		});
+		const common = {
+			type: 'array',
+			...filter,
+		} as JSONSchema;
+		return recursive
+			? common
+			: Object.assign(base, {
+					properties: {
+						[field]: common,
+					},
+					required: [field],
+			  });
 	}
 
 	if (operator === 'not_contains') {
+		const common = [
+			{
+				type: 'array',
+				not: {
+					...filter,
+				},
+			},
+			{
+				type: 'null',
+			},
+		] as JSONSchema[];
+		if (recursive) {
+			return {
+				anyOf: common,
+			};
+		}
 		return Object.assign(base, {
 			anyOf: [
 				{
 					properties: {
-						[field]: {
-							type: 'array',
-							not: {
-								...filter,
-							},
-						},
+						[field]: common[0],
 					},
 				},
 				{
 					properties: {
-						[field]: {
-							type: 'null',
-						},
+						[field]: common[1],
 					},
 				},
 			],
@@ -134,6 +150,8 @@ interface OneOf {
 	title: string;
 }
 
+type SelectType = OneOf | string;
+
 export const Edit = ({
 	onUpdate,
 	slim,
@@ -142,20 +160,31 @@ export const Edit = ({
 	TextareaProps &
 	InputProps &
 	Omit<SelectProps<OneOf>, 'onChange'> & { slim?: boolean }) => {
+	const subSchema = getSubSchemaFromRefScheme(props.schema);
 	const schemaItems = props.schema.items as JSONSchema | undefined;
-	if (schemaItems?.oneOf) {
+	const oneOf = subSchema?.oneOf ?? schemaItems?.oneOf;
+	const enumerator = (subSchema?.enum ?? schemaItems?.enum) as string[];
+	if (oneOf || enumerator) {
 		return (
-			<Select<OneOf>
+			<Select<SelectType>
 				{...props}
-				options={schemaItems.oneOf || []}
-				valueKey="const"
-				labelKey="title"
+				options={oneOf || enumerator || []}
+				{...(!!oneOf
+					? {
+							valueKey: 'const',
+							labelKey: 'title',
+					  }
+					: undefined)}
 				value={
-					(schemaItems.oneOf || []).find(
-						(x: OneOf) => x.const === props.value,
-					) as OneOf
+					(oneOf
+						? oneOf.find((x: OneOf) => x.const === props.value)
+						: (enumerator || []).find((x) => x === props.value)) as SelectType
 				}
-				onChange={({ option }) => onUpdate(option.const.toString())}
+				onChange={({ option }) =>
+					onUpdate(
+						typeof option === 'string' ? option : option.const.toString(),
+					)
+				}
 			/>
 		);
 	}
@@ -190,19 +219,30 @@ export const getFilter = (schema: JSONSchema, value: string) => {
 		return {
 			minItems: 1,
 			items: {
-				properties: Object.keys(schema.items.properties).reduce(
-					(props: NonNullable<JSONSchema['properties']>, propKey: string) => {
-						props[propKey] = {
-							// @ts-expect-error
-							regexp: {
-								pattern: regexEscape(value),
-								flags: 'i',
-							},
-						};
-						return props;
-					},
-					{},
-				),
+				anyOf: [
+					...Object.entries(schema.items.properties).reduce(
+						(
+							props: Array<JSONSchema['properties']>,
+							[propKey, propValue]: [string, JSONSchema],
+						) => {
+							const model = getDataModel(propValue);
+							const operator: string =
+								model?.operators && 'contains' in model.operators
+									? 'contains'
+									: 'is';
+							const filter = model?.createFilter(
+								propKey,
+								operator as never,
+								value,
+								propValue,
+								true,
+							);
+							props.push({ properties: { [propKey]: filter } });
+							return props;
+						},
+						[],
+					),
+				],
 			},
 		};
 	}

@@ -1,7 +1,11 @@
 import { JSONSchema7 as JSONSchema } from 'json-schema';
 import * as React from 'react';
+import {
+	getPropertyRefScheme,
+	getSubSchemaFromRefScheme,
+} from '../../extra/AutoUI/models/helpers';
 import { randomString } from '../../utils';
-import { DataTypeEditProps } from '../Filters';
+import { DataTypeEditProps, FilterSignature } from '../Filters';
 import { Select, SelectProps } from '../Select';
 import { getJsonDescription } from './utils';
 
@@ -35,15 +39,7 @@ interface OneOfFilter extends JSONSchema {
 	};
 }
 
-interface DecodeFilterResult {
-	field: string;
-	operator: OperatorSlug;
-	value: any;
-}
-
-export const decodeFilter = (
-	filter: OneOfFilter,
-): DecodeFilterResult | null => {
+export const decodeFilter = (filter: OneOfFilter): FilterSignature | null => {
 	const operator = filter.title;
 	if (!filter.properties) {
 		return null;
@@ -56,6 +52,7 @@ export const decodeFilter = (
 	let value: string;
 
 	const field = keys[0];
+	const refScheme = getPropertyRefScheme(filter)?.[0];
 
 	if (operator === 'is') {
 		value = filter.properties[field].const;
@@ -69,6 +66,7 @@ export const decodeFilter = (
 		field,
 		operator,
 		value,
+		refScheme,
 	};
 };
 
@@ -77,40 +75,50 @@ export const createFilter = (
 	operator: OperatorSlug,
 	value: any,
 	schema: JSONSchema,
-): OneOfFilter => {
+	recursive: boolean = false,
+	refScheme?: string,
+): OneOfFilter | JSONSchema => {
 	const { title } = schema;
+	const subSchema = getSubSchemaFromRefScheme(schema);
 	const base: OneOfFilter = {
 		$id: randomString(),
 		title: operator,
 		description: getJsonDescription(
 			title || field,
 			operators[operator].getLabel(schema),
-			getCaption(value, schema) || '',
+			getCaption(value, subSchema) || '',
+			refScheme,
 		),
 		type: 'object',
 	};
 
 	if (operator === 'is') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					const: value,
-				},
-			},
-			required: [field],
-		});
+		const filter = {
+			const: value,
+		};
+		return recursive
+			? filter
+			: Object.assign(base, {
+					properties: {
+						[field]: filter,
+					},
+					required: [field],
+			  });
 	}
 
 	if (operator === 'is_not') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					not: {
-						const: value,
-					},
-				},
+		const filter = {
+			not: {
+				const: value,
 			},
-		});
+		};
+		return recursive
+			? filter
+			: Object.assign(base, {
+					properties: {
+						[field]: filter,
+					},
+			  });
 	}
 
 	return base;
@@ -126,13 +134,18 @@ export const Edit = ({
 	value,
 	onUpdate,
 	...props
-}: DataTypeEditProps & SelectProps<OneOf>) => (
-	<Select<OneOf>
-		{...props}
-		options={(schema.oneOf as OneOf[]) || []}
-		valueKey="const"
-		labelKey="title"
-		value={(schema.oneOf || []).find((x: OneOf) => x.const === value) as OneOf}
-		onChange={({ option }) => onUpdate(option.const.toString())}
-	/>
-);
+}: DataTypeEditProps & SelectProps<OneOf>) => {
+	const subSchema = getSubSchemaFromRefScheme(schema);
+	return (
+		<Select<OneOf>
+			{...props}
+			options={(subSchema.oneOf as OneOf[]) || []}
+			valueKey="const"
+			labelKey="title"
+			value={
+				(subSchema.oneOf || []).find((x: OneOf) => x.const === value) as OneOf
+			}
+			onChange={({ option }) => onUpdate(option.const.toString())}
+		/>
+	);
+};

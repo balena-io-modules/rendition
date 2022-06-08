@@ -1,6 +1,8 @@
 import { JSONSchema7 as JSONSchema } from 'json-schema';
+import { getPropertyRefScheme } from '../../extra/AutoUI/models/helpers';
 import { findInObject } from '../../extra/AutoUI/utils';
 import { randomString, regexEscape } from '../../utils';
+import { FilterSignature } from '../Filters';
 import { FULL_TEXT_SLUG } from '../Filters/SchemaSieve';
 import { getJsonDescription } from './utils';
 
@@ -57,13 +59,8 @@ interface StringFilter extends JSONSchema {
 	}>;
 }
 
-export const decodeFilter = (
-	filter: StringFilter,
-): {
-	field: string;
-	operator: OperatorSlug;
-	value: string;
-} | null => {
+export const decodeFilter = (filter: StringFilter): FilterSignature | null => {
+	const refScheme = getPropertyRefScheme(filter)?.[0];
 	const operator = filter.title;
 	let value: string;
 	let field: string;
@@ -120,6 +117,7 @@ export const decodeFilter = (
 		field,
 		operator,
 		value,
+		refScheme,
 	};
 };
 
@@ -128,6 +126,8 @@ export const createFilter = (
 	operator: OperatorSlug,
 	value: any,
 	schema: JSONSchema,
+	recursive: boolean = false,
+	refScheme?: string | null,
 ): JSONSchema => {
 	const { title } = schema;
 	const base: StringFilter = {
@@ -137,60 +137,78 @@ export const createFilter = (
 			title || field,
 			operators[operator].getLabel(schema),
 			value,
+			refScheme,
 		),
 		type: 'object',
 	};
 
 	if (operator === 'is') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					title,
-					const: value,
-				},
-			},
-			required: [field],
-		});
+		const filter = {
+			title,
+			const: value,
+		};
+		return recursive
+			? filter
+			: Object.assign(base, {
+					properties: {
+						[field]: filter,
+					},
+					required: [field],
+			  });
 	}
 
 	if (operator === 'contains') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					type: 'string',
-					description: value,
+		const filter = {
+			regexp: {
+				pattern: regexEscape(value),
+				flags: 'i',
+			},
+		} as JSONSchema;
+		return recursive
+			? filter
+			: Object.assign(base, {
+					properties: {
+						[field]: {
+							type: 'string',
+							description: value,
+							...filter,
+						},
+					},
+					required: [field],
+			  });
+	}
+
+	if (operator === 'not_contains') {
+		const filter = [
+			{
+				type: 'string',
+				description: value,
+				not: {
 					regexp: {
 						pattern: regexEscape(value),
 						flags: 'i',
 					},
 				},
 			},
-			required: [field],
-		});
-	}
-
-	if (operator === 'not_contains') {
+			{
+				type: 'null',
+			},
+		] as JSONSchema[];
+		if (recursive) {
+			return {
+				anyOf: filter,
+			};
+		}
 		return Object.assign(base, {
 			anyOf: [
 				{
 					properties: {
-						[field]: {
-							type: 'string',
-							description: value,
-							not: {
-								regexp: {
-									pattern: regexEscape(value),
-									flags: 'i',
-								},
-							},
-						},
+						[field]: filter[0],
 					},
 				},
 				{
 					properties: {
-						[field]: {
-							type: 'null',
-						},
+						[field]: filter[1],
 					},
 				},
 			],
@@ -198,35 +216,47 @@ export const createFilter = (
 	}
 
 	if (operator === 'matches_re') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					type: 'string',
-					pattern: value,
-				},
-			},
-			required: [field],
-		});
+		const filter = {
+			type: 'string',
+			pattern: value,
+		} as JSONSchema;
+		return recursive
+			? filter
+			: Object.assign(base, {
+					properties: {
+						[field]: filter,
+					},
+					required: [field],
+			  });
 	}
 
 	if (operator === 'not_matches_re') {
+		const filter = [
+			{
+				type: 'string',
+				not: {
+					pattern: value,
+				},
+			},
+			{
+				type: 'null',
+			},
+		] as JSONSchema[];
+		if (recursive) {
+			return {
+				anyOf: filter,
+			};
+		}
 		return Object.assign(base, {
 			anyOf: [
 				{
 					properties: {
-						[field]: {
-							type: 'string',
-							not: {
-								pattern: value,
-							},
-						},
+						[field]: filter[0],
 					},
 				},
 				{
 					properties: {
-						[field]: {
-							type: 'null',
-						},
+						[field]: filter[1],
 					},
 				},
 			],

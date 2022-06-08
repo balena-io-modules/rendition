@@ -20,7 +20,10 @@ import { LensSelection } from './Lenses/LensSelection';
 import styled from 'styled-components';
 import { Flex } from '../../components/Flex';
 import { filter } from '../../components/Filters/SchemaSieve';
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import {
+	JSONSchema7 as JSONSchema,
+	JSONSchema7Definition as JSONSchemaDefinition,
+} from 'json-schema';
 import isEqual from 'lodash/isEqual';
 import { Spinner } from '../../components/Spinner';
 import { useTranslation } from '../../hooks/useTranslation';
@@ -37,6 +40,8 @@ import {
 	autoUIDefaultPermissions,
 	autoUIGetModelForCollection,
 	autoUIRunTransformers,
+	getPropertyRefScheme,
+	getRefSchemeTitle,
 } from './models/helpers';
 import { autoUIGetDisabledReason, getTagsDisabledReason } from './utils';
 import { FocusSearch } from './Filters/FocusSearch';
@@ -450,12 +455,25 @@ export const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 		.filter((entry): entry is [keyof T, typeof entry[1]] => {
 			return entry[0] !== tagField && entry[0] !== idField;
 		})
-		.map(([key, val]) => {
+		.reduce((columns, [key, val]) => {
+			const refScheme = getPropertyRefScheme(val);
+			if (refScheme && refScheme.length >= 1 && typeof val === 'object') {
+				refScheme.forEach((propKey: string) => {
+					const description = JSON.stringify({ 'x-ref-scheme': [propKey] });
+					columns.push([key, { ...val, description }]);
+				});
+			} else {
+				columns.push([key, val]);
+			}
+			return columns;
+		}, [] as Array<[keyof T, JSONSchemaDefinition]>)
+		.map(([key, val], index) => {
 			if (typeof val !== 'object') {
 				return;
 			}
 
 			const definedPriorities = priorities ?? ({} as Priorities<T>);
+			const refScheme = getPropertyRefScheme(val);
 			const priority = definedPriorities.primary.find(
 				(prioritizedKey) => prioritizedKey === key,
 			)
@@ -468,17 +486,17 @@ export const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 
 			const widgetSchema = { ...val, title: undefined };
 			return {
-				title: val.title || key,
+				title: getRefSchemeTitle(refScheme?.[0], val, key),
 				field: key,
 				// This is used for storing columns and views
-				key,
+				key: `${key}_${index}`,
 				selected: getSelected(key as keyof T, priorities),
 				priority,
 				type: 'predefined',
 				sortable: customSort?.[key] ?? getSortingFunction(key, val),
 				render: (fieldVal: string, entry: T) => {
 					const calculatedField = autoUIAdaptRefScheme(fieldVal, val);
-					return val.format ? (
+					return (
 						<CustomWidget
 							extraFormats={[
 								...(formats ?? ([] as Format[])),
@@ -488,8 +506,6 @@ export const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 							value={calculatedField}
 							extraContext={entry}
 						/>
-					) : (
-						calculatedField
 					);
 				},
 			};

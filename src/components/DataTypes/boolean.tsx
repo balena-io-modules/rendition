@@ -1,4 +1,5 @@
 import { JSONSchema7 as JSONSchema } from 'json-schema';
+import { getPropertyRefScheme } from '../../extra/AutoUI/models/helpers';
 import { randomString } from '../../utils';
 import { FilterSignature } from '../Filters';
 import { getJsonDescription } from './utils';
@@ -29,6 +30,7 @@ export const decodeFilter = (filter: BooleanFilter): FilterSignature | null => {
 	}
 
 	const field = keys[0];
+	const refScheme = getPropertyRefScheme(filter)?.[0];
 	const operator = filter.title;
 	let value: boolean;
 
@@ -37,10 +39,12 @@ export const decodeFilter = (filter: BooleanFilter): FilterSignature | null => {
 	} else {
 		return null;
 	}
+
 	return {
 		field,
 		operator,
 		value,
+		refScheme,
 	};
 };
 
@@ -49,7 +53,9 @@ export const createFilter = (
 	operator: OperatorSlug,
 	value: any,
 	schema: JSONSchema,
-): BooleanFilter => {
+	recursive: boolean = false,
+	refScheme?: string,
+): BooleanFilter | JSONSchema => {
 	const { title } = schema;
 	const base: BooleanFilter = {
 		$id: randomString(),
@@ -58,6 +64,7 @@ export const createFilter = (
 			title || field,
 			operators[operator].getLabel(schema),
 			value,
+			refScheme,
 		),
 		type: 'object',
 	};
@@ -66,14 +73,17 @@ export const createFilter = (
 		typeof value === 'string' ? value.toLowerCase() === 'true' : value;
 
 	if (operator === 'is') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					const: val,
-				},
-			},
-			required: [field],
-		});
+		const filter = {
+			const: val,
+		};
+		return recursive
+			? filter
+			: Object.assign(base, {
+					properties: {
+						[field]: filter,
+					},
+					required: [field],
+			  });
 	}
 	return base;
 };

@@ -50,7 +50,6 @@ export const stripSchemaFormats = (
 	whitelist: string[] = [],
 ) => {
 	const newSchema = cloneDeep(schema);
-
 	const _strip = (schema: JSONSchema) => {
 		if (schema.format && whitelist.indexOf(schema.format) === -1) {
 			delete schema.format;

@@ -404,6 +404,7 @@ export interface EditModel {
 	field: string;
 	operator: string;
 	value: string | number | { [k: string]: string };
+	refScheme?: string;
 }
 
 export interface ViewScope {
@@ -423,6 +424,7 @@ export interface FilterSignature {
 	field: string;
 	operator: string;
 	value: string | number | boolean | { [k: string]: string };
+	refScheme?: string;
 }
 
 export type FilterRenderMode = 'all' | 'add' | 'search' | 'views' | 'summary';
@@ -439,6 +441,7 @@ export interface DataTypeModel {
 		operator: string,
 		value: any,
 		schema: JSONSchema,
+		recursive?: boolean,
 	): JSONSchema;
 	Edit(props: DataTypeEditProps): JSX.Element;
 }

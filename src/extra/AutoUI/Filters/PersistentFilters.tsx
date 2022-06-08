@@ -22,6 +22,7 @@ export interface ListQueryStringFilterObject {
 	n: FilterSignature['field'];
 	o: FilterSignature['operator'];
 	v: FilterSignature['value'];
+	r: FilterSignature['refScheme'];
 }
 
 const isListQueryStringFilterRule = (
@@ -54,10 +55,11 @@ const listFilterQuery = (schema: JSONSchema, rules: JSONSchema[]) => {
 			flattenFilter,
 		) as FilterSignature[];
 		return signatures.map<ListQueryStringFilterObject>(
-			({ field, operator, value }) => ({
+			({ field, operator, value, refScheme }) => ({
 				n: field,
 				o: operator,
 				v: value,
+				r: refScheme,
 			}),
 		);
 	});
@@ -79,10 +81,11 @@ const loadRulesFromUrl = (
 				rules = [rules];
 			}
 
-			const signatures = rules.map(({ n, o, v }: any) => ({
+			const signatures = rules.map(({ n, o, v, r }: any) => ({
 				field: n,
 				operator: o,
 				value: v,
+				refScheme: r,
 			}));
 			// full_text_search filter has always a single signature
 			// since we cannot add multiple search text filters.

@@ -1,5 +1,7 @@
 import { JSONSchema7 as JSONSchema } from 'json-schema';
+import { getPropertyRefScheme } from '../../extra/AutoUI/models/helpers';
 import { randomString } from '../../utils';
+import { FilterSignature } from '../Filters';
 import { getJsonDescription } from './utils';
 
 export const operators = {
@@ -28,13 +30,7 @@ interface NumberFilter extends JSONSchema {
 	};
 }
 
-export const decodeFilter = (
-	filter: NumberFilter,
-): {
-	field: string;
-	operator: OperatorSlug;
-	value: number;
-} | null => {
+export const decodeFilter = (filter: NumberFilter): FilterSignature | null => {
 	const operator = filter.title;
 
 	if (!filter.properties) {
@@ -42,6 +38,7 @@ export const decodeFilter = (
 	}
 
 	const keys = Object.keys(filter.properties);
+	const refScheme = getPropertyRefScheme(filter)?.[0];
 	if (!keys.length) {
 		return null;
 	}
@@ -63,6 +60,7 @@ export const decodeFilter = (
 		field,
 		operator,
 		value,
+		refScheme,
 	};
 };
 
@@ -71,7 +69,9 @@ export const createFilter = (
 	operator: OperatorSlug,
 	value: any,
 	schema: JSONSchema,
-): NumberFilter => {
+	recursive: boolean = false,
+	refScheme?: string,
+): NumberFilter | JSONSchema => {
 	const { title } = schema;
 	const base: NumberFilter = {
 		$id: randomString(),
@@ -80,6 +80,7 @@ export const createFilter = (
 			title || field,
 			operators[operator].getLabel(schema),
 			value,
+			refScheme,
 		),
 		type: 'object',
 		required: [field],
@@ -88,38 +89,47 @@ export const createFilter = (
 	const val = typeof value === 'number' ? value : Number(value);
 
 	if (operator === 'is') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					type: 'number',
-					const: val,
-				},
-			},
-			required: [field],
-		});
+		const filter: JSONSchema = {
+			type: 'number',
+			const: val,
+		};
+		return recursive
+			? filter
+			: Object.assign(base, {
+					properties: {
+						[field]: filter,
+					},
+					required: [field],
+			  });
 	}
 
 	if (operator === 'is_more_than') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					type: 'number',
-					exclusiveMinimum: val,
-				},
-			},
-			required: [field],
-		});
+		const filter: JSONSchema = {
+			type: 'number',
+			exclusiveMinimum: val,
+		};
+		return recursive
+			? filter
+			: Object.assign(base, {
+					properties: {
+						[field]: filter,
+					},
+					required: [field],
+			  });
 	}
 
 	if (operator === 'is_less_than') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					type: 'number',
-					exclusiveMaximum: val,
-				},
-			},
-		});
+		const filter: JSONSchema = {
+			type: 'number',
+			exclusiveMaximum: val,
+		};
+		return recursive
+			? filter
+			: Object.assign(base, {
+					properties: {
+						[field]: filter,
+					},
+			  });
 	}
 
 	return base;

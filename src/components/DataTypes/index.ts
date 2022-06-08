@@ -25,7 +25,6 @@ export const getDataModel = (schema: JSONSchema | undefined) => {
 	}
 
 	const { format, type } = schema;
-
 	if (schema.enum) {
 		return enumType;
 	}
