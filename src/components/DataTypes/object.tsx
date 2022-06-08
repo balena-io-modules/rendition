@@ -217,7 +217,6 @@ export const createFilter = (
 	schema: JSONSchema,
 ): JSONSchema => {
 	const { title } = schema;
-
 	value = getValueForOperation(operator, schema, value);
 
 	const base: ObjectFilter = {
@@ -282,7 +281,10 @@ export const createFilter = (
 						properties: mapValues(value, (v) => ({
 							type: 'string',
 							description: v,
-							pattern: regexEscape(v),
+							regexp: {
+								pattern: regexEscape(v),
+								flags: 'i',
+							},
 						})),
 					},
 				},
@@ -301,7 +303,10 @@ export const createFilter = (
 							properties: mapValues(value, (v) => ({
 								type: 'string',
 								description: v,
-								pattern: regexEscape(v),
+								regexp: {
+									pattern: regexEscape(v),
+									flags: 'i',
+								},
 							})),
 						},
 					},

@@ -264,12 +264,12 @@ describe('SchemaSieve', () => {
 				{
 					operator: 'contains',
 					value: 'BCd',
-					expected: ['Entry 4'],
+					expected: ['Entry 1', 'Entry 4'],
 				},
 				{
 					operator: 'not_contains',
 					value: 'ABC',
-					expected: ['Entry 1', 'Entry 2', 'Entry 3', 'Entry 5', 'Entry 6'],
+					expected: ['Entry 2', 'Entry 3', 'Entry 5', 'Entry 6'],
 				},
 				{
 					operator: 'matches_re',
@@ -933,7 +933,7 @@ describe('SchemaSieve', () => {
 				]);
 
 				const result: any = sieve.filter(filter, collection);
-				expect(result).toHaveLength(1);
+				expect(result).toHaveLength(2);
 				expect(result[0].test).toEqual(collection[0].test);
 			});
 
@@ -956,7 +956,7 @@ describe('SchemaSieve', () => {
 				];
 
 				const result: any = sieve.filter(filters, collection);
-				expect(result).toHaveLength(1);
+				expect(result).toHaveLength(2);
 				expect(result[0].test).toEqual(collection[0].test);
 			});
 		});
@@ -1095,8 +1095,13 @@ describe('SchemaSieve', () => {
 				},
 			} as any;
 
-			const filter = sieve.createFullTextSearchFilter(schema, '9');
-			expect(ajv.validate(filter, [55, 9])).toBe(true);
+			const value = {
+				foo: 55,
+				bar: 9,
+			};
+
+			const filter = sieve.createFullTextSearchFilter(schema, '55');
+			expect(ajv.validate(filter, value)).toBe(true);
 		});
 	});
 

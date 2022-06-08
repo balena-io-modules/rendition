@@ -85,7 +85,7 @@ export const createFilter = (
 		required: [field],
 	};
 
-	const val = typeof value === 'number' ? value : parseInt(value, 10);
+	const val = typeof value === 'number' ? value : Number(value);
 
 	if (operator === 'is') {
 		return Object.assign(base, {

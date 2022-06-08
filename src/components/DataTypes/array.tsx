@@ -206,5 +206,9 @@ export const getFilter = (schema: JSONSchema, value: string) => {
 			},
 		};
 	}
-	return { contains: { const: value } };
+	return {
+		contains: {
+			const: Number.isNaN(parseInt(value, 10)) ? value : Number(value),
+		},
+	};
 };

@@ -1,4 +1,5 @@
 import { JSONSchema7 as JSONSchema } from 'json-schema';
+import { findInObject } from '../../extra/AutoUI/utils';
 import { randomString, regexEscape } from '../../utils';
 import { FULL_TEXT_SLUG } from '../Filters/SchemaSieve';
 import { getJsonDescription } from './utils';
@@ -103,7 +104,10 @@ export const decodeFilter = (
 			return {
 				field: 'any',
 				operator,
-				value: filter.anyOf[0].properties[keys[0]].regexp!.pattern!,
+				value:
+					findInObject(filter.anyOf[0].properties, 'description') ??
+					findInObject(filter.anyOf[0].properties, 'pattern') ??
+					findInObject(filter.anyOf[0].properties, 'const'),
 			};
 		} else {
 			return null;
@@ -155,7 +159,10 @@ export const createFilter = (
 				[field]: {
 					type: 'string',
 					description: value,
-					pattern: regexEscape(value),
+					regexp: {
+						pattern: regexEscape(value),
+						flags: 'i',
+					},
 				},
 			},
 			required: [field],
@@ -171,7 +178,10 @@ export const createFilter = (
 							type: 'string',
 							description: value,
 							not: {
-								pattern: regexEscape(value),
+								regexp: {
+									pattern: regexEscape(value),
+									flags: 'i',
+								},
 							},
 						},
 					},

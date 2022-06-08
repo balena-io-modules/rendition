@@ -1,9 +1,6 @@
 import Ajv from 'ajv';
 import ajvKeywords from 'ajv-keywords';
-import {
-	JSONSchema7 as JSONSchema,
-	JSONSchema7TypeName as JSONSchemaTypeName,
-} from 'json-schema';
+import { JSONSchema7 as JSONSchema } from 'json-schema';
 import cloneDeep from 'lodash/cloneDeep';
 import defaults from 'lodash/defaults';
 import every from 'lodash/every';
@@ -16,7 +13,7 @@ import startsWith from 'lodash/startsWith';
 import trimStart from 'lodash/trimStart';
 import without from 'lodash/without';
 import { FilterSignature } from '.';
-import { randomString, regexEscape } from '../../utils';
+import { randomString } from '../../utils';
 import { getDataModel } from '../DataTypes';
 
 const ajv = new Ajv();
@@ -26,9 +23,10 @@ export const FULL_TEXT_SLUG = 'full_text_search';
 const DEFAULT_DELIMITER = '___';
 interface FullTextFilterItem {
 	key: string;
-	type: JSONSchemaTypeName;
-	numberProperties: { maximum: number; minimum: number } | null;
-	items: JSONSchema['items'];
+	schema: JSONSchema;
+	operator: string;
+	model: any;
+	searchKey?: string;
 }
 
 export function filter<T>(
@@ -57,45 +55,49 @@ export function filter<T>(
 	return pickBy(collection, (m) => every(validators, (v) => v(m)));
 }
 
-const SupportedFullTextSearchTypes = ['string', 'number', 'array'] as const;
-
 export const createFullTextSearchFilter = (
 	schema: JSONSchema,
 	term: string,
 ) => {
-	const items = Object.entries(schema.properties as JSONSchema).reduce(
-		(itemsAccumulator, entry) => {
-			const [key, item] = entry;
-			const typeArray: string[] = Array.isArray(item.type)
-				? item.type
-				: [item.type];
-			const type = typeArray.find(
-				(t): t is typeof SupportedFullTextSearchTypes[number] =>
-					(SupportedFullTextSearchTypes as readonly string[]).includes(t),
-			);
-			if (type != null) {
-				itemsAccumulator.push({
-					key,
-					type,
-					items: item.items,
-					numberProperties:
-						typeArray.includes('number') && !isNaN(Number(term))
-							? {
-									maximum: Number(term),
-									minimum: Number(term),
-							  }
-							: null,
-				});
-			}
-			return itemsAccumulator;
-		},
-		[] as FullTextFilterItem[],
-	);
-	const filteredItems = isNaN(Number(term))
-		? items.filter((i) => i.type !== 'number')
-		: items;
-
-	const filter = generateFullTextSearchAjvFilter(term, filteredItems);
+	const items = !!schema.properties
+		? Object.entries(schema.properties as JSONSchema).reduce(
+				(itemsAccumulator, entry) => {
+					const [key, item] = entry;
+					const model = getDataModel(item);
+					const defaultItem = {
+						key,
+						schema: item,
+						model,
+					};
+					if (item.type?.includes('boolean')) {
+						return itemsAccumulator;
+					}
+					if (!!model && (!item.type || !item.type.includes('object'))) {
+						itemsAccumulator.push({
+							...defaultItem,
+							operator:
+								model?.operators && 'contains' in model.operators
+									? 'contains'
+									: 'is',
+						});
+					} else if (!!model && item.type?.includes('object')) {
+						itemsAccumulator.push({
+							...defaultItem,
+							operator: 'key_contains',
+							searchKey: findKey(item.properties!, { description: 'key' })!,
+						});
+						itemsAccumulator.push({
+							...defaultItem,
+							operator: 'value_contains',
+							searchKey: findKey(item.properties!, { description: 'value' })!,
+						});
+					}
+					return itemsAccumulator;
+				},
+				[] as FullTextFilterItem[],
+		  )
+		: [];
+	const filter = generateFullTextSearchAjvFilter(term, items);
 	return filter;
 };
 
@@ -111,29 +113,9 @@ const generateFullTextSearchAjvFilter = (
 			{
 				title: FULL_TEXT_SLUG,
 				description: `Any field contains ${term}`,
-				anyOf: items.map(({ key, type, numberProperties, items }) => {
-					return {
-						properties: {
-							[key]: {
-								type,
-								...numberProperties,
-								...(!items && {
-									regexp: {
-										pattern: regexEscape(term),
-										flags: 'i',
-									},
-								}),
-								// TODO: Drop array check to add support for varying filters bases on array position.
-								// See: https://datatracker.ietf.org/doc/html/draft-handrews-json-schema-validation-01#section-6.4
-								...(typeof items === 'object' &&
-									!Array.isArray(items) && {
-										items: createFullTextSearchFilter(items, term),
-										minItems: 1,
-									}),
-							},
-						},
-						required: [key],
-					};
+				anyOf: items.map(({ key, schema, operator, model, searchKey }) => {
+					const val = searchKey ? { [searchKey]: term } : term;
+					return model?.createFilter(key, operator, val, schema);
 				}),
 			},
 		],

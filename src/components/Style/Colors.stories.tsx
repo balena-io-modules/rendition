@@ -19,7 +19,6 @@ const getContrast = (hexColor: string) => {
 };
 
 const SwatchesComponent = () => {
-	console.log(Theme.colors);
 	return (
 		<Flex flexWrap="wrap">
 			{Object.entries(Theme.colors).map(([key, value]) => (
