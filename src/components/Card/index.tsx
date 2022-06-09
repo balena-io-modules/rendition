@@ -5,7 +5,6 @@ import { RenditionSystemProps } from '../../common-types';
 
 import asRendition from '../../asRendition';
 import { DismissableContainer } from '../../internal/DismissableContainer';
-import { Box } from '../Box';
 import { Divider } from '../Divider';
 import { Flex, FlexProps } from '../Flex';
 import { Heading } from '../Heading';
@@ -41,25 +40,28 @@ const BaseCard = ({
 	const Rows =
 		rows &&
 		map(rows, (row, index: number) => (
-			<Box key={index} fontSize={2}>
+			<Flex key={index} fontSize={2} flexDirection="column" flexWrap="wrap">
 				{index > 0 && <Divider />}
 				{row}
-			</Box>
+			</Flex>
 		));
 
 	const Body = children && (
-		<Box fontSize={2} height="100%">
+		<Flex fontSize={2} flex={1} flexDirection="column" flexWrap="wrap">
 			{children}
-		</Box>
+		</Flex>
 	);
 
 	return (
-		<Wrapper small={isSmall} {...props}>
-			<Box width="100%">
-				{Header}
-				{Rows}
-				{Body}
-			</Box>
+		<Wrapper
+			small={isSmall}
+			flexDirection="column"
+			alignItems="stretch"
+			{...props}
+		>
+			{Header}
+			{Rows}
+			{Body}
 		</Wrapper>
 	);
 };
