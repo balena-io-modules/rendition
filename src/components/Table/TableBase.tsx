@@ -140,6 +140,7 @@ interface TableBaseState<T> {
 		field: null | keyof T;
 	};
 	page: number;
+	lastSelected: T[keyof T] | null;
 }
 
 export class TableBase<T> extends React.Component<
@@ -163,6 +164,7 @@ export class TableBase<T> extends React.Component<
 		this.state = {
 			sort: sortState,
 			page: 0,
+			lastSelected: null,
 			...this.getSelectedRows(props.checkedItems ?? []),
 		};
 	}
@@ -383,15 +385,16 @@ export class TableBase<T> extends React.Component<
 		}
 
 		this.setState({
+			lastSelected: null,
 			allChecked: this.howManyRowsChecked(checkedItems),
 			checkedItems,
 		});
 	};
 
 	public toggleChecked = (e: React.ChangeEvent<HTMLInputElement>) => {
-		const rowKey = this.props.rowKey;
+		const { rowKey, data } = this.props;
 		const { key } = e.currentTarget.dataset;
-		if (!rowKey || !key) {
+		if (!rowKey || !key || !data) {
 			return false;
 		}
 
@@ -404,16 +407,51 @@ export class TableBase<T> extends React.Component<
 		const identifier = item[rowKey];
 		const newIsChecked = !this.getCheckedRowIdentifiers().has(identifier);
 
-		const oldCheckedItems = this.props.checkedItems || this.state.checkedItems;
-		const checkedItems = newIsChecked
-			? oldCheckedItems.concat(item)
-			: (oldCheckedItems ?? []).filter((x) => x[rowKey] !== identifier);
+		const checkedItemsMap = new Map(
+			((this.props.checkedItems || this.state.checkedItems) ?? []).map(
+				(item) => [item[rowKey], item],
+			),
+		);
+
+		let keysToFind = [identifier];
+		if (
+			this.state.lastSelected != null &&
+			(e.nativeEvent as MouseEvent).shiftKey
+		) {
+			keysToFind.push(this.state.lastSelected);
+		}
+		for (let index = 0; index < data.length && !!keysToFind.length; index++) {
+			let foundKey = false;
+			const currentItemKey = data[index][rowKey];
+			if (keysToFind.includes(currentItemKey)) {
+				keysToFind = keysToFind.filter(
+					(keyToFind) => keyToFind !== currentItemKey,
+				);
+				foundKey = true;
+			}
+			if (
+				foundKey ||
+				((e.nativeEvent as MouseEvent).shiftKey &&
+					keysToFind.length === 1 &&
+					this.state.lastSelected != null)
+			) {
+				const itemIsChecked = checkedItemsMap.has(currentItemKey);
+				if (newIsChecked && !itemIsChecked) {
+					checkedItemsMap.set(currentItemKey, data[index]);
+				} else if (!newIsChecked && itemIsChecked) {
+					checkedItemsMap.delete(currentItemKey);
+				}
+			}
+		}
+
+		const checkedItems = Array.from(checkedItemsMap.values());
 
 		if (this.props.onCheck) {
 			this.props.onCheck(checkedItems);
 		}
 
 		this.setState({
+			lastSelected: identifier,
 			allChecked: this.howManyRowsChecked(checkedItems),
 			checkedItems,
 		});
