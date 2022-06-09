@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove Box from Card component to avoid nesting Box and Flex components
+      hash: 5cada288aaf9d1c2690e4492280544b07e11ed35
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 28.0.0
+  title: "'Remove Box from Card component to avoid nesting Box and Flex components'"
+  date: 2022-06-09T17:31:27.847Z
+- commits:
     - subject: Add array of strings searchtext support and refactor function
       hash: 3d40e75f6fa0dd34d734f7c2d7ee624fdc4c7bd5
       body: ""
