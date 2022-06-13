@@ -397,6 +397,7 @@ export class TableBase<T> extends React.Component<
 		if (!rowKey || !key || !data) {
 			return false;
 		}
+		const sortedData = this.sortData(data);
 
 		const item = this.getElementFromKey(key);
 
@@ -420,9 +421,13 @@ export class TableBase<T> extends React.Component<
 		) {
 			keysToFind.push(this.state.lastSelected);
 		}
-		for (let index = 0; index < data.length && !!keysToFind.length; index++) {
+		for (
+			let index = 0;
+			index < sortedData.length && !!keysToFind.length;
+			index++
+		) {
 			let foundKey = false;
-			const currentItemKey = data[index][rowKey];
+			const currentItemKey = sortedData[index][rowKey];
 			if (keysToFind.includes(currentItemKey)) {
 				keysToFind = keysToFind.filter(
 					(keyToFind) => keyToFind !== currentItemKey,
@@ -437,7 +442,7 @@ export class TableBase<T> extends React.Component<
 			) {
 				const itemIsChecked = checkedItemsMap.has(currentItemKey);
 				if (newIsChecked && !itemIsChecked) {
-					checkedItemsMap.set(currentItemKey, data[index]);
+					checkedItemsMap.set(currentItemKey, sortedData[index]);
 				} else if (!newIsChecked && itemIsChecked) {
 					checkedItemsMap.delete(currentItemKey);
 				}
