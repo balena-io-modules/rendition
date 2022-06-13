@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add shift-clicking to select multiple table rows
+      hash: 13fd3aae3d535e6c9006b5dbd8e93b951ee97747
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 28.1.0
+  title: "'Add shift-clicking to select multiple table rows'"
+  date: 2022-06-13T11:36:03.799Z
+- commits:
     - subject: Remove Box from Card component to avoid nesting Box and Flex components
       hash: 5cada288aaf9d1c2690e4492280544b07e11ed35
       body: ""
