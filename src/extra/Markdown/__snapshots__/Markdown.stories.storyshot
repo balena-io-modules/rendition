@@ -1167,14 +1167,14 @@ exports[`Storyshots Extra/Markdown With Decorators 1`] = `
 exports[`Storyshots Extra/Markdown With Mermaid 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 hExPlF sc-fXEqDS hyLvgQ"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
   >
     <div
-      class="sc-fKVqWL hOcWtv sc-bBHxTw bFNBkh sc-bxDdli debCz"
+      class="sc-ivTmOn dNJphr sc-cxabCf hcBkUF sc-kIZKsT geXume"
     >
       <div>
         <p
-          class="sc-fKVqWL hOcWtv sc-cxpSdN idTDTk"
+          class="sc-ivTmOn dNJphr sc-iIPllB eSdPCy"
         >
           Markdown with mermaid:
         </p>
@@ -1184,7 +1184,7 @@ exports[`Storyshots Extra/Markdown With Mermaid 1`] = `
           class="language-mermaid"
         >
           <div
-            class="sc-gKclnd exdBHI sc-iCfMLu jciJBO"
+            class="sc-gKXOVf QRSBg sc-iBkjds ipRjux"
           >
             <div>
               Unable to parse input: labelSvg.node(...).getBBox is not a function
