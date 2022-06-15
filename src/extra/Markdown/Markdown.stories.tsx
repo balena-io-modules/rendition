@@ -8,6 +8,7 @@ import { Markdown, MarkdownProps, defaultSanitizerOptions } from '.';
 import source, {
 	customizationSamples,
 	decoratorSample,
+	mermaidSample,
 } from '../../stories/assets/markdownSample';
 import { TableColumn } from '../../components/Table';
 
@@ -78,4 +79,8 @@ export const WithDecorators = createStory<MarkdownProps>(Template, {
 		},
 	],
 	children: decoratorSample,
+});
+
+export const WithMermaid = createStory<MarkdownProps>(Template, {
+	children: mermaidSample,
 });

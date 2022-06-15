@@ -98,6 +98,17 @@ describe('Markdown component', () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it('should display mermaid charts', () => {
+		const { container } = render(
+			<Provider>
+				<Markdown>
+					```mermaid graph TD; A--&gt;B; A--&gt;C; B--&gt;D; C--&gt;D; ```
+				</Markdown>
+			</Provider>,
+		);
+		expect(container).toMatchSnapshot();
+	});
+
 	suite.forEach((testCase) => {
 		it(testCase.name, () => {
 			const { container } = render(
