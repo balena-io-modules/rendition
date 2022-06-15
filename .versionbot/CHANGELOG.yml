@@ -1,4 +1,17 @@
 - commits:
+    - subject: Render mermaid with markdown
+      hash: c8613a3e7e4183b9c2153269a91624e6d1a751ee
+      body: >
+        Add ability to render mermaid charts with markdown. It's done via
+        opening code block with language=markdown.
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: karaxuna
+  version: 28.2.0
+  title: "'Render mermaid with markdown'"
+  date: 2022-06-15T15:48:44.556Z
+- commits:
     - subject: Fix shift clicking in a table with sorted columns
       hash: 8bff788b07c5600d79ad9566052ce3dd5c8d04fe
       body: ""
