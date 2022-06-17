@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add refScheme array support to allow getting multiple properties
+      hash: 9a7ac47a2ed3156ee59e96f2b04e0fb98b43b646
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 28.2.0
+  title: "'Add refScheme array support to allow getting multiple properties'"
+  date: 2022-06-17T12:53:58.322Z
+- commits:
     - subject: Fix shift clicking in a table with sorted columns
       hash: 8bff788b07c5600d79ad9566052ce3dd5c8d04fe
       body: ""
