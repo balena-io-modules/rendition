@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update AutoUI affectedEntries for actions when selected data updates
+      hash: 3ce701896fda1fc26c3efd65583ebd6172ed1681
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 28.2.0
+  title: "'Update AutoUI affectedEntries for actions when selected data updates '"
+  date: 2022-06-22T19:56:19.290Z
+- commits:
     - subject: Fix shift clicking in a table with sorted columns
       hash: 8bff788b07c5600d79ad9566052ce3dd5c8d04fe
       body: ""
