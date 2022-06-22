@@ -40,6 +40,7 @@ export interface AutoUIAction<T> {
 	type: 'create' | 'update' | 'delete';
 	renderer?: (props: {
 		schema: JSONSchema;
+		currentData?: T[];
 		affectedEntries?: T[];
 		onDone: () => void;
 	}) => React.ReactNode;

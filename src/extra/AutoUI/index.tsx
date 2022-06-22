@@ -401,6 +401,7 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 					{actionData?.action?.renderer &&
 						actionData.action.renderer({
 							schema: actionData.schema,
+							currentData: Array.isArray(data) ? data : undefined,
 							affectedEntries: actionData.affectedEntries,
 							onDone: () => setActionData(undefined),
 						})}
