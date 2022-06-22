@@ -1,4 +1,15 @@
 - commits:
+    - subject: "patch: Update dependency jsdom to v16 [SECURITY]"
+      hash: c89994ef8fa0437666fd0ac9bc608c988fc54c3f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+  version: 28.2.1
+  title: "'patch: Update dependency jsdom to v16 [SECURITY]'"
+  date: 2022-06-22T22:30:13.418Z
+- commits:
     - subject: Update AutoUI affectedEntries for actions when selected data updates
       hash: 3ce701896fda1fc26c3efd65583ebd6172ed1681
       body: ""
