@@ -125,13 +125,23 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 
 	const [filters, setFilters] = React.useState<JSONSchema[]>([]);
 	const [views, setViews] = React.useState<FiltersView[]>([]);
-	const [selected, setSelected] = React.useState<T[]>([]);
+	const [selected, $setSelected] = React.useState<T[]>([]);
 	const [isBusyMessage, setIsBusyMessage] = React.useState<
 		string | undefined
 	>();
 	const [actionData, setActionData] = React.useState<
 		ActionData<T> | undefined
 	>();
+
+	const setSelected = React.useCallback(
+		(items: T[]) => {
+			$setSelected(items);
+			if (!!actionData) {
+				setActionData({ ...actionData, affectedEntries: items });
+			}
+		},
+		[$setSelected, setActionData, actionData],
+	);
 
 	const showFilters = React.useMemo(
 		() => Array.isArray(data) && !!(data?.length && data.length > 0),
