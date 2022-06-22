@@ -1,4 +1,17 @@
 - commits:
+    - subject: "AutoUIAction: Provide the currentData property to the renderer function"
+      hash: 606477ee0dc5d47afb93b6c911b4bc1fc8dabf12
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 28.2.0
+  title: "'AutoUIAction: Provide the currentData property to the renderer function'"
+  date: 2022-06-22T11:19:43.372Z
+- commits:
     - subject: Fix shift clicking in a table with sorted columns
       hash: 8bff788b07c5600d79ad9566052ce3dd5c8d04fe
       body: ""
