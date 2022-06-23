@@ -71,6 +71,7 @@ export interface DownloadOptionsBase {
 	releaseId?: number;
 	deviceType: string;
 	provisioningKeyName?: string;
+	provisioningKeyExpiryDate?: string;
 	downloadConfigOnly?: boolean;
 	version: string;
 	developmentMode?: boolean;
