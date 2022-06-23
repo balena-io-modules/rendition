@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update downloadOptions to include provisioning key expiry date
+      hash: 089c0ab8f47134e51927187d7995edbbd85adb9f
+      body: ""
+      footer:
+        Change-Type: minor
+        change-type: minor
+        Signed-off-by: Nitish Agarwal <1592163+nitishagar@users.noreply.github.com>
+        signed-off-by: Nitish Agarwal <1592163+nitishagar@users.noreply.github.com>
+      author: Nitish Agarwal
+  version: 28.3.0
+  title: "'DownloadImageModal: Add the provisioning key expiry date in the
+    advanced options'"
+  date: 2022-06-23T08:48:36.851Z
+- commits:
     - subject: "patch: Update dependency jsdom to v16 [SECURITY]"
       hash: c89994ef8fa0437666fd0ac9bc608c988fc54c3f
       body: ""
