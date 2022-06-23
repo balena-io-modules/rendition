@@ -33,10 +33,10 @@ export const Tags = <T extends AutoUIBaseResource<T>>({
 				return;
 			}
 
-			setIsBusyMessage(t(`loading.updating_release_tags`));
+			setIsBusyMessage(t(`loading.updating_tags`));
 			notifications.addNotification({
 				id: 'change-tags-loading',
-				content: t(`loading.updating_release_tags`),
+				content: t(`loading.updating_tags`),
 			});
 
 			try {
