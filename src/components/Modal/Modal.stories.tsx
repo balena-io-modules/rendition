@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
 import { createTemplate, createStory } from '../../stories/utils';
-import { Box, Button, Heading } from '../../';
+import { Box, Button, Heading, Txt } from '../../';
 import { Modal, ModalProps } from '.';
 
 import PokeDex from '../../stories/assets/pokedex';
@@ -86,8 +86,14 @@ export const NoCancel = createStory<ModalProps>(Template, {
 });
 
 export const WithTitleDetails = createStory<ModalProps>(Template, {
-	title: 'Modal title',
-	titleDetails: 'Optional details',
+	title: (
+		<>
+			Modal title
+			<Txt mt={3} fontSize="initial">
+				Optional details
+			</Txt>
+		</>
+	),
 	children: (
 		<>
 			<p>Lorem ipsum dolor sit amet</p>
@@ -96,8 +102,14 @@ export const WithTitleDetails = createStory<ModalProps>(Template, {
 });
 
 export const WithCustomWidth = createStory<ModalProps>(Template, {
-	title: 'Modal title',
-	titleDetails: 'Optional details',
+	title: (
+		<>
+			Modal title
+			<Txt mt={3} fontSize="initial">
+				Optional details
+			</Txt>
+		</>
+	),
 	width: ['auto', 500, 1000],
 	children: (
 		<>
@@ -107,7 +119,7 @@ export const WithCustomWidth = createStory<ModalProps>(Template, {
 });
 
 export const WithMultielementTitle = createStory<ModalProps>(Template, {
-	titleElement: (
+	title: (
 		<React.Fragment>
 			<Heading.h3>Heading</Heading.h3>
 			<Button mt={3} primary>

@@ -3,19 +3,19 @@
 exports[`Storyshots Core/Table Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kngDgl iKIurY kdKlCZ"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-afnQL iKIurY eFWjlE"
     >
       <div
         class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
       >
         <div
-          class="sc-iqGgem lbaJJA"
+          class="sc-iFwKgL cqyvps"
         >
           <div
-            class="sc-eVQfli lbmlHZ sc-dkSuNL bzbeQN"
+            class="sc-iqGgem lyCqM sc-cwpsFg cwqlwQ"
           >
             <div
               data-display="table-head"
@@ -506,19 +506,19 @@ exports[`Storyshots Core/Table Default 1`] = `
 exports[`Storyshots Core/Table Sorted 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kngDgl iKIurY kdKlCZ"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-afnQL iKIurY eFWjlE"
     >
       <div
         class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
       >
         <div
-          class="sc-iqGgem lbaJJA"
+          class="sc-iFwKgL cqyvps"
         >
           <div
-            class="sc-eVQfli lbmlHZ sc-dkSuNL bzbeQN"
+            class="sc-iqGgem lyCqM sc-cwpsFg cwqlwQ"
           >
             <div
               data-display="table-head"
@@ -1009,19 +1009,19 @@ exports[`Storyshots Core/Table Sorted 1`] = `
 exports[`Storyshots Core/Table With Anchor Rows 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kngDgl iKIurY kdKlCZ"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-afnQL iKIurY eFWjlE"
     >
       <div
         class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
       >
         <div
-          class="sc-iqGgem lbaJJA"
+          class="sc-iFwKgL cqyvps"
         >
           <div
-            class="sc-eVQfli cdbYRb sc-dkSuNL bzbeQN"
+            class="sc-iqGgem ilPLQu sc-cwpsFg cwqlwQ"
           >
             <div
               data-display="table-head"
@@ -1600,19 +1600,19 @@ exports[`Storyshots Core/Table With Anchor Rows 1`] = `
 exports[`Storyshots Core/Table With Checkboxes 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kngDgl iKIurY kdKlCZ"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-afnQL iKIurY eFWjlE"
     >
       <div
         class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
       >
         <div
-          class="sc-iqGgem lbaJJA"
+          class="sc-iFwKgL cqyvps"
         >
           <div
-            class="sc-eVQfli ievGIH sc-dkSuNL lomGJk"
+            class="sc-iqGgem kdhdEq sc-cwpsFg fWCnRp"
           >
             <div
               data-display="table-head"
@@ -1621,7 +1621,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-display="table-row"
               >
                 <div
-                  class="sc-iFwKgL bfGZOr"
+                  class="sc-eXBvqI jHeTGy"
                   data-display="table-cell"
                 >
                   <div
@@ -1778,7 +1778,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="true"
               >
                 <div
-                  class="sc-iFwKgL bfGZOr"
+                  class="sc-eXBvqI jHeTGy"
                   data-display="table-cell"
                 >
                   <div
@@ -1845,7 +1845,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="true"
               >
                 <div
-                  class="sc-iFwKgL bfGZOr"
+                  class="sc-eXBvqI jHeTGy"
                   data-display="table-cell"
                 >
                   <div
@@ -1912,7 +1912,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="true"
               >
                 <div
-                  class="sc-iFwKgL bfGZOr"
+                  class="sc-eXBvqI jHeTGy"
                   data-display="table-cell"
                 >
                   <div
@@ -1979,7 +1979,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-iFwKgL bfGZOr"
+                  class="sc-eXBvqI jHeTGy"
                   data-display="table-cell"
                 >
                   <div
@@ -2034,7 +2034,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-iFwKgL bfGZOr"
+                  class="sc-eXBvqI jHeTGy"
                   data-display="table-cell"
                 >
                   <div
@@ -2097,7 +2097,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-iFwKgL bfGZOr"
+                  class="sc-eXBvqI jHeTGy"
                   data-display="table-cell"
                 >
                   <div
@@ -2160,7 +2160,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-iFwKgL bfGZOr"
+                  class="sc-eXBvqI jHeTGy"
                   data-display="table-cell"
                 >
                   <div
@@ -2223,7 +2223,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-iFwKgL bfGZOr"
+                  class="sc-eXBvqI jHeTGy"
                   data-display="table-cell"
                 >
                   <div
@@ -2278,7 +2278,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-iFwKgL bfGZOr"
+                  class="sc-eXBvqI jHeTGy"
                   data-display="table-cell"
                 >
                   <div
@@ -2333,7 +2333,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-iFwKgL bfGZOr"
+                  class="sc-eXBvqI jHeTGy"
                   data-display="table-cell"
                 >
                   <div
@@ -2388,7 +2388,7 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
                 data-highlight="false"
               >
                 <div
-                  class="sc-iFwKgL bfGZOr"
+                  class="sc-eXBvqI jHeTGy"
                   data-display="table-cell"
                 >
                   <div
@@ -2449,19 +2449,19 @@ exports[`Storyshots Core/Table With Checkboxes 1`] = `
 exports[`Storyshots Core/Table With Conditional Row Classes 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kngDgl iKIurY kdKlCZ"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-afnQL iKIurY eFWjlE"
     >
       <div
         class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
       >
         <div
-          class="sc-iqGgem lbaJJA"
+          class="sc-iFwKgL cqyvps"
         >
           <div
-            class="sc-eVQfli lbmlHZ sc-dkSuNL bzbeQN"
+            class="sc-iqGgem lyCqM sc-cwpsFg cwqlwQ"
           >
             <div
               data-display="table-head"
@@ -2952,19 +2952,19 @@ exports[`Storyshots Core/Table With Conditional Row Classes 1`] = `
 exports[`Storyshots Core/Table With Custom Columns 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kngDgl iKIurY kdKlCZ"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-afnQL iKIurY eFWjlE"
     >
       <div
         class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
       >
         <div
-          class="sc-iqGgem lbaJJA"
+          class="sc-iFwKgL cqyvps"
         >
           <div
-            class="sc-eVQfli lbmlHZ sc-dkSuNL htuKgJ"
+            class="sc-iqGgem lyCqM sc-cwpsFg bNFRXc"
           >
             <div
               data-display="table-head"
@@ -3448,13 +3448,13 @@ exports[`Storyshots Core/Table With Custom Columns 1`] = `
         </div>
       </div>
       <div
-        class="sc-cwpsFg iJEoTV"
+        class="sc-kngDgl JIDoa"
       >
         <div
-          class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-fXynhf ifKwFV sc-jIAOiI bpUFTZ"
+          class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-GVOUr bFSVuL sc-TRNrF kulTqM"
         >
           <button
-            class="StyledButton-sc-323bzc-0 iFDLDn sc-breuTD sc-bjUoiL Krizp dANmhT sc-dIouRR kAoSkv sc-TRNrF eEcMpL"
+            class="StyledButton-sc-323bzc-0 iFDLDn sc-breuTD sc-bjUoiL Krizp dANmhT sc-dIouRR kAoSkv sc-dwLEzm yrxfS"
             type="button"
           >
             <div
@@ -3465,7 +3465,7 @@ exports[`Storyshots Core/Table With Custom Columns 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-gear sc-kTvvXX cGjQKm"
+                  class="svg-inline--fa fa-gear sc-eVQfli iSUjrE"
                   data-icon="gear"
                   data-prefix="fas"
                   focusable="false"
@@ -3506,10 +3506,10 @@ exports[`Storyshots Core/Table With Custom Columns 1`] = `
 exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kngDgl iKIurY kdKlCZ"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-afnQL iKIurY eFWjlE"
     >
       <div
         class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
@@ -3584,10 +3584,10 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
           </div>
         </div>
         <div
-          class="sc-iqGgem lbaJJA"
+          class="sc-iFwKgL cqyvps"
         >
           <div
-            class="sc-eVQfli lbmlHZ sc-dkSuNL bzbeQN"
+            class="sc-iqGgem lyCqM sc-cwpsFg cwqlwQ"
           >
             <div
               data-display="table-head"
@@ -3883,19 +3883,19 @@ exports[`Storyshots Core/Table With Fuzzy Pager 1`] = `
 exports[`Storyshots Core/Table With Highlighted Rows 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kngDgl iKIurY kdKlCZ"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-afnQL iKIurY eFWjlE"
     >
       <div
         class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
       >
         <div
-          class="sc-iqGgem lbaJJA"
+          class="sc-iFwKgL cqyvps"
         >
           <div
-            class="sc-eVQfli lbmlHZ sc-dkSuNL bzbeQN"
+            class="sc-iqGgem lyCqM sc-cwpsFg cwqlwQ"
           >
             <div
               data-display="table-head"
@@ -4386,10 +4386,10 @@ exports[`Storyshots Core/Table With Highlighted Rows 1`] = `
 exports[`Storyshots Core/Table With Pager 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kngDgl iKIurY kdKlCZ"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-afnQL iKIurY eFWjlE"
     >
       <div
         class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
@@ -4464,10 +4464,10 @@ exports[`Storyshots Core/Table With Pager 1`] = `
           </div>
         </div>
         <div
-          class="sc-iqGgem lbaJJA"
+          class="sc-iFwKgL cqyvps"
         >
           <div
-            class="sc-eVQfli lbmlHZ sc-dkSuNL bzbeQN"
+            class="sc-iqGgem lyCqM sc-cwpsFg cwqlwQ"
           >
             <div
               data-display="table-head"
@@ -4763,19 +4763,19 @@ exports[`Storyshots Core/Table With Pager 1`] = `
 exports[`Storyshots Core/Table With Prefix 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kngDgl iKIurY kdKlCZ"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-afnQL iKIurY eFWjlE"
     >
       <div
         class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
       >
         <div
-          class="sc-iqGgem lbaJJA"
+          class="sc-iFwKgL cqyvps"
         >
           <div
-            class="sc-eVQfli lbmlHZ sc-dkSuNL bzbeQN"
+            class="sc-iqGgem lyCqM sc-cwpsFg cwqlwQ"
           >
             <div
               data-display="table-head"
@@ -5288,19 +5288,19 @@ exports[`Storyshots Core/Table With Prefix 1`] = `
 exports[`Storyshots Core/Table With Row Click 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kngDgl iKIurY kdKlCZ"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-afnQL iKIurY eFWjlE"
     >
       <div
         class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
       >
         <div
-          class="sc-iqGgem lbaJJA"
+          class="sc-iFwKgL cqyvps"
         >
           <div
-            class="sc-eVQfli cdbYRb sc-dkSuNL bzbeQN"
+            class="sc-iqGgem ilPLQu sc-cwpsFg cwqlwQ"
           >
             <div
               data-display="table-head"

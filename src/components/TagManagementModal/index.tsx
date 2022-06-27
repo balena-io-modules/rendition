@@ -411,7 +411,7 @@ export const TagManagementModal = <T extends TaggedResource>({
 	return (
 		<Modal
 			width={1000}
-			titleElement={
+			title={
 				<div>
 					<Heading.h3 mt={0} mb={10}>
 						{items.length > 1 && <span>{t('labels.shared')} </span>}
