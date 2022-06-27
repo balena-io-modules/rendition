@@ -3,7 +3,7 @@
 exports[`Storyshots Core/Flex Column Direction 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
       class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK eTSHtc"
@@ -28,7 +28,7 @@ exports[`Storyshots Core/Flex Column Direction 1`] = `
 exports[`Storyshots Core/Flex Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
       class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY"
@@ -53,7 +53,7 @@ exports[`Storyshots Core/Flex Default 1`] = `
 exports[`Storyshots Core/Flex Flex On Children 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
       class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK cINHHz"
@@ -86,7 +86,7 @@ exports[`Storyshots Core/Flex Flex On Children 1`] = `
 exports[`Storyshots Core/Flex Justified 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
       class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK eccixI"
@@ -111,7 +111,7 @@ exports[`Storyshots Core/Flex Justified 1`] = `
 exports[`Storyshots Core/Flex Wrap 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
       class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK cINHHz"

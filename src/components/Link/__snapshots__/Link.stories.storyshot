@@ -3,10 +3,10 @@
 exports[`Storyshots Core/Link Blank Target 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <a
-      class="sc-eKBdFk eDgBSD sc-bUbCnL aUvHI"
+      class="sc-hlnMnd cpbYOv sc-eKBdFk cTggPd"
       color="primary.main"
       href="https://balena.io"
       rel="noopener"
@@ -21,10 +21,10 @@ exports[`Storyshots Core/Link Blank Target 1`] = `
 exports[`Storyshots Core/Link Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <a
-      class="sc-eKBdFk eDgBSD sc-bUbCnL aUvHI"
+      class="sc-hlnMnd cpbYOv sc-eKBdFk cTggPd"
       color="primary.main"
       href="#"
     >
@@ -37,10 +37,10 @@ exports[`Storyshots Core/Link Default 1`] = `
 exports[`Storyshots Core/Link Disabled 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <a
-      class="sc-eKBdFk hlANuf sc-bUbCnL aUvHI"
+      class="sc-hlnMnd kwlaPz sc-eKBdFk cTggPd"
       color="primary.main"
       disabled=""
     />

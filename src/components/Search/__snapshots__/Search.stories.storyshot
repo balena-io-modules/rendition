@@ -3,7 +3,7 @@
 exports[`Storyshots Core/Search Dark 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
       class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kgUAyh iKIurY kCkpfb sc-hTtwUo eWqTFt"
@@ -56,7 +56,7 @@ exports[`Storyshots Core/Search Dark 1`] = `
 exports[`Storyshots Core/Search Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
       class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kgUAyh iKIurY kCkpfb sc-hTtwUo eWqTFt"
@@ -108,7 +108,7 @@ exports[`Storyshots Core/Search Default 1`] = `
 exports[`Storyshots Core/Search Disabled 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
       class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kgUAyh iKIurY kCkpfb sc-hTtwUo eWqTFt"
@@ -161,7 +161,7 @@ exports[`Storyshots Core/Search Disabled 1`] = `
 exports[`Storyshots Core/Search With Placeholder 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
       class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kgUAyh iKIurY kCkpfb sc-hTtwUo eWqTFt"

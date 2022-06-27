@@ -3,7 +3,7 @@
 exports[`Storyshots Core/Card Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
       style="width: 400px; height: 400px;"
@@ -27,7 +27,7 @@ exports[`Storyshots Core/Card Default 1`] = `
 exports[`Storyshots Core/Card Small 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
       style="width: 400px; height: 400px;"
@@ -51,7 +51,7 @@ exports[`Storyshots Core/Card Small 1`] = `
 exports[`Storyshots Core/Card With Header 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
       style="width: 400px; height: 400px;"
@@ -93,7 +93,7 @@ exports[`Storyshots Core/Card With Header 1`] = `
 exports[`Storyshots Core/Card With Rows 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
       style="width: 400px; height: 400px;"
@@ -110,7 +110,7 @@ exports[`Storyshots Core/Card With Rows 1`] = `
             Card with Button
           </h5>
           <a
-            class="sc-eKBdFk eDgBSD sc-bUbCnL aUvHI"
+            class="sc-hlnMnd cpbYOv sc-eKBdFk cTggPd"
             color="primary.main"
             href="https://balena.io"
           >
@@ -134,7 +134,7 @@ exports[`Storyshots Core/Card With Rows 1`] = `
             class="sc-himrzO dDBpFK sc-cCsOjp lhBdCS"
           />
           <a
-            class="sc-eKBdFk eDgBSD sc-bUbCnL aUvHI"
+            class="sc-hlnMnd cpbYOv sc-eKBdFk cTggPd"
             color="primary.main"
             href="www.balena.io"
           >

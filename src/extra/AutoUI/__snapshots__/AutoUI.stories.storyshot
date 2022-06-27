@@ -3,7 +3,7 @@
 exports[`Storyshots Extra/AutoUI Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <h5
       class="sc-ciZhAO iJFBxw sc-cTQhss dOQXsM"
@@ -20,10 +20,10 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
       class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux sc-hHLeRK eTSHtc"
     >
       <div
-        class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux sc-hHLeRK sc-jmNpzm iKIurY iITdfN sc-caXVBt efHDjS"
+        class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux sc-hHLeRK sc-lkwKjF iKIurY khcTuI sc-hsOonA fPwlCE"
       >
         <div
-          class="sc-hsOonA fInNYD"
+          class="sc-dUWWNf iOmmoa"
         >
           <div
             class="sc-gKXOVf QRSBg sc-iBkjds eRknfj sc-hHLeRK eTSHtc"
@@ -32,20 +32,20 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
               class="sc-gKXOVf QRSBg sc-iBkjds diGonb"
             >
               <div
-                class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-fSUSjI klWzuj bSMjiJ"
+                class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-cuqtlR klWzuj eXTlRI"
               >
                 <div
                   class="sc-gKXOVf klumOZ sc-iBkjds hNqnWQ"
                   order="-1,-1,-1,0"
                 >
                   <div
-                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-yeoIj gpSmxc"
+                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-kYWVYA ikOJWL"
                   >
                     <div
                       class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK eccixI"
                     >
                       <div
-                        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-kYWVYA jBjBTq"
+                        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hAsxaJ cmyIYE"
                       >
                         <div
                           class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kgUAyh iKIurY kCkpfb sc-hTtwUo eWqTFt"
@@ -101,10 +101,10 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                         </div>
                       </button>
                       <div
-                        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-fXynhf ifKwFV sc-jIAOiI dwhOCm"
+                        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-GVOUr bFSVuL sc-TRNrF kXUaZr"
                       >
                         <button
-                          class="StyledButton-sc-323bzc-0 eBMyPP sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR kAoSkv sc-TRNrF eEcMpL"
+                          class="StyledButton-sc-323bzc-0 eBMyPP sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR kAoSkv sc-dwLEzm yrxfS"
                           type="button"
                         >
                           <div
@@ -161,16 +161,16 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
               </div>
             </div>
             <div
-              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kngDgl iKIurY kdKlCZ"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-afnQL iKIurY eFWjlE"
             >
               <div
                 class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
               >
                 <div
-                  class="sc-iqGgem lbaJJA"
+                  class="sc-iFwKgL cqyvps"
                 >
                   <div
-                    class="sc-eVQfli lbmlHZ sc-dkSuNL htuKgJ"
+                    class="sc-iqGgem lyCqM sc-cwpsFg bNFRXc"
                   >
                     <div
                       data-display="table-head"
@@ -608,13 +608,13 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                 </div>
               </div>
               <div
-                class="sc-cwpsFg dJofXK"
+                class="sc-kngDgl QwFJh"
               >
                 <div
-                  class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-fXynhf ifKwFV sc-jIAOiI bpUFTZ"
+                  class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-GVOUr bFSVuL sc-TRNrF kulTqM"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 iFDLDn sc-breuTD sc-bjUoiL Krizp dANmhT sc-dIouRR kAoSkv sc-TRNrF eEcMpL"
+                    class="StyledButton-sc-323bzc-0 iFDLDn sc-breuTD sc-bjUoiL Krizp dANmhT sc-dIouRR kAoSkv sc-dwLEzm yrxfS"
                     type="button"
                   >
                     <div
@@ -625,7 +625,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                       >
                         <svg
                           aria-hidden="true"
-                          class="svg-inline--fa fa-gear sc-kTvvXX cGjQKm"
+                          class="svg-inline--fa fa-gear sc-eVQfli iSUjrE"
                           data-icon="gear"
                           data-prefix="fas"
                           focusable="false"

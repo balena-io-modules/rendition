@@ -219,7 +219,7 @@ export const UnstableTempDownloadImageModal = ({
 	return (
 		<FooterlessModal
 			width={1400}
-			titleElement={
+			title={
 				// fixed height prevents jumping due to the logo size changing.
 				<Flex style={{ height: 32 }} alignItems="center">
 					<DeviceLogo small={false} src={logoSrc} title={defaultDisplayName} />

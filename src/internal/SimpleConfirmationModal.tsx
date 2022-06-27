@@ -17,7 +17,7 @@ export const SimpleConfirmationModal = (
 	const { t } = useTranslation();
 	return (
 		<Modal
-			titleElement={props.title || t('actions_messages.confirmation')}
+			title={props.title || t('actions_messages.confirmation')}
 			cancel={() => props.onClose(false)}
 			done={() => props.onClose(true)}
 			primaryButtonProps={props.primaryButtonProps}
