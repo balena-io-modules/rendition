@@ -1,4 +1,17 @@
 - commits:
+    - subject: Export CaretButton component
+      hash: c8914e21544b76c14668630a527309eecd781ce9
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 28.4.0
+  title: "'Export CaretButton component'"
+  date: 2022-06-24T19:14:46.300Z
+- commits:
     - subject: Update downloadOptions to include provisioning key expiry date
       hash: 089c0ab8f47134e51927187d7995edbbd85adb9f
       body: ""
