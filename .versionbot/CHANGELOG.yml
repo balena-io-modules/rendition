@@ -1,4 +1,18 @@
 - commits:
+    - subject: Fix notification message always saying `Updating release tags...` when
+        updating tags
+      hash: edbc5335abff917ebc34e24ab831cb2b81b18cce
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 28.4.1
+  title: "'Fix notification message always saying  when updating tags'"
+  date: 2022-06-27T15:47:41.910Z
+- commits:
     - subject: Export CaretButton component
       hash: c8914e21544b76c14668630a527309eecd781ce9
       body: ""
