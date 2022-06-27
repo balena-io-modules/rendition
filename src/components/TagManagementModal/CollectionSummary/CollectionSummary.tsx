@@ -5,8 +5,7 @@ import { Theme } from '../../../index';
 import { Coloring } from '../../../common-types';
 import { Txt } from '../../Txt';
 import { getThemeColoring } from '../../../utils';
-
-import CaretButton from './CaretButton';
+import { CaretButton } from './CaretButton';
 
 const Container = styled.div`
 	font-size: 16px;

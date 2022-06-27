@@ -110,6 +110,7 @@ export {
 	TagManagementModalProps,
 } from './components/TagManagementModal';
 export { CollectionSummary } from './components/TagManagementModal/CollectionSummary/CollectionSummary';
+export { CaretButton } from './components/TagManagementModal/CollectionSummary/CaretButton';
 export { Avatar, AvatarProps } from './components/Avatar';
 export { Box, BoxProps } from './components/Box';
 export { Breadcrumbs, BreadcrumbsProps, Crumb } from './components/Breadcrumbs';

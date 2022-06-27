@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import styled from 'styled-components';
 
-const CaretButton = styled.button`
+const CaretButtonBase = styled.button`
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -20,7 +20,7 @@ const CaretIconContainer = styled.span`
 	font-size: 14px;
 `;
 
-export default ({
+export const CaretButton = ({
 	isExpanded,
 	onClick,
 	children,
@@ -31,7 +31,7 @@ export default ({
 	children?: React.ReactNode;
 	className?: string;
 }) => (
-	<CaretButton className={className} onClick={onClick}>
+	<CaretButtonBase className={className} onClick={onClick}>
 		<span>{children}</span>
 		<CaretIconContainer style={{ marginLeft: children ? '4px' : 0 }}>
 			{isExpanded ? (
@@ -40,5 +40,5 @@ export default ({
 				<FontAwesomeIcon icon={faCaretDown} />
 			)}
 		</CaretIconContainer>
-	</CaretButton>
+	</CaretButtonBase>
 );
