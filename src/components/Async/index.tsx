@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 // Load given React component asynchronously, needed when implementing WASM
 // This component can be replaced with React.lazy once we upgrade to React v16.6
@@ -18,7 +18,10 @@ export const Async = (importComponent: () => any) => {
 		}
 
 		public render() {
-			const Component = this.state.component as React.SFC<any> | null;
+			const Component = this.state.component as React.ComponentFactory<
+				any,
+				any
+			> | null;
 			return Component ? <Component {...this.props} /> : null;
 		}
 	};

@@ -36,12 +36,12 @@ interface ObjectFieldProps {
 	title: string;
 	description: string;
 	properties: Properties[];
-	TitleField: React.StatelessComponent<{
+	TitleField: React.FunctionComponent<{
 		id: string;
 		title: string;
 		required: boolean;
 	}>;
-	DescriptionField: React.StatelessComponent<{
+	DescriptionField: React.FunctionComponent<{
 		id: string;
 		description: string | React.ReactElement;
 	}>;

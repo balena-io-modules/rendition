@@ -1,7 +1,7 @@
 import debounce from 'lodash/debounce';
 import * as React from 'react';
 import { BreakpointContext } from '../../contexts/BreakpointContext';
-export interface BreakpointProviderProps {
+export interface BreakpointProviderProps extends React.PropsWithChildren<{}> {
 	breakpoints: number[];
 	onBreakpointChange?: (breakpoint: number) => void;
 }

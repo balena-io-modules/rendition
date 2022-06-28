@@ -82,9 +82,12 @@ export function withConfirm<T extends {}>(
 				setClickEvent(null);
 			}, []);
 
-			const handleBaseClick = React.useCallback((e) => {
-				setClickEvent(e);
-			}, []);
+			const handleBaseClick = React.useCallback(
+				(e: React.SyntheticEvent<T, Event>) => {
+					setClickEvent(e);
+				},
+				[],
+			);
 
 			const confirmOptions = React.useMemo(() => {
 				return typeof confirmation === 'string'

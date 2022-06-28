@@ -192,6 +192,10 @@ export default css`
 		border-radius: 0;
 		margin-bottom: 0;
 	}
+	.rnc__notification-container--bottom-full .rnc__notification,
+	.rnc__notification-container--top-full .rnc__notification {
+		width: 100% !important;
+	}
 	.rnc__notification-timer {
 		margin-top: 10px;
 		width: 100%;

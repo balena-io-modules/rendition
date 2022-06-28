@@ -6,7 +6,7 @@ interface ErrorBoundaryState {
 	error: any;
 }
 
-interface ErrorBoundaryProps {
+interface ErrorBoundaryProps extends React.ComponentProps<any> {
 	getErrorDisplay?: (error: any) => JSX.Element;
 }
 
