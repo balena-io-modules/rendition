@@ -5,6 +5,7 @@ import { css } from 'styled-components';
 
 export default css`
 	.xterm {
+		cursor: text;
 		position: relative;
 		user-select: none;
 		-ms-user-select: none;
@@ -88,10 +89,6 @@ export default css`
 		line-height: normal;
 	}
 
-	.xterm {
-		cursor: text;
-	}
-
 	.xterm.enable-mouse-events {
 		cursor: default;
 	}
@@ -139,5 +136,18 @@ export default css`
 	.xterm-screen .xterm-decoration-container .xterm-decoration {
 		z-index: 6;
 		position: absolute;
+	}
+
+	.xterm-decoration-overview-ruler {
+		z-index: 7;
+		position: absolute;
+		top: 0;
+		right: 0;
+		pointer-events: none;
+	}
+
+	.xterm-decoration-top {
+		z-index: 2;
+		position: relative;
 	}
 `;
