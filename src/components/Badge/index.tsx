@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import theme from '../../theme';
 import asRendition from '../../asRendition';
 import { RenditionSystemProps, Theme } from '../../common-types';
 import { getLegibleTextColor } from '../../utils';
@@ -30,6 +31,7 @@ const shades = [
 	'#CAFECD',
 	'#D7E46C',
 	'#F7D8BA',
+	theme.colors.primary.main,
 ];
 
 const StyledBadge = styled(Txt.span)`
@@ -59,8 +61,8 @@ const BaseBadge = ({
 			px="12px"
 			fontSize={1}
 			bg={shadeHex}
-			{...otherProps}
 			color={getLegibleTextColor(shadeHex)}
+			{...otherProps}
 		>
 			{children}
 		</StyledBadge>
