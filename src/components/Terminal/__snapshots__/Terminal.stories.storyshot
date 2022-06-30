@@ -9,7 +9,7 @@ exports[`Storyshots Core/Terminal Default 1`] = `
       style="height: 500px;"
     >
       <div
-        class="sc-gKXOVf ckXSHX sc-iBkjds eRknfj sc-hHLeRK sc-gJwTLC iKIurY hOTRQY"
+        class="sc-gKXOVf ckXSHX sc-iBkjds eRknfj sc-hHLeRK sc-gJwTLC iKIurY bpbARM"
       >
         <div
           class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux sc-hHLeRK sc-fxvKuh eTSHtc fGztam"
@@ -29,7 +29,7 @@ exports[`Storyshots Core/Terminal Noninteractive Terminal 1`] = `
       style="height: 500px;"
     >
       <div
-        class="sc-gKXOVf ckXSHX sc-iBkjds eRknfj sc-hHLeRK sc-gJwTLC iKIurY hOTRQY"
+        class="sc-gKXOVf ckXSHX sc-iBkjds eRknfj sc-hHLeRK sc-gJwTLC iKIurY bpbARM"
       >
         <div
           class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux sc-hHLeRK sc-fxvKuh eTSHtc fGztam"
