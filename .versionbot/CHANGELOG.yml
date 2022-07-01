@@ -1,4 +1,16 @@
 - commits:
+    - subject: "patch: Update dependency mermaid to ^8.14.0"
+      hash: 5c10e18b4e6b6ed0b9d33341f2daaf7ff6584b5f
+      body: |
+        Update mermaid from 8.13.9 to 8.14.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+  version: 28.6.1
+  title: "'patch: Update dependency mermaid to ^8.14.0'"
+  date: 2022-07-01T17:21:41.688Z
+- commits:
     - subject: Add optional `badge` property to Sidebar MenuItem
       hash: d40dba2a26e5f3c468c00d2ca672c5e4e0fd5d6d
       body: ""
