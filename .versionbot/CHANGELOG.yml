@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add optional `badge` property to Sidebar MenuItem
+      hash: d40dba2a26e5f3c468c00d2ca672c5e4e0fd5d6d
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 28.6.0
+  title: "'Add optional  property to Sidebar MenuItem'"
+  date: 2022-07-01T12:55:03.889Z
+- commits:
     - subject: Add theme primary color main to Badge shades
       hash: 6cf2ebcc8de3aa143b2beac544ea93e00209f9db
       body: ""
