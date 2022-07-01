@@ -17,19 +17,27 @@ const parseFilter = (filter: JSONSchema | null | undefined) => {
 };
 
 const FilterDescription = ({ filter, ...props }: FilterDescriptionProps) => {
-	const tagProps = filter.anyOf
-		? filter.anyOf.map((filterFragment: JSONSchema, i) => {
-				const parsedFilter = parseFilter(filterFragment);
-				if (typeof parsedFilter.value === 'boolean') {
-					parsedFilter.value = JSON.stringify(parsedFilter.value);
-				}
-				if (i > 0) {
-					parsedFilter.prefix = 'or';
-				}
+	const tagProps = filter.anyOf?.map((filterFragment: JSONSchema, i) => {
+		const parsedFilter = parseFilter(filterFragment);
+		parsedFilter.name = parsedFilter.title;
+		parsedFilter.operator = parsedFilter.operator?.label?.replace(
+			`${parsedFilter.title} `,
+			'',
+		);
+		if (typeof parsedFilter.value === 'boolean') {
+			parsedFilter.value = JSON.stringify(parsedFilter.value);
+		}
+		if (typeof parsedFilter.value === 'object') {
+			parsedFilter.value = Object.entries(parsedFilter.value)
+				.map(([key, value]) => `${key}: ${value}`)
+				.join(', ');
+		}
+		if (i > 0) {
+			parsedFilter.prefix = 'or';
+		}
 
-				return parsedFilter;
-		  })
-		: [parseFilter(filter)];
+		return parsedFilter;
+	}) || [parseFilter(filter)];
 	return <Tag mt={2} multiple={tagProps} {...props} />;
 };
 

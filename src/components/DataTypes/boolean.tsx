@@ -1,83 +1,46 @@
-import type { JSONSchema7 as JSONSchema } from 'json-schema';
-import { randomString } from '../../utils';
-import { FilterSignature } from '../Filters';
-import { getJsonDescription } from './utils';
+import type { CreateFilter } from './utils';
 
-export const operators = {
-	is: {
-		getLabel: (_s: JSONSchema) => 'is',
-	},
-};
+export const operators = () => ({
+	is: 'is',
+});
 
-type OperatorSlug = keyof typeof operators;
+export type OperatorSlug = keyof ReturnType<typeof operators>;
 
-interface BooleanFilter extends JSONSchema {
-	title: OperatorSlug;
-	properties?: {
-		[k: string]: { const: boolean };
-	};
-}
-
-export const decodeFilter = (filter: BooleanFilter): FilterSignature | null => {
-	if (!filter.properties) {
-		return null;
-	}
-
-	const keys = Object.keys(filter.properties);
-	if (!keys.length) {
-		return null;
-	}
-
-	const field = keys[0];
-	const operator = filter.title;
-	let value: boolean;
-
-	if (operator === 'is') {
-		value = filter.properties[field].const;
-	} else {
-		return null;
-	}
-	return {
-		field,
-		operator,
-		value,
-	};
-};
-
-export const createFilter = (
-	field: string,
-	operator: OperatorSlug,
-	value: any,
-	schema: JSONSchema,
-): BooleanFilter => {
-	const { title } = schema;
-	const base: BooleanFilter = {
-		$id: randomString(),
-		title: operator,
-		description: getJsonDescription(
-			title || field,
-			operators[operator].getLabel(schema),
-			value,
-		),
-		type: 'object',
-	};
+export const createFilter: CreateFilter<OperatorSlug | 'is_not'> = (
+	field,
+	operator,
+	value,
+) => {
+	const operatorSlug = operator.slug;
 
 	const val =
 		typeof value === 'string' ? value.toLowerCase() === 'true' : value;
 
-	if (operator === 'is') {
-		return Object.assign(base, {
+	if (operatorSlug === 'is') {
+		return {
 			properties: {
 				[field]: {
 					const: val,
 				},
 			},
 			required: [field],
-		});
+		};
 	}
-	return base;
+	if (operatorSlug === 'is_not') {
+		return {
+			properties: {
+				[field]: {
+					not: {
+						const: val,
+					},
+				},
+			},
+			required: [field],
+		};
+	}
+	return {};
 };
 
-export const uiSchema = {
+export const uiSchema = () => ({
 	'ui:widget': 'select',
-};
+});

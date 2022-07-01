@@ -37,6 +37,8 @@ import {
 	autoUIDefaultPermissions,
 	autoUIGetModelForCollection,
 	autoUIRunTransformers,
+	getPropertyScheme,
+	getSchemaTitle,
 } from './models/helpers';
 import { autoUIGetDisabledReason, getTagsDisabledReason } from './utils';
 import { FocusSearch } from './Filters/FocusSearch';
@@ -309,6 +311,7 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 											mb={2}
 										>
 											<Filters
+												renderMode={['add', 'search', 'views']}
 												schema={model.schema}
 												filters={filters}
 												views={views}
@@ -460,12 +463,23 @@ export const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 		.filter((entry): entry is [keyof T, typeof entry[1]] => {
 			return entry[0] !== tagField && entry[0] !== idField;
 		})
-		.map(([key, val]) => {
+		.flatMap(([key, val]) => {
+			const refScheme = getPropertyScheme(val);
+			if (!refScheme || refScheme.length <= 1 || typeof val !== 'object') {
+				return [[key, val]];
+			}
+			return refScheme.map((propKey: string) => {
+				const description = JSON.stringify({ 'x-ref-scheme': [propKey] });
+				return [key, { ...val, description }];
+			});
+		})
+		.map(([key, val], index) => {
 			if (typeof val !== 'object') {
 				return;
 			}
 
 			const definedPriorities = priorities ?? ({} as Priorities<T>);
+			const refScheme = getPropertyScheme(val);
 			const priority = definedPriorities.primary.find(
 				(prioritizedKey) => prioritizedKey === key,
 			)
@@ -478,17 +492,17 @@ export const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 
 			const widgetSchema = { ...val, title: undefined };
 			return {
-				title: val.title || key,
+				title: getSchemaTitle(val, key, refScheme?.[0]),
 				field: key,
 				// This is used for storing columns and views
-				key,
+				key: `${key}_${index}`,
 				selected: getSelected(key as keyof T, priorities),
 				priority,
 				type: 'predefined',
 				sortable: customSort?.[key] ?? getSortingFunction(key, val),
 				render: (fieldVal: string, entry: T) => {
 					const calculatedField = autoUIAdaptRefScheme(fieldVal, val);
-					return val.format ? (
+					return (
 						<CustomWidget
 							extraFormats={[
 								...(formats ?? ([] as Format[])),
@@ -498,8 +512,6 @@ export const getColumnsFromSchema = <T extends AutoUIBaseResource<T>>({
 							value={calculatedField}
 							extraContext={entry}
 						/>
-					) : (
-						calculatedField
 					);
 				},
 			};

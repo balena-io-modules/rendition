@@ -6,7 +6,7 @@ const expectMatchesKeys = (data: any, keys: any) =>
 
 describe('DataTypes', () => {
 	describe('.getDataModel()', () => {
-		const dataModelKeys = ['operators', 'createFilter', 'decodeFilter'];
+		const dataModelKeys = ['operators', 'createFilter'];
 
 		it('should return null if provided with a falsey value as the schema parameter', () => {
 			// @ts-expect-error
@@ -56,7 +56,13 @@ describe('DataTypes', () => {
 				type: 'object',
 			} as any;
 
-			expectMatchesKeys(getDataModel(schema), ['Edit', ...dataModelKeys]);
+			expectMatchesKeys(getDataModel(schema), [
+				'editSchema',
+				'getFilter',
+				'isKeyValueObj',
+				'uiSchema',
+				...dataModelKeys,
+			]);
 		});
 
 		it('should return a model for boolean types', () => {
@@ -77,8 +83,8 @@ describe('DataTypes', () => {
 
 	describe('normalizeDateTime', () => {
 		it('rejects invalid date', () => {
-			expect(normalizeDateTime('wrong time')).toEqual('Invalid date');
-			expect(normalizeDateTime('')).toEqual('Invalid date');
+			expect(normalizeDateTime('wrong time')).toEqual(null);
+			expect(normalizeDateTime('')).toEqual(null);
 		});
 
 		it('formats the date correctly', () => {

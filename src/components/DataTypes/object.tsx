@@ -1,15 +1,14 @@
+// TODO THINK HOW TO CREATE THE RIGHT OBJECT FILTER WHEN WE HAVE A CASE LIKE NESTEDSCHEMA
 import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import find from 'lodash/find';
 import findKey from 'lodash/findKey';
-import includes from 'lodash/includes';
 import mapValues from 'lodash/mapValues';
 import pick from 'lodash/pick';
-import * as React from 'react';
 import { regexEscape } from '../../utils';
-import { DataTypeEditProps } from '../Filters';
-import { Flex } from '../Flex';
-import { Input } from '../Input';
-import { getJsonDescription } from './utils';
+import { UiSchema } from '@rjsf/core';
+import { getModelFilter, Operator } from '../Filters/SchemaSieve';
+import { getPropertyScheme } from '../../extra/AutoUI/models/helpers';
+import type { CreateFilter } from './utils';
 
 const getKeyLabel = (schema: JSONSchema) => {
 	const s = find(schema.properties!, { description: 'key' })! as JSONSchema;
@@ -21,50 +20,45 @@ const getValueLabel = (schema: JSONSchema) => {
 	return s && s.title ? s.title : 'value';
 };
 
-export const operators = {
-	key_contains: {
-		getLabel: (s: JSONSchema) => `${getKeyLabel(s)} contains`,
-	},
-	key_not_contains: {
-		getLabel: (s: JSONSchema) => `${getKeyLabel(s)} does not contain`,
-	},
-	is: {
-		getLabel: (_s: JSONSchema) => 'is',
-	},
-	is_not: {
-		getLabel: (_s: JSONSchema) => 'is not',
-	},
-	key_is: {
-		getLabel: (s: JSONSchema) => `${getKeyLabel(s)} is`,
-	},
-	key_matches_re: {
-		getLabel: (s: JSONSchema) => `${getKeyLabel(s)} matches RegEx`,
-	},
-	key_not_matches_re: {
-		getLabel: (s: JSONSchema) => `${getKeyLabel(s)} does not match RegEx`,
-	},
-	value_is: {
-		getLabel: (s: JSONSchema) => `${getValueLabel(s)} is`,
-	},
-	value_contains: {
-		getLabel: (s: JSONSchema) => `${getValueLabel(s)} contains`,
-	},
-	value_not_contains: {
-		getLabel: (s: JSONSchema) => `${getValueLabel(s)} does not contain`,
-	},
-	value_matches_re: {
-		getLabel: (s: JSONSchema) => `${getValueLabel(s)} matches RegEx`,
-	},
-	value_not_matches_re: {
-		getLabel: (s: JSONSchema) => `${getValueLabel(s)} does not match RegEx`,
-	},
+export const isKeyValueObj = (schema: JSONSchema) =>
+	!!find(schema.properties!, { description: 'key' }) ||
+	!!find(schema.properties!, { description: 'value' });
+
+export const operators = (s: JSONSchema) => {
+	return {
+		...(!getPropertyScheme(s)
+			? {
+					is: 'is',
+					is_not: 'is not',
+			  }
+			: {}),
+		...(!isKeyValueObj(s)
+			? {
+					contains: 'contains',
+					not_contains: 'does not contain',
+			  }
+			: (() => {
+					const keyLabel = getKeyLabel(s);
+					const valueLabel = getValueLabel(s);
+					return {
+						key_contains: `${keyLabel} contains`,
+						key_not_contains: `${keyLabel} does not contain`,
+						key_is: `${keyLabel} is`,
+						key_matches_re: `${keyLabel} matches RegEx`,
+						key_not_matches_re: `${keyLabel} does not match RegEx`,
+						value_is: `${valueLabel} is`,
+						value_contains: `${valueLabel} contains`,
+						value_not_contains: `${valueLabel} does not contain`,
+						value_matches_re: `${valueLabel} matches RegEx`,
+						value_not_matches_re: `${valueLabel} does not match RegEx`,
+					};
+			  })()),
+	};
 };
 
-type OperatorSlug = keyof typeof operators;
+export type OperatorSlug = keyof ReturnType<typeof operators>;
 
-const commonOperators: OperatorSlug[] = ['is', 'is_not'];
-
-const keySpecificOperators: OperatorSlug[] = [
+const keySpecificOperators = [
 	'key_is',
 	'key_contains',
 	'key_not_contains',
@@ -72,127 +66,13 @@ const keySpecificOperators: OperatorSlug[] = [
 	'key_not_matches_re',
 ];
 
-const keyOperators: OperatorSlug[] = [
-	...commonOperators,
-	...keySpecificOperators,
-];
-
-const valueSpecificOperators: OperatorSlug[] = [
+const valueSpecificOperators = [
 	'value_is',
 	'value_contains',
 	'value_not_contains',
 	'value_matches_re',
 	'value_not_matches_re',
 ];
-
-const valueOperators: OperatorSlug[] = [
-	...commonOperators,
-	...valueSpecificOperators,
-];
-
-interface SubSchema {
-	title: string;
-	properties: {
-		[key: string]: {
-			const?: string;
-			description?: string;
-			pattern?: string;
-		};
-	};
-}
-
-interface ObjectFilter extends JSONSchema {
-	title: OperatorSlug;
-	properties?: {
-		[k: string]: {
-			contains?: SubSchema;
-			not?: {
-				contains: SubSchema;
-			};
-		};
-	};
-}
-
-export const decodeFilter = (
-	filter: ObjectFilter,
-): {
-	field: string;
-	operator: OperatorSlug;
-	value: {};
-} | null => {
-	const operator = filter.title;
-
-	if (!filter.properties) {
-		return null;
-	}
-
-	const keys = Object.keys(filter.properties);
-	if (!keys.length) {
-		return null;
-	}
-	let value: { [key: string]: string };
-
-	const field = keys[0];
-
-	if (operator === 'is') {
-		value = mapValues(
-			filter.properties[field].contains!.properties,
-			(v) => v.const!,
-		);
-	} else if (operator === 'is_not') {
-		value = mapValues(
-			filter.properties[field].not!.contains.properties,
-			(v) => v.const!,
-		);
-	} else if (operator === 'key_is' || operator === 'value_is') {
-		value = mapValues(
-			filter.properties[field].contains!.properties,
-			(v) => v.const!,
-		);
-	} else if (operator === 'key_contains' || operator === 'value_contains') {
-		value = mapValues(
-			filter.properties[field].contains!.properties,
-			(v) => v.description!,
-		);
-	} else if (
-		operator === 'key_not_contains' ||
-		operator === 'value_not_contains'
-	) {
-		value = mapValues(
-			filter.properties[field].not!.contains.properties,
-			(v) => v.description!,
-		);
-	} else if (operator === 'key_matches_re' || operator === 'value_matches_re') {
-		value = mapValues(
-			filter.properties[field].contains!.properties,
-			(v) => v.pattern!,
-		);
-	} else if (
-		operator === 'key_not_matches_re' ||
-		operator === 'value_not_matches_re'
-	) {
-		value = mapValues(
-			filter.properties[field].not!.contains.properties,
-			(v) => v.pattern!,
-		);
-	} else {
-		return null;
-	}
-
-	return {
-		field,
-		operator,
-		value,
-	};
-};
-
-const format = (schema: JSONSchema, object: { [k: string]: string }) => {
-	const keyField = findKey(schema.properties!, { description: 'key' })!;
-	const valueField = findKey(schema.properties!, { description: 'value' })!;
-	const key = object[keyField];
-	const value = object[valueField];
-	return key && value ? `${key} : ${value}` : key || value;
-};
 
 function getValueForOperation(
 	operator: OperatorSlug,
@@ -201,225 +81,298 @@ function getValueForOperation(
 ) {
 	if (keySpecificOperators.includes(operator)) {
 		const schemaKey = findKey(schema.properties!, { description: 'key' })!;
-		return pick(value, schemaKey);
+		return typeof value === 'string'
+			? { [schemaKey]: value }
+			: pick(value, schemaKey);
 	}
 	if (valueSpecificOperators.includes(operator)) {
 		const schemaValue = findKey(schema.properties!, { description: 'value' })!;
-		return pick(value, schemaValue);
+		return typeof value === 'string'
+			? { [schemaValue]: value }
+			: pick(value, schemaValue);
 	}
 	return value;
 }
 
-export const createFilter = (
-	field: string,
+const getTitleForOperation = (
 	operator: OperatorSlug,
-	value: any,
 	schema: JSONSchema,
-): JSONSchema => {
-	const { title } = schema;
-	value = getValueForOperation(operator, schema, value);
+	value: string | object,
+) => {
+	if (typeof value !== 'object' || !schema.properties) {
+		return schema.title;
+	}
+	const property = schema.properties[Object.keys(value)[0]];
+	if (
+		[...keySpecificOperators, ...valueSpecificOperators].includes(operator) &&
+		typeof property === 'object'
+	) {
+		return property.title;
+	}
+	return schema.title;
+};
 
-	const base: ObjectFilter = {
-		title: operator,
-		description: getJsonDescription(
-			title || field,
-			operators[operator].getLabel(schema),
-			format(schema, value),
-		),
-		type: 'object',
-	};
+export const createFilter: CreateFilter<OperatorSlug> = (
+	field,
+	operator,
+	value,
+	schema,
+): ReturnType<CreateFilter<OperatorSlug>> => {
+	const operatorSlug = operator.slug;
+	value = !!isKeyValueObj(schema)
+		? getValueForOperation(operatorSlug, schema, value)
+		: value;
+	const propertyTitle = getTitleForOperation(operatorSlug, schema, value);
 
-	if (operator === 'is') {
-		return Object.assign(base, {
+	const isFilter = (v: any) => ({ const: v });
+
+	const containsFilter = (v: any) => ({
+		description: v,
+		regexp: {
+			pattern: regexEscape(v),
+			flags: 'i',
+		},
+	});
+
+	const matchReGexFilter = (v: any) => ({
+		pattern: v,
+	});
+
+	if (!isKeyValueObj(schema)) {
+		return {
+			properties: {
+				[field]: getFilter(field, schema, value, operator),
+			},
+			required: [field],
+		};
+	}
+
+	if (operatorSlug === 'is') {
+		return {
 			properties: {
 				[field]: {
 					contains: {
-						title,
+						title: propertyTitle,
 						properties: mapValues(value, (v) => ({ const: v })),
 					},
 				},
 			},
 			required: [field],
-		});
+		};
 	}
 
-	if (operator === 'is_not') {
-		return Object.assign(base, {
+	if (operatorSlug === 'is_not') {
+		return {
 			properties: {
 				[field]: {
 					not: {
 						contains: {
-							title,
+							title: propertyTitle,
 							properties: mapValues(value, (v) => ({ const: v })),
 						},
 					},
 				},
 			},
-		});
+		};
 	}
 
-	if (operator === 'key_is' || operator === 'value_is') {
-		return Object.assign(base, {
+	if (operatorSlug === 'key_is' || operatorSlug === 'value_is') {
+		return {
 			properties: {
 				[field]: {
 					contains: {
-						title,
-						properties: mapValues(value, (v) => ({ const: v })),
+						title: propertyTitle,
+						properties: mapValues(value, isFilter),
 					},
 				},
 			},
 			required: [field],
-		});
+		};
 	}
 
-	if (operator === 'key_contains' || operator === 'value_contains') {
-		return Object.assign(base, {
+	if (operatorSlug === 'key_contains' || operatorSlug === 'value_contains') {
+		return {
 			properties: {
 				[field]: {
 					contains: {
-						title,
-						properties: mapValues(value, (v) => ({
-							type: 'string',
-							description: v,
-							regexp: {
-								pattern: regexEscape(v),
-								flags: 'i',
-							},
-						})),
+						title: propertyTitle,
+						properties:
+							typeof value !== 'object'
+								? containsFilter(value)
+								: mapValues(value, containsFilter),
 					},
 				},
 			},
 			required: [field],
-		});
-	}
-
-	if (operator === 'key_not_contains' || operator === 'value_not_contains') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					not: {
-						contains: {
-							title,
-							properties: mapValues(value, (v) => ({
-								type: 'string',
-								description: v,
-								regexp: {
-									pattern: regexEscape(v),
-									flags: 'i',
-								},
-							})),
-						},
-					},
-				},
-			},
-		});
-	}
-
-	if (operator === 'key_matches_re' || operator === 'value_matches_re') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					contains: {
-						title,
-						properties: mapValues(value, (v) => ({
-							type: 'string',
-							pattern: v,
-						})),
-					},
-				},
-			},
-			required: [field],
-		});
+		};
 	}
 
 	if (
-		operator === 'key_not_matches_re' ||
-		operator === 'value_not_matches_re'
+		operatorSlug === 'key_not_contains' ||
+		operatorSlug === 'value_not_contains'
 	) {
-		return Object.assign(base, {
+		return {
 			properties: {
 				[field]: {
 					not: {
 						contains: {
-							title,
-							properties: mapValues(value, (v) => ({
-								type: 'string',
-								pattern: v,
-							})),
+							title: propertyTitle,
+							properties:
+								typeof value !== 'object'
+									? containsFilter(value)
+									: mapValues(value, containsFilter),
 						},
 					},
 				},
 			},
-		});
+		};
 	}
 
-	return base;
+	if (
+		operatorSlug === 'key_matches_re' ||
+		operatorSlug === 'value_matches_re'
+	) {
+		return {
+			properties: {
+				[field]: {
+					contains: {
+						title: propertyTitle,
+						properties:
+							typeof value !== 'object'
+								? matchReGexFilter(value)
+								: mapValues(value, matchReGexFilter),
+					},
+				},
+			},
+			required: [field],
+		};
+	}
+
+	if (
+		operatorSlug === 'key_not_matches_re' ||
+		operatorSlug === 'value_not_matches_re'
+	) {
+		return {
+			properties: {
+				[field]: {
+					not: {
+						contains: {
+							title: propertyTitle,
+							properties:
+								typeof value !== 'object'
+									? matchReGexFilter(value)
+									: mapValues(value, matchReGexFilter),
+						},
+					},
+				},
+			},
+		};
+	}
+
+	return {};
 };
 
-export const Edit = (props: DataTypeEditProps) => {
-	const { schema, onUpdate, operator } = props;
-	let { value } = props;
-
-	const schemaKey = findKey(schema.properties!, { description: 'key' })!;
-	const schemaValue = findKey(schema.properties!, { description: 'value' })!;
-	const keyLabel = (schema.properties![schemaKey] as JSONSchema).title || 'Key';
-	const valueLabel =
-		(schema.properties![schemaValue] as JSONSchema).title || 'Value';
-
-	React.useEffect(() => {
-		onUpdate(
-			Object.assign(value, {
-				[schemaKey]: '',
-				[schemaValue]: '',
-			}),
-		);
-	}, [operator]);
-
-	// Convert strings to objects
-	if (typeof value === 'string') {
-		const p: { [k: string]: string } = {};
-		if (includes(valueOperators, operator)) {
-			p[schemaValue] = value;
-		}
-		if (includes(keyOperators, operator)) {
-			p[schemaKey] = value;
-		}
-
-		value = p;
+export const editSchema = (
+	schema: JSONSchema,
+	operator: Operator<OperatorSlug> | undefined,
+) => {
+	const schemaKey = findKey(schema.properties!, { description: 'key' });
+	const schemaValue = findKey(schema.properties!, { description: 'value' });
+	if (
+		!!operator &&
+		keySpecificOperators.includes(operator.slug) &&
+		!!schemaKey
+	) {
+		return {
+			...schema,
+			title: '',
+			properties: pick(schema.properties, schemaKey),
+		};
 	}
+	if (
+		!!operator &&
+		valueSpecificOperators.includes(operator.slug) &&
+		!!schemaValue
+	) {
+		return {
+			...schema,
+			title: '',
+			properties: pick(schema.properties, schemaValue),
+		};
+	}
+	return { ...schema, title: '' };
+};
 
+export const uiSchema = (schema: JSONSchema) => {
+	if (!schema.properties || typeof schema.properties !== 'object') {
+		return {};
+	}
 	return (
-		<Flex flexWrap="wrap">
-			{includes(keyOperators, operator) && (
-				<Input
-					type="text"
-					value={value ? value[schemaKey] : ''}
-					mr={2}
-					mb={1}
-					placeholder={keyLabel}
-					onChange={(e: React.FormEvent<HTMLInputElement>) =>
-						onUpdate(
-							Object.assign(value, {
-								[schemaKey]: e.currentTarget.value,
-							}),
-						)
-					}
-				/>
-			)}
-			{includes(valueOperators, operator) && (
-				<Input
-					type="text"
-					value={value ? value[schemaValue] : ''}
-					placeholder={valueLabel}
-					onChange={(e: React.FormEvent<HTMLInputElement>) =>
-						onUpdate(
-							Object.assign(value, {
-								[schemaValue]: e.currentTarget.value,
-							}),
-						)
-					}
-				/>
-			)}
-		</Flex>
+		Object.entries(schema.properties)?.reduce(
+			(
+				acc: { [key: string]: UiSchema },
+				[key, value]: [string, JSONSchema],
+			) => {
+				acc[key] = {
+					'ui:options': {
+						label: false,
+						placeholder: typeof value.title === 'string' ? value.title : '',
+					},
+				};
+				return acc;
+			},
+			{},
+		) ?? {}
 	);
+};
+
+export const getFilter = (
+	field: string,
+	schema: JSONSchema,
+	value: string,
+	operator: Operator<OperatorSlug>,
+	refScheme?: string,
+): JSONSchema => {
+	if (!!schema?.properties && typeof schema.properties !== 'boolean') {
+		return {
+			anyOf: Object.entries(schema.properties).map(
+				([propKey, propValue]: [string, JSONSchema]) => {
+					const filter = getModelFilter(
+						propValue,
+						propKey,
+						operator,
+						value,
+						undefined,
+						refScheme ? convertOperator : undefined,
+					);
+					return filter;
+				},
+			),
+		};
+	}
+	const fieldFilter = getModelFilter(
+		schema,
+		field,
+		operator,
+		value,
+		undefined,
+		refScheme ? convertOperator : undefined,
+	);
+
+	return {
+		contains: fieldFilter.properties?.[field] as JSONSchema,
+	};
+};
+
+const convertOperator = (
+	operator: Operator<OperatorSlug>,
+	operators: Record<string, string> | undefined,
+): Operator<OperatorSlug | 'is' | 'is_not'> => {
+	if (operators != null && operator.slug in operators) {
+		return operator;
+	}
+	if (/(?:\b|_)not(?:\b|_)/.test(operator.slug)) {
+		return { slug: 'is_not', label: 'is not' };
+	}
+	return { slug: 'is', label: 'is' };
 };

@@ -165,7 +165,6 @@ const BaseForm = React.forwardRef<RsjfForm<any>, FormProps>(
 	) => {
 		const { form } = React.useContext(WidgetContext);
 		const contextFormats = form?.formats ?? [];
-
 		const allWidgets = React.useMemo(() => {
 			return {
 				...widgets,

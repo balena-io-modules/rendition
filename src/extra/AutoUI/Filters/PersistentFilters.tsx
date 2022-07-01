@@ -11,17 +11,18 @@ import {
 import {
 	createFilter,
 	createFullTextSearchFilter,
-	decodeFilter,
-	flattenSchema,
 	FULL_TEXT_SLUG,
+	getSignatures,
 } from '../../../components/Filters/SchemaSieve';
 import { getFromLocalStorage, setToLocalStorage } from '../../../utils';
 import type { History } from 'history';
 
 export interface ListQueryStringFilterObject {
+	t: FilterSignature['title'];
 	n: FilterSignature['field'];
 	o: FilterSignature['operator'];
 	v: FilterSignature['value'];
+	r: FilterSignature['refScheme'];
 }
 
 const isListQueryStringFilterRule = (
@@ -44,18 +45,14 @@ const isQueryStringFilterRuleset = (
 	!!rule?.length &&
 	rule?.every(isListQueryStringFilterRule);
 
-const listFilterQuery = (schema: JSONSchema, rules: JSONSchema[]) => {
-	const queryStringFilters = rules.map((filter) => {
-		// TODO: The typings need to be fixed in rendition.
-		const flatSchema = flattenSchema(schema);
-		const flattenFilter = flattenSchema(filter);
-		const signatures = decodeFilter(
-			flatSchema,
-			flattenFilter,
-		) as FilterSignature[];
+export const listFilterQuery = (filters: JSONSchema[]) => {
+	const queryStringFilters = filters.map((filter) => {
+		const signatures = getSignatures(filter);
 		return signatures.map<ListQueryStringFilterObject>(
-			({ field, operator, value }) => ({
+			({ title, field, operator, value, refScheme }) => ({
+				t: title,
 				n: field,
+				r: refScheme,
 				o: operator,
 				v: value,
 			}),
@@ -64,7 +61,7 @@ const listFilterQuery = (schema: JSONSchema, rules: JSONSchema[]) => {
 	return qs.stringify(queryStringFilters);
 };
 
-const loadRulesFromUrl = (
+export const loadRulesFromUrl = (
 	searchLocation: string,
 	schema: JSONSchema,
 ): JSONSchema[] => {
@@ -79,15 +76,17 @@ const loadRulesFromUrl = (
 				rules = [rules];
 			}
 
-			const signatures = rules.map(({ n, o, v }: any) => ({
-				field: n,
-				operator: o,
-				value: v,
-			}));
-			// full_text_search filter has always a single signature
-			// since we cannot add multiple search text filters.
+			const signatures = rules.map(
+				({ t, n, o, v, r }: ListQueryStringFilterObject) => ({
+					title: t,
+					field: n,
+					refScheme: r,
+					operator: o,
+					value: v,
+				}),
+			);
 			// TODO: createFilter should handle this case as well.
-			if (signatures[0].operator === FULL_TEXT_SLUG) {
+			if (signatures[0].operator.slug === FULL_TEXT_SLUG) {
 				// TODO: listFilterQuery serializes the already escaped value and this
 				// then re-escapes while de-serializing. Fix that loop, which can keep
 				// escaping regex characters (eg \) indefinitely on each call/reload from the url.
@@ -135,7 +134,7 @@ export const PersistentFilters = ({
 		const { pathname } = window.location;
 		history?.replace?.({
 			pathname,
-			search: listFilterQuery(schema, filters),
+			search: listFilterQuery(filters),
 		});
 	};
 
