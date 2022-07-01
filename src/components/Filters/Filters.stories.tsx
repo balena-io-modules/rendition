@@ -79,11 +79,14 @@ const schema = {
 		},
 		biometrics: {
 			type: 'object',
+			description: '{"x-foreign-key-scheme": ["Height", "Weight"]}',
 			properties: {
 				Height: {
+					title: 'Height',
 					type: ['number', null],
 				},
 				Weight: {
+					title: 'Weight',
 					type: 'number',
 				},
 			},
@@ -97,6 +100,7 @@ const schema = {
 		},
 		nationality: {
 			title: 'Nationality',
+			type: 'string',
 			oneOf: uniq(PokeDex.map((p) => p.nationality)).map((slug) => ({
 				title: getNameFromSlug(slug),
 				const: slug,
@@ -108,7 +112,10 @@ const schema = {
 const FiltersDemo = (props: FiltersProps) => {
 	const [filters, setFilters] = React.useState(props.filters ?? []);
 	const [views, setViews] = React.useState(props.views ?? []);
-	const items = SchemaSieve.filter(filters, PokeDex);
+	const items = React.useMemo(
+		() => SchemaSieve.filter(filters, PokeDex),
+		[filters],
+	);
 
 	return (
 		<div>
@@ -193,20 +200,7 @@ export default {
 } as Meta;
 
 const Template = createTemplate<FiltersProps>(FiltersDemo);
-export const Default = createStory<FiltersProps>(Template, {
-	filters: [],
-	viewScopes: [
-		{
-			slug: 'bleh',
-			name: 'bleh',
-			label: 'bla',
-		},
-		{
-			slug: 'foo',
-			name: 'foo',
-		},
-	],
-});
+export const DefaultCA = createStory<FiltersProps>(Template, {});
 
 export const Disabled = createStory<FiltersProps>(Template, {
 	filters: [],
@@ -228,10 +222,6 @@ export const Compact = createStory<FiltersProps>(Template, {
 	filters: [],
 	compact: [true],
 });
-
-// export const Dark = createStory<FiltersProps>(Template, {
-//   dark: true
-// });
 
 export const RenderModes = createStory<FiltersProps>(Template, {
 	filters: [

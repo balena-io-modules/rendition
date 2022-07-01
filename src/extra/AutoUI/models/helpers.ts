@@ -9,7 +9,9 @@ import type {
 	JSONSchema7Definition as JSONSchemaDefinition,
 } from 'json-schema';
 import { Dictionary } from '../../../common-types';
+import { findInObject } from '../utils';
 import get from 'lodash/get';
+import pick from 'lodash/pick';
 
 type Transformers<
 	T extends Dictionary<any>,
@@ -73,27 +75,36 @@ export const autoUIRunTransformers = <
 };
 
 export const autoUIAdaptRefScheme = (
-	field: unknown,
+	value: unknown,
 	property: JSONSchemaDefinition,
 ) => {
-	if (!property || field == null) {
+	if (!property || value == null) {
 		return null;
 	}
+	if (typeof property === 'boolean') {
+		return value;
+	}
+	const format = getSchemaFormat(property);
 	if (
-		typeof property === 'boolean' ||
 		!property.description?.includes('x-ref-scheme') ||
 		!isJson(property.description) ||
-		!!property.format
+		!!format
 	) {
-		return field;
+		return value;
 	}
-	const refScheme = getPropertyRefScheme(property);
+	const refScheme = getPropertyScheme(property);
 	const transformed =
-		(Array.isArray(field) && field.length <= 1 ? field[0] : field) ?? null;
+		(Array.isArray(value) && value.length <= 1 ? value[0] : value) ?? null;
 	if (refScheme) {
-		return get(transformed, refScheme) ?? null;
+		return get(transformed, refScheme[0]) ?? null;
 	}
 	return transformed;
+};
+
+export const getSchemaFormat = (schema: JSONSchema) => {
+	const property = getSubSchemaFromRefScheme(schema);
+	const format = property.format ?? schema.format;
+	return format;
 };
 
 // This transformation would happen elsewhere, and it wouldn't be part of AutoUI
@@ -136,12 +147,92 @@ export const autoUIAddToSchema = (
 	};
 };
 
-export const getPropertyRefScheme = (
+export const getPropertyScheme = (
 	schemaValue: JSONSchema | JSONSchemaDefinition,
 ) => {
-	return typeof schemaValue !== 'boolean' &&
-		!!schemaValue.description &&
-		isJson(schemaValue.description)
-		? JSON.parse(schemaValue.description!)['x-ref-scheme']
-		: null;
+	if (typeof schemaValue === 'boolean' || !schemaValue.description) {
+		return null;
+	}
+	try {
+		const json = JSON.parse(schemaValue.description!);
+		return json['x-foreign-key-scheme'] ?? json['x-ref-scheme'];
+	} catch (err) {
+		return null;
+	}
+};
+
+export const convertRefSchemeToSchemaPath = (refScheme: string | undefined) => {
+	return !!refScheme
+		? refScheme
+				.split('.')
+				.join('.properties.')
+				.replace(/\[\d+\]/g, '.items')
+		: // TODO: This atm doesn't support ['my property']
+		  refScheme;
+};
+
+export const getSchemaTitle = (
+	jsonSchema: JSONSchema,
+	propertyKey: string,
+	refScheme?: string | undefined,
+) => {
+	if (!refScheme) {
+		return jsonSchema?.title || propertyKey;
+	}
+	return (
+		getSubSchemaFromRefScheme(jsonSchema, refScheme)?.title ??
+		jsonSchema.title ??
+		propertyKey
+	);
+};
+
+export const generateSchemaFromRefScheme = (
+	schema: JSONSchema,
+	parentProperty: string,
+	refScheme: string | undefined,
+): JSONSchema => {
+	const propertySchema =
+		(schema.properties?.[parentProperty] as JSONSchema) ?? schema;
+	if (!refScheme) {
+		return propertySchema;
+	}
+	const convertedRefScheme = propertySchema.items
+		? `items.properties.${convertRefSchemeToSchemaPath(refScheme)}`
+		: `properties.${convertRefSchemeToSchemaPath(refScheme)}`;
+	const typePaths: string[][] = [];
+	const ongoingIncrementalPath: string[] = [];
+	convertedRefScheme.split('.').forEach((key) => {
+		if (['properties', 'items'].includes(key)) {
+			typePaths.push([...ongoingIncrementalPath, 'type']);
+		}
+		ongoingIncrementalPath.push(key);
+	});
+	if (ongoingIncrementalPath.length) {
+		typePaths.push(ongoingIncrementalPath);
+	}
+	return {
+		...propertySchema,
+		description: JSON.stringify({ 'x-ref-scheme': [refScheme] }),
+		title:
+			(get(propertySchema, convertedRefScheme) as JSONSchema)?.title ??
+			propertySchema.title,
+		...pick(
+			propertySchema,
+			// @ts-expect-error Pick typings should support string[][]
+			typePaths,
+		),
+	};
+};
+
+export const getSubSchemaFromRefScheme = (
+	schema: JSONSchema | JSONSchemaDefinition,
+	refScheme?: string,
+): JSONSchema => {
+	const referenceScheme = refScheme || getPropertyScheme(schema)?.[0];
+	const convertedRefScheme = convertRefSchemeToSchemaPath(referenceScheme);
+	if (!convertedRefScheme) {
+		return schema as JSONSchema;
+	}
+	const properties = findInObject(schema, 'properties');
+	return get(properties, convertedRefScheme);
 };

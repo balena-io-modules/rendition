@@ -13,7 +13,7 @@ import {
 	createFullTextSearchFilter,
 	filter as schemaSieveFilter,
 } from '../../../components/Filters/SchemaSieve';
-import { getPropertyRefScheme } from '../models/helpers';
+import { getPropertyScheme } from '../models/helpers';
 
 const Focus = styled(Box)`
 	flex-basis: 100%;
@@ -70,9 +70,7 @@ export const FocusSearch = <T extends { id: number; [key: string]: any }>({
 	const getEntityValue = (entity: T) => {
 		const property = model.priorities?.primary[0]!;
 		const schemaProperty = model.schema.properties?.[property];
-		const refScheme = schemaProperty
-			? getPropertyRefScheme(schemaProperty)
-			: null;
+		const refScheme = schemaProperty ? getPropertyScheme(schemaProperty) : null;
 		if (!refScheme || typeof schemaProperty === 'boolean') {
 			return entity[property];
 		}

@@ -1,25 +1,25 @@
-import { faFilter } from '@fortawesome/free-solid-svg-icons/faFilter';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
 import type { JSONSchema7 as JSONSchema } from 'json-schema';
-import castArray from 'lodash/castArray';
-import cloneDeep from 'lodash/cloneDeep';
-import includes from 'lodash/includes';
-import isEmpty from 'lodash/isEmpty';
-import isEqual from 'lodash/isEqual';
-import reject from 'lodash/reject';
-import * as React from 'react';
-import styled from 'styled-components';
 import { Button, ButtonProps } from '../Button';
-import { randomString } from '../../utils';
-import { Box } from '../Box';
 import { DropDownButtonProps } from '../DropDownButton';
-import { Flex } from '../Flex';
-import { Search } from '../Search';
-import { FilterFieldCompareFn, FilterModal } from './FilterModal';
-import * as SchemaSieve from './SchemaSieve';
-import Summary from './Summary';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFilter } from '@fortawesome/free-solid-svg-icons/faFilter';
 import ViewsMenu from './ViewsMenu';
+import styled from 'styled-components';
+import { Box } from '../Box';
+import { Search } from '../Search';
+import { Flex } from '../Flex';
 import { onClickOutOrEsc } from '../../extra/AutoUI/utils';
+import { FilterModal } from './FilterModal';
+import { Summary } from './Summary';
+import { randomString } from '../../utils';
+import cloneDeep from 'lodash/cloneDeep';
+import isEqual from 'lodash/isEqual';
+import {
+	createFullTextSearchFilter,
+	Operator,
+	OperatorSlugs,
+} from './SchemaSieve';
 
 const SearchWrapper = styled(Box)`
 	width: 100%;
@@ -30,451 +30,44 @@ const SearchWrapper = styled(Box)`
 	align-self: center;
 `;
 
-const FilterWrapper = styled(Box)`
-	position: relative;
-`;
-
-class BaseFilters extends React.Component<FiltersProps, FiltersState> {
-	private searchContainer = React.createRef<HTMLDivElement>();
-
-	constructor(props: FiltersProps) {
-		super(props);
-		const { filters = [], schema, views = [] } = this.props;
-		const flatSchema = SchemaSieve.flattenSchema(schema);
-		const flatViews = this.flattenViews(views);
-		const flatFilters = filters.map((filter) =>
-			SchemaSieve.flattenSchema(filter),
-		);
-
-		this.state = {
-			showModal: false,
-			searchString: '',
-			editingFilter: null,
-			filters: flatFilters,
-			views: flatViews,
-			schema: flatSchema,
-			edit: [],
-			showSearchDropDown: false,
-		};
-
-		this.state.edit.push(this.getCleanEditModel());
-		this.searchContainer = React.createRef();
-	}
-
-	public componentDidUpdate(prevProps: FiltersProps) {
-		const newState: any = {};
-
-		// If the schema prop updates, also update the internal 'flat' schema
-		if (!isEqual(prevProps.schema, this.props.schema)) {
-			newState.schema = SchemaSieve.flattenSchema(this.props.schema);
-		}
-
-		if (!isEqual(prevProps.filters, this.props.filters)) {
-			const filters = this.props.filters || [];
-			newState.filters = filters.map((filter) =>
-				SchemaSieve.flattenSchema(filter),
-			);
-		}
-
-		if (!isEqual(prevProps.views, this.props.views)) {
-			const views = this.props.views || [];
-			newState.views = this.flattenViews(views);
-		}
-
-		if (!isEmpty(newState)) {
-			this.setState(newState);
-		}
-	}
-
-	public flattenViews(views: FiltersView[]) {
-		return views.map(({ filters, ...view }) => ({
-			...view,
-			filters: filters.map((filter) => SchemaSieve.flattenSchema(filter)),
-		}));
-	}
-
-	public emitViewsUpdate() {
-		if (!this.props.onViewsUpdate) {
-			return;
-		}
-
-		this.props.onViewsUpdate(
-			this.state.views.map(({ filters, ...view }) => ({
-				...view,
-				filters: filters.map((filter) => SchemaSieve.unflattenSchema(filter)),
-			})),
-		);
-	}
-
-	public getCleanEditModel(field?: string | null) {
-		const schema = this.state.schema;
-		if (!field) {
-			field = Object.keys(schema.properties!).shift()!;
-		}
-
-		const fieldOperators = this.getOperators(field);
-		if (!fieldOperators.length) {
-			return {
-				field,
-				operator: '',
-				value: '',
-			};
-		}
-
-		const operator = fieldOperators.shift()!.slug;
-
-		let value: any = '';
-		const subschema = schema.properties![field];
-		if (typeof subschema !== 'boolean') {
-			if (subschema.enum) {
-				value = subschema.enum[0] || '';
-			}
-
-			if (subschema.oneOf) {
-				value = (subschema.oneOf[0] as JSONSchema).const || '';
-			}
-
-			if (subschema.type === 'boolean') {
-				value = true;
-			}
-		}
-
-		return {
-			field,
-			operator,
-			value,
-		};
-	}
-
-	public getOperators(field: string) {
-		const schema = this.state.schema;
-		return SchemaSieve.getOperators(schema, field);
-	}
-
-	public emitFilterUpdate() {
-		if (!this.props.onFiltersUpdate) {
-			return;
-		}
-
-		this.props.onFiltersUpdate(
-			this.state.filters.map((filter) => SchemaSieve.unflattenSchema(filter)),
-		);
-	}
-
-	public addFilter(edit: EditModel[]) {
-		const newFilter = SchemaSieve.createFilter(this.state.schema, edit);
-		const currentFilters: JSONSchema[] = !!this.state.editingFilter
-			? this.state.filters.map((filter) =>
-					filter.$id === this.state.editingFilter ? newFilter : filter,
-			  )
-			: [...this.state.filters, newFilter];
-
-		this.setState(
-			{
-				filters: currentFilters,
-				edit: [this.getCleanEditModel()],
-				showModal: false,
-				editingFilter: null,
-			},
-			() => this.emitFilterUpdate(),
-		);
-	}
-
-	public editFilter(filter: JSONSchema) {
-		if (filter.title === SchemaSieve.FULL_TEXT_SLUG) {
-			return;
-		}
-
-		const { schema } = this.state;
-		const signatures = SchemaSieve.decodeFilter(schema, filter);
-
-		this.setState({
-			edit: signatures as EditModel[],
-			editingFilter: filter.$id!,
-			showModal: true,
-		});
-	}
-
-	public removeFilter({ $id, title }: JSONSchema) {
-		this.setState(
-			(prevState) => {
-				const newState = {
-					...prevState,
-					filters: reject(prevState.filters, { $id }),
-				};
-
-				if (title === SchemaSieve.FULL_TEXT_SLUG) {
-					newState.searchString = '';
-				}
-
-				return newState;
-			},
-			() => this.emitFilterUpdate(),
-		);
-	}
-
-	public setFilters(filters: JSONSchema[]) {
-		this.setState({ filters }, () => this.emitFilterUpdate());
-	}
-
-	public clearAllFilters = () => {
-		this.setFilters([]);
-		this.setState({
-			searchString: '',
-		});
-	};
-
-	public saveView(name: string, scope: string | null) {
-		const view: FiltersView = {
-			id: randomString(),
-			name,
-			scope,
-			filters: cloneDeep(this.state.filters),
-		};
-
-		this.setState(
-			(prevState) => ({
-				views: prevState.views.concat(view),
-			}),
-			() =>
-				this.props.onViewsUpdate && this.props.onViewsUpdate(this.state.views),
-		);
-	}
-
-	public deleteView({ id }: FiltersView) {
-		this.setState(
-			(prevState) => ({
-				views: reject(prevState.views, { id }),
-			}),
-			() =>
-				this.props.onViewsUpdate && this.props.onViewsUpdate(this.state.views),
-		);
-	}
-
-	public shouldRenderComponent(mode: FilterRenderMode): boolean {
-		// If a render mode is not specified, render all components
-		if (!this.props.renderMode) {
-			return true;
-		}
-
-		const allowedModes = castArray(this.props.renderMode);
-
-		if (includes(allowedModes, 'all')) {
-			return true;
-		}
-
-		return includes(allowedModes, mode);
-	}
-
-	public render() {
-		const { filters, searchString, showSearchDropDown } = this.state;
-
-		const renderingSummaryAndOtherComponents =
-			this.shouldRenderComponent('summary') &&
-			[
-				this.shouldRenderComponent('add'),
-				this.shouldRenderComponent('search'),
-				this.shouldRenderComponent('views'),
-			].includes(true);
-
-		const componentsToRender = !!this.props.renderMode
-			? castArray(this.props.renderMode)
-			: [];
-
-		return (
-			<FilterWrapper>
-				<Flex
-					justifyContent="space-between"
-					mb={renderingSummaryAndOtherComponents ? 3 : undefined}
-				>
-					{this.shouldRenderComponent('search') && (
-						<SearchWrapper
-							ref={this.searchContainer}
-							onFocus={() => {
-								this.setState({ showSearchDropDown: true });
-								if (this.searchContainer.current) {
-									onClickOutOrEsc(this.searchContainer.current, () => {
-										this.setState({ showSearchDropDown: false });
-									});
-								}
-							}}
-						>
-							<Search
-								dark={this.props.dark}
-								disabled={this.props.disabled}
-								value={searchString}
-								onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-									if (e.target.value !== '') {
-										this.setState({ showSearchDropDown: true });
-									} else {
-										this.setState({ showSearchDropDown: false });
-									}
-									this.setState({ searchString: e.target.value });
-								}}
-								onEnter={() => {
-									if (!searchString) {
-										return;
-									}
-									this.setState(
-										(prevState) => {
-											const newFilters = SchemaSieve.insertFullTextSearch(
-												this.state.schema,
-												prevState.filters,
-												searchString,
-											);
-
-											return {
-												filters: newFilters,
-												searchString: '',
-											};
-										},
-										() => this.emitFilterUpdate(),
-									);
-								}}
-							/>
-							{searchString &&
-								showSearchDropDown &&
-								this.props.onSearch &&
-								this.props.onSearch(searchString)}
-						</SearchWrapper>
-					)}
-					{this.shouldRenderComponent('add') && (
-						<Button
-							mx={1}
-							disabled={this.props.disabled}
-							light={this.props.dark}
-							outline
-							quartenary
-							icon={<FontAwesomeIcon icon={faFilter} />}
-							onClick={() =>
-								this.setState({ showModal: true, editingFilter: null })
-							}
-							label="Add filter"
-							compact={this.props.compact}
-							{...this.props.addFilterButtonProps}
-						/>
-					)}
-					{this.shouldRenderComponent('views') && (
-						<ViewsMenu
-							dark={this.props.dark}
-							buttonProps={this.props.viewsMenuButtonProps}
-							disabled={this.props.disabled}
-							views={this.state.views || []}
-							schema={this.props.schema}
-							hasMultipleScopes={
-								this.props.viewScopes && this.props.viewScopes.length > 1
-							}
-							renderMode={componentsToRender}
-							setFilters={(filters) => this.setFilters(filters)}
-							deleteView={(view) => this.deleteView(view)}
-							compact={this.props.compact}
-						/>
-					)}
-					{this.state.showModal && (
-						<FilterModal
-							addFilter={(edit) => this.addFilter(edit)}
-							onClose={() => this.setState({ showModal: false })}
-							schema={this.state.schema}
-							edit={this.state.edit}
-							fieldCompareFn={this.props.filterFieldCompareFn}
-						/>
-					)}
-				</Flex>
-
-				{this.shouldRenderComponent('summary') &&
-					!!filters.length &&
-					!this.props.disabled && (
-						<Summary
-							scopes={this.props.viewScopes}
-							edit={(filter: JSONSchema) => this.editFilter(filter)}
-							delete={(filter: JSONSchema) => this.removeFilter(filter)}
-							saveView={(name, scope) => this.saveView(name, scope)}
-							clearAllFilters={this.clearAllFilters}
-							filters={filters}
-							views={this.state.views || []}
-							schema={this.state.schema}
-						/>
-					)}
-			</FilterWrapper>
-		);
-	}
-}
-
-export interface EditModel {
+export interface FilterSignature {
+	title: string | undefined;
 	field: string;
-	operator: string;
-	value: string | number | { [k: string]: string };
+	operator: Operator<OperatorSlugs>;
+	value: any;
+	refScheme?: string;
 }
 
-export interface ViewScope {
-	slug: string;
-	name: string;
-	label?: string;
+export interface FilterFieldOption {
+	field: string;
+	title: string;
 }
+
+export type FilterFieldCompareFn = (
+	a: FilterFieldOption,
+	b: FilterFieldOption,
+) => number;
+
+export type FilterRenderMode = 'all' | 'add' | 'search' | 'views' | 'summary';
 
 export interface FiltersView {
 	id: string;
 	name: string;
-	scope?: string | null;
 	filters: JSONSchema[];
 }
 
-export interface FilterSignature {
-	field: string;
-	operator: string;
-	value: string | number | boolean | { [k: string]: string };
-}
-
-export type FilterRenderMode = 'all' | 'add' | 'search' | 'views' | 'summary';
-
-export interface DataTypeModel {
-	operators: {
-		[key: string]: {
-			getLabel: (schema: JSONSchema) => string;
-		};
-	};
-	decodeFilter(filter: JSONSchema): null | FilterSignature;
-	createFilter(
-		field: string,
-		operator: string,
-		value: any,
-		schema: JSONSchema,
-	): JSONSchema;
-	Edit(props: DataTypeEditProps): JSX.Element;
-}
-
-export interface DataTypeEditProps {
-	schema: JSONSchema;
-	value?: any;
-	onUpdate: (value: string | number | boolean) => void;
-	operator: string;
-	slim?: boolean;
-}
-
-export interface FiltersState {
-	showModal: boolean;
-	edit: EditModel[];
-	editingFilter: string | null;
-	searchString: string;
-	filters: JSONSchema[];
-	views: FiltersView[];
-	schema: JSONSchema;
-	showSearchDropDown: boolean;
-}
-
-export interface FiltersProps extends React.HTMLAttributes<HTMLElement> {
+export interface FiltersProps {
 	/** If true, disable the entire `Filters` interface */
 	disabled?: boolean;
 	/** An array of json schemas to be displayed as the currently selected filters, typically used when loading filters from storage */
 	filters?: JSONSchema[];
 	/** An array of views, as described above, typically used when loading views from storage */
 	views?: FiltersView[];
-	/** An array of view scopes, as described above */
-	viewScopes?: ViewScope[];
 	/** A function that is called when filters are updated */
 	onFiltersUpdate?: (filters: JSONSchema[]) => void;
 	/** A function that is called when views are updated */
 	onViewsUpdate?: (views: FiltersView[]) => void;
+	/** A function that is called when pressing serach on searchbar */
 	onSearch?: (searchTerm: string) => React.ReactElement | null;
 	/** A json schema describing the shape of the objects you want to filter */
 	schema: JSONSchema;
@@ -492,82 +85,179 @@ export interface FiltersProps extends React.HTMLAttributes<HTMLElement> {
 	filterFieldCompareFn?: FilterFieldCompareFn;
 }
 
-/**
- * A component that can be used for generating filters in the form of [json schema](http://json-schema.org/) objects and saving sets of filters as "views".
- * The filters created by this component can be used to filter a collection of
- * objects using the `SchemaSieve` object.
- *
- * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Filters/story.js)
- *
- * ## Schema
- *
- * The `Filters` component requires a `schema` property which should be a json
- * schema that defines the shape of the objects you want to filter. For example if
- * you want to filter on a collection that looks like this:
- *
- * ```
- * [
- *   {
- *     name: 'Bulbasaur',
- *     caught: true,
- *   },
- *   {
- *     name: 'Pikachu',
- *     caught: true,
- *   },
- *   {
- *     name: 'Dratini',
- *     caught: false,
- *   }
- * ]
- * ```
- *
- * You would define a schema that looks like this:
- *
- * ```
- * {
- *   type: 'object',
- *   properties: {
- *     name: {
- *       title: 'Name',
- *       type: 'string'
- *     },
- *     caught: {
- *       title: 'Has been caught',
- *       type: 'boolean'
- *     }
- *   }
- * }
- * ```
- *
- * If you provide a `title` property, it will be used to label the field when
- * filtering, otherwise the field name will be used.
- *
- * ### Views
- *
- * Views represent a set of filters, along with an id and a name. This is a useful
- * feature for storing a set filters and loading it again at a later point.
- * A view can optionally have a `scope` property, which will correspond to the
- * `slug` of a view scope, if you have provided one in the `Filters` property
- * `viewScopes` property. Scopes allow you to easily add an extra layer of
- * granularity/grouping to views that are generated. If you provide view scopes,
- * the user can select a scope when creating a new view.
- *
- * A view scope has the following properties:
- *
- * | Name          | Type      | Description                                          |
- * | ------------- | --------- | ---------------------------------------------------- |
- * | slug            | `string`  | A unique identifier for the scope                  |
- * | name          | `string`  | A descriptive name for the scope                     |
- * | label       | `string`  | An optional label to use for this scope when creating a view  |
- *
- * A view has the following properties:
- *
- * | Name          | Type      | Description                                          |
- * | ------------- | --------- | ---------------------------------------------------- |
- * | id            | `string`  | A unique identifier for the view                     |
- * | name          | `string`  | A descriptive name for the view                      |
- * | filters       | `string`  | An array of json schemas                             |
- * | scope       | <code>string &#124; null</code>  | The slug of a view scope, or `null` if now scopes are provided |
- */
-export const Filters = BaseFilters;
+export const Filters = ({
+	disabled,
+	filters,
+	views,
+	schema,
+	addFilterButtonProps,
+	viewsMenuButtonProps,
+	renderMode,
+	dark,
+	compact,
+	onViewsUpdate,
+	onFiltersUpdate,
+	onSearch,
+}: FiltersProps) => {
+	const searchContainer = React.createRef<HTMLDivElement>();
+	const [showFilterModal, setShowFilterModal] = React.useState(false);
+	const [showSearchDropDown, setShowSearchDropDown] = React.useState(false);
+	const [searchString, setSearchString] = React.useState<string | undefined>();
+	const [internalFilters, setFilters] = React.useState<
+		JSONSchema[] | undefined
+	>(filters);
+	const [internalViews, setViews] = React.useState<FiltersView[] | undefined>(
+		views,
+	);
+	const [editFilter, setEditFilter] = React.useState<JSONSchema>();
+
+	React.useEffect(() => {
+		if (isEqual(internalFilters, filters)) {
+			return;
+		}
+		setFilters(filters);
+	}, [filters]);
+
+	React.useEffect(() => {
+		if (isEqual(internalViews, views)) {
+			return;
+		}
+		setViews(views);
+	}, [views]);
+
+	const deleteView = (view: FiltersView) => {
+		if (!internalViews) {
+			return;
+		}
+		const newViews = internalViews.filter((i) => i.id !== view.id);
+		setViews(newViews);
+		onViewsUpdate?.(newViews);
+	};
+
+	const addFilter = (filter: JSONSchema) => {
+		let newFilters = internalFilters ?? [];
+		if (editFilter?.$id) {
+			newFilters = newFilters.filter((f) => f.$id !== editFilter.$id);
+		}
+		newFilters = [...newFilters, filter];
+		setFilters(newFilters);
+		onFiltersUpdate?.(newFilters);
+	};
+
+	const deleteFilter = (filter: JSONSchema) => {
+		const newFilters =
+			internalFilters?.filter((f) => f.$id !== filter.$id) ?? [];
+		setFilters(newFilters);
+		onFiltersUpdate?.(newFilters);
+	};
+
+	const saveView = (name: string) => {
+		const view: FiltersView = {
+			id: randomString(),
+			name,
+			filters: cloneDeep(filters) ?? [],
+		};
+		const newViews = [...(internalViews ?? []), view];
+		setViews(newViews);
+		onViewsUpdate?.(newViews);
+	};
+
+	return (
+		<Box style={{ position: 'relative' }}>
+			<Flex flex="1">
+				{(!renderMode || renderMode.includes('search')) && (
+					<SearchWrapper
+						ref={searchContainer}
+						onFocus={() => {
+							setShowSearchDropDown(true);
+							if (searchContainer.current) {
+								onClickOutOrEsc(searchContainer.current, () => {
+									setShowSearchDropDown(false);
+								});
+							}
+						}}
+					>
+						<Search
+							dark={dark}
+							disabled={disabled}
+							value={searchString}
+							onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+								setShowSearchDropDown(e.target.value !== '');
+								setSearchString(e.target.value);
+							}}
+							onEnter={() => {
+								if (!searchString) {
+									return;
+								}
+								const newFilter = createFullTextSearchFilter(
+									schema,
+									searchString,
+								);
+								addFilter(newFilter);
+								setSearchString('');
+							}}
+						/>
+						{searchString && showSearchDropDown && onSearch?.(searchString)}
+					</SearchWrapper>
+				)}
+				{(!renderMode || renderMode.includes('add')) && (
+					<Button
+						disabled={disabled}
+						light={dark}
+						outline
+						quartenary
+						icon={<FontAwesomeIcon icon={faFilter} />}
+						onClick={() => setShowFilterModal(true)}
+						label="Add filter"
+						compact={compact}
+						{...addFilterButtonProps}
+					/>
+				)}
+				{(!renderMode || renderMode.includes('views')) && (
+					<ViewsMenu
+						dark={dark}
+						buttonProps={viewsMenuButtonProps}
+						disabled={disabled}
+						views={views || []}
+						schema={schema}
+						renderMode={renderMode}
+						setFilters={(f) => {
+							setFilters(f);
+							onFiltersUpdate?.(f);
+						}}
+						deleteView={deleteView}
+						compact={compact}
+					/>
+				)}
+			</Flex>
+			{(!renderMode || renderMode.includes('summary')) &&
+				internalFilters?.length &&
+				!disabled && (
+					<Summary
+						onEdit={(filter) => {
+							setEditFilter(filter);
+							setShowFilterModal(true);
+						}}
+						onDelete={deleteFilter}
+						onClearFilters={() => {
+							setFilters([]);
+							onFiltersUpdate?.([]);
+						}}
+						onSaveView={({ name }) => saveView(name)}
+						filters={internalFilters ?? []}
+					/>
+				)}
+			{showFilterModal && (
+				<FilterModal
+					schema={schema}
+					editFilter={editFilter}
+					addFilter={(filter) => {
+						addFilter(filter);
+						setShowFilterModal(false);
+					}}
+					onClose={() => setShowFilterModal(false)}
+				/>
+			)}
+		</Box>
+	);
+};

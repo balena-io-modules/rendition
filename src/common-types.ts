@@ -138,3 +138,6 @@ export interface TooltipProps {
 export interface Tooltip {
 	tooltip?: string | TooltipProps;
 }
+
+export type ResolvableReturnType<T extends (...args: any[]) => any> =
+	T extends (...args: any[]) => Promise<infer R> ? R : any;

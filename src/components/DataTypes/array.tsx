@@ -1,214 +1,134 @@
 import type { JSONSchema7 as JSONSchema } from 'json-schema';
-import * as React from 'react';
-import { randomString, regexEscape } from '../../utils';
-import { DataTypeEditProps } from '../Filters';
-import { Input, InputProps } from '../Input';
-import { Textarea, TextareaProps } from '../Textarea';
-import { getJsonDescription } from './utils';
-import { Select, SelectProps } from '../Select';
-import { findInObject } from '../../extra/AutoUI/utils';
+import get from 'lodash/get';
+import { EditSchema, getModelFilter, Operator } from '../Filters/SchemaSieve';
+import {
+	convertRefSchemeToSchemaPath,
+	getPropertyScheme,
+} from '../../extra/AutoUI/models/helpers';
 
-export const operators = {
-	contains: {
-		getLabel: (_s: JSONSchema) => 'contains',
-	},
-	not_contains: {
-		getLabel: (_s: JSONSchema) => 'does not contain',
-	},
-};
+import type { CreateFilter } from './utils';
+import { getDataModel } from '.';
 
-type OperatorSlug = keyof typeof operators;
+export const operators = () => ({
+	contains: 'contains',
+	not_contains: 'does not contain',
+});
 
-interface StringFilter extends JSONSchema {
-	title: OperatorSlug;
-	properties?: {
-		[k: string]: {
-			not?: {
-				contains: {
-					const: string;
-				};
-			};
-			contains?: {
-				const: string;
-			};
-		};
-	};
-	anyOf?: Array<{
-		properties?: {
-			[k: string]: {
-				not?: {
-					contains: {
-						const: string;
-					};
-				};
-				contains?: {
-					const: string;
-				};
-			};
-		};
-	}>;
-}
+export type OperatorSlug = keyof ReturnType<typeof operators>;
 
-export const decodeFilter = (
-	filter: StringFilter,
-): {
-	field: string;
-	operator: OperatorSlug;
-	value: string;
-} | null => {
-	const operator = filter.title;
-	const properties = findInObject(filter, 'properties');
-	const [firstPropKey] = Object.keys(properties);
-	const field = firstPropKey;
-	const value =
-		findInObject(filter, 'const') ?? findInObject(filter, 'pattern');
+export const createFilter: CreateFilter<OperatorSlug> = (
+	field,
+	operator,
+	value,
+	schema,
+	_refScheme,
+	isFullTextSearch,
+) => {
+	const filter = getFilter(field, schema, value, operator, isFullTextSearch);
 
 	return {
-		field,
-		operator,
-		value,
-	};
-};
-
-export const createFilter = (
-	field: string,
-	operator: OperatorSlug,
-	value: any,
-	schema: JSONSchema,
-): JSONSchema => {
-	const { title } = schema;
-	const base: StringFilter = {
-		$id: randomString(),
-		title: operator,
-		description: getJsonDescription(
-			title || field,
-			operators[operator].getLabel(schema),
-			value,
-		),
-		type: 'object',
-	};
-
-	const filter = getFilter(schema, value);
-
-	if (operator === 'contains') {
-		return Object.assign(base, {
-			properties: {
-				[field]: {
-					type: 'array',
-					...filter,
-				},
+		properties: {
+			[field]: {
+				type: 'array',
+				...filter,
 			},
-			required: [field],
-		});
-	}
-
-	if (operator === 'not_contains') {
-		return Object.assign(base, {
-			anyOf: [
-				{
-					properties: {
-						[field]: {
-							type: 'array',
-							not: {
-								...filter,
-							},
-						},
-					},
-				},
-				{
-					properties: {
-						[field]: {
-							type: 'null',
-						},
-					},
-				},
-			],
-		});
-	}
-
-	return base;
+		},
+		required: [field],
+	};
 };
 
-interface OneOf {
-	const: string | boolean | number;
-	title: string;
-}
-
-export const Edit = ({
-	onUpdate,
-	slim,
-	...props
-}: DataTypeEditProps &
-	TextareaProps &
-	InputProps &
-	Omit<SelectProps<OneOf>, 'onChange'> & { slim?: boolean }) => {
-	const schemaItems = props.schema.items as JSONSchema | undefined;
-	if (schemaItems?.oneOf) {
-		return (
-			<Select<OneOf>
-				{...props}
-				options={schemaItems.oneOf || []}
-				valueKey="const"
-				labelKey="title"
-				value={
-					(schemaItems.oneOf || []).find(
-						(x: OneOf) => x.const === props.value,
-					) as OneOf
-				}
-				onChange={({ option }) => onUpdate(option.const.toString())}
-			/>
-		);
-	}
-	if (slim) {
-		return (
-			<Input
-				onChange={(e: React.FormEvent<HTMLInputElement>) =>
-					onUpdate(e.currentTarget.value)
-				}
-				{...props}
-			/>
-		);
-	}
-
-	return (
-		<Textarea
-			onChange={(e: React.FormEvent<HTMLTextAreaElement>) =>
-				onUpdate(e.currentTarget.value)
-			}
-			{...props}
-		/>
-	);
-};
-
-export const getFilter = (schema: JSONSchema, value: string) => {
+export const getFilter = (
+	field: string,
+	schema: JSONSchema,
+	value: string,
+	operator: Operator<OperatorSlug>,
+	isFullTextSearch?: boolean,
+): JSONSchema => {
 	if (
 		!!schema?.items &&
 		typeof schema.items !== 'boolean' &&
 		'properties' in schema.items &&
 		!!schema.items.properties
 	) {
+		const propertyFilters = Object.entries(schema.items.properties).map(
+			([propKey, propSchema]: [string, JSONSchema]) => {
+				return getModelFilter(
+					propSchema,
+					propKey,
+					operator,
+					value,
+					isFullTextSearch,
+					convertOperator,
+				);
+			},
+		);
 		return {
 			minItems: 1,
-			items: {
-				properties: Object.keys(schema.items.properties).reduce(
-					(props: NonNullable<JSONSchema['properties']>, propKey: string) => {
-						props[propKey] = {
-							// @ts-expect-error
-							regexp: {
-								pattern: regexEscape(value),
-								flags: 'i',
-							},
-						};
-						return props;
-					},
-					{},
-				),
-			},
+			items:
+				propertyFilters.length === 1
+					? propertyFilters[0]
+					: {
+							anyOf: propertyFilters,
+					  },
 		};
 	}
-	return {
-		contains: {
-			const: Number.isNaN(parseInt(value, 10)) ? value : Number(value),
-		},
-	};
+	const isSchemaItems =
+		!!schema?.items &&
+		typeof schema.items !== 'boolean' &&
+		'type' in schema.items;
+	const filterSchema = isSchemaItems ? (schema.items as JSONSchema) : schema;
+	const filter = getModelFilter(
+		filterSchema,
+		field,
+		operator,
+		value,
+		isFullTextSearch,
+		convertOperator,
+	);
+	const recursiveFilter = filter.properties?.[field] as JSONSchema;
+	const targetFilter =
+		isSchemaItems && recursiveFilter ? recursiveFilter : filter;
+
+	if (typeof targetFilter.not === 'object') {
+		// TODO: avj doesn't support { contains: { not: ... } },
+		// so we have to convert it
+		return {
+			not: { contains: targetFilter.not },
+		};
+	}
+	return { contains: targetFilter };
+};
+
+const convertOperator = (
+	operator: Operator<OperatorSlug>,
+	operators: Record<string, string> | undefined,
+): Operator<OperatorSlug | 'is' | 'is_not'> => {
+	if (operators != null && operator.slug in operators) {
+		return operator;
+	}
+	if (/(?:\b|_)not(?:\b|_)/.test(operator.slug)) {
+		return { slug: 'is_not', label: 'is not' };
+	}
+	return { slug: 'is', label: 'is' };
+};
+
+export const editSchema = (
+	schema: JSONSchema,
+	operator: Operator<OperatorSlug> | undefined,
+): JSONSchema => {
+	const refScheme = getPropertyScheme(schema);
+	const schemaItems = schema.items as JSONSchema | undefined;
+	const convertedRefScheme = convertRefSchemeToSchemaPath(refScheme);
+	if (!!schemaItems && !!convertedRefScheme) {
+		const property = get(
+			schemaItems.properties,
+			convertedRefScheme,
+		) as JSONSchema['properties'];
+		return property as JSONSchema;
+	}
+	const subSchema = schemaItems || schema;
+	const model = getDataModel(subSchema);
+	return model && 'editSchema' in model
+		? (model.editSchema as EditSchema)(subSchema, operator)
+		: subSchema;
 };
