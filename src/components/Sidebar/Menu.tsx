@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { Badge, InternalBadgeProps } from '../Badge';
 import { Flex, FlexProps } from '../Flex';
 import { Txt } from '../Txt';
 
@@ -9,8 +10,17 @@ export interface MenuItem {
 	className?: string;
 	href: string;
 	title: string;
+	badge?: InternalBadgeProps;
 	icon?: React.ReactNode;
 }
+
+const StyledBadge = styled(Badge)`
+	border-radius: 0 1em 1em 0;
+	position: absolute;
+	transform: scale(0.75);
+	left: -5%;
+	bottom: 5%;
+`;
 
 const MenuItem = styled(Flex)<{ isCurrent: boolean }>`
 	height: 48px;
@@ -33,6 +43,7 @@ const MenuItem = styled(Flex)<{ isCurrent: boolean }>`
 				? props.theme.colors.quartenary.light
 				: props.theme.colors.tertiary.dark};
 	}
+	position: relative;
 `;
 
 export const Menu = ({
@@ -68,6 +79,7 @@ export const Menu = ({
 							alignItems="center"
 							justifyContent={isCollapsed ? 'center' : 'unset'}
 						>
+							{!!item.badge && <StyledBadge {...item.badge} />}
 							{!!item.icon && (
 								<Txt.span
 									bold
