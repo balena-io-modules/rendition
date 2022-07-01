@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add theme primary color main to Badge shades
+      hash: 6cf2ebcc8de3aa143b2beac544ea93e00209f9db
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 28.5.0
+  title: "'Add theme primary color main to Badge shades'"
+  date: 2022-07-01T11:41:31.843Z
+- commits:
     - subject: Update snapshots
       hash: f04f7cb2baf3fc0ad4d1efff69e30fcad8f25d74
       body: ""
