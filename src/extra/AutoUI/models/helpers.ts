@@ -4,7 +4,7 @@ import {
 	autoUIJsonSchemaPick,
 	AutoUIRawModel,
 } from '../schemaOps';
-import {
+import type {
 	JSONSchema7 as JSONSchema,
 	JSONSchema7Definition as JSONSchemaDefinition,
 } from 'json-schema';

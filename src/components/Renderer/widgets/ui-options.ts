@@ -1,4 +1,4 @@
-import { JSONSchema } from '../types';
+import type { JSONSchema } from '../types';
 
 export type UiOptions = {
 	[key: string]: JSONSchema;

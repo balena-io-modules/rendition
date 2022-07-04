@@ -7,7 +7,7 @@ import values from 'lodash/values';
 import skhema from 'skhema';
 import jsone from 'json-e';
 import * as types from './types';
-import { JSONSchema7 } from 'json-schema';
+import type { JSONSchema7 } from 'json-schema';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import map from 'lodash/map';
 import uniq from 'lodash/uniq';

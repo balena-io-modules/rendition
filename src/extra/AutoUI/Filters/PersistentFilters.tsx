@@ -1,7 +1,7 @@
 import * as React from 'react';
 import filter from 'lodash/filter';
 import qs from 'qs';
-import { JSONSchema } from '../../../components/Renderer/types';
+import type { JSONSchema } from '../../../components/Renderer/types';
 import {
 	Filters,
 	FilterSignature,

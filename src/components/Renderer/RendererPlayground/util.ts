@@ -1,4 +1,4 @@
-import { UiSchema, JSONSchema } from '../types';
+import type { UiSchema, JSONSchema } from '../types';
 import first from 'lodash/first';
 import forEach from 'lodash/forEach';
 import get from 'lodash/get';

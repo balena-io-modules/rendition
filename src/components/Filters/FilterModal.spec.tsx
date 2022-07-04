@@ -3,7 +3,7 @@ jest.mock('lodash/debounce', () => jest.fn((fn) => fn));
 import { mount } from 'enzyme';
 import sinon from 'sinon';
 import React from 'react';
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import { Provider } from '../..';
 import { FilterModal } from './FilterModal';
 

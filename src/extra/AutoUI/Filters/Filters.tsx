@@ -1,5 +1,5 @@
 import React from 'react';
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import { PersistentFilters } from './PersistentFilters';
 import { AutoUIContext, AutoUIBaseResource } from '../schemaOps';
 import {

@@ -1,4 +1,4 @@
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import cloneDeep from 'lodash/cloneDeep';
 import forEach from 'lodash/forEach';
 

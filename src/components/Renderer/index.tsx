@@ -18,7 +18,8 @@ import {
 	WidgetMeta,
 } from './widgets';
 import { transformUiSchema, getBestSchemaMatch } from './widgets/widget-util';
-import { Value, JSONSchema, UiSchema, Format, JsonTypes } from './types';
+import type { Value, JSONSchema, UiSchema, Format } from './types';
+import { JsonTypes } from './types';
 import { WidgetContext } from '../../contexts/WidgetContext';
 export { Widget, WidgetProps, widgetFactory } from './widgets/widget-util';
 

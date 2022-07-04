@@ -1,4 +1,4 @@
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import { findInObject } from '../../extra/AutoUI/utils';
 import { randomString, regexEscape } from '../../utils';
 import { FULL_TEXT_SLUG } from '../Filters/SchemaSieve';

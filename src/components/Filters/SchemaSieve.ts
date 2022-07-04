@@ -1,6 +1,6 @@
 import Ajv from 'ajv';
 import ajvKeywords from 'ajv-keywords';
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import cloneDeep from 'lodash/cloneDeep';
 import defaults from 'lodash/defaults';
 import every from 'lodash/every';

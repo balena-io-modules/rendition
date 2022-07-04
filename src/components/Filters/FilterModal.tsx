@@ -1,6 +1,6 @@
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import map from 'lodash/map';
 import debounce from 'lodash/debounce';
 import React, { useState } from 'react';

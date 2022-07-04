@@ -1,4 +1,4 @@
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import { randomString } from '../../utils';
 import { normalizeDateTime } from './date-time-helpers';
 import { getJsonDescription } from './utils';

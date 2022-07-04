@@ -11,7 +11,7 @@ import has from 'lodash/has';
 import concat from 'lodash/concat';
 import get from 'lodash/get';
 import pick from 'lodash/pick';
-import { JSONSchema6 } from 'json-schema';
+import type { JSONSchema6 } from 'json-schema';
 import type {
 	JSONSchema,
 	JsonTypesTypeMap,

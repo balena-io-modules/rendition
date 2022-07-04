@@ -1,4 +1,4 @@
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import * as React from 'react';
 import { Omit } from '../../common-types';
 import { Tag, TagProps } from '../Tag';

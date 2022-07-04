@@ -18,7 +18,7 @@ import { Button } from '../../Button';
 import { Heading } from '../../Heading';
 import { Checkbox } from '../../Checkbox';
 import { Renderer } from '../index';
-import { Value, JSONSchema, UiSchema } from '../types';
+import type { Value, JSONSchema, UiSchema } from '../types';
 import { CONTEXT_FUNCTIONS, EXTRA_FORMATS } from '../examples';
 import JsonEditor from './JsonEditor';
 import { generateUiSchemaMetaSchema } from './util';

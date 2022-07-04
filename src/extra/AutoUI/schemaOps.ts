@@ -1,4 +1,4 @@
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import $pick from 'lodash/pick';
 import { Dictionary } from '../../common-types';
 import { ResourceTagModelService } from '../../components/TagManagementModal/tag-management-service';
