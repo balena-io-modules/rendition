@@ -1,7 +1,7 @@
 import { FormatValidator, FormatDefinition } from 'ajv';
 import { UiSchema as rjsfUiSchema } from '@rjsf/core';
 import { Widget } from './widgets/widget-util';
-export { JSONSchema7 as JSONSchema } from 'json-schema';
+export type { JSONSchema7 as JSONSchema } from 'json-schema';
 
 export const JsonTypes = {
 	array: 'array',
