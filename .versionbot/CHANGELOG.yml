@@ -1,4 +1,28 @@
 - commits:
+    - subject: Change all JSONSchema imports to be explicitly type only
+      hash: 366caa405cc9234f9d1543c5340e0ba0fa550981
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+    - subject: Fix storybook issue trying to import type only json-schema package
+      hash: 83dab92a0a15cc0b8fc1c2c0ca9a52bf4ea17286
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        See: https://www.flowdock.com/app/rulemotion/f-rendition/threads/vX8HYnTNYCHgAWMbkVOUFR0oA_e
+        see: https://www.flowdock.com/app/rulemotion/f-rendition/threads/vX8HYnTNYCHgAWMbkVOUFR0oA_e
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 28.6.1
+  title: "'Fix missing json schema package build error'"
+  date: 2022-07-04T18:05:57.691Z
+- commits:
     - subject: Add optional `badge` property to Sidebar MenuItem
       hash: d40dba2a26e5f3c468c00d2ca672c5e4e0fd5d6d
       body: ""
