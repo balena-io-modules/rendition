@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import sinon from 'sinon';
-import { JSONSchema7 } from 'json-schema';
+import type { JSONSchema7 } from 'json-schema';
 
 import { Alert, Form, Provider } from '../../';
 import { EXTRA_FORMATS } from './examples';

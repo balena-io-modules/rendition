@@ -1,6 +1,6 @@
 import { faFilter } from '@fortawesome/free-solid-svg-icons/faFilter';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import castArray from 'lodash/castArray';
 import cloneDeep from 'lodash/cloneDeep';
 import includes from 'lodash/includes';

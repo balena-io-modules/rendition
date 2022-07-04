@@ -1,4 +1,4 @@
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import find from 'lodash/find';
 import findKey from 'lodash/findKey';
 import includes from 'lodash/includes';

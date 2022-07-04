@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Filters, Provider, SchemaSieve, Select, Box } from '../../';
 import FiltersSummary from '../../components/Filters/Summary';
-import { JSONSchema7 } from 'json-schema';
+import type { JSONSchema7 } from 'json-schema';
 import { Keyboard } from 'grommet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

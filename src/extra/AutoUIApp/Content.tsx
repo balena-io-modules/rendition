@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router';
 import { AutoUIModel, AutoUIBaseResource } from '../AutoUI/schemaOps';
-import { JSONSchema } from '../../components/Renderer/types';
+import type { JSONSchema } from '../../components/Renderer/types';
 import { OpenApiJson } from './openApiJson';
 import {
 	getAllNaturalPropertiesKeys,

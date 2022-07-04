@@ -1,4 +1,4 @@
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import uniqBy from 'lodash/uniqBy';
 import * as React from 'react';
 import RsjfForm, {

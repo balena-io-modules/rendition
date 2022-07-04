@@ -5,7 +5,7 @@ import {
 	UiSchema,
 	Value,
 } from '../../components/Renderer/types';
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import { transformUiSchema } from '../../components/Renderer/widgets/widget-util';
 import { getValue, getWidget } from '../../components/Renderer';
 import castArray from 'lodash/castArray';

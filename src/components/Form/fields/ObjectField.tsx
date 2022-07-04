@@ -8,7 +8,7 @@ import * as React from 'react';
 import AddButton from '@rjsf/core/dist/cjs/components/AddButton';
 import PatternPropertiesField from './PatternPropertiesField';
 
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import { FormValidation, IdSchema, UiSchema } from '@rjsf/core';
 import {
 	// @ts-expect-error

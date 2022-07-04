@@ -1,6 +1,6 @@
 import { faTrashAlt } from '@fortawesome/free-regular-svg-icons/faTrashAlt';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import map from 'lodash/map';
 import reduce from 'lodash/reduce';
 import * as React from 'react';

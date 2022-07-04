@@ -20,7 +20,7 @@ import { LensSelection } from './Lenses/LensSelection';
 import styled from 'styled-components';
 import { Flex } from '../../components/Flex';
 import { filter } from '../../components/Filters/SchemaSieve';
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import isEqual from 'lodash/isEqual';
 import { Spinner } from '../../components/Spinner';
 import { useTranslation } from '../../hooks/useTranslation';

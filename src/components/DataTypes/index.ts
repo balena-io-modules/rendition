@@ -1,4 +1,4 @@
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import * as arrayType from './array';
 import * as booleanType from './boolean';
 import * as dateTimeType from './date-time';

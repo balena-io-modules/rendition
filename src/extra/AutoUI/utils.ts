@@ -1,7 +1,7 @@
 import { AutoUIBaseResource, Permissions, Priorities } from './schemaOps';
 import { TFunction } from '../../hooks/useTranslation';
 import { TableSortFunction } from '../../components/Table/TableRow';
-import { JSONSchema7 as JSONSchema } from 'json-schema';
+import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import { JsonTypes } from '../../components/Renderer/types';
 import { diff } from '../../utils';
 import castArray from 'lodash/castArray';

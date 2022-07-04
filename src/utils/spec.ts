@@ -1,5 +1,5 @@
 import * as utils from '.';
-import { JSONSchema7 } from 'json-schema';
+import type { JSONSchema7 } from 'json-schema';
 
 describe('utils', () => {
 	describe('.stripSchemaFormats()', () => {

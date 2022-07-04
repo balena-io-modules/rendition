@@ -1,7 +1,7 @@
 import React from 'react';
 import { Flex } from '../../components/Flex';
 import { Button } from '../../components/Button';
-import { JSONSchema } from '../../components/Renderer/types';
+import type { JSONSchema } from '../../components/Renderer/types';
 import { ActionMethods, ACTION_SIDEBAR_WIDTH } from '.';
 import styled from 'styled-components';
 import { Form } from '../../components/Form';
