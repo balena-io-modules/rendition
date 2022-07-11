@@ -1,4 +1,17 @@
 - commits:
+    - subject: Make MenuItem badge small when Sidebar is collapsed
+      hash: 3b59e7e68145c4afeca8986382c6ef028ef334fc
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 28.6.2
+  title: "'Make MenuItem badge small when Sidebar is collapsed'"
+  date: 2022-07-11T15:52:20.914Z
+- commits:
     - subject: Change all JSONSchema imports to be explicitly type only
       hash: 366caa405cc9234f9d1543c5340e0ba0fa550981
       body: ""
