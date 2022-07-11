@@ -14,12 +14,18 @@ export interface MenuItem {
 	icon?: React.ReactNode;
 }
 
-const StyledBadge = styled(Badge)`
+const StyledBadge = styled(Badge)<{ isCollapsed: boolean }>`
 	border-radius: 0 1em 1em 0;
 	position: absolute;
 	transform: scale(0.75);
 	left: -5%;
 	bottom: 5%;
+	${(props) =>
+		props.isCollapsed &&
+		`
+			left: -15%;
+			height: 1.675em;
+		`}
 `;
 
 const MenuItem = styled(Flex)<{ isCurrent: boolean }>`
@@ -79,7 +85,11 @@ export const Menu = ({
 							alignItems="center"
 							justifyContent={isCollapsed ? 'center' : 'unset'}
 						>
-							{!!item.badge && <StyledBadge {...item.badge} />}
+							{!!item.badge && (
+								<StyledBadge {...item.badge} isCollapsed={isCollapsed}>
+									{isCollapsed ? '' : item.badge.children}
+								</StyledBadge>
+							)}
 							{!!item.icon && (
 								<Txt.span
 									bold
