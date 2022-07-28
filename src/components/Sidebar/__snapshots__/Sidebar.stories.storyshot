@@ -3,7 +3,7 @@
 exports[`Storyshots Core/Sidebar Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
       class="sc-gKXOVf QRSBg sc-iBkjds ideygz sc-hHLeRK iKIurY"
@@ -28,7 +28,7 @@ exports[`Storyshots Core/Sidebar Default 1`] = `
                   class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
                 >
                   <div
-                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-jWEIYm iKIurY iWCKqs"
+                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-ESujJ iKIurY iPkcIm"
                   />
                   <div
                     class="sc-gKXOVf QRSBg sc-iBkjds dqCdat sc-hHLeRK iKIurY"
@@ -64,7 +64,7 @@ exports[`Storyshots Core/Sidebar Default 1`] = `
                   class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
                 >
                   <div
-                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-jWEIYm iKIurY bFtnjU"
+                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-ESujJ iKIurY IUhdi"
                   />
                   <div
                     class="sc-gKXOVf QRSBg sc-iBkjds dqCdat sc-hHLeRK iKIurY"
@@ -92,7 +92,7 @@ exports[`Storyshots Core/Sidebar Default 1`] = `
             href="/menuitem1"
           >
             <div
-              class="sc-gKXOVf QRSBg sc-iBkjds lbcSYZ sc-hHLeRK sc-fmRtwQ dlYhNW ixFnmQ"
+              class="sc-gKXOVf QRSBg sc-iBkjds lbcSYZ sc-hHLeRK sc-eEOqmf dlYhNW boSbZi"
             >
               <span
                 class="sc-ivTmOn fSbxau sc-llJcti gHzjsC"
@@ -106,7 +106,7 @@ exports[`Storyshots Core/Sidebar Default 1`] = `
             href="/menuitem2"
           >
             <div
-              class="sc-gKXOVf QRSBg sc-iBkjds lbcSYZ sc-hHLeRK sc-fmRtwQ dlYhNW ixFnmQ"
+              class="sc-gKXOVf QRSBg sc-iBkjds lbcSYZ sc-hHLeRK sc-eEOqmf dlYhNW boSbZi"
             >
               <span
                 class="sc-ivTmOn fSbxau sc-llJcti gHzjsC"
@@ -120,7 +120,7 @@ exports[`Storyshots Core/Sidebar Default 1`] = `
             href="/menuitem3"
           >
             <div
-              class="sc-gKXOVf QRSBg sc-iBkjds lbcSYZ sc-hHLeRK sc-fmRtwQ dlYhNW ixFnmQ"
+              class="sc-gKXOVf QRSBg sc-iBkjds lbcSYZ sc-hHLeRK sc-eEOqmf dlYhNW boSbZi"
             >
               <span
                 class="sc-ivTmOn fSbxau sc-llJcti gHzjsC"
@@ -146,7 +146,7 @@ exports[`Storyshots Core/Sidebar Default 1`] = `
 exports[`Storyshots Core/Sidebar With Additional Components 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
       class="sc-gKXOVf QRSBg sc-iBkjds ideygz sc-hHLeRK iKIurY"
@@ -171,7 +171,7 @@ exports[`Storyshots Core/Sidebar With Additional Components 1`] = `
                   class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
                 >
                   <div
-                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-jWEIYm iKIurY iWCKqs"
+                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-ESujJ iKIurY iPkcIm"
                   />
                   <div
                     class="sc-gKXOVf QRSBg sc-iBkjds dqCdat sc-hHLeRK iKIurY"
@@ -207,7 +207,7 @@ exports[`Storyshots Core/Sidebar With Additional Components 1`] = `
                   class="sc-gKXOVf QRSBg sc-iBkjds gNjzDq sc-hHLeRK liHVdE"
                 >
                   <div
-                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-jWEIYm iKIurY bFtnjU"
+                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-ESujJ iKIurY IUhdi"
                   />
                   <div
                     class="sc-gKXOVf QRSBg sc-iBkjds dqCdat sc-hHLeRK iKIurY"
@@ -235,7 +235,7 @@ exports[`Storyshots Core/Sidebar With Additional Components 1`] = `
             href="/menuitem1"
           >
             <div
-              class="sc-gKXOVf QRSBg sc-iBkjds lbcSYZ sc-hHLeRK sc-fmRtwQ dlYhNW ixFnmQ"
+              class="sc-gKXOVf QRSBg sc-iBkjds lbcSYZ sc-hHLeRK sc-eEOqmf dlYhNW boSbZi"
             >
               <span
                 class="sc-ivTmOn fSbxau sc-llJcti gHzjsC"
@@ -249,7 +249,7 @@ exports[`Storyshots Core/Sidebar With Additional Components 1`] = `
             href="/menuitem2"
           >
             <div
-              class="sc-gKXOVf QRSBg sc-iBkjds lbcSYZ sc-hHLeRK sc-fmRtwQ dlYhNW ixFnmQ"
+              class="sc-gKXOVf QRSBg sc-iBkjds lbcSYZ sc-hHLeRK sc-eEOqmf dlYhNW boSbZi"
             >
               <span
                 class="sc-ivTmOn fSbxau sc-llJcti gHzjsC"
@@ -263,7 +263,7 @@ exports[`Storyshots Core/Sidebar With Additional Components 1`] = `
             href="/menuitem3"
           >
             <div
-              class="sc-gKXOVf QRSBg sc-iBkjds lbcSYZ sc-hHLeRK sc-fmRtwQ dlYhNW ixFnmQ"
+              class="sc-gKXOVf QRSBg sc-iBkjds lbcSYZ sc-hHLeRK sc-eEOqmf dlYhNW boSbZi"
             >
               <span
                 class="sc-ivTmOn fSbxau sc-llJcti gHzjsC"

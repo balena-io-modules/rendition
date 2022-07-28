@@ -8,7 +8,6 @@ import { Box } from '../Box';
 import { Button, ButtonProps } from '../Button';
 import { Flex } from '../Flex';
 import { Heading } from '../Heading';
-import { Txt } from '../Txt';
 
 const bodyNoOverflowClass = `rendition-modal-open`;
 
@@ -23,10 +22,6 @@ const DEFAULT_MODAL_WIDTH = 700;
 
 const ModalSizer = styled(Box)`
 	overflow-y: auto;
-`;
-
-const HeadingDescription = styled(Txt)`
-	font-weight: normal;
 `;
 
 const ModalButton = (props: ButtonProps) => {
@@ -149,20 +144,7 @@ class BaseModal extends React.Component<ThemedModalProps, any> {
 					className={props.className}
 				>
 					<Box p={[px(theme.space[3]), '40px 50px 30px']}>
-						{props.titleElement ? (
-							<Heading.h3 mb={4}>{props.titleElement}</Heading.h3>
-						) : (
-							!!props.title && (
-								<Heading.h3 mb={4}>
-									{props.title}
-									{!!props.titleDetails && (
-										<HeadingDescription color="text.light" fontSize={2}>
-											{props.titleDetails}
-										</HeadingDescription>
-									)}
-								</Heading.h3>
-							)
-						)}
+						{!!props.title && <Heading.h3 mb={4}>{props.title}</Heading.h3>}
 						{props.children}
 						<Flex mt={5} alignItems="center" justifyContent="flex-end">
 							{props.cancel && (
@@ -185,16 +167,13 @@ class BaseModal extends React.Component<ThemedModalProps, any> {
 	}
 }
 
-export interface ModalProps extends React.HTMLAttributes<HTMLElement> {
-	/** A title to display at the top of the Modal, only displayed if the `titleElement` property is not used */
-	title?: string;
+export interface ModalProps
+	extends Omit<React.HTMLAttributes<HTMLElement>, 'title'> {
 	width?: ResponsiveStyle;
 	/** Start the modal from the center (default) or top */
 	position?: 'center' | 'top';
 	/** A string or JSX element to display at the top of the modal */
-	titleElement?: string | JSX.Element;
-	/** A string or JSX element to display underneath the modal's `title`, only displayed if the `titleElement` property is not used and a `title` property is provided */
-	titleDetails?: string | JSX.Element;
+	title?: string | JSX.Element;
 	/** A string or JSX element to display in the primary modal button, defaults to 'OK' */
 	action?: string | JSX.Element;
 	/** A function that is called if the modal is dismissed */

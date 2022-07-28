@@ -3,22 +3,22 @@
 exports[`Storyshots Core/Copy Always Show 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
       class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-bBrHrO HodyL"
     >
       <div
-        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kngDgl iKIurY kdKlCZ"
+        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-afnQL iKIurY eFWjlE"
       >
         <div
           class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
         >
           <div
-            class="sc-iqGgem lbaJJA"
+            class="sc-iFwKgL cqyvps"
           >
             <div
-              class="sc-eVQfli lbmlHZ sc-dkSuNL bzbeQN"
+              class="sc-iqGgem lyCqM sc-cwpsFg cwqlwQ"
             >
               <div
                 data-display="table-head"
@@ -109,7 +109,7 @@ exports[`Storyshots Core/Copy Always Show 1`] = `
 exports[`Storyshots Core/Copy Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
       class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-bBrHrO HodyL"
@@ -146,7 +146,7 @@ exports[`Storyshots Core/Copy Default 1`] = `
 exports[`Storyshots Core/Copy Icon Only 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
       class="sc-gKXOVf QRSBg sc-iBkjds heXUfd"
@@ -183,16 +183,16 @@ exports[`Storyshots Core/Copy Icon Only 1`] = `
 exports[`Storyshots Core/Copy With Tag 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-fWIMVQ jMbSIt"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
   >
     <div
       class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-bBrHrO HodyL"
     >
       <div
-        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY sc-eFWqGp gPSCbK"
+        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK iKIurY sc-bWXABl jdyMoq"
       >
         <div
-          class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-grREDI iKIurY coRGQK"
+          class="sc-gKXOVf QRSBg sc-iBkjds eecmTK sc-hHLeRK sc-HzFiz iKIurY fECpVO"
         >
           <div
             class="sc-ivTmOn qStAn sc-cxabCf ecsbJB"
