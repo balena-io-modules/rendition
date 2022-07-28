@@ -3,7 +3,7 @@
 exports[`Storyshots Extra/AutoUI Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-yeoIj jdeFJT"
   >
     <h5
       class="sc-ciZhAO iJFBxw sc-cTQhss dOQXsM"
@@ -20,10 +20,10 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
       class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux sc-hHLeRK eTSHtc"
     >
       <div
-        class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux sc-hHLeRK sc-lkwKjF iKIurY khcTuI sc-hsOonA fPwlCE"
+        class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux sc-hHLeRK sc-jWEIYm iKIurY jbfbAy sc-lkwKjF dxOXJr"
       >
         <div
-          class="sc-dUWWNf iOmmoa"
+          class="sc-fmRtwQ dxExqA"
         >
           <div
             class="sc-gKXOVf QRSBg sc-iBkjds eRknfj sc-hHLeRK eTSHtc"
@@ -32,23 +32,24 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
               class="sc-gKXOVf QRSBg sc-iBkjds diGonb"
             >
               <div
-                class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-cuqtlR klWzuj eXTlRI"
+                class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-gVAlfg klWzuj jHdQHQ"
               >
                 <div
                   class="sc-gKXOVf klumOZ sc-iBkjds hNqnWQ"
                   order="-1,-1,-1,0"
                 >
                   <div
-                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-kYWVYA ikOJWL"
+                    class="sc-gKXOVf QRSBg sc-iBkjds ipRjux"
+                    style="position: relative;"
                   >
                     <div
-                      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK eccixI"
+                      class="sc-gKXOVf ckXSHX sc-iBkjds ipRjux sc-hHLeRK iKIurY"
                     >
                       <div
-                        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hAsxaJ cmyIYE"
+                        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-bhVIhj jaXiga"
                       >
                         <div
-                          class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-kgUAyh iKIurY kCkpfb sc-hTtwUo eWqTFt"
+                          class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-fbPSWO iKIurY fKkLud sc-GVOUr DlIhN"
                         >
                           <input
                             placeholder="Search entries..."
@@ -65,15 +66,34 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"
+                              d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"
                               fill="currentColor"
                             />
                           </svg>
+                          <button
+                            class="StyledButton-sc-323bzc-0 eXTxNK sc-breuTD sc-bjUoiL Krizp gOoGXe sc-dIouRR kAoSkv clear-icon"
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="svg-inline--fa fa-xmark "
+                              data-icon="xmark"
+                              data-prefix="fas"
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 320 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </button>
                         </div>
-                        
                       </div>
                       <button
-                        class="StyledButton-sc-323bzc-0 eBMyPP sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR fegrug"
+                        class="StyledButton-sc-323bzc-0 eBMyPP sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR kAoSkv"
                         type="button"
                       >
                         <div
@@ -90,7 +110,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M3.853 54.87C10.47 40.9 24.54 32 40 32H472C487.5 32 501.5 40.9 508.1 54.87C514.8 68.84 512.7 85.37 502.1 97.33L320 320.9V448C320 460.1 313.2 471.2 302.3 476.6C291.5 482 278.5 480.9 268.8 473.6L204.8 425.6C196.7 419.6 192 410.1 192 400V320.9L9.042 97.33C-.745 85.37-2.765 68.84 3.854 54.87L3.853 54.87z"
+                              d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6V320.9L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"
                               fill="currentColor"
                             />
                           </svg>
@@ -101,10 +121,10 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                         </div>
                       </button>
                       <div
-                        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-GVOUr bFSVuL sc-TRNrF kXUaZr"
+                        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-iNWwEs goxQVH sc-olbas gECXys"
                       >
                         <button
-                          class="StyledButton-sc-323bzc-0 eBMyPP sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR kAoSkv sc-dwLEzm yrxfS"
+                          class="StyledButton-sc-323bzc-0 eBMyPP sc-breuTD sc-hAZoDl Krizp eagAYV sc-dIouRR kAoSkv sc-eKszNL dDLayO"
                           type="button"
                         >
                           <div
@@ -121,7 +141,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M304 16.58C304 7.555 310.1 0 320 0C443.7 0 544 100.3 544 224C544 233 536.4 240 527.4 240H304V16.58zM32 272C32 150.7 122.1 50.34 238.1 34.25C248.2 32.99 256 40.36 256 49.61V288L412.5 444.5C419.2 451.2 418.7 462.2 411 467.7C371.8 495.6 323.8 512 272 512C139.5 512 32 404.6 32 272zM558.4 288C567.6 288 575 295.8 573.8 305C566.1 360.9 539.1 410.6 499.9 447.3C493.9 452.1 484.5 452.5 478.7 446.7L320 288H558.4z"
+                                d="M304 240V16.6c0-9 7-16.6 16-16.6C443.7 0 544 100.3 544 224c0 9-7.6 16-16.6 16H304zM32 272C32 150.7 122.1 50.3 239 34.3c9.2-1.3 17 6.1 17 15.4V288L412.5 444.5c6.7 6.7 6.2 17.7-1.5 23.1C371.8 495.6 323.8 512 272 512C139.5 512 32 404.6 32 272zm526.4 16c9.3 0 16.6 7.8 15.4 17c-7.7 55.9-34.6 105.6-73.9 142.3c-6 5.6-15.4 5.2-21.2-.7L320 288H558.4z"
                                 fill="currentColor"
                               />
                             </svg>
@@ -143,11 +163,11 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                                 data-prefix="fas"
                                 focusable="false"
                                 role="img"
-                                viewBox="0 0 448 512"
+                                viewBox="0 0 512 512"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
+                                  d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
                                   fill="currentColor"
                                 />
                               </svg>
@@ -161,16 +181,16 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
               </div>
             </div>
             <div
-              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-afnQL iKIurY eFWjlE"
+              class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-hHLeRK sc-cLFqLo iKIurY hMRcnb"
             >
               <div
                 class="sc-gKXOVf ckXSHX sc-iBkjds gNjzDq sc-hHLeRK eTSHtc"
               >
                 <div
-                  class="sc-iFwKgL cqyvps"
+                  class="sc-gkJlnC iIhRdf"
                 >
                   <div
-                    class="sc-iqGgem lyCqM sc-cwpsFg bNFRXc"
+                    class="sc-fmrZth kRawgr sc-grVGCS kuZUTG"
                   >
                     <div
                       data-display="table-head"
@@ -200,7 +220,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z"
+                                d="M137.4 41.4c12.5-12.5 32.8-12.5 45.3 0l128 128c9.2 9.2 11.9 22.9 6.9 34.9s-16.6 19.8-29.6 19.8H32c-12.9 0-24.6-7.8-29.6-19.8s-2.2-25.7 6.9-34.9l128-128zm0 429.3l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128c-12.5 12.5-32.8 12.5-45.3 0z"
                                 fill="currentColor"
                               />
                             </svg>
@@ -228,7 +248,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z"
+                                d="M137.4 41.4c12.5-12.5 32.8-12.5 45.3 0l128 128c9.2 9.2 11.9 22.9 6.9 34.9s-16.6 19.8-29.6 19.8H32c-12.9 0-24.6-7.8-29.6-19.8s-2.2-25.7 6.9-34.9l128-128zm0 429.3l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128c-12.5 12.5-32.8 12.5-45.3 0z"
                                 fill="currentColor"
                               />
                             </svg>
@@ -256,7 +276,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z"
+                                d="M137.4 41.4c12.5-12.5 32.8-12.5 45.3 0l128 128c9.2 9.2 11.9 22.9 6.9 34.9s-16.6 19.8-29.6 19.8H32c-12.9 0-24.6-7.8-29.6-19.8s-2.2-25.7 6.9-34.9l128-128zm0 429.3l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128c-12.5 12.5-32.8 12.5-45.3 0z"
                                 fill="currentColor"
                               />
                             </svg>
@@ -284,7 +304,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z"
+                                d="M137.4 41.4c12.5-12.5 32.8-12.5 45.3 0l128 128c9.2 9.2 11.9 22.9 6.9 34.9s-16.6 19.8-29.6 19.8H32c-12.9 0-24.6-7.8-29.6-19.8s-2.2-25.7 6.9-34.9l128-128zm0 429.3l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128c-12.5 12.5-32.8 12.5-45.3 0z"
                                 fill="currentColor"
                               />
                             </svg>
@@ -573,11 +593,11 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                           data-prefix="fas"
                           focusable="false"
                           role="img"
-                          viewBox="0 0 320 512"
+                          viewBox="0 0 384 512"
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"
+                            d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
                             fill="currentColor"
                           />
                         </svg>
@@ -594,11 +614,11 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                           data-prefix="fas"
                           focusable="false"
                           role="img"
-                          viewBox="0 0 320 512"
+                          viewBox="0 0 384 512"
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"
+                            d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
                             fill="currentColor"
                           />
                         </svg>
@@ -608,13 +628,13 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                 </div>
               </div>
               <div
-                class="sc-kngDgl QwFJh"
+                class="sc-iJkHyd iDxdJx"
               >
                 <div
-                  class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-GVOUr bFSVuL sc-TRNrF kulTqM"
+                  class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-iNWwEs goxQVH sc-olbas jFRZyP"
                 >
                   <button
-                    class="StyledButton-sc-323bzc-0 iFDLDn sc-breuTD sc-bjUoiL Krizp dANmhT sc-dIouRR kAoSkv sc-dwLEzm yrxfS"
+                    class="StyledButton-sc-323bzc-0 iFDLDn sc-breuTD sc-bjUoiL Krizp dANmhT sc-dIouRR kAoSkv sc-eKszNL dDLayO"
                     type="button"
                   >
                     <div
@@ -625,7 +645,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                       >
                         <svg
                           aria-hidden="true"
-                          class="svg-inline--fa fa-gear sc-eVQfli iSUjrE"
+                          class="svg-inline--fa fa-gear sc-eXBvqI cmbEAQ"
                           data-icon="gear"
                           data-prefix="fas"
                           focusable="false"
@@ -634,7 +654,7 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            d="M495.9 166.6C499.2 175.2 496.4 184.9 489.6 191.2L446.3 230.6C447.4 238.9 448 247.4 448 256C448 264.6 447.4 273.1 446.3 281.4L489.6 320.8C496.4 327.1 499.2 336.8 495.9 345.4C491.5 357.3 486.2 368.8 480.2 379.7L475.5 387.8C468.9 398.8 461.5 409.2 453.4 419.1C447.4 426.2 437.7 428.7 428.9 425.9L373.2 408.1C359.8 418.4 344.1 427 329.2 433.6L316.7 490.7C314.7 499.7 307.7 506.1 298.5 508.5C284.7 510.8 270.5 512 255.1 512C241.5 512 227.3 510.8 213.5 508.5C204.3 506.1 197.3 499.7 195.3 490.7L182.8 433.6C167 427 152.2 418.4 138.8 408.1L83.14 425.9C74.3 428.7 64.55 426.2 58.63 419.1C50.52 409.2 43.12 398.8 36.52 387.8L31.84 379.7C25.77 368.8 20.49 357.3 16.06 345.4C12.82 336.8 15.55 327.1 22.41 320.8L65.67 281.4C64.57 273.1 64 264.6 64 256C64 247.4 64.57 238.9 65.67 230.6L22.41 191.2C15.55 184.9 12.82 175.3 16.06 166.6C20.49 154.7 25.78 143.2 31.84 132.3L36.51 124.2C43.12 113.2 50.52 102.8 58.63 92.95C64.55 85.8 74.3 83.32 83.14 86.14L138.8 103.9C152.2 93.56 167 84.96 182.8 78.43L195.3 21.33C197.3 12.25 204.3 5.04 213.5 3.51C227.3 1.201 241.5 0 256 0C270.5 0 284.7 1.201 298.5 3.51C307.7 5.04 314.7 12.25 316.7 21.33L329.2 78.43C344.1 84.96 359.8 93.56 373.2 103.9L428.9 86.14C437.7 83.32 447.4 85.8 453.4 92.95C461.5 102.8 468.9 113.2 475.5 124.2L480.2 132.3C486.2 143.2 491.5 154.7 495.9 166.6V166.6zM256 336C300.2 336 336 300.2 336 255.1C336 211.8 300.2 175.1 256 175.1C211.8 175.1 176 211.8 176 255.1C176 300.2 211.8 336 256 336z"
+                            d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336c44.2 0 80-35.8 80-80s-35.8-80-80-80s-80 35.8-80 80s35.8 80 80 80z"
                             fill="currentColor"
                           />
                         </svg>
@@ -646,11 +666,11 @@ exports[`Storyshots Extra/AutoUI Default 1`] = `
                         data-prefix="fas"
                         focusable="false"
                         role="img"
-                        viewBox="0 0 448 512"
+                        viewBox="0 0 512 512"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
+                          d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
                           fill="currentColor"
                         />
                       </svg>
