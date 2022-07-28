@@ -3,10 +3,10 @@
 exports[`Storyshots Core/Tabs Compact 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-yeoIj jdeFJT"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 hANpeK StyledTabs-sc-a4fwxl-2 eCNyif sc-KfMfS iviGgR sc-gHLcSH ihYMZv"
+      class="StyledBox-sc-13pk1d4-0 hANpeK StyledTabs-sc-a4fwxl-2 eCNyif sc-dSuTWQ bMGrsU sc-hZFzCs fIQVjq"
       role="tablist"
     >
       <div
@@ -134,10 +134,10 @@ exports[`Storyshots Core/Tabs Compact 1`] = `
 exports[`Storyshots Core/Tabs Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-yeoIj jdeFJT"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 hANpeK StyledTabs-sc-a4fwxl-2 eCNyif sc-KfMfS hNILow sc-gHLcSH ihYMZv"
+      class="StyledBox-sc-13pk1d4-0 hANpeK StyledTabs-sc-a4fwxl-2 eCNyif sc-dSuTWQ cpYrRp sc-hZFzCs fIQVjq"
       role="tablist"
     >
       <div
@@ -214,10 +214,10 @@ exports[`Storyshots Core/Tabs Default 1`] = `
 exports[`Storyshots Core/Tabs With Long Titles 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-yeoIj jdeFJT"
   >
     <div
-      class="StyledBox-sc-13pk1d4-0 hANpeK StyledTabs-sc-a4fwxl-2 eCNyif sc-KfMfS hNILow sc-gHLcSH ihYMZv"
+      class="StyledBox-sc-13pk1d4-0 hANpeK StyledTabs-sc-a4fwxl-2 eCNyif sc-dSuTWQ cpYrRp sc-hZFzCs fIQVjq"
       role="tablist"
     >
       <div
