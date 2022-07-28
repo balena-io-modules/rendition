@@ -1,4 +1,19 @@
 - commits:
+    - subject: Fix DownloadImageModal submit button being disabled when switching from
+        a device type that has wifi network capability to one that does not
+      hash: 1efba3318830979716e29f1bb2f6616c2c786e97
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 29.0.1
+  title: "'Fix DownloadImageModal submit button being disabled when switching from
+    a device type that has wifi network capability to one that does not'"
+  date: 2022-07-28T14:56:18.583Z
+- commits:
     - subject: Drop Modal component's `titleElement` and `titleDetails` properties in
         favor of the `title` property and add `JSX.Element` as an acceptable
         type for `title`
