@@ -1,4 +1,14 @@
 - commits:
+    - subject: Remove "Source Sans Pro"
+      hash: 469d1b0a254ae3fa3353ae87fd491acd3a35cc06
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 29.0.1
+  date: 2022-08-01T11:14:22.659Z
+- commits:
     - subject: Drop Modal component's `titleElement` and `titleDetails` properties in
         favor of the `title` property and add `JSX.Element` as an acceptable
         type for `title`
