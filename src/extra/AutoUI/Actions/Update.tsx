@@ -10,7 +10,7 @@ import {
 import { ActionData } from '../schemaOps';
 import { autoUIGetDisabledReason } from '../utils';
 import { DropDownButton } from '../../../components/DropDownButton';
-import { faEllipsisH } from '@fortawesome/free-solid-svg-icons/faEllipsisH';
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons/faPenToSquare';
 import { useTranslation } from '../../../hooks/useTranslation';
 import groupBy from 'lodash/groupBy';
 import map from 'lodash/map';
@@ -136,8 +136,8 @@ export const Update = <T extends AutoUIBaseResource<T>>({
 				secondary
 				disabled={!!disabledReason}
 				tooltip={disabledReason}
-				icon={<FontAwesomeIcon icon={faEllipsisH} />}
-				label={t('labels.actions')}
+				icon={<FontAwesomeIcon icon={faPenToSquare} />}
+				label={t('labels.modify')}
 				items={actionHandlers}
 			/>
 		</Box>

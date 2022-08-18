@@ -113,7 +113,7 @@ const translationMap = {
 
 	// autoUI
 
-	'labels.actions': 'Actions',
+	'labels.modify': 'Modify',
 
 	'info.update_item_no_permissions':
 		"You don't have permission to {{action}} the selected {{resource}}",
