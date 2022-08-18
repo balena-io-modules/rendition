@@ -38,6 +38,7 @@ export interface AutoUIModel<T> {
 export interface AutoUIAction<T> {
 	title: string;
 	type: 'create' | 'update' | 'delete';
+	section?: string;
 	renderer?: (props: {
 		schema: JSONSchema;
 		affectedEntries?: T[];

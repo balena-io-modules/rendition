@@ -213,6 +213,7 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 			? {
 					title: t('actions.manage_tags'),
 					type: 'update',
+					section: 'settings',
 					renderer: ({ affectedEntries, onDone }) =>
 						!!affectedEntries && (
 							<Tags
