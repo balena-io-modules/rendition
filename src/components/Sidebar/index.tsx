@@ -6,6 +6,8 @@ import { Button } from '../Button';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons/faChevronLeft';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons/faChevronRight';
 import { Menu, MenuItem } from './Menu';
+import { ChangelogProps } from '../Changelog';
+import { ChangelogButton } from '../Changelog/ChangelogButton';
 
 export interface SidebarProps extends FlexProps {
 	menuItems: MenuItem[];
@@ -15,6 +17,9 @@ export interface SidebarProps extends FlexProps {
 	isCollapsed?: boolean;
 	additionalComponents?: JSX.Element | null;
 	setIsCollapsed?: (isCollapsed: boolean) => void;
+	getChangelog?: ChangelogProps['getChangelog'];
+	onChangelogClick?: () => void;
+	latestChangelogVersion?: string;
 }
 
 export const Sidebar = ({
@@ -25,6 +30,9 @@ export const Sidebar = ({
 	additionalComponents,
 	setIsCollapsed,
 	navLink,
+	getChangelog,
+	onChangelogClick,
+	latestChangelogVersion,
 	...props
 }: SidebarProps) => {
 	return (
@@ -49,6 +57,13 @@ export const Sidebar = ({
 				navLink={navLink}
 			/>
 			<Flex justifyContent="space-between" alignItems="center" mb={3} px={2}>
+				{getChangelog && (
+					<ChangelogButton
+						getChangelog={getChangelog}
+						onClick={onChangelogClick}
+						latestChangelogVersion={latestChangelogVersion}
+					/>
+				)}
 				{additionalComponents}
 				{!!setIsCollapsed && isCollapsed != null && (
 					<Button
