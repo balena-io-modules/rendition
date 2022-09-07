@@ -84,10 +84,7 @@ export const Update = <T extends AutoUIBaseResource<T>>({
 		);
 	}
 
-	const groupedActions = groupBy(
-		updateActions,
-		(action) => !!action.isDangerous,
-	);
+	const groupedActions = groupBy(updateActions, (action) => action.section);
 	const actionHandlers = map(groupedActions, (actions) =>
 		actions.map((action) => {
 			const disabledReason =
