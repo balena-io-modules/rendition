@@ -15,13 +15,9 @@ export { Divider, DividerProps } from './components/Divider';
 export {
 	Filters,
 	FiltersProps,
-	ViewScope,
 	FiltersView,
-	FilterSignature,
 	FilterRenderMode,
-	DataTypeModel,
-	DataTypeEditProps,
-	EditModel,
+	FilterSignature,
 } from './components/Filters';
 export { Fixed, FixedProps } from './components/Fixed';
 export {
@@ -145,6 +141,10 @@ export {
 	autoUIJsonSchemaPick,
 	autoUIGetDisabledReason,
 } from './extra/AutoUI';
+export {
+	listFilterQuery,
+	PersistentFilters,
+} from './extra/AutoUI/Filters/PersistentFilters';
 export * from './extra/AutoUI/Lenses/types';
 
 export { AutoUIApp, AutoUIAppProps } from './extra/AutoUIApp';

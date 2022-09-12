@@ -3,20 +3,20 @@
 exports[`Storyshots Core/DropDownButton Bordered List 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-yeoIj jdeFJT"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-GVOUr bFSVuL sc-TRNrF kulTqM"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-iNWwEs goxQVH sc-olbas jFRZyP"
     >
       <span>
         <button
-          class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR kAoSkv sc-ckMVTt hkTCeZ"
+          class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR kAoSkv sc-gSAPjG lekvvK"
           type="button"
         >
           Dropdown
         </button>
         <button
-          class="StyledButton-sc-323bzc-0 iPrszx sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR kAoSkv sc-gFGZVQ jLwVhQ"
+          class="StyledButton-sc-323bzc-0 iPrszx sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR kAoSkv sc-jgbSNz fMSiVj"
           type="button"
         >
           <svg
@@ -26,11 +26,11 @@ exports[`Storyshots Core/DropDownButton Bordered List 1`] = `
             data-prefix="fas"
             focusable="false"
             role="img"
-            viewBox="0 0 448 512"
+            viewBox="0 0 512 512"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
+              d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
               fill="currentColor"
             />
           </svg>
@@ -44,20 +44,20 @@ exports[`Storyshots Core/DropDownButton Bordered List 1`] = `
 exports[`Storyshots Core/DropDownButton Default 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-yeoIj jdeFJT"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-GVOUr bFSVuL sc-TRNrF kulTqM"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-iNWwEs goxQVH sc-olbas jFRZyP"
     >
       <span>
         <button
-          class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR kAoSkv sc-ckMVTt hkTCeZ"
+          class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR kAoSkv sc-gSAPjG lekvvK"
           type="button"
         >
           Dropdown
         </button>
         <button
-          class="StyledButton-sc-323bzc-0 iPrszx sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR kAoSkv sc-gFGZVQ jLwVhQ"
+          class="StyledButton-sc-323bzc-0 iPrszx sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR kAoSkv sc-jgbSNz fMSiVj"
           type="button"
         >
           <svg
@@ -67,11 +67,11 @@ exports[`Storyshots Core/DropDownButton Default 1`] = `
             data-prefix="fas"
             focusable="false"
             role="img"
-            viewBox="0 0 448 512"
+            viewBox="0 0 512 512"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
+              d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
               fill="currentColor"
             />
           </svg>
@@ -85,23 +85,23 @@ exports[`Storyshots Core/DropDownButton Default 1`] = `
 exports[`Storyshots Core/DropDownButton Drop Up 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-yeoIj jdeFJT"
   >
     <div
       class="sc-gKXOVf QRSBg sc-iBkjds hitktz"
     >
       <div
-        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-GVOUr bFSVuL sc-TRNrF kulTqM"
+        class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-iNWwEs goxQVH sc-olbas jFRZyP"
       >
         <span>
           <button
-            class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR kAoSkv sc-ckMVTt hkTCeZ"
+            class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR kAoSkv sc-gSAPjG lekvvK"
             type="button"
           >
             Dropdown
           </button>
           <button
-            class="StyledButton-sc-323bzc-0 iPrszx sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR kAoSkv sc-gFGZVQ jLwVhQ"
+            class="StyledButton-sc-323bzc-0 iPrszx sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR kAoSkv sc-jgbSNz fMSiVj"
             type="button"
           >
             <svg
@@ -111,11 +111,11 @@ exports[`Storyshots Core/DropDownButton Drop Up 1`] = `
               data-prefix="fas"
               focusable="false"
               role="img"
-              viewBox="0 0 448 512"
+              viewBox="0 0 512 512"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
+                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
                 fill="currentColor"
               />
             </svg>
@@ -130,13 +130,13 @@ exports[`Storyshots Core/DropDownButton Drop Up 1`] = `
 exports[`Storyshots Core/DropDownButton Icon Only 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-yeoIj jdeFJT"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-GVOUr bFSVuL sc-TRNrF kulTqM"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-iNWwEs goxQVH sc-olbas jFRZyP"
     >
       <button
-        class="StyledButton-sc-323bzc-0 jBNLlX sc-breuTD sc-ksZaOG Krizp jFzPEx sc-dIouRR kAoSkv sc-dwLEzm yrxfS"
+        class="StyledButton-sc-323bzc-0 jBNLlX sc-breuTD sc-ksZaOG Krizp jFzPEx sc-dIouRR kAoSkv sc-eKszNL dDLayO"
         type="button"
       >
         <svg
@@ -147,11 +147,11 @@ exports[`Storyshots Core/DropDownButton Icon Only 1`] = `
           data-prefix="fas"
           focusable="false"
           role="img"
-          viewBox="0 0 448 512"
+          viewBox="0 0 512 512"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
+            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
             fill="currentColor"
           />
         </svg>
@@ -164,13 +164,13 @@ exports[`Storyshots Core/DropDownButton Icon Only 1`] = `
 exports[`Storyshots Core/DropDownButton Joined 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-yeoIj jdeFJT"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-GVOUr bFSVuL sc-TRNrF kulTqM"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-iNWwEs goxQVH sc-olbas jFRZyP"
     >
       <button
-        class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR kAoSkv sc-dwLEzm yrxfS"
+        class="StyledButton-sc-323bzc-0 feSBMv sc-breuTD sc-hAZoDl Krizp gjEvOJ sc-dIouRR kAoSkv sc-eKszNL dDLayO"
         type="button"
       >
         <div
@@ -188,11 +188,11 @@ exports[`Storyshots Core/DropDownButton Joined 1`] = `
             data-prefix="fas"
             focusable="false"
             role="img"
-            viewBox="0 0 448 512"
+            viewBox="0 0 512 512"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
+              d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
               fill="currentColor"
             />
           </svg>
@@ -206,18 +206,18 @@ exports[`Storyshots Core/DropDownButton Joined 1`] = `
 exports[`Storyshots Core/DropDownButton No List Formatting 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-yeoIj jdeFJT"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-GVOUr bFSVuL sc-TRNrF kulTqM"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-iNWwEs goxQVH sc-olbas jFRZyP"
     >
       <span>
         <button
-          class="StyledButton-sc-323bzc-0 gvCdQt sc-breuTD sc-ksZaOG Krizp jFzPEx sc-dIouRR kAoSkv sc-ckMVTt hkTCeZ"
+          class="StyledButton-sc-323bzc-0 gvCdQt sc-breuTD sc-ksZaOG Krizp jFzPEx sc-dIouRR kAoSkv sc-gSAPjG lekvvK"
           type="button"
         />
         <button
-          class="StyledButton-sc-323bzc-0 jBNLlX sc-breuTD sc-ksZaOG Krizp jFzPEx sc-dIouRR kAoSkv sc-gFGZVQ jLwVhQ"
+          class="StyledButton-sc-323bzc-0 jBNLlX sc-breuTD sc-ksZaOG Krizp jFzPEx sc-dIouRR kAoSkv sc-jgbSNz fMSiVj"
           type="button"
         >
           <svg
@@ -228,11 +228,11 @@ exports[`Storyshots Core/DropDownButton No List Formatting 1`] = `
             data-prefix="fas"
             focusable="false"
             role="img"
-            viewBox="0 0 448 512"
+            viewBox="0 0 512 512"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
+              d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
               fill="currentColor"
             />
           </svg>
@@ -246,13 +246,13 @@ exports[`Storyshots Core/DropDownButton No List Formatting 1`] = `
 exports[`Storyshots Core/DropDownButton With Primary Button 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-yeoIj jdeFJT"
   >
     <div
-      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-GVOUr bFSVuL sc-TRNrF kulTqM"
+      class="sc-gKXOVf QRSBg sc-iBkjds ipRjux sc-iNWwEs goxQVH sc-olbas jFRZyP"
     >
       <button
-        class="StyledButton-sc-323bzc-0 gvCdQt sc-breuTD sc-ksZaOG Krizp jFzPEx sc-dIouRR kAoSkv sc-dwLEzm yrxfS"
+        class="StyledButton-sc-323bzc-0 gvCdQt sc-breuTD sc-ksZaOG Krizp jFzPEx sc-dIouRR kAoSkv sc-eKszNL dDLayO"
         type="button"
       >
         <div
@@ -270,11 +270,11 @@ exports[`Storyshots Core/DropDownButton With Primary Button 1`] = `
             data-prefix="fas"
             focusable="false"
             role="img"
-            viewBox="0 0 448 512"
+            viewBox="0 0 512 512"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
+              d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
               fill="currentColor"
             />
           </svg>

@@ -3,8 +3,6 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons/faTrash';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import cloneDeep from 'lodash/cloneDeep';
-import groupBy from 'lodash/groupBy';
-import map from 'lodash/map';
 import * as React from 'react';
 import styled from 'styled-components';
 import { stopEvent } from '../../utils';
@@ -34,38 +32,38 @@ const Preview = styled(PlainPanel)`
 	padding: 15px 15px 5px;
 `;
 
-const ViewsMenu = (props: ViewsMenuProps) => {
+const ViewsMenu = ({
+	views,
+	renderMode,
+	compact,
+	deleteView,
+	setFilters,
+	disabled,
+	dark,
+	buttonProps,
+}: ViewsMenuProps) => {
 	const loadView = (view: FiltersView) => {
 		const filters = cloneDeep(view.filters);
-		props.setFilters(filters);
+		setFilters(filters);
 	};
 
-	const { views, renderMode, hasMultipleScopes, compact, deleteView } = props;
 	const hasViews = views.length > 0;
-	const groupedViews = groupBy(views, (item) => item.scope || 'Unscoped');
 
 	const memoizedItems = React.useMemo(
 		() =>
 			!hasViews
 				? [[{ content: "You haven't created any views yet" }]]
-				: map(groupedViews, (views: FiltersView[], scope) =>
+				: [
 						views.map((view, index) => ({
 							content: (
 								<Flex
 									flexDirection="row"
 									justifyContent="space-between"
 									alignItems="center"
-									key={`${scope}-${index}`}
+									key={index}
 								>
 									<Flex flexDirection="column" mr={3}>
-										<Flex flexDirection="row">
-											{hasMultipleScopes && (
-												<Flex flexDirection="column" mr={1}>
-													<strong>{scope}</strong>
-												</Flex>
-											)}
-											<Flex flexDirection="column">{view.name}</Flex>
-										</Flex>
+										<Flex flexDirection="column">{view.name}</Flex>
 										<Flex flexDirection="row" color={theme.colors.gray}>
 											{view.filters.length} filter
 											{view.filters.length > 1 && 's'}
@@ -93,24 +91,24 @@ const ViewsMenu = (props: ViewsMenuProps) => {
 							),
 							onClick: () => loadView(view),
 						})),
-				  ),
+				  ],
 		[views, deleteView],
 	);
 
 	return (
 		<DropDownButton
-			mx={renderMode?.length === 1 ? 0 : 1}
-			disabled={props.disabled}
+			mx={typeof renderMode === 'string' || renderMode?.length === 1 ? 0 : 1}
+			disabled={disabled}
 			quartenary
-			light={props.dark}
+			light={dark}
 			outline
 			joined
-			alignRight={renderMode?.length === 1}
+			alignRight={typeof renderMode === 'string' || renderMode?.length === 1}
 			noListFormat
 			icon={<FontAwesomeIcon icon={faChartPie} />}
 			label="Views"
 			compact={compact}
-			{...props.buttonProps}
+			{...buttonProps}
 			items={memoizedItems}
 		/>
 	);
@@ -122,10 +120,9 @@ export interface ViewsMenuProps {
 	dark?: boolean;
 	views: FiltersView[];
 	schema: JSONSchema;
-	hasMultipleScopes?: boolean;
 	setFilters: (filters: JSONSchema[]) => void;
 	deleteView: (view: FiltersView) => any;
-	renderMode?: FilterRenderMode[];
+	renderMode?: FilterRenderMode | FilterRenderMode[];
 	compact?: boolean[];
 }
 

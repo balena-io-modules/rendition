@@ -1,11 +1,17 @@
 import { mount } from 'enzyme';
 import React from 'react';
 
-import { Filters, Provider, SchemaSieve, Select, Box } from '../../';
-import FiltersSummary from '../../components/Filters/Summary';
+import {
+	Filters,
+	Provider,
+	SchemaSieve,
+	Select,
+	Tag,
+	DropDownButton,
+} from '../../';
+import { Summary } from '../../components/Filters/Summary';
 import type { JSONSchema7 } from 'json-schema';
 import { Keyboard } from 'grommet';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /* FieldSummary buttons in order:
   0. Clear all filters
@@ -22,16 +28,17 @@ const schema = {
 			type: 'string',
 		},
 		Tag: {
+			title: 'Tag',
 			type: 'object',
 			properties: {
 				tag_name: {
-					title: 'Name',
+					title: 'Tag name',
 					description: 'key',
 					type: 'string',
 				},
 				tag_value: {
 					description: 'value',
-					title: 'Value',
+					title: 'Tag value',
 					type: 'string',
 				},
 			},
@@ -41,24 +48,27 @@ const schema = {
 
 const filter = SchemaSieve.createFilter(schema, [
 	{
+		title: 'Name',
 		field: 'Name',
-		operator: 'is',
+		operator: { slug: 'is', label: 'is' },
 		value: 'Squirtle',
 	},
 ]);
 
 const tagIsFilter = SchemaSieve.createFilter(schema, [
 	{
+		title: 'Tag',
 		field: 'Tag',
-		operator: 'is',
+		operator: { slug: 'is', label: 'is' },
 		value: { tag_name: 'rarity', tag_value: '10' },
 	},
 ]);
 
 const tagIsNotFilter = SchemaSieve.createFilter(schema, [
 	{
+		title: 'Tag',
 		field: 'Tag',
-		operator: 'is_not',
+		operator: { slug: 'is_not', label: 'is not' },
 		value: { tag_name: 'rarity', tag_value: '10' },
 	},
 ]);
@@ -70,17 +80,6 @@ const view = {
 	filters: [filter],
 };
 
-const viewScopes = [
-	{
-		slug: 'foo',
-		name: 'foo',
-	},
-	{
-		slug: 'bar',
-		name: 'bar',
-	},
-];
-
 describe('Filters component', () => {
 	describe('filters property', () => {
 		it('should not render a summary if there are no filters', () => {
@@ -90,7 +89,7 @@ describe('Filters component', () => {
 				</Provider>,
 			);
 
-			expect(component.find(FiltersSummary)).toHaveLength(0);
+			expect(component.find(Summary)).toHaveLength(0);
 
 			component.unmount();
 		});
@@ -102,7 +101,7 @@ describe('Filters component', () => {
 				</Provider>,
 			);
 
-			expect(component.find(FiltersSummary)).toHaveLength(1);
+			expect(component.find(Summary)).toHaveLength(1);
 
 			component.unmount();
 		});
@@ -122,7 +121,7 @@ describe('Filters component', () => {
 			component.setProps({ filters: [filter] } as any);
 			component.update();
 
-			expect(component.find(FiltersSummary)).toHaveLength(1);
+			expect(component.find(Summary)).toHaveLength(1);
 
 			component.unmount();
 		});
@@ -142,7 +141,7 @@ describe('Filters component', () => {
 			component.setProps({ filters: null } as any);
 			component.update();
 
-			expect(component.find(FiltersSummary)).toHaveLength(0);
+			expect(component.find(Summary)).toHaveLength(0);
 			component.unmount();
 		});
 
@@ -152,7 +151,9 @@ describe('Filters component', () => {
 					<Filters schema={schema} filters={[tagIsFilter]} />
 				</Provider>,
 			);
-			expect(component.find('button').at(4).text()).toBe('Tag is rarity : 10');
+			expect(component.find(Tag).text()).toBe(
+				'Tag is tag_name: rarity, tag_value: 10',
+			);
 		});
 
 		it('should show the correct label when filtering using "is_not" operator for both key and value properties of an object', () => {
@@ -161,8 +162,8 @@ describe('Filters component', () => {
 					<Filters schema={schema} filters={[tagIsNotFilter]} />
 				</Provider>,
 			);
-			expect(component.find('button').at(4).text()).toBe(
-				'Tag is not rarity : 10',
+			expect(component.find(Tag).text()).toBe(
+				'Tag is not tag_name: rarity, tag_value: 10',
 			);
 		});
 
@@ -179,49 +180,17 @@ describe('Filters component', () => {
 
 	describe('save views modal', () => {
 		it('should not show scopes selector if one or less scopes are passed', () => {
-			const withOneViewScope = mount(
+			const view = mount(
 				<Provider>
-					<Filters
-						schema={schema}
-						filters={[filter]}
-						viewScopes={[viewScopes[0]]}
-					/>
-				</Provider>,
-			);
-
-			const withNoViewScopes = mount(
-				<Provider>
-					<Filters
-						schema={schema}
-						filters={[filter]}
-						viewScopes={[viewScopes[0]]}
-					/>
+					<Filters schema={schema} filters={[filter]} />
 				</Provider>,
 			);
 
 			// Looking for 'Save view' button
-			withOneViewScope.find('button').at(3).simulate('click');
-			expect(withOneViewScope.find(Select)).toHaveLength(0);
+			view.find('button').at(3).simulate('click');
+			expect(view.find(Select)).toHaveLength(0);
 
-			withNoViewScopes.find('button').at(3).simulate('click');
-			expect(withNoViewScopes.find(Select)).toHaveLength(0);
-
-			withOneViewScope.unmount();
-			withNoViewScopes.unmount();
-		});
-
-		it('should show scopes selector if viewScopes are passed', () => {
-			const component = mount(
-				<Provider>
-					<Filters schema={schema} filters={[filter]} viewScopes={viewScopes} />
-				</Provider>,
-			);
-
-			// Looking for 'Save view' button
-			component.find('button').at(3).simulate('click');
-			expect(component.find(Select)).toHaveLength(1);
-
-			component.unmount();
+			view.unmount();
 		});
 	});
 
@@ -233,10 +202,8 @@ describe('Filters component', () => {
 				</Provider>,
 			);
 
-			component.find('button').at(1).simulate('click');
-			expect(component.find(Box).at(1).html()).toContain(
-				"You haven't created any views yet",
-			);
+			component.find(DropDownButton).find('button').simulate('click');
+			expect(component.html()).toContain("You haven't created any views yet");
 			component.unmount();
 		});
 
@@ -247,78 +214,8 @@ describe('Filters component', () => {
 				</Provider>,
 			);
 
-			component.find('button').at(1).simulate('click');
-			expect(component.find(FontAwesomeIcon)).toHaveLength(5);
-			component.unmount();
-		});
-
-		it('should not render scoped views in the views menu if no scopes are passed', () => {
-			const component = mount(
-				<Provider>
-					<Filters schema={schema} views={[{ ...view, scope: 'foo' }]} />
-				</Provider>,
-			);
-
-			component.find('button').at(1).simulate('click');
-			expect(component.find("[children='foo']")).toHaveLength(0);
-			expect(component.find("[children='null']")).toHaveLength(0);
-
-			component.unmount();
-		});
-
-		it('should not render scoped views in the views menu if one or less scopes are passed', () => {
-			const component = mount(
-				<Provider>
-					<Filters
-						schema={schema}
-						views={[{ ...view, scope: 'foo' }]}
-						viewScopes={[viewScopes[0]]}
-					/>
-				</Provider>,
-			);
-
-			component.find('button').at(1).simulate('click');
-			expect(component.find("[children='foo']")).toHaveLength(0);
-
-			component.unmount();
-		});
-
-		it('should render scoped views in the views menu if more than one viewScopes are passed', () => {
-			const component = mount(
-				<Provider>
-					<Filters
-						schema={schema}
-						views={[{ ...view, scope: 'foo' }]}
-						viewScopes={viewScopes}
-					/>
-				</Provider>,
-			);
-
-			component.find('button').at(1).simulate('click');
-
-			expect(component.find('strong').at(0).text()).toEqual('foo');
-			expect(component.find("[children='bar']")).toHaveLength(0);
-
-			component.unmount();
-		});
-
-		it('should render views as "Unscoped" if they do not have a scope and more than one viewScopes are passed', () => {
-			const component = mount(
-				<Provider>
-					<Filters
-						schema={schema}
-						views={[{ ...view }]}
-						viewScopes={viewScopes}
-					/>
-				</Provider>,
-			);
-
-			component.find('button').at(1).simulate('click');
-
-			expect(component.find('strong').at(0).text()).toEqual('Unscoped');
-			expect(component.find("[children='foo']")).toHaveLength(0);
-			expect(component.find("[children='bar']")).toHaveLength(0);
-
+			component.find(DropDownButton).find('button').simulate('click');
+			expect(component.find('svg')).toHaveLength(6);
 			component.unmount();
 		});
 
@@ -336,8 +233,8 @@ describe('Filters component', () => {
 
 			component.setProps({ views: [view] } as any);
 			component.update();
-			component.find('button').at(1).simulate('click');
-			expect(component.find(FontAwesomeIcon)).toHaveLength(5);
+			component.find(DropDownButton).find('button').simulate('click');
+			expect(component.find('svg')).toHaveLength(6);
 			component.unmount();
 		});
 
@@ -355,10 +252,8 @@ describe('Filters component', () => {
 
 			component.setProps({ views: null } as any);
 			component.update();
-			component.find('button').at(1).simulate('click');
-			expect(component.find(Box).at(1).html()).toContain(
-				"You haven't created any views yet",
-			);
+			component.find(DropDownButton).find('button').simulate('click');
+			expect(component.html()).toContain("You haven't created any views yet");
 			component.unmount();
 		});
 
@@ -383,8 +278,18 @@ describe('Filters component', () => {
 
 		it('should clear all filters when `clear all filters` gets clicked', () => {
 			const defaultFilters = SchemaSieve.createFilter(schema, [
-				{ field: 'Name', operator: 'contains', value: 's' },
-				{ field: 'Name', operator: 'contains', value: 'q' },
+				{
+					title: 'Name',
+					field: 'Name',
+					operator: { slug: 'contains', label: 'contains' },
+					value: 's',
+				},
+				{
+					title: 'Name',
+					field: 'Name',
+					operator: { slug: 'contains', label: 'contains' },
+					value: 'q',
+				},
 			]);
 
 			const component = mount(
@@ -393,7 +298,7 @@ describe('Filters component', () => {
 				</Provider>,
 			);
 
-			expect(component.find(FiltersSummary)).toHaveLength(1);
+			expect(component.find(Summary)).toHaveLength(1);
 
 			component
 				.find('input')
@@ -405,7 +310,7 @@ describe('Filters component', () => {
 				.findWhere((node) => node.text() === 'Clear all')
 				.at(1)
 				.simulate('click');
-			expect(component.find(FiltersSummary)).toHaveLength(0);
+			expect(component.find(Summary)).toHaveLength(0);
 
 			component.unmount();
 		});

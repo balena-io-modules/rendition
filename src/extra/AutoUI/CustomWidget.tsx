@@ -9,6 +9,7 @@ import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import { transformUiSchema } from '../../components/Renderer/widgets/widget-util';
 import { getValue, getWidget } from '../../components/Renderer';
 import castArray from 'lodash/castArray';
+import { getSchemaFormat } from './models/helpers';
 
 interface CustomWidgetProps {
 	value: Value;
@@ -25,6 +26,11 @@ export const CustomWidget = ({
 	extraFormats,
 	uiSchema,
 }: CustomWidgetProps) => {
+	const format = getSchemaFormat(schema);
+
+	if (!format) {
+		return <>{value}</>;
+	}
 	const processedUiSchema = transformUiSchema({
 		value,
 		uiSchema,
@@ -41,12 +47,7 @@ export const CustomWidget = ({
 		return null;
 	}
 
-	const Widget = getWidget(
-		processedValue,
-		schema.format,
-		undefined,
-		extraFormats,
-	);
+	const Widget = getWidget(processedValue, format, undefined, extraFormats);
 
 	return (
 		<Widget

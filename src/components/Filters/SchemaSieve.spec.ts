@@ -1,9 +1,7 @@
 import mapValues from 'lodash/mapValues';
 import Ajv from 'ajv';
 import ajvKeywords from 'ajv-keywords';
-
 import { SchemaSieve as sieve } from '../../';
-import { FULL_TEXT_SLUG } from './SchemaSieve';
 
 const expectMatchesKeys = (data: any, keys: any) =>
 	expect(Object.keys(data).sort()).toEqual(keys.sort());
@@ -16,9 +14,11 @@ describe('SchemaSieve', () => {
 			schema: any,
 			collection: any,
 			tests: any,
+			refScheme?: string,
 		) => {
 			const nestedSchema = {
 				type: 'object',
+				...(!!refScheme ? { description: refScheme } : {}),
 				properties: {
 					data: schema,
 				},
@@ -29,9 +29,12 @@ describe('SchemaSieve', () => {
 			})) as any;
 
 			tests.forEach(({ operator, value, expected }: any) => {
-				it(`should correctly test values using the "${operator}" operator with a value of "${value}"`, function () {
+				it(`should correctly test values using the "${
+					operator.label
+				}" operator with a value of "${JSON.stringify(value)}"`, function () {
 					const filter = sieve.createFilter(schema, [
 						{
+							title: field,
 							field,
 							operator,
 							value,
@@ -44,23 +47,19 @@ describe('SchemaSieve', () => {
 			});
 
 			tests.forEach(({ operator, value, expected }: any) => {
-				it(`should correctly test values using a nested schema and the "${operator}" operator with a value of "${value}"`, function () {
-					// Flattend/Unflatten happens 'behind the scenes' in the filter
-					// component when creating filters. The methods are used here directly
-					// to simulate the Filters behaviour.
-					const filter = sieve.createFilter(sieve.flattenSchema(nestedSchema), [
+				it(`should correctly test values using a nested schema and the "${
+					operator.label
+				}" operator with a value of "${JSON.stringify(value)}"`, function () {
+					const filter = sieve.createFilter(nestedSchema, [
 						{
-							field: '___data___' + field,
+							title: 'data',
+							field: 'data',
 							operator,
 							value,
+							refScheme,
 						},
 					]);
-
-					const result = sieve.filter(
-						sieve.unflattenSchema(filter),
-						nestedCollection,
-					);
-
+					const result = sieve.filter(filter, nestedCollection);
 					expectMatchesKeys(result, expected);
 				});
 			});
@@ -88,8 +87,9 @@ describe('SchemaSieve', () => {
 
 			const filter = sieve.createFilter(schema, [
 				{
+					title: 'Test',
 					field: 'test',
-					operator: 'contains',
+					operator: { label: 'contains', slug: 'contains' },
 					value: 'abc',
 				},
 			]);
@@ -119,8 +119,10 @@ describe('SchemaSieve', () => {
 
 			const filter = sieve.createFilter(schema, [
 				{
+					title: 'Title',
 					field: 'test',
-					operator: 'foo bar',
+					// @ts-expect-error
+					operator: { label: 'foo bar', slug: 'foo bar' },
 					value: 'abc',
 				},
 			]);
@@ -151,8 +153,9 @@ describe('SchemaSieve', () => {
 
 			const filter = sieve.createFilter(schema, [
 				{
+					title: 'test',
 					field: 'test',
-					operator: 'contains',
+					operator: { slug: 'contains', label: 'contains' },
 					value: 'abc',
 				},
 			]);
@@ -183,8 +186,10 @@ describe('SchemaSieve', () => {
 
 			const filter = sieve.createFilter(schema, [
 				{
+					title: 'Test',
 					field: 'test',
-					operator: 'foo bar',
+					// @ts-expect-error
+					operator: { label: 'foo bar', slug: 'foo bar' },
 					value: 'abc',
 				},
 			]);
@@ -215,8 +220,9 @@ describe('SchemaSieve', () => {
 			const filter = sieve.createFilter(schema, [
 				{
 					// Set the input field to something that doesn't exist in the schema
+					title: 'Foo bar',
 					field: 'foo bar',
-					operator: 'contains',
+					operator: { label: 'contains', slug: 'contains' },
 					value: 'abc',
 				},
 			]);
@@ -257,29 +263,29 @@ describe('SchemaSieve', () => {
 
 			const tests = [
 				{
-					operator: 'is',
+					operator: { slug: 'is', label: 'is' },
 					value: 'abcde',
 					expected: ['Entry 1'],
 				},
 				{
-					operator: 'contains',
+					operator: { slug: 'contains', label: 'contains' },
 					value: 'BCd',
 					expected: ['Entry 1', 'Entry 4'],
 				},
 				{
-					operator: 'not_contains',
+					operator: { slug: 'not_contains', label: 'not contains' },
 					value: 'ABC',
-					expected: ['Entry 2', 'Entry 3', 'Entry 5', 'Entry 6'],
+					expected: ['Entry 2', 'Entry 3', 'Entry 6'],
 				},
 				{
-					operator: 'matches_re',
+					operator: { slug: 'matches_re', label: 'match RegEx' },
 					value: 'ABC',
 					expected: ['Entry 4'],
 				},
 				{
-					operator: 'not_matches_re',
+					operator: { slug: 'not_matches_re', label: 'does not match RegEx' },
 					value: 'ghi',
-					expected: ['Entry 1', 'Entry 3', 'Entry 4', 'Entry 5', 'Entry 6'],
+					expected: ['Entry 1', 'Entry 3', 'Entry 4', 'Entry 6'],
 				},
 			];
 
@@ -378,7 +384,7 @@ describe('SchemaSieve', () => {
 
 			const tests = [
 				{
-					operator: 'is',
+					operator: { slug: 'is', label: 'is' },
 					value: {
 						tag_name: 'Aa',
 						tag_value: '123',
@@ -386,7 +392,7 @@ describe('SchemaSieve', () => {
 					expected: ['Entry 1'],
 				},
 				{
-					operator: 'is_not',
+					operator: { slug: 'is_not', label: 'is not' },
 					value: {
 						tag_name: 'Aa',
 						tag_value: '123',
@@ -402,21 +408,24 @@ describe('SchemaSieve', () => {
 					],
 				},
 				{
-					operator: 'key_is',
+					operator: { slug: 'key_is', label: 'key is' },
 					value: {
 						tag_name: 'Dd',
 					},
 					expected: ['Entry 4'],
 				},
 				{
-					operator: 'key_contains',
+					operator: { slug: 'key_contains', label: 'key contains' },
 					value: {
 						tag_name: 'b',
 					},
 					expected: ['Entry 2', 'Entry 3'],
 				},
 				{
-					operator: 'key_not_contains',
+					operator: {
+						slug: 'key_not_contains',
+						label: 'key does not contains',
+					},
 					value: {
 						tag_name: 'b',
 					},
@@ -430,14 +439,17 @@ describe('SchemaSieve', () => {
 					],
 				},
 				{
-					operator: 'key_matches_re',
+					operator: { slug: 'key_matches_re', label: 'key matches RegEx' },
 					value: {
 						tag_name: 'b',
 					},
 					expected: ['Entry 2', 'Entry 3'],
 				},
 				{
-					operator: 'key_not_matches_re',
+					operator: {
+						slug: 'key_not_matches_re',
+						label: 'key does not matches RegEx',
+					},
 					value: {
 						tag_name: 'b',
 					},
@@ -451,35 +463,41 @@ describe('SchemaSieve', () => {
 					],
 				},
 				{
-					operator: 'value_is',
+					operator: { slug: 'value_is', label: 'value is' },
 					value: {
 						tag_value: '123',
 					},
 					expected: ['Entry 1', 'Entry 8'],
 				},
 				{
-					operator: 'value_contains',
+					operator: { slug: 'value_contains', label: 'value contains' },
 					value: {
 						tag_value: '23',
 					},
 					expected: ['Entry 1', 'Entry 7', 'Entry 8'],
 				},
 				{
-					operator: 'value_not_contains',
+					operator: {
+						slug: 'value_not_contains',
+						label: 'value does not contains',
+					},
 					value: {
 						tag_value: '1',
 					},
 					expected: ['Entry 2', 'Entry 5'],
 				},
 				{
-					operator: 'value_matches_re',
+					operator: { slug: 'value_matches_re', label: 'value matches ReGex' },
 					value: {
 						tag_value: '56',
 					},
 					expected: ['Entry 2'],
 				},
 				{
-					operator: 'value_not_matches_re',
+					operator: {
+						slug: 'value_not_matches_re',
+						label: 'value does not matches ReGex',
+					},
 					value: {
 						tag_value: '1',
 					},
@@ -492,8 +510,9 @@ describe('SchemaSieve', () => {
 			it('should correctly test values using the "is" operator when there are additional properties', function () {
 				const filter = sieve.createFilter(schema, [
 					{
+						title: 'Tag',
 						field: 'Tag',
-						operator: 'is',
+						operator: { label: 'is', slug: 'is' },
 						value: {
 							tag_name: 'Ee',
 							tag_value: '161718',
@@ -535,17 +554,17 @@ describe('SchemaSieve', () => {
 
 			const tests = [
 				{
-					operator: 'is',
+					operator: { slug: 'is', label: 'is' },
 					value: '2017-01-01T08:49:26.000Z',
 					expected: ['Entry 1'],
 				},
 				{
-					operator: 'is_before',
+					operator: { slug: 'is_before', label: 'is before' },
 					value: '2016-12-25T00:00:00.000Z',
 					expected: ['Entry 2'],
 				},
 				{
-					operator: 'is_after',
+					operator: { slug: 'is_after', label: 'is after' },
 					value: '2016-12-25T00:00:00.000Z',
 					expected: ['Entry 1'],
 				},
@@ -556,8 +575,9 @@ describe('SchemaSieve', () => {
 			it('should correctly test values using the "is" operator where the date is not in the RFC3339 format', function () {
 				const filter = sieve.createFilter(schema, [
 					{
+						title: 'Date',
 						field: 'date',
-						operator: 'is',
+						operator: { label: 'is', slug: 'is' },
 						// This is a RFC2882 formatted date
 						value: 'Sun, 01 Jan 2017 08:49:26 +0000',
 					},
@@ -594,12 +614,12 @@ describe('SchemaSieve', () => {
 
 			const tests = [
 				{
-					operator: 'is',
+					operator: { slug: 'is', label: 'is' },
 					value: true,
 					expected: ['Entry 1'],
 				},
 				{
-					operator: 'is',
+					operator: { slug: 'is', label: 'is' },
 					value: false,
 					expected: ['Entry 2'],
 				},
@@ -638,17 +658,17 @@ describe('SchemaSieve', () => {
 
 			const tests = [
 				{
-					operator: 'is',
+					operator: { slug: 'is', label: 'is' },
 					value: 1.5,
 					expected: ['Entry 1'],
 				},
 				{
-					operator: 'is_more_than',
+					operator: { slug: 'is_more_than', label: 'is more than' },
 					value: 2.3,
 					expected: ['Entry 3'],
 				},
 				{
-					operator: 'is_less_than',
+					operator: { slug: 'is_less_than', label: 'is less than' },
 					value: 3.19,
 					expected: ['Entry 1', 'Entry 2'],
 				},
@@ -687,12 +707,12 @@ describe('SchemaSieve', () => {
 
 			const tests = [
 				{
-					operator: 'is',
+					operator: { slug: 'is', label: 'is' },
 					value: 'Flame',
 					expected: ['Entry 1'],
 				},
 				{
-					operator: 'is_not',
+					operator: { slug: 'is_not', label: 'is not' },
 					value: 'Seed',
 					expected: ['Entry 1', 'Entry 2', 'Entry 4', 'Entry 5'],
 				},
@@ -744,12 +764,12 @@ describe('SchemaSieve', () => {
 
 			const tests = [
 				{
-					operator: 'is',
+					operator: { slug: 'is', label: 'is' },
 					value: 'new_zealand',
 					expected: ['Entry 5'],
 				},
 				{
-					operator: 'is_not',
+					operator: { slug: 'is_not', label: 'is not' },
 					value: 'south_african',
 					expected: ['Entry 1', 'Entry 4', 'Entry 5'],
 				},
@@ -792,18 +812,24 @@ describe('SchemaSieve', () => {
 
 				const tests = [
 					{
-						operator: 'contains',
+						operator: { slug: 'contains', label: 'contains' },
 						value: 'Flame',
 						expected: ['Entry 1'],
 					},
 					{
-						operator: 'not_contains',
+						operator: { slug: 'not_contains', label: 'does not contain' },
 						value: 'Seed',
-						expected: ['Entry 1', 'Entry 2', 'Entry 4', 'Entry 5'],
+						expected: ['Entry 1', 'Entry 2'],
 					},
 				];
 
-				testFilter('category', schema, collection, tests);
+				testFilter(
+					'category',
+					schema,
+					collection,
+					tests,
+					'{"x-ref-scheme": ["category"]}',
+				);
 			});
 		});
 
@@ -868,15 +894,9 @@ describe('SchemaSieve', () => {
 					data: value,
 				})) as any;
 
-				const filter = sieve.createFullTextSearchFilter(
-					sieve.flattenSchema(nestedSchema),
-					'lorem',
-				);
+				const filter = sieve.createFullTextSearchFilter(nestedSchema, 'lorem');
 
-				const result = sieve.filter(
-					sieve.unflattenSchema(filter),
-					nestedCollection,
-				);
+				const result = sieve.filter(filter, nestedCollection);
 
 				expectMatchesKeys(result, ['Entry 1', 'Entry 3']);
 			});
@@ -913,8 +933,9 @@ describe('SchemaSieve', () => {
 			it('should return an array', function () {
 				const filter = sieve.createFilter(schema, [
 					{
+						title: 'Test',
 						field: 'test',
-						operator: 'contains',
+						operator: { label: 'contains', slug: 'contains' },
 						value: 'abc',
 					},
 				]);
@@ -926,8 +947,9 @@ describe('SchemaSieve', () => {
 			it('should return the correct values', function () {
 				const filter = sieve.createFilter(schema, [
 					{
+						title: 'Test',
 						field: 'test',
-						operator: 'contains',
+						operator: { label: 'contains', slug: 'contains' },
 						value: 'abc',
 					},
 				]);
@@ -941,15 +963,17 @@ describe('SchemaSieve', () => {
 				const filters = [
 					sieve.createFilter(schema, [
 						{
+							title: 'Test',
 							field: 'test',
-							operator: 'contains',
+							operator: { label: 'contains', slug: 'contains' },
 							value: 'de',
 						},
 					]),
 					sieve.createFilter(schema, [
 						{
+							title: 'Test',
 							field: 'test',
-							operator: 'contains',
+							operator: { label: 'contains', slug: 'contains' },
 							value: 'abc',
 						},
 					]),
@@ -1004,13 +1028,15 @@ describe('SchemaSieve', () => {
 			it('should correctly combine additional rules', function () {
 				const filter = sieve.createFilter(schema, [
 					{
+						title: 'Incidents',
 						field: 'incidents',
-						operator: 'is',
+						operator: { label: 'is', slug: 'is' },
 						value: 1,
 					},
 					{
+						title: 'Brief',
 						field: 'brief',
-						operator: 'contains',
+						operator: { label: 'contains', slug: 'contains' },
 						value: 'lorem',
 					},
 				]);
@@ -1105,49 +1131,6 @@ describe('SchemaSieve', () => {
 		});
 	});
 
-	describe('.insertFullTextSearch()', () => {
-		const collection = [
-			{
-				test: 'abcde',
-				description: 'maecenas convallis aliquet arcu sed faucibus',
-			},
-			{
-				test: 'fghij',
-				description: 'lorem ipsum dolor sit amet',
-			},
-		];
-
-		it('should create and append a new filter if a search filter does not already exist', () => {
-			const schema = {
-				type: 'object',
-				properties: {
-					test: { type: 'string' },
-					description: { type: 'string' },
-				},
-			} as any;
-
-			const term = 'lorem';
-
-			let filters = sieve.insertFullTextSearch(schema, [], term);
-
-			expect(filters).toHaveLength(1);
-			expect(sieve.filter(filters, collection)).toHaveLength(1);
-			expect(sieve.filter(filters, collection)).toEqual([collection[1]]);
-
-			expect(filters).toHaveLength(1);
-
-			const term2 = 'test';
-
-			filters = sieve.insertFullTextSearch(schema, filters, term2);
-
-			expect(filters).toHaveLength(2);
-			expect(sieve.filter(filters, collection)).toHaveLength(0);
-			expect(sieve.filter(filters, collection)).toEqual([]);
-
-			expect(filters).toHaveLength(2);
-		});
-	});
-
 	describe('.createFilter()', () => {
 		const schema = {
 			type: 'object',
@@ -1188,101 +1171,18 @@ describe('SchemaSieve', () => {
 		Object.keys(schema.properties).forEach((type) => {
 			const operators = sieve.getOperators(schema, type);
 
-			operators.forEach(({ slug }: any) => {
-				it(`should create a filter for the '${type}' type using operator '${slug}'`, () => {
+			operators.forEach((operator) => {
+				it(`should create a filter for the '${type}' type using operator '${operator.slug}'`, () => {
 					const result = sieve.createFilter(schema, [
 						{
+							title: type,
 							field: type,
-							operator: slug,
+							operator,
 							value: 'test',
 						},
 					]);
 
 					expectMatchesKeys(result, ['$id', 'anyOf']);
-				});
-			});
-		});
-	});
-
-	describe('.decodeFilter()', () => {
-		const schema = {
-			type: 'object',
-			properties: {
-				string: { type: 'string' },
-				number: { type: 'number' },
-				boolean: { type: 'boolean' },
-				'date-time': {
-					type: 'string',
-					format: 'date-time',
-				},
-				object: {
-					type: 'object',
-					properties: {
-						tag_name: {
-							description: 'key',
-							type: 'string',
-						},
-						tag_value: {
-							description: 'value',
-							type: 'string',
-						},
-					},
-				},
-				enum: {
-					enum: ['foo', 'bar', 'baz'],
-				},
-			},
-		} as any;
-
-		// Run test for each operator for each type declared in the schema
-		Object.keys(schema.properties).forEach((type) => {
-			const operators = sieve.getOperators(schema, type);
-
-			operators.forEach(({ slug }: any) => {
-				it(`should decode a filter for the '${type}' type using operator '${slug}'`, () => {
-					// We need to use an appropriate filter value for this test to work
-					// correctly
-					let value;
-					switch (type) {
-						case 'date-time':
-							value = '2017-01-01T08:49:26Z';
-							break;
-						case 'boolean':
-							value = true;
-							break;
-						case 'number':
-							value = 900122;
-							break;
-						case 'object':
-							if (slug.includes('key')) {
-								value = { tag_name: 'foo' };
-							} else if (slug.includes('value')) {
-								value = { tag_value: 'bar' };
-							} else {
-								value = { tag_name: 'foo' };
-							}
-							break;
-						default:
-							value = 'test';
-					}
-
-					const signatures = [
-						{
-							field: type,
-							operator: slug,
-							value,
-						},
-					] as any;
-
-					let filter;
-					if (slug === FULL_TEXT_SLUG) {
-						signatures[0].field = 'any';
-						filter = sieve.createFullTextSearchFilter(schema, value as string);
-					} else {
-						filter = sieve.createFilter(schema, signatures);
-					}
-
-					expect(sieve.decodeFilter(schema, filter)).toEqual(signatures);
 				});
 			});
 		});
@@ -1326,576 +1226,6 @@ describe('SchemaSieve', () => {
 					.forEach((operator: any) =>
 						expectMatchesKeys(operator, ['slug', 'label']),
 					));
-		});
-	});
-
-	describe('.flattenSchema()', () => {
-		it('should flatten a schema correctly', () => {
-			const schema = {
-				type: 'object',
-				properties: {
-					string: { type: 'string' },
-					nestedString: {
-						type: 'object',
-						properties: {
-							string: { type: 'string' },
-						},
-					},
-					nestedNumber: {
-						type: 'object',
-						properties: {
-							number: { type: 'number' },
-						},
-					},
-					nestedBoolean: {
-						type: 'object',
-						properties: {
-							boolean: { type: 'boolean' },
-						},
-					},
-					nestedDateTime: {
-						type: 'object',
-						properties: {
-							'date-time': {
-								type: 'string',
-								format: 'date-time',
-							},
-						},
-					},
-					nestedObject: {
-						type: 'object',
-						properties: {
-							object: {
-								type: 'object',
-								properties: {
-									tag_name: {
-										description: 'key',
-										type: 'string',
-									},
-									tag_value: {
-										description: 'value',
-										type: 'string',
-									},
-								},
-							},
-						},
-					},
-					nestedEnum: {
-						type: 'object',
-						properties: {
-							enum: {
-								enum: ['foo', 'bar', 'baz'],
-							},
-						},
-					},
-					nestedMultiple: {
-						type: 'object',
-						properties: {
-							string: { type: 'string' },
-							number: { type: 'number' },
-						},
-					},
-					nestedLevels: {
-						type: 'object',
-						properties: {
-							level: {
-								type: 'object',
-								properties: {
-									string: { type: 'string' },
-								},
-							},
-						},
-					},
-				},
-			} as any;
-
-			expect(sieve.flattenSchema(schema)).toEqual({
-				type: 'object',
-				properties: {
-					string: { type: 'string' },
-					___nestedString___string: {
-						title: 'string',
-						type: 'string',
-					},
-					___nestedNumber___number: {
-						title: 'number',
-						type: 'number',
-					},
-					___nestedBoolean___boolean: {
-						title: 'boolean',
-						type: 'boolean',
-					},
-					'___nestedDateTime___date-time': {
-						title: 'date-time',
-						type: 'string',
-						format: 'date-time',
-					},
-					___nestedObject___object: {
-						title: 'object',
-						type: 'object',
-						properties: {
-							tag_name: {
-								description: 'key',
-								type: 'string',
-							},
-							tag_value: {
-								description: 'value',
-								type: 'string',
-							},
-						},
-					},
-					___nestedEnum___enum: {
-						title: 'enum',
-						enum: ['foo', 'bar', 'baz'],
-					},
-					___nestedMultiple___string: {
-						title: 'string',
-						type: 'string',
-					},
-					___nestedMultiple___number: {
-						title: 'number',
-						type: 'number',
-					},
-					___nestedLevels___level___string: {
-						title: 'string',
-						type: 'string',
-					},
-				},
-			});
-		});
-
-		it('should preserve the "required" keyword', () => {
-			const schema = {
-				type: 'object',
-				required: ['data'],
-				properties: {
-					data: {
-						type: 'object',
-						required: ['status', 'category', 'profile'],
-						properties: {
-							status: {
-								type: 'string',
-							},
-							category: {
-								type: 'string',
-							},
-							profile: {
-								type: 'object',
-								required: ['name'],
-								properties: {
-									name: {
-										type: 'string',
-									},
-								},
-							},
-						},
-					},
-				},
-			} as any;
-
-			expect(sieve.flattenSchema(schema)).toEqual({
-				type: 'object',
-				required: [
-					'___data___status',
-					'___data___category',
-					'___data___profile___name',
-				],
-				properties: {
-					___data___status: {
-						type: 'string',
-						title: 'status',
-					},
-					___data___category: {
-						type: 'string',
-						title: 'category',
-					},
-					___data___profile___name: {
-						type: 'string',
-						title: 'name',
-					},
-				},
-			});
-		});
-
-		it('should preserve titles when flattening', () => {
-			const schema = {
-				type: 'object',
-				properties: {
-					nestedString: {
-						type: 'object',
-						properties: {
-							string: {
-								title: 'A string field',
-								type: 'string',
-							},
-						},
-					},
-				},
-			} as any;
-
-			expect(sieve.flattenSchema(schema)).toEqual({
-				type: 'object',
-				properties: {
-					___nestedString___string: {
-						title: 'A string field',
-						type: 'string',
-					},
-				},
-			});
-		});
-
-		it('should work with the "anyOf" keyword', () => {
-			const schema = {
-				anyOf: [
-					{
-						type: 'object',
-						properties: {
-							nestedString: {
-								type: 'object',
-								properties: {
-									string: {
-										title: 'A string field',
-										type: 'string',
-									},
-								},
-							},
-						},
-					},
-				],
-			} as any;
-
-			expect(sieve.flattenSchema(schema)).toEqual({
-				anyOf: [
-					{
-						type: 'object',
-						properties: {
-							___nestedString___string: {
-								title: 'A string field',
-								type: 'string',
-							},
-						},
-					},
-				],
-			});
-		});
-
-		it('should allow a custom delimiter to be used', () => {
-			const schema = {
-				type: 'object',
-				properties: {
-					string: { type: 'string' },
-					nestedString: {
-						type: 'object',
-						properties: {
-							string: { type: 'string' },
-						},
-					},
-					nestedNumber: {
-						type: 'object',
-						properties: {
-							number: { type: 'number' },
-						},
-					},
-					nestedBoolean: {
-						type: 'object',
-						properties: {
-							boolean: { type: 'boolean' },
-						},
-					},
-				},
-			} as any;
-
-			expect(sieve.flattenSchema(schema, '$$$')).toEqual({
-				type: 'object',
-				properties: {
-					string: { type: 'string' },
-					$$$nestedString$$$string: {
-						title: 'string',
-						type: 'string',
-					},
-					$$$nestedNumber$$$number: {
-						title: 'number',
-						type: 'number',
-					},
-					$$$nestedBoolean$$$boolean: {
-						title: 'boolean',
-						type: 'boolean',
-					},
-				},
-			});
-		});
-	});
-
-	describe('.unflattenSchema()', () => {
-		it('should unflatten a schema correctly', () => {
-			const schema = {
-				type: 'object',
-				properties: {
-					string: { type: 'string' },
-					nestedString: {
-						type: 'object',
-						properties: {
-							string: { type: 'string' },
-						},
-					},
-					nestedNumber: {
-						type: 'object',
-						properties: {
-							number: { type: 'number' },
-						},
-					},
-					nestedBoolean: {
-						type: 'object',
-						properties: {
-							boolean: { type: 'boolean' },
-						},
-					},
-					nestedDateTime: {
-						type: 'object',
-						properties: {
-							'date-time': {
-								type: 'string',
-								format: 'date-time',
-							},
-						},
-					},
-					nestedObject: {
-						type: 'object',
-						properties: {
-							object: {
-								type: 'object',
-								properties: {
-									tag_name: {
-										description: 'key',
-										type: 'string',
-									},
-									tag_value: {
-										description: 'value',
-										type: 'string',
-									},
-								},
-							},
-						},
-					},
-					nestedEnum: {
-						type: 'object',
-						properties: {
-							enum: {
-								enum: ['foo', 'bar', 'baz'],
-							},
-						},
-					},
-					nestedMultiple: {
-						type: 'object',
-						properties: {
-							string: { type: 'string' },
-							number: { type: 'number' },
-						},
-					},
-					nestedLevels: {
-						type: 'object',
-						properties: {
-							level: {
-								type: 'object',
-								properties: {
-									string: { type: 'string' },
-								},
-							},
-						},
-					},
-				},
-			} as any;
-
-			const flattenedSchema = sieve.flattenSchema(schema);
-
-			expect(sieve.unflattenSchema(flattenedSchema)).toEqual(schema);
-		});
-
-		it('should work with the "anyOf" keyword', () => {
-			const schema = {
-				anyOf: [
-					{
-						type: 'object',
-						properties: {
-							string: { type: 'string' },
-							nestedString: {
-								type: 'object',
-								properties: {
-									string: { type: 'string' },
-								},
-							},
-							nestedNumber: {
-								type: 'object',
-								properties: {
-									number: { type: 'number' },
-								},
-							},
-							nestedBoolean: {
-								type: 'object',
-								properties: {
-									boolean: { type: 'boolean' },
-								},
-							},
-							nestedDateTime: {
-								type: 'object',
-								properties: {
-									'date-time': {
-										type: 'string',
-										format: 'date-time',
-									},
-								},
-							},
-							nestedObject: {
-								type: 'object',
-								properties: {
-									object: {
-										type: 'object',
-										properties: {
-											tag_name: {
-												description: 'key',
-												type: 'string',
-											},
-											tag_value: {
-												description: 'value',
-												type: 'string',
-											},
-										},
-									},
-								},
-							},
-							nestedEnum: {
-								type: 'object',
-								properties: {
-									enum: {
-										enum: ['foo', 'bar', 'baz'],
-									},
-								},
-							},
-							nestedMultiple: {
-								type: 'object',
-								properties: {
-									string: { type: 'string' },
-									number: { type: 'number' },
-								},
-							},
-							nestedLevels: {
-								type: 'object',
-								properties: {
-									level: {
-										type: 'object',
-										properties: {
-											string: { type: 'string' },
-										},
-									},
-								},
-							},
-						},
-					},
-				],
-			} as any;
-
-			const flattenedSchema = sieve.flattenSchema(schema);
-
-			expect(sieve.unflattenSchema(flattenedSchema)).toEqual(schema);
-		});
-
-		it('should preserve the "required" keyword', () => {
-			const flattenedSchema = {
-				type: 'object',
-				required: [
-					'___data___status',
-					'___data___category',
-					'___data___profile___name',
-				],
-				properties: {
-					___data___status: {
-						type: 'string',
-						title: 'status',
-					},
-					___data___category: {
-						type: 'string',
-						title: 'category',
-					},
-					___data___profile___name: {
-						type: 'string',
-						title: 'name',
-					},
-				},
-			} as any;
-
-			expect(sieve.unflattenSchema(flattenedSchema)).toEqual({
-				type: 'object',
-				required: ['data'],
-				properties: {
-					data: {
-						type: 'object',
-						required: ['status', 'category', 'profile'],
-						properties: {
-							status: {
-								title: 'status',
-								type: 'string',
-							},
-							category: {
-								title: 'category',
-								type: 'string',
-							},
-							profile: {
-								type: 'object',
-								required: ['name'],
-								properties: {
-									name: {
-										title: 'name',
-										type: 'string',
-									},
-								},
-							},
-						},
-					},
-				},
-			});
-		});
-
-		it('should allow a custom delimiter to be used', () => {
-			const flattenedSchema = {
-				type: 'object',
-				properties: {
-					string: { type: 'string' },
-					$$$nestedString$$$string: {
-						type: 'string',
-					},
-					$$$nestedNumber$$$number: {
-						type: 'number',
-					},
-					$$$nestedBoolean$$$boolean: {
-						type: 'boolean',
-					},
-				},
-			} as any;
-
-			expect(sieve.unflattenSchema(flattenedSchema, '$$$')).toEqual({
-				type: 'object',
-				properties: {
-					string: { type: 'string' },
-					nestedString: {
-						type: 'object',
-						properties: {
-							string: { type: 'string' },
-						},
-					},
-					nestedNumber: {
-						type: 'object',
-						properties: {
-							number: { type: 'number' },
-						},
-					},
-					nestedBoolean: {
-						type: 'object',
-						properties: {
-							boolean: { type: 'boolean' },
-						},
-					},
-				},
-			});
 		});
 	});
 });

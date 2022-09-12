@@ -29,6 +29,7 @@ export const getDataModel = (schema: JSONSchema | undefined) => {
 	if (schema.enum) {
 		return enumType;
 	}
+
 	if (schema.oneOf) {
 		return oneOfType;
 	}

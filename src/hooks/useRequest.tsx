@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { ResolvableReturnType } from '../common-types';
 import { createPoll, Poll } from '../utils/poll';
 interface UseRequestOptions {
 	polling: boolean;
@@ -8,12 +9,6 @@ interface UseRequestOptions {
 
 type RequestError = Error | null | undefined;
 type ForcePoll = () => void;
-
-type ResolvableReturnType<T extends (...args: any[]) => any> = T extends (
-	...args: any[]
-) => Promise<infer R>
-	? R
-	: any;
 
 export const useRequest = <
 	TFn extends (poll: Poll | undefined) => Promise<any>,

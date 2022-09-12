@@ -223,7 +223,6 @@ const FormControl = ({ onModelChange, options, model }: FormControlProps) => {
 										: undefined
 								}
 								onChange={(e: React.FormEvent<HTMLInputElement>) => {
-									console.log(e.currentTarget.value);
 									onModelChange({
 										[options.name]: e.currentTarget.value,
 									});

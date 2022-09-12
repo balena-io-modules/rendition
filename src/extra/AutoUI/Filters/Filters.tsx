@@ -16,7 +16,7 @@ interface FiltersProps<T> {
 	autouiContext: AutoUIContext<T>;
 	changeFilters: (filters: JSONSchema[]) => void;
 	changeViews: (views: FiltersView[]) => void;
-	renderMode?: FilterRenderMode;
+	renderMode?: FilterRenderMode | FilterRenderMode[];
 	onSearch?: (searchTerm: string) => React.ReactElement | null;
 }
 

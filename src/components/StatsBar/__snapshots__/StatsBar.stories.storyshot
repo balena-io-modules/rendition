@@ -3,7 +3,7 @@
 exports[`Storyshots Core/StatsBar Cpu Temp 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-yeoIj jdeFJT"
   >
     <div
       class="sc-gKXOVf ckXSHX sc-iBkjds gXkNkX sc-hHLeRK eTSHtc"
@@ -34,7 +34,7 @@ exports[`Storyshots Core/StatsBar Cpu Temp 1`] = `
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M160 352h192V160H160V352zM448 176h48C504.8 176 512 168.8 512 160s-7.162-16-16-16H448V128c0-35.35-28.65-64-64-64h-16V16C368 7.164 360.8 0 352 0c-8.836 0-16 7.164-16 16V64h-64V16C272 7.164 264.8 0 256 0C247.2 0 240 7.164 240 16V64h-64V16C176 7.164 168.8 0 160 0C151.2 0 144 7.164 144 16V64H128C92.65 64 64 92.65 64 128v16H16C7.164 144 0 151.2 0 160s7.164 16 16 16H64v64H16C7.164 240 0 247.2 0 256s7.164 16 16 16H64v64H16C7.164 336 0 343.2 0 352s7.164 16 16 16H64V384c0 35.35 28.65 64 64 64h16v48C144 504.8 151.2 512 160 512c8.838 0 16-7.164 16-16V448h64v48c0 8.836 7.164 16 16 16c8.838 0 16-7.164 16-16V448h64v48c0 8.836 7.164 16 16 16c8.838 0 16-7.164 16-16V448H384c35.35 0 64-28.65 64-64v-16h48c8.838 0 16-7.164 16-16s-7.162-16-16-16H448v-64h48C504.8 272 512 264.8 512 256s-7.162-16-16-16H448V176zM384 368c0 8.836-7.162 16-16 16h-224C135.2 384 128 376.8 128 368v-224C128 135.2 135.2 128 144 128h224C376.8 128 384 135.2 384 144V368z"
+                    d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V280h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V176h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H280V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H176V24zM160 128H352c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32zm192 32H160V352H352V160z"
                     fill="currentColor"
                   />
                 </svg>
@@ -66,19 +66,19 @@ exports[`Storyshots Core/StatsBar Cpu Temp 1`] = `
           class="sc-gKXOVf ckXSHX sc-iBkjds hYdgwD"
         >
           <div
-            class="sc-fvNpTx hqRdaF sc-fctJkW gfcSxi"
+            class="sc-fctJkW hVFQfg sc-HzFiz fzqlHq"
             color="#fff"
             type="success"
           >
             <div
-              class="sc-jTYCaT eFodso"
+              class="sc-jQHtVU cDMxHp"
             />
             <div
-              class="sc-cZwWEu jSxaSQ"
+              class="sc-jTYCaT mCDFM"
               style="width: 34%;"
             >
               <div
-                class="sc-jQHtVU ezQmmd"
+                class="sc-fvNpTx flrTXX"
                 style="width: 294.11764705882354%;"
               />
             </div>
@@ -93,7 +93,7 @@ exports[`Storyshots Core/StatsBar Cpu Temp 1`] = `
 exports[`Storyshots Core/StatsBar Cpu Usage 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-yeoIj jdeFJT"
   >
     <div
       class="sc-gKXOVf ckXSHX sc-iBkjds gXkNkX sc-hHLeRK eTSHtc"
@@ -124,7 +124,7 @@ exports[`Storyshots Core/StatsBar Cpu Usage 1`] = `
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M160 352h192V160H160V352zM448 176h48C504.8 176 512 168.8 512 160s-7.162-16-16-16H448V128c0-35.35-28.65-64-64-64h-16V16C368 7.164 360.8 0 352 0c-8.836 0-16 7.164-16 16V64h-64V16C272 7.164 264.8 0 256 0C247.2 0 240 7.164 240 16V64h-64V16C176 7.164 168.8 0 160 0C151.2 0 144 7.164 144 16V64H128C92.65 64 64 92.65 64 128v16H16C7.164 144 0 151.2 0 160s7.164 16 16 16H64v64H16C7.164 240 0 247.2 0 256s7.164 16 16 16H64v64H16C7.164 336 0 343.2 0 352s7.164 16 16 16H64V384c0 35.35 28.65 64 64 64h16v48C144 504.8 151.2 512 160 512c8.838 0 16-7.164 16-16V448h64v48c0 8.836 7.164 16 16 16c8.838 0 16-7.164 16-16V448h64v48c0 8.836 7.164 16 16 16c8.838 0 16-7.164 16-16V448H384c35.35 0 64-28.65 64-64v-16h48c8.838 0 16-7.164 16-16s-7.162-16-16-16H448v-64h48C504.8 272 512 264.8 512 256s-7.162-16-16-16H448V176zM384 368c0 8.836-7.162 16-16 16h-224C135.2 384 128 376.8 128 368v-224C128 135.2 135.2 128 144 128h224C376.8 128 384 135.2 384 144V368z"
+                    d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V280h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V176h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H280V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H176V24zM160 128H352c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32zm192 32H160V352H352V160z"
                     fill="currentColor"
                   />
                 </svg>
@@ -156,19 +156,19 @@ exports[`Storyshots Core/StatsBar Cpu Usage 1`] = `
           class="sc-gKXOVf ckXSHX sc-iBkjds dLaGQT"
         >
           <div
-            class="sc-fvNpTx hqRdaF sc-fctJkW gfcSxi"
+            class="sc-fctJkW hVFQfg sc-HzFiz fzqlHq"
             color="#fff"
             type="success"
           >
             <div
-              class="sc-jTYCaT eFodso"
+              class="sc-jQHtVU cDMxHp"
             />
             <div
-              class="sc-cZwWEu jSxaSQ"
+              class="sc-jTYCaT mCDFM"
               style="width: 100%;"
             >
               <div
-                class="sc-jQHtVU ezQmmd"
+                class="sc-fvNpTx flrTXX"
                 style="width: 100%;"
               />
             </div>
@@ -178,19 +178,19 @@ exports[`Storyshots Core/StatsBar Cpu Usage 1`] = `
           class="sc-gKXOVf ckXSHX sc-iBkjds dLaGQT"
         >
           <div
-            class="sc-fvNpTx hqRdaF sc-fctJkW gfcSxi"
+            class="sc-fctJkW hVFQfg sc-HzFiz fzqlHq"
             color="#fff"
             type="success"
           >
             <div
-              class="sc-jTYCaT eFodso"
+              class="sc-jQHtVU cDMxHp"
             />
             <div
-              class="sc-cZwWEu jSxaSQ"
+              class="sc-jTYCaT mCDFM"
               style="width: 100%;"
             >
               <div
-                class="sc-jQHtVU ezQmmd"
+                class="sc-fvNpTx flrTXX"
                 style="width: 100%;"
               />
             </div>
@@ -200,19 +200,19 @@ exports[`Storyshots Core/StatsBar Cpu Usage 1`] = `
           class="sc-gKXOVf ckXSHX sc-iBkjds dLaGQT"
         >
           <div
-            class="sc-fvNpTx hqRdaF sc-fctJkW gfcSxi"
+            class="sc-fctJkW hVFQfg sc-HzFiz fzqlHq"
             color="#fff"
             type="success"
           >
             <div
-              class="sc-jTYCaT eFodso"
+              class="sc-jQHtVU cDMxHp"
             />
             <div
-              class="sc-cZwWEu jSxaSQ"
+              class="sc-jTYCaT mCDFM"
               style="width: 0%;"
             >
               <div
-                class="sc-jQHtVU ezQmmd"
+                class="sc-fvNpTx flrTXX"
                 style="width: 0%;"
               />
             </div>
@@ -222,19 +222,19 @@ exports[`Storyshots Core/StatsBar Cpu Usage 1`] = `
           class="sc-gKXOVf ckXSHX sc-iBkjds dLaGQT"
         >
           <div
-            class="sc-fvNpTx hqRdaF sc-fctJkW gfcSxi"
+            class="sc-fctJkW hVFQfg sc-HzFiz fzqlHq"
             color="#fff"
             type="success"
           >
             <div
-              class="sc-jTYCaT eFodso"
+              class="sc-jQHtVU cDMxHp"
             />
             <div
-              class="sc-cZwWEu jSxaSQ"
+              class="sc-jTYCaT mCDFM"
               style="width: 0%;"
             >
               <div
-                class="sc-jQHtVU ezQmmd"
+                class="sc-fvNpTx flrTXX"
                 style="width: 0%;"
               />
             </div>
@@ -244,19 +244,19 @@ exports[`Storyshots Core/StatsBar Cpu Usage 1`] = `
           class="sc-gKXOVf ckXSHX sc-iBkjds hYdgwD"
         >
           <div
-            class="sc-fvNpTx hqRdaF sc-fctJkW gfcSxi"
+            class="sc-fctJkW hVFQfg sc-HzFiz fzqlHq"
             color="#fff"
             type="success"
           >
             <div
-              class="sc-jTYCaT eFodso"
+              class="sc-jQHtVU cDMxHp"
             />
             <div
-              class="sc-cZwWEu jSxaSQ"
+              class="sc-jTYCaT mCDFM"
               style="width: 0%;"
             >
               <div
-                class="sc-jQHtVU ezQmmd"
+                class="sc-fvNpTx flrTXX"
                 style="width: 0%;"
               />
             </div>
@@ -271,7 +271,7 @@ exports[`Storyshots Core/StatsBar Cpu Usage 1`] = `
 exports[`Storyshots Core/StatsBar Memory 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-yeoIj jdeFJT"
   >
     <div
       class="sc-gKXOVf ckXSHX sc-iBkjds gXkNkX sc-hHLeRK eTSHtc"
@@ -302,7 +302,7 @@ exports[`Storyshots Core/StatsBar Memory 1`] = `
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M0 448h80v-32c0-8.838 7.164-16 16-16c8.838 0 16 7.162 16 16v32h96v-32c0-8.838 7.164-16 16-16c8.838 0 16 7.162 16 16v32h96v-32c0-8.838 7.164-16 16-16c8.838 0 16 7.162 16 16v32h96v-32c0-8.838 7.164-16 16-16c8.838 0 16 7.162 16 16v32H576v-96H0V448zM576 146.9V112C576 85.49 554.5 64 528 64h-480C21.49 64 0 85.49 0 112v34.94C18.6 153.5 32 171.1 32 192S18.6 230.5 0 237.1V320h576V237.1C557.4 230.5 544 212.9 544 192S557.4 153.5 576 146.9zM192 240C192 248.8 184.8 256 176 256h-32C135.2 256 128 248.8 128 240v-96C128 135.2 135.2 128 144 128h32C184.8 128 192 135.2 192 144V240zM320 240C320 248.8 312.8 256 304 256h-32C263.2 256 256 248.8 256 240v-96C256 135.2 263.2 128 272 128h32C312.8 128 320 135.2 320 144V240zM448 240C448 248.8 440.8 256 432 256h-32C391.2 256 384 248.8 384 240v-96C384 135.2 391.2 128 400 128h32C440.8 128 448 135.2 448 144V240z"
+                    d="M64 64C28.7 64 0 92.7 0 128v7.4c0 6.8 4.4 12.6 10.1 16.3C23.3 160.3 32 175.1 32 192s-8.7 31.7-21.9 40.3C4.4 236 0 241.8 0 248.6V320H576V248.6c0-6.8-4.4-12.6-10.1-16.3C552.7 223.7 544 208.9 544 192s8.7-31.7 21.9-40.3c5.7-3.7 10.1-9.5 10.1-16.3V128c0-35.3-28.7-64-64-64H64zM576 352H0v64c0 17.7 14.3 32 32 32H80V416c0-8.8 7.2-16 16-16s16 7.2 16 16v32h96V416c0-8.8 7.2-16 16-16s16 7.2 16 16v32h96V416c0-8.8 7.2-16 16-16s16 7.2 16 16v32h96V416c0-8.8 7.2-16 16-16s16 7.2 16 16v32h48c17.7 0 32-14.3 32-32V352zM192 160v64c0 17.7-14.3 32-32 32s-32-14.3-32-32V160c0-17.7 14.3-32 32-32s32 14.3 32 32zm128 0v64c0 17.7-14.3 32-32 32s-32-14.3-32-32V160c0-17.7 14.3-32 32-32s32 14.3 32 32zm128 0v64c0 17.7-14.3 32-32 32s-32-14.3-32-32V160c0-17.7 14.3-32 32-32s32 14.3 32 32z"
                     fill="currentColor"
                   />
                 </svg>
@@ -344,19 +344,19 @@ exports[`Storyshots Core/StatsBar Memory 1`] = `
           class="sc-gKXOVf ckXSHX sc-iBkjds hYdgwD"
         >
           <div
-            class="sc-fvNpTx hqRdaF sc-fctJkW gfcSxi"
+            class="sc-fctJkW hVFQfg sc-HzFiz fzqlHq"
             color="#fff"
             type="success"
           >
             <div
-              class="sc-jTYCaT eFodso"
+              class="sc-jQHtVU cDMxHp"
             />
             <div
-              class="sc-cZwWEu jSxaSQ"
+              class="sc-jTYCaT mCDFM"
               style="width: 45.300000000000004%;"
             >
               <div
-                class="sc-jQHtVU ezQmmd"
+                class="sc-fvNpTx flrTXX"
                 style="width: 220.75055187637966%;"
               />
             </div>
@@ -371,7 +371,7 @@ exports[`Storyshots Core/StatsBar Memory 1`] = `
 exports[`Storyshots Core/StatsBar Storage 1`] = `
 <div>
   <div
-    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-bPyhqo dWxQcS"
+    class="StyledGrommet-sc-19lkkz7-0 jbmlFX sc-yeoIj jdeFJT"
   >
     <div
       class="sc-gKXOVf ckXSHX sc-iBkjds gXkNkX sc-hHLeRK eTSHtc"
@@ -402,7 +402,7 @@ exports[`Storyshots Core/StatsBar Storage 1`] = `
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M464 288h-416C21.5 288 0 309.5 0 336v96C0 458.5 21.5 480 48 480h416c26.5 0 48-21.5 48-48v-96C512 309.5 490.5 288 464 288zM320 416c-17.62 0-32-14.38-32-32s14.38-32 32-32s32 14.38 32 32S337.6 416 320 416zM416 416c-17.62 0-32-14.38-32-32s14.38-32 32-32s32 14.38 32 32S433.6 416 416 416zM464 32h-416C21.5 32 0 53.5 0 80v192.4C13.41 262.3 29.92 256 48 256h416c18.08 0 34.59 6.254 48 16.41V80C512 53.5 490.5 32 464 32z"
+                    d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V280.4c-17-15.2-39.4-24.4-64-24.4H64c-24.6 0-47 9.2-64 24.4V96zM64 288H448c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V352c0-35.3 28.7-64 64-64zM320 416c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32zm128-32c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32z"
                     fill="currentColor"
                   />
                 </svg>
@@ -444,19 +444,19 @@ exports[`Storyshots Core/StatsBar Storage 1`] = `
           class="sc-gKXOVf ckXSHX sc-iBkjds hYdgwD"
         >
           <div
-            class="sc-fvNpTx hqRdaF sc-fctJkW gfcSxi"
+            class="sc-fctJkW hVFQfg sc-HzFiz fzqlHq"
             color="#fff"
             type="warning"
           >
             <div
-              class="sc-jTYCaT eFodso"
+              class="sc-jQHtVU cDMxHp"
             />
             <div
-              class="sc-cZwWEu hjrMRo"
+              class="sc-jTYCaT inPfE"
               style="width: 62.3%;"
             >
               <div
-                class="sc-jQHtVU ezQmmd"
+                class="sc-fvNpTx flrTXX"
                 style="width: 160.51364365971108%;"
               />
             </div>

@@ -9,7 +9,7 @@ export const getDefaultDate = (): string => {
 export const normalizeDateTime = memoize((timestamp: string) => {
 	const d = new Date(timestamp);
 	if (isNaN(d.getTime())) {
-		return 'Invalid date';
+		return null;
 	}
 	// Remove miliseconds
 	return d.toISOString().split('.')[0] + 'Z';
