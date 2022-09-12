@@ -1,4 +1,17 @@
 - commits:
+    - subject: Refactor Filters and add x-ref-scheme/x-foreign-key-scheme support
+      hash: 54ce2d89487491734979a71984bdba453108e61f
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 30.0.0
+  title: "'Refactor filters'"
+  date: 2022-09-12T12:26:38.000Z
+- commits:
     - subject: Drop Modal component's `titleElement` and `titleDetails` properties in
         favor of the `title` property and add `JSX.Element` as an acceptable
         type for `title`
