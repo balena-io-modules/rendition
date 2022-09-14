@@ -9,7 +9,7 @@ import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import { transformUiSchema } from '../../components/Renderer/widgets/widget-util';
 import { getValue, getWidget } from '../../components/Renderer';
 import castArray from 'lodash/castArray';
-import { getSchemaFormat } from './models/helpers';
+import { getSchemaFormat, getSubSchemaFromRefScheme } from './models/helpers';
 
 interface CustomWidgetProps {
 	value: Value;
@@ -27,7 +27,6 @@ export const CustomWidget = ({
 	uiSchema,
 }: CustomWidgetProps) => {
 	const format = getSchemaFormat(schema);
-
 	if (!format) {
 		return <>{value}</>;
 	}
@@ -38,12 +37,10 @@ export const CustomWidget = ({
 	});
 
 	const processedValue = getValue(value, schema, processedUiSchema);
-	const types = schema?.type != null ? castArray(schema.type) : [];
+	const subSchema = getSubSchemaFromRefScheme(schema);
+	const types = subSchema?.type != null ? castArray(subSchema.type) : [];
 
-	if (
-		processedValue === undefined ||
-		(processedValue === null && !types.includes(JsonTypes.null))
-	) {
+	if (processedValue == null && !types.includes(JsonTypes.null)) {
 		return null;
 	}
 
@@ -53,7 +50,7 @@ export const CustomWidget = ({
 		<Widget
 			extraContext={extraContext}
 			extraFormats={extraFormats}
-			value={processedValue}
+			value={processedValue || null}
 			schema={schema}
 		/>
 	);
