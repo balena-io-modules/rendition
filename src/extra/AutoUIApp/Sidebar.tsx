@@ -1,40 +1,11 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
+import { useHistory } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { OpenApiJson } from './openApiJson';
-import { Flex, FlexProps } from '../../components/Flex';
-import { Txt } from '../../components/Txt';
-
-const SidebarWrapper = styled(Flex)`
-	overflow: auto;
-	background: ${(props) => props.theme.colors.secondary.main};
-	flex-direction: column;
-	flex-wrap: nowrap;
-`;
-
-const MenuItem = styled(Flex)<{ isCurrent: boolean }>`
-	height: 48px;
-	cursor: pointer;
-	border-bottom: 1px solid
-		${(props) =>
-			props.isCurrent
-				? props.theme.colors.quartenary.light
-				: props.theme.colors.tertiary.dark};
-	border-left: ${(props) =>
-		props.isCurrent ? `2px solid ${props.theme.colors.primary.main}` : 'none'};
-	background: ${(props) =>
-		props.isCurrent
-			? props.theme.colors.quartenary.light
-			: props.theme.colors.secondary.dark};
-
-	&:hover {
-		background: ${(props) =>
-			props.isCurrent
-				? props.theme.colors.quartenary.light
-				: props.theme.colors.tertiary.dark};
-	}
-`;
+import { FlexProps } from '../../components/Flex';
+import { Crumb } from '../../components/Breadcrumbs';
+import { Sidebar as SidebarBase } from '../../components/Sidebar';
+import { MenuItem } from '../../components/Sidebar/Menu';
 
 interface SidebarProps {
 	openApiJson: OpenApiJson;
@@ -44,54 +15,53 @@ interface SidebarProps {
 export const Sidebar = ({
 	openApiJson,
 	isCollapsed = false,
-	...flexProps
 }: SidebarProps & FlexProps) => {
 	const { pathname } = useLocation();
-	const menuItems = React.useMemo(
-		() =>
-			Object.entries(openApiJson.components.schemas)
-				.filter(
-					([key, value]) =>
-						!key.endsWith('-create') &&
-						!key.endsWith('-update') &&
-						!!value.title,
-				) // add !findInObject(value, '$ref')
-				.map(([key, value]) => ({
-					resource: key.substring(key.indexOf('.') + 1),
-					title: value.title?.split('_')?.join(' '),
-				})),
-		[openApiJson],
-	);
-	return (
-		<SidebarWrapper {...flexProps}>
-			{menuItems.map((item) => {
-				const isCurrent = pathname.split('/').some((i) => i === item.resource);
+	const history = useHistory();
+	const crumbs = React.useMemo(() => {
+		const handleCrumbClick = (event: React.MouseEvent, href: string) => {
+			if (!event.ctrlKey && !event.metaKey) {
+				event.preventDefault();
+				history.push(href);
+			}
+		};
+		const paths = pathname
+			?.split('/')
+			?.slice(1)
+			.map((path) => path.split('_').join(' '));
+		if (paths.length <= 1 || isCollapsed) {
+			return [];
+		}
+		return paths.map((path, index) => {
+			const href: string = `/${paths.slice(0, index + 1).join('/')}`;
+			return {
+				text: path,
+				href,
+				onClick: (event: React.MouseEvent) => handleCrumbClick(event, href),
+			};
+		}) as Crumb[];
+	}, [pathname, isCollapsed, history]);
 
-				return (
-					<NavLink key={item.resource} to={`/${item.resource}`}>
-						<MenuItem
-							width="100%"
-							isCurrent={isCurrent}
-							px={3}
-							py={2}
-							flexDirection="row"
-							alignItems="center"
-						>
-							<Txt.span
-								bold
-								fontSize={2}
-								style={{ lineHeight: 1.33 }}
-								color={isCurrent ? 'text.main' : 'quartenary.main'}
-								display={isCollapsed ? 'none' : undefined}
-								truncate
-								tooltip={item.title}
-							>
-								{item.title}
-							</Txt.span>
-						</MenuItem>
-					</NavLink>
-				);
-			})}
-		</SidebarWrapper>
+	const menuItems = React.useMemo(() => {
+		if (pathname.split('/').length > 2) {
+			return [{ href: pathname, title: 'Summary' }] as MenuItem[];
+		}
+		return Object.entries(openApiJson.components.schemas)
+			.filter(
+				([key, value]) =>
+					!key.endsWith('-create') && !key.endsWith('-update') && !!value.title,
+			) // add !findInObject(value, '$ref')
+			.map(([key, value]) => ({
+				href: `/${key.substring(key.indexOf('.') + 1)}`,
+				title: value.title?.split('_')?.join(' '),
+			})) as MenuItem[];
+	}, [openApiJson, pathname]);
+	return (
+		<SidebarBase
+			crumbs={crumbs}
+			showBreadcrumbs={true}
+			menuItems={menuItems}
+			isCollapsed={isCollapsed}
+		/>
 	);
 };
