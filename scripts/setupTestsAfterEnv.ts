@@ -1,1 +1,1 @@
-require('jest-styled-components')
+import('jest-styled-components');

@@ -1,48 +1,54 @@
-const Enzyme = require('enzyme')
-const Adapter = require('enzyme-adapter-react-16')
-const { JSDOM } = require('jsdom')
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import { JSDOM } from 'jsdom';
 
-Enzyme.configure({ adapter: new Adapter() })
+Enzyme.configure({ adapter: new Adapter() });
 
 const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
-const { window } = jsdom;
+const { window: $window } = jsdom;
 
-function copyProps(src, target) {
-  Object.entries(Object.getOwnPropertyDescriptors(src)).forEach(([ key, descriptor ]) => {
-    if (!target.hasOwnProperty(key)) {
-      Object.defineProperty(target, key, descriptor);
-    }
-  });
+function copyProps(src: object, target: Record<string, any>) {
+	Object.entries(Object.getOwnPropertyDescriptors(src)).forEach(
+		([key, descriptor]) => {
+			if (!target.hasOwnProperty(key)) {
+				Object.defineProperty(target, key, descriptor);
+			}
+		},
+	);
 }
 
-global.window = window;
-global.document = window.document;
+// @ts-expect-error
+global.window = $window;
+global.document = $window.document;
 
 // See https://github.com/jsdom/jsdom/issues/3002 why we need to mock this.
 global.document.createRange = () => {
-  const range = new Range();
+	const range = new Range();
 
-  range.getBoundingClientRect = jest.fn();
+	range.getBoundingClientRect = jest.fn();
 
-  range.getClientRects = () => {
-    return {
-      item: () => null,
-      length: 0,
-      [Symbol.iterator]: jest.fn()
-    };
-  };
+	range.getClientRects = () => {
+		return {
+			item: () => null,
+			length: 0,
+			[Symbol.iterator]: jest.fn(),
+		};
+	};
 
-  return range;
-}
+	return range;
+};
 
+// @ts-expect-error
 global.navigator = {
-  userAgent: 'node.js',
+	userAgent: 'node.js',
 };
 global.requestAnimationFrame = function (callback) {
-  return setTimeout(callback, 0);
+	// @ts-expect-error This should have been using the browser typings.
+	return setTimeout(callback, 0) as number;
 };
 global.cancelAnimationFrame = function (id) {
-  clearTimeout(id);
+	clearTimeout(id);
 };
+// @ts-expect-error
 global.fetch = jest.fn(() => Promise.resolve());
-copyProps(window, global);
+copyProps($window, global);
