@@ -52,49 +52,50 @@ const Wrapper = styled(Flex)`
 	}
 `;
 
-const BaseSearch = React.forwardRef(
-	(
-		{
-			className,
-			dark,
-			disabled,
-			placeholder,
-			value,
-			onChange,
-			onEnter,
-		}: InternalSearchProps,
-		ref,
-	) => {
-		return (
-			<Wrapper className={className}>
-				<Keyboard onEnter={onEnter}>
-					<input
-						style={{ color: dark ? '#fff' : undefined }}
-						disabled={disabled}
-						placeholder={placeholder || 'Search entries...'}
-						value={value}
-						onChange={onChange}
-						ref={ref as any}
-					/>
-				</Keyboard>
-				<FontAwesomeIcon icon={faSearch} className="search-icon" />
-				{value !== '' && (
-					<Button
-						plain
-						className="clear-icon"
-						onClick={() => {
-							if (onChange) {
-								onChange({ target: { value: '' } });
-							}
-						}}
-					>
-						<FontAwesomeIcon icon={faTimes} />
-					</Button>
-				)}
-			</Wrapper>
-		);
-	},
-);
+const BaseSearch: React.ForwardRefExoticComponent<SearchProps> =
+	React.forwardRef(
+		(
+			{
+				className,
+				dark,
+				disabled,
+				placeholder,
+				value,
+				onChange,
+				onEnter,
+			}: InternalSearchProps,
+			ref,
+		) => {
+			return (
+				<Wrapper className={className}>
+					<Keyboard onEnter={onEnter}>
+						<input
+							style={{ color: dark ? '#fff' : undefined }}
+							disabled={disabled}
+							placeholder={placeholder || 'Search entries...'}
+							value={value}
+							onChange={onChange}
+							ref={ref as any}
+						/>
+					</Keyboard>
+					<FontAwesomeIcon icon={faSearch} className="search-icon" />
+					{value !== '' && (
+						<Button
+							plain
+							className="clear-icon"
+							onClick={() => {
+								if (onChange) {
+									onChange({ target: { value: '' } });
+								}
+							}}
+						>
+							<FontAwesomeIcon icon={faTimes} />
+						</Button>
+					)}
+				</Wrapper>
+			);
+		},
+	);
 
 export interface InternalSearchProps extends React.HTMLAttributes<HTMLElement> {
 	/** If true, uses a light colorscheme for use on a dark background */

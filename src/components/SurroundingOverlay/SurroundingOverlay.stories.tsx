@@ -8,7 +8,7 @@ const SurroundingOverlayDemo = (props: SurroundingOverlayProps) => {
 	const [rect, setRect] = React.useState<PartialDomRect | null>(null);
 	return (
 		<>
-			<SurroundingOverlay rect={rect} {...props} />
+			<SurroundingOverlay {...props} rect={rect} />
 			<Input
 				mb={4}
 				type="text"

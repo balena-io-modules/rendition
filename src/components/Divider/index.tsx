@@ -38,35 +38,36 @@ export interface InternalDividerProps
 	type?: 'solid' | 'dashed';
 }
 
-const BaseDivider = React.forwardRef(
-	({ children, className, ...otherProps }: InternalDividerProps, ref) => {
-		if (!children) {
-			return <Base className={className} {...otherProps} ref={ref as any} />;
-		}
+const BaseDivider: React.ForwardRefExoticComponent<DividerProps> =
+	React.forwardRef(
+		({ children, className, ...otherProps }: InternalDividerProps, ref) => {
+			if (!children) {
+				return <Base className={className} {...otherProps} ref={ref as any} />;
+			}
 
-		if (typeof children !== 'string') {
-			throw new Error(
-				`The child element of the Divider component must be a string, received: ${typeof children}`,
+			if (typeof children !== 'string') {
+				throw new Error(
+					`The child element of the Divider component must be a string, received: ${typeof children}`,
+				);
+			}
+
+			return (
+				<Flex
+					className={className}
+					width="100%"
+					flexDirection="row"
+					justifyContent="center"
+					ref={ref as any}
+				>
+					<FlexBase {...otherProps} />
+					<Txt.span color="tertiary.main" px={3}>
+						{children}
+					</Txt.span>
+					<FlexBase {...otherProps} />
+				</Flex>
 			);
-		}
-
-		return (
-			<Flex
-				className={className}
-				width="100%"
-				flexDirection="row"
-				justifyContent="center"
-				ref={ref as any}
-			>
-				<FlexBase {...otherProps} />
-				<Txt.span color="tertiary.main" px={3}>
-					{children}
-				</Txt.span>
-				<FlexBase {...otherProps} />
-			</Flex>
-		);
-	},
-);
+		},
+	);
 
 export type DividerProps = InternalDividerProps & RenditionSystemProps;
 

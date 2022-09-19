@@ -162,7 +162,6 @@ export class Terminal extends React.Component<ThemedTerminalProps, {}> {
 				});
 			}
 			this.resize();
-			// @ts-expect-error this was added to the window types on TS 4.2
 			const nativeResizeObserver = window.ResizeObserver;
 			const ResizeObserverCtor =
 				typeof nativeResizeObserver === 'function'

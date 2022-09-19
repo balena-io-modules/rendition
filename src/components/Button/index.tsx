@@ -300,9 +300,9 @@ export interface ThemedButtonProps extends ButtonProps {
 export const Button = withConditional<ButtonProps>(withConfirm, (props) => {
 	return 'confirmation' in props;
 })(
-	asRendition<ButtonProps>(
+	asRendition<React.ForwardRefExoticComponent<ButtonProps>>(
 		BaseButton,
 		[],
 		['width', 'color', 'bg'],
-	) as React.ForwardRefExoticComponent<ButtonProps>,
+	),
 );

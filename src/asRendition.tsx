@@ -124,8 +124,8 @@ export const withTooltip = (Base: React.ComponentType) => {
 	});
 };
 
-export default function asRendition<T>(
-	component: React.ComponentType | React.ForwardRefExoticComponent<T>,
+export default function asRendition<T extends React.ComponentType>(
+	component: T,
 	additionalEnhancers: Array<
 		(Base: React.ComponentType) => React.ComponentType
 	> = [],
@@ -137,5 +137,5 @@ export default function asRendition<T>(
 		withTooltip,
 		withStyledSystem,
 		filterStyledSystemProps(passthroughProps),
-	)(component) as unknown as T;
+	)(component) as T;
 }
