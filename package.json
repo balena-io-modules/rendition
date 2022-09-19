@@ -52,9 +52,11 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@types/enzyme": "^3.10.8",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/googlemaps": "^3.39.7",
     "@types/highlightjs": "^9.12.0",
     "@types/jest": "^26.0.21",
+    "@types/jsdom": "^20.0.0",
     "@types/react": "^16.14.5",
     "@types/react-dom": "^16.9.11",
     "@types/react-google-recaptcha": "^1.1.2",
@@ -162,11 +164,11 @@
     ]
   },
   "jest": {
-    "preset": "ts-jest/presets/js-with-ts",
+    "preset": "ts-jest",
     "transform": {
       ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
       "^.+\\.stories\\.(jsx?|tsx?)$": "@storybook/addon-storyshots/injectFileName",
-      "^.+\\.(jsx?|tsx?)$": "ts-jest"
+      "^.+\\.[jt]sx?$": "ts-jest"
     },
     "transformIgnorePatterns": [
       "node_modules/(?!(entity-decode|mermaid|monaco-editor|react-monaco-editor|d3|internmap|delaunator|robust-predicates))"
