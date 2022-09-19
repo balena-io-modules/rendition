@@ -32,4 +32,5 @@ const TitleFieldBase = (props: TitleFieldProps & { theme: Theme }) => {
 	);
 };
 
-export const TitleField = asRendition<TitleFieldProps>(TitleFieldBase);
+export const TitleField =
+	asRendition<React.ComponentType<TitleFieldProps>>(TitleFieldBase);

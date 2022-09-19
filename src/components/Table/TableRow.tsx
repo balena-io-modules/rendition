@@ -7,13 +7,13 @@ import { Checkbox, CheckboxProps } from '../Checkbox';
  * Get the value specified by the `field` value
  * If a `render` function is available, use it to get the display value.
  */
-const renderField = <T extends {}>(row: T, column: TableBaseColumn<T>): any => {
+function renderField<T>(row: T, column: TableBaseColumn<T>) {
 	const value = get(row, column.field);
 	if (column.render) {
 		return column.render(value, row);
 	}
 	return value == null ? '' : value;
-};
+}
 
 export const CheckboxWrapper = styled.div`
 	display: inline-block;

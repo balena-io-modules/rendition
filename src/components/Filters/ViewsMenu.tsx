@@ -72,7 +72,9 @@ const ViewsMenu = ({
 									<Flex flexDirection="column">
 										<Button
 											plain
-											onClick={(e) => {
+											onClick={(
+												e: React.MouseEvent<HTMLElement, MouseEvent>,
+											) => {
 												deleteView(view);
 												stopEvent(e);
 											}}

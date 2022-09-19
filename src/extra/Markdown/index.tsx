@@ -258,7 +258,7 @@ export type MarkdownProps = TxtProps & {
 	children: string;
 	/** Object specifying component Overrides. ex. `{ p: Txt.p }` */
 	componentOverrides?: components;
-	theme: Theme;
+
 	/** Specifies the options used when sanitizing the generated HTML. Passing `null` would disable the sanitization. */
 	sanitizerOptions?: any; // https://github.com/syntax-tree/hast-util-sanitize#schema
 	/** When disabled it does not renders raw html in markdown */
@@ -271,6 +271,10 @@ export type MarkdownProps = TxtProps & {
 	disableAutoHeadingLinking?: boolean;
 };
 
+export interface ThemedMarkdownProps extends MarkdownProps {
+	theme: Theme;
+}
+
 export const MarkdownBase = ({
 	children,
 	componentOverrides,
@@ -280,7 +284,7 @@ export const MarkdownBase = ({
 	decorators,
 	disableAutoHeadingLinking,
 	...rest
-}: MarkdownProps) => {
+}: ThemedMarkdownProps) => {
 	const content = React.useMemo(() => {
 		return (
 			getProcessor(
@@ -332,4 +336,6 @@ export const MarkdownBase = ({
  *
  * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/extra/Markdown/Markdown.stories.ts)
  */
-export const Markdown = withTheme(MarkdownBase);
+export const Markdown = withTheme(
+	MarkdownBase,
+) as React.FunctionComponent<MarkdownProps>;
