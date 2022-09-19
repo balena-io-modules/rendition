@@ -182,10 +182,10 @@
     ],
     "collectCoverage": true,
     "setupFiles": [
-      "<rootDir>scripts/setupTests.js"
+      "<rootDir>scripts/setupTests.ts"
     ],
     "setupFilesAfterEnv": [
-      "<rootDir>scripts/setupTestsAfterEnv.js"
+      "<rootDir>scripts/setupTestsAfterEnv.ts"
     ]
   },
   "versionist": {
