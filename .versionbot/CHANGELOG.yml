@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update grommet to 2.25.3
+      hash: ee58b5fc41c29a3e210497dcd5dc752eaf65d1b1
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 31.0.2
+  title: "'Update grommet to 2.25.3'"
+  date: 2022-09-20T17:14:57.813Z
+- commits:
     - subject: Fix widget value to be based on refScheme
       hash: ef9cc05a029640995dfd5df1cf415ebe91bc99f3
       body: ""
