@@ -4,153 +4,164 @@
 import { css } from 'styled-components';
 
 export default css`
-	.notification-container-bottom-center,
-	.notification-container-bottom-left,
-	.notification-container-bottom-right,
-	.notification-container-center,
-	.notification-container-top-center,
-	.notification-container-top-left,
-	.notification-container-top-right {
-		width: 325px;
-		position: absolute;
+	.rnc__notification-container--bottom-center,
+	.rnc__notification-container--bottom-full,
+	.rnc__notification-container--bottom-left,
+	.rnc__notification-container--bottom-right,
+	.rnc__notification-container--center,
+	.rnc__notification-container--top-center,
+	.rnc__notification-container--top-full,
+	.rnc__notification-container--top-left,
+	.rnc__notification-container--top-right {
+		min-width: 325px;
 		pointer-events: all;
+		position: absolute;
 	}
-	.notification-container-bottom-center,
-	.notification-container-center,
-	.notification-container-top-center {
-		display: flex;
-		justify-content: center;
+	.rnc__notification-container--bottom-center,
+	.rnc__notification-container--center,
+	.rnc__notification-container--top-center {
 		align-items: center;
+		display: flex;
 		flex-direction: column;
-		left: calc(50% - 162.5px);
+		justify-content: center;
+		left: calc(50% - 175px);
+		max-width: 350px;
 	}
-	.notification-container-center {
-		top: 20px;
+	.rnc__notification-container--center {
 		height: 100%;
 		pointer-events: none;
+		top: 20px;
 	}
-	.notification-container-center .center-inner {
-		width: 325px;
-		display: flex;
-		justify-content: center;
+	.rnc__notification-container--bottom-full,
+	.rnc__notification-container--top-full {
+		min-width: 100%;
+		width: 100%;
+	}
+	.rnc__notification-container--bottom-full {
+		bottom: 0;
+	}
+	.rnc__util--flex-center {
 		align-items: center;
+		display: flex;
 		flex-direction: column;
+		justify-content: center;
+		min-width: 325px;
 		pointer-events: all;
 	}
-	.notification-container-top-center {
+	.rnc__notification-container--top-center {
 		top: 20px;
 	}
-	.notification-container-bottom-center {
+	.rnc__notification-container--bottom-center {
 		bottom: 20px;
 	}
-	.notification-container-top-left {
+	.rnc__notification-container--top-left {
 		left: 20px;
 		top: 20px;
 	}
-	.notification-container-top-right {
+	.rnc__notification-container--top-right {
 		right: 20px;
 		top: 20px;
 	}
-	.notification-container-bottom-left {
-		left: 20px;
+	.rnc__notification-container--bottom-left {
 		bottom: 20px;
+		left: 20px;
 	}
-	.notification-container-bottom-right {
+	.rnc__notification-container--bottom-right {
 		bottom: 20px;
 		right: 20px;
 	}
-	.notification-container-mobile-bottom,
-	.notification-container-mobile-top {
+	.rnc__notification-container--mobile-bottom,
+	.rnc__notification-container--mobile-top {
 		pointer-events: all;
 		position: absolute;
 	}
-	.notification-container-mobile-top {
-		right: 20px;
+	.rnc__notification-container--mobile-top {
 		left: 20px;
+		right: 20px;
 		top: 20px;
 	}
-	.notification-container-mobile-bottom {
-		right: 20px;
-		left: 20px;
+	.rnc__notification-container--mobile-bottom {
 		bottom: 20px;
+		left: 20px;
 		margin-bottom: -15px;
+		right: 20px;
 	}
-	.notification-default {
+	.rnc__notification-item--default {
+		background-color: #007bff;
 		border-left: 8px solid #0562c7;
 	}
-	.notification-default,
-	.notification-default .timer {
+	.rnc__notification-item--default .rnc__notification-timer {
 		background-color: #007bff;
 	}
-	.notification-default .timer-filler {
+	.rnc__notification-item--default .rnc__notification-timer-filler {
 		background-color: #fff;
 	}
-	.notification-default .notification-close {
+	.rnc__notification-item--default .rnc__notification-close-mark {
 		background-color: #007bff;
 	}
-	.notification-success {
+	.rnc__notification-item--success {
+		background-color: #28a745;
 		border-left: 8px solid #1f8838;
 	}
-	.notification-success,
-	.notification-success .timer {
+	.rnc__notification-item--success .rnc__notification-timer {
 		background-color: #28a745;
 	}
-	.notification-success .timer-filler {
+	.rnc__notification-item--success .rnc__notification-timer-filler {
 		background-color: #fff;
 	}
-	.notification-success .notification-close {
+	.rnc__notification-item--success .rnc__notification-close-mark {
 		background-color: #28a745;
 	}
-	.notification-danger {
+	.rnc__notification-item--danger {
+		background-color: #dc3545;
 		border-left: 8px solid #bd1120;
 	}
-	.notification-danger,
-	.notification-danger .timer {
+	.rnc__notification-item--danger .rnc__notification-timer {
 		background-color: #dc3545;
 	}
-	.notification-danger .timer-filler {
+	.rnc__notification-item--danger .rnc__notification-timer-filler {
 		background-color: #fff;
 	}
-	.notification-danger .notification-close {
+	.rnc__notification-item--danger .rnc__notification-close-mark {
 		background-color: #dc3545;
 	}
-	.notification-info {
+	.rnc__notification-item--info {
+		background-color: #17a2b8;
 		border-left: 8px solid #138b9e;
 	}
-	.notification-info,
-	.notification-info .timer {
+	.rnc__notification-item--info .rnc__notification-timer {
 		background-color: #17a2b8;
 	}
-	.notification-info .timer-filler {
+	.rnc__notification-item--info .rnc__notification-timer-filler {
 		background-color: #fff;
 	}
-	.notification-info .notification-close {
+	.rnc__notification-item--info .rnc__notification-close-mark {
 		background-color: #17a2b8;
 	}
-	.notification-warning {
+	.rnc__notification-item--warning {
+		background-color: #eab000;
 		border-left: 8px solid #ce9c09;
 	}
-	.notification-warning,
-	.notification-warning .timer {
+	.rnc__notification-item--warning .rnc__notification-timer {
 		background-color: #eab000;
 	}
-	.notification-warning .timer-filler {
+	.rnc__notification-item--warning .rnc__notification-timer-filler {
 		background-color: #fff;
 	}
-	.notification-warning .notification-close {
+	.rnc__notification-item--warning .rnc__notification-close-mark {
 		background-color: #eab000;
 	}
-	.notification-awesome {
+	.rnc__notification-item--awesome {
+		background-color: #685dc3;
 		border-left: 8px solid #4c3fb1;
 	}
-	.notification-awesome,
-	.notification-awesome .timer {
+	.rnc__notification-item--awesome .rnc__notification-timer {
 		background-color: #685dc3;
 	}
-	.notification-awesome .timer-filler {
+	.rnc__notification-item--awesome .rnc__notification-timer-filler {
 		background-color: #fff;
 	}
-	.notification-awesome .notification-close {
+	.rnc__notification-item--awesome .rnc__notification-close-mark {
 		background-color: #685dc3;
 	}
 	@keyframes timer {
@@ -161,86 +172,91 @@ export default css`
 			width: 0;
 		}
 	}
-	.react-notification-root {
-		position: fixed;
-		z-index: 9000;
-		pointer-events: none;
-		width: 100%;
+	.rnc__base {
 		height: 100%;
+		pointer-events: none;
+		position: fixed;
+		width: 100%;
+		z-index: 9000;
 	}
-	.notification-item {
-		display: flex;
-		position: relative;
+	.rnc__notification-item {
 		border-radius: 3px;
-		margin-bottom: 15px;
 		box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.2);
 		cursor: pointer;
+		display: flex;
+		margin-bottom: 15px;
+		position: relative;
 	}
-	.notification-item .timer {
-		width: 100%;
+	.rnc__notification-container--bottom-full .rnc__notification-item,
+	.rnc__notification-container--top-full .rnc__notification-item {
+		border-radius: 0;
+		margin-bottom: 0;
+	}
+	.rnc__notification-timer {
 		margin-top: 10px;
+		width: 100%;
 	}
-	.notification-item .timer,
-	.notification-item .timer .timer-filler {
-		height: 3px;
+	.rnc__notification-timer,
+	.rnc__notification-timer-filler {
 		border-radius: 5px;
+		height: 3px;
 	}
-	.notification-item .notification-title {
+	.rnc__notification-title {
 		color: #fff;
-		font-weight: 700;
 		font-size: 14px;
-		margin-top: 5px;
+		font-weight: 700;
 		margin-bottom: 5px;
+		margin-top: 5px;
 	}
-	.notification-item .notification-message {
+	.rnc__notification-message {
+		word-wrap: break-word;
 		color: #fff;
-		max-width: calc(100% - 15px);
 		font-size: 14px;
 		line-height: 150%;
-		word-wrap: break-word;
 		margin-bottom: 0;
 		margin-top: 0;
+		max-width: calc(100% - 15px);
 	}
-	.notification-item .notification-content {
-		padding: 8px 15px;
+	.rnc__notification-content {
 		display: inline-block;
+		padding: 8px 15px;
 		width: 100%;
 	}
-	.notification-item .notification-close {
-		width: 18px;
-		height: 18px;
+	.rnc__notification-close-mark {
 		border-radius: 50%;
 		display: inline-block;
+		height: 18px;
 		position: absolute;
 		right: 10px;
 		top: 10px;
+		width: 18px;
 	}
-	.notification-item .notification-close:after {
-		content: '\D7';
-		position: absolute;
-		transform: translate(-50%, -50%);
+	.rnc__notification-close-mark:after {
 		color: #fff;
+		content: '\D7';
 		font-size: 12px;
 		left: 50%;
+		position: absolute;
 		top: 50%;
+		transform: translate(-50%, -50%);
 	}
-	.notification-container-mobile-bottom .notification-item,
-	.notification-container-mobile-bottom .notification-parent,
-	.notification-container-mobile-top .notification-item,
-	.notification-container-mobile-top .notification-parent {
+	.rnc__notification-container--mobile-bottom .notification,
+	.rnc__notification-container--mobile-bottom .rnc__notification-item,
+	.rnc__notification-container--mobile-top .notification,
+	.rnc__notification-container--mobile-top .rnc__notification-item {
 		max-width: 100%;
 		width: 100%;
 	}
-	.notification-container-bottom-right .notification-parent,
-	.notification-container-top-right .notification-parent {
+	.rnc__notification-container--bottom-right .notification,
+	.rnc__notification-container--top-right .notification {
 		margin-left: auto;
 	}
-	.notification-container-bottom-left .notification-parent,
-	.notification-container-top-left .notification-parent {
+	.rnc__notification-container--bottom-left .notification,
+	.rnc__notification-container--top-left .notification {
 		margin-right: auto;
 	}
-	.notification-container-mobile-bottom .notification-parent,
-	.notification-container-mobile-top .notification-parent {
+	.rnc__notification-container--mobile-bottom .notification,
+	.rnc__notification-container--mobile-top .notification {
 		margin-left: auto;
 		margin-right: auto;
 	}
