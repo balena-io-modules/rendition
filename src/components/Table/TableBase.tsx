@@ -143,7 +143,7 @@ interface TableBaseState<T> {
 	lastSelected: T[keyof T] | null;
 }
 
-export class TableBase<T> extends React.Component<
+export class TableBase<T extends {}> extends React.Component<
 	TableBaseProps<T>,
 	TableBaseState<T>
 > {
@@ -413,7 +413,6 @@ export class TableBase<T> extends React.Component<
 				(item) => [item[rowKey], item],
 			),
 		);
-
 		let keysToFind = [identifier];
 		if (
 			this.state.lastSelected != null &&

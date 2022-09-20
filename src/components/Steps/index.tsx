@@ -226,7 +226,7 @@ const FramelessSteps = ({
 	);
 };
 
-const BaseSteps = React.forwardRef(
+const BaseSteps: React.ForwardRefExoticComponent<StepsProps> = React.forwardRef(
 	(
 		{
 			theme,

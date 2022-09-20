@@ -44,17 +44,19 @@
   },
   "devDependencies": {
     "@balena/lint": "^6.1.1",
-    "@storybook/addon-actions": "~6.3.12",
-    "@storybook/addon-essentials": "~6.3.12",
-    "@storybook/addon-links": "~6.3.12",
-    "@storybook/addon-storyshots": "~6.3.12",
-    "@storybook/react": "~6.3.12",
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/addon-storyshots": "^6.4.19",
+    "@storybook/react": "^6.4.19",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@types/enzyme": "^3.10.8",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/googlemaps": "^3.39.7",
     "@types/highlightjs": "^9.12.0",
     "@types/jest": "^26.0.21",
+    "@types/jsdom": "^20.0.0",
     "@types/react": "^16.14.5",
     "@types/react-dom": "^16.9.11",
     "@types/react-google-recaptcha": "^1.1.2",
@@ -82,7 +84,7 @@
     "strip-css-comments": "^3.0.0",
     "ts-jest": "^26.5.6",
     "ts-node": "^10.4.0",
-    "typescript": "^3.9.10",
+    "typescript": "^4.8.3",
     "zxcvbn": "^4.4.2"
   },
   "dependencies": {
@@ -99,7 +101,7 @@
     "@types/json-schema": "^7.0.5",
     "@types/lodash": "4.14.165",
     "@types/memoizee": "^0.4.6",
-    "@types/mermaid": "8.2.8",
+    "@types/mermaid": "^9.1.0",
     "@types/node": "^14.14.35",
     "@types/prop-types": "^15.7.0",
     "@types/react-helmet": "^6.1.0",
@@ -118,7 +120,7 @@
     "json-e": "^4.4.3",
     "lodash": "^4.17.21",
     "memoizee": "^0.4.15",
-    "mermaid": "^8.13.9",
+    "mermaid": "^9.1.7",
     "moment": "^2.29.3",
     "pinejs-client-fetch": "^0.2.2",
     "prismjs": "^1.25.0",
@@ -162,16 +164,16 @@
     ]
   },
   "jest": {
-    "preset": "ts-jest/presets/js-with-ts",
+    "preset": "ts-jest",
     "transform": {
       ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
       "^.+\\.stories\\.(jsx?|tsx?)$": "@storybook/addon-storyshots/injectFileName",
-      "^.+\\.(jsx?|tsx?)$": "ts-jest"
+      "^.+\\.[jt]sx?$": "ts-jest"
     },
     "transformIgnorePatterns": [
       "node_modules/(?!(entity-decode|mermaid|monaco-editor|react-monaco-editor|d3|internmap|delaunator|robust-predicates))"
     ],
-    "testRegex": ".*spec.tsx?$",
+    "testRegex": "src/.*spec.tsx?$",
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -182,10 +184,10 @@
     ],
     "collectCoverage": true,
     "setupFiles": [
-      "<rootDir>scripts/setupTests.js"
+      "<rootDir>scripts/setupTests.ts"
     ],
     "setupFilesAfterEnv": [
-      "<rootDir>scripts/setupTestsAfterEnv.js"
+      "<rootDir>scripts/setupTestsAfterEnv.ts"
     ]
   },
   "versionist": {

@@ -328,8 +328,8 @@ export type DropDownButtonProps = InternalDropDownButtonProps &
  *
  * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/DropDownButton/DropDownButton.stories.tsx)
  */
-export const DropDownButton = asRendition<
-	React.ForwardRefExoticComponent<
-		DropDownButtonProps & React.RefAttributes<BaseDropDownButton>
-	>
->(BaseDropDownButton, [], ['color', 'bg', 'backgroundColor']);
+export const DropDownButton = asRendition(
+	BaseDropDownButton,
+	[],
+	['color', 'bg', 'backgroundColor'],
+);
