@@ -285,7 +285,7 @@ interface ButtonBaseProps extends Coloring, Sizing {
 
 export interface InternalButtonProps
 	extends ButtonBaseProps,
-		Omit<React.HTMLAttributes<HTMLElement>, 'dir' | 'color'>,
+		Omit<React.HTMLAttributes<HTMLElement>, 'dir' | 'color' | 'children'>,
 		GrommetButtonProps {
 	type?: 'submit' | 'reset' | 'button';
 	confirmation?: ConfirmOptions | string;
