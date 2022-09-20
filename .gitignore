@@ -107,3 +107,6 @@ dist_esm5
 
 .reg
 reg.json
+
+# Flowzone generated files that catch-uncommitted should ignore
+source.tar
