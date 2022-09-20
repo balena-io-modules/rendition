@@ -167,7 +167,6 @@ const RendererBase = ({
 
 	const wrapperProps = pick(
 		processedUiSchema['ui:options'] ?? {},
-		// @ts-expect-error we're passing pre-parsed paths which the lodash types do not support but lodash does
 		widgetWrapperUiOptionKeyPaths,
 	);
 	const Widget = getWidget(

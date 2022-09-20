@@ -25,6 +25,7 @@
       "es2019",
       "dom"
     ],
+    "skipLibCheck": true,
     "paths": {
       "~/*": [
         "./src/*"

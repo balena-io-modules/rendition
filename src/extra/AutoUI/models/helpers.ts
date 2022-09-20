@@ -214,11 +214,7 @@ export const generateSchemaFromRefScheme = (
 		title:
 			(get(propertySchema, convertedRefScheme) as JSONSchema)?.title ??
 			propertySchema.title,
-		...pick(
-			propertySchema,
-			// @ts-expect-error Pick typings should support string[][]
-			typePaths,
-		),
+		...pick(propertySchema, typePaths),
 	};
 };
 
