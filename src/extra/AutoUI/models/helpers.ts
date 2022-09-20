@@ -84,11 +84,9 @@ export const autoUIAdaptRefScheme = (
 	if (typeof property === 'boolean') {
 		return value;
 	}
-	const format = getSchemaFormat(property);
 	if (
 		!property.description?.includes('x-ref-scheme') ||
-		!isJson(property.description) ||
-		!!format
+		!isJson(property.description)
 	) {
 		return value;
 	}
