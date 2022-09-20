@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix widget value to be based on refScheme
+      hash: ef9cc05a029640995dfd5df1cf415ebe91bc99f3
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 31.0.1
+  title: "'Change widget value based on refScheme'"
+  date: 2022-09-20T11:50:56.363Z
+- commits:
     - subject: Convert & fix jest & storybook files for latest typescript
       hash: 59f12ac40ccb8f2b231a647fa6bc32215ea4c2ac
       body: ""
