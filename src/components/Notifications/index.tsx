@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ReactNotification, { store } from 'react-notifications-component';
+import { ReactNotifications, Store } from 'react-notifications-component';
 import styled from 'styled-components';
 import { animations } from '../../animations';
 import { Alert, AlertProps } from '../Alert';
@@ -25,7 +25,7 @@ export interface NotificationOptions extends Pick<AlertProps, 'prefix'> {
 	/** A callback function that is triggered when the "dismiss" button is clicked */
 	onDismiss?: () => void;
 	/** A custom id for the notification */
-	id?: string | number;
+	id?: string;
 	/** The duration this notification will be shown for in ms. 0 means it will never close automatically */
 	duration?: number;
 	/** The position of the notifications in the parent container. One of `'top-left' */
@@ -52,35 +52,13 @@ const generateNotificationId = () => {
 	return Math.random().toString(36).substr(2, 9);
 };
 
-const getTransformedOptions = (
-	options: React.ReactNode | NotificationOptions,
-): NotificationOptions => {
-	const defaultOptions = {
-		id: generateNotificationId(),
-		duration: DEFAULT_NOTIFICATION_DURATION,
-		container: DEFAULT_NOTIFICATION_CONTAINER,
-	};
-
-	if (typeof options === 'string' || React.isValidElement(options)) {
-		return {
-			content: options,
-			...defaultOptions,
-		};
-	} else {
-		return {
-			...defaultOptions,
-			...(options as NotificationOptions),
-		};
-	}
-};
-
 const NotificationContainer = ({
 	content,
 	type,
 	onDismiss,
 	id,
 	prefix,
-}: NotificationOptions) => {
+}: NotificationOptions & Required<Pick<NotificationOptions, 'id'>>) => {
 	return (
 		<FullWidthContainer
 			emphasized={Boolean(type)}
@@ -92,7 +70,7 @@ const NotificationContainer = ({
 				if (onDismiss) {
 					onDismiss();
 				}
-				store.removeNotification(id);
+				Store.removeNotification(id);
 			}}
 			prefix={
 				prefix ??
@@ -125,7 +103,7 @@ const NotificationContainer = ({
  *
  * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Notifications/story.js)
  */
-export const NotificationsContainer = styled(ReactNotification)`
+export const NotificationsContainer = styled(ReactNotifications)`
 	${animations}
 	${styles}
 
@@ -136,16 +114,27 @@ export const NotificationsContainer = styled(ReactNotification)`
 	height: 100%;
 
 	/* This overrides the react-notification library's default container shadow */
-	.notification-item {
+	.rnc__notification-item {
 		box-shadow: none;
 	}
 `;
 
+const isNotificationOptions = (
+	options: React.ReactNode | NotificationOptions,
+): options is NotificationOptions =>
+	typeof options === 'object' && !React.isValidElement(options);
+
 export const notifications = {
 	addNotification: (options: React.ReactNode | NotificationOptions) => {
-		const transformedOptions = getTransformedOptions(options);
+		const transformedOptions = isNotificationOptions(options)
+			? options
+			: { content: options };
 
-		store.addNotification({
+		transformedOptions.id ??= generateNotificationId();
+		transformedOptions.duration ??= DEFAULT_NOTIFICATION_DURATION;
+		transformedOptions.container ??= DEFAULT_NOTIFICATION_CONTAINER;
+
+		Store.addNotification({
 			container: transformedOptions.container,
 			animationIn: ['animated', 'fadeIn', 'faster'],
 			animationOut: ['animated', 'fadeOut', 'faster'],
@@ -177,5 +166,5 @@ export const notifications = {
 		});
 	},
 
-	removeNotification: (id: string | number) => store.removeNotification(id),
+	removeNotification: (id: string) => Store.removeNotification(id),
 };

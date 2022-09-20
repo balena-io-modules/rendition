@@ -31,7 +31,9 @@ describe('Notifications component', () => {
 
 		component.find('button').first().simulate('click');
 
-		expect(component.find('.notification-item').text()).toBe('A notification');
+		expect(component.find('.rnc__notification-item').text()).toBe(
+			'A notification',
+		);
 	});
 
 	it('can remove a notification using the API', () => {
@@ -49,9 +51,9 @@ describe('Notifications component', () => {
 		component.find('button').at(2).simulate('click');
 
 		// The notifications depend on the `transitionend` event for it to be removed from the dom, but we mock the css import for the animations, so it will never happen.
-		component.find('.notification-item').first().simulate('transitionend');
+		component.find('.rnc__notification-item').first().simulate('transitionend');
 
-		expect(component.find('.notification-item')).toHaveLength(0);
+		expect(component.find('.rnc__notification-item')).toHaveLength(0);
 	});
 
 	it('can remove a notification by clicking on the dismiss button', () => {
@@ -62,14 +64,14 @@ describe('Notifications component', () => {
 		component.find('button').first().simulate('click');
 
 		component
-			.find('.notification-item')
+			.find('.rnc__notification-item')
 			.find('button')
 			.first()
 			.simulate('click');
 
-		component.find('.notification-item').first().simulate('transitionend');
+		component.find('.rnc__notification-item').first().simulate('transitionend');
 
-		expect(component.find('.notification-item')).toHaveLength(0);
+		expect(component.find('.rnc__notification-item')).toHaveLength(0);
 	});
 
 	it('calls the onDismiss callback when the dismiss button is clicked', () => {
@@ -84,7 +86,7 @@ describe('Notifications component', () => {
 		component.find('button').first().simulate('click');
 
 		component
-			.find('.notification-item')
+			.find('.rnc__notification-item')
 			.find('button')
 			.first()
 			.simulate('click');
@@ -103,11 +105,11 @@ describe('Notifications component', () => {
 		component.find('button').first().simulate('click');
 
 		// On the first transitionend (on entry), it creates the timer, and on the second one (on exit), it removes the element from the DOM.
-		component.find('.notification-item').first().simulate('transitionend');
+		component.find('.rnc__notification-item').first().simulate('transitionend');
 		clock.tick(200);
-		component.find('.notification-item').first().simulate('transitionend');
+		component.find('.rnc__notification-item').first().simulate('transitionend');
 
-		expect(component.find('.notification-item')).toHaveLength(0);
+		expect(component.find('.rnc__notification-item')).toHaveLength(0);
 
 		clock.restore();
 	});
@@ -125,8 +127,8 @@ describe('Notifications component', () => {
 
 		component.find('button').first().simulate('click');
 
-		expect(component.find(`.notification-container-${container}`).text()).toBe(
-			'A notification',
-		);
+		expect(
+			component.find(`.rnc__notification-container--${container}`).text(),
+		).toBe('A notification');
 	});
 });
