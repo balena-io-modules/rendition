@@ -1,4 +1,16 @@
 - commits:
+    - subject: "patch: Update dependency date-fns to ^2.29.3"
+      hash: 54acc80ee425a0e58b16ac031d9dfbd26eb5a070
+      body: |
+        Update date-fns from 2.27.0 to 2.29.3
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+  version: 31.0.5
+  title: "'patch: Update dependency date-fns to ^2.29.3'"
+  date: 2022-09-21T10:27:35.356Z
+- commits:
     - subject: "patch: Update react-libs"
       hash: a597d65d78d101d8664cfd324f2abf0f84ee8963
       body: ""
