@@ -1,5 +1,5 @@
 import * as React from 'react';
-import MonacoEditor, { monaco, MonacoEditorProps } from 'react-monaco-editor';
+import Editor, { Monaco, EditorProps, useMonaco } from '@monaco-editor/react';
 import get from 'lodash/get';
 import cloneDeep from 'lodash/cloneDeep';
 import findIndex from 'lodash/findIndex';
@@ -27,7 +27,7 @@ const ValidationBox = styled(Box)<{ hasError: boolean }>`
 			: props.theme.colors.success.main};
 `;
 
-const defaultOptions: MonacoEditorProps['options'] = {
+const defaultOptions: EditorProps['options'] = {
 	minimap: {
 		enabled: false,
 	},
@@ -37,13 +37,14 @@ const defaultOptions: MonacoEditorProps['options'] = {
 	selectOnLineNumbers: true,
 };
 
-const monacoEditorSchemas = cloneDeep(
-	get(
-		monaco,
-		['languages', 'json', 'jsonDefaults', 'diagnosticsOptions', 'schemas'],
-		[],
-	),
-) as any[];
+const monacoEditorSchemas = (monaco: Monaco) =>
+	cloneDeep(
+		get(
+			monaco,
+			['languages', 'json', 'jsonDefaults', 'diagnosticsOptions', 'schemas'],
+			[],
+		),
+	) as any[];
 
 interface JsonEditorProps {
 	title: string;
@@ -53,10 +54,17 @@ interface JsonEditorProps {
 	isValid: boolean;
 }
 
-const getModel = (fileUri: monaco.Uri, valueStr: string) => {
+const getModel = (
+	valueStr: string,
+	fileUri?: ReturnType<Monaco['Uri']['file']>,
+	monaco?: Monaco | null,
+) => {
+	if (!monaco || !fileUri) {
+		return null;
+	}
 	const model =
-		monaco.editor.getModel(fileUri) ||
-		monaco.editor.createModel(valueStr, 'json', fileUri);
+		monaco?.editor.getModel(fileUri) ||
+		monaco?.editor.createModel(valueStr, 'json', fileUri);
 	model.updateOptions({ tabSize: 2 });
 	return model;
 };
@@ -68,40 +76,44 @@ const JsonEditor = ({
 	schema,
 	isValid,
 }: JsonEditorProps) => {
-	const fileName = `file:///${title}.json`;
-	const fileUri = monaco.Uri.parse(fileName);
+	const monaco = useMonaco();
 
-	const [model, setModel] = React.useState<monaco.editor.ITextModel>(
-		getModel(fileUri, value),
-	);
+	const fileName = `file:///${title}.json`;
+	const fileUri = monaco?.Uri.parse(fileName);
+
+	const [model, setModel] = React.useState<ReturnType<
+		Monaco['editor']['getModel']
+	> | null>(getModel(value, fileUri, monaco));
 
 	// Update the model when the value changes
 	React.useEffect(() => {
-		setModel(getModel(fileUri, value));
+		if (monaco) {
+			setModel(getModel(value, fileUri, monaco));
+		}
 	}, [title, value]);
 
 	// Update the editor's schemas when the schema prop changes
 	React.useEffect(() => {
-		if (!schema) {
+		if (!schema || !monaco) {
 			return;
 		}
 		const thisSchema = {
-			uri: schema['$schema'] || fileUri.toString(),
-			fileMatch: [fileUri.toString()],
+			uri: schema['$schema'] || fileUri?.toString(),
+			fileMatch: [fileUri?.toString()],
 			schema,
 		};
-
-		const existingSchemaIndex = findIndex(monacoEditorSchemas, {
+		const editorSchemas = monacoEditorSchemas(monaco);
+		const existingSchemaIndex = findIndex(editorSchemas, {
 			uri: thisSchema.uri,
 		});
 		if (existingSchemaIndex !== -1) {
-			monacoEditorSchemas.splice(existingSchemaIndex, 1, thisSchema);
+			editorSchemas.splice(existingSchemaIndex, 1, thisSchema);
 		} else {
-			monacoEditorSchemas.push(thisSchema);
+			editorSchemas.push(thisSchema);
 		}
-		monaco.languages.json.jsonDefaults.setDiagnosticsOptions({
+		monaco?.languages.json.jsonDefaults.setDiagnosticsOptions({
 			validate: true,
-			schemas: monacoEditorSchemas,
+			schemas: editorSchemas,
 		});
 	}, [schema]);
 
@@ -119,7 +131,7 @@ const JsonEditor = ({
 				</ValidationBox>
 			</Flex>
 			<EditorWrapper flex={1} mb={2} isValid={isValid}>
-				<MonacoEditor
+				<Editor
 					language="json"
 					theme="vs"
 					height="100%"

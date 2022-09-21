@@ -212,6 +212,7 @@ export default css`
 		height: 100%;
 		outline: 0;
 		position: relative;
+		z-index: 0;
 	}
 	.CodeMirror-sizer {
 		position: relative;
@@ -417,7 +418,7 @@ export default css`
 	.EasyMDEContainer .CodeMirror {
 		box-sizing: border-box;
 		height: auto;
-		border: 1px solid #ddd;
+		border: 1px solid #ced4da;
 		border-bottom-left-radius: 4px;
 		border-bottom-right-radius: 4px;
 		padding: 10px;
@@ -463,9 +464,9 @@ export default css`
 		-o-user-select: none;
 		user-select: none;
 		padding: 9px 10px;
-		border-top: 1px solid #bbb;
-		border-left: 1px solid #bbb;
-		border-right: 1px solid #bbb;
+		border-top: 1px solid #ced4da;
+		border-left: 1px solid #ced4da;
+		border-right: 1px solid #ced4da;
 		border-top-left-radius: 4px;
 		border-top-right-radius: 4px;
 	}
@@ -550,7 +551,10 @@ export default css`
 		cursor: pointer;
 	}
 	.editor-toolbar button {
-		width: 30px;
+		font-weight: 700;
+		min-width: 30px;
+		padding: 0 6px;
+		white-space: nowrap;
 	}
 	.editor-toolbar button.active,
 	.editor-toolbar button:hover {
@@ -681,20 +685,31 @@ export default css`
 		color: #183691;
 	}
 	.cm-s-easymde .cm-header-1 {
-		font-size: 200%;
-		line-height: 200%;
+		font-size: calc(1.375rem + 1.5vw);
 	}
 	.cm-s-easymde .cm-header-2 {
-		font-size: 160%;
-		line-height: 160%;
+		font-size: calc(1.325rem + 0.9vw);
 	}
 	.cm-s-easymde .cm-header-3 {
-		font-size: 125%;
-		line-height: 125%;
+		font-size: calc(1.3rem + 0.6vw);
 	}
 	.cm-s-easymde .cm-header-4 {
-		font-size: 110%;
-		line-height: 110%;
+		font-size: calc(1.275rem + 0.3vw);
+	}
+	.cm-s-easymde .cm-header-5 {
+		font-size: 1.25rem;
+	}
+	.cm-s-easymde .cm-header-6 {
+		font-size: 1rem;
+	}
+	.cm-s-easymde .cm-header-1,
+	.cm-s-easymde .cm-header-2,
+	.cm-s-easymde .cm-header-3,
+	.cm-s-easymde .cm-header-4,
+	.cm-s-easymde .cm-header-5,
+	.cm-s-easymde .cm-header-6 {
+		margin-bottom: 0.5rem;
+		line-height: 1.2;
 	}
 	.cm-s-easymde .cm-comment {
 		background: rgba(0, 0, 0, 0.05);
@@ -745,6 +760,9 @@ export default css`
 	.easymde-dropdown:focus .easymde-dropdown-content,
 	.easymde-dropdown:focus-within .easymde-dropdown-content {
 		visibility: visible;
+	}
+	.easymde-dropdown-content button {
+		display: block;
 	}
 	span[data-img-src]::after {
 		content: '';

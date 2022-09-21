@@ -91,7 +91,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
     "@mapbox/rehype-prism": "^0.8.0",
-    "@monaco-editor/react": "^4.4.4",
+    "@monaco-editor/react": "^4.4.5",
     "@react-google-maps/api": "^2.10.2",
     "@rjsf/core": "^2.5.1",
     "@types/ajv-keywords": "^3.4.0",
