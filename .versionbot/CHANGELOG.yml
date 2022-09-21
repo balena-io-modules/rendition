@@ -1,4 +1,15 @@
 - commits:
+    - subject: "patch: Update dependency grommet to ~2.25.3"
+      hash: 1e12dbfed24d9cc05e7addf5deaef578c8a3e9ce
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+  version: 31.0.5
+  title: "'patch: Update dependency grommet to ~2.25.3'"
+  date: 2022-09-21T10:28:28.147Z
+- commits:
     - subject: "patch: Update react-libs"
       hash: a597d65d78d101d8664cfd324f2abf0f84ee8963
       body: ""
