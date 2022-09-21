@@ -1,4 +1,71 @@
 - commits:
+    - subject: Add a repo.yml to allow flowzone to bump the versions
+      hash: afb0a5f242f2f7798deb2d1904b98a68e9795457
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+      nested: []
+    - subject: "AutoUI: Fix empty string values being converted to null when passed
+        into widgets"
+      hash: 27f06fa9a439463092a178f052fab5e4fca32840
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+      nested: []
+    - subject: Unlock easymde sub-dependency
+      hash: 823f9e080bf0595c451e8b37f2173974ddb93cbb
+      body: ""
+      footer:
+        Resolves: "#1515"
+        resolves: "#1515"
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+      nested: []
+    - subject: Replace balena ci with flowzone
+      hash: 33c9153e10f6bebccc4e6f10fa82df766dea9c2d
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+      nested: []
+    - subject: Update react to v17
+      hash: 2cbec2f3295224a904f8c48367741b41f929248b
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+      nested: []
+    - subject: "Filters: Fix the summary showing a `0` text"
+      hash: 2b8c6b745357ca707f82df2af4aa101473c623ce
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+      nested: []
+  version: 32.0.0
+  title: ""
+  date: 2022-09-21T16:48:16.065Z
+- commits:
     - subject: Revert react-monaco-editor version to 0.45.0 to fix incompatibilities
       hash: 8fd615c85530a741bb8d55e9b8ba7d5dfc57769a
       body: ""
