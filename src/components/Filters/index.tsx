@@ -103,19 +103,19 @@ export const Filters = ({
 	const [showFilterModal, setShowFilterModal] = React.useState(false);
 	const [showSearchDropDown, setShowSearchDropDown] = React.useState(false);
 	const [searchString, setSearchString] = React.useState<string | undefined>();
-	const [internalFilters, setFilters] = React.useState<
-		JSONSchema[] | undefined
-	>(filters);
+	const [internalFilters, setFilters] = React.useState<JSONSchema[]>(
+		filters ?? [],
+	);
 	const [internalViews, setViews] = React.useState<FiltersView[] | undefined>(
 		views,
 	);
 	const [editFilter, setEditFilter] = React.useState<JSONSchema>();
 
 	React.useEffect(() => {
-		if (isEqual(internalFilters, filters)) {
+		if (isEqual(internalFilters, filters ?? [])) {
 			return;
 		}
-		setFilters(filters);
+		setFilters(filters ?? []);
 	}, [filters]);
 
 	React.useEffect(() => {
@@ -231,7 +231,7 @@ export const Filters = ({
 				)}
 			</Flex>
 			{(!renderMode || renderMode.includes('summary')) &&
-				internalFilters?.length &&
+				internalFilters.length > 0 &&
 				!disabled && (
 					<Summary
 						onEdit={(filter) => {
@@ -244,7 +244,7 @@ export const Filters = ({
 							onFiltersUpdate?.([]);
 						}}
 						onSaveView={({ name }) => saveView(name)}
-						filters={internalFilters ?? []}
+						filters={internalFilters}
 					/>
 				)}
 			{showFilterModal && (
