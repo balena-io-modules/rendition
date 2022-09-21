@@ -52,7 +52,6 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@types/enzyme": "^3.10.12",
-    "@types/googlemaps": "^3.43.3",
     "@types/highlightjs": "^9.12.2",
     "@types/jest": "^26.0.24",
     "@types/jsdom": "^20.0.0",
