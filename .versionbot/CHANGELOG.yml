@@ -1,4 +1,16 @@
 - commits:
+    - subject: "patch: Update dependency @balena/lint to ^6.2.0"
+      hash: d1a1992192bc8f826961385c9acb54f58347edcd
+      body: |
+        Update @balena/lint from 6.1.1 to 6.2.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+  version: 31.0.6
+  title: "'patch: Update dependency @balena/lint to ^6.2.0'"
+  date: 2022-09-21T13:03:54.363Z
+- commits:
     - subject: Revert react-monaco-editor version to 0.45.0 to fix incompatibilities
       hash: 8fd615c85530a741bb8d55e9b8ba7d5dfc57769a
       body: ""
