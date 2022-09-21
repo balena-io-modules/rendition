@@ -1,4 +1,16 @@
 - commits:
+    - subject: "patch: Update dependency @testing-library/react to ^12.1.5"
+      hash: 67e62a2c0ef88426691e4595f6df4b5bd68d00f8
+      body: |
+        Update @testing-library/react from 12.1.2 to 12.1.5
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+  version: 31.0.6
+  title: "'patch: Update dependency @testing-library/react to ^12.1.5'"
+  date: 2022-09-21T12:59:18.711Z
+- commits:
     - subject: Revert react-monaco-editor version to 0.45.0 to fix incompatibilities
       hash: 8fd615c85530a741bb8d55e9b8ba7d5dfc57769a
       body: ""
