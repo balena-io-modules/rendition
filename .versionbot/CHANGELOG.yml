@@ -1,4 +1,17 @@
 - commits:
+    - subject: "Filters: Fix the summary showing a `0` text"
+      hash: 0c622a36f742dcf6bc05e09471179c798bd29f27
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 31.0.6
+  title: "'Filters: Fix the summary showing a  text'"
+  date: 2022-09-21T14:37:55.145Z
+- commits:
     - subject: Revert react-monaco-editor version to 0.45.0 to fix incompatibilities
       hash: 8fd615c85530a741bb8d55e9b8ba7d5dfc57769a
       body: ""
