@@ -1,4 +1,35 @@
 - commits:
+    - subject: Group `Modify` dropdown by section instead of by danger
+      hash: 09a908895f38b67ce954d6f1a76fd99698897dba
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+    - subject: Add `section` to `AutoUIAction`
+      hash: 05bed9c9845421c67b85f765c32f8ca6fb941343
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+    - subject: Change AutoUI `Actions` dropdown to be called `Modify`
+      hash: 9fa98a790a3d4e2609d2f6a3b359e5d567755887
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+  version: 32.0.0
+  title: "'Add section to AutoUIAction'"
+  date: 2022-09-21T13:37:15.112Z
+- commits:
     - subject: "patch: Update react-libs"
       hash: a597d65d78d101d8664cfd324f2abf0f84ee8963
       body: ""
