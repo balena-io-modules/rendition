@@ -85,7 +85,7 @@ const BaseCheckbox = ({ className, ...otherProps }: InternalCheckboxProps) => {
 };
 
 export interface InternalCheckboxProps
-	extends React.HTMLAttributes<HTMLElement>,
+	extends Omit<React.HTMLAttributes<HTMLElement>, 'children'>,
 		GrommetCheckBoxProps {
 	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
