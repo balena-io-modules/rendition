@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update react to v17
+      hash: f6036c2d55ef2d7ff5fdad9032fd095569584c8c
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 32.0.0
+  title: "'Update react to v17'"
+  date: 2022-09-21T13:43:00.436Z
+- commits:
     - subject: Revert react-monaco-editor version to 0.45.0 to fix incompatibilities
       hash: 8fd615c85530a741bb8d55e9b8ba7d5dfc57769a
       body: ""
