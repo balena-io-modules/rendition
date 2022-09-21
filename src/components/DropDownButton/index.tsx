@@ -278,22 +278,25 @@ class BaseDropDownButton extends React.Component<
 										{i < items.length - 1 && <Divider />}
 									</Box>
 							  ))
-							: React.Children.map(children, (child, i) => {
-									if (noListFormat) {
-										return child;
-									}
-									if (!child) {
-										return;
-									}
-									if ((child as any).type === Divider) {
-										return child;
-									}
-									return (
-										<Item px={3} py={1} hasActionFn={false} key={i}>
-											{child}
-										</Item>
-									);
-							  })}
+							: React.Children.map(
+									children as React.ReactElement,
+									(child, i) => {
+										if (noListFormat) {
+											return child;
+										}
+										if (!child) {
+											return;
+										}
+										if (child.type === Divider) {
+											return child;
+										}
+										return (
+											<Item px={3} py={1} hasActionFn={false} key={i}>
+												{child}
+											</Item>
+										);
+									},
+							  )}
 					</MenuBase>
 				)}
 			</Wrapper>

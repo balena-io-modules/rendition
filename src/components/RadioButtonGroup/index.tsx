@@ -38,7 +38,7 @@ const BaseRadioButtonGroup = (props: InternalRadioButtonGroupProps) => {
 // Make name optional, and override onChange to not be of `any` type.
 interface InternalRadioButtonGroupProps
 	extends Omit<GrommetRadioButtonGroupProps, 'name'>,
-		React.HTMLAttributes<HTMLElement> {
+		Omit<React.HTMLAttributes<HTMLElement>, 'children'> {
 	/** The DOM name attribute value to use for the underlying <input/> elements. */
 	name?: string;
 	/** Function called when the value of the radio button changes */
