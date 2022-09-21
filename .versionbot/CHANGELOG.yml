@@ -1,4 +1,17 @@
 - commits:
+    - subject: Unpin the @types/lodash package version
+      hash: d7a8fbfe682e9e210d659145f9f94dbe80f77db0
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 31.0.2
+  title: "'Unpin the @types/lodash package version'"
+  date: 2022-09-20T17:31:03.404Z
+- commits:
     - subject: Fix widget value to be based on refScheme
       hash: ef9cc05a029640995dfd5df1cf415ebe91bc99f3
       body: ""
