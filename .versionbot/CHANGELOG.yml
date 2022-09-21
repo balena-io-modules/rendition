@@ -1,4 +1,17 @@
 - commits:
+    - subject: Revert react-monaco-editor version to 0.45.0 to fix incompatibilities
+      hash: 8fd615c85530a741bb8d55e9b8ba7d5dfc57769a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 31.0.5
+  title: "'Revert react-monaco-editor version to 0.45.0 to fix incompatibilities'"
+  date: 2022-09-21T12:38:30.060Z
+- commits:
     - subject: "patch: Update react-libs"
       hash: a597d65d78d101d8664cfd324f2abf0f84ee8963
       body: ""
