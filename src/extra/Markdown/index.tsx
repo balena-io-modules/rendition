@@ -19,6 +19,8 @@ import gh from 'hast-util-sanitize/lib/github.json';
 import defaultStyle from './defaultStyle';
 import { darken, lighten } from '../../utils';
 import { Decorator, decoratorPlugin } from './plugins/decorator';
+import { mermaidPlugin } from './plugins/mermaid';
+import { Mermaid } from '../Mermaid';
 export { gh as defaultSanitizerOptions };
 
 const MarkdownWrapper = styled(Txt)`
@@ -243,9 +245,12 @@ export const getProcessor = (
 			h5: (props: any) => <Heading.h5 {...props} />,
 			h6: (props: any) => <Heading.h6 {...props} />,
 			hr: (props: any) => <Divider {...props} />,
+			mermaid: (props: any) => <Mermaid {...props} />,
 			...componentOverrides,
 		},
 	});
+
+	processor.use(mermaidPlugin);
 
 	return processor.use(decoratorPlugin, {
 		decorators,

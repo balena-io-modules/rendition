@@ -31,6 +31,18 @@ export const decoratorSample = `
 @good
 `;
 
+export const mermaidSample = `
+Markdown with mermaid:
+
+\`\`\`mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+\`\`\`
+`;
+
 export default `
 # Markdown
 A simple component for rendering *GitHub flavored markdown*.
