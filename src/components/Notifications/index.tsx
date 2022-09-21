@@ -113,7 +113,7 @@ const NotificationContainer = ({
 
 /**
  * To use this component, you first need to add the `NotificationsContainer` component at the root of your React application.
- * You can then programatically add or remove notifications using the `notifications` module. For example:
+ * You can then programmatically add or remove notifications using the `notifications` module. For example:
  *
  * ```
  * import {notifications} from 'rendition';

@@ -187,7 +187,7 @@ export const AutoUI = <T extends AutoUIBaseResource<T>>({
 	}, [lenses]);
 
 	const lensRendererOnEntityClick: typeof onEntityClick = React.useCallback(
-		(row, event) => {
+		(row: T, event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
 			onEntityClick?.(row, event);
 
 			if (event.isPropagationStopped() && event.isDefaultPrevented()) {
