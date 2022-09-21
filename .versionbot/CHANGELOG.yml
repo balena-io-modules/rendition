@@ -1,4 +1,12 @@
 - commits:
+    - subject: "patch: Update dependency core-js to ^3.25.2"
+      hash: 4c6e6b0da9fe93d53b1646542ae363cbc674393c
+      body: |
+        Update core-js from 3.23.3 to 3.25.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
     - subject: "patch: Update types"
       hash: 38b7b5605f263bec833123cec5eed2ee6f1983b1
       body: ""
@@ -7,8 +15,8 @@
         change-type: patch
       author: renovate[bot]
   version: 31.0.3
-  title: "'patch: Update types'"
-  date: 2022-09-21T09:45:33.748Z
+  title: "'patch: Update dependency core-js to ^3.25.2'"
+  date: 2022-09-21T10:00:16.725Z
 - commits:
     - subject: Unpin the @types/lodash package version
       hash: d7a8fbfe682e9e210d659145f9f94dbe80f77db0

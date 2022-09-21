@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 # v31.0.3
 ## (2022-09-21)
 
+* patch: Update dependency core-js to ^3.25.2 [renovate[bot]]
 * patch: Update types [renovate[bot]]
 
 # v31.0.2
