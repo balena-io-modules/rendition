@@ -1,4 +1,16 @@
 - commits:
+    - subject: "patch: Update dependency @testing-library/jest-dom to ^5.16.5"
+      hash: 76c610404ec096779101281ed6d8df191b61a581
+      body: |
+        Update @testing-library/jest-dom from 5.16.1 to 5.16.5
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+  version: 31.0.6
+  title: "'patch: Update dependency @testing-library/jest-dom to ^5.16.5'"
+  date: 2022-09-21T12:59:03.066Z
+- commits:
     - subject: Revert react-monaco-editor version to 0.45.0 to fix incompatibilities
       hash: 8fd615c85530a741bb8d55e9b8ba7d5dfc57769a
       body: ""
