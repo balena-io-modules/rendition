@@ -1,4 +1,16 @@
 - commits:
+    - subject: "patch: Update dependency easymde to ~2.18.0"
+      hash: cd0f9cbcd0bab59452d014f91fcd6887271a887f
+      body: |
+        Update easymde from 2.10.1 to 2.18.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+  version: 31.0.6
+  title: "'patch: Update dependency easymde to ~2.18.0'"
+  date: 2022-09-21T13:02:02.104Z
+- commits:
     - subject: Revert react-monaco-editor version to 0.45.0 to fix incompatibilities
       hash: 8fd615c85530a741bb8d55e9b8ba7d5dfc57769a
       body: ""
