@@ -1,4 +1,19 @@
 - commits:
+    - subject: Unlock easymde sub-dependency
+      hash: a128a586c87345f89b5b6876ee67d98d062be36b
+      body: ""
+      footer:
+        Resolves: "#1515"
+        resolves: "#1515"
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 31.0.4
+  title: "'Unlock easymde sub-dependency'"
+  date: 2022-09-21T10:11:45.386Z
+- commits:
     - subject: "patch: Update types"
       hash: 38b7b5605f263bec833123cec5eed2ee6f1983b1
       body: ""
