@@ -76,14 +76,13 @@ const onGoogleMapsApiLoad = (map: google.maps.Map, markers: UIMarker[]) => {
 	map.setOptions({
 		zoomControlOptions: {
 			position: google.maps.ControlPosition.TOP_RIGHT,
-			style: google.maps.ZoomControlStyle.SMALL,
 		},
 	});
 
 	// If we run `setZoom` right after `fitBounds` the map won't refresh. With this we first wait for the map to be idle (from fitBounds), and then set the zoom level.
 	const listener = google.maps.event.addListenerOnce(map, 'idle', () => {
 		// Don't allow to zoom closer than the defailt detail zoom level on initial load.
-		if (map.getZoom() > DETAIL_ZOOM_LEVEL) {
+		if (map.getZoom()! > DETAIL_ZOOM_LEVEL) {
 			map.setZoom(DETAIL_ZOOM_LEVEL);
 		}
 
@@ -193,7 +192,7 @@ export interface MapProps<T> extends React.HTMLAttributes<HTMLElement> {
 	/** Callback function when an item on the map was clicked */
 	onItemClick?: (item: T) => void;
 	/** Event triggered on map click that includes the clicked location's longitude and latitude */
-	mapClick?: (e: google.maps.MouseEvent) => void;
+	mapClick?: (e: google.maps.MapMouseEvent) => void;
 }
 
 /** [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Map/Map.stories.tsx) */
