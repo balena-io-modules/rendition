@@ -50,7 +50,7 @@ export const CustomWidget = ({
 		<Widget
 			extraContext={extraContext}
 			extraFormats={extraFormats}
-			value={processedValue || null}
+			value={processedValue ?? null}
 			schema={schema}
 		/>
 	);
