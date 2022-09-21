@@ -1,4 +1,18 @@
 - commits:
+    - subject: Drop no longer necessary @types/googlemaps devDependency
+      hash: fce0fd1fc08f08649dd39713b1340ba6359f8057
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+      nested: []
+  version: 32.0.1
+  title: ""
+  date: 2022-09-21T18:34:01.619Z
+- commits:
     - subject: Add a repo.yml to allow flowzone to bump the versions
       hash: afb0a5f242f2f7798deb2d1904b98a68e9795457
       body: ""
