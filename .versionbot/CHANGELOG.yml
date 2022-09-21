@@ -1,4 +1,16 @@
 - commits:
+    - subject: "patch: Update dependency prettier to ^2.7.1"
+      hash: ca1527261b2dcae4da22ebc92bb20675bbdbcaf4
+      body: |
+        Update prettier from 2.4.1 to 2.7.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+  version: 31.0.5
+  title: "'patch: Update dependency prettier to ^2.7.1'"
+  date: 2022-09-21T10:35:55.329Z
+- commits:
     - subject: "patch: Update react-libs"
       hash: a597d65d78d101d8664cfd324f2abf0f84ee8963
       body: ""
