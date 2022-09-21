@@ -1,11 +1,11 @@
 import React from 'react';
 import { Navbar } from './Navbar';
 import { Sidebar } from './Sidebar';
-import { Router, Switch, Route } from 'react-router-dom';
+import { MemoryRouter, Route, Switch } from 'react-router-dom';
 import { Content } from './Content';
 import { createGlobalStyle } from 'styled-components';
 import { Provider } from '../..';
-import { history, onClickOutOrEsc } from '../AutoUI/utils';
+import { onClickOutOrEsc } from '../AutoUI/utils';
 import { Flex } from '../../components/Flex';
 import { Box } from '../../components/Box';
 import { OpenApiJson } from './openApiJson';
@@ -59,10 +59,10 @@ export const AutoUIApp = ({ openApiJson, title, logo }: AutoUIAppProps) => {
 			setActionSidebar(null);
 		});
 	}, [actionSidebarWrapper.current]);
-
+	console.log(Object.keys(openApiJson.paths));
 	return (
 		<Provider>
-			<Router history={history}>
+			<MemoryRouter>
 				<GlobalStyle />
 				<Navbar height={NAVBAR_HEIGHT} title={title} logo={logo} />
 				<Flex style={{ position: 'relative' }}>
@@ -108,7 +108,7 @@ export const AutoUIApp = ({ openApiJson, title, logo }: AutoUIAppProps) => {
 						</Flex>
 					)}
 				</Flex>
-			</Router>
+			</MemoryRouter>
 		</Provider>
 	);
 };
