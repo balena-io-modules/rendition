@@ -1,4 +1,16 @@
 - commits:
+    - subject: "patch: Update dependency copy-to-clipboard to ^3.3.2"
+      hash: 60d3bd3ebedbb8eb48cfaf3c25f1d69dddc36b1e
+      body: |
+        Update copy-to-clipboard from 3.3.1 to 3.3.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+  version: 31.0.6
+  title: "'patch: Update dependency copy-to-clipboard to ^3.3.2'"
+  date: 2022-09-21T12:59:59.421Z
+- commits:
     - subject: Revert react-monaco-editor version to 0.45.0 to fix incompatibilities
       hash: 8fd615c85530a741bb8d55e9b8ba7d5dfc57769a
       body: ""
