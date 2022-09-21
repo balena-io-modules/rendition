@@ -1,4 +1,33 @@
 - commits:
+    - subject: "patch: Update dependency easymde to ~2.18.0"
+      hash: c54d510334bc24c3455d9387c11bae34954f133c
+      body: |
+        Update easymde from 2.10.1 to 2.18.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+    - subject: Replace balena ci with flowzone
+      hash: 33c9153e10f6bebccc4e6f10fa82df766dea9c2d
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+    - subject: Update react to v17
+      hash: 2cbec2f3295224a904f8c48367741b41f929248b
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+  version: 32.0.0
+  date: 2022-09-21T14:57:38.765Z
+- commits:
     - subject: Revert react-monaco-editor version to 0.45.0 to fix incompatibilities
       hash: 8fd615c85530a741bb8d55e9b8ba7d5dfc57769a
       body: ""
