@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update react dependecies
+      hash: 4cecf7e52b86f42034e3c96125de6da0081a0cf0
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+  version: 31.1.0
+  date: 2022-09-21T16:52:56.994Z
+- commits:
     - subject: Fix widget value to be based on refScheme
       hash: ef9cc05a029640995dfd5df1cf415ebe91bc99f3
       body: ""
