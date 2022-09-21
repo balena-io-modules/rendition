@@ -24,6 +24,17 @@
   ],
   "packageRules": [
     {
+      "groupName": "monaco",
+      "matchPackageNames": ["react-monaco-editor", "monaco-editor-webpack-plugin"],
+      "commitBody": "Change-type: patch",
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "automerge": false
+    },
+    {
       "groupName": "storybook-non-major",
       "matchPackagePrefixes": ["@storybook"],
       "commitBody": "Change-type: patch",
