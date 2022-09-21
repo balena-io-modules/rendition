@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ReactNotification, { store } from 'react-notifications-component';
+import { ReactNotifications, Store } from 'react-notifications-component';
 import styled from 'styled-components';
 import { animations } from '../../animations';
 import { Alert, AlertProps } from '../Alert';
@@ -92,7 +92,7 @@ const NotificationContainer = ({
 				if (onDismiss) {
 					onDismiss();
 				}
-				store.removeNotification(id);
+				Store.removeNotification(id);
 			}}
 			prefix={
 				prefix ??
@@ -125,7 +125,7 @@ const NotificationContainer = ({
  *
  * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Notifications/story.js)
  */
-export const NotificationsContainer = styled(ReactNotification)`
+export const NotificationsContainer = styled(ReactNotifications)`
 	${animations}
 	${styles}
 
@@ -145,7 +145,7 @@ export const notifications = {
 	addNotification: (options: React.ReactNode | NotificationOptions) => {
 		const transformedOptions = getTransformedOptions(options);
 
-		store.addNotification({
+		Store.addNotification({
 			container: transformedOptions.container,
 			animationIn: ['animated', 'fadeIn', 'faster'],
 			animationOut: ['animated', 'fadeOut', 'faster'],
@@ -177,5 +177,5 @@ export const notifications = {
 		});
 	},
 
-	removeNotification: (id: string | number) => store.removeNotification(id),
+	removeNotification: (id: string | number) => Store.removeNotification(id),
 };
