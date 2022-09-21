@@ -1,4 +1,15 @@
 - commits:
+    - subject: "patch: Update ajv"
+      hash: 2e6412d3c08aa7c97c4fbc8acba15ed16d307f8e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+  version: 31.0.6
+  title: "'patch: Update ajv (major)'"
+  date: 2022-09-21T13:04:46.200Z
+- commits:
     - subject: Revert react-monaco-editor version to 0.45.0 to fix incompatibilities
       hash: 8fd615c85530a741bb8d55e9b8ba7d5dfc57769a
       body: ""
