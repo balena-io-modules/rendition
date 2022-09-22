@@ -61,6 +61,7 @@ const ViewsMenu = ({
 									justifyContent="space-between"
 									alignItems="center"
 									key={index}
+									style={{ overflow: 'auto' }}
 								>
 									<Flex flexDirection="column" mr={3}>
 										<Flex flexDirection="column">{view.name}</Flex>
