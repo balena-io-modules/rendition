@@ -1,4 +1,18 @@
 - commits:
+    - subject: Fix views with long names getting cut off and hiding the trash icon
+      hash: f3d8ea8a163fa240c08de769182e6307021ab874
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+      nested: []
+  version: 32.0.2
+  title: ""
+  date: 2022-09-22T18:39:37.313Z
+- commits:
     - subject: Drop no longer necessary @types/googlemaps devDependency
       hash: fce0fd1fc08f08649dd39713b1340ba6359f8057
       body: ""
