@@ -1,4 +1,16 @@
 - commits:
+    - subject: "patch: Update dependency react to ^17.0.2"
+      hash: dbcca932d65c20296c6b6c889c4b5cd710c61128
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 32.0.3
+  title: ""
+  date: 2022-09-22T19:30:15.512Z
+- commits:
     - subject: Fix views with long names getting cut off and hiding the trash icon
       hash: f3d8ea8a163fa240c08de769182e6307021ab874
       body: ""
