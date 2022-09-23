@@ -1,4 +1,18 @@
 - commits:
+    - subject: Remove duplicate TagLabel and TagLabelList components
+      hash: 555662e0e452ea0ae49bd2b3805c7f7bded2782e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+      nested: []
+  version: 32.0.10
+  title: ""
+  date: 2022-09-23T16:28:13.495Z
+- commits:
     - subject: "patch: Update dependency date-fns to ^2.29.3"
       hash: 8da588d005d6be897cd3a46e7e7d0a6da3fa4381
       body: |
