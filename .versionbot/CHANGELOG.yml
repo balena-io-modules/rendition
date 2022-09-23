@@ -1,4 +1,17 @@
 - commits:
+    - subject: "patch: Update dependency date-fns to ^2.29.3"
+      hash: 8da588d005d6be897cd3a46e7e7d0a6da3fa4381
+      body: |
+        Update date-fns from 2.27.0 to 2.29.3
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 32.0.9
+  title: ""
+  date: 2022-09-23T15:31:44.761Z
+- commits:
     - subject: Remove moment in favor of date-fns
       hash: 16a184eab704e2d7f3c99eadf017b900c303d03e
       body: ""
