@@ -1,4 +1,17 @@
 - commits:
+    - subject: "patch: Update dependency moment to ^2.29.4"
+      hash: cf41d12156ee8f60bcd1af2d3e1571126648d8e4
+      body: |
+        Update moment from 2.29.3 to 2.29.4
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 32.0.7
+  title: ""
+  date: 2022-09-23T12:30:26.258Z
+- commits:
     - subject: "patch: Update dependency @balena/lint to ^6.2.0"
       hash: bfaedf3fa09b870301a3539d3af181a7ec8628ba
       body: |
