@@ -18,7 +18,6 @@ import {
 import { DownloadOptions, DownloadOptionsBase } from './DownloadImageModal';
 import { TFunction } from '../../hooks/useTranslation';
 import pickBy from 'lodash/pickBy';
-import moment from 'moment';
 
 const ETCHER_OPEN_IMAGE_URL = 'https://www.balena.io/etcher/open-image-url';
 const POLL_INTERVAL_DOCS =
@@ -413,11 +412,9 @@ export const ImageForm = ({
 					onClick={(event: React.MouseEvent) => {
 						if (downloadOptions.provisioningKeyExpiryDate) {
 							// Convert to UTC for /download
-							downloadOptions.provisioningKeyExpiryDate = moment(
+							downloadOptions.provisioningKeyExpiryDate = new Date(
 								downloadOptions.provisioningKeyExpiryDate,
-							)
-								.utc()
-								.format();
+							).toISOString();
 						}
 
 						if (action?.onClick) {
