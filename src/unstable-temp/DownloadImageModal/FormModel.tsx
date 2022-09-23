@@ -13,7 +13,6 @@ import styled from 'styled-components';
 import { DeviceTypeOptions, DeviceTypeOptionsGroup } from './models';
 import { DocsLink } from './OsConfiguration';
 import { useTranslation } from '../../hooks/useTranslation';
-import moment from 'moment';
 
 export const DownloadImageLabel = styled.label`
 	display: flex;
@@ -208,9 +207,7 @@ const FormControl = ({ onModelChange, options, model }: FormControlProps) => {
 								name={options.name}
 								value={
 									!!model[options.name]
-										? moment(model[options.name] as string)
-												.utc()
-												.format()
+										? new Date(model[options.name] as string).toISOString()
 										: undefined
 								}
 							/>
