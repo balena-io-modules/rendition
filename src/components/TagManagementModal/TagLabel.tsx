@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import copyToClipboard from 'copy-to-clipboard';
 import * as React from 'react';
 import styled from 'styled-components';
-import { Txt, TxtProps } from '../Txt';
 import { useTranslation } from '../../hooks/useTranslation';
 import { stopEvent } from '../../utils';
 import { ResourceTagBase } from './models';
+import { Txt, TxtProps } from '../Txt';
 
 const Label = styled(Txt.span)`
 	display: inline-flex;

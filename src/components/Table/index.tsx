@@ -19,8 +19,8 @@ import {
 	TableColumnStateStoredProps,
 	TagTableColumnState,
 } from './TableColumnSelector';
-import { TagLabel } from './TagLabel';
-import { TagLabelList } from './TagLabelList';
+import { TagLabel } from '../TagManagementModal/TagLabel';
+import { TagLabelList } from '../TagManagementModal/TagLabelList';
 import { CustomColumnHeader } from './CustomColumnHeader';
 import { TableBaseColumn, TableRow } from './TableRow';
 import { ResourceTagBase } from '../TagManagementModal/models';
