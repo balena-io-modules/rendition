@@ -112,7 +112,7 @@
     "color": "^3.2.1",
     "color-hash": "^1.1.1",
     "copy-to-clipboard": "^3.3.2",
-    "date-fns": "^2.27.0",
+    "date-fns": "^2.29.3",
     "grommet": "~2.18.0",
     "hast-util-sanitize": "^3.0.2",
     "json-e": "^4.4.3",
