@@ -1,4 +1,18 @@
 - commits:
+    - subject: Remove moment in favor of date-fns
+      hash: 16a184eab704e2d7f3c99eadf017b900c303d03e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+      nested: []
+  version: 32.0.8
+  title: ""
+  date: 2022-09-23T13:57:20.972Z
+- commits:
     - subject: "patch: Update dependency moment to ^2.29.4"
       hash: cf41d12156ee8f60bcd1af2d3e1571126648d8e4
       body: |
