@@ -3,13 +3,16 @@ import PineClientFetch from 'pinejs-client-fetch';
 import type { JSONSchema } from '~/components/Renderer/types';
 import get from 'lodash/get';
 
-export const pine = new PineClientFetch(
-	{
-		apiPrefix:
-			process.env.REACT_APP_API_HOST || process.env.STORYBOOK_APP_API_HOST,
-	},
-	{ fetch },
-);
+export const pine = (
+	apiHost = process.env.REACT_APP_API_HOST ||
+		process.env.STORYBOOK_APP_API_HOST,
+) =>
+	new PineClientFetch(
+		{
+			apiPrefix: apiHost,
+		},
+		{ fetch },
+	);
 
 export const getSchemaFromLocation = (
 	openApiJson: OpenApiJson,
@@ -45,4 +48,20 @@ export const getSelectableOptions = (
 export const getFromRef = (openApiJson: OpenApiJson, ref: string) => {
 	const tree = ref.replace('#/', '').split('/');
 	return get(openApiJson, tree);
+};
+
+export const externalRequest = async (url = '', method = 'GET', data = {}) => {
+	const response = await fetch(url, {
+		method,
+		mode: 'cors',
+		cache: 'no-cache',
+		credentials: 'omit',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		redirect: 'follow',
+		referrerPolicy: 'no-referrer',
+		body: JSON.stringify(data),
+	});
+	return response.text();
 };

@@ -65,6 +65,7 @@ export interface ActionSidebarProps {
 	resourceName: string;
 	openApiJson: OpenApiJson;
 	action: ActionMethods;
+	apiHost: string;
 	schema: JSONSchema;
 	id?: string;
 	onClose?: () => void;
@@ -74,6 +75,7 @@ export const ActionSidebar = ({
 	resourceName,
 	openApiJson,
 	action,
+	apiHost,
 	schema,
 	id,
 	onClose,
@@ -88,7 +90,7 @@ export const ActionSidebar = ({
 	}: ISubmitEvent<JSONSchema['properties']>) => {
 		if (action === ActionMethods.POST) {
 			try {
-				await pine.post({
+				await pine(apiHost).post({
 					resource: resourceName,
 					...(id && !isNaN(parseInt(id, 10)) && { id }),
 					body: formData,
@@ -97,7 +99,7 @@ export const ActionSidebar = ({
 					content: t('success.resource_added_successfully', {
 						name: resourceName,
 					}),
-					type: 'danger',
+					type: 'success',
 				});
 			} catch (err) {
 				notifications.addNotification({
