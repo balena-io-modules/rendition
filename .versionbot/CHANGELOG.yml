@@ -1,4 +1,18 @@
 - commits:
+    - subject: Fix AutoUI entity lens not working with new keys and surface tags in it
+      hash: 143b40cb0bd95081da7d813082e761823ad8d080
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+      nested: []
+  version: 33.0.2
+  title: ""
+  date: 2022-09-26T17:00:19.686Z
+- commits:
     - subject: Delete redundant .resinci.yml
       hash: 1519a79ac5d853f3c720b0249bd2e456baf79cd5
       body: ""
