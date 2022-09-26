@@ -1,4 +1,38 @@
 - commits:
+    - subject: Group `Modify` dropdown by section instead of by danger
+      hash: 52f6b6b4a86f86dca91a08e5a5c100c83ffa5dd7
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+      nested: []
+    - subject: Add `section` to `AutoUIAction`
+      hash: 90e9593c9ce157f2b17d92c51ca43c3e84ee75b2
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+      nested: []
+    - subject: Change AutoUI `Actions` dropdown to be called `Modify`
+      hash: 2cbdc698b61b60e63df521375401603b88ab7583
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+      nested: []
+  version: 33.0.0
+  title: ""
+  date: 2022-09-26T12:21:47.954Z
+- commits:
     - subject: Remove duplicate TagLabel and TagLabelList components
       hash: 555662e0e452ea0ae49bd2b3805c7f7bded2782e
       body: ""
