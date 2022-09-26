@@ -1,4 +1,16 @@
 - commits:
+    - subject: Delete redundant .resinci.yml
+      hash: 1519a79ac5d853f3c720b0249bd2e456baf79cd5
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Thodoris Greasidis
+      nested: []
+  version: 33.0.1
+  title: ""
+  date: 2022-09-26T12:55:37.781Z
+- commits:
     - subject: Group `Modify` dropdown by section instead of by danger
       hash: 52f6b6b4a86f86dca91a08e5a5c100c83ffa5dd7
       body: ""
