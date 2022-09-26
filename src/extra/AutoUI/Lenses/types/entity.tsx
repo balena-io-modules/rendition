@@ -10,6 +10,7 @@ import { Update } from '../../Actions/Update';
 import { ActionData } from '../../schemaOps';
 import { LensTemplate } from '..';
 import { EntityLensRendererProps } from '.';
+import { TagLabelList } from '../../../../components/TagManagementModal/TagLabelList';
 
 const Label = styled(Txt)`
 	color: #252629;
@@ -58,7 +59,7 @@ export const entity: LensTemplate = {
 								<Flex flexDirection="column">
 									<Heading.h2>
 										{properties.length > 0 &&
-											properties[0].render(data[properties[0].key], data)}
+											properties[0].render(data[properties[0].field], data)}
 									</Heading.h2>
 								</Flex>
 								<Flex flexDirection="column" alignItems="flex-end">
@@ -85,14 +86,27 @@ export const entity: LensTemplate = {
 										property.priority !== 'primary' && (
 											<Flex
 												flexDirection="column"
-												m={10}
+												my={10}
 												key={property.key}
 												flex={['100%', '0 0 30%']}
 											>
 												<Label>{property.title}</Label>
-												<Txt>{property.render(data[property.key], data)}</Txt>
+												<Txt>{property.render(data[property.field], data)}</Txt>
 											</Flex>
 										),
+								)}
+								{!!data[`${model.resource}_tag`]?.length && (
+									<Flex
+										flexDirection="column"
+										my={10}
+										key={'device_tag'}
+										flex={['100%', '0 0 30%']}
+									>
+										<Label>Tags</Label>
+										<Txt>
+											<TagLabelList tags={data[`${model.resource}_tag`]} />
+										</Txt>
+									</Flex>
 								)}
 							</Flex>
 							{actionData?.action?.renderer &&
