@@ -1,11 +1,12 @@
 import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import get from 'lodash/get';
-import { EditSchema, getModelFilter, Operator } from '../Filters/SchemaSieve';
 import {
 	convertRefSchemeToSchemaPath,
+	EditSchema,
+	getModelFilter,
 	getPropertyScheme,
-} from '../../extra/AutoUI/models/helpers';
-
+	Operator,
+} from '../Filters/SchemaSieve';
 import type { CreateFilter } from './utils';
 import { getDataModel } from '.';
 

@@ -1,10 +1,5 @@
 import React from 'react';
 import type { JSONSchema7 as JSONSchema } from 'json-schema';
-import {
-	getPropertyScheme,
-	getSchemaTitle,
-	getSubSchemaFromRefScheme,
-} from '../../extra/AutoUI/models/helpers';
 import { Flex } from '../Flex';
 import { Modal } from '../Modal';
 import { Select } from '../Select';
@@ -21,7 +16,12 @@ import { Txt } from '../Txt';
 import { getDataModel } from '../DataTypes';
 import { Form } from '../Form';
 import { FilterSignature } from '.';
-import { FilterSignatureWithKey } from './SchemaSieve';
+import {
+	FilterSignatureWithKey,
+	getPropertyScheme,
+	getSchemaTitle,
+	getSubSchemaFromRefScheme,
+} from './SchemaSieve';
 import { Button } from '../Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';

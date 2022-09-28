@@ -9,7 +9,10 @@ import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import { transformUiSchema } from '../../components/Renderer/widgets/widget-util';
 import { getValue, getWidget } from '../../components/Renderer';
 import castArray from 'lodash/castArray';
-import { getSchemaFormat, getSubSchemaFromRefScheme } from './models/helpers';
+import {
+	getSchemaFormat,
+	getSubSchemaFromRefScheme,
+} from '../../components/Filters/SchemaSieve';
 
 interface CustomWidgetProps {
 	value: Value;

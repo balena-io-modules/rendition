@@ -19,7 +19,11 @@ import { getFromLocalStorage, setToLocalStorage } from '../../utils';
 import { LensSelection } from './Lenses/LensSelection';
 import styled from 'styled-components';
 import { Flex } from '../../components/Flex';
-import { filter } from '../../components/Filters/SchemaSieve';
+import {
+	filter,
+	getPropertyScheme,
+	getSchemaTitle,
+} from '../../components/Filters/SchemaSieve';
 import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import isEqual from 'lodash/isEqual';
 import { Spinner } from '../../components/Spinner';
@@ -37,8 +41,6 @@ import {
 	autoUIDefaultPermissions,
 	autoUIGetModelForCollection,
 	autoUIRunTransformers,
-	getPropertyScheme,
-	getSchemaTitle,
 } from './models/helpers';
 import { autoUIGetDisabledReason, getTagsDisabledReason } from './utils';
 import { FocusSearch } from './Filters/FocusSearch';

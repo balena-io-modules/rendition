@@ -1,13 +1,12 @@
 import Ajv from 'ajv';
 import ajvKeywords from 'ajv-keywords';
-import type { JSONSchema7 as JSONSchema } from 'json-schema';
-import {
-	generateSchemaFromRefScheme,
-	isJson,
-} from '../../extra/AutoUI/models/helpers';
+import type {
+	JSONSchema7 as JSONSchema,
+	JSONSchema7Definition as JSONSchemaDefinition,
+} from 'json-schema';
 import { FilterSignature } from '.';
 import { getDataModel } from '../DataTypes';
-import { randomString } from '../../utils';
+import { findInObject, isJson, randomString } from '../../utils';
 import pickBy from 'lodash/pickBy';
 import findKey from 'lodash/findKey';
 import { isKeyValueObj } from '../DataTypes/object';
@@ -20,6 +19,8 @@ import { OperatorSlug as numberOperatorSlug } from '../DataTypes/number';
 import { OperatorSlug as objectOperatorSlug } from '../DataTypes/object';
 import { OperatorSlug as oneOfOperatorSlug } from '../DataTypes/oneOf';
 import { OperatorSlug as stringOperatorSlug } from '../DataTypes/string';
+import pick from 'lodash/pick';
+import get from 'lodash/get';
 
 const ajv = new Ajv();
 ajvKeywords(ajv, ['regexp', 'formatMaximum', 'formatMinimum']);
@@ -289,4 +290,96 @@ export const getModelFilter = (
 		subSchema,
 	);
 	return filter;
+};
+
+export const getSchemaFormat = (schema: JSONSchema) => {
+	const property = getSubSchemaFromRefScheme(schema);
+	const format = property.format ?? schema.format;
+	return format;
+};
+
+export const getPropertyScheme = (
+	schemaValue: JSONSchema | JSONSchemaDefinition,
+) => {
+	if (typeof schemaValue === 'boolean' || !schemaValue.description) {
+		return null;
+	}
+	try {
+		const json = JSON.parse(schemaValue.description!);
+		return json['x-foreign-key-scheme'] ?? json['x-ref-scheme'];
+	} catch (err) {
+		return null;
+	}
+};
+
+export const convertRefSchemeToSchemaPath = (refScheme: string | undefined) => {
+	return !!refScheme
+		? refScheme
+				.split('.')
+				.join('.properties.')
+				.replace(/\[\d+\]/g, '.items')
+		: // TODO: This atm doesn't support ['my property']
+		  refScheme;
+};
+
+export const getSchemaTitle = (
+	jsonSchema: JSONSchema,
+	propertyKey: string,
+	refScheme?: string | undefined,
+) => {
+	if (!refScheme) {
+		return jsonSchema?.title || propertyKey;
+	}
+	return (
+		getSubSchemaFromRefScheme(jsonSchema, refScheme)?.title ??
+		jsonSchema.title ??
+		propertyKey
+	);
+};
+
+export const generateSchemaFromRefScheme = (
+	schema: JSONSchema,
+	parentProperty: string,
+	refScheme: string | undefined,
+): JSONSchema => {
+	const propertySchema =
+		(schema.properties?.[parentProperty] as JSONSchema) ?? schema;
+	if (!refScheme) {
+		return propertySchema;
+	}
+	const convertedRefScheme = propertySchema.items
+		? `items.properties.${convertRefSchemeToSchemaPath(refScheme)}`
+		: `properties.${convertRefSchemeToSchemaPath(refScheme)}`;
+	const typePaths: string[][] = [];
+	const ongoingIncrementalPath: string[] = [];
+	convertedRefScheme.split('.').forEach((key) => {
+		if (['properties', 'items'].includes(key)) {
+			typePaths.push([...ongoingIncrementalPath, 'type']);
+		}
+		ongoingIncrementalPath.push(key);
+	});
+	if (ongoingIncrementalPath.length) {
+		typePaths.push(ongoingIncrementalPath);
+	}
+	return {
+		...propertySchema,
+		description: JSON.stringify({ 'x-ref-scheme': [refScheme] }),
+		title:
+			(get(propertySchema, convertedRefScheme) as JSONSchema)?.title ??
+			propertySchema.title,
+		...pick(propertySchema, typePaths),
+	};
+};
+
+export const getSubSchemaFromRefScheme = (
+	schema: JSONSchema | JSONSchemaDefinition,
+	refScheme?: string,
+): JSONSchema => {
+	const referenceScheme = refScheme || getPropertyScheme(schema)?.[0];
+	const convertedRefScheme = convertRefSchemeToSchemaPath(referenceScheme);
+	if (!convertedRefScheme) {
+		return schema as JSONSchema;
+	}
+	const properties = findInObject(schema, 'properties');
+	return get(properties, convertedRefScheme);
 };
