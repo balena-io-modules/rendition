@@ -6,8 +6,11 @@ import mapValues from 'lodash/mapValues';
 import pick from 'lodash/pick';
 import { regexEscape } from '../../utils';
 import { UiSchema } from '@rjsf/core';
-import { getModelFilter, Operator } from '../Filters/SchemaSieve';
-import { getPropertyScheme } from '../../extra/AutoUI/models/helpers';
+import {
+	getModelFilter,
+	getPropertyScheme,
+	Operator,
+} from '../Filters/SchemaSieve';
 import type { CreateFilter } from './utils';
 
 const getKeyLabel = (schema: JSONSchema) => {

@@ -22,7 +22,7 @@ import {
 import { TagLabel } from '../TagManagementModal/TagLabel';
 import { TagLabelList } from '../TagManagementModal/TagLabelList';
 import { CustomColumnHeader } from './CustomColumnHeader';
-import { TableBaseColumn, TableRow } from './TableRow';
+import { TableBaseColumn, TableRow, TableSortFunction } from './TableRow';
 import { ResourceTagBase } from '../TagManagementModal/models';
 import { getResourceTags } from '../TagManagementModal/tag-management-service';
 import { getFromLocalStorage, setToLocalStorage } from '../../utils';
@@ -741,4 +741,4 @@ export class Table<T extends {}> extends React.Component<
 	}
 }
 
-export { TableBaseColumn, TableRow, TableSortOptions };
+export { TableBaseColumn, TableRow, TableSortOptions, TableSortFunction };

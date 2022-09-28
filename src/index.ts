@@ -35,6 +35,14 @@ export {
 	widgetFactory,
 } from './components/Renderer';
 
+export { Format, JsonTypes, JSONSchema } from './components/Renderer/types';
+
+export { defaultFormats } from './components/Renderer/widgets';
+export {
+	transformUiSchema,
+	Widget as WidgetType,
+} from './components/Renderer/widgets/widget-util';
+
 export { DataGrid, DataGridProps } from './components/DataGrid';
 export {
 	HighlightedName,
@@ -77,7 +85,9 @@ export {
 	TableColumn,
 	TableSortOptions,
 	TableProps,
+	TableSortFunction,
 } from './components/Table';
+
 export { Accordion, AccordionProps } from './components/Accordion';
 export { Terminal, TerminalProps } from './components/Terminal';
 export { Txt, TxtProps } from './components/Txt';
@@ -94,7 +104,7 @@ export {
 	DropDownButtonProps,
 	DropdownOption,
 } from './components/DropDownButton';
-export { Map, MapProps } from './components/Map';
+export { Map, MapProps, UIMarker } from './components/Map';
 export { Navbar, NavbarProps } from './components/Navbar';
 export { Link, LinkProps } from './components/Link';
 export { List, ListProps } from './components/List';
@@ -105,8 +115,14 @@ export {
 	TagManagementModal,
 	TagManagementModalProps,
 } from './components/TagManagementModal';
+export { ResourceTagModelService } from './components/TagManagementModal/tag-management-service';
 export { CollectionSummary } from './components/TagManagementModal/CollectionSummary/CollectionSummary';
 export { CaretButton } from './components/TagManagementModal/CollectionSummary/CaretButton';
+export {
+	ResourceTagSubmitInfo,
+	SubmitInfo,
+} from './components/TagManagementModal/models';
+export { TagLabelList } from './components/TagManagementModal/TagLabelList';
 export { Avatar, AvatarProps } from './components/Avatar';
 export { Box, BoxProps } from './components/Box';
 export { Breadcrumbs, BreadcrumbsProps, Crumb } from './components/Breadcrumbs';
@@ -116,7 +132,6 @@ export { useBreakpoint } from './hooks/useBreakpoint';
 export { useRequest } from './hooks/useRequest';
 export { createPoll, Poll } from './utils/poll';
 export { default as Theme } from './theme';
-export { Theme as ThemeType } from './common-types';
 
 export {
 	default as asRendition,
@@ -124,8 +139,7 @@ export {
 	withTooltip,
 } from './asRendition';
 
-import * as SchemaSieve from './components/Filters/SchemaSieve';
-export { SchemaSieve };
+export * as SchemaSieve from './components/Filters/SchemaSieve';
 
 export {
 	AutoUI,
@@ -168,6 +182,8 @@ export {
 	TooltipProps,
 	Tooltip,
 	RenditionSystemProps,
+	Theme as ThemeType,
+	Dictionary,
 } from './common-types';
 export {
 	UnstableTempDownloadImageModal,

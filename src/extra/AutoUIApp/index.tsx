@@ -5,11 +5,12 @@ import { Router, Switch, Route } from 'react-router-dom';
 import { Content } from './Content';
 import { createGlobalStyle } from 'styled-components';
 import { Provider } from '../..';
-import { history, onClickOutOrEsc } from '../AutoUI/utils';
+import { history } from '../AutoUI/utils';
 import { Flex } from '../../components/Flex';
 import { Box } from '../../components/Box';
 import { OpenApiJson } from './openApiJson';
 import { ActionSidebar, ActionSidebarProps } from './ActionSidebar';
+import { onClickOutOrEsc } from '../../utils';
 
 const SIDEBAR_WIDTH = 166;
 const NAVBAR_HEIGHT = 60;

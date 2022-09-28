@@ -6,28 +6,10 @@ import { JsonTypes } from '../../components/Renderer/types';
 import { diff } from '../../utils';
 import castArray from 'lodash/castArray';
 import { createBrowserHistory } from 'history';
-import { getPropertyScheme } from './models/helpers';
 import get from 'lodash/get';
+import { getPropertyScheme } from '../../components/Filters/SchemaSieve';
 
 export const history = createBrowserHistory();
-
-export const findInObject = (obj: any, key: string): any => {
-	let result;
-	for (const property in obj) {
-		if (obj.hasOwnProperty(property)) {
-			if (property === key) {
-				return obj[key]; // returns the value
-			} else if (typeof obj[property] === 'object') {
-				// in case it is an object
-				result = findInObject(obj[property], key);
-
-				if (typeof result !== 'undefined') {
-					return result;
-				}
-			}
-		}
-	}
-};
 
 export const ObjectFromEntries = (entries: any[]) => {
 	const obj = {} as any;
@@ -151,30 +133,4 @@ export const getSelected = <T, K extends keyof T>(
 	return (
 		priorities?.primary.includes(key) || priorities?.secondary.includes(key)
 	);
-};
-
-export const onClickOutOrEsc = (
-	wrapper: HTMLDivElement,
-	callback: () => void,
-) => {
-	const handleClickOutside = (event: MouseEvent) => {
-		if (!wrapper.contains(event.target as Node)) {
-			handler();
-		}
-	};
-	const handleEsc = (event: KeyboardEvent) => {
-		if (event.key === 'Escape') {
-			handler();
-		}
-	};
-	const handler = () => {
-		callback();
-		if (document.activeElement instanceof HTMLElement) {
-			document.activeElement.blur();
-		}
-		document.removeEventListener('mousedown', handleClickOutside);
-		document.removeEventListener('keydown', handleEsc);
-	};
-	document.addEventListener('mousedown', handleClickOutside);
-	document.addEventListener('keydown', handleEsc);
 };
