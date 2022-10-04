@@ -1,4 +1,18 @@
 - commits:
+    - subject: Move methods in appropriate file and review exports
+      hash: 81dbc6df6ef14553d746fbf9de2d23323ed75f1e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+      nested: []
+  version: 33.0.3
+  title: ""
+  date: 2022-10-04T20:12:51.477Z
+- commits:
     - subject: Fix AutoUI entity lens not working with new keys and surface tags in it
       hash: 143b40cb0bd95081da7d813082e761823ad8d080
       body: ""
