@@ -12,10 +12,11 @@ import {
 } from './odata';
 import { useRequest } from '../../hooks/useRequest';
 import { AutoUI, autoUIRunTransformers, AutoUIAction } from '../AutoUI';
-import { findInObject, history } from '../AutoUI/utils';
+import { history } from '../AutoUI/utils';
 import isEmpty from 'lodash/isEmpty';
 import { ActionMethods } from '.';
 import { ActionSidebarProps } from './ActionSidebar';
+import { findInObject } from '../../utils';
 
 interface ContentProps {
 	openApiJson: OpenApiJson;

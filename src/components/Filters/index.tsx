@@ -9,10 +9,9 @@ import styled from 'styled-components';
 import { Box } from '../Box';
 import { Search } from '../Search';
 import { Flex } from '../Flex';
-import { onClickOutOrEsc } from '../../extra/AutoUI/utils';
 import { FilterModal } from './FilterModal';
 import { Summary } from './Summary';
-import { randomString } from '../../utils';
+import { onClickOutOrEsc, randomString } from '../../utils';
 import cloneDeep from 'lodash/cloneDeep';
 import isEqual from 'lodash/isEqual';
 import {

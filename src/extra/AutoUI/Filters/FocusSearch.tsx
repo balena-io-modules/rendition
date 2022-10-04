@@ -12,8 +12,8 @@ import { AutoUIModel } from '..';
 import {
 	createFullTextSearchFilter,
 	filter as schemaSieveFilter,
+	getPropertyScheme,
 } from '../../../components/Filters/SchemaSieve';
-import { getPropertyScheme } from '../models/helpers';
 
 const Focus = styled(Box)`
 	flex-basis: 100%;
