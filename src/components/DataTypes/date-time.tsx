@@ -13,11 +13,11 @@ export const createFilter: CreateFilter<OperatorSlug | 'is_not'> = (
 	field,
 	operator,
 	value,
+	schema,
 ) => {
 	const operatorSlug = operator.slug;
-
-	const normalizedValue = normalizeDateTime(value);
-
+	const { type } = schema;
+	const normalizedValue = normalizeDateTime(value, type as 'string' | 'number');
 	if (value != null && normalizedValue == null) {
 		return {};
 	}
@@ -26,7 +26,7 @@ export const createFilter: CreateFilter<OperatorSlug | 'is_not'> = (
 		return {
 			properties: {
 				[field]: {
-					type: 'string',
+					type: type ?? 'string',
 					format: 'date-time',
 					const: normalizedValue,
 				},
@@ -39,7 +39,7 @@ export const createFilter: CreateFilter<OperatorSlug | 'is_not'> = (
 		return {
 			properties: {
 				[field]: {
-					type: 'string',
+					type: type ?? 'string',
 					format: 'date-time',
 					not: {
 						const: normalizedValue,
@@ -51,12 +51,16 @@ export const createFilter: CreateFilter<OperatorSlug | 'is_not'> = (
 	}
 
 	if (operatorSlug === 'is_before') {
+		const rule =
+			type === 'number'
+				? { exclusiveMaximum: normalizedValue as number }
+				: { formatMaximum: normalizedValue };
 		return {
 			properties: {
 				[field]: {
-					type: 'string',
+					type: type ?? 'string',
 					format: 'date-time',
-					formatMaximum: normalizedValue,
+					...rule,
 				},
 			},
 			required: [field],
@@ -64,12 +68,16 @@ export const createFilter: CreateFilter<OperatorSlug | 'is_not'> = (
 	}
 
 	if (operatorSlug === 'is_after') {
+		const rule =
+			type === 'number'
+				? { exclusiveMinimum: normalizedValue as number }
+				: { formatMinimum: normalizedValue };
 		return {
 			properties: {
 				[field]: {
-					type: 'string',
+					type: type ?? 'string',
 					format: 'date-time',
-					formatMinimum: normalizedValue,
+					...rule,
 				},
 			},
 			required: [field],
