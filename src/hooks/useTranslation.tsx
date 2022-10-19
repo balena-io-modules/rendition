@@ -87,6 +87,7 @@ const translationMap = {
 	'actions.download_configuration_file_only':
 		'Download configuration file only',
 	'actions.flash': 'Flash',
+	'actions.etch': 'Etch Preloaded image',
 
 	'warning.etcher_min_requirement': 'Etcher v1.7.2 or greater is required',
 

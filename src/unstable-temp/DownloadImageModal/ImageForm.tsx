@@ -123,6 +123,9 @@ const flashWithEtcher = (
 		.filter((param) => !!param)
 		.join('&');
 	const imageUrl = `${downloadUrl}?${queryParams}`;
+	console.log('ROSE imageUrl', imageUrl);
+	const data = pickBy(modelCopy, (value) => !!value);
+	console.log('ROSE data', data);
 	const axiosConfig = {
 		method: 'POST',
 		url: imageUrl,
@@ -131,12 +134,14 @@ const flashWithEtcher = (
 				Authorization: `Bearer ${authToken}`,
 			},
 		}),
-		data: pickBy(modelCopy, (value) => !!value),
+		data,
 	};
+
 	// TODO: Check how to remove from resin site the decode and avoid this double encodeURIComponent on a stringified obj
 	const stringifiedAxiosConfig = encodeURIComponent(
 		JSON.stringify(axiosConfig),
 	);
+	console.log('ROSE stringifiedAxiosConfig', stringifiedAxiosConfig);
 	window.open(
 		`${ETCHER_OPEN_IMAGE_URL}?imageUrl=${encodeURIComponent(
 			stringifiedAxiosConfig,
@@ -230,6 +235,17 @@ export const ImageForm = ({
 				? t('warnings.image_deployed_to_docker')
 				: t('warning.etcher_min_requirement'),
 			label: t('actions.flash'),
+		},
+		{
+			plain: true,
+			onClick: (event) =>
+				etchWithEtcher(event, downloadOptions, downloadUrl, authToken),
+			icon: <img width="20px" alt="etcher" src={etcherLogoBase64} />,
+			disabled: hasDockerImageDownload,
+			tooltip: hasDockerImageDownload
+				? t('warnings.image_deployed_to_docker')
+				: t('warning.etcher_min_requirement'),
+			label: t('actions.etch'),
 		},
 		{
 			plain: true,
