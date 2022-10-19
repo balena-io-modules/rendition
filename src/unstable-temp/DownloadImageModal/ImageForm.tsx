@@ -117,6 +117,7 @@ const flashWithEtcher = (
 		modelCopy.wifiSsid = undefined;
 		modelCopy.wifiKey = undefined;
 	}
+	console.log(modelCopy);
 	const queryParams = Object.entries(modelCopy)
 		.map(([key, value]) => (!!value ? `${key}=${value}` : null))
 		.filter((param) => !!param)
@@ -234,17 +235,6 @@ export const ImageForm = ({
 				? t('warnings.image_deployed_to_docker')
 				: t('warning.etcher_min_requirement'),
 			label: t('actions.flash'),
-		},
-		{
-			plain: true,
-			onClick: (event) =>
-				etchWithEtcher(event, downloadOptions, downloadUrl, authToken),
-			icon: <img width="20px" alt="etcher" src={etcherLogoBase64} />,
-			disabled: hasDockerImageDownload,
-			tooltip: hasDockerImageDownload
-				? t('warnings.image_deployed_to_docker')
-				: t('warning.etcher_min_requirement'),
-			label: t('actions.etch'),
 		},
 		{
 			plain: true,
