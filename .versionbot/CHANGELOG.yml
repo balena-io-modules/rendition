@@ -1,4 +1,15 @@
 - commits:
+    - subject: Drop support for node < 16
+      hash: 1c5d83240aa7ec57fd8aa9610a2ad2c93b17c030
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+      author: zoobot
+      nested: []
+  version: 34.0.0
+  date: 2022-10-19T21:12:56.715Z
+- commits:
     - subject: Move methods in appropriate file and review exports
       hash: 81dbc6df6ef14553d746fbf9de2d23323ed75f1e
       body: ""
