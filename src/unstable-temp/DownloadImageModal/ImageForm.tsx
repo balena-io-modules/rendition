@@ -126,6 +126,7 @@ const flashWithEtcher = (
 	console.log('ROSE imageUrl', imageUrl);
 	const data = pickBy(modelCopy, (value) => !!value);
 	console.log('ROSE data', data);
+	console.log('ROSE imageUrl', imageUrl);
 	const axiosConfig = {
 		method: 'POST',
 		url: imageUrl,
@@ -142,12 +143,12 @@ const flashWithEtcher = (
 		JSON.stringify(axiosConfig),
 	);
 	console.log('ROSE stringifiedAxiosConfig', stringifiedAxiosConfig);
-	window.open(
-		`${ETCHER_OPEN_IMAGE_URL}?imageUrl=${encodeURIComponent(
-			stringifiedAxiosConfig,
-		)}`,
-		'_blank',
-	);
+	// window.open(
+	// 	`${ETCHER_OPEN_IMAGE_URL}?imageUrl=${encodeURIComponent(
+	// 		stringifiedAxiosConfig,
+	// 	)}`,
+	// 	'_blank',
+	// );
 };
 
 export type ModalAction = Omit<ButtonProps, 'onClick' | 'label'> & {
