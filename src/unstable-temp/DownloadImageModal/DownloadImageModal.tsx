@@ -133,6 +133,23 @@ export const UnstableTempDownloadImageModal = ({
 	authToken,
 	docsIcon,
 }: UnstableTempDownloadImageModalProps) => {
+	console.log(
+		'ROSE: UnstableTempDownloadImageModal',
+		downloadUrl,
+		application,
+		releaseId,
+		compatibleDeviceTypes,
+		initialDeviceType,
+		initialOsVersions,
+		isInitialDefault,
+		onDownloadStart,
+		getSupportedOsVersions,
+		getSupportedOsTypes,
+		getDockerArtifact,
+		hasEsrVersions,
+		downloadConfig,
+		getDownloadSize,
+	);
 	const { t } = useTranslation();
 	const [deviceType, setDeviceType] = React.useState(initialDeviceType);
 	const [rawVersion, setRawVersion] = React.useState<string | null>(null);
