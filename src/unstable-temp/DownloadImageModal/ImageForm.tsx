@@ -123,10 +123,10 @@ const flashWithEtcher = (
 		.filter((param) => !!param)
 		.join('&');
 	const imageUrl = `${downloadUrl}?${queryParams}`;
-	console.log('ROSE imageUrl', imageUrl);
+	console.log('ROSE RENDITION imageUrl', imageUrl);
 	const data = pickBy(modelCopy, (value) => !!value);
-	console.log('ROSE data', data);
-	console.log('ROSE imageUrl', imageUrl);
+	console.log('ROSE RENDITION data', data);
+	console.log('ROSE RENDITION imageUrl', imageUrl);
 	const axiosConfig = {
 		method: 'POST',
 		url: imageUrl,
@@ -142,7 +142,11 @@ const flashWithEtcher = (
 	const stringifiedAxiosConfig = encodeURIComponent(
 		JSON.stringify(axiosConfig),
 	);
-	console.log('ROSE stringifiedAxiosConfig', stringifiedAxiosConfig);
+	console.log('ROSE RENDITION stringifiedAxiosConfig', stringifiedAxiosConfig);
+	const etcherURL = `${ETCHER_OPEN_IMAGE_URL}?imageUrl=${encodeURIComponent(
+		stringifiedAxiosConfig,
+	)}`;
+	console.log('ROSE RENDITION etcherURL', etcherURL);
 	// window.open(
 	// 	`${ETCHER_OPEN_IMAGE_URL}?imageUrl=${encodeURIComponent(
 	// 		stringifiedAxiosConfig,

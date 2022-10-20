@@ -134,7 +134,7 @@ export const UnstableTempDownloadImageModal = ({
 	docsIcon,
 }: UnstableTempDownloadImageModalProps) => {
 	console.log(
-		'ROSE: UnstableTempDownloadImageModal',
+		'ROSE RENDITION: UnstableTempDownloadImageModal',
 		downloadUrl,
 		application,
 		releaseId,
