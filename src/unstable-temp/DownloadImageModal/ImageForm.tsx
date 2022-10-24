@@ -117,16 +117,16 @@ const flashWithEtcher = (
 		modelCopy.wifiSsid = undefined;
 		modelCopy.wifiKey = undefined;
 	}
-	console.log(modelCopy);
+	console.log('REND imageUrl', modelCopy);
 	const queryParams = Object.entries(modelCopy)
 		.map(([key, value]) => (!!value ? `${key}=${value}` : null))
 		.filter((param) => !!param)
 		.join('&');
 	const imageUrl = `${downloadUrl}?${queryParams}`;
-	console.log('ROSE RENDITION imageUrl', imageUrl);
+	console.log('REND imageUrl', imageUrl);
 	const data = pickBy(modelCopy, (value) => !!value);
-	console.log('ROSE RENDITION data', data);
-	console.log('ROSE RENDITION imageUrl', imageUrl);
+	console.log('REND data', data);
+	console.log('REND imageUrl', imageUrl);
 	const axiosConfig = {
 		method: 'POST',
 		url: imageUrl,
@@ -142,11 +142,11 @@ const flashWithEtcher = (
 	const stringifiedAxiosConfig = encodeURIComponent(
 		JSON.stringify(axiosConfig),
 	);
-	console.log('ROSE RENDITION stringifiedAxiosConfig', stringifiedAxiosConfig);
+	console.log('REND stringifiedAxiosConfig', stringifiedAxiosConfig);
 	const etcherURL = `${ETCHER_OPEN_IMAGE_URL}?imageUrl=${encodeURIComponent(
 		stringifiedAxiosConfig,
 	)}`;
-	console.log('ROSE RENDITION etcherURL', etcherURL);
+	console.log('REND etcherURL', etcherURL);
 	// window.open(
 	// 	`${ETCHER_OPEN_IMAGE_URL}?imageUrl=${encodeURIComponent(
 	// 		stringifiedAxiosConfig,
