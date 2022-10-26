@@ -12,11 +12,11 @@ import {
 } from './odata';
 import { useRequest } from '../../hooks/useRequest';
 import { AutoUI, autoUIRunTransformers, AutoUIAction } from '../AutoUI';
-import { history } from '../AutoUI/utils';
 import isEmpty from 'lodash/isEmpty';
 import { ActionMethods } from '.';
 import { ActionSidebarProps } from './ActionSidebar';
 import { findInObject } from '../../utils';
+import { useHistory } from '../../hooks/useHistory';
 
 interface ContentProps {
 	openApiJson: OpenApiJson;
@@ -66,6 +66,7 @@ const generateModel = (
 
 export const Content = ({ openApiJson, openActionSidebar }: ContentProps) => {
 	const { pathname } = useLocation();
+	const history = useHistory();
 	const resourceName = pathname.replace(/^\/([^\/]*).*$/, '$1');
 	const id = pathname.substring(pathname.lastIndexOf('/') + 1);
 	const endsWithValidId = !isNaN(parseInt(id, 10));

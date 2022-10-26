@@ -36,7 +36,7 @@ const BaseProvider = ({
 		<BreakpointProvider breakpoints={providerTheme.breakpoints}>
 			<WidgetContext.Provider value={widgets ?? {}}>
 				<TranslationContext.Provider value={t ?? {}}>
-					<HistoryContext.Provider value={history ?? null}>
+					<HistoryContext.Provider value={history || ({} as History)}>
 						{isDefaultFont && (
 							<Helmet>
 								<link
