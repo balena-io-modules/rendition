@@ -1,4 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import type { History } from 'history';
 
-export const HistoryContext = React.createContext<History | null>(null);
+export const HistoryContext = React.createContext<History>(
+	{} as History<unknown>,
+);

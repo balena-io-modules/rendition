@@ -5,11 +5,8 @@ import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import { JsonTypes } from '../../components/Renderer/types';
 import { diff } from '../../utils';
 import castArray from 'lodash/castArray';
-import { createBrowserHistory } from 'history';
 import get from 'lodash/get';
 import { getPropertyScheme } from '../../components/Filters/SchemaSieve';
-
-export const history = createBrowserHistory();
 
 export const ObjectFromEntries = (entries: any[]) => {
 	const obj = {} as any;

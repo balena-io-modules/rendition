@@ -5,12 +5,12 @@ import { Router, Switch, Route } from 'react-router-dom';
 import { Content } from './Content';
 import { createGlobalStyle } from 'styled-components';
 import { Provider } from '../..';
-import { history } from '../AutoUI/utils';
 import { Flex } from '../../components/Flex';
 import { Box } from '../../components/Box';
 import { OpenApiJson } from './openApiJson';
 import { ActionSidebar, ActionSidebarProps } from './ActionSidebar';
 import { onClickOutOrEsc } from '../../utils';
+import { useHistory } from '../../hooks/useHistory';
 
 const SIDEBAR_WIDTH = 166;
 const NAVBAR_HEIGHT = 60;
@@ -47,6 +47,7 @@ export interface AutoUIAppProps {
 
 export const AutoUIApp = ({ openApiJson, title, logo }: AutoUIAppProps) => {
 	const actionSidebarWrapper = React.useRef<HTMLDivElement>(null);
+	const history = useHistory();
 	const [actionSidebar, setActionSidebar] = React.useState<Omit<
 		ActionSidebarProps,
 		'openApiJson'
