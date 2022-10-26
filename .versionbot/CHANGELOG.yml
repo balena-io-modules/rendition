@@ -1,4 +1,18 @@
 - commits:
+    - subject: Fix history confilcts and remove unused createBrowserHistory function
+      hash: 4aa84419a6bacbac5d84f5df1ad9baf15bf116e9
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+      nested: []
+  version: 33.0.4
+  title: ""
+  date: 2022-10-26T14:05:47.353Z
+- commits:
     - subject: Move methods in appropriate file and review exports
       hash: 81dbc6df6ef14553d746fbf9de2d23323ed75f1e
       body: ""
@@ -3173,9 +3187,8 @@
     - subject: "Filters: Add optional filterFieldCompareFn prop"
       hash: 9651afa4a9d4d5f223ccf31e11d183585f538816
       body: >
-        This prop can be used to provide a compare function callback to
-        determine the order in which to display filter field options in the
-        filter modal.
+        This prop can be used to provide a compare function callback to determine
+        the order in which to display filter field options in the filter modal.
       footer:
         Change-type: minor
         change-type: minor
@@ -3388,9 +3401,9 @@
     - subject: "Renderer: handle anyOf options"
       hash: 29ab79f2a3545e2ae8e92d6509be43447f2aba8b
       body: >
-        The Renderer component now checks if `anyOf` options are specified in
-        the schema. If they are, it uses `skhema.match` to find the option that
-        most closely matches the value and returns that schema.
+        The Renderer component now checks if `anyOf` options are specified in the
+        schema. If they are, it uses `skhema.match` to find the option that most
+        closely matches the value and returns that schema.
 
 
         This also works with array items that can be of different types. See examples for details.
@@ -3858,8 +3871,8 @@
     - subject: "fix: handle empty timestamp string in formatTimestamp"
       hash: 67e086f8a623e753da140ddb4b74151b206ff60e
       body: >
-        Need to handle the case where the timestamp string is an empty string -
-        in which case we should just return an empty string.
+        Need to handle the case where the timestamp string is an empty string - in
+        which case we should just return an empty string.
       footer:
         Change-type: patch
         change-type: patch
@@ -3881,9 +3894,9 @@
     - subject: "DropDownButton: add support for dropping 'up'"
       hash: a7e89cdecc2faa2d9aa6c1094a8c8ec5383142d2
       body: >
-        When the DropDownButton is located at the bottom of the screen, it can
-        be useful to specify that the DropDownButton's menu should open _above_
-        the button, rather than below (as is the default).
+        When the DropDownButton is located at the bottom of the screen, it can be
+        useful to specify that the DropDownButton's menu should open _above_ the
+        button, rather than below (as is the default).
 
 
         Obviously it would be even nicer to be able to specify that it should automatically work out whether to open up or down - but adding this `dropUp` prop is a good first step for now.
@@ -4871,9 +4884,8 @@
     - subject: "feat: Auto-pick widget based on format field in schema"
       hash: 30b111ad8de170fa843ce02214d27841d0cff263
       body: >
-        If the format is mermaid or markdown or email or uri we automatically
-        pick the widget if the UI schema doesn't explicitly specify a widget to
-        use.
+        If the format is mermaid or markdown or email or uri we automatically pick
+        the widget if the UI schema doesn't explicitly specify a widget to use.
       footer:
         Change-type: minor
         change-type: minor
@@ -4991,8 +5003,8 @@
     - subject: "fix: Fallback to value key for title in JsonSchemaRenderer"
       hash: 55d89dbf639b9b7e1a847a1f943c284673d1b89b
       body: >
-        If no title is specified in the UI schema or the schema, fallback to
-        using the value's key.
+        If no title is specified in the UI schema or the schema, fallback to using
+        the value's key.
       footer:
         Change-type: patch
         change-type: patch
@@ -5002,8 +5014,8 @@
     - subject: "feat: Add support for materialized UI properties in JsonSchemaRenderer"
       hash: a6fadda11ba89a190e68002bf1dfd06b60910c13
       body: >
-        You can now specify additional 'fields' in the UI schema, evaluating
-        their value from other fields in the value.
+        You can now specify additional 'fields' in the UI schema, evaluating their
+        value from other fields in the value.
       footer:
         Change-type: minor
         change-type: minor
@@ -5173,8 +5185,8 @@
     - subject: "Add: number match on text search"
       hash: 99fbc9f65106febb4d6b2a1100e8e9196fa3229d
       body: >
-        add the possibility to filter also fields with type number from the
-        search bar
+        add the possibility to filter also fields with type number from the search
+        bar
       footer:
         Change-type: patch
         change-type: patch
@@ -5623,8 +5635,8 @@
     - subject: Update react-simplemde-editor to 4.1.1
       hash: 9d7c4d9003c2324d384701e8018bc65339f48c48
       body: >
-        This PR updates React-simplemde-editor to 4.1.1. It is part in a string
-        of updates to fix a z-index issue in [easy markdown
+        This PR updates React-simplemde-editor to 4.1.1. It is part in a string of
+        updates to fix a z-index issue in [easy markdown
         editor](https://github.com/Ionaru/easy-markdown-editor/pull/175)
       footer:
         Change-type: patch
@@ -6349,8 +6361,8 @@
     - subject: "Styled system: Add styled system props"
       hash: 88cb7bcf8ac6d1f757fb9c9983897f578f256a2a
       body: >
-        Add styled system props such as max/min width/height, display, update
-        some components and documentation
+        Add styled system props such as max/min width/height, display, update some
+        components and documentation
       footer:
         Change-type: major
         change-type: major
