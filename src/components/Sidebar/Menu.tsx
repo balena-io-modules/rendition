@@ -1,5 +1,4 @@
 import React from 'react';
-import { useLocation } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { Badge, InternalBadgeProps } from '../Badge';
@@ -60,7 +59,7 @@ export const Menu = ({
 	items: MenuItem[];
 	isCollapsed: boolean;
 } & FlexProps) => {
-	const { pathname } = useLocation();
+	const { pathname } = window.location;
 
 	const currentItem = React.useMemo(() => {
 		return (

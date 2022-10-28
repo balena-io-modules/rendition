@@ -142,28 +142,6 @@ export {
 export * as SchemaSieve from './components/Filters/SchemaSieve';
 
 export {
-	AutoUI,
-	AutoUIProps,
-	autoUIRunTransformers,
-	autoUIDefaultPermissions,
-	autoUIGetModelForCollection,
-	autoUIAddToSchema,
-	AutoUIAction,
-	AutoUIBaseResource,
-	AutoUIRawModel,
-	AutoUIModel,
-	autoUIJsonSchemaPick,
-	autoUIGetDisabledReason,
-} from './extra/AutoUI';
-export {
-	listFilterQuery,
-	PersistentFilters,
-} from './extra/AutoUI/Filters/PersistentFilters';
-export * from './extra/AutoUI/Lenses/types';
-
-export { AutoUIApp, AutoUIAppProps } from './extra/AutoUIApp';
-
-export {
 	ResponsiveStyle,
 	StyledSystemProps,
 	PineDataType,
