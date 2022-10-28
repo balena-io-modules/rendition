@@ -125,7 +125,6 @@
     "react-google-recaptcha": "^2.1.0",
     "react-helmet": "^6.1.0",
     "react-notifications-component": "^3.0.0",
-    "react-router-dom": "^5.3.3",
     "react-simplemde-editor": "^4.1.5",
     "regex-parser": "^2.2.11",
     "regexp-match-indices": "^1.0.2",

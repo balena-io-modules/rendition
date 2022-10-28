@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { Badge, InternalBadgeProps } from '../Badge';
 import { Flex, FlexProps } from '../Flex';
@@ -54,9 +53,11 @@ const MenuItem = styled(Flex)<{ isCurrent: boolean }>`
 export const Menu = ({
 	items,
 	isCollapsed,
+	navLink: NavLink,
 	...props
 }: {
 	items: MenuItem[];
+	navLink: React.FC<{ to: string }>;
 	isCollapsed: boolean;
 } & FlexProps) => {
 	const { pathname } = window.location;
