@@ -1,4 +1,18 @@
 - commits:
+    - subject: Remove autoui in favour of @balena/autoui lib
+      hash: 38f77cc40790bae1fb7fb93f293ed61e3b12040d
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+      nested: []
+  version: 34.0.0
+  title: ""
+  date: 2022-10-28T11:39:34.012Z
+- commits:
     - subject: Fix history confilcts and remove unused createBrowserHistory function
       hash: 4aa84419a6bacbac5d84f5df1ad9baf15bf116e9
       body: ""
