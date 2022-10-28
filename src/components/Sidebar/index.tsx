@@ -9,6 +9,7 @@ import { Menu, MenuItem } from './Menu';
 
 export interface SidebarProps extends FlexProps {
 	menuItems: MenuItem[];
+	navLink: React.FC<{ to: string }>;
 	crumbs?: Crumb[];
 	showBreadcrumbs?: boolean;
 	isCollapsed?: boolean;
@@ -23,6 +24,7 @@ export const Sidebar = ({
 	isCollapsed = false,
 	additionalComponents,
 	setIsCollapsed,
+	navLink,
 	...props
 }: SidebarProps) => {
 	return (
@@ -44,6 +46,7 @@ export const Sidebar = ({
 				style={{ overflowX: 'auto' }}
 				items={menuItems}
 				isCollapsed={isCollapsed}
+				navLink={navLink}
 			/>
 			<Flex justifyContent="space-between" alignItems="center" mb={3} px={2}>
 				{additionalComponents}

@@ -2,8 +2,6 @@ import React from 'react';
 import { Meta } from '@storybook/react';
 import { createTemplate, createStory } from '../../stories/utils';
 import { Sidebar, SidebarProps } from '.';
-import { Route, Router } from 'react-router';
-import { createBrowserHistory } from 'history';
 import { Flex } from '../Flex';
 import { Txt } from '../Txt';
 
@@ -26,18 +24,14 @@ const menuItems = [
 ];
 
 const SidebarDemo = (props: SidebarProps) => {
-	const history = createBrowserHistory();
 	return (
 		<Flex width="90vw" height="90vh">
-			<Router history={history}>
-				<Sidebar {...props} width={300} height="100%" />
-				<Flex>
-					{/* THIS IS JUST AN EXAMPLE. ROUTES WILL NOT BE RENDERED BECAUSE OF STORYBOOK */}
-					{menuItems.map((item) => (
-						<Route path={item.href} component={() => item.component} />
-					))}
-				</Flex>
-			</Router>
+			<Sidebar {...props} width={300} height="100%" />
+			<Flex>
+				{menuItems.map((_item, index) => (
+					<div>Page - {index}</div>
+				))}
+			</Flex>
 		</Flex>
 	);
 };

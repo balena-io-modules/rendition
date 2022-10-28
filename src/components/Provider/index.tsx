@@ -13,8 +13,6 @@ import {
 	WidgetContextValue,
 } from '../../contexts/WidgetContext';
 import { TranslationContext } from '../../contexts/TranslationContext';
-import { HistoryContext } from '../../contexts/HistoryContext';
-import type { History } from 'history';
 
 const Base = styled(Grommet)`
 	font-family: ${(props) => props.theme.font};
@@ -22,13 +20,7 @@ const Base = styled(Grommet)`
 	color: ${(props) => px(props.theme.colors.text.main)};
 `;
 
-const BaseProvider = ({
-	theme,
-	widgets,
-	t,
-	history,
-	...props
-}: ThemedProvider) => {
+const BaseProvider = ({ theme, widgets, t, ...props }: ThemedProvider) => {
 	const isDefaultFont = !theme?.font;
 	const providerTheme = merge(cloneDeep(defaultTheme), theme);
 
@@ -36,17 +28,15 @@ const BaseProvider = ({
 		<BreakpointProvider breakpoints={providerTheme.breakpoints}>
 			<WidgetContext.Provider value={widgets ?? {}}>
 				<TranslationContext.Provider value={t ?? {}}>
-					<HistoryContext.Provider value={history || ({} as History)}>
-						{isDefaultFont && (
-							<Helmet>
-								<link
-									href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&family=Ubuntu+Mono:wght@400;700&display=fallback"
-									rel="stylesheet"
-								/>
-							</Helmet>
-						)}
-						<Base theme={providerTheme} {...props} />
-					</HistoryContext.Provider>
+					{isDefaultFont && (
+						<Helmet>
+							<link
+								href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&family=Ubuntu+Mono:wght@400;700&display=fallback"
+								rel="stylesheet"
+							/>
+						</Helmet>
+					)}
+					<Base theme={providerTheme} {...props} />
 				</TranslationContext.Provider>
 			</WidgetContext.Provider>
 		</BreakpointProvider>
@@ -59,7 +49,6 @@ export interface ThemedProvider
 	theme?: Partial<Theme>;
 	dir?: GrommetProps['dir'];
 	t?: any; // useTranslation
-	history?: History; // Application Router history
 }
 
 export const Provider = BaseProvider;
