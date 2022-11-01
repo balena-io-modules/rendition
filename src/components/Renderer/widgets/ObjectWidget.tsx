@@ -16,7 +16,7 @@ const ObjectWidget = widgetFactory('Object', undefined, [JsonTypes.object])(
 			<React.Fragment>
 				{map(propertyNames, (key: string) => {
 					const subProps: WidgetProps = {
-						value: get(value, key),
+						value: get(value, key) ?? null,
 						schema: get(schema, ['properties', key]),
 						uiSchema: get(uiSchema, key),
 					};

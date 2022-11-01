@@ -88,7 +88,7 @@ export class TableRow<T> extends React.PureComponent<TableRowProps<T>, {}> {
 				{map(columns, (column) => {
 					const cellAttributes =
 						typeof column.cellAttributes === 'function'
-							? column.cellAttributes(data, get(data, column.field))
+							? column.cellAttributes(data, get(data, column.field) as T)
 							: column.cellAttributes || {};
 					let url: URL | null;
 					try {
