@@ -28,6 +28,8 @@ export {
 } from './components/Form';
 
 export {
+	getValue as getSchemaNormalizedValue,
+	getWidget as getRendererWidget,
 	Renderer,
 	RendererProps,
 	Widget,
