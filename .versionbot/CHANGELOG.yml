@@ -1,4 +1,40 @@
 - commits:
+    - subject: Reduce lodash usage in favor of native methods
+      hash: e4e3f94e1026d40e4b79516d56239f9740c5247b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+      nested: []
+    - subject: Fix TypeScript errors
+      hash: e4a29d244ed270a80c192dd7254fd274efdede77
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+      nested: []
+    - subject: "FilterModal: Allow false and 0 as valid values"
+      hash: 5ab3399351c86c3dfebd9956123fe8cd56b1d643
+      body: ""
+      footer:
+        Resolves: "#1663"
+        resolves: "#1663"
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+      nested: []
+  version: 34.0.1
+  title: ""
+  date: 2022-11-01T09:18:46.185Z
+- commits:
     - subject: Remove autoui in favour of @balena/autoui lib
       hash: 38f77cc40790bae1fb7fb93f293ed61e3b12040d
       body: ""
