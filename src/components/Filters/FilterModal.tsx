@@ -120,7 +120,10 @@ export const FilterModal = ({
 	): signs is Array<
 		typeof signatures[number] &
 			Required<Pick<typeof signatures[number], 'field' | 'operator' | 'value'>>
-	> => signs.every((s) => s.field && s.operator && s.value);
+	> =>
+		signs.every(
+			(s) => s.field && s.operator && s.value != null && s.value !== '',
+		);
 
 	const createAndAddFilter = () => {
 		if (!isValid(signatures)) {
