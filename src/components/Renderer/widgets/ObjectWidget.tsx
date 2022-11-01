@@ -1,6 +1,5 @@
 import * as React from 'react';
 import get from 'lodash/get';
-import map from 'lodash/map';
 import {
 	widgetFactory,
 	WidgetProps,
@@ -14,9 +13,9 @@ const ObjectWidget = widgetFactory('Object', undefined, [JsonTypes.object])(
 		const propertyNames = getObjectPropertyNames({ value, schema, uiSchema });
 		return (
 			<React.Fragment>
-				{map(propertyNames, (key: string) => {
+				{propertyNames.map((key: string) => {
 					const subProps: WidgetProps = {
-						value: get(value, key),
+						value: get(value, key) ?? null,
 						schema: get(schema, ['properties', key]),
 						uiSchema: get(uiSchema, key),
 					};

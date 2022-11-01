@@ -8,7 +8,6 @@ import difference from 'lodash/difference';
 import isArray from 'lodash/isArray';
 import keys from 'lodash/keys';
 import has from 'lodash/has';
-import concat from 'lodash/concat';
 import get from 'lodash/get';
 import pick from 'lodash/pick';
 import type { JSONSchema6 } from 'json-schema';
@@ -233,11 +232,11 @@ export function getObjectPropertyNames({
 		keys(value) || [],
 		schemaPropertyNames,
 	);
-	const allObjectPropertyNames = concat(
-		uiSchemaPropertyNames,
-		schemaPropertyNames,
-		nonSchemaPropertyNames,
-	);
+	const allObjectPropertyNames = [
+		...uiSchemaPropertyNames,
+		...schemaPropertyNames,
+		...nonSchemaPropertyNames,
+	];
 
 	return get(uiSchema, 'ui:explicit', false)
 		? allObjectPropertyNames.filter((propName) => has(uiSchema, propName))

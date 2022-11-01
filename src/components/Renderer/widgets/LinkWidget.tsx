@@ -20,7 +20,7 @@ const LinkWidget = widgetFactory(
 		return null;
 	}
 	let href = get(props, 'href', value.toString());
-	if (get(schema, 'format') === 'email') {
+	if (href != null && get(schema, 'format') === 'email') {
 		href = `mailto:${href.replace(/^mailto:/, '')}`;
 	}
 	return (
