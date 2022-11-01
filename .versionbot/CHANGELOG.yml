@@ -1,4 +1,28 @@
 - commits:
+    - subject: Lock mermaid to ~9.1, as the latest non-mjs release
+      hash: f7142e8bec6bd00c042fa8d3f2f19b91fd964a2f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+      nested: []
+    - subject: Export getSchemaNormalizedValue & getRendererWidget helpers
+      hash: a3bdcd216b384bb6c2170d8664f9c7cfaf9f9bdf
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+      nested: []
+  version: 34.1.0
+  title: ""
+  date: 2022-11-01T17:56:09.768Z
+- commits:
     - subject: "Filters: Fix restoring 0 as a valid value"
       hash: 5781c97c48f2835f8beb758c6e4db2f1fa2c8fe2
       body: ""
