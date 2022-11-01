@@ -1,4 +1,20 @@
 - commits:
+    - subject: "Filters: Fix restoring 0 as a valid value"
+      hash: 5781c97c48f2835f8beb758c6e4db2f1fa2c8fe2
+      body: ""
+      footer:
+        Resolves: "#1663"
+        resolves: "#1663"
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+      nested: []
+  version: 34.0.2
+  title: ""
+  date: 2022-11-01T10:25:29.698Z
+- commits:
     - subject: Reduce lodash usage in favor of native methods
       hash: e4e3f94e1026d40e4b79516d56239f9740c5247b
       body: ""
