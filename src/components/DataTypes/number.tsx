@@ -16,9 +16,14 @@ export const createFilter: CreateFilter<OperatorSlug> = (
 ) => {
 	const operatorSlug = operator.slug;
 
-	const val = typeof value === 'number' ? value : Number(value) || undefined;
+	const val =
+		typeof value === 'number'
+			? value
+			: value !== '' && value != null
+			? Number(value)
+			: undefined;
 
-	if (val == null) {
+	if (val == null || isNaN(val)) {
 		return {};
 	}
 
