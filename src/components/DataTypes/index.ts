@@ -34,6 +34,10 @@ export const getDataModel = (schema: JSONSchema | undefined) => {
 		return oneOfType;
 	}
 
+	if (isDateTimeFormat(format)) {
+		return dateTimeType;
+	}
+
 	const typeSet = Array.isArray(type) ? type : [type];
 	// Find the first type we can render, based on the typeMap preference order.
 	// TODO: Add handling for 'null` type.
@@ -45,9 +49,5 @@ export const getDataModel = (schema: JSONSchema | undefined) => {
 	}
 
 	const dataType = typeMap[dataTypeKey];
-	if (dataType === stringType && isDateTimeFormat(format)) {
-		return dateTimeType;
-	}
-
 	return dataType;
 };

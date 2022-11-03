@@ -303,9 +303,14 @@ const FilterInput = ({
 			? (model.editSchema as EditSchema)(subSchema, operator)
 			: subSchema;
 
+	const { format, type } = newSchema;
+
 	return (
 		<Form
-			schema={newSchema}
+			schema={{
+				...newSchema,
+				type: format?.endsWith('date-time') ? 'string' : type,
+			}}
 			value={value}
 			onFormChange={({ formData }) => onUpdate(formData)}
 			uiSchema={{ 'ui:options': { label: false, inline: true }, ...uiSchema }}
