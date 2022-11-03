@@ -1,4 +1,18 @@
 - commits:
+    - subject: Fix date-time filter summary visualization
+      hash: 5d7d2b5ee843ebb9949e34f5cb4ee8f5767b191f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+      nested: []
+  version: 34.2.1
+  title: ""
+  date: 2022-11-03T13:34:01.621Z
+- commits:
     - subject: "Filters: Enable `date-time` formats to have type `number`"
       hash: f81506d99564f86e1e4ca00c32cb095bc3449c13
       body: ""
