@@ -2,6 +2,7 @@ import type { JSONSchema7 as JSONSchema } from 'json-schema';
 import * as React from 'react';
 import { Omit } from '../../common-types';
 import { Tag, TagProps } from '../Tag';
+import { findInObject } from '../../utils';
 
 // If the description is JSON-formatted, parse the tag fields and return them, otherwise return the entire thing as the tag value.
 const parseFilter = (filter: JSONSchema | null | undefined) => {
@@ -19,6 +20,7 @@ const parseFilter = (filter: JSONSchema | null | undefined) => {
 const FilterDescription = ({ filter, ...props }: FilterDescriptionProps) => {
 	const tagProps = filter.anyOf?.map((filterFragment: JSONSchema, i) => {
 		const parsedFilter = parseFilter(filterFragment);
+		const format = findInObject(filterFragment, 'format');
 		parsedFilter.name = parsedFilter.title;
 		parsedFilter.operator = parsedFilter.operator?.label?.replace(
 			`${parsedFilter.title} `,
@@ -31,6 +33,10 @@ const FilterDescription = ({ filter, ...props }: FilterDescriptionProps) => {
 			parsedFilter.value = Object.entries(parsedFilter.value)
 				.map(([key, value]) => `${key}: ${value}`)
 				.join(', ');
+		}
+		if (format === 'date-time') {
+			const date = new Date(parsedFilter.value);
+			parsedFilter.value = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
 		}
 		if (i > 0) {
 			parsedFilter.prefix = 'or';
