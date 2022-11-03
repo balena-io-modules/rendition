@@ -1,4 +1,18 @@
 - commits:
+    - subject: "Filters: Enable `date-time` formats to have type `number`"
+      hash: f81506d99564f86e1e4ca00c32cb095bc3449c13
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+      nested: []
+  version: 34.2.0
+  title: ""
+  date: 2022-11-03T11:44:02.032Z
+- commits:
     - subject: Lock mermaid to ~9.1, as the latest non-mjs release
       hash: f7142e8bec6bd00c042fa8d3f2f19b91fd964a2f
       body: ""
