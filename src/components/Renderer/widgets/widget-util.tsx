@@ -1,5 +1,6 @@
 import * as React from 'react';
 import format from 'date-fns/format';
+import formatDistance from 'date-fns/formatDistance';
 import skhema from 'skhema';
 import jsone from 'json-e';
 import merge from 'lodash/merge';
@@ -20,7 +21,6 @@ import type {
 } from '../types';
 import type { Overwrite } from '../../../common-types';
 import { UiOptions } from './ui-options';
-import { formatDistance } from 'date-fns';
 
 export interface WidgetProps<T extends object = object> {
 	value: Value;

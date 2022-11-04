@@ -3,6 +3,7 @@
   "rules": {
     "import-blacklist": [
       true,
+      "date-fns",
       "lodash",
       "lodash/assign",
       "lodash/omit",

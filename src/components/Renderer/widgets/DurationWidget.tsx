@@ -1,8 +1,8 @@
 import React from 'react';
+import intervalToDuration from 'date-fns/intervalToDuration';
 import { widgetFactory } from './widget-util';
 import { JsonTypes } from '../types';
 import { Txt } from '../../Txt';
-import { intervalToDuration } from 'date-fns';
 
 export const DurationWidget = widgetFactory('Duration', {}, [JsonTypes.object])(
 	({
