@@ -1,4 +1,16 @@
 - commits:
+    - subject: Remove deep import into date-fns
+      hash: 49f91a0a8ded2d033e0d615226f26c9acb9b8f8a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Page-
+      nested: []
+  version: 34.2.2
+  title: ""
+  date: 2022-11-07T13:48:03.208Z
+- commits:
     - subject: Fix date-time filter summary visualization
       hash: 5d7d2b5ee843ebb9949e34f5cb4ee8f5767b191f
       body: ""
