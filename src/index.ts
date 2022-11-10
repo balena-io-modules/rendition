@@ -9,6 +9,7 @@ export {
 	ButtonGroupOption,
 } from './components/ButtonGroup';
 export { Card, CardProps } from './components/Card';
+export { Changelog, ChangelogProps } from './components/Changelog';
 export { Checkbox, CheckboxProps } from './components/Checkbox';
 export { Copy, CopyProps } from './components/Copy';
 export { Divider, DividerProps } from './components/Divider';
