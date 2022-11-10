@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add Changelog component
+      hash: c53e315f7af48b51299303cff6e4c1387c8bf533
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+        signed-off-by: Matthew Yarmolinsky <matthew-timothy@balena.io>
+      author: Matthew Yarmolinsky
+      nested: []
+  version: 34.3.0
+  title: ""
+  date: 2022-11-10T16:31:12.685Z
+- commits:
     - subject: Remove deep import into date-fns
       hash: 49f91a0a8ded2d033e0d615226f26c9acb9b8f8a
       body: ""
