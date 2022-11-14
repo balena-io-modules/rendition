@@ -57,7 +57,7 @@ export const Sidebar = ({
 				navLink={navLink}
 			/>
 			<Flex justifyContent="space-between" alignItems="center" mb={3} px={2}>
-				{getChangelog && (
+				{!isCollapsed && getChangelog && (
 					<ChangelogButton
 						getChangelog={getChangelog}
 						onClick={onChangelogClick}
