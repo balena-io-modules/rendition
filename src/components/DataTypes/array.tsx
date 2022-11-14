@@ -65,7 +65,7 @@ export const getFilter = (
 		);
 		return {
 			minItems: 1,
-			items:
+			contains:
 				propertyFilters.length === 1
 					? propertyFilters[0]
 					: {
