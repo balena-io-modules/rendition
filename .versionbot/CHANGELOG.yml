@@ -1,4 +1,16 @@
 - commits:
+    - subject: Hide Changelog button when Sidebar is collapsed
+      hash: 333d7c183aa99075b3b9f8bda4981135a2340afd
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: myarmolinsky
+      nested: []
+  version: 34.3.1
+  title: ""
+  date: 2022-11-14T13:15:56.181Z
+- commits:
     - subject: Add Changelog component
       hash: c53e315f7af48b51299303cff6e4c1387c8bf533
       body: ""
