@@ -1,4 +1,18 @@
 - commits:
+    - subject: Fix array filters creation
+      hash: 7af194f8e6f1ea1951a441a041d1062382b7b0b5
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+      nested: []
+  version: 34.3.2
+  title: ""
+  date: 2022-11-14T16:09:07.924Z
+- commits:
     - subject: Hide Changelog button when Sidebar is collapsed
       hash: 333d7c183aa99075b3b9f8bda4981135a2340afd
       body: ""
