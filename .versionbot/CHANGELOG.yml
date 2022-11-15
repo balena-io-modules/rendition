@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update TypeScript to 4.9.3
+      hash: 144e0999ebdc39cfa5c7183f5c49b48d9f578b1d
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Thodoris Greasidis
+      nested: []
+  version: 34.3.3
+  title: ""
+  date: 2022-11-15T22:43:14.545Z
+- commits:
     - subject: Fix array filters creation
       hash: 7af194f8e6f1ea1951a441a041d1062382b7b0b5
       body: ""
