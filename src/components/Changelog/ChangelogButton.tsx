@@ -39,6 +39,33 @@ export const ChangelogButton = ({
 		[showChangelogModal],
 	);
 
+	React.useEffect(() => {
+		if (!lastViewedChangelogVersion) {
+			setToLocalStorage(
+				LAST_VIEWED_CHANGELOG_VERSION_STORAGE_KEY,
+				latestChangelogVersion,
+			);
+		}
+	}, []);
+	React.useEffect(() => {
+		if (showChangelogModal) {
+			setToLocalStorage(
+				LAST_VIEWED_CHANGELOG_VERSION_STORAGE_KEY,
+				latestChangelogVersion,
+			);
+		}
+	}, [showChangelogModal]);
+	React.useEffect(() => {
+		if (
+			lastViewedChangelogVersion &&
+			latestChangelogVersion &&
+			Number(lastViewedChangelogVersion.split('.')[0]) <
+				Number(latestChangelogVersion.split('.')[0])
+		) {
+			setShowChangelogModal(true);
+		}
+	}, [lastViewedChangelogVersion]);
+
 	return (
 		<Flex justifyContent="flex-end">
 			<Button
@@ -46,10 +73,6 @@ export const ChangelogButton = ({
 				onClick={(e) => {
 					onClick?.(e);
 					setShowChangelogModal(true);
-					setToLocalStorage(
-						LAST_VIEWED_CHANGELOG_VERSION_STORAGE_KEY,
-						latestChangelogVersion,
-					);
 				}}
 				style={{
 					background: 'rgba(0, 0, 0, 0.1)',
