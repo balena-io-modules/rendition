@@ -34,6 +34,7 @@ const ModalButton = (props: ButtonProps) => {
 
 class BaseModal extends React.Component<ThemedModalProps, any> {
 	public static mountedCount = 0;
+	private ongoingSubmit = false;
 
 	public ownIndex = 0;
 
@@ -70,14 +71,23 @@ class BaseModal extends React.Component<ThemedModalProps, any> {
 			e.preventDefault();
 			e.stopPropagation();
 
-			if (this.props.primaryButtonProps?.disabled) {
+			if (this.props.primaryButtonProps?.disabled || this.ongoingSubmit) {
 				return;
 			}
 
 			// Enter key
 			if (e.which === 13) {
-				this.props.done();
+				this.done();
 			}
+		}
+	};
+
+	public done = async () => {
+		try {
+			this.ongoingSubmit = true;
+			await this.props.done();
+		} finally {
+			this.ongoingSubmit = false;
 		}
 	};
 
@@ -89,7 +99,7 @@ class BaseModal extends React.Component<ThemedModalProps, any> {
 			return;
 		}
 
-		(this.props.cancel || this.props.done)();
+		(this.props.cancel || this.done)();
 	};
 
 	public render() {
@@ -156,7 +166,7 @@ class BaseModal extends React.Component<ThemedModalProps, any> {
 							{props.secondaryButtonProps && (
 								<ModalButton {...secondaryButtonProps} />
 							)}
-							<ModalButton {...primaryButtonProps} onClick={props.done}>
+							<ModalButton {...primaryButtonProps} onClick={this.done}>
 								{props.action || 'OK'}
 							</ModalButton>
 						</Flex>
