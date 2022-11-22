@@ -1,4 +1,18 @@
 - commits:
+    - subject: "Modal: Await the done callback to avoid double firing on Enter keypress"
+      hash: da14e4dd88a4d8e11fc8883afffc03fa5984fcca
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        See: https://balena.zulipchat.com/#narrow/stream/346007-balena-io.2FbalenaCloud/topic/Prevent.20double.20PATCHing
+        see: https://balena.zulipchat.com/#narrow/stream/346007-balena-io.2FbalenaCloud/topic/Prevent.20double.20PATCHing
+      author: Thodoris Greasidis
+      nested: []
+  version: 34.3.4
+  title: ""
+  date: 2022-11-22T14:28:28.869Z
+- commits:
     - subject: Update TypeScript to 4.9.3
       hash: 144e0999ebdc39cfa5c7183f5c49b48d9f578b1d
       body: ""
