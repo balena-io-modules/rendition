@@ -1,4 +1,21 @@
 - commits:
+    - subject: "ChangelogButton: Open changelog modal automatically when there has
+        been a major version change since last viewed"
+      hash: 7c605d6de93dcf6b4a8ebd5f890f524028b4e5a0
+      body: ""
+      footer:
+        Changelog-entry: "ChangelogButton: Open changelog modal automatically when there
+          has been a major version change since last viewed"
+        changelog-entry: "ChangelogButton: Open changelog modal automatically when there
+          has been a major version change since last viewed"
+        Change-type: patch
+        change-type: patch
+      author: myarmolinsky
+      nested: []
+  version: 34.3.5
+  title: ""
+  date: 2022-11-23T14:49:10.549Z
+- commits:
     - subject: "Modal: Await the done callback to avoid double firing on Enter keypress"
       hash: da14e4dd88a4d8e11fc8883afffc03fa5984fcca
       body: ""
