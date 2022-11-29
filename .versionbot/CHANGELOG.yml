@@ -1,4 +1,14 @@
 - commits:
+    - subject: "patch: try bumping mermaid to fix ci"
+      hash: 1c580d4c26be33a5fd42bbfb5e404fcc28a23e00
+      body: ""
+      footer: {}
+      author: Edwin Joassart
+      nested: []
+  version: 34.3.6
+  title: ""
+  date: 2022-11-29T14:53:23.050Z
+- commits:
     - subject: "ChangelogButton: Open changelog modal automatically when there has
         been a major version change since last viewed"
       hash: 7c605d6de93dcf6b4a8ebd5f890f524028b4e5a0
