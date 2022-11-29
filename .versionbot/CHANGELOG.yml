@@ -1,4 +1,14 @@
 - commits:
+    - subject: "minor: add .etch preloading option to download modal"
+      hash: 835c82eb4597b322961a68820899f22be35051c8
+      body: ""
+      footer: {}
+      author: Edwin Joassart
+      nested: []
+  version: 34.4.0
+  title: ""
+  date: 2022-11-29T13:53:23.614Z
+- commits:
     - subject: "ChangelogButton: Open changelog modal automatically when there has
         been a major version change since last viewed"
       hash: 7c605d6de93dcf6b4a8ebd5f890f524028b4e5a0
