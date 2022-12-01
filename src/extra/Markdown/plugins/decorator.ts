@@ -1,4 +1,4 @@
-import unified from 'unified';
+import { Plugin } from 'unified';
 import type { Node, Literal, Parent } from 'unist';
 import visitParents from 'unist-util-visit-parents';
 import exec from 'regexp-match-indices';
@@ -95,7 +95,7 @@ interface DecoratorPluginOptions {
 	decorators: Decorator[] | undefined;
 }
 
-export const decoratorPlugin: unified.Plugin<[DecoratorPluginOptions]> = (
+export const decoratorPlugin: Plugin<[DecoratorPluginOptions]> = (
 	options: DecoratorPluginOptions,
 ) => {
 	if (!options.decorators?.length) {
