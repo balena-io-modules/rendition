@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update mermaid to v9.2.2 and fix storybook build
+      hash: e088cbf5779c38f77370918be408b4b8b38e0afc
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+      nested: []
+  version: 34.3.6
+  title: ""
+  date: 2022-12-01T18:23:28.384Z
+- commits:
     - subject: "ChangelogButton: Open changelog modal automatically when there has
         been a major version change since last viewed"
       hash: 7c605d6de93dcf6b4a8ebd5f890f524028b4e5a0
