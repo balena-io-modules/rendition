@@ -15,6 +15,8 @@ export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
 export type Overwrite<T, U> = Pick<T, Exclude<keyof T, keyof U>> & U;
 
+export type RequiredProps<T, K extends keyof T> = T & Required<Pick<T, K>>;
+
 export { Theme } from './theme';
 
 export interface StyledSystemProps
@@ -141,3 +143,5 @@ export interface Tooltip {
 
 export type ResolvableReturnType<T extends (...args: any[]) => any> =
 	T extends (...args: any[]) => Promise<infer R> ? R : any;
+
+export type KeysOfUnion<T> = T extends T ? keyof T : never;

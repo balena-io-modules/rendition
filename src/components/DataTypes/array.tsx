@@ -3,29 +3,42 @@ import get from 'lodash/get';
 import {
 	convertRefSchemeToSchemaPath,
 	EditSchema,
+	FULL_TEXT_SLUG,
 	getModelFilter,
 	getPropertyScheme,
 	Operator,
 } from '../Filters/SchemaSieve';
 import type { CreateFilter } from './utils';
-import { getDataModel } from '.';
+import { getDataModel, OperatorSlugs } from '.';
 
 export const operators = () => ({
 	contains: 'contains',
 	not_contains: 'does not contain',
 });
 
-export type OperatorSlug = keyof ReturnType<typeof operators>;
+export type OperatorSlug =
+	| keyof ReturnType<typeof operators>
+	| typeof FULL_TEXT_SLUG;
 
-export const createFilter: CreateFilter<OperatorSlug> = (
+const isSchemaWithPrimitiveItems = (
+	schema: JSONSchema,
+): schema is JSONSchema & { items: JSONSchema } =>
+	!!schema?.items &&
+	typeof schema.items !== 'boolean' &&
+	'type' in schema.items;
+
+export const createFilter: CreateFilter<OperatorSlugs> = (
 	field,
 	operator,
 	value,
 	schema,
 	_refScheme,
-	isFullTextSearch,
 ) => {
-	const filter = getFilter(field, schema, value, operator, isFullTextSearch);
+	const filter = getFilter(field, schema, value, operator);
+
+	if (!Object.keys(filter).length) {
+		return {};
+	}
 
 	return {
 		properties: {
@@ -42,9 +55,9 @@ export const getFilter = (
 	field: string,
 	schema: JSONSchema,
 	value: string,
-	operator: Operator<OperatorSlug>,
-	isFullTextSearch?: boolean,
+	operator: Operator<OperatorSlugs>,
 ): JSONSchema => {
+	// RefScheme and array of objects
 	if (
 		!!schema?.items &&
 		typeof schema.items !== 'boolean' &&
@@ -53,14 +66,7 @@ export const getFilter = (
 	) {
 		const propertyFilters = Object.entries(schema.items.properties).map(
 			([propKey, propSchema]: [string, JSONSchema]) => {
-				return getModelFilter(
-					propSchema,
-					propKey,
-					operator,
-					value,
-					isFullTextSearch,
-					convertOperator,
-				);
+				return getModelFilter(propSchema, propKey, operator, value);
 			},
 		);
 		return {
@@ -73,22 +79,25 @@ export const getFilter = (
 					  },
 		};
 	}
-	const isSchemaItems =
-		!!schema?.items &&
-		typeof schema.items !== 'boolean' &&
-		'type' in schema.items;
-	const filterSchema = isSchemaItems ? (schema.items as JSONSchema) : schema;
-	const filter = getModelFilter(
-		filterSchema,
-		field,
-		operator,
-		value,
-		isFullTextSearch,
-		convertOperator,
-	);
+
+	// Array of primitives
+	const hasPrimitiveItems = isSchemaWithPrimitiveItems(schema);
+	const filterSchema = hasPrimitiveItems ? schema.items : schema;
+	// For strings we can use contains/not_contains, otherwise
+	const innerOperator =
+		operator.slug === FULL_TEXT_SLUG ||
+		(hasPrimitiveItems && schema.items.type === 'string')
+			? operator
+			: convertOperatorToIs(operator);
+	const filter = getModelFilter(filterSchema, field, innerOperator, value);
+	// This handles Object description key|value case (eg: tags)
 	const recursiveFilter = filter.properties?.[field] as JSONSchema;
 	const targetFilter =
-		isSchemaItems && recursiveFilter ? recursiveFilter : filter;
+		hasPrimitiveItems && recursiveFilter ? recursiveFilter : filter;
+
+	if (!Object.keys(targetFilter).length) {
+		return targetFilter;
+	}
 
 	if (typeof targetFilter.not === 'object') {
 		// TODO: avj doesn't support { contains: { not: ... } },
@@ -97,25 +106,24 @@ export const getFilter = (
 			not: { contains: targetFilter.not },
 		};
 	}
-	return { contains: targetFilter };
+	return { minItems: 1, contains: targetFilter };
 };
 
-const convertOperator = (
-	operator: Operator<OperatorSlug>,
-	operators: Record<string, string> | undefined,
-): Operator<OperatorSlug | 'is' | 'is_not'> => {
-	if (operators != null && operator.slug in operators) {
-		return operator;
-	}
-	if (/(?:\b|_)not(?:\b|_)/.test(operator.slug)) {
+const convertOperatorToIs = (
+	operator: Operator<OperatorSlugs>,
+): Operator<OperatorSlugs | 'is' | 'is_not'> => {
+	if (operator.slug === 'not_contains') {
 		return { slug: 'is_not', label: 'is not' };
 	}
-	return { slug: 'is', label: 'is' };
+	if (operator.slug === 'contains') {
+		return { slug: 'is', label: 'is' };
+	}
+	return operator;
 };
 
 export const editSchema = (
 	schema: JSONSchema,
-	operator: Operator<OperatorSlug> | undefined,
+	operator: Operator<OperatorSlugs> | undefined,
 ): JSONSchema => {
 	const refScheme = getPropertyScheme(schema);
 	const schemaItems = schema.items as JSONSchema | undefined;

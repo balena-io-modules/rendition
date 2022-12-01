@@ -10,10 +10,9 @@ import {
 	getOperators,
 	getSignatures,
 	Operator,
-	OperatorSlugs,
 } from './SchemaSieve';
 import { Txt } from '../Txt';
-import { getDataModel } from '../DataTypes';
+import { getDataModel, OperatorSlugs } from '../DataTypes';
 import { Form } from '../Form';
 import { FilterSignature } from '.';
 import {
@@ -197,8 +196,11 @@ const FilterInputs = ({
 	const [searchTerm, setSearchTerm] = React.useState('');
 	const debouncedSetSearchTerm = debounce(setSearchTerm, 300);
 	const operators = React.useMemo(
-		() => (signature.field ? getOperators(schema, signature.field) : []),
-		[signature.field, schema],
+		() =>
+			signature.field
+				? getOperators(schema, signature.field, signature.refScheme)
+				: [],
+		[signature.field, signature.refScheme, schema],
 	);
 	const filteredFieldOptions = React.useMemo(() => {
 		if (!searchTerm) {

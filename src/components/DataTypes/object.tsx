@@ -7,11 +7,13 @@ import pick from 'lodash/pick';
 import { regexEscape } from '../../utils';
 import { UiSchema } from '@rjsf/core';
 import {
+	FULL_TEXT_SLUG,
 	getModelFilter,
 	getPropertyScheme,
 	Operator,
 } from '../Filters/SchemaSieve';
 import type { CreateFilter } from './utils';
+import { KeysOfUnion } from '~/common-types';
 
 const getKeyLabel = (schema: JSONSchema) => {
 	const s = find(schema.properties!, { description: 'key' })! as JSONSchema;
@@ -58,8 +60,6 @@ export const operators = (s: JSONSchema) => {
 			  })()),
 	};
 };
-
-export type OperatorSlug = keyof ReturnType<typeof operators>;
 
 const keySpecificOperators = [
 	'key_is',
@@ -115,12 +115,16 @@ const getTitleForOperation = (
 	return schema.title;
 };
 
+export type OperatorSlug =
+	| KeysOfUnion<ReturnType<typeof operators>>
+	| typeof FULL_TEXT_SLUG;
+
 export const createFilter: CreateFilter<OperatorSlug> = (
 	field,
 	operator,
 	value,
 	schema,
-): ReturnType<CreateFilter<OperatorSlug>> => {
+) => {
 	const operatorSlug = operator.slug;
 	value = !!isKeyValueObj(schema)
 		? getValueForOperation(operatorSlug, schema, value)
@@ -147,6 +151,29 @@ export const createFilter: CreateFilter<OperatorSlug> = (
 				[field]: getFilter(field, schema, value, operator),
 			},
 			required: [field],
+		};
+	}
+
+	if (operatorSlug === FULL_TEXT_SLUG) {
+		const schemaKey = findKey(schema.properties!, { description: 'key' });
+		const schemaValue = findKey(schema.properties!, { description: 'value' });
+		const properties = [schemaKey, schemaValue].map((key: string) => ({
+			properties: {
+				[key]: {
+					pattern: value,
+				},
+			},
+			required: [key],
+		}));
+		return {
+			properties: {
+				[field]: {
+					contains: {
+						title: propertyTitle,
+						anyOf: properties,
+					},
+				},
+			},
 		};
 	}
 
@@ -334,48 +361,20 @@ export const getFilter = (
 	schema: JSONSchema,
 	value: string,
 	operator: Operator<OperatorSlug>,
-	refScheme?: string,
 ): JSONSchema => {
 	if (!!schema?.properties && typeof schema.properties !== 'boolean') {
 		return {
 			anyOf: Object.entries(schema.properties).map(
 				([propKey, propValue]: [string, JSONSchema]) => {
-					const filter = getModelFilter(
-						propValue,
-						propKey,
-						operator,
-						value,
-						undefined,
-						refScheme ? convertOperator : undefined,
-					);
+					const filter = getModelFilter(propValue, propKey, operator, value);
 					return filter;
 				},
 			),
 		};
 	}
-	const fieldFilter = getModelFilter(
-		schema,
-		field,
-		operator,
-		value,
-		undefined,
-		refScheme ? convertOperator : undefined,
-	);
+	const fieldFilter = getModelFilter(schema, field, operator, value);
 
 	return {
 		contains: fieldFilter.properties?.[field] as JSONSchema,
 	};
-};
-
-const convertOperator = (
-	operator: Operator<OperatorSlug>,
-	operators: Record<string, string> | undefined,
-): Operator<OperatorSlug | 'is' | 'is_not'> => {
-	if (operators != null && operator.slug in operators) {
-		return operator;
-	}
-	if (/(?:\b|_)not(?:\b|_)/.test(operator.slug)) {
-		return { slug: 'is_not', label: 'is not' };
-	}
-	return { slug: 'is', label: 'is' };
 };

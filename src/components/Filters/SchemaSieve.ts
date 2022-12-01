@@ -5,20 +5,10 @@ import type {
 	JSONSchema7Definition as JSONSchemaDefinition,
 } from 'json-schema';
 import { FilterSignature } from '.';
-import { getDataModel } from '../DataTypes';
+import { getDataModel, isDateTimeFormat, OperatorSlugs } from '../DataTypes';
 import { findInObject, isJson, randomString } from '../../utils';
 import pickBy from 'lodash/pickBy';
-import findKey from 'lodash/findKey';
-import { isKeyValueObj } from '../DataTypes/object';
 import { getJsonDescription } from '../DataTypes/utils';
-import { OperatorSlug as arrayOperatorSlug } from '../DataTypes/array';
-import { OperatorSlug as booleanOperatorSlug } from '../DataTypes/boolean';
-import { OperatorSlug as dateTimeOperatorSlug } from '../DataTypes/date-time';
-import { OperatorSlug as enumOperatorSlug } from '../DataTypes/enum';
-import { OperatorSlug as numberOperatorSlug } from '../DataTypes/number';
-import { OperatorSlug as objectOperatorSlug } from '../DataTypes/object';
-import { OperatorSlug as oneOfOperatorSlug } from '../DataTypes/oneOf';
-import { OperatorSlug as stringOperatorSlug } from '../DataTypes/string';
 import pick from 'lodash/pick';
 import get from 'lodash/get';
 
@@ -30,16 +20,6 @@ export interface Operator<T> {
 	slug: T;
 	label: string;
 }
-
-export type OperatorSlugs =
-	| arrayOperatorSlug
-	| booleanOperatorSlug
-	| dateTimeOperatorSlug
-	| enumOperatorSlug
-	| numberOperatorSlug
-	| objectOperatorSlug
-	| oneOfOperatorSlug
-	| stringOperatorSlug;
 
 export type CreateFilter = (
 	field: string,
@@ -57,11 +37,7 @@ export type EditSchema = (
 interface FullTextFilterItem {
 	key: string;
 	schema: JSONSchema;
-	operator: Operator<string>;
-	model: {
-		createFilter: CreateFilter;
-	};
-	searchKey?: string;
+	model: ReturnType<typeof getDataModel>;
 }
 
 export type FilterSignatureWithKey = FilterSignature & { key: string };
@@ -124,44 +100,18 @@ export const createFullTextSearchFilter = (
 				(itemsAccumulator, entry) => {
 					const [key, item] = entry;
 					const model = getDataModel(item);
-					if (item.type?.includes('boolean') || !model) {
+					if (
+						item.type?.includes('boolean') ||
+						isDateTimeFormat(item.format) ||
+						!model
+					) {
 						return itemsAccumulator;
 					}
-					const defaultItem = {
+					itemsAccumulator.push({
 						key,
 						schema: item,
 						model,
-					};
-					const operators = model.operators(item);
-					if (
-						!item.type ||
-						!(item.type.includes('object') && isKeyValueObj(item))
-					) {
-						itemsAccumulator.push({
-							...defaultItem,
-							operator:
-								'contains' in operators
-									? { label: 'contains', slug: 'contains' }
-									: { label: 'is', slug: 'is' },
-						});
-					} else if (item.type?.includes('object') && isKeyValueObj(item)) {
-						itemsAccumulator.push({
-							...defaultItem,
-							operator: {
-								label: operators['key_contains' as keyof typeof operators],
-								slug: 'key_contains',
-							},
-							searchKey: findKey(item.properties!, { description: 'key' })!,
-						});
-						itemsAccumulator.push({
-							...defaultItem,
-							operator: {
-								label: operators['value_contains' as keyof typeof operators],
-								slug: 'value_contains',
-							},
-							searchKey: findKey(item.properties!, { description: 'value' })!,
-						});
-					}
+					});
 					return itemsAccumulator;
 				},
 				[] as FullTextFilterItem[],
@@ -176,6 +126,10 @@ const generateFullTextSearchAjvFilter = (
 	term: string,
 	items: FullTextFilterItem[],
 ): JSONSchema => {
+	const operator = {
+		label: 'full text search',
+		slug: FULL_TEXT_SLUG,
+	} as const;
 	return {
 		$id: randomString(),
 		title: FULL_TEXT_SLUG,
@@ -185,20 +139,25 @@ const generateFullTextSearchAjvFilter = (
 				description: getJsonDescription(
 					'Any field',
 					'any',
-					{ slug: FULL_TEXT_SLUG, label: 'contains' },
+					operator,
 					term,
 					undefined,
 				),
 				anyOf: items
-					.map(({ key, schema, operator, model, searchKey }) => {
-						const val = !!searchKey ? { [searchKey]: term } : term;
+					.map(({ key, schema, model }) => {
+						if (!model) {
+							return {};
+						}
 						return model.createFilter(
 							key,
-							operator as Operator<OperatorSlugs>,
-							val,
+							// @ts-expect-error we should check whether the operator is supported
+							// rather than calling anyway and then checking for empty filter result.
+							operator,
+							term,
 							schema,
 						);
 					})
+					// Model types that do not support the operator, return an empty filter, which we drop.
 					.filter((item) => Object.keys(item).length > 0),
 			},
 		],
@@ -239,8 +198,13 @@ export const parseFilterDescription = (filter: JSONSchema): FilterSignature => {
 export const getOperators = (
 	schema: JSONSchema,
 	field: string,
+	refScheme?: string,
 ): Array<Operator<OperatorSlugs>> => {
-	const subSchema = schema.properties![field] as JSONSchema;
+	const subSchema = (
+		refScheme
+			? getSubSchemaFromRefScheme(schema.properties![field], refScheme)
+			: schema.properties![field]
+	) as JSONSchema;
 	const model = getDataModel(subSchema);
 
 	if (!model) {
@@ -260,34 +224,18 @@ export const getModelFilter = (
 	field: string,
 	operator: Operator<OperatorSlugs>,
 	value: any,
-	isFullTextSearch?: boolean,
-	operatorConverter?: (
-		operator: Operator<OperatorSlugs>,
-		operators: any,
-	) => Operator<OperatorSlugs>,
 ): JSONSchema => {
-	let newOperator = operator;
-	let subSchema = schema;
-	if (isFullTextSearch) {
-		subSchema = { ...schema };
-		delete subSchema.oneOf;
-		delete subSchema.enum;
-	}
-	const model = getDataModel(subSchema);
+	const model = getDataModel(schema);
 	if (!model) {
 		throw new Error(
-			`getModelFilter: model not defied, something is probably wrong with the type declaration in the schema! field: ${field}, type: ${subSchema.type}`,
+			`getModelFilter: model not defied, something is probably wrong with the type declaration in the schema! field: ${field}, type: ${schema.type}`,
 		);
-	}
-	if (operatorConverter) {
-		const operators = model.operators(schema);
-		newOperator = operatorConverter(operator, operators);
 	}
 	const filter = (model.createFilter as CreateFilter)(
 		field,
-		newOperator,
+		operator,
 		value,
-		subSchema,
+		schema,
 	);
 	return filter;
 };

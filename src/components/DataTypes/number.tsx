@@ -1,3 +1,4 @@
+import { FULL_TEXT_SLUG } from '../Filters/SchemaSieve';
 import type { CreateFilter } from './utils';
 
 export const operators = () => ({
@@ -7,7 +8,9 @@ export const operators = () => ({
 	is_less_than: 'is less than',
 });
 
-export type OperatorSlug = keyof ReturnType<typeof operators>;
+export type OperatorSlug =
+	| keyof ReturnType<typeof operators>
+	| typeof FULL_TEXT_SLUG;
 
 export const createFilter: CreateFilter<OperatorSlug> = (
 	field,
@@ -27,7 +30,7 @@ export const createFilter: CreateFilter<OperatorSlug> = (
 		return {};
 	}
 
-	if (operatorSlug === 'is') {
+	if (operatorSlug === 'is' || operatorSlug === FULL_TEXT_SLUG) {
 		return {
 			properties: {
 				[field]: {
