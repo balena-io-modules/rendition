@@ -9,6 +9,11 @@ module.exports = {
 			test: /\.ttf$/,
 			use: ['file-loader'],
 		});
+		config.module.rules.push({
+			test: /\.mjs$/,
+			include: /node_modules/,
+			type: 'javascript/auto',
+		});
 		config.plugins.push(new MonacoWebpackPlugin({ languages: ['json'] }));
 
 		return config;
