@@ -1,4 +1,17 @@
 - commits:
+    - subject: Bump remark-parse from 8.0.3 to 10.0.1
+      hash: 6bcc543ea9fb3c55c2f6ee344c4c484d0e7582b1
+      body: |
+        Also bumps `unified` from 9.2.2 to 10.1.2 and adds `remark-gfm`
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: myarmolinsky
+      nested: []
+  version: 34.4.1
+  title: ""
+  date: 2022-12-07T17:46:07.203Z
+- commits:
     - subject: Improve full text search filters and operators in filter modal
       hash: 531a8af2ba4c1a3065c4765f47b0fa1a2a61f2aa
       body: ""
