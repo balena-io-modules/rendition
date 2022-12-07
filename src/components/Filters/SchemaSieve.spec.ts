@@ -275,7 +275,7 @@ describe('SchemaSieve', () => {
 				{
 					operator: { slug: 'not_contains', label: 'not contains' },
 					value: 'ABC',
-					expected: ['Entry 2', 'Entry 3', 'Entry 6'],
+					expected: ['Entry 2', 'Entry 3', 'Entry 5', 'Entry 6'],
 				},
 				{
 					operator: { slug: 'matches_re', label: 'match RegEx' },
@@ -292,7 +292,7 @@ describe('SchemaSieve', () => {
 			testFilter('test', schema, collection, tests);
 		});
 
-		describe('object types', () => {
+		describe('object "Tag" types', () => {
 			const schema = {
 				type: 'object',
 				properties: {
@@ -794,7 +794,7 @@ describe('SchemaSieve', () => {
 
 				const collection = {
 					'Entry 1': {
-						category: ['Flame'],
+						category: ['Flame', 'Drop'],
 					},
 					'Entry 2': {
 						category: ['Lizard'],
@@ -830,6 +830,50 @@ describe('SchemaSieve', () => {
 					tests,
 					'{"x-ref-scheme": ["category"]}',
 				);
+				testFilter('category', schema, collection, tests);
+			});
+
+			describe('where items are numbers', () => {
+				const schema = {
+					type: 'object',
+					properties: {
+						category: {
+							type: 'array',
+							items: {
+								type: 'number',
+							},
+						},
+					},
+				};
+
+				const collection = {
+					'Entry 1': {
+						category: null,
+					},
+					'Entry 2': {
+						foo: 9,
+					},
+					'Entry 3': {
+						category: [1, 2, 3, 4, 5],
+					},
+				};
+
+				const tests = [
+					{
+						operator: { slug: 'contains', label: 'contains' },
+						value: 3,
+						expected: ['Entry 3'],
+					},
+				];
+
+				testFilter(
+					'category',
+					schema,
+					collection,
+					tests,
+					'{"x-ref-scheme": ["category"]}',
+				);
+				testFilter('category', schema, collection, tests);
 			});
 		});
 

@@ -14,11 +14,8 @@ import { Summary } from './Summary';
 import { onClickOutOrEsc, randomString } from '../../utils';
 import cloneDeep from 'lodash/cloneDeep';
 import isEqual from 'lodash/isEqual';
-import {
-	createFullTextSearchFilter,
-	Operator,
-	OperatorSlugs,
-} from './SchemaSieve';
+import { createFullTextSearchFilter, Operator } from './SchemaSieve';
+import { OperatorSlugs } from '../DataTypes';
 
 const SearchWrapper = styled(Box)`
 	width: 100%;

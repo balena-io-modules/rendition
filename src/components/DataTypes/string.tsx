@@ -1,4 +1,5 @@
 import { regexEscape } from '../../utils';
+import { FULL_TEXT_SLUG } from '../Filters/SchemaSieve';
 import type { CreateFilter } from './utils';
 
 export const operators = () => ({
@@ -6,18 +7,19 @@ export const operators = () => ({
 	not_contains: 'does not contain',
 	is: 'is',
 	is_not: 'is not',
-	full_text_search: 'full text search',
 	matches_re: 'matches RegEx',
 	not_matches_re: 'does not match RegEx',
 });
 
-export type OperatorSlug = keyof ReturnType<typeof operators>;
+export type OperatorSlug =
+	| keyof ReturnType<typeof operators>
+	| typeof FULL_TEXT_SLUG;
 
 export const createFilter: CreateFilter<OperatorSlug> = (
 	field,
 	operator,
 	value,
-): ReturnType<CreateFilter<OperatorSlug>> => {
+) => {
 	const operatorSlug = operator.slug;
 
 	if (operatorSlug === 'is') {
@@ -46,12 +48,11 @@ export const createFilter: CreateFilter<OperatorSlug> = (
 		};
 	}
 
-	if (operatorSlug === 'contains') {
+	if (operatorSlug === 'contains' || operatorSlug === FULL_TEXT_SLUG) {
 		return {
 			properties: {
 				[field]: {
 					type: 'string',
-					// @ts-expect-error
 					regexp: {
 						pattern: regexEscape(value),
 						flags: 'i',
@@ -67,7 +68,7 @@ export const createFilter: CreateFilter<OperatorSlug> = (
 			properties: {
 				[field]: {
 					not: {
-						// @ts-expect-error
+						type: 'string',
 						regexp: {
 							pattern: regexEscape(value),
 							flags: 'i',

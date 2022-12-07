@@ -1,4 +1,5 @@
-import { Operator, OperatorSlugs } from '../Filters/SchemaSieve';
+import { OperatorSlugs } from '.';
+import { Operator } from '../Filters/SchemaSieve';
 import { JSONSchema } from '../Renderer/types';
 
 export const getJsonDescription = (
@@ -23,5 +24,4 @@ export type CreateFilter<TOperatorSlugs> = (
 	value: any,
 	subSchema: JSONSchema,
 	refScheme?: string,
-	isFullTextSearch?: boolean,
 ) => JSONSchema;

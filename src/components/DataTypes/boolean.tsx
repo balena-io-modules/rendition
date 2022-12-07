@@ -4,9 +4,9 @@ export const operators = () => ({
 	is: 'is',
 });
 
-export type OperatorSlug = keyof ReturnType<typeof operators>;
+export type OperatorSlug = keyof ReturnType<typeof operators> | 'is_not';
 
-export const createFilter: CreateFilter<OperatorSlug | 'is_not'> = (
+export const createFilter: CreateFilter<OperatorSlug> = (
 	field,
 	operator,
 	value,

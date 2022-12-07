@@ -8,7 +8,17 @@ import * as objectType from './object';
 import * as oneOfType from './oneOf';
 import * as stringType from './string';
 
-const isDateTimeFormat = (format: string | undefined) =>
+export type OperatorSlugs =
+	| arrayType.OperatorSlug
+	| booleanType.OperatorSlug
+	| dateTimeType.OperatorSlug
+	| enumType.OperatorSlug
+	| numberType.OperatorSlug
+	| objectType.OperatorSlug
+	| oneOfType.OperatorSlug
+	| stringType.OperatorSlug;
+
+export const isDateTimeFormat = (format: string | undefined) =>
 	format?.endsWith('date-time');
 
 const typeMap = {
