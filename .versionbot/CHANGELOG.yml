@@ -1,4 +1,16 @@
 - commits:
+    - subject: Remove unnecessary @types/mermaid dependency
+      hash: e448237e865e3af664d53bddc99a5880083b4b50
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: myarmolinsky
+      nested: []
+  version: 34.4.1
+  title: ""
+  date: 2022-12-07T19:52:19.250Z
+- commits:
     - subject: Improve full text search filters and operators in filter modal
       hash: 531a8af2ba4c1a3065c4765f47b0fa1a2a61f2aa
       body: ""
