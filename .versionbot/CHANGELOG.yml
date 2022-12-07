@@ -1,4 +1,16 @@
 - commits:
+    - subject: Bump `react-simplemde-editor` from v4.1.5 to v5.2.0
+      hash: 8a16af3d8acdad26de92ddd201deef3257837b35
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: myarmolinsky
+      nested: []
+  version: 34.4.1
+  title: ""
+  date: 2022-12-07T19:11:13.611Z
+- commits:
     - subject: Improve full text search filters and operators in filter modal
       hash: 531a8af2ba4c1a3065c4765f47b0fa1a2a61f2aa
       body: ""
