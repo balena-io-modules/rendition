@@ -1,4 +1,18 @@
 - commits:
+    - subject: Improve full text search filters and operators in filter modal
+      hash: 531a8af2ba4c1a3065c4765f47b0fa1a2a61f2aa
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+      nested: []
+  version: 34.4.0
+  title: ""
+  date: 2022-12-07T14:52:04.314Z
+- commits:
     - subject: Update mermaid to v9.2.2 and fix storybook build
       hash: e088cbf5779c38f77370918be408b4b8b38e0afc
       body: ""
