@@ -104,6 +104,7 @@ export interface FormWidgetProps extends WidgetProps {
 		widgets: { [name: string]: Widget };
 		definitions: { [name: string]: any };
 		formContext: any;
+		rootSchema: JSONSchema;
 	};
 	type?: string;
 	rawErrors: string[];
