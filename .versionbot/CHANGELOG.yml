@@ -1,4 +1,16 @@
 - commits:
+    - subject: Bump @rjsf/core from v2.5.1 to v4.2.3
+      hash: c6b372ac53eff323f73a2c6785d2645931deb655
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: myarmolinsky
+      nested: []
+  version: 34.4.2
+  title: ""
+  date: 2022-12-07T20:10:40.072Z
+- commits:
     - subject: Remove unnecessary @types/mermaid dependency
       hash: e448237e865e3af664d53bddc99a5880083b4b50
       body: ""
