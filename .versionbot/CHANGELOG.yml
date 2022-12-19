@@ -1,4 +1,16 @@
 - commits:
+    - subject: "useRequest: Make the result usable as object as well"
+      hash: c83f0a3770a3a367f163bb50494f4e8a863cdf3a
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Thodoris Greasidis
+      nested: []
+  version: 34.5.0
+  title: ""
+  date: 2022-12-19T19:02:09.385Z
+- commits:
     - subject: Remove unnecessary @types/mermaid dependency
       hash: e448237e865e3af664d53bddc99a5880083b4b50
       body: ""
