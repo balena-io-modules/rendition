@@ -10,6 +10,26 @@ interface UseRequestOptions {
 type RequestError = Error | null | undefined;
 type ForcePoll = () => void;
 
+// TODO: Change this to return only an object in the next major.
+type UseRequestResult<TResult> = (
+	| [TResult | undefined, true, RequestError, ForcePoll]
+	| [TResult, false, RequestError, ForcePoll]
+) &
+	(
+		| {
+				data: TResult | undefined;
+				isLoading: true;
+				error: RequestError;
+				forcePoll: ForcePoll;
+		  }
+		| {
+				data: TResult;
+				isLoading: false;
+				error: RequestError;
+				forcePoll: ForcePoll;
+		  }
+	);
+
 export const useRequest = <
 	TFn extends (poll: Poll | undefined) => Promise<any>,
 	TResult extends ResolvableReturnType<TFn>,
@@ -86,7 +106,11 @@ export const useRequest = <
 		forcePoll();
 	}, [...deps, polling]);
 
-	return [data, loading, error, forcePoll] as
-		| [TResult | undefined, true, RequestError, ForcePoll]
-		| [TResult, false, RequestError, ForcePoll];
+	const result = [data, loading, error, forcePoll] as UseRequestResult<TResult>;
+	result.data = data;
+	result.isLoading = loading;
+	result.error = error;
+	result.forcePoll = forcePoll;
+
+	return result;
 };
