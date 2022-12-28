@@ -1,4 +1,18 @@
 - commits:
+    - subject: Fix Breadcrumb keys error
+      hash: 4882fb52f391ca80861611e4faacf87aa2171e12
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+      nested: []
+  version: 34.5.1
+  title: ""
+  date: 2022-12-28T13:38:40.624Z
+- commits:
     - subject: "useRequest: Make the result usable as object as well"
       hash: c83f0a3770a3a367f163bb50494f4e8a863cdf3a
       body: ""
