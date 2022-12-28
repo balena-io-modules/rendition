@@ -110,7 +110,7 @@ export const Breadcrumbs = ({
 									? `${dark ? 'secondary.dark' : 'white'}`
 									: `${dark ? 'tertiary.light' : 'secondary.semilight'}`
 							}
-							key={crumb.text}
+							key={`${crumb.text || crumb.href}_${i}`}
 							width="100%"
 						>
 							<Flex flexDirection="column" width="100%">
