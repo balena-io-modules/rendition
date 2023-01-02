@@ -24,6 +24,15 @@ const BaseTableWrapper = styled.div`
 	max-width: 100%;
 	border-bottom: 1px solid ${(props) => props.theme.colors.quartenary.main};
 `;
+export const DEFAULT_ITEMS_PER_PAGE = 50;
+export type Pagination = { itemsPerPage?: number } & (
+	| { serverSide?: undefined }
+	| {
+			serverSide: true;
+			currentPage: number;
+			totalItems: number;
+	  }
+);
 
 interface InternalTableBaseProps {
 	hasCheckbox: boolean;
@@ -170,7 +179,8 @@ export class TableBase<T extends {}> extends React.Component<
 	}
 
 	public componentDidUpdate(prevProps: TableBaseProps<T>) {
-		const { sort, checkedItems, data, itemsPerPage, rowKey } = this.props;
+		const { sort, checkedItems, data, pagination, rowKey } = this.props;
+		const serverSide = pagination?.serverSide;
 		if (sort && !isEqual(prevProps.sort, sort)) {
 			this.setState({
 				sort,
@@ -186,10 +196,12 @@ export class TableBase<T extends {}> extends React.Component<
 			this.setRowSelection(checkedItems);
 		}
 
-		const totalItems = data?.length ?? 0;
+		const totalItems = serverSide ? pagination?.totalItems : data?.length ?? 0;
+		const currentPage = serverSide ? pagination?.currentPage : this.state.page;
+		const itemsPerPage = this.props.itemsPerPage ?? pagination?.itemsPerPage;
 		if (
-			this.state.page !== 0 &&
-			totalItems <= this.state.page * (itemsPerPage ?? 50)
+			currentPage !== 0 &&
+			totalItems <= currentPage * (itemsPerPage ?? DEFAULT_ITEMS_PER_PAGE)
 		) {
 			this.resetPager();
 		}
@@ -462,7 +474,7 @@ export class TableBase<T extends {}> extends React.Component<
 	};
 
 	public toggleSort = (e: React.MouseEvent<HTMLButtonElement>) => {
-		const { field } = e.currentTarget.dataset;
+		const { field, refScheme } = e.currentTarget.dataset;
 		const { sort } = this.state;
 		if (!field) {
 			return;
@@ -470,11 +482,12 @@ export class TableBase<T extends {}> extends React.Component<
 
 		let nextSort = {
 			field: field as keyof T,
+			refScheme,
 			reverse: false,
 		};
 
 		if (sort.field === field) {
-			nextSort = { field: sort.field, reverse: !sort.reverse };
+			nextSort = { field: sort.field, refScheme, reverse: !sort.reverse };
 		}
 
 		this.setState({ sort: nextSort });
@@ -522,11 +535,10 @@ export class TableBase<T extends {}> extends React.Component<
 		}
 	};
 
-	public setPage = (change: any) => {
-		if (this.props.onPageChange) {
-			this.props.onPageChange(change);
-		}
-
+	public setPage = (change: number) => {
+		const { pagination } = this.props;
+		const itemsPerPage = this.props.itemsPerPage ?? pagination?.itemsPerPage;
+		this.props.onPageChange?.(change, itemsPerPage ?? DEFAULT_ITEMS_PER_PAGE);
 		this.setState({ page: change });
 	};
 
@@ -547,7 +559,6 @@ export class TableBase<T extends {}> extends React.Component<
 			columns,
 			data,
 			usePager,
-			itemsPerPage,
 			pagerPosition,
 			rowAnchorAttributes,
 			rowKey,
@@ -557,36 +568,40 @@ export class TableBase<T extends {}> extends React.Component<
 			getRowClass,
 			className,
 			fuzzyPager,
+			pagination,
 		} = this.props;
 
 		const { page, sort } = this.state;
+		const serverSide = pagination?.serverSide;
 		const items = data || [];
-		const totalItems = items.length;
-		const _itemsPerPage = itemsPerPage || 50;
+		const totalItems = serverSide ? pagination?.totalItems : items.length;
+		const itemsPerPage =
+			this.props.itemsPerPage ??
+			pagination?.itemsPerPage ??
+			DEFAULT_ITEMS_PER_PAGE;
 		const _pagerPosition = pagerPosition || 'top';
+		let sortedData = items;
 
-		const lowerBound = usePager ? page * _itemsPerPage : 0;
-		const upperBound = usePager
-			? Math.min((page + 1) * _itemsPerPage, totalItems)
-			: totalItems;
+		if (!serverSide) {
+			const lowerBound = page * itemsPerPage;
+			const upperBound = Math.min((page + 1) * itemsPerPage, items.length);
+			sortedData = this.sortData(items).slice(lowerBound, upperBound);
+		}
 
-		const sortedData = this.sortData(items).slice(lowerBound, upperBound);
-
-		const shouldShowPaper = !!usePager && totalItems > 0;
-
+		const shouldShowPager = !!usePager && totalItems > 0;
 		const checkedRowIdentifiers = this.getCheckedRowIdentifiers();
 		const highlightedRowIdentifiers = this.getHighlightedRowIdentifiers();
 		const disabledRowIdentifiers = this.getDisabledRowIdentifiers();
 
 		return (
 			<>
-				{shouldShowPaper &&
+				{shouldShowPager &&
 					(_pagerPosition === 'top' || _pagerPosition === 'both') && (
 						<Pager
 							fuzzy={fuzzyPager}
 							totalItems={totalItems}
-							itemsPerPage={_itemsPerPage}
-							page={page}
+							itemsPerPage={itemsPerPage}
+							page={serverSide ? pagination?.currentPage : page}
 							nextPage={this.incrementPage}
 							prevPage={this.decrementPage}
 							mb={2}
@@ -620,6 +635,7 @@ export class TableBase<T extends {}> extends React.Component<
 											>
 												<Button
 													data-field={item.field}
+													data-ref-scheme={item.refScheme}
 													plain
 													primary={sort.field === item.field}
 													onClick={this.toggleSort}
@@ -692,12 +708,12 @@ export class TableBase<T extends {}> extends React.Component<
 					</Base>
 				</BaseTableWrapper>
 
-				{shouldShowPaper &&
+				{shouldShowPager &&
 					(_pagerPosition === 'bottom' || _pagerPosition === 'both') && (
 						<Pager
 							fuzzy={fuzzyPager}
 							totalItems={totalItems}
-							itemsPerPage={_itemsPerPage}
+							itemsPerPage={itemsPerPage}
 							page={page}
 							nextPage={this.incrementPage}
 							prevPage={this.decrementPage}
@@ -712,6 +728,7 @@ export class TableBase<T extends {}> extends React.Component<
 export interface TableSortOptions<T> {
 	reverse: boolean;
 	field: keyof T | null;
+	refScheme?: string;
 }
 
 export interface TableBaseProps<T> {
@@ -730,7 +747,7 @@ export interface TableBaseProps<T> {
 	/** A function that is called when a column is sorted */
 	onSort?: (sort: TableSortOptions<T>) => void;
 	/** A function that is called when the page is incremented, decremented and reset */
-	onPageChange?: (page: number) => void;
+	onPageChange?: (page: number, itemsPerPage: number) => void;
 	/** sort options to be used both as a default sort, and on subsequent renders if the passed sort changes */
 	sort?: TableSortOptions<T>;
 	/** Attributes to pass to the anchor element used in a row */
@@ -752,7 +769,10 @@ export interface TableBaseProps<T> {
 	/** If true, the total number of items shown on the page will be indicated as being approximate. Useful for when you don't now the full size of your dataset. Only used if `usePager` is true. */
 	fuzzyPager?: boolean;
 	/** The number of items to be shown per page. Only used if `usePager` is true. Defaults to 50. */
+	/** @deprecated use pagination.itemsPerPage */
 	itemsPerPage?: number;
+	/** Information from a server side pagination */
+	pagination?: Pagination;
 	/** Sets whether the pager is displayed at the top of the table, the bottom of the table or in both positions. Only used if `usePager` is true. Defaults to `top`. */
 	pagerPosition?: 'top' | 'bottom' | 'both';
 	className?: string;

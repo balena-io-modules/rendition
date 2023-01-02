@@ -34,6 +34,7 @@ export interface TableBaseColumn<T> {
 		row: T,
 	) => string | number | JSX.Element | null | undefined;
 	sortable?: boolean | TableSortFunction<T>;
+	refScheme?: string;
 }
 
 export interface TableRowProps<T> {
