@@ -769,6 +769,7 @@ export interface TableBaseProps<T> {
 	/** If true, the total number of items shown on the page will be indicated as being approximate. Useful for when you don't now the full size of your dataset. Only used if `usePager` is true. */
 	fuzzyPager?: boolean;
 	/** The number of items to be shown per page. Only used if `usePager` is true. Defaults to 50. */
+	/** @deprecated use pagination.itemsPerPage */
 	itemsPerPage?: number;
 	/** Information from a server side pagination */
 	pagination?: Pagination;
