@@ -1,4 +1,28 @@
 - commits:
+    - subject: "Table: deprecate itemsPerPage property"
+      hash: f169c31656b2c739156734c25ff229096989ca4a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+      nested: []
+    - subject: Add server side pagination
+      hash: cdc810e88303fb19dc5976864f8093f2f7aeed02
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+      nested: []
+  version: 34.6.0
+  title: ""
+  date: 2023-01-02T11:36:01.775Z
+- commits:
     - subject: Fix Breadcrumb keys error
       hash: 4882fb52f391ca80861611e4faacf87aa2171e12
       body: ""
