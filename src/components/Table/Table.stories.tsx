@@ -65,7 +65,7 @@ const TableWithCheckboxesTemplate = createTemplate<TableProps<any>>((props) => {
 		<Table
 			{...props}
 			checkedItems={selected}
-			onCheck={(items) => setSelected(items)}
+			onCheck={(items) => setSelected(items ?? [])}
 		/>
 	);
 });

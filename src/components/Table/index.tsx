@@ -4,6 +4,7 @@ import {
 	TableBaseProps,
 	TableSortOptions,
 	Pagination,
+	CheckedState,
 } from './TableBase';
 import styled, { css } from 'styled-components';
 import keys from 'lodash/keys';
@@ -751,4 +752,5 @@ export {
 	TableSortOptions,
 	TableSortFunction,
 	Pagination,
+	CheckedState,
 };

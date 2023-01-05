@@ -1,6 +1,7 @@
 import get from 'lodash/get';
 import * as React from 'react';
 import styled from 'styled-components';
+import { Box } from '../Box';
 import { Checkbox, CheckboxProps } from '../Checkbox';
 /*
  * Get the value specified by the `field` value
@@ -14,7 +15,7 @@ function renderField<T>(row: T, column: TableBaseColumn<T>) {
 	return value == null ? '' : value;
 }
 
-export const CheckboxWrapper = styled.div`
+export const CheckboxWrapper = styled(Box)`
 	display: inline-block;
 	vertical-align: middle;
 `;
