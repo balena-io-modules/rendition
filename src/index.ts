@@ -90,6 +90,7 @@ export {
 	TableProps,
 	TableSortFunction,
 	Pagination,
+	CheckedState,
 } from './components/Table';
 
 export { Accordion, AccordionProps } from './components/Accordion';

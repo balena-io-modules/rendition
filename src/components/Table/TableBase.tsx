@@ -139,11 +139,11 @@ const Base = styled.div<InternalTableBaseProps>`
 	}
 `;
 
-type CheckedTypes = 'none' | 'some' | 'all';
+export type CheckedState = 'none' | 'some' | 'all';
 
 interface TableBaseState<T> {
-	allChecked: CheckedTypes;
-	checkedItems: T[];
+	checkedState: CheckedState;
+	checkedItems: T[] | undefined;
 	sort: {
 		reverse: boolean;
 		field: null | keyof T;
@@ -283,13 +283,16 @@ export class TableBase<T extends {}> extends React.Component<
 		this.$getValidatedCheckedItems.clear();
 	}
 
-	public howManyRowsChecked(checkedItems: T[]): CheckedTypes {
-		const { rowKey, data } = this.props;
+	public howManyRowsChecked(checkedItems: T[]): CheckedState {
+		const { rowKey, data, pagination } = this.props;
+
 		if (!rowKey || !data) {
 			return 'none';
 		}
 
-		return data.length === checkedItems.length
+		return (pagination?.serverSide &&
+			checkedItems.length === pagination.totalItems) ||
+			(!pagination?.serverSide && data.length === checkedItems.length)
 			? 'all'
 			: checkedItems.length > 0
 			? 'some'
@@ -366,9 +369,9 @@ export class TableBase<T extends {}> extends React.Component<
 			rowKey,
 			selectedRows,
 		);
-		const allChecked = this.howManyRowsChecked(checkedItems);
+		const checkedState = this.howManyRowsChecked(checkedItems);
 
-		return { checkedItems, allChecked };
+		return { checkedItems, checkedState };
 	};
 
 	public setRowSelection = (selectedRows: T[]): void => {
@@ -377,15 +380,24 @@ export class TableBase<T extends {}> extends React.Component<
 			newState.checkedItems !== this.state.checkedItems;
 		this.setState(newState);
 		if (this.props.onCheck && hasCheckedItemsChanged) {
-			this.props.onCheck(newState.checkedItems);
+			this.props.onCheck(newState.checkedItems, this.state.checkedState);
 		}
 	};
 
-	public toggleAllChecked = () => {
-		const { data, onCheck, rowKey } = this.props;
+	private toggleCheckedState = (checkedState: CheckedState) => {
+		return checkedState === 'none' ? 'all' : 'none';
+	};
 
-		let checkedItems: T[] = [];
-		if (data && this.state.checkedItems.length === 0) {
+	public toggleAllChecked = () => {
+		const { data, onCheck, rowKey, pagination } = this.props;
+
+		let checkedItems: T[] | undefined;
+
+		if (
+			data &&
+			this.state.checkedItems?.length === 0 &&
+			!pagination?.serverSide
+		) {
 			const disabledRowsSet = this.getDisabledRowIdentifiers();
 			checkedItems =
 				rowKey && disabledRowsSet.size > 0
@@ -393,18 +405,20 @@ export class TableBase<T extends {}> extends React.Component<
 					: data.slice();
 		}
 		if (onCheck) {
-			onCheck(checkedItems);
+			onCheck(checkedItems, this.state.checkedState);
 		}
 
-		this.setState({
+		this.setState(({ checkedState }) => ({
 			lastSelected: null,
-			allChecked: this.howManyRowsChecked(checkedItems),
+			checkedState: pagination?.serverSide
+				? this.toggleCheckedState(checkedState)
+				: this.howManyRowsChecked(checkedItems!),
 			checkedItems,
-		});
+		}));
 	};
 
 	public toggleChecked = (e: React.ChangeEvent<HTMLInputElement>) => {
-		const { rowKey, data } = this.props;
+		const { rowKey, data, pagination } = this.props;
 		const { key } = e.currentTarget.dataset;
 		if (!rowKey || !key || !data) {
 			return false;
@@ -418,12 +432,20 @@ export class TableBase<T extends {}> extends React.Component<
 		}
 
 		const identifier = item[rowKey];
-		const newIsChecked = !this.getCheckedRowIdentifiers().has(identifier);
+		let newIsChecked;
+
+		let storedCheckedItems =
+			(this.props.checkedItems || this.state.checkedItems) ?? [];
+
+		if (pagination?.serverSide && this.state.checkedState === 'all') {
+			storedCheckedItems = sortedData;
+			newIsChecked = false;
+		} else {
+			newIsChecked = !this.getCheckedRowIdentifiers().has(identifier);
+		}
 
 		const checkedItemsMap = new Map(
-			((this.props.checkedItems || this.state.checkedItems) ?? []).map(
-				(item) => [item[rowKey], item],
-			),
+			storedCheckedItems.map((item) => [item[rowKey], item]),
 		);
 		let keysToFind = [identifier];
 		if (
@@ -463,12 +485,12 @@ export class TableBase<T extends {}> extends React.Component<
 		const checkedItems = Array.from(checkedItemsMap.values());
 
 		if (this.props.onCheck) {
-			this.props.onCheck(checkedItems);
+			this.props.onCheck(checkedItems, this.state.checkedState);
 		}
 
 		this.setState({
 			lastSelected: identifier,
-			allChecked: this.howManyRowsChecked(checkedItems),
+			checkedState: this.howManyRowsChecked(checkedItems),
 			checkedItems,
 		});
 	};
@@ -592,6 +614,10 @@ export class TableBase<T extends {}> extends React.Component<
 		const checkedRowIdentifiers = this.getCheckedRowIdentifiers();
 		const highlightedRowIdentifiers = this.getHighlightedRowIdentifiers();
 		const disabledRowIdentifiers = this.getDisabledRowIdentifiers();
+		const selectedItemCount =
+			this.state.checkedState === 'all'
+				? totalItems
+				: this.state.checkedItems?.length;
 
 		return (
 			<>
@@ -607,7 +633,6 @@ export class TableBase<T extends {}> extends React.Component<
 							mb={2}
 						/>
 					)}
-
 				<BaseTableWrapper>
 					<Base
 						className={className}
@@ -618,10 +643,17 @@ export class TableBase<T extends {}> extends React.Component<
 						<div data-display="table-head">
 							<div data-display="table-row">
 								{onCheck && (
-									<CheckboxWrapper data-display="table-cell">
+									<CheckboxWrapper
+										data-display="table-cell"
+										tooltip={
+											selectedItemCount != null
+												? `Selected: ${selectedItemCount}`
+												: undefined
+										}
+									>
 										<Checkbox
-											checked={this.state.allChecked === 'all'}
-											indeterminate={this.state.allChecked === 'some'}
+											checked={this.state.checkedState === 'all'}
+											indeterminate={this.state.checkedState === 'some'}
 											onChange={this.toggleAllChecked}
 										/>
 									</CheckboxWrapper>
@@ -674,7 +706,8 @@ export class TableBase<T extends {}> extends React.Component<
 								if (rowKey) {
 									const identifier = row[rowKey];
 									isChecked =
-										!!onCheck && checkedRowIdentifiers.has(identifier);
+										this.state.checkedState === 'all' ||
+										(!!onCheck && checkedRowIdentifiers.has(identifier));
 									isHighlighted = highlightedRowIdentifiers.has(identifier);
 									isDisabled = disabledRowIdentifiers.has(identifier);
 								}
@@ -741,7 +774,7 @@ export interface TableBaseProps<T> {
 	/** If provided, each row in the table will be a clickable link, this function is used to create the link href */
 	getRowHref?: (row: T) => string;
 	/** If provided, each row will begin with a checkbox. This function is called with every checked row every time a checkbox is toggled on or off. This property requires that you have provided a `rowKey` property */
-	onCheck?: (checkedItems: T[]) => void;
+	onCheck?: (checkedItems: T[] | undefined, checkStatus: CheckedState) => void;
 	/** A function that is called when a row is clicked. This property requires that you have provided a `rowKey` property */
 	onRowClick?: (row: T, event: React.MouseEvent<HTMLAnchorElement>) => void;
 	/** A function that is called when a column is sorted */

@@ -712,10 +712,9 @@ describe('Table component', () => {
 			const elements = component
 				.find('[data-display="table-body"] input[type="checkbox"]')
 				.filterWhere((element) => !!element.props().checked);
-
 			expect(elements).toHaveLength(PokeDex.length - disabled);
 			expect(spy.callCount).toEqual(1);
-			expect(spy.firstCall.args).toEqual([PokeDex.slice(disabled)]);
+			expect(spy.firstCall.args[0]).toEqual(PokeDex.slice(disabled));
 		});
 
 		it('should increment or decrement the checked rows as you check/uncheck checkboxes', () => {
@@ -738,27 +737,27 @@ describe('Table component', () => {
 			elements.first().simulate('change');
 			component.update();
 			expect(spy.callCount).toEqual(1);
-			expect(spy.firstCall.args).toEqual([PokeDex.slice(0, 1)]);
+			expect(spy.firstCall.args[0]).toEqual(PokeDex.slice(0, 1));
 
 			elements.at(1).simulate('change');
 			component.update();
 			expect(spy.callCount).toEqual(2);
-			expect(spy.secondCall.args).toEqual([PokeDex.slice(0, 2)]);
+			expect(spy.secondCall.args[0]).toEqual(PokeDex.slice(0, 2));
 
 			elements.at(2).simulate('change');
 			component.update();
 			expect(spy.callCount).toEqual(3);
-			expect(spy.thirdCall.args).toEqual([PokeDex.slice(0, 3)]);
+			expect(spy.thirdCall.args[0]).toEqual(PokeDex.slice(0, 3));
 
 			elements.at(2).simulate('change');
 			component.update();
 			expect(spy.callCount).toEqual(4);
-			expect(spy.getCall(3).args).toEqual([PokeDex.slice(0, 2)]);
+			expect(spy.getCall(3).args[0]).toEqual(PokeDex.slice(0, 2));
 
 			elements.at(1).simulate('change');
 			component.update();
 			expect(spy.callCount).toEqual(5);
-			expect(spy.getCall(4).args).toEqual([PokeDex.slice(0, 1)]);
+			expect(spy.getCall(4).args[0]).toEqual(PokeDex.slice(0, 1));
 		});
 	});
 
@@ -1025,7 +1024,7 @@ describe('control selected rows', () => {
 
 		const table: any = component.find(TableBase).instance();
 		expect(table.state.checkedItems.length).toEqual(2);
-		expect(table.state.allChecked).toEqual('some');
+		expect(table.state.checkedState).toEqual('some');
 	});
 });
 
@@ -1046,7 +1045,7 @@ describe('manually select rows', () => {
 
 		table.setRowSelection(PokeDex.slice(0, 2));
 		expect(table.state.checkedItems.length).toEqual(2);
-		expect(table.state.allChecked).toEqual('some');
+		expect(table.state.checkedState).toEqual('some');
 	});
 
 	it('should select all rows', () => {
@@ -1065,7 +1064,7 @@ describe('manually select rows', () => {
 
 		table.setRowSelection(PokeDex);
 		expect(table.state.checkedItems.length).toEqual(PokeDex.length);
-		expect(table.state.allChecked).toEqual('all');
+		expect(table.state.checkedState).toEqual('all');
 	});
 
 	it('should clear all rows', () => {
@@ -1084,11 +1083,11 @@ describe('manually select rows', () => {
 
 		table.setRowSelection(PokeDex);
 		expect(table.state.checkedItems.length).toEqual(PokeDex.length);
-		expect(table.state.allChecked).toEqual('all');
+		expect(table.state.checkedState).toEqual('all');
 
 		table.setRowSelection([]);
 		expect(table.state.checkedItems.length).toEqual(0);
-		expect(table.state.allChecked).toEqual('none');
+		expect(table.state.checkedState).toEqual('none');
 	});
 
 	it('should clear selection if data is set to null after instantiation', () => {
@@ -1113,7 +1112,7 @@ describe('manually select rows', () => {
 		table.setRowSelection([]);
 
 		expect(table.state.checkedItems.length).toEqual(0);
-		expect(table.state.allChecked).toEqual('none');
+		expect(table.state.checkedState).toEqual('none');
 	});
 });
 
