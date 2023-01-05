@@ -1,4 +1,18 @@
 - commits:
+    - subject: Adapt onCheck event for server side pagination
+      hash: b18e7d9871ff2d95e930d2e0adec77cd984366c9
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+      nested: []
+  version: 34.7.0
+  title: ""
+  date: 2023-01-05T19:21:09.491Z
+- commits:
     - subject: "Table: deprecate itemsPerPage property"
       hash: f169c31656b2c739156734c25ff229096989ca4a
       body: ""
