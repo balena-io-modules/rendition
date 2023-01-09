@@ -1,4 +1,17 @@
 - commits:
+    - subject: "patch: Update dependency core-js to ^3.27.1"
+      hash: caeebf11413fcde2aa43dcb90deefe9cb71f74fd
+      body: |
+        Update core-js from 3.23.3 to 3.27.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 34.7.2
+  title: ""
+  date: 2023-01-09T14:52:20.807Z
+- commits:
     - subject: Fix compatibility with selection without server side pagination
       hash: 7cfa06ee0554a8de718a0c5f669c0bc98f6a61eb
       body: ""
