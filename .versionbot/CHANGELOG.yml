@@ -1,4 +1,17 @@
 - commits:
+    - subject: "patch: Update dependency @testing-library/react to ^12.1.5"
+      hash: 80b924c46697061f57b8e4c2b2182277dddb3536
+      body: |
+        Update @testing-library/react from 12.1.2 to 12.1.5
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 34.7.2
+  title: ""
+  date: 2023-01-09T14:52:10.477Z
+- commits:
     - subject: Fix compatibility with selection without server side pagination
       hash: 7cfa06ee0554a8de718a0c5f669c0bc98f6a61eb
       body: ""
