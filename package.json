@@ -121,7 +121,7 @@
     "pinejs-client-fetch": "^0.2.2",
     "prismjs": "^1.25.0",
     "prop-types": "^15.7.2",
-    "qs": "^6.10.3",
+    "qs": "^6.11.0",
     "react-google-recaptcha": "^2.1.0",
     "react-helmet": "^6.1.0",
     "react-notifications-component": "^3.0.0",
