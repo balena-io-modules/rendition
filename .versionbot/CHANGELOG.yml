@@ -1,4 +1,17 @@
 - commits:
+    - subject: "patch: Update dependency prettier to ^2.8.2"
+      hash: da9b3982efcb45775845a2615fced52fb417b2ad
+      body: |
+        Update prettier from 2.4.1 to 2.8.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 34.7.2
+  title: ""
+  date: 2023-01-09T14:52:39.815Z
+- commits:
     - subject: Fix compatibility with selection without server side pagination
       hash: 7cfa06ee0554a8de718a0c5f669c0bc98f6a61eb
       body: ""
