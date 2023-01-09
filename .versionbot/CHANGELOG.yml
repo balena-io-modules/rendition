@@ -1,4 +1,31 @@
 - commits:
+    - subject: "patch: Update dependency qs to ^6.11.0"
+      hash: cb9ef0fc1d908f165363623ee8c8efd74cfc4ae5
+      body: |
+        Update qs from 6.10.3 to 6.11.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 34.7.2
+  title: ""
+  date: 2023-01-09T14:53:04.768Z
+- commits:
+    - subject: Fix compatibility with selection without server side pagination
+      hash: 7cfa06ee0554a8de718a0c5f669c0bc98f6a61eb
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+      nested: []
+  version: 34.7.1
+  title: ""
+  date: 2023-01-09T14:50:56.354Z
+- commits:
     - subject: Adapt onCheck event for server side pagination
       hash: b18e7d9871ff2d95e930d2e0adec77cd984366c9
       body: ""
