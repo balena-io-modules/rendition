@@ -1,4 +1,16 @@
 - commits:
+    - subject: "patch: Update ajv"
+      hash: 019cf1fcadb2610a453afdf5081df0eb7e4dac63
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 34.7.2
+  title: ""
+  date: 2023-01-09T14:53:22.947Z
+- commits:
     - subject: Fix compatibility with selection without server side pagination
       hash: 7cfa06ee0554a8de718a0c5f669c0bc98f6a61eb
       body: ""
