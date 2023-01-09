@@ -1,4 +1,17 @@
 - commits:
+    - subject: "patch: Update dependency @testing-library/jest-dom to ^5.16.5"
+      hash: b2ecd04a5719df51d7b4c296cff0be3021039a71
+      body: |
+        Update @testing-library/jest-dom from 5.16.1 to 5.16.5
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 34.7.2
+  title: ""
+  date: 2023-01-09T14:52:04.661Z
+- commits:
     - subject: Fix compatibility with selection without server side pagination
       hash: 7cfa06ee0554a8de718a0c5f669c0bc98f6a61eb
       body: ""
