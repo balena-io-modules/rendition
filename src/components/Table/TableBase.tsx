@@ -391,7 +391,9 @@ export class TableBase<T extends {}> extends React.Component<
 	public toggleAllChecked = () => {
 		const { data, onCheck, rowKey, pagination } = this.props;
 
-		let checkedItems: T[] | undefined;
+		let checkedItems: T[] | undefined = !pagination?.serverSide
+			? []
+			: undefined;
 
 		if (
 			data &&
