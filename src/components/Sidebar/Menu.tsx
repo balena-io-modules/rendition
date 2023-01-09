@@ -60,6 +60,7 @@ export const Menu = ({
 	navLink: React.FC<{ to: string }>;
 	isCollapsed: boolean;
 } & FlexProps) => {
+	console.log('*** items', items);
 	const { pathname } = window.location;
 
 	const currentItem = React.useMemo(() => {
