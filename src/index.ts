@@ -65,6 +65,8 @@ export { Provider } from './components/Provider';
 export { Rating, RatingProps } from './components/Rating';
 export { Search, SearchProps } from './components/Search';
 export { Select, SelectProps } from './components/Select';
+export { Layout, LayoutProps } from './components/Layout';
+export { Header, HeaderProps } from './components/Layout/Header';
 export { Sidebar, SidebarProps } from './components/Sidebar';
 export { Spinner, SpinnerProps } from './components/Spinner';
 export {
