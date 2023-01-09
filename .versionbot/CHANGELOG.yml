@@ -1,4 +1,17 @@
 - commits:
+    - subject: "patch: Update dependency prop-types to ^15.8.1"
+      hash: 4342e34736d26b3125c1a3e326179330dd36bb55
+      body: |
+        Update prop-types from 15.7.2 to 15.8.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 34.7.2
+  title: ""
+  date: 2023-01-09T14:52:56.027Z
+- commits:
     - subject: Fix compatibility with selection without server side pagination
       hash: 7cfa06ee0554a8de718a0c5f669c0bc98f6a61eb
       body: ""
