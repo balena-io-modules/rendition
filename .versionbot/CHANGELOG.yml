@@ -1,4 +1,18 @@
 - commits:
+    - subject: Fix compatibility with selection without server side pagination
+      hash: 7cfa06ee0554a8de718a0c5f669c0bc98f6a61eb
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+      nested: []
+  version: 34.7.1
+  title: ""
+  date: 2023-01-09T14:50:56.354Z
+- commits:
     - subject: Adapt onCheck event for server side pagination
       hash: b18e7d9871ff2d95e930d2e0adec77cd984366c9
       body: ""
