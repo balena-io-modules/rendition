@@ -1,4 +1,17 @@
 - commits:
+    - subject: "patch: Update dependency pinejs-client-fetch to ^0.3.1"
+      hash: 5bd048c1b07a55482e0fab073345b8ada6c2d69e
+      body: |
+        Update pinejs-client-fetch from 0.2.2 to 0.3.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 34.7.2
+  title: ""
+  date: 2023-01-09T14:52:29.792Z
+- commits:
     - subject: Fix compatibility with selection without server side pagination
       hash: 7cfa06ee0554a8de718a0c5f669c0bc98f6a61eb
       body: ""
