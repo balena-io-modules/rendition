@@ -54,7 +54,7 @@ interface OsConfigurationProps {
 
 const BuildVariants = ['dev', 'prod'] as const;
 
-export type BuildVariant = typeof BuildVariants[number];
+export type BuildVariant = (typeof BuildVariants)[number];
 
 const getCategorizedVersions = (
 	deviceTypeOsVersions: OsVersionsByDeviceType,

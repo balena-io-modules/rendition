@@ -91,7 +91,7 @@ export const OsTypeSelector = ({
 	);
 
 	return (
-		<Select<typeof selectOsTypes[number]>
+		<Select<(typeof selectOsTypes)[number]>
 			id="newAppApplicationType"
 			options={selectOsTypes}
 			valueKey="slug"

@@ -117,8 +117,10 @@ export const FilterModal = ({
 	const isValid = (
 		signs: FilterSignatureInternal[],
 	): signs is Array<
-		typeof signatures[number] &
-			Required<Pick<typeof signatures[number], 'field' | 'operator' | 'value'>>
+		(typeof signatures)[number] &
+			Required<
+				Pick<(typeof signatures)[number], 'field' | 'operator' | 'value'>
+			>
 	> =>
 		signs.every(
 			(s) => s.field && s.operator && s.value != null && s.value !== '',
