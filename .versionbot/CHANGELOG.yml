@@ -1,4 +1,17 @@
 - commits:
+    - subject: "patch: Update dependency ts-node to ^10.9.1"
+      hash: 84198b7532372c7c9eb8e86a021b4cc7a58ff34e
+      body: |
+        Update ts-node from 10.4.0 to 10.9.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 34.7.2
+  title: ""
+  date: 2023-01-09T14:53:13.120Z
+- commits:
     - subject: Fix compatibility with selection without server side pagination
       hash: 7cfa06ee0554a8de718a0c5f669c0bc98f6a61eb
       body: ""
