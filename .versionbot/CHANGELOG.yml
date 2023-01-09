@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add Layout component
+      hash: 3249536c57c53f823b9c221cfcf781e3bd5c0f91
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: myarmolinsky
+      nested: []
+  version: 34.7.0
+  title: ""
+  date: 2023-01-09T17:11:26.144Z
+- commits:
     - subject: "Table: deprecate itemsPerPage property"
       hash: f169c31656b2c739156734c25ff229096989ca4a
       body: ""
