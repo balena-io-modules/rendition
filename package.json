@@ -17,8 +17,8 @@
     "README.md"
   ],
   "engines": {
-    "node": ">=12.0.0",
-    "npm": ">=5.10.0"
+    "node": "^16.13.0",
+    "npm": "^8.1.1"
   },
   "scripts": {
     "tsify-css": "node ./scripts/tsifyCss.js",
