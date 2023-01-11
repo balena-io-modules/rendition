@@ -94,12 +94,20 @@ const getDeviceTypeOptions = (t: TFunction, deviceType: DeviceType) => {
 const isDownloadDisabled = (
 	formModel: FormModel,
 	rawVersion: ImageFormProps['rawVersion'],
+	deviceType: DeviceType,
 ) => {
 	if (!rawVersion) {
 		return true;
 	}
 
-	return formModel.network === 'wifi' && !formModel.wifiSsid;
+	if (
+		(deviceType.options?.filter((option) => option.name === 'network') ?? [])
+			.length > 0
+	) {
+		return formModel.network === 'wifi' && !formModel.wifiSsid;
+	}
+
+	return false;
 };
 
 const flashWithEtcher = (
@@ -401,9 +409,11 @@ export const ImageForm = ({
 					ml="auto"
 					className="e2e-download-image-submit"
 					type={action?.type || 'button'}
-					disabled={isDownloadDisabled(model, rawVersion) || !isInputValid}
+					disabled={
+						isDownloadDisabled(model, rawVersion, deviceType) || !isInputValid
+					}
 					tooltip={
-						isDownloadDisabled(model, rawVersion)
+						isDownloadDisabled(model, rawVersion, deviceType)
 							? t('warnings.fill_wifi_credentials')
 							: !isInputValid
 							? t('warnings.some_fields_are_invalid')
