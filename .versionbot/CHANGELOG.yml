@@ -1,4 +1,18 @@
 - commits:
+    - subject: "DownloadImageModal: Fix mixing instructions when a step is repeated"
+      hash: 77febc3aba5b2b73e5c947f47c21368b8f3f5243
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        See: https://github.com/balena-io/balena-ui/issues/5818
+        see: https://github.com/balena-io/balena-ui/issues/5818
+      author: Thodoris Greasidis
+      nested: []
+  version: 34.7.2
+  title: ""
+  date: 2023-01-11T18:58:48.366Z
+- commits:
     - subject: Fix compatibility with selection without server side pagination
       hash: 7cfa06ee0554a8de718a0c5f669c0bc98f6a61eb
       body: ""
