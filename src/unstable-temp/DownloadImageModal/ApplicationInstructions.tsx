@@ -161,8 +161,8 @@ const InstructionsItem = (props: InstructionsItemProps) => {
 
 			{hasChildren && (
 				<List>
-					{node.children.map((item: any) => {
-						return <InstructionsItem node={item} />;
+					{(node.children as any[]).map((item, i) => {
+						return <InstructionsItem key={i} node={item} />;
 					})}
 				</List>
 			)}
@@ -177,8 +177,8 @@ const InstructionsList = (props: InstructionsListProps) => {
 		// TODO: On 13px the line height is calculated as 19.5px, which breaks the alignment of the number inside the list item due to rounding.
 		// Remove custom font size once fixed in rendition https://github.com/balena-io-modules/rendition/issues/1025
 		<List ordered fontSize={14}>
-			{instructions.map((item) => {
-				return <InstructionsItem key={item} node={item} />;
+			{instructions.map((item, i) => {
+				return <InstructionsItem key={`${item}_${i}`} node={item} />;
 			})}
 		</List>
 	);
