@@ -855,9 +855,12 @@ exports[`Renderer component A button group widget 1`] = `
   box-shadow: none;
 }
 
-.c7:focus:not(:focus-visible) > circle,.c7:focus:not(:focus-visible) > ellipse,
-.c7:focus:not(:focus-visible) > line,.c7:focus:not(:focus-visible) > path,
-.c7:focus:not(:focus-visible) > polygon,.c7:focus:not(:focus-visible) > polyline,
+.c7:focus:not(:focus-visible) > circle,
+.c7:focus:not(:focus-visible) > ellipse,
+.c7:focus:not(:focus-visible) > line,
+.c7:focus:not(:focus-visible) > path,
+.c7:focus:not(:focus-visible) > polygon,
+.c7:focus:not(:focus-visible) > polyline,
 .c7:focus:not(:focus-visible) > rect {
   outline: none;
   box-shadow: none;
@@ -1080,9 +1083,12 @@ exports[`Renderer component A button widget 1`] = `
   box-shadow: none;
 }
 
-.c5:focus:not(:focus-visible) > circle,.c5:focus:not(:focus-visible) > ellipse,
-.c5:focus:not(:focus-visible) > line,.c5:focus:not(:focus-visible) > path,
-.c5:focus:not(:focus-visible) > polygon,.c5:focus:not(:focus-visible) > polyline,
+.c5:focus:not(:focus-visible) > circle,
+.c5:focus:not(:focus-visible) > ellipse,
+.c5:focus:not(:focus-visible) > line,
+.c5:focus:not(:focus-visible) > path,
+.c5:focus:not(:focus-visible) > polygon,
+.c5:focus:not(:focus-visible) > polyline,
 .c5:focus:not(:focus-visible) > rect {
   outline: none;
   box-shadow: none;
@@ -1427,9 +1433,12 @@ exports[`Renderer component A drop-down button widget 1`] = `
   box-shadow: none;
 }
 
-.c6:focus:not(:focus-visible) > circle,.c6:focus:not(:focus-visible) > ellipse,
-.c6:focus:not(:focus-visible) > line,.c6:focus:not(:focus-visible) > path,
-.c6:focus:not(:focus-visible) > polygon,.c6:focus:not(:focus-visible) > polyline,
+.c6:focus:not(:focus-visible) > circle,
+.c6:focus:not(:focus-visible) > ellipse,
+.c6:focus:not(:focus-visible) > line,
+.c6:focus:not(:focus-visible) > path,
+.c6:focus:not(:focus-visible) > polygon,
+.c6:focus:not(:focus-visible) > polyline,
 .c6:focus:not(:focus-visible) > rect {
   outline: none;
   box-shadow: none;
@@ -1824,7 +1833,8 @@ exports[`Renderer component A markdown field 1`] = `
   color: #2A506F;
 }
 
-.c5 code[class*='language-'],.c5 pre[class*='language-'] {
+.c5 code[class*='language-'],
+.c5 pre[class*='language-'] {
   color: black;
   background: none;
   text-shadow: 0 1px white;
@@ -1848,12 +1858,18 @@ exports[`Renderer component A markdown field 1`] = `
   hyphens: none;
 }
 
-.c5 pre[class*='language-']::-moz-selection,.c5 pre[class*='language-'] ::-moz-selection,.c5 code[class*='language-']::-moz-selection,.c5 code[class*='language-'] ::-moz-selection {
+.c5 pre[class*='language-']::-moz-selection,
+.c5 pre[class*='language-'] ::-moz-selection,
+.c5 code[class*='language-']::-moz-selection,
+.c5 code[class*='language-'] ::-moz-selection {
   text-shadow: none;
   background: #b3d4fc;
 }
 
-.c5 pre[class*='language-']::selection,.c5 pre[class*='language-'] ::selection,.c5 code[class*='language-']::selection,.c5 code[class*='language-'] ::selection {
+.c5 pre[class*='language-']::selection,
+.c5 pre[class*='language-'] ::selection,
+.c5 code[class*='language-']::selection,
+.c5 code[class*='language-'] ::selection {
   text-shadow: none;
   background: #b3d4fc;
 }
@@ -1864,7 +1880,8 @@ exports[`Renderer component A markdown field 1`] = `
   overflow: auto;
 }
 
-.c5:not(pre) > code[class*='language-'],.c5 pre[class*='language-'] {
+.c5:not(pre) > code[class*='language-'],
+.c5 pre[class*='language-'] {
   background: #f5f2f0;
 }
 
@@ -2115,7 +2132,8 @@ exports[`Renderer component A markdown field 1`] = `
 }
 
 @media print {
-  .c5 code[class*='language-'],.c5 pre[class*='language-'] {
+  .c5 code[class*='language-'],
+  .c5 pre[class*='language-'] {
     text-shadow: none;
   }
 }
@@ -3003,7 +3021,8 @@ exports[`Renderer component An array of different type items 1`] = `
   color: #2A506F;
 }
 
-.c8 code[class*='language-'],.c8 pre[class*='language-'] {
+.c8 code[class*='language-'],
+.c8 pre[class*='language-'] {
   color: black;
   background: none;
   text-shadow: 0 1px white;
@@ -3027,12 +3046,18 @@ exports[`Renderer component An array of different type items 1`] = `
   hyphens: none;
 }
 
-.c8 pre[class*='language-']::-moz-selection,.c8 pre[class*='language-'] ::-moz-selection,.c8 code[class*='language-']::-moz-selection,.c8 code[class*='language-'] ::-moz-selection {
+.c8 pre[class*='language-']::-moz-selection,
+.c8 pre[class*='language-'] ::-moz-selection,
+.c8 code[class*='language-']::-moz-selection,
+.c8 code[class*='language-'] ::-moz-selection {
   text-shadow: none;
   background: #b3d4fc;
 }
 
-.c8 pre[class*='language-']::selection,.c8 pre[class*='language-'] ::selection,.c8 code[class*='language-']::selection,.c8 code[class*='language-'] ::selection {
+.c8 pre[class*='language-']::selection,
+.c8 pre[class*='language-'] ::selection,
+.c8 code[class*='language-']::selection,
+.c8 code[class*='language-'] ::selection {
   text-shadow: none;
   background: #b3d4fc;
 }
@@ -3043,7 +3068,8 @@ exports[`Renderer component An array of different type items 1`] = `
   overflow: auto;
 }
 
-.c8:not(pre) > code[class*='language-'],.c8 pre[class*='language-'] {
+.c8:not(pre) > code[class*='language-'],
+.c8 pre[class*='language-'] {
   background: #f5f2f0;
 }
 
@@ -3294,7 +3320,8 @@ exports[`Renderer component An array of different type items 1`] = `
 }
 
 @media print {
-  .c8 code[class*='language-'],.c8 pre[class*='language-'] {
+  .c8 code[class*='language-'],
+  .c8 pre[class*='language-'] {
     text-shadow: none;
   }
 }
@@ -3675,7 +3702,8 @@ exports[`Renderer component An evaluated value 1`] = `
   cursor: pointer;
 }
 
-.c8:hover input:not([disabled]) + div,.c8:hover input:not([disabled]) + span {
+.c8:hover input:not([disabled]) + div,
+.c8:hover input:not([disabled]) + span {
   border-color: #DDE1f0;
 }
 
@@ -4149,7 +4177,8 @@ exports[`Renderer component An object with various properties 1`] = `
   cursor: pointer;
 }
 
-.c9:hover input:not([disabled]) + div,.c9:hover input:not([disabled]) + span {
+.c9:hover input:not([disabled]) + div,
+.c9:hover input:not([disabled]) + span {
   border-color: #DDE1f0;
 }
 
@@ -4752,7 +4781,8 @@ exports[`Renderer component anyOf options 1`] = `
   color: #2A506F;
 }
 
-.c7 code[class*='language-'],.c7 pre[class*='language-'] {
+.c7 code[class*='language-'],
+.c7 pre[class*='language-'] {
   color: black;
   background: none;
   text-shadow: 0 1px white;
@@ -4776,12 +4806,18 @@ exports[`Renderer component anyOf options 1`] = `
   hyphens: none;
 }
 
-.c7 pre[class*='language-']::-moz-selection,.c7 pre[class*='language-'] ::-moz-selection,.c7 code[class*='language-']::-moz-selection,.c7 code[class*='language-'] ::-moz-selection {
+.c7 pre[class*='language-']::-moz-selection,
+.c7 pre[class*='language-'] ::-moz-selection,
+.c7 code[class*='language-']::-moz-selection,
+.c7 code[class*='language-'] ::-moz-selection {
   text-shadow: none;
   background: #b3d4fc;
 }
 
-.c7 pre[class*='language-']::selection,.c7 pre[class*='language-'] ::selection,.c7 code[class*='language-']::selection,.c7 code[class*='language-'] ::selection {
+.c7 pre[class*='language-']::selection,
+.c7 pre[class*='language-'] ::selection,
+.c7 code[class*='language-']::selection,
+.c7 code[class*='language-'] ::selection {
   text-shadow: none;
   background: #b3d4fc;
 }
@@ -4792,7 +4828,8 @@ exports[`Renderer component anyOf options 1`] = `
   overflow: auto;
 }
 
-.c7:not(pre) > code[class*='language-'],.c7 pre[class*='language-'] {
+.c7:not(pre) > code[class*='language-'],
+.c7 pre[class*='language-'] {
   background: #f5f2f0;
 }
 
@@ -5043,7 +5080,8 @@ exports[`Renderer component anyOf options 1`] = `
 }
 
 @media print {
-  .c7 code[class*='language-'],.c7 pre[class*='language-'] {
+  .c7 code[class*='language-'],
+  .c7 pre[class*='language-'] {
     text-shadow: none;
   }
 }
