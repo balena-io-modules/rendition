@@ -55,6 +55,7 @@ export interface OsVersion {
 	basedOnVersion?: string;
 	osType: string;
 	line?: OsLines;
+	// TODO: Mark as non-nullable in the next major
 	variant?: string;
 	formattedVersion: string;
 	isRecommended?: boolean;

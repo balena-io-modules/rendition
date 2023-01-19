@@ -40,7 +40,9 @@ export const transformVersions = (versions: OsVersion[]) => {
 			osType: version.osType,
 			line: version.line,
 			knownIssueList: version.known_issue_list,
-			...(version.variant == null
+			// Unified releases in the model have variant === ''
+			// but we also test for nullish for backgwards compatibility w/ the typings.
+			...(!version.variant
 				? {
 						hasPrebuiltVariants: false,
 						rawVersion: version.raw_version,
