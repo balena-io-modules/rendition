@@ -1,4 +1,20 @@
 - commits:
+    - subject: "DownloadImageModal: Add support for empty string OS variant"
+      hash: 782e44a4facc22a347b9c7c89ed34d19789fa2e5
+      body: |
+        This is in order to match the actual
+        Release.variant field in open-balena.
+      footer:
+        Change-type: patch
+        change-type: patch
+        See: https://github.com/balena-io/balena-sdk/pull/1232
+        see: https://github.com/balena-io/balena-sdk/pull/1232
+      author: Thodoris Greasidis
+      nested: []
+  version: 34.7.3
+  title: ""
+  date: 2023-01-19T19:01:49.602Z
+- commits:
     - subject: "DownloadImageModal: Fix mixing instructions when a step is repeated"
       hash: 77febc3aba5b2b73e5c947f47c21368b8f3f5243
       body: ""
