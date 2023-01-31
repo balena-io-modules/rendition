@@ -14,6 +14,7 @@ import { px } from '../../utils';
 import { CheckboxProps, Checkbox } from '../Checkbox';
 import { Pager } from '../Pager';
 import { CheckboxWrapper, TableBaseColumn, TableRow } from './TableRow';
+import { FlexProps } from '../Flex';
 
 const highlightStyle = `
 	background-color: ${theme.colors.info.light};
@@ -593,6 +594,7 @@ export class TableBase<T extends {}> extends React.Component<
 			className,
 			fuzzyPager,
 			pagination,
+			pagerStyleProps,
 		} = this.props;
 
 		const { page, sort } = this.state;
@@ -753,6 +755,7 @@ export class TableBase<T extends {}> extends React.Component<
 							nextPage={this.incrementPage}
 							prevPage={this.decrementPage}
 							mt={2}
+							{...pagerStyleProps}
 						/>
 					)}
 			</>
@@ -810,5 +813,7 @@ export interface TableBaseProps<T> {
 	pagination?: Pagination;
 	/** Sets whether the pager is displayed at the top of the table, the bottom of the table or in both positions. Only used if `usePager` is true. Defaults to `top`. */
 	pagerPosition?: 'top' | 'bottom' | 'both';
+	/** Props for the Pager Flex */
+	pagerStyleProps?: FlexProps;
 	className?: string;
 }
