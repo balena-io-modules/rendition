@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add Layout component
+      hash: 7ea3d5d4bd46fab976bc8aa46d1490bf85f2cf47
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: myarmolinsky
+      nested: []
+  version: 34.8.0
+  title: ""
+  date: 2023-02-01T19:57:23.385Z
+- commits:
     - subject: "DownloadImageModal: Add support for empty string OS variant"
       hash: 782e44a4facc22a347b9c7c89ed34d19789fa2e5
       body: |
