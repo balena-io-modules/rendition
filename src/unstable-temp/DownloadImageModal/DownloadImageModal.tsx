@@ -10,6 +10,7 @@ import uniq from 'lodash/uniq';
 import {
 	OsVersionsByDeviceType,
 	Application,
+	Release,
 	DeviceType,
 	OsTypesEnum,
 } from './models';
@@ -22,11 +23,13 @@ import { Spinner } from '../../components/Spinner';
 import { Alert } from '../../components/Alert';
 import { Modal } from '../../components/Modal';
 import { Img } from '../../components/Img';
+import { Checkbox } from '../../components/Checkbox';
 import { useTranslation } from '../../hooks/useTranslation';
 import { FALLBACK_LOGO_UNKNOWN_DEVICE, stripVersionBuild } from './utils';
 import { OsConfiguration } from './OsConfiguration';
-import { FormModel } from './FormModel';
+import { DownloadImageLabel, FormModel } from './FormModel';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { ReleaseSelector } from './ReleaseSelector';
 
 export const DeviceLogo = styled(Img)<{ small?: boolean }>`
 	// To prevent Save Image dialog
@@ -81,7 +84,6 @@ export interface DownloadOptions extends DownloadOptionsBase, FormModel {}
 
 export interface UnstableTempDownloadImageModalProps {
 	application: Application;
-	releaseId?: number;
 	compatibleDeviceTypes: DeviceType[] | null;
 	initialDeviceType?: DeviceType;
 	initialOsVersions?: OsVersionsByDeviceType;
@@ -116,7 +118,6 @@ export interface UnstableTempDownloadImageModalProps {
 export const UnstableTempDownloadImageModal = ({
 	downloadUrl,
 	application,
-	releaseId,
 	compatibleDeviceTypes,
 	initialDeviceType,
 	initialOsVersions,
@@ -144,6 +145,22 @@ export const UnstableTempDownloadImageModal = ({
 	const [osTypes, setOsTypes] = React.useState<string[]>(
 		getUniqueOsTypes(osVersions, deviceType?.slug),
 	);
+	const defaultReleaseRawVersion =
+		application.should_be_running__release?.raw_version ??
+		application.owns__release[0]?.raw_version;
+	const defaultRelease: Release = {
+		raw_version: `Fleet's current release (${
+			!!defaultReleaseRawVersion ? `v${defaultReleaseRawVersion}` : 'none'
+		})`,
+		id:
+			application.should_be_running__release?.id ??
+			application.owns__release[0]?.id ??
+			undefined,
+	};
+	const [selectedRelease, setSelectedRelease] =
+		React.useState<Release>(defaultRelease);
+	const [preloadWithRelease, setPreloadWithRelease] = React.useState(false);
+	const [flashSelected, setFlashSelected] = React.useState(true);
 
 	const [deviceTypeHasEsr, setDeviceTypeHasEsr] = React.useState<
 		Dictionary<boolean>
@@ -255,11 +272,15 @@ export const UnstableTempDownloadImageModal = ({
 										setIsDownloadingConfig={setIsDownloadingConfig}
 										deviceType={deviceType}
 										appId={application.id}
-										releaseId={releaseId}
+										releaseId={
+											preloadWithRelease ? selectedRelease?.id : undefined
+										}
+										preloading={preloadWithRelease}
 										downloadUrl={downloadUrl}
 										rawVersion={rawVersion}
 										developmentMode={developmentMode}
 										modalActions={modalActions}
+										setFlashSelected={setFlashSelected}
 										authToken={authToken}
 										{...(downloadConfig && {
 											downloadConfig: ({
@@ -277,22 +298,55 @@ export const UnstableTempDownloadImageModal = ({
 												getDownloadSize(deviceType, rawVersion),
 										})}
 										configurationComponent={
-											<OsConfiguration
-												compatibleDeviceTypes={compatibleDeviceTypes}
-												selectedDeviceType={deviceType}
-												selectedOsType={osType}
-												deviceTypeOsVersions={osVersions}
-												osTypes={osTypes}
-												isInitialDefault={isInitialDefault}
-												onSelectedDeviceTypeChange={setDeviceType}
-												onSelectedVersionChange={setRawVersion}
-												onSelectedDevelopmentMode={setDevelopmentMode}
-												onSelectedOsTypeChange={setOsType}
-												hasEsrVersions={
-													deviceTypeHasEsr[deviceType.slug] ?? false
-												}
-												docsIcon={docsIcon}
-											/>
+											<>
+												<OsConfiguration
+													compatibleDeviceTypes={compatibleDeviceTypes}
+													selectedDeviceType={deviceType}
+													selectedOsType={osType}
+													deviceTypeOsVersions={osVersions}
+													osTypes={osTypes}
+													isInitialDefault={isInitialDefault}
+													onSelectedDeviceTypeChange={setDeviceType}
+													onSelectedVersionChange={setRawVersion}
+													onSelectedDevelopmentMode={setDevelopmentMode}
+													onSelectedOsTypeChange={setOsType}
+													hasEsrVersions={
+														deviceTypeHasEsr[deviceType.slug] ?? false
+													}
+													docsIcon={docsIcon}
+												/>
+												<Box mb={3}>
+													<DownloadImageLabel>
+														{t('placeholders.preload_release')}
+													</DownloadImageLabel>
+													<Flex alignItems="center" mx={-2}>
+														<Box flex={3} mx={2}>
+															<ReleaseSelector
+																application={application}
+																selectedRelease={selectedRelease}
+																setSelectedRelease={setSelectedRelease}
+																defaultRelease={defaultRelease}
+																disabled={!preloadWithRelease || !flashSelected}
+															/>
+														</Box>
+														<Box flex={2} mx={2}>
+															<Checkbox
+																checked={preloadWithRelease}
+																label="Preload with release"
+																onChange={() =>
+																	setPreloadWithRelease(!preloadWithRelease)
+																}
+																disabled={!flashSelected}
+																tooltip={
+																	!flashSelected
+																		? 'To enable this option, select "Flash" as the download method'
+																		: ''
+																}
+															/>
+														</Box>
+													</Flex>
+												</Box>
+											</>
 										}
 									/>
 								)}

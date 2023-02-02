@@ -39,6 +39,8 @@ const translationMap = {
 	'warnings.some_fields_are_invalid': 'Some fields are invalid',
 	'warnings.image_deployed_to_docker':
 		'This image is deployed to docker so you can only download its config',
+	'warnings.option_not_available_while_preloading':
+		'This option is not available while "Preload with release" is selected',
 
 	'errors.no_tags_for_selected_itemtype':
 		'The selected {{itemType}} has no tags',
@@ -59,6 +61,7 @@ const translationMap = {
 
 	// DownloadImageModal
 	'placeholders.select_device_type': 'Select device type',
+	'placeholders.preload_release': 'Preload release',
 	'placeholders.select_os_type_status': 'Select OS type',
 	'placeholders.choose_device_type': 'Choose a device type...',
 	'placeholders.select_os_type': 'Select OS type...',

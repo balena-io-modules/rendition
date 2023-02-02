@@ -153,6 +153,7 @@ interface ImageFormProps {
 	downloadUrl: string;
 	appId: number;
 	releaseId?: number;
+	preloading: boolean;
 	rawVersion: string | null;
 	developmentMode: boolean;
 	deviceType: DeviceType;
@@ -168,6 +169,7 @@ interface ImageFormProps {
 		version: string | null,
 	) => Promise<string | undefined>;
 	modalActions?: ModalAction[];
+	setFlashSelected: (selected: boolean) => void;
 	configurationComponent: React.ReactNode;
 }
 
@@ -175,6 +177,7 @@ export const ImageForm = ({
 	downloadUrl,
 	appId,
 	releaseId,
+	preloading,
 	rawVersion,
 	developmentMode,
 	deviceType,
@@ -184,6 +187,7 @@ export const ImageForm = ({
 	downloadConfig,
 	getDownloadSize,
 	modalActions,
+	setFlashSelected,
 	configurationComponent,
 }: ImageFormProps) => {
 	const { t } = useTranslation();
@@ -236,9 +240,11 @@ export const ImageForm = ({
 				formElement?.current?.submit();
 			},
 			icon: <FontAwesomeIcon icon={faDownload} />,
-			disabled: hasDockerImageDownload,
+			disabled: hasDockerImageDownload || preloading,
 			tooltip: hasDockerImageDownload
 				? t('warnings.image_deployed_to_docker')
+				: preloading
+				? t('warnings.option_not_available_while_preloading')
 				: '',
 			label: `${t('actions.download_balenaos')} ${
 				rawVersion && downloadSize ? ` (~${downloadSize})` : ''
@@ -258,6 +264,10 @@ export const ImageForm = ({
 				}
 				startDownload(true);
 			},
+			disabled: preloading,
+			tooltip: preloading
+				? t('warnings.option_not_available_while_preloading')
+				: '',
 			icon: <FontAwesomeIcon icon={faDownload} />,
 			label: t('actions.download_configuration_file_only'),
 		});
@@ -266,6 +276,14 @@ export const ImageForm = ({
 	const [selectedActionLabel, setSelectedActionLabel] = React.useState<string>(
 		actions.find((a) => !a.disabled)?.label || actions[0].label,
 	);
+
+	React.useEffect(() => {
+		if (selectedActionLabel === 'Flash') {
+			setFlashSelected(true);
+		} else {
+			setFlashSelected(false);
+		}
+	}, [selectedActionLabel]);
 
 	const startDownload = (downloadConfigOnly: boolean) => {
 		if (typeof onDownloadStart === 'function') {

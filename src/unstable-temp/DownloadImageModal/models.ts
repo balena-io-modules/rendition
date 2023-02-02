@@ -69,6 +69,13 @@ export interface Application {
 	app_name: string;
 	slug: string;
 	uuid: string;
+	owns__release: Release[];
+	should_be_running__release: Release | null;
+}
+
+export interface Release {
+	id: number;
+	raw_version: string;
 }
 
 export interface DeviceTypeInstructions {
