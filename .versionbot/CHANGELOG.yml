@@ -1,4 +1,19 @@
 - commits:
+    - subject: Fix server side checked items getter and fix useRequest when pagination
+        is a dependency
+      hash: a0e32709ed4ef79a7033abe9a4579d5a75720ef1
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrea Rosci <andrear@balena.io>
+        signed-off-by: Andrea Rosci <andrear@balena.io>
+      author: JSReds
+      nested: []
+  version: 34.8.1
+  title: ""
+  date: 2023-02-02T12:26:10.997Z
+- commits:
     - subject: Add Layout component
       hash: 7ea3d5d4bd46fab976bc8aa46d1490bf85f2cf47
       body: ""
