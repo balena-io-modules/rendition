@@ -360,15 +360,22 @@ export class TableBase<T extends {}> extends React.Component<
 	);
 
 	private getSelectedRows = (selectedRows: T[]) => {
-		const { rowKey, data } = this.props;
-
-		const selectedKeys = this.$getSelectedIdentifiersSet(selectedRows, rowKey);
-		const checkedItems = this.$getValidatedCheckedItems(
-			data,
-			selectedKeys,
-			rowKey,
-			selectedRows,
-		);
+		const { rowKey, data, pagination } = this.props;
+		let checkedItems;
+		if (!pagination?.serverSide) {
+			const selectedKeys = this.$getSelectedIdentifiersSet(
+				selectedRows,
+				rowKey,
+			);
+			checkedItems = this.$getValidatedCheckedItems(
+				data,
+				selectedKeys,
+				rowKey,
+				selectedRows,
+			);
+		} else {
+			checkedItems = selectedRows;
+		}
 		const checkedState = this.howManyRowsChecked(checkedItems);
 
 		return { checkedItems, checkedState };

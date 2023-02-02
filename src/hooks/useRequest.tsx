@@ -35,7 +35,9 @@ export const useRequest = <
 	TResult extends ResolvableReturnType<TFn>,
 >(
 	action: TFn,
-	deps: React.DependencyList,
+	deps:
+		| React.DependencyList
+		| Partial<Record<'persist' | 'reset', React.DependencyList>>,
 	options: UseRequestOptions,
 ) => {
 	const { polling, pollInterval, stopExecution } = options;
@@ -44,6 +46,11 @@ export const useRequest = <
 	const [data, setData] = React.useState<TResult>();
 	const [isVisible, setIsVisible] = React.useState(true);
 	const pollRef = React.useRef<Poll>();
+	// Array.isArray does not let TS infer properly for readonly arrays
+	const loadDataDeps =
+		'persist' in deps || 'reset' in deps
+			? [...(deps.persist ?? []), ...(deps.reset ?? [])]
+			: (deps as React.DependencyList);
 
 	React.useEffect(() => {
 		const handleVisibilityChange = () => setIsVisible(!document.hidden);
@@ -66,7 +73,7 @@ export const useRequest = <
 		} finally {
 			setLoading(false);
 		}
-	}, deps);
+	}, loadDataDeps);
 
 	const forcePoll = React.useCallback<ForcePoll>(() => {
 		setLoading(true);
@@ -103,8 +110,17 @@ export const useRequest = <
 			return;
 		}
 		setData(undefined);
+	}, [
+		...('reset' in deps ? deps.reset ?? [] : (deps as React.DependencyList)),
+		polling,
+	]);
+
+	React.useEffect(() => {
+		if (!polling) {
+			return;
+		}
 		forcePoll();
-	}, [...deps, polling]);
+	}, loadDataDeps);
 
 	const result = [data, loading, error, forcePoll] as UseRequestResult<TResult>;
 	result.data = data;
