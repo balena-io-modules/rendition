@@ -1,4 +1,16 @@
 - commits:
+    - subject: "Layout: Fix ErrorBoundary property typing"
+      hash: d15754e591839db36819da139213d6f0a1721e32
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: myarmolinsky
+      nested: []
+  version: 34.8.2
+  title: ""
+  date: 2023-02-07T15:50:51.259Z
+- commits:
     - subject: Fix server side checked items getter and fix useRequest when pagination
         is a dependency
       hash: a0e32709ed4ef79a7033abe9a4579d5a75720ef1
