@@ -24,7 +24,7 @@ export interface LayoutProps {
 		  ) => JSX.Element);
 	contentHeader?: JSX.Element;
 	children: JSX.Element;
-	ErrorBoundary?: any; // TODO
+	ErrorBoundary?: React.ComponentType<{ children: React.ReactNode }>;
 	isSidebarCollapsed?: boolean;
 	setIsSidebarCollapsed?: (state: boolean) => void;
 }
