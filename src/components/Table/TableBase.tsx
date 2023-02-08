@@ -413,17 +413,18 @@ export class TableBase<T extends {}> extends React.Component<
 					? data.filter((r) => !disabledRowsSet.has(r[rowKey]))
 					: data.slice();
 		}
-		if (onCheck) {
-			onCheck(checkedItems, this.state.checkedState);
-		}
 
-		this.setState(({ checkedState }) => ({
-			lastSelected: null,
-			checkedState: pagination?.serverSide
+		this.setState(({ checkedState }) => {
+			const newCheckedState = pagination?.serverSide
 				? this.toggleCheckedState(checkedState)
-				: this.howManyRowsChecked(checkedItems!),
-			checkedItems,
-		}));
+				: this.howManyRowsChecked(checkedItems!);
+			onCheck?.(checkedItems, newCheckedState);
+			return {
+				lastSelected: null,
+				checkedState: newCheckedState,
+				checkedItems,
+			};
+		});
 	};
 
 	public toggleChecked = (e: React.ChangeEvent<HTMLInputElement>) => {
