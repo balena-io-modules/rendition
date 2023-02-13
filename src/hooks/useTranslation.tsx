@@ -39,6 +39,8 @@ const translationMap = {
 	'warnings.some_fields_are_invalid': 'Some fields are invalid',
 	'warnings.image_deployed_to_docker':
 		'This image is deployed to docker so you can only download its config',
+	'warnings.will_download_dotech':
+		'this is a preloaded .etch file which requires balenaEtcher to flash',
 	'warnings.option_not_available_while_preloading':
 		'This option is not available while "Preload with release" is selected',
 

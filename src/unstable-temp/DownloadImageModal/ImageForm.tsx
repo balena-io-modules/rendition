@@ -240,14 +240,14 @@ export const ImageForm = ({
 				formElement?.current?.submit();
 			},
 			icon: <FontAwesomeIcon icon={faDownload} />,
-			disabled: hasDockerImageDownload || preloading,
+			disabled: hasDockerImageDownload,
 			tooltip: hasDockerImageDownload
 				? t('warnings.image_deployed_to_docker')
 				: preloading
-				? t('warnings.option_not_available_while_preloading')
+				? t('warnings.will_download.etch')
 				: '',
 			label: `${t('actions.download_balenaos')} ${
-				rawVersion && downloadSize ? ` (~${downloadSize})` : ''
+				rawVersion && downloadSize && !preloading ? ` (~${downloadSize})` : ''
 			}`,
 			type: 'submit',
 		},
