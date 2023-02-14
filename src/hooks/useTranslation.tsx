@@ -89,6 +89,7 @@ const translationMap = {
 		'Your device should appear in your application dashboard within a few minutes. Have fun!',
 	'actions.download_configuration_file': 'Download configuration file',
 	'actions.download_balenaos': 'Download balenaOS',
+	'actions.download_dotech': 'Download preloaded .etch',
 	'actions.download_configuration_file_only':
 		'Download configuration file only',
 	'actions.flash': 'Flash',

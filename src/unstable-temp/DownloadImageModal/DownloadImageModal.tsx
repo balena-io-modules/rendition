@@ -326,7 +326,7 @@ export const UnstableTempDownloadImageModal = ({
 																selectedRelease={selectedRelease}
 																setSelectedRelease={setSelectedRelease}
 																defaultRelease={defaultRelease}
-																disabled={!preloadWithRelease || !flashSelected}
+																disabled={!preloadWithRelease}
 															/>
 														</Box>
 														<Box flex={2} mx={2}>
@@ -335,12 +335,6 @@ export const UnstableTempDownloadImageModal = ({
 																label="Preload with release"
 																onChange={() =>
 																	setPreloadWithRelease(!preloadWithRelease)
-																}
-																disabled={!flashSelected}
-																tooltip={
-																	!flashSelected
-																		? 'To enable this option, select "Flash" as the download method'
-																		: ''
 																}
 															/>
 														</Box>
