@@ -169,7 +169,6 @@ interface ImageFormProps {
 		version: string | null,
 	) => Promise<string | undefined>;
 	modalActions?: ModalAction[];
-	setFlashSelected: (selected: boolean) => void;
 	configurationComponent: React.ReactNode;
 }
 
@@ -187,7 +186,6 @@ export const ImageForm = ({
 	downloadConfig,
 	getDownloadSize,
 	modalActions,
-	setFlashSelected,
 	configurationComponent,
 }: ImageFormProps) => {
 	const { t } = useTranslation();
@@ -291,14 +289,6 @@ export const ImageForm = ({
 	const [selectedActionLabel, setSelectedActionLabel] = React.useState<string>(
 		actions.find((a) => !a.disabled)?.label || actions[0].label,
 	);
-
-	React.useEffect(() => {
-		if (selectedActionLabel === 'Flash') {
-			setFlashSelected(true);
-		} else {
-			setFlashSelected(false);
-		}
-	}, [selectedActionLabel]);
 
 	const startDownload = (downloadConfigOnly: boolean) => {
 		if (typeof onDownloadStart === 'function') {

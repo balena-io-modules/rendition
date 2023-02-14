@@ -160,7 +160,6 @@ export const UnstableTempDownloadImageModal = ({
 	const [selectedRelease, setSelectedRelease] =
 		React.useState<Release>(defaultRelease);
 	const [preloadWithRelease, setPreloadWithRelease] = React.useState(false);
-	const [flashSelected, setFlashSelected] = React.useState(true);
 
 	const [deviceTypeHasEsr, setDeviceTypeHasEsr] = React.useState<
 		Dictionary<boolean>
@@ -280,7 +279,6 @@ export const UnstableTempDownloadImageModal = ({
 										rawVersion={rawVersion}
 										developmentMode={developmentMode}
 										modalActions={modalActions}
-										setFlashSelected={setFlashSelected}
 										authToken={authToken}
 										{...(downloadConfig && {
 											downloadConfig: ({
