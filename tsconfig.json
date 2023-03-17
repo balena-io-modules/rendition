@@ -19,7 +19,6 @@
     "allowJs": true,
     "esModuleInterop": true,
     "baseUrl": ".",
-    "keyofStringsOnly": true,
     "jsx": "react",
     "lib": [
       "es2019",

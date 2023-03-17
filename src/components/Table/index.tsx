@@ -163,14 +163,14 @@ type TableColumnInternal<T> = TableBaseColumn<T> & TableColumnState;
 
 const getTagTableColumn = <T extends {}>(
 	columnState: TagTableColumnState,
-	tagField: keyof T,
+	tagField: Extract<keyof T, string>,
 ) => {
 	const column: TableColumnInternal<T> = {
 		...columnState,
 		// this field path doesn't exist
 		// but we need to define something unique
 		// for the table to work
-		field: `${tagField}.${columnState.tagKey}` as keyof T,
+		field: `${tagField}.${columnState.tagKey}` as Extract<keyof T, string>,
 		cellAttributes: tagCellAttributes,
 	};
 	column.sortable = (a: T, b: T) => {
@@ -236,7 +236,7 @@ const normalizeTableColumn = <T extends {}>(
 };
 
 const getAllTagsTableColumn = <T extends {}>(
-	tagField: keyof T,
+	tagField: Extract<keyof T, string>,
 	enableCustomColumns?: boolean,
 ) =>
 	normalizeTableColumn(
@@ -323,7 +323,7 @@ const saveColumnPreferences = (
 const applyColumnPreferences = <T extends {}>(
 	columns: Array<TableColumnInternal<T>>,
 	loadedColumns: TableColumnState[] | undefined,
-	tagField: keyof T | undefined,
+	tagField: Extract<keyof T, string> | undefined,
 	enableCustomColumns?: boolean,
 ): Array<TableColumnInternal<T>> => {
 	if (!loadedColumns?.length) {
@@ -398,7 +398,7 @@ export interface TableProps<T> extends TableBaseProps<T> {
 	/** An array of column objects, as described above */
 	columns: Array<TableColumn<T>>;
 	/** Set a field for tags */
-	tagField?: keyof T;
+	tagField?: Extract<keyof T, string>;
 	innerRef?: React.LegacyRef<
 		React.Component<
 			TableProps<T> & { enableCustomColumns?: boolean | undefined },
