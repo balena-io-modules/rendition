@@ -1,4 +1,18 @@
 - commits:
+    - subject: "Table: Restrict the tagField to be a string key of the entity type"
+      hash: 0150ab12d491adc9dc41c8df01779006f4520759
+      body: |
+        Prepares us for TS 5.0 which deprecates
+        keyofStringsOnly.
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Thodoris Greasidis
+      nested: []
+  version: 34.8.4
+  title: ""
+  date: 2023-03-17T10:20:26.706Z
+- commits:
     - subject: Fix onCheck checked state
       hash: 6ba79b035e0acffd772ffc3a3688215f79408a7d
       body: ""
