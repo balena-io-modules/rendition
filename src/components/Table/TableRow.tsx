@@ -26,7 +26,7 @@ export interface TableBaseColumn<T> {
 	cellAttributes?:
 		| React.AnchorHTMLAttributes<HTMLAnchorElement>
 		| ((value: any, row: T) => React.AnchorHTMLAttributes<HTMLAnchorElement>);
-	field: keyof T;
+	field: Extract<keyof T, string>;
 	key?: string;
 	icon?: string;
 	label?: string | JSX.Element;
