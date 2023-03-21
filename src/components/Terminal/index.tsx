@@ -1,18 +1,11 @@
 import cloneDeep from 'lodash/cloneDeep';
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 import { ITerminalOptions, Terminal as Xterm } from 'xterm';
 import { FitAddon } from 'xterm-addon-fit';
-import { Theme as ThemeType } from '../../common-types';
-// TODO: Remove explicit import and use withTheme. There are some issues with the resulting typings when using withTheme, therefore the current workaround.
-import theme from '../../theme';
+import type { Theme as ThemeType } from '../../common-types';
 import defaultXtermStyle from './XTermDefaultStyle';
 import { Flex } from '../Flex';
-// TODO: Drop this in the next major, since TS now has the correct types and this was supposed to only be used as a type-only import.
-import { ResizeObserver as ResizeObserverPonyfill } from 'resize-observer';
-// TODO: Drop this in favor of the native TS ResizeObserver type once we bump to 4.2
-// See: https://github.com/microsoft/TypeScript/commit/16031bc429305e5daabf263f208678a6729a161e
-import type { ResizeObserver as ResizeObserverType } from 'resize-observer';
 
 const TtyContainer = styled(Flex)`
 	position: relative;
@@ -113,18 +106,21 @@ const TtyInner = styled(Flex)`
  *
  * [View story source](https://github.com/balena-io-modules/rendition/blob/master/src/components/Terminal/Terminal.stories.tsx)
  */
-export class Terminal extends React.Component<ThemedTerminalProps, {}> {
+
+class BaseTerminal extends React.Component<ThemedTerminalProps, {}> {
 	public readonly tty: Xterm & { fitAddon: FitAddon };
 	// Used as the element to mount XTERM into
 	private mountElement: HTMLDivElement | null;
 	private termConfig: ITerminalOptions;
-	private resizeObserver: ResizeObserverType | null;
+	private resizeObserver: ResizeObserver | null;
 
 	constructor(props: ThemedTerminalProps) {
 		super(props);
 		this.termConfig = Object.assign({}, props.config, {
 			cursorBlink: false,
-			fontFamily: props.theme ? props.theme.monospace : theme.monospace,
+			fontFamily: props.theme
+				? props.theme.monospace
+				: this.props.theme.monospace,
 			lineHeight: 1.4,
 			theme: {
 				background: '#343434',
@@ -166,7 +162,7 @@ export class Terminal extends React.Component<ThemedTerminalProps, {}> {
 			const ResizeObserverCtor =
 				typeof nativeResizeObserver === 'function'
 					? nativeResizeObserver
-					: ResizeObserverPonyfill;
+					: ResizeObserver;
 			if (typeof ResizeObserverCtor === 'function') {
 				const resizeObserver = new ResizeObserverCtor(() => {
 					this.resize();
@@ -242,6 +238,10 @@ export class Terminal extends React.Component<ThemedTerminalProps, {}> {
 	}
 }
 
+export const Terminal = withTheme(BaseTerminal) as React.FC<
+	React.PropsWithRef<TerminalProps>
+>;
+
 export interface TerminalProps {
 	/** An existing `Terminal.tty` instance to use instead of creating a new one */
 	ttyInstance?: (Xterm & { fitAddon: FitAddon }) | null;
@@ -256,5 +256,5 @@ export interface TerminalProps {
 }
 
 interface ThemedTerminalProps extends TerminalProps {
-	theme?: ThemeType;
+	theme: ThemeType;
 }

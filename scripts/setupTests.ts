@@ -4,7 +4,9 @@ import { JSDOM } from 'jsdom';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
+const jsdom = new JSDOM('<!doctype html><html><body></body></html>', {
+	url: 'http://localhost/',
+});
 const { window: $window } = jsdom;
 
 function copyProps(src: object, target: Record<string, any>) {
@@ -46,8 +48,7 @@ global.navigator = {
 	userAgent: 'node.js',
 };
 global.requestAnimationFrame = function (callback) {
-	// @ts-expect-error This should have been using the browser typings.
-	return setTimeout(callback, 0) as number;
+	return setTimeout(callback, 0) as unknown as number;
 };
 global.cancelAnimationFrame = function (id) {
 	clearTimeout(id);

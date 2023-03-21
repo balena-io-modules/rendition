@@ -40,7 +40,10 @@ class Logger extends React.Component<any, any> {
 
 	render() {
 		return (
-			<Terminal ref={(term) => (this.term = term)} {...this.props.termProps} />
+			<Terminal
+				ref={(term: any) => (this.term = term)}
+				{...this.props.termProps}
+			/>
 		);
 	}
 }
@@ -116,7 +119,10 @@ class InteractiveTerm extends React.Component<any, any> {
 
 	render() {
 		return (
-			<Terminal ref={(term) => (this.term = term)} {...this.props.termProps} />
+			<Terminal
+				ref={(term: any) => (this.term = term)}
+				{...this.props.termProps}
+			/>
 		);
 	}
 }

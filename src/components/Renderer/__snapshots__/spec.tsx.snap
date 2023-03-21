@@ -1,65 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renderer component A Heading widget 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c5 {
-  font-weight: normal;
-}
-
-.c6 {
-  margin: 0;
-  font-size: 34px;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <h2
-        class="c5 c6"
+        class="sc-dCFHLb lpvsqF sc-lcIPJg nZkps"
       >
         Something Important
       </h2>
@@ -69,74 +19,15 @@ exports[`Renderer component A Heading widget 1`] = `
 `;
 
 exports[`Renderer component A HighlightedName widget 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c5 {
-  padding: 8px;
-  font-size: 14px;
-  color: #2A506F;
-  background-color: #222;
-}
-
-.c6 {
-  display: inline-block;
-  border-radius: 2px;
-  line-height: 1;
-}
-
-.c7 {
-  color: white;
-  background-color: #222;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <span
-        class="c5 c6 c7"
+        class="sc-hmdomO ejALKt sc-jsJBEP ihMQIZ sc-jMakVo cvuYgZ sc-iMTnTL ioTtgK"
       >
         Jellyfish
       </span>
@@ -146,73 +37,15 @@ exports[`Renderer component A HighlightedName widget 1`] = `
 `;
 
 exports[`Renderer component A Link widget 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c5 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  opacity: 1;
-  display: inline-block;
-}
-
-.c5:active,
-.c5:hover {
-  color: hsl(196.29999999999995,100%,37.5%);
-}
-
-.c6 {
-  color: #00AEEF;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <a
-        class="c5 c6"
+        class="sc-bbSZdi cjkLKP sc-fBWQRz HTGQf"
         color="primary.main"
         href="https://trello.com/b/lEIoUMKY"
         rel="noopener"
@@ -226,126 +59,22 @@ exports[`Renderer component A Link widget 1`] = `
 `;
 
 exports[`Renderer component A List widget 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c7 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  opacity: 1;
-  display: inline-block;
-}
-
-.c7:active,
-.c7:hover {
-  color: hsl(196.29999999999995,100%,37.5%);
-}
-
-.c8 {
-  color: #00AEEF;
-}
-
-.c5 {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.c5 > li {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c5 > li:first-child {
-  margin-top: 0;
-}
-
-.c5 > li:last-child {
-  margin-bottom: 0;
-}
-
-.c5 > li:before {
-  text-align: center;
-}
-
-.c6 {
-  counter-reset: ordered-list-counter;
-}
-
-.c6 > li {
-  margin: 16px 0;
-  counter-increment: ordered-list-counter;
-}
-
-.c6 > li:before {
-  content: counter(ordered-list-counter);
-  margin-right: 8px;
-  background: #1496E1;
-  height: 1.5em;
-  width: 1.5em;
-  min-width: 1.5em;
-  line-height: 1.5em;
-  color: white;
-  border-radius: 50%;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <ol
-        class="c5 c6 "
+        class="sc-hwdzOV sc-jaXxmE bBtbcd exfyEY sc-jGKxIK hmzTLV"
       >
         <li>
           <div
-            class="c2 c3 c4 "
+            class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
           >
             <a
-              class="c7 c8"
+              class="sc-bbSZdi cjkLKP sc-fBWQRz HTGQf"
               color="primary.main"
               href="https://jel.ly.fish/user"
             >
@@ -355,10 +84,10 @@ exports[`Renderer component A List widget 1`] = `
         </li>
         <li>
           <div
-            class="c2 c3 c4 "
+            class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
           >
             <a
-              class="c7 c8"
+              class="sc-bbSZdi cjkLKP sc-fBWQRz HTGQf"
               color="primary.main"
               href="https://jel.ly.fish/org"
             >
@@ -368,10 +97,10 @@ exports[`Renderer component A List widget 1`] = `
         </li>
         <li>
           <div
-            class="c2 c3 c4 "
+            class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
           >
             <a
-              class="c7 c8"
+              class="sc-bbSZdi cjkLKP sc-fBWQRz HTGQf"
               color="primary.main"
               href="https://jel.ly.fish/issue"
             >
@@ -386,141 +115,39 @@ exports[`Renderer component A List widget 1`] = `
 `;
 
 exports[`Renderer component A ProgressBar widget 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c5 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c6 {
-  margin-right: 8px;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.c7 {
-  font-weight: 600;
-}
-
-.c11 {
-  position: relative;
-  height: 38px;
-  overflow: hidden;
-  background: #527699;
-  -webkit-transition: width linear 250ms;
-  transition: width linear 250ms;
-  text-align: center;
-}
-
-.c10 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  text-align: center;
-  color: #000;
-  text-shadow: 0 0 3px rgba(255,255,255,0.5);
-}
-
-.c12 {
-  text-align: center;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  top: 0;
-  text-shadow: 0 0 3px rgba(0,0,0,0.5);
-  -webkit-transition: width linear 250ms;
-  transition: width linear 250ms;
-}
-
-.c8 {
-  position: relative;
-  border-radius: 3px;
-  height: 16px;
-  line-height: 16px;
-  background: #DDE1f0;
-  font-size: 0.6em;
-  overflow: hidden;
-}
-
-.c9 {
-  color: #fff;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq hOYtMR sc-kAyceB fnnwQO sc-dAbbOL iHGMOf sc-fiCwlc kLagzx"
     >
       <div
-        class="c5 c6"
+        class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
       >
         <div
-          class="c7 "
+          class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
         >
           Progress
         </div>
       </div>
       <div
-        class="c8 c9"
+        class="sc-ktJbId lWXYk sc-gmgFlS jsiayY"
         color="#fff"
         type="tertiary"
       >
         <div
-          class="c10"
+          class="sc-hZDyAQ fUjDGn"
         >
           83
           %
         </div>
         <div
-          class="c11"
+          class="sc-guJBdh fLOTyc"
           style="width: 82.63512353%;"
         >
           <div
-            class="c12"
+            class="sc-fTFjTM eAkYdP"
             style="width: 121.0139172402832%;"
           >
             83
@@ -534,101 +161,26 @@ exports[`Renderer component A ProgressBar widget 1`] = `
 `;
 
 exports[`Renderer component A Tag widget 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c6 {
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c8 {
-  white-space: pre;
-}
-
-.c10 {
-  font-weight: 600;
-}
-
-.c9 {
-  font-size: 12px;
-  color: #1496E1;
-}
-
-.c7 {
-  background-color: #e8f5fc;
-  border: 1px solid #1496E1;
-  border-radius: 2px;
-  line-height: 1.5;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c5 "
+        class="sc-gsFSXq gghMVi sc-kAyceB jxvYmy sc-dAbbOL fWzuWL sc-ggpjZQ kLyInQ"
       >
         <div
-          class="c2 c6 c5 c7"
+          class="sc-gsFSXq gghMVi sc-kAyceB csUDXt sc-dAbbOL sc-dZoequ fWzuWL czgoIE"
         >
           <div
-            class="c8 c9"
+            class="sc-hmdomO eoXVnh sc-bXCLTC fyhfz"
           >
             subscription: 
           </div>
           <div
-            class="c10 c9"
+            class="sc-hmdomO jLJFWQ sc-bXCLTC fyhfz"
           >
             premium
           </div>
@@ -640,72 +192,15 @@ exports[`Renderer component A Tag widget 1`] = `
 `;
 
 exports[`Renderer component A badge widget 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c5 {
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 12px;
-  padding-right: 12px;
-  font-size: 12px;
-  color: #0650E5;
-  background-color: #D7E4FE;
-}
-
-.c6 {
-  display: inline-block;
-  border-radius: 1em;
-  line-height: 1;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <span
-        class="c5 c6 "
+        class="sc-hmdomO ejALKt sc-jsJBEP chzSEm sc-bmzYkS jUBrMa sc-iHGNWf cVnbHI"
       >
         closed
       </span>
@@ -715,83 +210,29 @@ exports[`Renderer component A badge widget 1`] = `
 `;
 
 exports[`Renderer component A boolean 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c5 {
-  margin-right: 8px;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c6 {
-  font-weight: 600;
-}
-
-.c7 {
-  font-size: 85%;
-  color: #527699;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c5"
+        class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
       >
         <div
-          class="c6 "
+          class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
         >
           Field Title
         </div>
         <div
-          class="c7"
+          class="sc-hmdomO ejALKt sc-bXCLTC jcOeME"
         >
           Field description
         </div>
       </div>
       <div
-        class=""
+        class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
       >
         true
       </div>
@@ -801,220 +242,30 @@ exports[`Renderer component A boolean 1`] = `
 `;
 
 exports[`Renderer component A button group widget 1`] = `
-.c7 {
-  display: inline-block;
-  box-sizing: border-box;
-  cursor: pointer;
-  font: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  background: transparent;
-  overflow: visible;
-  text-transform: none;
-  border: 1px solid #2A506F;
-  border-radius: 20px;
-  color: #444444;
-  padding: 4px 30px;
-  font-size: 14px;
-  line-height: 1.5;
-  -webkit-transition-property: color,background-color,border-color,box-shadow;
-  transition-property: color,background-color,border-color,box-shadow;
-  -webkit-transition-duration: 0.1s;
-  transition-duration: 0.1s;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-}
-
-.c7:hover {
-  box-shadow: 0px 0px 0px 2px #2A506F;
-}
-
-.c7:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #00AEEF;
-}
-
-.c7:focus > circle,
-.c7:focus > ellipse,
-.c7:focus > line,
-.c7:focus > path,
-.c7:focus > polygon,
-.c7:focus > polyline,
-.c7:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #00AEEF;
-}
-
-.c7:focus::-moz-focus-inner {
-  border: 0;
-}
-
-.c7:focus:not(:focus-visible) {
-  outline: none;
-  box-shadow: none;
-}
-
-.c7:focus:not(:focus-visible) > circle,
-.c7:focus:not(:focus-visible) > ellipse,
-.c7:focus:not(:focus-visible) > line,
-.c7:focus:not(:focus-visible) > path,
-.c7:focus:not(:focus-visible) > polygon,
-.c7:focus:not(:focus-visible) > polyline,
-.c7:focus:not(:focus-visible) > rect {
-  outline: none;
-  box-shadow: none;
-}
-
-.c7:focus:not(:focus-visible)::-moz-focus-inner {
-  border: 0;
-}
-
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c8 {
-  font-weight: 600;
-  font-size: 14px;
-  height: 38px;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c8 svg {
-  color: inherit !important;
-  font-size: 0.925em;
-}
-
-.c8:disabled {
-  cursor: not-allowed;
-}
-
-.c9 {
-  color: #2A506F;
-  border-color: #2A506F;
-}
-
-.c9:hover:enabled,
-.c9:focus:enabled,
-.c9:active:enabled {
-  box-shadow: none;
-  background: #2A506F;
-  border-color: #2A506F;
-  color: white;
-  opacity: initial;
-}
-
-.c9:hover:enabled svg,
-.c9:focus:enabled svg,
-.c9:active:enabled svg {
-  color: white !important;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c6 > *:first-child {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  padding-left: 16px;
-}
-
-.c6 > *:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  padding-right: 16px;
-}
-
-.c6 > *:not(:last-child) {
-  border-right: 0;
-}
-
-.c6 > *:not(:last-child):not(:first-child) {
-  border-radius: 0;
-}
-
-.c6 > *:hover {
-  z-index: 1;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c5 c6"
+        class="sc-gsFSXq gghMVi sc-kAyceB jxvYmy sc-dAbbOL sc-dtInlm fWzuWL hVyuVa"
       >
         <a
-          class="c7 c8 c9 "
+          class="StyledButton-sc-323bzc-0 ldhSDK sc-jEACwC sc-dLMFU jeSgeV jIsVue sc-ikkxIA eUBNFQ"
           href="https://jel.ly.fish/item 1"
         >
           item 1
         </a>
         <a
-          class="c7 c8 c9 "
+          class="StyledButton-sc-323bzc-0 ldhSDK sc-jEACwC sc-dLMFU jeSgeV jIsVue sc-ikkxIA eUBNFQ"
           href="https://jel.ly.fish/item 2"
         >
           item 2
         </a>
         <a
-          class="c7 c8 c9 "
+          class="StyledButton-sc-323bzc-0 ldhSDK sc-jEACwC sc-dLMFU jeSgeV jIsVue sc-ikkxIA eUBNFQ"
           href="https://jel.ly.fish/item 3"
         >
           item 3
@@ -1026,176 +277,15 @@ exports[`Renderer component A button group widget 1`] = `
 `;
 
 exports[`Renderer component A button widget 1`] = `
-.c5 {
-  display: inline-block;
-  box-sizing: border-box;
-  cursor: pointer;
-  font: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  background: transparent;
-  overflow: visible;
-  text-transform: none;
-  border: 1px solid #00AEEF;
-  border-radius: 20px;
-  color: #444444;
-  padding: 4px 30px;
-  font-size: 14px;
-  line-height: 1.5;
-  background-color: #00AEEF;
-  color: #444444;
-  border-radius: 20px;
-  -webkit-transition-property: color,background-color,border-color,box-shadow;
-  transition-property: color,background-color,border-color,box-shadow;
-  -webkit-transition-duration: 0.1s;
-  transition-duration: 0.1s;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-}
-
-.c5:hover {
-  box-shadow: 0px 0px 0px 2px #00AEEF;
-}
-
-.c5:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #00AEEF;
-}
-
-.c5:focus > circle,
-.c5:focus > ellipse,
-.c5:focus > line,
-.c5:focus > path,
-.c5:focus > polygon,
-.c5:focus > polyline,
-.c5:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #00AEEF;
-}
-
-.c5:focus::-moz-focus-inner {
-  border: 0;
-}
-
-.c5:focus:not(:focus-visible) {
-  outline: none;
-  box-shadow: none;
-}
-
-.c5:focus:not(:focus-visible) > circle,
-.c5:focus:not(:focus-visible) > ellipse,
-.c5:focus:not(:focus-visible) > line,
-.c5:focus:not(:focus-visible) > path,
-.c5:focus:not(:focus-visible) > polygon,
-.c5:focus:not(:focus-visible) > polyline,
-.c5:focus:not(:focus-visible) > rect {
-  outline: none;
-  box-shadow: none;
-}
-
-.c5:focus:not(:focus-visible)::-moz-focus-inner {
-  border: 0;
-}
-
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c6 {
-  font-weight: 600;
-  font-size: 14px;
-  height: 38px;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c6 svg {
-  color: inherit !important;
-  font-size: 0.925em;
-}
-
-.c6:disabled {
-  cursor: not-allowed;
-}
-
-.c7 {
-  color: white;
-}
-
-.c7:hover:enabled,
-.c7:focus:enabled,
-.c7:active:enabled {
-  box-shadow: none;
-  background: hsl(196.29999999999995,100%,37.5%);
-  border-color: hsl(196.29999999999995,100%,37.5%);
-  color: white;
-  opacity: initial;
-}
-
-.c7:hover:enabled svg,
-.c7:focus:enabled svg,
-.c7:active:enabled svg {
-  color: white !important;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <a
-        class="c5 c6 c7 "
+        class="StyledButton-sc-323bzc-0 dArTnk sc-jEACwC sc-cPiKLX jeSgeV kENxWu sc-ikkxIA eUBNFQ"
         href="http://jel.ly.fish/issue"
         target="_blank"
       >
@@ -1207,84 +297,18 @@ exports[`Renderer component A button widget 1`] = `
 `;
 
 exports[`Renderer component A color widget 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c5 {
-  width: 100px;
-  height: 100px;
-  color: #FFF;
-  background-color: #ff0000;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c5 c6"
+        class="sc-gsFSXq gghMVi sc-kAyceB kiWfLG sc-dAbbOL RsEAz"
       >
         <div
-          class=""
+          class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
         >
           #ff0000
         </div>
@@ -1295,83 +319,29 @@ exports[`Renderer component A color widget 1`] = `
 `;
 
 exports[`Renderer component A default value 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c5 {
-  margin-right: 8px;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c6 {
-  font-weight: 600;
-}
-
-.c7 {
-  font-size: 85%;
-  color: #527699;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c5"
+        class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
       >
         <div
-          class="c6 "
+          class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
         >
           Field Title
         </div>
         <div
-          class="c7"
+          class="sc-hmdomO ejALKt sc-bXCLTC jcOeME"
         >
           Field description
         </div>
       </div>
       <div
-        class=""
+        class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
       />
     </div>
   </div>
@@ -1379,222 +349,25 @@ exports[`Renderer component A default value 1`] = `
 `;
 
 exports[`Renderer component A drop-down button widget 1`] = `
-.c6 {
-  display: inline-block;
-  box-sizing: border-box;
-  cursor: pointer;
-  font: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  background: transparent;
-  overflow: visible;
-  text-transform: none;
-  border: 1px solid #2A506F;
-  border-radius: 20px;
-  color: #444444;
-  padding: 4px 30px;
-  font-size: 14px;
-  line-height: 1.5;
-  -webkit-transition-property: color,background-color,border-color,box-shadow;
-  transition-property: color,background-color,border-color,box-shadow;
-  -webkit-transition-duration: 0.1s;
-  transition-duration: 0.1s;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-}
-
-.c6:hover {
-  box-shadow: 0px 0px 0px 2px #2A506F;
-}
-
-.c6:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #00AEEF;
-}
-
-.c6:focus > circle,
-.c6:focus > ellipse,
-.c6:focus > line,
-.c6:focus > path,
-.c6:focus > polygon,
-.c6:focus > polyline,
-.c6:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #00AEEF;
-}
-
-.c6:focus::-moz-focus-inner {
-  border: 0;
-}
-
-.c6:focus:not(:focus-visible) {
-  outline: none;
-  box-shadow: none;
-}
-
-.c6:focus:not(:focus-visible) > circle,
-.c6:focus:not(:focus-visible) > ellipse,
-.c6:focus:not(:focus-visible) > line,
-.c6:focus:not(:focus-visible) > path,
-.c6:focus:not(:focus-visible) > polygon,
-.c6:focus:not(:focus-visible) > polyline,
-.c6:focus:not(:focus-visible) > rect {
-  outline: none;
-  box-shadow: none;
-}
-
-.c6:focus:not(:focus-visible)::-moz-focus-inner {
-  border: 0;
-}
-
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c11 {
-  margin-right: 8px;
-}
-
-.c7 {
-  font-weight: 600;
-  font-size: 14px;
-  height: 38px;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c7 svg {
-  color: inherit !important;
-  font-size: 0.925em;
-}
-
-.c7:disabled {
-  cursor: not-allowed;
-}
-
-.c8 {
-  color: #2A506F;
-  border-color: #2A506F;
-}
-
-.c8:hover:enabled,
-.c8:focus:enabled,
-.c8:active:enabled {
-  box-shadow: none;
-  background: #2A506F;
-  border-color: #2A506F;
-  color: white;
-  opacity: initial;
-}
-
-.c8:hover:enabled svg,
-.c8:focus:enabled svg,
-.c8:active:enabled svg {
-  color: white !important;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.c5 {
-  display: inline-block;
-  border-radius: 3px;
-  vertical-align: top;
-  position: relative;
-}
-
-.c5 svg {
-  width: 12px;
-  -webkit-transform: translateY(1px);
-  -ms-transform: translateY(1px);
-  transform: translateY(1px);
-}
-
-.c9 {
-  margin: 0;
-  width: 100%;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c5 "
+        class="sc-gsFSXq gghMVi sc-kAyceB jxvYmy sc-dSCufp ggtdNI sc-jnOGJG jIYfnk"
       >
         <button
-          class="c6 c7 c8 c9"
+          class="StyledButton-sc-323bzc-0 ldhSDK sc-jEACwC sc-dLMFU jeSgeV jIsVue sc-ikkxIA eUBNFQ sc-hIUJlX gUomGs"
           type="button"
         >
           <div
-            class="c2 c10"
+            class="sc-gsFSXq gghMVi sc-kAyceB jxvYmy sc-dAbbOL gEUimX"
           >
             <div
-              class="c2 c11"
+              class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
             >
               Links
             </div>
@@ -1622,76 +395,27 @@ exports[`Renderer component A drop-down button widget 1`] = `
 `;
 
 exports[`Renderer component A hidden field 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c5 {
-  margin-right: 8px;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c6 {
-  font-weight: 600;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c3 c4 "
+        class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
       >
         <div
-          class="c2 c5"
+          class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
         >
           <div
-            class="c6 "
+            class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
           >
             Shown
           </div>
         </div>
         <div
-          class=""
+          class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
         >
           This should be shown
         </div>
@@ -1702,56 +426,15 @@ exports[`Renderer component A hidden field 1`] = `
 `;
 
 exports[`Renderer component A hidden title 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class=""
+        class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
       >
         No title shown
       </div>
@@ -1761,400 +444,23 @@ exports[`Renderer component A hidden title 1`] = `
 `;
 
 exports[`Renderer component A markdown field 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c6 {
-  font-weight: normal;
-}
-
-.c7 {
-  margin: 0;
-  font-size: 58px;
-}
-
-.c10 {
-  margin: 0;
-  font-size: 34px;
-}
-
-.c8 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  opacity: 1;
-  display: inline-block;
-}
-
-.c8:active,
-.c8:hover {
-  color: hsl(196.29999999999995,100%,37.5%);
-}
-
-.c9 {
-  color: #00AEEF;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
-.c5 code[class*='language-'],
-.c5 pre[class*='language-'] {
-  color: black;
-  background: none;
-  text-shadow: 0 1px white;
-  font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
-  font-size: 1em;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
-
-.c5 pre[class*='language-']::-moz-selection,
-.c5 pre[class*='language-'] ::-moz-selection,
-.c5 code[class*='language-']::-moz-selection,
-.c5 code[class*='language-'] ::-moz-selection {
-  text-shadow: none;
-  background: #b3d4fc;
-}
-
-.c5 pre[class*='language-']::selection,
-.c5 pre[class*='language-'] ::selection,
-.c5 code[class*='language-']::selection,
-.c5 code[class*='language-'] ::selection {
-  text-shadow: none;
-  background: #b3d4fc;
-}
-
-.c5 pre[class*='language-'] {
-  padding: 1em;
-  margin: 0.5em 0;
-  overflow: auto;
-}
-
-.c5:not(pre) > code[class*='language-'],
-.c5 pre[class*='language-'] {
-  background: #f5f2f0;
-}
-
-.c5:not(pre) > code[class*='language-'] {
-  padding: 0.1em;
-  border-radius: 0.3em;
-  white-space: normal;
-}
-
-.c5 .token.comment,
-.c5 .token.prolog,
-.c5 .token.doctype,
-.c5 .token.cdata {
-  color: slategray;
-}
-
-.c5 .token.punctuation {
-  color: #999;
-}
-
-.c5 .token.namespace {
-  opacity: 0.7;
-}
-
-.c5 .token.property,
-.c5 .token.tag,
-.c5 .token.boolean,
-.c5 .token.number,
-.c5 .token.constant,
-.c5 .token.symbol,
-.c5 .token.deleted {
-  color: #905;
-}
-
-.c5 .token.selector,
-.c5 .token.attr-name,
-.c5 .token.string,
-.c5 .token.char,
-.c5 .token.builtin,
-.c5 .token.inserted {
-  color: #690;
-}
-
-.c5 .token.operator,
-.c5 .token.entity,
-.c5 .token.url,
-.c5 .language-css .token.string,
-.c5 .style .token.string {
-  color: #9a6e3a;
-  background: hsla(0,0%,100%,0.5);
-}
-
-.c5 .token.atrule,
-.c5 .token.attr-value,
-.c5 .token.keyword {
-  color: #07a;
-}
-
-.c5 .token.function,
-.c5 .token.class-name {
-  color: #dd4a68;
-}
-
-.c5 .token.regex,
-.c5 .token.important,
-.c5 .token.variable {
-  color: #e90;
-}
-
-.c5 .token.important,
-.c5 .token.bold {
-  font-weight: bold;
-}
-
-.c5 .token.italic {
-  font-style: italic;
-}
-
-.c5 .token.entity {
-  cursor: help;
-}
-
-.c5 * {
-  box-sizing: border-box;
-}
-
-.c5 code {
-  background-color: #f4f4f4;
-  padding: 0.2em 0px;
-  margin: 0px;
-  border-radius: 3px;
-  line-height: 1.2;
-}
-
-.c5 p {
-  margin-top: 0;
-  margin-bottom: 8px;
-}
-
-.c5 p:last-child {
-  margin-bottom: 0 !important;
-}
-
-.c5 pre {
-  background-color: #f4f4f4;
-}
-
-.c5 pre > code {
-  display: block;
-  background: none;
-  overflow-y: auto;
-}
-
-.c5 code,
-.c5 kbd,
-.c5 pre {
-  font-family: 'Ubuntu Mono','Courier New',monospace;
-}
-
-.c5 kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font-size: 11px;
-  line-height: 10px;
-  color: #2A506F;
-  vertical-align: middle;
-  background-color: rgba(244,244,244,0.7);
-  border: solid 1px #c6c8c9;
-  border-bottom-color: hsl(200,2.7%,70.4%);
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 hsl(200,2.7%,70.4%);
-}
-
-.c5 dl {
-  padding: 0;
-}
-
-.c5 dl dt {
-  padding: 0;
-  margin-top: 16px;
-  font-size: 1em;
-  font-style: italic;
-  font-weight: 600;
-}
-
-.c5 dl dd {
-  padding: 0 16px;
-  margin-bottom: 16px;
-}
-
-.c5 td,
-.c5 th {
-  padding: 0;
-}
-
-.c5 table {
-  border-spacing: 0;
-  border-collapse: collapse;
-  display: block;
-  width: 100%;
-  overflow: auto;
-}
-
-.c5 table th {
-  font-weight: 600;
-}
-
-.c5 table th,
-.c5 table td {
-  padding: 6px 13px;
-  border: 1px solid #c6c8c9;
-}
-
-.c5 table tr {
-  background-color: #fff;
-  border-top: 1px solid #f4f4f4;
-}
-
-.c5 table tr:nth-child(2n) {
-  background-color: #f4f4f4;
-}
-
-.c5 blockquote {
-  margin: 0;
-}
-
-.c5 blockquote,
-.c5 dl,
-.c5 table {
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-
-.c5 blockquote {
-  padding: 0 1em;
-  color: #2A506F;
-  border-left: 0.25em solid #c6c8c9;
-}
-
-.c5 blockquote > :first-child {
-  margin-top: 0;
-}
-
-.c5 blockquote > :last-child {
-  margin-bottom: 0;
-}
-
-.c5 .heading-anchor-link span.icon {
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAA/1BMVEUAAAAAAAAAgIAAVVVAQIAzZmYrVYAkSW0wUHAtS2kmTXMkVW0sTm8pUnAnTmwmTHEuUm0tU3EpU24oUXIpUW4oT3ErUW0qTm0rUHErUW8qT3EsUHArUXApT3EqUW4sUXApT28qUXApT3ApT28rUG8qUW8pUHAqUG8rT28qT28rUG4qUG4pUW8qUXAqUG4pUW8qUHAqUHAqUG4qUW8rUW8qUW4qUG8rUW8qUHAqUG8qUG4qUG8qUG8qUW8pUG8rUHAqUG8pUG8pUW8rUG8qUW8qUG8qUG8rUG8qUG8rUW8qUG8rUG8qUG8qUG8qUG8qUG8qUG8qUG8qUG8qUG////+bGS/DAAAAU3RSTlMAAQIDBAUGBxARFBUXGRobHCIlJiwtLzE2PD1AQkRPUl5iZGpsbnBzd3p9f4iLjY6SmZ2eoausrrC1u7y9vr/Aw8vR0tTW3d7j5Onq6+zx9fr7/UBGcCYAAAABYktHRFTkA4ilAAAArElEQVQYGa3BV1bCUABAwQuhh94kICoISgfphmZEpYm0/e+Fl5Ccw7/McAPxrC7OFXlyuhjLWCRtGkUXnWkSpvzGw4XnN4dp0Mbghk6f0msC4b2FLvAJjSHq/FAAqt8SwoeK/asMPOwV8K7rNkjvg1S2PoS3CaCsV2ryRYOegu5xh+B/rkWKP+DC8LTFFDsomEZdLI1lxo4gt/5CWBzN48mwuONK+D4rpJz81xnMWxXLF2A3LAAAAABJRU5ErkJggg==');
-  width: 20px;
-  background-repeat: no-repeat;
-  height: 20px;
-  display: inline-block;
-  -webkit-transform-origin: 0px 0px;
-  -ms-transform-origin: 0px 0px;
-  transform-origin: 0px 0px;
-  visibility: hidden;
-}
-
-.c5 .heading-anchor-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-  width: 20px;
-  height: 20px;
-  padding-right: 4px;
-}
-
-.c5 h1:hover .heading-anchor-link span.icon,
-.c5 h2:hover .heading-anchor-link span.icon,
-.c5 h3:hover .heading-anchor-link span.icon,
-.c5 h4:hover .heading-anchor-link span.icon,
-.c5 h5:hover .heading-anchor-link span.icon,
-.c5 h6:hover .heading-anchor-link span.icon {
-  visibility: visible;
-}
-
-.c5 h1,
-.c5 h2,
-.c5 h3,
-.c5 h4,
-.c5 h5,
-.c5 h6 {
-  position: relative;
-}
-
-@media print {
-  .c5 code[class*='language-'],
-  .c5 pre[class*='language-'] {
-    text-shadow: none;
-  }
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c5"
+        class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr sc-fFlnrN iDfORV"
       >
         <div>
           <h1
-            class="c6 c7"
+            class="sc-dCFHLb lpvsqF sc-jxOSlx hxGVXX"
             id="user-content-something-important"
           >
             <a
-              class="c8 c9 heading-anchor-link"
+              class="sc-bbSZdi cjkLKP sc-fBWQRz HTGQf heading-anchor-link"
               color="primary.main"
               href="#something-important"
             >
@@ -2167,11 +473,11 @@ exports[`Renderer component A markdown field 1`] = `
           
 
           <h2
-            class="c6 c10"
+            class="sc-dCFHLb lpvsqF sc-lcIPJg nZkps"
             id="user-content-something-less-important"
           >
             <a
-              class="c8 c9 heading-anchor-link"
+              class="sc-bbSZdi cjkLKP sc-fBWQRz HTGQf heading-anchor-link"
               color="primary.main"
               href="#something-less-important"
             >
@@ -2189,76 +495,27 @@ exports[`Renderer component A markdown field 1`] = `
 `;
 
 exports[`Renderer component A materialized field 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c5 {
-  margin-right: 8px;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c6 {
-  font-weight: 600;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c3 c4 "
+        class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
       >
         <div
-          class="c2 c5"
+          class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
         >
           <div
-            class="c6 "
+            class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
           >
             Name
           </div>
         </div>
         <div
-          class=""
+          class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
         >
           John Smith
         </div>
@@ -2269,83 +526,29 @@ exports[`Renderer component A materialized field 1`] = `
 `;
 
 exports[`Renderer component A null object 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c5 {
-  margin-right: 8px;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c6 {
-  font-weight: 600;
-}
-
-.c7 {
-  font-size: 85%;
-  color: #527699;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c5"
+        class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
       >
         <div
-          class="c6 "
+          class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
         >
           Field Title
         </div>
         <div
-          class="c7"
+          class="sc-hmdomO ejALKt sc-bXCLTC jcOeME"
         >
           Field description
         </div>
       </div>
       <div
-        class=""
+        class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
       />
     </div>
   </div>
@@ -2353,83 +556,29 @@ exports[`Renderer component A null object 1`] = `
 `;
 
 exports[`Renderer component A number 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c5 {
-  margin-right: 8px;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c6 {
-  font-weight: 600;
-}
-
-.c7 {
-  font-size: 85%;
-  color: #527699;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c5"
+        class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
       >
         <div
-          class="c6 "
+          class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
         >
           Field Title
         </div>
         <div
-          class="c7"
+          class="sc-hmdomO ejALKt sc-bXCLTC jcOeME"
         >
           Field description
         </div>
       </div>
       <div
-        class=""
+        class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
       >
         4.5
       </div>
@@ -2439,88 +588,29 @@ exports[`Renderer component A number 1`] = `
 `;
 
 exports[`Renderer component A string 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c5 {
-  margin-right: 8px;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c6 {
-  font-weight: 600;
-}
-
-.c8 {
-  text-align: left;
-  white-space: normal;
-}
-
-.c7 {
-  font-size: 85%;
-  color: #527699;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c5"
+        class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
       >
         <div
-          class="c6 "
+          class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
         >
           Field Title
         </div>
         <div
-          class="c7"
+          class="sc-hmdomO ejALKt sc-bXCLTC jcOeME"
         >
           Field description
         </div>
       </div>
       <div
-        class="c8 "
+        class="sc-hmdomO kvewVC sc-bXCLTC hiXRZr"
       >
         A string value
       </div>
@@ -2530,73 +620,24 @@ exports[`Renderer component A string 1`] = `
 `;
 
 exports[`Renderer component A string-interpolated value 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c5 {
-  margin-right: 8px;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c6 {
-  font-weight: 600;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c5"
+        class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
       >
         <div
-          class="c6 "
+          class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
         >
           Mentions
         </div>
       </div>
       <div
-        class=""
+        class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
       >
         4 mentions
       </div>
@@ -2606,111 +647,57 @@ exports[`Renderer component A string-interpolated value 1`] = `
 `;
 
 exports[`Renderer component A truncated array of strings field 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c5"
+        class="sc-gsFSXq gghMVi sc-kAyceB jxvYmy sc-dAbbOL dEXRVA"
       >
         <div
-          class="c2 c3 c4 "
+          class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
         >
           <div
-            class=""
+            class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
           >
             item 1
           </div>
         </div>
         <div
-          class="c2 c3 c4 "
+          class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
         >
           <div
-            class=""
+            class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
           >
             item 2
           </div>
         </div>
         <div
-          class="c2 c3 c4 "
+          class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
         >
           <div
-            class=""
+            class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
           >
             item 3
           </div>
         </div>
         <div
-          class="c2 c3 c4 "
+          class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
         >
           <div
-            class=""
+            class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
           >
             item 4
           </div>
         </div>
         <div
-          class="c2 c3 c4 "
+          class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
         >
           <div
-            class=""
+            class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
           >
             + 2 more
           </div>
@@ -2722,63 +709,15 @@ exports[`Renderer component A truncated array of strings field 1`] = `
 `;
 
 exports[`Renderer component A truncated string 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c5 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c5"
+        class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr sc-kMkxaj hGOzSL"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut facilisis urna. Suspendisse ullamcorper, velit ut auctor vulputate, nibh sem finibus ipsum, vel bibendum tellus nulla non nunc. In porta velit odio. Vivamus nibh dolor, bibendum vel velit sit amet, suscipit lobortis leo. Donec tempus justo non nisi pulvinar, vitae fringilla ligula aliquam. Proin efficitur tellus ac tincidunt iaculis. Duis mattis urna quis libero feugiat, nec pretium felis ornare.
       </div>
@@ -2788,73 +727,15 @@ exports[`Renderer component A truncated string 1`] = `
 `;
 
 exports[`Renderer component A uri field 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c5 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  opacity: 1;
-  display: inline-block;
-}
-
-.c5:active,
-.c5:hover {
-  color: hsl(196.29999999999995,100%,37.5%);
-}
-
-.c6 {
-  color: #00AEEF;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <a
-        class="c5 c6"
+        class="sc-bbSZdi cjkLKP sc-fBWQRz HTGQf"
         color="primary.main"
         href="https://google.com"
       >
@@ -2866,64 +747,16 @@ exports[`Renderer component A uri field 1`] = `
 `;
 
 exports[`Renderer component An Img widget 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c5 {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  width: 200px;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <img
         alt="Jellyfish"
-        class="c5"
+        class="sc-krNlru exYRZF"
         src="https://upload.wikimedia.org/wikipedia/commons/4/44/Jelly_cc11.jpg"
         width="200"
       />
@@ -2933,465 +766,72 @@ exports[`Renderer component An Img widget 1`] = `
 `;
 
 exports[`Renderer component An array of different type items 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c6 {
-  margin-right: 8px;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c7 {
-  font-weight: 600;
-}
-
-.c9 {
-  font-weight: normal;
-}
-
-.c10 {
-  margin: 0;
-  font-size: 58px;
-}
-
-.c11 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  opacity: 1;
-  display: inline-block;
-}
-
-.c11:active,
-.c11:hover {
-  color: hsl(196.29999999999995,100%,37.5%);
-}
-
-.c12 {
-  color: #00AEEF;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
-.c8 code[class*='language-'],
-.c8 pre[class*='language-'] {
-  color: black;
-  background: none;
-  text-shadow: 0 1px white;
-  font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
-  font-size: 1em;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
-
-.c8 pre[class*='language-']::-moz-selection,
-.c8 pre[class*='language-'] ::-moz-selection,
-.c8 code[class*='language-']::-moz-selection,
-.c8 code[class*='language-'] ::-moz-selection {
-  text-shadow: none;
-  background: #b3d4fc;
-}
-
-.c8 pre[class*='language-']::selection,
-.c8 pre[class*='language-'] ::selection,
-.c8 code[class*='language-']::selection,
-.c8 code[class*='language-'] ::selection {
-  text-shadow: none;
-  background: #b3d4fc;
-}
-
-.c8 pre[class*='language-'] {
-  padding: 1em;
-  margin: 0.5em 0;
-  overflow: auto;
-}
-
-.c8:not(pre) > code[class*='language-'],
-.c8 pre[class*='language-'] {
-  background: #f5f2f0;
-}
-
-.c8:not(pre) > code[class*='language-'] {
-  padding: 0.1em;
-  border-radius: 0.3em;
-  white-space: normal;
-}
-
-.c8 .token.comment,
-.c8 .token.prolog,
-.c8 .token.doctype,
-.c8 .token.cdata {
-  color: slategray;
-}
-
-.c8 .token.punctuation {
-  color: #999;
-}
-
-.c8 .token.namespace {
-  opacity: 0.7;
-}
-
-.c8 .token.property,
-.c8 .token.tag,
-.c8 .token.boolean,
-.c8 .token.number,
-.c8 .token.constant,
-.c8 .token.symbol,
-.c8 .token.deleted {
-  color: #905;
-}
-
-.c8 .token.selector,
-.c8 .token.attr-name,
-.c8 .token.string,
-.c8 .token.char,
-.c8 .token.builtin,
-.c8 .token.inserted {
-  color: #690;
-}
-
-.c8 .token.operator,
-.c8 .token.entity,
-.c8 .token.url,
-.c8 .language-css .token.string,
-.c8 .style .token.string {
-  color: #9a6e3a;
-  background: hsla(0,0%,100%,0.5);
-}
-
-.c8 .token.atrule,
-.c8 .token.attr-value,
-.c8 .token.keyword {
-  color: #07a;
-}
-
-.c8 .token.function,
-.c8 .token.class-name {
-  color: #dd4a68;
-}
-
-.c8 .token.regex,
-.c8 .token.important,
-.c8 .token.variable {
-  color: #e90;
-}
-
-.c8 .token.important,
-.c8 .token.bold {
-  font-weight: bold;
-}
-
-.c8 .token.italic {
-  font-style: italic;
-}
-
-.c8 .token.entity {
-  cursor: help;
-}
-
-.c8 * {
-  box-sizing: border-box;
-}
-
-.c8 code {
-  background-color: #f4f4f4;
-  padding: 0.2em 0px;
-  margin: 0px;
-  border-radius: 3px;
-  line-height: 1.2;
-}
-
-.c8 p {
-  margin-top: 0;
-  margin-bottom: 8px;
-}
-
-.c8 p:last-child {
-  margin-bottom: 0 !important;
-}
-
-.c8 pre {
-  background-color: #f4f4f4;
-}
-
-.c8 pre > code {
-  display: block;
-  background: none;
-  overflow-y: auto;
-}
-
-.c8 code,
-.c8 kbd,
-.c8 pre {
-  font-family: 'Ubuntu Mono','Courier New',monospace;
-}
-
-.c8 kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font-size: 11px;
-  line-height: 10px;
-  color: #2A506F;
-  vertical-align: middle;
-  background-color: rgba(244,244,244,0.7);
-  border: solid 1px #c6c8c9;
-  border-bottom-color: hsl(200,2.7%,70.4%);
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 hsl(200,2.7%,70.4%);
-}
-
-.c8 dl {
-  padding: 0;
-}
-
-.c8 dl dt {
-  padding: 0;
-  margin-top: 16px;
-  font-size: 1em;
-  font-style: italic;
-  font-weight: 600;
-}
-
-.c8 dl dd {
-  padding: 0 16px;
-  margin-bottom: 16px;
-}
-
-.c8 td,
-.c8 th {
-  padding: 0;
-}
-
-.c8 table {
-  border-spacing: 0;
-  border-collapse: collapse;
-  display: block;
-  width: 100%;
-  overflow: auto;
-}
-
-.c8 table th {
-  font-weight: 600;
-}
-
-.c8 table th,
-.c8 table td {
-  padding: 6px 13px;
-  border: 1px solid #c6c8c9;
-}
-
-.c8 table tr {
-  background-color: #fff;
-  border-top: 1px solid #f4f4f4;
-}
-
-.c8 table tr:nth-child(2n) {
-  background-color: #f4f4f4;
-}
-
-.c8 blockquote {
-  margin: 0;
-}
-
-.c8 blockquote,
-.c8 dl,
-.c8 table {
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-
-.c8 blockquote {
-  padding: 0 1em;
-  color: #2A506F;
-  border-left: 0.25em solid #c6c8c9;
-}
-
-.c8 blockquote > :first-child {
-  margin-top: 0;
-}
-
-.c8 blockquote > :last-child {
-  margin-bottom: 0;
-}
-
-.c8 .heading-anchor-link span.icon {
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAA/1BMVEUAAAAAAAAAgIAAVVVAQIAzZmYrVYAkSW0wUHAtS2kmTXMkVW0sTm8pUnAnTmwmTHEuUm0tU3EpU24oUXIpUW4oT3ErUW0qTm0rUHErUW8qT3EsUHArUXApT3EqUW4sUXApT28qUXApT3ApT28rUG8qUW8pUHAqUG8rT28qT28rUG4qUG4pUW8qUXAqUG4pUW8qUHAqUHAqUG4qUW8rUW8qUW4qUG8rUW8qUHAqUG8qUG4qUG8qUG8qUW8pUG8rUHAqUG8pUG8pUW8rUG8qUW8qUG8qUG8rUG8qUG8rUW8qUG8rUG8qUG8qUG8qUG8qUG8qUG8qUG8qUG8qUG////+bGS/DAAAAU3RSTlMAAQIDBAUGBxARFBUXGRobHCIlJiwtLzE2PD1AQkRPUl5iZGpsbnBzd3p9f4iLjY6SmZ2eoausrrC1u7y9vr/Aw8vR0tTW3d7j5Onq6+zx9fr7/UBGcCYAAAABYktHRFTkA4ilAAAArElEQVQYGa3BV1bCUABAwQuhh94kICoISgfphmZEpYm0/e+Fl5Ccw7/McAPxrC7OFXlyuhjLWCRtGkUXnWkSpvzGw4XnN4dp0Mbghk6f0msC4b2FLvAJjSHq/FAAqt8SwoeK/asMPOwV8K7rNkjvg1S2PoS3CaCsV2ryRYOegu5xh+B/rkWKP+DC8LTFFDsomEZdLI1lxo4gt/5CWBzN48mwuONK+D4rpJz81xnMWxXLF2A3LAAAAABJRU5ErkJggg==');
-  width: 20px;
-  background-repeat: no-repeat;
-  height: 20px;
-  display: inline-block;
-  -webkit-transform-origin: 0px 0px;
-  -ms-transform-origin: 0px 0px;
-  transform-origin: 0px 0px;
-  visibility: hidden;
-}
-
-.c8 .heading-anchor-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-  width: 20px;
-  height: 20px;
-  padding-right: 4px;
-}
-
-.c8 h1:hover .heading-anchor-link span.icon,
-.c8 h2:hover .heading-anchor-link span.icon,
-.c8 h3:hover .heading-anchor-link span.icon,
-.c8 h4:hover .heading-anchor-link span.icon,
-.c8 h5:hover .heading-anchor-link span.icon,
-.c8 h6:hover .heading-anchor-link span.icon {
-  visibility: visible;
-}
-
-.c8 h1,
-.c8 h2,
-.c8 h3,
-.c8 h4,
-.c8 h5,
-.c8 h6 {
-  position: relative;
-}
-
-@media print {
-  .c8 code[class*='language-'],
-  .c8 pre[class*='language-'] {
-    text-shadow: none;
-  }
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c5"
+        class="sc-gsFSXq gghMVi sc-kAyceB jxvYmy sc-dAbbOL dEXRVA"
       >
         <div
-          class="c2 c3 c4 "
+          class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
         >
           <div
-            class="c2 c3 c4 "
+            class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
           >
             <div
-              class="c2 c6"
+              class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
             >
               <div
-                class="c7 "
+                class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
               >
                 Number
               </div>
             </div>
             <div
-              class=""
+              class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
             >
               5
             </div>
           </div>
         </div>
         <div
-          class="c2 c3 c4 "
+          class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
         >
           <div
-            class="c2 c6"
+            class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
           >
             <div
-              class="c7 "
+              class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
             >
               Text
             </div>
           </div>
           <div
-            class="c2 c3 c4 "
+            class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
           >
             <div
-              class="c2 c6"
+              class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
             >
               <div
-                class="c7 "
+                class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
               >
                 Text
               </div>
             </div>
             <div
-              class="c8"
+              class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr sc-fFlnrN iDfORV"
             >
               <div>
                 <h1
-                  class="c9 c10"
+                  class="sc-dCFHLb lpvsqF sc-jxOSlx hxGVXX"
                   id="user-content-this-is-markdown"
                 >
                   <a
-                    class="c11 c12 heading-anchor-link"
+                    class="sc-bbSZdi cjkLKP sc-fBWQRz HTGQf heading-anchor-link"
                     color="primary.main"
                     href="#this-is-markdown"
                   >
@@ -3412,129 +852,39 @@ exports[`Renderer component An array of different type items 1`] = `
 `;
 
 exports[`Renderer component An array of strings field 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c6 {
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 12px;
-  padding-right: 12px;
-  font-size: 12px;
-  color: #BA0C00;
-  background-color: #FFD5D2;
-}
-
-.c8 {
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 12px;
-  padding-right: 12px;
-  font-size: 12px;
-  color: #0650E5;
-  background-color: #D7E4FE;
-}
-
-.c9 {
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 12px;
-  padding-right: 12px;
-  font-size: 12px;
-  color: #3C2DE7;
-  background-color: #D6D3FA;
-}
-
-.c7 {
-  display: inline-block;
-  border-radius: 1em;
-  line-height: 1;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c5"
+        class="sc-gsFSXq gghMVi sc-kAyceB jxvYmy sc-dAbbOL dEXRVA"
       >
         <div
-          class="c2 c3 c4 "
+          class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
         >
           <span
-            class="c6 c7 "
+            class="sc-hmdomO ejALKt sc-jsJBEP kxVqKr sc-bmzYkS jUBrMa sc-iHGNWf cVnbHI"
           >
             first item
           </span>
         </div>
         <div
-          class="c2 c3 c4 "
+          class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
         >
           <span
-            class="c8 c7 "
+            class="sc-hmdomO ejALKt sc-jsJBEP chzSEm sc-bmzYkS jUBrMa sc-iHGNWf cVnbHI"
           >
             second item
           </span>
         </div>
         <div
-          class="c2 c3 c4 "
+          class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
         >
           <span
-            class="c9 c7 "
+            class="sc-hmdomO ejALKt sc-jsJBEP gjngia sc-bmzYkS jUBrMa sc-iHGNWf cVnbHI"
           >
             third item
           </span>
@@ -3546,73 +896,15 @@ exports[`Renderer component An array of strings field 1`] = `
 `;
 
 exports[`Renderer component An email field 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c5 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  opacity: 1;
-  display: inline-block;
-}
-
-.c5:active,
-.c5:hover {
-  color: hsl(196.29999999999995,100%,37.5%);
-}
-
-.c6 {
-  color: #00AEEF;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <a
-        class="c5 c6"
+        class="sc-bbSZdi cjkLKP sc-fBWQRz HTGQf"
         color="primary.main"
         href="mailto:user@balena.io"
       >
@@ -3624,236 +916,41 @@ exports[`Renderer component An email field 1`] = `
 `;
 
 exports[`Renderer component An evaluated value 1`] = `
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: solid 1px #00AEEF;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 20px;
-  width: 20px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border-radius: 4px;
-}
-
-.c13 {
-  box-sizing: border-box;
-  stroke-width: 2px;
-  stroke: #00AEEF;
-  width: 20px;
-  height: 20px;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-}
-
-.c8:hover input:not([disabled]) + div,
-.c8:hover input:not([disabled]) + span {
-  border-color: #DDE1f0;
-}
-
-.c11 {
-  opacity: 0;
-  -moz-appearance: none;
-  width: 0;
-  height: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-.c11:checked + span > span {
-  left: calc( 40px - 20px );
-  background: #00AEEF;
-}
-
-.c10 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c5 {
-  margin-right: 8px;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c6 {
-  font-weight: 600;
-}
-
-.c7 > label > div > div,
-.c7 > label > div > span {
-  background-color: white;
-}
-
-.c7 > label > span {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-}
-
-.c7 label input + div {
-  border-color: #00AEEF;
-  background: #00AEEF;
-}
-
-.c7 label input + div > svg {
-  stroke: #fff;
-}
-
-.c7 label[disabled] {
-  opacity: 0.4;
-}
-
-.c7 label:hover input:not([disabled]) + span > span {
-  border-color: #009dd7;
-  background: #009dd7;
-}
-
-.c7 label:hover input:not([disabled]) + div {
-  border-color: #527699!important;
-}
-
-.c7 label:hover input:not([disabled]) + div {
-  border-color: #009dd7 !important;
-  background: #009dd7;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
-@media only screen and (max-width:768px) {
-  .c12 {
-    border: solid 1px #00AEEF;
-  }
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c5"
+        class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
       >
         <div
-          class="c6 "
+          class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
         >
           Multiple Owners
         </div>
       </div>
       <div
-        class="c7 "
+        class="sc-gFAWRd hqjpfh sc-gmPhUn gzFqhQ"
       >
         <label
-          class="c8"
+          class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 bQBqlD"
         >
           <div
-            class="c9 c10"
+            class="StyledBox-sc-13pk1d4-0 esJfWn StyledCheckBox-sc-1dbk5ju-6 cLdvuG"
           >
             <input
               checked=""
-              class="c11"
+              class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 ogbwN"
               type="checkbox"
             />
             <div
-              class="c12 "
+              class="StyledBox-sc-13pk1d4-0 eRnqxZ StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 gKzRMM"
             >
               <svg
-                class="c13"
+                class="StyledCheckBox__StyledCheckBoxIcon-sc-1dbk5ju-0 fzUnFn"
                 preserveAspectRatio="xMidYMid meet"
                 viewBox="0 0 24 24"
               >
@@ -3872,83 +969,29 @@ exports[`Renderer component An evaluated value 1`] = `
 `;
 
 exports[`Renderer component An integer 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c5 {
-  margin-right: 8px;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c6 {
-  font-weight: 600;
-}
-
-.c7 {
-  font-size: 85%;
-  color: #527699;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c5"
+        class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
       >
         <div
-          class="c6 "
+          class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
         >
           Field Title
         </div>
         <div
-          class="c7"
+          class="sc-hmdomO ejALKt sc-bXCLTC jcOeME"
         >
           Field description
         </div>
       </div>
       <div
-        class=""
+        class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
       >
         5000
       </div>
@@ -3958,94 +1001,18 @@ exports[`Renderer component An integer 1`] = `
 `;
 
 exports[`Renderer component An invalid value 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c9 {
-  margin-right: 8px;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c10 {
-  font-weight: 600;
-}
-
-.c11 {
-  font-size: 85%;
-  color: #527699;
-}
-
-.c7 {
-  margin-bottom: auto;
-  margin-right: 8px;
-  color: #FF423D;
-}
-
-.c8 {
-  color: #eb0800;
-}
-
-.c6 {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c5 c6"
+        class="sc-gsFSXq gghMVi sc-kAyceB jxvYmy sc-dAbbOL fWzuWL sc-koXPp jTEhkV"
       >
         <div
-          class="c7"
+          class="sc-hmdomO ejALKt sc-bXCLTC dvBMut"
         >
           <svg
             aria-hidden="true"
@@ -4064,39 +1031,39 @@ exports[`Renderer component An invalid value 1`] = `
           </svg>
         </div>
         <span
-          class="c8"
+          class="sc-hmdomO ejALKt sc-jsJBEP gKPbN"
         >
           Invalid data/schema
         </span>
       </div>
       <div
-        class="c2 c9"
+        class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
       >
         <div
-          class="c10 "
+          class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
         >
           Field Title
         </div>
         <div
-          class="c11"
+          class="sc-hmdomO ejALKt sc-bXCLTC jcOeME"
         >
           Field description
         </div>
       </div>
       <div
-        class="c2 c3 c4 "
+        class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
       >
         <div
-          class="c2 c9"
+          class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
         >
           <div
-            class="c10 "
+            class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
           >
             Eh
           </div>
         </div>
         <div
-          class=""
+          class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
         >
           what
         </div>
@@ -4107,305 +1074,127 @@ exports[`Renderer component An invalid value 1`] = `
 `;
 
 exports[`Renderer component An object with various properties 1`] = `
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: solid 1px #DDE1f0;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 20px;
-  width: 20px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border-radius: 4px;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-}
-
-.c9:hover input:not([disabled]) + div,
-.c9:hover input:not([disabled]) + span {
-  border-color: #DDE1f0;
-}
-
-.c12 {
-  opacity: 0;
-  -moz-appearance: none;
-  width: 0;
-  height: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-.c12:checked + span > span {
-  left: calc( 40px - 20px );
-  background: #00AEEF;
-}
-
-.c11 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c5 {
-  margin-right: 8px;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c6 {
-  font-weight: 600;
-}
-
-.c7 {
-  font-size: 85%;
-  color: #527699;
-}
-
-.c8 > label > div > div,
-.c8 > label > div > span {
-  background-color: white;
-}
-
-.c8 > label > span {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-}
-
-.c8 label[disabled] {
-  opacity: 0.4;
-}
-
-.c8 label:hover input:not([disabled]) + span > span {
-  border-color: #009dd7;
-  background: #009dd7;
-}
-
-.c8 label:hover input:not([disabled]) + div {
-  border-color: #527699!important;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
-@media only screen and (max-width:768px) {
-  .c13 {
-    border: solid 1px #DDE1f0;
-  }
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c5"
+        class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
       >
         <div
-          class="c6 "
+          class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
         >
           Field Title
         </div>
         <div
-          class="c7"
+          class="sc-hmdomO ejALKt sc-bXCLTC jcOeME"
         >
           Field description
         </div>
       </div>
       <div
-        class="c2 c3 c4 "
+        class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
       >
         <div
-          class="c2 c5"
+          class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
         >
           <div
-            class="c6 "
+            class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
           >
             A String Field
           </div>
         </div>
         <div
-          class=""
+          class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
         >
           The string value
         </div>
       </div>
       <div
-        class="c2 c3 c4 "
+        class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
       >
         <div
-          class="c2 c5"
+          class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
         >
           <div
-            class="c6 "
+            class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
           >
             A Number Field
           </div>
         </div>
         <div
-          class=""
+          class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
         >
           12.345
         </div>
       </div>
       <div
-        class="c2 c3 c4 "
+        class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
       >
         <div
-          class="c2 c5"
+          class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
         >
           <div
-            class="c6 "
+            class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
           >
             An Integer Field
           </div>
         </div>
         <div
-          class=""
+          class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
         >
           5000
         </div>
       </div>
       <div
-        class="c2 c3 c4 "
+        class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
       >
         <div
-          class="c2 c5"
+          class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
         >
           <div
-            class="c6 "
+            class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
           >
             A Boolean Field
           </div>
         </div>
         <div
-          class="c8 "
+          class="sc-gFAWRd bUhMkq sc-gmPhUn gzFqhQ"
         >
           <label
-            class="c9"
+            class="StyledCheckBox__StyledCheckBoxContainer-sc-1dbk5ju-1 bQBqlD"
           >
             <div
-              class="c10 c11"
+              class="StyledBox-sc-13pk1d4-0 esJfWn StyledCheckBox-sc-1dbk5ju-6 cLdvuG"
             >
               <input
-                class="c12"
+                class="StyledCheckBox__StyledCheckBoxInput-sc-1dbk5ju-2 ogbwN"
                 type="checkbox"
               />
               <div
-                class="c13 "
+                class="StyledBox-sc-13pk1d4-0 cYppjB StyledCheckBox__StyledCheckBoxBox-sc-1dbk5ju-3 gKzRMM"
               />
             </div>
           </label>
         </div>
       </div>
       <div
-        class="c2 c3 c4 "
+        class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
       >
         <div
-          class="c2 c5"
+          class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
         >
           <div
-            class="c6 "
+            class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
           >
             A Null Field
           </div>
         </div>
         <div
-          class=""
+          class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
         />
       </div>
     </div>
@@ -4414,113 +1203,59 @@ exports[`Renderer component An object with various properties 1`] = `
 `;
 
 exports[`Renderer component Explicitly specifying which fields to render 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c5 {
-  margin-right: 8px;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c6 {
-  font-weight: 600;
-}
-
-.c7 {
-  font-size: 85%;
-  color: #527699;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c5"
+        class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
       >
         <div
-          class="c6 "
+          class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
         >
           Field Title
         </div>
         <div
-          class="c7"
+          class="sc-hmdomO ejALKt sc-bXCLTC jcOeME"
         >
           Field description
         </div>
       </div>
       <div
-        class="c2 c3 c4 "
+        class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
       >
         <div
-          class="c2 c5"
+          class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
         >
           <div
-            class="c6 "
+            class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
           >
             A String Field
           </div>
         </div>
         <div
-          class=""
+          class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
         >
           The string value
         </div>
       </div>
       <div
-        class="c2 c3 c4 "
+        class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
       >
         <div
-          class="c2 c5"
+          class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
         >
           <div
-            class="c6 "
+            class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
           >
             A Number Field
           </div>
         </div>
         <div
-          class=""
+          class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
         >
           12.345
         </div>
@@ -4531,112 +1266,63 @@ exports[`Renderer component Explicitly specifying which fields to render 1`] = `
 `;
 
 exports[`Renderer component Re-ordered fields 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c5 {
-  margin-right: 8px;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c6 {
-  font-weight: 600;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c3 c4 "
+        class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
       >
         <div
-          class="c2 c5"
+          class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
         >
           <div
-            class="c6 "
+            class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
           >
             Field B
           </div>
         </div>
         <div
-          class=""
+          class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
         >
           field B value
         </div>
       </div>
       <div
-        class="c2 c3 c4 "
+        class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
       >
         <div
-          class="c2 c5"
+          class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
         >
           <div
-            class="c6 "
+            class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
           >
             Field C
           </div>
         </div>
         <div
-          class=""
+          class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
         >
           field C value
         </div>
       </div>
       <div
-        class="c2 c3 c4 "
+        class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
       >
         <div
-          class="c2 c5"
+          class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
         >
           <div
-            class="c6 "
+            class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
           >
             Field A
           </div>
         </div>
         <div
-          class=""
+          class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
         >
           field A value
         </div>
@@ -4647,56 +1333,15 @@ exports[`Renderer component Re-ordered fields 1`] = `
 `;
 
 exports[`Renderer component Using context functions 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class=""
+        class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr"
       >
         Hello Jellyfish
       </div>
@@ -4706,424 +1351,44 @@ exports[`Renderer component Using context functions 1`] = `
 `;
 
 exports[`Renderer component anyOf options 1`] = `
-.c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  margin-bottom: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-
-.c5 {
-  margin-right: 8px;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
-.c6 {
-  font-weight: 600;
-}
-
-.c8 {
-  font-weight: normal;
-}
-
-.c9 {
-  margin: 0;
-  font-size: 58px;
-}
-
-.c10 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  opacity: 1;
-  display: inline-block;
-}
-
-.c10:active,
-.c10:hover {
-  color: hsl(196.29999999999995,100%,37.5%);
-}
-
-.c11 {
-  color: #00AEEF;
-}
-
-.c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
-  font-size: 14px;
-  color: #2A506F;
-}
-
-.c7 code[class*='language-'],
-.c7 pre[class*='language-'] {
-  color: black;
-  background: none;
-  text-shadow: 0 1px white;
-  font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
-  font-size: 1em;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
-
-.c7 pre[class*='language-']::-moz-selection,
-.c7 pre[class*='language-'] ::-moz-selection,
-.c7 code[class*='language-']::-moz-selection,
-.c7 code[class*='language-'] ::-moz-selection {
-  text-shadow: none;
-  background: #b3d4fc;
-}
-
-.c7 pre[class*='language-']::selection,
-.c7 pre[class*='language-'] ::selection,
-.c7 code[class*='language-']::selection,
-.c7 code[class*='language-'] ::selection {
-  text-shadow: none;
-  background: #b3d4fc;
-}
-
-.c7 pre[class*='language-'] {
-  padding: 1em;
-  margin: 0.5em 0;
-  overflow: auto;
-}
-
-.c7:not(pre) > code[class*='language-'],
-.c7 pre[class*='language-'] {
-  background: #f5f2f0;
-}
-
-.c7:not(pre) > code[class*='language-'] {
-  padding: 0.1em;
-  border-radius: 0.3em;
-  white-space: normal;
-}
-
-.c7 .token.comment,
-.c7 .token.prolog,
-.c7 .token.doctype,
-.c7 .token.cdata {
-  color: slategray;
-}
-
-.c7 .token.punctuation {
-  color: #999;
-}
-
-.c7 .token.namespace {
-  opacity: 0.7;
-}
-
-.c7 .token.property,
-.c7 .token.tag,
-.c7 .token.boolean,
-.c7 .token.number,
-.c7 .token.constant,
-.c7 .token.symbol,
-.c7 .token.deleted {
-  color: #905;
-}
-
-.c7 .token.selector,
-.c7 .token.attr-name,
-.c7 .token.string,
-.c7 .token.char,
-.c7 .token.builtin,
-.c7 .token.inserted {
-  color: #690;
-}
-
-.c7 .token.operator,
-.c7 .token.entity,
-.c7 .token.url,
-.c7 .language-css .token.string,
-.c7 .style .token.string {
-  color: #9a6e3a;
-  background: hsla(0,0%,100%,0.5);
-}
-
-.c7 .token.atrule,
-.c7 .token.attr-value,
-.c7 .token.keyword {
-  color: #07a;
-}
-
-.c7 .token.function,
-.c7 .token.class-name {
-  color: #dd4a68;
-}
-
-.c7 .token.regex,
-.c7 .token.important,
-.c7 .token.variable {
-  color: #e90;
-}
-
-.c7 .token.important,
-.c7 .token.bold {
-  font-weight: bold;
-}
-
-.c7 .token.italic {
-  font-style: italic;
-}
-
-.c7 .token.entity {
-  cursor: help;
-}
-
-.c7 * {
-  box-sizing: border-box;
-}
-
-.c7 code {
-  background-color: #f4f4f4;
-  padding: 0.2em 0px;
-  margin: 0px;
-  border-radius: 3px;
-  line-height: 1.2;
-}
-
-.c7 p {
-  margin-top: 0;
-  margin-bottom: 8px;
-}
-
-.c7 p:last-child {
-  margin-bottom: 0 !important;
-}
-
-.c7 pre {
-  background-color: #f4f4f4;
-}
-
-.c7 pre > code {
-  display: block;
-  background: none;
-  overflow-y: auto;
-}
-
-.c7 code,
-.c7 kbd,
-.c7 pre {
-  font-family: 'Ubuntu Mono','Courier New',monospace;
-}
-
-.c7 kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font-size: 11px;
-  line-height: 10px;
-  color: #2A506F;
-  vertical-align: middle;
-  background-color: rgba(244,244,244,0.7);
-  border: solid 1px #c6c8c9;
-  border-bottom-color: hsl(200,2.7%,70.4%);
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 hsl(200,2.7%,70.4%);
-}
-
-.c7 dl {
-  padding: 0;
-}
-
-.c7 dl dt {
-  padding: 0;
-  margin-top: 16px;
-  font-size: 1em;
-  font-style: italic;
-  font-weight: 600;
-}
-
-.c7 dl dd {
-  padding: 0 16px;
-  margin-bottom: 16px;
-}
-
-.c7 td,
-.c7 th {
-  padding: 0;
-}
-
-.c7 table {
-  border-spacing: 0;
-  border-collapse: collapse;
-  display: block;
-  width: 100%;
-  overflow: auto;
-}
-
-.c7 table th {
-  font-weight: 600;
-}
-
-.c7 table th,
-.c7 table td {
-  padding: 6px 13px;
-  border: 1px solid #c6c8c9;
-}
-
-.c7 table tr {
-  background-color: #fff;
-  border-top: 1px solid #f4f4f4;
-}
-
-.c7 table tr:nth-child(2n) {
-  background-color: #f4f4f4;
-}
-
-.c7 blockquote {
-  margin: 0;
-}
-
-.c7 blockquote,
-.c7 dl,
-.c7 table {
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-
-.c7 blockquote {
-  padding: 0 1em;
-  color: #2A506F;
-  border-left: 0.25em solid #c6c8c9;
-}
-
-.c7 blockquote > :first-child {
-  margin-top: 0;
-}
-
-.c7 blockquote > :last-child {
-  margin-bottom: 0;
-}
-
-.c7 .heading-anchor-link span.icon {
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAA/1BMVEUAAAAAAAAAgIAAVVVAQIAzZmYrVYAkSW0wUHAtS2kmTXMkVW0sTm8pUnAnTmwmTHEuUm0tU3EpU24oUXIpUW4oT3ErUW0qTm0rUHErUW8qT3EsUHArUXApT3EqUW4sUXApT28qUXApT3ApT28rUG8qUW8pUHAqUG8rT28qT28rUG4qUG4pUW8qUXAqUG4pUW8qUHAqUHAqUG4qUW8rUW8qUW4qUG8rUW8qUHAqUG8qUG4qUG8qUG8qUW8pUG8rUHAqUG8pUG8pUW8rUG8qUW8qUG8qUG8rUG8qUG8rUW8qUG8rUG8qUG8qUG8qUG8qUG8qUG8qUG8qUG8qUG////+bGS/DAAAAU3RSTlMAAQIDBAUGBxARFBUXGRobHCIlJiwtLzE2PD1AQkRPUl5iZGpsbnBzd3p9f4iLjY6SmZ2eoausrrC1u7y9vr/Aw8vR0tTW3d7j5Onq6+zx9fr7/UBGcCYAAAABYktHRFTkA4ilAAAArElEQVQYGa3BV1bCUABAwQuhh94kICoISgfphmZEpYm0/e+Fl5Ccw7/McAPxrC7OFXlyuhjLWCRtGkUXnWkSpvzGw4XnN4dp0Mbghk6f0msC4b2FLvAJjSHq/FAAqt8SwoeK/asMPOwV8K7rNkjvg1S2PoS3CaCsV2ryRYOegu5xh+B/rkWKP+DC8LTFFDsomEZdLI1lxo4gt/5CWBzN48mwuONK+D4rpJz81xnMWxXLF2A3LAAAAABJRU5ErkJggg==');
-  width: 20px;
-  background-repeat: no-repeat;
-  height: 20px;
-  display: inline-block;
-  -webkit-transform-origin: 0px 0px;
-  -ms-transform-origin: 0px 0px;
-  transform-origin: 0px 0px;
-  visibility: hidden;
-}
-
-.c7 .heading-anchor-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-  width: 20px;
-  height: 20px;
-  padding-right: 4px;
-}
-
-.c7 h1:hover .heading-anchor-link span.icon,
-.c7 h2:hover .heading-anchor-link span.icon,
-.c7 h3:hover .heading-anchor-link span.icon,
-.c7 h4:hover .heading-anchor-link span.icon,
-.c7 h5:hover .heading-anchor-link span.icon,
-.c7 h6:hover .heading-anchor-link span.icon {
-  visibility: visible;
-}
-
-.c7 h1,
-.c7 h2,
-.c7 h3,
-.c7 h4,
-.c7 h5,
-.c7 h6 {
-  position: relative;
-}
-
-@media print {
-  .c7 code[class*='language-'],
-  .c7 pre[class*='language-'] {
-    text-shadow: none;
-  }
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="StyledGrommet-sc-19lkkz7-0 gXEEZC sc-iEXKAA fEtcpx"
   >
     <div
-      class="c2 c3 c4 "
+      class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
     >
       <div
-        class="c2 c5"
+        class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
       >
         <div
-          class="c6 "
+          class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
         >
           Text
         </div>
       </div>
       <div
-        class="c2 c3 c4 "
+        class="sc-gsFSXq gghMVi sc-kAyceB fnnwQO sc-dAbbOL jIzoO sc-fiCwlc kLagzx"
       >
         <div
-          class="c2 c5"
+          class="sc-gsFSXq gghMVi sc-kAyceB eHLJgc"
         >
           <div
-            class="c6 "
+            class="sc-hmdomO jLJFWQ sc-bXCLTC hiXRZr"
           >
             Text
           </div>
         </div>
         <div
-          class="c7"
+          class="sc-hmdomO ejALKt sc-bXCLTC hiXRZr sc-fFlnrN iDfORV"
         >
           <div>
             <h1
-              class="c8 c9"
+              class="sc-dCFHLb lpvsqF sc-jxOSlx hxGVXX"
               id="user-content-this-is-markdown"
             >
               <a
-                class="c10 c11 heading-anchor-link"
+                class="sc-bbSZdi cjkLKP sc-fBWQRz HTGQf heading-anchor-link"
                 color="primary.main"
                 href="#this-is-markdown"
               >
