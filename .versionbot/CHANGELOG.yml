@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix table column selector, keep open on item click
+      hash: 68aa89a7a812a1f917aecd91614e2576813e3010
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: JSReds
+      nested: []
+  version: 34.8.5
+  title: ""
+  date: 2023-03-28T13:09:28.320Z
+- commits:
     - subject: "Table: Restrict the tagField to be a string key of the entity type"
       hash: 0150ab12d491adc9dc41c8df01779006f4520759
       body: |
