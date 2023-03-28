@@ -197,6 +197,7 @@ export const TableColumnSelector = function <T extends TableColumnState>(
 			plain
 			label={<SmallFontAwesomeIcon icon={faCog} />}
 			items={memoizedItems}
+			keepOpenOnItemClick={true}
 		/>
 	);
 };

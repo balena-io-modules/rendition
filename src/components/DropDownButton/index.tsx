@@ -182,18 +182,18 @@ class BaseDropDownButton extends React.Component<
 	public toggle = () => {
 		const isNextOpen = !this.state.open;
 		if (isNextOpen) {
-			window.document.addEventListener('click', this.handleOutsideClick);
-		} else {
+			document.addEventListener('click', this.handleOutsideClick);
+		} else if (!this.props.keepOpenOnItemClick) {
 			this.removeListener();
 		}
 
 		this.setState({
-			open: isNextOpen,
+			open: !this.props.keepOpenOnItemClick ? isNextOpen : true,
 		});
 	};
 
 	public removeListener = () => {
-		window.document.removeEventListener('click', this.handleOutsideClick);
+		document.removeEventListener('click', this.handleOutsideClick);
 	};
 
 	public render() {
@@ -318,6 +318,8 @@ export interface InternalDropDownButtonProps extends ButtonProps {
 	noListFormat?: boolean;
 	/** If set, it defines the maximum height of the dropdown list */
 	listMaxHeight?: string | number;
+	/** If set, it close the dropdown only when clicking outside */
+	keepOpenOnItemClick?: boolean;
 }
 
 export type DropDownButtonProps = InternalDropDownButtonProps &
