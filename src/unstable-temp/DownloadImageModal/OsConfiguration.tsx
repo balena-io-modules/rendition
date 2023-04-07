@@ -1,5 +1,4 @@
 import * as React from 'react';
-import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons/faExclamationTriangle';
@@ -26,16 +25,7 @@ import { useTranslation } from '../../hooks/useTranslation';
 import { getOsVariantDisplayText } from './utils';
 import { useTheme } from '../../hooks/useTheme';
 import { Theme } from '~/theme';
-
-export const DownloadImageLabel = styled.label`
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	height: 21px;
-	font-size: 12px;
-	margin-bottom: 8px;
-	font-weight: normal;
-`;
+import { DownloadImageLabel } from './FormModel';
 
 interface OsConfigurationProps {
 	deviceTypeOsVersions: OsVersionsByDeviceType;

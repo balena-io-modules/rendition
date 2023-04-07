@@ -153,6 +153,7 @@ interface ImageFormProps {
 	downloadUrl: string;
 	appId: number;
 	releaseId?: number;
+	preloading: boolean;
 	rawVersion: string | null;
 	developmentMode: boolean;
 	deviceType: DeviceType;
@@ -175,6 +176,7 @@ export const ImageForm = ({
 	downloadUrl,
 	appId,
 	releaseId,
+	preloading,
 	rawVersion,
 	developmentMode,
 	deviceType,
@@ -236,13 +238,30 @@ export const ImageForm = ({
 				formElement?.current?.submit();
 			},
 			icon: <FontAwesomeIcon icon={faDownload} />,
-			disabled: hasDockerImageDownload,
+			disabled: hasDockerImageDownload || preloading,
 			tooltip: hasDockerImageDownload
 				? t('warnings.image_deployed_to_docker')
+				: preloading
+				? t('warnings.option_not_available_while_preloading')
 				: '',
 			label: `${t('actions.download_balenaos')} ${
 				rawVersion && downloadSize ? ` (~${downloadSize})` : ''
 			}`,
+			type: 'submit',
+		},
+		{
+			plain: true,
+			onClick: () => {
+				formElement?.current?.submit();
+			},
+			icon: <FontAwesomeIcon icon={faDownload} />,
+			disabled: hasDockerImageDownload || !preloading,
+			tooltip: hasDockerImageDownload
+				? t('warnings.image_deployed_to_docker')
+				: !preloading
+				? t('warnings.option_only_available_while_preloading')
+				: '',
+			label: t('actions.download_dotech'),
 			type: 'submit',
 		},
 	];
@@ -258,6 +277,10 @@ export const ImageForm = ({
 				}
 				startDownload(true);
 			},
+			disabled: preloading,
+			tooltip: preloading
+				? t('warnings.option_not_available_while_preloading')
+				: '',
 			icon: <FontAwesomeIcon icon={faDownload} />,
 			label: t('actions.download_configuration_file_only'),
 		});
