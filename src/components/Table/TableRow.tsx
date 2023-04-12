@@ -35,6 +35,10 @@ export interface TableBaseColumn<T> {
 		row: T,
 	) => string | number | JSX.Element | null | undefined;
 	sortable?: boolean | TableSortFunction<T>;
+	headerDocumentation?: {
+		url: string | undefined;
+		tooltip: string | undefined;
+	};
 	refScheme?: string;
 }
 

@@ -1,4 +1,5 @@
 import { faSort } from '@fortawesome/free-solid-svg-icons/faSort';
+import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons/faQuestionCircle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import isEqual from 'lodash/isEqual';
 import isPlainObject from 'lodash/isPlainObject';
@@ -14,6 +15,7 @@ import { px } from '../../utils';
 import { CheckboxProps, Checkbox } from '../Checkbox';
 import { Pager } from '../Pager';
 import { CheckboxWrapper, TableBaseColumn, TableRow } from './TableRow';
+import { Link } from '../Link';
 
 const highlightStyle = `
 	background-color: ${theme.colors.info.light};
@@ -628,7 +630,6 @@ export class TableBase<T extends {}> extends React.Component<
 			this.state.checkedState === 'all'
 				? totalItems
 				: this.state.checkedItems?.length;
-
 		return (
 			<>
 				{shouldShowPager &&
@@ -669,12 +670,12 @@ export class TableBase<T extends {}> extends React.Component<
 									</CheckboxWrapper>
 								)}
 								{columns.map((item) => {
-									if (item.sortable) {
-										return (
-											<div
-												data-display="table-cell"
-												key={item.key || (item.field as string)}
-											>
+									return (
+										<div
+											data-display="table-cell"
+											key={item.key || (item.field as string)}
+										>
+											{item.sortable ? (
 												<Button
 													data-field={item.field}
 													data-ref-scheme={item.refScheme}
@@ -693,15 +694,24 @@ export class TableBase<T extends {}> extends React.Component<
 														}
 													/>
 												</Button>
-											</div>
-										);
-									}
-									return (
-										<div
-											data-display="table-cell"
-											key={item.key || (item.field as string)}
-										>
-											{item.label || item.field}
+											) : (
+												<div
+													data-display="table-cell"
+													key={item.key || (item.field as string)}
+												>
+													{item.label || item.field}
+												</div>
+											)}
+											{item.headerDocumentation && (
+												<Link
+													blank
+													ml={1}
+													href={item.headerDocumentation.url}
+													tooltip={item.headerDocumentation.tooltip}
+												>
+													<FontAwesomeIcon icon={faQuestionCircle} />
+												</Link>
+											)}
 										</div>
 									);
 								})}

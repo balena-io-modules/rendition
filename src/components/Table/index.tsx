@@ -157,6 +157,10 @@ export interface TableColumn<T> extends TableBaseColumn<T> {
 	title?: string;
 	selected?: boolean;
 	locked?: boolean;
+	headerDocumentation?: {
+		url: string | undefined;
+		tooltip: string | undefined;
+	};
 }
 
 type TableColumnInternal<T> = TableBaseColumn<T> & TableColumnState;
