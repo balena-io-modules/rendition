@@ -101,6 +101,7 @@ export interface UnstableTempDownloadImageModalProps {
 		rawVersion: string | null,
 		model: FormModel,
 	) => Promise<void>;
+	allowDotEtch?: boolean;
 	getDownloadSize?: (
 		deviceType: DeviceType,
 		rawVersion: string | null,
@@ -127,6 +128,7 @@ export const UnstableTempDownloadImageModal = ({
 	getDockerArtifact,
 	hasEsrVersions,
 	downloadConfig,
+	allowDotEtch,
 	getDownloadSize,
 	onClose,
 	modalActions,
@@ -261,6 +263,7 @@ export const UnstableTempDownloadImageModal = ({
 										developmentMode={developmentMode}
 										modalActions={modalActions}
 										authToken={authToken}
+										allowDotEtch={allowDotEtch}
 										{...(downloadConfig && {
 											downloadConfig: ({
 												appId,
@@ -272,6 +275,7 @@ export const UnstableTempDownloadImageModal = ({
 												// TODO: Change this to be passing the whole model
 												downloadConfig(deviceType, version, model),
 										})}
+
 										{...(getDownloadSize && {
 											getDownloadSize: async () =>
 												getDownloadSize(deviceType, rawVersion),

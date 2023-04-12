@@ -163,6 +163,7 @@ interface ImageFormProps {
 	) => void;
 	setIsDownloadingConfig: (isDownloading: boolean) => void;
 	downloadConfig?: (model: DownloadOptions) => Promise<void> | undefined;
+	allowDotEtch?: boolean;
 	getDownloadSize?: (
 		slug: string,
 		version: string | null,
@@ -182,6 +183,7 @@ export const ImageForm = ({
 	onDownloadStart,
 	setIsDownloadingConfig,
 	downloadConfig,
+	allowDotEtch,
 	getDownloadSize,
 	modalActions,
 	configurationComponent,
@@ -213,6 +215,7 @@ export const ImageForm = ({
 		(): DownloadOptions => ({
 			...downloadOptionsBase,
 			...model,
+			fileType: allowDotEtch ? '.etch' : '.zip',
 		}),
 		[downloadOptionsBase, model],
 	);
@@ -222,7 +225,7 @@ export const ImageForm = ({
 		{
 			plain: true,
 			onClick: (event) =>
-				flashWithEtcher(event, downloadOptions, downloadUrl, authToken),
+				flashWithEtcher(event, { ...downloadOptions }, downloadUrl, authToken),
 			icon: <img width="20px" alt="etcher" src={etcherLogoBase64} />,
 			disabled: hasDockerImageDownload,
 			tooltip: hasDockerImageDownload
@@ -246,6 +249,27 @@ export const ImageForm = ({
 			type: 'submit',
 		},
 	];
+
+	if (allowDotEtch) {
+		actions.push({
+			plain: true,
+			onClick: () => {
+				if (formElement.current) {
+					formElement.current.fileType.value = '.etch';
+				}
+				formElement?.current?.submit();
+			},
+			icon: <FontAwesomeIcon icon={faDownload} />,
+			disabled: hasDockerImageDownload,
+			tooltip: hasDockerImageDownload
+				? t('warnings.image_deployed_to_docker')
+				: '',
+			label: `${t('actions.download_dot_etch')} ${
+				rawVersion && downloadSize ? ` (~${downloadSize})` : ''
+			}`,
+			type: 'submit',
+		});
+	}
 
 	if (!!downloadConfig) {
 		actions.push({
@@ -360,7 +384,7 @@ export const ImageForm = ({
 			ref={formElement}
 		>
 			<input type="hidden" name="_token" value={authToken} />
-			<input name="fileType" value=".zip" type="hidden" />
+			<input name="fileType" type="hidden" value=".zip" />
 
 			{Object.entries(downloadOptionsBase).map(([key, value]) => {
 				if (value === undefined) {
