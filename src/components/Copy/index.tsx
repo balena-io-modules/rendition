@@ -60,7 +60,8 @@ const BaseCopy = ({
 	);
 };
 
-interface InternalCopyProps extends Omit<BoxProps, 'onClick' | 'onCopy'> {
+interface InternalCopyProps
+	extends Omit<BoxProps, 'onClick' | 'onCopy' | 'content'> {
 	/** The value that should be copied to the clipboard */
 	content: string | number;
 	/** Optionally show the copy button on hover or always show the button */
