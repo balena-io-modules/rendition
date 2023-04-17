@@ -1,4 +1,24 @@
 - commits:
+    - subject: Fix build
+      hash: 46005c833860c58140b115d262c27c899e58436b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: JSReds
+      nested: []
+    - subject: Fix DownloadImageModal download button when changing release
+      hash: 85d2fe396fd239ffc121a625dd89d74bb971e35c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: JSReds
+      nested: []
+  version: 34.8.6
+  title: ""
+  date: 2023-04-17T12:06:31.013Z
+- commits:
     - subject: Fix table column selector, keep open on item click
       hash: 68aa89a7a812a1f917aecd91614e2576813e3010
       body: ""
