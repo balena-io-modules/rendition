@@ -217,54 +217,69 @@ export const ImageForm = ({
 		[downloadOptionsBase, model],
 	);
 
-	const actions: ModalAction[] = [
-		...(modalActions ?? []),
-		{
-			plain: true,
-			onClick: (event) =>
-				flashWithEtcher(event, downloadOptions, downloadUrl, authToken),
-			icon: <img width="20px" alt="etcher" src={etcherLogoBase64} />,
-			disabled: hasDockerImageDownload,
-			tooltip: hasDockerImageDownload
-				? t('warnings.image_deployed_to_docker')
-				: t('warning.etcher_min_requirement'),
-			label: t('actions.flash'),
-		},
-		{
-			plain: true,
-			onClick: () => {
-				formElement?.current?.submit();
+	const actions = React.useMemo(() => {
+		const list = [
+			...(modalActions ?? []),
+			{
+				id: 'flash',
+				plain: true,
+				onClick: (event: React.MouseEvent) =>
+					flashWithEtcher(event, downloadOptions, downloadUrl, authToken),
+				icon: <img width="20px" alt="etcher" src={etcherLogoBase64} />,
+				disabled: hasDockerImageDownload,
+				tooltip: hasDockerImageDownload
+					? t('warnings.image_deployed_to_docker')
+					: t('warning.etcher_min_requirement'),
+				label: t('actions.flash'),
 			},
-			icon: <FontAwesomeIcon icon={faDownload} />,
-			disabled: hasDockerImageDownload,
-			tooltip: hasDockerImageDownload
-				? t('warnings.image_deployed_to_docker')
-				: '',
-			label: `${t('actions.download_balenaos')} ${
-				rawVersion && downloadSize ? ` (~${downloadSize})` : ''
-			}`,
-			type: 'submit',
-		},
-	];
-
-	if (!!downloadConfig) {
-		actions.push({
-			plain: true,
-			onClick: async () => {
-				if (downloadConfigOnly && downloadConfig) {
-					setIsDownloadingConfig(true);
-					await downloadConfig(downloadOptions);
-					setIsDownloadingConfig(false);
-				}
-				startDownload(true);
+			{
+				id: 'download_os',
+				plain: true,
+				onClick: () => {
+					formElement?.current?.submit();
+				},
+				icon: <FontAwesomeIcon icon={faDownload} />,
+				disabled: hasDockerImageDownload,
+				tooltip: hasDockerImageDownload
+					? t('warnings.image_deployed_to_docker')
+					: '',
+				label: `${t('actions.download_balenaos')} ${
+					rawVersion && downloadSize ? ` (~${downloadSize})` : ''
+				}`,
+				type: 'submit',
 			},
-			icon: <FontAwesomeIcon icon={faDownload} />,
-			label: t('actions.download_configuration_file_only'),
-		});
-	}
+		];
+		if (!!downloadConfig) {
+			list.push({
+				id: 'download_config_file',
+				plain: true,
+				onClick: async () => {
+					if (downloadConfigOnly && downloadConfig) {
+						setIsDownloadingConfig(true);
+						await downloadConfig(downloadOptions);
+						setIsDownloadingConfig(false);
+					}
+					startDownload(true);
+				},
+				icon: <FontAwesomeIcon icon={faDownload} />,
+				label: t('actions.download_configuration_file_only'),
+			});
+		}
+		return list as ModalAction[];
+	}, [
+		modalActions,
+		downloadOptions,
+		downloadUrl,
+		authToken,
+		hasDockerImageDownload,
+		downloadConfigOnly,
+		downloadConfig,
+		rawVersion,
+		downloadSize,
+	]);
 
-	const [selectedActionLabel, setSelectedActionLabel] = React.useState<string>(
-		actions.find((a) => !a.disabled)?.label || actions[0].label,
+	const [selectedAction, setSelectedAction] = React.useState<ModalAction>(
+		actions.find((a) => !a.disabled) || actions[0],
 	);
 
 	const startDownload = (downloadConfigOnly: boolean) => {
@@ -297,20 +312,41 @@ export const ImageForm = ({
 		);
 	}, [deviceType?.slug, rawVersion]);
 
+	React.useEffect(() => {
+		console.log(actions);
+		setSelectedAction(
+			(oldSelectedAction) =>
+				actions.find((act) =>
+					act.id
+						? act.id === oldSelectedAction.id
+						: act.label === oldSelectedAction.label,
+				)!,
+		);
+	}, [actions.map((a) => a.label)]);
+
 	const memoizedItems = React.useMemo(
 		() =>
 			!!actions?.length
 				? [
-						actions.map(({ label, tooltip, onClick, disabled }) => ({
-							disabled,
+						actions.map((action) => ({
+							disabled: action.disabled,
 							content: (
-								<Txt bold={selectedActionLabel === label} tooltip={tooltip}>
-									{label}
+								<Txt
+									bold={
+										action.id
+											? selectedAction.id === action.id
+											: selectedAction.label === action.label
+									}
+									tooltip={action.tooltip}
+								>
+									{action.label}
 								</Txt>
 							),
 							onClick: (event: React.MouseEvent) => {
-								setSelectedActionLabel(label);
-								onClick?.(event, downloadOptions);
+								if (action) {
+									setSelectedAction(action);
+								}
+								action.onClick?.(event, downloadOptions);
 							},
 						})),
 				  ]
@@ -347,8 +383,6 @@ export const ImageForm = ({
 		});
 		return !opts.includes(false);
 	}, [options, model]);
-
-	const action = actions.find((act) => act.label === selectedActionLabel);
 
 	return (
 		<form
@@ -400,14 +434,14 @@ export const ImageForm = ({
 					primary
 					ml="auto"
 					className="e2e-download-image-submit"
-					type={action?.type || 'button'}
+					type={selectedAction?.type || 'button'}
 					disabled={isDownloadDisabled(model, rawVersion) || !isInputValid}
 					tooltip={
 						isDownloadDisabled(model, rawVersion)
 							? t('warnings.fill_wifi_credentials')
 							: !isInputValid
 							? t('warnings.some_fields_are_invalid')
-							: action?.tooltip
+							: selectedAction?.tooltip
 					}
 					onClick={(event: React.MouseEvent) => {
 						if (downloadOptions.provisioningKeyExpiryDate) {
@@ -417,12 +451,12 @@ export const ImageForm = ({
 							).toISOString();
 						}
 
-						if (action?.onClick) {
-							action.onClick(event, downloadOptions);
+						if (selectedAction?.onClick) {
+							selectedAction.onClick(event, downloadOptions);
 						}
 					}}
-					icon={action?.icon}
-					label={selectedActionLabel}
+					icon={selectedAction?.icon}
+					label={selectedAction.label}
 					alignRight
 					dropUp
 					items={memoizedItems}
