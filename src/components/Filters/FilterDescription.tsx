@@ -26,6 +26,9 @@ const FilterDescription = ({ filter, ...props }: FilterDescriptionProps) => {
 			`${parsedFilter.title} `,
 			'',
 		);
+		if (parsedFilter.label) {
+			parsedFilter.value = parsedFilter.label;
+		}
 		if (typeof parsedFilter.value === 'boolean') {
 			parsedFilter.value = JSON.stringify(parsedFilter.value);
 		}

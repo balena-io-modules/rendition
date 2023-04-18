@@ -83,6 +83,7 @@ export const FilterModal = ({
 				field: properties[0].field,
 				operator: undefined,
 				value: undefined,
+				label: undefined,
 				refScheme: properties[0].refScheme,
 		  }
 		: null;

@@ -53,6 +53,16 @@ export const getSignatures = (filter: JSONSchema): FilterSignatureWithKey[] => {
 	}));
 };
 
+const getSignatureLabel = (schema: JSONSchema, value: string) => {
+	if (Array.isArray(schema.oneOf)) {
+		const oneOf = schema.oneOf.find(
+			(oneOf) => oneOf && typeof oneOf === 'object' && oneOf.const === value,
+		);
+		return typeof oneOf === 'object' ? oneOf.title : undefined;
+	}
+	return undefined;
+};
+
 export const createFilter = (
 	schema: JSONSchema,
 	signatures: FilterSignature[],
@@ -61,6 +71,7 @@ export const createFilter = (
 		const subSchema = !!refScheme
 			? generateSchemaFromRefScheme(schema, field, refScheme)
 			: { ...(schema.properties![field] as JSONSchema) };
+		const label = getSignatureLabel(subSchema, value);
 		const model = getDataModel(subSchema);
 		if (!model) {
 			return {};
@@ -73,6 +84,7 @@ export const createFilter = (
 				field,
 				operator,
 				value,
+				label,
 				refScheme,
 			),
 			type: 'object',
@@ -141,6 +153,7 @@ const generateFullTextSearchAjvFilter = (
 					'any',
 					operator,
 					term,
+					undefined,
 					undefined,
 				),
 				anyOf: items
