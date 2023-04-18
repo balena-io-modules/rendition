@@ -7,6 +7,7 @@ export const getJsonDescription = (
 	field: string,
 	operator: Operator<OperatorSlugs>,
 	value: string,
+	label: string | undefined,
 	refScheme: string | undefined,
 ) => {
 	return JSON.stringify({
@@ -14,6 +15,7 @@ export const getJsonDescription = (
 		field,
 		operator,
 		value,
+		label,
 		refScheme,
 	});
 };

@@ -31,6 +31,7 @@ export interface FilterSignature {
 	field: string;
 	operator: Operator<OperatorSlugs>;
 	value: any;
+	label?: string;
 	refScheme?: string;
 }
 
