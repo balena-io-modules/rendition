@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix table cell make it always fit the content in one line
+      hash: f53087f16d1bde42a95f0fdc8c6c5dd8464c1bf0
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: JSReds
+      nested: []
+  version: 34.9.1
+  title: ""
+  date: 2023-04-19T09:42:19.228Z
+- commits:
     - subject: Add label on filter description when filter is oneOf
       hash: daad1770182cfc0e37fc6c8c7d5800613226ca49
       body: ""
