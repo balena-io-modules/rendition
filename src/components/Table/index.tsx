@@ -55,8 +55,6 @@ const fixedFirstColumnCss = (bg: string) => css`
 	max-width: calc(100% - ${fixedFirstColumnWidth});
 	margin-left: ${fixedFirstColumnWidth};
 
-	white-space: nowrap;
-
 	> [data-display='table-head']
 		> [data-display='table-row']
 		> [data-display='table-cell'],

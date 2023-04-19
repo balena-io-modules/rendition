@@ -97,6 +97,7 @@ const Base = styled.div<InternalTableBaseProps>`
 				padding: 5px 20px;
 				text-decoration: none;
 				color: inherit;
+				white-space: nowrap;
 			}
 
 			${(props) =>
