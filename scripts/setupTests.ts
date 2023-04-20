@@ -17,9 +17,12 @@ function copyProps(src: object, target: Record<string, any>) {
 	);
 }
 
-// @ts-expect-error
-global.window = $window;
-global.document = $window.document;
+global = {
+	...global,
+	// @ts-expect-error
+	window: $window,
+	document: $window.document,
+};
 
 // See https://github.com/jsdom/jsdom/issues/3002 why we need to mock this.
 global.document.createRange = () => {
