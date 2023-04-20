@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix node 18.16.0 tests
+      hash: 9c8097fb8a320dfe07a7212f31aee799a26bb6f4
+      body: |
+        issue due to https://github.com/nodejs/node/issues/47563
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: JSReds
+      nested: []
+  version: 34.9.2
+  title: ""
+  date: 2023-04-20T13:58:38.484Z
+- commits:
     - subject: Fix table cell make it always fit the content in one line
       hash: f53087f16d1bde42a95f0fdc8c6c5dd8464c1bf0
       body: ""
