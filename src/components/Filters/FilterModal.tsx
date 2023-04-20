@@ -24,6 +24,7 @@ import {
 import { Button } from '../Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
+import { findInObject } from '../../utils';
 
 type FilterSignatureInternal = Omit<FilterSignatureWithKey, 'operator'> &
 	Partial<Pick<FilterSignature, 'operator'>>;
@@ -314,7 +315,11 @@ const FilterInput = ({
 		<Form
 			schema={{
 				...newSchema,
-				type: format?.endsWith('date-time') ? 'string' : type,
+				type:
+					format?.endsWith('date-time') ||
+					findInObject(newSchema, 'maxItems') === 1
+						? 'string'
+						: type,
 			}}
 			value={value}
 			onFormChange={({ formData }) => onUpdate(formData)}
