@@ -94,24 +94,21 @@ describe('Notifications component', () => {
 		expect(callback.callCount).toEqual(1);
 	});
 
-	it('disappears after the duration passes', () => {
+	it('disappears after the duration passes', async () => {
 		const component = mount(
 			<NotificationsComponent
 				content={{ content: 'A notification', duration: 20 }}
 			/>,
 		);
-		const clock = sinon.useFakeTimers();
 
 		component.find('button').first().simulate('click');
 
 		// On the first transitionend (on entry), it creates the timer, and on the second one (on exit), it removes the element from the DOM.
 		component.find('.rnc__notification-item').first().simulate('transitionend');
-		clock.tick(200);
+		await new Promise((r) => setTimeout(r, 200));
 		component.find('.rnc__notification-item').first().simulate('transitionend');
 
 		expect(component.find('.rnc__notification-item')).toHaveLength(0);
-
-		clock.restore();
 	});
 
 	it('displays notifications in the expected position', () => {
