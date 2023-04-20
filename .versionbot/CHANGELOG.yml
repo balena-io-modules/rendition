@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add interim solution to have a single column for multiple
+        array  properties
+      hash: 17a681bb049ae3ae7f7f9abd1cbaee42f72ccbbb
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: JSReds
+      nested: []
+  version: 34.10.0
+  title: ""
+  date: 2023-04-20T14:14:26.115Z
+- commits:
     - subject: Fix node 18.16.0 tests
       hash: 9c8097fb8a320dfe07a7212f31aee799a26bb6f4
       body: |
