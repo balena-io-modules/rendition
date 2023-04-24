@@ -8,6 +8,8 @@ export interface MenuItem {
 	className?: string;
 	href: string;
 	title: string;
+	disabled?: boolean;
+	tooltip?: string;
 	badge?: InternalBadgeProps;
 	icon?: React.ReactNode;
 }
@@ -26,9 +28,9 @@ const StyledBadge = styled(Badge)<{ isCollapsed: boolean }>`
 		`}
 `;
 
-const MenuItem = styled(Flex)<{ isCurrent: boolean }>`
+const MenuItem = styled(Flex)<{ isCurrent: boolean; disabled?: boolean }>`
 	height: 48px;
-	cursor: pointer;
+	cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
 	border-bottom: 1px solid
 		${(props) =>
 			props.isCurrent
@@ -39,12 +41,16 @@ const MenuItem = styled(Flex)<{ isCurrent: boolean }>`
 	background: ${(props) =>
 		props.isCurrent
 			? props.theme.colors.quartenary.light
+			: props.disabled
+			? props.theme.colors.quartenary.dark
 			: props.theme.colors.secondary.dark};
 
 	&:hover {
 		background: ${(props) =>
 			props.isCurrent
 				? props.theme.colors.quartenary.light
+				: props.disabled
+				? props.theme.colors.quartenary.dark
 				: props.theme.colors.tertiary.dark};
 	}
 	position: relative;
@@ -69,12 +75,26 @@ export const Menu = ({
 		);
 	}, [items, pathname]);
 
+	const MenuItemWrapper = ({
+		disabled,
+		children,
+		...props
+	}: {
+		disabled?: boolean;
+		to: string;
+		children: any;
+	}) => (disabled ? <>{children}</> : <NavLink {...props}>{children}</NavLink>);
+
 	return (
 		<Flex flexDirection="column" {...props}>
 			{items.map((item) => {
 				const isCurrent = currentItem === item;
 				return (
-					<NavLink key={item.href} to={item.href}>
+					<MenuItemWrapper
+						key={item.href}
+						to={item.href}
+						disabled={item.disabled}
+					>
 						<MenuItem
 							className={item.className}
 							width="100%"
@@ -84,6 +104,12 @@ export const Menu = ({
 							flexDirection="row"
 							alignItems="center"
 							justifyContent={isCollapsed ? 'center' : 'unset'}
+							disabled={item.disabled}
+							tooltip={
+								item.tooltip != null
+									? { text: item.tooltip, placement: 'right' }
+									: undefined
+							}
 						>
 							{!!item.badge && (
 								<StyledBadge {...item.badge} isCollapsed={isCollapsed}>
@@ -93,7 +119,11 @@ export const Menu = ({
 							{!!item.icon && (
 								<Txt.span
 									bold
-									color={isCurrent ? 'text.main' : 'secondary.semilight'}
+									color={
+										isCurrent || item.disabled
+											? 'text.main'
+											: 'secondary.semilight'
+									}
 									fontSize={isCollapsed ? 4 : 3}
 									mr={isCollapsed ? 0 : 2}
 								>
@@ -105,7 +135,9 @@ export const Menu = ({
 									bold
 									fontSize={2}
 									style={{ lineHeight: 1.33 }}
-									color={isCurrent ? 'text.main' : 'quartenary.main'}
+									color={
+										isCurrent || item.disabled ? 'text.main' : 'quartenary.main'
+									}
 								>
 									{item.title}
 								</Txt.span>
@@ -114,7 +146,11 @@ export const Menu = ({
 								<Txt.span
 									bold
 									tooltip={item.title}
-									color={isCurrent ? 'text.main' : 'secondary.semilight'}
+									color={
+										isCurrent || item.disabled
+											? 'text.main'
+											: 'secondary.semilight'
+									}
 									fontSize={4}
 									ml={1}
 								>
@@ -122,7 +158,7 @@ export const Menu = ({
 								</Txt.span>
 							)}
 						</MenuItem>
-					</NavLink>
+					</MenuItemWrapper>
 				);
 			})}
 		</Flex>
