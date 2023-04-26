@@ -1,4 +1,26 @@
 - commits:
+    - subject: "DownloadImageModal: Use Badges when no formattedVersion is passed"
+      hash: bc9572372bcc60d739f55c7ee8ff62411d1bd5da
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        See: https://github.com/balena-io/balena-ui/issues/4849
+        see: https://github.com/balena-io/balena-ui/issues/4849
+      author: Thodoris Greasidis
+      nested: []
+    - subject: "DownloadImageModal: Make the OS's formattedVersion property optional"
+      hash: 5060a04d6785176eec6d58e3b28400e703de2cf8
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Thodoris Greasidis
+      nested: []
+  version: 34.12.0
+  title: ""
+  date: 2023-04-26T17:05:13.639Z
+- commits:
     - subject: "Sidebar items: Add `disabled` and `tooltip` props"
       hash: 2bcc91151f14a932009f9433a04ab377b43c5bc0
       body: ""
