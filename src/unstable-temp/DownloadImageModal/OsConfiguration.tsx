@@ -5,6 +5,7 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons/faExclamationTriangle';
 import { faFileAlt } from '@fortawesome/free-regular-svg-icons/faFileAlt';
 import { Alert } from '../../components/Alert';
+import { Badge } from '../../components/Badge';
 import { Box } from '../../components/Box';
 import { Checkbox } from '../../components/Checkbox';
 import { Flex } from '../../components/Flex';
@@ -22,7 +23,7 @@ import {
 	VersionSelectionOptions,
 } from './versions';
 import { DeviceType, OsVersionsByDeviceType } from './models';
-import { useTranslation } from '../../hooks/useTranslation';
+import { TFunction, useTranslation } from '../../hooks/useTranslation';
 import { getOsVariantDisplayText } from './utils';
 import { useTheme } from '../../hooks/useTheme';
 import { Theme } from '~/theme';
@@ -51,6 +52,13 @@ interface OsConfigurationProps {
 	onSelectedOsTypeChange: (osType: string) => void;
 	docsIcon?: IconProp;
 }
+
+export const lineColors = {
+	next: 1,
+	current: 0,
+	sunset: 12,
+	outdated: 5,
+};
 
 const BuildVariants = ['dev', 'prod'] as const;
 
@@ -128,9 +136,11 @@ const VariantSelector = ({
 };
 
 const VersionSelectOption = ({
+	t,
 	option,
 	theme,
 }: {
+	t: TFunction;
 	option: VersionSelectionOptions;
 	theme: Theme;
 }) => (
@@ -142,6 +152,23 @@ const VersionSelectOption = ({
 		maxWidth="445px"
 	>
 		<Txt mr={2}>{option.title}</Txt>{' '}
+		{option.showBadges && (
+			<>
+				{!!option.line && (
+					<Badge
+						ml={1}
+						shade={lineColors[option.line as keyof typeof lineColors] ?? 0}
+					>
+						{option.line}
+					</Badge>
+				)}
+				{!!option.isRecommended && (
+					<Badge ml={1} shade={20}>
+						{t('labels.recommended')}
+					</Badge>
+				)}
+			</>
+		)}
 		{!!option.knownIssueList && (
 			<Box
 				ml={2}
@@ -312,7 +339,7 @@ export const OsConfiguration = ({
 								value={version}
 								valueLabel={
 									version && (
-										<VersionSelectOption option={version} theme={theme} />
+										<VersionSelectOption t={t} option={version} theme={theme} />
 									)
 								}
 								placeholder={'Choose a version...'}
@@ -322,7 +349,7 @@ export const OsConfiguration = ({
 								options={versionSelectionOpts}
 							>
 								{(option) => (
-									<VersionSelectOption option={option} theme={theme} />
+									<VersionSelectOption t={t} option={option} theme={theme} />
 								)}
 							</Select>
 						</Box>
