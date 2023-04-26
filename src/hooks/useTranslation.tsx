@@ -68,6 +68,7 @@ const translationMap = {
 	'labels.instructions': 'Instructions',
 	'labels.provisioning_key_name': 'Provisioning Key name',
 	'labels.provisioning_key_expiry_date': 'Provisioning Key expiring on',
+	'labels.recommended': 'recommended',
 
 	'info.production_and_enterprise_plan_only':
 		'production and enterprise plan only',

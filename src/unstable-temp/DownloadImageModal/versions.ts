@@ -6,6 +6,9 @@ import { Dictionary } from '../../common-types';
 export type VersionSelectionOptions = {
 	title: string;
 	value: string;
+	// TODO: Drop in the next major and assume always true
+	/** @deprecated */
+	showBadges: boolean;
 	isRecommended?: boolean;
 	osType: string;
 	line?: string;
@@ -32,13 +35,22 @@ export const transformVersions = (versions: OsVersion[]) => {
 		// We always want to use the 'prod' variant's formatted version as it can contain additional information (such as recommended label).
 		const title =
 			(version.variant === 'dev' ? existingSelectionOpt?.title : null) ??
-			version.formattedVersion;
+			(version.formattedVersion
+				? // TODO: Drop in the next major in favor of always returning the strippedVersion
+				  version.formattedVersion
+				: version.strippedVersion);
 
 		optsByVersion[version.strippedVersion] = {
 			title,
 			value: version.strippedVersion,
 			osType: version.osType,
 			line: version.line,
+			isRecommended: version.isRecommended,
+			// TODO: Drop in the next major
+			// if the formattedVersion is provided we use it as
+			// the title, otherwise use badges based on the rest of the
+			// object properties.
+			showBadges: !version.formattedVersion,
 			knownIssueList: version.known_issue_list,
 			// Unified releases in the model have variant === ''
 			// but we also test for nullish for backgwards compatibility w/ the typings.
