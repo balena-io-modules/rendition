@@ -24,6 +24,21 @@ export type VersionSelectionOptions = {
 	  }
 );
 
+const getFormattedVersion = (version: OsVersion) => {
+	let formattedVersion = version.strippedVersion;
+	const additionalFormats = [];
+	if (version.line) {
+		additionalFormats.push(version.line);
+	}
+	if (version.isRecommended) {
+		additionalFormats.push('recommended');
+	}
+	if (additionalFormats.length > 0) {
+		formattedVersion += ` (${additionalFormats.join(', ')})`;
+	}
+	return formattedVersion;
+};
+
 export const transformVersions = (versions: OsVersion[]) => {
 	// Get a single object per stripped version, with both variants of it included (if they exist). It expects a sorted `
 	const optsByVersion: Dictionary<VersionSelectionOptions> = {};
@@ -32,7 +47,9 @@ export const transformVersions = (versions: OsVersion[]) => {
 		// We always want to use the 'prod' variant's formatted version as it can contain additional information (such as recommended label).
 		const title =
 			(version.variant === 'dev' ? existingSelectionOpt?.title : null) ??
-			version.formattedVersion;
+			// TODO: Drop in the next major
+			version.formattedVersion ??
+			getFormattedVersion(version);
 
 		optsByVersion[version.strippedVersion] = {
 			title,
