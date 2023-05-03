@@ -169,6 +169,7 @@ interface ImageFormProps {
 	) => Promise<string | undefined>;
 	modalActions?: ModalAction[];
 	configurationComponent: React.ReactNode;
+	onFieldChange?: (fields: { [key: string]: any }) => void;
 }
 
 export const ImageForm = ({
@@ -185,6 +186,7 @@ export const ImageForm = ({
 	getDownloadSize,
 	modalActions,
 	configurationComponent,
+	onFieldChange,
 }: ImageFormProps) => {
 	const { t } = useTranslation();
 	const formElement = React.useRef<HTMLFormElement | null>(null);
@@ -217,14 +219,23 @@ export const ImageForm = ({
 		[downloadOptionsBase, model],
 	);
 
+	React.useEffect(() => {
+		onFieldChange?.({ ...downloadOptions });
+	}, [downloadOptions]);
+
 	const actions = React.useMemo(() => {
 		const list = [
 			...(modalActions ?? []),
 			{
 				id: 'flash',
 				plain: true,
-				onClick: (event: React.MouseEvent) =>
-					flashWithEtcher(event, downloadOptions, downloadUrl, authToken),
+				onClick: (event: React.MouseEvent) => {
+					onDownloadStart?.(downloadConfigOnly, {
+						...downloadOptions,
+						type: 'flash',
+					});
+					flashWithEtcher(event, downloadOptions, downloadUrl, authToken);
+				},
 				icon: <img width="20px" alt="etcher" src={etcherLogoBase64} />,
 				disabled: hasDockerImageDownload,
 				tooltip: hasDockerImageDownload
@@ -236,6 +247,10 @@ export const ImageForm = ({
 				id: 'download_os',
 				plain: true,
 				onClick: () => {
+					onDownloadStart?.(downloadConfigOnly, {
+						...downloadOptions,
+						type: 'download_os',
+					});
 					formElement?.current?.submit();
 				},
 				icon: <FontAwesomeIcon icon={faDownload} />,
@@ -259,7 +274,11 @@ export const ImageForm = ({
 						await downloadConfig(downloadOptions);
 						setIsDownloadingConfig(false);
 					}
-					startDownload(true);
+					onDownloadStart?.(true, {
+						...downloadOptions,
+						type: 'download_config_file',
+					});
+					setDownloadConfigOnly(true);
 				},
 				icon: <FontAwesomeIcon icon={faDownload} />,
 				label: t('actions.download_configuration_file_only'),
@@ -281,15 +300,6 @@ export const ImageForm = ({
 	const [selectedAction, setSelectedAction] = React.useState<ModalAction>(
 		actions.find((a) => !a.disabled) || actions[0],
 	);
-
-	const startDownload = (downloadConfigOnly: boolean) => {
-		if (typeof onDownloadStart === 'function') {
-			onDownloadStart(downloadConfigOnly, {
-				...downloadOptions,
-			});
-		}
-		setDownloadConfigOnly(downloadConfigOnly);
-	};
 
 	React.useEffect(() => {
 		if (hasDockerImageDownload && !downloadConfigOnly) {
