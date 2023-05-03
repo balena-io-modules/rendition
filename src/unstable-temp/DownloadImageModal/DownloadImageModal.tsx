@@ -111,6 +111,7 @@ export interface UnstableTempDownloadImageModalProps {
 	modalActions?: ModalAction[];
 	authToken?: string;
 	docsIcon?: IconProp;
+	onFieldChange?: (fields: { [key: string]: any }) => void;
 }
 
 export const UnstableTempDownloadImageModal = ({
@@ -132,6 +133,7 @@ export const UnstableTempDownloadImageModal = ({
 	modalActions,
 	authToken,
 	docsIcon,
+	onFieldChange,
 }: UnstableTempDownloadImageModalProps) => {
 	const { t } = useTranslation();
 	const [deviceType, setDeviceType] = React.useState(initialDeviceType);
@@ -251,6 +253,7 @@ export const UnstableTempDownloadImageModal = ({
 								)}
 								{!!osType && !!compatibleDeviceTypes && (
 									<ImageForm
+										onFieldChange={onFieldChange}
 										onDownloadStart={onDownloadStart}
 										setIsDownloadingConfig={setIsDownloadingConfig}
 										deviceType={deviceType}
