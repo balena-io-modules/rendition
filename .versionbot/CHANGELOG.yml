@@ -1,4 +1,23 @@
 - commits:
+    - subject: "DownloadImageModal: Add `onFieldChange` and call `onDownloadStart`
+        whenever a download is started, regardless of type"
+      hash: e9bfa015b9d81e717d2b5288876ddd0bb12d9cb7
+      body: ""
+      footer:
+        Changelog-entry: "DownloadImageModal: Add `onFieldChange` and call
+          `onDownloadStart` whenever a download is started, regardless of type"
+        changelog-entry: "DownloadImageModal: Add `onFieldChange` and call
+          `onDownloadStart` whenever a download is started, regardless of type"
+        Change-type: minor
+        change-type: minor
+        Co-authored-by: Otavio Jacobi <otavio.jacobi@balena.io>
+        co-authored-by: Otavio Jacobi <otavio.jacobi@balena.io>
+      author: myarmolinsky
+      nested: []
+  version: 34.13.0
+  title: ""
+  date: 2023-05-03T19:44:23.083Z
+- commits:
     - subject: "DownloadImageModal: Use Badges when no formattedVersion is passed"
       hash: bc9572372bcc60d739f55c7ee8ff62411d1bd5da
       body: ""
