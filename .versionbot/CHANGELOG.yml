@@ -1,4 +1,16 @@
 - commits:
+    - subject: "Search: Fix clear icon being visible when input is empty"
+      hash: 8c27dbf90bf8a4a6e84288e74fd4ecb008b69a50
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: myarmolinsky
+      nested: []
+  version: 34.13.1
+  title: ""
+  date: 2023-05-11T15:22:41.423Z
+- commits:
     - subject: "DownloadImageModal: Add `onFieldChange` and call `onDownloadStart`
         whenever a download is started, regardless of type"
       hash: e9bfa015b9d81e717d2b5288876ddd0bb12d9cb7
