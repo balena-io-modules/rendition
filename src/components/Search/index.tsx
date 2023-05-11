@@ -79,7 +79,7 @@ const BaseSearch: React.ForwardRefExoticComponent<SearchProps> =
 						/>
 					</Keyboard>
 					<FontAwesomeIcon icon={faSearch} className="search-icon" />
-					{value !== '' && (
+					{!!value && (
 						<Button
 							plain
 							className="clear-icon"
