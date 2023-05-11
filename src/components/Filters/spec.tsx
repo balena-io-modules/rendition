@@ -215,7 +215,7 @@ describe('Filters component', () => {
 			);
 
 			component.find(DropDownButton).find('button').simulate('click');
-			expect(component.find('svg')).toHaveLength(6);
+			expect(component.find('svg')).toHaveLength(5);
 			component.unmount();
 		});
 
@@ -234,7 +234,7 @@ describe('Filters component', () => {
 			component.setProps({ views: [view] } as any);
 			component.update();
 			component.find(DropDownButton).find('button').simulate('click');
-			expect(component.find('svg')).toHaveLength(6);
+			expect(component.find('svg')).toHaveLength(5);
 			component.unmount();
 		});
 
