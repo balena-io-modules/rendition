@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add WrapWidget
+      hash: f52c056b79be87af69d64c6438f49f5d70c97c2e
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: myarmolinsky
+      nested: []
+  version: 34.15.0
+  title: ""
+  date: 2023-05-22T15:56:12.652Z
+- commits:
     - subject: Add `null` as an acceptable type for DisabledTextWidget
       hash: 6f1d03f02414bca9d4514767d585991f6dda2c1d
       body: ""
