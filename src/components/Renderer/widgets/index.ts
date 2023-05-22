@@ -25,6 +25,7 @@ import { PercentageWidget } from './PercentageWidget';
 import { DisabledTextWidget } from './DisabledTextWidget';
 import { BooleanAsIconWidget } from './BooleanAsIconWidget';
 import { PlaceholderTextWidget } from './PlaceholderTextWidget';
+import { WrapWidget } from './WrapWidget';
 export { WidgetWrapperUiOptions } from './ui-options';
 export {
 	getObjectPropertyNames,
@@ -86,6 +87,11 @@ export const defaultFormats: Format[] = [
 		name: 'disabled-text',
 		format: '.*',
 		widget: DisabledTextWidget,
+	},
+	{
+		name: 'wrap',
+		format: '.*',
+		widget: WrapWidget,
 	},
 	{
 		name: 'boolean-as-icon',
