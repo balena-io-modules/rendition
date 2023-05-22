@@ -129,6 +129,8 @@ const translationMap = {
 	'questions.how_about_adding_one': 'How about adding one?',
 
 	'success.resource_added_successfully': '{{name}} added successfully',
+
+	'info.not_defined': 'not defined',
 };
 
 const getTranslation = (str: string, opts?: any) => {
