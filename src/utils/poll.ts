@@ -59,6 +59,10 @@ export class Poll {
 		} finally {
 			this._counter++;
 			this.blocked = false;
+			if (this.pollInterval) {
+				clearTimeout(this.pollInterval);
+			}
+			this.pollInterval = setTimeout(this.poll, this.interval);
 		}
 	}
 
@@ -69,7 +73,6 @@ export class Poll {
 		}
 		this.lastCompleteTime = 0;
 		this._cancelled = false;
-		this.pollInterval = setInterval(this.poll, this.interval);
 		// Also run a poll instantly, as we wanted to start it *now*,
 		// not X time in the future.
 		return this.poll();
@@ -77,7 +80,7 @@ export class Poll {
 
 	public stop() {
 		if (this.pollInterval) {
-			clearInterval(this.pollInterval);
+			clearTimeout(this.pollInterval);
 		}
 		this._cancelled = true;
 		this.pollInterval = null;
