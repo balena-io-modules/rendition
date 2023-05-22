@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add `null` as an acceptable type for DisabledTextWidget
+      hash: 6f1d03f02414bca9d4514767d585991f6dda2c1d
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: myarmolinsky
+      nested: []
+  version: 34.14.0
+  title: ""
+  date: 2023-05-22T15:17:29.010Z
+- commits:
     - subject: fix polling not waiting for previous request to complete
       hash: eaaf08d2ec95af17562e417f7f0a7afa3a81e0c3
       body: ""
