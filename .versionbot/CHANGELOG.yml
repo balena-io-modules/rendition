@@ -1,4 +1,24 @@
 - commits:
+    - subject: Update snapshots
+      hash: aae41d15f6de09e9c0219a9124e8125d4c0edfd0
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: JSReds
+      nested: []
+    - subject: Update flowzone.yml
+      hash: ee036a8c6919bbf4bfe63cab2928a383c3a9c3c5
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kyle Harding
+      nested: []
+  version: 34.15.1
+  title: ""
+  date: 2023-06-06T18:16:55.302Z
+- commits:
     - subject: Add WrapWidget
       hash: f52c056b79be87af69d64c6438f49f5d70c97c2e
       body: ""
