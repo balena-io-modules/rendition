@@ -360,6 +360,7 @@ export const OsConfiguration = ({
 									checked={showAllVersions}
 									label={'Show outdated versions'}
 									onChange={handleShowAllVersions}
+									className="e2e-show-outdated-images"
 								/>
 							</Box>
 						)}
