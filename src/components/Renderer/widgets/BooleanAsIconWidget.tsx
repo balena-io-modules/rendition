@@ -9,6 +9,7 @@ import { widgetFactory } from './widget-util';
 
 export const BooleanAsIconWidget = widgetFactory('BooleanAsIcon', {}, [
 	JsonTypes.boolean,
+	JsonTypes.null,
 ])(({ value }) => {
 	const text = value ? 'true' : 'false';
 	return (
