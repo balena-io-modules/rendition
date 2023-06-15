@@ -1,4 +1,16 @@
 - commits:
+    - subject: Accept undefined values in the boolean widget
+      hash: 2e8e22844ab6e390d46da2ad5027943ea24916d6
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: JSReds
+      nested: []
+  version: 34.15.3
+  title: ""
+  date: 2023-06-15T15:04:07.162Z
+- commits:
     - subject: Add class to the "Show outdated images" checkbox
       hash: 9516099efe8cf6da92d397f66b0810b99dd5c275
       body: ""
