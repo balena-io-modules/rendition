@@ -86,11 +86,6 @@ export interface DeviceTypeDownloadAlert {
 	type: string;
 	message: string;
 }
-export interface DeviceTypeInstructions {
-	linux: string[];
-	osx: string[];
-	windows: string[];
-}
 export interface DeviceTypeOptions {
 	options: DeviceTypeOptionsGroup[];
 	collapsed: boolean;
@@ -121,7 +116,10 @@ export interface DeviceType {
 	/** @deprecated */
 	imageDownloadAlerts?: DeviceTypeDownloadAlert[];
 	/** @deprecated */
-	instructions?: string[] | DeviceTypeInstructions;
+	instructions?:
+		| string[]
+		| Record<'Linux' | 'MacOS' | 'Windows', string[]>
+		| DeviceTypeInstructions;
 	/** @deprecated */
 	options?: DeviceTypeOptions[];
 	/** @deprecated */

@@ -1,5 +1,4 @@
 import invert from 'lodash/invert';
-import has from 'lodash/has';
 import * as React from 'react';
 import { Flex } from '../../components/Flex';
 import { Box } from '../../components/Box';
@@ -77,7 +76,9 @@ export const ApplicationInstructions = React.memo(
 
 		const interpolatedInstructions = (
 			hasOsSpecificInstructions
-				? (instructions as DeviceTypeInstructions)[normalizedOs]
+				? (instructions as DeviceTypeInstructions)[
+						osTitles[normalizedOs] as keyof DeviceTypeInstructions
+				  ]
 				: (instructions as string[])
 		).map((instruction) =>
 			interpolateMustache(
@@ -134,45 +135,18 @@ export const ApplicationInstructions = React.memo(
 );
 
 interface InstructionsItemProps {
-	node: any;
+	node: string;
 }
 
 interface InstructionsListProps {
-	instructions: any[];
+	instructions: string[];
 }
 
-const InstructionsItem = (props: InstructionsItemProps) => {
-	const { node } = props;
-
-	const hasChildren = has(node, 'children');
-	let text = null;
-
-	if (typeof node === 'string') {
-		text = node;
-	}
-
-	if (node?.text) {
-		text = node.text;
-	}
-
-	return (
-		<span>
-			<span dangerouslySetInnerHTML={{ __html: text }} />
-
-			{hasChildren && (
-				<List>
-					{(node.children as any[]).map((item, i) => {
-						return <InstructionsItem key={i} node={item} />;
-					})}
-				</List>
-			)}
-		</span>
-	);
+const InstructionsItem = ({ node }: InstructionsItemProps) => {
+	return <span dangerouslySetInnerHTML={{ __html: node }} />;
 };
 
-const InstructionsList = (props: InstructionsListProps) => {
-	const { instructions } = props;
-
+const InstructionsList = ({ instructions }: InstructionsListProps) => {
 	return (
 		// TODO: On 13px the line height is calculated as 19.5px, which breaks the alignment of the number inside the list item due to rounding.
 		// Remove custom font size once fixed in rendition https://github.com/balena-io-modules/rendition/issues/1025
