@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update DownloadImageModal instructions typing
+      hash: a1d40da49f93511eea76a153dee2b9dfa09404fb
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: myarmolinsky
+      nested: []
+  version: 34.15.4
+  title: ""
+  date: 2023-06-19T14:55:19.362Z
+- commits:
     - subject: Accept undefined values in the boolean widget
       hash: 2e8e22844ab6e390d46da2ad5027943ea24916d6
       body: ""
