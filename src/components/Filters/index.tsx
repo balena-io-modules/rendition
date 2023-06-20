@@ -70,6 +70,7 @@ export interface FiltersProps {
 	schema: JSONSchema;
 	/** Properties that are passed to the "Add filter" button, these are the same props used for the [`Button`](#button) component */
 	addFilterButtonProps?: ButtonProps;
+	showSaveView?: boolean;
 	/** Properties that are passed to the "Views" button, these are the same props used for the [DropDownButton](#dropdownbutton) component */
 	viewsMenuButtonProps?: DropDownButtonProps;
 	/** Controls which parts of the Filters interface are displayed. One of `all`, `add`, `search`, `views`, `summary`, or an array containing any of these values */
@@ -92,6 +93,7 @@ export const Filters = ({
 	renderMode,
 	dark,
 	compact,
+	showSaveView = true,
 	onViewsUpdate,
 	onFiltersUpdate,
 	onSearch,
@@ -240,6 +242,7 @@ export const Filters = ({
 							setFilters([]);
 							onFiltersUpdate?.([]);
 						}}
+						showSaveView={showSaveView}
 						onSaveView={({ name }) => saveView(name)}
 						filters={internalFilters}
 					/>

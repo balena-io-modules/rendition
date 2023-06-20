@@ -16,6 +16,7 @@ export interface SummaryProps {
 	onEdit: (filter: JSONSchema) => void;
 	onDelete: (filter: JSONSchema) => void;
 	onClearFilters: () => void;
+	showSaveView?: boolean;
 	onSaveView: (viewData: ViewData) => void;
 }
 
@@ -31,6 +32,7 @@ export const Summary = ({
 	onEdit,
 	onDelete,
 	onClearFilters,
+	showSaveView,
 	onSaveView,
 }: SummaryProps) => {
 	const [showViewForm, setShowViewForm] = React.useState(false);
@@ -46,11 +48,13 @@ export const Summary = ({
 							Clear all
 						</Button>
 					</Flex>
-					<Flex>
-						<Button plain primary onClick={() => setShowViewForm(true)}>
-							Save view
-						</Button>
-					</Flex>
+					{showSaveView && (
+						<Flex>
+							<Button plain primary onClick={() => setShowViewForm(true)}>
+								Save view
+							</Button>
+						</Flex>
+					)}
 				</Flex>
 				<Flex flexWrap="wrap">
 					{filters.map((filter, index) => (
