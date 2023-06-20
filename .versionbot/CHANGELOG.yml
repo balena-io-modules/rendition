@@ -1,4 +1,16 @@
 - commits:
+    - subject: "Filters: Add `showSaveView` to `Summary` to hide `Save view` button"
+      hash: 2bfb577dc2fb2cbd94c49ec6282ee4e258b08428
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: myarmolinsky
+      nested: []
+  version: 34.15.5
+  title: ""
+  date: 2023-06-20T19:20:55.797Z
+- commits:
     - subject: Update DownloadImageModal instructions typing
       hash: a1d40da49f93511eea76a153dee2b9dfa09404fb
       body: ""
