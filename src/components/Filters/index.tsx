@@ -185,7 +185,9 @@ export const Filters = ({
 								setShowSearchDropDown(e.target.value !== '');
 								setSearchString(e.target.value);
 							}}
-							onEnter={() => {
+							onEnter={(e) => {
+								e.preventDefault();
+								e.stopPropagation();
 								if (!searchString) {
 									return;
 								}

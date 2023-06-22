@@ -108,7 +108,7 @@ export interface InternalSearchProps extends React.HTMLAttributes<HTMLElement> {
 	value?: string;
 	/** A function that is called when the input changes */
 	onChange?: (value: any) => void;
-	onEnter?: () => void;
+	onEnter?: (e: React.KeyboardEvent<HTMLElement>) => void;
 }
 
 export type SearchProps = InternalSearchProps & RenditionSystemProps;
