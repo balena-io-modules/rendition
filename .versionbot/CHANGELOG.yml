@@ -1,4 +1,17 @@
 - commits:
+    - subject: "Filters: Hide `Save view` button by default if not using `views`
+        renderMode"
+      hash: 3d9ff49b0072505e74f75b7c4edcc3d5cf756c83
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: myarmolinsky
+      nested: []
+  version: 34.15.6
+  title: ""
+  date: 2023-06-22T13:20:46.066Z
+- commits:
     - subject: "Filters: Add `showSaveView` to `Summary` to hide `Save view` button"
       hash: 2bfb577dc2fb2cbd94c49ec6282ee4e258b08428
       body: ""
