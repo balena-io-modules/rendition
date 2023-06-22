@@ -182,7 +182,7 @@ describe('Filters component', () => {
 		it('should not show scopes selector if one or less scopes are passed', () => {
 			const view = mount(
 				<Provider>
-					<Filters schema={schema} filters={[filter]} />
+					<Filters schema={schema} filters={[filter]} showSaveView />
 				</Provider>,
 			);
 
