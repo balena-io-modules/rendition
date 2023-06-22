@@ -1,4 +1,16 @@
 - commits:
+    - subject: "Filters: prevent event propagation on Search enter"
+      hash: c87c36e14efe7d07c81c7d6889b556a91a172008
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: myarmolinsky
+      nested: []
+  version: 34.15.7
+  title: ""
+  date: 2023-06-22T16:58:02.437Z
+- commits:
     - subject: "Filters: Hide `Save view` button by default if not using `views`
         renderMode"
       hash: 3d9ff49b0072505e74f75b7c4edcc3d5cf756c83
