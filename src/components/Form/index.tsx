@@ -82,6 +82,35 @@ const FormWrapper = styled(Box)`
 	.text-danger {
 		color: ${(props) => props?.theme?.colors?.danger?.main ?? '#a94442'};
 	}
+
+	input[type='file'] {
+		cursor: pointer;
+		&::file-selector-button {
+			cursor: pointer;
+			font-weight: ${(props) => props.theme.button.font.weight};
+			font-size: ${(props) => props.theme.button.font.size};
+			height: ${(props) => props.theme.button.height};
+			border-color: ${(props) => props.theme.colors.primary.main};
+			background: ${(props) => props.theme.colors.primary.main};
+			white-space: nowrap;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			padding: 4px 20px;
+			border-radius: 20px;
+			border: 1px solid ${(props) => props.theme.colors.primary.main};
+
+			&:disabled {
+				cursor: not-allowed;
+			}
+			&:hover {
+				box-shadow: none;
+				background: ${(props) => props.theme.colors.primary.dark};
+				border-color: ${(props) => props.theme.colors.primary.dark};
+			}
+		}
+	}
 `;
 
 const parseSchema = (schema: JSONSchema) => {
