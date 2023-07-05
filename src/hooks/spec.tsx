@@ -25,9 +25,9 @@ test('useTheme should return correct theme object', () => {
 	expect(text).toEqual('Arial');
 });
 
-const resizeWindow = (width = 600) => {
+const resizeWindow = (event: Event, width = 600) => {
 	global.window.innerWidth = width;
-	global.window.dispatchEvent(new Event('resize'));
+	global.window.dispatchEvent(event);
 };
 
 const HookContainer = ({ children, values }: any) =>
@@ -54,8 +54,9 @@ describe('should test useBreakpoint hook in multiple resolutions', () => {
 	test.each(table)(
 		'useBreakpoint should return %s value with %d resolution',
 		(_name: any, resolution: any, expectedResult: any) => {
+			const event: Event = new CustomEvent('resize');
 			act(() => {
-				resizeWindow(resolution - 1);
+				resizeWindow(event, resolution - 1);
 			});
 			const hookValue = testHook(values);
 			expect(hookValue).toEqual(expectedResult);

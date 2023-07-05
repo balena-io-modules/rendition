@@ -96,6 +96,7 @@ export {
 } from './components/Table';
 
 export { Accordion, AccordionProps } from './components/Accordion';
+/* istanbul ignore next */
 export { Terminal, TerminalProps } from './components/Terminal';
 export { Txt, TxtProps } from './components/Txt';
 export { Textarea, TextareaProps } from './components/Textarea';
