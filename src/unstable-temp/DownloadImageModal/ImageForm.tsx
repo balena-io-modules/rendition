@@ -323,7 +323,6 @@ export const ImageForm = ({
 	}, [deviceType?.slug, rawVersion]);
 
 	React.useEffect(() => {
-		console.log(actions);
 		setSelectedAction(
 			(oldSelectedAction) =>
 				actions.find((act) =>
