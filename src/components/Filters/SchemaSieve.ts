@@ -21,6 +21,12 @@ export interface Operator<T> {
 	label: string;
 }
 
+interface CustomSchemaDescription {
+	'x-ref-scheme'?: string[];
+	'x-foreign-key-scheme'?: string[];
+	'x-filter-only'?: boolean;
+}
+
 export type CreateFilter = (
 	field: string,
 	operator: Operator<OperatorSlugs>,
@@ -44,7 +50,7 @@ export type FilterSignatureWithKey = FilterSignature & { key: string };
 
 export const getSignatures = (filter: JSONSchema): FilterSignatureWithKey[] => {
 	const signatures = filter.anyOf!.map((f: JSONSchema) => {
-		return parseFilterDescription(f);
+		return parseDescription(f) as FilterSignature;
 	});
 
 	return (signatures.filter((s) => s !== null) ?? []).map((s) => ({
@@ -202,9 +208,24 @@ export function filter<T>(
 	return pickBy(collection, (m) => validators.every((v) => v(m)));
 }
 
-export const parseFilterDescription = (filter: JSONSchema): FilterSignature => {
-	return filter.description && isJson(filter.description)
-		? JSON.parse(filter.description)
+export const parseDescription = (
+	schemaValue: JSONSchema | JSONSchemaDefinition,
+): FilterSignature | CustomSchemaDescription | null => {
+	return schemaValue &&
+		typeof schemaValue !== 'boolean' &&
+		schemaValue.description &&
+		isJson(schemaValue.description)
+		? JSON.parse(schemaValue.description)
+		: null;
+};
+
+export const parseDescriptionProperty = <T extends unknown>(
+	schemaValue: JSONSchema,
+	property: string,
+): T | null => {
+	const description = parseDescription(schemaValue);
+	return description && property in description
+		? description[property as keyof typeof description]
 		: null;
 };
 
@@ -262,15 +283,10 @@ export const getSchemaFormat = (schema: JSONSchema) => {
 export const getPropertyScheme = (
 	schemaValue: JSONSchema | JSONSchemaDefinition,
 ) => {
-	if (typeof schemaValue === 'boolean' || !schemaValue.description) {
-		return null;
-	}
-	try {
-		const json = JSON.parse(schemaValue.description!);
-		return json['x-foreign-key-scheme'] ?? json['x-ref-scheme'];
-	} catch (err) {
-		return null;
-	}
+	const json = parseDescription(schemaValue);
+	return json && ('x-foreign-key-scheme' in json || 'x-ref-scheme' in json)
+		? json['x-foreign-key-scheme'] ?? json['x-ref-scheme']
+		: null;
 };
 
 export const convertRefSchemeToSchemaPath = (refScheme: string | undefined) => {
@@ -322,12 +338,17 @@ export const generateSchemaFromRefScheme = (
 	if (ongoingIncrementalPath.length) {
 		typePaths.push(ongoingIncrementalPath);
 	}
+	const referenceSchema = get(propertySchema, convertedRefScheme) as JSONSchema;
+	const referenceSchemaDescription = parseDescription(referenceSchema) ?? {};
+
 	return {
 		...propertySchema,
-		description: JSON.stringify({ 'x-ref-scheme': [refScheme] }),
-		title:
-			(get(propertySchema, convertedRefScheme) as JSONSchema)?.title ??
-			propertySchema.title,
+		description: `${JSON.stringify(
+			Object.assign(referenceSchemaDescription, {
+				'x-ref-scheme': [refScheme],
+			}),
+		)}`,
+		title: referenceSchema?.title ?? propertySchema.title,
 		...pick(propertySchema, typePaths),
 	};
 };

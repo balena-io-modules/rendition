@@ -127,7 +127,8 @@ export const editSchema = (
 ): JSONSchema => {
 	const refScheme = getPropertyScheme(schema);
 	const schemaItems = schema.items as JSONSchema | undefined;
-	const convertedRefScheme = convertRefSchemeToSchemaPath(refScheme);
+	// TODO: find a way to handle x-foreign-key-scheme on array types
+	const convertedRefScheme = convertRefSchemeToSchemaPath(refScheme?.[0]);
 	if (!!schemaItems && !!convertedRefScheme) {
 		const property = get(
 			schemaItems.properties,
