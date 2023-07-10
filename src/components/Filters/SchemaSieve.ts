@@ -24,7 +24,7 @@ export interface Operator<T> {
 interface CustomSchemaDescription {
 	'x-ref-scheme'?: string[];
 	'x-foreign-key-scheme'?: string[];
-	'x-filter-only'?: boolean;
+	'x-filter-only'?: boolean | string[];
 }
 
 export type CreateFilter = (
