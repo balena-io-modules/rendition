@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix typing, code reduction and add getDescriptionProperty functionality
+      hash: cd692e37807d66a4942a26223c2ae387719edca3
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: JSReds
+      nested: []
+  version: 34.16.1
+  title: ""
+  date: 2023-07-10T15:52:01.598Z
+- commits:
     - subject: Restyle form fyle upload
       hash: 5592a318dfbb0739aed242cc097878fe88312c8e
       body: ""
