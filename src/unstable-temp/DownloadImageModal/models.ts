@@ -77,11 +77,25 @@ export interface Application {
 	uuid: string;
 }
 
-export interface DeviceTypeInstructions {
+// the legacy device-type.json format
+export interface OsSpecificDeviceTypeJsonInstructions {
 	linux: string[];
 	osx: string[];
 	windows: string[];
 }
+
+export type OsSpecificContractInstructions = Record<
+	'Linux' | 'MacOS' | 'Windows',
+	string[]
+>;
+
+export type OsSpecificDeviceTypeInstructions =
+	| OsSpecificDeviceTypeJsonInstructions
+	| OsSpecificContractInstructions;
+
+// TODO: Fix me to include all possible types in the next major
+export type DeviceTypeInstructions = OsSpecificDeviceTypeJsonInstructions;
+
 export interface DeviceTypeDownloadAlert {
 	type: string;
 	message: string;
@@ -118,8 +132,8 @@ export interface DeviceType {
 	/** @deprecated */
 	instructions?:
 		| string[]
-		| Record<'Linux' | 'MacOS' | 'Windows', string[]>
-		| DeviceTypeInstructions;
+		| OsSpecificDeviceTypeJsonInstructions
+		| OsSpecificContractInstructions;
 	/** @deprecated */
 	options?: DeviceTypeOptions[];
 	/** @deprecated */
