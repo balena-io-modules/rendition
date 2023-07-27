@@ -1,4 +1,16 @@
 - commits:
+    - subject: "DownloadImageModal: Improve type safety for OS dependent instructions"
+      hash: 0924701e8215e999765de67f75da0cd2121f50fb
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Thodoris Greasidis
+      nested: []
+  version: 34.16.4
+  title: ""
+  date: 2023-07-27T12:35:58.171Z
+- commits:
     - subject: Fix download image modal specific instructions
       hash: ed824f4345aa5c21cdaa9b298f3ba3e5ca56cb84
       body: ""
