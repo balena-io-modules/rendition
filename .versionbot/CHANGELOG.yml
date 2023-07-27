@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix download image modal specific instructions
+      hash: ed824f4345aa5c21cdaa9b298f3ba3e5ca56cb84
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: JSReds
+      nested: []
+  version: 34.16.3
+  title: ""
+  date: 2023-07-27T11:42:50.620Z
+- commits:
     - subject: Fix typing
       hash: bcc843d4455b3313ca72ee672a1616d56ff7c0a4
       body: ""
