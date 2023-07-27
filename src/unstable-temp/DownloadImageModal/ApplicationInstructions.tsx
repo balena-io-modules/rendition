@@ -15,7 +15,7 @@ export type OsOptions = ReturnType<typeof getUserOs>;
 
 export const osTitles: Record<OsOptions, string> = {
 	windows: 'Windows',
-	osx: 'MacOS',
+	macos: 'MacOS',
 	linux: 'Linux',
 	unknown: 'Unknown',
 };
@@ -27,7 +27,7 @@ export const getUserOs = () => {
 	}
 
 	if (platform.includes('mac')) {
-		return 'osx';
+		return 'macos';
 	}
 
 	if (platform.includes('x11') || platform.includes('linux')) {
@@ -38,9 +38,9 @@ export const getUserOs = () => {
 };
 
 const osTabIndices: Record<OsOptions, number> = {
-	windows: 0,
-	osx: 1,
-	linux: 2,
+	linux: 0,
+	macos: 1,
+	windows: 2,
 	unknown: 0,
 };
 
@@ -63,7 +63,9 @@ export const ApplicationInstructions = React.memo(
 
 		React.useEffect(() => {
 			if (hasOsSpecificInstructions && instructions) {
-				const oses = Object.keys(instructions) as unknown as OsOptions;
+				const oses = Object.keys(instructions).map((os) =>
+					os.toLowerCase(),
+				) as unknown as OsOptions;
 				if (!oses.includes(currentOs) && oses.length > 0) {
 					setCurrentOs(oses[0] as OsOptions);
 				}
@@ -75,11 +77,11 @@ export const ApplicationInstructions = React.memo(
 		}
 
 		const interpolatedInstructions = (
-			hasOsSpecificInstructions
+			(hasOsSpecificInstructions
 				? (instructions as DeviceTypeInstructions)[
 						osTitles[normalizedOs] as keyof DeviceTypeInstructions
 				  ]
-				: (instructions as string[])
+				: instructions) ?? []
 		).map((instruction) =>
 			interpolateMustache(
 				templateData,
@@ -106,10 +108,17 @@ export const ApplicationInstructions = React.memo(
 					<Box mb={3}>
 						<Tabs
 							activeIndex={osTabIndices[currentOs]}
-							onActive={(index) => setCurrentOs(osTabNames[index.toString()])}
+							onActive={(index) => {
+								setCurrentOs(osTabNames[index.toString()]);
+							}}
 						>
-							{(Object.keys(instructions) as OsOptions[]).map((os) => {
-								return <Tab key={os} title={osTitles[os]}></Tab>;
+							{Object.keys(instructions).map((os) => {
+								return (
+									<Tab
+										key={os}
+										title={osTitles[os.toLowerCase() as keyof typeof osTitles]}
+									></Tab>
+								);
 							})}
 						</Tabs>
 					</Box>
