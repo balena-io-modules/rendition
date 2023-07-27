@@ -1,4 +1,3 @@
-import invert from 'lodash/invert';
 import * as React from 'react';
 import { Flex } from '../../components/Flex';
 import { Box } from '../../components/Box';
@@ -8,43 +7,35 @@ import { Link } from '../../components/Link';
 import { List } from '../../components/List';
 import { Heading } from '../../components/Heading';
 import { useTranslation } from '../../hooks/useTranslation';
-import { DeviceType, DeviceTypeInstructions } from './models';
+import { DeviceType, OsSpecificContractInstructions } from './models';
 import { interpolateMustache } from './utils';
-
-export type OsOptions = ReturnType<typeof getUserOs>;
-
-export const osTitles: Record<OsOptions, string> = {
-	windows: 'Windows',
-	macos: 'MacOS',
-	linux: 'Linux',
-	unknown: 'Unknown',
-};
 
 export const getUserOs = () => {
 	const platform = window.navigator.platform.toLowerCase();
 	if (platform.includes('win')) {
-		return 'windows';
+		return 'Windows';
 	}
 
 	if (platform.includes('mac')) {
-		return 'macos';
+		return 'MacOS';
 	}
 
 	if (platform.includes('x11') || platform.includes('linux')) {
-		return 'linux';
+		return 'Linux';
 	}
 
-	return 'unknown';
+	return 'Unknown';
 };
 
-const osTabIndices: Record<OsOptions, number> = {
-	linux: 0,
-	macos: 1,
-	windows: 2,
-	unknown: 0,
-};
+const dtJsonTocontractOsKeyMap = {
+	windows: 'Windows',
+	osx: 'MacOS',
+	linux: 'Linux',
+} as const;
 
-const osTabNames = invert(osTabIndices) as Record<string, OsOptions>;
+export type OsOptions = ReturnType<typeof getUserOs>;
+
+type KeysOfUnion<T> = T extends T ? keyof T : never;
 
 export const ApplicationInstructions = React.memo(
 	({
@@ -57,15 +48,44 @@ export const ApplicationInstructions = React.memo(
 		const { t } = useTranslation();
 		const [currentOs, setCurrentOs] = React.useState<OsOptions>(getUserOs());
 
-		const instructions = deviceType?.instructions;
-		const hasOsSpecificInstructions = !Array.isArray(instructions);
-		const normalizedOs = currentOs === 'unknown' ? 'linux' : currentOs;
+		const instructions = React.useMemo(() => {
+			if (
+				deviceType?.instructions == null ||
+				Array.isArray(deviceType.instructions) ||
+				typeof deviceType.instructions !== 'object'
+			) {
+				return deviceType?.instructions;
+			}
+
+			const instructionsByOs = deviceType.instructions;
+
+			return Object.fromEntries(
+				(
+					Object.entries(instructionsByOs) as Array<
+						[KeysOfUnion<typeof instructionsByOs>, string[]]
+					>
+				).map(([key, value]) => {
+					const normalizedKey =
+						key in dtJsonTocontractOsKeyMap
+							? dtJsonTocontractOsKeyMap[
+									key as keyof typeof dtJsonTocontractOsKeyMap
+							  ]
+							: (key as keyof OsSpecificContractInstructions);
+					return [normalizedKey, value];
+				}),
+			) as OsSpecificContractInstructions;
+		}, [deviceType?.instructions]);
+		const hasOsSpecificInstructions =
+			instructions != null &&
+			!Array.isArray(instructions) &&
+			typeof instructions === 'object';
+		const normalizedOs = currentOs === 'Unknown' ? 'Linux' : currentOs;
 
 		React.useEffect(() => {
-			if (hasOsSpecificInstructions && instructions) {
-				const oses = Object.keys(instructions).map((os) =>
-					os.toLowerCase(),
-				) as unknown as OsOptions;
+			if (hasOsSpecificInstructions) {
+				const oses = Object.keys(instructions) as Array<
+					keyof typeof instructions | 'Unknown'
+				>;
 				if (!oses.includes(currentOs) && oses.length > 0) {
 					setCurrentOs(oses[0] as OsOptions);
 				}
@@ -77,12 +97,10 @@ export const ApplicationInstructions = React.memo(
 		}
 
 		const interpolatedInstructions = (
-			(hasOsSpecificInstructions
-				? (instructions as DeviceTypeInstructions)[
-						osTitles[normalizedOs] as keyof DeviceTypeInstructions
-				  ]
-				: instructions) ?? []
-		).map((instruction) =>
+			hasOsSpecificInstructions
+				? (instructions as Exclude<typeof instructions, string[]>)[normalizedOs]
+				: instructions
+		)?.map((instruction) =>
 			interpolateMustache(
 				templateData,
 				instruction.replace(/<a/, '<a target="_blank"'),
@@ -92,13 +110,15 @@ export const ApplicationInstructions = React.memo(
 		const hasConfigDownloadOnly =
 			deviceType.yocto?.deployArtifact === 'docker-image';
 
-		const finalInstructions = [
-			hasConfigDownloadOnly
-				? t('actions.use_form_to_download_configuration')
-				: t('actions.use_from_to_configure_and_download'),
-			...interpolatedInstructions, // TODO: i18n understand how to handle this case
-			t('actions_messages.appearance_device_explanation'),
-		];
+		const finalInstructions = interpolatedInstructions
+			? [
+					hasConfigDownloadOnly
+						? t('actions.use_form_to_download_configuration')
+						: t('actions.use_from_to_configure_and_download'),
+					...interpolatedInstructions, // TODO: i18n understand how to handle this case
+					t('actions_messages.appearance_device_explanation'),
+			  ]
+			: null;
 
 		return (
 			<Flex flexDirection="column" alignItems="flex-start">
@@ -107,24 +127,27 @@ export const ApplicationInstructions = React.memo(
 				{hasOsSpecificInstructions && (
 					<Box mb={3}>
 						<Tabs
-							activeIndex={osTabIndices[currentOs]}
-							onActive={(index) => {
-								setCurrentOs(osTabNames[index.toString()]);
-							}}
+							activeIndex={Object.keys(instructions).indexOf(currentOs) ?? 0}
+							onActive={(index) =>
+								setCurrentOs(
+									(
+										Object.keys(instructions) as Array<
+											keyof typeof instructions
+										>
+									)[index] ?? 'Unknown',
+								)
+							}
 						>
 							{Object.keys(instructions).map((os) => {
-								return (
-									<Tab
-										key={os}
-										title={osTitles[os.toLowerCase() as keyof typeof osTitles]}
-									></Tab>
-								);
+								return <Tab key={os} title={os}></Tab>;
 							})}
 						</Tabs>
 					</Box>
 				)}
 
-				<InstructionsList instructions={finalInstructions} />
+				{finalInstructions != null && (
+					<InstructionsList instructions={finalInstructions} />
+				)}
 
 				<Flex mt={4}>
 					<Txt>
