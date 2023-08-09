@@ -85,9 +85,6 @@ export type OsSpecificDeviceTypeInstructions =
 	| OsSpecificDeviceTypeJsonInstructions
 	| OsSpecificContractInstructions;
 
-// TODO: Fix me to include all possible types in the next major
-export type DeviceTypeInstructions = OsSpecificDeviceTypeJsonInstructions;
-
 export interface DeviceTypeDownloadAlert {
 	type: string;
 	message: string;
