@@ -136,7 +136,6 @@
     "remark-breaks": "^2.0.2",
     "remark-parse": "^8.0.3",
     "remark-rehype": "^7.0.0",
-    "resize-observer": "^1.0.4",
     "semver": "^7.3.8",
     "skhema": "^5.3.4",
     "styled-components": "^5.3.5",

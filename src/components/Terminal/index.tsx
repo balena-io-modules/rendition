@@ -8,11 +8,6 @@ import { Theme as ThemeType } from '../../common-types';
 import theme from '../../theme';
 import defaultXtermStyle from './XTermDefaultStyle';
 import { Flex } from '../Flex';
-// TODO: Drop this in the next major, since TS now has the correct types and this was supposed to only be used as a type-only import.
-import { ResizeObserver as ResizeObserverPonyfill } from 'resize-observer';
-// TODO: Drop this in favor of the native TS ResizeObserver type once we bump to 4.2
-// See: https://github.com/microsoft/TypeScript/commit/16031bc429305e5daabf263f208678a6729a161e
-import type { ResizeObserver as ResizeObserverType } from 'resize-observer';
 
 const TtyContainer = styled(Flex)`
 	position: relative;
@@ -118,7 +113,7 @@ export class Terminal extends React.Component<ThemedTerminalProps, {}> {
 	// Used as the element to mount XTERM into
 	private mountElement: HTMLDivElement | null;
 	private termConfig: ITerminalOptions;
-	private resizeObserver: ResizeObserverType | null;
+	private resizeObserver: ResizeObserver | null;
 
 	constructor(props: ThemedTerminalProps) {
 		super(props);
@@ -162,11 +157,7 @@ export class Terminal extends React.Component<ThemedTerminalProps, {}> {
 				});
 			}
 			this.resize();
-			const nativeResizeObserver = window.ResizeObserver;
-			const ResizeObserverCtor =
-				typeof nativeResizeObserver === 'function'
-					? nativeResizeObserver
-					: ResizeObserverPonyfill;
+			const ResizeObserverCtor = window.ResizeObserver;
 			if (typeof ResizeObserverCtor === 'function') {
 				const resizeObserver = new ResizeObserverCtor(() => {
 					this.resize();
