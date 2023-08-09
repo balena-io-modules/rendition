@@ -57,13 +57,6 @@ export interface OsVersion {
 	line?: OsLines;
 	// TODO: Mark as non-nullable in the next major
 	variant?: string;
-	// TODO: Drop in the next major
-	/**
-	 * @deprecated if the formattedVersion is provided we use it as
-	 * the title, otherwise use badges based on the rest of the
-	 * object properties.
-	 */
-	formattedVersion?: string;
 	isRecommended?: boolean;
 	known_issue_list: string | null;
 }
