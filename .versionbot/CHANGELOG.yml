@@ -1,4 +1,48 @@
 - commits:
+    - subject: "Terminal: Remove the ResizeObserver polyfill"
+      hash: 2dee4b13a7dbf35d95c5fbadc11d07cc89cb961a
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+      author: Thodoris Greasidis
+      nested: []
+    - subject: "DownloadImageModal: Drop the DeviceTypeInstructions type"
+      hash: 0a13aa493875f7bce87b00dc80e769cf58b1ba0e
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+      author: Thodoris Greasidis
+      nested: []
+    - subject: "DownloadImageModal: Mark the OsVersion variant as non-nullable"
+      hash: bbc18dd2626d81ef269f7e355f34407b08a344e7
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+      author: Thodoris Greasidis
+      nested: []
+    - subject: "DownloadImageModal: Drop the deprecated formattedVersion property"
+      hash: 936494ff007b866cb019982feedf5f10d167e275
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+      author: Thodoris Greasidis
+      nested: []
+    - subject: Stop actively supporting node versions below v14
+      hash: 86044eccb2a17005bb82805cf9bdafba54749166
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+      author: Thodoris Greasidis
+      nested: []
+  version: 35.0.0
+  title: ""
+  date: 2023-08-09T14:10:54.859Z
+- commits:
     - subject: "DownloadImageModal: Improve type safety for OS dependent instructions"
       hash: 0924701e8215e999765de67f75da0cd2121f50fb
       body: ""
