@@ -1,4 +1,16 @@
 - commits:
+    - subject: "ButtonGroup: Add a key prop to the rendered options"
+      hash: b4aca1d0ccef2fcbf6343726f0a79d3a91047e2e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Thodoris Greasidis
+      nested: []
+  version: 35.0.1
+  title: ""
+  date: 2023-08-09T14:26:21.866Z
+- commits:
     - subject: "Terminal: Remove the ResizeObserver polyfill"
       hash: 2dee4b13a7dbf35d95c5fbadc11d07cc89cb961a
       body: ""
