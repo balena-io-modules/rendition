@@ -152,22 +152,18 @@ const VersionSelectOption = ({
 		maxWidth="445px"
 	>
 		<Txt mr={2}>{option.title}</Txt>{' '}
-		{option.showBadges && (
-			<>
-				{!!option.line && (
-					<Badge
-						ml={1}
-						shade={lineColors[option.line as keyof typeof lineColors] ?? 0}
-					>
-						{option.line}
-					</Badge>
-				)}
-				{!!option.isRecommended && (
-					<Badge ml={1} shade={20}>
-						{t('labels.recommended')}
-					</Badge>
-				)}
-			</>
+		{!!option.line && (
+			<Badge
+				ml={1}
+				shade={lineColors[option.line as keyof typeof lineColors] ?? 0}
+			>
+				{option.line}
+			</Badge>
+		)}
+		{!!option.isRecommended && (
+			<Badge ml={1} shade={20}>
+				{t('labels.recommended')}
+			</Badge>
 		)}
 		{!!option.knownIssueList && (
 			<Box

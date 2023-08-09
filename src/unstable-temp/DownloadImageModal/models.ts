@@ -55,15 +55,7 @@ export interface OsVersion {
 	basedOnVersion?: string;
 	osType: string;
 	line?: OsLines;
-	// TODO: Mark as non-nullable in the next major
-	variant?: string;
-	// TODO: Drop in the next major
-	/**
-	 * @deprecated if the formattedVersion is provided we use it as
-	 * the title, otherwise use badges based on the rest of the
-	 * object properties.
-	 */
-	formattedVersion?: string;
+	variant: string;
 	isRecommended?: boolean;
 	known_issue_list: string | null;
 }
@@ -92,9 +84,6 @@ export type OsSpecificContractInstructions = Record<
 export type OsSpecificDeviceTypeInstructions =
 	| OsSpecificDeviceTypeJsonInstructions
 	| OsSpecificContractInstructions;
-
-// TODO: Fix me to include all possible types in the next major
-export type DeviceTypeInstructions = OsSpecificDeviceTypeJsonInstructions;
 
 export interface DeviceTypeDownloadAlert {
 	type: string;
