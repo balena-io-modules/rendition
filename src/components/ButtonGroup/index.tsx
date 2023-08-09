@@ -86,6 +86,7 @@ export const ButtonGroup = (props: ButtonGroupProps) => {
 					const label = typeof option !== 'object' ? option : option.label;
 					return (
 						<Button
+							key={`${label}`}
 							active={
 								typeof option !== 'object'
 									? option === props.value
