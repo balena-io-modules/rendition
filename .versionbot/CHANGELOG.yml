@@ -1,4 +1,16 @@
 - commits:
+    - subject: "Form: Add `widgets` prop for overriding internal Form widgets"
+      hash: 3f59755ce455f73570960d38a2f8b751439ad4c6
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: myarmolinsky
+      nested: []
+  version: 35.1.0
+  title: ""
+  date: 2023-09-22T15:37:44.618Z
+- commits:
     - subject: "ButtonGroup: Add a key prop to the rendered options"
       hash: b4aca1d0ccef2fcbf6343726f0a79d3a91047e2e
       body: ""
