@@ -37,7 +37,7 @@ const SUPPORTED_SCHEMA_FORMATS = [
 	'uri',
 ];
 
-let widgets: {
+let internalWidgets: {
 	[k: string]: any;
 } = {
 	BaseInput,
@@ -114,7 +114,9 @@ const FormWrapper = styled(Box)`
 `;
 
 const parseSchema = (schema: JSONSchema) => {
-	const whitelist = SUPPORTED_SCHEMA_FORMATS.concat(Object.keys(widgets));
+	const whitelist = SUPPORTED_SCHEMA_FORMATS.concat(
+		Object.keys(internalWidgets),
+	);
 	return utils.stripSchemaFormats(schema, whitelist);
 };
 
@@ -168,6 +170,10 @@ export interface FormProps
 	schema: JSONSchema;
 	/** A list of extra formats the form should support and be able to render */
 	extraFormats?: Format[];
+	/** Extra form widgets */
+	widgets?: {
+		[k: string]: any;
+	};
 }
 
 const BaseForm = React.forwardRef<RsjfForm<any>, FormProps>(
@@ -188,6 +194,7 @@ const BaseForm = React.forwardRef<RsjfForm<any>, FormProps>(
 			liveValidate,
 			noValidate,
 			transformErrors,
+			widgets,
 			...props
 		}: FormProps,
 		ref,
@@ -196,7 +203,7 @@ const BaseForm = React.forwardRef<RsjfForm<any>, FormProps>(
 		const contextFormats = form?.formats ?? [];
 		const allWidgets = React.useMemo(() => {
 			return {
-				...widgets,
+				...internalWidgets,
 				...uniqBy(
 					[...(extraFormats ?? []), ...contextFormats],
 					(format) => format.name,
@@ -206,11 +213,12 @@ const BaseForm = React.forwardRef<RsjfForm<any>, FormProps>(
 					}
 					return agg;
 				}, {}),
+				...widgets,
 			};
-		}, [widgets, extraFormats]);
+		}, [internalWidgets, extraFormats]);
 
 		// TODO: This is required for the extra widgets to be rendered, not sure why yet.. :/
-		widgets = allWidgets;
+		internalWidgets = allWidgets;
 
 		const calculatedSchema = React.useMemo(() => {
 			const parsedSchema = parseSchema(schema);
