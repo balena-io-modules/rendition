@@ -117,7 +117,7 @@
     "json-e": "^4.4.3",
     "lodash": "^4.17.21",
     "memoizee": "^0.4.15",
-    "mermaid": "~9.2.2",
+    "mermaid": "~9.3.0",
     "pinejs-client-fetch": "^0.2.2",
     "prismjs": "^1.25.0",
     "prop-types": "^15.7.2",
