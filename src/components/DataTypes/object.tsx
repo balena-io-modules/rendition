@@ -160,7 +160,7 @@ export const createFilter: CreateFilter<OperatorSlug> = (
 		const properties = [schemaKey, schemaValue].map((key: string) => ({
 			properties: {
 				[key]: {
-					pattern: value,
+					pattern: regexEscape(value),
 				},
 			},
 			required: [key],
