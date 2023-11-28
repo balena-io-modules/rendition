@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix full text serach filter with special characters
+      hash: 8bc846faa79d6bdb092bb0ed879f17ca7114c33a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Andrea Rosci
+      nested: []
+  version: 35.1.1
+  title: ""
+  date: 2023-11-28T10:34:18.188Z
+- commits:
     - subject: "Form: Add `widgets` prop for overriding internal Form widgets"
       hash: 3f59755ce455f73570960d38a2f8b751439ad4c6
       body: ""
