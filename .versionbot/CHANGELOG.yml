@@ -1,4 +1,16 @@
 - commits:
+    - subject: Override Layer z-index
+      hash: 7d2ff50586cdbc5e6e47be5bcebb39c823cfbd35
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Andrea Rosci
+      nested: []
+  version: 35.1.2
+  title: ""
+  date: 2023-12-07T15:17:29.658Z
+- commits:
     - subject: Fix full text serach filter with special characters
       hash: 8bc846faa79d6bdb092bb0ed879f17ca7114c33a
       body: ""
