@@ -256,9 +256,9 @@ const theme = {
 	},
 	layer: {
 		container: {
-			zIndex: 40,
+			zIndex: 5000,
 		},
-		zIndex: 30,
+		zIndex: 4999,
 	},
 	text: {
 		medium: {
