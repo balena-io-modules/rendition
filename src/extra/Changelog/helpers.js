@@ -1,5 +1,3 @@
-import { isBefore } from 'date-fns'
-
 export default (data) => {
 	const untilDate = new Date(new Date().setDate(new Date().getDate() - 90));
 	const versionDateStringMatches =
@@ -11,7 +9,7 @@ export default (data) => {
 	for (let i = 0; i < versionDateStringMatches.length; i++) {
 		foundMatch = true;
 		const firstOlderDateString = versionDateStringMatches[i];
-		if (isBefore(new Date(firstOlderDateString.split('(')[1].split(')')[0]), untilDate)) {
+		if (new Date(firstOlderDateString.split('(')[1].split(')')[0]) < untilDate) {
 			firstOlderDateIndex = i;
 			break;
 		}
