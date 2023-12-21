@@ -2,7 +2,7 @@
 
 exports[`Renderer component A Heading widget 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -46,7 +46,7 @@ exports[`Renderer component A Heading widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -70,7 +70,7 @@ exports[`Renderer component A Heading widget 1`] = `
 
 exports[`Renderer component A HighlightedName widget 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -123,7 +123,7 @@ exports[`Renderer component A HighlightedName widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -147,7 +147,7 @@ exports[`Renderer component A HighlightedName widget 1`] = `
 
 exports[`Renderer component A Link widget 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -199,7 +199,7 @@ exports[`Renderer component A Link widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -227,7 +227,7 @@ exports[`Renderer component A Link widget 1`] = `
 
 exports[`Renderer component A List widget 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -325,7 +325,7 @@ exports[`Renderer component A List widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -387,7 +387,7 @@ exports[`Renderer component A List widget 1`] = `
 
 exports[`Renderer component A ProgressBar widget 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -483,7 +483,7 @@ exports[`Renderer component A ProgressBar widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -535,7 +535,7 @@ exports[`Renderer component A ProgressBar widget 1`] = `
 
 exports[`Renderer component A Tag widget 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -604,7 +604,7 @@ exports[`Renderer component A Tag widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -625,7 +625,7 @@ exports[`Renderer component A Tag widget 1`] = `
           <div
             class="c8 c9"
           >
-            subscription: 
+            subscription:
           </div>
           <div
             class="c10 c9"
@@ -641,7 +641,7 @@ exports[`Renderer component A Tag widget 1`] = `
 
 exports[`Renderer component A badge widget 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -692,7 +692,7 @@ exports[`Renderer component A badge widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -716,7 +716,7 @@ exports[`Renderer component A badge widget 1`] = `
 
 exports[`Renderer component A boolean 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -764,7 +764,7 @@ exports[`Renderer component A boolean 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -871,7 +871,7 @@ exports[`Renderer component A button group widget 1`] = `
 }
 
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -986,7 +986,7 @@ exports[`Renderer component A button group widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -1099,7 +1099,7 @@ exports[`Renderer component A button widget 1`] = `
 }
 
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -1182,7 +1182,7 @@ exports[`Renderer component A button widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -1208,7 +1208,7 @@ exports[`Renderer component A button widget 1`] = `
 
 exports[`Renderer component A color widget 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -1268,7 +1268,7 @@ exports[`Renderer component A color widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -1296,7 +1296,7 @@ exports[`Renderer component A color widget 1`] = `
 
 exports[`Renderer component A default value 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -1344,7 +1344,7 @@ exports[`Renderer component A default value 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -1449,7 +1449,7 @@ exports[`Renderer component A drop-down button widget 1`] = `
 }
 
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -1571,7 +1571,7 @@ exports[`Renderer component A drop-down button widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -1623,7 +1623,7 @@ exports[`Renderer component A drop-down button widget 1`] = `
 
 exports[`Renderer component A hidden field 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -1666,7 +1666,7 @@ exports[`Renderer component A hidden field 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -1703,7 +1703,7 @@ exports[`Renderer component A hidden field 1`] = `
 
 exports[`Renderer component A hidden title 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -1738,7 +1738,7 @@ exports[`Renderer component A hidden title 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -1762,7 +1762,7 @@ exports[`Renderer component A hidden title 1`] = `
 
 exports[`Renderer component A markdown field 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -1828,7 +1828,7 @@ exports[`Renderer component A markdown field 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2164,7 +2164,7 @@ exports[`Renderer component A markdown field 1`] = `
             </a>
             Something Important
           </h1>
-          
+
 
           <h2
             class="c6 c10"
@@ -2190,7 +2190,7 @@ exports[`Renderer component A markdown field 1`] = `
 
 exports[`Renderer component A materialized field 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -2233,7 +2233,7 @@ exports[`Renderer component A materialized field 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2270,7 +2270,7 @@ exports[`Renderer component A materialized field 1`] = `
 
 exports[`Renderer component A null object 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -2318,7 +2318,7 @@ exports[`Renderer component A null object 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2354,7 +2354,7 @@ exports[`Renderer component A null object 1`] = `
 
 exports[`Renderer component A number 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -2402,7 +2402,7 @@ exports[`Renderer component A number 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2440,7 +2440,7 @@ exports[`Renderer component A number 1`] = `
 
 exports[`Renderer component A string 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -2493,7 +2493,7 @@ exports[`Renderer component A string 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2531,7 +2531,7 @@ exports[`Renderer component A string 1`] = `
 
 exports[`Renderer component A string-interpolated value 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -2574,7 +2574,7 @@ exports[`Renderer component A string-interpolated value 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2607,7 +2607,7 @@ exports[`Renderer component A string-interpolated value 1`] = `
 
 exports[`Renderer component A truncated array of strings field 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -2655,7 +2655,7 @@ exports[`Renderer component A truncated array of strings field 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2723,7 +2723,7 @@ exports[`Renderer component A truncated array of strings field 1`] = `
 
 exports[`Renderer component A truncated string 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -2765,7 +2765,7 @@ exports[`Renderer component A truncated string 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2789,7 +2789,7 @@ exports[`Renderer component A truncated string 1`] = `
 
 exports[`Renderer component A uri field 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -2841,7 +2841,7 @@ exports[`Renderer component A uri field 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2867,7 +2867,7 @@ exports[`Renderer component A uri field 1`] = `
 
 exports[`Renderer component An Img widget 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -2909,7 +2909,7 @@ exports[`Renderer component An Img widget 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2934,7 +2934,7 @@ exports[`Renderer component An Img widget 1`] = `
 
 exports[`Renderer component An array of different type items 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -3016,7 +3016,7 @@ exports[`Renderer component An array of different type items 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -3413,7 +3413,7 @@ exports[`Renderer component An array of different type items 1`] = `
 
 exports[`Renderer component An array of strings field 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -3497,7 +3497,7 @@ exports[`Renderer component An array of strings field 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -3547,7 +3547,7 @@ exports[`Renderer component An array of strings field 1`] = `
 
 exports[`Renderer component An email field 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -3599,7 +3599,7 @@ exports[`Renderer component An email field 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -3728,7 +3728,7 @@ exports[`Renderer component An evaluated value 1`] = `
 }
 
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -3776,7 +3776,7 @@ exports[`Renderer component An evaluated value 1`] = `
 }
 
 .c7 > label > span {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
 }
 
@@ -3808,7 +3808,7 @@ exports[`Renderer component An evaluated value 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -3873,7 +3873,7 @@ exports[`Renderer component An evaluated value 1`] = `
 
 exports[`Renderer component An integer 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -3921,7 +3921,7 @@ exports[`Renderer component An integer 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -3959,7 +3959,7 @@ exports[`Renderer component An integer 1`] = `
 
 exports[`Renderer component An invalid value 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -4029,7 +4029,7 @@ exports[`Renderer component An invalid value 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -4203,7 +4203,7 @@ exports[`Renderer component An object with various properties 1`] = `
 }
 
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -4256,7 +4256,7 @@ exports[`Renderer component An object with various properties 1`] = `
 }
 
 .c8 > label > span {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
 }
 
@@ -4274,7 +4274,7 @@ exports[`Renderer component An object with various properties 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -4415,7 +4415,7 @@ exports[`Renderer component An object with various properties 1`] = `
 
 exports[`Renderer component Explicitly specifying which fields to render 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -4463,7 +4463,7 @@ exports[`Renderer component Explicitly specifying which fields to render 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -4532,7 +4532,7 @@ exports[`Renderer component Explicitly specifying which fields to render 1`] = `
 
 exports[`Renderer component Re-ordered fields 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -4575,7 +4575,7 @@ exports[`Renderer component Re-ordered fields 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -4648,7 +4648,7 @@ exports[`Renderer component Re-ordered fields 1`] = `
 
 exports[`Renderer component Using context functions 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -4683,7 +4683,7 @@ exports[`Renderer component Using context functions 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -4707,7 +4707,7 @@ exports[`Renderer component Using context functions 1`] = `
 
 exports[`Renderer component anyOf options 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -4776,7 +4776,7 @@ exports[`Renderer component anyOf options 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
