@@ -120,7 +120,7 @@
     "mermaid": "~9.2.2",
     "pinejs-client-fetch": "^0.2.2",
     "prismjs": "^1.25.0",
-    "prop-types": "^15.7.2",
+    "prop-types": "^15.8.1",
     "qs": "^6.10.3",
     "react-google-recaptcha": "^2.1.0",
     "react-helmet": "^6.1.0",
