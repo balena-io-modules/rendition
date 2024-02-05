@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add new schema description properties
+      hash: fdb00dddd2aac8055307278deee2ed04c0ca6f4f
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Andrea Rosci
+      nested: []
+  version: 35.2.0
+  title: ""
+  date: 2024-02-05T09:52:05.723Z
+- commits:
     - subject: Update date-fns to v3.0.5
       hash: 5b3a5d817929fa1e73665e8c5ef4b501d5948749
       body: ""
