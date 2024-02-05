@@ -25,6 +25,8 @@ interface CustomSchemaDescription {
 	'x-ref-scheme'?: string[];
 	'x-foreign-key-scheme'?: string[];
 	'x-filter-only'?: boolean | string[];
+	'x-no-filter'?: boolean | string[];
+	'x-no-sort'?: boolean | string[];
 }
 
 export type CreateFilter = (
