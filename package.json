@@ -94,7 +94,7 @@
     "@fortawesome/react-fontawesome": "^0.1.18",
     "@mapbox/rehype-prism": "^0.8.0",
     "@react-google-maps/api": "^2.12.0",
-    "@rjsf/core": "^2.5.1",
+    "@rjsf/core": "^4.2.3",
     "@types/ajv-keywords": "^3.4.0",
     "@types/color": "^3.0.3",
     "@types/json-schema": "^7.0.11",
