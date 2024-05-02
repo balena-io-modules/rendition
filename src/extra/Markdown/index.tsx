@@ -3,8 +3,9 @@ import breaks from 'remark-breaks';
 import { Txt, TxtProps } from '../../components/Txt';
 import { Heading } from '../../components/Heading';
 import { Link } from '../../components/Link';
-import unified from 'unified';
+import { unified } from 'unified';
 import remarkParse from 'remark-parse';
+import remarkGfm from 'remark-gfm';
 import remarkRehype from 'remark-rehype';
 import rehypeReact from 'rehype-react';
 import sanitize from 'rehype-sanitize';
@@ -200,7 +201,8 @@ export const getProcessor = (
 	decorators?: Decorator[] | undefined,
 ) => {
 	let processor = unified()
-		.use(remarkParse, { gfm: true })
+		.use(remarkParse)
+		.use(remarkGfm)
 		.use(breaks)
 		.use(remarkRehype, { allowDangerousHtml: !disableRawHtml });
 
