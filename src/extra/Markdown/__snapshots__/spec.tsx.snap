@@ -2,7 +2,7 @@
 
 exports[`Markdown component Custom sanitizer options: allowedAttributes can be overridden 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -13,7 +13,7 @@ exports[`Markdown component Custom sanitizer options: allowedAttributes can be o
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -343,7 +343,7 @@ exports[`Markdown component Custom sanitizer options: allowedAttributes can be o
 
 exports[`Markdown component Custom sanitizer options: allowedTags can be overridden 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -371,7 +371,7 @@ exports[`Markdown component Custom sanitizer options: allowedTags can be overrid
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -697,7 +697,7 @@ exports[`Markdown component Custom sanitizer options: allowedTags can be overrid
           <span />
         </a>
         Foobar
-        
+
 
         <p
           class=""
@@ -712,7 +712,7 @@ exports[`Markdown component Custom sanitizer options: allowedTags can be overrid
 
 exports[`Markdown component should decorate the text matching the condition 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -740,7 +740,7 @@ exports[`Markdown component should decorate the text matching the condition 1`] 
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -1062,13 +1062,13 @@ exports[`Markdown component should decorate the text matching the condition 1`] 
           class=""
         >
           <span>
-            
+
             <span
               style="color: green;"
             >
               @good
             </span>
-             foo @bad@bad 
+             foo @bad@bad
           </span>
           <a
             class="c3 c4"
@@ -1076,7 +1076,7 @@ exports[`Markdown component should decorate the text matching the condition 1`] 
             href="https://github.com"
           >
             <span>
-              
+
               <span
                 style="color: green;"
               >
@@ -1084,12 +1084,12 @@ exports[`Markdown component should decorate the text matching the condition 1`] 
               </span>
             </span>
           </a>
-           bar@bad baz qux. 
+           bar@bad baz qux.
           <code>
             Is @bad inside code
           </code>
           <span>
-             
+
             <span
               style="color: green;"
             >
@@ -1106,7 +1106,7 @@ exports[`Markdown component should decorate the text matching the condition 1`] 
 
 exports[`Markdown component should drop the content of style elements tag 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -1117,7 +1117,7 @@ exports[`Markdown component should drop the content of style elements tag 1`] = 
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -1444,7 +1444,7 @@ exports[`Markdown component should drop the content of style elements tag 1`] = 
 
 exports[`Markdown component should drop the content of textarea elements tag 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -1455,7 +1455,7 @@ exports[`Markdown component should drop the content of textarea elements tag 1`]
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -1786,7 +1786,7 @@ exports[`Markdown component should drop the content of textarea elements tag 1`]
 
 exports[`Markdown component should not highlight code when disabled 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -1823,7 +1823,7 @@ exports[`Markdown component should not highlight code when disabled 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2156,7 +2156,7 @@ exports[`Markdown component should not highlight code when disabled 1`] = `
           </a>
           Code blocks
         </h2>
-        
+
 
         <pre>
           <code>
@@ -2167,7 +2167,7 @@ return 'bar'
 
           </code>
         </pre>
-        
+
 
         <pre>
           <code
@@ -2188,7 +2188,7 @@ const foo = () =&gt; {
 
 exports[`Markdown component should not render raw html when disabled 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -2225,7 +2225,7 @@ exports[`Markdown component should not render raw html when disabled 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2558,31 +2558,31 @@ exports[`Markdown component should not render raw html when disabled 1`] = `
           </a>
           Inline HTML
         </h2>
-        
+
 
         <p
           class=""
         >
           An image:
           <br />
-          
+
 
           <br />
-          
+
 
           <br />
-          
+
 
           <br />
-          
+
 
           A link:
           <br />
-          
+
 
           http://github.com/
         </p>
-        
+
 
         <h2
           class="c3 c4"
@@ -2599,17 +2599,17 @@ exports[`Markdown component should not render raw html when disabled 1`] = `
           </a>
           Keyboard keys
         </h2>
-        
+
 
         <p
           class=""
         >
           cmd
-           + 
+           +
           alt
-           + 
+           +
           shift
-           + 
+           +
           a
         </p>
       </div>
@@ -2620,7 +2620,7 @@ exports[`Markdown component should not render raw html when disabled 1`] = `
 
 exports[`Markdown component should not sanitize html when disabled 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -2631,7 +2631,7 @@ exports[`Markdown component should not sanitize html when disabled 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -2960,7 +2960,7 @@ exports[`Markdown component should not sanitize html when disabled 1`] = `
 
 exports[`Markdown component should render html images 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -2971,7 +2971,7 @@ exports[`Markdown component should render html images 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -3300,7 +3300,7 @@ exports[`Markdown component should render html images 1`] = `
 
 exports[`Markdown component should render html links 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -3328,7 +3328,7 @@ exports[`Markdown component should render html links 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -3665,7 +3665,7 @@ exports[`Markdown component should render html links 1`] = `
 
 exports[`Markdown component should render link type strings as links 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -3693,7 +3693,7 @@ exports[`Markdown component should render link type strings as links 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -4030,7 +4030,7 @@ exports[`Markdown component should render link type strings as links 1`] = `
 
 exports[`Markdown component should render markdown blockquotes 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -4041,7 +4041,7 @@ exports[`Markdown component should render markdown blockquotes 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -4360,14 +4360,14 @@ exports[`Markdown component should render markdown blockquotes 1`] = `
     >
       <div>
         <blockquote>
-          
+
 
           <p
             class=""
           >
             Lorem ipsum dolor sit amet
           </p>
-          
+
 
         </blockquote>
       </div>
@@ -4378,7 +4378,7 @@ exports[`Markdown component should render markdown blockquotes 1`] = `
 
 exports[`Markdown component should render markdown bold using ** 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -4389,7 +4389,7 @@ exports[`Markdown component should render markdown bold using ** 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -4722,7 +4722,7 @@ exports[`Markdown component should render markdown bold using ** 1`] = `
 
 exports[`Markdown component should render markdown bold using __ 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -4733,7 +4733,7 @@ exports[`Markdown component should render markdown bold using __ 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -5066,7 +5066,7 @@ exports[`Markdown component should render markdown bold using __ 1`] = `
 
 exports[`Markdown component should render markdown code blocks 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -5077,7 +5077,7 @@ exports[`Markdown component should render markdown code blocks 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -5411,7 +5411,7 @@ exports[`Markdown component should render markdown code blocks 1`] = `
 
 exports[`Markdown component should render markdown code blocks with language specified 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -5422,7 +5422,7 @@ exports[`Markdown component should render markdown code blocks with language spe
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -5751,19 +5751,19 @@ exports[`Markdown component should render markdown code blocks with language spe
             >
               const
             </span>
-             
+
             <span
               class="token function-variable function"
             >
               foo
             </span>
-             
+
             <span
               class="token operator"
             >
               =
             </span>
-             
+
             <span
               class="token punctuation"
             >
@@ -5774,39 +5774,39 @@ exports[`Markdown component should render markdown code blocks with language spe
             >
               )
             </span>
-             
+
             <span
               class="token arrow operator"
             >
               =&gt;
             </span>
-             
+
             <span
               class="token punctuation"
             >
               {
             </span>
-            
-  
+
+
             <span
               class="token keyword control-flow"
             >
               return
             </span>
-             
+
             <span
               class="token string"
             >
               'bar'
             </span>
-            
+
 
             <span
               class="token punctuation"
             >
               }
             </span>
-            
+
 
           </code>
         </pre>
@@ -5818,7 +5818,7 @@ exports[`Markdown component should render markdown code blocks with language spe
 
 exports[`Markdown component should render markdown h1 headers 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -5855,7 +5855,7 @@ exports[`Markdown component should render markdown h1 headers 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -6196,7 +6196,7 @@ exports[`Markdown component should render markdown h1 headers 1`] = `
 
 exports[`Markdown component should render markdown h2 headers 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -6233,7 +6233,7 @@ exports[`Markdown component should render markdown h2 headers 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -6574,7 +6574,7 @@ exports[`Markdown component should render markdown h2 headers 1`] = `
 
 exports[`Markdown component should render markdown h3 headers 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -6611,7 +6611,7 @@ exports[`Markdown component should render markdown h3 headers 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -6952,7 +6952,7 @@ exports[`Markdown component should render markdown h3 headers 1`] = `
 
 exports[`Markdown component should render markdown h4 headers 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -6990,7 +6990,7 @@ exports[`Markdown component should render markdown h4 headers 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -7331,7 +7331,7 @@ exports[`Markdown component should render markdown h4 headers 1`] = `
 
 exports[`Markdown component should render markdown h4 headers 2`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -7369,7 +7369,7 @@ exports[`Markdown component should render markdown h4 headers 2`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -7710,7 +7710,7 @@ exports[`Markdown component should render markdown h4 headers 2`] = `
 
 exports[`Markdown component should render markdown h5 headers 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -7748,7 +7748,7 @@ exports[`Markdown component should render markdown h5 headers 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -8089,7 +8089,7 @@ exports[`Markdown component should render markdown h5 headers 1`] = `
 
 exports[`Markdown component should render markdown h5 headers 2`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -8127,7 +8127,7 @@ exports[`Markdown component should render markdown h5 headers 2`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -8468,7 +8468,7 @@ exports[`Markdown component should render markdown h5 headers 2`] = `
 
 exports[`Markdown component should render markdown images 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -8479,7 +8479,7 @@ exports[`Markdown component should render markdown images 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -8813,7 +8813,7 @@ exports[`Markdown component should render markdown images 1`] = `
 
 exports[`Markdown component should render markdown inline code 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -8824,7 +8824,7 @@ exports[`Markdown component should render markdown inline code 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -9157,7 +9157,7 @@ exports[`Markdown component should render markdown inline code 1`] = `
 
 exports[`Markdown component should render markdown italics using * 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -9168,7 +9168,7 @@ exports[`Markdown component should render markdown italics using * 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -9501,7 +9501,7 @@ exports[`Markdown component should render markdown italics using * 1`] = `
 
 exports[`Markdown component should render markdown italics using _ 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -9512,7 +9512,7 @@ exports[`Markdown component should render markdown italics using _ 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -9845,7 +9845,7 @@ exports[`Markdown component should render markdown italics using _ 1`] = `
 
 exports[`Markdown component should render markdown links 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -9873,7 +9873,7 @@ exports[`Markdown component should render markdown links 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -10210,7 +10210,7 @@ exports[`Markdown component should render markdown links 1`] = `
 
 exports[`Markdown component should render markdown ordered lists 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -10221,7 +10221,7 @@ exports[`Markdown component should render markdown ordered lists 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -10540,27 +10540,27 @@ exports[`Markdown component should render markdown ordered lists 1`] = `
     >
       <div>
         <ol>
-          
+
 
           <li>
             Item 1
           </li>
-          
+
 
           <li>
             Item 2
           </li>
-          
+
 
           <li>
             Item 2a
           </li>
-          
+
 
           <li>
             Item 2b
           </li>
-          
+
 
         </ol>
       </div>
@@ -10571,7 +10571,7 @@ exports[`Markdown component should render markdown ordered lists 1`] = `
 
 exports[`Markdown component should render markdown strikethroughs 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -10582,7 +10582,7 @@ exports[`Markdown component should render markdown strikethroughs 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -10915,7 +10915,7 @@ exports[`Markdown component should render markdown strikethroughs 1`] = `
 
 exports[`Markdown component should render markdown tables 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -10926,7 +10926,7 @@ exports[`Markdown component should render markdown tables 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -11244,7 +11244,7 @@ exports[`Markdown component should render markdown tables 1`] = `
       class="c2"
     >
       <div>
-        
+
 
 
 
@@ -11300,7 +11300,7 @@ exports[`Markdown component should render markdown tables 1`] = `
 
 exports[`Markdown component should render markdown task lists 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -11311,7 +11311,7 @@ exports[`Markdown component should render markdown task lists 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -11632,7 +11632,7 @@ exports[`Markdown component should render markdown task lists 1`] = `
         <ul
           class="contains-task-list"
         >
-          
+
 
           <li
             class="task-list-item"
@@ -11644,7 +11644,7 @@ exports[`Markdown component should render markdown task lists 1`] = `
             />
              task 1
           </li>
-          
+
 
           <li
             class="task-list-item"
@@ -11656,7 +11656,7 @@ exports[`Markdown component should render markdown task lists 1`] = `
             />
              task 2
           </li>
-          
+
 
           <li
             class="task-list-item"
@@ -11667,7 +11667,7 @@ exports[`Markdown component should render markdown task lists 1`] = `
             />
              task 3
           </li>
-          
+
 
         </ul>
       </div>
@@ -11678,7 +11678,7 @@ exports[`Markdown component should render markdown task lists 1`] = `
 
 exports[`Markdown component should render markdown unordered lists 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -11689,7 +11689,7 @@ exports[`Markdown component should render markdown unordered lists 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -12008,34 +12008,34 @@ exports[`Markdown component should render markdown unordered lists 1`] = `
     >
       <div>
         <ul>
-          
+
 
           <li>
             Item 1
           </li>
-          
+
 
           <li>
             Item 2
 
             <ul>
-              
+
 
               <li>
                 Item 2a
               </li>
-              
+
 
               <li>
                 Item 2b
               </li>
-              
+
 
             </ul>
-            
+
 
           </li>
-          
+
 
         </ul>
       </div>
@@ -12046,7 +12046,7 @@ exports[`Markdown component should render markdown unordered lists 1`] = `
 
 exports[`Markdown component xss: 1 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -12057,7 +12057,7 @@ exports[`Markdown component xss: 1 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -12382,7 +12382,7 @@ exports[`Markdown component xss: 1 1`] = `
 
 exports[`Markdown component xss: 2 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -12393,7 +12393,7 @@ exports[`Markdown component xss: 2 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -12724,7 +12724,7 @@ exports[`Markdown component xss: 2 1`] = `
 
 exports[`Markdown component xss: 3 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -12735,7 +12735,7 @@ exports[`Markdown component xss: 3 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -13064,7 +13064,7 @@ exports[`Markdown component xss: 3 1`] = `
 
 exports[`Markdown component xss: 4 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -13075,7 +13075,7 @@ exports[`Markdown component xss: 4 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -13404,7 +13404,7 @@ exports[`Markdown component xss: 4 1`] = `
 
 exports[`Markdown component xss: 5 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -13415,7 +13415,7 @@ exports[`Markdown component xss: 5 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -13746,7 +13746,7 @@ exports[`Markdown component xss: 5 1`] = `
 
 exports[`Markdown component xss: 6 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -13757,7 +13757,7 @@ exports[`Markdown component xss: 6 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -14088,7 +14088,7 @@ exports[`Markdown component xss: 6 1`] = `
 
 exports[`Markdown component xss: 7 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -14099,7 +14099,7 @@ exports[`Markdown component xss: 7 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -14430,7 +14430,7 @@ exports[`Markdown component xss: 7 1`] = `
 
 exports[`Markdown component xss: 8 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -14441,7 +14441,7 @@ exports[`Markdown component xss: 8 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -14760,9 +14760,9 @@ exports[`Markdown component xss: 8 1`] = `
     >
       <div>
         <blockquote>
-          
 
-          
+
+
 
         </blockquote>
       </div>
@@ -14773,7 +14773,7 @@ exports[`Markdown component xss: 8 1`] = `
 
 exports[`Markdown component xss: 9 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -14784,7 +14784,7 @@ exports[`Markdown component xss: 9 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -15113,7 +15113,7 @@ exports[`Markdown component xss: 9 1`] = `
 
 exports[`Markdown component xss: 10 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -15124,7 +15124,7 @@ exports[`Markdown component xss: 10 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -15455,7 +15455,7 @@ exports[`Markdown component xss: 10 1`] = `
 
 exports[`Markdown component xss: 11 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -15466,7 +15466,7 @@ exports[`Markdown component xss: 11 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -15797,7 +15797,7 @@ exports[`Markdown component xss: 11 1`] = `
 
 exports[`Markdown component xss: 12 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -15808,7 +15808,7 @@ exports[`Markdown component xss: 12 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -16139,7 +16139,7 @@ exports[`Markdown component xss: 12 1`] = `
 
 exports[`Markdown component xss: 13 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -16150,7 +16150,7 @@ exports[`Markdown component xss: 13 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -16481,7 +16481,7 @@ exports[`Markdown component xss: 13 1`] = `
 
 exports[`Markdown component xss: 14 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -16492,7 +16492,7 @@ exports[`Markdown component xss: 14 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -16823,7 +16823,7 @@ exports[`Markdown component xss: 14 1`] = `
 
 exports[`Markdown component xss: 15 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -16834,7 +16834,7 @@ exports[`Markdown component xss: 15 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -17166,7 +17166,7 @@ exports[`Markdown component xss: 15 1`] = `
 
 exports[`Markdown component xss: 16 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -17177,7 +17177,7 @@ exports[`Markdown component xss: 16 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -17508,7 +17508,7 @@ exports[`Markdown component xss: 16 1`] = `
 
 exports[`Markdown component xss: 17 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -17519,7 +17519,7 @@ exports[`Markdown component xss: 17 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -17850,7 +17850,7 @@ exports[`Markdown component xss: 17 1`] = `
 
 exports[`Markdown component xss: 18 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -17861,7 +17861,7 @@ exports[`Markdown component xss: 18 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -18192,7 +18192,7 @@ exports[`Markdown component xss: 18 1`] = `
 
 exports[`Markdown component xss: 19 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -18203,7 +18203,7 @@ exports[`Markdown component xss: 19 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -18534,7 +18534,7 @@ exports[`Markdown component xss: 19 1`] = `
 
 exports[`Markdown component xss: 20 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -18545,7 +18545,7 @@ exports[`Markdown component xss: 20 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -18876,7 +18876,7 @@ exports[`Markdown component xss: 20 1`] = `
 
 exports[`Markdown component xss: 21 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -18887,7 +18887,7 @@ exports[`Markdown component xss: 21 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -19218,7 +19218,7 @@ exports[`Markdown component xss: 21 1`] = `
 
 exports[`Markdown component xss: 22 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -19229,7 +19229,7 @@ exports[`Markdown component xss: 22 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -19560,7 +19560,7 @@ exports[`Markdown component xss: 22 1`] = `
 
 exports[`Markdown component xss: 23 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -19571,7 +19571,7 @@ exports[`Markdown component xss: 23 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -19902,7 +19902,7 @@ exports[`Markdown component xss: 23 1`] = `
 
 exports[`Markdown component xss: 24 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -19913,7 +19913,7 @@ exports[`Markdown component xss: 24 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -20232,7 +20232,7 @@ exports[`Markdown component xss: 24 1`] = `
     >
       <div>
         <blockquote>
-          
+
 
         </blockquote>
       </div>
@@ -20243,7 +20243,7 @@ exports[`Markdown component xss: 24 1`] = `
 
 exports[`Markdown component xss: 25 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -20254,7 +20254,7 @@ exports[`Markdown component xss: 25 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -20585,7 +20585,7 @@ exports[`Markdown component xss: 25 1`] = `
 
 exports[`Markdown component xss: 26 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -20596,7 +20596,7 @@ exports[`Markdown component xss: 26 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -20927,7 +20927,7 @@ exports[`Markdown component xss: 26 1`] = `
 
 exports[`Markdown component xss: 27 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -20938,7 +20938,7 @@ exports[`Markdown component xss: 27 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -21269,7 +21269,7 @@ exports[`Markdown component xss: 27 1`] = `
 
 exports[`Markdown component xss: 28 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -21280,7 +21280,7 @@ exports[`Markdown component xss: 28 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -21611,7 +21611,7 @@ exports[`Markdown component xss: 28 1`] = `
 
 exports[`Markdown component xss: 29 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -21622,7 +21622,7 @@ exports[`Markdown component xss: 29 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -21953,7 +21953,7 @@ exports[`Markdown component xss: 29 1`] = `
 
 exports[`Markdown component xss: 30 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -21964,7 +21964,7 @@ exports[`Markdown component xss: 30 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -22295,7 +22295,7 @@ exports[`Markdown component xss: 30 1`] = `
 
 exports[`Markdown component xss: 31 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -22306,7 +22306,7 @@ exports[`Markdown component xss: 31 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -22637,7 +22637,7 @@ exports[`Markdown component xss: 31 1`] = `
 
 exports[`Markdown component xss: 32 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -22648,7 +22648,7 @@ exports[`Markdown component xss: 32 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -22979,7 +22979,7 @@ exports[`Markdown component xss: 32 1`] = `
 
 exports[`Markdown component xss: 33 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -22990,7 +22990,7 @@ exports[`Markdown component xss: 33 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -23321,7 +23321,7 @@ exports[`Markdown component xss: 33 1`] = `
 
 exports[`Markdown component xss: 34 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -23332,7 +23332,7 @@ exports[`Markdown component xss: 34 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -23663,7 +23663,7 @@ exports[`Markdown component xss: 34 1`] = `
 
 exports[`Markdown component xss: 35 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -23674,7 +23674,7 @@ exports[`Markdown component xss: 35 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -24005,7 +24005,7 @@ exports[`Markdown component xss: 35 1`] = `
 
 exports[`Markdown component xss: 36 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -24016,7 +24016,7 @@ exports[`Markdown component xss: 36 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -24353,7 +24353,7 @@ exports[`Markdown component xss: 36 1`] = `
 
 exports[`Markdown component xss: 37 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -24364,7 +24364,7 @@ exports[`Markdown component xss: 37 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -24701,7 +24701,7 @@ exports[`Markdown component xss: 37 1`] = `
 
 exports[`Markdown component xss: 38 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -24712,7 +24712,7 @@ exports[`Markdown component xss: 38 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -25049,7 +25049,7 @@ exports[`Markdown component xss: 38 1`] = `
 
 exports[`Markdown component xss: 39 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -25060,7 +25060,7 @@ exports[`Markdown component xss: 39 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -25397,7 +25397,7 @@ exports[`Markdown component xss: 39 1`] = `
 
 exports[`Markdown component xss: 40 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -25408,7 +25408,7 @@ exports[`Markdown component xss: 40 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -25745,7 +25745,7 @@ exports[`Markdown component xss: 40 1`] = `
 
 exports[`Markdown component xss: 41 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -25756,7 +25756,7 @@ exports[`Markdown component xss: 41 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -26093,7 +26093,7 @@ exports[`Markdown component xss: 41 1`] = `
 
 exports[`Markdown component xss: 42 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -26104,7 +26104,7 @@ exports[`Markdown component xss: 42 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -26441,7 +26441,7 @@ exports[`Markdown component xss: 42 1`] = `
 
 exports[`Markdown component xss: 43 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -26452,7 +26452,7 @@ exports[`Markdown component xss: 43 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -26789,7 +26789,7 @@ exports[`Markdown component xss: 43 1`] = `
 
 exports[`Markdown component xss: 44 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -26800,7 +26800,7 @@ exports[`Markdown component xss: 44 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -27137,7 +27137,7 @@ exports[`Markdown component xss: 44 1`] = `
 
 exports[`Markdown component xss: 45 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -27148,7 +27148,7 @@ exports[`Markdown component xss: 45 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -27485,7 +27485,7 @@ exports[`Markdown component xss: 45 1`] = `
 
 exports[`Markdown component xss: 46 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -27496,7 +27496,7 @@ exports[`Markdown component xss: 46 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -27833,7 +27833,7 @@ exports[`Markdown component xss: 46 1`] = `
 
 exports[`Markdown component xss: 47 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -27844,7 +27844,7 @@ exports[`Markdown component xss: 47 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -28181,7 +28181,7 @@ exports[`Markdown component xss: 47 1`] = `
 
 exports[`Markdown component xss: 48 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -28192,7 +28192,7 @@ exports[`Markdown component xss: 48 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -28529,7 +28529,7 @@ exports[`Markdown component xss: 48 1`] = `
 
 exports[`Markdown component xss: 49 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -28540,7 +28540,7 @@ exports[`Markdown component xss: 49 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -28877,7 +28877,7 @@ exports[`Markdown component xss: 49 1`] = `
 
 exports[`Markdown component xss: 50 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -28888,7 +28888,7 @@ exports[`Markdown component xss: 50 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -29225,7 +29225,7 @@ exports[`Markdown component xss: 50 1`] = `
 
 exports[`Markdown component xss: 51 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -29236,7 +29236,7 @@ exports[`Markdown component xss: 51 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -29573,7 +29573,7 @@ exports[`Markdown component xss: 51 1`] = `
 
 exports[`Markdown component xss: 52 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -29584,7 +29584,7 @@ exports[`Markdown component xss: 52 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -29921,7 +29921,7 @@ exports[`Markdown component xss: 52 1`] = `
 
 exports[`Markdown component xss: 53 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -29932,7 +29932,7 @@ exports[`Markdown component xss: 53 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -30269,7 +30269,7 @@ exports[`Markdown component xss: 53 1`] = `
 
 exports[`Markdown component xss: 54 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -30280,7 +30280,7 @@ exports[`Markdown component xss: 54 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -30617,7 +30617,7 @@ exports[`Markdown component xss: 54 1`] = `
 
 exports[`Markdown component xss: 55 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -30628,7 +30628,7 @@ exports[`Markdown component xss: 55 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -30965,7 +30965,7 @@ exports[`Markdown component xss: 55 1`] = `
 
 exports[`Markdown component xss: 56 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -30976,7 +30976,7 @@ exports[`Markdown component xss: 56 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -31313,7 +31313,7 @@ exports[`Markdown component xss: 56 1`] = `
 
 exports[`Markdown component xss: 57 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -31324,7 +31324,7 @@ exports[`Markdown component xss: 57 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -31661,7 +31661,7 @@ exports[`Markdown component xss: 57 1`] = `
 
 exports[`Markdown component xss: 58 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -31672,7 +31672,7 @@ exports[`Markdown component xss: 58 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -32009,7 +32009,7 @@ exports[`Markdown component xss: 58 1`] = `
 
 exports[`Markdown component xss: 59 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -32020,7 +32020,7 @@ exports[`Markdown component xss: 59 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -32357,7 +32357,7 @@ exports[`Markdown component xss: 59 1`] = `
 
 exports[`Markdown component xss: 60 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -32368,7 +32368,7 @@ exports[`Markdown component xss: 60 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -32705,7 +32705,7 @@ exports[`Markdown component xss: 60 1`] = `
 
 exports[`Markdown component xss: 61 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -32716,7 +32716,7 @@ exports[`Markdown component xss: 61 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -33053,7 +33053,7 @@ exports[`Markdown component xss: 61 1`] = `
 
 exports[`Markdown component xss: 62 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -33064,7 +33064,7 @@ exports[`Markdown component xss: 62 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -33401,7 +33401,7 @@ exports[`Markdown component xss: 62 1`] = `
 
 exports[`Markdown component xss: 63 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -33429,7 +33429,7 @@ exports[`Markdown component xss: 63 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -33766,7 +33766,7 @@ exports[`Markdown component xss: 63 1`] = `
 
 exports[`Markdown component xss: 64 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -33794,7 +33794,7 @@ exports[`Markdown component xss: 64 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -34131,7 +34131,7 @@ exports[`Markdown component xss: 64 1`] = `
 
 exports[`Markdown component xss: 65 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -34159,7 +34159,7 @@ exports[`Markdown component xss: 65 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -34496,7 +34496,7 @@ exports[`Markdown component xss: 65 1`] = `
 
 exports[`Markdown component xss: 66 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -34524,7 +34524,7 @@ exports[`Markdown component xss: 66 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -34861,7 +34861,7 @@ exports[`Markdown component xss: 66 1`] = `
 
 exports[`Markdown component xss: 67 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -34889,7 +34889,7 @@ exports[`Markdown component xss: 67 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -35226,7 +35226,7 @@ exports[`Markdown component xss: 67 1`] = `
 
 exports[`Markdown component xss: 68 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -35254,7 +35254,7 @@ exports[`Markdown component xss: 68 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -35591,7 +35591,7 @@ exports[`Markdown component xss: 68 1`] = `
 
 exports[`Markdown component xss: 69 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -35619,7 +35619,7 @@ exports[`Markdown component xss: 69 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -35956,7 +35956,7 @@ exports[`Markdown component xss: 69 1`] = `
 
 exports[`Markdown component xss: 70 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -35984,7 +35984,7 @@ exports[`Markdown component xss: 70 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -36321,7 +36321,7 @@ exports[`Markdown component xss: 70 1`] = `
 
 exports[`Markdown component xss: 71 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -36349,7 +36349,7 @@ exports[`Markdown component xss: 71 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -36686,7 +36686,7 @@ exports[`Markdown component xss: 71 1`] = `
 
 exports[`Markdown component xss: 72 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -36714,7 +36714,7 @@ exports[`Markdown component xss: 72 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -37051,7 +37051,7 @@ exports[`Markdown component xss: 72 1`] = `
 
 exports[`Markdown component xss: 73 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -37079,7 +37079,7 @@ exports[`Markdown component xss: 73 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -37416,7 +37416,7 @@ exports[`Markdown component xss: 73 1`] = `
 
 exports[`Markdown component xss: 74 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -37444,7 +37444,7 @@ exports[`Markdown component xss: 74 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -37781,7 +37781,7 @@ exports[`Markdown component xss: 74 1`] = `
 
 exports[`Markdown component xss: 75 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -37809,7 +37809,7 @@ exports[`Markdown component xss: 75 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -38146,7 +38146,7 @@ exports[`Markdown component xss: 75 1`] = `
 
 exports[`Markdown component xss: 76 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -38174,7 +38174,7 @@ exports[`Markdown component xss: 76 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -38511,7 +38511,7 @@ exports[`Markdown component xss: 76 1`] = `
 
 exports[`Markdown component xss: 77 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -38539,7 +38539,7 @@ exports[`Markdown component xss: 77 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -38876,7 +38876,7 @@ exports[`Markdown component xss: 77 1`] = `
 
 exports[`Markdown component xss: 78 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -38904,7 +38904,7 @@ exports[`Markdown component xss: 78 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -39241,7 +39241,7 @@ exports[`Markdown component xss: 78 1`] = `
 
 exports[`Markdown component xss: 79 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -39269,7 +39269,7 @@ exports[`Markdown component xss: 79 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -39606,7 +39606,7 @@ exports[`Markdown component xss: 79 1`] = `
 
 exports[`Markdown component xss: 80 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -39634,7 +39634,7 @@ exports[`Markdown component xss: 80 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -39971,7 +39971,7 @@ exports[`Markdown component xss: 80 1`] = `
 
 exports[`Markdown component xss: 81 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -39999,7 +39999,7 @@ exports[`Markdown component xss: 81 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -40336,7 +40336,7 @@ exports[`Markdown component xss: 81 1`] = `
 
 exports[`Markdown component xss: 82 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -40364,7 +40364,7 @@ exports[`Markdown component xss: 82 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -40701,7 +40701,7 @@ exports[`Markdown component xss: 82 1`] = `
 
 exports[`Markdown component xss: 83 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -40729,7 +40729,7 @@ exports[`Markdown component xss: 83 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -41066,7 +41066,7 @@ exports[`Markdown component xss: 83 1`] = `
 
 exports[`Markdown component xss: 84 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -41094,7 +41094,7 @@ exports[`Markdown component xss: 84 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -41431,7 +41431,7 @@ exports[`Markdown component xss: 84 1`] = `
 
 exports[`Markdown component xss: 85 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -41459,7 +41459,7 @@ exports[`Markdown component xss: 85 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -41796,7 +41796,7 @@ exports[`Markdown component xss: 85 1`] = `
 
 exports[`Markdown component xss: 86 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -41824,7 +41824,7 @@ exports[`Markdown component xss: 86 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -42161,7 +42161,7 @@ exports[`Markdown component xss: 86 1`] = `
 
 exports[`Markdown component xss: 87 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -42189,7 +42189,7 @@ exports[`Markdown component xss: 87 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -42526,7 +42526,7 @@ exports[`Markdown component xss: 87 1`] = `
 
 exports[`Markdown component xss: 88 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -42554,7 +42554,7 @@ exports[`Markdown component xss: 88 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -42891,7 +42891,7 @@ exports[`Markdown component xss: 88 1`] = `
 
 exports[`Markdown component xss: 89 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -42919,7 +42919,7 @@ exports[`Markdown component xss: 89 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -43256,7 +43256,7 @@ exports[`Markdown component xss: 89 1`] = `
 
 exports[`Markdown component xss: 90 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -43284,7 +43284,7 @@ exports[`Markdown component xss: 90 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -43621,7 +43621,7 @@ exports[`Markdown component xss: 90 1`] = `
 
 exports[`Markdown component xss: 91 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -43649,7 +43649,7 @@ exports[`Markdown component xss: 91 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -43986,7 +43986,7 @@ exports[`Markdown component xss: 91 1`] = `
 
 exports[`Markdown component xss: 92 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -44014,7 +44014,7 @@ exports[`Markdown component xss: 92 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -44351,7 +44351,7 @@ exports[`Markdown component xss: 92 1`] = `
 
 exports[`Markdown component xss: 93 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -44379,7 +44379,7 @@ exports[`Markdown component xss: 93 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -44716,7 +44716,7 @@ exports[`Markdown component xss: 93 1`] = `
 
 exports[`Markdown component xss: 94 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -44744,7 +44744,7 @@ exports[`Markdown component xss: 94 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -45081,7 +45081,7 @@ exports[`Markdown component xss: 94 1`] = `
 
 exports[`Markdown component xss: 95 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -45109,7 +45109,7 @@ exports[`Markdown component xss: 95 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -45446,7 +45446,7 @@ exports[`Markdown component xss: 95 1`] = `
 
 exports[`Markdown component xss: 96 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -45474,7 +45474,7 @@ exports[`Markdown component xss: 96 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -45811,7 +45811,7 @@ exports[`Markdown component xss: 96 1`] = `
 
 exports[`Markdown component xss: 97 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -45839,7 +45839,7 @@ exports[`Markdown component xss: 97 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -46176,7 +46176,7 @@ exports[`Markdown component xss: 97 1`] = `
 
 exports[`Markdown component xss: 98 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -46204,7 +46204,7 @@ exports[`Markdown component xss: 98 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -46541,7 +46541,7 @@ exports[`Markdown component xss: 98 1`] = `
 
 exports[`Markdown component xss: 99 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -46569,7 +46569,7 @@ exports[`Markdown component xss: 99 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -46906,7 +46906,7 @@ exports[`Markdown component xss: 99 1`] = `
 
 exports[`Markdown component xss: 100 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -46934,7 +46934,7 @@ exports[`Markdown component xss: 100 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -47271,7 +47271,7 @@ exports[`Markdown component xss: 100 1`] = `
 
 exports[`Markdown component xss: 101 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -47299,7 +47299,7 @@ exports[`Markdown component xss: 101 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -47636,7 +47636,7 @@ exports[`Markdown component xss: 101 1`] = `
 
 exports[`Markdown component xss: 102 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -47664,7 +47664,7 @@ exports[`Markdown component xss: 102 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -48001,7 +48001,7 @@ exports[`Markdown component xss: 102 1`] = `
 
 exports[`Markdown component xss: 103 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -48029,7 +48029,7 @@ exports[`Markdown component xss: 103 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -48366,7 +48366,7 @@ exports[`Markdown component xss: 103 1`] = `
 
 exports[`Markdown component xss: 104 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -48394,7 +48394,7 @@ exports[`Markdown component xss: 104 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -48731,7 +48731,7 @@ exports[`Markdown component xss: 104 1`] = `
 
 exports[`Markdown component xss: 105 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -48759,7 +48759,7 @@ exports[`Markdown component xss: 105 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -49096,7 +49096,7 @@ exports[`Markdown component xss: 105 1`] = `
 
 exports[`Markdown component xss: 106 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -49124,7 +49124,7 @@ exports[`Markdown component xss: 106 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -49461,7 +49461,7 @@ exports[`Markdown component xss: 106 1`] = `
 
 exports[`Markdown component xss: 107 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -49489,7 +49489,7 @@ exports[`Markdown component xss: 107 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -49826,7 +49826,7 @@ exports[`Markdown component xss: 107 1`] = `
 
 exports[`Markdown component xss: 108 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -49854,7 +49854,7 @@ exports[`Markdown component xss: 108 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -50191,7 +50191,7 @@ exports[`Markdown component xss: 108 1`] = `
 
 exports[`Markdown component xss: 109 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -50219,7 +50219,7 @@ exports[`Markdown component xss: 109 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -50556,7 +50556,7 @@ exports[`Markdown component xss: 109 1`] = `
 
 exports[`Markdown component xss: 110 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -50584,7 +50584,7 @@ exports[`Markdown component xss: 110 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -50921,7 +50921,7 @@ exports[`Markdown component xss: 110 1`] = `
 
 exports[`Markdown component xss: 111 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -50949,7 +50949,7 @@ exports[`Markdown component xss: 111 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -51286,7 +51286,7 @@ exports[`Markdown component xss: 111 1`] = `
 
 exports[`Markdown component xss: 112 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -51314,7 +51314,7 @@ exports[`Markdown component xss: 112 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -51651,7 +51651,7 @@ exports[`Markdown component xss: 112 1`] = `
 
 exports[`Markdown component xss: 113 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -51679,7 +51679,7 @@ exports[`Markdown component xss: 113 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -52016,7 +52016,7 @@ exports[`Markdown component xss: 113 1`] = `
 
 exports[`Markdown component xss: 114 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -52044,7 +52044,7 @@ exports[`Markdown component xss: 114 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -52381,7 +52381,7 @@ exports[`Markdown component xss: 114 1`] = `
 
 exports[`Markdown component xss: 115 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -52409,7 +52409,7 @@ exports[`Markdown component xss: 115 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -52746,7 +52746,7 @@ exports[`Markdown component xss: 115 1`] = `
 
 exports[`Markdown component xss: 116 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -52774,7 +52774,7 @@ exports[`Markdown component xss: 116 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -53111,7 +53111,7 @@ exports[`Markdown component xss: 116 1`] = `
 
 exports[`Markdown component xss: 117 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -53139,7 +53139,7 @@ exports[`Markdown component xss: 117 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -53476,7 +53476,7 @@ exports[`Markdown component xss: 117 1`] = `
 
 exports[`Markdown component xss: 118 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -53504,7 +53504,7 @@ exports[`Markdown component xss: 118 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -53841,7 +53841,7 @@ exports[`Markdown component xss: 118 1`] = `
 
 exports[`Markdown component xss: 119 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -53869,7 +53869,7 @@ exports[`Markdown component xss: 119 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -54206,7 +54206,7 @@ exports[`Markdown component xss: 119 1`] = `
 
 exports[`Markdown component xss: 120 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -54217,7 +54217,7 @@ exports[`Markdown component xss: 120 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -54548,7 +54548,7 @@ exports[`Markdown component xss: 120 1`] = `
 
 exports[`Markdown component xss: 121 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -54559,7 +54559,7 @@ exports[`Markdown component xss: 121 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -54890,7 +54890,7 @@ exports[`Markdown component xss: 121 1`] = `
 
 exports[`Markdown component xss: 122 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -54901,7 +54901,7 @@ exports[`Markdown component xss: 122 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -55232,7 +55232,7 @@ exports[`Markdown component xss: 122 1`] = `
 
 exports[`Markdown component xss: 123 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -55243,7 +55243,7 @@ exports[`Markdown component xss: 123 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -55574,7 +55574,7 @@ exports[`Markdown component xss: 123 1`] = `
 
 exports[`Markdown component xss: 124 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -55585,7 +55585,7 @@ exports[`Markdown component xss: 124 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -55916,7 +55916,7 @@ exports[`Markdown component xss: 124 1`] = `
 
 exports[`Markdown component xss: 125 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -55927,7 +55927,7 @@ exports[`Markdown component xss: 125 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -56258,7 +56258,7 @@ exports[`Markdown component xss: 125 1`] = `
 
 exports[`Markdown component xss: 126 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -56269,7 +56269,7 @@ exports[`Markdown component xss: 126 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -56600,7 +56600,7 @@ exports[`Markdown component xss: 126 1`] = `
 
 exports[`Markdown component xss: 127 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -56611,7 +56611,7 @@ exports[`Markdown component xss: 127 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -56942,7 +56942,7 @@ exports[`Markdown component xss: 127 1`] = `
 
 exports[`Markdown component xss: 128 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -56953,7 +56953,7 @@ exports[`Markdown component xss: 128 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -57284,7 +57284,7 @@ exports[`Markdown component xss: 128 1`] = `
 
 exports[`Markdown component xss: 129 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -57295,7 +57295,7 @@ exports[`Markdown component xss: 129 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -57626,7 +57626,7 @@ exports[`Markdown component xss: 129 1`] = `
 
 exports[`Markdown component xss: 130 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -57637,7 +57637,7 @@ exports[`Markdown component xss: 130 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -57968,7 +57968,7 @@ exports[`Markdown component xss: 130 1`] = `
 
 exports[`Markdown component xss: 131 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -57979,7 +57979,7 @@ exports[`Markdown component xss: 131 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -58310,7 +58310,7 @@ exports[`Markdown component xss: 131 1`] = `
 
 exports[`Markdown component xss: 132 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -58321,7 +58321,7 @@ exports[`Markdown component xss: 132 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -58652,7 +58652,7 @@ exports[`Markdown component xss: 132 1`] = `
 
 exports[`Markdown component xss: 133 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -58663,7 +58663,7 @@ exports[`Markdown component xss: 133 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -58994,7 +58994,7 @@ exports[`Markdown component xss: 133 1`] = `
 
 exports[`Markdown component xss: 134 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -59005,7 +59005,7 @@ exports[`Markdown component xss: 134 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -59336,7 +59336,7 @@ exports[`Markdown component xss: 134 1`] = `
 
 exports[`Markdown component xss: 135 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -59347,7 +59347,7 @@ exports[`Markdown component xss: 135 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -59678,7 +59678,7 @@ exports[`Markdown component xss: 135 1`] = `
 
 exports[`Markdown component xss: 136 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -59689,7 +59689,7 @@ exports[`Markdown component xss: 136 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -60020,7 +60020,7 @@ exports[`Markdown component xss: 136 1`] = `
 
 exports[`Markdown component xss: 137 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -60031,7 +60031,7 @@ exports[`Markdown component xss: 137 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -60362,7 +60362,7 @@ exports[`Markdown component xss: 137 1`] = `
 
 exports[`Markdown component xss: 138 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -60373,7 +60373,7 @@ exports[`Markdown component xss: 138 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -60704,7 +60704,7 @@ exports[`Markdown component xss: 138 1`] = `
 
 exports[`Markdown component xss: 139 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -60715,7 +60715,7 @@ exports[`Markdown component xss: 139 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -61046,7 +61046,7 @@ exports[`Markdown component xss: 139 1`] = `
 
 exports[`Markdown component xss: 140 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -61057,7 +61057,7 @@ exports[`Markdown component xss: 140 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -61388,7 +61388,7 @@ exports[`Markdown component xss: 140 1`] = `
 
 exports[`Markdown component xss: 141 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -61399,7 +61399,7 @@ exports[`Markdown component xss: 141 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -61730,7 +61730,7 @@ exports[`Markdown component xss: 141 1`] = `
 
 exports[`Markdown component xss: 142 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -61741,7 +61741,7 @@ exports[`Markdown component xss: 142 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -62072,7 +62072,7 @@ exports[`Markdown component xss: 142 1`] = `
 
 exports[`Markdown component xss: 143 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -62083,7 +62083,7 @@ exports[`Markdown component xss: 143 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -62414,7 +62414,7 @@ exports[`Markdown component xss: 143 1`] = `
 
 exports[`Markdown component xss: 144 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -62425,7 +62425,7 @@ exports[`Markdown component xss: 144 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -62756,7 +62756,7 @@ exports[`Markdown component xss: 144 1`] = `
 
 exports[`Markdown component xss: 145 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -62767,7 +62767,7 @@ exports[`Markdown component xss: 145 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -63098,7 +63098,7 @@ exports[`Markdown component xss: 145 1`] = `
 
 exports[`Markdown component xss: 146 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -63109,7 +63109,7 @@ exports[`Markdown component xss: 146 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -63440,7 +63440,7 @@ exports[`Markdown component xss: 146 1`] = `
 
 exports[`Markdown component xss: 147 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -63451,7 +63451,7 @@ exports[`Markdown component xss: 147 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -63782,7 +63782,7 @@ exports[`Markdown component xss: 147 1`] = `
 
 exports[`Markdown component xss: 148 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -63793,7 +63793,7 @@ exports[`Markdown component xss: 148 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -64124,7 +64124,7 @@ exports[`Markdown component xss: 148 1`] = `
 
 exports[`Markdown component xss: 149 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -64135,7 +64135,7 @@ exports[`Markdown component xss: 149 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -64466,7 +64466,7 @@ exports[`Markdown component xss: 149 1`] = `
 
 exports[`Markdown component xss: 150 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -64477,7 +64477,7 @@ exports[`Markdown component xss: 150 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -64808,7 +64808,7 @@ exports[`Markdown component xss: 150 1`] = `
 
 exports[`Markdown component xss: 151 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -64819,7 +64819,7 @@ exports[`Markdown component xss: 151 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -65150,7 +65150,7 @@ exports[`Markdown component xss: 151 1`] = `
 
 exports[`Markdown component xss: 152 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -65161,7 +65161,7 @@ exports[`Markdown component xss: 152 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -65492,7 +65492,7 @@ exports[`Markdown component xss: 152 1`] = `
 
 exports[`Markdown component xss: 153 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -65503,7 +65503,7 @@ exports[`Markdown component xss: 153 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -65834,7 +65834,7 @@ exports[`Markdown component xss: 153 1`] = `
 
 exports[`Markdown component xss: 154 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -65845,7 +65845,7 @@ exports[`Markdown component xss: 154 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -66176,7 +66176,7 @@ exports[`Markdown component xss: 154 1`] = `
 
 exports[`Markdown component xss: 155 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -66187,7 +66187,7 @@ exports[`Markdown component xss: 155 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -66518,7 +66518,7 @@ exports[`Markdown component xss: 155 1`] = `
 
 exports[`Markdown component xss: 156 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -66529,7 +66529,7 @@ exports[`Markdown component xss: 156 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -66860,7 +66860,7 @@ exports[`Markdown component xss: 156 1`] = `
 
 exports[`Markdown component xss: 157 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -66871,7 +66871,7 @@ exports[`Markdown component xss: 157 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -67202,7 +67202,7 @@ exports[`Markdown component xss: 157 1`] = `
 
 exports[`Markdown component xss: 158 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -67213,7 +67213,7 @@ exports[`Markdown component xss: 158 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -67544,7 +67544,7 @@ exports[`Markdown component xss: 158 1`] = `
 
 exports[`Markdown component xss: 159 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -67555,7 +67555,7 @@ exports[`Markdown component xss: 159 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -67886,7 +67886,7 @@ exports[`Markdown component xss: 159 1`] = `
 
 exports[`Markdown component xss: 160 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -67897,7 +67897,7 @@ exports[`Markdown component xss: 160 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -68228,7 +68228,7 @@ exports[`Markdown component xss: 160 1`] = `
 
 exports[`Markdown component xss: 161 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -68239,7 +68239,7 @@ exports[`Markdown component xss: 161 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -68570,7 +68570,7 @@ exports[`Markdown component xss: 161 1`] = `
 
 exports[`Markdown component xss: 162 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -68581,7 +68581,7 @@ exports[`Markdown component xss: 162 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -68912,7 +68912,7 @@ exports[`Markdown component xss: 162 1`] = `
 
 exports[`Markdown component xss: 163 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -68923,7 +68923,7 @@ exports[`Markdown component xss: 163 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -69254,7 +69254,7 @@ exports[`Markdown component xss: 163 1`] = `
 
 exports[`Markdown component xss: 164 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -69265,7 +69265,7 @@ exports[`Markdown component xss: 164 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -69596,7 +69596,7 @@ exports[`Markdown component xss: 164 1`] = `
 
 exports[`Markdown component xss: 165 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -69607,7 +69607,7 @@ exports[`Markdown component xss: 165 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -69938,7 +69938,7 @@ exports[`Markdown component xss: 165 1`] = `
 
 exports[`Markdown component xss: 166 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -69949,7 +69949,7 @@ exports[`Markdown component xss: 166 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -70280,7 +70280,7 @@ exports[`Markdown component xss: 166 1`] = `
 
 exports[`Markdown component xss: 167 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -70291,7 +70291,7 @@ exports[`Markdown component xss: 167 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -70622,7 +70622,7 @@ exports[`Markdown component xss: 167 1`] = `
 
 exports[`Markdown component xss: 168 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -70633,7 +70633,7 @@ exports[`Markdown component xss: 168 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -70964,7 +70964,7 @@ exports[`Markdown component xss: 168 1`] = `
 
 exports[`Markdown component xss: 169 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -70975,7 +70975,7 @@ exports[`Markdown component xss: 169 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -71306,7 +71306,7 @@ exports[`Markdown component xss: 169 1`] = `
 
 exports[`Markdown component xss: 170 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -71317,7 +71317,7 @@ exports[`Markdown component xss: 170 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -71648,7 +71648,7 @@ exports[`Markdown component xss: 170 1`] = `
 
 exports[`Markdown component xss: 171 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -71659,7 +71659,7 @@ exports[`Markdown component xss: 171 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -71990,7 +71990,7 @@ exports[`Markdown component xss: 171 1`] = `
 
 exports[`Markdown component xss: 172 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -72001,7 +72001,7 @@ exports[`Markdown component xss: 172 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -72332,7 +72332,7 @@ exports[`Markdown component xss: 172 1`] = `
 
 exports[`Markdown component xss: 173 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -72343,7 +72343,7 @@ exports[`Markdown component xss: 173 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -72674,7 +72674,7 @@ exports[`Markdown component xss: 173 1`] = `
 
 exports[`Markdown component xss: 174 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -72685,7 +72685,7 @@ exports[`Markdown component xss: 174 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -73016,7 +73016,7 @@ exports[`Markdown component xss: 174 1`] = `
 
 exports[`Markdown component xss: 175 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -73027,7 +73027,7 @@ exports[`Markdown component xss: 175 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -73358,7 +73358,7 @@ exports[`Markdown component xss: 175 1`] = `
 
 exports[`Markdown component xss: 176 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -73369,7 +73369,7 @@ exports[`Markdown component xss: 176 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -73700,7 +73700,7 @@ exports[`Markdown component xss: 176 1`] = `
 
 exports[`Markdown component xss: 177 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -73711,7 +73711,7 @@ exports[`Markdown component xss: 177 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -74042,7 +74042,7 @@ exports[`Markdown component xss: 177 1`] = `
 
 exports[`Markdown component xss: 178 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -74053,7 +74053,7 @@ exports[`Markdown component xss: 178 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -74384,7 +74384,7 @@ exports[`Markdown component xss: 178 1`] = `
 
 exports[`Markdown component xss: 179 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -74395,7 +74395,7 @@ exports[`Markdown component xss: 179 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -74726,7 +74726,7 @@ exports[`Markdown component xss: 179 1`] = `
 
 exports[`Markdown component xss: 180 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -74737,7 +74737,7 @@ exports[`Markdown component xss: 180 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -75068,7 +75068,7 @@ exports[`Markdown component xss: 180 1`] = `
 
 exports[`Markdown component xss: 181 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -75079,7 +75079,7 @@ exports[`Markdown component xss: 181 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -75410,7 +75410,7 @@ exports[`Markdown component xss: 181 1`] = `
 
 exports[`Markdown component xss: 182 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -75421,7 +75421,7 @@ exports[`Markdown component xss: 182 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -75752,7 +75752,7 @@ exports[`Markdown component xss: 182 1`] = `
 
 exports[`Markdown component xss: 183 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -75763,7 +75763,7 @@ exports[`Markdown component xss: 183 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -76094,7 +76094,7 @@ exports[`Markdown component xss: 183 1`] = `
 
 exports[`Markdown component xss: 184 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -76105,7 +76105,7 @@ exports[`Markdown component xss: 184 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -76436,7 +76436,7 @@ exports[`Markdown component xss: 184 1`] = `
 
 exports[`Markdown component xss: 185 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -76447,7 +76447,7 @@ exports[`Markdown component xss: 185 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -76778,7 +76778,7 @@ exports[`Markdown component xss: 185 1`] = `
 
 exports[`Markdown component xss: 186 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -76789,7 +76789,7 @@ exports[`Markdown component xss: 186 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -77120,7 +77120,7 @@ exports[`Markdown component xss: 186 1`] = `
 
 exports[`Markdown component xss: 187 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -77131,7 +77131,7 @@ exports[`Markdown component xss: 187 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -77462,7 +77462,7 @@ exports[`Markdown component xss: 187 1`] = `
 
 exports[`Markdown component xss: 188 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -77473,7 +77473,7 @@ exports[`Markdown component xss: 188 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -77804,7 +77804,7 @@ exports[`Markdown component xss: 188 1`] = `
 
 exports[`Markdown component xss: 189 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -77815,7 +77815,7 @@ exports[`Markdown component xss: 189 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -78146,7 +78146,7 @@ exports[`Markdown component xss: 189 1`] = `
 
 exports[`Markdown component xss: 190 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -78157,7 +78157,7 @@ exports[`Markdown component xss: 190 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -78488,7 +78488,7 @@ exports[`Markdown component xss: 190 1`] = `
 
 exports[`Markdown component xss: 191 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -78499,7 +78499,7 @@ exports[`Markdown component xss: 191 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -78830,7 +78830,7 @@ exports[`Markdown component xss: 191 1`] = `
 
 exports[`Markdown component xss: 192 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -78841,7 +78841,7 @@ exports[`Markdown component xss: 192 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -79172,7 +79172,7 @@ exports[`Markdown component xss: 192 1`] = `
 
 exports[`Markdown component xss: 193 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -79183,7 +79183,7 @@ exports[`Markdown component xss: 193 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -79514,7 +79514,7 @@ exports[`Markdown component xss: 193 1`] = `
 
 exports[`Markdown component xss: 194 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -79525,7 +79525,7 @@ exports[`Markdown component xss: 194 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -79856,7 +79856,7 @@ exports[`Markdown component xss: 194 1`] = `
 
 exports[`Markdown component xss: 195 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -79867,7 +79867,7 @@ exports[`Markdown component xss: 195 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -80198,7 +80198,7 @@ exports[`Markdown component xss: 195 1`] = `
 
 exports[`Markdown component xss: 196 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -80209,7 +80209,7 @@ exports[`Markdown component xss: 196 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -80540,7 +80540,7 @@ exports[`Markdown component xss: 196 1`] = `
 
 exports[`Markdown component xss: 197 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -80551,7 +80551,7 @@ exports[`Markdown component xss: 197 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -80882,7 +80882,7 @@ exports[`Markdown component xss: 197 1`] = `
 
 exports[`Markdown component xss: 198 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -80893,7 +80893,7 @@ exports[`Markdown component xss: 198 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -81224,7 +81224,7 @@ exports[`Markdown component xss: 198 1`] = `
 
 exports[`Markdown component xss: 199 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -81235,7 +81235,7 @@ exports[`Markdown component xss: 199 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -81566,7 +81566,7 @@ exports[`Markdown component xss: 199 1`] = `
 
 exports[`Markdown component xss: 200 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -81577,7 +81577,7 @@ exports[`Markdown component xss: 200 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -81908,7 +81908,7 @@ exports[`Markdown component xss: 200 1`] = `
 
 exports[`Markdown component xss: 201 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -81936,7 +81936,7 @@ exports[`Markdown component xss: 201 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -82272,7 +82272,7 @@ exports[`Markdown component xss: 201 1`] = `
 
 exports[`Markdown component xss: 202 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -82283,7 +82283,7 @@ exports[`Markdown component xss: 202 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -82606,11 +82606,11 @@ exports[`Markdown component xss: 202 1`] = `
         >
           &lt;img src="x
           <code>
-             
+
           </code>
           "
           <code>
-             
+
           </code>
           &gt;
         </p>
@@ -82622,7 +82622,7 @@ exports[`Markdown component xss: 202 1`] = `
 
 exports[`Markdown component xss: 203 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -82633,7 +82633,7 @@ exports[`Markdown component xss: 203 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -82964,7 +82964,7 @@ exports[`Markdown component xss: 203 1`] = `
 
 exports[`Markdown component xss: 204 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -82975,7 +82975,7 @@ exports[`Markdown component xss: 204 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -83300,7 +83300,7 @@ exports[`Markdown component xss: 204 1`] = `
 
 exports[`Markdown component xss: 205 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -83328,7 +83328,7 @@ exports[`Markdown component xss: 205 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -83669,7 +83669,7 @@ exports[`Markdown component xss: 205 1`] = `
 
 exports[`Markdown component xss: 206 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -83680,7 +83680,7 @@ exports[`Markdown component xss: 206 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -84005,7 +84005,7 @@ exports[`Markdown component xss: 206 1`] = `
 
 exports[`Markdown component xss: 207 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -84016,7 +84016,7 @@ exports[`Markdown component xss: 207 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -84341,7 +84341,7 @@ exports[`Markdown component xss: 207 1`] = `
 
 exports[`Markdown component xss: 208 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -84352,7 +84352,7 @@ exports[`Markdown component xss: 208 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -84677,7 +84677,7 @@ exports[`Markdown component xss: 208 1`] = `
 
 exports[`Markdown component xss: 209 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -84688,7 +84688,7 @@ exports[`Markdown component xss: 209 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -85013,7 +85013,7 @@ exports[`Markdown component xss: 209 1`] = `
 
 exports[`Markdown component xss: 210 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -85024,7 +85024,7 @@ exports[`Markdown component xss: 210 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -85356,7 +85356,7 @@ exports[`Markdown component xss: 210 1`] = `
 
 exports[`Markdown component xss: 211 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -85367,7 +85367,7 @@ exports[`Markdown component xss: 211 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -85694,7 +85694,7 @@ exports[`Markdown component xss: 211 1`] = `
 
 exports[`Markdown component xss: 212 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -85705,7 +85705,7 @@ exports[`Markdown component xss: 212 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -86034,7 +86034,7 @@ exports[`Markdown component xss: 212 1`] = `
 
 exports[`Markdown component xss: 213 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -86045,7 +86045,7 @@ exports[`Markdown component xss: 213 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -86376,7 +86376,7 @@ exports[`Markdown component xss: 213 1`] = `
 
 exports[`Markdown component xss: 214 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -86387,7 +86387,7 @@ exports[`Markdown component xss: 214 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -86714,7 +86714,7 @@ exports[`Markdown component xss: 214 1`] = `
 
 exports[`Markdown component xss: 215 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -86725,7 +86725,7 @@ exports[`Markdown component xss: 215 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -87052,7 +87052,7 @@ exports[`Markdown component xss: 215 1`] = `
 
 exports[`Markdown component xss: 216 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -87063,7 +87063,7 @@ exports[`Markdown component xss: 216 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -87390,7 +87390,7 @@ exports[`Markdown component xss: 216 1`] = `
 
 exports[`Markdown component xss: 217 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -87401,7 +87401,7 @@ exports[`Markdown component xss: 217 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -87728,7 +87728,7 @@ exports[`Markdown component xss: 217 1`] = `
 
 exports[`Markdown component xss: 218 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -87739,7 +87739,7 @@ exports[`Markdown component xss: 218 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -88066,7 +88066,7 @@ exports[`Markdown component xss: 218 1`] = `
 
 exports[`Markdown component xss: 219 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -88077,7 +88077,7 @@ exports[`Markdown component xss: 219 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -88404,7 +88404,7 @@ exports[`Markdown component xss: 219 1`] = `
 
 exports[`Markdown component xss: 220 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -88415,7 +88415,7 @@ exports[`Markdown component xss: 220 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -88742,7 +88742,7 @@ exports[`Markdown component xss: 220 1`] = `
 
 exports[`Markdown component xss: 221 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -88753,7 +88753,7 @@ exports[`Markdown component xss: 221 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -89080,7 +89080,7 @@ exports[`Markdown component xss: 221 1`] = `
 
 exports[`Markdown component xss: 222 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -89091,7 +89091,7 @@ exports[`Markdown component xss: 222 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -89422,7 +89422,7 @@ exports[`Markdown component xss: 222 1`] = `
 
 exports[`Markdown component xss: 223 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -89433,7 +89433,7 @@ exports[`Markdown component xss: 223 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -89760,7 +89760,7 @@ exports[`Markdown component xss: 223 1`] = `
 
 exports[`Markdown component xss: 224 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -89788,7 +89788,7 @@ exports[`Markdown component xss: 224 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -90126,7 +90126,7 @@ exports[`Markdown component xss: 224 1`] = `
 
 exports[`Markdown component xss: 225 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -90137,7 +90137,7 @@ exports[`Markdown component xss: 225 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -90462,7 +90462,7 @@ exports[`Markdown component xss: 225 1`] = `
 
 exports[`Markdown component xss: 226 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -90490,7 +90490,7 @@ exports[`Markdown component xss: 226 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -90826,7 +90826,7 @@ exports[`Markdown component xss: 226 1`] = `
 
 exports[`Markdown component xss: 227 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -90837,7 +90837,7 @@ exports[`Markdown component xss: 227 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -91168,7 +91168,7 @@ exports[`Markdown component xss: 227 1`] = `
 
 exports[`Markdown component xss: 228 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -91179,7 +91179,7 @@ exports[`Markdown component xss: 228 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -91504,7 +91504,7 @@ exports[`Markdown component xss: 228 1`] = `
 
 exports[`Markdown component xss: 229 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -91515,7 +91515,7 @@ exports[`Markdown component xss: 229 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -91840,7 +91840,7 @@ exports[`Markdown component xss: 229 1`] = `
 
 exports[`Markdown component xss: 230 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -91851,7 +91851,7 @@ exports[`Markdown component xss: 230 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -92182,7 +92182,7 @@ exports[`Markdown component xss: 230 1`] = `
 
 exports[`Markdown component xss: 231 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -92193,7 +92193,7 @@ exports[`Markdown component xss: 231 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -92518,7 +92518,7 @@ exports[`Markdown component xss: 231 1`] = `
 
 exports[`Markdown component xss: 232 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -92529,7 +92529,7 @@ exports[`Markdown component xss: 232 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -92860,7 +92860,7 @@ exports[`Markdown component xss: 232 1`] = `
 
 exports[`Markdown component xss: 233 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -92871,7 +92871,7 @@ exports[`Markdown component xss: 233 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -93202,7 +93202,7 @@ exports[`Markdown component xss: 233 1`] = `
 
 exports[`Markdown component xss: 234 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -93213,7 +93213,7 @@ exports[`Markdown component xss: 234 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -93535,7 +93535,7 @@ exports[`Markdown component xss: 234 1`] = `
           class=""
         >
           <i>
-             Scroll over me 
+             Scroll over me
           </i>
         </p>
       </div>
@@ -93546,7 +93546,7 @@ exports[`Markdown component xss: 234 1`] = `
 
 exports[`Markdown component xss: 235 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -93557,7 +93557,7 @@ exports[`Markdown component xss: 235 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -93882,7 +93882,7 @@ exports[`Markdown component xss: 235 1`] = `
 
 exports[`Markdown component xss: 236 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -93893,7 +93893,7 @@ exports[`Markdown component xss: 236 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
@@ -94224,7 +94224,7 @@ exports[`Markdown component xss: 236 1`] = `
 
 exports[`Markdown component xss: 237 1`] = `
 .c0 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   line-height: 1.5;
   box-sizing: border-box;
@@ -94235,7 +94235,7 @@ exports[`Markdown component xss: 237 1`] = `
 }
 
 .c1 {
-  font-family: 'Source Sans Pro',Helvetica,sans-serif;
+  font-family: Helvetica,sans-serif;
   font-size: 14px;
   color: #2A506F;
 }
