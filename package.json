@@ -75,7 +75,7 @@
     "lint-staged": "^4.3.0",
     "match-media-mock": "^0.1.1",
     "monaco-editor-webpack-plugin": "^4.2.0",
-    "prettier": "^2.4.1",
+    "prettier": "^2.8.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.0",
     "react-monaco-editor": "^0.45.0",
