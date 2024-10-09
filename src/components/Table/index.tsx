@@ -162,6 +162,7 @@ type TableColumnInternal<T> = TableBaseColumn<T> & TableColumnState;
 const getTagTableColumn = <T extends {}>(
 	columnState: TagTableColumnState,
 	tagField: Extract<keyof T, string>,
+	pagination?: Pagination,
 ) => {
 	const column: TableColumnInternal<T> = {
 		...columnState,
@@ -171,32 +172,34 @@ const getTagTableColumn = <T extends {}>(
 		field: `${tagField}.${columnState.tagKey}` as Extract<keyof T, string>,
 		cellAttributes: tagCellAttributes,
 	};
-	column.sortable = (a: T, b: T) => {
-		const tagKey = column.tagKey;
-		if (!tagKey) {
-			return 0;
-		}
+	column.sortable = pagination?.serverSide
+		? false
+		: (a: T, b: T) => {
+				const tagKey = column.tagKey;
+				if (!tagKey) {
+					return 0;
+				}
 
-		const item1tag = findTagOfTaggedResource(a, tagField, tagKey);
-		const item2tag = findTagOfTaggedResource(b, tagField, tagKey);
+				const item1tag = findTagOfTaggedResource(a, tagField, tagKey);
+				const item2tag = findTagOfTaggedResource(b, tagField, tagKey);
 
-		// first compare the objects
-		// so that we differentiate not having a value
-		// with not having the tag at all
-		if (!item1tag && !item2tag) {
-			return 0;
-		}
+				// first compare the objects
+				// so that we differentiate not having a value
+				// with not having the tag at all
+				if (!item1tag && !item2tag) {
+					return 0;
+				}
 
-		if (!item1tag) {
-			return 1;
-		}
+				if (!item1tag) {
+					return 1;
+				}
 
-		if (!item2tag) {
-			return -1;
-		}
+				if (!item2tag) {
+					return -1;
+				}
 
-		return (item1tag.value || '').localeCompare(item2tag.value || '');
-	};
+				return (item1tag.value || '').localeCompare(item2tag.value || '');
+		  };
 	column.render = (_value: any, data: T) => {
 		const tagKey = column.tagKey;
 		if (!tagKey) {
@@ -323,6 +326,7 @@ const applyColumnPreferences = <T extends {}>(
 	loadedColumns: TableColumnState[] | undefined,
 	tagField: Extract<keyof T, string> | undefined,
 	enableCustomColumns?: boolean,
+	pagination?: Pagination,
 ): Array<TableColumnInternal<T>> => {
 	if (!loadedColumns?.length) {
 		return columns;
@@ -352,7 +356,7 @@ const applyColumnPreferences = <T extends {}>(
 	if (tagField) {
 		const loadedTagColumns = filter(loadedColumns, isCustomTagColumn);
 		const tagColumns = map(loadedTagColumns, (c) =>
-			getTagTableColumn<T>(c, tagField),
+			getTagTableColumn<T>(c, tagField, pagination),
 		);
 		insertTagColumns(columns, tagColumns);
 	}
@@ -365,8 +369,13 @@ const applyColumnPreferences = <T extends {}>(
 };
 
 const addCustomColumns = <T extends {}>(props: TableProps<T>) => {
-	const { columns, tagField, enableCustomColumns, columnStateRestorationKey } =
-		props;
+	const {
+		columns,
+		tagField,
+		enableCustomColumns,
+		columnStateRestorationKey,
+		pagination,
+	} = props;
 	let allColumns = columns.map((column) =>
 		normalizeTableColumn(column, enableCustomColumns),
 	);
@@ -386,6 +395,7 @@ const addCustomColumns = <T extends {}>(props: TableProps<T>) => {
 		loadedColumns,
 		tagField,
 		enableCustomColumns,
+		pagination,
 	);
 	return allColumns;
 };
@@ -640,7 +650,11 @@ export class Table<T extends {}> extends React.Component<
 		const newColumnState = getNewTagTableColumnState(tagKey);
 
 		const columns = allColumns.slice();
-		const newTagColumn = getTagTableColumn(newColumnState, this.props.tagField);
+		const newTagColumn = getTagTableColumn(
+			newColumnState,
+			this.props.tagField,
+			this.props.pagination,
+		);
 		this.setTagTableColumnHeader(
 			{ tagKeys, selectedTagColumnKeys },
 			newTagColumn,
@@ -680,6 +694,7 @@ export class Table<T extends {}> extends React.Component<
 		const newColumn = getTagTableColumn(
 			getNewTagTableColumnState(tagKey),
 			this.props.tagField,
+			this.props.pagination,
 		);
 		const columns = this.state.allColumns.slice();
 		columns.splice(indexOfColumn, 1, newColumn);
