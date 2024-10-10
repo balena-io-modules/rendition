@@ -5,7 +5,7 @@ import {
 	WidgetProps,
 	getObjectPropertyNames,
 } from './widget-util';
-import { JsonTypes } from '../types';
+import { JSONSchema, JsonTypes } from '../types';
 import { Renderer } from '../index';
 
 const ObjectWidget = widgetFactory('Object', undefined, [JsonTypes.object])(
@@ -16,7 +16,7 @@ const ObjectWidget = widgetFactory('Object', undefined, [JsonTypes.object])(
 				{propertyNames.map((key: string) => {
 					const subProps: WidgetProps = {
 						value: get(value, key) ?? null,
-						schema: get(schema, ['properties', key]),
+						schema: get(schema, ['properties', key]) as JSONSchema,
 						uiSchema: get(uiSchema, key),
 					};
 					return (

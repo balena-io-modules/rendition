@@ -78,7 +78,7 @@ export function formatTimestamp(
 		return '';
 	}
 	const uiFormat =
-		get(uiSchema, ['ui:options', 'dtFormat']) ||
+		(get(uiSchema, ['ui:options', 'dtFormat']) as string) ||
 		`${DATE_FORMAT}, ${TIME_FORMAT}`;
 	return format(new Date(timestamp), uiFormat);
 }
@@ -175,7 +175,11 @@ export const getArrayItems = ({
 	if (!isArray(value)) {
 		throw new Error(`Value must be an array (not '${typeof value}')`);
 	}
-	const maxItems = get(uiSchema, ['ui:options', 'truncate'], value.length);
+	const maxItems = get(
+		uiSchema,
+		['ui:options', 'truncate'],
+		value.length,
+	) as number;
 	const items = value.slice(0, maxItems).map((item) => {
 		const itemSchema = get(schema, 'items', {}) as JSONSchema;
 		const itemUiSchema = get(uiSchema, 'items', {}) as UiSchema;

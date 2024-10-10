@@ -18,7 +18,11 @@ const SingleLineTxt = styled(Txt)`
 const getArrayValue = (value: Value[], uiSchema?: UiSchema): string => {
 	// Trim array if the 'truncate' option was provided,
 	// then comma-join the items into a single string.
-	const maxItems = get(uiSchema, ['ui:options', 'truncate'], value.length);
+	const maxItems = get(
+		uiSchema,
+		['ui:options', 'truncate'],
+		value.length,
+	) as number;
 	let arrayString = invokeMap(value.slice(0, maxItems), 'toString').join(', ');
 	if (maxItems < value.length) {
 		arrayString += ` and ${value.length - maxItems} more...`;
