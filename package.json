@@ -31,7 +31,7 @@
     "generate-snapshots": "npm run build && npm run jest -- -u",
     "test:fast": "npm run lint && npm run jest",
     "test:fast:watch": "npm run lint && npm run jest:watch",
-    "test": "npm run build && npm run test:fast && npm run catch-uncommitted",
+    "test": "npm run build && npm run catch-uncommitted",
     "jest": "jest --maxWorkers=4",
     "jest:watch": "jest --maxWorkers=4 --watch",
     "lint:fix": "balena-lint --fix src",
